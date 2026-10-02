@@ -39,7 +39,7 @@
     const ia=items.get(a.value),ib=items.get(b.value);
     place(imageA,ia);place(imageB,ib);
     $('status').textContent=`A: ${ia.label} · B: ${ib.label}`;
-    $('alignment-status').textContent=$('align').checked?(ia.flip||ib.flip?'Aligned · white knight mirrored':'Aligned · uniform scale and position'):'Original framing';
+    $('alignment-status').textContent=$('align').checked?(ia.flip||ib.flip?'Aligned · white knight mirrored':'Aligned · outline and lower rings'):'Original framing';
     $('download-a').href=ia.file;$('download-b').href=ib.file;
   }
   async function pair(){

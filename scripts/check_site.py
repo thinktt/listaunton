@@ -97,3 +97,15 @@ for row in generation['records']:
     if row['piece']=='bishop' and row['color']=='white':
         assert not re.search(r'\b(mitre|miter|slit|cut|groove)\b',row['prompt'],re.I)
 print('PASS: white bishops used plain upscale prompts without mitre-specific instructions.')
+
+foot_report=json.loads((ROOT/'assets/candidates/foot-alignment-report.json').read_text(encoding='utf-8'))
+assert len(foot_report['candidates'])==30
+for images in placements['pieces'].values():
+    for item in images:
+        if 'candidate' not in item['id']:continue
+        refinement=item['foot_refinement']
+        assert abs(item['y']-item['silhouette_y']-refinement['dy_original_px']/3)<1e-6
+        assert abs(refinement['dy_original_px'])<4
+        assert refinement['correlation_after']>=refinement['correlation_before']-.00001
+        assert refinement['reference']==('white' if item['id'].startswith('white') else 'black')
+print('PASS: bounded foot-detail registration, unchanged image scale and same-color references.')
