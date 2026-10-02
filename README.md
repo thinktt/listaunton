@@ -66,10 +66,10 @@ The twelve sprites came from Lichess's `public/images/staunton/piece/Staunton` d
 
 ## Comparing the two queen references
 
-In `review.html`, **Selected high-res** uses the ChatGPT-generated candidate chosen by the owner. **Original Lichess** uses the untouched 300 × 300 `White-Queen.png` from the original 3D Staunton set. The model render stays in exactly the same place when switching references.
+In `review.html`, **Selected high-res** uses the ChatGPT-generated candidate chosen by the owner. **Original Lichess** uses the untouched 300 × 300 `Black-Queen.png` from the original 3D Staunton set. The model render stays in exactly the same place when switching references.
 
 **Compare references** places the selected high-res image over the original sprite, with the same opacity, hold and blink controls. While comparing sources, model revision/material controls are paused. The fixed detail panels and contours remain explicitly high-res comparisons.
 
-The original sprite is positioned by uniform scaling and translation fitted to the high-res silhouette, independently of the reconstructed model. No anisotropic stretching or warping is applied. The recorded scale is about 4.133×; the original and high-res outlines overlap by about 98.2% at the quarter-resolution fit. This describes silhouettes, not matching internal geometry or recovered detail. The browser smooths the enlarged source image.
+The original sprite is positioned by uniform scaling and translation fitted to the high-res silhouette, independently of the reconstructed model. No anisotropic stretching or warping is applied. The recorded scale is about 4.218×; the original and high-res outlines overlap by about 98.5% at the quarter-resolution fit. This describes silhouettes, not matching internal geometry or recovered detail. The browser smooths the enlarged source image.
 
 `assets/queen/original-reference-alignment.json` records placement, source hashes and fitting method. Run `python scripts/queen/align_original_reference.py` to recompute the alignment and update the page's embedded metadata if the references change. `node scripts/queen/check_review_reference.cjs` checks the page's actual control logic, alignment hashes, zoom/pan stability, hold/blink behavior and contour guards.

@@ -13,7 +13,7 @@ from overlay_qa import largest_component, fill_holes, bounds
 
 ROOT=Path(__file__).resolve().parents[2]
 HIGH=ROOT/'assets/queen/reference.png'
-LOW=ROOT/'references/lichess-staunton-3d/White-Queen.png'
+LOW=ROOT/'references/lichess-staunton-3d/Black-Queen.png'
 def mask(path):
  image=Image.open(path).convert('RGBA')
  pixels=np.asarray(image)
@@ -50,7 +50,7 @@ for scale in np.linspace(initial_scale*.996,initial_scale*1.004,9):
 overlap,scale,x,y=best
 record={'method':'Uniform scale and translation; no rotation, anisotropic stretch or warp',
  'fit_target':'Selected high-resolution reference silhouette; not the reconstructed model',
- 'source':'references/lichess-staunton-3d/White-Queen.png','target':'assets/queen/reference.png',
+ 'source':'references/lichess-staunton-3d/Black-Queen.png','target':'assets/queen/reference.png',
  'source_sha256':hashlib.sha256(LOW.read_bytes()).hexdigest(),'target_sha256':hashlib.sha256(HIGH.read_bytes()).hexdigest(),
  'source_size':[lo.width,lo.height],'canvas_size':[hi.width,hi.height],
  'scale':float(scale),'offset_x':float(x),'offset_y':float(y),
@@ -59,8 +59,8 @@ record={'method':'Uniform scale and translation; no rotation, anisotropic stretc
  'display':'Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated.'}
 (ROOT/'assets/queen/original-reference-alignment.json').write_text(json.dumps(record,indent=2)+'\n')
 review=ROOT/'review.html'
-page=review.read_text()
+page=review.read_text(encoding="utf-8")
 if 'id="original-reference-alignment"' in page:
  page=re.sub(r'(<script id="original-reference-alignment"[^>]*>).*?(</script>)',lambda m:m.group(1)+json.dumps(record,separators=(',',':'))+m.group(2),page,flags=re.S)
- review.write_text(page)
+ review.write_text(page,encoding="utf-8")
 print(json.dumps(record,indent=2))

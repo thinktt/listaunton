@@ -23,7 +23,7 @@ const click=(key,value)=>button(key,value).fire('click');
 assert.equal(node('reference').src,'assets/queen/reference.png');
 click('zoom','2');node('viewport').scrollLeft=123;node('viewport').scrollTop=87;
 click('reference','original');
-assert.equal(node('reference').src,'references/lichess-staunton-3d/White-Queen.png');
+assert.equal(node('reference').src,'references/lichess-staunton-3d/Black-Queen.png');
 assert.equal(node('stage').style.width,'2508px');
 assert.equal(node('viewport').scrollLeft,123);assert.equal(node('viewport').scrollTop,87);
 assert.equal(parseFloat(node('reference').style.width),alignment.source_size[0]*alignment.scale/1254*100);
@@ -39,7 +39,7 @@ node('blink').fire('click');assert.equal(node('reference').style.opacity,'0');as
 node('compare-sources').fire('click');
 assert.equal(node('render').src,'assets/queen/reference.png');assert.equal(node('opacity-label').textContent,'High-res opacity');
 assert.equal(button('revision','current').disabled,true);assert.equal(button('material','neutral').disabled,true);
-assert.equal(node('reference').src,'references/lichess-staunton-3d/White-Queen.png');
+assert.equal(node('reference').src,'references/lichess-staunton-3d/Black-Queen.png');
 node('opacity').value='20';node('opacity').fire('input');assert.equal(node('render').style.opacity,'0.2');
 node('blink').fire('click');assert.equal(node('render').style.opacity,'1');assert.equal(node('reference').style.opacity,'0');
 node('blink').fire('click');assert.equal(node('render').style.opacity,'0');assert.equal(node('reference').style.opacity,'1');
