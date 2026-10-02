@@ -8,7 +8,7 @@ async function check(piece){
  assert.equal(data.images.length,8);
  for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,3);
  const nodes=new Map(),failed=new Set();let errors=0;
- function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},...event});}});return nodes.get(id);}
+ function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},focus(){},getBoundingClientRect(){return {left:-100,width:1000};},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},stopPropagation(){},...event});}});return nodes.get(id);}
  const zooms=['fit','1','2'].map(value=>Object.assign(node('zoom-'+value),{dataset:{zoom:value}}));
  node('comparison-data').textContent=JSON.stringify(data);node('image-a').value='black';node('image-b').value='candidate-1';node('align').checked=true;node('mix').value='50';
  const doc={getElementById:node,querySelectorAll:()=>zooms,documentElement:{style:{setProperty(){}}}};
@@ -16,6 +16,19 @@ async function check(piece){
  vm.runInNewContext(source,{document:doc,window:{addEventListener(){}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
  await settle();
  assert.equal(node('stage').style.visibility,'visible');assert.equal(node('loading').hidden,true);
+ assert.equal(node('wipe').attrs['aria-pressed'],'true');assert.equal(node('layer-b').style.clipPath,'inset(0 50% 0 0)');
+ const h=node('wipe-handle');assert.equal(h.hidden,false);
+ node('viewport').scrollLeft=70;node('viewport').scrollTop=80;
+ h.fire('pointerdown',{button:0,pointerId:7,clientX:400});h.fire('pointermove',{pointerId:7,clientX:650});
+ assert.equal(node('mix').value,'75');assert.equal(h.attrs['aria-valuenow'],'75');assert.equal(node('layer-b').style.clipPath,'inset(0 25% 0 0)');
+ assert.equal(node('viewport').scrollLeft,70);assert.equal(node('viewport').scrollTop,80);
+ h.fire('pointermove',{pointerId:8,clientX:200});assert.equal(node('mix').value,'75');
+ h.fire('pointermove',{pointerId:7,clientX:1500});assert.equal(node('mix').value,'100');assert.equal(h.hidden,false);
+ h.fire('pointermove',{pointerId:7,clientX:-500});assert.equal(node('mix').value,'0');assert.equal(h.hidden,false);
+ h.fire('pointercancel',{pointerId:7});h.fire('pointermove',{pointerId:7,clientX:650});assert.equal(node('mix').value,'0');
+ h.fire('keydown',{key:'ArrowRight',shiftKey:true});assert.equal(node('mix').value,'10');h.fire('keydown',{key:'End'});assert.equal(node('mix').value,'100');h.fire('keydown',{key:'Home'});assert.equal(node('mix').value,'0');
+ node('blend').fire('click');assert.equal(h.hidden,true);
+
  for(const a of data.images)for(const b of data.images){
    node('image-a').value=a.id;node('image-b').value=b.id;node('image-b').fire('change');await settle();
    assert.equal(node('photo-a').src,a.file);assert.equal(node('photo-b').src,b.file);
@@ -42,6 +55,6 @@ async function check(piece){
  node('image-b').value='candidate-1';node('image-b').fire('change');node('image-b').value='candidate-3';node('image-b').fire('change');await settle();
  assert.equal(node('photo-b').src,data.images.find(x=>x.id==='candidate-3').file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
  assert.equal(errors,0);
- console.log('PASS: '+piece+' — 64 source pairs, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
+ console.log('PASS: '+piece+' — 64 source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
 }
 (async()=>{for(const piece of ['king','rook','bishop','knight','pawn'])await check(piece);})().catch(error=>{console.error(error);process.exitCode=1;});
