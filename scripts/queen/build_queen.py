@@ -68,6 +68,30 @@ body_profile=[
 (0.41875514,3.14207577),(0.42873696,3.20427962),(0.44446920,3.30244505),(0.46309760,3.41907725),
 (0.48320313,3.54445687),]
 
+# Close the collar gaps while retaining thin plate edges. The two exposed
+# spacers shrink to about .012 units; each plate keeps its edge thickness.
+# Blend the change into the upper stem and crown body, preserving the bowl.
+def collar_adjust(r, z):
+ def interp(knots):
+  if z <= knots[0][0]: return knots[0][1]
+  for (a,b),(c,d) in zip(knots,knots[1:]):
+   if z <= c: return b+(d-b)*(z-a)/(c-a)
+  return knots[-1][1]
+ dz=interp([(2.29155483,0),(2.6329,.062),(2.7129,.062),
+            (2.8019,-.014),(2.8919,-.014),(2.9789,-.090),
+            (3.0789,-.090),(3.54445687,0)])
+ dr=interp([(2.29155483,0),(2.6329,.008),(2.7129,.008),
+            (2.8019,-.020),(2.8919,-.020),(2.9789,-.046),
+            (3.0789,-.046),(3.54445687,0)])
+ # Keep the crown wall full where it meets the subtle upper plate. Narrow
+ # only that plate's radial overhang, rather than pinching the whole body.
+ if z>2.8919:
+  blend=min(1.,(z-2.8919)/(2.9789-2.8919))
+  upper_dr=-max(0.,r-.40863142)*.648 if z<3.0789 else 0.
+  dr=-.020*(1-blend)+upper_dr*blend
+ return r+dr,z+dz
+body_profile=[collar_adjust(r,z) for r,z in body_profile]
+
 # Retained crown profile supplies the bowl, finial and tip maxima.
 crown_profile=[(0.001, 3.998, 0), (0.4, 3.998, 0), (0.499, 4.012, 0), (0.532, 4.041, 0.06), (0.572, 4.078, 0.2), (0.614, 4.112, 0.44), (0.65, 4.133, 0.69), (0.661, 4.151, 0.91), (0.646, 4.174, 1), (0.617, 4.184, 1), (0.586, 4.174, 0.94), (0.55, 4.152, 0.8), (0.5, 4.15, 0.56), (0.45, 4.15, 0.32), (0.405, 4.165, 0.11), (0.355, 4.163, 0), (0.303, 4.161, 0), (0.254, 4.16, 0), (0.226, 4.16, 0), (0.211, 4.15, 0), (0.198, 4.17, 0), (0.195, 4.209, 0), (0.191, 4.26, 0), (0.177, 4.32, 0), (0.15, 4.382, 0), (0.114, 4.439, 0), (0.066, 4.475, 0), (0.024, 4.493, 0), (0.001, 4.495, 0)]
 
@@ -152,6 +176,7 @@ features={
  'small_bead':(0.47763142,3.02090000),
  'egg_base':(0.19800000,3.80490000),
 }
+features={name:collar_adjust(r,z) for name,(r,z) in features.items()}
 (OUT/'profile-landmarks.json').write_text(json.dumps({'scale':S,'elevation':ELEV,'cx':CX,'y0':Y0,'rings':features},indent=2))
 
 # Packed reference, plus a camera background usable as a live overlay in Blender.
@@ -179,7 +204,7 @@ scene.cycles.use_denoising=True
 scene.render.resolution_x=W;scene.render.resolution_y=H;scene.render.resolution_percentage=100
 scene.render.film_transparent=True;scene.render.image_settings.file_format='PNG'
 scene.view_settings.view_transform='AgX'
-scene['reconstruction']='Fuller queen proportions; continuous splash crown with pressed rim valleys. Camera refitted to 51.5 degrees. Geometry review material; wood deferred.'
+scene['reconstruction']='Closely stacked collar plates with reduced spacers; adjusted upper stem and crown body. Continuous splash crown and 51.5-degree reference camera retained. Wood material deferred.'
 bpy.ops.object.select_all(action='DESELECT')
 queen.select_set(True);bpy.context.view_layer.objects.active=queen
 for screen in bpy.data.screens:
