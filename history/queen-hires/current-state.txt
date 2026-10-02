@@ -1,0 +1,257 @@
+Current queen reconstruction: explicit part-by-part shape feedback pass
+
+Use outputs/queen-hires/queen-rebuilt.blend and build_queen.py, not outputs/queen-model.
+Reference is the user's supplied C:/Users/toby/Desktop/hi-res-queen.png, copied to reference.png.
+Camera: orthographic; 55.32 degrees; 273.5px per unit; axis x483.625; z=0 projects to y874.
+All comparison images preserve the original 1254x1254 coordinates. No post-render registration.
+
+Earlier rebuild history: measured lathe profile; radial eight-fold crown scallops; rolled lip;
+flattened outer base; a gradual stem taper; smooth crown bowl with embedded finial.
+Fixed body-cap intrusion into bowl by tapering the hidden cap below the inner floor.
+Rebuild pass 06 smoothed inner crown control radii to remove a secondary wavy ridge.
+
+Geometry remains two closed editable meshes with Subdivision modifiers.
+Wood grain is explicitly deferred. Brown material is a plain glossy diagnostic only.
+Open review.html locally for opacity/blink/zoom and neutral/brown material switching.
+Reference is also packed in the .blend as a 50% camera background.
+
+Validation: validate_model.py checks evaluated mesh manifold edges, loose vertices,
+positive volume, packed reference and camera background. Output model-validation.json.
+overlay_qa.py generates comparison panels and contours. Use --reference-mask max-channel.
+Mask measurements cannot assess internal geometry or the final material. Avoid claiming
+silhouette overlap proves fidelity. The reference has small asymmetries and dark edges.
+
+Earlier thickness refinement after user said the reconstruction was close but bulky:
+- Narrowed the upper neck by up to .025 radius and the stem by roughly 8-12%.
+- Flattened the three collar bead profiles by roughly 18-20% in z.
+- Socket peak moved from (.561,1.383) to (.529,1.353), preserving front lip position
+  within a few pixels while retracting its rear silhouette. Stem seat stays fixed.
+- Removed excessive flare just above the stem seat.
+- Middle collar peak moved from (.618,3.177) to (.590,3.1365). Paired radial and
+  vertical shifts preserve the front arc but reduce the overly wide back.
+- Crown, finial, camera, base outline and foot groove unchanged.
+The pre-thinning full model/scripts/renders are in work/queen-hires/before-thinning.
+Viewer has Current/Previous paired with neutral/brown selections. Previous PNGs
+are stored in outputs; contours and detail panels always refer to Current.
+
+LATEST PASS: shape-feedback-01, following the named-parts diagram
+The user explicitly approved the finial, crown tips, crown rim and inner bowl.
+Keep the entire crown mesh unchanged unless the user requests another crown change.
+The user requested substantial body changes, which override the earlier preference
+for preserving every projected front ring edge:
+- Crown body / upper neck is about 14% slimmer through its middle.
+- All three collars were redesigned as thin shelves with small edge roundovers;
+  they are not merely compressed versions of the old rounded beads.
+- Stem has stronger taper and a narrower waist.
+- Raised socket now has a nearly straight wall and a smooth shoulder that rounds
+  inward to meet the stem. Its radius does not flare outward at the top, and the
+  separate projecting lip / seat bump has been removed.
+- Foot has a flat, coin-like cylindrical edge with small corner roundovers.
+  Its bottom plane is z=.070; near-constant radius .999 spans z=.108 to .249.
+  The raised bottom prevents the flat edge from extending below the reference.
+- Camera and all approved crown geometry remain unchanged. Wood remains deferred.
+
+Latest full backup before this shape pass:
+work/queen-hires/before-shape-feedback (model, generator, renders, and metadata).
+The viewer's Previous neutral/brown PNGs now represent that immediately preceding
+thinning version, not the older pre-thinning version. Current/Previous and materials
+can be selected independently; contours, fixed detail panels, and the second angle
+always represent Current.
+
+Final neutral, brown and second-angle renders are complete, and comparison panels
+were regenerated. Model validation passed, including exact equality of the approved
+crown's vertex positions, face indices, transforms and Subdivision settings against
+the before-shape-feedback model. See model-validation.json.
+Independent visual inspection found the requested changes clearly visible and no
+meaningful new regression: flat foot edge, no socket flare, thinner collars, smooth
+stem taper. All requested outputs are ready for review.
+README and viewer prose are updated for this pass; no viewer JavaScript changes.
+
+Future review should follow the user's part-specific feedback; do not reopen the
+approved crown merely to pursue a different highlight or minor silhouette mismatch.
+Silhouette analysis script identifies the specific profile region driving each
+image row. Dark reference edges need a lower max-channel threshold (3-6) around
+the stem and foot; the default12 mask clips those shadow areas.
+
+Do not attribute original Lichess artwork to James Clarke; attribution unverified.
+
+LATEST PASS: upper-collar refinement
+User: upper collar is too high, sits directly on middle collar, very subtle.
+- Upper collar peak lowered from z3.367 to about3.218; radius .506 to .488.
+- Tall intervening valley removed; a shallow valley at r.470,z3.195 leads
+  immediately into a small rounded lip, then smoothly back into the crown body.
+- Middle/lower collar control points, stem, socket, base, foot, and separate
+  approved crown retain their profiles. Crown body above z3.49 is unchanged.
+- Backup: work/queen-hires/before-upper-collar.
+- Current/Previous preview images now compare this change against that backup.
+- queen-3d.html contains the updated evaluated mesh; queen-parts.html is the
+  unchanged exported reference diagram. review.html markup is unchanged.
+
+LATEST VIEWER FIX: camera mismatch
+- The old interactive page used a 40-degree perspective lens at 25-degree tilt,
+  unlike the saved overlay's orthographic camera at 55.32-degree elevation.
+- Mesh/source hashes and binary contents were identical; it was a projection
+  and framing discrepancy, not different queen geometry.
+- Viewer now defaults to the saved Blender camera, including shift/framing.
+  Overlay camera / Reset / R / double-click restore it exactly. Free rotation
+  remains available, with an explicit Orthographic/Perspective control.
+- Exporter stores referenceCamera matrices. The viewer builder refuses stale
+  mesh metadata. Future mesh exports keep the reference camera synchronized.
+- Numerical check uses actual runtime uniforms and Blender's 30 world/pixel
+  samples across square/wide/narrow viewports: maximum pixel error <0.0001.
+  Tests also exercise rotation, projection switch, pixel-accurate pan and reset.
+  work/queen-hires/viewer-camera-check.json records the result.
+- No geometry, Blender material, render, or overlay-page edits in this fix.
+
+CURRENT STATE: upper-collar change REVERTED at user's explicit request.
+- Restored generator, blend, renders, landmarks and validation byte-for-byte
+  from work/queen-hires/before-upper-collar. Upper landmark is (.506,3.367).
+- Rejected low/subtle collar saved in work/queen-hires/reverted-upper-collar;
+  Previous overlay PNGs show that rejected variation, Current is restored.
+- Refreshed comparison images and rebuilt 3D viewer with restored mesh.
+- Preserved exact-overlay-camera default, projection controls, and viewer code.
+- User wants to discuss a thought about perspective next; make no further
+  camera or geometry changes unless requested.
+
+LATEST REQUEST: crown body as a simple widening tapered cylinder.
+- Changed only eight outer body radii at z3.425 through z4.055, removing the
+  inward waist. The profile is approximately a straight 6.5-degree taper from
+  (r.437,z3.425) to the existing (r.514,z4.102) rim connection.
+- Restored upper collar and every profile point below z3.425 are unchanged.
+  Crown mesh (rim, tips, inner bowl, finial), top closure and camera unchanged.
+- Backup: work/queen-hires/before-crown-body-taper. Previous images show that
+  preceding waist, with the same restored upper collar and matching camera.
+- Fixed-camera comparison shows a straighter wall, smooth joins without an
+  extra bead or gap, and no visible regression of the approved crown.
+- Updated overlay assets and exact-camera interactive viewer use the same model.
+
+LATEST REQUEST: even spacing of the three collars, retaining overlay fit.
+- Collar landmark centers are z2.984,3.155,3.326; both gaps are .171 units.
+  Lower ring remains the anchor. Middle moved up .018; upper moved down .041.
+- Radii .653,.6024544974,.4776314226 follow dr=cot(55.32deg)*dz to preserve
+  front arc pixel positions y556.50,518.52,463.83 with the fixed camera.
+- Smoothly interpolated the transitions into both modified rings. Crown body
+  remains a straight taper, reconnected from r.40863,z3.384 into the unchanged
+  r.514,z4.102 top connection. Approved separate crown mesh is unchanged.
+- Backup: work/queen-hires/before-even-collars. Previous PNGs show that version.
+- Numerical checks measure actual subdivided collar peaks from the exported
+  mesh in work/queen-hires/even-collars-measurements.json.
+
+LATEST REQUEST: compress everything from the raised socket through the foot.
+- Compressed lower profile heights by 20% about z=.35: socket/stem join goes
+  from z1.55 to z1.31 and bottom plane from .070 to .126. Section height is
+  1.184 instead of 1.480. Foot wall remains flat at r1.022.
+- Socket wall is nearly cylindrical at r.465; the shoulder rounds inward to
+  the stem. Lower stem blends back into the unchanged profile at z2.15.
+- Restrained radius corrections retain broad-base and foot overlay alignment.
+  Socket front shoulder remains a little lower than the reference; matching
+  that arc exactly would excessively narrow the socket under this camera.
+- Upper stem from z2.15, evenly spaced collars, crown body, separate approved
+  crown mesh, reference camera and both review/parts HTML files are unchanged.
+- Backup: work/queen-hires/before-base-compression. Previous previews show the
+  taller base immediately before this pass. Current shows the shorter section.
+- Updated renders and interactive viewer are built from the same saved model.
+
+LATEST REQUEST: widen and enlarge the socket to better match the reference.
+- Increased cylindrical socket wall radius from .465 to .520 (diameter +11.83%).
+  Wall now extends from z1.006 through z1.250, then rounds inward without flare.
+- Lifted rounded shoulder to (.500,1.330) and stem seat to (.443,1.440); their
+  projected front arcs move upward 9.83px and 13.61px to y779.48 and y749.54.
+- Enlarged socket-to-stem join to (.387,1.490), blending through the lower stem
+  back into unchanged (.251,2.15). Local radius remains monotonic throughout.
+- The compressed broad base and foot through (.5824,.906) remain identical,
+  as do upper stem, collars, crown body and approved separate crown mesh.
+- Fixed camera is unchanged. No editing of review.html or queen-parts.html.
+- Backup: work/queen-hires/before-socket-enlargement. Previous previews show
+  the compressed base with the smaller socket; Current is the enlarged socket.
+- Neutral overlay review shows a fuller socket and closer shoulder/seat arcs.
+
+LATEST REQUEST: compress the stretched-looking socket-to-foot section again.
+User authorized proportion changes anywhere needed to fit the reference.
+- Last socket enlargement restored much of the height removed earlier. This
+  pass genuinely reduces floor-to-socket-join height from1.364 to1.143 (16.2%).
+- Broad-base slope is about24% flatter, and socket wall is shorter. Retain
+  socket radius.520. Foot edge thickness is preserved and radius is1.037.
+- Compression is distributed: floor rises from.126 to.219, and socket/stem
+  join lowers from1.490 to1.362. Lower stem blends back to unchangedz2.15.
+- First16-sample draft used18.8% compression; overlay showed foot/rear base
+  too high. Lowered the flattened base .035, fading tozero at the upper wall,
+  recovering about5px of alignment without raising the socket shoulder.
+- The fixed reference camera and approved upper features remain unchanged.
+  No changes to review.html or queen-parts.html; only their geometry assets.
+- Backup: work/queen-hires/before-base-flattening. Previous previews show the
+  taller enlarged-socket version. Current shows the flattened lower assembly.
+- Construction script: work/queen-hires/flatten_lower_assembly.py. Draft image
+  and comparison preserved in work/queen-hires/base-flattening-draft*.png.
+- Exact pixel alignment of every lower arc is not claimed; the compression
+  is retained rather than undone merely to recover one projected ring edge.
+
+LATEST REQUEST: curve the bottom of the flare, with a slight outward bubble
+and a lower-profile groove as it approaches the foot.
+- Replaced the sharp flange/undercut belowz.658 with a gradual convex roll.
+  Roll control maximum isr1.014 atz.482, inside the foot'sr1.037 outer wall.
+- Groove control minimum isr.996 atz.412–.422, replacingr.951 nearz.45.
+  Depth relative to foot wall is reduced52%, and valley height is narrowed.
+- Flat foot profile throughz.3622 and all profile fromz.65807142 upward remain
+  identical. Lower assembly height, widened socket and camera are unchanged.
+- Backup: work/queen-hires/before-base-roundover. Previous images show the
+  sharper flare edge and deeper groove; Current shows the rounded roll.
+- Neutral overlay inspection shows a softer, continuous bottom curve and a
+  fine groove line. Do not rerun the earlier flatten_lower_assembly.py over
+  this refinement without incorporating the current rounded lower profile.
+- Geometry, neutral/brown/second-angle renders and interactive mesh viewer
+  are generated from the same updated build_queen.py and queen-rebuilt.blend.
+
+LATEST REQUEST: make the whole piece fatter; compress socket-to-foot further,
+fill out the flared base and shorten the stem. User also agrees crown looked off.
+- Coordinated proportion pass: lower assembly11.55% shorter, stem11.14% shorter,
+  crown body8.36% shorter, total queen8.54% shorter than before this request.
+- Stem waist radius.217→.24304 (+12%); socket wall.520→.544. Flare mid-radii
+  fill out to .930 at formerz.623, .905 at formerz.658, .832 at formerz.722,
+  and .733 at formerz.802. Maximum foot width and rounded roll/groove are kept.
+- Heights abovez.482 initially compressed15% through old collar underside2.916.
+  Upper assembly drops.3651. Collar group lifts.06 within that lowered head,
+  preserving equal spacing while shortening the tapered crown body.
+- Crown mesh LOCAL vertices/faces/subdivision remain identical; its object
+  now has location.z=-.3651. It moves with the shorter piece. Validation now
+  separately checks unchanged crown shape and the expected translation.
+- CURRENT CAMERA: orthographic elevation51.5deg; scale273.5px/unit;
+  axisx483.625; groundprojectiony880. The lower viewing angle restores much
+  of the reference framing after the real model-height reduction. No PNG warp.
+  Interactive viewer exports and uses this exact same Blender camera.
+- Current collar centers:2.6789,2.8499,3.0209, still.171 apart. Crown body from
+  aboutz3.0789 to3.7369; finial top about4.1299; bottom remains.219.
+- Backup: work/queen-hires/before-fuller-proportions. Previous previews retain
+  the taller/slimmer queen and old55.32deg camera. Both use original1254px coords.
+- work/queen-hires/full_proportions.py creates this candidate from that backup.
+  Current editable generator remains outputs/queen-hires/build_queen.py.
+- Neutral overlay checked at final camera; final side view and exact viewer
+  are rebuilt from the same model. Wood finish is still deferred.
+
+LATEST REQUEST: seamless crown-body flare and flatter/pressed rim valleys,
+with a water-splash character. User explicitly authorizes crown/rim changes.
+- Replaced two overlapping closed meshes with ONE continuous quad-ring mesh,
+  from sole through body, flare, rim, bowl and finial. No Boolean or voxel weld.
+- Preserved the first89 body rings exactly at192 angular samples. Bridge rings
+  (.497,3.625) and(.515,3.700) flow into outer flare valleys at(.529,3.752),
+  (.545,3.802),(.559,3.848); removed old body top cap and crown underside disk.
+- Old crown ring parameters retained as source. Radial term correctly uses
+  r-.100*w+.090*w*peak. Rim peak exponent is4.2 (3.8 at transition), returning
+  to original3.1 inside bowl. Rim sectionsj6–j10 compressed between tips about
+  z3.920 andr.545, with deformation fading at each tip. Inner bowl/egg retained.
+- Object is '01 Queen - continuous body and splash crown', at world origin.
+  No separate crown object or -.3651 object translation now; heights are baked
+  into the generated rings. Geometry has192 shared segments and Subsurf2.
+- Vertex groups: Body and collars; Crown flare and bowl; Egg finial.
+- Exporter supports single mesh when scene['continuous_crown'] is true.
+  Current interactive export715,776 triangles. Same51.5deg camera, Y0880.
+- Validation script: work/queen-hires/validate_seamless_crown.py compares body
+  prefix and common-angle finial positions against before-seamless-crown.
+  The older two-object crown validator is not appropriate for this topology.
+- Backup: work/queen-hires/before-seamless-crown. Previous previews show the
+  accepted fuller proportions with old separate crown and its seam.
+- Generator builder: work/queen-hires/make_seamless_crown.py. Current editable
+  generator still outputs/queen-hires/build_queen.py. Do not rerun older
+  proportion helpers without preserving this new continuous crown topology.
+- Final side and overlay inspected: smooth crown-body transition without the
+  prior ledge, flatter soft-edged sections between eight tips. Wood deferred.

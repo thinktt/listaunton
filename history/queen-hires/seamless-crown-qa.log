@@ -1,0 +1,185 @@
+{
+  "reference": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\reference.png",
+  "render": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\queen-matched.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "registration": "No shifts or scaling applied",
+  "mask_method": "Reference max-channel >12; model alpha >127; largest 8-connected component, holes filled",
+  "reference_bbox": [
+    210,
+    60,
+    757,
+    1083
+  ],
+  "model_bbox": [
+    200,
+    70,
+    766,
+    1060
+  ],
+  "silhouette_iou": 0.9400620131023376,
+  "reference_area_px": 367154,
+  "model_area_px": 359277,
+  "missing_reference_px": 15160,
+  "excess_model_px": 7283,
+  "row_extents": [
+    {
+      "y": 100,
+      "reference": [
+        396,
+        570
+      ],
+      "model": [
+        404,
+        562
+      ]
+    },
+    {
+      "y": 160,
+      "reference": [
+        314,
+        653
+      ],
+      "model": [
+        320,
+        646
+      ]
+    },
+    {
+      "y": 260,
+      "reference": [
+        317,
+        652
+      ],
+      "model": [
+        321,
+        645
+      ]
+    },
+    {
+      "y": 340,
+      "reference": [
+        336,
+        630
+      ],
+      "model": [
+        333,
+        633
+      ]
+    },
+    {
+      "y": 420,
+      "reference": [
+        306,
+        660
+      ],
+      "model": [
+        305,
+        661
+      ]
+    },
+    {
+      "y": 500,
+      "reference": [
+        339,
+        629
+      ],
+      "model": [
+        333,
+        634
+      ]
+    },
+    {
+      "y": 560,
+      "reference": [
+        448,
+        562
+      ],
+      "model": [
+        408,
+        558
+      ]
+    },
+    {
+      "y": 600,
+      "reference": [
+        363,
+        601
+      ],
+      "model": [
+        359,
+        607
+      ]
+    },
+    {
+      "y": 700,
+      "reference": [
+        243,
+        724
+      ],
+      "model": [
+        235,
+        731
+      ]
+    },
+    {
+      "y": 800,
+      "reference": [
+        212,
+        754
+      ],
+      "model": [
+        201,
+        765
+      ]
+    },
+    {
+      "y": 840,
+      "reference": [
+        211,
+        756
+      ],
+      "model": [
+        200,
+        766
+      ]
+    },
+    {
+      "y": 940,
+      "reference": [
+        229,
+        741
+      ],
+      "model": [
+        232,
+        734
+      ]
+    },
+    {
+      "y": 1000,
+      "reference": [
+        277,
+        702
+      ],
+      "model": [
+        290,
+        676
+      ]
+    },
+    {
+      "y": 1060,
+      "reference": [
+        374,
+        607
+      ],
+      "model": [
+        464,
+        502
+      ]
+    }
+  ],
+  "caution": "Silhouette overlap does not assess internal geometry, shading, material, or unseen surfaces."
+}
+Comparisons saved in C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires

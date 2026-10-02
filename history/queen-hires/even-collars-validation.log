@@ -1,0 +1,37 @@
+00:02.281  blend            | Read blend: "C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires\queen-rebuilt.blend"
+{
+  "meshes": [
+    {
+      "name": "01 Body - foot groove, raised socket, stem and collars",
+      "editable_vertices": 18240,
+      "render_vertices": 290306,
+      "render_faces": 290304,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "volume": 4.124735707302088,
+      "subdivision_editable": true
+    },
+    {
+      "name": "02 Crown - rolled scallops, shallow scoop and egg finial",
+      "editable_vertices": 7424,
+      "render_vertices": 116738,
+      "render_faces": 116736,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "volume": 0.16934961844955554,
+      "subdivision_editable": true
+    }
+  ],
+  "reference_packed": true,
+  "camera_background": true,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "render_samples": 32,
+  "approved_crown_unchanged": true,
+  "passed": true
+}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

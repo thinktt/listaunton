@@ -1,0 +1,14 @@
+C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires\build_queen.py:13: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*col,1);m.use_nodes=True
+C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires\build_queen.py:123: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Controlled studio');scene.world=world;world.use_nodes=True
+00:02.485  image.write      | ERROR OpenImageIO write failed: Could not open file "\.thumbnails\large\blender_8768_6c69a3908b1a9a5b4281ace6031e0c48.png.png"
+00:02.516  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+01:46.078  render           | Saved: 'C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires\queen-matched.png'
+03:30.344  render           | Saved: 'C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires\queen-brown.png'
+05:06.203  render           | Saved: 'C:\Users\toby\Documents\Codex\2026-10-01\go-x20\outputs\queen-hires\queen-three-quarter.png'
+Info: Saved as "queen-rebuilt.blend"
+HIRES_QUEEN_COMPLETE
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

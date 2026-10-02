@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "sourceBlend": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\queen-rebuilt.blend",
+  "sourceSha256": "ee52dd8e3985269e33fb20f21c804314984260a6d5b97b7ff997d3e5c7913265",
+  "sourceUnchanged": true,
+  "binary": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-hires\\viewer-mesh.bin",
+  "coordinateSystem": "Blender world XYZ, right-handed, +Z up; no axis conversion",
+  "endianness": "little",
+  "vertexType": "float32",
+  "indexType": "uint32",
+  "vertexCount": 357890,
+  "indexCount": 2147328,
+  "triangleCount": 715776,
+  "vertexStrideBytes": 24,
+  "positionOffsetBytes": 0,
+  "normalOffsetBytes": 12,
+  "vertexByteOffset": 0,
+  "vertexByteLength": 8589360,
+  "indexByteOffset": 8589360,
+  "indexByteLength": 8589312,
+  "totalByteLength": 17178672,
+  "bounds": {
+    "min": [
+      -1.0367107391357422,
+      -1.0367107391357422,
+      0.21899919211864471
+    ],
+    "max": [
+      1.0367107391357422,
+      1.0367107391357422,
+      4.129855155944824
+    ],
+    "center": [
+      0.0,
+      0.0,
+      2.1744272708892822
+    ],
+    "size": [
+      2.0734214782714844,
+      2.0734214782714844,
+      3.910856008529663
+    ]
+  },
+  "parts": [
+    {
+      "name": "01 Queen - continuous body and splash crown",
+      "vertexOffset": 0,
+      "vertexCount": 357890,
+      "indexOffset": 0,
+      "indexCount": 2147328,
+      "triangleCount": 715776,
+      "bounds": {
+        "min": [
+          -1.0367107391357422,
+          -1.0367107391357422,
+          0.21899919211864471
+        ],
+        "max": [
+          1.0367107391357422,
+          1.0367107391357422,
+          4.129855155944824
+        ],
+        "center": [
+          0.0,
+          0.0,
+          2.1744272708892822
+        ],
+        "size": [
+          2.0734214782714844,
+          2.0734214782714844,
+          3.910856008529663
+        ]
+      },
+      "subdivisionLevels": [
+        2
+      ]
+    }
+  ],
+  "referenceCamera": {
+    "type": "ORTHO",
+    "worldToCamera": [
+      1.0,
+      -0.0,
+      0.0,
+      -0.0,
+      -0.0,
+      0.782608151435852,
+      0.6225146651268005,
+      -0.9250459671020508,
+      0.0,
+      -0.6225146651268005,
+      0.782608151435852,
+      -13.162942886352539,
+      -0.0,
+      0.0,
+      -0.0,
+      1.0
+    ],
+    "projectionMatrix": [
+      0.436204195022583,
+      0.0,
+      0.0,
+      -0.22866825759410858,
+      0.0,
+      0.4362041652202606,
+      0.0,
+      -0.0,
+      0.0,
+      0.0,
+      -0.0020001998636871576,
+      -1.0001999139785767,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthoScale": 4.5850090980529785,
+    "shiftX": 0.11433412879705429,
+    "shiftY": 0.0,
+    "width": 1254,
+    "height": 1254,
+    "pixelAspectX": 1.0,
+    "pixelAspectY": 1.0,
+    "clipStart": 0.10000000149011612,
+    "clipEnd": 1000.0,
+    "matrixConvention": "4x4 row-major; multiplication by a column vector"
+  },
+  "validation": {
+    "allAttributesFinite": true,
+    "allIndicesInRange": true,
+    "normalLengthMin": 0.9999999501341398,
+    "normalLengthMax": 1.00000004994066,
+    "binaryRoundTripExact": true,
+    "sourceHashAndMtimeUnchanged": true,
+    "simplificationApplied": false
+  }
+}
