@@ -21,7 +21,7 @@ class Links(HTMLParser):
             target = ROOT / unquote(url.path)
             assert target.is_file(), f'Missing local link: {value}'
             checked.add(url.path)
-for name in ('index.html', 'queen-3d.html', 'review.html', 'queen-parts.html'):
+for name in ('index.html', 'queen-3d.html', 'review.html', 'queen-parts.html', 'staunton-references.html'):
     html = (ROOT / name).read_text(encoding='utf-8')
     assert 'file:///' not in html, f'Machine-specific URL in {name}'
     Links().feed(html)
@@ -37,4 +37,14 @@ assert meta, 'Missing viewer mesh metadata'
 expected = json.loads(meta.group(1))['sourceSha256']
 actual = hashlib.sha256((ROOT / 'models/queen/queen-rebuilt.blend').read_bytes()).hexdigest()
 assert expected == actual, 'Viewer is stale relative to the Blender model'
-print(f'PASS: four pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
+print(f'PASS: five pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
+
+manifest=json.loads((ROOT/'references/lichess-staunton-3d/original-png-manifest.json').read_text())
+assert len(manifest['files'])==12
+gallery=(ROOT/'staunton-references.html').read_text()
+assert gallery.count('<img ')==12
+for item in manifest['files']:
+    image=ROOT/'references/lichess-staunton-3d'/item['file']
+    assert hashlib.sha256(image.read_bytes()).hexdigest()==item['sha256'],item['file']
+    assert f'src="references/lichess-staunton-3d/{item["file"]}"' in gallery
+print('PASS: all twelve original PNG reference hashes and gallery images.')
