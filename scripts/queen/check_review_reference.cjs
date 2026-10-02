@@ -5,22 +5,23 @@ const html=fs.readFileSync(path.join(root,'review.html'),'utf8');
 const nodes=new Map(),buttons=[],windowListeners={},messages=[];
 const viewerWindow={postMessage(message){messages.push(message);}};
 function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},dataset:{},listeners:{},value:'',disabled:false,offsetLeft:0,offsetTop:0,scrollLeft:0,scrollTop:0,clientWidth:800,clientHeight:600,classList:{add(){},remove(){}},setPointerCapture(){},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,f){(this.listeners[k]??=[]).push(f);},fire(k,extra={}){if(k==='click'&&this.disabled)return;for(const f of this.listeners[k]??[])f({target:this,preventDefault(){},...extra});}});return nodes.get(id);}
-for(const match of html.matchAll(/<button\b([^>]*)>/g)){
+for(const match of html.slice(0,html.indexOf('<script id="viewer-document"')).matchAll(/<button\b([^>]*)>/g)){
  const attrs=Object.fromEntries([...match[1].matchAll(/([\w-]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
  const b=node(attrs.id??'button-'+buttons.length);b.className=attrs.class??'';
  for(const [k,v] of Object.entries(attrs))if(k.startsWith('data-'))b.dataset[k.slice(5)]=v;
  buttons.push(b);
 }
 node('opacity').value='50';
-node('model3d-frame').contentWindow=viewerWindow;node('model3d-frame').dataset.src='queen-3d.html';node('model3d-frame').src='about:blank';
-node('parts-frame').dataset.src='queen-parts.html';node('parts-frame').src='about:blank';
+node('model3d-frame').contentWindow=viewerWindow;node('model3d-frame').src='about:blank';
+node('parts-frame').src='about:blank';
+for(const id of ['viewer-document','parts-document'])node(id).textContent=html.match(new RegExp('<script id="'+id+'"[^>]*>(.*?)</script>','s'))[1];
 const alignmentText=html.match(/<script id="original-reference-alignment"[^>]*>(.*?)<\/script>/s)[1];
 node('original-reference-alignment').textContent=alignmentText;
 const alignment=JSON.parse(alignmentText);
 assert.equal(alignment.source_sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,alignment.source))).digest('hex'));
 assert.equal(alignment.target_sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,alignment.target))).digest('hex'));
 const document={getElementById:node,querySelectorAll:selector=>buttons.filter(b=>b.className.split(' ').includes(selector.slice(1))),addEventListener(){}};
-vm.runInNewContext(html.match(/<script>\s*([\s\S]*?)<\/script>/)[1],{document,window:{addEventListener(name,fn){windowListeners[name]=fn;}},ResizeObserver:class{observe(){}},console,JSON,Math,Number,String});
+vm.runInNewContext(html.match(/<script id="review-runtime">\s*([\s\S]*?)<\/script>/)[1],{document,window:{addEventListener(name,fn){windowListeners[name]=fn;}},ResizeObserver:class{observe(){}},console,JSON,Math,Number,String});
 const button=(key,value)=>buttons.find(b=>b.dataset[key]===value);
 const click=(key,value)=>button(key,value).fire('click');
 assert.equal(node('reference').src,'assets/queen/reference.png');
@@ -54,35 +55,32 @@ click('reference','original');assert.equal(node('contours').style.display,'none'
 assert.equal(node('viewport').scrollLeft,123);assert.equal(node('viewport').scrollTop,87);
 console.log('PASS: source switching, uniform placement, stable zoom/pan, opacity, revisions/materials, hold/blink, direct source comparison, contour guard, and source hashes.');
 
-// The first drag switches workspaces and queues its movement until WebGL is ready.
-assert.equal(node('model3d-frame').src,'about:blank');
+// Dragging the reference must only pan; the tabs alone select tools.
+assert.equal(node('model3d-frame').srcdoc,undefined);
 node('viewport').fire('pointerdown',{button:0,pointerId:10,clientX:100,clientY:100});
-node('review-shell').fire('pointermove',{pointerId:10,clientX:102,clientY:100});
-assert.equal(node('model3d-frame').src,'about:blank','A click must not accidentally enter 3D');
 node('review-shell').fire('pointermove',{pointerId:10,clientX:140,clientY:120});
-assert.equal(node('model3d-frame').src,'queen-3d.html');
+assert.equal(node('model3d-frame').srcdoc,undefined);
+assert.equal(node('viewport').scrollLeft,83);assert.equal(node('viewport').scrollTop,67);
+node('review-shell').fire('pointerup',{pointerId:10});
+click('workspace','model3d');
+const viewerDoc=node('model3d-frame').srcdoc;
+assert.equal(viewerDoc,JSON.parse(node('viewer-document').textContent));
 assert.equal(node('model3d-pane').hidden,false);assert.equal(node('overlay-pane').hidden,true);
 assert.equal(button('revision','current').attrs['aria-pressed'],'true');
-assert.equal(messages.length,0,'Commands must wait for viewer readiness');
+assert.equal(messages.length,0);
 windowListeners.message({source:{},data:{channel:'listaunton-review',event:'viewer-ready'}});
-assert.equal(messages.length,0,'Unrelated frames cannot acknowledge readiness');
+assert.equal(messages.length,0);
 windowListeners.message({source:viewerWindow,data:{channel:'listaunton-review',event:'viewer-ready'}});
-assert.equal(messages[0].action,'activate');assert.equal(messages[0].reset,true);
-assert.equal(messages[1].action,'orbit');assert(messages[1].dx>0&&messages[1].dy>0);
-node('review-shell').fire('pointermove',{pointerId:10,clientX:150,clientY:130,shiftKey:true});
-assert.equal(messages.at(-1).action,'pan');
-node('review-shell').fire('pointerup',{pointerId:10});assert.equal(messages.at(-1).action,'focus');
-click('workspace','overlay');assert.equal(node('overlay-pane').hidden,false);assert.equal(node('model3d-pane').hidden,true);
-assert.equal(node('viewport').scrollLeft,123);assert.equal(node('viewport').scrollTop,87);
-// Image panning is still possible without changing tools.
-node('viewport').fire('pointerdown',{button:0,pointerId:11,clientX:100,clientY:100,shiftKey:true});
-node('review-shell').fire('pointermove',{pointerId:11,clientX:120,clientY:110});
-assert.equal(node('viewport').scrollLeft,103);assert.equal(node('viewport').scrollTop,77);
-assert.equal(node('overlay-pane').hidden,false);node('review-shell').fire('pointerup',{pointerId:11});
-click('workspace','parts');assert.equal(node('parts-frame').src,'queen-parts.html');
-assert.equal(node('parts-pane').hidden,false);assert.equal(node('model3d-pane').hidden,true);assert.equal(node('overlay-pane').hidden,true);
+assert.equal(messages.length,1);assert.equal(messages[0].action,'activate');assert.equal(messages[0].reset,undefined);
+click('workspace','overlay');
+assert.equal(node('overlay-pane').hidden,false);assert.equal(node('model3d-pane').hidden,true);
+assert.equal(node('viewport').scrollLeft,83);assert.equal(node('viewport').scrollTop,67);
+click('workspace','parts');
+assert.equal(node('parts-frame').srcdoc,JSON.parse(node('parts-document').textContent));
+assert.equal(node('parts-pane').hidden,false);assert.equal(node('overlay-pane').hidden,true);
 assert.equal(button('reference','highres').attrs['aria-pressed'],'true');
 click('workspace','overlay');assert.equal(node('reference').src,'assets/queen/reference.png');
-click('workspace','model3d');assert.equal(messages.at(-1).action,'activate');assert.equal(messages.at(-1).reset,false);
-assert.equal(node('model3d-frame').src,'queen-3d.html');
-console.log('PASS: drag-to-3D handoff, queued first gesture, frame-source validation, current revision, image pan, high-res parts map and persistent 3D frame.');
+click('workspace','model3d');
+assert.equal(node('model3d-frame').srcdoc,viewerDoc);
+assert.equal(messages.length,2);assert(messages.every(message=>message.action==='activate'&&message.reset===undefined));
+console.log('PASS: tab-only switching, reference panning, embedded documents, readiness/source checks and persistent 3D frame.');

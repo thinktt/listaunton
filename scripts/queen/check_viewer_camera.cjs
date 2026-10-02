@@ -2,7 +2,8 @@
 // No browser, network request, or HTML rendering; Blender supplies expected pixels.
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const path=require('node:path'),root=path.resolve(__dirname,'../..');
-const html=fs.readFileSync(path.join(root,'queen-3d.html'),'utf8');
+const review=fs.readFileSync(path.join(root,'review.html'),'utf8');
+const html=JSON.parse(review.match(/<script id="viewer-document"[^>]*>(.*?)<\/script>/s)[1]);
 const truth=JSON.parse(fs.readFileSync(path.join(root,'build/queen/viewer-camera.json'),'utf8'));
 const text=id=>html.match(new RegExp(`<script id="${id}"[^>]*>([\\s\\S]*?)</script>`))[1];
 const source=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1],uniforms={},queue=[],listeners={},nodes=new Map();
@@ -67,18 +68,15 @@ const result={passed:true,blenderSampleCount:truth.samples.length,viewportShapes
 fs.writeFileSync(path.join(root,'build/queen/viewer-camera-check.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
 
 assert(parentMessages.some(message=>message.channel==='listaunton-review'&&message.event==='viewer-ready'));
-const rotationBeforeBridge=JSON.stringify(uniforms.uRotation);
-windowListeners.message({source:{},data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
-assert.equal(JSON.stringify(uniforms.uRotation),rotationBeforeBridge,'An unrelated window changed the model');
-windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
-assert.notEqual(JSON.stringify(uniforms.uRotation),rotationBeforeBridge,'The handoff drag did not rotate the model');
-windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',reset:true,material:'brown'}});flush();compare();
+listeners.keydown({key:'ArrowRight',shiftKey:false,preventDefault(){}});flush();
+const orbitBefore=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
+windowListeners.message({source:{},data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();
+assert.notEqual(node('brown').attrs['aria-pressed'],'true');
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();
 assert.equal(node('brown').attrs['aria-pressed'],'true');
-const beforeBridgePan=Array.from(uniforms.uPan);
-windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'pan',dx:.1,dy:-.1}});flush();
-assert.notDeepEqual(Array.from(uniforms.uPan),beforeBridgePan);
-const rotationBeforeInvalid=JSON.stringify(uniforms.uRotation);
-windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:NaN,dy:Infinity}});flush();
-assert.equal(JSON.stringify(uniforms.uRotation),rotationBeforeInvalid);
-windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',reset:true,material:'neutral'}});flush();compare();
-console.log('PASS: embedded viewer readiness, parent-only gesture bridge, orbit, pan, material sync and exact camera reset.');
+assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbitBefore);
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
+assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbitBefore);
+node('reset').onclick();flush();compare();
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',material:'neutral'}});flush();compare();
+console.log('PASS: embedded readiness, parent-only material sync, persistent orbit and native camera reset.');

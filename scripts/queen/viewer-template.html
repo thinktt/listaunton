@@ -225,23 +225,13 @@ new ResizeObserver(()=>{if(autoFit)fit();schedule();}).observe(canvas);
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=false;status.textContent='3D graphics paused. Restoring the view…';});
 canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();}catch(e){fail(e);}});
 function fail(error){status.hidden=false;status.textContent='The 3D view could not load. You can still open the Blender file below.';console.error(error);}
-// Optional parent-page bridge. Accept commands only from this frame's parent.
-// Normalized drag deltas let an overlay gesture continue while the frame loads.
+// Synchronize material when the parent selects the 3D tab; retain the orbit.
 if(window.parent&&window.parent!==window)window.addEventListener('message',event=>{
  const data=event.data;
- if(event.source!==window.parent||!data||data.channel!=='listaunton-review')return;
- if(data.action==='activate'){
-  if(data.reset)view('overlay');else if(autoFit)fit();
-  if(data.material==='neutral'||data.material==='brown')document.getElementById(data.material).onclick();
-  schedule();
- }else if(data.action==='orbit'||data.action==='pan'){
-  if(!Number.isFinite(data.dx)||!Number.isFinite(data.dy))return;
-  const r=canvas.getBoundingClientRect(),s=Math.min(r.width,r.height);
-  if(s<=0)return;
-  const dx=clamp(data.dx,-2,2)*s,dy=clamp(data.dy,-2,2)*s;
-  if(data.action==='pan')shift(dx,dy);
-  else turn(ball(r.left+r.width/2,r.top+r.height/2),ball(r.left+r.width/2+dx,r.top+r.height/2+dy));
- }else if(data.action==='focus')canvas.focus({preventScroll:true});
+ if(event.source!==window.parent||!data||data.channel!=='listaunton-review'||data.action!=='activate')return;
+ if(autoFit)fit();
+ if(data.material==='neutral'||data.material==='brown')document.getElementById(data.material).onclick();
+ schedule();
 });
 view('overlay');
 requestAnimationFrame(()=>setTimeout(()=>{try{
