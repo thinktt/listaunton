@@ -1,0 +1,22 @@
+{
+  "method": "Uniform scale and translation; no rotation, anisotropic stretch or warp",
+  "fit_target": "Selected high-resolution reference silhouette; not the reconstructed model",
+  "source": "references/lichess-staunton-3d/White-Queen.png",
+  "target": "assets/queen/reference.png",
+  "source_sha256": "0d950cd3691a4435917ade7b496787511a2cad9aa23f3992ba8fdece99e9646d",
+  "target_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "source_size": [
+    300,
+    300
+  ],
+  "canvas_size": [
+    1254,
+    1254
+  ],
+  "scale": 4.133012048192771,
+  "offset_x": 10.336626506024174,
+  "offset_y": 19.67638554216876,
+  "silhouette_iou_at_quarter_resolution": 0.9818977350720659,
+  "mask": "max RGB >12 and alpha >127; largest component and filled holes",
+  "display": "Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated."
+}

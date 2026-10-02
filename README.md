@@ -5,7 +5,7 @@ Recovering the Lichess **Staunton** chess set as editable 3D models from its sta
 Open [the home page](index.html) to access:
 
 - [Rotating queen](queen-3d.html): the current mesh, orbit controls, and the saved overlay camera.
-- [Reference overlay](review.html): current/previous renders, opacity and blink comparison, and detail views.
+- [Reference overlay](review.html): current/previous renders against either the selected high-res reference or original Lichess queen, direct comparison of both source images, opacity/blink controls, and detail views.
 - [Queen parts map](queen-parts.html): the names used to discuss the model.
 - [Original Staunton references](staunton-references.html): all twelve original PNG sprites from Lichess’s 3D Staunton set, paired by piece.
 
@@ -38,6 +38,7 @@ python scripts/queen/build_viewer.py
 python scripts/queen/overlay_qa.py --reference-mask max-channel
 blender --background --python scripts/queen/validate_stacked_collars.py
 node scripts/queen/check_viewer_camera.cjs
+node scripts/queen/check_review_reference.cjs
 python scripts/check_site.py
 ```
 
@@ -62,3 +63,13 @@ See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pa
 ## References and attribution
 
 The twelve sprites came from Lichess's `public/images/staunton/piece/Staunton` directory. Specific authorship is unclear; see `references/lichess-staunton-3d/SOURCE.txt`. The high-resolution queen reference was supplied by the project owner after generating it with ChatGPT. It is an interpretation used for reconstruction, not recovered original geometry. No new license claim is made for these reference assets.
+
+## Comparing the two queen references
+
+In `review.html`, **Selected high-res** uses the ChatGPT-generated candidate chosen by the owner. **Original Lichess** uses the untouched 300 × 300 `White-Queen.png` from the original 3D Staunton set. The model render stays in exactly the same place when switching references.
+
+**Compare references** places the selected high-res image over the original sprite, with the same opacity, hold and blink controls. While comparing sources, model revision/material controls are paused. The fixed detail panels and contours remain explicitly high-res comparisons.
+
+The original sprite is positioned by uniform scaling and translation fitted to the high-res silhouette, independently of the reconstructed model. No anisotropic stretching or warping is applied. The recorded scale is about 4.133×; the original and high-res outlines overlap by about 98.2% at the quarter-resolution fit. This describes silhouettes, not matching internal geometry or recovered detail. The browser smooths the enlarged source image.
+
+`assets/queen/original-reference-alignment.json` records placement, source hashes and fitting method. Run `python scripts/queen/align_original_reference.py` to recompute the alignment and update the page's embedded metadata if the references change. `node scripts/queen/check_review_reference.cjs` checks the page's actual control logic, alignment hashes, zoom/pan stability, hold/blink behavior and contour guards.

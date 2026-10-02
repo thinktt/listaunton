@@ -48,3 +48,9 @@ for item in manifest['files']:
     assert hashlib.sha256(image.read_bytes()).hexdigest()==item['sha256'],item['file']
     assert f'src="references/lichess-staunton-3d/{item["file"]}"' in gallery
 print('PASS: all twelve original PNG reference hashes and gallery images.')
+
+alignment=json.loads(re.search(r'<script id="original-reference-alignment"[^>]*>(.*?)</script>',review,re.S).group(1))
+assert alignment==json.loads((ROOT/'assets/queen/original-reference-alignment.json').read_text())
+for label in ('source','target'):
+    assert hashlib.sha256((ROOT/alignment[label]).read_bytes()).hexdigest()==alignment[label+'_sha256']
+print('PASS: original-reference alignment metadata and source image hashes.')

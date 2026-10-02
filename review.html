@@ -16,7 +16,7 @@
   button:hover{background:#2d3b52}button[aria-pressed=true]{background:#8ab8ff;border-color:#a8ceff;color:#08182d;font-weight:600}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc86c;outline-offset:3px}
   button:disabled{opacity:.45;cursor:default}.opacity{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:14px}.opacity label{white-space:nowrap}.opacity input{width:145px;accent-color:var(--accent)}output{font-variant-numeric:tabular-nums;min-width:37px;color:#d6e5ff}
   #viewport{height:min(78vh,960px);min-height:360px;overflow:auto;background:#030405;border:1px solid var(--line);border-top:0;overscroll-behavior:contain;cursor:grab;position:relative;scrollbar-color:#56647b #111723;touch-action:pan-x pan-y}
-  #viewport.dragging{cursor:grabbing}#stage{position:relative;flex:none;background:#000;margin:auto;isolation:isolate}
+  #viewport.dragging{cursor:grabbing}#stage{position:relative;flex:none;background:#000;margin:auto;isolation:isolate;overflow:hidden}
   #stage img{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;user-select:none;-webkit-user-drag:none}
   #reference{z-index:1}#render{z-index:2}#contours{z-index:3;display:none}
   .status{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:10px 15px;font-size:13px;color:var(--muted);background:var(--panel)}
@@ -31,17 +31,25 @@
   <div class="topline">
     <div>
       <h1>Queen reconstruction</h1>
-      <p class="intro">Compare the supplied reference with the rebuilt 3D geometry. Both images use the same camera framing and pixel coordinates. Choose neutral shading or a plain brown gloss preview to inspect the shape.</p>
+      <p class="intro">Compare the rebuilt geometry with your selected ChatGPT-generated high-res reference or the original Lichess queen. You can also overlay the two reference images directly.</p>
     </div>
     <a class="file-link" href="models/queen/queen-rebuilt.blend" download>Download Blender model</a>
   </div>
   <section aria-label="Interactive reference comparison">
     <div class="controls">
+      <div class="group" aria-label="Reference image">
+        <span style="font-size:14px;color:var(--muted);margin-right:3px">Reference</span>
+        <button type="button" class="reference-source" data-reference="highres" aria-pressed="true">Selected high-res</button>
+        <button type="button" class="reference-source" data-reference="original" aria-pressed="false">Original Lichess</button>
+      </div>
+      <div class="group separated">
+        <button type="button" id="compare-sources" aria-pressed="false" title="Overlay the selected high-res image on the original Lichess sprite, without the model.">Compare references</button>
+      </div>
       <div class="group" aria-label="Display mode">
         <button type="button" class="mode" data-mode="overlay" aria-pressed="true">Overlay</button>
         <button type="button" class="mode" data-mode="reference" aria-pressed="false">Reference</button>
         <button type="button" class="mode" data-mode="model" aria-pressed="false">Model</button>
-        <button type="button" class="mode" data-mode="contours" aria-pressed="false" title="Contours are available for the current revision only.">Contours (current)</button>
+        <button type="button" class="mode" data-mode="contours" aria-pressed="false" title="Contours are available for the current model and high-res reference only.">Contours (current)</button>
       </div>
       <div class="group separated" aria-label="Model revision">
         <span style="font-size:14px;color:var(--muted);margin-right:3px">Revision</span>
@@ -54,7 +62,7 @@
         <button type="button" class="material" data-material="brown" aria-pressed="false" title="Plain, untextured brown gloss. Wood grain is not included.">Brown preview</button>
       </div>
       <div class="opacity separated">
-        <label for="opacity">Model opacity</label>
+        <label id="opacity-label" for="opacity">Model opacity</label>
         <input id="opacity" type="range" min="0" max="100" value="50" step="1">
         <output id="opacity-value" for="opacity">50%</output>
       </div>
@@ -70,7 +78,7 @@
     </div>
     <div id="viewport" tabindex="0" aria-label="Comparison image. Drag to pan; select a zoom level above.">
       <div id="stage" style="width:1254px;height:1254px">
-        <img id="reference" src="assets/queen/reference.png" width="1254" height="1254" alt="Supplied wooden queen reference">
+        <img id="reference" src="assets/queen/reference.png" width="1254" height="1254" alt="Selected ChatGPT-generated high-resolution wooden queen reference">
         <img id="render" src="assets/queen/queen-matched.png" width="1254" height="1254" alt="Neutral material render of the reconstructed queen">
         <img id="contours" src="assets/queen/contour-overlay.png" width="1254" height="1254" alt="Reference contour in cyan and reconstructed model contour in magenta">
       </div>
@@ -78,14 +86,15 @@
     <div class="status">
       <span id="mode-status" aria-live="polite">50% model over reference</span>
       <span id="zoom-status">1254 × 1254 source pixels</span>
-      <span>Current contours: <span style="color:#2ee1f4">reference</span> / <span style="color:#ff4cd7">model</span> / white overlap</span>
+      <span>High-res contours (current): <span style="color:#2ee1f4">reference</span> / <span style="color:#ff4cd7">model</span> / white overlap</span>
     </div>
-    <p id="load-error" class="error">A comparison image could not be loaded. Keep this HTML file beside the PNG images in the queen-hires folder, then reload.</p>
-    <p class="hint">Drag to pan at 1× or 2×. Hold <kbd>Space</kbd> for the reference; release to return. <kbd>O</kbd> overlay · <kbd>R</kbd> reference · <kbd>M</kbd> model. “Blink” alternates the selected revision and the reference without moving them.<br>Current / Previous compares the stacked collars with the preceding wider-spaced revision. Contours always switch to Current.<br><span id="material-note">Brown preview uses plain, untextured gloss; the wood grain is still deferred.</span></p>
+    <p id="load-error" class="error">A comparison image could not be loaded. Keep this page with its assets and original reference images, then reload.</p>
+    <p id="reference-note" class="hint" style="margin-bottom:12px" aria-live="polite">Selected high-res: the ChatGPT-generated candidate chosen by the project owner.</p>
+    <p class="hint">Drag to pan at 1× or 2×. Hold <kbd>Space</kbd> for the reference; release to return. <kbd>O</kbd> overlay · <kbd>R</kbd> reference · <kbd>M</kbd> model. “Blink” alternates the selected revision and the reference without moving them.<br>Current / Previous compares the stacked collars with the preceding wider-spaced revision. Contours are available for the current model against the selected high-res image. Reference switching keeps the zoom and position fixed.<br><span id="material-note">Brown preview uses plain, untextured gloss; the wood grain is still deferred.</span></p>
   </section>
   <section aria-labelledby="details-heading">
     <h2 id="details-heading">Inspect the details</h2>
-    <p>These fixed comparison panels and the second-angle view show the current revision. Comparison panels use the neutral material.</p>
+    <p>These fixed panels always compare the current neutral model with the selected high-res reference. The reference selector above changes only the interactive comparison. The second-angle view shows the current geometry.</p>
     <div class="details">
       <figure class="card wide"><a href="assets/queen/comparison-crown.png" target="_blank"><img src="assets/queen/comparison-crown.png" alt="Crown and central finial: reference, model, and 50 percent overlay" loading="lazy"></a><figcaption>Crown and central finial<small>The scoop, eight tips, rolled rim, and partially seated egg-shaped finial.</small></figcaption></figure>
       <figure class="card wide"><a href="assets/queen/comparison-collars.png" target="_blank"><img src="assets/queen/comparison-collars.png" alt="Upper body and collars: reference, model, and overlay" loading="lazy"></a><figcaption>Upper body and collar stack</figcaption></figure>
@@ -94,8 +103,9 @@
       <figure class="card angle" id="angle-card"><a href="assets/queen/queen-three-quarter.png" target="_blank"><img id="angle-image" src="assets/queen/queen-three-quarter.png" alt="Reconstructed queen viewed from a second angle" loading="lazy"></a><figcaption>Second angle<small>Checks the three-dimensional shape beyond the reference view.</small></figcaption></figure>
     </div>
   </section>
-  <p class="endnote">Geometry study. Wood grain and the final surface finish are deferred. The overlay compares the unchanged reference and rendered images; it does not stretch or warp either image.</p>
+  <p class="endnote">Geometry study. Wood grain and the final surface finish are deferred. The high-res reference and model retain their original framing. The original 300 × 300 Lichess PNG is enlarged with one uniform scale and positioned to align its outline with the high-res reference. Its proportions and pixels are otherwise unchanged; browser smoothing adds no new detail.</p>
 </main>
+<script id="original-reference-alignment" type="application/json">{"method":"Uniform scale and translation; no rotation, anisotropic stretch or warp","fit_target":"Selected high-resolution reference silhouette; not the reconstructed model","source":"references/lichess-staunton-3d/White-Queen.png","target":"assets/queen/reference.png","source_sha256":"0d950cd3691a4435917ade7b496787511a2cad9aa23f3992ba8fdece99e9646d","target_sha256":"bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a","source_size":[300,300],"canvas_size":[1254,1254],"scale":4.133012048192771,"offset_x":10.336626506024174,"offset_y":19.67638554216876,"silhouette_iou_at_quarter_resolution":0.9818977350720659,"mask":"max RGB >12 and alpha >127; largest component and filled holes","display":"Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated."}</script>
 <script>
 (() => {
   'use strict';
@@ -104,6 +114,11 @@
   const slider=byId('opacity'),output=byId('opacity-value'),modeStatus=byId('mode-status'),zoomStatus=byId('zoom-status');
   let mode='overlay',material='neutral',revision='current',zoomMode='fit',scale=1,width=1254,height=1254,holding=false,drag=null;
   const modes=[...document.querySelectorAll('.mode')],zooms=[...document.querySelectorAll('.zoom')],materials=[...document.querySelectorAll('.material')],revisions=[...document.querySelectorAll('.revision')];
+  let referenceSource='highres',compareSources=false;
+  const referenceButtons=[...document.querySelectorAll('.reference-source')];
+  const alignment=JSON.parse(byId('original-reference-alignment').textContent);
+  const highresFile='assets/queen/reference.png';
+  const originalFile='references/lichess-staunton-3d/White-Queen.png';
   const modelFiles={current:{neutral:'assets/queen/queen-matched.png',brown:'assets/queen/queen-brown.png'},previous:{neutral:'assets/queen/queen-previous.png',brown:'assets/queen/queen-previous-brown.png'}};
 
   function refresh(){
@@ -115,16 +130,46 @@
     modes.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===mode)));
     materials.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.material===material)));
     revisions.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.revision===revision)));
+    referenceButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.reference===referenceSource)));
+    byId('compare-sources').setAttribute('aria-pressed',String(compareSources));
+    materials.concat(revisions).forEach(button=>button.disabled=compareSources);
+    modes.find(button=>button.dataset.mode==='contours').disabled=referenceSource==='original'||compareSources;
+    modes.find(button=>button.dataset.mode==='model').textContent=compareSources?'High-res':'Model';
+    byId('opacity-label').textContent=compareSources?'High-res opacity':'Model opacity';
     const materialLabel=material==='brown'?'brown preview':'neutral model';
     const revisionLabel=revision==='current'?'Current':'Previous';
-    modeStatus.textContent=holding?'Reference (held)':active==='overlay'?revisionLabel+' · '+slider.value+'% '+materialLabel+' over reference':active==='reference'?'Reference only (shared by both revisions)':active==='model'?revisionLabel+' model · '+(material==='brown'?'plain brown gloss':'neutral material'):'Current revision · reference and model silhouettes';
-    byId('blink').textContent=mode==='model'?'Blink to reference':'Blink to model';
+    const referenceLabel=referenceSource==='original'?'original Lichess':'selected high-res';
+    const layerLabel=compareSources?'selected high-res':revisionLabel+' '+materialLabel;
+    modeStatus.textContent=holding?referenceLabel+' (held)':active==='overlay'?slider.value+'% '+layerLabel+' over '+referenceLabel:active==='reference'?referenceLabel+' only':active==='model'?layerLabel+' only':'Current model · selected high-res contours';
+    byId('blink').textContent=mode==='model'?'Blink to reference':compareSources?'Blink to high-res':'Blink to model';
+    byId('reference-note').textContent=referenceSource==='original'?'Original Lichess: 300 × 300 PNG, enlarged '+alignment.scale.toFixed(3)+'× with uniform scaling and positioning against the selected high-res outline. No stretching, warping, or generated detail. '+(compareSources?'The upper layer is the high-res image; model controls are paused.':'The upper layer is the selected model render.'):'Selected high-res: the ChatGPT-generated candidate chosen by the project owner. Original framing is unchanged.';
   }
   function updateRender(){
-    render.src=modelFiles[revision][material];
-    render.alt=(revision==='current'?'Current':'Previous')+' queen reconstruction with '+(material==='brown'?'plain, untextured brown gloss':'neutral shading');
+    render.src=compareSources?highresFile:modelFiles[revision][material];
+    render.alt=compareSources?'Selected ChatGPT-generated high-resolution reference':(revision==='current'?'Current':'Previous')+' queen reconstruction with '+(material==='brown'?'plain, untextured brown gloss':'neutral shading');
+  }
+  function updateReference(){
+    const original=referenceSource==='original';
+    reference.style.inset='auto';
+    reference.style.left=(original?alignment.offset_x/width*100:0)+'%';
+    reference.style.top=(original?alignment.offset_y/height*100:0)+'%';
+    reference.style.width=(original?alignment.source_size[0]*alignment.scale/width*100:100)+'%';
+    reference.style.height=(original?alignment.source_size[1]*alignment.scale/height*100:100)+'%';
+    reference.src=original?originalFile:highresFile;
+    reference.alt=original?'Original Lichess 3D Staunton white queen, uniformly enlarged':'Selected ChatGPT-generated high-resolution wooden queen reference';
+  }
+  function setReference(next){
+    referenceSource=next;compareSources=false;
+    if(next==='original'&&mode==='contours')mode='overlay';
+    updateReference();updateRender();refresh();
+  }
+  function toggleSourceComparison(){
+    compareSources=!compareSources;
+    if(compareSources){referenceSource='original';mode='overlay';}
+    updateReference();updateRender();refresh();
   }
   function setMode(next){
+    if(next==='contours'&&(referenceSource==='original'||compareSources))return;
     mode=next;
     if(next==='contours'&&revision!=='current'){revision='current';updateRender();}
     refresh();
@@ -153,6 +198,8 @@
     zooms.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.zoom===zoomMode)));
     zoomStatus.textContent=Math.round(scale*100)+'% display · '+width+' × '+height+' source pixels';
   }
+  referenceButtons.forEach(button=>button.addEventListener('click',()=>setReference(button.dataset.reference)));
+  byId('compare-sources').addEventListener('click',toggleSourceComparison);
   modes.forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.mode)));
   materials.forEach(button=>button.addEventListener('click',()=>setMaterial(button.dataset.material)));
   revisions.forEach(button=>button.addEventListener('click',()=>setRevision(button.dataset.revision)));
@@ -183,13 +230,13 @@
   });
   const endDrag=()=>{drag=null;viewport.classList.remove('dragging');};
   viewport.addEventListener('pointerup',endDrag);viewport.addEventListener('pointercancel',endDrag);viewport.addEventListener('lostpointercapture',endDrag);
-  reference.addEventListener('load',()=>{width=reference.naturalWidth;height=reference.naturalHeight;resize(zoomMode,false);});
+  reference.addEventListener('load',()=>{byId('load-error').style.display='none';});
   [reference,render].forEach(image=>image.addEventListener('error',()=>{byId('load-error').style.display='block';}));
   contours.addEventListener('error',()=>{const button=modes.find(item=>item.dataset.mode==='contours');button.disabled=true;});
   byId('angle-image').addEventListener('error',()=>{byId('angle-card').hidden=true;});
   new ResizeObserver(()=>{if(zoomMode==='fit')resize('fit',false);}).observe(viewport);
-  if(reference.complete&&reference.naturalWidth){width=reference.naturalWidth;height=reference.naturalHeight;}
-  resize('fit',false);refresh();
+  // The comparison canvas always stays 1254 square, regardless of source resolution.
+  updateReference();resize('fit',false);refresh();
 })();
 </script>
 </body>
