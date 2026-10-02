@@ -40,7 +40,7 @@
       <div class="group" aria-label="Reference image">
         <span style="font-size:14px;color:var(--muted);margin-right:3px">Reference</span>
         <button type="button" class="reference-source" data-reference="highres" aria-pressed="true">Selected high-res</button>
-        <button type="button" class="reference-source" data-reference="original" aria-pressed="false">Original Lichess</button>
+        <button type="button" class="reference-source" data-reference="original" aria-pressed="false">Original Lichess (black)</button>
       </div>
       <div class="group separated">
         <button type="button" id="compare-sources" aria-pressed="false" title="Overlay the selected high-res image on the original Lichess sprite, without the model.">Compare references</button>
@@ -105,7 +105,7 @@
   </section>
   <p class="endnote">Geometry study. Wood grain and the final surface finish are deferred. The high-res reference and model retain their original framing. The original 300 × 300 Lichess PNG is enlarged with one uniform scale and positioned to align its outline with the high-res reference. Its proportions and pixels are otherwise unchanged; browser smoothing adds no new detail.</p>
 </main>
-<script id="original-reference-alignment" type="application/json">{"method":"Uniform scale and translation; no rotation, anisotropic stretch or warp","fit_target":"Selected high-resolution reference silhouette; not the reconstructed model","source":"references/lichess-staunton-3d/White-Queen.png","target":"assets/queen/reference.png","source_sha256":"0d950cd3691a4435917ade7b496787511a2cad9aa23f3992ba8fdece99e9646d","target_sha256":"bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a","source_size":[300,300],"canvas_size":[1254,1254],"scale":4.133012048192771,"offset_x":10.336626506024174,"offset_y":19.67638554216876,"silhouette_iou_at_quarter_resolution":0.9818977350720659,"mask":"max RGB >12 and alpha >127; largest component and filled holes","display":"Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated."}</script>
+<script id="original-reference-alignment" type="application/json">{"method":"Uniform scale and translation; no rotation, anisotropic stretch or warp","fit_target":"Selected high-resolution reference silhouette; not the reconstructed model","source":"references/lichess-staunton-3d/Black-Queen.png","target":"assets/queen/reference.png","source_sha256":"b214bd3b522122f9a6040c4fd6ed4e00b2fe9d16436bf4f52e5f155b4b190567","target_sha256":"bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a","source_size":[300,300],"canvas_size":[1254,1254],"scale":4.218205761316873,"offset_x":-1.7027654320988321,"offset_y":-3.1759835390946662,"silhouette_iou_at_quarter_resolution":0.9846504428583713,"mask":"max RGB >12 and alpha >127; largest component and filled holes","display":"Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated."}</script>
 <script>
 (() => {
   'use strict';
@@ -118,7 +118,7 @@
   const referenceButtons=[...document.querySelectorAll('.reference-source')];
   const alignment=JSON.parse(byId('original-reference-alignment').textContent);
   const highresFile='assets/queen/reference.png';
-  const originalFile='references/lichess-staunton-3d/White-Queen.png';
+  const originalFile='references/lichess-staunton-3d/Black-Queen.png';
   const modelFiles={current:{neutral:'assets/queen/queen-matched.png',brown:'assets/queen/queen-brown.png'},previous:{neutral:'assets/queen/queen-previous.png',brown:'assets/queen/queen-previous-brown.png'}};
 
   function refresh(){
@@ -142,7 +142,7 @@
     const layerLabel=compareSources?'selected high-res':revisionLabel+' '+materialLabel;
     modeStatus.textContent=holding?referenceLabel+' (held)':active==='overlay'?slider.value+'% '+layerLabel+' over '+referenceLabel:active==='reference'?referenceLabel+' only':active==='model'?layerLabel+' only':'Current model · selected high-res contours';
     byId('blink').textContent=mode==='model'?'Blink to reference':compareSources?'Blink to high-res':'Blink to model';
-    byId('reference-note').textContent=referenceSource==='original'?'Original Lichess: 300 × 300 PNG, enlarged '+alignment.scale.toFixed(3)+'× with uniform scaling and positioning against the selected high-res outline. No stretching, warping, or generated detail. '+(compareSources?'The upper layer is the high-res image; model controls are paused.':'The upper layer is the selected model render.'):'Selected high-res: the ChatGPT-generated candidate chosen by the project owner. Original framing is unchanged.';
+    byId('reference-note').textContent=referenceSource==='original'?'Original Lichess black queen: 300 × 300 PNG, enlarged '+alignment.scale.toFixed(3)+'× with uniform scaling and positioning against the selected high-res outline. No stretching, warping, or generated detail. '+(compareSources?'The upper layer is the high-res image; model controls are paused.':'The upper layer is the selected model render.'):'Selected high-res: the ChatGPT-generated candidate chosen by the project owner. Original framing is unchanged.';
   }
   function updateRender(){
     render.src=compareSources?highresFile:modelFiles[revision][material];
@@ -156,7 +156,7 @@
     reference.style.width=(original?alignment.source_size[0]*alignment.scale/width*100:100)+'%';
     reference.style.height=(original?alignment.source_size[1]*alignment.scale/height*100:100)+'%';
     reference.src=original?originalFile:highresFile;
-    reference.alt=original?'Original Lichess 3D Staunton white queen, uniformly enlarged':'Selected ChatGPT-generated high-resolution wooden queen reference';
+    reference.alt=original?'Original Lichess 3D Staunton black queen, uniformly enlarged':'Selected ChatGPT-generated high-resolution wooden queen reference';
   }
   function setReference(next){
     referenceSource=next;compareSources=false;
