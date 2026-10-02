@@ -8,7 +8,8 @@
       "file": "assets/candidates/king/candidate-1.png",
       "sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
       "source": "references/lichess-staunton-3d/Black-King.png",
-      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+      "color": "black"
     },
     {
       "piece": "king",
@@ -17,7 +18,8 @@
       "file": "assets/candidates/king/candidate-2.png",
       "sha256": "294fc8632e8aaa4ea7bdbd792c742b0ebb73a04b296a3e4ca2c1b2db42de89b0",
       "source": "references/lichess-staunton-3d/Black-King.png",
-      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+      "color": "black"
     },
     {
       "piece": "king",
@@ -26,7 +28,8 @@
       "file": "assets/candidates/king/candidate-3.png",
       "sha256": "f422806eb42276997795f9c62e1e5e8b97e77da1acc5ef7c0b8e739c0a3416bb",
       "source": "references/lichess-staunton-3d/Black-King.png",
-      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+      "color": "black"
     },
     {
       "piece": "rook",
@@ -35,7 +38,8 @@
       "file": "assets/candidates/rook/candidate-1.png",
       "sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
       "source": "references/lichess-staunton-3d/Black-Rook.png",
-      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+      "color": "black"
     },
     {
       "piece": "rook",
@@ -44,7 +48,8 @@
       "file": "assets/candidates/rook/candidate-2.png",
       "sha256": "74c270282b914e2cb746d8df367791869f76fa43f3f3ea65a0be5af0f8af5007",
       "source": "references/lichess-staunton-3d/Black-Rook.png",
-      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+      "color": "black"
     },
     {
       "piece": "rook",
@@ -53,7 +58,8 @@
       "file": "assets/candidates/rook/candidate-3.png",
       "sha256": "1fef405cd9418b0597a6f2918f26b0050e83e737d6d5106f5645f5cb1135c31d",
       "source": "references/lichess-staunton-3d/Black-Rook.png",
-      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+      "color": "black"
     },
     {
       "piece": "bishop",
@@ -64,7 +70,8 @@
       "source": "references/lichess-staunton-3d/Black-Bishop.png",
       "source_sha256": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585",
       "revision": 2,
-      "correction": "Replace shallow engraved line with a full deep open mitre slit, using the original black bishop."
+      "correction": "Replace shallow engraved line with a full deep open mitre slit, using the original black bishop.",
+      "color": "black"
     },
     {
       "piece": "bishop",
@@ -75,7 +82,8 @@
       "source": "references/lichess-staunton-3d/Black-Bishop.png",
       "source_sha256": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585",
       "revision": 2,
-      "correction": "Replace shallow engraved line with a full deep open mitre slit, using the original black bishop."
+      "correction": "Replace shallow engraved line with a full deep open mitre slit, using the original black bishop.",
+      "color": "black"
     },
     {
       "piece": "bishop",
@@ -86,7 +94,8 @@
       "source": "references/lichess-staunton-3d/Black-Bishop.png",
       "source_sha256": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585",
       "revision": 2,
-      "correction": "Replace shallow engraved line with a full deep open mitre slit, using the original black bishop."
+      "correction": "Replace shallow engraved line with a full deep open mitre slit, using the original black bishop.",
+      "color": "black"
     },
     {
       "piece": "knight",
@@ -95,7 +104,8 @@
       "file": "assets/candidates/knight/candidate-1.png",
       "sha256": "3f460185db9827742d60d520055bfb1d13b6e370b1842771bf3b7583a92632cf",
       "source": "references/lichess-staunton-3d/Black-Knight.png",
-      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+      "color": "black"
     },
     {
       "piece": "knight",
@@ -104,7 +114,8 @@
       "file": "assets/candidates/knight/candidate-2.png",
       "sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
       "source": "references/lichess-staunton-3d/Black-Knight.png",
-      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+      "color": "black"
     },
     {
       "piece": "knight",
@@ -113,7 +124,8 @@
       "file": "assets/candidates/knight/candidate-3.png",
       "sha256": "635f2bbeb1d6ca1d1eae17a2463e9cb59e3b85221d9c0164113ed4551ad880bb",
       "source": "references/lichess-staunton-3d/Black-Knight.png",
-      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+      "color": "black"
     },
     {
       "piece": "pawn",
@@ -122,7 +134,8 @@
       "file": "assets/candidates/pawn/candidate-1.png",
       "sha256": "e1431e56d2f7cc6c26b7d951cd6fe9fd52451942dc15a200e90c1bbb64d16a61",
       "source": "references/lichess-staunton-3d/Black-Pawn.png",
-      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
+      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+      "color": "black"
     },
     {
       "piece": "pawn",
@@ -131,7 +144,8 @@
       "file": "assets/candidates/pawn/candidate-2.png",
       "sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
       "source": "references/lichess-staunton-3d/Black-Pawn.png",
-      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
+      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+      "color": "black"
     },
     {
       "piece": "pawn",
@@ -140,10 +154,161 @@
       "file": "assets/candidates/pawn/candidate-3.png",
       "sha256": "71fd50d02b2e74f689f9b34ce2cc228d8ac4df21acc61cc7be2a72d38bde6e51",
       "source": "references/lichess-staunton-3d/Black-Pawn.png",
-      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
+      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+      "color": "black"
+    },
+    {
+      "piece": "king",
+      "color": "white",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE king, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 1 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/king/white-candidate-1.png",
+      "sha256": "386de7e737a5b57ebaf0372e799d272f5a7019dc9306ea4cefdd3c2e15247030",
+      "source": "references/lichess-staunton-3d/White-King.png",
+      "source_sha256": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48"
+    },
+    {
+      "piece": "king",
+      "color": "white",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE king, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 2 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/king/white-candidate-2.png",
+      "sha256": "b21aeee9c143604797693ebb4e11d1e42b726db14d80d1bf25e21aba528fd60b",
+      "source": "references/lichess-staunton-3d/White-King.png",
+      "source_sha256": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48"
+    },
+    {
+      "piece": "king",
+      "color": "white",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE king, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 3 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/king/white-candidate-3.png",
+      "sha256": "2f0e897f12674a91295f397ed62c7bcc5260a354edee9a9523eac30a245f0bc8",
+      "source": "references/lichess-staunton-3d/White-King.png",
+      "source_sha256": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48"
+    },
+    {
+      "piece": "rook",
+      "color": "white",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE rook, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 1 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/rook/white-candidate-1.png",
+      "sha256": "b4965e5628979e1f38eef9c83943a63b30f4bd3c4012b41cfc7e2e738156bb76",
+      "source": "references/lichess-staunton-3d/White-Rook.png",
+      "source_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    {
+      "piece": "rook",
+      "color": "white",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE rook, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 2 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/rook/white-candidate-2.png",
+      "sha256": "127256336dd3438a530b573408dcfc5066d6066a26cde2ef2d074bcf4148d6d8",
+      "source": "references/lichess-staunton-3d/White-Rook.png",
+      "source_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    {
+      "piece": "rook",
+      "color": "white",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE rook, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 3 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/rook/white-candidate-3.png",
+      "sha256": "9ecc6e2a40f67323ba85ff0edf946db8262257c4293ea590858e049384fbd047",
+      "source": "references/lichess-staunton-3d/White-Rook.png",
+      "source_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    {
+      "piece": "bishop",
+      "color": "white",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE bishop, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 1 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/bishop/white-candidate-1.png",
+      "sha256": "b59d4395db126532fa83f0bbcbeec432424e99f67ebea9c517cf8218b4d0b345",
+      "source": "references/lichess-staunton-3d/White-Bishop.png",
+      "source_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7"
+    },
+    {
+      "piece": "bishop",
+      "color": "white",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE bishop, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 2 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/bishop/white-candidate-2.png",
+      "sha256": "e66ce4687dc2c8001c76665f0edc9c1a016fa111efe10e52ddfd6a0cea260318",
+      "source": "references/lichess-staunton-3d/White-Bishop.png",
+      "source_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7"
+    },
+    {
+      "piece": "bishop",
+      "color": "white",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE bishop, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 3 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/bishop/white-candidate-3.png",
+      "sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "source": "references/lichess-staunton-3d/White-Bishop.png",
+      "source_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7"
+    },
+    {
+      "piece": "knight",
+      "color": "white",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE knight, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 1 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/knight/white-candidate-1.png",
+      "sha256": "0134895d15ac22605dc4e61cff2a3eeb43db482034b65280161f363a91344ea6",
+      "source": "references/lichess-staunton-3d/White-Knight.png",
+      "source_sha256": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304"
+    },
+    {
+      "piece": "knight",
+      "color": "white",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE knight, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 2 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/knight/white-candidate-2.png",
+      "sha256": "91615e7ee45cf7f9eda50e6f3f2e547d528de24309199123a0b6dda6ff2d62da",
+      "source": "references/lichess-staunton-3d/White-Knight.png",
+      "source_sha256": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304"
+    },
+    {
+      "piece": "knight",
+      "color": "white",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE knight, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 3 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/knight/white-candidate-3.png",
+      "sha256": "493170b3ed3da6e7952123dee424301dd91ece00237aa8e8ab87eb3467152b1e",
+      "source": "references/lichess-staunton-3d/White-Knight.png",
+      "source_sha256": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304"
+    },
+    {
+      "piece": "pawn",
+      "color": "white",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE pawn, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 1 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/pawn/white-candidate-1.png",
+      "sha256": "45a79199be1e90e87d6971f15bc7e21a5051c601352d05a537f26a65cb2ddd66",
+      "source": "references/lichess-staunton-3d/White-Pawn.png",
+      "source_sha256": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3"
+    },
+    {
+      "piece": "pawn",
+      "color": "white",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE pawn, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 2 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/pawn/white-candidate-2.png",
+      "sha256": "3481201e9d0ff92f354c3cb09f58fe550e0f9c3783e2ba433182ccbc7b31dc93",
+      "source": "references/lichess-staunton-3d/White-Pawn.png",
+      "source_sha256": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3"
+    },
+    {
+      "piece": "pawn",
+      "color": "white",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE pawn, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 3 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
+      "file": "assets/candidates/pawn/white-candidate-3.png",
+      "sha256": "86f2b18006e1779a9d4d4b58f64449be74e6433d95bf8d97384d2ba7a860facb",
+      "source": "references/lichess-staunton-3d/White-Pawn.png",
+      "source_sha256": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3"
     }
   ],
   "date": "2026-10-02",
-  "intent": "Three independent faithful upscale interpretations per original black sprite. Fine details are generated, not recovered.",
+  "intent": "Three independent faithful upscale interpretations per black and white original for king, rook, bishop, knight and pawn. Queen excluded. Fine details are generated, not recovered.",
   "background": "Transparent alpha preserved; files copied without pixel editing."
 }

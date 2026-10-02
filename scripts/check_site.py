@@ -74,7 +74,9 @@ print('PASS: original-reference alignment metadata and source image hashes.')
 
 generation=json.loads((ROOT/'assets/candidates/generation.json').read_text(encoding='utf-8'))
 placements=json.loads((ROOT/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
-assert len(generation['records'])==15
+assert len(generation['records'])==30
+from collections import Counter
+assert Counter((r['piece'],r['color']) for r in generation['records'])=={(p,c):3 for p in ('king','rook','bishop','knight','pawn') for c in ('black','white')}
 for row in generation['records']:
     assert hashlib.sha256((ROOT/row['file']).read_bytes()).hexdigest()==row['sha256']
     assert hashlib.sha256((ROOT/row['source']).read_bytes()).hexdigest()==row['source_sha256']
@@ -82,10 +84,16 @@ for piece,images in placements['pieces'].items():
     page=(ROOT/f'{piece}-review.html').read_text(encoding='utf-8')
     embedded=json.loads(re.search(r'<script id="comparison-data"[^>]*>(.*?)</script>',page,re.S).group(1))
     assert embedded['images']==images
-    assert len(images)==5
+    assert len(images)==8
+    assert len({item["id"] for item in images})==8
     for item in images:
         assert (ROOT/item['file']).is_file()
         assert item['width']==item['height']
         assert .5<item['scale']<1.5
-        if item['id'].startswith('candidate'):assert item['width']>=1024
-print('PASS: fifteen candidate hashes, source provenance, five comparison pages and alignment data.')
+        if 'candidate' in item['id']:assert item['width']>=1024
+print('PASS: thirty candidate hashes, source provenance, five comparison pages and alignment data.')
+
+for row in generation['records']:
+    if row['piece']=='bishop' and row['color']=='white':
+        assert not re.search(r'\b(mitre|miter|slit|cut|groove)\b',row['prompt'],re.I)
+print('PASS: white bishops used plain upscale prompts without mitre-specific instructions.')
