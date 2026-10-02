@@ -1,6 +1,6 @@
 {
-  "reference": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\reference.png",
-  "render": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\queen-matched.png",
+  "reference": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\assets\\queen\\reference.png",
+  "render": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\assets\\queen\\queen-matched.png",
   "size": [
     1254,
     1254
@@ -19,11 +19,11 @@
     766,
     1060
   ],
-  "silhouette_iou": 0.9400620131023376,
+  "silhouette_iou": 0.9380908268171637,
   "reference_area_px": 367154,
-  "model_area_px": 359277,
-  "missing_reference_px": 15160,
-  "excess_model_px": 7283,
+  "model_area_px": 358818,
+  "missing_reference_px": 15763,
+  "excess_model_px": 7427,
   "row_extents": [
     {
       "y": 100,
@@ -65,8 +65,8 @@
         630
       ],
       "model": [
-        333,
-        633
+        328,
+        638
       ]
     },
     {
@@ -76,8 +76,8 @@
         660
       ],
       "model": [
-        305,
-        661
+        303,
+        663
       ]
     },
     {
@@ -87,8 +87,8 @@
         629
       ],
       "model": [
-        333,
-        634
+        339,
+        627
       ]
     },
     {

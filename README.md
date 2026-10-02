@@ -9,7 +9,7 @@ Open [the home page](index.html) to access:
 - [Queen parts map](queen-parts.html): the names used to discuss the model.
 - [Original Staunton references](staunton-references.html): all twelve original PNG sprites from Lichess’s 3D Staunton set, paired by piece.
 
-The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
+The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. Its three thin collars now sit closely stacked, with roughly 44% less center spacing and narrow grooves in place of the tall spacers. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
 
 ## Files
 
@@ -36,14 +36,14 @@ blender --background --python scripts/queen/export_viewer_mesh.py
 blender --background --python scripts/queen/inspect_viewer_camera.py
 python scripts/queen/build_viewer.py
 python scripts/queen/overlay_qa.py --reference-mask max-channel
-blender --background --python scripts/queen/validate_seamless_crown.py
+blender --background --python scripts/queen/validate_stacked_collars.py
 node scripts/queen/check_viewer_camera.cjs
 python scripts/check_site.py
 ```
 
 Use an absolute Blender executable path if it is not on PATH. For Windows Blender with this repository in WSL, pass Windows/UNC versions of script paths (obtain them with `wslpath -w`), rather than Linux `/home/...` paths. Each script resolves repository paths from its own location. The saved model still contains its original render-output path until rebuilt; the external reference is already packed.
 
-`validate_seamless_crown.py` checks the current crown revision against the preserved pre-seamless baseline. Its exact body/finial preservation checks are specific to that change; revise those expectations deliberately when future geometry changes are authorized.
+`validate_stacked_collars.py` checks the current revision against `history/queen-hires/before-stacked-collars`: a closed connected mesh, materially closer collar centers, narrow exposed spacers, and unchanged base/socket/lower stem and crown/bowl/finial. The earlier `validate_seamless_crown.py` remains available for its historical revision. Preservation checks must be revised deliberately when a future change authorizes those regions.
 
 The 3D viewer embeds its mesh and works without a server. The parts map keeps its original sandbox/CSP and uses external UI libraries from unpkg.com, so it needs internet access for those libraries.
 

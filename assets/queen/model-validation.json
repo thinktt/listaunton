@@ -1,11 +1,6 @@
 {
-  "validation": "Continuous queen and preserved control regions",
+  "validation": "Stacked collars, manifold queen, and preserved lower body/crown",
   "passed": true,
-  "source_blend": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\queen-rebuilt.blend",
-  "baseline_blend": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-hires\\before-seamless-crown\\queen-rebuilt.blend",
-  "coordinate_tolerance": 2e-06,
-  "source_sha256": "ee52dd8e3985269e33fb20f21c804314984260a6d5b97b7ff997d3e5c7913265",
-  "baseline_sha256": "319b21f3e1e3b0bd2292857f13ae8862490bba86d92d804309bac375aaa29995",
   "mesh_object_count": 1,
   "control_connected_components": 1,
   "meshes": [
@@ -17,7 +12,7 @@
       "non_manifold_edges": 0,
       "loose_vertices": 0,
       "loose_edges": 0,
-      "volume": 3.4308867356584747,
+      "volume": 3.3761809284250157,
       "subdivision_editable": true
     }
   ],
@@ -66,35 +61,51 @@
       ]
     ]
   },
-  "ring_metadata": {
-    "ring_segments": 192,
-    "body_preserved_ring_count": 89,
-    "finial_first_ring": 108,
-    "finial_ring_count": 9,
-    "finial_source_first_ring": 20
-  },
-  "preserved_body_control_vertices": {
-    "vertex_count": 17088,
+  "preserved_base_socket_lower_stem": {
+    "vertex_count": 9024,
     "coordinate_space": "world",
     "tolerance": 2e-06,
     "max_distance": 0.0,
     "max_component_difference": 0.0,
     "passed": true
   },
-  "preserved_finial_control_vertices": {
-    "vertex_count": 576,
+  "preserved_crown_bowl_finial": {
+    "vertex_count": 5376,
     "coordinate_space": "world",
     "tolerance": 2e-06,
-    "max_distance": 1.4901161193847656e-07,
-    "max_component_difference": 1.4901161193847656e-07,
-    "passed": true,
-    "rings": 9,
-    "shared_angles_per_ring": 64,
-    "baseline_segments": 256,
-    "current_segments": 192,
-    "baseline_first_ring": 20
+    "max_distance": 0.0,
+    "max_component_difference": 0.0,
+    "passed": true
   },
-  "authorized_changed_region": "Crown body transition, flare, rim and bowl; no full-crown equality check",
-  "source_file_unchanged": true,
-  "baseline_file_unchanged": true
+  "collar_centers": {
+    "previous": [
+      2.6789000034332275,
+      2.849900007247925,
+      3.023400068283081
+    ],
+    "current": [
+      2.7409000396728516,
+      2.8358999490737915,
+      2.9333999156951904
+    ],
+    "center_spacing": [
+      0.09499990940093994,
+      0.09749996662139893
+    ],
+    "spacing_reduction_percent": [
+      44.44449866569254,
+      43.804073589551905
+    ]
+  },
+  "exposed_spacer_heights": [
+    0.013000011444091797,
+    0.01100015640258789
+  ],
+  "source_sha256": "dcffeafda38af779c8bd0856ac0001cd468ca14bbfaf792918f13c921a2a5a32",
+  "baseline_sha256": "ee52dd8e3985269e33fb20f21c804314984260a6d5b97b7ff997d3e5c7913265",
+  "authorized_changed_region": "Upper stem, three collar plates and their junction with the crown body",
+  "source_files_unchanged": {
+    "\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\models\\queen\\queen-rebuilt.blend": true,
+    "\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\history\\queen-hires\\before-stacked-collars\\queen-rebuilt.blend": true
+  }
 }
