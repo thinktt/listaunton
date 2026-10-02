@@ -17,6 +17,7 @@ async function check(piece){
  for(const a of data.images)for(const b of data.images){
    node('image-a').value=a.id;node('image-b').value=b.id;node('image-b').fire('change');await settle();
    assert.equal(node('photo-a').src,a.file);assert.equal(node('photo-b').src,b.file);
+   if(piece==='king')for(const id of ['photo-a','photo-b']){const style=node(id).style;assert(parseFloat(style.top)>=3,'King needs top headroom');assert(parseFloat(style.left)>=0);assert(parseFloat(style.top)+parseFloat(style.height)<=100);assert(parseFloat(style.left)+parseFloat(style.width)<=100);}
    assert.equal(node('download-a').href,a.file);assert.equal(node('download-b').href,b.file);
    node('only-a').fire('click');assert.equal(node('layer-b').style.opacity,'0');
    node('only-b').fire('click');assert.equal(node('layer-b').style.opacity,'1');
@@ -29,7 +30,7 @@ async function check(piece){
  node('blend').fire('click');assert.equal(node('layer-b').style.clipPath,'none');
  node('image-a').value='black';node('image-b').value='white';node('image-b').fire('change');await settle();
  assert.equal(node('photo-b').style.transform,piece==='knight'?'scaleX(-1)':'none');
- node('align').checked=false;node('align').fire('change');assert.equal(node('photo-b').style.transform,'none');assert.equal(node('photo-b').style.width,'100%');
+ node('align').checked=false;node('align').fire('change');assert.equal(node('photo-b').style.transform,'none');assert.equal(node('photo-b').style.width,piece==='king'?'90%':'100%');
  node('mix').value='20';node('swap').fire('click');await settle();assert.equal(node('image-a').value,'white');assert.equal(node('image-b').value,'black');assert.equal(node('mix').value,'80');
  node('zoom-2').fire('click');assert.equal(node('stage').style.width,'2508px');
  node('viewport').scrollLeft=100;node('viewport').scrollTop=120;

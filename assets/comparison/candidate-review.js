@@ -14,8 +14,10 @@
   }
   function place(image,item){
     const aligned=$('align').checked,s=aligned?item.scale:1;
-    image.style.width=s*100+'%';image.style.height=s*100+'%';
-    image.style.left=(aligned?item.x:0)+'%';image.style.top=(aligned?item.y:0)+'%';
+    // A shared inset keeps the entire aligned king visible without changing relative geometry.
+    const padding=data.viewPadding||0,frameScale=1-padding/50;
+    image.style.width=s*frameScale*100+'%';image.style.height=s*frameScale*100+'%';
+    image.style.left=(padding+(aligned?item.x:0)*frameScale)+'%';image.style.top=(padding+(aligned?item.y:0)*frameScale)+'%';
     image.style.transform=aligned&&item.flip?'scaleX(-1)':'none';
   }
   function paint(){

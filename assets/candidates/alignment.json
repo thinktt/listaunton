@@ -153,38 +153,38 @@
       {
         "id": "candidate-1",
         "label": "Candidate 1",
-        "file": "assets/candidates/bishop/candidate-1.png",
+        "file": "assets/candidates/bishop/candidate-1-deep-slit.png",
         "width": 1254,
         "height": 1254,
         "flip": false,
-        "scale": 1.0022222222222221,
-        "x": -0.2777777777777778,
-        "y": 0.0,
-        "silhouette_iou": 0.9694949158193032
+        "scale": 0.983343935538592,
+        "x": 0.3159457167090728,
+        "y": 0.18659881255301355,
+        "silhouette_iou": 0.9586390927284857
       },
       {
         "id": "candidate-2",
         "label": "Candidate 2",
-        "file": "assets/candidates/bishop/candidate-2.png",
+        "file": "assets/candidates/bishop/candidate-2-deep-slit.png",
         "width": 1254,
         "height": 1254,
         "flip": false,
-        "scale": 1.0133680555555555,
-        "x": -1.083767361111111,
-        "y": -0.9887152777777778,
-        "silhouette_iou": 0.9637766225054503
+        "scale": 0.9612976782752902,
+        "x": 1.0447761194029839,
+        "y": 0.9282752902155871,
+        "silhouette_iou": 0.9638856378532018
       },
       {
         "id": "candidate-3",
         "label": "Candidate 3",
-        "file": "assets/candidates/bishop/candidate-3.png",
+        "file": "assets/candidates/bishop/candidate-3-deep-slit.png",
         "width": 1254,
         "height": 1254,
         "flip": false,
-        "scale": 1.0022569444444445,
-        "x": -0.026041666666666668,
-        "y": -0.09982638888888888,
-        "silhouette_iou": 0.9721102150537635
+        "scale": 0.9611111111111111,
+        "x": 1.185185185185181,
+        "y": -0.012345679012347609,
+        "silhouette_iou": 0.9603714143591444
       }
     ],
     "knight": [
