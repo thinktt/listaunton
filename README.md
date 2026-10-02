@@ -2,7 +2,7 @@
 
 Recovering the Lichess **Staunton** chess set as editable 3D models from its static rendered images. We are starting with the queen. This is an independent art reconstruction, with interpretation where a single image cannot determine the geometry.
 
-[The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html); other pieces show “Coming soon.”
+[The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html). The king, rook, bishop, knight and pawn each open their own reference-candidate comparison page.
 
 The review has three tabs: **Reference overlay**, **3D model**, and **Parts map**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. All tools are embedded in this one page, with no separate viewer or map pages.
 
@@ -76,3 +76,18 @@ The original sprite is positioned by uniform scaling and translation fitted to t
 `scripts/queen/build_viewer.py` embeds the generated mesh viewer and the preserved `parts-template.html` into `review.html`. The parts map retains its sandbox and CSP. Both frames initialize on first use. Only messages from the corresponding parent/frame are accepted.
 
 `check_review_reference.cjs` covers tab-only switching, image panning, reference selection and comparison controls. `check_viewer_camera.cjs` checks the exact Blender camera projection, native orbit, zoom and pan, and preservation of the view when changing tabs. `check_site.py` validates local links, the twelve source PNG hashes, embedded model provenance and the preserved parts map.
+
+## Reference candidates
+
+Each non-queen piece has three independently generated 1254 × 1254 PNG enlargements of its black original, made with the built-in image-generation tool. Original black and white 300 × 300 sprites remain available in both selectors. These are interpretations for review; generated grain and carving details are not recovered source geometry.
+
+Choose images A and B, then use Blend or Wipe and the A–B slider. A only/B only show exact endpoints; Swap exchanges the sources. Fit/1×/2× and drag-to-pan inspect details. Background choices help inspect transparent edges. Align to original applies measured uniform scale and translation without warping. The white knight is mirrored in aligned view to match the black knight; disable alignment to see its original orientation and framing. Downloads always return the untouched image files.
+
+`assets/candidates/generation.json` records all 15 exact prompts, source hashes and output hashes. `assets/candidates/alignment.json` records browser placement and approximate silhouette overlap. `scripts/analyze_candidates.py` measures images using Pillow and NumPy without writing image pixels; `scripts/build_candidate_pages.py` builds the five HTML pages. Neither script modifies the queen review.
+
+```sh
+python scripts/analyze_candidates.py
+python scripts/build_candidate_pages.py
+node scripts/check_candidate_review.cjs
+python scripts/check_site.py
+```
