@@ -6,6 +6,8 @@
 <title>Queen reconstruction — reference comparison</title>
 <style>
   :root{color-scheme:dark;--bg:#0b0e14;--panel:#141a25;--line:#303b4e;--text:#edf1f8;--muted:#a7b4c8;--accent:#89b9ff}
+  [hidden]{display:none!important}
+  .workspace-tabs{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 12px}.workspace-tabs button{font-size:15px;padding:10px 17px}.workspace-tabs small{color:var(--muted);margin-left:6px}.tool-frame{display:block;width:100%;height:min(82vh,1000px);min-height:640px;border:1px solid var(--line);border-radius:12px;background:#121519}.tool-note{margin:12px 0 30px;font-size:13px}.map-frame{height:min(90vh,1100px);min-height:760px}
   *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,"Segoe UI",sans-serif}
   main{max-width:1540px;margin:auto;padding:30px clamp(16px,3vw,42px) 64px}h1{font-size:clamp(25px,3vw,38px);letter-spacing:-.025em;margin:0 0 7px}h2{font-size:22px;margin:0 0 14px}
   p{color:var(--muted);margin:0 0 20px}.intro{max-width:950px}.topline{display:flex;justify-content:space-between;align-items:start;gap:20px;margin-bottom:22px}
@@ -15,7 +17,7 @@
   button{font:inherit;font-size:14px;background:#202a3b;border:1px solid #3e4e68;color:var(--text);padding:8px 12px;border-radius:7px;cursor:pointer;touch-action:none}
   button:hover{background:#2d3b52}button[aria-pressed=true]{background:#8ab8ff;border-color:#a8ceff;color:#08182d;font-weight:600}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc86c;outline-offset:3px}
   button:disabled{opacity:.45;cursor:default}.opacity{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:14px}.opacity label{white-space:nowrap}.opacity input{width:145px;accent-color:var(--accent)}output{font-variant-numeric:tabular-nums;min-width:37px;color:#d6e5ff}
-  #viewport{height:min(78vh,960px);min-height:360px;overflow:auto;background:#030405;border:1px solid var(--line);border-top:0;overscroll-behavior:contain;cursor:grab;position:relative;scrollbar-color:#56647b #111723;touch-action:pan-x pan-y}
+  #viewport{height:min(78vh,960px);min-height:360px;overflow:auto;background:#030405;border:1px solid var(--line);border-top:0;overscroll-behavior:contain;cursor:grab;position:relative;scrollbar-color:#56647b #111723;touch-action:none}
   #viewport.dragging{cursor:grabbing}#stage{position:relative;flex:none;background:#000;margin:auto;isolation:isolate;overflow:hidden}
   #stage img{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;user-select:none;-webkit-user-drag:none}
   #reference{z-index:1}#render{z-index:2}#contours{z-index:3;display:none}
@@ -31,11 +33,18 @@
   <div class="topline">
     <div>
       <h1>Queen reconstruction</h1>
-      <p class="intro">Compare the rebuilt geometry with your selected ChatGPT-generated high-res reference or the original Lichess queen. You can also overlay the two reference images directly.</p>
+      <p class="intro">Compare the rebuilt geometry with your selected ChatGPT-generated high-res reference or the original Lichess queen. You can also overlay the two references, drag the piece into 3D, or open the labeled parts map—all here.</p>
     </div>
     <a class="file-link" href="models/queen/queen-rebuilt.blend" download>Download Blender model</a>
   </div>
-  <section aria-label="Interactive reference comparison">
+  <section id="review-shell" aria-label="Queen review tools">
+    <div class="workspace-tabs" role="group" aria-label="Review tool">
+      <button type="button" class="workspace" data-workspace="overlay" aria-pressed="true" aria-controls="overlay-pane">Reference overlay</button>
+      <button type="button" class="workspace" data-workspace="model3d" aria-pressed="false" aria-controls="model3d-pane">3D model</button>
+      <button type="button" class="workspace" data-workspace="parts" aria-pressed="false" aria-controls="parts-pane">Parts map</button>
+      <small id="workspace-note" aria-live="polite">Drag the picture to rotate in 3D · Shift-drag to pan the image</small>
+    </div>
+    <div id="overlay-pane">
     <div class="controls">
       <div class="group" aria-label="Reference image">
         <span style="font-size:14px;color:var(--muted);margin-right:3px">Reference</span>
@@ -76,7 +85,7 @@
         <button type="button" id="blink">Blink to model</button>
       </div>
     </div>
-    <div id="viewport" tabindex="0" aria-label="Comparison image. Drag to pan; select a zoom level above.">
+    <div id="viewport" tabindex="0" aria-label="Comparison image. Drag to enter 3D and rotate. Shift-drag to pan the image; use the zoom controls above.">
       <div id="stage" style="width:1254px;height:1254px">
         <img id="reference" src="assets/queen/reference.png" width="1254" height="1254" alt="Selected ChatGPT-generated high-resolution wooden queen reference">
         <img id="render" src="assets/queen/queen-matched.png" width="1254" height="1254" alt="Neutral material render of the reconstructed queen">
@@ -90,9 +99,18 @@
     </div>
     <p id="load-error" class="error">A comparison image could not be loaded. Keep this page with its assets and original reference images, then reload.</p>
     <p id="reference-note" class="hint" style="margin-bottom:12px" aria-live="polite">Selected high-res: the ChatGPT-generated candidate chosen by the project owner.</p>
-    <p class="hint">Drag to pan at 1× or 2×. Hold <kbd>Space</kbd> for the reference; release to return. <kbd>O</kbd> overlay · <kbd>R</kbd> reference · <kbd>M</kbd> model. “Blink” alternates the selected revision and the reference without moving them.<br>Current / Previous compares the stacked collars with the preceding wider-spaced revision. Contours are available for the current model against the selected high-res image. Reference switching keeps the zoom and position fixed.<br><span id="material-note">Brown preview uses plain, untextured gloss; the wood grain is still deferred.</span></p>
+    <p class="hint">Drag the picture to enter 3D and rotate the current model. Shift-drag pans the overlay at 1× or 2×. Hold <kbd>Space</kbd> for the reference; release to return. <kbd>O</kbd> overlay · <kbd>R</kbd> reference · <kbd>M</kbd> model. “Blink” alternates the selected revision and the reference without moving them.<br>Current / Previous compares the stacked collars with the preceding wider-spaced revision. Contours are available for the current model against the selected high-res image. Reference switching keeps the zoom and position fixed.<br><span id="material-note">Brown preview uses plain, untextured gloss; the wood grain is still deferred.</span></p>
+    </div>
+    <div id="model3d-pane" hidden>
+      <iframe id="model3d-frame" class="tool-frame" title="Current queen — interactive 3D rotation, zoom and pan" data-src="queen-3d.html" src="about:blank"></iframe>
+      <p class="tool-note">Current model. Drag to rotate; scroll or pinch to zoom; Shift-drag, right-drag or two fingers to pan. Use Reset view for the overlay camera, or Reference overlay above to return to comparison. <a href="queen-3d.html" target="_blank" rel="noopener">Open standalone 3D view ↗</a></p>
+    </div>
+    <div id="parts-pane" hidden>
+      <iframe id="parts-frame" class="tool-frame map-frame" title="High-res queen reference with fourteen labeled parts and name key" data-src="queen-parts.html" src="about:blank"></iframe>
+      <p class="tool-note">The selected high-res reference and the original interactive parts key. Select a name or numbered callout to see its description. <a href="queen-parts.html" target="_blank" rel="noopener">Open standalone parts map ↗</a></p>
+    </div>
   </section>
-  <section aria-labelledby="details-heading">
+  <section id="details-section" aria-labelledby="details-heading">
     <h2 id="details-heading">Inspect the details</h2>
     <p>These fixed panels always compare the current neutral model with the selected high-res reference. The reference selector above changes only the interactive comparison. The second-angle view shows the current geometry.</p>
     <div class="details">
@@ -115,6 +133,40 @@
   let mode='overlay',material='neutral',revision='current',zoomMode='fit',scale=1,width=1254,height=1254,holding=false,drag=null;
   const modes=[...document.querySelectorAll('.mode')],zooms=[...document.querySelectorAll('.zoom')],materials=[...document.querySelectorAll('.material')],revisions=[...document.querySelectorAll('.revision')];
   let referenceSource='highres',compareSources=false;
+  let workspace='overlay',viewerReady=false,viewerStarted=false,partsStarted=false;
+  const workspaceButtons=[...document.querySelectorAll('.workspace')];
+  const shell=byId('review-shell'),viewerFrame=byId('model3d-frame'),partsFrame=byId('parts-frame');
+  const viewerCommands=[];
+  function sendViewer(command){
+    const message={channel:'listaunton-review',...command};
+    if(viewerReady)viewerFrame.contentWindow.postMessage(message,'*');
+    else{
+      const last=viewerCommands[viewerCommands.length-1];
+      if(last&&last.action===message.action&&(message.action==='orbit'||message.action==='pan')){last.dx+=message.dx;last.dy+=message.dy;}
+      else viewerCommands.push(message);
+    }
+  }
+  function showWorkspace(next,fromDrag=false){
+    workspace=next;holding=false;
+    if(next==='model3d'){
+      compareSources=false;revision='current';updateRender();
+    }else if(next==='parts')setReference('highres');
+    for(const name of ['overlay','model3d','parts'])byId(name+'-pane').hidden=name!==next;
+    byId('details-section').hidden=next!=='overlay';
+    workspaceButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.workspace===next)));
+    if(next==='model3d'){
+      if(!viewerStarted){viewerStarted=true;viewerFrame.src=viewerFrame.dataset.src;}
+      sendViewer({action:'activate',reset:fromDrag,material});
+    }else if(next==='parts'&&!partsStarted){partsStarted=true;partsFrame.src=partsFrame.dataset.src;}
+    if(next==='overlay'&&zoomMode==='fit')resize('fit',false);
+    byId('workspace-note').textContent=next==='overlay'?'Drag the picture to rotate in 3D · Shift-drag to pan the image':next==='model3d'?'Current 3D model · Reference overlay returns to comparison':'Selected high-res reference · Click a part name or numbered callout';
+    refresh();
+  }
+  window.addEventListener('message',event=>{
+    if(event.source!==viewerFrame.contentWindow||!viewerStarted||event.data?.channel!=='listaunton-review'||event.data.event!=='viewer-ready')return;
+    viewerReady=true;
+    for(const message of viewerCommands.splice(0))viewerFrame.contentWindow.postMessage(message,'*');
+  });
   const referenceButtons=[...document.querySelectorAll('.reference-source')];
   const alignment=JSON.parse(byId('original-reference-alignment').textContent);
   const highresFile='assets/queen/reference.png';
@@ -198,6 +250,7 @@
     zooms.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.zoom===zoomMode)));
     zoomStatus.textContent=Math.round(scale*100)+'% display · '+width+' × '+height+' source pixels';
   }
+  workspaceButtons.forEach(button=>button.addEventListener('click',()=>showWorkspace(button.dataset.workspace)));
   referenceButtons.forEach(button=>button.addEventListener('click',()=>setReference(button.dataset.reference)));
   byId('compare-sources').addEventListener('click',toggleSourceComparison);
   modes.forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.mode)));
@@ -213,7 +266,7 @@
   hold.addEventListener('keydown',event=>{if(event.code==='Enter'){event.preventDefault();holding=true;refresh();}});
   hold.addEventListener('keyup',event=>{if(event.code==='Enter')release();});
   document.addEventListener('keydown',event=>{
-    if(event.target.tagName==='INPUT')return;
+    if(event.target.tagName==='INPUT'||workspace!=='overlay')return;
     if(event.code==='Space'){event.preventDefault();holding=true;refresh();}
     if(!event.ctrlKey&&!event.metaKey&&!event.altKey){
       if(event.code==='KeyO')setMode('overlay');if(event.code==='KeyR')setMode('reference');if(event.code==='KeyM')setMode('model');
@@ -222,19 +275,34 @@
   document.addEventListener('keyup',event=>{if(event.code==='Space'){event.preventDefault();release();}});
   window.addEventListener('blur',()=>{release();drag=null;viewport.classList.remove('dragging');});
   viewport.addEventListener('pointerdown',event=>{
-    if(event.button!==0||event.pointerType==='touch')return;
-    viewport.setPointerCapture(event.pointerId);drag={x:event.clientX,y:event.clientY,left:viewport.scrollLeft,top:viewport.scrollTop};viewport.classList.add('dragging');
+    if(event.button!==0&&event.button!==2)return;
+    event.preventDefault();shell.setPointerCapture(event.pointerId);
+    drag={id:event.pointerId,x:event.clientX,y:event.clientY,lastX:event.clientX,lastY:event.clientY,left:viewport.scrollLeft,top:viewport.scrollTop,pan:event.shiftKey||event.button===2,rotating:false,unit:Math.max(1,Math.min(viewport.clientWidth,viewport.clientHeight))};
+    viewport.classList.add('dragging');
   });
-  viewport.addEventListener('pointermove',event=>{
-    if(!drag)return;viewport.scrollLeft=drag.left-(event.clientX-drag.x);viewport.scrollTop=drag.top-(event.clientY-drag.y);
+  shell.addEventListener('pointermove',event=>{
+    if(!drag||event.pointerId!==drag.id)return;
+    event.preventDefault();
+    if(drag.pan){viewport.scrollLeft=drag.left-(event.clientX-drag.x);viewport.scrollTop=drag.top-(event.clientY-drag.y);return;}
+    if(!drag.rotating){
+      if(Math.hypot(event.clientX-drag.x,event.clientY-drag.y)<4)return;
+      drag.rotating=true;showWorkspace('model3d',true);
+    }
+    sendViewer({action:event.shiftKey?'pan':'orbit',dx:(event.clientX-drag.lastX)/drag.unit,dy:(event.clientY-drag.lastY)/drag.unit});
+    drag.lastX=event.clientX;drag.lastY=event.clientY;
   });
-  const endDrag=()=>{drag=null;viewport.classList.remove('dragging');};
-  viewport.addEventListener('pointerup',endDrag);viewport.addEventListener('pointercancel',endDrag);viewport.addEventListener('lostpointercapture',endDrag);
+  const endDrag=event=>{
+    if(!drag||event.pointerId!==drag.id)return;
+    const rotated=drag.rotating;drag=null;viewport.classList.remove('dragging');
+    if(rotated)sendViewer({action:'focus'});
+  };
+  for(const name of ['pointerup','pointercancel','lostpointercapture'])shell.addEventListener(name,endDrag);
+  viewport.addEventListener('contextmenu',event=>event.preventDefault());
   reference.addEventListener('load',()=>{byId('load-error').style.display='none';});
   [reference,render].forEach(image=>image.addEventListener('error',()=>{byId('load-error').style.display='block';}));
   contours.addEventListener('error',()=>{const button=modes.find(item=>item.dataset.mode==='contours');button.disabled=true;});
   byId('angle-image').addEventListener('error',()=>{byId('angle-card').hidden=true;});
-  new ResizeObserver(()=>{if(zoomMode==='fit')resize('fit',false);}).observe(viewport);
+  new ResizeObserver(()=>{if(workspace==='overlay'&&zoomMode==='fit')resize('fit',false);}).observe(viewport);
   // The comparison canvas always stays 1254 square, regardless of source resolution.
   updateReference();resize('fit',false);refresh();
 })();
