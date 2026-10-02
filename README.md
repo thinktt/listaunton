@@ -95,3 +95,5 @@ python scripts/check_site.py
 The king comparison applies a common 5% display inset so aligned finials cannot be clipped at the top. Bishop candidate revision 2 replaces the initial shallow engravings with a deep open mitre slit, generated again from the black original. Rejected bishop images are removed from the current tree (earlier versions remain in Git history).
 
 White candidates were generated directly from the white originals and appear as White candidate 1–3 alongside the retained Black candidate 1–3. White bishop prompts use the same plain upscale instructions as the other pieces, with no mitre or slit guidance. Queen candidates were explicitly excluded. White knight candidates preserve their original facing direction in the files and are mirrored with the white original only when alignment is enabled.
+
+Candidate comparisons open in Wipe mode. Drag the middle arrow or use the toolbar slider; the handle stays reachable at either endpoint and follows the visible area when zoomed. The focused handle also supports arrow keys (Shift for larger steps), Home and End. Dragging elsewhere still pans.
