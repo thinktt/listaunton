@@ -1,0 +1,275 @@
+{
+  "method": "Smoothed vertical brightness gradients over the central lower 38% of the piece, fitted to its same-color original; maximum 4 original pixels; weak/tied/boundary fits unchanged.",
+  "candidates": [
+    {
+      "piece": "king",
+      "candidate": "candidate-1",
+      "proposed_px": 1.4,
+      "dy_original_px": 1.4,
+      "correlation_before": 0.57317,
+      "correlation_after": 0.84807,
+      "reference": "black"
+    },
+    {
+      "piece": "king",
+      "candidate": "candidate-2",
+      "proposed_px": 1.05,
+      "dy_original_px": 1.05,
+      "correlation_before": 0.68572,
+      "correlation_after": 0.88635,
+      "reference": "black"
+    },
+    {
+      "piece": "king",
+      "candidate": "candidate-3",
+      "proposed_px": 2.35,
+      "dy_original_px": 2.35,
+      "correlation_before": 0.17656,
+      "correlation_after": 0.90987,
+      "reference": "black"
+    },
+    {
+      "piece": "king",
+      "candidate": "white-candidate-1",
+      "proposed_px": -1.65,
+      "dy_original_px": -1.65,
+      "correlation_before": 0.72518,
+      "correlation_after": 0.97574,
+      "reference": "white"
+    },
+    {
+      "piece": "king",
+      "candidate": "white-candidate-2",
+      "proposed_px": 0.2,
+      "dy_original_px": 0,
+      "correlation_before": 0.95852,
+      "correlation_after": 0.95852,
+      "reference": "white"
+    },
+    {
+      "piece": "king",
+      "candidate": "white-candidate-3",
+      "proposed_px": -0.35,
+      "dy_original_px": -0.35,
+      "correlation_before": 0.91699,
+      "correlation_after": 0.9287,
+      "reference": "white"
+    },
+    {
+      "piece": "rook",
+      "candidate": "candidate-1",
+      "proposed_px": 0.9,
+      "dy_original_px": 0.9,
+      "correlation_before": 0.75059,
+      "correlation_after": 0.8965,
+      "reference": "black"
+    },
+    {
+      "piece": "rook",
+      "candidate": "candidate-2",
+      "proposed_px": 0.7,
+      "dy_original_px": 0.7,
+      "correlation_before": 0.75305,
+      "correlation_after": 0.81419,
+      "reference": "black"
+    },
+    {
+      "piece": "rook",
+      "candidate": "candidate-3",
+      "proposed_px": 0.6,
+      "dy_original_px": 0.6,
+      "correlation_before": 0.82686,
+      "correlation_after": 0.89834,
+      "reference": "black"
+    },
+    {
+      "piece": "rook",
+      "candidate": "white-candidate-1",
+      "proposed_px": -2.6,
+      "dy_original_px": -2.6,
+      "correlation_before": 0.56,
+      "correlation_after": 0.78361,
+      "reference": "white"
+    },
+    {
+      "piece": "rook",
+      "candidate": "white-candidate-2",
+      "proposed_px": -0.45,
+      "dy_original_px": -0.45,
+      "correlation_before": 0.91442,
+      "correlation_after": 0.9522,
+      "reference": "white"
+    },
+    {
+      "piece": "rook",
+      "candidate": "white-candidate-3",
+      "proposed_px": -0.2,
+      "dy_original_px": -0.2,
+      "correlation_before": 0.94384,
+      "correlation_after": 0.95103,
+      "reference": "white"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "candidate-1",
+      "proposed_px": 2.85,
+      "dy_original_px": 2.85,
+      "correlation_before": 0.2562,
+      "correlation_after": 0.87913,
+      "reference": "black"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "candidate-2",
+      "proposed_px": 1.75,
+      "dy_original_px": 1.75,
+      "correlation_before": 0.61111,
+      "correlation_after": 0.95079,
+      "reference": "black"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "candidate-3",
+      "proposed_px": 1.95,
+      "dy_original_px": 1.95,
+      "correlation_before": 0.50294,
+      "correlation_after": 0.89989,
+      "reference": "black"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "white-candidate-1",
+      "proposed_px": 0.85,
+      "dy_original_px": 0.85,
+      "correlation_before": 0.87095,
+      "correlation_after": 0.95282,
+      "reference": "white"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "white-candidate-2",
+      "proposed_px": 0.85,
+      "dy_original_px": 0.85,
+      "correlation_before": 0.86781,
+      "correlation_after": 0.94854,
+      "reference": "white"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "white-candidate-3",
+      "proposed_px": 0.5,
+      "dy_original_px": 0.5,
+      "correlation_before": 0.94706,
+      "correlation_after": 0.97912,
+      "reference": "white"
+    },
+    {
+      "piece": "knight",
+      "candidate": "candidate-1",
+      "proposed_px": 1.8,
+      "dy_original_px": 1.8,
+      "correlation_before": 0.43548,
+      "correlation_after": 0.84313,
+      "reference": "black"
+    },
+    {
+      "piece": "knight",
+      "candidate": "candidate-2",
+      "proposed_px": -0.1,
+      "dy_original_px": 0,
+      "correlation_before": 0.90545,
+      "correlation_after": 0.90545,
+      "reference": "black"
+    },
+    {
+      "piece": "knight",
+      "candidate": "candidate-3",
+      "proposed_px": 1.55,
+      "dy_original_px": 1.55,
+      "correlation_before": 0.47235,
+      "correlation_after": 0.89899,
+      "reference": "black"
+    },
+    {
+      "piece": "knight",
+      "candidate": "white-candidate-1",
+      "proposed_px": 2.2,
+      "dy_original_px": 2.2,
+      "correlation_before": 0.46033,
+      "correlation_after": 0.91633,
+      "reference": "white"
+    },
+    {
+      "piece": "knight",
+      "candidate": "white-candidate-2",
+      "proposed_px": 1.15,
+      "dy_original_px": 1.15,
+      "correlation_before": 0.71891,
+      "correlation_after": 0.85696,
+      "reference": "white"
+    },
+    {
+      "piece": "knight",
+      "candidate": "white-candidate-3",
+      "proposed_px": 2.05,
+      "dy_original_px": 2.05,
+      "correlation_before": 0.47237,
+      "correlation_after": 0.93482,
+      "reference": "white"
+    },
+    {
+      "piece": "pawn",
+      "candidate": "candidate-1",
+      "proposed_px": 0.45,
+      "dy_original_px": 0.45,
+      "correlation_before": 0.94718,
+      "correlation_after": 0.97149,
+      "reference": "black"
+    },
+    {
+      "piece": "pawn",
+      "candidate": "candidate-2",
+      "proposed_px": 0.35,
+      "dy_original_px": 0.35,
+      "correlation_before": 0.9312,
+      "correlation_after": 0.94723,
+      "reference": "black"
+    },
+    {
+      "piece": "pawn",
+      "candidate": "candidate-3",
+      "proposed_px": 0.2,
+      "dy_original_px": 0,
+      "correlation_before": 0.96703,
+      "correlation_after": 0.96703,
+      "reference": "black"
+    },
+    {
+      "piece": "pawn",
+      "candidate": "white-candidate-1",
+      "proposed_px": -0.15,
+      "dy_original_px": 0,
+      "correlation_before": 0.97056,
+      "correlation_after": 0.97056,
+      "reference": "white"
+    },
+    {
+      "piece": "pawn",
+      "candidate": "white-candidate-2",
+      "proposed_px": -0.8,
+      "dy_original_px": -0.8,
+      "correlation_before": 0.90694,
+      "correlation_after": 0.98513,
+      "reference": "white"
+    },
+    {
+      "piece": "pawn",
+      "candidate": "white-candidate-3",
+      "proposed_px": -0.9,
+      "dy_original_px": -0.9,
+      "correlation_before": 0.85878,
+      "correlation_after": 0.96318,
+      "reference": "white"
+    }
+  ]
+}

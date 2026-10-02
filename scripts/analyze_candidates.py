@@ -44,3 +44,7 @@ for piece in ['king','rook','bishop','knight','pawn']:
     result['pieces'][piece]=items
     print(piece,[(v['id'],round(v['silhouette_iou'],3),[v['width'],v['height']]) for v in items])
 (root/'assets/candidates/alignment.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+
+# Keep the coarse outline fit as a baseline, then register the visible lower rings.
+import runpy
+runpy.run_path(str(root/"scripts/refine_foot_alignment.py"), run_name="__main__")

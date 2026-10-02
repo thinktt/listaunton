@@ -1,5 +1,5 @@
 {
-  "method": "Uniform scale and translation fitted to the black original silhouette at 180px; no shape warping. White knight mirrored only in aligned view.",
+  "method": "Whole-outline uniform scale/translation, followed by bounded vertical refinement against same-color original lower-body ring details. No image warping. White knights mirrored only in aligned view.",
   "pieces": {
     "king": [
       {
@@ -35,8 +35,15 @@
         "flip": false,
         "scale": 0.9798195329087048,
         "x": 0.1072186836518054,
-        "y": -1.361111111111111,
-        "silhouette_iou": 0.9596110695587136
+        "y": -0.8944444444444506,
+        "silhouette_iou": 0.9596110695587136,
+        "silhouette_y": -1.361111111111111,
+        "foot_refinement": {
+          "dy_original_px": 1.4,
+          "correlation_before": 0.57317,
+          "correlation_after": 0.84807,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-2",
@@ -47,8 +54,15 @@
         "flip": false,
         "scale": 0.992012987012987,
         "x": -0.5880230880230878,
-        "y": -0.4722222222222222,
-        "silhouette_iou": 0.968675604560832
+        "y": -0.12222222222222817,
+        "silhouette_iou": 0.968675604560832,
+        "silhouette_y": -0.4722222222222222,
+        "foot_refinement": {
+          "dy_original_px": 1.05,
+          "correlation_before": 0.68572,
+          "correlation_after": 0.88635,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-3",
@@ -59,8 +73,15 @@
         "flip": false,
         "scale": 0.9878463203463204,
         "x": 0.515873015873017,
-        "y": -1.402236652236654,
-        "silhouette_iou": 0.9686454331391746
+        "y": -0.6189033189033283,
+        "silhouette_iou": 0.9686454331391746,
+        "silhouette_y": -1.402236652236654,
+        "foot_refinement": {
+          "dy_original_px": 2.35,
+          "correlation_before": 0.17656,
+          "correlation_after": 0.90987,
+          "reference": "black"
+        }
       },
       {
         "id": "white-candidate-1",
@@ -71,8 +92,15 @@
         "flip": false,
         "scale": 0.9254403794037941,
         "x": 3.0880758807588067,
-        "y": 0.04065040650405965,
-        "silhouette_iou": 0.963350141434018
+        "y": -0.5093495934959432,
+        "silhouette_iou": 0.963350141434018,
+        "silhouette_y": 0.04065040650405965,
+        "foot_refinement": {
+          "dy_original_px": -1.65,
+          "correlation_before": 0.72518,
+          "correlation_after": 0.97574,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-2",
@@ -84,7 +112,14 @@
         "scale": 0.8866666666666666,
         "x": 3.6975308641975317,
         "y": -0.9876543209876508,
-        "silhouette_iou": 0.968687624750499
+        "silhouette_iou": 0.968687624750499,
+        "silhouette_y": -0.9876543209876508,
+        "foot_refinement": {
+          "dy_original_px": 0,
+          "correlation_before": 0.95852,
+          "correlation_after": 0.95852,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-3",
@@ -95,8 +130,15 @@
         "flip": false,
         "scale": 0.9323848238482385,
         "x": 2.984417344173443,
-        "y": -0.5555555555555556,
-        "silhouette_iou": 0.9672943508424182
+        "y": -0.6722222222222266,
+        "silhouette_iou": 0.9672943508424182,
+        "silhouette_y": -0.5555555555555556,
+        "foot_refinement": {
+          "dy_original_px": -0.35,
+          "correlation_before": 0.91699,
+          "correlation_after": 0.9287,
+          "reference": "white"
+        }
       }
     ],
     "rook": [
@@ -133,8 +175,15 @@
         "flip": false,
         "scale": 0.9878947368421053,
         "x": 0.33869395711500755,
-        "y": 0.6622807017543835,
-        "silhouette_iou": 0.9643598615916955
+        "y": 0.9622807017543777,
+        "silhouette_iou": 0.9643598615916955,
+        "silhouette_y": 0.6622807017543835,
+        "foot_refinement": {
+          "dy_original_px": 0.9,
+          "correlation_before": 0.75059,
+          "correlation_after": 0.8965,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-2",
@@ -145,8 +194,15 @@
         "flip": false,
         "scale": 0.9865058479532164,
         "x": 0.5307017543859666,
-        "y": 0.8845029239766057,
-        "silhouette_iou": 0.9709994821336095
+        "y": 1.1178362573099334,
+        "silhouette_iou": 0.9709994821336095,
+        "silhouette_y": 0.8845029239766057,
+        "foot_refinement": {
+          "dy_original_px": 0.7,
+          "correlation_before": 0.75305,
+          "correlation_after": 0.81419,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-3",
@@ -157,8 +213,15 @@
         "flip": false,
         "scale": 0.9892836257309942,
         "x": 0.6140350877192999,
-        "y": 0.6622807017543835,
-        "silhouette_iou": 0.965236942234521
+        "y": 0.862280701754378,
+        "silhouette_iou": 0.965236942234521,
+        "silhouette_y": 0.6622807017543835,
+        "foot_refinement": {
+          "dy_original_px": 0.6,
+          "correlation_before": 0.82686,
+          "correlation_after": 0.89834,
+          "reference": "black"
+        }
       },
       {
         "id": "white-candidate-1",
@@ -169,8 +232,15 @@
         "flip": false,
         "scale": 0.7936406619385343,
         "x": 3.159180457052799,
-        "y": 11.898542159180453,
-        "silhouette_iou": 0.9603079555175363
+        "y": 11.031875492513784,
+        "silhouette_iou": 0.9603079555175363,
+        "silhouette_y": 11.898542159180453,
+        "foot_refinement": {
+          "dy_original_px": -2.6,
+          "correlation_before": 0.56,
+          "correlation_after": 0.78361,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-2",
@@ -181,8 +251,15 @@
         "flip": false,
         "scale": 0.870968992248062,
         "x": 2.925710594315247,
-        "y": 8.053832902670116,
-        "silhouette_iou": 0.9533423820834748
+        "y": 7.903832902670112,
+        "silhouette_iou": 0.9533423820834748,
+        "silhouette_y": 8.053832902670116,
+        "foot_refinement": {
+          "dy_original_px": -0.45,
+          "correlation_before": 0.91442,
+          "correlation_after": 0.9522,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-3",
@@ -193,8 +270,15 @@
         "flip": false,
         "scale": 0.9748309178743961,
         "x": 1.217391304347828,
-        "y": 0.9323671497584565,
-        "silhouette_iou": 0.9605919807262089
+        "y": 0.8657004830917853,
+        "silhouette_iou": 0.9605919807262089,
+        "silhouette_y": 0.9323671497584565,
+        "foot_refinement": {
+          "dy_original_px": -0.2,
+          "correlation_before": 0.94384,
+          "correlation_after": 0.95103,
+          "reference": "white"
+        }
       }
     ],
     "bishop": [
@@ -231,8 +315,15 @@
         "flip": false,
         "scale": 0.983343935538592,
         "x": 0.3159457167090728,
-        "y": 0.18659881255301355,
-        "silhouette_iou": 0.9586390927284857
+        "y": 1.1365988125530053,
+        "silhouette_iou": 0.9586390927284857,
+        "silhouette_y": 0.18659881255301355,
+        "foot_refinement": {
+          "dy_original_px": 2.85,
+          "correlation_before": 0.2562,
+          "correlation_after": 0.87913,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-2",
@@ -243,8 +334,15 @@
         "flip": false,
         "scale": 0.9612976782752902,
         "x": 1.0447761194029839,
-        "y": 0.9282752902155871,
-        "silhouette_iou": 0.9638856378532018
+        "y": 1.5116086235489137,
+        "silhouette_iou": 0.9638856378532018,
+        "silhouette_y": 0.9282752902155871,
+        "foot_refinement": {
+          "dy_original_px": 1.75,
+          "correlation_before": 0.61111,
+          "correlation_after": 0.95079,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-3",
@@ -255,8 +353,15 @@
         "flip": false,
         "scale": 0.9611111111111111,
         "x": 1.185185185185181,
-        "y": -0.012345679012347609,
-        "silhouette_iou": 0.9603714143591444
+        "y": 0.6376543209876453,
+        "silhouette_iou": 0.9603714143591444,
+        "silhouette_y": -0.012345679012347609,
+        "foot_refinement": {
+          "dy_original_px": 1.95,
+          "correlation_before": 0.50294,
+          "correlation_after": 0.89989,
+          "reference": "black"
+        }
       },
       {
         "id": "white-candidate-1",
@@ -267,8 +372,15 @@
         "flip": false,
         "scale": 0.7885185185185185,
         "x": 1.8940329218107035,
-        "y": 8.353909465020577,
-        "silhouette_iou": 0.9585887029981779
+        "y": 8.637242798353904,
+        "silhouette_iou": 0.9585887029981779,
+        "silhouette_y": 8.353909465020577,
+        "foot_refinement": {
+          "dy_original_px": 0.85,
+          "correlation_before": 0.87095,
+          "correlation_after": 0.95282,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-2",
@@ -279,8 +391,15 @@
         "flip": false,
         "scale": 0.939640522875817,
         "x": 2.1960784313725523,
-        "y": 0.6576797385620934,
-        "silhouette_iou": 0.9680388219544847
+        "y": 0.941013071895421,
+        "silhouette_iou": 0.9680388219544847,
+        "silhouette_y": 0.6576797385620934,
+        "foot_refinement": {
+          "dy_original_px": 0.85,
+          "correlation_before": 0.86781,
+          "correlation_after": 0.94854,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-3",
@@ -291,8 +410,15 @@
         "flip": false,
         "scale": 0.938272506082725,
         "x": 2.0255474452554743,
-        "y": 0.7461476074614776,
-        "silhouette_iou": 0.9610432485968967
+        "y": 0.9128142741281389,
+        "silhouette_iou": 0.9610432485968967,
+        "silhouette_y": 0.7461476074614776,
+        "foot_refinement": {
+          "dy_original_px": 0.5,
+          "correlation_before": 0.94706,
+          "correlation_after": 0.97912,
+          "reference": "white"
+        }
       }
     ],
     "knight": [
@@ -329,8 +455,15 @@
         "flip": false,
         "scale": 1.0101791277258565,
         "x": -0.4415887850467281,
-        "y": -4.709241952232601,
-        "silhouette_iou": 0.9837539889759211
+        "y": -4.109241952232607,
+        "silhouette_iou": 0.9837539889759211,
+        "silhouette_y": -4.709241952232601,
+        "foot_refinement": {
+          "dy_original_px": 1.8,
+          "correlation_before": 0.43548,
+          "correlation_after": 0.84313,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-2",
@@ -342,7 +475,14 @@
         "scale": 1.0055555555555555,
         "x": -0.2777777777777778,
         "y": 0.0,
-        "silhouette_iou": 0.981063891298063
+        "silhouette_iou": 0.981063891298063,
+        "silhouette_y": 0.0,
+        "foot_refinement": {
+          "dy_original_px": 0,
+          "correlation_before": 0.90545,
+          "correlation_after": 0.90545,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-3",
@@ -353,8 +493,15 @@
         "flip": false,
         "scale": 0.9887626262626262,
         "x": 0.4141414141414165,
-        "y": 0.43434343434343403,
-        "silhouette_iou": 0.9855240301100173
+        "y": 0.9510101010100941,
+        "silhouette_iou": 0.9855240301100173,
+        "silhouette_y": 0.43434343434343403,
+        "foot_refinement": {
+          "dy_original_px": 1.55,
+          "correlation_before": 0.47235,
+          "correlation_after": 0.89899,
+          "reference": "black"
+        }
       },
       {
         "id": "white-candidate-1",
@@ -365,8 +512,15 @@
         "flip": true,
         "scale": 0.8277136752136752,
         "x": -6.90811965811966,
-        "y": 8.797008547008542,
-        "silhouette_iou": 0.9820211686240394
+        "y": 9.530341880341867,
+        "silhouette_iou": 0.9820211686240394,
+        "silhouette_y": 8.797008547008542,
+        "foot_refinement": {
+          "dy_original_px": 2.2,
+          "correlation_before": 0.46033,
+          "correlation_after": 0.91633,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-2",
@@ -377,8 +531,15 @@
         "flip": true,
         "scale": 0.8266497031382528,
         "x": -7.725614927905005,
-        "y": 11.300254452926204,
-        "silhouette_iou": 0.9710419091967404
+        "y": 11.683587786259531,
+        "silhouette_iou": 0.9710419091967404,
+        "silhouette_y": 11.300254452926204,
+        "foot_refinement": {
+          "dy_original_px": 1.15,
+          "correlation_before": 0.71891,
+          "correlation_after": 0.85696,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-3",
@@ -389,8 +550,15 @@
         "flip": true,
         "scale": 0.9421859903381643,
         "x": -18.392512077294686,
-        "y": 0.7934782608695675,
-        "silhouette_iou": 0.9826732673267327
+        "y": 1.4768115942028937,
+        "silhouette_iou": 0.9826732673267327,
+        "silhouette_y": 0.7934782608695675,
+        "foot_refinement": {
+          "dy_original_px": 2.05,
+          "correlation_before": 0.47237,
+          "correlation_after": 0.93482,
+          "reference": "white"
+        }
       }
     ],
     "pawn": [
@@ -427,8 +595,15 @@
         "flip": false,
         "scale": 1.0064716312056738,
         "x": -0.40780141843972234,
-        "y": -0.3014184397163196,
-        "silhouette_iou": 0.9749757045675413
+        "y": -0.15141843971632488,
+        "silhouette_iou": 0.9749757045675413,
+        "silhouette_y": -0.3014184397163196,
+        "foot_refinement": {
+          "dy_original_px": 0.45,
+          "correlation_before": 0.94718,
+          "correlation_after": 0.97149,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-2",
@@ -439,8 +614,15 @@
         "flip": false,
         "scale": 1.0084160756501184,
         "x": -0.46631205673759263,
-        "y": 0.2600472813238734,
-        "silhouette_iou": 0.9678440925700366
+        "y": 0.3767139479905349,
+        "silhouette_iou": 0.9678440925700366,
+        "silhouette_y": 0.2600472813238734,
+        "foot_refinement": {
+          "dy_original_px": 0.35,
+          "correlation_before": 0.9312,
+          "correlation_after": 0.94723,
+          "reference": "black"
+        }
       },
       {
         "id": "candidate-3",
@@ -452,7 +634,14 @@
         "scale": 1.0084160756501184,
         "x": -0.40780141843972234,
         "y": -0.3014184397163196,
-        "silhouette_iou": 0.9742044358727098
+        "silhouette_iou": 0.9742044358727098,
+        "silhouette_y": -0.3014184397163196,
+        "foot_refinement": {
+          "dy_original_px": 0,
+          "correlation_before": 0.96703,
+          "correlation_after": 0.96703,
+          "reference": "black"
+        }
       },
       {
         "id": "white-candidate-1",
@@ -464,7 +653,14 @@
         "scale": 0.7947222222222222,
         "x": 5.78703703703704,
         "y": 10.35185185185186,
-        "silhouette_iou": 0.9685775965459342
+        "silhouette_iou": 0.9685775965459342,
+        "silhouette_y": 10.35185185185186,
+        "foot_refinement": {
+          "dy_original_px": 0,
+          "correlation_before": 0.97056,
+          "correlation_after": 0.97056,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-2",
@@ -475,8 +671,15 @@
         "flip": false,
         "scale": 0.9134615384615384,
         "x": 3.3173076923076925,
-        "y": 2.7371794871794886,
-        "silhouette_iou": 0.9740543161978662
+        "y": 2.470512820512818,
+        "silhouette_iou": 0.9740543161978662,
+        "silhouette_y": 2.7371794871794886,
+        "foot_refinement": {
+          "dy_original_px": -0.8,
+          "correlation_before": 0.90694,
+          "correlation_after": 0.98513,
+          "reference": "white"
+        }
       },
       {
         "id": "white-candidate-3",
@@ -487,8 +690,15 @@
         "flip": false,
         "scale": 0.7282692307692308,
         "x": 4.2307692307692335,
-        "y": 14.446581196581201,
-        "silhouette_iou": 0.9581831290555155
+        "y": 14.146581196581197,
+        "silhouette_iou": 0.9581831290555155,
+        "silhouette_y": 14.446581196581201,
+        "foot_refinement": {
+          "dy_original_px": -0.9,
+          "correlation_before": 0.85878,
+          "correlation_after": 0.96318,
+          "reference": "white"
+        }
       }
     ]
   }
