@@ -21,27 +21,36 @@ class Links(HTMLParser):
             target = ROOT / unquote(url.path)
             assert target.is_file(), f'Missing local link: {value}'
             checked.add(url.path)
-for name in ('index.html', 'queen-3d.html', 'review.html', 'queen-parts.html', 'staunton-references.html'):
+for name in ('index.html', 'review.html'):
     html = (ROOT / name).read_text(encoding='utf-8')
     assert 'file:///' not in html, f'Machine-specific URL in {name}'
     Links().feed(html)
 review = (ROOT / 'review.html').read_text(encoding='utf-8')
 for value in re.findall(r"['\"](assets/queen/[^'\"]+\.png)['\"]", review):
     assert (ROOT / value).is_file(), value
-parts = (ROOT / 'queen-parts.html').read_text(encoding='utf-8')
+def embedded(identifier):
+    return json.loads(re.search(r'<script id="'+identifier+r'"[^>]*>(.*?)</script>', review, re.S).group(1))
+parts = embedded('parts-document')
+assert parts == (ROOT/'scripts/queen/parts-template.html').read_text(encoding='utf-8')
+assert 'id="details-section"' not in review
+for obsolete in ('queen-3d.html', 'queen-parts.html', 'staunton-references.html'):
+    assert not (ROOT/obsolete).exists(), obsolete
 assert 'sandbox="allow-scripts"' in parts
 assert 'Content-Security-Policy' in parts
-viewer = (ROOT / 'queen-3d.html').read_text(encoding='utf-8')
+viewer = embedded('viewer-document')
+Links().feed(viewer)
 meta = re.search(r'<script id="mesh-metadata"[^>]*>(.*?)</script>', viewer, re.S)
 assert meta, 'Missing viewer mesh metadata'
 expected = json.loads(meta.group(1))['sourceSha256']
 actual = hashlib.sha256((ROOT / 'models/queen/queen-rebuilt.blend').read_bytes()).hexdigest()
 assert expected == actual, 'Viewer is stale relative to the Blender model'
-print(f'PASS: five pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
+print(f'PASS: two pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
 
 manifest=json.loads((ROOT/'references/lichess-staunton-3d/original-png-manifest.json').read_text())
 assert len(manifest['files'])==12
-gallery=(ROOT/'staunton-references.html').read_text()
+gallery=(ROOT/'index.html').read_text(encoding='utf-8')
+assert gallery.count('data-piece=')==5
+assert 'href="review.html"' in gallery
 assert gallery.count('<img ')==12
 for item in manifest['files']:
     image=ROOT/'references/lichess-staunton-3d'/item['file']
