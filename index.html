@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="description" content="Reconstructing the Lichess Staunton chess set as 3D models, beginning with the queen. Explore the model, reference overlay, and guide to its parts.">
-  <title>listauton — Recovering a chess set</title>
+  <title>listaunton — Recovering a chess set</title>
   <style>
     :root { color-scheme: dark; --bg: #10110f; --panel: #191b17; --ink: #f0eee7; --muted: #b0b2a7; --line: #36392f; --accent: #d7ad77; }
     * { box-sizing: border-box; }
@@ -32,7 +32,7 @@
     .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding-block: 22px; border-top: 1px solid var(--line); }
     h2 { margin: 0; font-size: 22px; font-weight: 500; letter-spacing: -.025em; }
     .section-heading p { margin: 0; color: var(--muted); font-size: 14px; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .card { display: flex; flex-direction: column; min-height: 246px; padding: 26px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; text-decoration: none; transition: border-color .15s, background .15s; }
     .card:hover { border-color: var(--accent); background: #20221c; }
     .card-top { display: flex; justify-content: space-between; color: var(--accent); font-size: 13px; }
@@ -65,7 +65,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <header>
-      <span class="wordmark">listauton</span>
+      <span class="wordmark">listaunton</span>
       <span class="status">A reconstruction in progress</span>
     </header>
     <main id="main">
@@ -83,10 +83,10 @@
       </section>
       <section aria-labelledby="explore-title">
         <div class="section-heading">
-          <h2 id="explore-title">Three ways to look closer</h2>
+          <h2 id="explore-title">Explore the project</h2>
           <p>Turn it. Compare it. Get to know its parts.</p>
         </div>
-        <nav class="cards" aria-label="Queen project pages">
+        <nav class="cards" aria-label="Project pages">
           <a class="card" href="queen-3d.html">
             <div class="card-top"><span>01 / Explore</span><span aria-hidden="true">↗</span></div>
             <h3>The rotating model</h3>
@@ -102,6 +102,11 @@
             <h3>The parts map</h3>
             <p>A labeled guide from finial to foot, giving every detail a name we can discuss.</p>
           </a>
+          <a class="card" href="staunton-references.html">
+            <div class="card-top"><span>04 / Reference</span><span aria-hidden="true">↗</span></div>
+            <h3>The original Staunton set</h3>
+            <p>All twelve original Lichess 3D piece images, paired in white and black.</p>
+          </a>
         </nav>
       </section>
       <section class="process" aria-labelledby="process-title">
@@ -110,7 +115,7 @@
       </section>
     </main>
     <footer>
-      <p>listauton · An independent reconstruction of the Lichess Staunton set.</p>
+      <p>listaunton · An independent reconstruction of the Lichess Staunton set.</p>
       <p>Queen study / Work in progress</p>
     </footer>
   </div>

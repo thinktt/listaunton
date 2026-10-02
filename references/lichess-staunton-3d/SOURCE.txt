@@ -1,7 +1,11 @@
-Source: https://github.com/lichess-org/lila/tree/master/public/images/staunton/piece/Staunton
-Downloaded: 2026-10-01
-The 12 original WebP files contain the six white and six black chess pieces.
+Original 3D Staunton set from Lichess
+PNG source: https://github.com/lichess-org/lila/tree/776e1ff6680182bfedaf17cd8500e1c3cc3defd0/public/images/staunton/piece/Staunton
+Imported from the user's local lila Git checkout on 2026-10-02.
+The twelve PNG files were extracted verbatim from that Git commit.
+original-png-manifest.json records dimensions and SHA-256 hashes.
+The extra White-Knight-Preview.png is deliberately excluded: six piece types in two colors are the complete playing set.
 
-Authorship: Unclear for these specific pieces. The user reports that James Clarke did not create this set.
-Repository attribution: Lichess COPYING.md lists James Clarke and MIT for the parent directory public/images/staunton. That broad entry does not establish authorship or independently verify the license for this specific set.
-Attribution reference: https://github.com/lichess-org/lila/blob/master/COPYING.md
+The WebP files are the previously collected copies from 2026-10-01, retained for project history. The reference gallery now displays the original PNG files.
+
+Specific authorship is unclear. No author or new license is asserted for these individual reference images.
+Repository attribution context: https://github.com/lichess-org/lila/blob/776e1ff6680182bfedaf17cd8500e1c3cc3defd0/COPYING.md

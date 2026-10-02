@@ -1,4 +1,4 @@
-# listauton
+# listaunton
 
 Recovering the Lichess **Staunton** chess set as editable 3D models from its static rendered images. We are starting with the queen. This is an independent art reconstruction, with interpretation where a single image cannot determine the geometry.
 
@@ -7,6 +7,7 @@ Open [the home page](index.html) to access:
 - [Rotating queen](queen-3d.html): the current mesh, orbit controls, and the saved overlay camera.
 - [Reference overlay](review.html): current/previous renders, opacity and blink comparison, and detail views.
 - [Queen parts map](queen-parts.html): the names used to discuss the model.
+- [Original Staunton references](staunton-references.html): all twelve original PNG sprites from Lichess’s 3D Staunton set, paired by piece.
 
 The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
 
@@ -14,7 +15,7 @@ The queen geometry includes a continuous splash-shaped crown, eight tips, a shal
 
 - `models/queen/queen-rebuilt.blend`: current editable Blender model, with its reference packed inside.
 - `assets/queen/`: the supplied high-resolution reference, renders, comparisons and validation reports.
-- `references/lichess-staunton-3d/`: all twelve original Lichess piece images and source notes.
+- `references/lichess-staunton-3d/`: all twelve original PNG sprites, their provenance and hashes, plus the previously collected WebP versions.
 - `scripts/queen/`: portable current generation, export and checking pipeline.
 - `history/`: previous models, scripts, experiments and working notes preserved from the original project.
 - `docs/import-manifest.json`: source-to-repository mapping and hashes for imported files.
@@ -48,16 +49,13 @@ The 3D viewer embeds its mesh and works without a server. The parts map keeps it
 
 ## GitHub Pages
 
-The repository is committed locally; pushing is left to the owner. Create a GitHub repository named `listauton`, add it as `origin`, and push `main`. In GitHub **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**. Run **Publish site** from Actions if the initial push occurred before Pages was enabled.
+The repository is committed locally; pushing is left to the owner. Create a GitHub repository named `listaunton`, add it as `origin`, and push `main`. In GitHub **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**. Run **Publish site** from Actions if the initial push occurred before Pages was enabled.
 
-The included workflow publishes on subsequent pushes to `main`. It packages the four root HTML pages, their assets and the Blender download; it does not deploy the historical working folders. If hosted under the `thinktt` account with the repository name `listauton`, the expected URL is `https://thinktt.github.io/listauton/`. It is not live until the owner pushes and Pages deployment succeeds.
+The included workflow publishes the repository root directly on pushes to `main`. There is no `_site` folder or packaging step. All HTML pages live at the root and use relative asset links. If hosted under `thinktt/listaunton`, the expected URL is `https://thinktt.github.io/listaunton/`; it is not live until pushed and deployed.
 
-To check the publishable bundle locally:
+Alternatively, choose **Deploy from a branch**, select **main / (root)**, and disable the custom Publish site workflow so only one deployment method is used. The root `.nojekyll` file allows plain static publishing.
 
-```sh
-python3 scripts/package_site.py
-python3 scripts/check_site.py _site
-```
+Check the site locally with `python3 scripts/check_site.py`.
 
 See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
