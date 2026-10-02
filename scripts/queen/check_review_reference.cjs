@@ -1,0 +1,52 @@
+// Exercise the review page's actual script with a small DOM harness.
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../..');
+const html=fs.readFileSync(path.join(root,'review.html'),'utf8');
+const nodes=new Map(),buttons=[];
+function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},dataset:{},listeners:{},value:'',disabled:false,offsetLeft:0,offsetTop:0,scrollLeft:0,scrollTop:0,clientWidth:800,clientHeight:600,classList:{add(){},remove(){}},setPointerCapture(){},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,f){(this.listeners[k]??=[]).push(f);},fire(k,extra={}){if(k==='click'&&this.disabled)return;for(const f of this.listeners[k]??[])f({target:this,preventDefault(){},...extra});}});return nodes.get(id);}
+for(const match of html.matchAll(/<button\b([^>]*)>/g)){
+ const attrs=Object.fromEntries([...match[1].matchAll(/([\w-]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
+ const b=node(attrs.id??'button-'+buttons.length);b.className=attrs.class??'';
+ for(const [k,v] of Object.entries(attrs))if(k.startsWith('data-'))b.dataset[k.slice(5)]=v;
+ buttons.push(b);
+}
+node('opacity').value='50';
+const alignmentText=html.match(/<script id="original-reference-alignment"[^>]*>(.*?)<\/script>/s)[1];
+node('original-reference-alignment').textContent=alignmentText;
+const alignment=JSON.parse(alignmentText);
+assert.equal(alignment.source_sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,alignment.source))).digest('hex'));
+assert.equal(alignment.target_sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,alignment.target))).digest('hex'));
+const document={getElementById:node,querySelectorAll:selector=>buttons.filter(b=>b.className.split(' ').includes(selector.slice(1))),addEventListener(){}};
+vm.runInNewContext(html.match(/<script>\s*([\s\S]*?)<\/script>/)[1],{document,window:{addEventListener(){}},ResizeObserver:class{observe(){}},console,JSON,Math,Number,String});
+const button=(key,value)=>buttons.find(b=>b.dataset[key]===value);
+const click=(key,value)=>button(key,value).fire('click');
+assert.equal(node('reference').src,'assets/queen/reference.png');
+click('zoom','2');node('viewport').scrollLeft=123;node('viewport').scrollTop=87;
+click('reference','original');
+assert.equal(node('reference').src,'references/lichess-staunton-3d/White-Queen.png');
+assert.equal(node('stage').style.width,'2508px');
+assert.equal(node('viewport').scrollLeft,123);assert.equal(node('viewport').scrollTop,87);
+assert.equal(parseFloat(node('reference').style.width),alignment.source_size[0]*alignment.scale/1254*100);
+node('reference').naturalWidth=300;node('reference').naturalHeight=300;node('reference').fire('load');
+assert.equal(node('stage').style.width,'2508px');
+assert.equal(button('mode','contours').disabled,true);
+node('opacity').value='70';node('opacity').fire('input');assert.equal(node('render').style.opacity,'0.7');
+click('revision','previous');click('material','brown');
+assert.equal(node('render').src,'assets/queen/queen-previous-brown.png');
+node('hold').fire('pointerdown',{pointerId:1});assert.equal(node('render').style.opacity,'0');
+node('hold').fire('pointerup');assert.equal(node('render').style.opacity,'0.7');
+node('blink').fire('click');assert.equal(node('reference').style.opacity,'0');assert.equal(node('render').style.opacity,'1');
+node('compare-sources').fire('click');
+assert.equal(node('render').src,'assets/queen/reference.png');assert.equal(node('opacity-label').textContent,'High-res opacity');
+assert.equal(button('revision','current').disabled,true);assert.equal(button('material','neutral').disabled,true);
+assert.equal(node('reference').src,'references/lichess-staunton-3d/White-Queen.png');
+node('opacity').value='20';node('opacity').fire('input');assert.equal(node('render').style.opacity,'0.2');
+node('blink').fire('click');assert.equal(node('render').style.opacity,'1');assert.equal(node('reference').style.opacity,'0');
+node('blink').fire('click');assert.equal(node('render').style.opacity,'0');assert.equal(node('reference').style.opacity,'1');
+node('compare-sources').fire('click');assert.equal(node('render').src,'assets/queen/queen-previous-brown.png');assert.equal(button('revision','current').disabled,false);
+click('reference','highres');assert.equal(node('reference').style.width,'100%');assert.equal(node('reference').style.left,'0%');
+assert.equal(node('reference').src,'assets/queen/reference.png');assert.equal(button('mode','contours').disabled,false);
+click('mode','contours');assert.equal(button('revision','current').attrs['aria-pressed'],'true');assert.equal(node('contours').style.display,'block');
+click('reference','original');assert.equal(node('contours').style.display,'none');assert.equal(button('mode','overlay').attrs['aria-pressed'],'true');
+assert.equal(node('viewport').scrollLeft,123);assert.equal(node('viewport').scrollTop,87);
+console.log('PASS: source switching, uniform placement, stable zoom/pan, opacity, revisions/materials, hold/blink, direct source comparison, contour guard, and source hashes.');
