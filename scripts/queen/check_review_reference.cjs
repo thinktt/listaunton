@@ -24,6 +24,9 @@ const document={getElementById:node,querySelectorAll:selector=>buttons.filter(b=
 vm.runInNewContext(html.match(/<script id="review-runtime">\s*([\s\S]*?)<\/script>/)[1],{document,window:{addEventListener(name,fn){windowListeners[name]=fn;}},ResizeObserver:class{observe(){}},console,JSON,Math,Number,String});
 const button=(key,value)=>buttons.find(b=>b.dataset[key]===value);
 const click=(key,value)=>button(key,value).fire('click');
+assert.equal(node('stage').style.visibility,'visible');
+assert.equal(node('contours').style.display,'none');
+assert.equal(node('render').style.opacity,'0.5');
 assert.equal(node('reference').src,'assets/queen/reference.png');
 click('zoom','2');node('viewport').scrollLeft=123;node('viewport').scrollTop=87;
 click('reference','original');

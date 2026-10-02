@@ -26,6 +26,12 @@ for name in ('index.html', 'review.html'):
     assert 'file:///' not in html, f'Machine-specific URL in {name}'
     Links().feed(html)
 review = (ROOT / 'review.html').read_text(encoding='utf-8')
+initial_style = re.search(r'<style>(.*?)</style>', review, re.S).group(1)
+assert '#stage #contours{z-index:3;display:none}' in initial_style, 'Contour hiding must beat the #stage img selector before JS starts'
+assert '#stage{visibility:hidden;' in initial_style, 'Keep the image hidden until the initial fit is ready'
+assert '#render{z-index:2;opacity:.5}' in initial_style
+assert 'cursor:grab' not in initial_style, 'Reference view should use the normal cursor'
+
 for value in re.findall(r"['\"](assets/queen/[^'\"]+\.png)['\"]", review):
     assert (ROOT / value).is_file(), value
 def embedded(identifier):
