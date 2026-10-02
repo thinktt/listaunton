@@ -1,0 +1,315 @@
+{
+  "method": "Uniform scale and translation fitted to the black original silhouette at 180px; no shape warping. White knight mirrored only in aligned view.",
+  "pieces": {
+    "king": [
+      {
+        "id": "black",
+        "label": "Original black",
+        "file": "references/lichess-staunton-3d/Black-King.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "silhouette_iou": 1
+      },
+      {
+        "id": "white",
+        "label": "Original white",
+        "file": "references/lichess-staunton-3d/White-King.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 0.9592639773531494,
+        "x": 1.8029016277423913,
+        "y": 0.8888888888888888,
+        "silhouette_iou": 0.9672314976326938
+      },
+      {
+        "id": "candidate-1",
+        "label": "Candidate 1",
+        "file": "assets/candidates/king/candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9798195329087048,
+        "x": 0.1072186836518054,
+        "y": -1.361111111111111,
+        "silhouette_iou": 0.9596110695587136
+      },
+      {
+        "id": "candidate-2",
+        "label": "Candidate 2",
+        "file": "assets/candidates/king/candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.992012987012987,
+        "x": -0.5880230880230878,
+        "y": -0.4722222222222222,
+        "silhouette_iou": 0.968675604560832
+      },
+      {
+        "id": "candidate-3",
+        "label": "Candidate 3",
+        "file": "assets/candidates/king/candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9878463203463204,
+        "x": 0.515873015873017,
+        "y": -1.402236652236654,
+        "silhouette_iou": 0.9686454331391746
+      }
+    ],
+    "rook": [
+      {
+        "id": "black",
+        "label": "Original black",
+        "file": "references/lichess-staunton-3d/Black-Rook.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "silhouette_iou": 1
+      },
+      {
+        "id": "white",
+        "label": "Original white",
+        "file": "references/lichess-staunton-3d/White-Rook.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 0.9727490421455939,
+        "x": 1.2691570881226018,
+        "y": 0.7969348659003795,
+        "silhouette_iou": 0.9725932350390286
+      },
+      {
+        "id": "candidate-1",
+        "label": "Candidate 1",
+        "file": "assets/candidates/rook/candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9878947368421053,
+        "x": 0.33869395711500755,
+        "y": 0.6622807017543835,
+        "silhouette_iou": 0.9643598615916955
+      },
+      {
+        "id": "candidate-2",
+        "label": "Candidate 2",
+        "file": "assets/candidates/rook/candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9865058479532164,
+        "x": 0.5307017543859666,
+        "y": 0.8845029239766057,
+        "silhouette_iou": 0.9709994821336095
+      },
+      {
+        "id": "candidate-3",
+        "label": "Candidate 3",
+        "file": "assets/candidates/rook/candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9892836257309942,
+        "x": 0.6140350877192999,
+        "y": 0.6622807017543835,
+        "silhouette_iou": 0.965236942234521
+      }
+    ],
+    "bishop": [
+      {
+        "id": "black",
+        "label": "Original black",
+        "file": "references/lichess-staunton-3d/Black-Bishop.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "silhouette_iou": 1
+      },
+      {
+        "id": "white",
+        "label": "Original white",
+        "file": "references/lichess-staunton-3d/White-Bishop.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 0.9729803675856308,
+        "x": 1.161236424394316,
+        "y": 0.07873851294903664,
+        "silhouette_iou": 0.9768766756032171
+      },
+      {
+        "id": "candidate-1",
+        "label": "Candidate 1",
+        "file": "assets/candidates/bishop/candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0022222222222221,
+        "x": -0.2777777777777778,
+        "y": 0.0,
+        "silhouette_iou": 0.9694949158193032
+      },
+      {
+        "id": "candidate-2",
+        "label": "Candidate 2",
+        "file": "assets/candidates/bishop/candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0133680555555555,
+        "x": -1.083767361111111,
+        "y": -0.9887152777777778,
+        "silhouette_iou": 0.9637766225054503
+      },
+      {
+        "id": "candidate-3",
+        "label": "Candidate 3",
+        "file": "assets/candidates/bishop/candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0022569444444445,
+        "x": -0.026041666666666668,
+        "y": -0.09982638888888888,
+        "silhouette_iou": 0.9721102150537635
+      }
+    ],
+    "knight": [
+      {
+        "id": "black",
+        "label": "Original black",
+        "file": "references/lichess-staunton-3d/Black-Knight.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "silhouette_iou": 1
+      },
+      {
+        "id": "white",
+        "label": "Original white",
+        "file": "references/lichess-staunton-3d/White-Knight.png",
+        "width": 300,
+        "height": 300,
+        "flip": true,
+        "scale": 1.0163679245283017,
+        "x": -24.264150943396228,
+        "y": -2.1488469601677136,
+        "silhouette_iou": 0.9695664656904966
+      },
+      {
+        "id": "candidate-1",
+        "label": "Candidate 1",
+        "file": "assets/candidates/knight/candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0101791277258565,
+        "x": -0.4415887850467281,
+        "y": -4.709241952232601,
+        "silhouette_iou": 0.9837539889759211
+      },
+      {
+        "id": "candidate-2",
+        "label": "Candidate 2",
+        "file": "assets/candidates/knight/candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0055555555555555,
+        "x": -0.2777777777777778,
+        "y": 0.0,
+        "silhouette_iou": 0.981063891298063
+      },
+      {
+        "id": "candidate-3",
+        "label": "Candidate 3",
+        "file": "assets/candidates/knight/candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9887626262626262,
+        "x": 0.4141414141414165,
+        "y": 0.43434343434343403,
+        "silhouette_iou": 0.9855240301100173
+      }
+    ],
+    "pawn": [
+      {
+        "id": "black",
+        "label": "Original black",
+        "file": "references/lichess-staunton-3d/Black-Pawn.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "silhouette_iou": 1
+      },
+      {
+        "id": "white",
+        "label": "Original white",
+        "file": "references/lichess-staunton-3d/White-Pawn.png",
+        "width": 300,
+        "height": 300,
+        "flip": false,
+        "scale": 0.9816036655211913,
+        "x": 0.6572164948453639,
+        "y": 0.3619702176403226,
+        "silhouette_iou": 0.98365056124939
+      },
+      {
+        "id": "candidate-1",
+        "label": "Candidate 1",
+        "file": "assets/candidates/pawn/candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0064716312056738,
+        "x": -0.40780141843972234,
+        "y": -0.3014184397163196,
+        "silhouette_iou": 0.9749757045675413
+      },
+      {
+        "id": "candidate-2",
+        "label": "Candidate 2",
+        "file": "assets/candidates/pawn/candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0084160756501184,
+        "x": -0.46631205673759263,
+        "y": 0.2600472813238734,
+        "silhouette_iou": 0.9678440925700366
+      },
+      {
+        "id": "candidate-3",
+        "label": "Candidate 3",
+        "file": "assets/candidates/pawn/candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 1.0084160756501184,
+        "x": -0.40780141843972234,
+        "y": -0.3014184397163196,
+        "silhouette_iou": 0.9742044358727098
+      }
+    ]
+  }
+}

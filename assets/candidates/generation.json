@@ -1,0 +1,143 @@
+{
+  "tool": "Built-in image_gen",
+  "records": [
+    {
+      "piece": "king",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK king sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Keep the compact cross finial, its circular dish below, the closely stacked collar rings, slender tapered stem and broad low rounded foot exactly as projected.\nCandidate 1 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/king/candidate-1.png",
+      "sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+      "source": "references/lichess-staunton-3d/Black-King.png",
+      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+    },
+    {
+      "piece": "king",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK king sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Keep the compact cross finial, circular dish below, closely stacked collar rings, tapered stem and broad low rounded foot exactly as projected.\nCandidate 2 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/king/candidate-2.png",
+      "sha256": "294fc8632e8aaa4ea7bdbd792c742b0ebb73a04b296a3e4ca2c1b2db42de89b0",
+      "source": "references/lichess-staunton-3d/Black-King.png",
+      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+    },
+    {
+      "piece": "king",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK king sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Keep the compact cross finial, circular dish below, closely stacked collar rings, tapered stem and broad low rounded foot exactly as projected.\nCandidate 3 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/king/candidate-3.png",
+      "sha256": "f422806eb42276997795f9c62e1e5e8b97e77da1acc5ef7c0b8e739c0a3416bb",
+      "source": "references/lichess-staunton-3d/Black-King.png",
+      "source_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+    },
+    {
+      "piece": "rook",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK rook sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve exactly the same crenellations and notches (do not invent extra merlons), visible circular flat well, thick short castle rim, tapering body and rounded low base.\nCandidate 1 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/rook/candidate-1.png",
+      "sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
+      "source": "references/lichess-staunton-3d/Black-Rook.png",
+      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    {
+      "piece": "rook",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK rook sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve exactly the same crenellations and notches (do not invent extra merlons), visible circular flat well, thick short castle rim, tapering body and rounded low base.\nCandidate 2 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/rook/candidate-2.png",
+      "sha256": "74c270282b914e2cb746d8df367791869f76fa43f3f3ea65a0be5af0f8af5007",
+      "source": "references/lichess-staunton-3d/Black-Rook.png",
+      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    {
+      "piece": "rook",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK rook sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve exactly the same crenellations and notches (do not invent extra merlons), visible circular flat well, thick short castle rim, tapering body and rounded low base.\nCandidate 3 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/rook/candidate-3.png",
+      "sha256": "1fef405cd9418b0597a6f2918f26b0050e83e737d6d5106f5645f5cb1135c31d",
+      "source": "references/lichess-staunton-3d/Black-Rook.png",
+      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    {
+      "piece": "bishop",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK bishop sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve the small round finial, egg-shaped mitre head with exactly the source slit and highlight, thin stacked collars, narrow neck, raised socket and broad low foot. Do not invent a giant conventional diagonal cut.\nCandidate 1 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/bishop/candidate-1.png",
+      "sha256": "80a654c6c7dd7ed48644c106acb0ede8de70bdfc759508374820355ef2e268b1",
+      "source": "references/lichess-staunton-3d/Black-Bishop.png",
+      "source_sha256": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+    },
+    {
+      "piece": "bishop",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK bishop sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve the small round finial, egg-shaped mitre head with exactly the source slit and highlight, thin stacked collars, narrow neck, raised socket and broad low foot. Do not invent a giant conventional diagonal cut.\nCandidate 2 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/bishop/candidate-2.png",
+      "sha256": "d093da2e3a2523bdfac564a0a7d7136d11662256b9e0defbacf17cb75bab751b",
+      "source": "references/lichess-staunton-3d/Black-Bishop.png",
+      "source_sha256": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+    },
+    {
+      "piece": "bishop",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK bishop sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve the small round finial, egg-shaped mitre head with exactly the source slit and highlight, thin stacked collars, narrow neck, raised socket and broad low foot. Do not invent a giant conventional diagonal cut.\nCandidate 3 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/bishop/candidate-3.png",
+      "sha256": "77249f57c3acb288ec420e15045fcf783eec6b77419cb36e6c7e620226fc43d1",
+      "source": "references/lichess-staunton-3d/Black-Bishop.png",
+      "source_sha256": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+    },
+    {
+      "piece": "knight",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK knight sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Keep the horse in the SAME side-facing orientation toward image right, with the exact downward muzzle angle, curved neck, ears, simple carved mane and incised cheek/neck lines. Do not mirror, turn the head, add eyes on the other side, or redesign as a realistic living horse.\nCandidate 1 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/knight/candidate-1.png",
+      "sha256": "3f460185db9827742d60d520055bfb1d13b6e370b1842771bf3b7583a92632cf",
+      "source": "references/lichess-staunton-3d/Black-Knight.png",
+      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+    },
+    {
+      "piece": "knight",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK knight sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Keep the horse in the SAME side-facing orientation toward image right, with the exact downward muzzle angle, curved neck, ears, simple carved mane and incised cheek/neck lines. Do not mirror, turn the head, add eyes on the other side, or redesign as a realistic living horse.\nCandidate 2 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/knight/candidate-2.png",
+      "sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+      "source": "references/lichess-staunton-3d/Black-Knight.png",
+      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+    },
+    {
+      "piece": "knight",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK knight sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Keep the horse in the SAME side-facing orientation toward image right, with the exact downward muzzle angle, curved neck, ears, simple carved mane and incised cheek/neck lines. Do not mirror, turn the head, add eyes on the other side, or redesign as a realistic living horse.\nCandidate 3 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/knight/candidate-3.png",
+      "sha256": "635f2bbeb1d6ca1d1eae17a2463e9cb59e3b85221d9c0164113ed4551ad880bb",
+      "source": "references/lichess-staunton-3d/Black-Knight.png",
+      "source_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+    },
+    {
+      "piece": "pawn",
+      "candidate": 1,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK pawn sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve the round ball finial, thin collar, short tapered neck and broad flattened domed foot, including the single narrow groove at the base. Match the squat compact source, not a tall generic pawn.\nCandidate 1 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/pawn/candidate-1.png",
+      "sha256": "e1431e56d2f7cc6c26b7d951cd6fe9fd52451942dc15a200e90c1bbb64d16a61",
+      "source": "references/lichess-staunton-3d/Black-Pawn.png",
+      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
+    },
+    {
+      "piece": "pawn",
+      "candidate": 2,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK pawn sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve the round ball finial, thin collar, short tapered neck and broad flattened domed foot, including the single narrow groove at the base. Match the squat compact source, not a tall generic pawn.\nCandidate 2 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/pawn/candidate-2.png",
+      "sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+      "source": "references/lichess-staunton-3d/Black-Pawn.png",
+      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
+    },
+    {
+      "piece": "pawn",
+      "candidate": 3,
+      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK pawn sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve the round ball finial, thin collar, short tapered neck and broad flattened domed foot, including the single narrow groove at the base. Match the squat compact source, not a tall generic pawn.\nCandidate 3 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
+      "file": "assets/candidates/pawn/candidate-3.png",
+      "sha256": "71fd50d02b2e74f689f9b34ce2cc228d8ac4df21acc61cc7be2a72d38bde6e51",
+      "source": "references/lichess-staunton-3d/Black-Pawn.png",
+      "source_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
+    }
+  ],
+  "date": "2026-10-02",
+  "intent": "Three independent faithful upscale interpretations per original black sprite. Fine details are generated, not recovered.",
+  "background": "Transparent alpha preserved; files copied without pixel editing."
+}

@@ -21,7 +21,7 @@ class Links(HTMLParser):
             target = ROOT / unquote(url.path)
             assert target.is_file(), f'Missing local link: {value}'
             checked.add(url.path)
-for name in ('index.html', 'review.html'):
+for name in ('index.html', 'review.html', 'king-review.html', 'rook-review.html', 'bishop-review.html', 'knight-review.html', 'pawn-review.html'):
     html = (ROOT / name).read_text(encoding='utf-8')
     assert 'file:///' not in html, f'Machine-specific URL in {name}'
     Links().feed(html)
@@ -50,12 +50,14 @@ assert meta, 'Missing viewer mesh metadata'
 expected = json.loads(meta.group(1))['sourceSha256']
 actual = hashlib.sha256((ROOT / 'models/queen/queen-rebuilt.blend').read_bytes()).hexdigest()
 assert expected == actual, 'Viewer is stale relative to the Blender model'
-print(f'PASS: two pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
+print(f'PASS: seven pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
 
 manifest=json.loads((ROOT/'references/lichess-staunton-3d/original-png-manifest.json').read_text())
 assert len(manifest['files'])==12
 gallery=(ROOT/'index.html').read_text(encoding='utf-8')
-assert gallery.count('data-piece=')==5
+assert 'data-piece=' not in gallery
+for piece in ('king','rook','bishop','knight','pawn'):
+    assert f'href="{piece}-review.html"' in gallery
 assert 'href="review.html"' in gallery
 assert gallery.count('<img ')==12
 for item in manifest['files']:
@@ -69,3 +71,21 @@ assert alignment==json.loads((ROOT/'assets/queen/original-reference-alignment.js
 for label in ('source','target'):
     assert hashlib.sha256((ROOT/alignment[label]).read_bytes()).hexdigest()==alignment[label+'_sha256']
 print('PASS: original-reference alignment metadata and source image hashes.')
+
+generation=json.loads((ROOT/'assets/candidates/generation.json').read_text(encoding='utf-8'))
+placements=json.loads((ROOT/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
+assert len(generation['records'])==15
+for row in generation['records']:
+    assert hashlib.sha256((ROOT/row['file']).read_bytes()).hexdigest()==row['sha256']
+    assert hashlib.sha256((ROOT/row['source']).read_bytes()).hexdigest()==row['source_sha256']
+for piece,images in placements['pieces'].items():
+    page=(ROOT/f'{piece}-review.html').read_text(encoding='utf-8')
+    embedded=json.loads(re.search(r'<script id="comparison-data"[^>]*>(.*?)</script>',page,re.S).group(1))
+    assert embedded['images']==images
+    assert len(images)==5
+    for item in images:
+        assert (ROOT/item['file']).is_file()
+        assert item['width']==item['height']
+        assert .5<item['scale']<1.5
+        if item['id'].startswith('candidate'):assert item['width']>=1024
+print('PASS: fifteen candidate hashes, source provenance, five comparison pages and alignment data.')
