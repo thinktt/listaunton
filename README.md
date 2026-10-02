@@ -91,3 +91,5 @@ python scripts/build_candidate_pages.py
 node scripts/check_candidate_review.cjs
 python scripts/check_site.py
 ```
+
+The king comparison applies a common 5% display inset so aligned finials cannot be clipped at the top. Bishop candidate revision 2 replaces the initial shallow engravings with a deep open mitre slit, generated again from the black original. Rejected bishop images are removed from the current tree (earlier versions remain in Git history).
