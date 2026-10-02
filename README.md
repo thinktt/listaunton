@@ -79,11 +79,11 @@ The original sprite is positioned by uniform scaling and translation fitted to t
 
 ## Reference candidates
 
-Each non-queen piece has three independently generated 1254 × 1254 PNG enlargements of its black original, made with the built-in image-generation tool. Original black and white 300 × 300 sprites remain available in both selectors. These are interpretations for review; generated grain and carving details are not recovered source geometry.
+Each non-queen piece has three independently generated high-resolution PNG enlargements of each original color, made with the built-in image-generation tool. Original black and white 300 × 300 sprites remain available in both selectors. These are interpretations for review; generated grain and carving details are not recovered source geometry.
 
 Choose images A and B, then use Blend or Wipe and the A–B slider. A only/B only show exact endpoints; Swap exchanges the sources. Fit/1×/2× and drag-to-pan inspect details. Background choices help inspect transparent edges. Align to original applies measured uniform scale and translation without warping. The white knight is mirrored in aligned view to match the black knight; disable alignment to see its original orientation and framing. Downloads always return the untouched image files.
 
-`assets/candidates/generation.json` records all 15 exact prompts, source hashes and output hashes. `assets/candidates/alignment.json` records browser placement and approximate silhouette overlap. `scripts/analyze_candidates.py` measures images using Pillow and NumPy without writing image pixels; `scripts/build_candidate_pages.py` builds the five HTML pages. Neither script modifies the queen review.
+`assets/candidates/generation.json` records all 30 exact prompts, source hashes and output hashes. `assets/candidates/alignment.json` records browser placement and approximate silhouette overlap. `scripts/analyze_candidates.py` measures images using Pillow and NumPy without writing image pixels; `scripts/build_candidate_pages.py` builds the five HTML pages. Neither script modifies the queen review.
 
 ```sh
 python scripts/analyze_candidates.py
@@ -93,3 +93,5 @@ python scripts/check_site.py
 ```
 
 The king comparison applies a common 5% display inset so aligned finials cannot be clipped at the top. Bishop candidate revision 2 replaces the initial shallow engravings with a deep open mitre slit, generated again from the black original. Rejected bishop images are removed from the current tree (earlier versions remain in Git history).
+
+White candidates were generated directly from the white originals and appear as White candidate 1–3 alongside the retained Black candidate 1–3. White bishop prompts use the same plain upscale instructions as the other pieces, with no mitre or slit guidance. Queen candidates were explicitly excluded. White knight candidates preserve their original facing direction in the files and are mirrored with the white original only when alignment is enabled.

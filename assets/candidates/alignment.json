@@ -28,7 +28,7 @@
       },
       {
         "id": "candidate-1",
-        "label": "Candidate 1",
+        "label": "Black candidate 1",
         "file": "assets/candidates/king/candidate-1.png",
         "width": 1254,
         "height": 1254,
@@ -40,7 +40,7 @@
       },
       {
         "id": "candidate-2",
-        "label": "Candidate 2",
+        "label": "Black candidate 2",
         "file": "assets/candidates/king/candidate-2.png",
         "width": 1254,
         "height": 1254,
@@ -52,7 +52,7 @@
       },
       {
         "id": "candidate-3",
-        "label": "Candidate 3",
+        "label": "Black candidate 3",
         "file": "assets/candidates/king/candidate-3.png",
         "width": 1254,
         "height": 1254,
@@ -61,6 +61,42 @@
         "x": 0.515873015873017,
         "y": -1.402236652236654,
         "silhouette_iou": 0.9686454331391746
+      },
+      {
+        "id": "white-candidate-1",
+        "label": "White candidate 1",
+        "file": "assets/candidates/king/white-candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9254403794037941,
+        "x": 3.0880758807588067,
+        "y": 0.04065040650405965,
+        "silhouette_iou": 0.963350141434018
+      },
+      {
+        "id": "white-candidate-2",
+        "label": "White candidate 2",
+        "file": "assets/candidates/king/white-candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.8866666666666666,
+        "x": 3.6975308641975317,
+        "y": -0.9876543209876508,
+        "silhouette_iou": 0.968687624750499
+      },
+      {
+        "id": "white-candidate-3",
+        "label": "White candidate 3",
+        "file": "assets/candidates/king/white-candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9323848238482385,
+        "x": 2.984417344173443,
+        "y": -0.5555555555555556,
+        "silhouette_iou": 0.9672943508424182
       }
     ],
     "rook": [
@@ -90,7 +126,7 @@
       },
       {
         "id": "candidate-1",
-        "label": "Candidate 1",
+        "label": "Black candidate 1",
         "file": "assets/candidates/rook/candidate-1.png",
         "width": 1254,
         "height": 1254,
@@ -102,7 +138,7 @@
       },
       {
         "id": "candidate-2",
-        "label": "Candidate 2",
+        "label": "Black candidate 2",
         "file": "assets/candidates/rook/candidate-2.png",
         "width": 1254,
         "height": 1254,
@@ -114,7 +150,7 @@
       },
       {
         "id": "candidate-3",
-        "label": "Candidate 3",
+        "label": "Black candidate 3",
         "file": "assets/candidates/rook/candidate-3.png",
         "width": 1254,
         "height": 1254,
@@ -123,6 +159,42 @@
         "x": 0.6140350877192999,
         "y": 0.6622807017543835,
         "silhouette_iou": 0.965236942234521
+      },
+      {
+        "id": "white-candidate-1",
+        "label": "White candidate 1",
+        "file": "assets/candidates/rook/white-candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.7936406619385343,
+        "x": 3.159180457052799,
+        "y": 11.898542159180453,
+        "silhouette_iou": 0.9603079555175363
+      },
+      {
+        "id": "white-candidate-2",
+        "label": "White candidate 2",
+        "file": "assets/candidates/rook/white-candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.870968992248062,
+        "x": 2.925710594315247,
+        "y": 8.053832902670116,
+        "silhouette_iou": 0.9533423820834748
+      },
+      {
+        "id": "white-candidate-3",
+        "label": "White candidate 3",
+        "file": "assets/candidates/rook/white-candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9748309178743961,
+        "x": 1.217391304347828,
+        "y": 0.9323671497584565,
+        "silhouette_iou": 0.9605919807262089
       }
     ],
     "bishop": [
@@ -152,7 +224,7 @@
       },
       {
         "id": "candidate-1",
-        "label": "Candidate 1",
+        "label": "Black candidate 1",
         "file": "assets/candidates/bishop/candidate-1-deep-slit.png",
         "width": 1254,
         "height": 1254,
@@ -164,7 +236,7 @@
       },
       {
         "id": "candidate-2",
-        "label": "Candidate 2",
+        "label": "Black candidate 2",
         "file": "assets/candidates/bishop/candidate-2-deep-slit.png",
         "width": 1254,
         "height": 1254,
@@ -176,7 +248,7 @@
       },
       {
         "id": "candidate-3",
-        "label": "Candidate 3",
+        "label": "Black candidate 3",
         "file": "assets/candidates/bishop/candidate-3-deep-slit.png",
         "width": 1254,
         "height": 1254,
@@ -185,6 +257,42 @@
         "x": 1.185185185185181,
         "y": -0.012345679012347609,
         "silhouette_iou": 0.9603714143591444
+      },
+      {
+        "id": "white-candidate-1",
+        "label": "White candidate 1",
+        "file": "assets/candidates/bishop/white-candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.7885185185185185,
+        "x": 1.8940329218107035,
+        "y": 8.353909465020577,
+        "silhouette_iou": 0.9585887029981779
+      },
+      {
+        "id": "white-candidate-2",
+        "label": "White candidate 2",
+        "file": "assets/candidates/bishop/white-candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.939640522875817,
+        "x": 2.1960784313725523,
+        "y": 0.6576797385620934,
+        "silhouette_iou": 0.9680388219544847
+      },
+      {
+        "id": "white-candidate-3",
+        "label": "White candidate 3",
+        "file": "assets/candidates/bishop/white-candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.938272506082725,
+        "x": 2.0255474452554743,
+        "y": 0.7461476074614776,
+        "silhouette_iou": 0.9610432485968967
       }
     ],
     "knight": [
@@ -214,7 +322,7 @@
       },
       {
         "id": "candidate-1",
-        "label": "Candidate 1",
+        "label": "Black candidate 1",
         "file": "assets/candidates/knight/candidate-1.png",
         "width": 1254,
         "height": 1254,
@@ -226,7 +334,7 @@
       },
       {
         "id": "candidate-2",
-        "label": "Candidate 2",
+        "label": "Black candidate 2",
         "file": "assets/candidates/knight/candidate-2.png",
         "width": 1254,
         "height": 1254,
@@ -238,7 +346,7 @@
       },
       {
         "id": "candidate-3",
-        "label": "Candidate 3",
+        "label": "Black candidate 3",
         "file": "assets/candidates/knight/candidate-3.png",
         "width": 1254,
         "height": 1254,
@@ -247,6 +355,42 @@
         "x": 0.4141414141414165,
         "y": 0.43434343434343403,
         "silhouette_iou": 0.9855240301100173
+      },
+      {
+        "id": "white-candidate-1",
+        "label": "White candidate 1",
+        "file": "assets/candidates/knight/white-candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": true,
+        "scale": 0.8277136752136752,
+        "x": -6.90811965811966,
+        "y": 8.797008547008542,
+        "silhouette_iou": 0.9820211686240394
+      },
+      {
+        "id": "white-candidate-2",
+        "label": "White candidate 2",
+        "file": "assets/candidates/knight/white-candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": true,
+        "scale": 0.8266497031382528,
+        "x": -7.725614927905005,
+        "y": 11.300254452926204,
+        "silhouette_iou": 0.9710419091967404
+      },
+      {
+        "id": "white-candidate-3",
+        "label": "White candidate 3",
+        "file": "assets/candidates/knight/white-candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": true,
+        "scale": 0.9421859903381643,
+        "x": -18.392512077294686,
+        "y": 0.7934782608695675,
+        "silhouette_iou": 0.9826732673267327
       }
     ],
     "pawn": [
@@ -276,7 +420,7 @@
       },
       {
         "id": "candidate-1",
-        "label": "Candidate 1",
+        "label": "Black candidate 1",
         "file": "assets/candidates/pawn/candidate-1.png",
         "width": 1254,
         "height": 1254,
@@ -288,7 +432,7 @@
       },
       {
         "id": "candidate-2",
-        "label": "Candidate 2",
+        "label": "Black candidate 2",
         "file": "assets/candidates/pawn/candidate-2.png",
         "width": 1254,
         "height": 1254,
@@ -300,7 +444,7 @@
       },
       {
         "id": "candidate-3",
-        "label": "Candidate 3",
+        "label": "Black candidate 3",
         "file": "assets/candidates/pawn/candidate-3.png",
         "width": 1254,
         "height": 1254,
@@ -309,6 +453,42 @@
         "x": -0.40780141843972234,
         "y": -0.3014184397163196,
         "silhouette_iou": 0.9742044358727098
+      },
+      {
+        "id": "white-candidate-1",
+        "label": "White candidate 1",
+        "file": "assets/candidates/pawn/white-candidate-1.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.7947222222222222,
+        "x": 5.78703703703704,
+        "y": 10.35185185185186,
+        "silhouette_iou": 0.9685775965459342
+      },
+      {
+        "id": "white-candidate-2",
+        "label": "White candidate 2",
+        "file": "assets/candidates/pawn/white-candidate-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9134615384615384,
+        "x": 3.3173076923076925,
+        "y": 2.7371794871794886,
+        "silhouette_iou": 0.9740543161978662
+      },
+      {
+        "id": "white-candidate-3",
+        "label": "White candidate 3",
+        "file": "assets/candidates/pawn/white-candidate-3.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.7282692307692308,
+        "x": 4.2307692307692335,
+        "y": 14.446581196581201,
+        "silhouette_iou": 0.9581831290555155
       }
     ]
   }
