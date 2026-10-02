@@ -5,7 +5,7 @@ Recovering the Lichess **Staunton** chess set as editable 3D models from its sta
 Open [the home page](index.html) to access:
 
 - [Rotating queen](queen-3d.html): the current mesh, orbit controls, and the saved overlay camera.
-- [Reference overlay](review.html): current/previous renders against either the selected high-res reference or original Lichess queen, direct comparison of both source images, opacity/blink controls, and detail views.
+- [Combined queen review](review.html): interactive 3D rotation and the high-res parts map alongside current/previous renders against either the selected high-res reference or original Lichess queen, direct comparison of both source images, opacity/blink controls, and detail views.
 - [Queen parts map](queen-parts.html): the names used to discuss the model.
 - [Original Staunton references](staunton-references.html): all twelve original PNG sprites from Lichess’s 3D Staunton set, paired by piece.
 
@@ -73,3 +73,13 @@ In `review.html`, **Selected high-res** uses the ChatGPT-generated candidate cho
 The original sprite is positioned by uniform scaling and translation fitted to the high-res silhouette, independently of the reconstructed model. No anisotropic stretching or warping is applied. The recorded scale is about 4.218×; the original and high-res outlines overlap by about 98.5% at the quarter-resolution fit. This describes silhouettes, not matching internal geometry or recovered detail. The browser smooths the enlarged source image.
 
 `assets/queen/original-reference-alignment.json` records placement, source hashes and fitting method. Run `python scripts/queen/align_original_reference.py` to recompute the alignment and update the page's embedded metadata if the references change. `node scripts/queen/check_review_reference.cjs` checks the page's actual control logic, alignment hashes, zoom/pan stability, hold/blink behavior and contour guards.
+
+## One-page queen review
+
+`review.html` combines the existing comparison, 3D model, and parts map. Drag the comparison picture to switch into the current 3D model and continue rotating with that same drag. Short clicks do not trigger a switch. Shift-drag or right-drag pans the comparison image without leaving it.
+
+The **3D model** button opens the same standalone viewer inside the review page, with its projection, material, camera-angle, zoom, reset, free orbit, and pan controls. Initial loading preserves the first drag by queuing movement until the viewer is ready. Returning via the button preserves its current orbit; beginning a fresh drag from the comparison starts at the matched overlay camera. The interactive 3D model is always the current revision.
+
+**Parts map** shows the existing high-res diagram and fourteen-part name key. Its original file, sandbox, and content-security policies are unchanged. **Reference overlay** returns to the comparison, where the original black Lichess and generated high-res references remain available. The model and map frames load on first use; their standalone pages remain available too.
+
+`check_review_reference.cjs` covers view switching, queued drag handoff, image panning, reference selection and the original comparison controls. `check_viewer_camera.cjs` checks the embedded gesture bridge as well as the exact Blender camera projection, orbit, zoom and pan math. Only messages from the corresponding parent/frame are accepted.

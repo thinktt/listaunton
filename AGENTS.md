@@ -19,3 +19,5 @@ The root pages are `index.html`, `queen-3d.html`, `review.html`, `queen-parts.ht
 The precise authorship of the original Lichess pieces is unclear. Do not attribute these pieces to James Clarke. Preserve the source notes; do not invent a license for the supplied references.
 
 Publish the repository root directly. Do not reintroduce an `_site` packaging folder. The original reference gallery uses the twelve PNGs from Lichess’s `public/images/staunton/piece/Staunton` set; omit its extra knight preview.
+
+The main review now embeds the standalone viewer and the unmodified parts map. Keep the drag handoff and parent/frame message-source checks working. Both interaction checks in scripts/queen must pass after changes to review controls or the viewer bridge.

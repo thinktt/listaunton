@@ -6,7 +6,7 @@ const html=fs.readFileSync(path.join(root,'queen-3d.html'),'utf8');
 const truth=JSON.parse(fs.readFileSync(path.join(root,'build/queen/viewer-camera.json'),'utf8'));
 const text=id=>html.match(new RegExp(`<script id="${id}"[^>]*>([\\s\\S]*?)</script>`))[1];
 const source=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1],uniforms={},queue=[],listeners={},nodes=new Map();
-let resize,draws=0;
+let resize,draws=0;const parentMessages=[],windowListeners={};const parentFrame={postMessage(message){parentMessages.push(message);}};
 const node=id=>{if(!nodes.has(id))nodes.set(id,{id,attrs:{},hidden:false,setAttribute(k,v){this.attrs[k]=v;},remove(){},textContent:''});return nodes.get(id);};
 const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node('view-'+m[1]),{dataset:{view:m[1]}}));
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');
@@ -23,7 +23,7 @@ const canvas=Object.assign(node('viewer'),{clientWidth:1254,clientHeight:1254,wi
  getBoundingClientRect:()=>({left:0,top:0,width:canvas.clientWidth,height:canvas.clientHeight}),
  focus(){},setPointerCapture(){},classList:{add(){},remove(){}}});
 const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
- document:{getElementById:node,querySelectorAll:()=>views},window:{devicePixelRatio:1},
+ document:{getElementById:node,querySelectorAll:()=>views},window:{devicePixelRatio:1,parent:parentFrame,addEventListener(name,fn){windowListeners[name]=fn;}},
  requestAnimationFrame:cb=>queue.push(cb),setTimeout:cb=>queue.push(cb),
  atob:s=>Buffer.from(s,'base64').toString('binary'),
  ResizeObserver:class{constructor(cb){resize=cb;}observe(){}}
@@ -65,3 +65,20 @@ const after=pixel([0,0,2]);assert(Math.abs(after[0]-before[0]-50)<.001);assert(M
 node('reset').onclick();flush();compare();
 const result={passed:true,blenderSampleCount:truth.samples.length,viewportShapes:5,maxPixelError:maxError,projectionSwitch:true,dragRotation:true,panPixelAccuracy:true,resetRestoresCamera:true,manualViewSurvivesResize:true,sourceSha256:truth.sourceSha256};
 fs.writeFileSync(path.join(root,'build/queen/viewer-camera-check.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+
+assert(parentMessages.some(message=>message.channel==='listaunton-review'&&message.event==='viewer-ready'));
+const rotationBeforeBridge=JSON.stringify(uniforms.uRotation);
+windowListeners.message({source:{},data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
+assert.equal(JSON.stringify(uniforms.uRotation),rotationBeforeBridge,'An unrelated window changed the model');
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
+assert.notEqual(JSON.stringify(uniforms.uRotation),rotationBeforeBridge,'The handoff drag did not rotate the model');
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',reset:true,material:'brown'}});flush();compare();
+assert.equal(node('brown').attrs['aria-pressed'],'true');
+const beforeBridgePan=Array.from(uniforms.uPan);
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'pan',dx:.1,dy:-.1}});flush();
+assert.notDeepEqual(Array.from(uniforms.uPan),beforeBridgePan);
+const rotationBeforeInvalid=JSON.stringify(uniforms.uRotation);
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:NaN,dy:Infinity}});flush();
+assert.equal(JSON.stringify(uniforms.uRotation),rotationBeforeInvalid);
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',reset:true,material:'neutral'}});flush();compare();
+console.log('PASS: embedded viewer readiness, parent-only gesture bridge, orbit, pan, material sync and exact camera reset.');
