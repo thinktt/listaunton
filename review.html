@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Queen reconstruction — reference comparison</title>
+<style>
+  :root{color-scheme:dark;--bg:#0b0e14;--panel:#141a25;--line:#303b4e;--text:#edf1f8;--muted:#a7b4c8;--accent:#89b9ff}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,"Segoe UI",sans-serif}
+  main{max-width:1540px;margin:auto;padding:30px clamp(16px,3vw,42px) 64px}h1{font-size:clamp(25px,3vw,38px);letter-spacing:-.025em;margin:0 0 7px}h2{font-size:22px;margin:0 0 14px}
+  p{color:var(--muted);margin:0 0 20px}.intro{max-width:950px}.topline{display:flex;justify-content:space-between;align-items:start;gap:20px;margin-bottom:22px}
+  a{color:#a8caff;text-decoration:none}a:hover{text-decoration:underline}.file-link{white-space:nowrap;display:inline-block;border:1px solid var(--line);border-radius:9px;padding:10px 15px;font-size:14px;background:var(--panel)}
+  .controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--panel);padding:16px;border:1px solid var(--line);border-radius:12px 12px 0 0}
+  .group{display:flex;gap:5px;align-items:center}.separated{padding-left:12px;border-left:1px solid var(--line)}
+  button{font:inherit;font-size:14px;background:#202a3b;border:1px solid #3e4e68;color:var(--text);padding:8px 12px;border-radius:7px;cursor:pointer;touch-action:none}
+  button:hover{background:#2d3b52}button[aria-pressed=true]{background:#8ab8ff;border-color:#a8ceff;color:#08182d;font-weight:600}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc86c;outline-offset:3px}
+  button:disabled{opacity:.45;cursor:default}.opacity{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:14px}.opacity label{white-space:nowrap}.opacity input{width:145px;accent-color:var(--accent)}output{font-variant-numeric:tabular-nums;min-width:37px;color:#d6e5ff}
+  #viewport{height:min(78vh,960px);min-height:360px;overflow:auto;background:#030405;border:1px solid var(--line);border-top:0;overscroll-behavior:contain;cursor:grab;position:relative;scrollbar-color:#56647b #111723;touch-action:pan-x pan-y}
+  #viewport.dragging{cursor:grabbing}#stage{position:relative;flex:none;background:#000;margin:auto;isolation:isolate}
+  #stage img{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;user-select:none;-webkit-user-drag:none}
+  #reference{z-index:1}#render{z-index:2}#contours{z-index:3;display:none}
+  .status{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:10px 15px;font-size:13px;color:var(--muted);background:var(--panel)}
+  #mode-status{color:#d7e7ff;font-weight:600}.hint{font-size:13px;margin:13px 0 35px}kbd{background:#222c3e;border:1px solid #455570;border-radius:4px;padding:1px 5px;color:#e6edfa;font-size:12px}
+  .details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:0}.card img{width:100%;display:block;background:#000}.card figcaption{padding:13px 16px;color:#dbe5f5;font-size:15px}.card figcaption small{display:block;color:var(--muted);margin-top:4px}.card.wide{grid-column:1/-1}
+  .card.angle img{max-height:720px;object-fit:contain}.error{display:none;margin:12px 0;color:#ffd190;background:#3a2918;padding:14px;border-radius:8px}.endnote{margin-top:24px;font-size:13px}
+  @media(max-width:760px){.topline{display:block}.file-link{margin-top:4px}.details{grid-template-columns:1fr}.separated{padding-left:0;border:0}.controls{padding:11px;gap:11px}button{padding:8px 9px}.status{font-size:12px}#viewport{height:70vh}.opacity input{width:130px}.card.wide{grid-column:auto}}
+</style>
+</head>
+<body>
+<main>
+  <div class="topline">
+    <div>
+      <h1>Queen reconstruction</h1>
+      <p class="intro">Compare the supplied reference with the rebuilt 3D geometry. Both images use the same camera framing and pixel coordinates. Choose neutral shading or a plain brown gloss preview to inspect the shape.</p>
+    </div>
+    <a class="file-link" href="models/queen/queen-rebuilt.blend" download>Download Blender model</a>
+  </div>
+  <section aria-label="Interactive reference comparison">
+    <div class="controls">
+      <div class="group" aria-label="Display mode">
+        <button type="button" class="mode" data-mode="overlay" aria-pressed="true">Overlay</button>
+        <button type="button" class="mode" data-mode="reference" aria-pressed="false">Reference</button>
+        <button type="button" class="mode" data-mode="model" aria-pressed="false">Model</button>
+        <button type="button" class="mode" data-mode="contours" aria-pressed="false" title="Contours are available for the current revision only.">Contours (current)</button>
+      </div>
+      <div class="group separated" aria-label="Model revision">
+        <span style="font-size:14px;color:var(--muted);margin-right:3px">Revision</span>
+        <button type="button" class="revision" data-revision="current" aria-pressed="true">Current</button>
+        <button type="button" class="revision" data-revision="previous" aria-pressed="false" title="The thinning revision immediately before this shape refinement.">Previous</button>
+      </div>
+      <div class="group separated" aria-label="Model material">
+        <span style="font-size:14px;color:var(--muted);margin-right:3px">Material</span>
+        <button type="button" class="material" data-material="neutral" aria-pressed="true">Neutral</button>
+        <button type="button" class="material" data-material="brown" aria-pressed="false" title="Plain, untextured brown gloss. Wood grain is not included.">Brown preview</button>
+      </div>
+      <div class="opacity separated">
+        <label for="opacity">Model opacity</label>
+        <input id="opacity" type="range" min="0" max="100" value="50" step="1">
+        <output id="opacity-value" for="opacity">50%</output>
+      </div>
+      <div class="group separated" aria-label="Zoom">
+        <button type="button" class="zoom" data-zoom="fit" aria-pressed="true">Fit</button>
+        <button type="button" class="zoom" data-zoom="1" aria-pressed="false">1×</button>
+        <button type="button" class="zoom" data-zoom="2" aria-pressed="false">2×</button>
+      </div>
+      <div class="group separated">
+        <button type="button" id="hold">Hold for reference</button>
+        <button type="button" id="blink">Blink to model</button>
+      </div>
+    </div>
+    <div id="viewport" tabindex="0" aria-label="Comparison image. Drag to pan; select a zoom level above.">
+      <div id="stage" style="width:1254px;height:1254px">
+        <img id="reference" src="assets/queen/reference.png" width="1254" height="1254" alt="Supplied wooden queen reference">
+        <img id="render" src="assets/queen/queen-matched.png" width="1254" height="1254" alt="Neutral material render of the reconstructed queen">
+        <img id="contours" src="assets/queen/contour-overlay.png" width="1254" height="1254" alt="Reference contour in cyan and reconstructed model contour in magenta">
+      </div>
+    </div>
+    <div class="status">
+      <span id="mode-status" aria-live="polite">50% model over reference</span>
+      <span id="zoom-status">1254 × 1254 source pixels</span>
+      <span>Current contours: <span style="color:#2ee1f4">reference</span> / <span style="color:#ff4cd7">model</span> / white overlap</span>
+    </div>
+    <p id="load-error" class="error">A comparison image could not be loaded. Keep this HTML file beside the PNG images in the queen-hires folder, then reload.</p>
+    <p class="hint">Drag to pan at 1× or 2×. Hold <kbd>Space</kbd> for the reference; release to return. <kbd>O</kbd> overlay · <kbd>R</kbd> reference · <kbd>M</kbd> model. “Blink” alternates the selected revision and the reference without moving them.<br>Current / Previous compares this shape refinement with the preceding thinning revision. Contours always switch to Current.<br><span id="material-note">Brown preview uses plain, untextured gloss; the wood grain is still deferred.</span></p>
+  </section>
+  <section aria-labelledby="details-heading">
+    <h2 id="details-heading">Inspect the details</h2>
+    <p>These fixed comparison panels and the second-angle view show the current revision. Comparison panels use the neutral material.</p>
+    <div class="details">
+      <figure class="card wide"><a href="assets/queen/comparison-crown.png" target="_blank"><img src="assets/queen/comparison-crown.png" alt="Crown and central finial: reference, model, and 50 percent overlay" loading="lazy"></a><figcaption>Crown and central finial<small>The scoop, eight tips, rolled rim, and partially seated egg-shaped finial.</small></figcaption></figure>
+      <figure class="card wide"><a href="assets/queen/comparison-collars.png" target="_blank"><img src="assets/queen/comparison-collars.png" alt="Upper body and collars: reference, model, and overlay" loading="lazy"></a><figcaption>Upper body and collar stack</figcaption></figure>
+      <figure class="card wide"><a href="assets/queen/comparison-base.png" target="_blank"><img src="assets/queen/comparison-base.png" alt="Stem socket and base: reference, model, and overlay" loading="lazy"></a><figcaption>Raised stem socket, broad base, and single foot groove</figcaption></figure>
+      <figure class="card"><a href="assets/queen/feature-curves.png" target="_blank"><img src="assets/queen/feature-curves.png" alt="Projected circular features of the model overlaid on the reference" loading="lazy"></a><figcaption>Internal feature alignment<small>Colored curves project the model’s ring radii and heights onto the reference.</small></figcaption></figure>
+      <figure class="card angle" id="angle-card"><a href="assets/queen/queen-three-quarter.png" target="_blank"><img id="angle-image" src="assets/queen/queen-three-quarter.png" alt="Reconstructed queen viewed from a second angle" loading="lazy"></a><figcaption>Second angle<small>Checks the three-dimensional shape beyond the reference view.</small></figcaption></figure>
+    </div>
+  </section>
+  <p class="endnote">Geometry study. Wood grain and the final surface finish are deferred. The overlay compares the unchanged reference and rendered images; it does not stretch or warp either image.</p>
+</main>
+<script>
+(() => {
+  'use strict';
+  const byId = id => document.getElementById(id);
+  const viewport=byId('viewport'),stage=byId('stage'),reference=byId('reference'),render=byId('render'),contours=byId('contours');
+  const slider=byId('opacity'),output=byId('opacity-value'),modeStatus=byId('mode-status'),zoomStatus=byId('zoom-status');
+  let mode='overlay',material='neutral',revision='current',zoomMode='fit',scale=1,width=1254,height=1254,holding=false,drag=null;
+  const modes=[...document.querySelectorAll('.mode')],zooms=[...document.querySelectorAll('.zoom')],materials=[...document.querySelectorAll('.material')],revisions=[...document.querySelectorAll('.revision')];
+  const modelFiles={current:{neutral:'assets/queen/queen-matched.png',brown:'assets/queen/queen-brown.png'},previous:{neutral:'assets/queen/queen-previous.png',brown:'assets/queen/queen-previous-brown.png'}};
+
+  function refresh(){
+    const active=holding?'reference':mode,opacity=Number(slider.value)/100;
+    reference.style.opacity=(active==='model')?'0':'1';
+    render.style.opacity=active==='overlay'?String(opacity):active==='model'?'1':'0';
+    contours.style.display=active==='contours'?'block':'none';
+    output.value=slider.value+'%';output.textContent=slider.value+'%';
+    modes.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===mode)));
+    materials.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.material===material)));
+    revisions.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.revision===revision)));
+    const materialLabel=material==='brown'?'brown preview':'neutral model';
+    const revisionLabel=revision==='current'?'Current':'Previous';
+    modeStatus.textContent=holding?'Reference (held)':active==='overlay'?revisionLabel+' · '+slider.value+'% '+materialLabel+' over reference':active==='reference'?'Reference only (shared by both revisions)':active==='model'?revisionLabel+' model · '+(material==='brown'?'plain brown gloss':'neutral material'):'Current revision · reference and model silhouettes';
+    byId('blink').textContent=mode==='model'?'Blink to reference':'Blink to model';
+  }
+  function updateRender(){
+    render.src=modelFiles[revision][material];
+    render.alt=(revision==='current'?'Current':'Previous')+' queen reconstruction with '+(material==='brown'?'plain, untextured brown gloss':'neutral shading');
+  }
+  function setMode(next){
+    mode=next;
+    if(next==='contours'&&revision!=='current'){revision='current';updateRender();}
+    refresh();
+  }
+  function setMaterial(next){
+    material=next;
+    updateRender();
+    refresh();
+  }
+  function setRevision(next){
+    revision=next;
+    if(next==='previous'&&mode==='contours')mode='overlay';
+    updateRender();
+    refresh();
+  }
+  function resize(next,keepCenter=true){
+    const centerX=(viewport.scrollLeft+viewport.clientWidth/2-stage.offsetLeft)/scale;
+    const centerY=(viewport.scrollTop+viewport.clientHeight/2-stage.offsetTop)/scale;
+    zoomMode=next;
+    scale=next==='fit'?Math.min(viewport.clientWidth/width,viewport.clientHeight/height):Number(next);
+    stage.style.width=(width*scale)+'px';stage.style.height=(height*scale)+'px';
+    if(keepCenter&&next!=='fit'){
+      viewport.scrollLeft=centerX*scale+stage.offsetLeft-viewport.clientWidth/2;
+      viewport.scrollTop=centerY*scale+stage.offsetTop-viewport.clientHeight/2;
+    }else{viewport.scrollLeft=0;viewport.scrollTop=0;}
+    zooms.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.zoom===zoomMode)));
+    zoomStatus.textContent=Math.round(scale*100)+'% display · '+width+' × '+height+' source pixels';
+  }
+  modes.forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.mode)));
+  materials.forEach(button=>button.addEventListener('click',()=>setMaterial(button.dataset.material)));
+  revisions.forEach(button=>button.addEventListener('click',()=>setRevision(button.dataset.revision)));
+  zooms.forEach(button=>button.addEventListener('click',()=>resize(button.dataset.zoom)));
+  slider.addEventListener('input',()=>{mode='overlay';refresh();});
+  byId('blink').addEventListener('click',()=>setMode(mode==='model'?'reference':'model'));
+  const hold=byId('hold');
+  hold.addEventListener('pointerdown',event=>{event.preventDefault();hold.setPointerCapture(event.pointerId);holding=true;refresh();});
+  const release=()=>{holding=false;refresh();};
+  hold.addEventListener('pointerup',release);hold.addEventListener('pointercancel',release);hold.addEventListener('lostpointercapture',release);
+  hold.addEventListener('keydown',event=>{if(event.code==='Enter'){event.preventDefault();holding=true;refresh();}});
+  hold.addEventListener('keyup',event=>{if(event.code==='Enter')release();});
+  document.addEventListener('keydown',event=>{
+    if(event.target.tagName==='INPUT')return;
+    if(event.code==='Space'){event.preventDefault();holding=true;refresh();}
+    if(!event.ctrlKey&&!event.metaKey&&!event.altKey){
+      if(event.code==='KeyO')setMode('overlay');if(event.code==='KeyR')setMode('reference');if(event.code==='KeyM')setMode('model');
+    }
+  });
+  document.addEventListener('keyup',event=>{if(event.code==='Space'){event.preventDefault();release();}});
+  window.addEventListener('blur',()=>{release();drag=null;viewport.classList.remove('dragging');});
+  viewport.addEventListener('pointerdown',event=>{
+    if(event.button!==0||event.pointerType==='touch')return;
+    viewport.setPointerCapture(event.pointerId);drag={x:event.clientX,y:event.clientY,left:viewport.scrollLeft,top:viewport.scrollTop};viewport.classList.add('dragging');
+  });
+  viewport.addEventListener('pointermove',event=>{
+    if(!drag)return;viewport.scrollLeft=drag.left-(event.clientX-drag.x);viewport.scrollTop=drag.top-(event.clientY-drag.y);
+  });
+  const endDrag=()=>{drag=null;viewport.classList.remove('dragging');};
+  viewport.addEventListener('pointerup',endDrag);viewport.addEventListener('pointercancel',endDrag);viewport.addEventListener('lostpointercapture',endDrag);
+  reference.addEventListener('load',()=>{width=reference.naturalWidth;height=reference.naturalHeight;resize(zoomMode,false);});
+  [reference,render].forEach(image=>image.addEventListener('error',()=>{byId('load-error').style.display='block';}));
+  contours.addEventListener('error',()=>{const button=modes.find(item=>item.dataset.mode==='contours');button.disabled=true;});
+  byId('angle-image').addEventListener('error',()=>{byId('angle-card').hidden=true;});
+  new ResizeObserver(()=>{if(zoomMode==='fit')resize('fit',false);}).observe(viewport);
+  if(reference.complete&&reference.naturalWidth){width=reference.naturalWidth;height=reference.naturalHeight;}
+  resize('fit',false);refresh();
+})();
+</script>
+</body>
+</html>

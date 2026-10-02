@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "sourceSha256": "4b790a70b86176b851f9a07f2a2f0889bc4a2e63fea7632b17e5c5a40f3b19ff",
+  "collars": [
+    {
+      "name": "lower",
+      "evaluated_peak_z": 2.9825003984473915,
+      "evaluated_peak_radius": 0.6537234898159725
+    },
+    {
+      "name": "middle",
+      "evaluated_peak_z": 3.15249555213857,
+      "evaluated_peak_radius": 0.6032061780888359
+    },
+    {
+      "name": "upper",
+      "evaluated_peak_z": 3.3249393408730574,
+      "evaluated_peak_radius": 0.47900020135531374
+    }
+  ],
+  "evaluated_peak_gaps": [
+    0.16999515369117857,
+    0.1724437887344874
+  ],
+  "gap_difference": 0.0024486350433088333,
+  "crown_body_taper_slope": 0.14672634574865837,
+  "max_taper_radius_deviation": 1.5972997859547977e-05
+}

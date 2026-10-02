@@ -1,0 +1,100 @@
+{
+  "validation": "Continuous queen and preserved control regions",
+  "passed": true,
+  "source_blend": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\queen-rebuilt.blend",
+  "baseline_blend": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-hires\\before-seamless-crown\\queen-rebuilt.blend",
+  "coordinate_tolerance": 2e-06,
+  "source_sha256": "ee52dd8e3985269e33fb20f21c804314984260a6d5b97b7ff997d3e5c7913265",
+  "baseline_sha256": "319b21f3e1e3b0bd2292857f13ae8862490bba86d92d804309bac375aaa29995",
+  "mesh_object_count": 1,
+  "control_connected_components": 1,
+  "meshes": [
+    {
+      "name": "01 Queen - continuous body and splash crown",
+      "editable_vertices": 22464,
+      "render_vertices": 357890,
+      "render_faces": 357888,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "volume": 3.4308867356584747,
+      "subdivision_editable": true
+    }
+  ],
+  "reference_packed": true,
+  "camera_background": true,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "resolution_percentage": 100,
+  "pixel_aspect": [
+    1.0,
+    1.0
+  ],
+  "render_samples": 32,
+  "camera": {
+    "name": "Aligned reference camera",
+    "type": "ORTHO",
+    "ortho_scale": 4.5850090980529785,
+    "shift_x": 0.11433412879705429,
+    "shift_y": 0.0,
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.782608151435852,
+        -0.6225146651268005,
+        -7.470175743103027
+      ],
+      [
+        0.0,
+        0.6225146651268005,
+        0.782608151435852,
+        10.877280235290527
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "ring_metadata": {
+    "ring_segments": 192,
+    "body_preserved_ring_count": 89,
+    "finial_first_ring": 108,
+    "finial_ring_count": 9,
+    "finial_source_first_ring": 20
+  },
+  "preserved_body_control_vertices": {
+    "vertex_count": 17088,
+    "coordinate_space": "world",
+    "tolerance": 2e-06,
+    "max_distance": 0.0,
+    "max_component_difference": 0.0,
+    "passed": true
+  },
+  "preserved_finial_control_vertices": {
+    "vertex_count": 576,
+    "coordinate_space": "world",
+    "tolerance": 2e-06,
+    "max_distance": 1.4901161193847656e-07,
+    "max_component_difference": 1.4901161193847656e-07,
+    "passed": true,
+    "rings": 9,
+    "shared_angles_per_ring": 64,
+    "baseline_segments": 256,
+    "current_segments": 192,
+    "baseline_first_ring": 20
+  },
+  "authorized_changed_region": "Crown body transition, flare, rim and bowl; no full-crown equality check",
+  "source_file_unchanged": true,
+  "baseline_file_unchanged": true
+}

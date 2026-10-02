@@ -1,0 +1,33 @@
+{
+  "meshes": [
+    {
+      "name": "01 Body - foot groove, raised socket, stem and collars",
+      "editable_vertices": 18432,
+      "render_vertices": 293378,
+      "render_faces": 293376,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "volume": 3.3781367196510015,
+      "subdivision_editable": true
+    },
+    {
+      "name": "02 Crown - rolled scallops, shallow scoop and egg finial",
+      "editable_vertices": 7424,
+      "render_vertices": 116738,
+      "render_faces": 116736,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "volume": 0.16934961844955554,
+      "subdivision_editable": true
+    }
+  ],
+  "reference_packed": true,
+  "camera_background": true,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "render_samples": 32,
+  "approved_crown_unchanged": true,
+  "passed": true
+}

@@ -1,0 +1,1347 @@
+[
+  {
+    "source": "outputs/queen-hires/comparison-base.png",
+    "destination": "assets/queen/comparison-base.png",
+    "sha256": "74e0802f0206a56532207bde10d45f30f9bbae2f69adf9c784ab6651c5e34102"
+  },
+  {
+    "source": "outputs/queen-hires/comparison-collars.png",
+    "destination": "assets/queen/comparison-collars.png",
+    "sha256": "e9eeb8c766214d960ff25bd03b472997baad313b19b622d97196cc94413ae617"
+  },
+  {
+    "source": "outputs/queen-hires/comparison-crown.png",
+    "destination": "assets/queen/comparison-crown.png",
+    "sha256": "11a2270b7c5f8c8803e9aef77732ab42b1231070f809988daeee6eeebdea9612"
+  },
+  {
+    "source": "outputs/queen-hires/comparison-full.png",
+    "destination": "assets/queen/comparison-full.png",
+    "sha256": "71c94fcd5785bb62ae0ed2c9bfe1772c027abced721ef9bd08c0206f3ab547ce"
+  },
+  {
+    "source": "outputs/queen-hires/contour-overlay-labeled.png",
+    "destination": "assets/queen/contour-overlay-labeled.png",
+    "sha256": "187daf09e1beafc5cd30ab10538c361f4e029ff6fa6e2ad2dd2ce033586af4ba"
+  },
+  {
+    "source": "outputs/queen-hires/contour-overlay.png",
+    "destination": "assets/queen/contour-overlay.png",
+    "sha256": "7ecec66258de942aea8b4f41a7fd8eb419a85c99fb820adf8a00ad8f881161aa"
+  },
+  {
+    "source": "outputs/queen-hires/feature-curves.json",
+    "destination": "assets/queen/feature-curves.json",
+    "sha256": "6363d4bbfc079a1c55f15bf78f026057dddc09932cbee72e64912699fe1297ad"
+  },
+  {
+    "source": "outputs/queen-hires/feature-curves.png",
+    "destination": "assets/queen/feature-curves.png",
+    "sha256": "98cf58ba720149b4efe489a4ecfb0e91b4a9af2db23528548985a4b0d35a8906"
+  },
+  {
+    "source": "outputs/queen-hires/model-validation.json",
+    "destination": "assets/queen/model-validation.json",
+    "sha256": "2504099b7305468cc852e121046c89b41c305b013561eb8807290cb926653cec"
+  },
+  {
+    "source": "outputs/queen-hires/overlay-50-labeled.png",
+    "destination": "assets/queen/overlay-50-labeled.png",
+    "sha256": "da14c327b0969536654a0d63a6c1c55727a5d050a5cc9cae9e9426e24dd7d045"
+  },
+  {
+    "source": "outputs/queen-hires/overlay-50.png",
+    "destination": "assets/queen/overlay-50.png",
+    "sha256": "8a2e7bf545a162eca42433de8e2beeb2a6c6e474e033b2e8c8ee3d146be5751c"
+  },
+  {
+    "source": "outputs/queen-hires/overlay-metrics.json",
+    "destination": "assets/queen/overlay-metrics.json",
+    "sha256": "3263c1fa5feb129e11ab4ee1e2e488d524ec0d83927e2543860e87a0e7cc8242"
+  },
+  {
+    "source": "outputs/queen-hires/profile-landmarks.json",
+    "destination": "assets/queen/profile-landmarks.json",
+    "sha256": "ffba6a3b1e3b386e1ec39e16241976055a77cc68efe0585781f068ddb25c6e35"
+  },
+  {
+    "source": "outputs/queen-hires/queen-brown.png",
+    "destination": "assets/queen/queen-brown.png",
+    "sha256": "000337952f7c82c8018521bb562d69d44b08b43cb725f7dcd89e507423e43f17"
+  },
+  {
+    "source": "outputs/queen-hires/queen-matched.png",
+    "destination": "assets/queen/queen-matched.png",
+    "sha256": "7881230a8efe2bd01b93ae78b0a8c801de828ac292282742657993ffd3c2d720"
+  },
+  {
+    "source": "outputs/queen-hires/queen-previous-brown.png",
+    "destination": "assets/queen/queen-previous-brown.png",
+    "sha256": "cbb3ab5e141a5eef4af34b1761d3d617cee211503037d7fb7569400e9079adf7"
+  },
+  {
+    "source": "outputs/queen-hires/queen-previous.png",
+    "destination": "assets/queen/queen-previous.png",
+    "sha256": "84b5e27daccc26afde8154aac12bb9e9050d8144cd516e7a39d0a9e709834743"
+  },
+  {
+    "source": "outputs/queen-hires/queen-three-quarter.png",
+    "destination": "assets/queen/queen-three-quarter.png",
+    "sha256": "ebc7840df93d17a07f0dbae82d056656a2bf46cb5c175a6084593cc965e7cef9"
+  },
+  {
+    "source": "outputs/queen-hires/reference.png",
+    "destination": "assets/queen/reference.png",
+    "sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a"
+  },
+  {
+    "source": "outputs/queen-hires/queen-rebuilt.blend",
+    "destination": "models/queen/queen-rebuilt.blend",
+    "sha256": "ee52dd8e3985269e33fb20f21c804314984260a6d5b97b7ff997d3e5c7913265"
+  },
+  {
+    "source": "outputs/queen-hires/README.txt",
+    "destination": "docs/queen-notes.txt",
+    "sha256": "fb415f5ba086607dbea719443b30feb888562807fb5c4e7037e2c5c85388c8c1"
+  },
+  {
+    "source": "outputs/queen-hires/queen-parts.html",
+    "destination": "queen-parts.html",
+    "sha256": "c6ea07e0c37e221585fe3605b1891a706b64bd6bb6166a8bcef27951dcab7123"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/Black-Bishop.webp",
+    "destination": "references/lichess-staunton-3d/Black-Bishop.webp",
+    "sha256": "4c45c97247043f2533a018d7fcefe1fc73cf3e6e6746905a195041683c42b111"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/Black-King.webp",
+    "destination": "references/lichess-staunton-3d/Black-King.webp",
+    "sha256": "e83cebe0c61abf3df29e6c8b8083cfc4f836ed3f8acbd7e4ef0341419592e1ee"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/Black-Knight.webp",
+    "destination": "references/lichess-staunton-3d/Black-Knight.webp",
+    "sha256": "6956cbc7cdca6388ee65e108eb790678ca3133be73cb26e79647c2a7c2a38ec0"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/Black-Pawn.webp",
+    "destination": "references/lichess-staunton-3d/Black-Pawn.webp",
+    "sha256": "3d27b5cce731dc2bedfcd6f4dc15ea6c8aef9f4c67a65376c50e75b14ce4b793"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/Black-Queen.webp",
+    "destination": "references/lichess-staunton-3d/Black-Queen.webp",
+    "sha256": "149795b6e653a16af629eb0ad1559c9e8fba6154297a2c13447295bfddb7d45e"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/Black-Rook.webp",
+    "destination": "references/lichess-staunton-3d/Black-Rook.webp",
+    "sha256": "4ceb172a9633e7f38049144b5dd970616b24a23c6bdc70e80799ff53fd9372b8"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/SOURCE.txt",
+    "destination": "references/lichess-staunton-3d/SOURCE.txt",
+    "sha256": "3a786432f1a5a59566e601d2c1b677d10f697d140e759c7bbe937b5f2bc9c99c"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/White-Bishop.webp",
+    "destination": "references/lichess-staunton-3d/White-Bishop.webp",
+    "sha256": "667cb667d1fe0e4b86d18979a56b90166f2c7426ecd0033e72d256c9cff1c015"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/White-King.webp",
+    "destination": "references/lichess-staunton-3d/White-King.webp",
+    "sha256": "fd1d5fc0f742dca7baf4f090d1436fb190261964fe6b3e4ad37e14052e45f832"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/White-Knight.webp",
+    "destination": "references/lichess-staunton-3d/White-Knight.webp",
+    "sha256": "76f9c04515b3a1bcb12d2d4a3a1a100fc79973bb8ec6b9bee9debf75cac0eae3"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/White-Pawn.webp",
+    "destination": "references/lichess-staunton-3d/White-Pawn.webp",
+    "sha256": "bf20d1a79732a53c2c657f7d1028297a2775dd2749559df8f408a088683d9205"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/White-Queen.webp",
+    "destination": "references/lichess-staunton-3d/White-Queen.webp",
+    "sha256": "77d9efe6e06081e2a6e0e8b1bb9cb4ec718e5f609431f6970cdcd2d5238820d1"
+  },
+  {
+    "source": "outputs/lichess-staunton-3d/White-Rook.webp",
+    "destination": "references/lichess-staunton-3d/White-Rook.webp",
+    "sha256": "4b89cab26415e1db2bde452932544634ba11161c28acd2eb6cbf7588b530feb0"
+  },
+  {
+    "source": "work/queen-hires/analyze_thickness.py",
+    "destination": "history/queen-hires/analyze_thickness.py",
+    "sha256": "0f2e4941bf2170b50b0e7eb3a54d0b4ac67ae67e287d61e2d863ba6cb6b341b8"
+  },
+  {
+    "source": "work/queen-hires/base-compression-camera.log",
+    "destination": "history/queen-hires/base-compression-camera.log",
+    "sha256": "03cd8580803ff067682dc9ef50a57967a3d54cf08a9b1c3c4cab34f1319fe2a8"
+  },
+  {
+    "source": "work/queen-hires/base-compression-check.json",
+    "destination": "history/queen-hires/base-compression-check.json",
+    "sha256": "7a57785ad8b03bdbea1223a72e3ea0809b7610d5de03f943e19fdb5e49c49188"
+  },
+  {
+    "source": "work/queen-hires/base-compression-export.log",
+    "destination": "history/queen-hires/base-compression-export.log",
+    "sha256": "ebd60ca7291aa20812297a37def79d8f01d42f147b3b77c607c791153348147e"
+  },
+  {
+    "source": "work/queen-hires/base-compression-qa.log",
+    "destination": "history/queen-hires/base-compression-qa.log",
+    "sha256": "c58fc326152e4d9a2535b55a0451aa687bb7aedceb5b682878165636735bfd52"
+  },
+  {
+    "source": "work/queen-hires/base-compression-validation.log",
+    "destination": "history/queen-hires/base-compression-validation.log",
+    "sha256": "8cc6e50fea37247ea5047d4ae56dce834f3661aa9471b41dacf072a3e330e8bd"
+  },
+  {
+    "source": "work/queen-hires/base-compression.log",
+    "destination": "history/queen-hires/base-compression.log",
+    "sha256": "446752f99bbbd62805411623a35a9cb66946b89f1542a1e074087f057c4dc6ea"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-camera.log",
+    "destination": "history/queen-hires/base-flattening-camera.log",
+    "sha256": "4124675ab653e0aad2ccb8207ac5b357d3fc21cbf97e1e296a8eb8ecd4d8ecb4"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-draft-comparison.png",
+    "destination": "history/queen-hires/base-flattening-draft-comparison.png",
+    "sha256": "a360d04125d4dbd4eab0ce53dba17db526627fbe730b14241fe8b076bea134ad"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-draft-qa.log",
+    "destination": "history/queen-hires/base-flattening-draft-qa.log",
+    "sha256": "146e2f74757608905a5d8465b49e1aa45a1d9adc6320e752b1aba9bd47a79583"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-draft.log",
+    "destination": "history/queen-hires/base-flattening-draft.log",
+    "sha256": "12bbfe852fdf945d9cca20b0dc4701b4448b150ca5a0158f1c94f563af183b95"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-draft.png",
+    "destination": "history/queen-hires/base-flattening-draft.png",
+    "sha256": "ddee769b3a5a2239714a6526faddea6c0cc8ed5b9c853b29b33dc733a2ae539b"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-export.log",
+    "destination": "history/queen-hires/base-flattening-export.log",
+    "sha256": "f30635805782e2f98a14fbf563c4061ce04c4066a087de1749bedfe75e347856"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-final-qa.log",
+    "destination": "history/queen-hires/base-flattening-final-qa.log",
+    "sha256": "8a55d715c1946aa9d9a7f1d46d291fdeec9ddb5bb336c9242ffbb160e688e95d"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-final.log",
+    "destination": "history/queen-hires/base-flattening-final.log",
+    "sha256": "284e0088fc04450a2190765e51069eb5062ddee25e8b146c1c82e8921ce8805c"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-shape-check.json",
+    "destination": "history/queen-hires/base-flattening-shape-check.json",
+    "sha256": "6396f67fbcdfa0189a6787a484ea264697132e6b39dc435dac221668688ec073"
+  },
+  {
+    "source": "work/queen-hires/base-flattening-validation.log",
+    "destination": "history/queen-hires/base-flattening-validation.log",
+    "sha256": "d7d23414f8562f1bcd14c59dcbc63ab82cf4418db39b5df36b4b5f4b42b53abf"
+  },
+  {
+    "source": "work/queen-hires/base-roundover-camera.log",
+    "destination": "history/queen-hires/base-roundover-camera.log",
+    "sha256": "3aae2d79ed3cdddafdf01bb0ef708701d701a61c2ab0c725ed7982bd8ed6201a"
+  },
+  {
+    "source": "work/queen-hires/base-roundover-export.log",
+    "destination": "history/queen-hires/base-roundover-export.log",
+    "sha256": "200f0b3aa41170dc95d9157fcde94e7072af85127f38f0632c1ca0ed758f1088"
+  },
+  {
+    "source": "work/queen-hires/base-roundover-qa.log",
+    "destination": "history/queen-hires/base-roundover-qa.log",
+    "sha256": "15237ecb2a99983bf873994a17d812b96e7aa8d81a7d455a9ebc582830fa0a5a"
+  },
+  {
+    "source": "work/queen-hires/base-roundover-shape-check.json",
+    "destination": "history/queen-hires/base-roundover-shape-check.json",
+    "sha256": "6438cb3781e256b339486749cd05a2b7cb6f9ab0ac290bd298d172b9ebb08244"
+  },
+  {
+    "source": "work/queen-hires/base-roundover-validation.log",
+    "destination": "history/queen-hires/base-roundover-validation.log",
+    "sha256": "6dbc5b4171e837429b1d700314189556d98469a296bc7c5e1ff708d5b919760a"
+  },
+  {
+    "source": "work/queen-hires/base-roundover.log",
+    "destination": "history/queen-hires/base-roundover.log",
+    "sha256": "de5e28404a77811f29210cf770093dbfe4fe89a8f25764fcb38a6626ada852f9"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/build_queen.py",
+    "destination": "history/queen-hires/before-base-compression/build_queen.py",
+    "sha256": "e79c69fee0120a21f5f3a4373aaa78afbc6249e9758bb12c68cc8e4349c20c53"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/model-validation.json",
+    "destination": "history/queen-hires/before-base-compression/model-validation.json",
+    "sha256": "515cea48182a6bc2254d49632b59cdb322888ca687f670ca5527123767cafbf4"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/profile-landmarks.json",
+    "destination": "history/queen-hires/before-base-compression/profile-landmarks.json",
+    "sha256": "df92bb5da3d5cef0189a3074c8710468cfe2f62873ef3ed7cc753d6e6794c30b"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/queen-brown.png",
+    "destination": "history/queen-hires/before-base-compression/queen-brown.png",
+    "sha256": "975d357828383852f26bea1e6d878f0b65a231e19b1a15b763d4aa02a93ecc0d"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/queen-matched.png",
+    "destination": "history/queen-hires/before-base-compression/queen-matched.png",
+    "sha256": "e11ed1c26f1c73366e254c2d8ba5a952b77783196550a5a29386631409beeafc"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-base-compression/queen-rebuilt.blend",
+    "sha256": "4b790a70b86176b851f9a07f2a2f0889bc4a2e63fea7632b17e5c5a40f3b19ff"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-base-compression/queen-three-quarter.png",
+    "sha256": "db00d32ce1346e48fc425dc9b6c86f938099b54a99c81f85731d6b3c7f2a6de8"
+  },
+  {
+    "source": "work/queen-hires/before-base-compression/README.txt",
+    "destination": "history/queen-hires/before-base-compression/README.txt",
+    "sha256": "33c2b0cc77120a9b4e820b3f6eead184ca6c6adfe5d674d8c1d868b5b63b73e7"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/build_queen.py",
+    "destination": "history/queen-hires/before-base-flattening/build_queen.py",
+    "sha256": "4ef16f0b4133787080c3d28553e88180f69013e9b2f83c86ae021226febc6b9a"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/model-validation.json",
+    "destination": "history/queen-hires/before-base-flattening/model-validation.json",
+    "sha256": "c28eb9e20b22b75907b6e104ba8206f749680bfe58e1e49965a2804a95be9ac1"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/profile-landmarks.json",
+    "destination": "history/queen-hires/before-base-flattening/profile-landmarks.json",
+    "sha256": "77f7b73b53b2ce7ca21d334efa16540d2a57b241bcf862169dca82c9d4de1c9f"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/queen-brown.png",
+    "destination": "history/queen-hires/before-base-flattening/queen-brown.png",
+    "sha256": "020e92a6c878f613dd8c225b6e92c9a79adfb378758fef478fb02d01825fedf8"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/queen-matched.png",
+    "destination": "history/queen-hires/before-base-flattening/queen-matched.png",
+    "sha256": "3ccba6699d65034f6259dd53c2e871a152fe642023f05ef233ccd7ef7681bbe6"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-base-flattening/queen-rebuilt.blend",
+    "sha256": "769e045fa578e7d63fee0d022aa79f5ea56b70fdb955fe0023a8fd78e427ea89"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-base-flattening/queen-three-quarter.png",
+    "sha256": "0f0af96ece843f04801de5d20df442a8e39dcf0dce88737cb051cac87516891b"
+  },
+  {
+    "source": "work/queen-hires/before-base-flattening/README.txt",
+    "destination": "history/queen-hires/before-base-flattening/README.txt",
+    "sha256": "5777ff01d64ae1abba06c29ecdb0570a07a8f80380dbf6e40fd44970cee5f87a"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/build_queen.py",
+    "destination": "history/queen-hires/before-base-roundover/build_queen.py",
+    "sha256": "8fafb358e41b839b8bb7ef99859351bdfa18bf780aee3b13a9f4cd5916ebb2f6"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/model-validation.json",
+    "destination": "history/queen-hires/before-base-roundover/model-validation.json",
+    "sha256": "e7d970762b06e1f20d28032717747463ed239cb88c0198c101474c645f5150ce"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/profile-landmarks.json",
+    "destination": "history/queen-hires/before-base-roundover/profile-landmarks.json",
+    "sha256": "f1d3d617951152fc13bc45d0f288857b27e178f0c65c55b0f2eca379761d1015"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/queen-brown.png",
+    "destination": "history/queen-hires/before-base-roundover/queen-brown.png",
+    "sha256": "33baadfd07ee22dc21f2856a9e2388687f12a921fd0b77b7e1b4dc1fd9321712"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/queen-matched.png",
+    "destination": "history/queen-hires/before-base-roundover/queen-matched.png",
+    "sha256": "064f6686dc424ec8dbb4c470308576718b450ab9e5f065315d880a56c8f0db73"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-base-roundover/queen-rebuilt.blend",
+    "sha256": "772e48815dc8db5193b6d166c501c24d370c9ced8080fb95aee01785d8b4496e"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-base-roundover/queen-three-quarter.png",
+    "sha256": "0ef1781bfd4352bd1aec156e7d8d13a69ae8bfbc207bc4f43725bc0d4b457663"
+  },
+  {
+    "source": "work/queen-hires/before-base-roundover/README.txt",
+    "destination": "history/queen-hires/before-base-roundover/README.txt",
+    "sha256": "03f0fcf05e6ae03c7b89d7b4aa086833a0f787b1d588be9729c0917c075d732d"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/build_queen.py",
+    "destination": "history/queen-hires/before-crown-body-taper/build_queen.py",
+    "sha256": "5b77be7fad098820033669eb4a6c260bc81fc0e25490e47a51ce9b5f1ad7489d"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/model-validation.json",
+    "destination": "history/queen-hires/before-crown-body-taper/model-validation.json",
+    "sha256": "5736189f3cd0f4a7f619db9aa77702bd3c84a7d4e7ff73f5a530556396eca8b5"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/profile-landmarks.json",
+    "destination": "history/queen-hires/before-crown-body-taper/profile-landmarks.json",
+    "sha256": "25f93f1abe8ffe594cf9b444bc67ca8b40a495f0bcc2914a854fb593e627ad80"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/queen-brown.png",
+    "destination": "history/queen-hires/before-crown-body-taper/queen-brown.png",
+    "sha256": "456c66ec85d6ae04f247d66e995dd558deccd0f516ddab23a8548fe22a2bb3fd"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/queen-matched.png",
+    "destination": "history/queen-hires/before-crown-body-taper/queen-matched.png",
+    "sha256": "60a1b0cd5601d0fca495a1b760bc45fad6907bdc93ce0343a25d48d895fbd201"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-crown-body-taper/queen-rebuilt.blend",
+    "sha256": "381a080d57914f75914b22f61ff061bb48a6835dd88b81ab8d67744ff893b2a1"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-crown-body-taper/queen-three-quarter.png",
+    "sha256": "8249d2ccb121e49a16cd2e07cb617923d5e7cdc3908b5f7d4a60c1794a256ab0"
+  },
+  {
+    "source": "work/queen-hires/before-crown-body-taper/README.txt",
+    "destination": "history/queen-hires/before-crown-body-taper/README.txt",
+    "sha256": "abc91243910adae9bcf1596a86ce60ca1b56288d7cbca065cc08e228ee3637d2"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/build_queen.py",
+    "destination": "history/queen-hires/before-even-collars/build_queen.py",
+    "sha256": "95285634af74572b9e781d7aaa5c30c7f8dd10fea0347c5d641630376570e311"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/model-validation.json",
+    "destination": "history/queen-hires/before-even-collars/model-validation.json",
+    "sha256": "8186a265267fc81b477e551eabf5433cf4e1c7ae82f3d4818edddfd6b7c8cf9a"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/profile-landmarks.json",
+    "destination": "history/queen-hires/before-even-collars/profile-landmarks.json",
+    "sha256": "25f93f1abe8ffe594cf9b444bc67ca8b40a495f0bcc2914a854fb593e627ad80"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/queen-brown.png",
+    "destination": "history/queen-hires/before-even-collars/queen-brown.png",
+    "sha256": "f9dc93384d5f304b704ab02f2763e69cec4e455643b743c7e804366660401e71"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/queen-matched.png",
+    "destination": "history/queen-hires/before-even-collars/queen-matched.png",
+    "sha256": "e0ee88d24258646832377e5ee0f4af0236dc4b8ca772995c2073206738a5038e"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-even-collars/queen-rebuilt.blend",
+    "sha256": "abfb01a42a811eea2dfe9d48895b38562e415d97c877c0058211fb2eb984da81"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-even-collars/queen-three-quarter.png",
+    "sha256": "557e2842f111967fa1d08161322ace9c6c895130941b86d49f9b81cd9de90398"
+  },
+  {
+    "source": "work/queen-hires/before-even-collars/README.txt",
+    "destination": "history/queen-hires/before-even-collars/README.txt",
+    "sha256": "a3545c9afc63b6732605c6cfa8fc1ee0290240a87d8dd42cbd9e823f444229c3"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/build_queen.py",
+    "destination": "history/queen-hires/before-fuller-proportions/build_queen.py",
+    "sha256": "6c92ae3026eecc8c71a81a14806ece97a87ed53dc37d0625ae582ec9200aac8e"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/model-validation.json",
+    "destination": "history/queen-hires/before-fuller-proportions/model-validation.json",
+    "sha256": "2bc3b4d1b24da909a6ffd8af732b22be290fb8ea5106f76b9dabaecc04754dc0"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/profile-landmarks.json",
+    "destination": "history/queen-hires/before-fuller-proportions/profile-landmarks.json",
+    "sha256": "c903eb90394c89f86cf61921868c882b3b10f07428687cd91f4e3dc165b2850b"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/queen-brown.png",
+    "destination": "history/queen-hires/before-fuller-proportions/queen-brown.png",
+    "sha256": "dee7df2d088c9f5574b46995c239fa1b0400fdee9f6f0be9e9e0c9269083798d"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/queen-matched.png",
+    "destination": "history/queen-hires/before-fuller-proportions/queen-matched.png",
+    "sha256": "425dd89e615dcad2e740c007835a1624ce4b90f09e0ff2a6f37691b814833b7a"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-fuller-proportions/queen-rebuilt.blend",
+    "sha256": "0bfa3f640947f37bf92c5ae1478576e316b85c2d0d3778811c4b2c9ae74990df"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-fuller-proportions/queen-three-quarter.png",
+    "sha256": "6a3622e12edb9017d16429d209e16c1a266abe37c53cde3e1fa9fa903d259022"
+  },
+  {
+    "source": "work/queen-hires/before-fuller-proportions/README.txt",
+    "destination": "history/queen-hires/before-fuller-proportions/README.txt",
+    "sha256": "3f705d6e0cb35a71cadf88fdbc08537f639462d601127dee9eb43611a20b231b"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/build_queen.py",
+    "destination": "history/queen-hires/before-seamless-crown/build_queen.py",
+    "sha256": "23e5b5b8497b4b695bf03e1a0a2d9f8b57c550b15db8f6f314d4b7c4e6d4e090"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/export_viewer_mesh.py",
+    "destination": "history/queen-hires/before-seamless-crown/export_viewer_mesh.py",
+    "sha256": "28e58a11698367c616329bd62196074a5a55aa620a48bb3d6ca76d53d143dd1a"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/model-validation.json",
+    "destination": "history/queen-hires/before-seamless-crown/model-validation.json",
+    "sha256": "29f1bc626d66b6e3848b4df5ff9d9766c561ca861e3da2426cb243259ceb0ca5"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/profile-landmarks.json",
+    "destination": "history/queen-hires/before-seamless-crown/profile-landmarks.json",
+    "sha256": "ffba6a3b1e3b386e1ec39e16241976055a77cc68efe0585781f068ddb25c6e35"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/queen-brown.png",
+    "destination": "history/queen-hires/before-seamless-crown/queen-brown.png",
+    "sha256": "cbb3ab5e141a5eef4af34b1761d3d617cee211503037d7fb7569400e9079adf7"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/queen-matched.png",
+    "destination": "history/queen-hires/before-seamless-crown/queen-matched.png",
+    "sha256": "84b5e27daccc26afde8154aac12bb9e9050d8144cd516e7a39d0a9e709834743"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-seamless-crown/queen-rebuilt.blend",
+    "sha256": "319b21f3e1e3b0bd2292857f13ae8862490bba86d92d804309bac375aaa29995"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-seamless-crown/queen-three-quarter.png",
+    "sha256": "ad87cc6a6b3739bcef30e4ccdc5b642dca1336ecf33d28baec8ba1323ad0e09c"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/README.txt",
+    "destination": "history/queen-hires/before-seamless-crown/README.txt",
+    "sha256": "dc8730f2ed33ee0d9ed638c09bb1038c47a13325e1b42332e5f769e06ad2acf1"
+  },
+  {
+    "source": "work/queen-hires/before-seamless-crown/validate_model.py",
+    "destination": "history/queen-hires/before-seamless-crown/validate_model.py",
+    "sha256": "000fb5b3fba6762dcb221c28725e77116cb4fb4a5eb66f60040a6a83d6abc9ce"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/build_queen.py",
+    "destination": "history/queen-hires/before-shape-feedback/build_queen.py",
+    "sha256": "99d6defa477fb545196aefafbc39b606d7b3a27b881dcc15d3ff7cdbc7ca24c3"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/overlay-metrics.json",
+    "destination": "history/queen-hires/before-shape-feedback/overlay-metrics.json",
+    "sha256": "a32f9d2c03670a54bbd911cb8bc48397ba5e3484cdee8ba58ba0affdd830fec7"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/profile-landmarks.json",
+    "destination": "history/queen-hires/before-shape-feedback/profile-landmarks.json",
+    "sha256": "fc9f2a0056d8add962bb277666befc97be96d4707b581d92dc8d4564345b4c49"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/queen-brown.png",
+    "destination": "history/queen-hires/before-shape-feedback/queen-brown.png",
+    "sha256": "a9c0050e77fa42255391095551978efb384586658050593fafe1bb5cf10bb683"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/queen-matched.png",
+    "destination": "history/queen-hires/before-shape-feedback/queen-matched.png",
+    "sha256": "bbabbe95a65402ee405dae9fc8a7bd4aaead786ed6e53f05464db6ca371fba73"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-shape-feedback/queen-rebuilt.blend",
+    "sha256": "f425d22a265a0e3a9d196623e822c5249e7c6ed2f6ded35dd46a794c7dba5384"
+  },
+  {
+    "source": "work/queen-hires/before-shape-feedback/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-shape-feedback/queen-three-quarter.png",
+    "sha256": "bf99a19f112796c403c00b9101f049c90e4c54fa9b170aa408358f60818ecad4"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/build_queen.py",
+    "destination": "history/queen-hires/before-socket-enlargement/build_queen.py",
+    "sha256": "7d08e27a22c06f36ec1e4b2192b9173c3144829b7520180bd68d207034c40652"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/model-validation.json",
+    "destination": "history/queen-hires/before-socket-enlargement/model-validation.json",
+    "sha256": "95643cf0ee7c67085b08616c8bcbb148a6c00ddb5509af28f37c2a201416eee1"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/profile-landmarks.json",
+    "destination": "history/queen-hires/before-socket-enlargement/profile-landmarks.json",
+    "sha256": "9c898e45bb7c5b6286a6e2cd7d6b0bf0c1a04a8abcec2926dc8b6731d12f7303"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/queen-brown.png",
+    "destination": "history/queen-hires/before-socket-enlargement/queen-brown.png",
+    "sha256": "75cb1f352b90a91dd7bbee859121dedbf09793be6068b77c5fdacaf31a2552a5"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/queen-matched.png",
+    "destination": "history/queen-hires/before-socket-enlargement/queen-matched.png",
+    "sha256": "f73597b743f9b263db8cd7939c5056819cee15f52daa68675a83c4c7adbd9284"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-socket-enlargement/queen-rebuilt.blend",
+    "sha256": "fda99598aa220604c7109e3bbef1f2b6277edb42106c84c4a77703adbfe04481"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-socket-enlargement/queen-three-quarter.png",
+    "sha256": "b94efd60a43d08e63e42837f997bcfee444c0fc3cd1995d8d16311d863d1b708"
+  },
+  {
+    "source": "work/queen-hires/before-socket-enlargement/README.txt",
+    "destination": "history/queen-hires/before-socket-enlargement/README.txt",
+    "sha256": "475deb8d72df470f673870ada8f7bf4c52c7ec2bec3f4d30fdf40a096b16d964"
+  },
+  {
+    "source": "work/queen-hires/before-thinning/build_queen.py",
+    "destination": "history/queen-hires/before-thinning/build_queen.py",
+    "sha256": "db9e558fb820a3c69c8c06461fccc5eedfef68a14c75f06e81133565a7b4b91b"
+  },
+  {
+    "source": "work/queen-hires/before-thinning/overlay-metrics.json",
+    "destination": "history/queen-hires/before-thinning/overlay-metrics.json",
+    "sha256": "a5a5eb8e19869c761736c65b95e860dbe8628e4a020e9261c4b45e372bc206ea"
+  },
+  {
+    "source": "work/queen-hires/before-thinning/queen-brown.png",
+    "destination": "history/queen-hires/before-thinning/queen-brown.png",
+    "sha256": "7e57e80ef62f7f244d2bef6c83723b1743b0dbf6dedebe7d178ee1d94e6f7689"
+  },
+  {
+    "source": "work/queen-hires/before-thinning/queen-matched.png",
+    "destination": "history/queen-hires/before-thinning/queen-matched.png",
+    "sha256": "9dc38858df08e04f27a0d6163872db4e0892fac2cd5f5864a2cefe82b563683f"
+  },
+  {
+    "source": "work/queen-hires/before-thinning/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-thinning/queen-rebuilt.blend",
+    "sha256": "8d9c45440c2a662271618a55a134ecab3d74bbab6d83c57569e27e60ca054fe7"
+  },
+  {
+    "source": "work/queen-hires/before-thinning/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-thinning/queen-three-quarter.png",
+    "sha256": "77d181f57e64ffdea2b594cc5db2ff723df256a1d5feabd085cb4d7b2b552c67"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/build_queen.py",
+    "destination": "history/queen-hires/before-upper-collar/build_queen.py",
+    "sha256": "5b77be7fad098820033669eb4a6c260bc81fc0e25490e47a51ce9b5f1ad7489d"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/model-validation.json",
+    "destination": "history/queen-hires/before-upper-collar/model-validation.json",
+    "sha256": "5736189f3cd0f4a7f619db9aa77702bd3c84a7d4e7ff73f5a530556396eca8b5"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/profile-landmarks.json",
+    "destination": "history/queen-hires/before-upper-collar/profile-landmarks.json",
+    "sha256": "25f93f1abe8ffe594cf9b444bc67ca8b40a495f0bcc2914a854fb593e627ad80"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/queen-brown.png",
+    "destination": "history/queen-hires/before-upper-collar/queen-brown.png",
+    "sha256": "456c66ec85d6ae04f247d66e995dd558deccd0f516ddab23a8548fe22a2bb3fd"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/queen-matched.png",
+    "destination": "history/queen-hires/before-upper-collar/queen-matched.png",
+    "sha256": "60a1b0cd5601d0fca495a1b760bc45fad6907bdc93ce0343a25d48d895fbd201"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/queen-rebuilt.blend",
+    "destination": "history/queen-hires/before-upper-collar/queen-rebuilt.blend",
+    "sha256": "381a080d57914f75914b22f61ff061bb48a6835dd88b81ab8d67744ff893b2a1"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/queen-three-quarter.png",
+    "destination": "history/queen-hires/before-upper-collar/queen-three-quarter.png",
+    "sha256": "8249d2ccb121e49a16cd2e07cb617923d5e7cdc3908b5f7d4a60c1794a256ab0"
+  },
+  {
+    "source": "work/queen-hires/before-upper-collar/README.txt",
+    "destination": "history/queen-hires/before-upper-collar/README.txt",
+    "sha256": "f2a76721204d53d65ecd904523c0a56f6e8f45c71a83736e479481e943380f09"
+  },
+  {
+    "source": "work/queen-hires/before-viewer-camera-fix/build_viewer.py",
+    "destination": "history/queen-hires/before-viewer-camera-fix/build_viewer.py",
+    "sha256": "2bc7949638b54f2c27e2b6ddb232e9aa444c587571ba2e534b3cf790def97db8"
+  },
+  {
+    "source": "work/queen-hires/before-viewer-camera-fix/viewer-template.html",
+    "destination": "history/queen-hires/before-viewer-camera-fix/viewer-template.html",
+    "sha256": "1043b002aa0340b1f26c76d1914ad8923d9277ebd23de56f3713eadf20a25c43"
+  },
+  {
+    "source": "work/queen-hires/build_viewer.py",
+    "destination": "history/queen-hires/build_viewer.py",
+    "sha256": "150fc43bfa2147dcfbe7eea836261ead078f9d9e4c8f5a50cf29ad8ab5f84b5a"
+  },
+  {
+    "source": "work/queen-hires/check_even_collar_mesh.py",
+    "destination": "history/queen-hires/check_even_collar_mesh.py",
+    "sha256": "d50daec3f930dc8b4c72861b98b3cebc3e8a2a51ecef7a39bdcf50dcdfc09f45"
+  },
+  {
+    "source": "work/queen-hires/check_viewer_camera.cjs",
+    "destination": "history/queen-hires/check_viewer_camera.cjs",
+    "sha256": "6a7737e0a050768db5b242f5ad9d677682eda2fbded9ccf40d1c0a3ab69b847c"
+  },
+  {
+    "source": "work/queen-hires/collar-revert-export.log",
+    "destination": "history/queen-hires/collar-revert-export.log",
+    "sha256": "8837de5fbb1e721cd8f8c7dbe9b0b9913c507a2fd7cb973e7881478ad63f4f07"
+  },
+  {
+    "source": "work/queen-hires/collar-revert-qa.log",
+    "destination": "history/queen-hires/collar-revert-qa.log",
+    "sha256": "71ee08f8a7a3cad832d09d0fb3f3a8ac0b392f4ec6a7f13836e4087db603b8c4"
+  },
+  {
+    "source": "work/queen-hires/collars-reference.png",
+    "destination": "history/queen-hires/collars-reference.png",
+    "sha256": "6a83ec01590bafa1b5359f0a06a47d76c149c2caeeafb5e65a2f2586032ccd23"
+  },
+  {
+    "source": "work/queen-hires/crown-body-taper-camera.log",
+    "destination": "history/queen-hires/crown-body-taper-camera.log",
+    "sha256": "0f2ff19e0ab6c222d62133d13833091bbf75da3dcd451d6356fed3b2e13126f1"
+  },
+  {
+    "source": "work/queen-hires/crown-body-taper-export.log",
+    "destination": "history/queen-hires/crown-body-taper-export.log",
+    "sha256": "d24e303e1a537287605d731a6a264285932a4481bb5e9d3810b3e951384ba91a"
+  },
+  {
+    "source": "work/queen-hires/crown-body-taper-qa.log",
+    "destination": "history/queen-hires/crown-body-taper-qa.log",
+    "sha256": "a712775caaef0bb227a8b322a7e20ce5b49aa8581ef5818a9f4f2fca73256439"
+  },
+  {
+    "source": "work/queen-hires/crown-body-taper-validation.log",
+    "destination": "history/queen-hires/crown-body-taper-validation.log",
+    "sha256": "9362dd19ae58c7b10a7200cb379ffe09e38b5633fb840372c540f5c0f0fd358b"
+  },
+  {
+    "source": "work/queen-hires/crown-body-taper.log",
+    "destination": "history/queen-hires/crown-body-taper.log",
+    "sha256": "b01a127e6e9df2ebcb089325bd3fbc379d747401c71a341334fa0f7e7dde2228"
+  },
+  {
+    "source": "work/queen-hires/crown-grid.png",
+    "destination": "history/queen-hires/crown-grid.png",
+    "sha256": "d56a2903ee104b61eac36b3f501ee72381012825c989b819f8752850ebe4ccb9"
+  },
+  {
+    "source": "work/queen-hires/crown-reference.png",
+    "destination": "history/queen-hires/crown-reference.png",
+    "sha256": "39e5f10dfd853500d70aff75b18428547fb22c037b24b97b25a4b05867e5e107"
+  },
+  {
+    "source": "work/queen-hires/current-state.txt",
+    "destination": "history/queen-hires/current-state.txt",
+    "sha256": "8194321fce7eb32c2d0928d00387bf9eb840edbe0a9b506e9ad6d386c9e5afb6"
+  },
+  {
+    "source": "work/queen-hires/even-collars-camera.log",
+    "destination": "history/queen-hires/even-collars-camera.log",
+    "sha256": "e285d3b87bca1ffb5e2c95f33939b2f5272d1c96524caebd9a887639c2c37ff6"
+  },
+  {
+    "source": "work/queen-hires/even-collars-export.log",
+    "destination": "history/queen-hires/even-collars-export.log",
+    "sha256": "41ff43f026851c90afbbcc11e9bd24cd4eb61be1900921c57f6936646f60598e"
+  },
+  {
+    "source": "work/queen-hires/even-collars-measurements.json",
+    "destination": "history/queen-hires/even-collars-measurements.json",
+    "sha256": "87e07b6bb8f99deec94c5653e6e5c23c8629c2de415eeefac52b8ba10609723e"
+  },
+  {
+    "source": "work/queen-hires/even-collars-qa.log",
+    "destination": "history/queen-hires/even-collars-qa.log",
+    "sha256": "209cb18e9d8201b79f9c130663af8c64e6d94bfae02170729fd3193052362536"
+  },
+  {
+    "source": "work/queen-hires/even-collars-validation.log",
+    "destination": "history/queen-hires/even-collars-validation.log",
+    "sha256": "13c3aba349a339850cb5257dfe9a465a962c7cad8bd12e05a02152676aa38326"
+  },
+  {
+    "source": "work/queen-hires/even-collars.log",
+    "destination": "history/queen-hires/even-collars.log",
+    "sha256": "51670d9982138437e553860a421df5d7df903e5305210781a56a95961b8defa6"
+  },
+  {
+    "source": "work/queen-hires/flatten_lower_assembly.py",
+    "destination": "history/queen-hires/flatten_lower_assembly.py",
+    "sha256": "85690122307107f2743b067e468a9519f8e42bb949ecd93a7837a48c973967f5"
+  },
+  {
+    "source": "work/queen-hires/foot-reference.png",
+    "destination": "history/queen-hires/foot-reference.png",
+    "sha256": "67214f403bbc9dc5be2e7f0796a23a5947a90c5f5cf0fb9cc90a00672b8f6e69"
+  },
+  {
+    "source": "work/queen-hires/full_proportions.py",
+    "destination": "history/queen-hires/full_proportions.py",
+    "sha256": "fe04bd50ab740394ef6e3ccafaa13c926d2c026ee199b8512724325d61098835"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-camera.log",
+    "destination": "history/queen-hires/fuller-proportions-camera.log",
+    "sha256": "28da68cd0f9d23f7e22c45720f5260155b5dc7dc72cbb77b15d7f4526b73cea3"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-export.log",
+    "destination": "history/queen-hires/fuller-proportions-export.log",
+    "sha256": "d95f345bfdcaef3fa36ae1c73ec0455ed5a14d678f42439aa940af5a97b80eaf"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-final-camera.log",
+    "destination": "history/queen-hires/fuller-proportions-final-camera.log",
+    "sha256": "3afe6ac5d8726f96c8686d58dadc32ecbb777963f654f0b6e4acc3d6379c029d"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-final-export.log",
+    "destination": "history/queen-hires/fuller-proportions-final-export.log",
+    "sha256": "b72b20fa808fe01082ca8afd78f8a27bdbae471c083181889963aff2c154761d"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-final-qa.log",
+    "destination": "history/queen-hires/fuller-proportions-final-qa.log",
+    "sha256": "b2f557120a0254b515a99711c6de76f7df715df24e8f52def34422d2433874fc"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-final-validation.log",
+    "destination": "history/queen-hires/fuller-proportions-final-validation.log",
+    "sha256": "bcac726bc30d1902d3d7f6c28463cf114535672e947d7ce92be416d88cb24030"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-final.log",
+    "destination": "history/queen-hires/fuller-proportions-final.log",
+    "sha256": "40031410309fc833cddf34afdcfb40480f223aaa835c8472b4d3b38c84b1b4b8"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-first-camera.png",
+    "destination": "history/queen-hires/fuller-proportions-first-camera.png",
+    "sha256": "10354ea1aabbb9c4874d722f08610d826d7bb3ec686adf2036f2cd94a383c5f3"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-first-side.png",
+    "destination": "history/queen-hires/fuller-proportions-first-side.png",
+    "sha256": "658738196b87cd102aa64b7c071fc4a1f8009737dc6b0dda80b64dbaafa632cd"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-shape-check.json",
+    "destination": "history/queen-hires/fuller-proportions-shape-check.json",
+    "sha256": "7d2982a4c3e3097521a9c7554d9d968ca9683955f76100b6a6f994be159da02f"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions-validation.log",
+    "destination": "history/queen-hires/fuller-proportions-validation.log",
+    "sha256": "fcf3745b90bbc65678e90647081a8f049799f100197b42b7607dd73c69bc9bda"
+  },
+  {
+    "source": "work/queen-hires/fuller-proportions.log",
+    "destination": "history/queen-hires/fuller-proportions.log",
+    "sha256": "4019eb8e294dc1fd2b83ba080ec7da3b1c46a935e60660561498dab455d5616c"
+  },
+  {
+    "source": "work/queen-hires/grid.py",
+    "destination": "history/queen-hires/grid.py",
+    "sha256": "b2e6ccb7fda04af85220ca9b8339b48353dc5f5670f5152435dadf10f8cdf00d"
+  },
+  {
+    "source": "work/queen-hires/inspect_reference.py",
+    "destination": "history/queen-hires/inspect_reference.py",
+    "sha256": "4ae7b0376f27229aefe421b71ed3aaa91e04648b2b9bc556f617a3a403a60f55"
+  },
+  {
+    "source": "work/queen-hires/inspect_viewer_camera.py",
+    "destination": "history/queen-hires/inspect_viewer_camera.py",
+    "sha256": "0ee515dff0a645115d569d3052b77c160bf15507397695e6e9019c42207694a6"
+  },
+  {
+    "source": "work/queen-hires/internal-collars-grid.png",
+    "destination": "history/queen-hires/internal-collars-grid.png",
+    "sha256": "6c51035163bd6a31309d0a2258ab023554627afdbe8ef15dca42aa755d38e638"
+  },
+  {
+    "source": "work/queen-hires/make_seamless_crown.py",
+    "destination": "history/queen-hires/make_seamless_crown.py",
+    "sha256": "fd360bf90df03a0114b42d9204929c84e336e360852d14da36bf4a0cff46961d"
+  },
+  {
+    "source": "work/queen-hires/overlay_qa.py",
+    "destination": "history/queen-hires/overlay_qa.py",
+    "sha256": "1e842ff4642abc913ae093bee45ab38f8ae405cf67cefc994b193185972ba9e4"
+  },
+  {
+    "source": "work/queen-hires/pass-01.png",
+    "destination": "history/queen-hires/pass-01.png",
+    "sha256": "954fb196b64846f8f411e53df73b6d3c933b92f05e8a45171ecb90683c3e404c"
+  },
+  {
+    "source": "work/queen-hires/pass-02.png",
+    "destination": "history/queen-hires/pass-02.png",
+    "sha256": "dc960acf3541f5873571134400c9b853fbe4ab4263e2a3209784357dde371831"
+  },
+  {
+    "source": "work/queen-hires/pass-04.log",
+    "destination": "history/queen-hires/pass-04.log",
+    "sha256": "b56d49b1f28512068239331f3ae63306f2b61a743b825336d2d01abd40d76d1e"
+  },
+  {
+    "source": "work/queen-hires/pass-05.log",
+    "destination": "history/queen-hires/pass-05.log",
+    "sha256": "f1e35be63ddd86fab2d65bb7d181c5cd92f44d4c301183f94ea26d749fc866ff"
+  },
+  {
+    "source": "work/queen-hires/pass-06.log",
+    "destination": "history/queen-hires/pass-06.log",
+    "sha256": "40a71452cb69a6a6f37907846a7a2b1bf726c26e5633f9e25f69447f6cd4d8f2"
+  },
+  {
+    "source": "work/queen-hires/prepare_parts_diagram.py",
+    "destination": "history/queen-hires/prepare_parts_diagram.py",
+    "sha256": "c8090fd2502833c0105ea8520236b3208c3d5e4010146b062b1b713870f05a89"
+  },
+  {
+    "source": "work/queen-hires/probe_devices.py",
+    "destination": "history/queen-hires/probe_devices.py",
+    "sha256": "2f26e368928f67b0d49fa241a70f4552a70d77f9929c23ef4968ab779a5697dc"
+  },
+  {
+    "source": "work/queen-hires/qa-final.log",
+    "destination": "history/queen-hires/qa-final.log",
+    "sha256": "130ff700b1630ef9032e0b214afc24f341b57977ef09b058b1c3d7014c633da7"
+  },
+  {
+    "source": "work/queen-hires/queen-parts-check.js",
+    "destination": "history/queen-hires/queen-parts-check.js",
+    "sha256": "21bfc0573b5dd48bae5b9de36d8480725a005fdc81ece739ef1138313cf06051"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/build_queen.py",
+    "destination": "history/queen-hires/reverted-upper-collar/build_queen.py",
+    "sha256": "66e01ee4cdb53792f99910058c9fc705dc4eeba7a5a48143d27655bfb9e19666"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/model-validation.json",
+    "destination": "history/queen-hires/reverted-upper-collar/model-validation.json",
+    "sha256": "800e26df893b273f0d1c37cd60462754c37f8cdfac11328730449c03dfb40939"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/profile-landmarks.json",
+    "destination": "history/queen-hires/reverted-upper-collar/profile-landmarks.json",
+    "sha256": "9078af0119386ac1179b4474b6c184c274d13578a3ba40ab4f64854a223c6fb6"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/queen-brown.png",
+    "destination": "history/queen-hires/reverted-upper-collar/queen-brown.png",
+    "sha256": "774759b908e5cd537fc486ec75f443edd714f06ad9d106ec7cad3a92796b0897"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/queen-matched.png",
+    "destination": "history/queen-hires/reverted-upper-collar/queen-matched.png",
+    "sha256": "efa51a39bbe491ae913887711cf5c6bce2321e300818753bc93dd6a114269c6d"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/queen-rebuilt.blend",
+    "destination": "history/queen-hires/reverted-upper-collar/queen-rebuilt.blend",
+    "sha256": "e45a45dbe687cd366ab3435fb1da173b259c8d23e3df95a225792c32e68e562e"
+  },
+  {
+    "source": "work/queen-hires/reverted-upper-collar/queen-three-quarter.png",
+    "destination": "history/queen-hires/reverted-upper-collar/queen-three-quarter.png",
+    "sha256": "7ab5368335138c87854b416c8080960644f4c13564b17bc0186a7e96d3480292"
+  },
+  {
+    "source": "work/queen-hires/seamless-crown-camera.log",
+    "destination": "history/queen-hires/seamless-crown-camera.log",
+    "sha256": "0e2afba295eecb99a12a036bbe699cf23e2d34a0dc5d948595f2a4cd2c32e718"
+  },
+  {
+    "source": "work/queen-hires/seamless-crown-export.log",
+    "destination": "history/queen-hires/seamless-crown-export.log",
+    "sha256": "f633f2948055c36e52c6893e376b07fa6c2a74ca3c113d0dcaa91591699400b7"
+  },
+  {
+    "source": "work/queen-hires/seamless-crown-final.log",
+    "destination": "history/queen-hires/seamless-crown-final.log",
+    "sha256": "af61351657edf9f41e4f36fa4c952e3c4f2d6bcee045294da35136eeaf452e7f"
+  },
+  {
+    "source": "work/queen-hires/seamless-crown-qa.log",
+    "destination": "history/queen-hires/seamless-crown-qa.log",
+    "sha256": "dc797331714a44ec167c57c59ae4c896f28944c68d4fd5e5e233fee1b2529d59"
+  },
+  {
+    "source": "work/queen-hires/seamless-crown-refined.log",
+    "destination": "history/queen-hires/seamless-crown-refined.log",
+    "sha256": "5de0b1d9359eb6af2dcd1c036c31ec204dcd42fe3982a42e3d4a948977bffcaf"
+  },
+  {
+    "source": "work/queen-hires/seamless-crown.log",
+    "destination": "history/queen-hires/seamless-crown.log",
+    "sha256": "01c15728e0b9a51012092d8fbf60fcaad1429f6f05ef3c7f7e365067c9a4772a"
+  },
+  {
+    "source": "work/queen-hires/shape-feedback-01-qa.log",
+    "destination": "history/queen-hires/shape-feedback-01-qa.log",
+    "sha256": "af9703e59d96304b1981d1874ebd16ea4a8b21dde1142b62d0bc9d5c8f5b9df4"
+  },
+  {
+    "source": "work/queen-hires/shape-feedback-01.log",
+    "destination": "history/queen-hires/shape-feedback-01.log",
+    "sha256": "f023bb972158c17c746d577c241a6f072fe3b5b7a164b5294d8eb9fa61e3399a"
+  },
+  {
+    "source": "work/queen-hires/shape-feedback-final-qa.log",
+    "destination": "history/queen-hires/shape-feedback-final-qa.log",
+    "sha256": "71ee08f8a7a3cad832d09d0fb3f3a8ac0b392f4ec6a7f13836e4087db603b8c4"
+  },
+  {
+    "source": "work/queen-hires/shape-feedback-final.log",
+    "destination": "history/queen-hires/shape-feedback-final.log",
+    "sha256": "9a3e0e8c537c4e89ed389abb21f62dc0c6d7ad644e649b42b8de0e005161a507"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement-camera.log",
+    "destination": "history/queen-hires/socket-enlargement-camera.log",
+    "sha256": "1ee94317566f679b4937ae6cf20e50e90d3895d54e2a6c03891f69ceed3bd870"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement-export.log",
+    "destination": "history/queen-hires/socket-enlargement-export.log",
+    "sha256": "cf4668b5ae9d70687ae7e05ed15e3f11ed114a7312a641f441e8671b48f39b7e"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement-final-check.json",
+    "destination": "history/queen-hires/socket-enlargement-final-check.json",
+    "sha256": "d6ba64b422d734eaf1a0aa6a17a782e490cc095e75c7bf867ebfb0905424c1e5"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement-qa.log",
+    "destination": "history/queen-hires/socket-enlargement-qa.log",
+    "sha256": "0faa8bdd348aa86cff5c8d0b3410c57b8926f4973587d58b082cd7d3b06c882f"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement-shape-check.json",
+    "destination": "history/queen-hires/socket-enlargement-shape-check.json",
+    "sha256": "e6c916524516c6f80b6e0f93472e06cb7be4e3a73367b880c75c07c921ec3f6a"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement-validation.log",
+    "destination": "history/queen-hires/socket-enlargement-validation.log",
+    "sha256": "d9c5bb37aa877220cf082ac9fc76a8926f54e90d6f2d63a243a0ba2a900590ab"
+  },
+  {
+    "source": "work/queen-hires/socket-enlargement.log",
+    "destination": "history/queen-hires/socket-enlargement.log",
+    "sha256": "a1ac4c8153987aeb3acb76371ce0e9e8839d171b8153de204152ae5078d7075a"
+  },
+  {
+    "source": "work/queen-hires/thinning-01-outline.txt",
+    "destination": "history/queen-hires/thinning-01-outline.txt",
+    "sha256": "dbf26bd2972c0f7b08751c0a509538790c7d33c9d14a8c7c5451811ef7a81e19"
+  },
+  {
+    "source": "work/queen-hires/thinning-01-qa.log",
+    "destination": "history/queen-hires/thinning-01-qa.log",
+    "sha256": "0e3318a51601d2c6c3511ac648e0a84bf3bcc1875546c73f067794327f906138"
+  },
+  {
+    "source": "work/queen-hires/thinning-01.log",
+    "destination": "history/queen-hires/thinning-01.log",
+    "sha256": "7dc5e6763442c6b1b7cb6c8d11c575061700b5518043d742f3a3ed8ff462b2e9"
+  },
+  {
+    "source": "work/queen-hires/thinning-02-qa.log",
+    "destination": "history/queen-hires/thinning-02-qa.log",
+    "sha256": "d9bd7a611d7aa8354e606d5b9c8799f586e56c6d5d43ecc7d56d2aba75f0f0f7"
+  },
+  {
+    "source": "work/queen-hires/thinning-02.log",
+    "destination": "history/queen-hires/thinning-02.log",
+    "sha256": "dbc08bfde3e6a68605c536c2ebafaac6c86262dd11f092854458242f46ae5db8"
+  },
+  {
+    "source": "work/queen-hires/thinning-final-outline.txt",
+    "destination": "history/queen-hires/thinning-final-outline.txt",
+    "sha256": "cb3f93ed8cff4c7f17619073b7d2b1df90600a1bb8fba9606d8de16bb71f43db"
+  },
+  {
+    "source": "work/queen-hires/thinning-final-qa.log",
+    "destination": "history/queen-hires/thinning-final-qa.log",
+    "sha256": "61ad2228f53946fb9d3cff4d090d95d72e85a20f264ac2594c817740f1f5b626"
+  },
+  {
+    "source": "work/queen-hires/thinning-final.log",
+    "destination": "history/queen-hires/thinning-final.log",
+    "sha256": "0352c6bc4f0b71a2d3eaa280553ae56f7025c3c66fa62778233ee6c4ea726c25"
+  },
+  {
+    "source": "work/queen-hires/upper-collar-export.log",
+    "destination": "history/queen-hires/upper-collar-export.log",
+    "sha256": "047a5d7d4415d951f528f8dd191356a660e1980fe2c7b20e30b46fa4c75ebf09"
+  },
+  {
+    "source": "work/queen-hires/upper-collar-qa.log",
+    "destination": "history/queen-hires/upper-collar-qa.log",
+    "sha256": "44ab2bed18583f2e55a05d2560bde2d5f3ea4df66c07e0657a0de62f99cb9199"
+  },
+  {
+    "source": "work/queen-hires/upper-collar-validation.log",
+    "destination": "history/queen-hires/upper-collar-validation.log",
+    "sha256": "aad351024c7ef912f437aad86262e312c6d9aa8d0b27b49e4dd7854caadea4c3"
+  },
+  {
+    "source": "work/queen-hires/upper-collar.log",
+    "destination": "history/queen-hires/upper-collar.log",
+    "sha256": "081dc3710d83853dd2a3bdad5cb61501c66bc1441f8a08fd9cb963feabf18b42"
+  },
+  {
+    "source": "work/queen-hires/validate_model.py",
+    "destination": "history/queen-hires/validate_model.py",
+    "sha256": "000fb5b3fba6762dcb221c28725e77116cb4fb4a5eb66f60040a6a83d6abc9ce"
+  },
+  {
+    "source": "work/queen-hires/validate_seamless_crown.py",
+    "destination": "history/queen-hires/validate_seamless_crown.py",
+    "sha256": "0ac462c7e1df7810fda7e60c49a6ac934787149a24f4131a064cc12a319a797c"
+  },
+  {
+    "source": "work/queen-hires/validation-final.log",
+    "destination": "history/queen-hires/validation-final.log",
+    "sha256": "844b7571d4a965efd6d9322b83ff1d3f91b894237bc54a9407b02b203e53694a"
+  },
+  {
+    "source": "work/queen-hires/validation-shape-feedback.log",
+    "destination": "history/queen-hires/validation-shape-feedback.log",
+    "sha256": "e52c6ec85ab2ada311f18c0938f0761c9e746a055ae738417b2be627eb6ad416"
+  },
+  {
+    "source": "work/queen-hires/validation-thinning.log",
+    "destination": "history/queen-hires/validation-thinning.log",
+    "sha256": "ae987245c33d95262135417dd8a8e9f84f80cdac95a967add6d1b8b93b8153f1"
+  },
+  {
+    "source": "work/queen-hires/validation.log",
+    "destination": "history/queen-hires/validation.log",
+    "sha256": "3f7c4b0ef68eca63eb7d78f14e01e5399cfeff66bb1ade1f76f8a3c8c469969e"
+  },
+  {
+    "source": "work/queen-hires/viewer-camera-check.json",
+    "destination": "history/queen-hires/viewer-camera-check.json",
+    "sha256": "f7e5c58137eab699ae7629038f6475de22989c3101c7867415eb5f3da2d0a735"
+  },
+  {
+    "source": "work/queen-hires/viewer-camera.json",
+    "destination": "history/queen-hires/viewer-camera.json",
+    "sha256": "6c21c9d79635ea571643183c55fe0dd3c017b26a0e5ab611aa0258b4a57b3888"
+  },
+  {
+    "source": "work/queen-hires/viewer-check.js",
+    "destination": "history/queen-hires/viewer-check.js",
+    "sha256": "2e7bc1d2062fba1ff33455d35de8c8bd7a5d817e68cd7f43cc4212a0e71d7513"
+  },
+  {
+    "source": "work/queen-hires/viewer-mesh.bin",
+    "destination": "history/queen-hires/viewer-mesh.bin",
+    "sha256": "65728e5307dc3946bd0576eb2075c85f41dcb5f07e6e11899fb32a7e8f9e7a04"
+  },
+  {
+    "source": "work/queen-hires/viewer-mesh.json",
+    "destination": "history/queen-hires/viewer-mesh.json",
+    "sha256": "1f22073e7a26af7802c89e665b98fc31fcd4350e08b746d5ec8792a5c244a850"
+  },
+  {
+    "source": "work/queen-hires/viewer-template.html",
+    "destination": "history/queen-hires/viewer-template.html",
+    "sha256": "a09d5d33517a72c4eda7ba1e641c525ded0ed398f851e3307e08b60f4fd19a18"
+  },
+  {
+    "source": "outputs/queen-model/build_queen.py",
+    "destination": "history/queen-original/outputs/build_queen.py",
+    "sha256": "f8eaa693f5f7c8ca08bfe17a56d620ba983d07a63bf7e362078a43a3e64d721e"
+  },
+  {
+    "source": "outputs/queen-model/comparison.html",
+    "destination": "history/queen-original/outputs/comparison.html",
+    "sha256": "ebf137f0d65e82640741886ae100df46d60e73411ccada0a54c959622ab36efc"
+  },
+  {
+    "source": "outputs/queen-model/queen-reference-view.png",
+    "destination": "history/queen-original/outputs/queen-reference-view.png",
+    "sha256": "c5ddf83a6f69d2a73aac590351546892e4e1524005004820ce4fc2aa56c06e65"
+  },
+  {
+    "source": "outputs/queen-model/queen-three-quarter.png",
+    "destination": "history/queen-original/outputs/queen-three-quarter.png",
+    "sha256": "4d228c97f8f40290b8b9cebcb1cad127be5a08271df72ac8b10c69624a55b04b"
+  },
+  {
+    "source": "outputs/queen-model/README.txt",
+    "destination": "history/queen-original/outputs/README.txt",
+    "sha256": "b14b1f2488ebf5d3b112853dc760bc8e753f914c72f3ed508a91128801620d4d"
+  },
+  {
+    "source": "outputs/queen-model/staunton-queen.blend",
+    "destination": "history/queen-original/outputs/staunton-queen.blend",
+    "sha256": "805cd49f676af4904317d4aabcb6cbd53d43ba1833744340859c1123d2539302"
+  },
+  {
+    "source": "work/queen-before-revision/build_queen.py",
+    "destination": "history/queen-original/before-revision/build_queen.py",
+    "sha256": "fbb82efa86c025a106576f5bda11dc53133fd8bac1a3deed74f0197785bd8a9f"
+  },
+  {
+    "source": "work/queen-before-revision/queen-reference-view.png",
+    "destination": "history/queen-original/before-revision/queen-reference-view.png",
+    "sha256": "98cde452872d67fdff2fd948ca4d02758e85637b9d5f30df7062cc5c10221a49"
+  },
+  {
+    "source": "work/queen-before-revision/queen-three-quarter.png",
+    "destination": "history/queen-original/before-revision/queen-three-quarter.png",
+    "sha256": "7d4d3ace1d09d814f6840c5c0caa8990d779bd3f55e37a3ab15a3b3b2f488255"
+  },
+  {
+    "source": "work/queen-before-revision/staunton-queen.blend",
+    "destination": "history/queen-original/before-revision/staunton-queen.blend",
+    "sha256": "ca7854f678fbed63dd5bfe102a7954b14e15eb432f8367402f8e358d0d3d6729"
+  },
+  {
+    "source": "work/analyze_queen.py",
+    "destination": "history/queen-original/work/analyze_queen.py",
+    "sha256": "d8ed948d76ce400fe94c3c2b4684a335d6c37dcf6b0db5d760e5747b87269813"
+  },
+  {
+    "source": "work/compare_queen.py",
+    "destination": "history/queen-original/work/compare_queen.py",
+    "sha256": "3a7892a3731b5b582718d3c0ddb7a1164aacf3cba85a816445148d923a21b569"
+  },
+  {
+    "source": "work/queen-mesh-check.json",
+    "destination": "history/queen-original/work/queen-mesh-check.json",
+    "sha256": "b49c97f0dbc8184d1f5278f25dc150a6a387e55718c9834e5457352a3d6e94d7"
+  },
+  {
+    "source": "work/queen-pass-01.blend",
+    "destination": "history/queen-original/work/queen-pass-01.blend",
+    "sha256": "c401c52a194d39ada9eac62cf9140e35f9ca940620ebb35972c107e70b229ae0"
+  },
+  {
+    "source": "work/queen-pass-02.blend",
+    "destination": "history/queen-original/work/queen-pass-02.blend",
+    "sha256": "e9763552bd9b444be0e4f55bcb1c3acb5d9d4d1c1d85e514da03e3fa4c06d545"
+  },
+  {
+    "source": "work/test_blender.py",
+    "destination": "history/queen-original/work/test_blender.py",
+    "sha256": "f916a889543ee13fde591f7a33c89a7e8cd6b0a1ef86032fcc5af88ef8d0981b"
+  },
+  {
+    "source": "work/validate_queen.py",
+    "destination": "history/queen-original/work/validate_queen.py",
+    "sha256": "debea0caebc9eb7093f57e1ed9d85e4e306d212599fb10c3276fec9f996636d9"
+  },
+  {
+    "source": "work/queen-hires/viewer-mesh.bin",
+    "destination": "build/queen/viewer-mesh.bin",
+    "sha256": "65728e5307dc3946bd0576eb2075c85f41dcb5f07e6e11899fb32a7e8f9e7a04"
+  },
+  {
+    "source": "work/queen-hires/viewer-mesh.json",
+    "destination": "build/queen/viewer-mesh.json",
+    "sha256": "1f22073e7a26af7802c89e665b98fc31fcd4350e08b746d5ec8792a5c244a850"
+  },
+  {
+    "source": "work/queen-hires/viewer-camera.json",
+    "destination": "build/queen/viewer-camera.json",
+    "sha256": "6c21c9d79635ea571643183c55fe0dd3c017b26a0e5ab611aa0258b4a57b3888"
+  },
+  {
+    "source": "work/queen-hires/viewer-camera-check.json",
+    "destination": "build/queen/viewer-camera-check.json",
+    "sha256": "f7e5c58137eab699ae7629038f6475de22989c3101c7867415eb5f3da2d0a735"
+  },
+  {
+    "source": "outputs/queen-hires/build_queen.py",
+    "destination": "history/imported-active-scripts/build_queen.py",
+    "sha256": "c54a6d98bca00953ee755a4245901a87c2db56f7c600deaf2e2e267579abc9d1"
+  },
+  {
+    "source": "outputs/queen-hires/export_viewer_mesh.py",
+    "destination": "history/imported-active-scripts/export_viewer_mesh.py",
+    "sha256": "5d2f10fc48e7a31a0dcf752d11406d2099a07faebbc62f43da7b427911b0076b"
+  },
+  {
+    "source": "outputs/queen-hires/overlay_qa.py",
+    "destination": "history/imported-active-scripts/overlay_qa.py",
+    "sha256": "6051af3a672d6582ab157847243a18da5059666145d8353dd9ddc9dc3908e4df"
+  }
+]
