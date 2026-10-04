@@ -21,7 +21,7 @@ class Links(HTMLParser):
             target = ROOT / unquote(url.path)
             assert target.is_file(), f'Missing local link: {value}'
             checked.add(url.path)
-for name in ('index.html', 'review.html', 'king-review.html', 'rook-review.html', 'bishop-review.html', 'knight-review.html', 'pawn-review.html'):
+for name in ('index.html', 'set-comparison.html', 'review.html', 'king-review.html', 'rook-review.html', 'bishop-review.html', 'knight-review.html', 'pawn-review.html'):
     html = (ROOT / name).read_text(encoding='utf-8')
     assert 'file:///' not in html, f'Machine-specific URL in {name}'
     Links().feed(html)
@@ -50,7 +50,7 @@ assert meta, 'Missing viewer mesh metadata'
 expected = json.loads(meta.group(1))['sourceSha256']
 actual = hashlib.sha256((ROOT / 'models/queen/queen-rebuilt.blend').read_bytes()).hexdigest()
 assert expected == actual, 'Viewer is stale relative to the Blender model'
-print(f'PASS: seven pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
+print(f'PASS: eight pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
 
 manifest=json.loads((ROOT/'references/lichess-staunton-3d/original-png-manifest.json').read_text())
 assert len(manifest['files'])==12
