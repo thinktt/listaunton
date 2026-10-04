@@ -1,0 +1,223 @@
+{
+  "note": "Canonical queen geometry, renders, references, exports and geometry/viewer scripts. review.html and scripts/queen/check_review_reference.cjs are excluded because the authorized projection-tab integration changes the review UI and its interaction regression test. The 40-file pre-integration snapshot was verified byte-for-byte before excluding that UI test; the remaining 39 files stay protected.",
+  "files": [
+    {
+      "path": "assets/queen/collar-revision.json",
+      "sha256": "0255475c356e09c1816844510b63120030fa0090fa472ec7c018fbbac6e4eb72",
+      "bytes": 479,
+      "textLfSha256": "0255475c356e09c1816844510b63120030fa0090fa472ec7c018fbbac6e4eb72"
+    },
+    {
+      "path": "assets/queen/comparison-base.png",
+      "sha256": "e954e88cb3f18d55ed58eedecf42fbd13e39dca16bf5c6db64f2a2f4ccf60b70",
+      "bytes": 775347
+    },
+    {
+      "path": "assets/queen/comparison-collars.png",
+      "sha256": "23d7ed704e343a613f9fd4b79c321918ffc4e0569bd72973bfaf56a31b997879",
+      "bytes": 605087
+    },
+    {
+      "path": "assets/queen/comparison-crown.png",
+      "sha256": "8f896e74b32881b181cf3e644f0f683e9e104a5f7bea16ae8098bfd321725aba",
+      "bytes": 641960
+    },
+    {
+      "path": "assets/queen/comparison-full.png",
+      "sha256": "e0b716547f28f78c0b7d8cf0af7a89cdfbaf5d482a89ebb9b23ff5809acaa3a4",
+      "bytes": 1335632
+    },
+    {
+      "path": "assets/queen/contour-overlay-labeled.png",
+      "sha256": "a669a2b3f87cfaee347c9b10505b7db5247f6e5ede0d4891db0737c31042511b",
+      "bytes": 625463
+    },
+    {
+      "path": "assets/queen/contour-overlay.png",
+      "sha256": "2382db018b8d433b94aef3b06700e4f5f31f116fd11de4f3d3efcc405103b317",
+      "bytes": 617133
+    },
+    {
+      "path": "assets/queen/feature-curves.json",
+      "sha256": "999921684ed588a344cdb21970235168542cfbc8981b145cefa024f54ed6750b",
+      "bytes": 2128,
+      "textLfSha256": "c9f42b04600d11d9659a0719b172749a000c5348dc747c213199f6d0abd6cfdc"
+    },
+    {
+      "path": "assets/queen/feature-curves.png",
+      "sha256": "aed4aa0810726ebbfdc073ba9f6f542225d355538a15f24d4ab828e08f2a154f",
+      "bytes": 694558
+    },
+    {
+      "path": "assets/queen/model-validation.json",
+      "sha256": "eb483c4d01eb1004c4eaf9381cd24a8432163a677ca75804a007118af953f17e",
+      "bytes": 2849,
+      "textLfSha256": "b90e49f543efbeac1d5a5ae5f3067ac7204c325f012ef3899d72682c67bf1d54"
+    },
+    {
+      "path": "assets/queen/original-reference-alignment.json",
+      "sha256": "154d146a42199d1c4f2c3addc7ccdea12e87de1bdb4a899701fa71ab3c1354a1",
+      "bytes": 912,
+      "textLfSha256": "df261f992c5ef5fda3f03c4a80b490eb51b26c6dc59c89afa662c994327eabbd"
+    },
+    {
+      "path": "assets/queen/overlay-50-labeled.png",
+      "sha256": "7ad5bdc1166f195d15f58fe5bc0da5f811d949c2de77318a4af639c8f4cecfcd",
+      "bytes": 848121
+    },
+    {
+      "path": "assets/queen/overlay-50.png",
+      "sha256": "d9516e4b25d1c541546aaef7acaf4c9c4a2d96ff7c4723b7bad118c462c4093e",
+      "bytes": 845331
+    },
+    {
+      "path": "assets/queen/overlay-metrics.json",
+      "sha256": "78e7157fe6f94a4fb0d3cf58ac8bd84f8d460be68f12866ddf13222880ee417a",
+      "bytes": 2889,
+      "textLfSha256": "f5fad218c24fb1fb12fcfab1e0c12c68a98b725473fe0e3aa075c636afb58482"
+    },
+    {
+      "path": "assets/queen/profile-landmarks.json",
+      "sha256": "dec56befbce8bb78bbe372b9717034a0aa47b6c616f25fb17e49057950b9791f",
+      "bytes": 658,
+      "textLfSha256": "3cba0be0dbb5e4c471addc6dd023dff8afbab0ac8de4d1eff1dfc388ab2defd3"
+    },
+    {
+      "path": "assets/queen/queen-brown.png",
+      "sha256": "bcc489111984b4bd54a068968dd71aaa6c756b04ac91fe92193ef66fd21a81f7",
+      "bytes": 848420
+    },
+    {
+      "path": "assets/queen/queen-matched.png",
+      "sha256": "c99a0bff01b2b7e160428fd50485f7d77fc86a91b46b83dd74e7d92e0e217376",
+      "bytes": 803487
+    },
+    {
+      "path": "assets/queen/queen-previous-brown.png",
+      "sha256": "000337952f7c82c8018521bb562d69d44b08b43cb725f7dcd89e507423e43f17",
+      "bytes": 856311
+    },
+    {
+      "path": "assets/queen/queen-previous.png",
+      "sha256": "7881230a8efe2bd01b93ae78b0a8c801de828ac292282742657993ffd3c2d720",
+      "bytes": 806193
+    },
+    {
+      "path": "assets/queen/queen-three-quarter.png",
+      "sha256": "f75579de52da4f97038480251537feecfa1d41b30eff2d67b734a9c245f5d6a0",
+      "bytes": 427129
+    },
+    {
+      "path": "assets/queen/reference.png",
+      "sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+      "bytes": 950042
+    },
+    {
+      "path": "assets/queen/viewer-camera-check.json",
+      "sha256": "900821ff62e871e7a55a33ec4cf05ff2fe3179b677a9bee44fa00fb62d3fef5a",
+      "bytes": 347,
+      "textLfSha256": "900821ff62e871e7a55a33ec4cf05ff2fe3179b677a9bee44fa00fb62d3fef5a"
+    },
+    {
+      "path": "build/queen/viewer-camera-check.json",
+      "sha256": "900821ff62e871e7a55a33ec4cf05ff2fe3179b677a9bee44fa00fb62d3fef5a",
+      "bytes": 347,
+      "textLfSha256": "900821ff62e871e7a55a33ec4cf05ff2fe3179b677a9bee44fa00fb62d3fef5a"
+    },
+    {
+      "path": "build/queen/viewer-camera.json",
+      "sha256": "cb26b39e9b554f9c30405982dcde41cfd5ec5c63ddd7344ad4574e30bf67803d",
+      "bytes": 11434,
+      "textLfSha256": "496b73171c232bcf30396964e6855e23144468cc82997bbd0716bee9a21a4784"
+    },
+    {
+      "path": "build/queen/viewer-mesh.bin",
+      "sha256": "a051e99b621c47e3589a685148e0c11df635814b5593f09aa8a172c3d3c6fb9e",
+      "bytes": 17178672
+    },
+    {
+      "path": "build/queen/viewer-mesh.json",
+      "sha256": "ca5a2245ec1a64693603caea2412a3c2ca543ce15bb73bd23f7ad089679a6853",
+      "bytes": 3331,
+      "textLfSha256": "ceaafb4d4d407ec34889706c67d32d2b69d884786fcebd018a2183d47c149c29"
+    },
+    {
+      "path": "models/queen/queen-rebuilt.blend",
+      "sha256": "dcffeafda38af779c8bd0856ac0001cd468ca14bbfaf792918f13c921a2a5a32",
+      "bytes": 1652718
+    },
+    {
+      "path": "scripts/queen/align_original_reference.py",
+      "sha256": "0fd0f7e6176baded174b0233558fa2c577200af78de8f8236276b66f29539e4c",
+      "bytes": 3234,
+      "textLfSha256": "0fd0f7e6176baded174b0233558fa2c577200af78de8f8236276b66f29539e4c"
+    },
+    {
+      "path": "scripts/queen/build_queen.py",
+      "sha256": "149a71bca18176f3027bd779e49b5206f2929e9e4f809a152dd7ac86b5d76b7a",
+      "bytes": 12687,
+      "textLfSha256": "149a71bca18176f3027bd779e49b5206f2929e9e4f809a152dd7ac86b5d76b7a"
+    },
+    {
+      "path": "scripts/queen/build_viewer.py",
+      "sha256": "b76d8e0e95a6bd39ae2dcd2328a9ab6549cc7f968e163261ad22e15d9979ec28",
+      "bytes": 1875,
+      "textLfSha256": "b76d8e0e95a6bd39ae2dcd2328a9ab6549cc7f968e163261ad22e15d9979ec28"
+    },
+    {
+      "path": "scripts/queen/check_viewer_camera.cjs",
+      "sha256": "c446dd10e1d7a0fb0d26cae032aa8aa7891b104591451b94040eb6da6c664fb8",
+      "bytes": 7135,
+      "textLfSha256": "c446dd10e1d7a0fb0d26cae032aa8aa7891b104591451b94040eb6da6c664fb8"
+    },
+    {
+      "path": "scripts/queen/export_viewer_mesh.py",
+      "sha256": "a95ef08a677675ab054339504b3492b797af0472815e6bb2a22c4a59b27f508c",
+      "bytes": 10821,
+      "textLfSha256": "b1bf6567e5e12ffbeb7c5b04add74ed339323705c30fd03aa0cc62fe835871e8"
+    },
+    {
+      "path": "scripts/queen/inspect_viewer_camera.py",
+      "sha256": "ec15a271cdf6b7eb0ed298a7bc9cba43be31c94cbb0a7e13f91a22a5e707a99b",
+      "bytes": 3817,
+      "textLfSha256": "58982ddcf58fa027ea173791f82d5cd61e546d0e2287a56a266e94b72a3d3e28"
+    },
+    {
+      "path": "scripts/queen/overlay_qa.py",
+      "sha256": "8289e9c4861b2847f6bfe3cd33d7b03711215772198aeecadc0b1d6ded1f3856",
+      "bytes": 14284,
+      "textLfSha256": "657fe921d40bfaed52aeaf034ac972103aa3a36ad3e8c12bf734bf04ac4fb388"
+    },
+    {
+      "path": "scripts/queen/parts-template.html",
+      "sha256": "c6ea07e0c37e221585fe3605b1891a706b64bd6bb6166a8bcef27951dcab7123",
+      "bytes": 184582,
+      "textLfSha256": "16c0ecf5482667d6dde6318009fd1144e93a91c22a062af2dffcb395a48dc5f7"
+    },
+    {
+      "path": "scripts/queen/requirements.txt",
+      "sha256": "7f75b88ca9db25ed6a80ad0bc8d0755124b4696157796f70270fda87cc33d476",
+      "bytes": 34,
+      "textLfSha256": "0fa896861a27f40b0f58a407a80589c2b087721ff84e283753d1057acf74540d"
+    },
+    {
+      "path": "scripts/queen/validate_seamless_crown.py",
+      "sha256": "60471ee9ac256050228b7474ffaed19f7ca8e9c2c0de85c07501fb2ca110e517",
+      "bytes": 13892,
+      "textLfSha256": "400d2c3032315714b0c1ce3ddb769a9b06db1a7a9375c34d29917624e7364642"
+    },
+    {
+      "path": "scripts/queen/validate_stacked_collars.py",
+      "sha256": "9572e12bc87d3acd95f1ebba8e156b3b942f482fd753434ca13349fd43d2964a",
+      "bytes": 3607,
+      "textLfSha256": "9572e12bc87d3acd95f1ebba8e156b3b942f482fd753434ca13349fd43d2964a"
+    },
+    {
+      "path": "scripts/queen/viewer-template.html",
+      "sha256": "121bc5252941774a0fe6bab919dc2d90c1155aaf1c17da3a11026a4dbd8557a4",
+      "bytes": 19350,
+      "textLfSha256": "121bc5252941774a0fe6bab919dc2d90c1155aaf1c17da3a11026a4dbd8557a4"
+    }
+  ],
+  "canonical_hashes_preserved": true
+}

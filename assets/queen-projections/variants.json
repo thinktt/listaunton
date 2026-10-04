@@ -1,0 +1,134 @@
+{
+  "baseline": "angle-51-5",
+  "description": "Physical queen geometry refits at seven assumed camera elevations; 51.5-degree accepted shape retained as baseline. Same base width, floor, profile camera and orbit frame.",
+  "variants": [
+    {
+      "id": "angle-48",
+      "label": "48\u00b0",
+      "elevation": 48,
+      "assetDir": "assets/queen-projections/angle-48",
+      "model": "models/queen-projections/queen-48.blend",
+      "fit": {
+        "initial_loss": 4.832208008710565,
+        "loss": 3.797301323773561,
+        "silhouette": 3.5972966228279195,
+        "preserved_arc_term": 0.10397058412136802,
+        "regularization": 0.07524
+      },
+      "height": 3.6431450843811035,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.7570692319721821
+    },
+    {
+      "id": "angle-51-5",
+      "label": "51.5\u00b0 \u00b7 current shape",
+      "elevation": 51.5,
+      "assetDir": "assets/queen-projections/angle-51-5",
+      "model": "models/queen-projections/queen-51-5.blend",
+      "fit": {
+        "initial_loss": 3.2232416343563615,
+        "loss": 3.2232416343563615,
+        "silhouette": 3.2232416343563615,
+        "preserved_arc_term": 0.0,
+        "regularization": 0.0
+      },
+      "height": 3.910893678665161,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.8862029354135428
+    },
+    {
+      "id": "angle-52",
+      "label": "52\u00b0",
+      "elevation": 52,
+      "assetDir": "assets/queen-projections/angle-52",
+      "model": "models/queen-projections/queen-52.blend",
+      "fit": {
+        "initial_loss": 3.3117343491464237,
+        "loss": 3.102776893340405,
+        "silhouette": 3.062015429428146,
+        "preserved_arc_term": 0.018117886593549244,
+        "regularization": 0.01902
+      },
+      "height": 3.9586949348449707,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.9092572235458618
+    },
+    {
+      "id": "angle-54",
+      "label": "54\u00b0",
+      "elevation": 54,
+      "assetDir": "assets/queen-projections/angle-54",
+      "model": "models/queen-projections/queen-54.blend",
+      "fit": {
+        "initial_loss": 4.4507830535054,
+        "loss": 4.003229447681842,
+        "silhouette": 3.8903940794361294,
+        "preserved_arc_term": 0.04777947353809398,
+        "regularization": 0.05550000000000001
+      },
+      "height": 4.143457412719727,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.9983671704674033
+    },
+    {
+      "id": "angle-56",
+      "label": "56\u00b0",
+      "elevation": 56,
+      "assetDir": "assets/queen-projections/angle-56",
+      "model": "models/queen-projections/queen-56.blend",
+      "fit": {
+        "initial_loss": 5.8971900320008634,
+        "loss": 5.129320138316784,
+        "silhouette": 4.89083144241421,
+        "preserved_arc_term": 0.1372405799188117,
+        "regularization": 0.07379999999999999
+      },
+      "height": 4.3275146484375,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 2.0871369828989854
+    },
+    {
+      "id": "angle-60",
+      "label": "60\u00b0",
+      "elevation": 60,
+      "assetDir": "assets/queen-projections/angle-60",
+      "model": "models/queen-projections/queen-60.blend",
+      "fit": {
+        "initial_loss": 8.649038550959533,
+        "loss": 7.526055416277358,
+        "silhouette": 7.010224214190191,
+        "preserved_arc_term": 0.3697093350726386,
+        "regularization": 0.07218
+      },
+      "height": 4.746461868286133,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 2.289192968254114
+    },
+    {
+      "id": "angle-64",
+      "label": "64\u00b0",
+      "elevation": 64,
+      "assetDir": "assets/queen-projections/angle-64",
+      "model": "models/queen-projections/queen-64.blend",
+      "fit": {
+        "initial_loss": 11.466123774333091,
+        "loss": 9.551402709241872,
+        "silhouette": 8.657441769003484,
+        "preserved_arc_term": 0.6806674501986569,
+        "regularization": 0.07715999999999999
+      },
+      "height": 5.298889636993408,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 2.5556259026557626
+    }
+  ],
+  "sharedView": {
+    "center": [
+      0,
+      0,
+      2.9
+    ],
+    "orthoHeight": 6.2,
+    "distance": 16
+  }
+}

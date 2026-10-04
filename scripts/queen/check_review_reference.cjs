@@ -1,6 +1,6 @@
 // Exercise the review page's actual script with a small DOM harness.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../..');
+const root=process.argv[2]||path.resolve(__dirname,'../..');
 const html=fs.readFileSync(path.join(root,'review.html'),'utf8');
 const nodes=new Map(),buttons=[],windowListeners={},messages=[];
 const viewerWindow={postMessage(message){messages.push(message);}};
@@ -20,6 +20,7 @@ node('original-reference-alignment').textContent=alignmentText;
 const alignment=JSON.parse(alignmentText);
 assert.equal(alignment.source_sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,alignment.source))).digest('hex'));
 assert.equal(alignment.target_sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,alignment.target))).digest('hex'));
+let projectionLoads=0;Object.defineProperty(node('projections-frame'),'src',{get(){return this.page;},set(value){this.page=value;projectionLoads++;}});
 const document={getElementById:node,querySelectorAll:selector=>buttons.filter(b=>b.className.split(' ').includes(selector.slice(1))),addEventListener(){}};
 vm.runInNewContext(html.match(/<script id="review-runtime">\s*([\s\S]*?)<\/script>/)[1],{document,window:{addEventListener(name,fn){windowListeners[name]=fn;}},ResizeObserver:class{observe(){}},console,JSON,Math,Number,String});
 const button=(key,value)=>buttons.find(b=>b.dataset[key]===value);
@@ -87,3 +88,11 @@ click('workspace','model3d');
 assert.equal(node('model3d-frame').srcdoc,viewerDoc);
 assert.equal(messages.length,2);assert(messages.every(message=>message.action==='activate'&&message.reset===undefined));
 console.log('PASS: tab-only switching, reference panning, embedded documents, readiness/source checks and persistent 3D frame.');
+
+assert.equal(projectionLoads,0);
+click('workspace','projections');
+assert.equal(node('projections-frame').src,'queen-projections.html');assert.equal(projectionLoads,1);
+assert.equal(node('projections-pane').hidden,false);assert.equal(node('model3d-pane').hidden,true);assert.equal(node('parts-pane').hidden,true);
+click('workspace','overlay');assert.equal(node('projections-pane').hidden,true);assert.equal(node('viewport').scrollLeft,83);assert.equal(node('viewport').scrollTop,67);
+click('workspace','projections');assert.equal(projectionLoads,1);assert.equal(node('model3d-frame').srcdoc,viewerDoc);
+console.log('PASS: queen projection tab loads once, preserves overlay pan and retains current-model and parts frames.');

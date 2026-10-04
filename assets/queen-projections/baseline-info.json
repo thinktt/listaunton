@@ -1,0 +1,26 @@
+{
+  "sourceSha256": "dcffeafda38af779c8bd0856ac0001cd468ca14bbfaf792918f13c921a2a5a32",
+  "object": "01 Queen - continuous body and splash crown",
+  "ringSegments": 192,
+  "bodyRingCount": 89,
+  "finialFirstRing": 108,
+  "ringCount": 117,
+  "floor": 0.21899999678134918,
+  "baseRadius": 1.0370000366086927,
+  "elevation": 51.5,
+  "scale": 273.5,
+  "cx": 483.625,
+  "y0": 880.0,
+  "sourceSubdivision": 2,
+  "candidateSubdivision": 1,
+  "crownTipCount": 8,
+  "reduced_mesh_check": {
+    "dense_triangles": 715776,
+    "candidate_triangles": 178944,
+    "sample_count": 5041,
+    "surface_distance_max": 0.0014670755481347442,
+    "surface_distance_p95": 0.0004958351491950452,
+    "surface_distance_max_original_pixels": 0.09512223564210122,
+    "method": "Dense subdivision-2 sampled vertices to nearest triangle of subdivision-1 surface; same editable controls."
+  }
+}

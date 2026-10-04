@@ -1,0 +1,41 @@
+{
+  "id": "angle-51-5",
+  "elevation": 51.5,
+  "original": {
+    "iou": 0.9348149607452153,
+    "mean_boundary_error_original_px": 2.772910115865239,
+    "p95_boundary_error_original_px": 5.926690497002997
+  },
+  "selected": {
+    "iou": 0.9163154115357612,
+    "mean_boundary_error_original_px": 3.1012881033440243,
+    "p95_boundary_error_original_px": 6.637893356643356
+  },
+  "height": 3.910893678665161,
+  "baseWidth": 2.0734214782714844,
+  "heightToBaseWidth": 1.8862029354135428,
+  "head": {
+    "original": {
+      "iou": 0.9408889194411982,
+      "mean_boundary_error_original_px": 1.8453319433108186,
+      "p95_boundary_error_original_px": 3.5560142982017977
+    },
+    "selected": {
+      "iou": 0.929959834422591,
+      "mean_boundary_error_original_px": 1.7854060748169027,
+      "p95_boundary_error_original_px": 3.318946678321678
+    }
+  },
+  "body": {
+    "original": {
+      "iou": 0.9315651818553331,
+      "mean_boundary_error_original_px": 2.5556864835466406,
+      "p95_boundary_error_original_px": 6.163758116883116
+    },
+    "selected": {
+      "iou": 0.9090459005392842,
+      "mean_boundary_error_original_px": 2.931921497264007,
+      "p95_boundary_error_original_px": 7.3846563592657555
+    }
+  }
+}

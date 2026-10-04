@@ -1,0 +1,299 @@
+{
+  "method": "Actual alpha silhouettes at saved candidate cameras. Original sprite registered by the existing accepted queen alignment; boundary differences expressed in original 300px units. Cyan reference/orange model contours.",
+  "variants": [
+    {
+      "id": "angle-48",
+      "elevation": 48,
+      "original": {
+        "iou": 0.9297636515738298,
+        "mean_boundary_error_original_px": 2.803029992320462,
+        "p95_boundary_error_original_px": 7.147588739385528
+      },
+      "selected": {
+        "iou": 0.9157365097018394,
+        "mean_boundary_error_original_px": 2.8857594819952768,
+        "p95_boundary_error_original_px": 7.360949597277656
+      },
+      "height": 3.6431450843811035,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.7570692319721821,
+      "head": {
+        "original": {
+          "iou": 0.9520019018259063,
+          "mean_boundary_error_original_px": 1.3623866962273132,
+          "p95_boundary_error_original_px": 3.318946678321678
+        },
+        "selected": {
+          "iou": 0.939639098207819,
+          "mean_boundary_error_original_px": 1.3574081720998465,
+          "p95_boundary_error_original_px": 3.318946678321678
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.9178666666666667,
+          "mean_boundary_error_original_px": 2.9832775886345315,
+          "p95_boundary_error_original_px": 8.297366695804195
+        },
+        "selected": {
+          "iou": 0.9029418921649901,
+          "mean_boundary_error_original_px": 3.0193522064894074,
+          "p95_boundary_error_original_px": 8.297366695804195
+        }
+      }
+    },
+    {
+      "id": "angle-51-5",
+      "elevation": 51.5,
+      "original": {
+        "iou": 0.9348149607452153,
+        "mean_boundary_error_original_px": 2.772910115865239,
+        "p95_boundary_error_original_px": 5.926690497002997
+      },
+      "selected": {
+        "iou": 0.9163154115357612,
+        "mean_boundary_error_original_px": 3.1012881033440243,
+        "p95_boundary_error_original_px": 6.637893356643356
+      },
+      "height": 3.910893678665161,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.8862029354135428,
+      "head": {
+        "original": {
+          "iou": 0.9408889194411982,
+          "mean_boundary_error_original_px": 1.8453319433108186,
+          "p95_boundary_error_original_px": 3.5560142982017977
+        },
+        "selected": {
+          "iou": 0.929959834422591,
+          "mean_boundary_error_original_px": 1.7854060748169027,
+          "p95_boundary_error_original_px": 3.318946678321678
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.9315651818553331,
+          "mean_boundary_error_original_px": 2.5556864835466406,
+          "p95_boundary_error_original_px": 6.163758116883116
+        },
+        "selected": {
+          "iou": 0.9090459005392842,
+          "mean_boundary_error_original_px": 2.931921497264007,
+          "p95_boundary_error_original_px": 7.3846563592657555
+        }
+      }
+    },
+    {
+      "id": "angle-52",
+      "elevation": 52,
+      "original": {
+        "iou": 0.9382545154463537,
+        "mean_boundary_error_original_px": 2.5414076826220198,
+        "p95_boundary_error_original_px": 5.926690497002997
+      },
+      "selected": {
+        "iou": 0.9199810997893748,
+        "mean_boundary_error_original_px": 2.8292836631996408,
+        "p95_boundary_error_original_px": 6.400825736763236
+      },
+      "height": 3.9586949348449707,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.9092572235458618,
+      "head": {
+        "original": {
+          "iou": 0.9558852894643872,
+          "mean_boundary_error_original_px": 1.3318152409615098,
+          "p95_boundary_error_original_px": 2.6077438186813184
+        },
+        "selected": {
+          "iou": 0.9466166866329173,
+          "mean_boundary_error_original_px": 1.2152723991189647,
+          "p95_boundary_error_original_px": 2.3706761988011986
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.9289017270390183,
+          "mean_boundary_error_original_px": 2.722566820617888,
+          "p95_boundary_error_original_px": 6.400825736763236
+        },
+        "selected": {
+          "iou": 0.9059270677856892,
+          "mean_boundary_error_original_px": 3.121960373795501,
+          "p95_boundary_error_original_px": 7.621723979145875
+        }
+      }
+    },
+    {
+      "id": "angle-54",
+      "elevation": 54,
+      "original": {
+        "iou": 0.9287787746880298,
+        "mean_boundary_error_original_px": 3.0030601848216216,
+        "p95_boundary_error_original_px": 6.637893356643356
+      },
+      "selected": {
+        "iou": 0.9103511355135122,
+        "mean_boundary_error_original_px": 3.274467691960502,
+        "p95_boundary_error_original_px": 7.823231456043955
+      },
+      "height": 4.143457412719727,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 1.9983671704674033,
+      "head": {
+        "original": {
+          "iou": 0.955875807664564,
+          "mean_boundary_error_original_px": 1.366218590107611,
+          "p95_boundary_error_original_px": 2.3706761988011986
+        },
+        "selected": {
+          "iou": 0.9475022018944018,
+          "mean_boundary_error_original_px": 1.2249996023463228,
+          "p95_boundary_error_original_px": 2.133608578921079
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.9145957930505404,
+          "mean_boundary_error_original_px": 3.4356780958028996,
+          "p95_boundary_error_original_px": 7.349096216283716
+        },
+        "selected": {
+          "iou": 0.891028036632068,
+          "mean_boundary_error_original_px": 3.887566938809612,
+          "p95_boundary_error_original_px": 8.569994458666354
+        }
+      }
+    },
+    {
+      "id": "angle-56",
+      "elevation": 56,
+      "original": {
+        "iou": 0.9189242097185499,
+        "mean_boundary_error_original_px": 3.512384092741235,
+        "p95_boundary_error_original_px": 9.399731128246666
+      },
+      "selected": {
+        "iou": 0.9007257015594863,
+        "mean_boundary_error_original_px": 3.7841822922223405,
+        "p95_boundary_error_original_px": 10.193907654845153
+      },
+      "height": 4.3275146484375,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 2.0871369828989854,
+      "head": {
+        "original": {
+          "iou": 0.95627217619876,
+          "mean_boundary_error_original_px": 1.3925093591057232,
+          "p95_boundary_error_original_px": 2.6077438186813184
+        },
+        "selected": {
+          "iou": 0.9486793559641242,
+          "mean_boundary_error_original_px": 1.2376191714654166,
+          "p95_boundary_error_original_px": 2.133608578921079
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.8996334618459907,
+          "mean_boundary_error_original_px": 4.171160242094667,
+          "p95_boundary_error_original_px": 10.668042894605394
+        },
+        "selected": {
+          "iou": 0.8761259923581002,
+          "mean_boundary_error_original_px": 4.648791280011692,
+          "p95_boundary_error_original_px": 11.414805897227792
+        }
+      }
+    },
+    {
+      "id": "angle-60",
+      "elevation": 60,
+      "original": {
+        "iou": 0.898034115530845,
+        "mean_boundary_error_original_px": 4.54805930612018,
+        "p95_boundary_error_original_px": 13.749921953046952
+      },
+      "selected": {
+        "iou": 0.8799447762876141,
+        "mean_boundary_error_original_px": 4.817263010553036,
+        "p95_boundary_error_original_px": 14.698192432567431
+      },
+      "height": 4.746461868286133,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 2.289192968254114,
+      "head": {
+        "original": {
+          "iou": 0.9465804360502541,
+          "mean_boundary_error_original_px": 1.6863309998940932,
+          "p95_boundary_error_original_px": 3.318946678321678
+        },
+        "selected": {
+          "iou": 0.9404594718363609,
+          "mean_boundary_error_original_px": 1.4796496072669427,
+          "p95_boundary_error_original_px": 2.8448114385614383
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.873314386855206,
+          "mean_boundary_error_original_px": 5.504824638549063,
+          "p95_boundary_error_original_px": 15.88353053196803
+        },
+        "selected": {
+          "iou": 0.8493785467554897,
+          "mean_boundary_error_original_px": 6.045010539927835,
+          "p95_boundary_error_original_px": 16.12059815184815
+        }
+      }
+    },
+    {
+      "id": "angle-64",
+      "elevation": 64,
+      "original": {
+        "iou": 0.8750814003098826,
+        "mean_boundary_error_original_px": 5.7013468377720535,
+        "p95_boundary_error_original_px": 17.30593625124875
+      },
+      "selected": {
+        "iou": 0.8569449619051668,
+        "mean_boundary_error_original_px": 5.972680696986195,
+        "p95_boundary_error_original_px": 18.017139110889108
+      },
+      "height": 5.298889636993408,
+      "baseWidth": 2.0734214782714844,
+      "heightToBaseWidth": 2.5556259026557626,
+      "head": {
+        "original": {
+          "iou": 0.9177220301154843,
+          "mean_boundary_error_original_px": 2.5280710932659107,
+          "p95_boundary_error_original_px": 4.978420017482517
+        },
+        "selected": {
+          "iou": 0.9117818962009396,
+          "mean_boundary_error_original_px": 2.295749643845409,
+          "p95_boundary_error_original_px": 4.504284777722277
+        }
+      },
+      "body": {
+        "original": {
+          "iou": 0.8531301495154731,
+          "mean_boundary_error_original_px": 6.629729579035677,
+          "p95_boundary_error_original_px": 18.787608875499497
+        },
+        "selected": {
+          "iou": 0.8289494557293831,
+          "mean_boundary_error_original_px": 7.209613238851995,
+          "p95_boundary_error_original_px": 19.913680069930066
+        }
+      }
+    }
+  ],
+  "reduced_render_vs_dense": {
+    "iou": 0.9996488216013735,
+    "mean_boundary_error_original_px": 0.013846696668222662,
+    "p95_boundary_error_original_px": 0.23706761988011985,
+    "silhouette_xor_pixels": 126
+  },
+  "limitations": "Higher elevations require a taller queen and increasingly change the visible ring ellipses and crown cavities. Bounded fitting preserves the accepted crown topology and chunky carving, so endpoint fits deliberately retain residual mismatch. A single shaded sprite cannot uniquely identify hidden depth or camera elevation."
+}

@@ -4,13 +4,15 @@ Recovering the Lichess **Staunton** chess set as editable 3D models from its sta
 
 [The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html). The king, rook, bishop, knight and pawn each open their own page with **Reference candidates** and **Model** tabs. All five have model comparisons.
 
-The queen review has three tabs: **Reference overlay**, **3D model**, and **Parts map**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. All tools are embedded in this one page, with no separate viewer or map pages.
+The queen review has four tabs: **Reference overlay**, **3D model**, **Parts map**, and **Projection variants**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. The current model and parts map are embedded; the projection study loads in its own frame on first use.
 
 The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. Its three thin collars now sit closely stacked, with roughly 44% less center spacing and narrow grooves in place of the tall spacers. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
 
 The king uses the original Lichess sprite as the authority for proportions, with selected black candidate 1 supporting detail interpretation. Its closed revolved body and separate beveled cross intersect but are not boolean-fused. This is a geometry study of roughly 68,500 triangles in neutral clay; matching wood grain and finish come later.
 
 [King projection variants](king-projections.html) compare six refitted models at assumed elevations of 48°, 52°, 54°, 56°, 60° and 64°. Inspect profiles at one physical scale, rotate while retaining the view, or compare each fitted render against either reference. They also appear in the king review’s **Projection variants** tab. The current king is preserved; see [the experiment notes](docs/king-projections.md).
+
+[Queen](queen-projections.html) and [rook](rook-projections.html) have corresponding proportion studies, including **54°**, reachable from their review tabs and the home and set pages. Each study preserves its current model and uses one base diameter, ground level and profile camera across its alternatives. The queen also includes its current 51.5° interpretation. These are geometry alternatives fitted under different camera assumptions; silhouette agreement alone does not establish the historical camera. See [queen notes](docs/queen-projections.md) and [rook notes](docs/rook-projections.md).
 
 See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
 
@@ -79,9 +81,9 @@ The validator's argument after `--` is the repository root. When using Windows B
 The rook, bishop, knight and pawn use the shared working camera estimate of 54°. Each **Model** tab provides a source overlay and freely rotatable geometry, with the exact saved Blender camera for returning to the reference. Geometry materials are neutral; wood grain remains future work.
 
 - [Rook build notes](scripts/rook/README.md): thin uniform crenellated wall, shallow cavity and turned base, guided by original black/white sprites and selected black candidate 8.
-- [Bishop build notes](scripts/bishop/README.md): full-depth open mitre slit with a solid floor, guided by original white and selected white candidate 3.
-- [Knight build notes](scripts/knight/README.md): sculpted head and neck, mane, paired ears and turned pedestal, guided by both originals and selected black candidate 2.
-- [Pawn build notes](scripts/pawn/README.md): one connected turned surface with rounded head, shallow collar, curved stem and broad base rolls, guided by both originals and selected black candidate 2.
+- [Bishop build notes](scripts/bishop/README.md): continuous curved head with a directly seated button and full-depth open mitre slit, guided by original white and selected white candidate 3.
+- [Knight build notes](scripts/knight/README.md): continuous horse head with a tapered muzzle, joined mane, paired ears and turned pedestal, guided by both originals and selected black candidate 2.
+- [Pawn build notes](scripts/pawn/README.md): one connected turned surface with round head seated directly in its shallow collar, curved stem and broad base rolls, guided by both originals and selected black candidate 2.
 
 Builders, validators and viewer generators live under `scripts/<piece>/`; editable scenes under `models/<piece>/`; references, exported meshes and comparisons under `assets/<piece>/`. Earlier rendered iterations are under `history/<piece>/`. Run `python scripts/build_candidate_pages.py` after a new standalone `<piece>-model.html` is available, then `node scripts/check_candidate_review.cjs`, `python scripts/check_model_site.py`, and `python scripts/check_site.py`. This activates the existing Model tab while retaining candidate controls and lazy loading.
 
