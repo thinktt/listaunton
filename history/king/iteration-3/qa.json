@@ -1,0 +1,17 @@
+{
+  "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
+  "images": {
+    "original": {
+      "silhouette_iou": 0.9598434592173943,
+      "mean_boundary_error_px": 6.181776133209991,
+      "p95_boundary_error_px": 20.0,
+      "reference_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+    },
+    "selected": {
+      "silhouette_iou": 0.9739137100144155,
+      "mean_boundary_error_px": 3.4686346863468636,
+      "p95_boundary_error_px": 10.0,
+      "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c"
+    }
+  }
+}

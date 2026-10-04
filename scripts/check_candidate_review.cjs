@@ -2,9 +2,15 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'assets/comparison/candidate-review.js'),'utf8');
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
-async function check(piece){
+async function check(piece,modelOverride){
  const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
  const data=JSON.parse(html.match(/<script id="comparison-data"[^>]*>(.*?)<\/script>/s)[1]);
+ if(modelOverride)data.model={page:modelOverride};
+ assert.match(html,/id="tab-candidates"[^>]*role="tab"[^>]*aria-selected="true"/);
+ assert.match(html,/id="tab-model"[^>]*role="tab"[^>]*aria-selected="false"/);
+ assert.match(html,/id="panel-model"[^>]*hidden/);
+ assert.match(html,/id="model-frame"[^>]*sandbox="allow-scripts allow-downloads"[^>]*hidden/);
+ assert(!/id="model-frame"[^>]*\ssrc=/.test(html),'Frame must load only when its tab opens');
  assert.equal(data.images.length,piece==='rook'?10:piece==='bishop'?9:8);
  for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,piece==='rook'&&color==='Black'?5:piece==='bishop'&&color==='White'?4:3);
  const firstCandidate=data.images.find(x=>x.id.startsWith('candidate-')).id,lastCandidate=data.images.filter(x=>x.id.startsWith('candidate-')).at(-1).id;
@@ -12,6 +18,8 @@ async function check(piece){
  function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},focus(){},getBoundingClientRect(){return {left:-100,width:1000};},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},stopPropagation(){},...event});}});return nodes.get(id);}
  const zooms=['fit','1','2'].map(value=>Object.assign(node('zoom-'+value),{dataset:{zoom:value}}));
  node('comparison-data').textContent=JSON.stringify(data);node('image-a').value='black';node('image-b').value=firstCandidate;node('align').checked=true;node('mix').value='50';
+ const frame=node('model-frame');let frameLoads=0,frameSource;
+ Object.defineProperty(frame,'src',{get(){return frameSource;},set(value){frameSource=value;frameLoads++;}});
  const doc={getElementById:node,querySelectorAll:()=>zooms,documentElement:{style:{setProperty(){}}}};
  class FakeImage{set src(value){queueMicrotask(()=>failed.has(value)?this.onerror():this.onload());}}
  vm.runInNewContext(source,{document:doc,window:{addEventListener(){}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
@@ -55,7 +63,25 @@ async function check(piece){
  assert.equal(node('viewport').scrollLeft,60);assert.equal(node('viewport').scrollTop,100);
  node('image-b').value=firstCandidate;node('image-b').fire('change');node('image-b').value=lastCandidate;node('image-b').fire('change');await settle();
  assert.equal(node('photo-b').src,data.images.find(x=>x.id===lastCandidate).file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
+ assert.equal(frameLoads,0,'Hidden model must not load during reference work');
+ const savedA=node('image-a').value,savedB=node('image-b').value,savedMix=node('mix').value;
+ node('tab-model').fire('click');
+ assert.equal(node('panel-candidates').hidden,true);assert.equal(node('panel-model').hidden,false);
+ assert.equal(node('tab-model').attrs['aria-selected'],'true');assert.equal(node('tab-candidates').tabIndex,-1);
+ if(data.model?.page){
+   assert.equal(frame.hidden,false);assert.equal(node('model-empty').hidden,true);assert.equal(frame.src,data.model.page);assert.equal(frameLoads,1);
+ }else{
+   assert.equal(frame.hidden,true);assert.equal(node('model-empty').hidden,false);assert.equal(frameLoads,0);
+ }
+ node('tab-model').fire('keydown',{key:'ArrowLeft'});
+ assert.equal(node('panel-candidates').hidden,false);assert.equal(node('panel-model').hidden,true);
+ assert.equal(node('tab-candidates').attrs['aria-selected'],'true');assert.equal(node('tab-candidates').tabIndex,0);
+ assert.equal(node('stage').style.width,'2508px');assert.equal(node('viewport').scrollLeft,60);
+ assert.equal(node('image-a').value,savedA);assert.equal(node('image-b').value,savedB);assert.equal(node('mix').value,savedMix);
+ node('tab-candidates').fire('keydown',{key:'End'});node('tab-model').fire('keydown',{key:'Home'});
+ node('tab-candidates').fire('keydown',{key:'ArrowRight'});node('tab-model').fire('click');
+ assert.equal(frameLoads,data.model?.page?1:0,'Model iframe is retained between visits');
  assert.equal(errors,0);
- console.log('PASS: '+piece+' — all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
+ console.log('PASS: '+piece+(modelOverride?' (model frame)':'')+' — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
 }
-(async()=>{for(const piece of ['king','rook','bishop','knight','pawn'])await check(piece);})().catch(error=>{console.error(error);process.exitCode=1;});
+(async()=>{for(const piece of ['king','rook','bishop','knight','pawn'])await check(piece);await check('king','king-model.html');})().catch(error=>{console.error(error);process.exitCode=1;});

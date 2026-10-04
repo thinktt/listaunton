@@ -1,6 +1,6 @@
 # listaunton
 
-Reconstruct the Lichess Staunton chess set from its rendered images, beginning with the queen. Interpret unseen geometry as an art project while matching the references carefully. Wood grain is planned; current materials are diagnostic.
+Reconstruct the Lichess Staunton chess set from its rendered images. The queen and king have editable reconstructions. Interpret unseen geometry as an art project while matching the references carefully. Wood grain is planned; current materials are diagnostic.
 
 The user requests a Git commit after each completed, checked iteration. Do not push or publish unless asked; the user currently handles pushing.
 
@@ -10,9 +10,13 @@ Append a co-author trailer to every commit, using the actual model name:
 
 For the initial import the user explicitly supplied `GPT 6 Astra Ultra`. Future agents must use their own actual identity, not infer it from this import. Ask if unavailable. This is message attribution, not cryptographic signing.
 
-Active scripts are in `scripts/queen`. The editable model is `models/queen/queen-rebuilt.blend`; rendered references and comparisons are in `assets/queen`. Keep the interactive viewer and overlay synchronized with the same model and saved camera. Verify substantive geometry changes with the model validator, mesh export checks, and camera regression.
+Queen scripts are in `scripts/queen`; its editable model is `models/queen/queen-rebuilt.blend`, with references and comparisons in `assets/queen`. King scripts are in `scripts/king`; its model is `models/king/king-rebuilt.blend`, with references, renders, mesh export and comparison reports in `assets/king`. Keep the interactive viewer and overlay synchronized with the same model and saved camera. Verify substantive geometry changes with the model validator, mesh export checks, and camera regression.
 
-Root pages are `index.html` (all twelve original pieces), `review.html` (queen tabs), and five `<piece>-review.html` candidate-comparison pages for king, rook, bishop, knight and pawn. Preserve the parts map's sandboxed iframe and CSP. Do not change the overlay's behavior while changing geometry.
+Root pages are `index.html` (all twelve original pieces), `review.html` (queen tabs), `set-comparison.html` (whole-set references), and five `<piece>-review.html` pages with Reference candidates and Model tabs. The king Model tab lazily embeds `king-model.html`; rook, bishop, knight and pawn show placeholders. The queen review remains independent. Preserve the parts map's sandboxed iframe and CSP. Do not change the overlay's behavior while changing geometry.
+
+For the king, the original Lichess sprite is authoritative for proportions; selected black candidate 1 supports detail interpretation. The current model is a closed revolved body plus an intersecting separate beveled cross (not boolean-fused), approximately 68,500 triangles. Neutral clay is a geometry study; wood materials remain later work. Do not interpret silhouette agreement as proof of unseen geometry.
+
+King rebuild order: Blender runs `scripts/king/build_king.py`; ordinary Python with Pillow and NumPy runs `scripts/king/compare.py`; Blender runs `scripts/king/validate.py` with `-- ROOT` for the repository root; ordinary Python runs `scripts/king/build_viewer.py`; Node runs `scripts/king/check_viewer.cjs`; then rebuild candidate pages with `scripts/build_candidate_pages.py` and run their interaction and site checks. Keep king work separate from the queen model and review.
 
 `history/` preserves earlier iterations and scripts as evidence. Those scripts may contain obsolete paths and destructive overwrite assumptions: do not run them as the current pipeline. The current stacked-collar validator uses `history/queen-hires/before-stacked-collars`; the historical seamless-crown validator uses its earlier baseline. Run the current validator for this revision.
 
@@ -22,4 +26,4 @@ Publish the repository root directly. Do not reintroduce an `_site` packaging fo
 
 The review embeds its viewer and unmodified parts map as JSON documents. Switch tools only through the three tabs; image dragging only pans the reference. Preserve parent/frame message-source checks. Source templates live in scripts/queen; build_viewer.py updates the embedded documents in review.html. Keep the page limited to the tabs, controls, and viewing area, with no detail panels beneath. Both interaction checks in scripts/queen must pass after changes to review controls or the viewer bridge.
 
-Candidate comparison pages share assets/comparison/candidate-review.js and .css. scripts/build_candidate_pages.py rebuilds them from the template and assets/candidates/alignment.json. It must never rewrite review.html. Generated candidate PNGs stay unmodified; prompts and hashes are recorded in assets/candidates/generation.json. Alignment applies only uniform scale/translation in CSS, with the white knight mirrored explicitly in aligned view. Run node scripts/check_candidate_review.cjs after comparison interaction changes.
+Candidate comparison pages share assets/comparison/candidate-review.js and .css. scripts/build_candidate_pages.py rebuilds them from the template and assets/candidates/alignment.json. It must never rewrite review.html. Generated candidate PNGs stay unmodified; prompts and hashes are recorded in assets/candidates/generation.json. Alignment applies only uniform scale/translation in CSS, with the white knight mirrored explicitly in aligned view. Model frames load on first tab use and retain their state; preserve candidate choices, zoom and pan when switching tabs. Run node scripts/check_candidate_review.cjs after comparison interaction changes.

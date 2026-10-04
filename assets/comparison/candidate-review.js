@@ -7,6 +7,32 @@
   let mode='wipe',zoom='fit',scale=1,drag=null,wipeDrag=null,version=0,ready=false;
   const handle=$('wipe-handle');
   const cache=new Map();
+  const tabNames=['candidates','model'];
+  let activeTab='candidates',modelLoaded=false;
+  function showTab(name,focus=false){
+    if(!tabNames.includes(name))return;
+    activeTab=name;drag=null;wipeDrag=null;
+    for(const value of tabNames){
+      const selected=value===name,tab=$('tab-'+value);
+      tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;
+      $('panel-'+value).hidden=!selected;
+    }
+    if(name==='model'){
+      const page=data.model?.page;
+      $('model-empty').hidden=Boolean(page);$('model-frame').hidden=!page;
+      if(page&&!modelLoaded){$('model-frame').src=page;modelLoaded=true;}
+    }else if(zoom==='fit')resize('fit',false);
+    if(focus)$('tab-'+name).focus();
+  }
+  for(const name of tabNames){
+    const tab=$('tab-'+name);
+    tab.addEventListener('click',()=>showTab(name));
+    tab.addEventListener('keydown',event=>{
+      const index=tabNames.indexOf(name);
+      const next={ArrowLeft:tabNames[(index+1)%2],ArrowRight:tabNames[(index+1)%2],Home:'candidates',End:'model'}[event.key];
+      if(next){event.preventDefault();showTab(next,true);}
+    });
+  }
   function load(src){
     if(!cache.has(src))cache.set(src,new Promise((resolve,reject)=>{
       const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>{cache.delete(src);reject(new Error('Could not load '+src));};image.src=src;
@@ -57,6 +83,7 @@
     }catch(error){if(request===version){$('loading').textContent='Image unavailable. Choose another image or reload the page.';console.error(error);}}
   }
   function resize(next,keepCenter=true){
+    if(activeTab!=='candidates'||!viewport.clientWidth||!viewport.clientHeight)return;
     const cx=(viewport.scrollLeft+viewport.clientWidth/2-stage.offsetLeft)/scale;
     const cy=(viewport.scrollTop+viewport.clientHeight/2-stage.offsetTop)/scale;
     zoom=next;scale=next==='fit'?Math.min(viewport.clientWidth,viewport.clientHeight)/1254:Number(next);

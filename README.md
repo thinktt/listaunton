@@ -1,12 +1,14 @@
 # listaunton
 
-Recovering the Lichess **Staunton** chess set as editable 3D models from its static rendered images. We are starting with the queen. This is an independent art reconstruction, with interpretation where a single image cannot determine the geometry.
+Recovering the Lichess **Staunton** chess set as editable 3D models from its static rendered images. The queen and king now have editable reconstructions. This is an independent art reconstruction, with interpretation where a single image cannot determine the geometry.
 
-[The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html). The king, rook, bishop, knight and pawn each open their own reference-candidate comparison page.
+[The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html). The king, rook, bishop, knight and pawn each open their own page with **Reference candidates** and **Model** tabs. The king has a model comparison; the others show a placeholder until their models are ready.
 
-The review has three tabs: **Reference overlay**, **3D model**, and **Parts map**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. All tools are embedded in this one page, with no separate viewer or map pages.
+The queen review has three tabs: **Reference overlay**, **3D model**, and **Parts map**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. All tools are embedded in this one page, with no separate viewer or map pages.
 
 The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. Its three thin collars now sit closely stacked, with roughly 44% less center spacing and narrow grooves in place of the tall spacers. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
+
+The king uses the original Lichess sprite as the authority for proportions, with selected black candidate 1 supporting detail interpretation. Its closed revolved body and separate beveled cross intersect but are not boolean-fused. This is a geometry study of roughly 68,500 triangles in neutral clay; matching wood grain and finish come later.
 
 See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
 
@@ -14,8 +16,10 @@ See [the continuing provenance investigation](PROVENANCE.md) for the original se
 
 - `models/queen/queen-rebuilt.blend`: current editable Blender model, with its reference packed inside.
 - `assets/queen/`: the supplied high-resolution reference, renders, comparisons and validation reports.
+- `models/king/king-rebuilt.blend`: current editable king model.
+- `assets/king/`: king references, renders, exported mesh and comparison reports.
 - `references/lichess-staunton-3d/`: all twelve original PNG sprites, their provenance and hashes, plus the previously collected WebP versions.
-- `scripts/queen/`: portable current generation, export and checking pipeline.
+- `scripts/queen/` and `scripts/king/`: current generation, export and checking pipelines.
 - `history/`: previous models, scripts, experiments and working notes preserved from the original project.
 - `docs/import-manifest.json`: source-to-repository mapping and hashes for imported files.
 - `build/`: ignored, regenerable mesh export and camera-check files.
@@ -46,6 +50,25 @@ Use an absolute Blender executable path if it is not on PATH. For Windows Blende
 `validate_stacked_collars.py` checks the current revision against `history/queen-hires/before-stacked-collars`: a closed connected mesh, materially closer collar centers, narrow exposed spacers, and unchanged base/socket/lower stem and crown/bowl/finial. The earlier `validate_seamless_crown.py` remains available for its historical revision. Preservation checks must be revised deliberately when a future change authorizes those regions.
 
 The 3D viewer embeds its mesh and works without a server. The parts map keeps its original sandbox/CSP and uses external UI libraries from unpkg.com, so it needs internet access for those libraries.
+
+## Rebuild the king
+
+See [the king reconstruction notes](docs/king-reconstruction.md) for measured features, iteration history and remaining uncertainty.
+
+Use Blender for model construction and validation, ordinary Python with Pillow and NumPy for comparison analysis, and Node.js for viewer checks. Run from the repository root:
+
+```sh
+blender --background --python scripts/king/build_king.py
+python scripts/king/compare.py
+blender --background --python scripts/king/validate.py -- "$PWD"
+python scripts/king/build_viewer.py
+node scripts/king/check_viewer.cjs
+python scripts/build_candidate_pages.py
+node scripts/check_candidate_review.cjs
+python scripts/check_site.py
+```
+
+The validator's argument after `--` is the repository root. When using Windows Blender against WSL files, supply its Windows/UNC path along with the Windows/UNC script path. Rebuild `king-model.html` after changing the model, then rebuild the candidate pages to activate its Model tab. The page embeds the model and references, uses the saved reference camera for its overlay, and retains rotation between tab visits. Image overlap is evidence for the visible silhouette, not proof of hidden geometry or a perfect reconstruction.
 
 ## GitHub Pages
 
@@ -81,11 +104,11 @@ The original sprite is positioned by uniform scaling and translation fitted to t
 
 ## Reference candidates
 
-Each non-queen piece has three independently generated high-resolution PNG enlargements of each original color, made with the built-in image-generation tool. Original black and white 300 × 300 sprites remain available in both selectors. These are interpretations for review; generated grain and carving details are not recovered source geometry.
+Each non-queen piece has high-resolution PNG candidate enlargements of each original color, made with the built-in image-generation tool. Additional color grades are identified in the candidate labels and records. Original black and white 300 × 300 sprites remain available in both selectors. These are interpretations for review; generated grain and carving details are not recovered source geometry.
 
 Choose images A and B, then use Blend or Wipe and the A–B slider. A only/B only show exact endpoints; Swap exchanges the sources. Fit/1×/2× and drag-to-pan inspect details. Background choices help inspect transparent edges. Align to original applies measured uniform scale and translation without warping. The white knight is mirrored in aligned view to match the black knight; disable alignment to see its original orientation and framing. Downloads always return the untouched image files.
 
-`assets/candidates/generation.json` records all 30 exact prompts, source hashes and output hashes. `assets/candidates/alignment.json` records browser placement and approximate silhouette overlap. `scripts/analyze_candidates.py` measures images using Pillow and NumPy without writing image pixels; `scripts/build_candidate_pages.py` builds the five HTML pages. Neither script modifies the queen review.
+`assets/candidates/generation.json` records exact prompts, source hashes and output hashes. `assets/candidates/alignment.json` records browser placement and approximate silhouette overlap. `scripts/analyze_candidates.py` measures images using Pillow and NumPy without writing image pixels; `scripts/build_candidate_pages.py` builds the five HTML pages. Neither script modifies the queen review.
 
 ```sh
 python scripts/analyze_candidates.py
@@ -96,12 +119,12 @@ python scripts/check_site.py
 
 The king comparison applies a common 5% display inset to provide headroom. The original king sprites themselves have clipped cross tips; display padding cannot restore them (see PROVENANCE.md). Bishop candidate revision 2 replaces the initial shallow engravings with a deep open mitre slit, generated again from the black original. Rejected bishop images are removed from the current tree (earlier versions remain in Git history).
 
-White candidates were generated directly from the white originals and appear as White candidate 1–3 alongside the retained Black candidate 1–3. White bishop prompts use the same plain upscale instructions as the other pieces, with no mitre or slit guidance. Queen candidates were explicitly excluded. White knight candidates preserve their original facing direction in the files and are mirrored with the white original only when alignment is enabled.
+The initial white candidates were generated directly from the white originals; later replacements and color grades keep their revision numbers. White bishop prompts use the same plain upscale instructions as the other pieces, with no mitre or slit guidance. Queen candidates were explicitly excluded. White knight candidates preserve their original facing direction in the files and are mirrored with the white original only when alignment is enabled.
 
 Candidate comparisons open in Wipe mode. Drag the middle arrow or use the toolbar slider; the handle stays reachable at either endpoint and follows the visible area when zoomed. The focused handle also supports arrow keys (Shift for larger steps), Home and End. Dragging elsewhere still pans.
 
 Candidate alignment now refines the whole-outline fit with the visible lower rings. `scripts/refine_foot_alignment.py` compares smoothed vertical brightness gradients against the same-color original and applies a small vertical translation only (less than four pixels in the original 300px canvas). Scale and horizontal placement stay fixed; weak or tied matches stay unchanged. `analyze_candidates.py` runs this step automatically. The saved `silhouette_y` makes repeated refinement idempotent. `assets/candidates/foot-alignment-report.json` records each correction and before/after agreement. This reduces registration error without warping away differences in generated ring thickness or curvature.
 
-Rook candidates were replaced after turret review: black and white candidates 4–6 are the active thin-rim versions. Earlier candidates 1–3 remain only in Git history. Generation records identify the historical input revision for edited candidates. Both original Lichess sprites remain available.
+Rook candidates were replaced after turret review: black and white candidates 4–6 are the thin-rim versions, with additional black color grades 7 and 8. Earlier candidates 1–3 remain only in Git history. Generation records identify the historical input revision for edited candidates. Both original Lichess sprites remain available.
 
 The [set comparison](set-comparison.html) shows all six pieces as candidate/original pairs at matched scale up to 300 pixels per image. Switch black/white and choose candidates independently. White queen remains unavailable. Rebuild with `python3 scripts/build_set_comparison.py` after changing candidate placements.
