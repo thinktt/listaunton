@@ -1,0 +1,19 @@
+{
+  "id": "candidate-2",
+  "label": "Black candidate 2",
+  "file": "assets/candidates/knight/candidate-2.png",
+  "width": 1254,
+  "height": 1254,
+  "flip": false,
+  "scale": 1.0055555555555555,
+  "x": -0.2777777777777778,
+  "y": 0.0,
+  "silhouette_iou": 0.981063891298063,
+  "silhouette_y": 0.0,
+  "foot_refinement": {
+    "dy_original_px": 0,
+    "correlation_before": 0.90545,
+    "correlation_after": 0.90545,
+    "reference": "black"
+  }
+}

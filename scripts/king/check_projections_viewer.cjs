@@ -5,7 +5,7 @@ const html=fs.readFileSync(path.join(root,'king-projections.html'),'utf8');
 const contents=id=>html.match(new RegExp(`<script id="${id}"[^>]*>([\\s\\S]*?)</script>`))[1];
 const config=JSON.parse(contents('projection-data'));
 const source=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1];
-function harness(noWebGL=false){
+function harness(noWebGL=false,embedded=true){
  const nodes=new Map(),queue=[],listeners={},uniforms={},windowListeners={};let resize,draws=0,indexCount;
  const node=id=>{if(!nodes.has(id))nodes.set(id,{id,tagName:'DIV',attrs:{},hidden:false,style:{},dataset:{},events:{},value:'',
   setAttribute(k,v){this.attrs[k]=v;},remove(){},addEventListener(k,v){this.events[k]=v;},textContent:''});return nodes.get(id);};
@@ -31,12 +31,14 @@ function harness(noWebGL=false){
   requestAnimationFrame:cb=>queue.push(cb),setTimeout:cb=>queue.push(cb),atob:s=>Buffer.from(s,'base64').toString('binary'),
   ResizeObserver:class{constructor(cb){resize=cb;}observe(){}}
  };
+ if(!embedded)context.window.parent=context.window;
  vm.runInNewContext(source,context,{filename:'king-projections-runtime.js'});
  function flush(){let n=0;while(queue.length){assert(n++<30);queue.shift()();}}
  function select(id){variants.find(n=>n.tagName==='BUTTON'&&n.dataset.variant===id).onclick();flush();}
  return {nodes,node,canvas,views,variants,renders,listeners,uniforms,flush,select,get indexCount(){return indexCount;},get draws(){return draws;},resize:()=>resize()};
 }
-const h=harness();h.flush();assert(h.draws>0);assert.equal(h.node('stage').dataset.mode,'profiles');
+const h=harness();h.flush();assert.equal(h.node('king-references').hidden,true);
+const standalone=harness(false,false);standalone.flush();assert.equal(standalone.node('king-references').hidden,false);assert(h.draws>0);assert.equal(h.node('stage').dataset.mode,'profiles');
 const state=()=>JSON.stringify([h.uniforms.uCenter,h.uniforms.uRotation,h.uniforms.uPan,h.uniforms.uDistance,h.uniforms.uProjection]);
 const baselineState=state();
 h.node('rotate-tab').onclick();h.flush();assert.equal(state(),baselineState);

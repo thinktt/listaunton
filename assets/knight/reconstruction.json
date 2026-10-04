@@ -1,0 +1,49 @@
+{
+  "piece": "Knight",
+  "revision": "07-cheek-and-neck-refinement",
+  "source_priority": [
+    "Original black and white Lichess 300px sprites",
+    "Selected black candidate 2 enlargement for secondary detail interpretation"
+  ],
+  "reference_camera": {
+    "projection": "orthographic",
+    "elevation_degrees": 54,
+    "basis": "Initial whole-set elevation from rook estimate; still an interpretation"
+  },
+  "geometry": {
+    "method": "Turned lathe pedestal; dense elliptical lofts for neck/head/jaw; remeshed continuous sculpt skin; swept oval-section mane and paired ears; recessed eyes, nostrils and mouth; bilateral neck channels",
+    "visible_components": 7,
+    "hidden_construction_lofts": 3,
+    "triangles": 196806,
+    "parts_intersect": true,
+    "manufacturing_ready": false
+  },
+  "internal_review": {
+    "observations": [
+      "Both original colors show the same low muzzle, arched mane, laid-back ear, cheek undercut and sloping neck channels.",
+      "Original white was mirrored and registered for a second silhouette check.",
+      "Side, front and opposite renders were visually inspected to verify substantial depth and continuity.",
+      "Final comparison lowered and deepened the cheek to match its undercut in both original sprites; original mean contour discrepancy is 1.38 source pixels."
+    ],
+    "limitations": [
+      "The 54 degree orthographic camera, bilateral depth and unseen anatomy are inferred.",
+      "The shape and depth of ear cupping, cheek, nostrils and chest channels remain interpretations; silhouette overlap does not validate them.",
+      "Mane, ears, eyes and pedestal remain separately closed intersecting components.",
+      "Neutral clay lighting differs from the reference wood; no wood texture or grain has been reconstructed.",
+      "Browser rendering was not exercised; controls and exact camera projection were checked by the inherited Node VM harness."
+    ]
+  },
+  "history": [
+    "01-volumetric-lofts",
+    "02-proportion-refinement",
+    "03-sculpted-channels",
+    "04-ear-mouth-collar",
+    "05-continuous-sculpt",
+    "06-volume-and-export-verified"
+  ],
+  "source_hashes": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

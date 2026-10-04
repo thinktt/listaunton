@@ -1,8 +1,8 @@
 # listaunton
 
-Recovering the Lichess **Staunton** chess set as editable 3D models from its static rendered images. The queen, king, rook and bishop now have editable reconstructions. This is an independent art reconstruction, with interpretation where a single image cannot determine the geometry.
+Recovering the Lichess **Staunton** chess set as editable 3D models from its static rendered images. The queen, king, rook, bishop and knight now have editable reconstructions. This is an independent art reconstruction, with interpretation where a single image cannot determine the geometry.
 
-[The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html). The king, rook, bishop, knight and pawn each open their own page with **Reference candidates** and **Model** tabs. King, rook and bishop have model comparisons; knight and pawn show a placeholder until their models are ready.
+[The home page](index.html) displays all twelve original reference pieces. Choose either queen to open [the queen review](review.html). The king, rook, bishop, knight and pawn each open their own page with **Reference candidates** and **Model** tabs. King, rook, bishop and knight have model comparisons; pawn shows a placeholder until its model is ready.
 
 The queen review has three tabs: **Reference overlay**, **3D model**, and **Parts map**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. All tools are embedded in this one page, with no separate viewer or map pages.
 
@@ -76,10 +76,11 @@ The validator's argument after `--` is the repository root. When using Windows B
 
 ## Other piece models
 
-The rook and bishop use the shared working camera estimate of 54°. Each **Model** tab provides a source overlay and freely rotatable geometry, with the exact saved Blender camera for returning to the reference. Geometry materials are neutral; wood grain remains future work.
+The rook, bishop and knight use the shared working camera estimate of 54°. Each **Model** tab provides a source overlay and freely rotatable geometry, with the exact saved Blender camera for returning to the reference. Geometry materials are neutral; wood grain remains future work.
 
 - [Rook build notes](scripts/rook/README.md): thin uniform crenellated wall, shallow cavity and turned base, guided by original black/white sprites and selected black candidate 8.
 - [Bishop build notes](scripts/bishop/README.md): full-depth open mitre slit with a solid floor, guided by original white and selected white candidate 3.
+- [Knight build notes](scripts/knight/README.md): sculpted head and neck, mane, paired ears and turned pedestal, guided by both originals and selected black candidate 2.
 
 Builders, validators and viewer generators live under `scripts/<piece>/`; editable scenes under `models/<piece>/`; references, exported meshes and comparisons under `assets/<piece>/`. Earlier rendered iterations are under `history/<piece>/`. Run `python scripts/build_candidate_pages.py` after a new standalone `<piece>-model.html` is available, then `node scripts/check_candidate_review.cjs`, `python scripts/check_model_site.py`, and `python scripts/check_site.py`. This activates the existing Model tab while retaining candidate controls and lazy loading.
 

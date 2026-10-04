@@ -1,0 +1,91 @@
+{
+  "components": [
+    {
+      "name": "Knight | turned pedestal",
+      "nonmanifold_edges": 0,
+      "signed_volume": 9.715002395275048,
+      "vertices": 29186,
+      "faces": 29184,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | swept rounded mane",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.44445958617024023,
+      "vertices": 9730,
+      "faces": 9728,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | near swept ear",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.017038077346553396,
+      "vertices": 5634,
+      "faces": 5632,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | near eye",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.0015879770022384826,
+      "vertices": 482,
+      "faces": 512,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | far swept ear",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01703808052216058,
+      "vertices": 5634,
+      "faces": 5632,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | far eye",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.0015879770022384828,
+      "vertices": 482,
+      "faces": 512,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | continuous sculpted head and neck",
+      "nonmanifold_edges": 0,
+      "signed_volume": 5.219237941479957,
+      "vertices": 47269,
+      "faces": 67054,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | curved neck and chest",
+      "nonmanifold_edges": 0,
+      "signed_volume": 3.656582075352203,
+      "vertices": 49666,
+      "faces": 49664,
+      "hidden_construction": true
+    },
+    {
+      "name": "Knight | forehead and tapered muzzle",
+      "nonmanifold_edges": 0,
+      "signed_volume": 1.175422602778133,
+      "vertices": 15490,
+      "faces": 15488,
+      "hidden_construction": true
+    },
+    {
+      "name": "Knight | rounded jaw and chin",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.5196565584986097,
+      "vertices": 9346,
+      "faces": 9344,
+      "hidden_construction": true
+    }
+  ],
+  "source_hash_matches": true,
+  "mesh_finite": true,
+  "normals_unit_length": true,
+  "camera_matches_saved_blend": true,
+  "visible_component_count": 7,
+  "hidden_construction_count": 3,
+  "note": "Head, neck and jaw form one remeshed sculpted skin; three closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+}
