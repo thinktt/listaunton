@@ -5,8 +5,8 @@ const settle=()=>new Promise(resolve=>setImmediate(resolve));
 async function check(piece){
  const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
  const data=JSON.parse(html.match(/<script id="comparison-data"[^>]*>(.*?)<\/script>/s)[1]);
- assert.equal(data.images.length,piece==='rook'?10:8);
- for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,piece==='rook'&&color==='Black'?5:3);
+ assert.equal(data.images.length,piece==='rook'?10:piece==='bishop'?9:8);
+ for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,piece==='rook'&&color==='Black'?5:piece==='bishop'&&color==='White'?4:3);
  const firstCandidate=data.images.find(x=>x.id.startsWith('candidate-')).id,lastCandidate=data.images.filter(x=>x.id.startsWith('candidate-')).at(-1).id;
  const nodes=new Map(),failed=new Set();let errors=0;
  function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},focus(){},getBoundingClientRect(){return {left:-100,width:1000};},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},stopPropagation(){},...event});}});return nodes.get(id);}

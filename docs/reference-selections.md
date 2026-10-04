@@ -8,6 +8,6 @@ Keep all candidates until the owner asks to archive the alternatives after selec
 | --- | --- | --- |
 | King | [Black candidate 1](../assets/candidates/king/candidate-1.png) | 2026-10-04 |
 | Rook | [Black candidate 8 — direct color grade](../assets/candidates/rook/color-tests/candidate-6-direct-grade.png) | 2026-10-04 |
-| Bishop | Pending | |
+| Bishop | [White candidate 3](../assets/candidates/bishop/white-candidate-3.png); candidate 4 color grade under review | 2026-10-04 |
 | Knight | Pending | |
 | Pawn | Pending | |

@@ -1,0 +1,12 @@
+{
+  "source": "assets/candidates/bishop/white-candidate-3.png",
+  "reference": "references/lichess-staunton-3d/White-Bishop.png",
+  "gamma_rgb": [
+    1.311040618488476,
+    1.201418534357086,
+    1.1080401663568449
+  ],
+  "method": "Median per-channel log-ratio fit on aligned opaque midtones; global monotonic RGB curves only. Output is not resampled.",
+  "alpha_unchanged": true,
+  "sha256": "378fe40aa046ea760b31baf3ea572bd76f7ee817d08b8e1cc57dba0fe9c8b1a9"
+}

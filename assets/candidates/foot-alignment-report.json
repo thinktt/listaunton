@@ -288,6 +288,15 @@
       "correlation_before": 0.85878,
       "correlation_after": 0.96318,
       "reference": "white"
+    },
+    {
+      "piece": "bishop",
+      "candidate": "white-candidate-4",
+      "inherited_from": "white-candidate-3",
+      "dy_original_px": 0.5,
+      "correlation_before": 0.94706,
+      "correlation_after": 0.97912,
+      "reference": "white"
     }
   ]
 }

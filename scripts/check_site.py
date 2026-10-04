@@ -74,9 +74,9 @@ print('PASS: original-reference alignment metadata and source image hashes.')
 
 generation=json.loads((ROOT/'assets/candidates/generation.json').read_text(encoding='utf-8'))
 placements=json.loads((ROOT/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
-assert len(generation['records'])==32
+assert len(generation['records'])==33
 from collections import Counter
-assert Counter((r['piece'],r['color']) for r in generation['records'])=={(p,c):(5 if (p,c)==('rook','black') else 3) for p in ('king','rook','bishop','knight','pawn') for c in ('black','white')}
+assert Counter((r['piece'],r['color']) for r in generation['records'])=={(p,c):(5 if (p,c)==('rook','black') else 4 if (p,c)==('bishop','white') else 3) for p in ('king','rook','bishop','knight','pawn') for c in ('black','white')}
 for row in generation['records']:
     assert hashlib.sha256((ROOT/row['file']).read_bytes()).hexdigest()==row['sha256']
     import subprocess
@@ -88,8 +88,8 @@ for piece,images in placements['pieces'].items():
     page=(ROOT/f'{piece}-review.html').read_text(encoding='utf-8')
     embedded=json.loads(re.search(r'<script id="comparison-data"[^>]*>(.*?)</script>',page,re.S).group(1))
     assert embedded['images']==images
-    assert len(images)==(10 if piece=='rook' else 8)
-    assert len({item["id"] for item in images})==(10 if piece=='rook' else 8)
+    assert len(images)==(10 if piece=='rook' else 9 if piece=='bishop' else 8)
+    assert len({item["id"] for item in images})==(10 if piece=='rook' else 9 if piece=='bishop' else 8)
     for item in images:
         assert (ROOT/item['file']).is_file()
         assert item['width']==item['height']
@@ -99,11 +99,11 @@ print('PASS: candidate hashes, source provenance, five comparison pages and alig
 
 for row in generation['records']:
     if row['piece']=='bishop' and row['color']=='white':
-        assert not re.search(r'\b(mitre|miter|slit|cut|groove)\b',row['prompt'],re.I)
+        assert not re.search(r'\b(mitre|miter|slit|cut|groove)\b',row.get('prompt',''),re.I)
 print('PASS: white bishops used plain upscale prompts without mitre-specific instructions.')
 
 foot_report=json.loads((ROOT/'assets/candidates/foot-alignment-report.json').read_text(encoding='utf-8'))
-assert len(foot_report['candidates'])==32
+assert len(foot_report['candidates'])==33
 for images in placements['pieces'].values():
     for item in images:
         if 'candidate' not in item['id']:continue
