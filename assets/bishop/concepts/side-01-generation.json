@@ -1,0 +1,16 @@
+{
+  "prompt": "Use case: product-mockup. Create a faithful imagined TRUE LEVEL SIDE ELEVATION of the wooden Staunton bishop shown in these two references, to help reconstruct its 3D geometry. Image 1 is the original Lichess sprite and ultimate design authority. Image 2 is the selected enlarged detail reference. Rotate the same carved object to a horizontal camera at mid-height, orthographic product photograph: we must see the actual upright side profile rather than looking down at it. Keep its compact turned proportions and golden honey wood. Crucial head construction: the mitre has one continuous elegant convex taper from the broad lower head up to the finial. The finial is a small shallow softly domed BUTTON resting directly on that taper, with a subtle rounded lip; there is NO cylindrical pedestal, NO exposed stem, NO neck ring, NO air gap beneath the button, and NO sphere perched on top. The tapered head flows all the way up into the underside of the button. Preserve the real deep diagonal mitre slit through the head, the three close stacked plate collars, tapering stem, raised socket and broad flattened foot. Show one complete piece centered and large, softly lit on plain dark charcoal background, with the slit side visible. Infer hidden geometry conservatively from the reference, without adding ornaments. No labels or text.",
+  "tool": "Built-in image_gen",
+  "date": "2026-10-04",
+  "sources": [
+    "assets/bishop/original.png",
+    "assets/bishop/reference.png"
+  ],
+  "status": "User approved as side-profile art direction: use that, that's it",
+  "note": "An inferred side view, not historical source evidence.",
+  "output_sha256": "ea4d279f26f4d5692abe659847c9a1890d018420c258acd2cb712ea9267dad4c",
+  "source_sha256": {
+    "assets/bishop/original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "assets/bishop/reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
+  }
+}
