@@ -5,8 +5,8 @@ const settle=()=>new Promise(resolve=>setImmediate(resolve));
 async function check(piece){
  const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
  const data=JSON.parse(html.match(/<script id="comparison-data"[^>]*>(.*?)<\/script>/s)[1]);
- assert.equal(data.images.length,8);
- for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,3);
+ assert.equal(data.images.length,piece==='rook'?9:8);
+ for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,piece==='rook'&&color==='Black'?4:3);
  const nodes=new Map(),failed=new Set();let errors=0;
  function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},focus(){},getBoundingClientRect(){return {left:-100,width:1000};},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},stopPropagation(){},...event});}});return nodes.get(id);}
  const zooms=['fit','1','2'].map(value=>Object.assign(node('zoom-'+value),{dataset:{zoom:value}}));
@@ -55,6 +55,6 @@ async function check(piece){
  node('image-b').value='candidate-1';node('image-b').fire('change');node('image-b').value='candidate-3';node('image-b').fire('change');await settle();
  assert.equal(node('photo-b').src,data.images.find(x=>x.id==='candidate-3').file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
  assert.equal(errors,0);
- console.log('PASS: '+piece+' — 64 source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
+ console.log('PASS: '+piece+' — all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
 }
 (async()=>{for(const piece of ['king','rook','bishop','knight','pawn'])await check(piece);})().catch(error=>{console.error(error);process.exitCode=1;});

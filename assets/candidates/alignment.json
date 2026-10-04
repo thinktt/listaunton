@@ -224,6 +224,25 @@
         }
       },
       {
+        "id": "candidate-4",
+        "label": "Black candidate 4",
+        "file": "assets/candidates/rook/rim-tests/attempt-2.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9834502923976608,
+        "x": 0.672027290448341,
+        "y": 1.2622807017543771,
+        "silhouette_iou": 0.9609947198092318,
+        "silhouette_y": 0.8289473684210501,
+        "foot_refinement": {
+          "dy_original_px": 1.3,
+          "correlation_before": 0.61222,
+          "correlation_after": 0.86344,
+          "reference": "black"
+        }
+      },
+      {
         "id": "white-candidate-1",
         "label": "White candidate 1",
         "file": "assets/candidates/rook/white-candidate-1.png",

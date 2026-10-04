@@ -36,7 +36,7 @@ result={'method':'Uniform scale and translation fitted to the black original sil
 for piece in ['king','rook','bishop','knight','pawn']:
     target,size=mask(root/f'references/lichess-staunton-3d/Black-{piece.title()}.png')
     items=[]
-    for key,label,file in [('black','Original black',f'references/lichess-staunton-3d/Black-{piece.title()}.png'),('white','Original white',f'references/lichess-staunton-3d/White-{piece.title()}.png')]+[(f'candidate-{n}',f'Black candidate {n}',candidate_files[(piece,'black',n)]) for n in range(1,4)]+[(f'white-candidate-{n}',f'White candidate {n}',candidate_files[(piece,'white',n)]) for n in range(1,4)]:
+    for key,label,file in [('black','Original black',f'references/lichess-staunton-3d/Black-{piece.title()}.png'),('white','Original white',f'references/lichess-staunton-3d/White-{piece.title()}.png')]+[(f'candidate-{n}',f'Black candidate {n}',candidate_files[(piece,'black',n)]) for n in sorted(n for p,c,n in candidate_files if p==piece and c=='black')]+[(f'white-candidate-{n}',f'White candidate {n}',candidate_files[(piece,'white',n)]) for n in sorted(n for p,c,n in candidate_files if p==piece and c=='white')]:
         m,size=mask(root/file);flip=piece=='knight' and key.startswith('white')
         if flip:m=m[:,::-1]
         placement=fit(m,target) if key!='black' else dict(scale=1,x=0,y=0,silhouette_iou=1)
