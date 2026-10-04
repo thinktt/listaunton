@@ -50,9 +50,9 @@ def check(root, manifest_file, baseline_file):
             require(actual == expected, f'Canonical king changed: {name}')
 
     variants = manifest['variants']
-    require(len(variants) == 5, 'Expected five projection variants')
-    require(sorted(v['elevation'] for v in variants) == [48, 52, 56, 60, 64], 'Unexpected projection angles')
-    require(len({v['id'] for v in variants}) == 5, 'Duplicate variant IDs')
+    require(len(variants) == 6, 'Expected six projection variants')
+    require(sorted(v['elevation'] for v in variants) == [48, 52, 54, 56, 60, 64], 'Unexpected projection angles')
+    require(len({v['id'] for v in variants}) == 6, 'Duplicate variant IDs')
     require(manifest['baseline'] in {v['id'] for v in variants}, 'Baseline variant missing')
     base_variant = next(v for v in variants if v['id'] == manifest['baseline'])
     require(base_variant['elevation'] == 52, 'Baseline must be the 52-degree king')
@@ -137,9 +137,9 @@ def check(root, manifest_file, baseline_file):
         reports.append({'id':variant['id'], 'elevation':elevation, 'modelSha256':model_hash, 'meshSha256':sha(paths['mesh.bin']), 'renderSha256':sha(paths['render.png']), 'triangleCount':meta['triangleCount'], 'baseDiameter':size[0], 'height':size[2], 'heightDiameter':size[2]/size[0], 'closedComponents':len(components), 'originalSilhouetteIoU':qa['images']['original']['silhouette_iou']})
 
     require(len({r['triangleCount'] for r in reports}) == 1, 'Variants have different mesh topology counts')
-    require(len({r['modelSha256'] for r in reports}) == 5, 'Duplicate model file in projection experiment')
-    require(len({r['meshSha256'] for r in reports}) == 5, 'Geometry was not regenerated for each projection')
-    require(len({r['renderSha256'] for r in reports}) == 5, 'Duplicate variant render')
+    require(len({r['modelSha256'] for r in reports}) == 6, 'Duplicate model file in projection experiment')
+    require(len({r['meshSha256'] for r in reports}) == 6, 'Geometry was not regenerated for each projection')
+    require(len({r['renderSha256'] for r in reports}) == 6, 'Duplicate variant render')
     canonical_meta = json.loads(local('assets/king/mesh.json').read_text())
     base_width = canonical_meta['bounds']['size'][0]
     for result in reports:
@@ -148,7 +148,7 @@ def check(root, manifest_file, baseline_file):
     if shared:
         require(len(shared['center']) == 3 and all(math.isfinite(x) for x in shared['center']), 'Invalid shared-view center')
         require(shared['orthoHeight'] > 0 and shared['distance'] > 0, 'Invalid common inspection camera')
-    return {'passed':True, 'canonicalKingUnchanged':True, 'preservedCanonicalFiles':sorted(canonical), 'expectedElevations':[48,52,56,60,64], 'physicalBaseDiameterTolerancePercent':2.5, 'closureEvidence':'Blender validation reports certify the two source components. This checker verifies hashes and exported binary structure; it does not infer manifoldness from duplicated viewer vertices.', 'variants':reports}
+    return {'passed':True, 'canonicalKingUnchanged':True, 'preservedCanonicalFiles':sorted(canonical), 'expectedElevations':[48,52,54,56,60,64], 'physicalBaseDiameterTolerancePercent':2.5, 'closureEvidence':'Blender validation reports certify the two source components. This checker verifies hashes and exported binary structure; it does not infer manifoldness from duplicated viewer vertices.', 'variants':reports}
 
 
 if __name__ == '__main__':

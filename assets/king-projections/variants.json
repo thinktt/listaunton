@@ -1,6 +1,6 @@
 {
   "baseline": "angle-52",
-  "description": "Existing king reconstructed under five assumed camera elevations. Original and selected references unchanged. Compare all profiles at identical base width.",
+  "description": "Existing king reconstructed under six assumed camera elevations. Original and selected references unchanged. Compare all profiles at identical base width.",
   "variants": [
     {
       "id": "angle-48",
@@ -60,6 +60,37 @@
           "silhouette_iou": 0.9741436682789247,
           "mean_boundary_error_px": 3.4395756457564577,
           "p95_boundary_error_px": 10.0,
+          "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c"
+        }
+      }
+    },
+    {
+      "id": "angle-54",
+      "label": "54\u00b0",
+      "elevation": 54,
+      "assetDir": "assets/king-projections/angle-54",
+      "model": "models/king-projections/king-54.blend",
+      "fit": {
+        "initial_loss": 1.226431893225087,
+        "loss": 0.6766091563715922,
+        "silhouette_term": 0.6332782486708335,
+        "internal_arc_term": 0.045881757013188806,
+        "regularization": 0.002037326388888889
+      },
+      "height": 5.127651214599609,
+      "baseWidth": 2.0663816928863525,
+      "heightToBaseWidth": 2.4814637258217433,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.9627058797457912,
+          "mean_boundary_error_px": 5.628703703703704,
+          "p95_boundary_error_px": 18.0,
+          "reference_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
+        },
+        "selected": {
+          "silhouette_iou": 0.9716013504322125,
+          "mean_boundary_error_px": 3.9256694367497693,
+          "p95_boundary_error_px": 12.0,
           "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c"
         }
       }

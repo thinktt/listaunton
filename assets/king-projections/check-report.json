@@ -14,6 +14,7 @@
   "expectedElevations": [
     48,
     52,
+    54,
     56,
     60,
     64
@@ -46,6 +47,19 @@
       "heightDiameter": 2.389015710451316,
       "closedComponents": 2,
       "originalSilhouetteIoU": 0.9599626622778467
+    },
+    {
+      "id": "angle-54",
+      "elevation": 54.00000066135015,
+      "modelSha256": "fcac78b20f646a7a0ecbde6dd518ef0fa2cedfb78e49fc5b66f05e642604d5bc",
+      "meshSha256": "e7370fd03cfcd20c79219232ff1f1c71ce400eeaedd8d104f4d26b42a7598d5f",
+      "renderSha256": "cf2b9f49f8b306682e873d026d114c088031518ac2fc858a51019dffd0531447",
+      "triangleCount": 68492,
+      "baseDiameter": 2.0663816928863525,
+      "height": 5.127651214599609,
+      "heightDiameter": 2.4814637258217433,
+      "closedComponents": 2,
+      "originalSilhouetteIoU": 0.9627058797457912
     },
     {
       "id": "angle-56",

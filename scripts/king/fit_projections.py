@@ -9,7 +9,7 @@ import argparse,copy,json,math
 import numpy as np
 from PIL import Image
 
-ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2]);args=ap.parse_args()
+ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2]);ap.add_argument('--only',type=int,choices=[48,52,54,56,60,64]);args=ap.parse_args()
 root=args.root;out=root/'assets/king-projections';out.mkdir(parents=True,exist_ok=True)
 base=json.loads((root/'scripts/king/profile.json').read_text());P=np.array(base['profile']);q0=math.sin(math.radians(base['elevation']));n=len(P)
 names=['foot','flare','socket','lower collar','middle collar','upper collar','saucer','lower pedestal','upper pedestal','center seat']
@@ -74,8 +74,9 @@ def loss(params,q,details=False):
 rad_bound=np.array([0,.005,.06,.05,.07,.07,.04,.06,.06,0.])
 dy_bound=np.array([10,14,18,14,14,14,14,12,12,0.])
 params_bound=np.r_[dy_bound,rad_bound]
-results=[]
-for angle in [48,52,56,60,64]:
+previous=json.loads((out/'variants.json').read_text()) if args.only and (out/'variants.json').is_file() else {}
+results=[v for v in previous.get('variants',[]) if v['elevation']!=args.only] if args.only else []
+for angle in ([args.only] if args.only else [48,52,54,56,60,64]):
  q=math.sin(math.radians(angle));params=np.zeros(20)
  start=loss(params,q)
  if angle!=52:
@@ -97,4 +98,5 @@ for angle in [48,52,56,60,64]:
  dest=out/f'angle-{angle}';dest.mkdir(exist_ok=True);(dest/'profile.json').write_text(json.dumps(cfg,indent=2)+'\n')
  item={'id':f'angle-{angle}','label':f'{angle}°'+(' · current shape' if angle==52 else ''),'elevation':angle,'assetDir':f'assets/king-projections/angle-{angle}','model':f'models/king-projections/king-{angle}.blend','fit':{'initial_loss':float(start),**loss(params,q,True)}}
  results.append(item);print(angle,item['fit'],flush=True)
-(out/'variants.json').write_text(json.dumps({'baseline':'angle-52','description':'Existing king reconstructed under five assumed camera elevations. Original and selected references unchanged. Compare all profiles at identical base width.','variants':results},indent=2)+'\n')
+previous.update({'baseline':'angle-52','description':'Existing king reconstructed under six assumed camera elevations. Original and selected references unchanged. Compare all profiles at identical base width.','variants':sorted(results,key=lambda v:v['elevation'])})
+(out/'variants.json').write_text(json.dumps(previous,indent=2)+'\n')

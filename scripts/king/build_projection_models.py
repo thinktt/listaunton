@@ -9,9 +9,11 @@ from mathutils import Vector
 
 args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
 ROOT=Path(args[args.index('--root')+1]) if '--root' in args else Path(__file__).resolve().parents[2]
+only=int(args[args.index('--only')+1]) if '--only' in args else None
 manifest_path=ROOT/'assets/king-projections/variants.json';manifest=json.loads(manifest_path.read_text())
 def aim(obj,target):obj.rotation_euler=(Vector(target)-obj.location).to_track_quat('-Z','Y').to_euler()
 for item in manifest['variants']:
+ if only is not None and item['elevation']!=only:continue
  ident=item['id'];dest=ROOT/item['assetDir'];temp=ROOT/'build/king-projections'/ident
  (temp/'scripts/king').mkdir(parents=True,exist_ok=True);(temp/'assets/king').mkdir(parents=True,exist_ok=True)
  shutil.copy2(dest/'profile.json',temp/'scripts/king/profile.json')

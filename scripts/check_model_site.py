@@ -56,7 +56,8 @@ for name in ['index.html','set-comparison.html']:
  assert 'href="king-projections.html"' in (root/name).read_text(),name
 projection=(root/'king-projections.html').read_text();LocalLinks().feed(projection)
 manifest=json.loads(data(projection,'projection-data'))
-assert len(manifest['variants'])==5
+assert len(manifest['variants'])==6
+assert 54 in [v['elevation'] for v in manifest['variants']]
 for item in manifest['variants']:
  assert (root/item['model']).is_file(),item['id']
-print('PASS: five king projection variants are linked from review, home and set comparison; local downloads exist.')
+print('PASS: six king projection variants are linked from review, home and set comparison; local downloads exist.')

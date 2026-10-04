@@ -1,18 +1,19 @@
 # King projection variants
 
-Five alternate kings explore how an uncertain camera elevation changes the recovered proportions. No candidate has been promoted; the existing king model, camera, mesh and references are preserved byte for byte.
+Six alternate kings explore how an uncertain camera elevation changes the recovered proportions. No candidate has been promoted; the existing king model, camera, mesh and references are preserved byte for byte.
 
-Open **Projection variants** in the king review, or [the standalone comparison](../king-projections.html). **Profiles** uses one camera and scale for all five, **Rotate** keeps the view when switching models, and **Reference overlay** uses each model's own fitted camera. Original Lichess is the default authority; the chosen black candidate 1 is also available.
+Open **Projection variants** in the king review, or [the standalone comparison](../king-projections.html). **Profiles** uses one camera and scale for all six, **Rotate** keeps the view when switching models, and **Reference overlay** uses each model's own fitted camera. Original Lichess is the default authority; the chosen black candidate 1 is also available.
 
 | Assumed elevation | Height / base diameter | Original silhouette overlap | Selected enlargement overlap |
 | --- | ---: | ---: | ---: |
 | 48° | 2.221 | 95.51% | 97.13% |
 | 52° · current shape | 2.389 | 96.00% | 97.41% |
+| 54° | 2.481 | 96.27% | 97.16% |
 | 56° | 2.595 | 96.27% | 96.65% |
 | 60° | 2.869 | 94.66% | 94.54% |
 | 64° | 3.242 | 92.98% | 92.70% |
 
-Overlap is intersection over union of silhouettes, not a measure of complete 3D correctness. The 56° version fits the original outline best among these trials; 52° fits the selected enlargement best. The steepest variants increasingly disagree around circular features. Different elevations cannot preserve every ellipse while retaining plausible planar rings. These are alternatives for visual judgment, not five equally exact solutions.
+Overlap is intersection over union of silhouettes, not a measure of complete 3D correctness. The 54° and 56° versions are practically tied for the closest original outline among these trials; 52° fits the selected enlargement best. The steepest variants increasingly disagree around circular features. Different elevations cannot preserve every ellipse while retaining plausible planar rings. These are alternatives for visual judgment, not five equally exact solutions.
 
 ## Method
 
