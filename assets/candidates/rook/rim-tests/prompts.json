@@ -1,0 +1,16 @@
+[
+  {
+    "attempt": 1,
+    "prompt": "Use case: precise-object-edit. Make a faithful high-resolution enlargement of this exact low-resolution wooden black rook sprite, transparent background. Preserve its precise camera angle, silhouette, framing, proportions, brown wood color and lighting. Especially preserve the turret: four curved wall segments separated by four slots. The rear two wall segments (upper part of image) have a NARROW, nearly flat top ledge with a crisp tiny bevel, not a broad rounded cushion. Distinguish the narrow top surface from the vertical inner wall visible below it. All four segments belong to the same thin-walled circular shell; do not make the rear segments thicker than the front. Keep the inner floor height and opening faithful. Add natural fine wood detail without redesigning the geometry. No text, no border. Entire piece in the same relative position on the square canvas.",
+    "file": "attempt-1.png",
+    "tool": "built-in image_gen",
+    "sha256": "e1384ee24494e989ffcf4995d43c08d626a09e4bf46120ad8bb6a4d583611125"
+  },
+  {
+    "attempt": 2,
+    "prompt": "Use case: precise-object-edit. Image 1 is the high resolution edit target; image 2 is the original low resolution geometry reference. Change ONLY the TOP LEDGES of the two REAR curved battlements of the rook turret (the two arcs across the upper part of the image). Their radial thickness is currently exaggerated. Reduce the visible width of those two rear top ledges by about half, moving their inner upper edges outward toward the outer silhouette. Make the ledges narrow and flat, with a tiny crisp bevel, like the thin front rim. Continue the inner vertical walls down from these new edges to the existing floor. The rear wall's visible vertical height is NOT its top ledge thickness. Preserve the outer silhouette and all four notch positions. Keep the front two battlements, floor, stem, base, camera, lighting, wood color, grain and composition unchanged. No added rings, no redesign, transparent background. This is a surgical reduction of the rear rim thickness, not a new rook.",
+    "file": "attempt-2.png",
+    "tool": "built-in image_gen",
+    "sha256": "830b7c7ec55fc226bea9839d30a4390d4ea73bb1c2ba6d29d2406e0038a19ce5"
+  }
+]
