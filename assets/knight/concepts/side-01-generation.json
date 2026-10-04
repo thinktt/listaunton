@@ -1,0 +1,20 @@
+{
+  "type": "inferred-side-view",
+  "tool": "built-in image_gen",
+  "date": "2026-10-04",
+  "prompt": "Use case: stylized-concept. Asset type: supplementary side-view concept for reconstructing a wooden chess knight as a 3D model.\nInput images: Image 1 is the authoritative original black Lichess knight viewed from above; Image 2 is the original white version of the same geometry, facing the other direction, for extra shape clues; Image 3 is the chosen faithful high-resolution interpretation of Image 1. Use these as design references, not as a collage.\nPrimary request: Imagine this exact carved wooden knight viewed from a TRUE LEVEL SIDE PROFILE, facing right. Lower the camera to the height of the head, with an orthographic side elevation. Show one complete chess piece, including its turned circular pedestal. The base rings should appear horizontal in this side elevation; do not show the top of the pedestal or a top-down view. This is an inferred alternate view of the same object, not a new generic Staunton design.\nPreserve its distinctive smooth arched mane, backward laid ears, swept neck with diagonal carved channels, short rounded turned base and polished dark reddish brown wood. Resolve the horse head naturally: a gently conical tapered muzzle with a rounded end, a coherent connected cheek and lower jaw, a small recessed eye in a plausible horse position, and the characteristic throat undercut. It should clearly read as a stylized carved horse head, not a bird beak or separate hanging jaw mass. Keep faithful to the supplied piece's elegant carving and proportions while sensibly imagining surfaces the original overhead view conceals.\nStyle: high quality photorealistic product render of carved wood, soft studio lighting showing contours clearly, plain charcoal background. Center the entire piece with margin. No extra objects, text, labels, split panels or watermark.",
+  "output": "assets/knight/concepts/side-01.png",
+  "sources": [
+    "references/lichess-staunton-3d/Black-Knight.png",
+    "references/lichess-staunton-3d/White-Knight.png",
+    "assets/candidates/knight/candidate-2.png"
+  ],
+  "note": "Supplementary imagined profile for horse-head anatomy. Original Lichess sprites remain authoritative; this is not recovered geometry.",
+  "sha256": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e",
+  "source_hashes": {
+    "references/lichess-staunton-3d/Black-Knight.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "references/lichess-staunton-3d/White-Knight.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "assets/candidates/knight/candidate-2.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "owner_feedback": "Closer and endorsed as a modeling guide; muzzle should be more conical than this generated image."
+}
