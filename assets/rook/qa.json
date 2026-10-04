@@ -1,0 +1,45 @@
+{
+  "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
+  "images": {
+    "original": {
+      "silhouette_iou": 0.9564889867541091,
+      "mean_boundary_error_px": 5.70440251572327,
+      "p95_boundary_error_px": 19.0,
+      "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    "selected": {
+      "silhouette_iou": 0.969624327586615,
+      "mean_boundary_error_px": 4.583018867924529,
+      "p95_boundary_error_px": 13.0,
+      "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+    }
+  },
+  "original_mask_sensitivity": {
+    "4": 0.9821990878983659,
+    "8": 0.9752626597577334,
+    "12": 0.9564889867541091,
+    "16": 0.9363783886979763
+  },
+  "camera": {
+    "elevation_degrees": 54,
+    "roll_degrees": -0.35,
+    "frame": "selected candidate 8; original registered by preserved uniform alignment"
+  },
+  "internal_features": {
+    "wall_thickness_px_in_model_profile": 23,
+    "outer_radius_px": 177,
+    "thickness_fraction_of_radius": 0.12994350282485875,
+    "crenel_count": 4,
+    "floor_rear_native_original_y_target": [
+      82,
+      85
+    ],
+    "assessment": "Raised the cavity floor by 10 model-frame pixels after comparing both original colors. Equal annular wall thickness on all four merlons. Rectangular slots, rounded edges, continuous outer bowl and two turned foot beads inspected separately from silhouette."
+  },
+  "limitations": [
+    "Single-view reconstruction: unseen surfaces inferred with rotational symmetry and four equal crenels.",
+    "Dark original shadow/wood boundary changes the measured silhouette with threshold. Scores do not measure recovered topology or wood.",
+    "The selected image has a somewhat deeper-looking interior than the original; original proportions take precedence.",
+    "Neutral clay and lighting are diagnostic. Original wood and finish are not reconstructed."
+  ]
+}

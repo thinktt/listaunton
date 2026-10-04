@@ -1,0 +1,43 @@
+{
+  "sources": {
+    "original.png": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+    "original-white.png": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397",
+    "ref.png": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+  },
+  "camera": {
+    "elevation_degrees": 54,
+    "roll_degrees": -0.35
+  },
+  "iterations": [
+    {
+      "snapshot": "01-initial",
+      "original_iou": 0.9165303938788283,
+      "selected_iou": 0.9127632684660125
+    },
+    {
+      "snapshot": "02-proportions",
+      "original_iou": 0.9513895735241624,
+      "selected_iou": 0.9568634827648754
+    },
+    {
+      "snapshot": "03-crown-union",
+      "original_iou": 0.957189075057894,
+      "selected_iou": 0.9710327115436604
+    },
+    {
+      "snapshot": "04-shallow-floor",
+      "original_iou": 0.9561140387355389,
+      "selected_iou": 0.9696186778849405
+    },
+    {
+      "snapshot": "05-buried-join",
+      "original_iou": 0.9561140387355389,
+      "selected_iou": 0.9696186778849405
+    },
+    {
+      "snapshot": "current-06-turret-join-support",
+      "original_iou": 0.9564889867541091,
+      "selected_iou": 0.969624327586615
+    }
+  ]
+}
