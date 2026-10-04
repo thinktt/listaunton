@@ -8,6 +8,8 @@ The review has three tabs: **Reference overlay**, **3D model**, and **Parts map*
 
 The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. Its three thin collars now sit closely stacked, with roughly 44% less center spacing and narrow grooves in place of the tall spacers. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
 
+See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
+
 ## Files
 
 - `models/queen/queen-rebuilt.blend`: current editable Blender model, with its reference packed inside.
@@ -92,7 +94,7 @@ node scripts/check_candidate_review.cjs
 python scripts/check_site.py
 ```
 
-The king comparison applies a common 5% display inset so aligned finials cannot be clipped at the top. Bishop candidate revision 2 replaces the initial shallow engravings with a deep open mitre slit, generated again from the black original. Rejected bishop images are removed from the current tree (earlier versions remain in Git history).
+The king comparison applies a common 5% display inset to provide headroom. The original king sprites themselves have clipped cross tips; display padding cannot restore them (see PROVENANCE.md). Bishop candidate revision 2 replaces the initial shallow engravings with a deep open mitre slit, generated again from the black original. Rejected bishop images are removed from the current tree (earlier versions remain in Git history).
 
 White candidates were generated directly from the white originals and appear as White candidate 1–3 alongside the retained Black candidate 1–3. White bishop prompts use the same plain upscale instructions as the other pieces, with no mitre or slit guidance. Queen candidates were explicitly excluded. White knight candidates preserve their original facing direction in the files and are mirrored with the white original only when alignment is enabled.
 
