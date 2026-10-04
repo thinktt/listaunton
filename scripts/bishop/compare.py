@@ -9,8 +9,8 @@ placement=json.loads((out/'original-alignment.json').read_text());s=placement['s
 original=Image.open(out/'original.png').convert('RGBA').transform((W,W),Image.Transform.AFFINE,(s*300/W,0,x*3,0,s*300/W,y*3),Image.Resampling.BILINEAR)
 original=np.array(original)
 def bounds(mask):return np.argmax(mask,axis=1),mask.shape[1]-1-np.argmax(mask[:,::-1],axis=1)
-report={'note':'Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.','images':{}}
-report['internal_features']={'inspection':'Original and selected source overlays checked against neutral render; topology and cavity depth independently validated.','mitre':'Turned bulb, rounded finial, full-thickness oblique cut with solid floor.','collars':'Three descending collar steps.','lower_body':'Concave stem, raised socket lip, flared base and rounded flat-bottom foot.','limits':'Wood and lighting are not reconstructed. Single-view evidence cannot determine hidden geometry uniquely.'}
+report={'note':'Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.','images':{}}
+report['internal_features']={'inspection':'Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.','mitre':'One continuous rounded meridian from the collar transition into the button underside; full-thickness oblique cut and solid floor preserved.','finial':'Rounded convex button sits directly on the head. No cylindrical seat, pedestal, neck ring or gap is exposed.','collars':'Three descending collar steps, preserved by exact lower-profile comparison.','lower_body':'Concave stem, raised socket lip, flared base and rounded flat-bottom foot preserved.','limits':'The accepted side guide is art direction, not a recovered source camera. Wood and lighting are not reconstructed. Single-view evidence cannot determine hidden geometry uniquely.'}
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])
@@ -20,4 +20,24 @@ for name,ar in [('original',original),('selected',ref)]:
  for m,color in [(a,'#60e0ff'),(b,'#ff65bb')]:
   ll,rrr=bounds(m);ys=np.where(m.any(1))[0];d.line([(int(ll[t]),int(t)) for t in ys],fill=color,width=2);d.line([(int(rrr[t]),int(t)) for t in ys],fill=color,width=2)
  canvas.save(out/f'contour-{name}.png')
-(out/'qa.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
+(out/'qa.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,indent=2))
+# Pair the historical and current true-level views at exactly the same camera.
+# This is the view that exposed the old neck; an elevated overlay alone hid it.
+prior=root/'history/bishop/07-before-continuous-button-join/head-side.png'
+side=out/'head-side.png'
+if prior.exists() and side.exists():
+ canvas=Image.new('RGB',(1200,650),'#171b21');d=ImageDraw.Draw(canvas)
+ for i,(label,path) in enumerate([('Previous: exposed cylindrical seat',prior),('Current: direct rounded contact',side)]):
+  im=Image.open(path).convert('RGBA').resize((600,600),Image.Resampling.LANCZOS)
+  canvas.paste(im,(i*600,45),im);d.text((i*600+22,18),label,fill='#f0e7d4')
+ canvas.save(out/'join-comparison.png')
+# Actual source overlay in the unchanged reference-camera frame.
+background=Image.new('RGBA',(W,W),'#181d24');source=Image.fromarray(original)
+background.alpha_composite(source)
+overlay=Image.fromarray(ren).copy();overlay.putalpha(overlay.getchannel('A').point(lambda a:round(a*.5)))
+background.alpha_composite(overlay);background.convert('RGB').save(out/'overlay-original.png')
+# Keep the general comparison sheet synchronized with the current revision.
+canvas=Image.new('RGB',(1500,550),'#171b21');d=ImageDraw.Draw(canvas)
+for i,(label,im) in enumerate([('Original white',Image.fromarray(original)),('White candidate 3',Image.fromarray(ref)),('Current neutral geometry',Image.fromarray(ren))]):
+ im=im.convert('RGBA').resize((500,500),Image.Resampling.LANCZOS);canvas.paste(im,(i*500,40),im);d.text((i*500+20,15),label,fill='#f0e7d4')
+canvas.save(out/'comparison.png')

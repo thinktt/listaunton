@@ -1,0 +1,25 @@
+{
+  "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
+  "images": {
+    "original": {
+      "silhouette_iou": 0.9651834964479707,
+      "mean_boundary_error_px": 5.671957671957672,
+      "p95_boundary_error_px": 18.0,
+      "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+      "mean_boundary_error_original_300px_units": 1.3085237590277141
+    },
+    "selected": {
+      "silhouette_iou": 0.949838475445304,
+      "mean_boundary_error_px": 8.672139830508474,
+      "p95_boundary_error_px": 23.0,
+      "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
+    }
+  },
+  "internal_features": {
+    "inspection": "Original and selected source overlays checked against neutral render; topology and cavity depth independently validated.",
+    "mitre": "Turned bulb, rounded finial, full-thickness oblique cut with solid floor.",
+    "collars": "Three descending collar steps.",
+    "lower_body": "Concave stem, raised socket lip, flared base and rounded flat-bottom foot.",
+    "limits": "Wood and lighting are not reconstructed. Single-view evidence cannot determine hidden geometry uniquely."
+  }
+}

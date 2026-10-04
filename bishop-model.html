@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bishop â€” model comparison</title>
+<title>Bishop — model comparison</title>
 <style>
 :root{color-scheme:dark;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#eceae5;background:#121519}
 *{box-sizing:border-box}body{margin:0;min-width:300px}main{height:100vh;height:100dvh;min-height:480px;display:flex;flex-direction:column}
@@ -42,24 +42,24 @@ header .download{font-size:12px}
 </head>
 <body>
 <main>
-<header><div><h1>Bishop model</h1><p>Original Lichess bishop Â· geometry study</p></div><a class="download" href="models/bishop/bishop-rebuilt.blend" download>Blender file â†—</a></header>
+<header><div><h1>Bishop model</h1><p>Original Lichess bishop · geometry study</p></div><a class="download" href="models/bishop/bishop-rebuilt.blend" download>Blender file ↗</a></header>
 <nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original white</option><option value="selected">White candidate 3</option><option value="black">Original black</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Bishop model comparison">
-<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176@" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7@" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="data:image/png;base64,@LISTAUNTON_ASSET:b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585@" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:ef06f19cf8a8736259b8ce330720d994104f8738a26839dee697440d88ce9b61@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176@" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7@" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="data:image/png;base64,@LISTAUNTON_ASSET:b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585@" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:77ce5ef54309003095ccc2cb5910231e853d26c5f6183b1863ed98aecff2462e@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D bishop. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
-<div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">âˆ’</button></div>
-<div class="badge" id="surface-note">Overlay camera Â· neutral surface</div>
-<div class="status" id="status" role="status" aria-live="polite">Loading the bishopâ€¦</div>
+<div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+<div class="badge" id="surface-note">Overlay camera · neutral surface</div>
+<div class="status" id="status" role="status" aria-live="polite">Loading the bishop…</div>
 </section>
 
 </main>
 <script id="original-alignment" type="application/json">{"scale":0.9643283023386892,"x":0.8883129091349228,"y":0.8572380172981201}</script>
 <script id="black-alignment" type="application/json">{"scale":0.938272506082725,"x":2.0255474452554743,"y":0.9128142741281389}</script>
-<script id="mesh-metadata" type="application/json">{"vertexCount":303456,"indexCount":303456,"triangleCount":101152,"vertexStrideBytes":24,"vertexByteLength":7282944,"indexByteOffset":7282944,"totalByteLength":8496768,"bounds":{"min":[-1.004895567893982,-1.004895567893982,0.0],"max":[1.004895567893982,1.004895567893982,4.7063493728637695],"size":[2.009791135787964,2.009791135787964,4.7063493728637695],"center":[0.0,0.0,2.3531746864318848]},"sourceSha256":"6752c4be0853b2f09d2717e39102e9e6061dd1f692b1cf0a5dc3214c612f673b","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-1.061633586883545,0.0,-0.5877852439880371,0.80901700258255,-13.461213111877441,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2157922238111496,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.1078961193561554,"shiftY":0,"elevationDegrees":54}}</script>
-<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:c98e4892045961b25ca36747b3fb24ddec6ce8ada4cfc2ae9ef66abdbba61d61@</script>
+<script id="mesh-metadata" type="application/json">{"vertexCount":399360,"indexCount":399360,"triangleCount":133120,"vertexStrideBytes":24,"vertexByteLength":9584640,"indexByteOffset":9584640,"totalByteLength":11182080,"bounds":{"min":[-1.004895567893982,-1.004895567893982,0.0],"max":[1.004895567893982,1.004895567893982,4.592006683349609],"size":[2.009791135787964,2.009791135787964,4.592006683349609],"center":[0.0,0.0,2.2960033416748047]},"sourceSha256":"3db345fb65a1d9579344456a717f7960f0a3894dc3a95b209cb0fe1ad52f6a3f","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-1.061633586883545,0.0,-0.5877852439880371,0.80901700258255,-13.461213111877441,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2157922238111496,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.1078961193561554,"shiftY":0,"elevationDegrees":54}}</script>
+<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:9a9ba91ed77966f405557249c695f4e63ba54b1b948b9b7b8fe616d8b2b8bacc@</script>
 <script>
 'use strict';
 (() => {
@@ -191,7 +191,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' Â· '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
+ document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -276,7 +276,7 @@ document.getElementById('zoom-in').onclick=()=>zoom(.85);document.getElementById
 for(const name of ['orthographic','perspective'])document.getElementById(name).onclick=()=>setProjection(name);
 for(const name of ['neutral','brown'])document.getElementById(name).onclick=()=>{material=name;for(const id of ['neutral','brown'])document.getElementById(id).setAttribute('aria-pressed',String(id===name));updateLabels();schedule();};
 new ResizeObserver(()=>{fitComparison();if(autoFit)fit();schedule();}).observe(canvas);
-canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the viewâ€¦';});
+canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the view…';});
 canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();}catch(e){fail(e);}});
 function fail(error){status.hidden=stage.dataset.mode!=='rotate';status.textContent='The 3D view could not load. You can still open the Blender file below.';console.error(error);}
 // Synchronize material when the parent selects the 3D tab; retain the orbit.

@@ -53,7 +53,7 @@ assert alignment['scale'] > 0
 def data_uri(path):
     return 'data:image/png;base64,' + base64.b64encode(path.read_bytes()).decode('ascii')
 
-html = (Path(__file__).with_name('viewer-template.html')).read_text()
+html = (Path(__file__).with_name('viewer-template.html')).read_text(encoding='utf-8')
 html = html.replace('__MESH_META__',json.dumps(public_meta,separators=(',',':')))
 html = html.replace('__MESH_BASE64__',base64.b64encode(mesh).decode('ascii'))
 html = html.replace('__REFERENCE_IMAGE__',data_uri(assets/'reference.png'))

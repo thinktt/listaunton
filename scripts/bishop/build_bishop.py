@@ -39,13 +39,14 @@ bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
 cutter.hide_render=True;cutter.hide_set(True);cutter.display_type='WIRE'
 cut=body.modifiers.new('Open slit through mitre','BOOLEAN');cut.operation='DIFFERENCE';cut.solver='EXACT';cut.object=cutter
 bev=body.modifiers.new('Soft cut edges','BEVEL');bev.width=.23*F/S;bev.segments=3;bev.limit_method='ANGLE';bev.angle_limit=.5
-# Rounded, slightly flattened top finial, intersecting its turned neck.
-fi=cfg['finial'];bpy.ops.mesh.primitive_uv_sphere_add(segments=64,ring_count=32,radius=1)
-finial=bpy.context.object;finial.name='Bishop - rounded finial'
-finial.location=(0,0,z((fi['center_y']-A['y']*3)*F));finial.scale=(fi['radius']*F/S,fi['radius']*F/S,fi['radius']*fi['height_ratio']*F/S)
-bpy.ops.object.transform_apply(location=True,rotation=False,scale=True)
-finial.data.materials.append(mat)
-for face in finial.data.polygons:face.use_smooth=True
+# The convex head enters the rounded button underside directly, with no neck.
+fi=cfg['finial'];fp=fi['profile'];fn=128
+fvs=[(r*F/S*math.cos(i*math.tau/fn),r*F/S*math.sin(i*math.tau/fn),z((y-A['y']*3)*F)) for r,y in fp for i in range(fn)];ffs=[]
+for j in range(len(fp)-1):
+ for i in range(fn):k=(i+1)%fn;ffs.append((j*fn+i,j*fn+k,(j+1)*fn+k,(j+1)*fn+i))
+ffs+=[tuple(reversed(range(fn))),tuple((len(fp)-1)*fn+i for i in range(fn))]
+finial=mesh('Bishop - domed button finial',fvs,ffs)
+button_smooth=finial.modifiers.new('Rounded button edge and shallow dome','SUBSURF');button_smooth.levels=1;button_smooth.render_levels=1
 outward(finial)
 components=[body,finial]
 reference=bpy.data.images.load(str(OUT/'reference.png'));reference.pack()
@@ -66,7 +67,7 @@ for screen in bpy.data.screens:
   if ar.type=='VIEW_3D':
    sp=ar.spaces.active;sp.region_3d.view_distance=9;sp.region_3d.view_location=(0,0,2.4);sp.region_3d.view_rotation=cam.rotation_euler.to_quaternion();sp.region_3d.view_perspective='CAMERA'
 bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(MODEL))
-# Export evaluated triangle corner normals so the cross keeps flat faces.
+# Export evaluated triangle corner normals, including the softened saw-cut faces.
 bpy.context.view_layer.update();graph=bpy.context.evaluated_depsgraph_get();blocks=[];parts=[];count=0
 for ob in components:
  ev=ob.evaluated_get(graph);me=ev.to_mesh();me.calc_loop_triangles();block=[]

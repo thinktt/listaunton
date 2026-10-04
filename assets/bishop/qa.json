@@ -1,25 +1,26 @@
 {
-  "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
+  "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9625693632082546,
-      "mean_boundary_error_px": 6.1497354497354495,
+      "silhouette_iou": 0.9657608499259206,
+      "mean_boundary_error_px": 5.450959488272921,
       "p95_boundary_error_px": 18.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 1.4187473555204404
+      "mean_boundary_error_original_300px_units": 1.2575393563261232
     },
     "selected": {
-      "silhouette_iou": 0.9452794198413776,
-      "mean_boundary_error_px": 9.523305084745763,
+      "silhouette_iou": 0.94821504789908,
+      "mean_boundary_error_px": 8.89498933901919,
       "p95_boundary_error_px": 23.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
   "internal_features": {
-    "inspection": "Original and selected source overlays checked against neutral render; topology and cavity depth independently validated.",
-    "mitre": "Turned bulb, rounded finial, full-thickness oblique cut with solid floor.",
-    "collars": "Three descending collar steps.",
-    "lower_body": "Concave stem, raised socket lip, flared base and rounded flat-bottom foot.",
-    "limits": "Wood and lighting are not reconstructed. Single-view evidence cannot determine hidden geometry uniquely."
+    "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
+    "mitre": "One continuous rounded meridian from the collar transition into the button underside; full-thickness oblique cut and solid floor preserved.",
+    "finial": "Rounded convex button sits directly on the head. No cylindrical seat, pedestal, neck ring or gap is exposed.",
+    "collars": "Three descending collar steps, preserved by exact lower-profile comparison.",
+    "lower_body": "Concave stem, raised socket lip, flared base and rounded flat-bottom foot preserved.",
+    "limits": "The accepted side guide is art direction, not a recovered source camera. Wood and lighting are not reconstructed. Single-view evidence cannot determine hidden geometry uniquely."
   }
 }

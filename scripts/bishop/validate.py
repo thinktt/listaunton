@@ -26,4 +26,58 @@ for dz in [7,12,17]:
 assert body.ray_cast(Vector((sl['x']*factor,-4,bottom-3*factor)),Vector((0,1,0)),distance=8)[0], 'Slot requires a solid floor.'
 meta=json.loads((root/'assets/bishop/mesh.json').read_text());assert meta['sourceSha256']==hashlib.sha256(model.read_bytes()).hexdigest()
 assert meta['referenceCamera']['elevationDegrees']==54
-(root/'assets/bishop/validation.json').write_text(json.dumps({'components':report,'slit_ray_probes':probes,'solid_slot_floor':True,'source_hash_matches':True,'reference_camera_elevation':54,'note':'Two closed editable components, turned body with open mitre slot, and finial. Finial intersects the mitre; not boolean-fused for manufacture.'},indent=2));print('PASS',report,probes)
+old_camera=json.loads((root/'history/bishop/07-before-continuous-button-join/camera.json').read_text())
+assert meta['referenceCamera']==old_camera,'The reference camera must remain unchanged during the head correction.'
+baseline=json.loads((root/'history/bishop/04-before-head-correction/profile.json').read_text())
+assert cfg['profile'][:65]==baseline['profile'][:65], 'Lower collars, stem and base must be preserved.'
+button_baseline=json.loads((root/'history/bishop/07-before-continuous-button-join/profile.json').read_text())
+assert cfg['slit']==button_baseline['slit'], 'Preserve the full-depth slit dimensions.'
+button=bpy.data.objects['Bishop - domed button finial'].evaluated_get(graph);button_mesh=button.to_mesh()
+points=[v.co for v in button_mesh.vertices];width=max(v.x for v in points)-min(v.x for v in points);height=max(v.z for v in points)-min(v.z for v in points)
+button_ratio=height/width
+assert button_ratio<.5,('Finial must be a shallow button, not a sphere',button_ratio)
+head_cap_z=(cfg['y0']-cfg['head_button_join']['head_cap_axis_y'])*factor/math.cos(math.radians(cfg['elevation']))
+assert min(v.z for v in points)<head_cap_z, 'Button underside must intersect the head cap.'
+button.to_mesh_clear()
+# Probe the actual evaluated mesh on the unslit side. The old shelf had an abrupt
+# normal transition; the continuous head must rotate its surface normal smoothly.
+head_normals=[]
+for i in range(100):
+ axis_y=89.5-i*(89.5-56.8)/99
+ zz=(cfg['y0']-axis_y)*factor/math.cos(math.radians(cfg['elevation']))
+ hit,loc,normal,face=body.ray_cast(Vector((-4,0,zz)),Vector((1,0,0)),distance=8)
+ assert hit,('Continuous head side missing',axis_y)
+ head_normals.append(normal)
+max_head_normal_step=max(math.degrees(a.angle(b)) for a,b in zip(head_normals,head_normals[1:]))
+assert max_head_normal_step<9,('Abrupt head shelf',max_head_normal_step)
+# Examine the evaluated *external* section through the unslit side. Merely
+# overlapping component bounds missed the old exposed cylindrical seat.
+co=math.cos(math.radians(cfg['elevation']))
+def section(ob,axis_y):
+ zz=(cfg['y0']-axis_y)*factor/co
+ hit,loc,normal,face=ob.ray_cast(Vector((-4,0,zz)),Vector((1,0,0)),distance=8)
+ return (-loc.x/factor,normal) if hit else (None,None)
+join=[]
+for i in range(161):
+ axis_y=59.0-i*(59.0-54.0)/160
+ br,bn=section(body,axis_y);fr,fn=section(button,axis_y)
+ assert br is not None or fr is not None,('Visible gap under button',axis_y)
+ owner='head' if br is not None and (fr is None or br>=fr) else 'button'
+ join.append({'axis_y':axis_y,'head_radius':br,'button_radius':fr,'external_radius':max(r for r in [br,fr] if r is not None),'owner':owner})
+transitions=[i for i in range(1,len(join)) if join[i]['owner']!=join[i-1]['owner']]
+assert len(transitions)==1 and join[0]['owner']=='head' and join[-1]['owner']=='button',('Head must meet button once, with no exposed head rim',transitions)
+k=transitions[0];crossing_y=(join[k]['axis_y']+join[k-1]['axis_y'])/2
+assert crossing_y>cfg['head_button_join']['head_cap_axis_y']+.25,'The head cap must be concealed inside the button.'
+contact_ratio=join[k]['external_radius']/(width/2/factor)
+assert .8<contact_ratio<.99,('Direct broad contact rather than narrow pedestal',contact_ratio)
+# All exposed head samples before contact must taper. A cylindrical neck has
+# zero radius slope; test the surface seen by a true level camera.
+slopes=[co*(a['external_radius']-b['external_radius'])/(a['axis_y']-b['axis_y']) for a,b in zip(join[:k-1],join[1:k])]
+assert min(slopes)>.12,('Exposed cylindrical neck',min(slopes))
+assert any(x['head_radius'] is not None and x['button_radius'] is not None for x in join),'Closed components must intersect.'
+cam=bpy.context.scene.camera;bpy.context.view_layer.update()
+actual_matrix=[float(v) for row in cam.matrix_world.inverted() for v in row]
+assert max(abs(a-b) for a,b in zip(actual_matrix,meta['referenceCamera']['worldToCamera']))<1e-6,'Saved camera and export differ.'
+result={'components':report,'slit_ray_probes':probes,'solid_slot_floor':True,'source_hash_matches':True,'reference_camera_elevation':54,'saved_camera_matches_export':True,'head_surface_probe_count':len(head_normals),'head_surface_max_normal_step_degrees':max_head_normal_step,'lower_65_profile_points_preserved':True,'slit_parameters_preserved':True,'button_height_to_width':button_ratio,'head_button_join':{'level_section_samples':len(join),'visible_component_transitions':len(transitions),'contact_axis_y':crossing_y,'contact_width_to_button_width':contact_ratio,'minimum_exposed_head_radius_slope':min(slopes),'head_cap_concealed':True,'gap_free':True,'no_exposed_cylindrical_neck':True},'note':'Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.'}
+(root/'assets/bishop/validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+print('PASS',json.dumps(result))

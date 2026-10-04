@@ -269,72 +269,168 @@
       91.3
     ],
     [
-      29,
-      89.5
+      29.660610937499996,
+      90.05905625
     ],
     [
-      29,
-      86
+      30.671137499999997,
+      88.85519999999998
     ],
     [
-      30.5,
-      84
+      31.537120312500008,
+      87.68689375
     ],
     [
-      31.9,
-      82
+      32.2641,
+      86.55260000000001
     ],
     [
-      33.3,
-      79
+      32.8576171875,
+      85.45078124999999
     ],
     [
-      34,
-      76
+      33.3232125,
+      84.37989999999999
     ],
     [
-      33.7,
-      74.8
+      33.66642656249999,
+      83.33841874999997
     ],
     [
-      32.3,
-      73.7
+      33.89280000000001,
+      82.32480000000002
     ],
     [
-      30.1,
-      72.4
+      34.0078734375,
+      81.33750625000002
     ],
     [
-      27,
-      70.9
+      34.0171875,
+      80.375
     ],
     [
-      23.5,
-      67.8
+      33.9262828125,
+      79.43574375
     ],
     [
-      20.2,
-      64.5
+      33.7407,
+      78.5182
     ],
     [
-      17,
-      61.6
+      33.46597968750002,
+      77.62083125000002
     ],
     [
-      14,
-      59.8
+      33.107662499999996,
+      76.74210000000001
     ],
     [
-      12.5,
-      59.2
+      32.6712890625,
+      75.88046875
     ],
     [
-      11.7,
-      57.5
+      32.1624,
+      75.0344
+    ],
+    [
+      31.586535937499995,
+      74.20235625
+    ],
+    [
+      30.94923750000001,
+      73.38280000000002
+    ],
+    [
+      30.2560453125,
+      72.57419374999999
+    ],
+    [
+      29.5125,
+      71.77499999999999
+    ],
+    [
+      28.724142187499996,
+      70.98368124999999
+    ],
+    [
+      27.8965125,
+      70.1987
+    ],
+    [
+      27.0351515625,
+      69.41851875
+    ],
+    [
+      26.145599999999998,
+      68.64160000000001
+    ],
+    [
+      25.2333984375,
+      67.86640625
+    ],
+    [
+      24.304087499999998,
+      67.0914
+    ],
+    [
+      23.3632078125,
+      66.31504375
+    ],
+    [
+      22.4163,
+      65.5358
+    ],
+    [
+      21.468904687500004,
+      64.75213125
+    ],
+    [
+      20.5265625,
+      63.962500000000006
+    ],
+    [
+      19.5948140625,
+      63.16536875
+    ],
+    [
+      18.679199999999998,
+      62.3592
+    ],
+    [
+      17.785260937500002,
+      61.54245625
+    ],
+    [
+      16.9185375,
+      60.7136
+    ],
+    [
+      16.0845703125,
+      59.87109375
+    ],
+    [
+      15.2889,
+      59.0134
+    ],
+    [
+      14.537067187499998,
+      58.13898125
+    ],
+    [
+      13.834612500000002,
+      57.246300000000005
+    ],
+    [
+      13.1870765625,
+      56.33381875
+    ],
+    [
+      12.6,
+      55.4
     ],
     [
       0.01,
-      57.5
+      55.4
     ]
   ],
   "slit": {
@@ -344,11 +440,91 @@
     "width": 4.1
   },
   "finial": {
-    "center_y": 51.9,
-    "radius": 13.1,
-    "height_ratio": 0.9
+    "shape": "Rounded shallow button with a convex dome and direct underside contact; no central cylindrical seat",
+    "profile": [
+      [
+        0.01,
+        56.5
+      ],
+      [
+        10.3,
+        56.5
+      ],
+      [
+        11.7,
+        56.3
+      ],
+      [
+        13.1,
+        55.7
+      ],
+      [
+        14.05,
+        54.7
+      ],
+      [
+        14.4,
+        53.65
+      ],
+      [
+        14.2,
+        52.7
+      ],
+      [
+        13.4,
+        51.6
+      ],
+      [
+        11.6,
+        50.35
+      ],
+      [
+        8.7,
+        49.5
+      ],
+      [
+        5,
+        49.1
+      ],
+      [
+        0.01,
+        49.0
+      ]
+    ],
+    "profile_units": "[radius, projected-axis-y] in original 300px white frame; shares body coordinate conversion."
   },
   "roll_degrees": 0,
   "profile_units": "Each [radius, projected_axis_y] pair uses original white 300px sprite coordinates. Axis y is the center of its horizontal ring before camera-depth projection.",
-  "reference_authority": "Original Lichess White-Bishop.png proportions; white candidate 3 detail interpretation. Black original is a secondary cross-check."
+  "reference_authority": "Original Lichess White-Bishop.png overall proportions; white candidate 3 details. User-accepted side guide directs head and button continuity; black original is secondary.",
+  "head_curve": {
+    "type": "cubic_bezier",
+    "control_points": [
+      [
+        28.5,
+        91.3
+      ],
+      [
+        45,
+        74.5
+      ],
+      [
+        20,
+        68
+      ],
+      [
+        12.6,
+        55.4
+      ]
+    ],
+    "samples": 41,
+    "start_profile_index": 65,
+    "note": "Accepted side guide: continuous convex taper enters the button underside directly, without an exposed seat or neck."
+  },
+  "revision": "09-continuous-button-join",
+  "head_button_join": {
+    "head_cap_axis_y": 55.4,
+    "button_bottom_axis_y": 56.5,
+    "guide": "assets/bishop/concepts (accepted user side guide, saved separately with provenance)",
+    "note": "Convex head continues inside the rounded button underside; the wider button conceals the cap. No exposed pedestal or neck ring. Separate closed components intersect."
+  }
 }
