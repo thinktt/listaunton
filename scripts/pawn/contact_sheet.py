@@ -9,5 +9,5 @@ frames=[b,w,Image.open(a/'reference.png').convert('RGBA'),Image.open(a/'render.p
 canvas=Image.new('RGB',(1280,510),'#181b20');d=ImageDraw.Draw(canvas)
 for i,(im,title) in enumerate(zip(frames,['Original black','Original white (registered)','Selected Black 2','Final neutral model / 54 deg'])):
  im=im.crop((225,310,735,1040)).resize((320,458));bg=Image.new('RGB',im.size,'#101317');bg.paste(im,mask=im.getchannel('A'));canvas.paste(bg,(i*320,30));d.text((i*320+10,8),title,fill='#eeeeee')
-d.text((10,493),'Four geometric passes. Sources are unchanged. Original sprites govern geometry; candidate is a secondary detail guide.',fill='#bbbbbb')
+d.text((10,493),'Seated-head revision. Sources are unchanged. Original sprites govern geometry; candidate is a secondary detail guide.',fill='#bbbbbb')
 canvas.save(a/'comparison-contact-sheet.png')

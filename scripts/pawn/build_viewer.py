@@ -21,7 +21,7 @@ if missing:
     print('Wrote temporary pawn-model.html while waiting for model assets.')
     raise SystemExit(0)
 
-meta = json.loads((assets/'mesh.json').read_text())
+meta = json.loads((assets/'mesh.json').read_text(encoding='utf-8'))
 blend = root/'models/pawn/pawn-rebuilt.blend'
 if not blend.is_file() or hashlib.sha256(blend.read_bytes()).hexdigest() != meta['sourceSha256']:
     raise RuntimeError('Export the current Blender model before rebuilding its viewer.')
@@ -43,9 +43,9 @@ for image in ['reference.png', 'render.png', 'original.png']:
 
 override = assets/'original-alignment.json'
 if override.is_file():
-    alignment = json.loads(override.read_text())
+    alignment = json.loads(override.read_text(encoding='utf-8'))
 else:
-    registrations = json.loads((root/'assets/candidates/alignment.json').read_text())
+    registrations = json.loads((root/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
     alignment = next(item for item in registrations['pieces']['pawn'] if item['id'] == 'candidate-2')
 alignment = {key: alignment[key] for key in ['scale', 'x', 'y']}
 assert alignment['scale'] > 0
@@ -53,7 +53,7 @@ assert alignment['scale'] > 0
 def data_uri(path):
     return 'data:image/png;base64,' + base64.b64encode(path.read_bytes()).decode('ascii')
 
-html = (Path(__file__).with_name('viewer-template.html')).read_text()
+html = (Path(__file__).with_name('viewer-template.html')).read_text(encoding='utf-8')
 html = html.replace('__MESH_META__',json.dumps(public_meta,separators=(',',':')))
 html = html.replace('__MESH_BASE64__',base64.b64encode(mesh).decode('ascii'))
 html = html.replace('__REFERENCE_IMAGE__',data_uri(assets/'reference.png'))

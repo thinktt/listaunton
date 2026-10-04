@@ -2,28 +2,28 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9806756369882622,
-      "mean_boundary_error_px": 2.3189522342064715,
-      "p95_boundary_error_px": 9.0,
+      "silhouette_iou": 0.9617411483278046,
+      "mean_boundary_error_px": 4.1265822784810124,
+      "p95_boundary_error_px": 16.0,
       "reference_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
     },
     "original_white": {
-      "silhouette_iou": 0.9785801494740821,
-      "mean_boundary_error_px": 3.0330769230769232,
-      "p95_boundary_error_px": 9.0,
+      "silhouette_iou": 0.9589896504010661,
+      "mean_boundary_error_px": 4.855450236966824,
+      "p95_boundary_error_px": 16.0,
       "reference_sha256": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3"
     },
     "selected": {
-      "silhouette_iou": 0.9510722836330294,
-      "mean_boundary_error_px": 5.875384615384616,
-      "p95_boundary_error_px": 23.0,
+      "silhouette_iou": 0.9322399918508709,
+      "mean_boundary_error_px": 7.7725118483412325,
+      "p95_boundary_error_px": 27.0,
       "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
     }
   },
   "internal_feature_review": {
     "camera_elevation_degrees": 54,
-    "head": "Round head radius 28.25 original pixels; center y114.3. Original black silhouette wins over the slightly broader selected render.",
-    "collar": "Shallow bowl with raised rounded lip under the sphere; lowered one original pixel after pass 2 internal comparison.",
+    "head": "Round head radius 28.25 original pixels; center y118.3. Original black silhouette wins over the slightly broader selected render.",
+    "collar": "Rounded lip and broad inner seat support the ball without the exposed peg; head lowered four original pixels after owner side-view review.",
     "stem": "Curved narrow stem widens into an upper shoulder bead and a short lower wall; both original sprites inspected.",
     "base": "Two broad rolls separated by a continuous narrow groove. Base underside and back edge lowered after pass 1.",
     "limitations": "Single-view rotational reconstruction. Unseen underside and exact material are inferred. Neutral clay does not reproduce wood or its reflections. Selected Black 2 differs measurably from the original silhouette."

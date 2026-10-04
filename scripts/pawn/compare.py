@@ -24,8 +24,8 @@ for name,ar in [('original',original),('original_white',white),('selected',ref)]
  canvas.save(out/f'contour-{name}.png')
 report['internal_feature_review']={
  'camera_elevation_degrees':54,
- 'head':'Round head radius 28.25 original pixels; center y114.3. Original black silhouette wins over the slightly broader selected render.',
- 'collar':'Shallow bowl with raised rounded lip under the sphere; lowered one original pixel after pass 2 internal comparison.',
+ 'head':'Round head radius 28.25 original pixels; center y118.3. Original black silhouette wins over the slightly broader selected render.',
+ 'collar':'Rounded lip and broad inner seat support the ball without the exposed peg; head lowered four original pixels after owner side-view review.',
  'stem':'Curved narrow stem widens into an upper shoulder bead and a short lower wall; both original sprites inspected.',
  'base':'Two broad rolls separated by a continuous narrow groove. Base underside and back edge lowered after pass 1.',
  'limitations':'Single-view rotational reconstruction. Unseen underside and exact material are inferred. Neutral clay does not reproduce wood or its reflections. Selected Black 2 differs measurably from the original silhouette.'}

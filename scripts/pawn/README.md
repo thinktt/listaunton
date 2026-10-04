@@ -18,6 +18,10 @@ python scripts/build_candidate_pages.py
 python scripts/check_model_site.py
 ```
 
-The 58,752-triangle export has no nonmanifold edges and positive volume. Original-black silhouette overlap is 98.07%, original-white 97.86%, and selected candidate 95.11%; candidate shoulder/head proportions differ from the originals. Mean original-black contour discrepancy is about 0.56 source pixels. These scores measure visible outline, not unseen geometry or surface material.
+The 57,984-triangle export has no nonmanifold edges and positive volume. Original-black silhouette overlap is 96.17%, original-white 95.90%, and selected candidate 93.22%; candidate shoulder/head proportions differ from the originals. Mean original-black contour discrepancy is about 0.99 source pixels. These scores measure visible outline, not unseen geometry or surface material.
 
 The viewer starts with the original black reference, supports the selected enlargement, and switches to independent rotation while retaining the camera. Runtime checks verify overlay endpoints, camera reset, orbit/pan/zoom and no repeated-frame scale drift; maximum sampled camera discrepancy is below 0.000011 pixels. Native browser graphics have not been independently screenshot-tested. Wood finish and unseen underside remain later interpretation work.
+
+## Seated head revision
+
+Owner side-view feedback identified an exposed neck between the ball and collar. The ball is lowered by four original-image pixels into a broader inner seat. The outside collar and all lower-body meridian points are unchanged. The head and seat remain one closed continuous surface. `assets/pawn/side-seating.png` records the level view; `scripts/pawn/check_seating.py` checks preserved geometry and regenerates that view. The stronger seating reduces the original silhouette score from 98.07% to 96.17%; this is an intentional interpretation of the three-dimensional join, not a claim of a closer projected silhouette. The preceding shape is preserved in `history/pawn/04-before-seated-head`.
