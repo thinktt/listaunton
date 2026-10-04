@@ -7,8 +7,8 @@
   let mode='wipe',zoom='fit',scale=1,drag=null,wipeDrag=null,version=0,ready=false;
   const handle=$('wipe-handle');
   const cache=new Map();
-  const tabNames=['candidates','model'];
-  let activeTab='candidates',modelLoaded=false;
+  const tabNames=['candidates','model',...(data.projections?.page?['projections']:[])];
+  let activeTab='candidates',modelLoaded=false,projectionsLoaded=false;
   function showTab(name,focus=false){
     if(!tabNames.includes(name))return;
     activeTab=name;drag=null;wipeDrag=null;
@@ -21,6 +21,8 @@
       const page=data.model?.page;
       $('model-empty').hidden=Boolean(page);$('model-frame').hidden=!page;
       if(page&&!modelLoaded){$('model-frame').src=page;modelLoaded=true;}
+    }else if(name==='projections'){
+      if(!projectionsLoaded){$('projections-frame').src=data.projections.page;projectionsLoaded=true;}
     }else if(zoom==='fit')resize('fit',false);
     if(focus)$('tab-'+name).focus();
   }
@@ -29,7 +31,7 @@
     tab.addEventListener('click',()=>showTab(name));
     tab.addEventListener('keydown',event=>{
       const index=tabNames.indexOf(name);
-      const next={ArrowLeft:tabNames[(index+1)%2],ArrowRight:tabNames[(index+1)%2],Home:'candidates',End:'model'}[event.key];
+      const next={ArrowLeft:tabNames[(index-1+tabNames.length)%tabNames.length],ArrowRight:tabNames[(index+1)%tabNames.length],Home:tabNames[0],End:tabNames[tabNames.length-1]}[event.key];
       if(next){event.preventDefault();showTab(next,true);}
     });
   }

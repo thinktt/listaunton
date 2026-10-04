@@ -10,6 +10,8 @@ The queen geometry includes a continuous splash-shaped crown, eight tips, a shal
 
 The king uses the original Lichess sprite as the authority for proportions, with selected black candidate 1 supporting detail interpretation. Its closed revolved body and separate beveled cross intersect but are not boolean-fused. This is a geometry study of roughly 68,500 triangles in neutral clay; matching wood grain and finish come later.
 
+[King projection variants](king-projections.html) compare five refitted models at assumed elevations of 48°, 52°, 56°, 60° and 64°. Inspect profiles at one physical scale, rotate while retaining the view, or compare each fitted render against either reference. They also appear in the king review’s **Projection variants** tab. The current king is preserved; see [the experiment notes](docs/king-projections.md).
+
 See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
 
 [The shared camera study](camera-study.html) compares circular features across all six original pieces. Its working estimate is about 54° above the board, with substantial uncertainty; existing models and review pages remain unchanged.

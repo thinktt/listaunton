@@ -1,6 +1,6 @@
 // Exercise the shared browser runtime, including async image loading and every source pair.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'assets/comparison/candidate-review.js'),'utf8');
+const root=process.argv[2]||path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'assets/comparison/candidate-review.js'),'utf8');
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
 async function check(piece,modelOverride){
  const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
@@ -20,6 +20,10 @@ async function check(piece,modelOverride){
  node('comparison-data').textContent=JSON.stringify(data);node('image-a').value='black';node('image-b').value=firstCandidate;node('align').checked=true;node('mix').value='50';
  const frame=node('model-frame');let frameLoads=0,frameSource;
  Object.defineProperty(frame,'src',{get(){return frameSource;},set(value){frameSource=value;frameLoads++;}});
+ const projectionFrame=node('projections-frame');let projectionLoads=0;
+ Object.defineProperty(projectionFrame,'src',{set(value){this.page=value;projectionLoads++;}});
+ if(data.projections){assert.match(html,/id="tab-projections"/);assert(!/id="projections-frame"[^>]*\ssrc=/.test(html));}
+ else assert(!html.includes('id="tab-projections"'));
  const doc={getElementById:node,querySelectorAll:()=>zooms,documentElement:{style:{setProperty(){}}}};
  class FakeImage{set src(value){queueMicrotask(()=>failed.has(value)?this.onerror():this.onload());}}
  vm.runInNewContext(source,{document:doc,window:{addEventListener(){}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
@@ -81,6 +85,15 @@ async function check(piece,modelOverride){
  node('tab-candidates').fire('keydown',{key:'End'});node('tab-model').fire('keydown',{key:'Home'});
  node('tab-candidates').fire('keydown',{key:'ArrowRight'});node('tab-model').fire('click');
  assert.equal(frameLoads,data.model?.page?1:0,'Model iframe is retained between visits');
+ if(data.projections){
+   assert.equal(projectionLoads,1,'End key lazily opens projection frame');
+   node('tab-projections').fire('click');assert.equal(node('panel-projections').hidden,false);assert.equal(node('panel-model').hidden,true);
+   assert.equal(projectionFrame.page,data.projections.page);assert.equal(projectionLoads,1);
+   node('tab-projections').fire('keydown',{key:'ArrowRight'});assert.equal(node('panel-candidates').hidden,false);
+   node('tab-candidates').fire('keydown',{key:'ArrowLeft'});assert.equal(node('panel-projections').hidden,false);
+   node('tab-projections').fire('keydown',{key:'Home'});assert.equal(node('panel-candidates').hidden,false);
+   assert.equal(node('image-a').value,savedA);assert.equal(node('image-b').value,savedB);assert.equal(node('stage').style.width,'2508px');assert.equal(node('viewport').scrollLeft,60);
+ }else assert.equal(projectionLoads,0);
  assert.equal(errors,0);
  console.log('PASS: '+piece+(modelOverride?' (model frame)':'')+' — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
 }

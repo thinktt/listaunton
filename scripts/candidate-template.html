@@ -5,6 +5,7 @@
 <div class="review-tabs" role="tablist" aria-label="Review mode">
 <button id="tab-candidates" type="button" role="tab" aria-selected="true" aria-controls="panel-candidates" tabindex="0">Reference candidates</button>
 <button id="tab-model" type="button" role="tab" aria-selected="false" aria-controls="panel-model" tabindex="-1">Model</button>
+__EXTRA_TAB__
 </div>
 <section id="panel-candidates" role="tabpanel" aria-labelledby="tab-candidates">
 <div class="toolbar pickers"><label class="picker" for="image-a"><span class="letter">A</span><select id="image-a">__OPTIONS_A__</select></label><button id="swap" type="button" title="Swap images A and B" aria-label="Swap images A and B">⇄</button><label class="picker" for="image-b"><span class="letter">B</span><select id="image-b">__OPTIONS_B__</select></label></div>
@@ -16,5 +17,7 @@
 <section id="panel-model" role="tabpanel" aria-labelledby="tab-model" hidden>
 <div id="model-empty" class="model-empty"><p>No __LOWER_PIECE__ model yet.</p></div>
 <iframe id="model-frame" title="__PIECE__ model and reference comparison" sandbox="allow-scripts allow-downloads" hidden></iframe>
-</section><noscript><p>Enable JavaScript to compare the images.</p></noscript>
+</section>
+__EXTRA_PANEL__
+<noscript><p>Enable JavaScript to compare the images.</p></noscript>
 </main><script id="comparison-data" type="application/json">__DATA__</script><script src="assets/comparison/candidate-review.js"></script></body></html>

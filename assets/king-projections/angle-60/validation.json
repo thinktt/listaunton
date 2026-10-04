@@ -1,0 +1,21 @@
+{
+  "components": [
+    {
+      "name": "King - continuous turned body",
+      "nonmanifold_edges": 0,
+      "signed_volume": 5.1817319772926655,
+      "vertices": 33602,
+      "faces": 33600
+    },
+    {
+      "name": "King - beveled cross",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.08354461279481937,
+      "vertices": 648,
+      "faces": 650
+    }
+  ],
+  "sourceSha256": "2dc139dc363adeac82353d8b83e673f3c0eab29a0a7f1fc59938ecb9dbc5a7de",
+  "source_hash_matches": true,
+  "note": "Body and cross are closed editable components; they intersect at the pedestal."
+}

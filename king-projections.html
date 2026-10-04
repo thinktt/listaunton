@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>King — compare proportions</title>
+<style>
+:root{color-scheme:dark;font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:#121519;color:#eeece7}*{box-sizing:border-box}body{margin:0;min-width:320px}main{height:100vh;height:100dvh;min-height:580px;display:flex;flex-direction:column}header{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:16px 22px;background:#181c22;border-bottom:1px solid #ffffff16}h1{margin:0;font-size:22px;font-weight:600;letter-spacing:-.5px}header p{margin:4px 0 0;color:#a4acb7;font-size:12px}a{color:#dac08c;text-decoration:none}a:hover{text-decoration:underline}.header-links{display:flex;gap:16px;white-space:nowrap;font-size:12px}button,select,input{font:inherit}button,select{background:#242a32;color:#dadde2;border:1px solid #ffffff18;border-radius:7px;padding:7px 12px;cursor:pointer}button:hover{background:#303844}button:disabled{opacity:.45;cursor:default}button[aria-pressed="true"]{background:#59492e;border-color:#927540;color:#ffe8bc}button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid #ddbd78;outline-offset:3px}[hidden]{display:none!important}.toolbar,.mode-tabs,.controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:9px 22px;border-bottom:1px solid #ffffff10}.toolbar{background:#171b21}.toolbar .hint{font-size:12px;color:#a5adba;margin-right:7px}.mode-tabs{padding-top:8px;padding-bottom:8px}.mode-tabs button{background:transparent}.mode-tabs button[aria-pressed="true"]{background:#343c48;border-color:#738299;color:white}.controls{min-height:55px;padding-top:8px;padding-bottom:8px}.controls label{display:flex;gap:8px;align-items:center;font-size:12px}.group{display:flex;gap:3px}.controls button,.controls select{font-size:12px;padding:6px 9px}.controls input{width:clamp(100px,18vw,240px);accent-color:#d7b987}.controls output{min-width:33px;font-variant-numeric:tabular-nums}.control-spacer{flex:1}.stage{position:relative;flex:1;min-height:300px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#303842,#151a22)}canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab;outline:none}canvas.dragging{cursor:grabbing}canvas:focus-visible{box-shadow:inset 0 0 0 2px #ddbd78}.profile-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:9px;padding:14px;overflow:auto;background:#10151c}.profile-card{display:flex;flex-direction:column;gap:8px;align-items:stretch;padding:10px 5px;border-radius:10px;min-height:0;overflow:hidden;background:#1b222b;border-color:#ffffff1b;white-space:normal}.profile-card img{display:block;width:100%;height:0;flex:1;min-height:0;object-fit:contain;pointer-events:none}.profile-card span{flex:0 0 auto;font-size:15px}.profile-card[aria-pressed="true"]{background:#2c2a24;border-color:#927540}.comparison-stage{position:absolute;inset:0;background:#000;overflow:hidden}.comparison-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}.comparison-stage img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}.render-layer{background:#000;opacity:.5}.zoom{position:absolute;right:15px;bottom:15px;display:flex;flex-direction:column;gap:3px}.zoom button{font-size:20px;padding:3px 12px}.badge{position:absolute;left:18px;bottom:15px;pointer-events:none;color:#a7b1bd;font-size:12px}.status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;background:#151a20e8;padding:30px;color:#d6d9df}.stage:not([data-mode="rotate"]) canvas,.stage:not([data-mode="rotate"]) .zoom,.stage:not([data-mode="rotate"]) .badge{visibility:hidden;pointer-events:none}.stage:not([data-mode="profiles"]) .profile-grid{visibility:hidden;pointer-events:none}.stage:not([data-mode="compare"]) .comparison-stage{visibility:hidden;pointer-events:none}@media(max-width:700px){header{padding:12px 14px;align-items:flex-start;flex-wrap:wrap;gap:8px}h1{font-size:20px}.toolbar,.mode-tabs,.controls{padding-left:12px;padding-right:12px}.toolbar .hint{width:100%}.controls{gap:6px}.control-spacer{display:none}.profile-grid{gap:7px;padding:10px;grid-template-columns:repeat(5,180px)}.header-links{font-size:11px}}
+</style></head><body><main>
+<header><div><h1>King proportions</h1><p>Geometry fitted at different camera angles. Every model has the same base width.</p></div><div class="header-links"><a href="king-review.html">King references</a><a id="model-download" href="models/king-projections/king-52.blend" download>Blender file ↗</a></div></header>
+<div class="toolbar" aria-label="Geometry candidate"><span class="hint">Assumed reference angle</span><button class="variant-button" data-variant="angle-48" aria-pressed="false">48°</button><button class="variant-button" data-variant="angle-52" aria-pressed="true">52° · current shape</button><button class="variant-button" data-variant="angle-56" aria-pressed="false">56°</button><button class="variant-button" data-variant="angle-60" aria-pressed="false">60°</button><button class="variant-button" data-variant="angle-64" aria-pressed="false">64°</button></div>
+<nav class="mode-tabs" aria-label="Comparison tools"><button id="profiles-tab" aria-pressed="true">Front profiles</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="compare-tab" aria-pressed="false">Reference overlay</button></nav>
+<div class="controls" id="profiles-controls"><span style="font-size:12px;color:#a5adba">Shared camera and scale · choose a model, then rotate it</span></div>
+<div class="controls" id="rotation-controls" hidden><div class="group" aria-label="View angle"><button data-view="front" aria-pressed="true">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="threequarter" aria-pressed="false">3/4</button><button data-view="overlay" aria-pressed="false">Its reference camera</button></div><div class="group" aria-label="Projection"><button id="orthographic" aria-pressed="true">Orthographic</button><button id="perspective" aria-pressed="false">Perspective</button></div><div class="group" aria-label="Surface"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><span class="control-spacer"></span><button id="reset" title="Reset to the shared front view (R)">Reset view</button></div>
+<div class="controls" id="comparison-controls" hidden><label>Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 1</option></select></label><label>Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div></div>
+<section class="stage" id="stage" data-mode="profiles" aria-label="King geometry comparison">
+<div class="profile-grid" id="profile-grid"><button class="profile-card" data-variant="angle-48" aria-pressed="false"><span>48°</span><img src="data:image/png;base64,@LISTAUNTON_ASSET:b1f50617dedbb6043c24f9495499dd2b6cd244de3a2bc1c31d96c2ec690e4878@" alt="Front profile of the king geometry fitted at 48 degrees" draggable="false"></button><button class="profile-card" data-variant="angle-52" aria-pressed="true"><span>52° · current shape</span><img src="data:image/png;base64,@LISTAUNTON_ASSET:1a4f73716e56b240dbb80dffe4fc129804f59b33096b26b93d11154d819f5cb3@" alt="Front profile of the king geometry fitted at 52 degrees" draggable="false"></button><button class="profile-card" data-variant="angle-56" aria-pressed="false"><span>56°</span><img src="data:image/png;base64,@LISTAUNTON_ASSET:749e4398c1c8867b1431fcb2678671765e21355760a85bde1003e751012819f1@" alt="Front profile of the king geometry fitted at 56 degrees" draggable="false"></button><button class="profile-card" data-variant="angle-60" aria-pressed="false"><span>60°</span><img src="data:image/png;base64,@LISTAUNTON_ASSET:5ce46bace006d6e2c63cb4f2937004c294d497e15d29e70c3bbca1b37755599d@" alt="Front profile of the king geometry fitted at 60 degrees" draggable="false"></button><button class="profile-card" data-variant="angle-64" aria-pressed="false"><span>64°</span><img src="data:image/png;base64,@LISTAUNTON_ASSET:99b266199cdc4c85b6753bb3ace0320a6ef15bc39231e07dee95a62f70a750d9@" alt="Front profile of the king geometry fitted at 64 degrees" draggable="false"></button></div>
+<div class="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c@" alt="Selected black king reference" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4@" alt="Original Lichess black king"><img id="render-angle-48" class="render-layer" data-variant="angle-48" src="data:image/png;base64,@LISTAUNTON_ASSET:ae6dd02186c33418d305dc4912e86a8bd6119a1c0b72fd26e234021c4a613ee9@" alt="King fitted at 48 degrees, rendered from its own reference camera" hidden><img id="render-angle-52" class="render-layer" data-variant="angle-52" src="data:image/png;base64,@LISTAUNTON_ASSET:aa3e96aebebd9fa84f6d11d9f63fa16edab8ff90a15a323ce45aa2650a4156bd@" alt="King fitted at 52 degrees, rendered from its own reference camera"><img id="render-angle-56" class="render-layer" data-variant="angle-56" src="data:image/png;base64,@LISTAUNTON_ASSET:6cb3fa3ccf8de086e8322be19896a6526cc3f57216615450253e35e4025167d8@" alt="King fitted at 56 degrees, rendered from its own reference camera" hidden><img id="render-angle-60" class="render-layer" data-variant="angle-60" src="data:image/png;base64,@LISTAUNTON_ASSET:d1b9e359e89cfaf177f18c6de266353e1f000e5f50ca092d3d372aa286726752@" alt="King fitted at 60 degrees, rendered from its own reference camera" hidden><img id="render-angle-64" class="render-layer" data-variant="angle-64" src="data:image/png;base64,@LISTAUNTON_ASSET:2ac78ea8c74741f68d9c531666cb94cebba75aacc2e59502d6e11f3bdd12972e@" alt="King fitted at 64 degrees, rendered from its own reference camera" hidden></div></div>
+<canvas id="viewer" tabindex="-1" aria-label="King model. Drag to rotate freely, scroll to zoom, Shift-drag or right-drag to pan. Arrow keys rotate. R restores front view."></canvas><div class="zoom"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div><div class="badge" id="surface-note"></div><div class="status" id="status" role="status" aria-live="polite" hidden>Preparing the model…</div>
+</section></main>
+<script id="projection-data" type="application/json">{"baseline":"angle-52","variants":[{"id":"angle-48","label":"48\u00b0","elevation":48,"model":"models/king-projections/king-48.blend","meta":{"vertexCount":205476,"indexCount":205476,"triangleCount":68492,"vertexStrideBytes":24,"vertexByteLength":4931424,"indexByteOffset":4931424,"totalByteLength":5753328,"bounds":{"min":[-1.0331908464431763,-1.0331908464431763,0.0],"max":[1.0331908464431763,1.0331908464431763,4.590237140655518],"size":[2.0663816928863525,2.0663816928863525,4.590237140655518],"center":[0.0,0.0,2.295118570327759]},"sourceSha256":"a30508ead09ce7c2ed8901ac9891fb93f4e89795384371095ea99d0f5695915e","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999690651893616,0.005836586933583021,0.005255287513136864,-0.0072371275164186954,-0.007853902876377106,0.7431218028068542,0.6691100001335144,-0.9214407205581665,2.3283061589829401e-10,-0.6691306233406067,0.7431447505950928,-13.023393630981445,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.19537480175495148,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.09768740087747574,"shiftY":0}}},{"id":"angle-52","label":"52\u00b0 \u00b7 current shape","elevation":52,"model":"models/king-projections/king-52.blend","meta":{"vertexCount":205476,"indexCount":205476,"triangleCount":68492,"vertexStrideBytes":24,"vertexByteLength":4931424,"indexByteOffset":4931424,"totalByteLength":5753328,"bounds":{"min":[-1.0331908464431763,-1.0331908464431763,0.0],"max":[1.0331908464431763,1.0331908464431763,4.936618328094482],"size":[2.0663816928863525,2.0663816928863525,4.936618328094482],"center":[0.0,0.0,2.468309164047241]},"sourceSha256":"bf993711b18f3c9419b5ef8984245bbd0eb11711534881b05d1166b45e7ed147","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999691247940063,0.006188960280269384,0.004835345316678286,-0.0069843558594584465,-0.00785390380769968,0.7879865169525146,0.6156424880027771,-0.8892576694488525,2.3283064365386963e-10,-0.6156614422798157,0.7880107760429382,-13.13823413848877,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.19537480175495148,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.09768740087747574,"shiftY":0}}},{"id":"angle-56","label":"56\u00b0","elevation":56,"model":"models/king-projections/king-56.blend","meta":{"vertexCount":205476,"indexCount":205476,"triangleCount":68492,"vertexStrideBytes":24,"vertexByteLength":4931424,"indexByteOffset":4931424,"totalByteLength":5753328,"bounds":{"min":[-1.0331908464431763,-1.0331908464431763,0.0],"max":[1.0331908464431763,1.0331908464431763,5.362334251403809],"size":[2.0663816928863525,2.0663816928863525,5.362334251403809],"center":[0.0,0.0,2.6811671257019043]},"sourceSha256":"04951aca893df315240d1256bc67f03d7e15bd14d6b3d2f7d7b5311b37557617","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999691843986511,0.006511181592941284,0.004391846712678671,-0.006664654240012169,-0.00785390380769968,0.8290120959281921,0.5591755509376526,-0.848551332950592,-6.984919309616089e-10,-0.5591928362846375,0.8290376663208008,-13.258072853088379,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.19537480175495148,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.09768740087747574,"shiftY":0}}},{"id":"angle-60","label":"60\u00b0","elevation":60,"model":"models/king-projections/king-60.blend","meta":{"vertexCount":205476,"indexCount":205476,"triangleCount":68492,"vertexStrideBytes":24,"vertexByteLength":4931424,"indexByteOffset":4931424,"totalByteLength":5753328,"bounds":{"min":[-1.0331908464431763,-1.0331908464431763,0.0],"max":[1.0331908464431763,1.0331908464431763,5.9276838302612305],"size":[2.0663816928863525,2.0663816928863525,5.9276838302612305],"center":[0.0,0.0,2.9638419151306152]},"sourceSha256":"2dc139dc363adeac82353d8b83e673f3c0eab29a0a7f1fc59938ecb9dbc5a7de","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999691247940063,0.0068016815930604935,0.003926951438188553,-0.0063918279483914375,-0.007853904739022255,0.8659987449645996,0.4999845623970032,-0.813816249370575,4.656612873077393e-10,-0.4999999701976776,0.8660253882408142,-13.409616470336914,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.19537480175495148,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.09768740087747574,"shiftY":0}}},{"id":"angle-64","label":"64\u00b0","elevation":64,"model":"models/king-projections/king-64.blend","meta":{"vertexCount":205476,"indexCount":205476,"triangleCount":68492,"vertexStrideBytes":24,"vertexByteLength":4931424,"indexByteOffset":4931424,"totalByteLength":5753328,"bounds":{"min":[-1.0331908464431763,-1.0331908464431763,0.0],"max":[1.0331908464431763,1.0331908464431763,6.699906826019287],"size":[2.0663816928863525,2.0663816928863525,6.699906826019287],"center":[0.0,0.0,3.3499534130096436]},"sourceSha256":"9e5eed1d497e77100a4749ba97232425b8d2fe11f6d4367d170483c21cca7ba2","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999691247940063,0.007059040945023298,0.0034429251682013273,-0.006181395146995783,-0.007853902876377106,0.898766279220581,0.43835777044296265,-0.7870236039161682,0.0,-0.4383712708950043,0.8987939953804016,-13.613682746887207,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.19537480175495148,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.09768740087747574,"shiftY":0}}}],"sharedBounds":{"min":[-1.0331908464431763,-1.0331908464431763,0.0],"max":[1.0331908464431763,1.0331908464431763,6.699906826019287],"center":[0.0,0.0,3.3499534130096436],"size":[2.0663816928863525,2.0663816928863525,6.699906826019287]},"sharedView":{"center":[0,0,3.45],"orthoHeight":7.6,"distance":16},"originalAlignment":{"scale":0.9798195329087048,"x":0.1072186836518054,"y":-0.8944444444444506}}</script>
+<script id="mesh-angle-48" type="application/octet-stream">@LISTAUNTON_ASSET:4f3555474c03485309101fb14681698e306cb3724db79244e5484fe65821adbb@</script>
+<script id="mesh-angle-52" type="application/octet-stream">@LISTAUNTON_ASSET:73fdbd414a3b8c9242098cab6e96e8d8ca30055cd7955093db9555a23d54c477@</script>
+<script id="mesh-angle-56" type="application/octet-stream">@LISTAUNTON_ASSET:50e311027200f2f10d8ccbb020928d039d8543d5220e2f9d9eb555b84e4a9ccd@</script>
+<script id="mesh-angle-60" type="application/octet-stream">@LISTAUNTON_ASSET:9c285fcf9fc47d4d53f78d091425b7746b9253a230b6dbd3abb8a3ffc5b39e38@</script>
+<script id="mesh-angle-64" type="application/octet-stream">@LISTAUNTON_ASSET:acff21b5d948132d009588f9ca4a6dfcfabc23220096a9333a7fce0294c35f0b@</script>
+<script>
+'use strict';
+(() => {
+const config=JSON.parse(document.getElementById('projection-data').textContent);
+const variants=new Map(config.variants.map(v=>[v.id,v]));
+let variant=variants.get(config.baseline),meta=variant.meta,reference=meta.referenceCamera;
+const canvas=document.getElementById('viewer'),status=document.getElementById('status'),stage=document.getElementById('stage');
+const sharedBounds=config.sharedBounds,sharedCenter=config.sharedView.center;
+const size=sharedBounds.size,radius=Math.hypot(...size)/2,fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
+let program,vao,uniforms,vertexBuffer,indexBuffer,meshBytes,ready=false,lost=false,pending=false;
+let q=[0,0,0,1],pan=[0,0],distance=9,material='neutral',autoFit=true;
+let projection='orthographic',orthoHeight=6,activeView='front';
+const decoded=new Map(),renderLayers=document.querySelectorAll('.render-layer');
+const originalAlignment=config.originalAlignment,originalImage=document.getElementById('original-image'),frame=document.getElementById('comparison-frame');
+originalImage.style.width=(100/originalAlignment.scale)+'%';originalImage.style.height=(100/originalAlignment.scale)+'%';originalImage.style.left=(-originalAlignment.x/originalAlignment.scale)+'%';originalImage.style.top=(-originalAlignment.y/originalAlignment.scale)+'%';
+function fitComparison(){const side=Math.max(1,Math.min(stage.clientWidth,stage.clientHeight));frame.style.width=side+'px';frame.style.height=side+'px';}
+document.getElementById('reference-choice').addEventListener('change',event=>{const original=event.target.value==='original';originalImage.hidden=!original;document.getElementById('reference-image').hidden=original;});
+const opacity=document.getElementById('model-opacity');
+function paintOverlay(){const value=Math.min(100,Math.max(0,Number(opacity.value)||0));renderLayers.forEach(image=>image.style.opacity=value/100);document.getElementById('opacity-value').textContent=value+'%';}
+opacity.addEventListener('input',paintOverlay);
+for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',100]])document.getElementById(id).onclick=()=>{opacity.value=value;paintOverlay();};
+function mode(name){
+ stage.dataset.mode=name;
+ for(const tab of ['profiles','rotate','compare'])document.getElementById(tab+'-tab').setAttribute('aria-pressed',String(tab===name));
+ document.getElementById('profiles-controls').hidden=name!=='profiles';document.getElementById('rotation-controls').hidden=name!=='rotate';document.getElementById('comparison-controls').hidden=name!=='compare';
+ canvas.tabIndex=name==='rotate'?0:-1;status.hidden=name!=='rotate'||ready;
+ fitComparison();if(name==='rotate'){if(autoFit)fit();schedule();}
+}
+for(const name of ['profiles','rotate','compare'])document.getElementById(name+'-tab').onclick=()=>mode(name);
+function selectVariant(id){
+ if(!variants.has(id)||id===variant.id)return;
+ variant=variants.get(id);meta=variant.meta;reference=meta.referenceCamera;
+ document.querySelectorAll('button[data-variant]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.variant===id)));
+ document.getElementById('model-download').href=variant.model;
+ renderLayers.forEach(image=>image.hidden=image.dataset.variant!==id);
+ // Preserve the camera already chosen by the user, including a former candidate's
+ // reference view. Explicitly pressing "Its reference camera" loads this one's.
+ if(activeView==='overlay'){autoFit=false;unselectViews();}
+ if(ready&&!lost){try{uploadMesh();schedule();}catch(error){fail(error);}}
+ updateLabels();
+}
+document.querySelectorAll('button[data-variant]').forEach(button=>{if(button.tagName==='BUTTON')button.onclick=()=>selectVariant(button.dataset.variant);});
+function decodeMesh(){
+ if(!decoded.has(variant.id)){
+  const element=document.getElementById('mesh-'+variant.id),raw=atob(element.textContent.trim()),bytes=new Uint8Array(raw.length);
+  for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
+  if(bytes.byteLength!==meta.totalByteLength)throw new Error('Mesh size mismatch: '+variant.id);
+  decoded.set(variant.id,bytes);element.remove();
+ }
+ return decoded.get(variant.id);
+}
+function uploadMesh(){
+ meshBytes=decodeMesh();gl.bindVertexArray(vao);
+ gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
+ for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
+ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,indexBuffer);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
+}
+fitComparison();paintOverlay();
+const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
+if(!gl){new ResizeObserver(fitComparison).observe(stage);document.getElementById('rotate-tab').disabled=true;document.getElementById('rotate-tab').title='WebGL 2 is unavailable in this browser.';return;}
+const vs=`#version 300 es
+precision highp float;
+layout(location=0) in vec3 aPosition;
+layout(location=1) in vec3 aNormal;
+uniform vec3 uCenter;
+uniform mat3 uRotation;
+uniform mat4 uProjection;
+uniform vec2 uPan;
+uniform float uDistance;
+out vec3 vNormal;
+out vec3 vPosition;
+void main(){
+ vec3 p=aPosition-uCenter;
+ p=uRotation*vec3(p.x,p.z,-p.y);
+ vPosition=p+vec3(uPan,-uDistance);
+ vNormal=uRotation*vec3(aNormal.x,aNormal.z,-aNormal.y);
+ gl_Position=uProjection*vec4(vPosition,1.0);
+}`;
+const fs=`#version 300 es
+precision highp float;
+in vec3 vNormal;
+in vec3 vPosition;
+uniform vec3 uColor;
+uniform float uGloss;
+uniform bool uOrthographic;
+out vec4 outColor;
+vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
+ float diffuse=max(dot(n,l),0.0);
+ vec3 h=normalize(l+v);
+ float spec=pow(max(dot(n,h),0.0),uGloss)*step(0.001,diffuse);
+ return strength*color*(uColor*diffuse+vec3(spec*0.25));
+}
+void main(){
+ vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
+ vec3 c=uColor*(0.19+0.06*n.y);
+ c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
+ c+=light(n,v,normalize(vec3(0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.55);
+ c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.8);
+ c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
+ outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
+}`;
+
+const clamp=(x,a,b)=>Math.min(b,Math.max(a,x));
+const normalize=a=>{const l=Math.hypot(...a);return a.map(v=>v/l);};
+const mul=(a,b)=>[
+ a[3]*b[0]+a[0]*b[3]+a[1]*b[2]-a[2]*b[1],
+ a[3]*b[1]-a[0]*b[2]+a[1]*b[3]+a[2]*b[0],
+ a[3]*b[2]+a[0]*b[1]-a[1]*b[0]+a[2]*b[3],
+ a[3]*b[3]-a[0]*b[0]-a[1]*b[1]-a[2]*b[2]
+];
+const axis=(x,y,z,a)=>[x*Math.sin(a/2),y*Math.sin(a/2),z*Math.sin(a/2),Math.cos(a/2)];
+function referenceQuaternion(){
+ // R maps Blender world to camera space. The shader first applies B:(x,y,z)->(x,z,-y),
+ // so its quaternion must represent R*inverse(B), not an estimated Euler angle.
+ const r=reference.worldToCamera.flat();
+ const m00=r[0],m01=r[2],m02=-r[1],m10=r[4],m11=r[6],m12=-r[5],m20=r[8],m21=r[10],m22=-r[9];
+ const trace=m00+m11+m22;let a,s;
+ if(trace>0){s=2*Math.sqrt(trace+1);a=[(m21-m12)/s,(m02-m20)/s,(m10-m01)/s,s/4];}
+ else if(m00>m11&&m00>m22){s=2*Math.sqrt(1+m00-m11-m22);a=[s/4,(m01+m10)/s,(m02+m20)/s,(m21-m12)/s];}
+ else if(m11>m22){s=2*Math.sqrt(1+m11-m00-m22);a=[(m01+m10)/s,s/4,(m12+m21)/s,(m02-m20)/s];}
+ else{s=2*Math.sqrt(1+m22-m00-m11);a=[(m02+m20)/s,(m12+m21)/s,s/4,(m10-m01)/s];}
+ return normalize(a);
+}
+function rotation(){const [x,y,z,w]=q;return new Float32Array([
+ 1-2*(y*y+z*z),2*(x*y+z*w),2*(x*z-y*w),
+ 2*(x*y-z*w),1-2*(x*x+z*z),2*(y*z+x*w),
+ 2*(x*z+y*w),2*(y*z-x*w),1-2*(x*x+y*y)
+]);}
+function fit(){
+ const m=rotation(),aspect=Math.max(.01,canvas.clientWidth/canvas.clientHeight);let d=0,maxX=0,maxY=0;
+ if(activeView==='overlay'){
+  const r=reference.worldToCamera.flat(),p=reference.projectionMatrix.flat(),c=sharedCenter;
+  const center=r.slice(0,12).reduce((rows,_,i)=>{if(i%4===0)rows.push(r[i]*c[0]+r[i+1]*c[1]+r[i+2]*c[2]+r[i+3]);return rows;},[]);
+  // Fit the complete render frame to this viewport without stretching it. Keep
+  // Blender's camera shifts and framing, including its off-center subject.
+  orthoHeight=Math.max(2/p[5],(2/p[0])/aspect);
+  pan=[center[0]+p[3]/p[0],center[1]+p[7]/p[5]];distance=-center[2];return;
+ }
+ for(const wx of [sharedBounds.min[0],sharedBounds.max[0]])for(const wy of [sharedBounds.min[1],sharedBounds.max[1]])for(const wz of [sharedBounds.min[2],sharedBounds.max[2]]){
+  const x=wx-sharedCenter[0],y=wz-sharedCenter[2],z=-(wy-sharedCenter[1]);
+  const rx=m[0]*x+m[3]*y+m[6]*z,ry=m[1]*x+m[4]*y+m[7]*z,rz=m[2]*x+m[5]*y+m[8]*z;
+  d=Math.max(d,Math.abs(rx)/(tanHalf*aspect)+rz,Math.abs(ry)/tanHalf+rz);
+  maxX=Math.max(maxX,Math.abs(rx));maxY=Math.max(maxY,Math.abs(ry));
+ }
+ orthoHeight=Math.max(config.sharedView.orthoHeight||0,2*Math.max(maxY,maxX/aspect)*1.16);
+ distance=projection==='orthographic'?(config.sharedView.distance||radius*5):d*1.16;pan=[0,0];
+}
+function updateLabels(){
+ for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
+ document.getElementById('surface-note').textContent=variant.label+' · '+(activeView==='overlay'?'its reference camera':'shared viewing scale');
+}
+function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
+function view(name){
+ const views={overlay:referenceQuaternion(),threequarter:mul(axis(1,0,0,25*Math.PI/180),axis(0,1,0,-25*Math.PI/180)),front:[0,0,0,1],side:axis(0,1,0,Math.PI/2),top:axis(1,0,0,Math.PI/2),bottom:axis(1,0,0,-Math.PI/2)};
+ activeView=name;if(name==='overlay')projection='orthographic';
+ q=views[name]||views.overlay;autoFit=true;fit();updateLabels();
+ document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));
+ schedule();
+}
+function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){const info=gl.getShaderInfoLog(s);gl.deleteShader(s);throw new Error(info);}return s;}
+function initialize(){
+ const vert=shader(gl.VERTEX_SHADER,vs),frag=shader(gl.FRAGMENT_SHADER,fs);
+ program=gl.createProgram();gl.attachShader(program,vert);gl.attachShader(program,frag);gl.linkProgram(program);
+ if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));
+ gl.deleteShader(vert);gl.deleteShader(frag);
+ vao=gl.createVertexArray();gl.bindVertexArray(vao);
+ vertexBuffer=gl.createBuffer();indexBuffer=gl.createBuffer();
+ uploadMesh();
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic'])uniforms[name]=gl.getUniformLocation(program,name);
+ gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
+ const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
+ ready=true;status.hidden=true;schedule();
+ if(window.parent&&window.parent!==window)window.parent.postMessage({channel:'listaunton-review',event:'viewer-ready'},'*');
+}
+function draw(){
+ pending=false;if(!ready||lost)return;
+ const dpr=Math.min(window.devicePixelRatio||1,2),w=Math.max(1,Math.round(canvas.clientWidth*dpr)),h=Math.max(1,Math.round(canvas.clientHeight*dpr));
+ if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+ gl.viewport(0,0,w,h);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(program);gl.bindVertexArray(vao);
+ const f=1/tanHalf,n=radius*.01,far=radius*100;
+ const cameraMatrix=projection==='orthographic'?
+  [2/(orthoHeight*w/h),0,0,0,0,2/orthoHeight,0,0,0,0,-2/(far-n),0,0,0,-(far+n)/(far-n),1]:
+  [f/(w/h),0,0,0,0,f,0,0,0,0,(far+n)/(n-far),-1,0,0,2*far*n/(n-far),0];
+ gl.uniformMatrix4fv(uniforms.uProjection,false,new Float32Array(cameraMatrix));
+ gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,sharedCenter);
+ gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
+ gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
+ gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
+ gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
+}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(draw);}}
+function zoom(factor){autoFit=false;unselectViews();if(projection==='orthographic')orthoHeight=clamp(orthoHeight*factor,radius*.15,radius*40);else distance=clamp(distance*factor,radius*.8,radius*20);schedule();}
+function shift(dx,dy){autoFit=false;unselectViews();const scale=(projection==='orthographic'?orthoHeight:2*distance*tanHalf)/canvas.clientHeight;pan[0]+=dx*scale;pan[1]-=dy*scale;schedule();}
+function setProjection(name){
+ if(name===projection)return;
+ if(name==='orthographic')orthoHeight=2*distance*tanHalf;
+ else distance=clamp(orthoHeight/(2*tanHalf),radius*.8,radius*20);
+ projection=name;autoFit=false;unselectViews();schedule();
+}
+function ball(x,y){const r=canvas.getBoundingClientRect(),scale=.45*Math.min(r.width,r.height);x=(x-r.left-r.width/2)/scale;y=(r.height/2-y+r.top)/scale;const s=x*x+y*y;return normalize([x,y,s<=.5?Math.sqrt(1-s):.5/Math.sqrt(s)]);}
+function turn(a,b){
+ const dot=clamp(a[0]*b[0]+a[1]*b[1]+a[2]*b[2],-1,1);
+ let delta=[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0],1+dot];
+ if(dot<-.999999){const orth=Math.abs(a[0])<.9?[1,0,0]:[0,1,0];delta=[a[1]*orth[2]-a[2]*orth[1],a[2]*orth[0]-a[0]*orth[2],a[0]*orth[1]-a[1]*orth[0],0];}
+ autoFit=false;q=normalize(mul(normalize(delta),q));unselectViews();schedule();
+}
+const pointers=new Map();
+function gesture(){const p=[...pointers.values()];return p.length<2?null:{x:(p[0].x+p[1].x)/2,y:(p[0].y+p[1].y)/2,d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)};}
+canvas.addEventListener('pointerdown',e=>{if(e.button!==0&&e.button!==2)return;e.preventDefault();canvas.focus({preventScroll:true});canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey});canvas.classList.add('dragging');});
+canvas.addEventListener('pointermove',e=>{
+ const old=pointers.get(e.pointerId);if(!old)return;e.preventDefault();const before=gesture();
+ pointers.set(e.pointerId,{...old,x:e.clientX,y:e.clientY});const after=gesture();
+ if(before&&after){if(before.d>3&&after.d>3)zoom(before.d/after.d);shift(after.x-before.x,after.y-before.y);}
+ else if(old.pan||e.shiftKey)shift(e.clientX-old.x,e.clientY-old.y);
+ else turn(ball(old.x,old.y),ball(e.clientX,e.clientY));
+});
+function release(e){pointers.delete(e.pointerId);if(!pointers.size)canvas.classList.remove('dragging');}
+for(const name of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(name,release);
+canvas.addEventListener('contextmenu',e=>e.preventDefault());
+canvas.addEventListener('wheel',e=>{e.preventDefault();const unit=e.deltaMode===1?16:e.deltaMode===2?canvas.clientHeight:1;zoom(Math.exp(clamp(e.deltaY*unit,-300,300)*.0012));},{passive:false});
+canvas.addEventListener('dblclick',()=>view('front'));
+canvas.addEventListener('keydown',e=>{
+ const keys=['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','=','-','_','r','R'];if(!keys.includes(e.key))return;e.preventDefault();
+ if(e.key.toLowerCase()==='r')view('front');else if(e.key==='+'||e.key==='=')zoom(.85);else if(e.key==='-'||e.key==='_')zoom(1/.85);
+ else if(e.shiftKey)shift(e.key==='ArrowLeft'?-24:e.key==='ArrowRight'?24:0,e.key==='ArrowUp'?-24:e.key==='ArrowDown'?24:0);
+ else{const angle=Math.PI/24;const d=e.key==='ArrowLeft'?axis(0,1,0,-angle):e.key==='ArrowRight'?axis(0,1,0,angle):e.key==='ArrowUp'?axis(1,0,0,-angle):axis(1,0,0,angle);autoFit=false;q=normalize(mul(d,q));unselectViews();schedule();}
+});
+document.getElementById('reset').onclick=()=>view('front');
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));
+document.getElementById('zoom-in').onclick=()=>zoom(.85);document.getElementById('zoom-out').onclick=()=>zoom(1/.85);
+for(const name of ['orthographic','perspective'])document.getElementById(name).onclick=()=>setProjection(name);
+for(const name of ['neutral','brown'])document.getElementById(name).onclick=()=>{material=name;for(const id of ['neutral','brown'])document.getElementById(id).setAttribute('aria-pressed',String(id===name));updateLabels();schedule();};
+new ResizeObserver(()=>{fitComparison();if(autoFit)fit();schedule();}).observe(canvas);
+canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the view…';});
+canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();}catch(e){fail(e);}});
+function fail(error){status.hidden=stage.dataset.mode!=='rotate';status.textContent='The 3D view could not load. Profiles, overlays and the Blender download are still available.';console.error(error);}
+view('front');
+requestAnimationFrame(()=>setTimeout(()=>{try{initialize();}catch(error){fail(error);}},0));
+})();
+</script></body></html>

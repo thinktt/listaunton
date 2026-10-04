@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "canonicalKingUnchanged": true,
+  "preservedCanonicalFiles": [
+    "assets/king/camera.json",
+    "assets/king/mesh.bin",
+    "assets/king/mesh.json",
+    "assets/king/original.png",
+    "assets/king/reference.png",
+    "assets/king/render.png",
+    "assets/king/validation.json",
+    "models/king/king-rebuilt.blend"
+  ],
+  "expectedElevations": [
+    48,
+    52,
+    56,
+    60,
+    64
+  ],
+  "physicalBaseDiameterTolerancePercent": 2.5,
+  "closureEvidence": "Blender validation reports certify the two source components. This checker verifies hashes and exported binary structure; it does not infer manifoldness from duplicated viewer vertices.",
+  "variants": [
+    {
+      "id": "angle-48",
+      "elevation": 47.99999640606831,
+      "modelSha256": "a30508ead09ce7c2ed8901ac9891fb93f4e89795384371095ea99d0f5695915e",
+      "meshSha256": "4f3555474c03485309101fb14681698e306cb3724db79244e5484fe65821adbb",
+      "renderSha256": "ae6dd02186c33418d305dc4912e86a8bd6119a1c0b72fd26e234021c4a613ee9",
+      "triangleCount": 68492,
+      "baseDiameter": 2.0663816928863525,
+      "height": 4.590237140655518,
+      "heightDiameter": 2.2213887959120497,
+      "closedComponents": 2,
+      "originalSilhouetteIoU": 0.9551233794417457
+    },
+    {
+      "id": "angle-52",
+      "elevation": 52.000002283442704,
+      "modelSha256": "bf993711b18f3c9419b5ef8984245bbd0eb11711534881b05d1166b45e7ed147",
+      "meshSha256": "73fdbd414a3b8c9242098cab6e96e8d8ca30055cd7955093db9555a23d54c477",
+      "renderSha256": "aa3e96aebebd9fa84f6d11d9f63fa16edab8ff90a15a323ce45aa2650a4156bd",
+      "triangleCount": 68492,
+      "baseDiameter": 2.0663816928863525,
+      "height": 4.936618328094482,
+      "heightDiameter": 2.389015710451316,
+      "closedComponents": 2,
+      "originalSilhouetteIoU": 0.9599626622778467
+    },
+    {
+      "id": "angle-56",
+      "elevation": 56.00000619556176,
+      "modelSha256": "04951aca893df315240d1256bc67f03d7e15bd14d6b3d2f7d7b5311b37557617",
+      "meshSha256": "50e311027200f2f10d8ccbb020928d039d8543d5220e2f9d9eb555b84e4a9ccd",
+      "renderSha256": "6cb3fa3ccf8de086e8322be19896a6526cc3f57216615450253e35e4025167d8",
+      "triangleCount": 68492,
+      "baseDiameter": 2.0663816928863525,
+      "height": 5.362334251403809,
+      "heightDiameter": 2.5950356944527613,
+      "closedComponents": 2,
+      "originalSilhouetteIoU": 0.9626636185981343
+    },
+    {
+      "id": "angle-60",
+      "elevation": 60.00000103348732,
+      "modelSha256": "2dc139dc363adeac82353d8b83e673f3c0eab29a0a7f1fc59938ecb9dbc5a7de",
+      "meshSha256": "9c285fcf9fc47d4d53f78d091425b7746b9253a230b6dbd3abb8a3ffc5b39e38",
+      "renderSha256": "d1b9e359e89cfaf177f18c6de266353e1f000e5f50ca092d3d372aa286726752",
+      "triangleCount": 68492,
+      "baseDiameter": 2.0663816928863525,
+      "height": 5.9276838302612305,
+      "heightDiameter": 2.868629668307482,
+      "closedComponents": 2,
+      "originalSilhouetteIoU": 0.9466367355035039
+    },
+    {
+      "id": "angle-64",
+      "elevation": 63.99999232998677,
+      "modelSha256": "9e5eed1d497e77100a4749ba97232425b8d2fe11f6d4367d170483c21cca7ba2",
+      "meshSha256": "acff21b5d948132d009588f9ca4a6dfcfabc23220096a9333a7fce0294c35f0b",
+      "renderSha256": "2ac78ea8c74741f68d9c531666cb94cebba75aacc2e59502d6e11f3bdd12972e",
+      "triangleCount": 68492,
+      "baseDiameter": 2.0663816928863525,
+      "height": 6.699906826019287,
+      "heightDiameter": 3.242337487350054,
+      "closedComponents": 2,
+      "originalSilhouetteIoU": 0.9298401610989727
+    }
+  ]
+}
