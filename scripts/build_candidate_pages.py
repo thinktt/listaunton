@@ -10,6 +10,6 @@ for piece,images in data['pieces'].items():
     def options(selected):
         groups=[('Originals',[i for i in images if i['id'] in ('black','white')]),('Black enlargements',[i for i in images if i['id'].startswith('candidate-')]),('White enlargements',[i for i in images if i['id'].startswith('white-candidate-')])]
         return ''.join('<optgroup label="'+label+'">'+''.join(f'<option value="{v["id"]}"'+(' selected' if v['id']==selected else '')+f'>{v["label"]}</option>' for v in entries)+'</optgroup>' for label,entries in groups)
-    for key,value in {'__PIECE__':piece.title(),'__NAV__':nav,'__OPTIONS_A__':options('black'),'__OPTIONS_B__':options('candidate-1'),'__FIRST_A__':images[0]['file'],'__FIRST_B__':images[2]['file'],'__DATA__':json.dumps(dict(piece=piece.title(),images=images,viewPadding=5 if piece=='king' else 0),separators=(',',':')).replace('<','\\u003c')}.items():page=page.replace(key,value)
+    for key,value in {'__PIECE__':piece.title(),'__NAV__':nav,'__OPTIONS_A__':options('black'),'__OPTIONS_B__':options(images[2]['id']),'__FIRST_A__':images[0]['file'],'__FIRST_B__':images[2]['file'],'__DATA__':json.dumps(dict(piece=piece.title(),images=images,viewPadding=5 if piece=='king' else 0),separators=(',',':')).replace('<','\\u003c')}.items():page=page.replace(key,value)
     (root/f'{piece}-review.html').write_text(page,encoding='utf-8')
 print('Built five comparison pages.')

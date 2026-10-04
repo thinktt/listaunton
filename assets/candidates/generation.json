@@ -32,36 +32,6 @@
       "color": "black"
     },
     {
-      "piece": "rook",
-      "candidate": 1,
-      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK rook sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve exactly the same crenellations and notches (do not invent extra merlons), visible circular flat well, thick short castle rim, tapering body and rounded low base.\nCandidate 1 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
-      "file": "assets/candidates/rook/candidate-1.png",
-      "sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
-      "source": "references/lichess-staunton-3d/Black-Rook.png",
-      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
-      "color": "black"
-    },
-    {
-      "piece": "rook",
-      "candidate": 2,
-      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK rook sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve exactly the same crenellations and notches (do not invent extra merlons), visible circular flat well, thick short castle rim, tapering body and rounded low base.\nCandidate 2 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
-      "file": "assets/candidates/rook/candidate-2.png",
-      "sha256": "74c270282b914e2cb746d8df367791869f76fa43f3f3ea65a0be5af0f8af5007",
-      "source": "references/lichess-staunton-3d/Black-Rook.png",
-      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
-      "color": "black"
-    },
-    {
-      "piece": "rook",
-      "candidate": 3,
-      "prompt": "Use case: precise-object-edit.\nInput image is the EDIT TARGET: an original low-resolution Lichess 3D Staunton BLACK rook sprite, actually polished dark warm brown wood.\nCreate one very faithful high-resolution photographic reconstruction of exactly this rendered chess piece, for overlay comparison with the original. Output a square 1536x1536 image if possible. Keep the SAME full 300x300 composition scaled uniformly: identical camera elevation/azimuth, silhouette, projected height and width, position, margins, shape of each carved section, grooves, and original lighting directions. Do not reframe or enlarge the piece within the canvas. Preserve the reference's unusual proportions rather than replacing it with a generic Staunton piece. Reveal plausible fine wood grain and smooth carved contours with restrained detail, retaining dark walnut/caramel color, specular highlights and shading. This is an upscale interpretation, not a redesign. Preserve transparent background and any subtle original contact shadow. No text, labels, multiple views, collage, chessboard, extra pieces, ornaments, dramatic relighting or new features. Preserve exactly the same crenellations and notches (do not invent extra merlons), visible circular flat well, thick short castle rim, tapering body and rounded low base.\nCandidate 3 of three independent faithful reconstructions; not an artistic variant. Prioritize matching the source geometry over prettification.",
-      "file": "assets/candidates/rook/candidate-3.png",
-      "sha256": "1fef405cd9418b0597a6f2918f26b0050e83e737d6d5106f5645f5cb1135c31d",
-      "source": "references/lichess-staunton-3d/Black-Rook.png",
-      "source_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
-      "color": "black"
-    },
-    {
       "piece": "bishop",
       "candidate": 1,
       "prompt": "Use case: precise-object-edit. Make a very faithful high-resolution photographic enlargement of the attached original Lichess BLACK BISHOP sprite (polished dark warm brown wood), square image with transparent background. Preserve the exact camera angle, projection, placement, margins, silhouette, compact proportions, finial, collars, stem, socket, base, lighting and wood color.\nCRITICAL GEOMETRY CLARIFICATION FROM THE OWNER: the bishop's mitre has a FULL DEEP SAW-CUT SLIT THROUGH THE HEAD. The dark diagonal feature visible on the upper head is NOT a superficial engraved line, scratch, seam or decorative groove. Render an actual open diagonal slot cut deeply through the wooden mitre, with two clearly separated edges, visible inner cut walls and a dark recessed void between them. It must read unmistakably as removed wood and a structural split in the head. Follow the original diagonal slit location from the upper left flank toward the lower front of the head. Preserve the small rounded finial and the rest of the bulbous head; do not turn the head into a hollow bowl. Keep slot width restrained and faithful, but make its depth physically legible.\nReveal plausible fine wood grain and polished carved surfaces at high resolution. One single bishop, no text or extra objects. This is replacement candidate 1 of three faithful interpretations. Do not use a generic bishop design. Do not repeat the shallow incised line seen in many mistaken upscales.",
@@ -188,36 +158,6 @@
       "source_sha256": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48"
     },
     {
-      "piece": "rook",
-      "color": "white",
-      "candidate": 1,
-      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE rook, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 1 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
-      "file": "assets/candidates/rook/white-candidate-1.png",
-      "sha256": "b4965e5628979e1f38eef9c83943a63b30f4bd3c4012b41cfc7e2e738156bb76",
-      "source": "references/lichess-staunton-3d/White-Rook.png",
-      "source_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
-    },
-    {
-      "piece": "rook",
-      "color": "white",
-      "candidate": 2,
-      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE rook, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 2 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
-      "file": "assets/candidates/rook/white-candidate-2.png",
-      "sha256": "127256336dd3438a530b573408dcfc5066d6066a26cde2ef2d074bcf4148d6d8",
-      "source": "references/lichess-staunton-3d/White-Rook.png",
-      "source_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
-    },
-    {
-      "piece": "rook",
-      "color": "white",
-      "candidate": 3,
-      "prompt": "Use case: precise-object-edit.\nThe attached image is the edit target: the original low-resolution Lichess 3D Staunton WHITE rook, carved from polished light golden wood.\nCreate one extremely faithful high-resolution photographic enlargement of this exact image, on a transparent background. Preserve its complete square composition: the same camera angle and projection, shape, proportions, position, margins, carved features, lighting direction, highlights and shadows. Keep the light honey-gold wood color; do not turn it brown, white plastic, marble or ivory. Make the existing visible features crisp and reveal plausible fine natural wood grain without redesigning them. Follow the supplied image closely instead of substituting a generic chess piece. Preserve the original facing direction and silhouette. One piece only, no text, new ornaments, chessboard, extra objects or multiple views. Keep the original transparent background and subtle shadow. Output a high-resolution square image.\nCandidate 3 of three independent faithful enlargements. Use only the attached original as the reference, not any previous generated candidate.",
-      "file": "assets/candidates/rook/white-candidate-3.png",
-      "sha256": "9ecc6e2a40f67323ba85ff0edf946db8262257c4293ea590858e049384fbd047",
-      "source": "references/lichess-staunton-3d/White-Rook.png",
-      "source_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
-    },
-    {
       "piece": "bishop",
       "color": "white",
       "candidate": 1,
@@ -317,7 +257,8 @@
       "source": "assets/candidates/rook/candidate-1.png",
       "source_sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
       "supporting_reference": "references/lichess-staunton-3d/Black-Rook.png",
-      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+      "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf"
     },
     {
       "piece": "rook",
@@ -329,7 +270,8 @@
       "source": "assets/candidates/rook/candidate-1.png",
       "source_sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
       "supporting_reference": "references/lichess-staunton-3d/Black-Rook.png",
-      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+      "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf"
     },
     {
       "piece": "rook",
@@ -341,7 +283,47 @@
       "source": "assets/candidates/rook/candidate-1.png",
       "source_sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
       "supporting_reference": "references/lichess-staunton-3d/Black-Rook.png",
-      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+      "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf"
+    },
+    {
+      "piece": "rook",
+      "color": "white",
+      "candidate": 4,
+      "file": "assets/candidates/rook/white-candidate-4.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the high resolution WHITE wooden rook edit target; image 2 is the original low resolution white rook geometry and color reference. Change ONLY the TOP LEDGES of the two REAR curved battlements (upper two arcs). Reduce their radial thickness by about half, moving the inner upper edges outward toward the outer silhouette. Make these ledges narrow and nearly flat with a tiny crisp bevel, like the thin front rim, not broad rounded cushions. Extend the inner vertical walls from the new edges down to the existing floor. Preserve the outer silhouette, four slots, floor height, front battlements, stem, base, camera and composition. Preserve the original pale honey-gold wood color, lighting, grain and exposure; do not make it orange, darker, or more contrasty. No added rings, no redesign. Transparent background.",
+      "sha256": "7abffe15053f834e88240903b199583e14773e4d7bdb00433d4191c6345732cb",
+      "source": "assets/candidates/rook/white-candidate-3.png",
+      "source_sha256": "9ecc6e2a40f67323ba85ff0edf946db8262257c4293ea590858e049384fbd047",
+      "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf",
+      "supporting_reference": "references/lichess-staunton-3d/White-Rook.png",
+      "supporting_reference_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    {
+      "piece": "rook",
+      "color": "white",
+      "candidate": 5,
+      "file": "assets/candidates/rook/white-candidate-5.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the high resolution WHITE wooden rook edit target; image 2 is the original low resolution white rook geometry and color reference. Change ONLY the TOP LEDGES of the two REAR curved battlements (upper two arcs). Reduce their radial thickness by about half, moving the inner upper edges outward toward the outer silhouette. Make these ledges narrow and nearly flat with a tiny crisp bevel, like the thin front rim, not broad rounded cushions. Extend the inner vertical walls from the new edges down to the existing floor. Preserve the outer silhouette, four slots, floor height, front battlements, stem, base, camera and composition. Preserve the original pale honey-gold wood color, lighting, grain and exposure; do not make it orange, darker, or more contrasty. No added rings, no redesign. Transparent background.",
+      "sha256": "add436f6f838242b7c1a375c77e2a9e99e092d1ac3c570669328334f5301a624",
+      "source": "assets/candidates/rook/white-candidate-3.png",
+      "source_sha256": "9ecc6e2a40f67323ba85ff0edf946db8262257c4293ea590858e049384fbd047",
+      "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf",
+      "supporting_reference": "references/lichess-staunton-3d/White-Rook.png",
+      "supporting_reference_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    {
+      "piece": "rook",
+      "color": "white",
+      "candidate": 6,
+      "file": "assets/candidates/rook/white-candidate-6.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the high resolution WHITE wooden rook edit target; image 2 is the original low resolution white rook geometry and color reference. Change ONLY the TOP LEDGES of the two REAR curved battlements (upper two arcs). Reduce their radial thickness by about half, moving the inner upper edges outward toward the outer silhouette. Make these ledges narrow and nearly flat with a tiny crisp bevel, like the thin front rim, not broad rounded cushions. Extend the inner vertical walls from the new edges down to the existing floor. Preserve the outer silhouette, four slots, floor height, front battlements, stem, base, camera and composition. Preserve the original pale honey-gold wood color, lighting, grain and exposure; do not make it orange, darker, or more contrasty. No added rings, no redesign. Transparent background.",
+      "sha256": "c661df3a05a8fe32babff9ab9f5067930f4d080c2e82faedc6775dbda99ee18e",
+      "source": "assets/candidates/rook/white-candidate-3.png",
+      "source_sha256": "9ecc6e2a40f67323ba85ff0edf946db8262257c4293ea590858e049384fbd047",
+      "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf",
+      "supporting_reference": "references/lichess-staunton-3d/White-Rook.png",
+      "supporting_reference_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
     }
   ],
   "date": "2026-10-02",

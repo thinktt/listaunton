@@ -5,12 +5,13 @@ const settle=()=>new Promise(resolve=>setImmediate(resolve));
 async function check(piece){
  const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
  const data=JSON.parse(html.match(/<script id="comparison-data"[^>]*>(.*?)<\/script>/s)[1]);
- assert.equal(data.images.length,piece==='rook'?11:8);
- for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,piece==='rook'&&color==='Black'?6:3);
+ assert.equal(data.images.length,8);
+ for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,3);
+ const firstCandidate=data.images.find(x=>x.id.startsWith('candidate-')).id,lastCandidate=data.images.filter(x=>x.id.startsWith('candidate-')).at(-1).id;
  const nodes=new Map(),failed=new Set();let errors=0;
  function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},focus(){},getBoundingClientRect(){return {left:-100,width:1000};},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},stopPropagation(){},...event});}});return nodes.get(id);}
  const zooms=['fit','1','2'].map(value=>Object.assign(node('zoom-'+value),{dataset:{zoom:value}}));
- node('comparison-data').textContent=JSON.stringify(data);node('image-a').value='black';node('image-b').value='candidate-1';node('align').checked=true;node('mix').value='50';
+ node('comparison-data').textContent=JSON.stringify(data);node('image-a').value='black';node('image-b').value=firstCandidate;node('align').checked=true;node('mix').value='50';
  const doc={getElementById:node,querySelectorAll:()=>zooms,documentElement:{style:{setProperty(){}}}};
  class FakeImage{set src(value){queueMicrotask(()=>failed.has(value)?this.onerror():this.onload());}}
  vm.runInNewContext(source,{document:doc,window:{addEventListener(){}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
@@ -52,8 +53,8 @@ async function check(piece){
  node('viewport').scrollLeft=100;node('viewport').scrollTop=120;
  node('viewport').fire('pointerdown',{button:0,pointerId:1,clientX:100,clientY:100});node('viewport').fire('pointermove',{pointerId:1,clientX:140,clientY:120});node('viewport').fire('pointerup');
  assert.equal(node('viewport').scrollLeft,60);assert.equal(node('viewport').scrollTop,100);
- node('image-b').value='candidate-1';node('image-b').fire('change');node('image-b').value='candidate-3';node('image-b').fire('change');await settle();
- assert.equal(node('photo-b').src,data.images.find(x=>x.id==='candidate-3').file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
+ node('image-b').value=firstCandidate;node('image-b').fire('change');node('image-b').value=lastCandidate;node('image-b').fire('change');await settle();
+ assert.equal(node('photo-b').src,data.images.find(x=>x.id===lastCandidate).file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
  assert.equal(errors,0);
  console.log('PASS: '+piece+' — all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
 }
