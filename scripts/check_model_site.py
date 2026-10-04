@@ -42,7 +42,14 @@ for piece,(color,chosen) in selection.items():
  assert sha(reference)==sha(root/chosen_item['file']),piece+' wrong selected candidate'
  alignment=json.loads(data(html,'original-alignment'))
  assert alignment=={k:json.loads((root/f'assets/{piece}/original-alignment.json').read_text())[k] for k in ('scale','x','y')},piece+' stale alignment'
- print(f'PASS: {piece} review opens its current mesh/camera; selected reference and original are unchanged.')
+ original_item=next(i for i in placements[piece] if i['id']==color.lower())
+ expected_alignment={'scale':chosen_item['scale']/original_item['scale'],'x':(chosen_item['x']-original_item['x'])/original_item['scale'],'y':(chosen_item['y']-original_item['y'])/original_item['scale']}
+ for key in ('scale','x','y'):assert abs(alignment[key]-expected_alignment[key])<1e-9,piece+' wrong original registration'
+ for ident,path in [('original-image',root/f'assets/{piece}/original.png'),('reference-image',reference),('model-image',root/f'assets/{piece}/render.png')]:
+  encoded=re.search(r'<img id="'+ident+r'"[^>]*src="data:image/png;base64,([^"]+)"',html)
+  assert encoded,piece+' missing embedded '+ident
+  assert base64.b64decode(encoded.group(1))==path.read_bytes(),piece+' stale embedded '+ident
+ print(f'PASS: {piece} review opens its current mesh/camera/render; source images and registration are correct.')
 king=json.loads(data((root/'king-review.html').read_text(),'comparison-data'))
 assert king['projections']['page']=='king-projections.html'
 for name in ['index.html','set-comparison.html']:

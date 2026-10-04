@@ -1,0 +1,19 @@
+{
+  "id": "candidate-2",
+  "label": "Black candidate 2",
+  "file": "assets/candidates/pawn/candidate-2.png",
+  "width": 1254,
+  "height": 1254,
+  "flip": false,
+  "scale": 1.0084160756501184,
+  "x": -0.46631205673759263,
+  "y": 0.3767139479905349,
+  "silhouette_iou": 0.9678440925700366,
+  "silhouette_y": 0.2600472813238734,
+  "foot_refinement": {
+    "dy_original_px": 0.35,
+    "correlation_before": 0.9312,
+    "correlation_after": 0.94723,
+    "reference": "black"
+  }
+}

@@ -1,6 +1,6 @@
 # listaunton
 
-Reconstruct the Lichess Staunton chess set from its rendered images. The queen, king, rook, bishop and knight have editable reconstructions. Interpret unseen geometry as an art project while matching the references carefully. Wood grain is planned; current materials are diagnostic.
+Reconstruct the Lichess Staunton chess set from its rendered images. All six pieces have editable reconstructions. Interpret unseen geometry as an art project while matching the references carefully. Wood grain is planned; current materials are diagnostic.
 
 The user requests a Git commit after each completed, checked iteration. Do not push or publish unless asked; the user currently handles pushing.
 
@@ -30,4 +30,4 @@ Candidate comparison pages share assets/comparison/candidate-review.js and .css.
 
 King projection alternatives live in `assets/king-projections`, `models/king-projections`, and `scripts/king/*projections*`. They do not replace the current king. Preserve a fixed physical base diameter and shared profile/orbit framing between variants. Validate with `check_projection_variants.py` and `check_projections_viewer.cjs`; see `docs/king-projections.md`.
 
-Additional pieces follow `scripts/<piece>`, `assets/<piece>`, `models/<piece>`, `history/<piece>` and `<piece>-model.html`. Rook uses original black / selected black 8; bishop uses original white / selected white 3; knight uses original black / selected black 2 with mirrored white for secondary comparison. Their starting camera is 54 degrees. Preserve selected-reference hashes and coordinate registration. `scripts/check_model_site.py` checks activated review frames, embedded mesh/camera and unchanged source selection.
+Additional pieces follow `scripts/<piece>`, `assets/<piece>`, `models/<piece>`, `history/<piece>` and `<piece>-model.html`. Rook uses original black / selected black 8; bishop uses original white / selected white 3; knight uses original black / selected black 2 with mirrored white for secondary comparison. Pawn uses original black / selected black 2. Their starting camera is 54 degrees. Preserve selected-reference hashes and coordinate registration. `scripts/check_model_site.py` checks activated review frames, embedded mesh/camera and unchanged source selection.
