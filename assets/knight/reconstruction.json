@@ -1,8 +1,9 @@
 {
   "piece": "Knight",
-  "revision": "07-cheek-and-neck-refinement",
+  "revision": "11-anatomy-correction-conical-muzzle",
   "source_priority": [
-    "Original black and white Lichess 300px sprites",
+    "Owner-requested plausible horse anatomy and stronger conical muzzle, using the approved imagined side study for unseen side form",
+    "Original black and white Lichess 300px sprites for set character and overhead comparison",
     "Selected black candidate 2 enlargement for secondary detail interpretation"
   ],
   "reference_camera": {
@@ -11,26 +12,27 @@
     "basis": "Initial whole-set elevation from rook estimate; still an interpretation"
   },
   "geometry": {
-    "method": "Turned lathe pedestal; dense elliptical lofts for neck/head/jaw; remeshed continuous sculpt skin; swept oval-section mane and paired ears; recessed eyes, nostrils and mouth; bilateral neck channels",
+    "method": "One continuous skull/cheek/chin/muzzle envelope joined to neck; tapering cross-sections continue down to a small rounded cone end; inset upper-lateral almond eyes and small nostril recesses; laid-back ears and inward-filled arched mane; established turned pedestal",
     "visible_components": 7,
-    "hidden_construction_lofts": 3,
-    "triangles": 196806,
+    "hidden_construction_lofts": 2,
+    "triangles": 184918,
     "parts_intersect": true,
     "manufacturing_ready": false
   },
   "internal_review": {
     "observations": [
-      "Both original colors show the same low muzzle, arched mane, laid-back ear, cheek undercut and sloping neck channels.",
-      "Original white was mirrored and registered for a second silhouette check.",
-      "Side, front and opposite renders were visually inspected to verify substantial depth and continuity.",
-      "Final comparison lowered and deepened the cheek to match its undercut in both original sprites; original mean contour discrepancy is 1.38 source pixels."
+      "Previous 196,806-triangle model was rejected after rotation despite its high silhouette overlap; its separate jaw volume read as a hanging bag.",
+      "Four corrective anatomy studies removed the separate jaw, moved the eye to the upper skull, restored laid-back ears from the approved concept, joined the mane to the neck, and progressively tapered the muzzle tip.",
+      "True level profile, front, three-quarter, side, opposite and reference-camera renders were visually inspected.",
+      "Front and Side viewer presets now correspond to muzzle-facing and horse-profile views.",
+      "Original silhouette IoU is 0.92495 and mean boundary discrepancy is 3.14 original pixels. These record the overhead difference; they are not an anatomy quality score."
     ],
     "limitations": [
-      "The 54 degree orthographic camera, bilateral depth and unseen anatomy are inferred.",
-      "The shape and depth of ear cupping, cheek, nostrils and chest channels remain interpretations; silhouette overlap does not validate them.",
-      "Mane, ears, eyes and pedestal remain separately closed intersecting components.",
-      "Neutral clay lighting differs from the reference wood; no wood texture or grain has been reconstructed.",
-      "Browser rendering was not exercised; controls and exact camera projection were checked by the inherited Node VM harness."
+      "The generated side study is an owner-approved interpretation, not recovered geometry. The 54-degree camera and unseen bilateral depth remain inferred.",
+      "Small carved features and surface transitions remain artistic approximations; original overhead silhouette agreement decreased with the authorized anatomy correction.",
+      "Mane, ears, eyes and pedestal remain separate closed components intersecting the continuous head-neck skin. They are not fused for manufacturing.",
+      "Neutral clay lighting differs from the reference wood; wood grain and materials have not been reconstructed.",
+      "Browser rendering was not exercised; controls, horse front/side presets and exact saved-camera projection were checked with the Node VM harness."
     ]
   },
   "history": [
@@ -39,11 +41,16 @@
     "03-sculpted-channels",
     "04-ear-mouth-collar",
     "05-continuous-sculpt",
-    "06-volume-and-export-verified"
+    "06-volume-and-export-verified",
+    "07-before-anatomy-correction",
+    "08-single-envelope-study",
+    "09-concept-profile-study",
+    "10-joined-mane-study"
   ],
   "source_hashes": {
     "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
     "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
     "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
-  }
+  },
+  "side_study": "assets/knight/concepts/side-01.png"
 }

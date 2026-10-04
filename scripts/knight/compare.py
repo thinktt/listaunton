@@ -12,7 +12,7 @@ white_reg=json.loads((out/'white-registration.json').read_text()); ws=white_reg[
 white=Image.open(out/'white-original.png').convert('RGBA').transpose(Image.Transpose.FLIP_LEFT_RIGHT).transform((W,W),Image.Transform.AFFINE,(s*300/W/ws,0,(x-wx)*3/ws,0,s*300/W/ws,(y-wy)*3/ws),Image.Resampling.BILINEAR)
 white=np.array(white)
 def bounds(mask):return np.argmax(mask,axis=1),mask.shape[1]-1-np.argmax(mask[:,::-1],axis=1)
-report={'note':'Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.','images':{}}
+report={'note':'Silhouette scores document visible-boundary differences only. The owner-requested horse anatomy and approved side study govern this revision; original sprites guide set character and overhead comparison. Scores do not validate anatomy, wood, lighting or unseen surfaces.','images':{}}
 for name,ar in [('original',original),('selected',ref),('white-original-mirrored',white)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

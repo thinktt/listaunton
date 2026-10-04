@@ -192,7 +192,7 @@ function updateLabels(){
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
- const views={overlay:referenceQuaternion(),threequarter:mul(axis(1,0,0,25*Math.PI/180),axis(0,1,0,-25*Math.PI/180)),front:[0,0,0,1],side:axis(0,1,0,Math.PI/2),top:axis(1,0,0,Math.PI/2),bottom:axis(1,0,0,-Math.PI/2)};
+ const views={overlay:referenceQuaternion(),threequarter:mul(axis(1,0,0,25*Math.PI/180),axis(0,1,0,-25*Math.PI/180)),front:axis(0,1,0,-Math.PI/2),side:[0,0,0,1],top:axis(1,0,0,Math.PI/2),bottom:axis(1,0,0,-Math.PI/2)};
  activeView=name;if(name==='overlay')projection='orthographic';
  q=views[name]||views.overlay;autoFit=true;fit();updateLabels();
  document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));

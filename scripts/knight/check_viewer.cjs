@@ -65,6 +65,9 @@ listeners.wheel({deltaMode:0,deltaY:120,preventDefault(){}});flush();
 const orbit=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
 node('compare-tab').onclick();flush();node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbit,'Tabs changed orbit');
 node('reset').onclick();flush();compare();
+views.find(b=>b.dataset.view==='side').onclick();flush();assert(Math.abs(pixel([1,0,4])[0]-pixel([-1,0,4])[0])>100,'Side must show the horse profile');
+views.find(b=>b.dataset.view==='front').onclick();flush();assert(Math.abs(pixel([1,0,4])[0]-pixel([-1,0,4])[0])<.001,'Front must look along the horse muzzle');assert(uniforms.uRotation[2]>.999,'Front must face the muzzle, not the mane');
+node('reset').onclick();flush();compare();
 const before=pixel([0,0,2]);
 listeners.pointerdown({button:2,pointerId:2,clientX:600,clientY:600,shiftKey:false,preventDefault(){}});
 listeners.pointermove({pointerId:2,clientX:650,clientY:570,shiftKey:false,preventDefault(){}});listeners.pointerup({pointerId:2});flush();
@@ -76,5 +79,5 @@ node('model-opacity').value='73';node('model-opacity').events.input();assert.equ
 assert(html.includes('#model-image{opacity:.5;background:#000}'),'Model-only image must have an opaque backnight.');
 assert(parentMessages.some(m=>m.channel==='listaunton-review'&&m.event==='viewer-ready'));
 windowListeners.message({source:{},data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();assert.notEqual(node('brown').attrs['aria-pressed'],'true');
-const report={passed:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256};
+const report={passed:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,horseFrontSidePresets:true,cameraReset:true,sourceSha256:meta.sourceSha256};
 fs.writeFileSync(path.join(root,'assets/knight/viewer-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

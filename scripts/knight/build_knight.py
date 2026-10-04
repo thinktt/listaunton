@@ -55,37 +55,39 @@ def headloft(name,rows):
   for t in theta:
    yy=ry*math.sin(t);zz=z+rz*math.cos(t)
    # Sockets and nostrils are sculpted into the side, not painted on.
-   socket=math.exp(-((x-118)/4.5)**2-((zz-4.17)/.105)**2)
-   nostril=math.exp(-((x-167)/2.8)**2-((zz-3.80)/.085)**2)
+   socket=math.exp(-((x-119)/4.4)**2-((zz-4.45)/.105)**2)
+   brow=math.exp(-((x-119)/7.5)**2-((zz-4.60)/.13)**2)
+   nostril=math.exp(-((x-164.5)/2.1)**2-((zz-3.72)/.060)**2)
    muzzle_groove=(math.exp(-((x-(151+(zz-3.8)*15))/1.25)**2)+.6*math.exp(-((x-(163+(zz-3.7)*12))/1.0)**2))
    mouth=math.exp(-((zz-(z-.60*rz))/.040)**2)*math.exp(-((x-160)/16)**8) if x>138 else 0
-   yy*=1-.35*socket-.34*nostril-.30*mouth
+   yy*=1-.23*socket+.10*brow-.24*nostril-.08*mouth
    ring.append((mx(x),yy,zz))
   rings.append(ring)
  return closedrings(name,rings,1)
-head=headloft('Knight | forehead and tapered muzzle',cfg['head']); jaw=headloft('Knight | rounded jaw and chin',cfg['jaw'])
+head=headloft('Knight | coherent skull cheek and conical muzzle',cfg['head'])
 # Rounded swept mane follows the arch. Its oval depth is real and symmetric.
 mane=[];path=cfg['mane']
 for j,(x,v,r,dep) in enumerate(path):
  prev=Vector((mx(path[max(0,j-1)][0]),mz(path[max(0,j-1)][1])));nxt=Vector((mx(path[min(len(path)-1,j+1)][0]),mz(path[min(len(path)-1,j+1)][1])))
  tangent=(nxt-prev).normalized();normal=Vector((-tangent.y,tangent.x))
- mane.append([(mx(x)+normal.x*r*math.cos(t),dep*math.sin(t),mz(v)+normal.y*r*math.cos(t)) for t in theta])
+ fill=cfg.get('mane_inward_fill',[0]*len(path))[j]
+ mane.append([(mx(x)+normal.x*(fill+(r+fill)*math.cos(t)),dep*math.sin(t),mz(v)+normal.y*(fill+(r+fill)*math.cos(t))) for t in theta])
 closedrings('Knight | swept rounded mane',mane,2)
 # Flattened pointed ears laid back along the poll, cupped and mirrored.
 for side in [-1,1]:
  rings=[]
- for x,z,y,ry,rz in [[70,4.98,.22,.01,.012],[76,4.92,.35,.06,.055],[88,4.75,.43,.09,.075],[102,4.57,.40,.085,.08],[114,4.44,.31,.06,.09],[119,4.43,.24,.01,.02]]:
+ for x,z,y,ry,rz in [[82,5.03,.28,.01,.02],[88,5.00,.39,.07,.07],[99,4.91,.46,.105,.10],[111,4.80,.46,.10,.095],[122,4.72,.38,.065,.08],[128,4.70,.28,.01,.025]]:
   rings.append([(mx(x),side*(y+ry*math.sin(t)),z+rz*math.cos(t)) for t in theta])
  closedrings('Knight | '+('near' if side<0 else 'far')+' swept ear',rings,2)
  # A small closed almond form sits in the recessed orbital plane.
- bpy.ops.mesh.primitive_uv_sphere_add(segments=32,ring_count=16,location=(mx(119),side*.30,4.09));ob=bpy.context.object;ob.name='Knight | '+('near' if side<0 else 'far')+' eye';ob.scale=(.115,.050,.067)
+ bpy.ops.mesh.primitive_uv_sphere_add(segments=32,ring_count=16,location=(mx(119),side*.465,4.45));ob=bpy.context.object;ob.name='Knight | '+('near' if side<0 else 'far')+' eye';ob.scale=(.087,.025,.049);ob.rotation_euler[1]=.22
  bpy.ops.object.transform_apply(location=False,rotation=False,scale=True);ob.data.materials.append(mat)
  for p in ob.data.polygons:p.use_smooth=True
  objects.append(ob)
-# An editable sculpted skin joins the cheek, neck and head. Source lofts remain hidden.
+# One head envelope already contains skull, cheek, chin and muzzle. Unite only the neck join; keep both source lofts editable.
 construction=bpy.data.collections.new('Construction lofts | hidden');scene.collection.children.link(construction)
 skinparts=[]
-for source in [neck,head,jaw]:
+for source in [neck,head]:
  copy=source.copy();copy.data=source.data.copy();scene.collection.objects.link(copy);copy.hide_render=False;copy.hide_viewport=False;skinparts.append(copy)
  for collection in list(source.users_collection):collection.objects.unlink(source)
  construction.objects.link(source);source.hide_render=True;source.hide_set(True);objects.remove(source)
@@ -94,9 +96,9 @@ for ob in skinparts:
  ob.select_set(True);bpy.context.view_layer.objects.active=ob
  for mod in list(ob.modifiers):bpy.ops.object.modifier_apply(modifier=mod.name)
 for ob in skinparts:ob.select_set(True)
-bpy.context.view_layer.objects.active=skinparts[0];bpy.ops.object.join();skin=bpy.context.object;skin.name='Knight | continuous sculpted head and neck'
+bpy.context.view_layer.objects.active=skinparts[0];bpy.ops.object.join();skin=bpy.context.object;skin.name='Knight | continuous horse head and neck'
 remesh=skin.modifiers.new('Joined anatomical skin','REMESH');remesh.mode='VOXEL';remesh.voxel_size=.018;remesh.use_smooth_shade=True;bpy.ops.object.modifier_apply(modifier=remesh.name)
-smooth=skin.modifiers.new('Soften carved transitions','SMOOTH');smooth.factor=.40;smooth.iterations=3;bpy.ops.object.modifier_apply(modifier=smooth.name)
+smooth=skin.modifiers.new('Soften carved transitions','SMOOTH');smooth.factor=.40;smooth.iterations=7;bpy.ops.object.modifier_apply(modifier=smooth.name)
 dec=skin.modifiers.new('Efficient sculpt surface','DECIMATE');dec.ratio=.48;bpy.ops.object.modifier_apply(modifier=dec.name)
 for p in skin.data.polygons:p.use_smooth=True
 objects.append(skin);neck=skin
