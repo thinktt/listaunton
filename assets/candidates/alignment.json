@@ -243,6 +243,44 @@
         }
       },
       {
+        "id": "candidate-5",
+        "label": "Black candidate 5",
+        "file": "assets/candidates/rook/candidate-5.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9803864734299517,
+        "x": 0.7222222222222239,
+        "y": 1.515700483091783,
+        "silhouette_iou": 0.9606635881648709,
+        "silhouette_y": 1.0157004830917895,
+        "foot_refinement": {
+          "dy_original_px": 1.5,
+          "correlation_before": 0.55756,
+          "correlation_after": 0.86757,
+          "reference": "black"
+        }
+      },
+      {
+        "id": "candidate-6",
+        "label": "Black candidate 6",
+        "file": "assets/candidates/rook/candidate-6.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9842836257309941,
+        "x": 0.5307017543859666,
+        "y": 1.1789473684210439,
+        "silhouette_iou": 0.9612032131259614,
+        "silhouette_y": 0.7456140350877168,
+        "foot_refinement": {
+          "dy_original_px": 1.3,
+          "correlation_before": 0.6108,
+          "correlation_after": 0.87501,
+          "reference": "black"
+        }
+      },
+      {
         "id": "white-candidate-1",
         "label": "White candidate 1",
         "file": "assets/candidates/rook/white-candidate-1.png",

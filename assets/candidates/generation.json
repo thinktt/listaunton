@@ -318,6 +318,30 @@
       "source_sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
       "supporting_reference": "references/lichess-staunton-3d/Black-Rook.png",
       "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    {
+      "piece": "rook",
+      "color": "black",
+      "candidate": 5,
+      "file": "assets/candidates/rook/candidate-5.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the high resolution edit target; image 2 is the original low resolution geometry reference. Change ONLY the TOP LEDGES of the two REAR curved battlements of the rook turret (the two arcs across the upper part of the image). Their radial thickness is currently exaggerated. Reduce the visible width of those two rear top ledges by about half, moving their inner upper edges outward toward the outer silhouette. Make the ledges narrow and flat, with a tiny crisp bevel, like the thin front rim. Continue the inner vertical walls down from these new edges to the existing floor. The rear wall's visible vertical height is NOT its top ledge thickness. Preserve the outer silhouette and all four notch positions. Keep the front two battlements, floor, stem, base, camera, lighting, wood color, grain and composition unchanged. No added rings, no redesign, transparent background. This is a surgical reduction of the rear rim thickness, not a new rook.",
+      "sha256": "422fe2932c52baeafef401a15efb4063a275488c315c39c2ff7cf7533096efcf",
+      "source": "assets/candidates/rook/candidate-1.png",
+      "source_sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
+      "supporting_reference": "references/lichess-staunton-3d/Black-Rook.png",
+      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    {
+      "piece": "rook",
+      "color": "black",
+      "candidate": 6,
+      "file": "assets/candidates/rook/candidate-6.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the high resolution edit target; image 2 is the original low resolution geometry reference. Change ONLY the TOP LEDGES of the two REAR curved battlements of the rook turret (the two arcs across the upper part of the image). Their radial thickness is currently exaggerated. Reduce the visible width of those two rear top ledges by about half, moving their inner upper edges outward toward the outer silhouette. Make the ledges narrow and flat, with a tiny crisp bevel, like the thin front rim. Continue the inner vertical walls down from these new edges to the existing floor. The rear wall's visible vertical height is NOT its top ledge thickness. Preserve the outer silhouette and all four notch positions. Keep the front two battlements, floor, stem, base, camera, lighting, wood color, grain and composition unchanged. No added rings, no redesign, transparent background. This is a surgical reduction of the rear rim thickness, not a new rook.",
+      "sha256": "75a806e0fc3d3a1162871012c3a007ad05850c3092684690fafc4a2411909ec5",
+      "source": "assets/candidates/rook/candidate-1.png",
+      "source_sha256": "43eee4536f385938c3751ea1617fc115bd82f16ad153c7f0b3c5b3d666c00504",
+      "supporting_reference": "references/lichess-staunton-3d/Black-Rook.png",
+      "supporting_reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
     }
   ],
   "date": "2026-10-02",
