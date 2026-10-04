@@ -12,6 +12,8 @@ The king uses the original Lichess sprite as the authority for proportions, with
 
 See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
 
+[The shared camera study](camera-study.html) compares circular features across all six original pieces. Its working estimate is about 54° above the board, with substantial uncertainty; existing models and review pages remain unchanged.
+
 ## Files
 
 - `models/queen/queen-rebuilt.blend`: current editable Blender model, with its reference packed inside.

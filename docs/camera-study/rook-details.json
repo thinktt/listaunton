@@ -1,0 +1,361 @@
+{
+  "piece": "Rook",
+  "source_size": [
+    300,
+    300
+  ],
+  "coordinate_convention": "Origin upper left, x right, y down; source pixel centers. All landmark points picked independently from enlarged original White-Rook. Black-original overlays cross-check same geometry, not additional independent samples.",
+  "sources": {
+    "White": {
+      "path": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\references\\lichess-staunton-3d\\White-Rook.png",
+      "sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    "Black": {
+      "path": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires\\references\\lichess-staunton-3d\\Black-Rook.png",
+      "sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    }
+  },
+  "method": "Axis-aligned ellipse, linear initialization followed by Gauss-Newton minimizing approximate orthogonal pixel residuals. Orthographic/weak-perspective circle assumption: elevation above horizontal = asin(ry/rx). No king-derived angle or generated reference used.",
+  "fits": {
+    "top_bevel_crest": {
+      "color": "White",
+      "points": [
+        [
+          79,
+          89
+        ],
+        [
+          84,
+          83
+        ],
+        [
+          90,
+          78
+        ],
+        [
+          97,
+          74
+        ],
+        [
+          103,
+          72
+        ],
+        [
+          125,
+          72
+        ],
+        [
+          132,
+          74
+        ],
+        [
+          139,
+          79
+        ],
+        [
+          145,
+          84
+        ],
+        [
+          150,
+          90
+        ],
+        [
+          77,
+          108
+        ],
+        [
+          80,
+          116
+        ],
+        [
+          85,
+          122
+        ],
+        [
+          91,
+          127
+        ],
+        [
+          98,
+          130
+        ],
+        [
+          104,
+          132
+        ],
+        [
+          125,
+          132
+        ],
+        [
+          132,
+          130
+        ],
+        [
+          139,
+          126
+        ],
+        [
+          145,
+          121
+        ],
+        [
+          150,
+          115
+        ],
+        [
+          153,
+          108
+        ]
+      ],
+      "confidence": "moderate",
+      "meaning": "Visible top-rim bevel crest on four battlements. Missing notch sectors excluded. Approximates a same-height circular rim, but illumination can shift the highlight across the bevel.",
+      "fit": {
+        "cx": 114.47123,
+        "cy": 102.07567,
+        "rx": 38.59032,
+        "ry": 31.1471,
+        "q": 0.80712,
+        "elevation_degrees": 53.8157,
+        "normal_residual_rms_px": 0.32923
+      },
+      "point_jitter_sensitivity": {
+        "sigma_each_xy_px": 0.75,
+        "trials": 2000,
+        "successful": 2000,
+        "elevation_p05_median_p95": [
+          51.839,
+          53.811,
+          55.801
+        ],
+        "note": "Landmark jitter only, not full systematic uncertainty or an independent confidence interval."
+      },
+      "annotations": {
+        "white": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\angle-analysis\\rook\\white-top_bevel_crest-annotated.png",
+        "black": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\angle-analysis\\rook\\black-top_bevel_crest-annotated.png"
+      },
+      "use_in_combined_estimate": true
+    },
+    "top_outer_edge": {
+      "color": "White",
+      "points": [
+        [
+          78,
+          85
+        ],
+        [
+          84,
+          77
+        ],
+        [
+          90,
+          72.5
+        ],
+        [
+          99,
+          68
+        ],
+        [
+          105,
+          66.5
+        ],
+        [
+          125,
+          66.5
+        ],
+        [
+          134,
+          70
+        ],
+        [
+          143,
+          76
+        ],
+        [
+          150,
+          83
+        ],
+        [
+          154,
+          90
+        ],
+        [
+          73,
+          108
+        ],
+        [
+          76,
+          116
+        ],
+        [
+          81,
+          123
+        ],
+        [
+          90,
+          130
+        ],
+        [
+          100,
+          134
+        ],
+        [
+          106,
+          135
+        ],
+        [
+          124,
+          135
+        ],
+        [
+          132,
+          132.5
+        ],
+        [
+          140,
+          128
+        ],
+        [
+          148,
+          122
+        ],
+        [
+          154,
+          116
+        ],
+        [
+          157,
+          106
+        ]
+      ],
+      "confidence": "low to moderate",
+      "meaning": "Outer visible rim boundary, excluding notches. Systematic check only: front boundary can lie down a rounded bevel rather than the same Z plane as rear silhouette; do not average as an independent camera measurement.",
+      "fit": {
+        "cx": 114.43294,
+        "cy": 101.04329,
+        "rx": 42.24218,
+        "ry": 34.98589,
+        "q": 0.82822,
+        "elevation_degrees": 55.9165,
+        "normal_residual_rms_px": 0.50842
+      },
+      "point_jitter_sensitivity": {
+        "sigma_each_xy_px": 0.75,
+        "trials": 2000,
+        "successful": 2000,
+        "elevation_p05_median_p95": [
+          54.175,
+          55.866,
+          57.77
+        ],
+        "note": "Landmark jitter only, not full systematic uncertainty or an independent confidence interval."
+      },
+      "annotations": {
+        "white": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\angle-analysis\\rook\\white-top_outer_edge-annotated.png",
+        "black": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\angle-analysis\\rook\\black-top_outer_edge-annotated.png"
+      },
+      "use_in_combined_estimate": false
+    },
+    "lower_collar_crest": {
+      "color": "White",
+      "points": [
+        [
+          72,
+          191
+        ],
+        [
+          76,
+          198
+        ],
+        [
+          82,
+          205
+        ],
+        [
+          89,
+          211
+        ],
+        [
+          98,
+          215.5
+        ],
+        [
+          107,
+          218
+        ],
+        [
+          116,
+          218.5
+        ],
+        [
+          125,
+          218
+        ],
+        [
+          135,
+          214
+        ],
+        [
+          144,
+          209
+        ],
+        [
+          151,
+          202
+        ],
+        [
+          157,
+          191
+        ],
+        [
+          159,
+          181
+        ]
+      ],
+      "confidence": "low",
+      "meaning": "Narrow lower collar bright crest, visible front arc only. Rear half occluded and left edge dark: fitted radii and center are correlated. Rounded torus silhouette is not substituted for a planar circle.",
+      "fit": {
+        "cx": 114.79421,
+        "cy": 178.5302,
+        "rx": 44.47779,
+        "ry": 40.06414,
+        "q": 0.90077,
+        "elevation_degrees": 64.25913,
+        "normal_residual_rms_px": 0.2505
+      },
+      "point_jitter_sensitivity": {
+        "sigma_each_xy_px": 0.75,
+        "trials": 2000,
+        "successful": 1806,
+        "elevation_p05_median_p95": [
+          53.858,
+          63.215,
+          77.114
+        ],
+        "note": "Landmark jitter only, not full systematic uncertainty or an independent confidence interval."
+      },
+      "annotations": {
+        "white": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\angle-analysis\\rook\\white-lower_collar_crest-annotated.png",
+        "black": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\angle-analysis\\rook\\black-lower_collar_crest-annotated.png"
+      },
+      "use_in_combined_estimate": false
+    }
+  },
+  "shared_camera_use": {
+    "recommended_elevation_degrees": 54,
+    "plausible_range_degrees": [
+      50,
+      58
+    ],
+    "confidence": "moderate",
+    "use_fit": "top_bevel_crest",
+    "reason": "Four exposed battlement arcs sample both rear and front halves of a nearly horizontal circular rim. Missing notch sectors are omitted. The top bevel highlight may shift across its curved section, so the 0.33px fit residual is not the camera uncertainty.",
+    "not_independent": [
+      "The black and white sprites depict the same geometry and reuse the same selected pixel coordinates here.",
+      "Outer-rim and crest fits use the same ring; their approximately2.1degree difference estimates boundary-choice sensitivity.",
+      "Lower collar lacks rear arc and poorly constrains ellipse center and radii; do not include its64degree estimate as a contradictory reliable camera measurement."
+    ],
+    "shared_camera_caveat": "Use a shared-elevation fit only for true same-plane circular curves. A rounded surface silhouette, inset cavity floor, groove wall, and battlement crest can be different 3D circles or heights. Orthographic q=sin(elevation) is exact for a horizontal circle; perspective introduces further uncertainty."
+  }
+}
