@@ -42,7 +42,12 @@ def check(root, manifest_file, baseline_file):
     required_baseline = {'models/king/king-rebuilt.blend', 'assets/king/mesh.json', 'assets/king/mesh.bin', 'assets/king/render.png', 'assets/king/camera.json', 'assets/king/reference.png', 'assets/king/original.png', 'assets/king/validation.json'}
     require(required_baseline <= canonical.keys(), 'Preservation snapshot is incomplete')
     for name, expected in canonical.items():
-        require(sha(local(name)) == expected, f'Canonical king changed: {name}')
+        actual = sha(local(name))
+        if actual != expected and name in baseline.get('jsonContentSha256', {}):
+            content = json.dumps(json.loads(local(name).read_text()), sort_keys=True, separators=(',', ':')).encode()
+            require(hashlib.sha256(content).hexdigest() == baseline['jsonContentSha256'][name], f'Canonical king data changed: {name}')
+        else:
+            require(actual == expected, f'Canonical king changed: {name}')
 
     variants = manifest['variants']
     require(len(variants) == 5, 'Expected five projection variants')

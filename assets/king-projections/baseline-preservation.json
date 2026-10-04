@@ -9,5 +9,11 @@
     "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
     "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
     "assets/king/validation.json": "a5a63b78d82d3762abc4585e7bbb4bc41389a05bf44b10df451ffac6c6dec548"
-  }
+  },
+  "jsonContentSha256": {
+    "assets/king/mesh.json": "fc2080f343b80e6f94157f971f8bd3f6a01c3bcfcf1e56d83d77678fabb6f14e",
+    "assets/king/camera.json": "cdff471de17c95b7f64e342e289531f466f34ac43ebfd320eae8396e39132f6c",
+    "assets/king/validation.json": "94a2cdc506d35ae6660bbd38b9141802f8ce2cd4639b44175f137542f06003bf"
+  },
+  "jsonHashNote": "Retain original byte hashes; canonical JSON content hashes also tolerate Git line-ending conversion without accepting data changes."
 }
