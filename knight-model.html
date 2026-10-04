@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Knight â€” model comparison</title>
+<title>Knight — model comparison</title>
 <style>
 :root{color-scheme:dark;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#eceae5;background:#121519}
 *{box-sizing:border-box}body{margin:0;min-width:300px}main{height:100vh;height:100dvh;min-height:480px;display:flex;flex-direction:column}
@@ -42,7 +42,7 @@ header .download{font-size:12px}
 </head>
 <body>
 <main>
-<header><div><h1>Knight model</h1><p>Original Lichess knight Â· geometry study</p></div><a class="download" href="models/knight/knight-rebuilt.blend" download>Blender file â†—</a></header>
+<header><div><h1>Knight model</h1><p>Original Lichess knight · geometry study</p></div><a class="download" href="models/knight/knight-rebuilt.blend" download>Blender file ↗</a></header>
 <nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 2</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
@@ -50,9 +50,9 @@ header .download{font-size:12px}
 <section class="stage" data-mode="compare" id="stage" aria-label="Knight model comparison">
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0@" alt="Selected reference: black knight candidate 2" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f@" alt="Original Lichess black knight" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:039b0838321a94fce2c4dff0b920d1dcdb6a7875688d692ece6c8bfae2031f76@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D knight. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
-<div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">âˆ’</button></div>
-<div class="badge" id="surface-note">Overlay camera Â· neutral surface</div>
-<div class="status" id="status" role="status" aria-live="polite">Loading the knightâ€¦</div>
+<div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+<div class="badge" id="surface-note">Overlay camera · neutral surface</div>
+<div class="status" id="status" role="status" aria-live="polite">Loading the knight…</div>
 </section>
 
 </main>
@@ -188,7 +188,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' Â· '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
+ document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -273,7 +273,7 @@ document.getElementById('zoom-in').onclick=()=>zoom(.85);document.getElementById
 for(const name of ['orthographic','perspective'])document.getElementById(name).onclick=()=>setProjection(name);
 for(const name of ['neutral','brown'])document.getElementById(name).onclick=()=>{material=name;for(const id of ['neutral','brown'])document.getElementById(id).setAttribute('aria-pressed',String(id===name));updateLabels();schedule();};
 new ResizeObserver(()=>{fitComparison();if(autoFit)fit();schedule();}).observe(canvas);
-canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the viewâ€¦';});
+canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the view…';});
 canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();}catch(e){fail(e);}});
 function fail(error){status.hidden=stage.dataset.mode!=='rotate';status.textContent='The 3D view could not load. You can still open the Blender file below.';console.error(error);}
 // Synchronize material when the parent selects the 3D tab; retain the orbit.

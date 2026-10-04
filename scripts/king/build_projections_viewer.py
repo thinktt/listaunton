@@ -19,7 +19,7 @@ parser.add_argument('--template',type=Path,default=Path(__file__).with_name('pro
 args=parser.parse_args()
 root=args.root.resolve()
 source=root/'assets/king-projections/variants.json'
-manifest=json.loads(source.read_text())
+manifest=json.loads(source.read_text(encoding='utf-8'))
 baseline=manifest['baseline']
 rows=manifest['variants']
 assert rows and baseline in [row['id'] for row in rows]
@@ -42,7 +42,7 @@ def image_uri(path):
 
 for row in rows:
     ident=row['id'];assert re.fullmatch(r'[a-z0-9-]+',ident),ident
-    folder=row['assetDir'];meta=json.loads(relative_file(folder+'/mesh.json').read_text())
+    folder=row['assetDir'];meta=json.loads(relative_file(folder+'/mesh.json').read_text(encoding='utf-8'))
     binary=relative_file(folder+'/mesh.bin').read_bytes()
     blend=relative_file(row['model'])
     assert hashlib.sha256(blend.read_bytes()).hexdigest()==meta['sourceSha256'],f'Re-export {ident}: Blender model changed.'
@@ -60,7 +60,7 @@ for row in rows:
     render,render_dimensions=image_uri(relative_file(folder+'/render.png'));assert render_dimensions[0]==render_dimensions[1]
     camera_file=root/folder/'profile-camera.json'
     if camera_file.is_file():
-        camera=json.loads(camera_file.read_text());camera=camera.get('referenceCamera',camera.get('camera',camera))
+        camera=json.loads(camera_file.read_text(encoding='utf-8'));camera=camera.get('referenceCamera',camera.get('camera',camera))
         profile_cameras.append({key:camera[key] for key in ['type','worldToCamera','projectionMatrix','width','height'] if key in camera})
     pressed=str(ident==baseline).lower();label=html_module.escape(row['label']);hidden='' if ident==baseline else ' hidden'
     profiles.append(f'<button class="profile-card" data-variant="{ident}" aria-pressed="{pressed}"><span>{label}</span><img src="{profile}" alt="Front profile of the king geometry fitted at {row["elevation"]} degrees" draggable="false"></button>')
@@ -76,10 +76,10 @@ shared_bounds={'min':low,'max':high,'center':[(a+b)/2 for a,b in zip(low,high)],
 shared_view={'center':shared_bounds['center']}
 shared_view.update(manifest.get('sharedView') or {})
 assert all(math.isfinite(v) for v in shared_view['center'])
-alignment=json.loads((root/'assets/king/original-alignment.json').read_text())
+alignment=json.loads((root/'assets/king/original-alignment.json').read_text(encoding='utf-8'))
 config={'baseline':baseline,'variants':public,'sharedBounds':shared_bounds,'sharedView':shared_view,'originalAlignment':alignment}
 reference,_=image_uri(root/'assets/king/reference.png');original,_=image_uri(root/'assets/king/original.png')
-template=args.template.read_text()
+template=args.template.read_text(encoding='utf-8')
 replacements={
  '__VARIANT_COUNT__':str(len(rows)),
  '__INITIAL_MODEL__':html_module.escape(next(row['model'] for row in rows if row['id']==baseline),quote=True),

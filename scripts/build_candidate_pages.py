@@ -9,9 +9,10 @@ for piece,images in data['pieces'].items():
     page=template
     model_page=f'{piece}-model.html'
     model={'page':model_page} if model_page and (root/model_page).is_file() else None
-    projections={'page':'king-projections.html'} if piece=='king' and (root/'king-projections.html').is_file() else None
+    projection_page=f'{piece}-projections.html'
+    projections={'page':projection_page} if (root/projection_page).is_file() else None
     extra_tab='<button id="tab-projections" type="button" role="tab" aria-selected="false" aria-controls="panel-projections" tabindex="-1">Projection variants</button>' if projections else ''
-    extra_panel='<section id="panel-projections" role="tabpanel" aria-labelledby="tab-projections" hidden><iframe id="projections-frame" title="King projection variants" sandbox="allow-scripts allow-downloads"></iframe></section>' if projections else ''
+    extra_panel=f'<section id="panel-projections" role="tabpanel" aria-labelledby="tab-projections" hidden><iframe id="projections-frame" title="{piece.title()} projection variants" sandbox="allow-scripts allow-downloads"></iframe></section>' if projections else ''
     nav=' '.join(f'<a href="{p}-review.html"'+(' aria-current="page"' if p==piece else '')+f'>{p.title()}</a>' for p in data['pieces'])
     def options(selected):
         groups=[('Originals',[i for i in images if i['id'] in ('black','white')]),('Black enlargements',[i for i in images if i['id'].startswith('candidate-')]),('White enlargements',[i for i in images if i['id'].startswith('white-candidate-')])]
