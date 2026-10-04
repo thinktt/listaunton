@@ -5,6 +5,11 @@ from mathutils import Vector
 root=Path(__file__).resolve().parents[2]
 bpy.ops.wm.open_mainfile(filepath=str(root/'models/knight/knight-rebuilt.blend'))
 scene=bpy.context.scene;cam=scene.camera;scene.cycles.samples=16
+try:
+ prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='CUDA';prefs.get_devices()
+ for dev in prefs.devices:dev.use=dev.type=='CUDA'
+ if any(dev.type=='CUDA' for dev in prefs.devices):scene.cycles.device='GPU'
+except Exception:pass
 scene.render.resolution_x=640;scene.render.resolution_y=640
 cam.data.shift_x=0;cam.data.shift_y=0;cam.data.ortho_scale=6.4
 for label,azimuth,elevation in [('side',0,16),('profile',0,0),('front',90,25),('opposite',180,40),('threequarter',45,20)]:

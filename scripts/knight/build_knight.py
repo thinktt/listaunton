@@ -2,6 +2,7 @@
 import bpy, bmesh, math, json, sys, hashlib
 from pathlib import Path
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 import numpy as np
 args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
 ROOT=Path(args[args.index('--root')+1]) if '--root' in args else Path(__file__).resolve().parents[2]
@@ -40,10 +41,10 @@ for z,x,rx,ry in densify(cfg['neck'],4):
  for t in theta:
   xx=mx(x)+rx*math.cos(t); yy=ry*math.sin(t)
   # Fluted tendon channels on both sides, with stronger round shoulder volume.
-  side=abs(math.sin(t));line=float(np.interp(z,[2.1,2.4,2.8,3.3,3.8,4.2],[136,129,113,98,88,87])); taper=math.exp(-((z-3.15)/.94)**4)
-  panel=math.exp(-((xx-mx(line))/.25)**4)*taper
-  border=math.exp(-((xx-mx(line-8))/.070)**2)*taper
-  yy*=1-(.31*panel+.12*border)*side**2
+  side=abs(math.sin(t));line=float(np.interp(z,[1.8,2.1,2.5,3.0,3.5,4.1,4.45],[.78,.67,.41,.16,-.10,-.25,-.29])); taper=math.exp(-((z-3.14)/1.15)**4)
+  panel=math.exp(-((xx-line)/.21)**4)*taper
+  border=math.exp(-((xx-(line-.18))/.075)**2)*taper
+  yy*=1-(.16*panel+.11*border)*side**2
   ring.append((xx,yy,z))
  neckrings.append(ring)
 neck=closedrings('Knight | curved neck and chest',neckrings,2)
@@ -53,34 +54,37 @@ def headloft(name,rows):
  for x,z,ry,rz in rows:
   ring=[]
   for t in theta:
-   yy=ry*math.sin(t);zz=z+rz*math.cos(t)
+   yy=ry*math.copysign(abs(math.sin(t))**.72,math.sin(t));zz=z+rz*math.cos(t)
    # Sockets and nostrils are sculpted into the side, not painted on.
-   socket=math.exp(-((x-119)/4.4)**2-((zz-4.45)/.105)**2)
-   brow=math.exp(-((x-119)/7.5)**2-((zz-4.60)/.13)**2)
-   nostril=math.exp(-((x-164.5)/2.1)**2-((zz-3.72)/.060)**2)
-   muzzle_groove=(math.exp(-((x-(151+(zz-3.8)*15))/1.25)**2)+.6*math.exp(-((x-(163+(zz-3.7)*12))/1.0)**2))
-   mouth=math.exp(-((zz-(z-.60*rz))/.040)**2)*math.exp(-((x-160)/16)**8) if x>138 else 0
-   yy*=1-.23*socket+.10*brow-.24*nostril-.08*mouth
+   wx=mx(x);ex,ey,ez=cfg['eye_world']
+   # Long almond orbit and a soft brow keep the eye in the upper lateral face.
+   tilt=zz-ez+.58*(wx-ex)
+   socket=math.exp(-((wx-ex)/.20)**2-(tilt/.083)**2)
+   brow=math.exp(-((wx-ex)/.25)**2-((tilt-.125)/.055)**2)
+   # Short incised nostril near the blunt end, following the face's downward slope.
+   nostril=math.exp(-((wx-1.505)/.055)**2-((zz-3.63+1.1*(wx-1.505))/.12)**2)
+   mouth=math.exp(-((zz-(z-.68*rz))/.030)**2)*math.exp(-((wx-1.39)/.23)**8) if wx>1.10 else 0
+   yy*=1-.29*socket+.08*brow-.32*nostril-.08*mouth
    ring.append((mx(x),yy,zz))
   rings.append(ring)
  return closedrings(name,rings,1)
 head=headloft('Knight | coherent skull cheek and conical muzzle',cfg['head'])
 # Rounded swept mane follows the arch. Its oval depth is real and symmetric.
-mane=[];path=cfg['mane']
+mane=[];path=cfg['mane_world']
 for j,(x,v,r,dep) in enumerate(path):
- prev=Vector((mx(path[max(0,j-1)][0]),mz(path[max(0,j-1)][1])));nxt=Vector((mx(path[min(len(path)-1,j+1)][0]),mz(path[min(len(path)-1,j+1)][1])))
+ prev=Vector(path[max(0,j-1)][:2]);nxt=Vector(path[min(len(path)-1,j+1)][:2])
  tangent=(nxt-prev).normalized();normal=Vector((-tangent.y,tangent.x))
  fill=cfg.get('mane_inward_fill',[0]*len(path))[j]
- mane.append([(mx(x)+normal.x*(fill+(r+fill)*math.cos(t)),dep*math.sin(t),mz(v)+normal.y*(fill+(r+fill)*math.cos(t))) for t in theta])
+ mane.append([(x+normal.x*(fill+(r+fill)*math.cos(t)),dep*math.sin(t),v+normal.y*(fill+(r+fill)*math.cos(t))) for t in theta])
 closedrings('Knight | swept rounded mane',mane,2)
 # Flattened pointed ears laid back along the poll, cupped and mirrored.
 for side in [-1,1]:
  rings=[]
- for x,z,y,ry,rz in [[82,5.03,.28,.01,.02],[88,5.00,.39,.07,.07],[99,4.91,.46,.105,.10],[111,4.80,.46,.10,.095],[122,4.72,.38,.065,.08],[128,4.70,.28,.01,.025]]:
-  rings.append([(mx(x),side*(y+ry*math.sin(t)),z+rz*math.cos(t)) for t in theta])
+ for x,z,y,ry,rz in cfg['ear_world']:
+  rings.append([(x,side*(y+ry*math.sin(t)),z+rz*math.cos(t)) for t in theta])
  closedrings('Knight | '+('near' if side<0 else 'far')+' swept ear',rings,2)
  # A small closed almond form sits in the recessed orbital plane.
- bpy.ops.mesh.primitive_uv_sphere_add(segments=32,ring_count=16,location=(mx(119),side*.465,4.45));ob=bpy.context.object;ob.name='Knight | '+('near' if side<0 else 'far')+' eye';ob.scale=(.087,.025,.049);ob.rotation_euler[1]=.22
+ ex,ey,ez=cfg['eye_world'];bpy.ops.mesh.primitive_uv_sphere_add(segments=32,ring_count=16,location=(ex,side*abs(ey),ez));ob=bpy.context.object;ob.name='Knight | '+('near' if side<0 else 'far')+' eye';ob.scale=(.096,.033,.047);ob.rotation_euler[1]=.48
  bpy.ops.object.transform_apply(location=False,rotation=False,scale=True);ob.data.materials.append(mat)
  for p in ob.data.polygons:p.use_smooth=True
  objects.append(ob)
@@ -102,6 +106,15 @@ smooth=skin.modifiers.new('Soften carved transitions','SMOOTH');smooth.factor=.4
 dec=skin.modifiers.new('Efficient sculpt surface','DECIMATE');dec.ratio=.48;bpy.ops.object.modifier_apply(modifier=dec.name)
 for p in skin.data.polygons:p.use_smooth=True
 objects.append(skin);neck=skin
+# Seat the separate closed eye forms in the actual smoothed orbital surfaces.
+# This is evaluated after the head/neck union, so changing depth cannot float them.
+bpy.context.view_layer.update();eye_tree=BVHTree.FromObject(skin,bpy.context.evaluated_depsgraph_get())
+for ob in objects:
+ if not ob.name.endswith(' eye'):continue
+ side=-1 if 'near' in ob.name else 1
+ origin=Vector((ob.location.x,2*side,ob.location.z));hit=eye_tree.ray_cast(origin,Vector((0,-side,0)))[0]
+ if hit is None:raise RuntimeError('Eye socket ray missed anatomical skin')
+ ob.location.y=hit.y+side*.004
 # Recalculate every closed component outwards before export.
 for ob in objects:
  bpy.context.view_layer.objects.active=ob;ob.select_set(True);bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT');bpy.ops.mesh.normals_make_consistent(inside=False);bpy.ops.object.mode_set(mode='OBJECT');ob.select_set(False)
@@ -110,8 +123,9 @@ def aim(o,p):o.rotation_euler=(Vector(p)-o.location).to_track_quat('-Z','Y').to_
 def area(name,loc,power,size):
  d=bpy.data.lights.new(name,'AREA');d.energy=power;d.shape='DISK';d.size=size;o=bpy.data.objects.new(name,d);scene.collection.objects.link(o);o.location=loc;aim(o,(0,0,2.5))
 area('Key',(-3,-4,8),700,3);area('Fill',(4,-3,5),150,3);area('Rim',(2,4,8),320,3)
-d=bpy.data.cameras.new('Reference camera | 54 degrees');cam=bpy.data.objects.new(d.name,d);scene.collection.objects.link(cam);scene.camera=cam;d.type='ORTHO';d.ortho_scale=300/S;d.clip_end=100
-ZT=(Y0-150)/(S*C);cam.location=(0,-12*C,ZT+12*SN);aim(cam,(0,0,ZT));d.shift_x=(150-CX)/300
+framing=cfg.get('reference_framing',{});frame_scale=framing.get('scale',1);yaw=math.radians(framing.get('yawDegrees',0))
+d=bpy.data.cameras.new('Reference camera | 54 degrees');cam=bpy.data.objects.new(d.name,d);scene.collection.objects.link(cam);scene.camera=cam;d.type='ORTHO';d.ortho_scale=300/S/frame_scale;d.clip_end=100
+ZT=(Y0-150)/(S*C);cam.location=(12*math.sin(yaw)*C,-12*math.cos(yaw)*C,ZT+12*SN);aim(cam,(0,0,ZT));d.shift_x=frame_scale*(150-CX)/300-framing.get('dxPixels1254',0)/W;d.shift_y=framing.get('dyPixels1254',0)/H
 reference=bpy.data.images.load(str(OUT/'ref.png'));reference.pack();bg=d.background_images.new();bg.image=reference;bg.alpha=.5;bg.display_depth='FRONT';bg.frame_method='FIT';d.show_background_images=True
 scene.render.engine='CYCLES';scene.cycles.samples=24;scene.cycles.use_denoising=True;scene.render.resolution_x=W;scene.render.resolution_y=H;scene.render.resolution_percentage=100;scene.render.film_transparent=True;scene.render.image_settings.file_format='PNG';scene.view_settings.view_transform='AgX';scene.render.filepath=str(OUT/'render.png')
 scene['reconstruction']=cfg['note'];scene['reference_camera_elevation_degrees']=54
@@ -128,7 +142,7 @@ for ob in objects:
   for vi,li in zip(tri.vertices,tri.loops):block.append(tuple(ob.matrix_world@me.vertices[vi].co)+tuple(ob.matrix_world.to_3x3()@me.corner_normals[li].vector))
  a=np.array(block,dtype='<f4');blocks.append(a);parts.append({'name':ob.name,'vertexCount':len(a),'indexCount':len(a),'indexOffset':count,'vertexOffset':count,'triangleCount':len(a)//3});count+=len(a);ev.to_mesh_clear()
 a=np.concatenate(blocks);indices=np.arange(len(a),dtype='<u4');raw=a.tobytes()+indices.tobytes();(OUT/'mesh.bin').write_bytes(raw);lo=a[:,:3].min(0);hi=a[:,:3].max(0)
-projection=cam.calc_matrix_camera(graph,x=W,y=H);camera={'type':'ORTHO','elevationDegrees':54,'worldToCamera':[float(v) for row in cam.matrix_world.inverted() for v in row],'projectionMatrix':[float(v) for row in projection for v in row],'width':W,'height':H,'orthoScale':d.ortho_scale,'shiftX':d.shift_x,'shiftY':0}
+projection=cam.calc_matrix_camera(graph,x=W,y=H);camera={'type':'ORTHO','elevationDegrees':54,'yawDegrees':math.degrees(yaw),'worldToCamera':[float(v) for row in cam.matrix_world.inverted() for v in row],'projectionMatrix':[float(v) for row in projection for v in row],'width':W,'height':H,'orthoScale':d.ortho_scale,'shiftX':d.shift_x,'shiftY':d.shift_y}
 meta={'vertexCount':len(a),'indexCount':len(a),'triangleCount':len(a)//3,'vertexStrideBytes':24,'vertexByteLength':a.nbytes,'indexByteOffset':a.nbytes,'totalByteLength':len(raw),'bounds':{'min':lo.tolist(),'max':hi.tolist(),'size':(hi-lo).tolist(),'center':((hi+lo)/2).tolist()},'parts':parts,'sourceSha256':hashlib.sha256(MODEL.read_bytes()).hexdigest(),'referenceCamera':camera}
 (OUT/'mesh.json').write_text(json.dumps(meta,indent=2));(OUT/'camera.json').write_text(json.dumps(camera,indent=2))
 try:

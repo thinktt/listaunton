@@ -1,0 +1,84 @@
+{
+  "components": [
+    {
+      "name": "Knight | turned pedestal",
+      "nonmanifold_edges": 0,
+      "signed_volume": 9.715002395275048,
+      "vertices": 29186,
+      "faces": 29184,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | swept rounded mane",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.8177023446359849,
+      "vertices": 9730,
+      "faces": 9728,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | near swept ear",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.021280199505466127,
+      "vertices": 5634,
+      "faces": 5632,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | near eye",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.00043929560415343976,
+      "vertices": 482,
+      "faces": 512,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | far swept ear",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.021280195981214688,
+      "vertices": 5634,
+      "faces": 5632,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | far eye",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.00043929560415343987,
+      "vertices": 482,
+      "faces": 512,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | continuous horse head and neck",
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.718595223979197,
+      "vertices": 41325,
+      "faces": 58049,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | curved neck and chest",
+      "nonmanifold_edges": 0,
+      "signed_volume": 3.64124899611333,
+      "vertices": 49666,
+      "faces": 49664,
+      "hidden_construction": true
+    },
+    {
+      "name": "Knight | coherent skull cheek and conical muzzle",
+      "nonmanifold_edges": 0,
+      "signed_volume": 1.2510546034948469,
+      "vertices": 20098,
+      "faces": 20096,
+      "hidden_construction": true
+    }
+  ],
+  "source_hash_matches": true,
+  "mesh_finite": true,
+  "bounds_match": true,
+  "normals_unit_length": true,
+  "camera_matches_saved_blend": true,
+  "visible_component_count": 7,
+  "hidden_construction_count": 2,
+  "note": "One continuous skull, cheek and conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+}

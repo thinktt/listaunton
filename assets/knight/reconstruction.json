@@ -1,38 +1,46 @@
 {
   "piece": "Knight",
-  "revision": "11-anatomy-correction-conical-muzzle",
+  "revision": "12-approved-side-guide-match",
   "source_priority": [
-    "Owner-requested plausible horse anatomy and stronger conical muzzle, using the approved imagined side study for unseen side form",
-    "Original black and white Lichess 300px sprites for set character and overhead comparison",
+    "Owner request: match approved generated side study assets/knight/concepts/side-01.png first, including broad cheek, rounded muzzle and wide neck/chest",
+    "Original black Lichess sprite for best-effort secondary overhead fit, with mirrored white as a check",
     "Selected black candidate 2 enlargement for secondary detail interpretation"
   ],
   "reference_camera": {
     "projection": "orthographic",
     "elevation_degrees": 54,
-    "basis": "Initial whole-set elevation from rook estimate; still an interpretation"
+    "yaw_degrees": 12,
+    "framing_scale": 0.985,
+    "image_translation_1254_pixels": [
+      -8.36,
+      -8.36
+    ],
+    "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
   },
   "geometry": {
-    "method": "One continuous skull/cheek/chin/muzzle envelope joined to neck; tapering cross-sections continue down to a small rounded cone end; inset upper-lateral almond eyes and small nostril recesses; laid-back ears and inward-filled arched mane; established turned pedestal",
+    "method": "Guide-derived broad continuous skull/cheek and gently conical rounded muzzle joined to a wide S neck/chest; thick arched mane, swept ears, socket-seated eyes, flatter foot. Single Y-depth reduction retained XZ side profiles.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
-    "triangles": 184918,
+    "triangles": 203602,
     "parts_intersect": true,
     "manufacturing_ready": false
   },
   "internal_review": {
     "observations": [
-      "Previous 196,806-triangle model was rejected after rotation despite its high silhouette overlap; its separate jaw volume read as a hanging bag.",
-      "Four corrective anatomy studies removed the separate jaw, moved the eye to the upper skull, restored laid-back ears from the approved concept, joined the mane to the neck, and progressively tapered the muzzle tip.",
-      "True level profile, front, three-quarter, side, opposite and reference-camera renders were visually inspected.",
-      "Front and Side viewer presets now correspond to muzzle-facing and horse-profile views.",
-      "Original silhouette IoU is 0.92495 and mean boundary discrepancy is 3.14 original pixels. These record the overhead difference; they are not an anatomy quality score."
+      "Previous committed thin pointed model preserved before edits in history/knight/11-before-guide-match.",
+      "Large side masses rebuilt directly from the approved guide; same-base-width and floor overlay reviewed before secondary depth/camera work.",
+      "Small gap behind the ear closed; sloping forehead corrected against actual source outline; cheek cross-sections rounded.",
+      "Single targeted Y-depth correction narrows the head and upper neck, retaining guide XZ profiles. Eyes are seated on the final smoothed socket surfaces.",
+      "Level profile, front, three-quarter, side, opposite and reference-camera renders visually inspected.",
+      "All nine mesh objects have one connected closed shell and positive volume; seven are visible. Saved camera/mesh and viewer interaction checks pass.",
+      "Final original silhouette IoU is 88.46% with 6.20 original-pixel mean boundary discrepancy; frozen previous camera on the same final geometry gives 85.76%."
     ],
     "limitations": [
-      "The generated side study is an owner-approved interpretation, not recovered geometry. The 54-degree camera and unseen bilateral depth remain inferred.",
-      "Small carved features and surface transitions remain artistic approximations; original overhead silhouette agreement decreased with the authorized anatomy correction.",
-      "Mane, ears, eyes and pedestal remain separate closed components intersecting the continuous head-neck skin. They are not fused for manufacturing.",
-      "Neutral clay lighting differs from the reference wood; wood grain and materials have not been reconstructed.",
-      "Browser rendering was not exercised; controls, horse front/side presets and exact saved-camera projection were checked with the Node VM harness."
+      "The generated side guide is an owner-approved interpretation. Side camera elevation, depth and unseen surfaces remain inferred.",
+      "The side study and original overhead silhouette are not simultaneously matched exactly. The guide-derived chest and head extent remain visibly different in the original view, despite bounded framing and one Y-only depth correction.",
+      "Fine carving and local anatomical transitions remain approximations. Neutral clay lighting differs from wood; no material study was performed.",
+      "Mane, ears, eyes and pedestal are separate closed components intersecting the continuous head-neck skin, not fused for manufacturing.",
+      "Native browser rendering was not exercised. Controls, Front/Side presets and saved-camera projection were checked with the Node VM harness."
     ]
   },
   "history": [
@@ -45,12 +53,37 @@
     "07-before-anatomy-correction",
     "08-single-envelope-study",
     "09-concept-profile-study",
-    "10-joined-mane-study"
+    "10-joined-mane-study",
+    "11-before-guide-match"
   ],
   "source_hashes": {
     "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
     "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
-    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+    "concepts/side-01.png": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e"
   },
-  "side_study": "assets/knight/concepts/side-01.png"
+  "side_study": "assets/knight/concepts/side-01.png",
+  "guide_camera": {
+    "elevation": 7,
+    "azimuth": 0,
+    "guideBaseWidth": 565,
+    "guideBaseCenterX": 624,
+    "guideFloorY": 1127,
+    "pixelsPerWorldUnit": 188.33333333333334,
+    "target": [
+      0.0,
+      0.0,
+      2.548305034637451
+    ],
+    "orthoScale": 6.658407211303711,
+    "shiftX": 0.0023923444095999002,
+    "note": "Approximate inferred study camera; fixed base width and physical floor. No rotation, warp, or anisotropic fit of the source image."
+  },
+  "checks": {
+    "mesh_validation": "assets/knight/validation.json",
+    "viewer_validation": "assets/knight/viewer-validation.json",
+    "guide_comparison": "assets/knight/guide-comparison.png",
+    "reference_fit": "assets/knight/reference-fit/fit.json",
+    "final_reference_metrics": "assets/knight/qa.json"
+  }
 }

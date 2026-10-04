@@ -3,31 +3,35 @@
     {
       "name": "Knight | turned pedestal",
       "nonmanifold_edges": 0,
-      "signed_volume": 9.715002395275048,
-      "vertices": 29186,
-      "faces": 29184,
+      "signed_volume": 10.041042560201195,
+      "connected_components": 1,
+      "vertices": 31234,
+      "faces": 31232,
       "hidden_construction": false
     },
     {
       "name": "Knight | swept rounded mane",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.8177023446359849,
-      "vertices": 9730,
-      "faces": 9728,
+      "signed_volume": 1.2641677195526053,
+      "connected_components": 1,
+      "vertices": 12802,
+      "faces": 12800,
       "hidden_construction": false
     },
     {
       "name": "Knight | near swept ear",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.021280199505466127,
-      "vertices": 5634,
-      "faces": 5632,
+      "signed_volume": 0.026776515275645278,
+      "connected_components": 1,
+      "vertices": 6658,
+      "faces": 6656,
       "hidden_construction": false
     },
     {
       "name": "Knight | near eye",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.00043929560415343976,
+      "signed_volume": 0.0006137401726784158,
+      "connected_components": 1,
       "vertices": 482,
       "faces": 512,
       "hidden_construction": false
@@ -35,15 +39,17 @@
     {
       "name": "Knight | far swept ear",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.021280195981214688,
-      "vertices": 5634,
-      "faces": 5632,
+      "signed_volume": 0.026776516771270843,
+      "connected_components": 1,
+      "vertices": 6658,
+      "faces": 6656,
       "hidden_construction": false
     },
     {
       "name": "Knight | far eye",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.00043929560415343987,
+      "signed_volume": 0.0006137401726784159,
+      "connected_components": 1,
       "vertices": 482,
       "faces": 512,
       "hidden_construction": false
@@ -51,26 +57,43 @@
     {
       "name": "Knight | continuous horse head and neck",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.718595223979197,
-      "vertices": 41325,
-      "faces": 58049,
+      "signed_volume": 5.625160013732307,
+      "connected_components": 1,
+      "vertices": 43499,
+      "faces": 59880,
       "hidden_construction": false
     },
     {
       "name": "Knight | curved neck and chest",
       "nonmanifold_edges": 0,
-      "signed_volume": 3.64124899611333,
-      "vertices": 49666,
-      "faces": 49664,
+      "signed_volume": 4.497897906259924,
+      "connected_components": 1,
+      "vertices": 57858,
+      "faces": 57856,
       "hidden_construction": true
     },
     {
       "name": "Knight | coherent skull cheek and conical muzzle",
       "nonmanifold_edges": 0,
-      "signed_volume": 1.2510546034948469,
-      "vertices": 20098,
-      "faces": 20096,
+      "signed_volume": 1.3983946902684472,
+      "connected_components": 1,
+      "vertices": 27778,
+      "faces": 27776,
       "hidden_construction": true
+    }
+  ],
+  "eyes": [
+    {
+      "name": "near",
+      "socket_center_depth_difference": 0.0040000081062316895,
+      "half_eye_depth": 0.03299998864531517,
+      "seated_in_surface": true
+    },
+    {
+      "name": "far",
+      "socket_center_depth_difference": 0.0040000081062316895,
+      "half_eye_depth": 0.03299998864531517,
+      "seated_in_surface": true
     }
   ],
   "source_hash_matches": true,
@@ -80,5 +103,5 @@
   "camera_matches_saved_blend": true,
   "visible_component_count": 7,
   "hidden_construction_count": 2,
-  "note": "One continuous skull, cheek and conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+  "note": "One continuous broad skull, cheek and rounded gently conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
 }

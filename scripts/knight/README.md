@@ -1,12 +1,18 @@
 # Knight reconstruction
 
-The owner rejected the previous head after rotating it: its separate lower jaw looked like a hanging mass under a beak. This revision follows the owner's request for a recognizable carved horse head with a more conical muzzle, and the owner-endorsed imagined side view in `assets/knight/concepts/side-01.png`. That concept is an interpretation, not recovered geometry. The original Lichess black and white sprites still guide the set's character and overhead comparison; selected black candidate 2 supports detail interpretation. All source images remain unchanged.
+The current instruction is to match the owner-approved side study in `assets/knight/concepts/side-01.png` first, while fitting the original image as well as possible. The broad cheek, thick rounded muzzle, wide S-shaped neck/chest, arched mane, sloping forehead and flat lower plinth now follow that study. The head and cheek remain one envelope joined to the neck. The study is an imagined interpretation, not recovered geometry. The original black and mirrored white Lichess sprites and selected black candidate 2 remain unchanged secondary reference checks.
 
-The skull, cheek, chin and muzzle now share one continuous loft envelope that joins the neck. Its cross-sections taper toward a small rounded muzzle end, with recessed nostrils, a small upper-lateral eye and a brow. The long ears lie back along the poll. The upper neck and mane meet without the open gap introduced by the first anatomy study; the lower neck, turned pedestal and saved 54-degree orthographic camera retain their established character.
+The previous committed anatomy correction is preserved in `history/knight/11-before-guide-match`. That model was too thin through the neck and cheek and too pointed at the muzzle. This revision rebuilds the large side masses from the guide's coordinates. A single subsequent depth correction narrows the head and upper neck along Y while retaining their XZ profiles. Both eye forms are seated in the evaluated socket surfaces after smoothing the skin.
 
-Seven visible components are individually closed and overlap: head/neck skin, mane, two ears, two eyes, and pedestal. Two closed construction lofts remain hidden and editable. The parts are not fused for manufacturing. Depth, eye and nostril carving, and unseen surfaces remain artistic choices. Neutral clay does not reproduce the wood material.
+`assets/knight/guide-comparison.png` places the untouched guide, neutral-clay side render and silhouette overlay at the same 565-pixel base width and 1127-pixel projected floor. The inferred side camera is 7 degrees above level. `guide-camera.json` records that independent framing. `anatomy-angles.png` shows level profile, front, three-quarter, side, opposite and the saved reference camera. These images show the substantial side-shape improvement; silhouette overlap alone does not establish anatomical fidelity. Fine carving, material, depth and unseen surfaces still differ from the study.
 
-Four anatomy passes follow the initial seven reconstruction passes. The rejected committed model and its Blender file are preserved in `history/knight/07-before-anatomy-correction`; the anatomy studies are in `08-single-envelope-study`, `09-concept-profile-study`, and `10-joined-mane-study`. `assets/knight/anatomy-comparison.png` compares the rejected head, approved side concept and revision. `anatomy-angles.png` shows true level profile, front, three-quarter, side, opposite, and reference-camera views.
+Seven visible components are individually closed and connected: continuous head/neck skin, mane, two ears, two eyes and pedestal. Two closed construction lofts remain hidden and editable. The visible export has 203,602 triangles. The separate overlapping components are not fused for manufacturing. Neutral clay is diagnostic; wood materials have not been reconstructed.
+
+## Secondary reference fit
+
+After the side shape was established, a bounded camera study tried yaw angles -12, -6, 0, 6 and 12 degrees at the existing 54-degree elevation, with uniform scale and translation. It did not warp source images or alter their registration. The chosen saved camera uses 12-degree yaw, 0.985 framing scale and an 8.36-pixel shift left and up at 1254-pixel output resolution. Render, Blender camera, exported camera and viewer use the same result.
+
+For the final geometry, original-black silhouette IoU is 85.76% under the frozen previous camera and 88.46% under the fitted camera; mean boundary discrepancy falls from 7.59 to 6.20 original-source pixels. Selected candidate IoU is 88.12%; mirrored original white is 87.98%. `assets/knight/reference-fit/fit.json` records the bounded study, while `frozen-camera.png`, `frozen-camera.json` and `frozen-qa.json` preserve its baseline. The final `qa.json` records the full-resolution fitted result. The broader guide-derived chest and longer side head extent do not simultaneously reproduce the original overhead silhouette. This is an explicit remaining limitation, not a claim of recovered geometry.
 
 ## Rebuild
 
@@ -14,6 +20,8 @@ From the repository root, using Blender, ordinary Python with Pillow/NumPy, and 
 
 ```sh
 blender --background --python scripts/knight/build_knight.py
+blender --background --python scripts/knight/guide_view.py
+python scripts/knight/compare_guide.py
 blender --background --python scripts/knight/qa_views.py
 python scripts/knight/compare.py
 blender --background --python scripts/knight/validate.py -- "$PWD"
@@ -24,8 +32,6 @@ python scripts/build_candidate_pages.py
 python scripts/check_model_site.py
 ```
 
-Use Windows/UNC paths when Windows Blender works on the WSL repository. The viewer's Front button faces the muzzle; Side shows the horse profile. Reset returns to the saved overlay camera.
+The normal build uses the selected framing stored in `profile.json`; it does not rerun the camera study. `fit_reference.py` and `choose_reference_fit.py` document that optional bounded study and do not apply a new choice automatically. Use Windows/UNC paths when Windows Blender works on the WSL repository. The viewer's Front button faces the muzzle; Side shows the horse profile. Reset returns to the fitted reference camera.
 
-The export has 184,918 triangles. Validation checks closed components, positive volumes, mesh bounds/normals/indices, source hash and saved-camera agreement. The viewer runtime passes camera and interaction checks, including the horse's front/side presets, with sampled projection error below 0.00005 pixels. Native browser rendering has not been independently tested here.
-
-Original silhouette IoU is 92.50%, with mean boundary discrepancy about 3.14 original pixels; selected candidate IoU is 92.35%, and mirrored original white is 92.32%. These are comparison records. The current priority is the owner-requested plausible horse anatomy across viewing angles; high silhouette overlap in the rejected model did not establish anatomical quality.
+Validation checks manifold closed components, one connected shell per component, positive volumes, eye/socket overlap, mesh bounds/normals/indices, source hash and both saved camera matrices. The Node viewer harness passes camera and interaction checks, including Front/Side presets, with sampled projection error below 0.00003 pixels. Native browser rendering has not been independently tested here.
