@@ -1,0 +1,25 @@
+{
+  "source": "assets/candidates/rook/candidate-6.png",
+  "source_sha256": "75a806e0fc3d3a1162871012c3a007ad05850c3092684690fafc4a2411909ec5",
+  "generator": {
+    "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: black rook candidate 6. Image 2 is ONLY a wood color reference: the original low-resolution black rook. Apply ONLY a photographic color grade to image 1: darker, redder brown wood matching image 2, less golden orange. Preserve the exact geometry, thin turret ledges, framing, every grain pattern, all carved details, edges, light directions and highlight locations. Preserve transparency and image dimensions. Do not rerender, redraw, sharpen, add texture or modify proportions. Think of an RGB curves/color-balance adjustment to the existing pixels, with neutral specular highlights retained. No other changes.",
+    "tool": "built-in image_gen",
+    "file": "candidate-6-generated-grade.png"
+  },
+  "direct_grade": {
+    "file": "candidate-6-direct-grade.png",
+    "gamma": 1.16,
+    "midtone_channel_gains": [
+      0.98,
+      0.86,
+      0.9
+    ],
+    "highlight_tint_fade": [
+      0.6,
+      0.95
+    ],
+    "alpha_unchanged": true,
+    "geometry_unchanged": true
+  },
+  "status": "Color trials only; active candidate 6 remains unchanged."
+}
