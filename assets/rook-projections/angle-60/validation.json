@@ -1,0 +1,51 @@
+{
+  "components": [
+    {
+      "name": "Rook - continuous turned body and recessed floor",
+      "nonmanifold_edges": 0,
+      "signed_volume": 3.7650750337775216,
+      "vertices": 31262,
+      "faces": 30832,
+      "hidden_construction": false
+    },
+    {
+      "name": "Rook - thin curved merlon 1",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.019704984516335344,
+      "vertices": 1030,
+      "faces": 1026,
+      "hidden_construction": true
+    },
+    {
+      "name": "Rook - thin curved merlon 2",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.019704984516335344,
+      "vertices": 1030,
+      "faces": 1026,
+      "hidden_construction": true
+    },
+    {
+      "name": "Rook - thin curved merlon 3",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.019704984516335344,
+      "vertices": 1030,
+      "faces": 1026,
+      "hidden_construction": true
+    },
+    {
+      "name": "Rook - thin curved merlon 4",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.019704984516335344,
+      "vertices": 1030,
+      "faces": 1026,
+      "hidden_construction": true
+    }
+  ],
+  "sourceSha256": "d03f0ede3d985aaa9af9259f3aa9a831d5553ecdedf8fda659d164b0e1abba8d",
+  "source_hash_matches": true,
+  "renderSha256": "a5ef10a22c6e3e1d1687ff19c7de1e119e85526ef4979d675318a57411201fac",
+  "profileSha256": "0cd21c974774cf0cc30c86dbab0890906da4df475d0dfa45a71b76199960a18a",
+  "cameraSha256": "92ac33bb17da7da1c679a732b203eef1b76a49cea50edc0e4bddbc7093f71cb0",
+  "equal_merlon_volumes": true,
+  "note": "Evaluated body union and four hidden editable merlons are closed with positive signed volumes; hidden merlons are rotationally equal."
+}

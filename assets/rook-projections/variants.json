@@ -1,0 +1,218 @@
+{
+  "baseline": "angle-54",
+  "description": "Six actual rook geometry refits at equal base width and floor level. Original sprites remain authoritative; selected black candidate 8 supports details.",
+  "variants": [
+    {
+      "id": "angle-48",
+      "label": "48\u00b0",
+      "elevation": 48,
+      "assetDir": "assets/rook-projections/angle-48",
+      "model": "models/rook-projections/rook-48.blend",
+      "fit": {
+        "initial_loss": 2.4605910451685924,
+        "loss": 1.077283779705194,
+        "silhouette_term": 0.5991777891062559,
+        "internal_arc_term": 0.5699181734700268,
+        "regularization": 0.022171451822916667,
+        "structural_penalty": 0.0
+      },
+      "height": 2.590441942214966,
+      "baseWidth": 1.7814275026321411,
+      "heightToBaseWidth": 1.4541382898756579,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.9546553953324941,
+          "mean_boundary_error_px": 5.857774968394438,
+          "p95_boundary_error_px": 20.949999999999818,
+          "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+        },
+        "selected": {
+          "silhouette_iou": 0.9759535176092828,
+          "mean_boundary_error_px": 3.260429835651075,
+          "p95_boundary_error_px": 7.0,
+          "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+        }
+      },
+      "originalMask8IoU": 0.9711496901237803
+    },
+    {
+      "id": "angle-52",
+      "label": "52\u00b0",
+      "elevation": 52,
+      "assetDir": "assets/rook-projections/angle-52",
+      "model": "models/rook-projections/rook-52.blend",
+      "fit": {
+        "initial_loss": 0.6544009729081555,
+        "loss": 0.37452008934262204,
+        "silhouette_term": 0.30447399825441646,
+        "internal_arc_term": 0.07930514193642883,
+        "regularization": 0.0066019775390625,
+        "structural_penalty": 0.0
+      },
+      "height": 2.745070457458496,
+      "baseWidth": 1.7814275026321411,
+      "heightToBaseWidth": 1.5409386311834348,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.9609627478942455,
+          "mean_boundary_error_px": 4.830188679245283,
+          "p95_boundary_error_px": 19.0,
+          "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+        },
+        "selected": {
+          "silhouette_iou": 0.9752638063462864,
+          "mean_boundary_error_px": 3.534005037783375,
+          "p95_boundary_error_px": 8.0,
+          "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+        }
+      },
+      "originalMask8IoU": 0.9790693545303067
+    },
+    {
+      "id": "angle-54",
+      "label": "54\u00b0 \u00b7 current shape",
+      "elevation": 54,
+      "assetDir": "assets/rook-projections/angle-54",
+      "model": "models/rook-projections/rook-54.blend",
+      "fit": {
+        "initial_loss": 0.5343487906602433,
+        "loss": 0.5343487906602433,
+        "silhouette_term": 0.5343487906602433,
+        "internal_arc_term": 0.0,
+        "regularization": 0.0,
+        "structural_penalty": 0.0
+      },
+      "height": 2.8375279903411865,
+      "baseWidth": 1.7814275026321411,
+      "heightToBaseWidth": 1.5928394426091481,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.9564889867541091,
+          "mean_boundary_error_px": 5.70440251572327,
+          "p95_boundary_error_px": 19.0,
+          "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+        },
+        "selected": {
+          "silhouette_iou": 0.969624327586615,
+          "mean_boundary_error_px": 4.583018867924529,
+          "p95_boundary_error_px": 13.0,
+          "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+        }
+      },
+      "originalMask8IoU": 0.9752626597577334
+    },
+    {
+      "id": "angle-56",
+      "label": "56\u00b0",
+      "elevation": 56,
+      "assetDir": "assets/rook-projections/angle-56",
+      "model": "models/rook-projections/rook-56.blend",
+      "fit": {
+        "initial_loss": 0.963786496491897,
+        "loss": 0.7211581402132609,
+        "silhouette_term": 0.5943394675350374,
+        "internal_arc_term": 0.14767064919738868,
+        "regularization": 0.0086821533203125,
+        "structural_penalty": 0.0
+      },
+      "height": 2.9381306171417236,
+      "baseWidth": 1.7814275026321411,
+      "heightToBaseWidth": 1.6493124827142842,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.9586210190213683,
+          "mean_boundary_error_px": 5.410062893081761,
+          "p95_boundary_error_px": 18.0,
+          "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+        },
+        "selected": {
+          "silhouette_iou": 0.9659419849800611,
+          "mean_boundary_error_px": 5.167924528301887,
+          "p95_boundary_error_px": 14.0,
+          "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+        }
+      },
+      "originalMask8IoU": 0.9775685584996183
+    },
+    {
+      "id": "angle-60",
+      "label": "60\u00b0",
+      "elevation": 60,
+      "assetDir": "assets/rook-projections/angle-60",
+      "model": "models/rook-projections/rook-60.blend",
+      "fit": {
+        "initial_loss": 2.676653670360765,
+        "loss": 1.8065235040468426,
+        "silhouette_term": 1.3064006607170273,
+        "internal_arc_term": 0.6085430805294566,
+        "regularization": 0.013288378906249999,
+        "structural_penalty": 0.0
+      },
+      "numericalSeamWeld": {
+        "threshold_world_units": 1e-06,
+        "nonmanifold_edges_before": 9,
+        "nonmanifold_edges_after": 0
+      },
+      "height": 3.21329927444458,
+      "baseWidth": 1.7814275026321411,
+      "heightToBaseWidth": 1.8037777398725363,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.947847962403673,
+          "mean_boundary_error_px": 7.231446540880503,
+          "p95_boundary_error_px": 21.0,
+          "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+        },
+        "selected": {
+          "silhouette_iou": 0.9522578703626302,
+          "mean_boundary_error_px": 7.582286432160804,
+          "p95_boundary_error_px": 22.0,
+          "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+        }
+      },
+      "originalMask8IoU": 0.9659813577028795
+    },
+    {
+      "id": "angle-64",
+      "label": "64\u00b0",
+      "elevation": 64,
+      "assetDir": "assets/rook-projections/angle-64",
+      "model": "models/rook-projections/rook-64.blend",
+      "fit": {
+        "initial_loss": 4.588899165181804,
+        "loss": 3.3040538618707864,
+        "silhouette_term": 2.3475190350283652,
+        "internal_arc_term": 1.1818651379638339,
+        "regularization": 0.011042716471354169,
+        "structural_penalty": 0.0
+      },
+      "height": 3.5947628021240234,
+      "baseWidth": 1.7814275026321411,
+      "heightToBaseWidth": 2.017911364236039,
+      "comparison": {
+        "original": {
+          "silhouette_iou": 0.9362610654375653,
+          "mean_boundary_error_px": 9.234591194968553,
+          "p95_boundary_error_px": 26.0,
+          "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+        },
+        "selected": {
+          "silhouette_iou": 0.9374234590866063,
+          "mean_boundary_error_px": 10.306532663316583,
+          "p95_boundary_error_px": 31.449999999999818,
+          "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+        }
+      },
+      "originalMask8IoU": 0.9520582346126286
+    }
+  ],
+  "sharedView": {
+    "center": [
+      0,
+      0,
+      1.95
+    ],
+    "orthoHeight": 4.4,
+    "distance": 12
+  }
+}

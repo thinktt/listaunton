@@ -1,0 +1,41 @@
+{
+  "note": "Strict historical RGB > 12 mask retained for comparability. Fitting used RGB > 8 to retain near-black original wood; all four threshold scores are exposed. Scores are silhouette evidence, not proof of internal or unseen geometry.",
+  "images": {
+    "original": {
+      "silhouette_iou": 0.9362610654375653,
+      "mean_boundary_error_px": 9.234591194968553,
+      "p95_boundary_error_px": 26.0,
+      "reference_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4"
+    },
+    "selected": {
+      "silhouette_iou": 0.9374234590866063,
+      "mean_boundary_error_px": 10.306532663316583,
+      "p95_boundary_error_px": 31.449999999999818,
+      "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+    }
+  },
+  "original_mask_sensitivity": {
+    "4": 0.9551651660654269,
+    "8": 0.9520582346126286,
+    "12": 0.9362610654375653,
+    "16": 0.9182038451586019
+  },
+  "elevation_degrees": 64,
+  "fit": {
+    "initial_loss": 4.588899165181804,
+    "loss": 3.3040538618707864,
+    "silhouette_term": 2.3475190350283652,
+    "internal_arc_term": 1.1818651379638339,
+    "regularization": 0.011042716471354169,
+    "structural_penalty": 0.0
+  },
+  "visible_wall_thickness_fraction": 0.12994350282485867,
+  "floor_rear_landmark": {
+    "native_original_y_estimate": 83.90671839246664,
+    "original_visual_interval": [
+      82,
+      85
+    ],
+    "note": "Projected floor-edge parameter, independently constrained by the original white and black sprites. Bevel/shading shifts its visible highlight."
+  }
+}
