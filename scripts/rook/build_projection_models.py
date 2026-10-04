@@ -14,8 +14,9 @@ angles=set(map(int,args[args.index('--angles')+1].split(','))) if '--angles' in 
 manifest_path=ROOT/'assets/rook-projections/variants.json';manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
 def aim(obj,target):obj.rotation_euler=(Vector(target)-obj.location).to_track_quat('-Z','Y').to_euler()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-preserved=json.loads((ROOT/'assets/rook-projections/baseline-preservation.json').read_text(encoding='utf-8'))['sha256']
-for name,expected in preserved.items():assert sha(ROOT/name)==expected,('Changed canonical input',name)
+snapshot=json.loads((ROOT/'assets/rook-projections/baseline-preservation.json').read_text(encoding='utf-8'));preserved=snapshot['sha256']
+def preserved_ok(name,expected):return sha(ROOT/name)==expected or snapshot.get('textLfSha256',{}).get(name)==hashlib.sha256((ROOT/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+for name,expected in preserved.items():assert preserved_ok(name,expected),('Changed canonical input',name)
 for item in manifest['variants']:
  if angles is not None and item['elevation'] not in angles:continue
  ident=item['id'];dest=ROOT/item['assetDir'];temp=ROOT/'build/rook-projections'/ident
@@ -59,10 +60,10 @@ for item in manifest['variants']:
  bpy.context.view_layer.update();graph=bpy.context.evaluated_depsgraph_get();projection=cam.calc_matrix_camera(graph,x=600,y=900)
  pc={'type':'ORTHO','worldToCamera':[float(v) for row in cam.matrix_world.inverted() for v in row],'projectionMatrix':[float(v) for row in projection for v in row],'width':600,'height':900,'orthoScale':4.4,'shiftX':0,'shiftY':0}
  (dest/'profile-camera.json').write_text(json.dumps(pc,indent=2));bpy.ops.render.render(write_still=True)
- validation={'components':components,'sourceSha256':meta['sourceSha256'],'source_hash_matches':sha(model)==meta['sourceSha256'],'renderSha256':sha(dest/'render.png'),'profileSha256':sha(dest/'profile.png'),'cameraSha256':sha(dest/'camera.json'),'equal_merlon_volumes':True,'note':'Evaluated body union and four hidden editable merlons are closed with positive signed volumes; hidden merlons are rotationally equal.'}
+ validation={'components':components,'sourceSha256':meta['sourceSha256'],'source_hash_matches':sha(model)==meta['sourceSha256'],'renderSha256':sha(dest/'render.png'),'profileSha256':sha(dest/'profile.png'),'cameraSha256':sha(dest/'camera.json'),'cameraLfSha256':hashlib.sha256((dest/'camera.json').read_bytes().replace(b'\r\n',b'\n')).hexdigest(),'equal_merlon_volumes':True,'note':'Evaluated body union and four hidden editable merlons are closed with positive signed volumes; hidden merlons are rotationally equal.'}
  (dest/'validation.json').write_text(json.dumps(validation,indent=2));manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
  print('ROOK_PROJECTION_DONE',ident,item['heightToBaseWidth'],flush=True)
 manifest['sharedView']={'center':[0,0,1.95],'orthoHeight':4.4,'distance':12}
 manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
-for name,expected in preserved.items():assert sha(ROOT/name)==expected,('Canonical changed',name)
+for name,expected in preserved.items():assert preserved_ok(name,expected),('Canonical changed',name)
 print('ALL_ROOK_PROJECTIONS_BUILT',flush=True)

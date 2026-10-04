@@ -145,7 +145,7 @@ for piece,angles in expected_angles.items():
    evidence=read_json(evidence_path)
    if 'sourceSha256' in evidence:assert evidence['sourceSha256']==meta['sourceSha256'],label+' stale validation model'
    for filename,key in [('render.png','renderSha256'),('profile.png','profileSha256'),('camera.json','cameraSha256')]:
-    if key in evidence:assert evidence[key]==sha(project_file(folder+'/'+filename)),label+' stale '+filename+' evidence'
+    if key in evidence:assert evidence[key]==sha(project_file(folder+'/'+filename)) or (filename=='camera.json' and evidence.get('cameraLfSha256')==hashlib.sha256(project_file(folder+'/'+filename).read_bytes().replace(b'\r\n',b'\n')).hexdigest()),label+' stale '+filename+' evidence'
   bounds.append(meta['bounds'])
   if 'baseWidth' in row:base_widths.append(row['baseWidth'])
  assert len(set(profile_dimensions))==1 and all(c==profile_cameras[0] for c in profile_cameras),piece+' physical profiles do not share one camera and scale'

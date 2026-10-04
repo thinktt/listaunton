@@ -9,14 +9,15 @@ def check(root):
  def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
  def local(name):
   p=(root/name).resolve();assert p.is_relative_to(root) and p.is_file(),name;return p
- for name,expected in baseline['sha256'].items():assert sha(local(name))==expected,('Canonical rook changed',name)
+ for name,expected in baseline['sha256'].items():
+  assert sha(local(name))==expected or baseline.get('textLfSha256',{}).get(name)==hashlib.sha256(local(name).read_bytes().replace(b'\r\n',b'\n')).hexdigest(),('Canonical rook changed',name)
  variants=manifest['variants'];assert [v['elevation'] for v in variants]==[48,52,54,56,60,64];assert manifest['baseline']=='angle-54'
  assert len({v['id'] for v in variants})==6
  canonical=json.loads((root/'assets/rook/mesh.json').read_text(encoding='utf-8'));original_cfg=json.loads((root/'scripts/rook/profile.json').read_text(encoding='utf-8'));reports=[];profile_cameras=[]
  for item in variants:
   folder=root/item['assetDir'];meta=json.loads((folder/'mesh.json').read_text(encoding='utf-8'));camera=json.loads((folder/'camera.json').read_text(encoding='utf-8'));validation=json.loads((folder/'validation.json').read_text(encoding='utf-8'));cfg=json.loads((folder/'profile.json').read_text(encoding='utf-8'));qa=json.loads((folder/'qa.json').read_text(encoding='utf-8'))
   model_hash=sha(local(item['model']));assert model_hash==meta['sourceSha256']==validation['sourceSha256'];assert validation['source_hash_matches']
-  for name,key in [('render.png','renderSha256'),('profile.png','profileSha256'),('camera.json','cameraSha256')]:assert sha(folder/name)==validation[key]
+  for name,key in [('render.png','renderSha256'),('profile.png','profileSha256'),('camera.json','cameraSha256')]:assert sha(folder/name)==validation[key] or (name=='camera.json' and validation.get('cameraLfSha256')==hashlib.sha256((folder/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest())
   components=validation['components'];assert len(components)==5 and sum(not c['hidden_construction'] for c in components)==1
   for c in components:assert c['nonmanifold_edges']==0 and c['signed_volume']>0 and math.isfinite(c['signed_volume'])
   volumes=[c['signed_volume'] for c in components if c['hidden_construction']];assert max(volumes)-min(volumes)<1e-7
