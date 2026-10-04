@@ -224,6 +224,45 @@
         }
       },
       {
+        "id": "candidate-7",
+        "label": "Black candidate 7 \u2014 generator color grade",
+        "file": "assets/candidates/rook/color-tests/candidate-6-generated-grade.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9865058479532164,
+        "x": 0.42202729044834086,
+        "y": 1.0289473684210442,
+        "silhouette_iou": 0.960827916524119,
+        "silhouette_y": 0.6622807017543835,
+        "foot_refinement": {
+          "dy_original_px": 1.1,
+          "correlation_before": 0.63997,
+          "correlation_after": 0.84208,
+          "reference": "black"
+        }
+      },
+      {
+        "id": "candidate-8",
+        "label": "Black candidate 8 \u2014 direct color grade",
+        "file": "assets/candidates/rook/color-tests/candidate-6-direct-grade.png",
+        "width": 1254,
+        "height": 1254,
+        "flip": false,
+        "scale": 0.9842836257309941,
+        "x": 0.5307017543859666,
+        "y": 1.1789473684210439,
+        "silhouette_iou": 0.9612032131259614,
+        "alignment_source": "candidate-6",
+        "silhouette_y": 0.7456140350877168,
+        "foot_refinement": {
+          "dy_original_px": 1.3,
+          "correlation_before": 0.6108,
+          "correlation_after": 0.87501,
+          "reference": "black"
+        }
+      },
+      {
         "id": "white-candidate-4",
         "label": "White candidate 4",
         "file": "assets/candidates/rook/white-candidate-4.png",

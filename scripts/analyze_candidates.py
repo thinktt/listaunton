@@ -40,7 +40,10 @@ for piece in ['king','rook','bishop','knight','pawn']:
         m,size=mask(root/file);flip=piece=='knight' and key.startswith('white')
         if flip:m=m[:,::-1]
         placement=fit(m,target) if key!='black' else dict(scale=1,x=0,y=0,silhouette_iou=1)
-        items.append(dict(id=key,label=label,file=file,width=size[0],height=size[1],flip=flip,**placement))
+        items.append(dict(id=key,label=next((v.get('label',label) for v in generated if v['file']==file),label),file=file,width=size[0],height=size[1],flip=flip,**placement))
+    for item in items:
+        record=next((v for v in generated if v['file']==item['file']),{})
+        if record.get('alignment_source'):item['alignment_source']=record['alignment_source']
     result['pieces'][piece]=items
     print(piece,[(v['id'],round(v['silhouette_iou'],3),[v['width'],v['height']]) for v in items])
 (root/'assets/candidates/alignment.json').write_text(json.dumps(result,indent=2),encoding='utf-8')

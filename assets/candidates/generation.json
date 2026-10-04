@@ -324,6 +324,45 @@
       "source_revision": "d44985e2ca0c940b8e0a4764b593803feadb1ecf",
       "supporting_reference": "references/lichess-staunton-3d/White-Rook.png",
       "supporting_reference_sha256": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+    },
+    {
+      "piece": "rook",
+      "color": "black",
+      "candidate": 7,
+      "label": "Black candidate 7 \u2014 generator color grade",
+      "file": "assets/candidates/rook/color-tests/candidate-6-generated-grade.png",
+      "sha256": "ef30b5f3193511ed7778bcf128226ba76e6bb18e72efef36b960090f33d7f92c",
+      "source": "assets/candidates/rook/candidate-6.png",
+      "source_sha256": "75a806e0fc3d3a1162871012c3a007ad05850c3092684690fafc4a2411909ec5",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: black rook candidate 6. Image 2 is ONLY a wood color reference: the original low-resolution black rook. Apply ONLY a photographic color grade to image 1: darker, redder brown wood matching image 2, less golden orange. Preserve the exact geometry, thin turret ledges, framing, every grain pattern, all carved details, edges, light directions and highlight locations. Preserve transparency and image dimensions. Do not rerender, redraw, sharpen, add texture or modify proportions. Think of an RGB curves/color-balance adjustment to the existing pixels, with neutral specular highlights retained. No other changes."
+    },
+    {
+      "piece": "rook",
+      "color": "black",
+      "candidate": 8,
+      "label": "Black candidate 8 \u2014 direct color grade",
+      "file": "assets/candidates/rook/color-tests/candidate-6-direct-grade.png",
+      "sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe",
+      "source": "assets/candidates/rook/candidate-6.png",
+      "source_sha256": "75a806e0fc3d3a1162871012c3a007ad05850c3092684690fafc4a2411909ec5",
+      "tool": "Pillow/NumPy deterministic RGB grade",
+      "recipe": {
+        "file": "candidate-6-direct-grade.png",
+        "gamma": 1.16,
+        "midtone_channel_gains": [
+          0.98,
+          0.86,
+          0.9
+        ],
+        "highlight_tint_fade": [
+          0.6,
+          0.95
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      "alignment_source": "candidate-6"
     }
   ],
   "date": "2026-10-02",

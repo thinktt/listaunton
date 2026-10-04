@@ -84,6 +84,24 @@
     },
     {
       "piece": "rook",
+      "candidate": "candidate-7",
+      "proposed_px": 1.1,
+      "dy_original_px": 1.1,
+      "correlation_before": 0.63997,
+      "correlation_after": 0.84208,
+      "reference": "black"
+    },
+    {
+      "piece": "rook",
+      "candidate": "candidate-8",
+      "inherited_from": "candidate-6",
+      "dy_original_px": 1.3,
+      "correlation_before": 0.6108,
+      "correlation_after": 0.87501,
+      "reference": "black"
+    },
+    {
+      "piece": "rook",
       "candidate": "white-candidate-4",
       "proposed_px": -1.05,
       "dy_original_px": -1.05,

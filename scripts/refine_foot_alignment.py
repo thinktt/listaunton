@@ -24,6 +24,11 @@ for piece,items in data['pieces'].items():
     originals={i['id']:i for i in items if i['id'] in ['black','white']}
     for item in items:
         if 'candidate' not in item['id']:continue
+        if item.get('alignment_source'):
+            base=next(v for v in items if v['id']==item['alignment_source'])
+            for key in ['scale','x','y','silhouette_y','silhouette_iou','foot_refinement']:item[key]=base[key]
+            report.append({'piece':piece,'candidate':item['id'],'inherited_from':base['id'],**item['foot_refinement']})
+            continue
         # Repeated runs recompute from the saved silhouette placement, not the prior correction.
         item['y']=item.get('silhouette_y',item['y']);item['silhouette_y']=item['y']
         original=originals['white' if item['id'].startswith('white') else 'black']
