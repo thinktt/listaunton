@@ -1,8 +1,12 @@
 {
   "date": "2026-10-05",
   "anchor": "king",
-  "method": "Uniformly scale each cutout so its broadest lower-base width, relative to the king, matches the same width ratio in the original white 300px Lichess sprites. Align opaque foot bottoms to a shared ground line. No independent height adjustment.",
-  "assumptions": "Original sprites share an orthographic or weak-perspective camera and pixel scale. Horizontal widths of circular bases avoid the vertical foreshortening and clipped king cross. This is a base-matched estimate, not recovered physical dimensions; generated side proportions remain interpretations.",
+  "method": "For every piece, multiply its model height/base-diameter ratio by its original sprite base-width ratio to the king, then divide by the king model height/base ratio. Uniformly scale the cutout to that estimated relative height. King is 430px tall; all feet share one ground line. No image stretching.",
+  "assumptions": "Model interpretations at a common assumed 54-degree elevation, not recovered exact physical dimensions. Original sprites are assumed to share render scale. Generated side-image proportions differ from model proportions, so their displayed base widths need not exactly match original width ratios. Knight geometry prioritizes its approved generated side guide; its original-view fit is weaker.",
+  "model_measurement": {
+    "base_search": "Lower quarter of mesh height; use maximum XY extent of the round base, excluding the knight muzzle",
+    "elevation_degrees": 54
+  },
   "original_measurement": {
     "rows": [
       150,
@@ -61,6 +65,30 @@
         "ground_y_px": 1159,
         "fully_transparent_fraction": 0.81855
       },
+      "model": {
+        "file": "assets/king-projections/angle-54/mesh.json",
+        "sha256": "7108a2e3f4379d89af75f3c46e799a36f43434e952e61d66ca453224e5e05545",
+        "binary": "assets/king-projections/angle-54/mesh.bin",
+        "binary_sha256": "e7370fd03cfcd20c79219232ff1f1c71ce400eeaedd8d104f4d26b42a7598d5f",
+        "camera_file": "assets/king-projections/angle-54/profile.json",
+        "camera_sha256": "13f1bc08becf2d2b3abdaab9f339830dcad422544f4d5d22c70318c1cd55b381",
+        "text_hash_normalization": "CRLF to LF",
+        "assumed_elevation_degrees": 54,
+        "height": 5.127651214599609,
+        "base_diameter": 2.0663816928863525,
+        "base_xy_widths": [
+          2.0663816928863525,
+          2.0663816928863525
+        ],
+        "base_search_max_z": 1.2819128036499023,
+        "base_vertex_count": 58752,
+        "height_to_base": 2.4814637258217433
+      },
+      "height_check": {
+        "height_ratio_to_king": 1.0,
+        "previous_height_ratio_to_king": 1.0,
+        "uniform_correction_factor": 1.0
+      },
       "base_ratio_to_king": 1.0,
       "display": {
         "scale": 0.388086642599278,
@@ -108,15 +136,39 @@
         "ground_y_px": 1159,
         "fully_transparent_fraction": 0.7908
       },
+      "model": {
+        "file": "assets/queen-projections/angle-54/mesh.json",
+        "sha256": "e8dc1b0ad4a2f124e97bda14608f4aefefa5887f92bc1e6a6ba8233fdd6083a8",
+        "binary": "assets/queen-projections/angle-54/mesh.bin",
+        "binary_sha256": "7135ce1b890bbf56e371469b302430d36030e88fe1cff265740b93e46bf316a5",
+        "camera_file": "assets/queen-projections/angle-54/fit.json",
+        "camera_sha256": "00865939306a883be92559229ce1821fa99b37e6a4d33fa082b782cea56ad38b",
+        "text_hash_normalization": "CRLF to LF",
+        "assumed_elevation_degrees": 54,
+        "height": 4.1434574143645335,
+        "base_diameter": 2.0734214782714844,
+        "base_xy_widths": [
+          2.0734214782714844,
+          2.0734214782714844
+        ],
+        "base_search_max_z": 1.035864351946326,
+        "base_vertex_count": 29185,
+        "height_to_base": 1.9983671712606847
+      },
+      "height_check": {
+        "height_ratio_to_king": 0.7647623279108172,
+        "previous_height_ratio_to_king": 0.8009628875885748,
+        "uniform_correction_factor": 0.9548036990992866
+      },
       "base_ratio_to_king": 0.9496402877697842,
       "display": {
-        "scale": 0.3283260645024663,
-        "image_width_px": 411.7208848860928,
-        "image_height_px": 411.7208848860928,
-        "left_from_center_px": -204.05464908828282,
-        "top_px": 69.47009124164151,
-        "visible_height_px": 344.4140416630872,
-        "base_width_px": 183.53427005687868
+        "scale": 0.3134869408976658,
+        "image_width_px": 393.1126238856729,
+        "image_height_px": 393.1126238856729,
+        "left_from_center_px": -194.8321337678993,
+        "top_px": 86.66863549960533,
+        "visible_height_px": 328.8478010016515,
+        "base_width_px": 175.2391999617952
       }
     },
     {
@@ -155,15 +207,39 @@
         "ground_y_px": 1118,
         "fully_transparent_fraction": 0.71341
       },
+      "model": {
+        "file": "assets/rook-projections/angle-54/mesh.json",
+        "sha256": "3589cf6c33bd164442d1a732ea65b91c0f16ad55b52d5e088e5c75953e81632c",
+        "binary": "assets/rook-projections/angle-54/mesh.bin",
+        "binary_sha256": "62a327e20f269411789f691b57f0ca2619b406f2fb3a929da435a7ebdc6f3166",
+        "camera_file": "assets/rook-projections/angle-54/profile.json",
+        "camera_sha256": "f13e689f233d5878f5d0ee127590e4b3285b4e978caccae490aca8c7fe4e54da",
+        "text_hash_normalization": "CRLF to LF",
+        "assumed_elevation_degrees": 54,
+        "height": 2.8375279903411865,
+        "base_diameter": 1.7814275026321411,
+        "base_xy_widths": [
+          1.7814275026321411,
+          1.7814275026321411
+        ],
+        "base_search_max_z": 0.7093819975852966,
+        "base_vertex_count": 55296,
+        "height_to_base": 1.5928394426091481
+      },
+      "height_check": {
+        "height_ratio_to_king": 0.5449181548221758,
+        "previous_height_ratio_to_king": 0.5121721256076859,
+        "uniform_correction_factor": 1.0639355942606934
+      },
       "base_ratio_to_king": 0.8489208633093526,
       "display": {
-        "scale": 0.23305186667862954,
-        "image_width_px": 292.2470408150014,
-        "image_height_px": 292.2470408150014,
-        "left_from_center_px": -146.1235204075007,
-        "top_px": 189.4480130532922,
-        "visible_height_px": 220.2340140113049,
-        "base_width_px": 164.0685141417552
+        "scale": 0.2479521762682916,
+        "image_width_px": 310.93202904043767,
+        "image_height_px": 310.93202904043767,
+        "left_from_center_px": -155.46601452021883,
+        "top_px": 172.78946693205,
+        "visible_height_px": 234.31480657353558,
+        "base_width_px": 174.5583320928773
       }
     },
     {
@@ -202,15 +278,39 @@
         "ground_y_px": 1188,
         "fully_transparent_fraction": 0.76896
       },
+      "model": {
+        "file": "assets/bishop/mesh.json",
+        "sha256": "b3088d316079fa1eb2e20b2d96d80a45fbd313244fd922f4a417c0a09aae1782",
+        "binary": "assets/bishop/mesh.bin",
+        "binary_sha256": "9a9ba91ed77966f405557249c695f4e63ba54b1b948b9b7b8fe616d8b2b8bacc",
+        "camera_file": "scripts/bishop/profile.json",
+        "camera_sha256": "e54e6fe34fa3b08a5f5dc76f57ebedfdb3f6b6816c6c5dbf775a658f09648392",
+        "text_hash_normalization": "CRLF to LF",
+        "assumed_elevation_degrees": 54,
+        "height": 4.592006683349609,
+        "base_diameter": 2.009791135787964,
+        "base_xy_widths": [
+          2.009791135787964,
+          2.009791135787964
+        ],
+        "base_search_max_z": 1.1480016708374023,
+        "base_vertex_count": 76800,
+        "height_to_base": 2.284817860712305
+      },
+      "height_check": {
+        "height_ratio_to_king": 0.8015197424901712,
+        "previous_height_ratio_to_king": 0.7449024471013165,
+        "uniform_correction_factor": 1.0760063221824185
+      },
       "base_ratio_to_king": 0.8705035971223022,
       "display": {
-        "scale": 0.2837095236966927,
-        "image_width_px": 355.7717427156527,
-        "image_height_px": 355.7717427156527,
-        "left_from_center_px": -174.62321183531438,
-        "top_px": 112.95308584832907,
-        "visible_height_px": 320.3080522535661,
-        "base_width_px": 168.2397475521388
+        "scale": 0.30527324116100407,
+        "image_width_px": 382.8126444158991,
+        "image_height_px": 382.8126444158991,
+        "left_from_center_px": -187.895679934598,
+        "top_px": 87.33538950072716,
+        "visible_height_px": 344.6534892707736,
+        "base_width_px": 181.0270320084754
       }
     },
     {
@@ -249,15 +349,39 @@
         "ground_y_px": 1184,
         "fully_transparent_fraction": 0.65754
       },
+      "model": {
+        "file": "assets/knight/mesh.json",
+        "sha256": "104c19170f0976a86c98d529887603d19ea227374a044894d8d87a3855942326",
+        "binary": "assets/knight/mesh.bin",
+        "binary_sha256": "50b30e70d614bd0e8f5157b0a94827c2ab49f8b79a3dd045878ef40afb9478ca",
+        "camera_file": "assets/knight/reconstruction.json",
+        "camera_sha256": "072c5faa9ee1844230b10d3ff8830a64b23d90b67ee8820b393b55bdd784814b",
+        "text_hash_normalization": "CRLF to LF",
+        "assumed_elevation_degrees": 54,
+        "height": 5.102221962064505,
+        "base_diameter": 2.9886536598205566,
+        "base_xy_widths": [
+          2.9886536598205566,
+          2.9886536598205566
+        ],
+        "base_search_max_z": 1.3155554560944438,
+        "base_vertex_count": 114432,
+        "height_to_base": 1.7071974684316047
+      },
+      "height_check": {
+        "height_ratio_to_king": 0.6186870700527631,
+        "previous_height_ratio_to_king": 0.7015992270866852,
+        "uniform_correction_factor": 0.8818240473579114
+      },
       "base_ratio_to_king": 0.8992805755395683,
       "display": {
-        "scale": 0.281687831603431,
-        "image_width_px": 353.2365408307025,
-        "image_height_px": 353.2365408307025,
-        "left_from_center_px": -176.75911433115297,
-        "top_px": 116.48160738153769,
-        "visible_height_px": 301.6876676472746,
-        "base_width_px": 173.80139209931696
+        "scale": 0.24839910375601135,
+        "image_width_px": 311.49247611003824,
+        "image_height_px": 311.49247611003824,
+        "left_from_center_px": -155.87043760689713,
+        "top_px": 155.89546115288255,
+        "visible_height_px": 266.03544012268816,
+        "base_width_px": 153.262247017459
       }
     },
     {
@@ -296,15 +420,39 @@
         "ground_y_px": 1168,
         "fully_transparent_fraction": 0.7465
       },
+      "model": {
+        "file": "assets/pawn/mesh.json",
+        "sha256": "04e39f6c6dd660bcc67232c4f0906cd883f0abffd87aec82a386313a3d60e0f0",
+        "binary": "assets/pawn/mesh.bin",
+        "binary_sha256": "3c3ad4470a692b90d5356d601ac33c8615a361415e64dbb3e985b071cd4e1539",
+        "camera_file": "scripts/pawn/profile.json",
+        "camera_sha256": "cf5e86096185c58bab78a706ca910fd808800e0db1bcca8e54c7db46c5bad83a",
+        "text_hash_normalization": "CRLF to LF",
+        "assumed_elevation_degrees": 54,
+        "height": 2.774854891002178,
+        "base_diameter": 1.649958848953247,
+        "base_xy_widths": [
+          1.649958848953247,
+          1.649958848953247
+        ],
+        "base_search_max_z": 0.5852199252694845,
+        "base_vertex_count": 38016,
+        "height_to_base": 1.68177218041685
+      },
+      "height_check": {
+        "height_ratio_to_king": 0.5022057230986264,
+        "previous_height_ratio_to_king": 0.5151740441930487,
+        "uniform_correction_factor": 0.9748273011022218
+      },
       "base_ratio_to_king": 0.7410071942446043,
       "display": {
-        "scale": 0.21633285058887788,
-        "image_width_px": 271.28139463845287,
-        "image_height_px": 271.28139463845287,
-        "left_from_center_px": -135.64069731922643,
-        "top_px": 197.32323051219063,
-        "visible_height_px": 221.52483900301095,
-        "base_width_px": 143.21234708983715
+        "scale": 0.21088716887930603,
+        "image_width_px": 264.45250977464974,
+        "image_height_px": 264.45250977464974,
+        "left_from_center_px": -132.22625488732487,
+        "top_px": 203.68378674897056,
+        "visible_height_px": 215.94846093240938,
+        "base_width_px": 139.60730579810058
       }
     }
   ]

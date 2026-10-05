@@ -23,10 +23,10 @@ for item in sides:
     display=row['display']
     style=f'width:{display["image_width_px"]:.6f}px;left:calc(50% + {display["left_from_center_px"]:.6f}px);top:{display["top_px"]:.6f}px'
     name=escape(item['name']);image=escape(item['file'],quote=True)
-    ratio=f'{row["base_ratio_to_king"]:.0%}'
+    ratio=f'{row["height_check"]["height_ratio_to_king"]:.1%}'
     # Load the whole set even while its tab is hidden or cards are outside the scroll viewport.
     cards.append(f'''<article class="card side-card" data-side-piece="{item["piece"]}">
-<h2>{name}</h2><span class="side-ratio">Base: {ratio} of king</span>
+<h2>{name}</h2><span class="side-ratio">Height: {ratio} of king</span>
 <a class="side-image" href="{image}" target="_blank" rel="noopener" aria-label="Open full-size {name.lower()} cutout">
 <img src="{image}" alt="Generated {name.lower()} side view based on the {item["referenceColor"]} reference" width="{item["width"]}" height="{item["height"]}" style="{style}" loading="eager" decoding="auto"></a>
 <div class="side-links"><a href="{escape(item["review"],quote=True)}">Review {name.lower()}</a><a href="{image}" target="_blank" rel="noopener">Full-size cutout</a><a href="{escape(item["source_file"],quote=True)}" target="_blank" rel="noopener">Before removal</a><a href="{escape(item["generation"],quote=True)}" target="_blank" rel="noopener">Prompt &amp; sources</a></div></article>''')

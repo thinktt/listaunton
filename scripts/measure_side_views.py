@@ -10,10 +10,22 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / 'assets/side-views/manifest.json'
+MODEL_SOURCES = {
+    'king': ('assets/king-projections/angle-54/mesh.json', 'assets/king-projections/angle-54/profile.json'),
+    'queen': ('assets/queen-projections/angle-54/mesh.json', 'assets/queen-projections/angle-54/fit.json'),
+    'rook': ('assets/rook-projections/angle-54/mesh.json', 'assets/rook-projections/angle-54/profile.json'),
+    'bishop': ('assets/bishop/mesh.json', 'scripts/bishop/profile.json'),
+    'knight': ('assets/knight/mesh.json', 'assets/knight/reconstruction.json'),
+    'pawn': ('assets/pawn/mesh.json', 'scripts/pawn/profile.json'),
+}
 
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def text_digest(path):
+    return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
 
 
 def widest_row(mask, start, stop):
@@ -64,12 +76,40 @@ def cutout_measurement(file):
                 fully_transparent_fraction=round(float((alpha == 0).mean()), 5))
 
 
+def model_measurement(piece):
+    file, camera_file = MODEL_SOURCES[piece]
+    path = ROOT / file
+    meta = json.loads(path.read_text(encoding='utf-8'))
+    camera = json.loads((ROOT / camera_file).read_text(encoding='utf-8'))
+    elevation = camera['reference_camera']['elevation_degrees'] if piece == 'knight' else camera['elevation']
+    assert elevation == 54, (piece, elevation)
+    binary = str(Path(file).with_suffix('.bin')).replace('\\', '/')
+    raw = (ROOT / binary).read_bytes()
+    assert len(raw) == meta['totalByteLength']
+    vertices = np.ndarray((meta['vertexCount'], 3), dtype='<f4', buffer=raw,
+                          offset=meta.get('vertexByteOffset', 0) + meta.get('positionOffsetBytes', 0),
+                          strides=(meta['vertexStrideBytes'], 4)).astype(float)
+    lo, hi = vertices.min(axis=0), vertices.max(axis=0)
+    assert np.allclose(hi - lo, meta['bounds']['size'], atol=1e-5)
+    height = float(hi[2] - lo[2])
+    # In particular, do not mistake the knight's overhanging muzzle for its base.
+    base = vertices[vertices[:, 2] <= lo[2] + .25 * height]
+    xy_widths = base[:, :2].max(axis=0) - base[:, :2].min(axis=0)
+    assert abs(xy_widths[0] / xy_widths[1] - 1) < .01, (piece, xy_widths)
+    diameter = float(max(xy_widths))
+    return dict(file=file, sha256=text_digest(path), binary=binary, binary_sha256=digest(ROOT / binary),
+                camera_file=camera_file, camera_sha256=text_digest(ROOT / camera_file), text_hash_normalization='CRLF to LF',
+                assumed_elevation_degrees=elevation, height=height, base_diameter=diameter,
+                base_xy_widths=xy_widths.tolist(), base_search_max_z=float(lo[2] + .25 * height),
+                base_vertex_count=len(base), height_to_base=height / diameter)
+
+
 def main():
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
     measured = []
     for item in manifest['pieces']:
         measured.append(dict(piece=item['piece'], original=original_measurement(item['piece']),
-                             cutout=cutout_measurement(item['file'])))
+                             cutout=cutout_measurement(item['file']), model=model_measurement(item['piece'])))
     king = measured[0]
     assert king['piece'] == 'king'
     king_height = king['cutout']['ground_y_px'] - king['cutout']['bounds_px'][1]
@@ -77,8 +117,16 @@ def main():
     for row in measured:
         original, cutout = row['original'], row['cutout']
         ratio = original['base_width_px'] / king['original']['base_width_px']
-        # One scale factor on both axes. Foot centers sit at slot centers.
-        scale = king_scale * king['cutout']['base_width_px'] * ratio / cutout['base_width_px']
+        # Models use arbitrary world units; normalize by their round bases, then
+        # recover cross-piece scale from the original sprites' diameter ratios.
+        height_ratio = ratio * row['model']['height_to_base'] / king['model']['height_to_base']
+        target_height = 430 * height_ratio
+        cutout_height = cutout['ground_y_px'] - cutout['bounds_px'][1]
+        baseline_scale = king_scale * king['cutout']['base_width_px'] * ratio / cutout['base_width_px']
+        scale = target_height / cutout_height
+        row['height_check'] = dict(height_ratio_to_king=height_ratio,
+                                   previous_height_ratio_to_king=cutout_height * baseline_scale / 430,
+                                   uniform_correction_factor=scale / baseline_scale)
         row['base_ratio_to_king'] = ratio
         row['display'] = dict(scale=scale, image_width_px=cutout['width'] * scale,
                               image_height_px=cutout['height'] * scale,
@@ -87,10 +135,11 @@ def main():
                               visible_height_px=(cutout['ground_y_px'] - cutout['bounds_px'][1]) * scale,
                               base_width_px=cutout['base_width_px'] * scale)
         print(f"{row['piece']:6s}: original base {original['base_width_px']:3d}px; "
-              f"{ratio:.1%} of king; displayed height {row['display']['visible_height_px']:.1f}px")
+              f"estimated height {height_ratio:.1%} of king; displayed {target_height:.1f}px")
     report = dict(date='2026-10-05', anchor='king',
-                  method='Uniformly scale each cutout so its broadest lower-base width, relative to the king, matches the same width ratio in the original white 300px Lichess sprites. Align opaque foot bottoms to a shared ground line. No independent height adjustment.',
-                  assumptions='Original sprites share an orthographic or weak-perspective camera and pixel scale. Horizontal widths of circular bases avoid the vertical foreshortening and clipped king cross. This is a base-matched estimate, not recovered physical dimensions; generated side proportions remain interpretations.',
+                  method='For every piece, multiply its model height/base-diameter ratio by its original sprite base-width ratio to the king, then divide by the king model height/base ratio. Uniformly scale the cutout to that estimated relative height. King is 430px tall; all feet share one ground line. No image stretching.',
+                  assumptions='Model interpretations at a common assumed 54-degree elevation, not recovered exact physical dimensions. Original sprites are assumed to share render scale. Generated side-image proportions differ from model proportions, so their displayed base widths need not exactly match original width ratios. Knight geometry prioritizes its approved generated side guide; its original-view fit is weaker.',
+                  model_measurement=dict(base_search='Lower quarter of mesh height; use maximum XY extent of the round base, excluding the knight muzzle', elevation_degrees=54),
                   original_measurement=dict(rows=[150, 260], alpha_min=200, red_min_exclusive=35,
                                             red_to_blue_min_exclusive=1.3,
                                             note='Exclude blurred shadows; brightest white side gives the clearest outline. Threshold sensitivity records the few-pixel ambiguity.'),

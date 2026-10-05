@@ -56,6 +56,7 @@ console.log('PASS: side-view deep link, keyboard tabs, retained comparison/color
 // Validate the page's actual placements against source measurements, not card size.
 const sizing=JSON.parse(fs.readFileSync(path.join(root,manifest.scale),'utf8'));
 const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
+const textSha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n')).digest('hex');
 const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<.001,`${label}: ${actual} != ${expected}`);
 const king=sizing.pieces.find(row=>row.piece==='king');
 near(king.display.visible_height_px,430,'King anchor height');
@@ -71,7 +72,19 @@ for(const row of sizing.pieces){
  assert.equal(item.source_file,extraction.source.file);assert(extraction.transparent_background);
  assert.equal(extraction.output.sha256,item.sha256);assert(cut.fully_transparent_fraction>.5);
  near(row.base_ratio_to_king,row.original.base_width_px/king.original.base_width_px,'Original ratio');
- near(d.base_width_px/king.display.base_width_px,row.base_ratio_to_king,'Displayed base ratio');
+ const check=row.height_check,model=row.model,correction=check.uniform_correction_factor;
+ assert.equal(model.assumed_elevation_degrees,54);
+ assert.equal(textSha(model.file),model.sha256,'Height-check model metadata changed');
+ assert.equal(sha(model.binary),model.binary_sha256,'Height-check geometry changed');
+ assert.equal(textSha(model.camera_file),model.camera_sha256,'Height-check camera assumption changed');
+ near(model.height_to_base,model.height/model.base_diameter,'Model dimensions');
+ if(row.piece==='knight'){
+  const meta=JSON.parse(fs.readFileSync(path.join(root,model.file),'utf8'));
+  assert(model.base_diameter<meta.bounds.size[0]-.1,'Knight base must exclude its overhanging muzzle');
+ }
+ near(check.height_ratio_to_king,row.base_ratio_to_king*model.height_to_base/king.model.height_to_base,'Model height ratio');
+ near(d.visible_height_px/king.display.visible_height_px,check.height_ratio_to_king,'Displayed height estimate');
+ near(d.base_width_px/king.display.base_width_px,row.base_ratio_to_king*correction,'Displayed base ratio');
  const card=html.match(new RegExp('<article[^>]*data-side-piece="'+row.piece+'"[\\s\\S]*?</article>'))[0];
  const style=card.match(/<img[^>]*style="([^"]+)"/)[1];
  const width=Number(style.match(/width:([\d.]+)px/)[1]);
@@ -86,4 +99,4 @@ for(const row of sizing.pieces){
  assert(left+cut.bounds_px[2]*s<=half,'Right side clipped');
  assert(card.includes('href="'+item.source_file+'"'),'Untouched side view must remain accessible');
 }
-console.log('PASS: uniform king-relative base scale, shared ground, no clipped pieces, original guide hashes and transparent cutout provenance.');
+console.log('PASS: six 54-degree model height estimates, true knight base, uniform image scale, shared ground, bounds and source hashes.');
