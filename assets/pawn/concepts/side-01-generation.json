@@ -1,0 +1,18 @@
+{
+  "piece": "pawn",
+  "sources": [
+    "assets/pawn/original.png",
+    "assets/pawn/reference.png"
+  ],
+  "prompt": "Use case: product-mockup. Make a faithful imagined SIDE ELEVATION of the exact wooden Staunton chess piece in the supplied images, as a guide to reconstructing its 3D geometry. Image 1 is the original low-resolution Lichess black piece and design authority. Image 2 is the owner's selected high-resolution reference, supporting detail interpretation. Lower the camera to a horizontal optical axis at mid-piece height, orthographic or a very long lens: a level elevation with rings nearly edge-on, not the overhead view of the source. Keep the piece upright. Infer its hidden vertical proportions conservatively; preserve this particular compact turned design rather than substituting a generic chess piece. Show one complete piece centered and large, uncropped with margins, on a plain dark charcoal studio backdrop and subtle ground shadow. Preserve its reddish dark brown polished wood, fine visible grain, slightly worn finish and soft warm highlights. No labels, text, extra objects or ornamental additions. A plausible new viewpoint of this same carved object, not a redesign.\nSpecific pawn geometry: a round wooden head sits snugly in its shallow saucer collar, with no exposed peg or air gap beneath the ball. Preserve its gently concave tapered stem, rounded shoulder/socket transition and broad squat flaring base, with a shallow dark groove between the main base and low rounded foot. Keep the ball, collar and foot proportions faithful to these references: the simple smooth connected turned shapes are the design. Avoid a long spindly neck, extra decorative rings or a separate floating ball.",
+  "generated_file": "exec-139abaaa-bf0e-4034-8abf-b6bef5d2a365.png",
+  "tool": "Built-in image_gen",
+  "date": "2026-10-05",
+  "status": "Generated side-view candidate; not yet selected as a modeling target.",
+  "interpretation": "An imagined side elevation, not recovered original geometry or a calibrated camera view.",
+  "output_sha256": "9e0eb9fa0d2f133e9a4729b3670346bc3de2d1168d6d92230597763660b91a51",
+  "source_sha256": {
+    "assets/pawn/original.png": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "assets/pawn/reference.png": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
+  }
+}

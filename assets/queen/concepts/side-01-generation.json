@@ -1,0 +1,18 @@
+{
+  "piece": "queen",
+  "sources": [
+    "references/lichess-staunton-3d/Black-Queen.png",
+    "assets/queen/reference.png"
+  ],
+  "prompt": "Use case: product-mockup. Make a faithful imagined SIDE ELEVATION of the exact wooden Staunton chess piece in the supplied images, as a guide to reconstructing its 3D geometry. Image 1 is the original low-resolution Lichess black piece and design authority. Image 2 is the owner's selected high-resolution reference, supporting detail interpretation. Lower the camera to a horizontal optical axis at mid-piece height, orthographic or a very long lens: a level elevation with rings nearly edge-on, not the overhead view of the source. Keep the piece upright. Infer its hidden vertical proportions conservatively; preserve this particular compact turned design rather than substituting a generic chess piece. Show one complete piece centered and large, uncropped with margins, on a plain dark charcoal studio backdrop and subtle ground shadow. Preserve its reddish dark brown polished wood, fine visible grain, slightly worn finish and soft warm highlights. No labels, text, extra objects or ornamental additions. A plausible new viewpoint of this same carved object, not a redesign.\nSpecific queen geometry: a crown like a frozen splash of water, with eight softly pointed tips connected by shallow flattened scalloped edges; the simple gently expanding crown body flows seamlessly into the elegant flared rim, without a seam or an added ring. The inner bowl is shallow and the small egg-like central finial sits down inside it, with only its upper portion peeking above the front rim in the level view. Preserve the three thin closely stacked collar plates, the curved tapering stem, rounded raised socket that meets the stem without an outward lip, and the broad compressed flaring base with its shallow single groove and low flattened foot. Avoid a tall conventional pronged crown, detached ball or exaggerated spacing between collars.",
+  "generated_file": "exec-97923b41-c34c-4a33-b126-f3649587f820.png",
+  "tool": "Built-in image_gen",
+  "date": "2026-10-05",
+  "status": "Generated side-view candidate; not yet selected as a modeling target.",
+  "interpretation": "An imagined side elevation, not recovered original geometry or a calibrated camera view.",
+  "output_sha256": "64508964896844556c409e74c2ec04441efd47c373ab703c150ecc669695538d",
+  "source_sha256": {
+    "references/lichess-staunton-3d/Black-Queen.png": "b214bd3b522122f9a6040c4fd6ed4e00b2fe9d16436bf4f52e5f155b4b190567",
+    "assets/queen/reference.png": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a"
+  }
+}

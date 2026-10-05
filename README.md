@@ -14,6 +14,8 @@ The king uses the original Lichess sprite as the authority for proportions, with
 
 [Queen](queen-projections.html) and [rook](rook-projections.html) have corresponding proportion studies, including **54°**, reachable from their review tabs and the home and set pages. Each study preserves its current model and uses one base diameter, ground level and profile camera across its alternatives. The queen also includes its current 51.5° interpretation. These are geometry alternatives fitted under different camera assumptions; silhouette agreement alone does not establish the historical camera. See [queen notes](docs/queen-projections.md) and [rook notes](docs/rook-projections.md).
 
+All six GPT-generated side elevations live in the [Side views tab](set-comparison.html#side-views) of the whole-set page. Each card links to its full image, piece review and exact generation prompt. These are inferred design references with independent framing, not measured side photographs. The original comparison retains its color and candidate choices when switching tabs. Gallery records are in `assets/side-views/manifest.json`; image and provenance files are in `assets/<piece>/concepts`.
+
 See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
 
 [The shared camera study](camera-study.html) compares circular features across all six original pieces. Its working estimate is about 54° above the board, with substantial uncertainty; existing models and review pages remain unchanged.

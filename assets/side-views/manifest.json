@@ -1,0 +1,71 @@
+{
+  "note": "Generated interpretations, not original side photographs. Each image is presented in its own frame; the pieces are not at a common physical scale.",
+  "pieces": [
+    {
+      "piece": "king",
+      "name": "King",
+      "file": "assets/king/concepts/side-01.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "51834868a0755807d22669000544b5061e0103976646707d50cdd82ba7593e3e",
+      "generation": "assets/king/concepts/side-01-generation.json",
+      "review": "king-review.html",
+      "referenceColor": "black"
+    },
+    {
+      "piece": "queen",
+      "name": "Queen",
+      "file": "assets/queen/concepts/side-01.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "64508964896844556c409e74c2ec04441efd47c373ab703c150ecc669695538d",
+      "generation": "assets/queen/concepts/side-01-generation.json",
+      "review": "review.html",
+      "referenceColor": "black"
+    },
+    {
+      "piece": "rook",
+      "name": "Rook",
+      "file": "assets/rook/concepts/side-01.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "da7bee0e6cdd797d3a5eda8508c4b312819c5b5997217cbac6cd544591bb2009",
+      "generation": "assets/rook/concepts/side-01-generation.json",
+      "review": "rook-review.html",
+      "referenceColor": "black"
+    },
+    {
+      "piece": "bishop",
+      "name": "Bishop",
+      "file": "assets/bishop/concepts/side-01.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "ea4d279f26f4d5692abe659847c9a1890d018420c258acd2cb712ea9267dad4c",
+      "generation": "assets/bishop/concepts/side-01-generation.json",
+      "review": "bishop-review.html",
+      "referenceColor": "white"
+    },
+    {
+      "piece": "knight",
+      "name": "Knight",
+      "file": "assets/knight/concepts/side-01.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e",
+      "generation": "assets/knight/concepts/side-01-generation.json",
+      "review": "knight-review.html",
+      "referenceColor": "black"
+    },
+    {
+      "piece": "pawn",
+      "name": "Pawn",
+      "file": "assets/pawn/concepts/side-01.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9e0eb9fa0d2f133e9a4729b3670346bc3de2d1168d6d92230597763660b91a51",
+      "generation": "assets/pawn/concepts/side-01-generation.json",
+      "review": "pawn-review.html",
+      "referenceColor": "black"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "piece": "rook",
+  "sources": [
+    "assets/rook/original.png",
+    "assets/rook/ref.png"
+  ],
+  "prompt": "Use case: product-mockup. Make a faithful imagined SIDE ELEVATION of the exact wooden Staunton chess piece in the supplied images, as a guide to reconstructing its 3D geometry. Image 1 is the original low-resolution Lichess black piece and design authority. Image 2 is the owner's selected high-resolution reference, supporting detail interpretation. Lower the camera to a horizontal optical axis at mid-piece height, orthographic or a very long lens: a level elevation with rings nearly edge-on, not the overhead view of the source. Keep the piece upright. Infer its hidden vertical proportions conservatively; preserve this particular compact turned design rather than substituting a generic chess piece. Show one complete piece centered and large, uncropped with margins, on a plain dark charcoal studio backdrop and subtle ground shadow. Preserve its reddish dark brown polished wood, fine visible grain, slightly worn finish and soft warm highlights. No labels, text, extra objects or ornamental additions. A plausible new viewpoint of this same carved object, not a redesign.\nSpecific rook geometry: the top is a shallow circular cup with a uniformly THIN wall, divided by four narrow rectangular notches into four curved wall segments. Keep the wall equally thin around the entire circumference; do not thicken the rear segments or invent square castle blocks. At this level elevation the cavity is mostly hidden, but the thin side rim and visible notches should be clear. Preserve the subtly rounded lip, simple concave tapering tower, small turned shoulder ring and wide compressed flaring base with a shallow groove above a low flattened foot. Maintain the reference's restrained compact proportions, minimal ornament and exact turret character.",
+  "generated_file": "exec-ab5b8212-08a0-482f-98f6-56e33f8fb1ab.png",
+  "tool": "Built-in image_gen",
+  "date": "2026-10-05",
+  "status": "Generated side-view candidate; not yet selected as a modeling target.",
+  "interpretation": "An imagined side elevation, not recovered original geometry or a calibrated camera view.",
+  "output_sha256": "da7bee0e6cdd797d3a5eda8508c4b312819c5b5997217cbac6cd544591bb2009",
+  "source_sha256": {
+    "assets/rook/original.png": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+    "assets/rook/ref.png": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe"
+  }
+}
