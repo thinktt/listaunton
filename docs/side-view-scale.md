@@ -17,6 +17,19 @@ changes. Adjustments persist across tabs and, where browser storage is available
 refreshes. Reset affects only that piece. The reference-comparison candidates,
 image files and model estimates remain unchanged.
 
+## Piece order
+
+Drag a piece sideways and drop it at the highlighted insertion point. Its card
+moves horizontally only, preserving the common ground line and its current size.
+The row scrolls when dragging near an edge. Left/right buttons provide precise
+one-position moves; a focused piece also responds to arrow keys, Home and End.
+Escape or pointer cancellation abandons an in-progress drag.
+
+Order is saved separately from scale settings. Reset order restores the initial
+lineup without resetting sizes. Reordering moves existing DOM nodes, preserving
+their loaded images, controls and handlers. Normal slider use and the separate
+full-size image links do not start a reorder.
+
 ## How the estimate works
 
 The models were built with different arbitrary world-unit scales. Raw Blender
