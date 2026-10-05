@@ -1,0 +1,18 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-10-05",
+  "use_case": "product-mockup",
+  "prompt": "Use case: product-mockup.\nAsset type: imagined side-elevation guide for reconstructing a particular wooden chess piece in 3D.\nPrimary request: Show the SAME Staunton king from the supplied images from a true level side elevation, faithfully inferring its hidden proportions. Image 1 is the original low-resolution Lichess black king, the authority for design. Image 2 is the owner's selected enlarged Black candidate 1, a supporting detail reference. Neither is an existing model to redesign.\nCamera: lower the camera to a horizontal optical axis at mid-piece height, orthographic or very long lens. Keep the upright piece vertical, preserve the original azimuth so the broad face of its cross remains visible. This is a level elevation, not the steep downward view of the references and not a three-quarter overhead view. Round collars should appear nearly edge-on. Show the full piece from cross to foot, uncropped, with generous small margins.\nGeometry: faithfully preserve this specific compact carved design: a simple thick wooden cross with softly rounded edges, seated on the small concentric stepped support; the wide gently flared upper cap; the subtly tapered cylindrical body beneath; the close stack of thin rounded plate collars; the concave tapering stem; the low raised rounded socket into the broad squat flaring base; and the shallow single groove above the low flat foot. Preserve the reference's restrained rounded carving and individual transitions. Infer vertical dimensions conservatively rather than making a generic tall slender king. The very top of the cross is cropped in the input; complete only its simple upper arm naturally.\nMaterial and photography: preserve the dark reddish brown polished wood, visible fine grain, warm highlights and slightly worn finish seen in Image 2. Soft directional studio lighting that reveals the continuous profile and turned rings. Plain dark charcoal backdrop and subtle ground shadow, matching the style of a faithful product photograph. One piece only, centered and large. No labels, text, diagrams, extra objects or added ornament. This is a plausible inferred side view of the exact referenced piece, not a new chess-set design.",
+  "sources": [
+    "assets/king/original.png",
+    "assets/king/reference.png"
+  ],
+  "status": "Generated side-view candidate; not yet selected by the owner.",
+  "interpretation": "Imagined side elevation from two elevated reference images. It does not establish the original geometry or camera. The source king's cropped cross tip is completed conservatively.",
+  "generated_file": "exec-ae4dbfa8-bb8b-4268-90da-04416b3f5587.png",
+  "output_sha256": "51834868a0755807d22669000544b5061e0103976646707d50cdd82ba7593e3e",
+  "source_sha256": {
+    "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c"
+  }
+}
