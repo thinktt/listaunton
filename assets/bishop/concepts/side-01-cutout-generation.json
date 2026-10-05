@@ -1,0 +1,19 @@
+{
+  "piece": "bishop",
+  "mode": "built-in image_gen edit",
+  "tool": "image_gen.imagegen",
+  "date": "2026-10-05",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. The attached image is the exact EDIT TARGET: a wooden bishop chess piece. Remove ONLY the dark studio backdrop, floor, and cast floor shadow, leaving the single chess piece as a clean cutout on real transparent alpha. Preserve the entire piece including its thin bottom edge. Preserve the exact existing silhouette, all internal shapes and gaps, camera, pose, proportions, colors, lighting, wood grain and fine surface detail; do not redesign, repaint, enhance or reinterpret the chess piece. Keep the object in precisely its current position, scale, and square image framing. Remove background visible through any openings but preserve dark wood and recessed surface details. No added shadow, glow, border, text or checkerboard pattern. Actual transparent background.",
+  "source": {
+    "file": "assets/bishop/concepts/side-01.png",
+    "sha256": "ea4d279f26f4d5692abe659847c9a1890d018420c258acd2cb712ea9267dad4c"
+  },
+  "output": {
+    "file": "assets/bishop/concepts/side-01-cutout.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "a149dcbc328980d7d164c421b836c3d8f9c4ff748613ebd326eb3dd63d4d5afc"
+  },
+  "note": "AI background extraction, not a pixel-preserving alpha operation. It changed some surface texture and image framing. Original side-01.png is retained; scaling uses the new cutout measurements."
+}

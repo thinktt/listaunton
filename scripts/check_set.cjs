@@ -52,3 +52,38 @@ for(const item of manifest.pieces){
  const record=JSON.parse(fs.readFileSync(path.join(root,item.generation),'utf8'));assert(record.prompt);assert(record.tool.toLowerCase().includes('image'));
 }
 console.log('PASS: side-view deep link, keyboard tabs, retained comparison/color state, six images, dimensions, hashes and prompt records.');
+
+// Validate the page's actual placements against source measurements, not card size.
+const sizing=JSON.parse(fs.readFileSync(path.join(root,manifest.scale),'utf8'));
+const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
+const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<.001,`${label}: ${actual} != ${expected}`);
+const king=sizing.pieces.find(row=>row.piece==='king');
+near(king.display.visible_height_px,430,'King anchor height');
+assert(html.includes('class="side-lineup"'));assert(html.includes('class="side-scroll"'));
+assert(html.includes('grid-template-columns:repeat(6,minmax(220px,1fr))'),'One row must retain scale on narrow screens');
+assert(html.includes('height:auto'),'No independent vertical stretching');
+for(const row of sizing.pieces){
+ const item=manifest.pieces.find(item=>item.piece===row.piece),cut=row.cutout,d=row.display;
+ assert.equal(sha(row.original.file),row.original.sha256,'Original width source changed');
+ assert.equal(sha(cut.file),cut.sha256,'Cutout measured for a different image');
+ const extraction=JSON.parse(fs.readFileSync(path.join(root,item.generation),'utf8'));
+ assert.equal(sha(extraction.source.file),extraction.source.sha256,'Original generated guide changed');
+ assert.equal(item.source_file,extraction.source.file);assert(extraction.transparent_background);
+ assert.equal(extraction.output.sha256,item.sha256);assert(cut.fully_transparent_fraction>.5);
+ near(row.base_ratio_to_king,row.original.base_width_px/king.original.base_width_px,'Original ratio');
+ near(d.base_width_px/king.display.base_width_px,row.base_ratio_to_king,'Displayed base ratio');
+ const card=html.match(new RegExp('<article[^>]*data-side-piece="'+row.piece+'"[\\s\\S]*?</article>'))[0];
+ const style=card.match(/<img[^>]*style="([^"]+)"/)[1];
+ const width=Number(style.match(/width:([\d.]+)px/)[1]);
+ const left=Number(style.match(/left:calc\(50% \+ (-?[\d.]+)px\)/)[1]);
+ const top=Number(style.match(/top:(-?[\d.]+)px/)[1]);
+ const s=width/item.width;
+ near(s,d.scale,'Uniform scale in page');near(top+cut.ground_y_px*s,sizing.display.ground_y_px,'Shared ground line');
+ near(left+cut.base_center_x_px*s,0,'Base centering');
+ assert(top+cut.bounds_px[1]*s>=0,'Head clipped at top');
+ const half=sizing.display.min_slot_width_px/2;
+ assert(left+cut.bounds_px[0]*s>=-half,'Left side clipped');
+ assert(left+cut.bounds_px[2]*s<=half,'Right side clipped');
+ assert(card.includes('href="'+item.source_file+'"'),'Untouched side view must remain accessible');
+}
+console.log('PASS: uniform king-relative base scale, shared ground, no clipped pieces, original guide hashes and transparent cutout provenance.');

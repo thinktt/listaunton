@@ -1,0 +1,19 @@
+{
+  "piece": "king",
+  "mode": "built-in image_gen edit",
+  "tool": "image_gen.imagegen",
+  "date": "2026-10-05",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. The attached image is the exact EDIT TARGET: a wooden king chess piece. Remove ONLY the dark studio backdrop, floor, and cast floor shadow, leaving the single chess piece as a clean cutout on real transparent alpha. Preserve the entire piece including its thin bottom edge. Preserve the exact existing silhouette, all internal shapes and gaps, camera, pose, proportions, colors, lighting, wood grain and fine surface detail; do not redesign, repaint, enhance or reinterpret the chess piece. Keep the object in precisely its current position, scale, and square image framing. Remove background visible through any openings but preserve dark wood and recessed surface details. No added shadow, glow, border, text or checkerboard pattern. Actual transparent background.",
+  "source": {
+    "file": "assets/king/concepts/side-01.png",
+    "sha256": "51834868a0755807d22669000544b5061e0103976646707d50cdd82ba7593e3e"
+  },
+  "output": {
+    "file": "assets/king/concepts/side-01-cutout.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "fb1504dd66887d36f574c92f1fb28cca98fba49bc0905febe7f3cc3f3f213f51"
+  },
+  "note": "AI background extraction, not a pixel-preserving alpha operation. It changed some surface texture and image framing. Original side-01.png is retained; scaling uses the new cutout measurements."
+}

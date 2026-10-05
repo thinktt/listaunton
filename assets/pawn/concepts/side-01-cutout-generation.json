@@ -1,0 +1,19 @@
+{
+  "piece": "pawn",
+  "mode": "built-in image_gen edit",
+  "tool": "image_gen.imagegen",
+  "date": "2026-10-05",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. The attached image is the exact EDIT TARGET: a wooden pawn chess piece. Remove ONLY the dark studio backdrop, floor, and cast floor shadow, leaving the single chess piece as a clean cutout on real transparent alpha. Preserve the entire piece including its thin bottom edge. Preserve the exact existing silhouette, all internal shapes and gaps, camera, pose, proportions, colors, lighting, wood grain and fine surface detail; do not redesign, repaint, enhance or reinterpret the chess piece. Keep the object in precisely its current position, scale, and square image framing. Remove background visible through any openings but preserve dark wood and recessed surface details. No added shadow, glow, border, text or checkerboard pattern. Actual transparent background.",
+  "source": {
+    "file": "assets/pawn/concepts/side-01.png",
+    "sha256": "9e0eb9fa0d2f133e9a4729b3670346bc3de2d1168d6d92230597763660b91a51"
+  },
+  "output": {
+    "file": "assets/pawn/concepts/side-01-cutout.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37"
+  },
+  "note": "AI background extraction, not a pixel-preserving alpha operation. It changed some surface texture and image framing. Original side-01.png is retained; scaling uses the new cutout measurements."
+}

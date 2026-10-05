@@ -1,0 +1,19 @@
+{
+  "piece": "rook",
+  "mode": "built-in image_gen edit",
+  "tool": "image_gen.imagegen",
+  "date": "2026-10-05",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. The attached image is the exact EDIT TARGET: a wooden rook chess piece. Remove ONLY the dark studio backdrop, floor, and cast floor shadow, leaving the single chess piece as a clean cutout on real transparent alpha. Preserve the entire piece including its thin bottom edge. Preserve the exact existing silhouette, all internal shapes and gaps, camera, pose, proportions, colors, lighting, wood grain and fine surface detail; do not redesign, repaint, enhance or reinterpret the chess piece. Keep the object in precisely its current position, scale, and square image framing. Remove background visible through any openings but preserve dark wood and recessed surface details. No added shadow, glow, border, text or checkerboard pattern. Actual transparent background.",
+  "source": {
+    "file": "assets/rook/concepts/side-01.png",
+    "sha256": "da7bee0e6cdd797d3a5eda8508c4b312819c5b5997217cbac6cd544591bb2009"
+  },
+  "output": {
+    "file": "assets/rook/concepts/side-01-cutout.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "56f86bc0a017646140fec1f96e6966aadf4e728ed4a0a2d8f86c8c181b98cc2c"
+  },
+  "note": "AI background extraction, not a pixel-preserving alpha operation. It changed some surface texture and image framing. Original side-01.png is retained; scaling uses the new cutout measurements."
+}
