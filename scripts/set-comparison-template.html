@@ -2,16 +2,17 @@
 :root{color-scheme:dark;font:15px/1.5 system-ui;background:#10110f;color:#eeeae1}*{box-sizing:border-box}body{margin:0}main{max-width:1900px;margin:auto;padding:20px}header{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:20px}h1{font-size:25px;margin:8px 0}a{color:#d7ad77}button,select{font:inherit;color:inherit;background:#252a22;border:1px solid #535b48;padding:8px 12px;border-radius:6px}button{cursor:pointer}button[aria-pressed=true]{background:#d7ad77;color:#171710}button:focus-visible,select:focus-visible{outline:3px solid #f1c37f;outline-offset:3px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid #363a31;border-radius:10px;padding:12px;background:#1a1c18;min-width:0}.card h2{font-size:18px;margin:0 0 10px}.card select{width:100%;margin-bottom:12px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}.frame{position:relative;width:100%;max-width:300px;aspect-ratio:1;background:var(--canvas,#000);overflow:hidden;margin:auto}.frame img{position:absolute;max-width:none;height:auto;display:block}.caption{text-align:center;color:#b1b4a9;font-size:12px;margin-top:6px}.empty{position:absolute;inset:0;display:grid;place-content:center;padding:15px;text-align:center;color:#b1b4a9;font-size:13px}.note{color:#b1b4a9;font-size:13px;margin:0}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}@media(max-width:1250px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.grid{grid-template-columns:1fr}main{padding:12px}}
 [hidden]{display:none!important}.set-tabs{display:flex;gap:8px;margin:0 0 18px;border-bottom:1px solid #363a31;padding-bottom:14px}button[aria-selected=true]{background:#d7ad77;color:#171710}/* A single row retains one physical display scale and ground line on every viewport. */
 .side-scroll{overflow-x:auto;padding:4px 0 14px;overscroll-behavior-x:contain}
-.side-lineup{display:grid;grid-template-columns:repeat(6,minmax(220px,1fr));gap:12px;min-width:1380px}
+.side-lineup{display:grid;grid-template-columns:repeat(6,minmax(320px,1fr));gap:12px;min-width:1980px}
 .side-card{border:0;border-radius:0;padding:0;background:transparent}
 .side-card h2{margin:0;text-align:center}.side-ratio{display:block;color:#b1b4a9;text-align:center;font-size:12px;margin:3px 0 12px}
-.side-image{position:relative;display:block;height:452px;overflow:hidden;border-bottom:1px solid #626654;background:#20231f}
+.side-image{position:relative;display:block;height:672px;overflow:hidden;border-bottom:1px solid #626654;background:#20231f}
 .side-image img{position:absolute;display:block;max-width:none;height:auto}
 .side-links{display:flex;justify-content:center;flex-wrap:wrap;gap:5px 14px;font-size:12px;padding:12px 8px 0}
+.side-scale-controls{padding:12px 16px 0}.side-scale-label{display:flex;gap:10px;align-items:center;font-size:13px}.side-scale-label output{font-variant-numeric:tabular-nums}.side-scale-label button{margin-left:auto;padding:3px 9px;font-size:12px}.side-scale-controls input{display:block;width:100%;accent-color:#d7ad77;cursor:ew-resize;margin:12px 0 0}.side-scale-controls input:focus-visible{outline:3px solid #f1c37f;outline-offset:4px}
 .side-note{margin:0 0 12px;color:#b1b4a9;font-size:13px}
 .side-image:focus-visible,.side-links a:focus-visible,.side-scroll:focus-visible{outline:3px solid #f1c37f;outline-offset:3px}
 
-</style></head><body><main><header><div><a href="index.html">← Home</a> · <span id="projection-links">Proportions: <a href="king-projections.html">King</a> · <a href="queen-projections.html">Queen</a> · <a href="rook-projections.html">Rook</a></span><h1>Set comparison</h1><p id="view-note" class="note">Candidate beside original · matched scale · up to 300 px per image</p></div><div id="comparison-tools" class="tools"><button id="black" aria-pressed="true">Black pieces</button><button id="white" aria-pressed="false">White pieces</button><label>Background <select id="background"><option value="#000">Black</option><option value="#565850">Gray</option><option value="#ddd">Light</option></select></label></div></header><div class="set-tabs" role="tablist" aria-label="Whole-set view"><button id="tab-comparison" role="tab" aria-selected="true" aria-controls="panel-comparison" tabindex="0">Reference comparison</button><button id="tab-side-views" role="tab" aria-selected="false" aria-controls="panel-side-views" tabindex="-1">Side views</button></div><section id="panel-comparison" role="tabpanel" aria-labelledby="tab-comparison"><div id="grid" class="grid"></div></section><section id="panel-side-views" role="tabpanel" aria-labelledby="tab-side-views" hidden><p class="side-note">Heights estimated from all six models at 54°, scaled against the king using the original base widths. Each image keeps its proportions. Scroll sideways on smaller screens. <a href="assets/side-views/scale.json">Measurements</a></p><div class="side-scroll" tabindex="0" role="region" aria-label="Six side views at one relative scale"><div class="side-lineup">__SIDE_CARDS__</div></div></section></main><script id="set-data" type="application/json">__DATA__</script><script>
+</style></head><body><main><header><div><a href="index.html">← Home</a> · <span id="projection-links">Proportions: <a href="king-projections.html">King</a> · <a href="queen-projections.html">Queen</a> · <a href="rook-projections.html">Rook</a></span><h1>Set comparison</h1><p id="view-note" class="note">Candidate beside original · matched scale · up to 300 px per image</p></div><div id="comparison-tools" class="tools"><button id="black" aria-pressed="true">Black pieces</button><button id="white" aria-pressed="false">White pieces</button><label>Background <select id="background"><option value="#000">Black</option><option value="#565850">Gray</option><option value="#ddd">Light</option></select></label></div></header><div class="set-tabs" role="tablist" aria-label="Whole-set view"><button id="tab-comparison" role="tab" aria-selected="true" aria-controls="panel-comparison" tabindex="0">Reference comparison</button><button id="tab-side-views" role="tab" aria-selected="false" aria-controls="panel-side-views" tabindex="-1">Side views</button></div><section id="panel-comparison" role="tabpanel" aria-labelledby="tab-comparison"><div id="grid" class="grid"></div></section><section id="panel-side-views" role="tabpanel" aria-labelledby="tab-side-views" hidden><p class="side-note">Drag each slider to scale its piece from the bottom. 100% restores its model-based size. Adjustments are saved in this browser when available. Scroll sideways to see the whole set. <a href="assets/side-views/scale.json">Measurements</a></p><div class="side-scroll" tabindex="0" role="region" aria-label="Six side views at one relative scale"><div class="side-lineup">__SIDE_CARDS__</div></div></section></main><script id="set-data" type="application/json">__DATA__</script><script>
 (()=>{'use strict';const data=JSON.parse(document.getElementById('set-data').textContent),grid=document.getElementById('grid');let color='black';const choices={black:{king:'candidate-1',rook:'candidate-8',knight:'candidate-2',pawn:'candidate-2'},white:{bishop:'white-candidate-3'}};
 function layout(item,original){let scale=item.scale/original.scale,x=(item.x-original.x)/original.scale,y=(item.y-original.y)/original.scale;const flip=Boolean(item.flip)!==Boolean(original.flip);if(original.flip)x=100-x-scale*100;return {scale,x,y,flip};}
 function picture(frame,item,placement){frame.replaceChildren();if(!item){const msg=document.createElement('span');msg.className='empty';msg.textContent='No white queen high-res reference yet';frame.append(msg);return;}const im=document.createElement('img');im.alt=item.label;im.src=item.file;im.style.width=placement.scale*100+'%';im.style.left=placement.x+'%';im.style.top=placement.y+'%';im.style.transform=placement.flip?'scaleX(-1)':'none';frame.append(im);}
@@ -38,6 +39,34 @@ for(const [index,id] of ids.entries()){
 }
 window.addEventListener('hashchange',()=>selectView(window.location.hash.slice(1)));
 selectView(window.location.hash.slice(1));
+})();
+</script>
+<script id="side-scale-data" type="application/json">__SIDE_SCALE_DATA__</script>
+<script id="side-scales-runtime">
+(()=>{'use strict';
+const byId=id=>document.getElementById(id),data=JSON.parse(byId('side-scale-data').textContent);
+const key='listaunton.side-view-scales.v1',values={};
+let saved={};
+try{const parsed=JSON.parse(window.localStorage.getItem(key)||'{}');if(parsed&&typeof parsed==='object'&&!Array.isArray(parsed))saved=parsed;}catch{}
+function bounded(value){return typeof value==='number'&&Number.isFinite(value)?Math.max(data.min,Math.min(data.max,Math.round(value))):100;}
+for(const item of data.pieces)values[item.piece]=bounded(saved[item.piece]);
+function paint(){
+ const king=data.pieces.find(item=>item.piece==='king'),kingHeight=king.height*values.king/100;
+ for(const item of data.pieces){
+  const piece=item.piece,value=values[piece],slider=byId('side-scale-'+piece);
+  byId('side-picture-'+piece).style.transform='scale('+(value/100)+')';
+  slider.value=String(value);slider.setAttribute('aria-valuetext',value+'% of model estimate');
+  byId('side-scale-value-'+piece).textContent=value+'%';
+  byId('side-ratio-'+piece).textContent='Height: '+(item.height*(value/100)/kingHeight*100).toFixed(1)+'% of king';
+ }
+}
+function save(){try{window.localStorage.setItem(key,JSON.stringify(values));}catch{}}
+for(const item of data.pieces){
+ const piece=item.piece;
+ byId('side-scale-'+piece).addEventListener('input',event=>{values[piece]=bounded(Number(event.target.value));paint();save();});
+ byId('side-reset-'+piece).addEventListener('click',()=>{values[piece]=100;paint();save();});
+}
+paint();
 })();
 </script>
 </body></html>

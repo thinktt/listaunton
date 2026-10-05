@@ -55,13 +55,14 @@ console.log('PASS: side-view deep link, keyboard tabs, retained comparison/color
 
 // Validate the page's actual placements against source measurements, not card size.
 const sizing=JSON.parse(fs.readFileSync(path.join(root,manifest.scale),'utf8'));
+const sliderData=JSON.parse(html.match(/<script id="side-scale-data"[^>]*>(.*?)<\/script>/s)[1]);
 const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
 const textSha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n')).digest('hex');
 const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<.001,`${label}: ${actual} != ${expected}`);
 const king=sizing.pieces.find(row=>row.piece==='king');
 near(king.display.visible_height_px,430,'King anchor height');
 assert(html.includes('class="side-lineup"'));assert(html.includes('class="side-scroll"'));
-assert(html.includes('grid-template-columns:repeat(6,minmax(220px,1fr))'),'One row must retain scale on narrow screens');
+assert(html.includes('grid-template-columns:repeat(6,minmax(320px,1fr))'),'One row must retain space for slider extremes');
 assert(html.includes('height:auto'),'No independent vertical stretching');
 for(const row of sizing.pieces){
  const item=manifest.pieces.find(item=>item.piece===row.piece),cut=row.cutout,d=row.display;
@@ -90,13 +91,51 @@ for(const row of sizing.pieces){
  const width=Number(style.match(/width:([\d.]+)px/)[1]);
  const left=Number(style.match(/left:calc\(50% \+ (-?[\d.]+)px\)/)[1]);
  const top=Number(style.match(/top:(-?[\d.]+)px/)[1]);
+ const origin=style.match(/transform-origin:([\d.]+)px ([\d.]+)px/).slice(1).map(Number);
  const s=width/item.width;
- near(s,d.scale,'Uniform scale in page');near(top+cut.ground_y_px*s,sizing.display.ground_y_px,'Shared ground line');
+ near(s,d.scale,'Uniform scale in page');near(top+cut.ground_y_px*s,sliderData.ground,'Shared ground line');
  near(left+cut.base_center_x_px*s,0,'Base centering');
  assert(top+cut.bounds_px[1]*s>=0,'Head clipped at top');
- const half=sizing.display.min_slot_width_px/2;
- assert(left+cut.bounds_px[0]*s>=-half,'Left side clipped');
- assert(left+cut.bounds_px[2]*s<=half,'Right side clipped');
+ const half=sliderData.minSlotWidth/2;
+ for(const factor of [.5,.79,1,1.37,1.5]){
+  const tx=x=>left+origin[0]+(x*s-origin[0])*factor;
+  const ty=y=>top+origin[1]+(y*s-origin[1])*factor;
+  near(tx(cut.base_center_x_px),0,'Foot center must stay fixed while scaling');
+  near(ty(cut.ground_y_px),sliderData.ground,'Foot bottom must stay fixed while scaling');
+  assert(ty(cut.bounds_px[1])>=0,'Head clipped at slider extreme');
+  assert(tx(cut.bounds_px[0])>=-half,'Left side clipped at slider extreme');
+  assert(tx(cut.bounds_px[2])<=half,'Right side clipped at slider extreme');
+ }
  assert(card.includes('href="'+item.source_file+'"'),'Untouched side view must remain accessible');
 }
 console.log('PASS: six 54-degree model height estimates, true knight base, uniform image scale, shared ground, bounds and source hashes.');
+
+// Exercise the actual controls, including refresh persistence and unavailable storage.
+const scaleRuntime=html.match(/<script id="side-scales-runtime">([\s\S]*?)<\/script>/)[1];
+const storageKey='listaunton.side-view-scales.v1';let stored=null;
+const storage={getItem(){return stored;},setItem(key,value){assert.equal(key,storageKey);stored=value;}};
+function scaleContext(storage){
+ const elements={'side-scale-data':new E('script')};elements['side-scale-data'].textContent=JSON.stringify(sliderData);
+ for(const item of sliderData.pieces)for(const prefix of ['side-picture-','side-scale-','side-scale-value-','side-ratio-','side-reset-'])elements[prefix+item.piece]=new E(prefix);
+ vm.runInNewContext(scaleRuntime,{document:{getElementById:id=>elements[id]},window:{localStorage:storage}});
+ return elements;
+}
+let controls=scaleContext(storage);
+for(const item of sliderData.pieces)assert.equal(controls['side-picture-'+item.piece].style.transform,'scale(1)');
+function move(piece,value){const input=controls['side-scale-'+piece];input.value=String(value);input.events.input({target:input});}
+move('rook',137);assert.equal(controls['side-picture-rook'].style.transform,'scale(1.37)');
+assert.equal(controls['side-scale-value-rook'].textContent,'137%');
+assert.equal(controls['side-scale-rook'].attrs['aria-valuetext'],'137% of model estimate');
+assert.equal(controls['side-picture-pawn'].style.transform,'scale(1)');
+move('king',120);const rookHeight=sliderData.pieces.find(item=>item.piece==='rook').height;
+assert.equal(controls['side-ratio-rook'].textContent,'Height: '+(rookHeight*1.37/(430*1.2)*100).toFixed(1)+'% of king');
+controls=scaleContext(storage);assert.equal(controls['side-scale-rook'].value,'137');assert.equal(controls['side-scale-king'].value,'120');
+controls['side-reset-rook'].events.click();assert.equal(controls['side-scale-rook'].value,'100');assert.equal(controls['side-scale-king'].value,'120');
+move('pawn',10);assert.equal(controls['side-scale-pawn'].value,'50');
+move('pawn',999);assert.equal(controls['side-scale-pawn'].value,'150');
+stored='not json';controls=scaleContext(storage);assert.equal(controls['side-scale-king'].value,'100');
+stored=JSON.stringify({king:130,pawn:'90',bishop:400});controls=scaleContext(storage);
+assert.equal(controls['side-scale-king'].value,'130');assert.equal(controls['side-scale-pawn'].value,'100');assert.equal(controls['side-scale-bishop'].value,'150');
+controls=scaleContext({getItem(){throw new Error('Storage disabled');},setItem(){throw new Error('Storage disabled');}});
+move('knight',113);assert.equal(controls['side-picture-knight'].style.transform,'scale(1.13)');
+console.log('PASS: fixed foot anchors and unclipped extremes, independent sliders, live king-relative labels, per-piece reset and safe storage restoration.');

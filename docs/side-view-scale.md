@@ -4,6 +4,19 @@ All six transparent side views share a ground line and use height estimates from
 our 3D models, with the king as 100%. The gallery keeps each image's aspect ratio.
 On smaller screens the row scrolls horizontally at the same scale.
 
+## Manual scale controls
+
+Each piece has a 50–150% slider and a Reset button. 100% is its model-estimated
+starting size. Scaling is uniform and anchored at the measured bottom-center of
+the opaque foot, not at the PNG canvas edge. The anchor stays fixed horizontally
+and vertically while dragging. The fixed viewing area reserves space for the
+largest allowed sizes; the ground line does not move to accommodate an image.
+
+Height labels compare with the king's current size and update when its slider
+changes. Adjustments persist across tabs and, where browser storage is available,
+refreshes. Reset affects only that piece. The reference-comparison candidates,
+image files and model estimates remain unchanged.
+
 ## How the estimate works
 
 The models were built with different arbitrary world-unit scales. Raw Blender
