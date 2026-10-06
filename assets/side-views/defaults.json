@@ -1,0 +1,9 @@
+{
+  "revision": "2026-10-05-picked",
+  "source": "User-selected sizes and order from the screenshot supplied on 2026-10-05.",
+  "scale_basis": "Slider percentages of the model-estimated starting sizes in scale.json; image proportions are preserved.",
+  "order": ["king", "queen", "bishop", "knight", "rook", "pawn"],
+  "scales": {"king": 99, "queen": 108, "bishop": 93, "knight": 106, "rook": 107, "pawn": 97},
+  "shown_height_percent_of_king": {"king": 100.0, "queen": 83.4, "bishop": 75.3, "knight": 66.2, "rook": 58.9, "pawn": 49.2},
+  "note": "The king slider was partly cropped in the screenshot; 99% reproduces all five visible relative-height labels. Reset restores these chosen values and this order. These are display defaults, not changes to model geometry."
+}

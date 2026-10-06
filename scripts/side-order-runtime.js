@@ -1,8 +1,8 @@
 // Included inline by the set-page builder so the gallery also works from file://.
 (()=>{'use strict';
 const byId=id=>document.getElementById(id),data=JSON.parse(byId('side-scale-data').textContent);
-const defaults=data.pieces.map(item=>item.piece),names=Object.fromEntries(data.pieces.map(item=>[item.piece,item.name]));
-const lineup=byId('side-lineup'),scroller=byId('side-scroll'),key='listaunton.side-view-order.v1';
+const defaults=data.defaultOrder,names=Object.fromEntries(data.pieces.map(item=>[item.piece,item.name]));
+const lineup=byId('side-lineup'),scroller=byId('side-scroll'),key='listaunton.side-view-order.'+data.defaultsRevision;
 const cards=Object.fromEntries(defaults.map(piece=>[piece,byId('side-card-'+piece)]));
 let order=[...defaults],drag=null,frame=0;
 try{const saved=JSON.parse(window.localStorage.getItem(key)||'null');
@@ -115,6 +115,6 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&drag){event
 for(const id of ['tab-comparison','tab-side-views'])byId(id).addEventListener('click',()=>finish(true));
 window.addEventListener('hashchange',()=>finish(true));
 window.addEventListener('blur',()=>finish(true));
-byId('side-reset-order').addEventListener('click',()=>{finish(true);commit([...defaults]);byId('side-order-status').textContent='Original piece order restored.';});
+byId('side-reset-order').addEventListener('click',()=>{finish(true);commit([...defaults]);byId('side-order-status').textContent='Chosen default order restored.';});
 paint();
 })();

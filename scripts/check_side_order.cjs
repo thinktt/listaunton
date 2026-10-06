@@ -2,7 +2,7 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const html=fs.readFileSync(process.argv[2],'utf8');
 const data=JSON.parse(html.match(/<script id="side-scale-data"[^>]*>(.*?)<\/script>/s)[1]);
 const script=id=>html.match(new RegExp('<script id="'+id+'">([\\s\\S]*?)<\\/script>'))[1];
-const defaults=data.pieces.map(item=>item.piece),orderKey='listaunton.side-view-order.v1';
+const defaults=data.defaultOrder,orderKey='listaunton.side-view-order.'+data.defaultsRevision;
 
 function fixture(saved=new Map(),blocked=false){
  let focused=null,nextFrame=0;const frames=new Map(),els={},docEvents={},winEvents={};
@@ -55,17 +55,17 @@ function noDrag(f){assert.equal(f.frames.size,0);for(const piece of defaults){as
 let f=fixture();assert.deepEqual(f.order(),defaults);
 resize(f,'king',120);resize(f,'rook',137);
 const rookImage=f.els['side-picture-rook'],rookInput=f.els['side-scale-rook'];
-f.els['side-right-king'].fire('click');assert.deepEqual(f.order(),['queen','king','rook','bishop','knight','pawn']);
-f.els['side-drag-pawn'].fire('keydown',{key:'Home'});assert.deepEqual(f.order(),['pawn','queen','king','rook','bishop','knight']);
-assert(f.els['side-left-pawn'].disabled);assert(f.els['side-right-knight'].disabled);
+f.els['side-right-king'].fire('click');assert.deepEqual(f.order(),['queen','king','bishop','knight','rook','pawn']);
+f.els['side-drag-pawn'].fire('keydown',{key:'Home'});assert.deepEqual(f.order(),['pawn','queen','king','bishop','knight','rook']);
+assert(f.els['side-left-pawn'].disabled);assert(f.els['side-right-rook'].disabled);
 assert.equal(f.els['side-picture-rook'],rookImage);assert.equal(rookImage.style.transform,'scale(1.37)');assert.equal(f.els['side-scale-rook'],rookInput);
 f.els['side-reset-order'].fire('click');assert.deepEqual(f.order(),defaults);assert.equal(rookInput.value,'137');assert.equal(f.els['side-scale-king'].value,'120');
 
-const surface=drag(f,'rook',1300);assert.deepEqual(f.order(),defaults,'Drag must not rebuild the row before drop');
+const surface=drag(f,'rook',1100);assert.deepEqual(f.order(),defaults,'Drag must not rebuild the row before drop');
 assert(f.els['side-card-rook'].style.transform.startsWith('translateX('));
 assert(f.els['side-card-knight'].classList.contains('drop-before'));
 assert.equal(f.els['side-card-rook'].getBoundingClientRect().top,80,'Horizontal drag must preserve the baseline');
-surface.fire('pointerup',pointer(1300));assert.deepEqual(f.order(),['king','queen','bishop','rook','knight','pawn']);noDrag(f);
+surface.fire('pointerup',pointer(1100));assert.deepEqual(f.order(),['king','queen','bishop','rook','knight','pawn']);noDrag(f);
 assert.equal(rookImage.style.transform,'scale(1.37)');assert.equal(f.focus(),surface);
 let restored=fixture(f.saved);assert.deepEqual(restored.order(),f.order());assert.equal(restored.els['side-scale-rook'].value,'137');
 
@@ -93,3 +93,8 @@ const bad=new Map([[orderKey,'["king","king","rook","bishop","knight","pawn"]']]
 assert.deepEqual(fixture(new Map([[orderKey,'broken json']])).order(),defaults);
 f=fixture(new Map(),true);f.els['side-right-king'].fire('click');assert.equal(f.order()[1],'king');
 console.log('PASS: drag insertion, arrows/keyboard, horizontal-only motion, saved order, scale/DOM preservation, cancellation, edge scrolling and invalid/blocked storage.');
+
+const legacy=new Map([['listaunton.side-view-order.v1',JSON.stringify([...defaults].reverse())],['listaunton.side-view-scales.v1',JSON.stringify({king:150,pawn:50})]]);
+const upgraded=fixture(legacy);assert.deepEqual(upgraded.order(),defaults);assert.equal(upgraded.els['side-scale-king'].value,'99');assert.equal(upgraded.els['side-scale-pawn'].value,'97');
+assert(legacy.has('listaunton.side-view-order.v1'),'Old preferences need not be deleted to apply a new default revision');
+console.log('PASS: new default revision applies the chosen arrangement without stale settings overriding it.');

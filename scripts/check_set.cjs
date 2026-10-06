@@ -112,7 +112,7 @@ console.log('PASS: six 54-degree model height estimates, true knight base, unifo
 
 // Exercise the actual controls, including refresh persistence and unavailable storage.
 const scaleRuntime=html.match(/<script id="side-scales-runtime">([\s\S]*?)<\/script>/)[1];
-const storageKey='listaunton.side-view-scales.v1';let stored=null;
+const storageKey='listaunton.side-view-scales.'+sliderData.defaultsRevision;let stored=null;
 const storage={getItem(){return stored;},setItem(key,value){assert.equal(key,storageKey);stored=value;}};
 function scaleContext(storage){
  const elements={'side-scale-data':new E('script')};elements['side-scale-data'].textContent=JSON.stringify(sliderData);
@@ -121,21 +121,34 @@ function scaleContext(storage){
  return elements;
 }
 let controls=scaleContext(storage);
-for(const item of sliderData.pieces)assert.equal(controls['side-picture-'+item.piece].style.transform,'scale(1)');
+for(const item of sliderData.pieces)assert.equal(controls['side-picture-'+item.piece].style.transform,'scale('+(item.defaultScale/100)+')');
 function move(piece,value){const input=controls['side-scale-'+piece];input.value=String(value);input.events.input({target:input});}
 move('rook',137);assert.equal(controls['side-picture-rook'].style.transform,'scale(1.37)');
 assert.equal(controls['side-scale-value-rook'].textContent,'137%');
 assert.equal(controls['side-scale-rook'].attrs['aria-valuetext'],'137% of model estimate');
-assert.equal(controls['side-picture-pawn'].style.transform,'scale(1)');
+assert.equal(controls['side-picture-pawn'].style.transform,'scale(0.97)');
 move('king',120);const rookHeight=sliderData.pieces.find(item=>item.piece==='rook').height;
 assert.equal(controls['side-ratio-rook'].textContent,'Height: '+(rookHeight*1.37/(430*1.2)*100).toFixed(1)+'% of king');
 controls=scaleContext(storage);assert.equal(controls['side-scale-rook'].value,'137');assert.equal(controls['side-scale-king'].value,'120');
-controls['side-reset-rook'].events.click();assert.equal(controls['side-scale-rook'].value,'100');assert.equal(controls['side-scale-king'].value,'120');
+controls['side-reset-rook'].events.click();assert.equal(controls['side-scale-rook'].value,'107');assert.equal(controls['side-scale-king'].value,'120');
 move('pawn',10);assert.equal(controls['side-scale-pawn'].value,'50');
 move('pawn',999);assert.equal(controls['side-scale-pawn'].value,'150');
-stored='not json';controls=scaleContext(storage);assert.equal(controls['side-scale-king'].value,'100');
+stored='not json';controls=scaleContext(storage);assert.equal(controls['side-scale-king'].value,'99');
 stored=JSON.stringify({king:130,pawn:'90',bishop:400});controls=scaleContext(storage);
-assert.equal(controls['side-scale-king'].value,'130');assert.equal(controls['side-scale-pawn'].value,'100');assert.equal(controls['side-scale-bishop'].value,'150');
+assert.equal(controls['side-scale-king'].value,'130');assert.equal(controls['side-scale-pawn'].value,'97');assert.equal(controls['side-scale-bishop'].value,'150');
 controls=scaleContext({getItem(){throw new Error('Storage disabled');},setItem(){throw new Error('Storage disabled');}});
 move('knight',113);assert.equal(controls['side-picture-knight'].style.transform,'scale(1.13)');
 console.log('PASS: fixed foot anchors and unclipped extremes, independent sliders, live king-relative labels, per-piece reset and safe storage restoration.');
+
+const chosen=JSON.parse(fs.readFileSync(path.join(root,'assets/side-views/defaults.json'),'utf8'));
+assert.deepEqual(chosen.order,['king','queen','bishop','knight','rook','pawn']);
+assert.deepEqual(chosen.scales,{king:99,queen:108,bishop:93,knight:106,rook:107,pawn:97});
+assert.deepEqual(sliderData.defaultOrder,chosen.order);
+assert.deepEqual([...html.matchAll(/data-side-piece="([^"]+)"/g)].map(match=>match[1]),chosen.order,'Static HTML should start in the chosen order');
+for(const item of sliderData.pieces){
+ assert.equal(item.defaultScale,chosen.scales[item.piece]);
+ const height=Number((item.height*item.defaultScale/(430*chosen.scales.king)*100).toFixed(1));
+ assert.equal(height,chosen.shown_height_percent_of_king[item.piece],'Picked heights must reproduce the screenshot');
+ assert(html.includes('Height: '+height.toFixed(1)+'% of king'));
+}
+console.log('PASS: approved screenshot sizes/order, static defaults, default resets and matching displayed height ratios.');

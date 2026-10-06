@@ -1,13 +1,33 @@
 # Side views at model-estimated relative sizes
 
-All six transparent side views share a ground line and use height estimates from
-our 3D models, with the king as 100%. The gallery keeps each image's aspect ratio.
+All six transparent side views share a ground line. Model-based height estimates
+provide the starting scale, followed by the user's chosen adjustments below. The gallery keeps each image's aspect ratio.
 On smaller screens the row scrolls horizontally at the same scale.
+
+## Chosen defaults — 2026-10-05
+
+The user selected this arrangement by eye and supplied a screenshot. It is now
+the default lineup and the destination of Reset / Reset order:
+
+| Order | Piece | Slider setting | Displayed height relative to king |
+| ---: | --- | ---: | ---: |
+| 1 | King | 99% | 100.0% |
+| 2 | Queen | 108% | 83.4% |
+| 3 | Bishop | 93% | 75.3% |
+| 4 | Knight | 106% | 66.2% |
+| 5 | Rook | 107% | 58.9% |
+| 6 | Pawn | 97% | 49.2% |
+
+Settings are versioned in `assets/side-views/defaults.json`. The king's partly
+cropped slider value is confirmed by reproducing all five visible height labels.
+The underlying model estimates, image pixels and models are unchanged. A new
+defaults revision starts with this arrangement, avoiding older browser settings
+overriding it. Further adjustments are saved under the new revision.
 
 ## Manual scale controls
 
-Each piece has a 50–150% slider and a Reset button. 100% is its model-estimated
-starting size. Scaling is uniform and anchored at the measured bottom-center of
+Each piece has a 50–150% slider and a Reset button. 100% still denotes its
+model-estimated size; Reset restores its chosen default above. Scaling is uniform and anchored at the measured bottom-center of
 the opaque foot, not at the PNG canvas edge. The anchor stays fixed horizontally
 and vertically while dragging. The fixed viewing area reserves space for the
 largest allowed sizes; the ground line does not move to accommodate an image.
@@ -25,7 +45,7 @@ The row scrolls when dragging near an edge. Left/right buttons provide precise
 one-position moves; a focused piece also responds to arrow keys, Home and End.
 Escape or pointer cancellation abandons an in-progress drag.
 
-Order is saved separately from scale settings. Reset order restores the initial
+Order is saved separately from scale settings. Reset order restores the chosen
 lineup without resetting sizes. Reordering moves existing DOM nodes, preserving
 their loaded images, controls and handlers. Normal slider use and the separate
 full-size image links do not start a reorder.
