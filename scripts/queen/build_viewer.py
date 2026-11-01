@@ -22,6 +22,7 @@ template = (Path(__file__).resolve().parent / 'viewer-template.html').read_text(
 payload = base64.b64encode((work / 'viewer-mesh.bin').read_bytes()).decode('ascii')
 html = template.replace('__MESH_META__', json.dumps(public_meta, separators=(',', ':')))
 html = html.replace('__MESH_BASE64__', payload)
+html = html.replace('__WOOD_BASE64__', base64.b64encode((root / 'assets/queen/walnut-albedo.png').read_bytes()).decode('ascii'))
 page=out.read_text(encoding='utf-8')
 parts=(Path(__file__).resolve().parent/'parts-template.html').read_text(encoding='utf-8')
 for ident,document in [('viewer-document',html),('parts-document',parts)]:

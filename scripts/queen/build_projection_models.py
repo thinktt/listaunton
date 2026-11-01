@@ -17,7 +17,7 @@ info=json.loads((A/'baseline-info.json').read_text(encoding='utf-8'))
 manifest=json.loads((A/'variants.json').read_text(encoding='utf-8'))
 resume='--resume' in sys.argv
 controls=np.load(A/'baseline-controls.npz')['points']
-baseline=ROOT/'models/queen/queen-rebuilt.blend'
+baseline=ROOT/'history/queen-before-54-finish/models/queen/queen-rebuilt.blend'
 digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 assert digest(baseline)==info['sourceSha256']
 def dump(path,data):path.write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')

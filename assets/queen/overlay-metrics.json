@@ -1,6 +1,6 @@
 {
-  "reference": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\assets\\queen\\reference.png",
-  "render": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\assets\\queen\\queen-matched.png",
+  "reference": "assets/queen/reference.png",
+  "render": "assets/queen/queen-matched.png",
   "size": [
     1254,
     1254
@@ -14,16 +14,16 @@
     1083
   ],
   "model_bbox": [
-    200,
-    70,
-    766,
-    1060
+    209,
+    61,
+    757,
+    1077
   ],
-  "silhouette_iou": 0.9380908268171637,
+  "silhouette_iou": 0.9790579862288763,
   "reference_area_px": 367154,
-  "model_area_px": 358818,
-  "missing_reference_px": 15763,
-  "excess_model_px": 7427,
+  "model_area_px": 368070,
+  "missing_reference_px": 3432,
+  "excess_model_px": 4348,
   "row_extents": [
     {
       "y": 100,
@@ -32,8 +32,8 @@
         570
       ],
       "model": [
-        404,
-        562
+        399,
+        567
       ]
     },
     {
@@ -43,8 +43,8 @@
         653
       ],
       "model": [
-        320,
-        646
+        313,
+        653
       ]
     },
     {
@@ -54,8 +54,8 @@
         652
       ],
       "model": [
-        321,
-        645
+        312,
+        654
       ]
     },
     {
@@ -65,8 +65,8 @@
         630
       ],
       "model": [
-        328,
-        638
+        333,
+        633
       ]
     },
     {
@@ -76,8 +76,8 @@
         660
       ],
       "model": [
-        303,
-        663
+        305,
+        661
       ]
     },
     {
@@ -87,8 +87,8 @@
         629
       ],
       "model": [
-        339,
-        627
+        335,
+        631
       ]
     },
     {
@@ -98,8 +98,8 @@
         562
       ],
       "model": [
-        408,
-        558
+        412,
+        554
       ]
     },
     {
@@ -109,7 +109,7 @@
         601
       ],
       "model": [
-        359,
+        360,
         607
       ]
     },
@@ -120,8 +120,8 @@
         724
       ],
       "model": [
-        235,
-        731
+        240,
+        727
       ]
     },
     {
@@ -131,8 +131,8 @@
         754
       ],
       "model": [
-        201,
-        765
+        210,
+        757
       ]
     },
     {
@@ -142,8 +142,8 @@
         756
       ],
       "model": [
-        200,
-        766
+        209,
+        757
       ]
     },
     {
@@ -153,8 +153,8 @@
         741
       ],
       "model": [
-        232,
-        734
+        231,
+        736
       ]
     },
     {
@@ -164,8 +164,8 @@
         702
       ],
       "model": [
-        290,
-        676
+        276,
+        690
       ]
     },
     {
@@ -175,8 +175,8 @@
         607
       ],
       "model": [
-        464,
-        502
+        377,
+        589
       ]
     }
   ],

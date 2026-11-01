@@ -1,0 +1,9 @@
+{
+  "tool": "OpenAI built-in image generator",
+  "role": "Generated albedo texture for the reconstructed queen; the source image remains authoritative for the shape and appearance.",
+  "reference": "assets/queen/reference.png",
+  "output": "assets/queen/walnut-albedo.png",
+  "prompt": "Use case: photorealistic-natural. Generate a single square material texture image to be used as the color/albedo map for a 3D chess queen. The supplied queen image is a style and material reference only; do not draw a chess piece. Fill the entire frame edge to edge with a flat, seamless, tileable close-up of the same rich dark reddish brown polished wood, with subtle fine irregular dark grain lines and small natural pores like the reference, not a generic plank. Consistent diffuse lighting, no baked highlights or shadows, no large knots, no boards, no borders, no text. It should read as real wood at the small scale of a turned chess piece.",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "output_sha256": "e61ce60bf905476af427359943dd14bfe893981b53b842e6f6423387048e83eb"
+}

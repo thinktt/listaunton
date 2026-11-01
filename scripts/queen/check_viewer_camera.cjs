@@ -6,13 +6,15 @@ const review=fs.readFileSync(path.join(root,'review.html'),'utf8');
 const html=JSON.parse(review.match(/<script id="viewer-document"[^>]*>(.*?)<\/script>/s)[1]);
 const truth=JSON.parse(fs.readFileSync(path.join(root,'build/queen/viewer-camera.json'),'utf8'));
 const text=id=>html.match(new RegExp(`<script id="${id}"[^>]*>([\\s\\S]*?)</script>`))[1];
-const source=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1],uniforms={},queue=[],listeners={},nodes=new Map();
+assert.deepEqual(Buffer.from(text('wood-data'),'base64'),fs.readFileSync(path.join(root,'assets/queen/walnut-albedo.png')),'Viewer texture must match the Blender albedo');
+const source=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1],uniforms={},queue=[],listeners={},nodes=new Map(),textureUploads=[];
 let resize,draws=0;const parentMessages=[],windowListeners={};const parentFrame={postMessage(message){parentMessages.push(message);}};
 const node=id=>{if(!nodes.has(id))nodes.set(id,{id,attrs:{},hidden:false,setAttribute(k,v){this.attrs[k]=v;},remove(){},textContent:''});return nodes.get(id);};
 const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node('view-'+m[1]),{dataset:{view:m[1]}}));
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');
+node('wood-data').textContent=text('wood-data');
 const gl=new Proxy({NO_ERROR:0,getError:()=>0,getShaderParameter:()=>true,getProgramParameter:()=>true,
- getUniformLocation:(_,name)=>name,drawElements:()=>draws++,
+ getUniformLocation:(_,name)=>name,drawElements:()=>draws++,texImage2D:(...args)=>textureUploads.push(args),
  uniformMatrix4fv:(name,_,v)=>uniforms[name]=Array.from(v,Math.fround),
  uniformMatrix3fv:(name,_,v)=>uniforms[name]=Array.from(v,Math.fround),
  uniform3fv:(name,v)=>uniforms[name]=Array.from(v,Math.fround),
@@ -24,6 +26,7 @@ const canvas=Object.assign(node('viewer'),{clientWidth:1254,clientHeight:1254,wi
  getBoundingClientRect:()=>({left:0,top:0,width:canvas.clientWidth,height:canvas.clientHeight}),
  focus(){},setPointerCapture(){},classList:{add(){},remove(){}}});
 const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
+ Image:class{constructor(){this.complete=true;this.naturalWidth=1254;}set src(value){this._src=value;}},
  document:{getElementById:node,querySelectorAll:()=>views},window:{devicePixelRatio:1,parent:parentFrame,addEventListener(name,fn){windowListeners[name]=fn;}},
  requestAnimationFrame:cb=>queue.push(cb),setTimeout:cb=>queue.push(cb),
  atob:s=>Buffer.from(s,'base64').toString('binary'),
@@ -32,6 +35,7 @@ const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
 vm.runInNewContext(source,context,{filename:'queen-3d-runtime.js'});
 function flush(){let n=0;while(queue.length){assert(n++<20);queue.shift()();}}
 flush();assert(draws>0,'Viewer did not reach drawElements');assert(node('status').hidden,'Viewer failed initialization');
+assert(textureUploads.some(args=>args.length===6&&args[5] instanceof context.Image),'Wood image was not uploaded');
 function pixel(world){
  const c=uniforms.uCenter,r=uniforms.uRotation,p=uniforms.uProjection;
  const b=[world[0]-c[0],world[2]-c[2],-(world[1]-c[1])];
@@ -74,6 +78,8 @@ windowListeners.message({source:{},data:{channel:'listaunton-review',action:'act
 assert.notEqual(node('brown').attrs['aria-pressed'],'true');
 windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();
 assert.equal(node('brown').attrs['aria-pressed'],'true');
+assert.equal(uniforms.uWood,1,'Wood mode should enable the texture in the shader');
+assert.equal(uniforms.uWoodMap,0,'Wood sampler must use the uploaded texture unit');
 assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbitBefore);
 windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
 assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbitBefore);

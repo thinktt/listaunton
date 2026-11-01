@@ -4,7 +4,7 @@ import bpy,bmesh,json,hashlib,math
 import numpy as np
 from mathutils.bvhtree import BVHTree
 root=Path(__file__).resolve().parents[2];out=root/'assets/queen-projections';out.mkdir(parents=True,exist_ok=True)
-source=root/'models/queen/queen-rebuilt.blend';digest=hashlib.sha256(source.read_bytes()).hexdigest()
+source=root/'history/queen-before-54-finish/models/queen/queen-rebuilt.blend';digest=hashlib.sha256(source.read_bytes()).hexdigest()
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);scene=bpy.context.scene
 ob=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render);points=np.asarray([tuple(v.co) for v in ob.data.vertices]);n=int(ob['ring_segments']);assert len(points)%n==0
 np.savez_compressed(out/'baseline-controls.npz',points=points)

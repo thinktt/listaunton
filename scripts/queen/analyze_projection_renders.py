@@ -40,7 +40,7 @@ for k,row in enumerate(manifest['variants']):
  d.text((k*260+12,8),row['label'],font=font,fill='white');d.text((k*260+12,416),f"Height / base {row['heightToBaseWidth']:.3f}",font=small,fill=(174,183,197))
  overlay=Image.blend(over_black(original),over_black(render),.5);overlay.save(folder/'overlay-original.png');contour(om,m).save(folder/'contour-original.png');contour(sm,m).save(folder/'contour-selected.png')
  od.text((k*300+10,8),row['label'],font=font,fill='white');overlays.paste(overlay.resize((300,300),Image.Resampling.LANCZOS),(k*300,40));overlays.paste(contour(om,m).resize((300,300),Image.Resampling.LANCZOS),(k*300,340));od.text((k*300+10,643),f"Original IoU {data['original']['iou']:.4f}",font=small,fill=(174,183,197))
-base=Image.open(ROOT/'assets/queen/queen-matched.png').convert('RGBA');low=Image.open(A/manifest['baseline']/'render.png').convert('RGBA')
+base=Image.open(ROOT/'history/queen-before-54-finish/assets/queen/queen-matched.png').convert('RGBA');low=Image.open(A/manifest['baseline']/'render.png').convert('RGBA')
 report['reduced_render_vs_dense']=metrics(mask(base,True),mask(low,True));report['reduced_render_vs_dense']['silhouette_xor_pixels']=int(np.count_nonzero(mask(base,True)^mask(low,True)))
 report['limitations']='Higher elevations require a taller queen and increasingly change the visible ring ellipses and crown cavities. Bounded fitting preserves the accepted crown topology and chunky carving, so endpoint fits deliberately retain residual mismatch. A single shaded sprite cannot uniquely identify hidden depth or camera elevation.'
 plate.save(A/'profiles.png');overlays.save(A/'original-comparison.png');(A/'render-analysis.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')

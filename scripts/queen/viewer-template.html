@@ -25,7 +25,7 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 <body>
 <main>
 <header><div><h1>Queen in 3D</h1><p>Starts at the overlay camera. Drag to explore.</p></div>
-<div class="controls"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div></header>
+<div class="controls"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div></header>
 <nav class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" aria-label="Interactive queen model">
 <canvas id="viewer" tabindex="0" aria-label="3D queen. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
@@ -37,6 +37,7 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 </main>
 <script id="mesh-metadata" type="application/json">__MESH_META__</script>
 <script id="mesh-data" type="application/octet-stream">__MESH_BASE64__</script>
+<script id="wood-data" type="application/octet-stream">__WOOD_BASE64__</script>
 <script>
 'use strict';
 (() => {
@@ -55,7 +56,11 @@ uniform vec2 uPan;
 uniform float uDistance;
 out vec3 vNormal;
 out vec3 vPosition;
+out vec3 vWoodPosition;
+out vec3 vWoodNormal;
 void main(){
+ vWoodPosition=aPosition;
+ vWoodNormal=aNormal;
  vec3 p=aPosition-uCenter;
  p=uRotation*vec3(p.x,p.z,-p.y);
  vPosition=p+vec3(uPan,-uDistance);
@@ -66,26 +71,47 @@ const fs=`#version 300 es
 precision highp float;
 in vec3 vNormal;
 in vec3 vPosition;
+in vec3 vWoodPosition;
+in vec3 vWoodNormal;
 uniform vec3 uColor;
 uniform float uGloss;
 uniform bool uOrthographic;
+uniform bool uWood;
+uniform sampler2D uWoodMap;
 out vec4 outColor;
-vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
+float hash3(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}
+float noise3(vec3 p){
+ vec3 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
+ return mix(mix(mix(hash3(i),hash3(i+vec3(1,0,0)),f.x),mix(hash3(i+vec3(0,1,0)),hash3(i+vec3(1,1,0)),f.x),f.y),
+            mix(mix(hash3(i+vec3(0,0,1)),hash3(i+vec3(1,0,1)),f.x),mix(hash3(i+vec3(0,1,1)),hash3(i+vec3(1,1,1)),f.x),f.y),f.z);
+}
+vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength,vec3 base){
  float diffuse=max(dot(n,l),0.0);
  vec3 h=normalize(l+v);
  float spec=pow(max(dot(n,h),0.0),uGloss)*step(0.001,diffuse);
- return strength*color*(uColor*diffuse+vec3(spec*0.25));
+ return strength*color*(base*diffuse+vec3(spec*0.25));
 }
 void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
- vec3 c=uColor*(0.19+0.06*n.y);
- c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
- c+=light(n,v,normalize(vec3(0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.55);
- c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.8);
+ vec3 base=uColor;
+ if(uWood){
+  vec3 weights=pow(abs(normalize(vWoodNormal)),vec3(4.0));
+  weights/=max(weights.x+weights.y+weights.z,0.0001);
+  vec3 p=vWoodPosition*0.85;
+  vec3 wood=texture(uWoodMap,p.yz).rgb*weights.x+texture(uWoodMap,p.xz).rgb*weights.y+texture(uWoodMap,p.xy).rgb*weights.z;
+  base=mix(uColor,pow(wood,vec3(2.2)),0.78);
+ }
+ vec3 c=base*(0.19+0.06*n.y);
+ c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45,base);
+ c+=light(n,v,normalize(vec3(0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.55,base);
+ c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.8,base);
  c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
-let program,vao,uniforms,meshBytes,ready=false,lost=false,pending=false;
+let program,vao,uniforms,meshBytes,woodTexture,ready=false,lost=false,pending=false;
+const woodImage=new Image();
+woodImage.onload=()=>{if(ready&&!lost){uploadWood();schedule();}};
+woodImage.src='data:image/png;base64,'+document.getElementById('wood-data').textContent.trim();
 let q=[0,0,0,1],pan=[0,0],distance=9,material='neutral',autoFit=true;
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 const reference=meta.referenceCamera;
@@ -137,7 +163,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
+  document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'procedural wood preview':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -157,12 +183,23 @@ function initialize(){
  const vb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic'])uniforms[name]=gl.getUniformLocation(program,name);
+  uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uWoodMap'])uniforms[name]=gl.getUniformLocation(program,name);
+  woodTexture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);
+  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([100,45,18,255]));
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.REPEAT);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+  gl.generateMipmap(gl.TEXTURE_2D);
+  if(woodImage.complete&&woodImage.naturalWidth)uploadWood();
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
  if(window.parent&&window.parent!==window)window.parent.postMessage({channel:'listaunton-review',event:'viewer-ready'},'*');
 }
+ function uploadWood(){
+  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);
+  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,woodImage);
+  gl.generateMipmap(gl.TEXTURE_2D);
+ }
 function draw(){
  pending=false;if(!ready||lost)return;
  const dpr=Math.min(window.devicePixelRatio||1,2),w=Math.max(1,Math.round(canvas.clientWidth*dpr)),h=Math.max(1,Math.round(canvas.clientHeight*dpr));
@@ -176,6 +213,8 @@ function draw(){
  gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,meta.bounds.center);
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
+  gl.uniform1i(uniforms.uWood,material==='brown'?1:0);
+  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);gl.uniform1i(uniforms.uWoodMap,0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
 }

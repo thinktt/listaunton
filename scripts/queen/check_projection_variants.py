@@ -13,7 +13,9 @@ sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 manifest=read(A/'variants.json');rows=manifest['variants'];info=read(A/'baseline-info.json')
 preservation=read(A/'baseline-preservation.json');preserved=0
 for item in preservation['files']:
- path=ROOT/item['path']
+ archived=item['path']
+ if archived.startswith('build/'):archived='archived-build/'+archived[len('build/'):]
+ path=ROOT/'history/queen-before-54-finish'/archived
  if args.allow_partial_baseline and not path.exists():continue
  raw=path.read_bytes();actual=hashlib.sha256(raw).hexdigest()
  if actual!=item['sha256']:
@@ -22,7 +24,7 @@ for item in preservation['files']:
  preserved+=1
 assert [r['elevation'] for r in rows]==[48,51.5,52,54,56,60,64]
 assert manifest['baseline']=='angle-51-5'
-assert sha(ROOT/'models/queen/queen-rebuilt.blend')==info['sourceSha256']
+assert sha(ROOT/'history/queen-before-54-finish/models/queen/queen-rebuilt.blend')==info['sourceSha256']
 assert sha(ROOT/'assets/queen/reference.png')==sha(A/'reference.png')
 canonical_original=ROOT/'references/lichess-staunton-3d/Black-Queen.png'
 if canonical_original.exists():assert sha(canonical_original)==sha(A/'original.png')

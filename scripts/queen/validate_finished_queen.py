@@ -1,0 +1,45 @@
+"""Check the delivered queen mesh, material, camera and chosen relative size."""
+from pathlib import Path
+import json, math, hashlib
+import bpy, bmesh
+import numpy as np
+
+root=Path(__file__).resolve().parents[2]
+model=root/'models/queen/queen-rebuilt.blend'
+fit=json.loads((root/'assets/queen/finish-fit.json').read_text())
+bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False)
+scene=bpy.context.scene
+obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
+camera=scene.camera
+back=camera.matrix_world.to_3x3()@__import__('mathutils').Vector((0,0,1))
+elevation=math.degrees(math.atan2(back.z, math.hypot(back.x,back.y)))
+assert abs(elevation-54)<1e-4,elevation
+assert obj.data.materials and 'Walnut' in obj.data.materials[0].name
+assert obj.data.materials[0].use_nodes
+controls=np.empty(len(obj.data.vertices)*3,dtype=np.float32)
+obj.data.vertices.foreach_get('co',controls);controls=controls.reshape((-1,192,3))
+z=controls[:,:,2].mean(1)
+assert np.all(np.diff(z[:89])>=-1e-5),'Turned body rings reverse direction'
+assert scene.get('continuous_crown') and scene.get('crown_tip_count')==8
+graph=bpy.context.evaluated_depsgraph_get();evaluated=obj.evaluated_get(graph);mesh=evaluated.to_mesh()
+bm=bmesh.new();bm.from_mesh(mesh)
+boundary=sum(e.is_boundary for e in bm.edges)
+nonmanifold=sum(not e.is_manifold for e in bm.edges)
+volume=bm.calc_volume(signed=True)
+assert boundary==0 and nonmanifold==0 and volume>0,(boundary,nonmanifold,volume)
+co=np.empty(len(mesh.vertices)*3,dtype=np.float32);mesh.vertices.foreach_get('co',co);co=co.reshape(-1,3)
+height=float(np.ptp(co[:,2]));low=co[co[:,2]<=co[:,2].min()+height*.25]
+diameter=float((np.ptp(low[:,0])+np.ptp(low[:,1]))/2)
+ratio=height/diameter
+assert abs(ratio-fit['target_height_to_base_width'])<.015,(ratio,fit['target_height_to_base_width'])
+report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdigest(),
+        'camera_elevation_degrees':elevation,'camera_type':camera.data.type,
+        'height':height,'base_diameter':diameter,'height_to_base_diameter':ratio,
+        'target_height_to_base_diameter':fit['target_height_to_base_width'],
+        'target_queen_to_king':fit['target_queen_to_king_height'],
+        'material':obj.data.materials[0].name,'boundary_edges':boundary,'nonmanifold_edges':nonmanifold,
+        'signed_volume':volume,'crown_tips':8,'body_rings_monotonic':True}
+for name in ('finish-validation.json','model-validation.json'):
+    (root/'assets/queen'/name).write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps(report,indent=2))
+bm.free();evaluated.to_mesh_clear()

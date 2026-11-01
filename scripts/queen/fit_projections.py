@@ -15,7 +15,7 @@ def widths(im,alpha=False):
  if not alpha:m&=a[:,:,:3].max(2)>12
  l=m.argmax(1);r=m.shape[1]-1-m[:,::-1].argmax(1);v=(r-l)/2;v[~m.any(1)]=0
  v=np.convolve(np.pad(v,(3,3),mode='edge'),np.ones(7)/7,'valid');return np.interp(ys,np.arange(len(v)),v)
-ow=widths(original);rw=widths(Image.open(out/'reference.png'));bw=widths(Image.open(root/'assets/queen/queen-matched.png'),True)
+ow=widths(original);rw=widths(Image.open(out/'reference.png'));bw=widths(Image.open(root/'history/queen-before-54-finish/assets/queen/queen-matched.png'),True)
 def rings(p):
  a=p.reshape((n,N,3));r=np.linalg.norm(a[:,:,:2],axis=2).mean(1)*S;z=a[:,:,2].mean(1);return np.c_[r,z]
 def envelope(p,yfloor,angle):

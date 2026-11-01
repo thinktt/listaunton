@@ -6,7 +6,7 @@ Recovering the Lichess **Staunton** chess set as editable 3D models from its sta
 
 The queen review has four tabs: **Reference overlay**, **3D model**, **Parts map**, and **Projection variants**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. The current model and parts map are embedded; the projection study loads in its own frame on first use.
 
-The queen geometry includes a continuous splash-shaped crown, eight tips, a shallow bowl and seated egg-shaped finial. Its three thin collars now sit closely stacked, with roughly 44% less center spacing and narrow grooves in place of the tall spacers. The neutral and brown materials are shape studies. Faithful wood grain is still to come.
+The queen uses an assumed 54° reference camera and the owner’s saved 83.4% queen-to-king height target. Its editable model has a continuous eight-tip splash crown and a packed, generated wood-grain material. The review shows the wood render and supports a neutral inspection view and a textured 3D viewer. See [the 54° reconstruction notes](docs/queen-54-wood.md) for measurements and remaining differences.
 
 The king uses the original Lichess sprite as the authority for proportions, with selected black candidate 1 supporting detail interpretation. Its closed revolved body and separate beveled cross intersect but are not boolean-fused. This is a geometry study of roughly 68,500 triangles in neutral clay; matching wood grain and finish come later.
 
@@ -36,28 +36,7 @@ The original Windows project was copied, not deleted, so existing open browser t
 
 ## Rebuild the queen
 
-Use Blender 5.2 (the current model was built with 5.2.2), Python 3.10+ with the requirements below, and Node.js for the camera regression. Blender supplies `bpy`, `bmesh` and its NumPy runtime; do not install `bpy` into ordinary Python.
-
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r scripts/queen/requirements.txt
-blender --background --python scripts/queen/build_queen.py
-blender --background --python scripts/queen/export_viewer_mesh.py
-blender --background --python scripts/queen/inspect_viewer_camera.py
-python scripts/queen/build_viewer.py
-python scripts/queen/overlay_qa.py --reference-mask max-channel
-blender --background --python scripts/queen/validate_stacked_collars.py
-node scripts/queen/check_viewer_camera.cjs
-node scripts/queen/check_review_reference.cjs
-python scripts/check_site.py
-```
-
-Use an absolute Blender executable path if it is not on PATH. For Windows Blender with this repository in WSL, pass Windows/UNC versions of script paths (obtain them with `wslpath -w`), rather than Linux `/home/...` paths. Each script resolves repository paths from its own location. The saved model still contains its original render-output path until rebuilt; the external reference is already packed.
-
-`validate_stacked_collars.py` checks the current revision against `history/queen-hires/before-stacked-collars`: a closed connected mesh, materially closer collar centers, narrow exposed spacers, and unchanged base/socket/lower stem and crown/bowl/finial. The earlier `validate_seamless_crown.py` remains available for its historical revision. Preservation checks must be revised deliberately when a future change authorizes those regions.
-
-The 3D viewer embeds its mesh and works without a server. The parts map keeps its original sandbox/CSP and uses external UI libraries from unpkg.com, so it needs internet access for those libraries.
+See [the queen reconstruction notes](docs/queen-54-wood.md) for the current build, comparison, and validation commands. The earlier projection study uses archived pre-revision inputs.
 
 ## Rebuild the king
 

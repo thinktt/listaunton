@@ -262,8 +262,13 @@ def main():
             x = np.flatnonzero(mask[y])
             record[name] = [int(x.min()), int(x.max())] if x.size else None
         rows.append(record)
+    def report_path(path):
+        try:
+            return path.resolve().relative_to(WORKSPACE.resolve()).as_posix()
+        except ValueError:
+            return str(path)
     metrics = {
-        "reference": str(args.reference), "render": str(args.render),
+        "reference": report_path(args.reference), "render": report_path(args.render),
         "size": list(reference.size), "registration": "No shifts or scaling applied",
         "mask_method": f"Reference {args.reference_mask} >{args.threshold}; model alpha >127; largest 8-connected component, holes filled",
         "reference_bbox": bounds(reference_mask), "model_bbox": bounds(model_mask),

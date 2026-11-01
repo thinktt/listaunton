@@ -1,6 +1,6 @@
 # Queen projection and proportion study
 
-Seven physically different queen interpretations are compared at **48°, 51.5°, 52°, 54°, 56°, 60°, and 64°**. The 51.5° entry retains the accepted queen's editable shape and is the default. The canonical queen model, renders, mesh, references, and geometry/viewer scripts remain unchanged. Their 39 original hashes are recorded in `assets/queen-projections/baseline-preservation.json`; a separately recorded LF-normalized checksum permits only newline changes in recognized text files after checkout. The review page and its interaction regression test are excluded because the authorized fourth-tab integration changes those two UI files. The original 40-file snapshot passed strict byte checks before excluding that test.
+Seven physically different queen interpretations are compared at **48°, 51.5°, 52°, 54°, 56°, 60°, and 64°**. The 51.5° entry retains the accepted queen's editable shape and is the default. These historical alternatives and their renders remain unchanged. The current queen was later refit at 54° and is documented in [the current queen notes](queen-54-wood.md). Their 39 original hashes are recorded in `assets/queen-projections/baseline-preservation.json`; a separately recorded LF-normalized checksum permits only newline changes in recognized text files after checkout. The review page and its interaction regression test are excluded because the authorized fourth-tab integration changes those two UI files. The original 40-file snapshot passed strict byte checks before excluding that test. The 39 protected inputs are now archived under `history/queen-before-54-finish`.
 
 [Open the comparison](../queen-projections.html). It provides front profiles, free rotation, and overlays against the original black sprite or selected queen reference. The original black sprite is the default overlay source. The references are embedded unchanged, with the existing uniform alignment retained. Each Blender download contains the candidate's own saved reference camera.
 
@@ -32,7 +32,7 @@ The [front profiles](../assets/queen-projections/profiles.png) show all seven ca
 
 ## Mesh size and verification
 
-Study meshes use subdivision level 1: 89,474 vertices and 178,944 triangles each, compared with 715,776 triangles in the unchanged canonical level-2 mesh. The embedded binary is 4,294,704 bytes per candidate. The saved Blender sources remain editable control meshes.
+Study meshes use subdivision level 1: 89,474 vertices and 178,944 triangles each, compared with 715,776 triangles in the archived canonical level-2 mesh. The embedded binary is 4,294,704 bytes per candidate. The saved Blender sources remain editable control meshes.
 
 For each candidate, 5,041 vertices sampled from its dense level-2 surface were compared with the nearest triangle on its level-1 surface. The largest sampled distance across all seven candidates was **0.132605 original-pixel equivalents**, at 64°. This is a sampled surface-distance measurement, not an exhaustive geometric error bound. The reduced 51.5° baseline render has **0.9996488 silhouette IoU** against the unchanged canonical dense render, with mean boundary difference **0.013847 original pixels** and 126 differing pixels at the 1,254-pixel render resolution.
 
