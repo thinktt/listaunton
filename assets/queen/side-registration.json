@@ -1,0 +1,24 @@
+{
+  "method": "Single uniform scale and translation: align measured foot width, horizontal center and floor. Side guide itself unchanged.",
+  "side_guide_is_interpretation": true,
+  "guide": {
+    "file": "assets/queen/concepts/side-01.png",
+    "base_left": 344,
+    "base_right": 876,
+    "floor_y": 1105
+  },
+  "model_base": {
+    "width_px": 354,
+    "center_px": 300.0,
+    "floor_y_px": 800,
+    "measured_row": 789
+  },
+  "scale": 1.502824858757062,
+  "offset_x": 159.15254237288138,
+  "offset_y": 62.740112994350284,
+  "guide_top_padding_px": 160,
+  "canvas": [
+    1254,
+    1414
+  ]
+}

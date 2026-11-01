@@ -1,4 +1,6 @@
-# Queen reconstruction at 54 degrees
+# Previous queen reconstruction at 54 degrees
+
+This describes the previous revision, archived under `history/queen-before-scratch`. For the current fresh queen see [the new reconstruction notes](queen-side-rebuild.md).
 
 The current queen is a revised version of the earlier 54-degree study. The
 saved orthographic reference camera is **54 degrees above the board**, an

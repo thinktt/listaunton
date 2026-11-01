@@ -8,10 +8,10 @@ function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},dataset:{
 for(const match of html.slice(0,html.indexOf('<script id="viewer-document"')).matchAll(/<button\b([^>]*)>/g)){
  const attrs=Object.fromEntries([...match[1].matchAll(/([\w-]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
  const b=node(attrs.id??'button-'+buttons.length);b.className=attrs.class??'';
- for(const [k,v] of Object.entries(attrs))if(k.startsWith('data-'))b.dataset[k.slice(5)]=v;
+ for(const [k,v] of Object.entries(attrs))if(k.startsWith('data-'))b.dataset[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=v;
  buttons.push(b);
 }
-node('opacity').value='50';
+node('opacity').value='50';node('side-opacity').value='50';
 node('model3d-frame').contentWindow=viewerWindow;node('model3d-frame').src='about:blank';
 node('parts-frame').src='about:blank';
 for(const id of ['viewer-document','parts-document'])node(id).textContent=html.match(new RegExp('<script id="'+id+'"[^>]*>(.*?)</script>','s'))[1];
@@ -28,7 +28,7 @@ const click=(key,value)=>button(key,value).fire('click');
 assert.equal(node('stage').style.visibility,'visible');
 assert.equal(node('contours').style.display,'none');
 assert.equal(node('render').style.opacity,'0.5');
-assert.equal(node('reference').src,'assets/queen/reference.png');
+assert.equal(node('reference').src,'references/lichess-staunton-3d/Black-Queen.png');
 click('zoom','2');node('viewport').scrollLeft=123;node('viewport').scrollTop=87;
 click('reference','original');
 assert.equal(node('reference').src,'references/lichess-staunton-3d/Black-Queen.png');
@@ -96,3 +96,8 @@ assert.equal(node('projections-pane').hidden,false);assert.equal(node('model3d-p
 click('workspace','overlay');assert.equal(node('projections-pane').hidden,true);assert.equal(node('viewport').scrollLeft,83);assert.equal(node('viewport').scrollTop,67);
 click('workspace','projections');assert.equal(projectionLoads,1);assert.equal(node('model3d-frame').srcdoc,viewerDoc);
 console.log('PASS: queen projection tab loads once, preserves overlay pan and retains current-model and parts frames.');
+click('workspace','side');assert.equal(node('side-pane').hidden,false);assert.equal(node('projections-pane').hidden,true);
+node('side-opacity').value='35';node('side-opacity').fire('input');assert.equal(node('side-render').style.opacity,'0.35');
+click('sideMaterial','neutral');assert.equal(node('side-render').src,'assets/queen/side-aligned-neutral.png');
+click('workspace','overlay');click('workspace','side');assert.equal(node('side-render').style.opacity,'0.35');assert.equal(node('side-render').src,'assets/queen/side-aligned-neutral.png');
+console.log('PASS: imagined side guide, aligned model material and opacity persist across tabs.');

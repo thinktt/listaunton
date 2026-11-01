@@ -6,7 +6,7 @@ Recovering the Lichess **Staunton** chess set as editable 3D models from its sta
 
 The queen review has four tabs: **Reference overlay**, **3D model**, **Parts map**, and **Projection variants**. Use the tabs to switch; dragging the reference only pans it. The viewer retains its rotation when switching tabs. The current model and parts map are embedded; the projection study loads in its own frame on first use.
 
-The queen uses an assumed 54° reference camera and the owner’s saved 83.4% queen-to-king height target. Its editable model has a continuous eight-tip splash crown and a packed, generated wood-grain material. The review shows the wood render and supports a neutral inspection view and a textured 3D viewer. See [the 54° reconstruction notes](docs/queen-54-wood.md) for measurements and remaining differences.
+The queen was freshly built from a side-inspired profile, then fitted to the original black Lichess sprite at an assumed 54° camera. The review opens with the original and includes a side-comparison tab, the previous revision, and a textured 3D viewer. The imagined side guide informs the carving; the original is the deciding visual reference. See [the new queen notes](docs/queen-side-rebuild.md) for measurements and remaining differences.
 
 The king uses the original Lichess sprite as the authority for proportions, with selected black candidate 1 supporting detail interpretation. Its closed revolved body and separate beveled cross intersect but are not boolean-fused. This is a geometry study of roughly 68,500 triangles in neutral clay; matching wood grain and finish come later.
 
@@ -36,7 +36,7 @@ The original Windows project was copied, not deleted, so existing open browser t
 
 ## Rebuild the queen
 
-See [the queen reconstruction notes](docs/queen-54-wood.md) for the current build, comparison, and validation commands. The earlier projection study uses archived pre-revision inputs.
+See [the queen reconstruction notes](docs/queen-side-rebuild.md) for the current build, comparison, and validation commands. Earlier models and the projection study use archived inputs.
 
 ## Rebuild the king
 
