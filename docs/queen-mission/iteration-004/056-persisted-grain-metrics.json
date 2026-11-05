@@ -1,0 +1,29 @@
+{
+  "highres_iou": 0.979611843983474,
+  "original_iou": 0.9791093182518729,
+  "previous_highres_iou": 0.979611843983474,
+  "previous_original_iou": 0.9791093182518729,
+  "regional_iou": {
+    "crown": {
+      "previous": 0.9807164884993722,
+      "trial": 0.9807164884993722
+    },
+    "body-collars": {
+      "previous": 0.9771096794718842,
+      "trial": 0.9771096794718842
+    },
+    "stem-socket": {
+      "previous": 0.9850964418353899,
+      "trial": 0.9850964418353899
+    },
+    "base-foot": {
+      "previous": 0.9734842120867717,
+      "trial": 0.9734842120867717
+    }
+  },
+  "trial_blend_sha256": "405e5d67ffe65b7afd5a6cb60a7d81c02f07578f3ff84fb89836be0882e01871",
+  "trial_render_sha256": "c81bc68b0b9311f903f80d0aeb95ba697e31cd2c023a27af33cfcb8db125ae9d",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "previous_image": "history/queen-mission-003/queen-brown.png",
+  "previous_image_sha256": "05f88799c5f8576cd0b788eb027f63e6a2c22a85e26c5dd0c7c30b502cfa6e53"
+}

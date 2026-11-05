@@ -42,7 +42,7 @@ The second mission checkpoint darkens the crown body, stem, socket and foot,
 and corrects their excessive orange cast through smooth pigment grades. The
 visible grain now also drives surface relief, mixed with fine pores. A fuller
 finial upper curve and raised lower shoulder preserve the same maximum height.
-The current color atlas is `assets/queen/queen-pigment-albedo-v2.png`; the first
+That checkpoint's color atlas is `assets/queen/queen-pigment-albedo-v2.png`; the first
 atlas remains the ungraded relief source. The second bake reuses the exact
 existing UVs and bakes color only. The lighting setup remains the earlier
 accepted one: tested alternatives did not improve the image overall.
@@ -120,3 +120,38 @@ studies also established that the light data's diffuse/specular factors do not
 provide the intended Cycles separation here; explicit object ray visibility
 does. Their diagnostic results, full scores and rejected ImageGen texture
 experiment are recorded under `docs/queen-mission/iteration-003`.
+
+The fourth checkpoint retains that geometry and uses
+`assets/queen/queen-pigment-albedo-v3.png`. Its pigment retains a broad color
+field while replacing some invented detail with bounded fine grain inferred
+from the unchanged reference. Hidden surfaces retain continuous prior wood.
+The original atlas still supplies relief; consequently, some visible pores
+and larger relief lines do not yet agree with the new pigment. The new atlas
+bakes color only, with the existing UV layout.
+
+The reference lighting now uses powers fitted through AgX to displayed colors,
+with separate diffuse and glossy ray visibility. It improves the base highlight
+and reduces stray glints. The thin collar/socket crescents and finial spots
+remain imperfect. This is an art-directed reference rig, not a recovered
+studio. The browser embeds the same mesh/camera/color atlas but continues to
+use approximate real-time lighting.
+
+The third model and four renders are preserved in `history/queen-mission-003`.
+Reconstruct the fourth checkpoint from tracked inputs with:
+
+```sh
+blender -b --python scripts/queen/rebuild_material_checkpoint.py -- docs/queen-mission/iteration-004/reproduction.json
+```
+
+This creates `build/queen-mission/060-fourth-reproduced` and does not overwrite
+the current model. Use the validation/export sequence above to promote any
+future accepted trial. The reconstruction is checked against the actual
+fourth-checkpoint render, including a save/reopen texture check. Diagnostic
+reports and scores are under `docs/queen-mission/iteration-004`.
+
+A float-image packaging defect was found before publication: repacking edited
+linear values into a reopened sRGB-tagged EXR darkened them on reload. New
+projection experiments use a fresh explicitly linear color image, save EXR
+before packing, and keep confidence in a separate grayscale image. Validate
+the saved pixel values, not only an in-memory render. The current v3 atlas is
+a conventional sRGB PNG and has a separately verified rebuild path.

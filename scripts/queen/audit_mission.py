@@ -5,10 +5,11 @@ import numpy as np
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 from overlay_qa import largest_component,fill_holes
 root=Path(__file__).resolve().parents[2]
-p=argparse.ArgumentParser();p.add_argument('variant');args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('variant');p.add_argument('--previous-image',default='assets/queen/queen-brown.png');args=p.parse_args()
 out=root/'build/queen-mission'/args.variant
 reference=Image.open(root/'assets/queen/reference.png').convert('RGBA')
-previous=Image.open(root/'assets/queen/queen-brown.png').convert('RGBA')
+previous_path=root/args.previous_image
+previous=Image.open(previous_path).convert('RGBA')
 trial=Image.open(out/'wood.png').convert('RGBA')
 def black(im):return Image.alpha_composite(Image.new('RGBA',im.size,(0,0,0,255)),im).convert('RGB')
 fontpath=next((p for p in ['C:/Windows/Fonts/segoeui.ttf','/mnt/c/Windows/Fonts/segoeui.ttf','/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'] if Path(p).exists()),None)
@@ -34,7 +35,7 @@ for i,(label,im) in enumerate([('Lichess original',original),('High-res referenc
 sheet.save(out/'original-comparison.png')
 A=refmask(reference);O=refmask(original);B=mmask(trial);P=mmask(previous)
 digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-stats={'highres_iou':iou(A,B),'original_iou':iou(O,B),'previous_highres_iou':iou(A,P),'previous_original_iou':iou(O,P),'regional_iou':{},'trial_blend_sha256':digest(out/'queen.blend'),'trial_render_sha256':digest(out/'wood.png'),'reference_sha256':digest(root/'assets/queen/reference.png')}
+stats={'highres_iou':iou(A,B),'original_iou':iou(O,B),'previous_highres_iou':iou(A,P),'previous_original_iou':iou(O,P),'regional_iou':{},'trial_blend_sha256':digest(out/'queen.blend'),'trial_render_sha256':digest(out/'wood.png'),'reference_sha256':digest(root/'assets/queen/reference.png'),'previous_image':args.previous_image,'previous_image_sha256':digest(previous_path)}
 for name,lo,hi in [('crown',45,360),('body-collars',360,570),('stem-socket',570,850),('base-foot',850,1095)]:stats['regional_iou'][name]={'previous':iou(A[lo:hi],P[lo:hi]),'trial':iou(A[lo:hi],B[lo:hi])}
 (out/'metrics.json').write_text(json.dumps(stats,indent=2))
 print(json.dumps(stats,indent=2))

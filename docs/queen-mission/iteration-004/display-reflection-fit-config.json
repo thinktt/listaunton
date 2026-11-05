@@ -1,0 +1,436 @@
+{
+  "variant": "053-display-reflections",
+  "source": "models/queen/queen-rebuilt.blend",
+  "samples": 64,
+  "world": 0.03,
+  "lights": [
+    {
+      "energy": 1100,
+      "name": "Diffuse Top reflection",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "size": 0.6,
+      "specular_factor": 0
+    },
+    {
+      "energy": 400,
+      "name": "Diffuse Right key",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "size": 0.5,
+      "specular_factor": 0
+    },
+    {
+      "energy": 150,
+      "name": "Diffuse Foot strip",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "size": 0.7,
+      "target": [
+        0,
+        0,
+        0.3
+      ],
+      "specular_factor": 0
+    },
+    {
+      "name": "Display fitted original-top",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "energy": 63.94320536044694,
+      "size": 0.6,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted original-right",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "energy": 2.5838082980045876,
+      "size": 0.5,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted original-foot",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "target": [
+        0,
+        0,
+        0.3
+      ],
+      "energy": 2.362208161816102,
+      "size": 0.7,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted base-key",
+      "position": [
+        3.74,
+        -3.69,
+        4.63
+      ],
+      "target": [
+        0.3567,
+        -0.6887,
+        0.6858
+      ],
+      "energy": 348.10724551392474,
+      "shape": "RECTANGLE",
+      "size": 0.45,
+      "size_y": 3.8,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted socket-left",
+      "position": [
+        -3.09,
+        -3.65,
+        5.45
+      ],
+      "target": [
+        -0.2,
+        -0.45,
+        1.28
+      ],
+      "energy": 14.588747869289024,
+      "size": 0.7,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted bowl-left",
+      "position": [
+        0.861,
+        2.062,
+        9.663
+      ],
+      "target": [
+        -0.21,
+        0.31,
+        4.03
+      ],
+      "energy": 39.295176372951545,
+      "size": 0.7,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted bowl-back",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "target": [
+        0.08,
+        0.4,
+        4.03
+      ],
+      "energy": 26.116279287649355,
+      "size": 0.6,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted collars-right",
+      "position": [
+        5.61,
+        -3.34,
+        2.74
+      ],
+      "target": [
+        0.36,
+        -0.45,
+        3.08
+      ],
+      "energy": 80.04887101470787,
+      "size": 0.7,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted lower-collar",
+      "position": [
+        0.83,
+        2.1,
+        8.24
+      ],
+      "target": [
+        0.31,
+        -0.53,
+        2.87
+      ],
+      "energy": 3.367092405931901,
+      "size": 0.7,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted finial-left",
+      "position": [
+        -1.45,
+        -3.81,
+        8.94
+      ],
+      "target": [
+        -0.02,
+        -0.09,
+        4.46
+      ],
+      "energy": 10.876035006208323,
+      "size": 0.3,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted finial-top",
+      "position": [
+        3.23,
+        -2.24,
+        9.06
+      ],
+      "target": [
+        0.04,
+        -0.07,
+        4.46
+      ],
+      "energy": 34.325036701214316,
+      "size": 0.3,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted foot-low",
+      "position": [
+        -3.64,
+        -5.42,
+        -2.02
+      ],
+      "target": [
+        -0.38,
+        -0.93,
+        0.25
+      ],
+      "energy": 3.740485918705547,
+      "size": 0.8,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted base-rear",
+      "position": [
+        -2.84,
+        5.9,
+        -0.87
+      ],
+      "target": [
+        -0.63,
+        0.53,
+        0.64
+      ],
+      "energy": 7.090237453276554,
+      "size": 0.8,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted bowl-arc",
+      "position": [
+        -0.14,
+        1.5,
+        9.77
+      ],
+      "target": [
+        0,
+        0.3,
+        4.03
+      ],
+      "energy": 15.039980900887972,
+      "shape": "RECTANGLE",
+      "size": 2.1,
+      "size_y": 0.45,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted finial-right",
+      "position": [
+        3.92,
+        -4.7,
+        4.78
+      ],
+      "target": [
+        0.06,
+        -0.14,
+        4.36
+      ],
+      "energy": 73.30249787485285,
+      "size": 0.3,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted finial-left-spot",
+      "position": [
+        -1.45416259765625,
+        -3.812018394470215,
+        8.936174392700195
+      ],
+      "target": [
+        -0.017478466033935547,
+        -0.08818817138671875,
+        4.456331253051758
+      ],
+      "energy": 4276.739999117586,
+      "size": 0.3,
+      "type": "SPOT",
+      "spot_degrees": 1.2,
+      "spot_blend": 0.25,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted finial-top-spot",
+      "position": [
+        3.2279295921325684,
+        -2.2384605407714844,
+        9.060192108154297
+      ],
+      "target": [
+        0.03920847177505493,
+        -0.07001399993896484,
+        4.463464736938477
+      ],
+      "energy": 16835.323030925312,
+      "size": 0.3,
+      "type": "SPOT",
+      "spot_degrees": 1.2,
+      "spot_blend": 0.25,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted finial-right-spot",
+      "position": [
+        3.924412965774536,
+        -4.704495906829834,
+        4.78243350982666
+      ],
+      "target": [
+        0.06188327074050903,
+        -0.12978506088256836,
+        4.391425609588623
+      ],
+      "energy": 2143.7559727537114,
+      "size": 0.3,
+      "type": "SPOT",
+      "spot_degrees": 1.2,
+      "spot_blend": 0.25,
+      "diffuse_factor": 0,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    }
+  ],
+  "cycles_ray_visibility": true,
+  "method": "Fit actual light response powers through AgX to displayed reference; accepted diffuse rig retained",
+  "light_chromaticity": [
+    1.0,
+    0.7,
+    0.5
+  ],
+  "response_source": "build/queen-mission/specular-tight-039",
+  "caveat": "Art-directed light powers; approximate diffuse/specular separation and low-resolution basis. Requires a full render and visual verification."
+}

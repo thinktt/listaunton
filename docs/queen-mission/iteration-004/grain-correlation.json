@@ -1,0 +1,66 @@
+{
+  "accepted": {
+    "bowl_left": {
+      "pixels": 5868,
+      "correlation": 0.37973786207538185,
+      "reference_std": 0.12804625928401947,
+      "model_std": 0.09257326275110245
+    },
+    "bowl_right": {
+      "pixels": 5770,
+      "correlation": 0.5327683770032504,
+      "reference_std": 0.14760296046733856,
+      "model_std": 0.10501368343830109
+    },
+    "crown_body": {
+      "pixels": 8173,
+      "correlation": 0.263650038459865,
+      "reference_std": 0.18678165972232819,
+      "model_std": 0.12377547472715378
+    },
+    "stem": {
+      "pixels": 12587,
+      "correlation": 0.5627267426904582,
+      "reference_std": 0.161236971616745,
+      "model_std": 0.11894584447145462
+    },
+    "base": {
+      "pixels": 24813,
+      "correlation": 0.3772052791044247,
+      "reference_std": 0.16101795434951782,
+      "model_std": 0.1291314959526062
+    }
+  },
+  "057-opaque-pigment": {
+    "bowl_left": {
+      "pixels": 5867,
+      "correlation": 0.8097815440133146,
+      "reference_std": 0.12802651524543762,
+      "model_std": 0.11540869623422623
+    },
+    "bowl_right": {
+      "pixels": 5735,
+      "correlation": 0.8468743519847399,
+      "reference_std": 0.14665143191814423,
+      "model_std": 0.12100522220134735
+    },
+    "crown_body": {
+      "pixels": 8163,
+      "correlation": 0.5060365507740858,
+      "reference_std": 0.18658842146396637,
+      "model_std": 0.13319827616214752
+    },
+    "stem": {
+      "pixels": 12575,
+      "correlation": 0.8843328981685793,
+      "reference_std": 0.16123871505260468,
+      "model_std": 0.13694116473197937
+    },
+    "base": {
+      "pixels": 24719,
+      "correlation": 0.7657751030254447,
+      "reference_std": 0.16117487847805023,
+      "model_std": 0.14351940155029297
+    }
+  }
+}

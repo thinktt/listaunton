@@ -531,3 +531,125 @@ parts sandbox/CSP, and all 39 protected projection-study inputs. Git whitespace
 checks pass and there are no executable-bit changes. Other pieces and approved
 side-gallery defaults remain unchanged. The checkpoint is ready for its local
 commit; no push or hosting deployment is part of this mission.
+
+## Fourth iteration in progress: bounded grain replacement
+
+The third checkpoint was committed as `5ce46d1`; its local preview is exactly
+synchronized and the repository is clean. Starting model SHA-256 is
+`a6594fab05ae5f9c9cdbe9b32d01542129b5f6ca8825e8b16a7cb8fa0aa5b8db`.
+The next trial keeps that geometry, material response and lighting fixed while
+replacing coarse pigment detail. It smooths the prior pigment to retain broad
+color, then adds bounded fine/medium reference grain. Obvious glossy regions
+have their detail contribution suppressed rather than inverted into color.
+A new fixed-coordinate high-pass diagnostic measures grain correlation in
+interior regions, excluding obvious source and model highlights. It supplements
+visual examination and does not replace the five-category scorecard.
+
+Boundary reading at 2026-11-05 10:13:23 UTC: weekly 14% used / 86% remaining,
+reset 2026-11-11 13:19:48 UTC. Luna continues five-minute monitoring.
+
+048 improves high-pass correlation but suppresses too much grain, making the
+collars and stem look smooth and plastic. Reject. Inspection identified an
+overbroad highlight mask: the assumed two-color split classifies warm diffuse
+wood as partly reflective. 049 instead suppresses only bright, relatively
+neutral areas and strengthens the transferred detail. It recovers recognizable
+grain, but the broad filter also transfers collar shading into dark pigment
+bands. 050 couples that color to restrained reference-derived micro-relief;
+the smoother highlights help locally but do not fix the bands.
+
+051 narrows the transferred detail to a three-pixel repeated-box high pass.
+It keeps more fine wood detail without as much collar shading contamination.
+052 adds restrained relief to 051; its smoother, more continuous glare is less
+like the reference's broken polished reflections. All five trials preserve
+the exact accepted mesh and fixed-view outline (97.9612% high-res, 97.9109%
+original). Candidate 051 is the strongest color-only result so far, pending
+side views and texture-atlas checks; it is not yet published.
+
+| Trial | Silhouette | Interior form | Color | Grain | Lighting | Mean | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 048 medium grain | 97.961 | 80 | 74 | 64 | 49 | 72.19 | Reject: overly smooth |
+| 049 contrast grain | 97.961 | 80 | 73 | 74 | 50 | 74.99 | Reject: dark collar bands |
+| 050 restrained relief | 97.961 | 80 | 73 | 76 | 49 | 75.19 | Reject: bands and smooth glare |
+| 051 fine grain | 97.961 | 80 | 75 | 77 | 50 | 75.99 | Retain for further evaluation |
+| 052 fine relief | 97.961 | 80 | 75 | 77 | 48 | 75.59 | Reject: reflection texture regression |
+| 053 display reflection fit | 97.961 | 80 | 75 | 69 | 59 | 76.19 | Retain as lighting experiment |
+
+These are working visual judgments, not objective recovery percentages. The
+new correlation diagnostic is deliberately not averaged into the score: a
+filtered photograph can correlate well while producing a visibly bad material.
+
+053 fits the real reflection-light responses through Blender's AgX display
+transform, keeping the existing diffuse rig. This avoids letting a few clipped
+linear-light peaks dominate the fit. Its actual render moves the large base
+reflection to the correct side and removes distracting old glints. However,
+the finial spots are still poorly shaped, the socket highlight is incomplete,
+and thin collar/crown crescents remain weak. It does not replace the accepted
+model yet. The next test adds area-light positions derived from normals at
+these missing glints and refits their powers. These are art-directed real
+emitters, not an image projected as light or a claim to recover the source studio.
+
+Boundary reading at 2026-11-05 10:33:39 UTC: weekly 15% used / 85% remaining,
+reset 2026-11-11 13:19:47 UTC. Luna's five-minute guard remains active.
+
+054 expands the display-space fit with twelve area-light responses aimed at
+missing glints. It modestly improves the collar/socket placement but does not
+recover the thin bright crescents. Scores stay 97.961 / 80 / 75 / 69 / 59,
+mean 76.19. The next combined trial, 055, exposed a persistence defect rather
+than an artistic failure: editing and repacking a reopened sRGB-tagged float
+EXR converted the newly assigned linear pigment again. The saved 051 pigment
+was substantially darker than the in-memory render. 055's actual render scores
+97.961 / 80 / 22 / 25 / 59, mean 56.79; it is rejected. The in-memory scores
+of 049–052 do not qualify those saved files for publication.
+
+056 creates a fresh explicitly linear float image and saves EXR before packing.
+Its color survives, but alpha-associated storage complicates an exact pixel
+comparison (confidence was stored in the color image's alpha). 057 separates
+opaque color from a grayscale confidence texture. After reopening, its color
+has maximum absolute error 0.00001231 and mean error 0.000000113 versus the
+generated linear input. No reference or public asset was changed by this bug.
+056 and 057 both have the 051 appearance: 97.961 / 80 / 75 / 77 / 50, mean
+75.99. Only 057 passes the corrected persistence check.
+
+058 combines the reopened 057 material with the expanded fitted lights. The
+full render retains the finer aligned grain and the improvement in base
+reflection placement. It is a candidate for the fourth checkpoint, with
+scores **97.961 / 80 / 75 / 77 / 59**, working mean **77.79%** and holistic
+assessment around 75–80%. It remains visibly incomplete. The bowl still has
+coarse grain from the old relief field; finial glints are elongated; the socket
+crescent and thin rim/plate reflections are incomplete; collar and socket
+curvature remain wrong. Some grain contrast on the crown and stem is too strong.
+
+The color is now being baked into a v3 pigment-only atlas using the unchanged
+UV layout. The old atlas remains the relief source. The lighting is an
+art-directed reference rig with separated diffuse and glossy ray visibility,
+not a recovered physical studio. The browser's lighting remains an approximate
+real-time preview; its mesh, camera and new color atlas must match the saved
+model. No failed experiment is added to public controls.
+
+059's v3 bake preserves the 058 appearance (mean absolute foreground difference
+0.3202/255; 95th percentile one channel level). Rebuilding from the archived
+third model, tracked v3 PNG and recorded lights reproduces the actual render
+with mean error 0.001486/255 and identical alpha. This independently exercises
+the saved/reopened atlas and provides a repo-local reconstruction path.
+
+The fourth delivery model is
+`aae6d369ed42909b451be77ed0aa9e4f6731c20b338645755353290c7907e216`.
+The 54-degree camera, control vertices, topology and atlas control UVs are
+unchanged. The mesh remains closed/manifold with eight tips and height/base
+ratio 2.167048. Original/high-res IoUs remain 97.9109% / 97.9612%.
+All four current views were rendered and the wood/clay side views inspected.
+The side material remains usable, but stretched inferred grain and an overly
+glossy socket remain visible limitations. The working score stays **77.79%**.
+
+The viewer export retains all 715,776 triangles, valid UV seams and exact binary
+round trip. Its camera matches Blender within 0.0000382 pixels over 30 points
+and five viewport shapes. Reference controls, persistent tabs/orbit, source
+hashes, parts-map sandbox/CSP and side state pass the simulated DOM/GL checks.
+Native browser GPU inspection remains unavailable and is not claimed.
+
+Latest pre-sync allowance at 2026-11-05 10:55:19 UTC: 16% used / 84% remaining,
+reset 2026-11-11 13:19:47 UTC. The next experiment should address regional color
+and the residual coarse relief separately; geometry and thin reflected
+crescents remain a later priority. Mission remains active and incomplete.
+
+Post-integration checks pass: eight pages and 55 local links, all twelve original PNG hashes, candidate provenance/alignment, current model/viewer hash, and all 39 protected projection-study inputs. Git whitespace checks pass with existing file modes preserved. The fourth checkpoint is ready for its local commit; no push or hosting deployment is performed.

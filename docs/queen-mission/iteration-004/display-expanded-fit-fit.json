@@ -1,0 +1,73 @@
+{
+  "history": [
+    {
+      "iteration": 0,
+      "weighted_display_mse": 0.0244002381214565,
+      "accepted_mse": 0.016776391208657225
+    },
+    {
+      "iteration": 1,
+      "weighted_display_mse": 0.016776391208657225,
+      "accepted_mse": 0.014408273061695934
+    },
+    {
+      "iteration": 2,
+      "weighted_display_mse": 0.014408273061695934,
+      "accepted_mse": 0.014084351002843163
+    },
+    {
+      "iteration": 3,
+      "weighted_display_mse": 0.014084351002843163,
+      "accepted_mse": 0.014061791471533646
+    },
+    {
+      "iteration": 4,
+      "weighted_display_mse": 0.014061791471533646,
+      "accepted_mse": 0.014060774286076596
+    },
+    {
+      "iteration": 5,
+      "weighted_display_mse": 0.014060774286076596,
+      "accepted_mse": 0.01406071100541665
+    },
+    {
+      "iteration": 6,
+      "weighted_display_mse": 0.01406071100541665,
+      "accepted_mse": 0.014060705496259925
+    }
+  ],
+  "factors": {
+    "original-top": 0.04444621014927274,
+    "original-right": 0.02082054991289924,
+    "original-foot": 0.015554710181070054,
+    "base-key": 0.7822721944080783,
+    "socket-left": 0.032650493245656935,
+    "bowl-left": 0.14163313280644424,
+    "bowl-back": 0.05228680682498226,
+    "collars-right": 0.1775734327689169,
+    "lower-collar": 0.010377975702497039,
+    "finial-left": 0.00438353030835143,
+    "finial-top": 0.26412631393996017,
+    "foot-low": 0.0,
+    "base-rear": 0.07089508773838196,
+    "world": 0.0,
+    "bowl-arc": 0.005028076765809036,
+    "finial-right": 0.5121573805636106,
+    "finial-left-spot": 25.470913694721784,
+    "finial-top-spot": 110.99271884026355,
+    "finial-right-spot": 22.496884344745617,
+    "middle-left": 0.0035237901533528002,
+    "upper-right": 0.18561309190810435,
+    "lower-right": 0.17665501168613232,
+    "socket-right": 0.08864657074685277,
+    "socket-left-precise": 0.020568476361889597,
+    "foot-right": 0.1349207139997931,
+    "foot-left-precise": 0.007473520312582903,
+    "rim-front-left": 0.07120267535323362,
+    "rim-front-right": 0.0202099488902043,
+    "tip-back-left": 0.06752695834469707,
+    "bowl-inner-front": 0.004679079259646725,
+    "bowl-inner-left": 0.0
+  },
+  "pixels": 39872
+}

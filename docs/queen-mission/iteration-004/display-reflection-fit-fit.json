@@ -1,0 +1,66 @@
+{
+  "history": [
+    {
+      "iteration": 0,
+      "weighted_display_mse": 0.0244002381214565,
+      "accepted_mse": 0.017293131874113535
+    },
+    {
+      "iteration": 1,
+      "weighted_display_mse": 0.017293131874113535,
+      "accepted_mse": 0.015020331871812271
+    },
+    {
+      "iteration": 2,
+      "weighted_display_mse": 0.015020331871812271,
+      "accepted_mse": 0.014651934878511167
+    },
+    {
+      "iteration": 3,
+      "weighted_display_mse": 0.014651934878511167,
+      "accepted_mse": 0.014617232690435354
+    },
+    {
+      "iteration": 4,
+      "weighted_display_mse": 0.014617232690435354,
+      "accepted_mse": 0.01461498157308936
+    },
+    {
+      "iteration": 5,
+      "weighted_display_mse": 0.01461498157308936,
+      "accepted_mse": 0.014614818852525047
+    },
+    {
+      "iteration": 6,
+      "weighted_display_mse": 0.014614818852525047,
+      "accepted_mse": 0.014614797817708193
+    },
+    {
+      "iteration": 7,
+      "weighted_display_mse": 0.014614797817708193,
+      "accepted_mse": 0.014614795353627277
+    }
+  ],
+  "factors": {
+    "original-top": 0.0581301866913154,
+    "original-right": 0.006459520745011469,
+    "original-foot": 0.01574805441210735,
+    "base-key": 1.2432401625497311,
+    "socket-left": 0.0583549914771561,
+    "bowl-left": 0.13098392124317182,
+    "bowl-back": 0.05223255857529871,
+    "collars-right": 0.26682957004902624,
+    "lower-collar": 0.011223641353106337,
+    "finial-left": 0.07250690004138882,
+    "finial-top": 0.22883357800809542,
+    "foot-low": 0.018702429593527733,
+    "base-rear": 0.07090237453276554,
+    "world": 0.0,
+    "bowl-arc": 0.03759995225221993,
+    "finial-right": 0.6108541489571071,
+    "finial-left-spot": 28.51159999411724,
+    "finial-top-spot": 112.23548687283541,
+    "finial-right-spot": 17.864633106280927
+  },
+  "pixels": 39872
+}

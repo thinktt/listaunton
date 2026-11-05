@@ -1,0 +1,18 @@
+{
+  "method": "Retain a broad normalized pigment field; replace coarse invented color lines with bounded fine/medium log-luminance variation from the unchanged reference",
+  "old_color_blur_radius": 12,
+  "reference_log_blur_radius": 7,
+  "box_blur_passes": 3,
+  "grain_bounds_before_exponent": [
+    0.68,
+    1.42
+  ],
+  "grain_exponent": 0.85,
+  "highlight_detail_weight_fraction_transition": [
+    0.1,
+    0.3
+  ],
+  "projection_weight": 0.96,
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "caveat": "Low-frequency inferred color is preserved; some carving or shading edges may enter the bounded detail field. Highlight grain is suppressed, not painted into a reflective light map. Hidden surfaces retain prior continuous wood."
+}
