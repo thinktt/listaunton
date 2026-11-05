@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "147-collar-varnish",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 71
+    },
+    "mean": 82.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Broadening the coat lobe softens existing highlights but does not recover the missing crescent."
+  },
+  {
+    "variant": "148-fuller-middle-lip",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 72
+    },
+    "mean": 82.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "retain only with later lighting",
+    "reason": "Three radial controls fill the lower bevel without moving the peak or changing heights. Alone this does not restore the reflection."
+  },
+  {
+    "variant": "151-fitted-collar-surfaces",
+    "scores": {
+      "silhouette": 97.95615523417091,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 72
+    },
+    "mean": 82.99123104683419,
+    "original_iou": 0.9791335532999006,
+    "decision": "reject alone",
+    "reason": "Ring-specific lights recover isolated glints but leave the crescent fragmented. Provisional fitting-session image; not an accepted saved-model result."
+  },
+  {
+    "variant": "153-fitted-full-crescent",
+    "scores": {
+      "silhouette": 97.95615523417091,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 72
+    },
+    "mean": 82.99123104683419,
+    "original_iou": 0.9791335532999006,
+    "decision": "reject alone",
+    "reason": "Disabling shadows for the remaining middle fills produces little improvement while their targets miss the reference ridge. Provisional fitting-session image."
+  },
+  {
+    "variant": "155-fitted-ridge-crescents",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 74
+    },
+    "mean": 83.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "accept",
+    "reason": "Measured reference ridge targets improve the middle-collar crescent in fresh-file renders and the independent rebuild. Existing image and geometry checks pass."
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "baseline_sha256": "8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0",
+  "trial_sha256": "8b98d88d71a709919b75fb2162d3d17f6bfb82a9a183bf096785c3445079f0f4",
+  "samples": 256,
+  "adaptive_sampling": false,
+  "geometry_only_emission_diagnostic": true,
+  "camera_identical": true,
+  "camera": {
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.80901700258255,
+        -0.5877852439880371,
+        -7.053422927856445
+      ],
+      [
+        0.0,
+        0.5877852439880371,
+        0.80901700258255,
+        11.2076997756958
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "type": "ORTHO",
+    "scale": 4.739027500152588,
+    "shift": [
+      0.11433412879705429,
+      0.0
+    ],
+    "sensor_fit": "AUTO",
+    "resolution": [
+      1254,
+      1254,
+      100
+    ]
+  },
+  "different_binary_silhouette_pixels": 0,
+  "max_alpha_difference": 0.00784313678741455,
+  "passed": true
+}

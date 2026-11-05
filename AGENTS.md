@@ -110,3 +110,6 @@ Secondary glossy bounces are zero to remove a measured crown-body interreflectio
 this is an artistic rendering approximation, not a recovered original setting.
 Rebuild with rebuild_collar_checkpoint.py and iteration-015/reproduction.json.
 Preserve unchanged geometry/UV checks and fixed/side/viewer synchronization.
+
+
+The sixteenth queen checkpoint changes only lower-bevel radii 64-66 of the middle collar. All heights, peak ring and other controls stay exact; v8 pigment and relief stay unchanged. Six exact receivers now split lower/middle/upper collars: regenerate with socket_band=True, collar_band=True, split_collars=True. Eleven measured middle-collar reflection fills omit cast shadows as an explicit artistic approximation. Reproduce from archived checkpoint 15 with rebuild_collar_checkpoint.py and docs/queen-mission/iteration-016/reproduction.json. Compare geometry using --allow-middle-collar-edge against checkpoint 15. Always judge a fresh saved-file render after a response-fitting session; checkpoint 16 records a transient in-memory mismatch and successful independent reconstruction. See iteration-016 for current scores, validation and remaining defects.

@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse, hashlib, json, sys, math
 import bpy
+import numpy as np
 from mathutils import Vector
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -17,13 +18,24 @@ source=ROOT/cfg['baseline']
 assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['baseline_sha256']
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
 s=bpy.context.scene; obj=editable_mesh(s); settings=cfg['material_config']
+if settings.get('middle_collar_edge_refinement'):
+    assert cfg['baseline_sha256']==settings['middle_collar_edge_refinement']['source_sha256']
+    controls=np.empty(len(obj.data.vertices)*3,dtype=np.float32)
+    obj.data.vertices.foreach_get('co',controls);controls=controls.reshape(-1,192,3)
+    for edit in settings['middle_collar_edge_refinement']['rings']:
+        i=edit['ring'];oldr=np.linalg.norm(controls[i,:,:2],axis=1)
+        controls[i,:,:2]*=(edit['new_radius']/oldr)[:,None]
+    from validate_middle_collar_edge import check as check_middle_edge
+    check_middle_edge(controls,settings)
+    obj.data.vertices.foreach_set('co',controls.reshape(-1));obj.data.update()
+    bpy.context.view_layer.update()
 for light in s.objects:
     if light.type=='LIGHT': light.light_linking.receiver_collection=None
 for o in list(s.objects):
     if o.get('mission_render_region'): bpy.data.objects.remove(o,do_unlink=True)
 for c in list(bpy.data.collections):
     if c.name.startswith(('Queen render regions','Receivers ')): bpy.data.collections.remove(c)
-parts,report=partition(s,obj,socket_band=True,collar_band=True)
+parts,report=partition(s,obj,socket_band=True,collar_band=True,split_collars=bool(settings.get('subdivided_collar_receivers')))
 byname={o['mission_render_region']:o for o in parts}
 for spec in settings['lights']:
     light=bpy.data.objects.get(spec['name'])
@@ -40,6 +52,10 @@ for spec in settings['lights']:
             light.location=spec['position']
             light.rotation_euler=(Vector(spec['target'])-light.location).to_track_quat('-Z','Y').to_euler()
             light.visible_diffuse=False; light.visible_glossy=True
+    if spec.get('surface_pixel'):
+        light.location=spec['position']
+        light.rotation_euler=(Vector(spec['target'])-light.location).to_track_quat('-Z','Y').to_euler()
+    if 'use_shadow' in spec: light.data.use_shadow=spec['use_shadow']
     light.data.energy=spec['energy']
     if 'color' in spec: light.data.color=spec['color']
     if spec.get('diffuse_factor',1)==0 and not ('finial-' in spec['name'] and spec['name'].endswith('-spot')):

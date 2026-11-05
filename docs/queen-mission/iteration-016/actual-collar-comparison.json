@@ -1,0 +1,19 @@
+{
+  "crop": [
+    290,
+    350,
+    680,
+    565
+  ],
+  "measurement": "Weighted RGB display-space mean square error in actual native renders, not a fidelity percentage.",
+  "previous_mse": 0.007857083564317498,
+  "candidate_mse": 0.006416082943820996,
+  "reduction_percent": 18.340146298567127,
+  "trial_mse": {
+    "147-collar-varnish": 0.00782049315223968,
+    "148-fuller-middle-lip": 0.008461699467957506,
+    "151-fitted-collar-surfaces": 0.008147337204944155,
+    "153-fitted-full-crescent": 0.008146735843757351,
+    "155-fitted-ridge-crescents": 0.006416082943820996
+  }
+}

@@ -291,3 +291,16 @@ BSDF lighting remains active; the render approximation is explicit in iteration-
 Reproduce with rebuild_collar_checkpoint.py from archived checkpoint 14.
 Future receiver regeneration requires both socket_band=True and collar_band=True.
 See iteration-015 for rejected trials, reproduction and all five scores.
+
+
+The sixteenth checkpoint fills three middle-collar lower-bevel controls without
+changing heights, peak radius or the rest of the model. It separates all three
+collars into exact light receivers and measures crescent targets from the
+unchanged reference. Eleven middle-collar reflected fills omit cast shadows;
+this artistic approximation is explicit. Rebuild from checkpoint 15 using
+rebuild_collar_checkpoint.py with the iteration-016 reproduction.json argument.
+Use --allow-middle-collar-edge for the geometry comparison against checkpoint 15.
+Receiver regeneration now requires socket_band=True, collar_band=True and
+split_collars=True. Export the closed control as before. Final fitting renders
+are produced after reopening the saved scene; see the iteration's failed
+in-memory comparison and successful fresh-file reproduction evidence.

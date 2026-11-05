@@ -1,10 +1,22 @@
 {
-  "baseline": "history/queen-mission-014/queen-rebuilt.blend",
+  "baseline": "history/queen-mission-015/queen-rebuilt.blend",
   "current": "models/queen/queen-rebuilt.blend",
-  "baseline_sha256": "eac23f7c9bbead43a22ea621f2a05a0604eeeebcc13a131e53ffabaca6302223",
-  "current_sha256": "8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0",
-  "control_vertices_identical": true,
+  "baseline_sha256": "8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0",
+  "current_sha256": "fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94",
+  "control_vertices_identical": false,
   "atlas_control_uvs_identical": true,
   "topology_identical": true,
+  "scoped_geometry_change": {
+    "baseline_sha256": "8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0",
+    "changed_rings": [
+      64,
+      65,
+      66
+    ],
+    "all_other_controls_identical": true,
+    "all_heights_identical": true,
+    "peak_ring_identical": true,
+    "maximum_vertex_displacement": 0.015000076033174992
+  },
   "passed": true
 }

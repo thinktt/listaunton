@@ -1,0 +1,118 @@
+{
+  "source_sha256": "21b32f31e52f99a8363e730a82d173c1c37fd9bf4ed426c73e60f809523b463b",
+  "sample_count": 512,
+  "crop": [
+    290,
+    350,
+    680,
+    565
+  ],
+  "gain_factors": {
+    "Collar crescent 00": 0.0,
+    "Collar crescent 01": 0.012703058319261938,
+    "Collar crescent 02": 0.0,
+    "Collar crescent 03": 0.0,
+    "Collar crescent 04": 0.0,
+    "Collar crescent 05": 0.0,
+    "Collar crescent 06": 0.003379265921506415,
+    "Collar crescent 07": 0.16783772981471587,
+    "Collar crescent 08": 1.597749280359066,
+    "Collar crescent 09": 2.0363979500353695,
+    "Collar crescent 10": 0.4124116814094323,
+    "Collar crescent 11": 0.022132500768341633,
+    "Collar crescent 12": 0.16736869781703853,
+    "Collar crescent 13": 8.0,
+    "Collar crescent 14": 8.0,
+    "Collar crescent 15": 8.0,
+    "Collar crescent 16": 0.8278546021270231,
+    "Collar crescent 17": 0.0,
+    "Collar crescent 18": 2.6867149147527355e-05,
+    "Collar crescent 19": 0.10062854235704684,
+    "Collar crescent 20": 0.0,
+    "Collar crescent 21": 0.0,
+    "Collar crescent 22": 0.0,
+    "Collar retained 00": 0.05347027396702528,
+    "Collar retained 01": 2.6043311596097865,
+    "Collar retained 02": 0.5386257057103715,
+    "Collar retained 03": 1.7457389868463125,
+    "Collar retained 04": 2.2509455027252576,
+    "Collar retained 05": 0.22800377662607002,
+    "Collar retained 06": 6.980211729524631,
+    "Collar retained 07": 0.0,
+    "Collar retained 08": 0.1292724773233675,
+    "Collar retained 09": 0.0
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.007616359533815225,
+      "after_mse": 0.0069042911418512485
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.0069042911418512485,
+      "after_mse": 0.006601771825212781
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.006601771825212781,
+      "after_mse": 0.006546387749665366
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.006546387749665366,
+      "after_mse": 0.006525955526925792
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.006525955526925792,
+      "after_mse": 0.006513429435573674
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.006513429435573674,
+      "after_mse": 0.006505802740835748
+    },
+    {
+      "iteration": 6,
+      "before_mse": 0.006505802740835748,
+      "after_mse": 0.006500836223877762
+    },
+    {
+      "iteration": 7,
+      "before_mse": 0.006500836223877762,
+      "after_mse": 0.006497692240499422
+    },
+    {
+      "iteration": 8,
+      "before_mse": 0.006497692240499422,
+      "after_mse": 0.0064952676551146135
+    },
+    {
+      "iteration": 9,
+      "before_mse": 0.0064952676551146135,
+      "after_mse": 0.0064935031095948925
+    },
+    {
+      "iteration": 10,
+      "before_mse": 0.0064935031095948925,
+      "after_mse": 0.00649205438045946
+    },
+    {
+      "iteration": 11,
+      "before_mse": 0.00649205438045946,
+      "after_mse": 0.006490676226394775
+    },
+    {
+      "iteration": 12,
+      "before_mse": 0.006490676226394775,
+      "after_mse": 0.006489976027733421
+    },
+    {
+      "iteration": 13,
+      "before_mse": 0.006489976027733421,
+      "after_mse": 0.006489975911125337
+    }
+  ],
+  "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+}

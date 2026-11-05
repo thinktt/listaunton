@@ -1090,3 +1090,25 @@ rejected trials and persistent defects are recorded in iteration-015.
 Delivered model SHA-256: 8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0. Prior model: history/queen-mission-014.
 Local review, fixed/side renders and viewer are updated together. Next examine
 collar normals versus pigment/relief; the mission remains incomplete.
+
+
+## Sixteenth iteration: middle collar bevel and crescent
+
+Only three lower-bevel radii change; all heights, peak radius, UVs and other
+controls stay fixed. Six exact light receivers and measured reference-ridge
+targets improve the middle crescent. Eleven local reflected fills omit cast
+shadows, explicitly recorded as an artistic approximation. The v8 material
+and 54-degree camera are unchanged.
+
+Fresh saved-file renders and independent reconstruction agree within one RGB
+byte. The fitting-session beauty failed repeatability and was replaced by the
+verified saved-scene result; the failed evidence is retained. No acceptance
+thresholds were relaxed. Uniform 256-sample silhouettes are identical.
+
+Scores: outline 97.9612 measured, form 82, color 84, grain 79,
+lighting 74; mean 83.3922%, holistic 79-84%. Original IoU 97.9109%.
+Actual collar-crop error falls 18.34%; this is not whole-model fidelity.
+See iteration-016 for every trial, validation, reproduction and remaining defects.
+Delivered model SHA-256: fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94.
+Prior model: history/queen-mission-015. Local review, side views and viewer are
+updated together. Next inspect fine relief and reflection breakup. Incomplete.

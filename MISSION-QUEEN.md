@@ -109,7 +109,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.9612 / 82 / 84 / 79 / 72; working mean 82.9922%, holistic 79-84%. Original IoU: 97.9109%. Latest accepted model and validation: docs/queen-mission/iteration-015 (collar reflections and reduced glossy interreflection). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current accepted scores: 97.9612 / 82 / 84 / 79 / 74; working mean 83.3922%, holistic 79-84%. Original IoU: 97.9109%. Latest accepted model and validation: docs/queen-mission/iteration-016 (middle-collar bevel and measured crescent targets). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 

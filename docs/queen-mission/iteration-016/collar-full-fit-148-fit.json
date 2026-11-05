@@ -1,0 +1,123 @@
+{
+  "source_sha256": "0fe903f4bb420a41fbccd899c9edf5acda9a83132cba764e49b182ae35b474bf",
+  "sample_count": 512,
+  "crop": [
+    290,
+    350,
+    680,
+    565
+  ],
+  "gain_factors": {
+    "Collar crescent 00": 0.0,
+    "Collar crescent 01": 0.012375296195059787,
+    "Collar crescent 02": 0.0,
+    "Collar crescent 03": 0.0,
+    "Collar crescent 04": 0.0,
+    "Collar crescent 05": 0.0,
+    "Collar crescent 06": 0.003949222792799094,
+    "Collar crescent 07": 0.06402393948649618,
+    "Collar crescent 08": 0.008408612696555644,
+    "Collar crescent 09": 3.273563741686304,
+    "Collar crescent 10": 0.45466394561681034,
+    "Collar crescent 11": 0.0,
+    "Collar crescent 12": 0.0,
+    "Collar crescent 13": 0.0,
+    "Collar crescent 14": 0.08949983317523058,
+    "Collar crescent 15": 0.659576488847832,
+    "Collar crescent 16": 0.0,
+    "Collar crescent 17": 0.0,
+    "Collar crescent 18": 0.00013707950230590224,
+    "Collar crescent 19": 0.10302705456470385,
+    "Collar crescent 20": 0.0001731458141013663,
+    "Collar crescent 21": 0.0,
+    "Collar crescent 22": 0.0,
+    "Collar retained 00": 0.05683089742507265,
+    "Collar retained 01": 6.642861380950147,
+    "Collar retained 02": 2.853983085965146,
+    "Collar retained 03": 1.3101928791693789,
+    "Collar retained 04": 2.1546011086834036,
+    "Collar retained 05": 0.21254676392221644,
+    "Collar retained 06": 6.589138548961681,
+    "Collar retained 07": 0.0,
+    "Collar retained 08": 0.0,
+    "Collar retained 09": 5.262259031780178
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.008457518931687408,
+      "after_mse": 0.008250533757581105
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.008250533757581105,
+      "after_mse": 0.008222990171808477
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.008222990171808477,
+      "after_mse": 0.008214992551703984
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.008214992551703984,
+      "after_mse": 0.008212032273029883
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.008212032273029883,
+      "after_mse": 0.008210578066994845
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.008210578066994845,
+      "after_mse": 0.008209771341736975
+    },
+    {
+      "iteration": 6,
+      "before_mse": 0.008209771341736975,
+      "after_mse": 0.008209268110726942
+    },
+    {
+      "iteration": 7,
+      "before_mse": 0.008209268110726942,
+      "after_mse": 0.00820893958176268
+    },
+    {
+      "iteration": 8,
+      "before_mse": 0.00820893958176268,
+      "after_mse": 0.00820876722779393
+    },
+    {
+      "iteration": 9,
+      "before_mse": 0.00820876722779393,
+      "after_mse": 0.0082086601658041
+    },
+    {
+      "iteration": 10,
+      "before_mse": 0.0082086601658041,
+      "after_mse": 0.00820860446513648
+    },
+    {
+      "iteration": 11,
+      "before_mse": 0.00820860446513648,
+      "after_mse": 0.008208574702418146
+    },
+    {
+      "iteration": 12,
+      "before_mse": 0.008208574702418146,
+      "after_mse": 0.008208554082414063
+    },
+    {
+      "iteration": 13,
+      "before_mse": 0.008208554082414063,
+      "after_mse": 0.008208543638869647
+    },
+    {
+      "iteration": 14,
+      "before_mse": 0.008208543638869647,
+      "after_mse": 0.00820853826229767
+    }
+  ],
+  "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+}

@@ -10,8 +10,9 @@ import numpy as np
 REGION_NAMES = ['foot', 'base', 'socket', 'stem', 'lower-collar',
                 'middle-collar', 'upper-collar', 'crown-body', 'bowl', 'finial']
 
-def partition(scene, obj, finial_only=False, socket_band=False, collar_band=False):
+def partition(scene, obj, finial_only=False, socket_band=False, collar_band=False, split_collars=False):
     assert not collar_band or socket_band, 'Collar partition requires the accepted socket partition'
+    assert not split_collars or collar_band, 'Subdivided collars require the collar partition'
     old_levels = [(m, m.levels) for m in obj.modifiers if m.type == 'SUBSURF']
     for modifier, _ in old_levels:
         modifier.levels = modifier.render_levels
@@ -40,6 +41,10 @@ def partition(scene, obj, finial_only=False, socket_band=False, collar_band=Fals
         if collar_band:
             labels[(centers[:, 2] >= 2.78) & (centers[:, 2] < 3.34)] = 3
             names.append('collars')
+            if split_collars:
+                labels[(centers[:, 2] >= 2.97) & (centers[:, 2] < 3.16)] = 4
+                labels[(centers[:, 2] >= 3.16) & (centers[:, 2] < 3.34)] = 5
+                names = ['turned-body', 'stem-socket', 'finial', 'lower-collar', 'middle-collar', 'upper-collar']
     elif finial_only:
         labels = (labels == 9).astype(np.int32)
         names = ['turned-body', 'finial']

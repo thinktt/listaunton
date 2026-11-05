@@ -1,0 +1,454 @@
+{
+  "Principled BSDF": {
+    "name": "Principled BSDF",
+    "type": "BSDF_PRINCIPLED",
+    "inputs": {
+      "Base Color": {
+        "value": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "links": [
+          [
+            "Image Texture.018",
+            "Color"
+          ]
+        ]
+      },
+      "Metallic": {
+        "value": 0.0,
+        "links": []
+      },
+      "Roughness": {
+        "value": 0.1899999976158142,
+        "links": []
+      },
+      "IOR": {
+        "value": 1.4800000190734863,
+        "links": []
+      },
+      "Alpha": {
+        "value": 1.0,
+        "links": []
+      },
+      "Thin Wall": {
+        "value": false,
+        "links": []
+      },
+      "Normal": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": [
+          [
+            "Bump.001",
+            "Normal"
+          ]
+        ]
+      },
+      "Weight": {
+        "value": 0.0,
+        "links": []
+      },
+      "Diffuse Roughness": {
+        "value": 0.0,
+        "links": []
+      },
+      "Subsurface Weight": {
+        "value": 0.0,
+        "links": []
+      },
+      "Subsurface Radius": {
+        "value": [
+          1.0,
+          0.20000000298023224,
+          0.10000000149011612
+        ],
+        "links": []
+      },
+      "Subsurface Scale": {
+        "value": 0.004999999888241291,
+        "links": []
+      },
+      "Subsurface IOR": {
+        "value": 1.399999976158142,
+        "links": []
+      },
+      "Subsurface Anisotropy": {
+        "value": 0.0,
+        "links": []
+      },
+      "Specular IOR Level": {
+        "value": 0.5,
+        "links": []
+      },
+      "Specular Tint": {
+        "value": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "links": []
+      },
+      "Anisotropic": {
+        "value": 0.0,
+        "links": []
+      },
+      "Anisotropic Rotation": {
+        "value": 0.0,
+        "links": []
+      },
+      "Tangent": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": []
+      },
+      "Transmission Weight": {
+        "value": 0.0,
+        "links": []
+      },
+      "Coat Weight": {
+        "value": 0.3499999940395355,
+        "links": []
+      },
+      "Coat Roughness": {
+        "value": 0.07500000298023224,
+        "links": []
+      },
+      "Coat IOR": {
+        "value": 1.5,
+        "links": []
+      },
+      "Coat Tint": {
+        "value": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "links": []
+      },
+      "Coat Normal": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": [
+          [
+            "Bump.001",
+            "Normal"
+          ]
+        ]
+      },
+      "Sheen Weight": {
+        "value": 0.0,
+        "links": []
+      },
+      "Sheen Roughness": {
+        "value": 0.5,
+        "links": []
+      },
+      "Sheen Tint": {
+        "value": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "links": []
+      },
+      "Emission Color": {
+        "value": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "links": []
+      },
+      "Emission Strength": {
+        "value": 0.0,
+        "links": []
+      },
+      "Thin Film Thickness": {
+        "value": 0.0,
+        "links": []
+      },
+      "Thin Film IOR": {
+        "value": 1.3300000429153442,
+        "links": []
+      }
+    }
+  },
+  "Bump.001": {
+    "name": "Bump.001",
+    "type": "BUMP",
+    "inputs": {
+      "Strength": {
+        "value": 0.44999998807907104,
+        "links": []
+      },
+      "Distance": {
+        "value": 0.007000000216066837,
+        "links": []
+      },
+      "Filter Width": {
+        "value": 0.10000000149011612,
+        "links": []
+      },
+      "Height": {
+        "value": 1.0,
+        "links": [
+          [
+            "Mix (Legacy).006",
+            "Color"
+          ]
+        ]
+      },
+      "Normal": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": []
+      }
+    }
+  },
+  "Mix (Legacy).006": {
+    "name": "Mix (Legacy).006",
+    "type": "MIX_RGB",
+    "inputs": {
+      "Factor": {
+        "value": 0.2199999988079071,
+        "links": []
+      },
+      "Color1": {
+        "value": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "links": [
+          [
+            "Map Range.005",
+            "Result"
+          ]
+        ]
+      },
+      "Color2": {
+        "value": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "links": [
+          [
+            "Noise Texture.003",
+            "Factor"
+          ]
+        ]
+      }
+    }
+  },
+  "Noise Texture.003": {
+    "name": "Noise Texture.003",
+    "type": "TEX_NOISE",
+    "inputs": {
+      "Vector": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": [
+          [
+            "Texture Coordinate.002",
+            "Object"
+          ]
+        ]
+      },
+      "W": {
+        "value": 0.0,
+        "links": []
+      },
+      "Scale": {
+        "value": 140.0,
+        "links": []
+      },
+      "Detail": {
+        "value": 2.0,
+        "links": []
+      },
+      "Roughness": {
+        "value": 0.699999988079071,
+        "links": []
+      },
+      "Lacunarity": {
+        "value": 2.0,
+        "links": []
+      },
+      "Offset": {
+        "value": 0.0,
+        "links": []
+      },
+      "Gain": {
+        "value": 1.0,
+        "links": []
+      },
+      "Distortion": {
+        "value": 0.0,
+        "links": []
+      }
+    }
+  },
+  "Texture Coordinate.002": {
+    "name": "Texture Coordinate.002",
+    "type": "TEX_COORD",
+    "inputs": {}
+  },
+  "Map Range.005": {
+    "name": "Map Range.005",
+    "type": "MAP_RANGE",
+    "inputs": {
+      "Value": {
+        "value": 1.0,
+        "links": [
+          [
+            "RGB to BW.002",
+            "Val"
+          ]
+        ]
+      },
+      "From Min": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": []
+      },
+      "From Max": {
+        "value": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "links": []
+      },
+      "To Min": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": []
+      },
+      "To Max": {
+        "value": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "links": []
+      },
+      "Steps": {
+        "value": [
+          4.0,
+          4.0,
+          4.0
+        ],
+        "links": []
+      },
+      "Vector": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": []
+      }
+    }
+  },
+  "RGB to BW.002": {
+    "name": "RGB to BW.002",
+    "type": "RGBTOBW",
+    "inputs": {
+      "Color": {
+        "value": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "links": [
+          [
+            "Image Texture.002",
+            "Color"
+          ]
+        ]
+      }
+    }
+  },
+  "Image Texture.002": {
+    "name": "Image Texture.002",
+    "type": "TEX_IMAGE",
+    "inputs": {
+      "Vector": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": [
+          [
+            "UV Map.002",
+            "UV"
+          ]
+        ]
+      }
+    },
+    "image": "Queen pigment atlas"
+  },
+  "UV Map.002": {
+    "name": "UV Map.002",
+    "type": "UVMAP",
+    "inputs": {}
+  },
+  "Image Texture.018": {
+    "name": "Image Texture.018",
+    "type": "TEX_IMAGE",
+    "inputs": {
+      "Vector": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "links": [
+          [
+            "UV Map.009",
+            "UV"
+          ]
+        ]
+      }
+    },
+    "image": "Queen pigment atlas.006"
+  },
+  "UV Map.009": {
+    "name": "UV Map.009",
+    "type": "UVMAP",
+    "inputs": {}
+  }
+}

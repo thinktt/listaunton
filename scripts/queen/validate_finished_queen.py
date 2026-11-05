@@ -9,6 +9,7 @@ sys.path.insert(0,str(Path(__file__).parent))
 from queen_scene import editable_mesh
 from validate_render_receivers import check as check_receivers
 from validate_base_transition import check as check_base_transition
+from validate_middle_collar_edge import check as check_middle_edge
 p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=args.blend
@@ -39,10 +40,12 @@ diameter=float((np.ptp(low[:,0])+np.ptp(low[:,1]))/2)
 ratio=height/diameter
 # The owner's smaller, deeper finial intentionally lowers the maximum height.
 # Keep the original tolerance around the adjusted target. All other controls
-# remain identical except the four separately validated base-junction rings.
+# remain identical except separately validated base-junction and middle-lip rings.
 material_settings=json.loads(scene.get('mission_material_config','{}'))
 seating=material_settings.get('finial_seating')
-base_transition=check_base_transition(controls,material_settings)
+middle_edge,pre_collar_controls=check_middle_edge(controls,material_settings)
+base_transition=check_base_transition(pre_collar_controls,material_settings)
+if middle_edge and base_transition:base_transition['verification_scope']='Prior base edit checked on pre-collar snapshot; current base is identical to it by the separate middle-edge scope check.'
 adjusted_target=fit['target_height_to_base_width']
 if seating:
     assert seating['height_factor']==.90 and seating['radial_factor']==.96
@@ -60,6 +63,7 @@ report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdige
         'signed_volume':volume,'crown_tips':8,'body_rings_monotonic':True}
 report['finial_seating']=seating
 report['base_transition']=base_transition
+report['middle_collar_edge_refinement']=middle_edge
 report['adjusted_height_target']=adjusted_target
 report['render_receivers']=check_receivers(scene,obj)
 for name in ('finish-validation.json','model-validation.json'):

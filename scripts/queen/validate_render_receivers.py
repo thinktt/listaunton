@@ -19,12 +19,13 @@ def check(scene,control):
     settings=json.loads(scene['mission_material_config'])
     socket=settings.get('stem_socket_receiver_isolation')
     collar=settings.get('collar_receiver_isolation')
+    subdivisions=settings.get('subdivided_collar_receivers')
     if settings.get('glossy_interreflection'):
         assert scene.cycles.glossy_bounces==settings['glossy_interreflection']['glossy_bounces']==0
     expected_parts={'turned-body','stem-socket','finial'} if socket else {'turned-body','finial'}
     if collar:
         assert socket
-        expected_parts.add('collars')
+        expected_parts.update(subdivisions['regions'] if subdivisions else ['collars'])
     assert {o['mission_render_region'] for o in parts}==expected_parts
     if socket:
         assert socket['z_interval']==[.83,2.78]
@@ -37,9 +38,15 @@ def check(scene,control):
     if collar:
         assert collar['z_interval']==[2.78,3.34]
         assert hashlib.sha256(controls.tobytes()).hexdigest()==collar['closed_controls_sha256']
-        region=next(o for o in parts if o['mission_render_region']=='collars')
-        centers=np.array([tuple(p.center) for p in region.data.polygons])
-        assert np.all((centers[:,2]>=2.78)&(centers[:,2]<3.34))
+        regions=subdivisions['regions'] if subdivisions else {'collars':[2.78,3.34]}
+        if subdivisions:
+            assert regions=={'lower-collar':[2.78,2.97],'middle-collar':[2.97,3.16],'upper-collar':[3.16,3.34]}
+            assert subdivisions['nonshadowing_fills']==[f'Collar crescent {i:02d}' for i in range(6,17 if settings.get('full_collar_fill') else 9)]
+            for name in subdivisions['nonshadowing_fills']:assert not bpy.data.objects[name].data.use_shadow
+        for name,(lo,hi) in regions.items():
+            region=next(o for o in parts if o['mission_render_region']==name)
+            centers=np.array([tuple(p.center) for p in region.data.polygons])
+            assert np.all((centers[:,2]>=lo)&(centers[:,2]<hi))
     for part in parts:
         assert not part.hide_render and not part.modifiers
         assert part.matrix_world==control.matrix_world
@@ -72,6 +79,11 @@ def check(scene,control):
                 else:
                     if 'turned-body' in expected:expected.add('collars')
                     if name in collar['excluded_reflectors']:expected.discard('collars')
+            if subdivisions and 'collars' in expected:
+                expected.remove('collars');expected.update(subdivisions['regions'])
+                if name.startswith('Collar crescent '):
+                    index=int(name.split()[-1]);expected={'upper-collar' if index<6 else 'middle-collar' if index<17 else 'lower-collar'}
+                    assert bpy.data.objects[name].data.use_shadow==(name not in subdivisions['nonshadowing_fills'])
             assert set(specifications[name]['receiver_parts'])==expected
         assert receiver and {o.get('mission_render_region') for o in receiver.objects}==expected
         assert 'finial' not in expected
@@ -80,7 +92,9 @@ def check(scene,control):
             'custom_normal_mean_component_error':float(normal_error.mean()),
             'materials_shared':True,'excluded_reflector_count':len(cfg['excluded_reflectors']),
             'closed_editable_control_retained':True,
-            'collar_controls_unchanged':bool(collar) if collar else None,
+            'collar_control_hash_verified':bool(collar) if collar else None,
+            'collar_controls_unchanged':bool(collar) and not bool(settings.get('middle_collar_edge_refinement')) if collar else None,
+            'nonshadowing_collar_fills':subdivisions['nonshadowing_fills'] if subdivisions else [],
             'receiver_regions':sorted(expected_parts),'socket_controls_unchanged':bool(socket) if socket else None}
     evaluated.to_mesh_clear()
     for modifier,level in levels:modifier.levels=level
