@@ -52,11 +52,28 @@ image coordinates for before/after comparisons.
 Use [check-codex-usage](skills/check-codex-usage/SKILL.md). A discoverable copy
 is installed at `C:/Users/toby/.codex/skills/check-codex-usage/SKILL.md`.
 
-Check current account usage at the beginning and end of each goal turn,
+The owner selected a **Luna subagent** for usage monitoring. Reuse
+`/root/usage_guard_luna` when it is available. Otherwise spawn
+`usage_guard_luna` with `model: gpt-6-luna`, `reasoning_effort: low`, and
+`fork_turns: none`; supply only the usage skill, the 3% rule, and the current
+mission state, rather than the modeling conversation.
+
+Luna's initial read-only check succeeded: it can access the live usage tool.
+It is idle until the mission starts. At mission start, assign it to check
+immediately and about every 15 minutes during active work, using bounded,
+interruptible waits rather than busy polling. It reports threshold crossings
+and reading failures to the parent with `collaboration.send_message`.
+Routine readings need no user-facing commentary.
+
+Ask Luna for a fresh check at the beginning and end of each goal turn,
 between substantial iterations, and before a new expensive batch when the
-last reading is stale. A background heartbeat is supplementary; it cannot
-guarantee a check during every active turn or prevent other chats from using
-the shared allowance. Retain the direct checks even when it is enabled.
+last reading is stale. The parent handles checkpoints and goal transitions;
+Luna does not modify models or pause a potentially different child goal.
+Stop the worker when the mission stops, pauses, or completes. Confirm its
+status on continuation, and restart it if it ended; a session subagent is
+not an independently scheduled service and must not be assumed to survive
+an app restart. If Luna cannot run, use the live tool directly and disclose
+the fallback rather than silently dropping the usage check.
 
 Use the applicable **weekly** window (normally `windowDurationMins: 10080`).
 Calculate `remainingPercent = clamp(100 - usedPercent, 0, 100)`.
@@ -71,8 +88,9 @@ limit, purchased credit balance, or the current goal's token budget.
 3. If the mission goal is active, call `update_goal` with `status: paused`.
    The owner explicitly authorized this conditional pause. Report the status
    returned by the tool and the observed remaining percentage, then stop.
-4. Disable the mission's heartbeat until the owner resumes. Do not resume
-   automatically after a weekly reset or spend a reset credit to continue.
+4. Stop Luna's monitoring loop and keep the old heartbeat disabled until
+   the owner resumes. Do not resume automatically after a weekly reset or
+   spend a reset credit to continue.
 
 If a weekly reading is missing or the tool fails, it means **unknown**, not
 zero or unlimited. Retry once; if still unknown, checkpoint and report that
@@ -83,19 +101,13 @@ If the execution/goal token budget runs out first, leave an honest incomplete
 checkpoint and allow the platform's budget status to take precedence. Never
 mark the goal complete merely because time or tokens are ending.
 
-A quiet 15-minute heartbeat may be enabled for this mission. It should check
-usage only while this mission is active, act on the threshold, and surface
-only a meaningful threshold crossing or a monitoring failure. A skill is
-instructions, not an independently running process. Do not claim background
-monitoring is active until the automation tool confirms it.
-
-Prepared heartbeat ID: `queen-mission-usage-guard`. It was created **paused**
-while this mission file was being written. When the owner starts or resumes
-the mission, view it with `automation_update`, then activate it while
-preserving its prompt, 15-minute cadence, and notification policy. Reuse this
-monitor rather than creating a duplicate. Pause it when the mission pauses
-or completes. Its current runtime status must be read from the tool; this
-file's creation-time status is not a live status report.
+The earlier main-chat heartbeat, `queen-mission-usage-guard`, remains
+**paused**. Do not activate it automatically with the mission: Luna replaces
+its routine checks, avoiding duplicate scheduled main-agent work. A skill
+contains instructions; the actual checks are tool calls made by the Luna
+worker. This guard is still a precaution rather than a guaranteed hard cap:
+messages can wait for a tool call to finish, and other chats share the same
+allowance. Preserve the iteration-boundary checks.
 
 ## Stable scorecard
 

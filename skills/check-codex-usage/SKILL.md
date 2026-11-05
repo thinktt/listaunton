@@ -49,13 +49,40 @@ If the reading fails, retry once. If still unknown, disclose the failure and
 follow the mission's missing-data rule; never invent a percentage or claim a
 threshold crossing. Do not use `blocked` without meeting its tool conditions.
 
-## Optional background monitoring
+## Delegated monitoring
 
-A skill does not execute continuously on its own. When the owner requests
-monitoring, discover `automation_update` and use a heartbeat attached to the
-current chat rather than a new cron task. Inspect matching saved automations
-first and reuse one. A 15-minute interval is a reasonable low-overhead
-starting point unless the owner specifies a different cadence.
+When the owner explicitly requests a particular subagent, delegate the
+usage checks to it instead of repeatedly waking the main model. Reuse an
+existing suitable worker. For a requested Luna guard, the supported settings
+are `model: gpt-6-luna`, `reasoning_effort: low`, `fork_turns: none`; provide
+this skill and the applicable threshold, not the full project history.
+Do not spawn workers merely because this skill was loaded.
+
+Start with one live read to verify that the subagent can access the tool.
+During an authorized active mission it may check about every 15 minutes,
+using interruptible waits of at most 60 seconds rather than a busy loop,
+and answer on-demand checks at iteration boundaries. It should send only
+threshold alerts, failures, and requested readings to its parent. The parent
+performs checkpointing and goal-state transitions, so the worker cannot
+accidentally pause an unrelated child goal. No modeling or file edits belong
+in the guard's assignment.
+
+Stop the worker when the mission stops. An idle worker does not schedule
+future checks by itself; a running session worker is not an independent
+service guaranteed to survive turns or app restarts. Confirm its status and
+restart or request a fresh check when needed. Keep any replaced main-chat
+heartbeat paused. If delegation fails, disclose that and use a direct live
+check rather than silently abandoning an active usage constraint.
+
+## Optional scheduled monitoring
+
+A skill does not execute continuously on its own. When scheduled monitoring
+is requested and a subagent has not been selected instead, discover
+`automation_update` and use a heartbeat attached to the current chat rather
+than a new cron task. Inspect matching saved automations first and reuse one.
+A 15-minute interval is a reasonable starting point unless the owner
+specifies a different cadence. Do not claim the heartbeat itself runs on
+Luna merely because its prompt names that model; verify supported settings.
 
 Make the monitor conditional on the relevant mission being active, and stop
 it when that mission completes or pauses. If monitoring is being prepared
