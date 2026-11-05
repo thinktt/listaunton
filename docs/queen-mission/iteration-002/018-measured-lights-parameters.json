@@ -1,0 +1,144 @@
+{
+  "atlas_bakes_lighting": false,
+  "atlas_size": 2048,
+  "bump_distance": 0.008,
+  "bump_strength": 0.22,
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "image_bump": true,
+  "image_mix": 1,
+  "lights": [
+    {
+      "name": "Bowl reflection",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "energy": 600,
+      "size": 0.4,
+      "target": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "name": "Right base key",
+      "position": [
+        3.74,
+        -3.69,
+        4.63
+      ],
+      "energy": 230,
+      "size": 1,
+      "diffuse_factor": 0.6,
+      "target": [
+        0,
+        0,
+        1.5
+      ]
+    },
+    {
+      "name": "Right collar strip",
+      "position": [
+        4.8,
+        -4.2,
+        2.4
+      ],
+      "energy": 100,
+      "size": 0.8,
+      "diffuse_factor": 0.1,
+      "target": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "name": "Finial left",
+      "position": [
+        -1.75,
+        -4.52,
+        8.09
+      ],
+      "energy": 90,
+      "size": 0.22,
+      "diffuse_factor": 0.15,
+      "target": [
+        0,
+        0,
+        4.3
+      ]
+    },
+    {
+      "name": "Socket left",
+      "position": [
+        -3.09,
+        -3.65,
+        5.45
+      ],
+      "energy": 100,
+      "size": 1.4,
+      "size_y": 0.25,
+      "shape": "RECTANGLE",
+      "diffuse_factor": 0.15,
+      "target": [
+        0,
+        0,
+        1.2
+      ]
+    },
+    {
+      "name": "Foot left",
+      "position": [
+        -3.64,
+        -5.42,
+        -2.02
+      ],
+      "energy": 200,
+      "size": 2,
+      "size_y": 0.2,
+      "shape": "RECTANGLE",
+      "diffuse_factor": 0.05,
+      "target": [
+        0,
+        0,
+        0.2
+      ]
+    },
+    {
+      "name": "Low rear left",
+      "position": [
+        -2.84,
+        5.9,
+        -0.87
+      ],
+      "energy": 150,
+      "size": 1.5,
+      "size_y": 0.4,
+      "shape": "RECTANGLE",
+      "diffuse_factor": 0.05,
+      "target": [
+        0,
+        0,
+        0.6
+      ]
+    }
+  ],
+  "pore_mix": 0.2,
+  "pore_noise": 180,
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "samples": 64,
+  "saturation": 1,
+  "source": "history/queen-mission-001/queen-rebuilt.blend",
+  "texture": "assets/queen/queen-pigment-albedo.png",
+  "uv_layer": "Pigment atlas",
+  "uv_meridian_scale": 5.5,
+  "uv_offset_v": 0.13,
+  "uv_repeat_u": 1,
+  "value": 1,
+  "variant": "018-measured-lights",
+  "world": 0.03
+}

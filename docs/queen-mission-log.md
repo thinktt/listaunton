@@ -166,3 +166,126 @@ Completed checks for this checkpoint:
 Evidence is in `docs/queen-mission/iteration-001/`. Rebuild instructions are in
 `docs/queen-54-wood.md`. Next: improve lower-collar roll/socket curvature while
 preserving the silhouette, then fit the bright edge crescents and base reflection.
+
+## Second iteration in progress: edge rolls, reflections, and regional color
+
+Starting accepted commit: `33f0adc` (file-mode cleanup in `6469bba`). Model SHA
+remains `35a939bf3af852067bfdd25dd7be217c60e11b2e6ffeeee688a11b7ff0160c0c`.
+The repository and local preview show that checked checkpoint. No trial below
+has replaced it at this point.
+
+| Trial | High-res IoU | Original IoU | Interior form | Color | Grain | Lighting | Overall | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 015 lower roll | 97.915% | 97.896% | 77 | 64 | 65 | 48 | 70.38 | Reject: slight rounding gain does not justify original-outline loss |
+| 016 raised foot edge | 97.644% | 97.765% | 74 | 64 | 64 | 47 | 69.33 | Reject: base contour moves and the left reflection grows |
+| 017 internal groove roll | 97.903% | 97.904% | 77 | 64 | 65 | 48 | 70.38 | Candidate: narrower edit preserves outline, but lighting remains uncertain |
+| 018 measured lights | 97.904% | 97.904% | 76 | 63 | 65 | 45 | 69.38 | Reject: correct-area highlights also create excessive unwanted reflections |
+| 019 varied surface polish | 97.904% | 97.904% | 77 | 63 | 65 | 44 | 69.38 | Reject: diffuse white patches and exaggerated collar reflections |
+
+The localized four-ring groove change in 017 preserves the outer foot and
+flared-base boundary. The wider 016 change did not; the actual alpha tests
+exposed a regression that was not apparent from the front groove alone.
+
+Highlight centroids were measured from the unmodified reference, then ray-cast
+onto the accepted mesh at the fixed camera. Normals imply disparate light
+directions; some foot/base locations imply lights below the model. This is a
+diagnostic of the current geometry and inferred rendering, not a claim about
+how the source was made. Seven targeted lights and orientation-dependent
+roughness did not improve the overall image, so those trials are rejected.
+
+Regional RGB measurements expose a more useful next target: the accepted
+wood is too bright and too orange, especially the crown body, stem, socket and
+foot. For example, crown-body median RGB is approximately (77,29,1), compared
+with (43,17,4) in the reference; base median is (128,58,9), compared with
+(87,39,13). These exclude black/background and the brightest reflection pixels.
+Trial 020 corrects pigment in the actual shader using smooth height zones and
+a separate finial region; geometry, lights and source images remain unchanged.
+It is an artistic material adjustment, not evidence that original albedo has
+been uniquely recovered.
+
+Resource check at 2026-11-05 07:26:46 UTC: 8% used / 92% remaining in the same
+weekly bucket. Luna continues five-minute checks; the goal remains active.
+
+### Pigment, surface relief, and finial refinement
+
+| Trial | High-res IoU | Original IoU | Interior form | Color | Grain | Lighting | Overall | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 020 regional pigment | 97.904% | 97.904% | 76 | 70 | 65 | 48 | 71.38 | Dark distribution improves, but blue correction creates a reddish/mauve cast; superseded |
+| 021 warm pigment | 97.904% | 97.904% | 76 | 75 | 66 | 48 | 72.58 | Retain the narrower RGB correction; body, stem, socket and foot darken appropriately |
+| 022 grain relief | 97.904% | 97.904% | 76 | 75 | 70 | 49 | 73.58 | Retain: highlights break over the visible pigment grain instead of unrelated procedural grain |
+| 023 directed reflections | 97.904% | 97.904% | 76 | 73 | 70 | 47 | 72.78 | Reject: removes the left base patch but introduces a bright stem streak and wrong collar/bowl patches |
+| 024 rounded finial | 97.903% | 97.904% | 78 | 75 | 70 | 49 | 73.98 | Candidate for acceptance: fuller upper curve and raised lower shoulder, unchanged maximum height |
+| 025 turned polish | 97.904% | 97.904% | 78 | 75 | 70 | 49 | 73.98 | Reject: anisotropic response adds complexity without a clear visible improvement over 024 |
+
+The 021 grade is an actual material adjustment using smooth height regions and
+a separate radial finial mask. It preserves the albedo's grain. Against the
+same measured image regions, crown-body median RGB changes from (77,29,1) to
+(50,22,7), versus reference (47,20,4); stem changes from (84,32,1) to
+(54,22,5), versus (55,23,5). Base changes from (124,56,7) to (89,41,18),
+versus (85,38,13). Matching regional medians is not proof of matching the
+spatial color pattern. The base still lacks the source's detailed warm/cool
+variation, and its right highlight remains misplaced.
+
+The previous bump network still used the earlier fine wood, although the
+visible color had moved to the pigment atlas. Trial 022 uses the atlas's
+ungraded luminance for relief, mixed with fine three-dimensional pores. Its
+surface response is closer to the reference's broken reflections, though
+the small wrinkles remain somewhat too uniform and artificial. Roughness is
+0.19, coat roughness 0.075, coat weight 0.35; bump strength 0.45 and distance
+0.007. Trial 025's directional polish was inspected but did not merit adoption.
+
+Trial 024 only changes rings 107–116, making the finial fuller near its top
+and raising the lower shoulder. It keeps the apex at the same height; the
+neutral render was completed too. Its small IoU variation is antialiasing
+precision from 48 rather than 64 samples, not a change to the outer boundary.
+The finial is less pointed but is still not an exact match, and the bowl's
+reflection and inner contour remain visibly different.
+
+Latest resource check: 2026-11-05 07:53:22 UTC, weekly 10080-minute window,
+9% used / 91% remaining, resetting 2026-11-11 13:19:48 UTC. Luna remains
+active on the five-minute cadence. The mission is incomplete.
+
+Trial 026 is the accepted pigment-only rebake of 024 into a second atlas. It
+reuses the existing UV coordinates. No lights are baked; the material remains
+a Principled BSDF, and the source images remain unchanged. The rendered
+rebake differs from the graded shader by mean 1.51/255 RGB levels on the object
+(95th percentile 7/255), including the difference between 48 and 64 samples
+and denoising of fine relief. The images were inspected; regional tone and
+visible grain are retained. This is not claimed to be an exact pixel match.
+
+Accepted scores: silhouette **97.904%**, interior **78**, color **75**, grain
+**70**, lighting **49**; equal-weight working mean **73.98%** (holistic visual
+assessment about 70–75%). Original sprite IoU is **97.9036%**, unchanged from
+the first checkpoint. The finial remains somewhat tall, the bowl and rim
+still differ, the collars are shelf-like, and the socket's shoulder is too
+soft. Strong reflections remain in the wrong places, especially on the base,
+stem and bowl. The narrow bright edge crescents remain missing. These visible
+differences prevent any claim of completion.
+
+The saved accepted model SHA-256 is
+`f2e65f66fa65de9f212e5300d889350b877259aaf422c8d29a9430a49a016b99`.
+The closed mesh, positive volume, eight tips, monotonic lower body, 54-degree
+camera and unchanged height/base ratio 2.167048 all pass. The viewer exports
+all 715,776 triangles with exact geometry and UV seam handling; binary round
+trip and source-file preservation pass. Camera regression passes 30 sample
+points over five viewport shapes with maximum error 0.0000382 pixels.
+The actual page runtime passes rotation/pan/reset, source validation, tabs,
+parts-map containment and side-state checks. Native browser GPU inspection
+remains unavailable; these runtime checks use the simulated DOM/GL harness.
+
+Wood and neutral fixed-view and side renders were regenerated from the same
+accepted file. The side images were visually inspected and uniformly
+registered to the unchanged guide. They expose the same remaining flat
+lower collar and broad socket shoulder; the texture remains attached in the
+profile. The original references and side-gallery defaults are untouched.
+
+Checkpoint resource reading at 2026-11-05 08:01:26 UTC: weekly **10% used /
+90% remaining**, reset 2026-11-11 13:19:48 UTC. Luna continues five-minute
+monitoring. The next hypothesis is to adjust one reflection light at a time,
+starting with the left socket/base patch, and independently improve the lower
+collar's roll without losing the original outline.
+
+Repository checks after integration pass: eight site pages, 55 local links,
+model/viewer hash, parts sandbox/CSP, all twelve original PNG hashes, candidate
+provenance and alignment, and all 39 protected historical projection inputs.
+Git whitespace checks pass and no executable-bit changes were introduced.

@@ -1,0 +1,132 @@
+{
+  "variant": "019-surface-polish",
+  "source": "build/queen-mission/017-groove-roll/queen.blend",
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "bump_strength": 0.28,
+  "bump_distance": 0.012,
+  "pore_mix": 0.2,
+  "world": 0.03,
+  "lights": [
+    {
+      "name": "Bowl reflection",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "energy": 600,
+      "size": 0.4,
+      "target": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "name": "Right base key",
+      "position": [
+        3.74,
+        -3.69,
+        4.63
+      ],
+      "energy": 230,
+      "size": 1,
+      "diffuse_factor": 0.6,
+      "target": [
+        0,
+        0,
+        1.5
+      ]
+    },
+    {
+      "name": "Right collar strip",
+      "position": [
+        4.8,
+        -4.2,
+        2.4
+      ],
+      "energy": 100,
+      "size": 0.8,
+      "diffuse_factor": 0.1,
+      "target": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "name": "Finial left",
+      "position": [
+        -1.75,
+        -4.52,
+        8.09
+      ],
+      "energy": 90,
+      "size": 0.22,
+      "diffuse_factor": 0.15,
+      "target": [
+        0,
+        0,
+        4.3
+      ]
+    },
+    {
+      "name": "Socket left",
+      "position": [
+        -3.09,
+        -3.65,
+        5.45
+      ],
+      "energy": 70,
+      "size": 1.4,
+      "size_y": 0.25,
+      "shape": "RECTANGLE",
+      "diffuse_factor": 0.15,
+      "target": [
+        0,
+        0,
+        1.2
+      ]
+    },
+    {
+      "name": "Foot left",
+      "position": [
+        -3.74,
+        -5.68,
+        1.71
+      ],
+      "energy": 120,
+      "size": 2,
+      "size_y": 0.2,
+      "shape": "RECTANGLE",
+      "diffuse_factor": 0.05,
+      "target": [
+        0,
+        0,
+        0.2
+      ]
+    },
+    {
+      "name": "Low rear left",
+      "position": [
+        -2.84,
+        5.9,
+        -0.87
+      ],
+      "energy": 30,
+      "size": 1.5,
+      "size_y": 0.4,
+      "shape": "RECTANGLE",
+      "diffuse_factor": 0.05,
+      "target": [
+        0,
+        0,
+        0.6
+      ]
+    }
+  ],
+  "surface_polish": true
+}

@@ -38,6 +38,15 @@ split without simplifying geometry. Its real-time shading remains an
 approximation of Cycles. Mission evidence and honest scores are recorded in
 `docs/queen-mission-log.md`; this is still an unfinished reconstruction.
 
+The second mission checkpoint darkens the crown body, stem, socket and foot,
+and corrects their excessive orange cast through smooth pigment grades. The
+visible grain now also drives surface relief, mixed with fine pores. A fuller
+finial upper curve and raised lower shoulder preserve the same maximum height.
+The current color atlas is `assets/queen/queen-pigment-albedo-v2.png`; the first
+atlas remains the ungraded relief source. The second bake reuses the exact
+existing UVs and bakes color only. The lighting setup remains the earlier
+accepted one: tested alternatives did not improve the image overall.
+
 The review opens on the original Lichess image and includes a Side comparison tab. The side guide is an imagined view; the model render is uniformly registered to its foot width and floor, with extra room above to prevent clipping. Its neutral and wood images are rendered from the same side camera.
 
 The previous canonical model and all 39 inputs of the earlier projection
@@ -46,7 +55,7 @@ pages still show those historical alternatives, not the new current queen.
 Their build and validation scripts use the archived baseline.
 
 Do not run `build_finished_queen.py` to rebuild the current material: it describes
-the older mission starting point. Reproduce the accepted mission chain from the
+the older mission starting point. Reproduce the first mission checkpoint from the
 repository root with Blender, Python with NumPy and Pillow, and Node.js:
 
 ```sh
@@ -68,6 +77,21 @@ node scripts/queen/check_viewer_camera.cjs
 node scripts/queen/check_review_reference.cjs
 python scripts/queen/check_projection_variants.py
 python scripts/check_site.py
+```
+
+The first checkpoint is preserved in `history/queen-mission-001`. To reproduce
+the second checkpoint from that saved source, use the following instead of
+the first checkpoint's modeling steps; then run the same publish/validation,
+export, viewer, image-comparison and site checks above with trial
+`026-graded-atlas`:
+
+```sh
+blender -b --python scripts/queen/grade_pigment.py -- --config docs/queen-mission/iteration-002/021-warm-pigment-config.json
+blender -b --python scripts/queen/relief_from_pigment.py -- docs/queen-mission/iteration-002/022-relief-config.json
+blender -b --python scripts/queen/geometry_trial.py -- docs/queen-mission/iteration-002/024-finial-config.json
+blender -b --python scripts/queen/bake_pigment_atlas.py -- --source build/queen-mission/024-rounded-finial/queen.blend --variant 026-graded-atlas --texture assets/queen/queen-pigment-albedo-v2.png --reuse-uv
+blender -b --python scripts/queen/validate_finished_queen.py -- --blend build/queen-mission/026-graded-atlas/queen.blend --report-dir build/queen-mission/026-graded-atlas
+python scripts/queen/audit_mission.py 026-graded-atlas
 ```
 
 The runtime checks execute the viewer code with a simulated DOM and WebGL

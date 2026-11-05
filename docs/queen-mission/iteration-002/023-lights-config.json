@@ -1,0 +1,10 @@
+{
+ "source":"build/queen-mission/022-grain-relief/queen.blend",
+ "variant":"023-directed-reflections","world":0.035,
+ "lights":[
+  {"name":"Base right key","position":[3.74,-3.69,4.63],"target":[0.4,-0.7,0.55],"energy":350,"size":0.65},
+  {"name":"Back bowl arc","position":[-1.14,0.93,9.88],"target":[0,0,4.1],"energy":850,"size":0.8},
+  {"name":"Finial pin","position":[-1.75,-4.52,8.09],"target":[0,0,4.3],"energy":125,"size":0.25},
+  {"name":"Foot reflection","position":[-3.64,-5.42,-2.02],"target":[0,-0.9,0.15],"energy":230,"size":0.8,"diffuse_factor":0.35}
+ ]
+}

@@ -1,0 +1,222 @@
+{
+  "atlas_bakes_lighting": false,
+  "atlas_size": 2048,
+  "bump_distance": 0.008,
+  "bump_strength": 0.22,
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "image_bump": true,
+  "image_mix": 1,
+  "lights": [
+    {
+      "name": "Base right key",
+      "position": [
+        3.74,
+        -3.69,
+        4.63
+      ],
+      "target": [
+        0.4,
+        -0.7,
+        0.55
+      ],
+      "energy": 350,
+      "size": 0.65
+    },
+    {
+      "name": "Back bowl arc",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "target": [
+        0,
+        0,
+        4.1
+      ],
+      "energy": 850,
+      "size": 0.8
+    },
+    {
+      "name": "Finial pin",
+      "position": [
+        -1.75,
+        -4.52,
+        8.09
+      ],
+      "target": [
+        0,
+        0,
+        4.3
+      ],
+      "energy": 125,
+      "size": 0.25
+    },
+    {
+      "name": "Foot reflection",
+      "position": [
+        -3.64,
+        -5.42,
+        -2.02
+      ],
+      "target": [
+        0,
+        -0.9,
+        0.15
+      ],
+      "energy": 230,
+      "size": 0.8,
+      "diffuse_factor": 0.35
+    }
+  ],
+  "pigment_grading": {
+    "finial_factor": [
+      0.5,
+      0.6,
+      1.8
+    ],
+    "method": "Regional median RGB discrepancies, corrected in linear pigment; artistic inference, not recovered albedo",
+    "z_zones": [
+      [
+        0,
+        [
+          0.42,
+          0.55,
+          2.2
+        ]
+      ],
+      [
+        0.26,
+        [
+          0.42,
+          0.55,
+          2.2
+        ]
+      ],
+      [
+        0.36,
+        [
+          0.5,
+          0.57,
+          1.5
+        ]
+      ],
+      [
+        0.78,
+        [
+          0.5,
+          0.57,
+          1.5
+        ]
+      ],
+      [
+        0.9,
+        [
+          0.4,
+          0.53,
+          2
+        ]
+      ],
+      [
+        1.18,
+        [
+          0.4,
+          0.53,
+          2
+        ]
+      ],
+      [
+        1.34,
+        [
+          0.45,
+          0.6,
+          2
+        ]
+      ],
+      [
+        2.55,
+        [
+          0.45,
+          0.6,
+          2
+        ]
+      ],
+      [
+        2.78,
+        [
+          0.9,
+          1.3,
+          3
+        ]
+      ],
+      [
+        3.26,
+        [
+          0.9,
+          1.3,
+          3
+        ]
+      ],
+      [
+        3.34,
+        [
+          0.35,
+          0.5,
+          2
+        ]
+      ],
+      [
+        3.9,
+        [
+          0.35,
+          0.5,
+          2
+        ]
+      ],
+      [
+        4.02,
+        [
+          0.88,
+          1.03,
+          2
+        ]
+      ],
+      [
+        4.5,
+        [
+          0.88,
+          1.03,
+          2
+        ]
+      ]
+    ]
+  },
+  "pore_mix": 0.2,
+  "pore_noise": 180,
+  "relief_from_pigment": {
+    "coat": 0.35,
+    "coat_roughness": 0.075,
+    "distance": 0.007,
+    "pore_mix": 0.22,
+    "pore_scale": 140,
+    "relief_range": 0.2,
+    "roughness": 0.19,
+    "source": "build/queen-mission/021-warm-pigment/queen.blend",
+    "strength": 0.45,
+    "variant": "022-grain-relief"
+  },
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "samples": 64,
+  "saturation": 1,
+  "source": "build/queen-mission/022-grain-relief/queen.blend",
+  "texture": "assets/queen/queen-pigment-albedo.png",
+  "uv_layer": "Pigment atlas",
+  "uv_meridian_scale": 5.5,
+  "uv_offset_v": 0.13,
+  "uv_repeat_u": 1,
+  "value": 1,
+  "variant": "023-directed-reflections",
+  "world": 0.035
+}

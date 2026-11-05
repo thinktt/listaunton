@@ -13,6 +13,16 @@ gray=nodes.new('ShaderNodeRGBToBW');links.new(tex,gray.inputs[0])
 rough=nodes.new('ShaderNodeMapRange');rough.inputs['From Min'].default_value=.02;rough.inputs['From Max'].default_value=.24
 rough.inputs['To Min'].default_value=cfg['rough_dark'];rough.inputs['To Max'].default_value=cfg['rough_light'];links.new(gray.outputs[0],rough.inputs['Value']);links.new(rough.outputs[0],bs.inputs['Roughness'])
 bs.inputs['Coat Weight'].default_value=cfg['coat'];bs.inputs['Coat Roughness'].default_value=cfg['coat_roughness']
+if cfg.get('surface_polish'):
+    geom=nodes.new('ShaderNodeNewGeometry');normal=nodes.new('ShaderNodeSeparateXYZ');links.new(geom.outputs['True Normal'],normal.inputs[0])
+    vertical=nodes.new('ShaderNodeMath');vertical.operation='ABSOLUTE';links.new(normal.outputs['Z'],vertical.inputs[0])
+    position=nodes.new('ShaderNodeSeparateXYZ');links.new(geom.outputs['Position'],position.inputs[0])
+    head=nodes.new('ShaderNodeMapRange');head.inputs['From Min'].default_value=3.95;head.inputs['From Max'].default_value=4.08;links.new(position.outputs['Z'],head.inputs['Value'])
+    for socket,low,high,head_value in [('Roughness',.38,.13,.13),('Coat Roughness',.28,.07,.07)]:
+        polish=nodes.new('ShaderNodeMapRange');polish.inputs['From Min'].default_value=.1;polish.inputs['From Max'].default_value=.8
+        polish.inputs['To Min'].default_value=low;polish.inputs['To Max'].default_value=high;links.new(vertical.outputs[0],polish.inputs['Value'])
+        blend=nodes.new('ShaderNodeMixRGB');links.new(head.outputs[0],blend.inputs[0]);links.new(polish.outputs[0],blend.inputs[1]);blend.inputs[2].default_value=(head_value,head_value,head_value,1)
+        links.new(blend.outputs[0],bs.inputs[socket])
 bump=next(n for n in nodes if n.type=='BUMP');bump.inputs['Strength'].default_value=cfg['bump_strength'];bump.inputs['Distance'].default_value=cfg['bump_distance']
 mix=nodes.new('ShaderNodeMixRGB');mix.inputs[0].default_value=cfg['pore_mix'];links.new(gray.outputs[0],mix.inputs[1])
 pores=next(n for n in nodes if n.type=='TEX_NOISE' and abs(n.inputs['Scale'].default_value-180)<.1)
@@ -21,6 +31,7 @@ for light in list(scene.objects):
     if light.type=='LIGHT':bpy.data.objects.remove(light,do_unlink=True)
 for spec in cfg['lights']:
     data=bpy.data.lights.new(spec['name'],'AREA');data.energy=spec['energy'];data.shape=spec.get('shape','DISK');data.size=spec['size']
+    data.diffuse_factor=spec.get('diffuse_factor',1);data.specular_factor=spec.get('specular_factor',1)
     if data.shape=='RECTANGLE':data.size_y=spec['size_y']
     light=bpy.data.objects.new(spec['name'],data);scene.collection.objects.link(light);light.location=spec['position']
     light.rotation_euler=(Vector(spec.get('target',[0,0,2.3]))-light.location).to_track_quat('-Z','Y').to_euler()
