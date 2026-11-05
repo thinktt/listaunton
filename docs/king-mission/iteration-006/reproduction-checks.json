@@ -1,0 +1,36 @@
+{
+  "saved_reopened": {
+    "alpha_identical": true,
+    "mean_foreground_rgb_error_255": 3.159518256611084e-05,
+    "maximum_channel_error_255": 1,
+    "pixels_over_one": 0,
+    "pixels_over_four": 0,
+    "max_error_pixel_xy": [
+      515,
+      70
+    ]
+  },
+  "full_reproduction": {
+    "alpha_identical": true,
+    "mean_foreground_rgb_error_255": 3.159518256611084e-05,
+    "maximum_channel_error_255": 1,
+    "pixels_over_one": 0,
+    "pixels_over_four": 0,
+    "max_error_pixel_xy": [
+      515,
+      70
+    ]
+  },
+  "atlas_reproduction": {
+    "alpha_identical": true,
+    "mean_foreground_rgb_error_255": 0.0,
+    "maximum_channel_error_255": 0,
+    "pixels_over_one": 0,
+    "pixels_over_four": 0,
+    "max_error_pixel_xy": [
+      0,
+      0
+    ]
+  },
+  "viewer_mesh_bytes_identical_to005": true
+}

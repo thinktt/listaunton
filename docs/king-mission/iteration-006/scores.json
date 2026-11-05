@@ -1,0 +1,87 @@
+[
+  {
+    "variant": "076-hidden-pigment-completion",
+    "decision": "Rejected: dark smearing and abrupt side patch persist; folded pigment copies residual glints onto the back.",
+    "scores": {
+      "silhouette_iou_percent": 97.8204465462784,
+      "interior_form": 83,
+      "wood_color": 82,
+      "grain_surface": 78,
+      "lighting_reflections": 60
+    },
+    "equal_weight_mean": 80.16408930925567,
+    "original_iou_percent": 96.83194167344024,
+    "holistic_range": [
+      73,
+      82
+    ]
+  },
+  {
+    "variant": "077-hidden-coverage-completion",
+    "decision": "Rejected: coverage blending improves texture slightly but retains large color transitions and copies shading.",
+    "scores": {
+      "silhouette_iou_percent": 97.8204465462784,
+      "interior_form": 83,
+      "wood_color": 82,
+      "grain_surface": 78,
+      "lighting_reflections": 60
+    },
+    "equal_weight_mean": 80.16408930925567,
+    "original_iou_percent": 96.83194167344024,
+    "holistic_range": [
+      73,
+      82
+    ]
+  },
+  {
+    "variant": "078-generated-hidden-wood",
+    "decision": "Intermediate improvement: generated unlit grain replaces smeared hidden pigment; side base patch still sharply bounded.",
+    "scores": {
+      "silhouette_iou_percent": 97.8204465462784,
+      "interior_form": 83,
+      "wood_color": 82,
+      "grain_surface": 79,
+      "lighting_reflections": 60
+    },
+    "equal_weight_mean": 80.36408930925568,
+    "original_iou_percent": 96.83194167344024,
+    "holistic_range": [
+      73,
+      82
+    ]
+  },
+  {
+    "variant": "079-grazing-wood-continuity",
+    "decision": "Chosen refinement: wider grazing blend softens the side transition while retaining central front detail. Draft has 64-sample edge differences.",
+    "scores": {
+      "silhouette_iou_percent": 97.8204465462784,
+      "interior_form": 83,
+      "wood_color": 82,
+      "grain_surface": 79,
+      "lighting_reflections": 60
+    },
+    "equal_weight_mean": 80.36408930925568,
+    "original_iou_percent": 96.83194167344024,
+    "holistic_range": [
+      73,
+      82
+    ]
+  },
+  {
+    "variant": "080-completed-hidden-wood",
+    "decision": "Accepted production rendering of 079 at 128 samples; removes temporary completion UVs and attributes. Only the packed pigment changes.",
+    "scores": {
+      "silhouette_iou_percent": 97.81968835023498,
+      "interior_form": 83,
+      "wood_color": 82,
+      "grain_surface": 79,
+      "lighting_reflections": 60
+    },
+    "equal_weight_mean": 80.363937670047,
+    "original_iou_percent": 96.83311862811989,
+    "holistic_range": [
+      73,
+      82
+    ]
+  }
+]

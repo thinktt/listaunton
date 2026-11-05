@@ -1,0 +1,14 @@
+{
+  "source": "history/king-mission-005/king-rebuilt.blend",
+  "source_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+  "variant": "077-hidden-coverage-completion",
+  "texture": "build/king-mission/077-hidden-coverage-completion/completed-atlas.png",
+  "feather_steps": 4,
+  "mask_mode": "coverage",
+  "sample_mode": "right_strip",
+  "sample_center": 0.63,
+  "sample_amplitude": 0.07,
+  "samples": 64,
+  "neutral": false,
+  "profile": true
+}

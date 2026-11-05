@@ -249,3 +249,34 @@ All trial decisions, checks, reproduction and remaining issues are in
 repository and local-preview DOM/WebGL checks pass; native UI inspection is
 not claimed. The synchronized king review and local preview expose the accepted checkpoint. Next: hidden
 wood continuity, then the foot using isolated-light diagnostics. Goal incomplete.
+
+## 2026-11-05 — checkpoint 006: continuous inferred wood
+
+The hidden turned surfaces now use a generated unlit grain source, with a wider
+blend on grazing surfaces. This replaces the smeared rear wood and softens the
+side-base transition. Central front pigment and cross atlas remain retained;
+side-facing collar/base texels change. Geometry, original UVs/attributes, relief,
+lighting and the 54-degree camera are exact; the viewer mesh is byte-identical.
+
+| Metric | Checkpoint 005 | Checkpoint 006 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.820% | 97.820% |
+| Interior form | 83% | 83% |
+| Wood color | 82% | 82% |
+| Grain and surface texture | 78% | 79% |
+| Lighting and reflections | 60% | 60% |
+| Equal-weight working mean | 80.164% | 80.364% |
+
+Original IoU remains 96.833%; the holistic range remains 73–82%. Only IoU is
+measured. The small subjective grain gain reflects continuity and detail at
+oblique angles; unseen grain is interpretation. Lighting and carved-form defects
+remain, along with a warmer side patch, cross-side finish and projected relief.
+
+Saved/reopened and fully reproduced beauty differ by at most 1/255; reproduced
+atlas pixels match exactly. Geometry/material scope, exact receivers and export
+pass. See [iteration-006/README.md](king-mission/iteration-006/README.md) for trial
+scores, prompt, evidence, final checks and synchronization. All affected site,
+model, candidate, set, projection and repository/local-preview interaction checks
+pass. All 34 king preview files are hash-verified. Native UI inspection
+is not claimed. Owner requested pause after the completed checkpoint; do not
+begin another iteration until resumed.

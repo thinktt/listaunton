@@ -1,0 +1,21 @@
+{
+  "source": "history/king-mission-005/king-rebuilt.blend",
+  "source_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+  "variant": "080-completed-hidden-wood",
+  "texture": "assets/king/materials/king-pigment-atlas-v6.png",
+  "generated_source": "assets/king/materials/inferred-wood-source-01.png",
+  "feather_steps": 4,
+  "mask_mode": "coverage",
+  "sample_mode": "generated_tile",
+  "grazing_blend": [
+    50,
+    110
+  ],
+  "tile_u_scale": 1,
+  "tile_v_scale": 1,
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "cleanup": true,
+  "generated_source_sha256": "269524f329d6bd0ad27a62aec4f60957f19402264a8abd6a65cb18aeed24716e"
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-05",
+  "checkpoint": "006",
+  "status": "accepted, validated, synchronized; owner requested pause",
+  "source_model_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+  "model_sha256": "96f3d023c799f79fd12cc19baf5f2b3e535ec969eda7573c9bc7e464f4ea8ba5",
+  "render_sha256": "5ab399e597027b604e4c495e286f662509917f13b954988459cab467124aa8af",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+  "scores": {
+    "silhouette_iou_percent": 97.81968835023498,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 60
+  },
+  "equal_weight_mean": 80.363937670047,
+  "holistic_range": [
+    73,
+    82
+  ],
+  "front_change": {
+    "mean_foreground_rgb_difference_255": 1.3869137742524205,
+    "max_rgb_difference_255": 81,
+    "foreground_pixels_over_4": 75351,
+    "foreground_pixels_over_12": 23079,
+    "max_error_pixel_xy": [
+      685,
+      360
+    ]
+  },
+  "validation": {
+    "saved_reopened": {
+      "alpha_identical": true,
+      "mean_foreground_rgb_error_255": 3.159518256611084e-05,
+      "maximum_channel_error_255": 1,
+      "pixels_over_one": 0,
+      "pixels_over_four": 0,
+      "max_error_pixel_xy": [
+        515,
+        70
+      ]
+    },
+    "full_reproduction": {
+      "alpha_identical": true,
+      "mean_foreground_rgb_error_255": 3.159518256611084e-05,
+      "maximum_channel_error_255": 1,
+      "pixels_over_one": 0,
+      "pixels_over_four": 0,
+      "max_error_pixel_xy": [
+        515,
+        70
+      ]
+    },
+    "atlas_reproduction": {
+      "alpha_identical": true,
+      "mean_foreground_rgb_error_255": 0.0,
+      "maximum_channel_error_255": 0,
+      "pixels_over_one": 0,
+      "pixels_over_four": 0,
+      "max_error_pixel_xy": [
+        0,
+        0
+      ]
+    },
+    "viewer_mesh_bytes_identical_to005": true,
+    "canonical_model": "passed",
+    "receiver_regeneration": "passed; exact surfaces and light routes preserved",
+    "site_model_candidates_set_and_historical_projections": "passed",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "native_browser_limitation": "App-access request timed out; no native inspection completed.",
+    "local_preview_verified_files": 34
+  },
+  "remaining": [
+    "Foot crescent remains too weak, thin and low.",
+    "Base glints remain too compact and differently shaped; upper glints are too pale and regular.",
+    "Cross seating, collar shelves and cavity contrast still differ from the references.",
+    "A warmer side-base patch and residual shading in retained pigment remain; hidden grain is inferred.",
+    "Cross side/rear pigment and camera-projected relief remain unfinished.",
+    "The receiver illumination cutoff remains visible in neutral clay; it is not a geometry seam.",
+    "Browser lighting approximates the Cycles material."
+  ],
+  "pending": "Visual mission incomplete. All work for this accepted checkpoint is complete; pause requested by owner, no further iteration started."
+}

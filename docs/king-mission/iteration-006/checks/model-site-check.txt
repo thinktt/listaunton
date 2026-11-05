@@ -1,0 +1,8 @@
+PASS: king review opens its current mesh/camera/render; source images and registration are correct.
+PASS: rook review opens its current mesh/camera/render; source images and registration are correct.
+PASS: bishop review opens its current mesh/camera/render; source images and registration are correct.
+PASS: knight review opens its current mesh/camera/render; source images and registration are correct.
+PASS: pawn review opens its current mesh/camera/render; source images and registration are correct.
+PASS: 6 king projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.
+PASS: 6 rook projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.
+PASS: 7 queen projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.

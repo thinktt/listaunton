@@ -1,0 +1,87 @@
+{
+  "before": "history/king-mission-005/king-rebuilt.blend",
+  "after": "build/king-mission/080-completed-hidden-wood/king.blend",
+  "editable_geometry_exact": true,
+  "all_original_uvs_and_attributes_exact": true,
+  "live_lights_and_routing_exact": true,
+  "camera_world_and_color_management_exact": true,
+  "original_finish_and_relief_graph_exact": true,
+  "pigment_before_sha256": "4ae543aaed7327165962a4f7167d42f23f5b39d9d72340db8691efcf5abb0ae6",
+  "pigment_after_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "render_receivers": {
+    "used": true,
+    "receiverCount": 4,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.586313247680664e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ]
+    }
+  }
+}

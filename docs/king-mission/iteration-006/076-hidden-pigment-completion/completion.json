@@ -1,0 +1,87 @@
+{
+  "source_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+  "source_atlas": "King pigment atlas king-pigment-atlas-v5",
+  "preserved_texels": 1911098,
+  "total_texels": 4194304,
+  "cross_pixels_identical": true,
+  "changed_texels": 2081529,
+  "geometry_camera_lights_unchanged_by_construction": true,
+  "receiver_check": {
+    "used": true,
+    "receiverCount": 4,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.586313247680664e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ]
+    }
+  },
+  "inferred_not_observed": true,
+  "packed_roundtrip_max_error": 0.0
+}

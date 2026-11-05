@@ -1,4 +1,4 @@
-Current checkpoint: [mission iteration 005](king-mission/iteration-005/README.md). It isolates and reshapes the lower base reflection while preserving geometry, pigment, proportions and the 54-degree camera. Reproduce with `scripts/king/rebuild_checkpoint_005.py`; older clay pipelines are historical.
+Current checkpoint: [mission iteration 006](king-mission/iteration-006/README.md). It completes inferred hidden wood while preserving geometry, proportions, relief, lighting and the 54-degree camera. Reproduce with complete_hidden_pigment.py and the iteration-006 reproduction config. The owner paused the mission after this checkpoint.
 
 # King reconstruction
 
@@ -61,6 +61,6 @@ baking a local pigment repair; `bake_registered_pigment.py` retains upper and
 cross atlas bytes for this base-only pass. The local profile-crossing check
 supplements, rather than replaces, closed-manifold validation.
 
-## Current checkpoint 005
+## Checkpoint 005 lighting foundation
 
 The current scene retains 004 geometry and pigment v5, adds local flare coat relief and fitted lower reflectors, and splits the flare receiver at ring 17. Its four exact receiver regions are foot, lower-flare, upper-flare and upper-body. `regenerate` preserves this split and all light routes. See iteration 005 for the causal spill diagnosis, exact scope checks and complete reproduction. Keep the closed control for export.

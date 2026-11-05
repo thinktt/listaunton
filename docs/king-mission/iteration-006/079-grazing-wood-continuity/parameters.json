@@ -1,0 +1,23 @@
+{
+  "source": "build/king-mission/079-grazing-wood-continuity/prepared.blend",
+  "source_sha256": "e227d395fe79ea5952aa0a15ee107b087961dafebb85442be973af21ed4a363d",
+  "variant": "079-grazing-wood-continuity",
+  "texture": "build/king-mission/079-grazing-wood-continuity/completed-atlas.png",
+  "generated_source": "assets/king/materials/inferred-wood-source-01.png",
+  "feather_steps": 4,
+  "mask_mode": "coverage",
+  "sample_mode": "generated_tile",
+  "grazing_blend": [
+    50,
+    110
+  ],
+  "tile_u_scale": 1,
+  "tile_v_scale": 1,
+  "samples": 64,
+  "neutral": false,
+  "profile": true,
+  "original_source": "history/king-mission-005/king-rebuilt.blend",
+  "original_source_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+  "model_sha256": "5e44be2a25330db1cd8faecd5496b71d326f6aedcff8b34f084822aa0e5a1413",
+  "elevation_degrees": 54.000000800055794
+}

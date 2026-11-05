@@ -1,0 +1,11 @@
+{
+  "prompt": "Use case: photorealistic-natural. Asset type: a seamless square diffuse albedo wood texture for the hidden surfaces of a 3D chess piece. Image 1 is ONLY a material style/color reference, not an edit target. Generate a flat, edge-to-edge, orthographic close-up swatch of the same fine reddish dark amber-brown figured wood visible on this king. Preserve the small scale and irregular undulating, curled fibers and tiny pores. Grain mostly flows horizontally with gentle organic curls and subtle branching, not straight horizontal scanlines. Dense delicate detail with restrained natural tonal variation; average pigment approximately sRGB #784623 to #91502a, deeper umber fine grain. It should look like the actual wood pigment under perfectly even diffuse illumination. No glossy highlights, no reflections, no directional light, no dark corners or shading, no edge vignette, no gradients from lighting, no 3D shape, no chess piece, no plank borders, no text. A single continuous wood surface filling the square; seamless opposite edges. This is a base-color material map: the 3D renderer will add all gloss, relief, shadows and lighting later.",
+  "source": "assets/king/reference.png",
+  "generator": "built-in image_gen",
+  "generatedFile": "exec-fa87f45c-fda9-4f67-9bd9-1937b25966f1.png",
+  "purpose": "Inferred unlit wood source for unseen surfaces; not original historical artwork.",
+  "source_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "output_asset": "assets/king/materials/inferred-wood-source-01.png",
+  "output_sha256": "269524f329d6bd0ad27a62aec4f60957f19402264a8abd6a65cb18aeed24716e",
+  "limitations": "Inferred hidden grain; no claim of recovering the original timber. Generator output is preserved unchanged; shader mapping and blending create the model atlas."
+}
