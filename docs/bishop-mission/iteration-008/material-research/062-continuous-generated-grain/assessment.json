@@ -1,0 +1,31 @@
+{
+  "trial": "062-continuous-generated-grain",
+  "decision": "rejected",
+  "reason": "Broad regularization plus new grain smooths the rear transition somewhat, but weakens collar grooves and front tonal structure.",
+  "scores": {
+    "silhouette": 96.1972461692215,
+    "interior": 83,
+    "color": 80,
+    "texture": 75,
+    "lighting": 70,
+    "mean": 80.8394492338443
+  },
+  "holistic_fixed_view_range": "70\u201380%",
+  "model_sha256": "185186aabc8f4f34a61b27a4ee73842b996ff9f1040315a6b8e1c82660c38d99",
+  "render_sha256": "d76280e8f585568c23e3beb000dc76fadda34c1c63e6f0e1ea0b1e6966d772b3",
+  "atlas_sha256": "38f549794540de70ceff6f2d870c66aeba1ac5ba597a0e1a6a4a5cd99fab78b2",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  },
+  "samples": 96,
+  "fixed_sampling": true,
+  "rear_diagnostic_samples": 24
+}

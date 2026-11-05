@@ -1,0 +1,166 @@
+{
+  "status": "Rejected experiments; accepted model and public pages remain unchanged by this collector.",
+  "baseline": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "baseline_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "source_of_truth": "Original Lichess white bishop; selected ungraded white candidate 3 for detail.",
+  "references_unchanged": true,
+  "scores_note": "Silhouette is measured; other scores are subjective. Diagnostic views inform usability. RGB loss is not a fidelity score.",
+  "trials": [
+    {
+      "trial": "058-regularized-pigment",
+      "decision": "rejected",
+      "reason": "Broad smoothing loses front contrast; old fine residue retains the rear patch.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 75,
+        "texture": 72,
+        "lighting": 68,
+        "mean": 78.8394492338443
+      },
+      "holistic_fixed_view_range": "70\u201380%",
+      "model_sha256": "c8b3ba1a98f1eac6fc4a8d4ede2d50c0b55b954f5fd4ea9abd6d96b906d0215a",
+      "render_sha256": "40a024e61446f95a44b70272060aeb75ce3f8617a75db8784c9e0caeb9415d3d",
+      "atlas_sha256": "205490013ea5afa744b7289ef4cd1653a37566d5316c17a796f144258b5f7102",
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "samples": 96,
+      "fixed_sampling": true,
+      "rear_diagnostic_samples": 24
+    },
+    {
+      "trial": "059-folded-pigment",
+      "decision": "rejected",
+      "reason": "Wrapping a front strip also wraps its baked shading into false horizontal bands.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 84,
+        "texture": 72,
+        "lighting": 73,
+        "mean": 81.6394492338443
+      },
+      "holistic_fixed_view_range": "75\u201385%",
+      "model_sha256": "402323f80b2768182dea952d6589d814ec33b45402bda79c21490b8ead6e26fd",
+      "render_sha256": "eb2eb7d4ca5d565c03d9a558eed289eacc67f288748b9df9df96b00211fd9904",
+      "atlas_sha256": "7639808e0b2271946035745b3754d57701552d0c2e1e912c882de0fd6f3c6c76",
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "samples": 96,
+      "fixed_sampling": true,
+      "rear_diagnostic_samples": 24
+    },
+    {
+      "trial": "060-grain-continuation",
+      "decision": "rejected",
+      "reason": "Separating sampled fine grain still leaves the broad dark bands and patch transition.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 84,
+        "texture": 73,
+        "lighting": 73,
+        "mean": 81.8394492338443
+      },
+      "holistic_fixed_view_range": "75\u201385%",
+      "model_sha256": "7c24ae6c841bff303dcb88af0cd74b1982bb461c3e17133cdf4f8fa50912ff71",
+      "render_sha256": "9b14e0f26a8053e54e68e00f425243bfd2945857f0fb9b5fb5ba41beb8ad7204",
+      "atlas_sha256": "796327e6d2399aedfb62b893decddb4deac7fad60873bdb0489d0f9cb10fcf91",
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "samples": 96,
+      "fixed_sampling": true,
+      "rear_diagnostic_samples": 24
+    },
+    {
+      "trial": "061-generated-grain",
+      "decision": "rejected",
+      "reason": "Fresh inferred grain is cleaner on unseen wood, but the front-to-rear color patch remains and an edge stripe appears.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 84,
+        "texture": 74,
+        "lighting": 73,
+        "mean": 82.0394492338443
+      },
+      "holistic_fixed_view_range": "75\u201385%",
+      "model_sha256": "b9562ff851c3600c0b3cb60481cf2c641da6b4a407a9229d7cf3296251285af1",
+      "render_sha256": "cb978372a15e65e5c669b1c5015507babe844bd3f9beb8bf873bcdca5bbdf19a",
+      "atlas_sha256": "52637da29a0a8fba27e9e8d575e670a3e205f858a0a7d6015135bdbea725ecb3",
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "samples": 96,
+      "fixed_sampling": true,
+      "rear_diagnostic_samples": 24
+    },
+    {
+      "trial": "062-continuous-generated-grain",
+      "decision": "rejected",
+      "reason": "Broad regularization plus new grain smooths the rear transition somewhat, but weakens collar grooves and front tonal structure.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 80,
+        "texture": 75,
+        "lighting": 70,
+        "mean": 80.8394492338443
+      },
+      "holistic_fixed_view_range": "70\u201380%",
+      "model_sha256": "185186aabc8f4f34a61b27a4ee73842b996ff9f1040315a6b8e1c82660c38d99",
+      "render_sha256": "d76280e8f585568c23e3beb000dc76fadda34c1c63e6f0e1ea0b1e6966d772b3",
+      "atlas_sha256": "38f549794540de70ceff6f2d870c66aeba1ac5ba597a0e1a6a4a5cd99fab78b2",
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "samples": 96,
+      "fixed_sampling": true,
+      "rear_diagnostic_samples": 24
+    }
+  ],
+  "conclusion": "The remaining boundary is in pigment rather than bump or geometry. Protecting projected color or retaining its fine residual preserves the artifact; wrapping whole donor strips introduces dark bands. Smoothing those tones weakens important front contrast. Future work must jointly improve physical illumination/shape and pigment, rather than repeating a hidden-only fill."
+}

@@ -1,0 +1,12 @@
+{
+  "parameters": {
+    "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+    "broad_trial": "build/bishop-mission/054-pigment-boundary",
+    "donor_trial": "build/bishop-mission/059-folded-pigment",
+    "out": "build/bishop-mission/060-grain-continuation"
+  },
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "output_sha256": "796327e6d2399aedfb62b893decddb4deac7fad60873bdb0489d0f9cb10fcf91",
+  "protected_texels_identical": true,
+  "method": "Remove the old transition-region high-frequency residue from the harmonic trial. Substitute bounded sampled fine grain, without propagating donor broad shadow bands. Interpretive isolated material trial."
+}

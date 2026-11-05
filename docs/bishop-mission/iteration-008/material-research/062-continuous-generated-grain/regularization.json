@@ -1,0 +1,52 @@
+{
+  "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+  "coverage_sha256": "f7c9d457278f9404aa2fb0866fab6dd3d2491622210fd76d034cf1b38b55e08e",
+  "output_sha256": "38f549794540de70ceff6f2d870c66aeba1ac5ba597a0e1a6a4a5cd99fab78b2",
+  "parameters": {
+    "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+    "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+    "out": "build/bishop-mission/062-continuous-generated-grain",
+    "screen_weight": 0.4,
+    "grain_radius": 6,
+    "grid_width": 128,
+    "iterations": 5000,
+    "grain_source": "build/bishop-mission/061-generated-grain/albedo.png"
+  },
+  "regions": {
+    "body": {
+      "grid": [
+        128,
+        90
+      ],
+      "iterations": 764,
+      "max_final_update_log_rgb": 9.727478754939511e-06,
+      "confidence_mean": 0.25131890177726746,
+      "center_linear_rgb": [
+        0.19313403964042664,
+        0.07290185987949371,
+        0.01374694425612688
+      ],
+      "broad_log_rgb_mean_change": 0.27477842569351196
+    },
+    "button": {
+      "grid": [
+        128,
+        24
+      ],
+      "iterations": 325,
+      "max_final_update_log_rgb": 9.322166988567915e-06,
+      "confidence_mean": 0.42331549525260925,
+      "center_linear_rgb": [
+        0.2809550166130066,
+        0.11810757219791412,
+        0.021960701793432236
+      ],
+      "broad_log_rgb_mean_change": 0.23832029104232788
+    }
+  },
+  "method": "Screened periodic Poisson broad log-linear pigment field with soft original-confidence constraints, plus bounded existing fine grain. All broad colors may move. Caps and unused atlas areas unchanged. Low-confidence old fine residue replaced with inferred grain, using original confidence to the eighth power.",
+  "status": "Unaccepted interpretation; render fixed and rear views and measure any original/reference regression.",
+  "grain_source_sha256": "52637da29a0a8fba27e9e8d575e670a3e205f858a0a7d6015135bdbea725ecb3"
+}

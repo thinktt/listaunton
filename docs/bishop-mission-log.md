@@ -204,3 +204,27 @@ for the full scorecard, sampling limitations, rejected trials and validation.
 The bishop review and existing local preview are refreshed together at
 acceptance. The next material trial must address residual shading inside the
 projected pigment, rather than repeating a protected hidden-only fill.
+
+## Iteration 008 — pigment continuity and base-reflection research
+
+Checkpoint 007 remains the accepted model and the page's visible result.
+Five material trials and four lower-reflection trials were rendered, compared
+and rejected. A pigment-only diagnostic and constant-color control identify
+the rear patch as primarily embedded color. Keeping its fine residual preserves
+the boundary; wrapping whole front strips produces false bands. Generated
+grain gives a cleaner inferred source, but smoothing the combined material
+weakens important front contrast. It is not installed on the accepted model.
+
+The base reflection's measured bright center is roughly 16 pixels left and
+20 pixels above the selected reference. Cream-colored lights, measured normal
+placement, a flatter emitter and a bounded positional interpolation were
+tested. They either retain the tall misplaced glint, add foot spill, or remove
+the intended reflection. The next experiment should inspect base curvature
+and its normal distribution before continuing to move the light.
+
+All five accepted scores remain 96.20 / 83 / 85 / 77 / 73, with a working mean
+of 82.84 and a holistic fixed-view range of 75–85%. See
+[`iteration-008/assessment.md`](bishop-mission/iteration-008/assessment.md)
+for every trial's scorecard, generated-texture provenance and diagnostic
+evidence. Research scripts and records are checkpointed; failed models are
+not offered in the review controls. The mission remains incomplete.

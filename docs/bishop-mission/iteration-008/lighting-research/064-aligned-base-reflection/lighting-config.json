@@ -1,0 +1,37 @@
+{
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "variant": "064-aligned-base-reflection",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "Move the existing base reflection to the measured reference highlight center and reduce its yellow tint. Preserve its original energy, shape, spread and receiver, all other lights, texture, geometry and 54-degree camera.",
+  "lights": [
+    {
+      "name": "base reflection",
+      "position": [
+        4.3269283366403535,
+        -6.582904510929073,
+        1.5493846440630357
+      ],
+      "target": [
+        0.355006605386734,
+        -0.8931055068969727,
+        0.6274166107177734
+      ],
+      "color": [
+        1,
+        0.92,
+        0.65
+      ]
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/lower-glint-landmarks.json",
+    "normals": "build/bishop-mission/lower-shading-normals/manifest.json",
+    "target_pixel": [
+      584,
+      995
+    ],
+    "mean_radius": 3,
+    "normal_difference_degrees": 0.6098872756641384
+  }
+}

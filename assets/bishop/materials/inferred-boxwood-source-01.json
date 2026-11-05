@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Inferred wood grain for unseen surfaces; unaccepted isolated trial source. Original references are unchanged.",
+  "reference": "assets/bishop/reference.png",
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "output": "inferred-boxwood-source-01.png",
+  "output_sha256": "42525214b313230d19ace941dff7dcc5ad34c42ddeaa38e9321bc9af9494a3a3",
+  "prompt": "Use case: product-mockup\nAsset type: seamless square diffuse-color wood texture for a real 3D chess-piece material, not a render of a chess piece.\nInput image 1 is a material style reference only: the selected honey-gold wooden bishop. Create a flat, straight-on, evenly illuminated square swatch of the SAME warm golden boxwood, with its fine irregular short fibres, delicate brown hairline streaks and subtle mottled grain. Fine irregular grain primarily runs vertically. The texture should feel like closely grained polished turned wood, with small natural variations, not oak planks or swirling burl.\nRemove all lighting information: no specular reflections, no shine, no shadows, no ambient occlusion, no large value gradient. Preserve the warm honey/ochre golden color and understated tan-brown grain from the bishop. Uniform average color across the whole swatch. Edge-to-edge wood with seamless tileable borders. No chess piece, shape, silhouette, border, seams, planks, text or watermark. This is an inferred surface-color texture, intended for unseen sides of a reconstructed model. Opaque background."
+}

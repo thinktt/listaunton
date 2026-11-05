@@ -1,0 +1,16 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+  "render": "build/bishop-mission/064-aligned-base-reflection/wood.png",
+  "render_sha256": "d0cf7d11bc263355d57bbc9c6a8cef60b8a719393d7106d836df871edce67f1c",
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  }
+}

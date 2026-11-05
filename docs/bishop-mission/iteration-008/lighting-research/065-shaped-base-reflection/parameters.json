@@ -1,0 +1,91 @@
+{
+  "config": {
+    "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+    "variant": "065-shaped-base-reflection",
+    "samples": 96,
+    "adaptive_sampling": false,
+    "hypothesis": "The first physically placed light still creates an overly tall reflection above the reference center. Aim farther down the surface and flatten the emitter to broaden the glint laterally. Normalize power by area to retain approximate emitter radiance; validate in the actual render. Geometry, material, all other lights and camera stay fixed.",
+    "lights": [
+      {
+        "name": "base reflection",
+        "position": [
+          3.2956388551687663,
+          -3.7998805101004076,
+          -5.144445844280897
+        ],
+        "target": [
+          0.3780835270881653,
+          -0.9153695106506348,
+          0.527191162109375
+        ],
+        "color": [
+          1,
+          0.92,
+          0.65
+        ],
+        "shape": "ELLIPSE",
+        "size": 1.5,
+        "size_y": 0.35,
+        "energy": 3.9480661111111104
+      }
+    ],
+    "measurement": {
+      "landmarks": "build/bishop-mission/lower-glint-landmarks-065.json",
+      "normal_capture": "build/bishop-mission/lower-shading-normals/normals.npy",
+      "pixel": [
+        590,
+        1015
+      ],
+      "normal": [
+        0.3847614526748657,
+        -0.9230153560638428,
+        -0.0011233368422836065
+      ],
+      "mean_radius": 3
+    }
+  },
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "saved_model_sha256": "55823af7ff367ffdce5eee1d137c32a1f31d8c4c408065a9c18bad6112bd97fb",
+  "render_sha256": "7f301bb02b7e60a7c8f7bb0e22ad1fdae336af5f13d6bf91abf26f8f442dd2e9",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+      "Mitre saw cut - editable cutter": "cfb8406e703dd84260154b47cbb424ce66e4917287331a4a79bc601667c78250",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "15dc4cd2d10b91e774f060b4ffd569acfffefde999fb78002cea7ed4023d96ab",
+      "Bishop boxwood \u2014 interior cut.001": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  },
+  "effective_lights": {
+    "base reflection": {
+      "type": "AREA",
+      "energy": 3.948065996170044,
+      "shadow_soft_size": 0.0
+    }
+  },
+  "adaptive_sampling": false
+}

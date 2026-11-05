@@ -1,0 +1,37 @@
+{
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "variant": "066-intermediate-base-reflection",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "The measured placement leaves the broad highlight too high; the lower flattened-emitter trial overshoots onto the foot. Interpolate its direction 40 percent toward the lower trial, retaining the flatter emitter and power, to test a centered glint without the foot flash. All other scene properties remain at accepted 007.",
+  "lights": [
+    {
+      "name": "base reflection",
+      "position": [
+        4.482703652955026,
+        -6.200862801978819,
+        -1.4027505117368508
+      ],
+      "target": [
+        0.3642373740673065,
+        -0.9020111083984376,
+        0.587326431274414
+      ],
+      "color": [
+        1,
+        0.92,
+        0.65
+      ],
+      "shape": "ELLIPSE",
+      "size": 1.5,
+      "size_y": 0.35,
+      "energy": 3.9480661111111104
+    }
+  ],
+  "measurement": {
+    "upper_config": "scripts/bishop/lighting-064.json",
+    "lower_config": "scripts/bishop/lighting-065.json",
+    "lower_direction_fraction": 0.4,
+    "source_distance": 7
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "config": {
+    "variant": "063-cream-lower-reflections",
+    "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+    "samples": 96,
+    "adaptive_sampling": false,
+    "hypothesis": "The lower collar, socket and base highlights are too yellow. Raise the blue component of these existing glossy sources to make the reflections cream, retaining their red energy, positions, shapes and receiver links. All other lights, pigment, geometry and fixed camera remain unchanged.",
+    "lights": [
+      {
+        "name": "collars reflection",
+        "color": [
+          1.0,
+          0.92,
+          0.65
+        ]
+      },
+      {
+        "name": "socket reflection",
+        "color": [
+          1.0,
+          0.92,
+          0.65
+        ]
+      },
+      {
+        "name": "base reflection",
+        "color": [
+          1.0,
+          0.92,
+          0.65
+        ]
+      }
+    ]
+  },
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "saved_model_sha256": "b42169469ecc7eb117f150d2667d06e460d104244b7f0ca6207105a66d22e83e",
+  "render_sha256": "3ccfe99bfb08b8e3d0b2c83061cdb1c6d524e1bc8379482c1dbde62dcbb0ee02",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+      "Mitre saw cut - editable cutter": "cfb8406e703dd84260154b47cbb424ce66e4917287331a4a79bc601667c78250",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "15dc4cd2d10b91e774f060b4ffd569acfffefde999fb78002cea7ed4023d96ab",
+      "Bishop boxwood \u2014 interior cut.001": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  },
+  "effective_lights": {
+    "collars reflection": {
+      "type": "AREA",
+      "energy": 70.0,
+      "shadow_soft_size": 0.0
+    },
+    "socket reflection": {
+      "type": "AREA",
+      "energy": 5.798434257507324,
+      "shadow_soft_size": 0.0
+    },
+    "base reflection": {
+      "type": "AREA",
+      "energy": 6.091301918029785,
+      "shadow_soft_size": 0.0
+    }
+  },
+  "adaptive_sampling": false
+}

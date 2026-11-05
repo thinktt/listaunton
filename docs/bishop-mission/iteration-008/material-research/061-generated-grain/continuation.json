@@ -1,0 +1,33 @@
+{
+  "parameters": {
+    "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+    "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+    "swatch": "assets/bishop/materials/inferred-boxwood-source-01.png",
+    "out": "build/bishop-mission/061-generated-grain",
+    "preserve_from": 0.98,
+    "replace_through": 0.35,
+    "background_rgb": [
+      0.2,
+      0.08,
+      0.015
+    ],
+    "grain_strength": 0.7
+  },
+  "regions": {
+    "body": {
+      "preserved": 614753,
+      "changed": 2224559,
+      "inferred": 1917956
+    },
+    "button": {
+      "preserved": 241762,
+      "changed": 376702,
+      "inferred": 325553
+    }
+  },
+  "protected_texels_identical": true,
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "swatch_sha256": "42525214b313230d19ace941dff7dcc5ad34c42ddeaa38e9321bc9af9494a3a3",
+  "output_sha256": "52637da29a0a8fba27e9e8d575e670a3e205f858a0a7d6015135bdbea725ecb3",
+  "status": "Isolated unaccepted generated-grain material interpretation. Requires actual front and rotated BSDF renders."
+}

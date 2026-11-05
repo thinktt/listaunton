@@ -1,0 +1,41 @@
+{
+  "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+  "coverage_sha256": "f7c9d457278f9404aa2fb0866fab6dd3d2491622210fd76d034cf1b38b55e08e",
+  "output_sha256": "7639808e0b2271946035745b3754d57701552d0c2e1e912c882de0fd6f3c6c76",
+  "parameters": {
+    "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+    "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+    "out": "build/bishop-mission/059-folded-pigment",
+    "center": 0.39,
+    "amplitude": 0.05,
+    "preserve_from": 0.98,
+    "replace_through": 0.6
+  },
+  "regions": {
+    "body": {
+      "preserved_texels": 614753,
+      "edited_texels": 2224559,
+      "fully_replaced_texels": 2028725,
+      "sampled_confidence_mean": 0.5936112999916077,
+      "source_strip_u": [
+        0.34,
+        0.44
+      ]
+    },
+    "button": {
+      "preserved_texels": 241762,
+      "edited_texels": 376702,
+      "fully_replaced_texels": 339357,
+      "sampled_confidence_mean": 0.5420945882797241,
+      "source_strip_u": [
+        0.34,
+        0.44
+      ]
+    }
+  },
+  "protected_texels_identical": true,
+  "method": "Smooth periodic sampling of a front strip at the same meridian coordinate. Replace low-confidence pigment, including fine boundary residue, while preserving high-confidence texels exactly.",
+  "limits": "Unseen grain is an interpretation. Possible repeated markings and wrapped shading must be judged in real fixed and rotated BSDF renders."
+}

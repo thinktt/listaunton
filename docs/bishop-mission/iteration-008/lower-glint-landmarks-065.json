@@ -1,0 +1,50 @@
+{
+  "base peak": {
+    "pixel": [
+      590,
+      1015
+    ],
+    "surface": [
+      0.3780835270881653,
+      -0.9153695106506348,
+      0.527191162109375
+    ],
+    "normal": [
+      0.3817356824874878,
+      -0.9242138266563416,
+      0.010325118899345398
+    ],
+    "facet_normal": [
+      0.3713102638721466,
+      -0.9284937977790833,
+      0.005293135065585375
+    ],
+    "normal_difference_degrees": 0.7072058975127596,
+    "barycentric_weights": [
+      0.04085721913052792,
+      0.5047558052740504,
+      0.4543869755954217
+    ],
+    "object": "Bishop - continuous turned body",
+    "position": [
+      3.325958728790283,
+      -3.9379236698150635,
+      -5.056194305419922
+    ],
+    "target": [
+      0.3780835270881653,
+      -0.9153695106506348,
+      0.527191162109375
+    ],
+    "light_direction": [
+      0.42112502455711365,
+      -0.4317934513092041,
+      -0.7976264953613281
+    ]
+  },
+  "_provenance": {
+    "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+    "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+    "method": "Barycentric interpolation of evaluated triangle-corner shading normals, preserving split normals; bumps are not included."
+  }
+}

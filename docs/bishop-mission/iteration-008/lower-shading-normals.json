@@ -1,0 +1,52 @@
+{
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "points": {
+    "base peak": {
+      "pixel": [
+        584,
+        995
+      ],
+      "normal": [
+        0.31876134872436523,
+        -0.7868308424949646,
+        0.5284774899482727
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "socket peak": {
+      "pixel": [
+        550,
+        790
+      ],
+      "normal": [
+        0.4057481288909912,
+        -0.7785378694534302,
+        0.47879758477211
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "foot peak": {
+      "pixel": [
+        535,
+        1050
+      ],
+      "normal": [
+        0.1672685295343399,
+        -0.9486900568008423,
+        0.2683439254760742
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    }
+  },
+  "border_pixels": [
+    490,
+    760,
+    650,
+    1060
+  ],
+  "note": "Unsaved BSDF-normal emission diagnostic, including shader bump. This is not a beauty render; source model unchanged."
+}

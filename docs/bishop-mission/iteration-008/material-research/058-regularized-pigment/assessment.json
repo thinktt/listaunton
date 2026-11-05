@@ -1,0 +1,31 @@
+{
+  "trial": "058-regularized-pigment",
+  "decision": "rejected",
+  "reason": "Broad smoothing loses front contrast; old fine residue retains the rear patch.",
+  "scores": {
+    "silhouette": 96.1972461692215,
+    "interior": 83,
+    "color": 75,
+    "texture": 72,
+    "lighting": 68,
+    "mean": 78.8394492338443
+  },
+  "holistic_fixed_view_range": "70\u201380%",
+  "model_sha256": "c8b3ba1a98f1eac6fc4a8d4ede2d50c0b55b954f5fd4ea9abd6d96b906d0215a",
+  "render_sha256": "40a024e61446f95a44b70272060aeb75ce3f8617a75db8784c9e0caeb9415d3d",
+  "atlas_sha256": "205490013ea5afa744b7289ef4cd1653a37566d5316c17a796f144258b5f7102",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  },
+  "samples": 96,
+  "fixed_sampling": true,
+  "rear_diagnostic_samples": 24
+}

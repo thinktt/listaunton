@@ -1,0 +1,33 @@
+{
+  "trial": "063-cream-lower-reflections",
+  "decision": "rejected",
+  "reason": "Hue improves but misplaced glints become more conspicuous.",
+  "scores": {
+    "silhouette": 96.1972461692215,
+    "interior": 83,
+    "color": 85,
+    "texture": 77,
+    "lighting": 73
+  },
+  "mean": 82.8394492338443,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  },
+  "model_sha256": "b42169469ecc7eb117f150d2667d06e460d104244b7f0ca6207105a66d22e83e",
+  "render_sha256": "3ccfe99bfb08b8e3d0b2c83061cdb1c6d524e1bc8379482c1dbde62dcbb0ee02",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "source_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+}

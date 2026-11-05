@@ -1,0 +1,31 @@
+{
+  "trial": "060-grain-continuation",
+  "decision": "rejected",
+  "reason": "Separating sampled fine grain still leaves the broad dark bands and patch transition.",
+  "scores": {
+    "silhouette": 96.1972461692215,
+    "interior": 83,
+    "color": 84,
+    "texture": 73,
+    "lighting": 73,
+    "mean": 81.8394492338443
+  },
+  "holistic_fixed_view_range": "75\u201385%",
+  "model_sha256": "7c24ae6c841bff303dcb88af0cd74b1982bb461c3e17133cdf4f8fa50912ff71",
+  "render_sha256": "9b14e0f26a8053e54e68e00f425243bfd2945857f0fb9b5fb5ba41beb8ad7204",
+  "atlas_sha256": "796327e6d2399aedfb62b893decddb4deac7fad60873bdb0489d0f9cb10fcf91",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  },
+  "samples": 96,
+  "fixed_sampling": true,
+  "rear_diagnostic_samples": 24
+}

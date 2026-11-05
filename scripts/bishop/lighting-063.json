@@ -1,0 +1,12 @@
+{
+  "variant": "063-cream-lower-reflections",
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "The lower collar, socket and base highlights are too yellow. Raise the blue component of these existing glossy sources to make the reflections cream, retaining their red energy, positions, shapes and receiver links. All other lights, pigment, geometry and fixed camera remain unchanged.",
+  "lights": [
+    {"name": "collars reflection", "color": [1.0, 0.92, 0.65]},
+    {"name": "socket reflection", "color": [1.0, 0.92, 0.65]},
+    {"name": "base reflection", "color": [1.0, 0.92, 0.65]}
+  ]
+}

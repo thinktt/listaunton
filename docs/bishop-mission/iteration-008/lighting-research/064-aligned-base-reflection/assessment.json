@@ -1,0 +1,33 @@
+{
+  "trial": "064-aligned-base-reflection",
+  "decision": "rejected",
+  "reason": "Reflection remains too tall/high after physical placement.",
+  "scores": {
+    "silhouette": 96.1972461692215,
+    "interior": 83,
+    "color": 85,
+    "texture": 77,
+    "lighting": 73
+  },
+  "mean": 82.8394492338443,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  },
+  "model_sha256": "53d2541aa6d7a4728b2503a4d3f257b04d3ace9ac49466894e34f26a3684baf1",
+  "render_sha256": "d0cf7d11bc263355d57bbc9c6a8cef60b8a719393d7106d836df871edce67f1c",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "source_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+}

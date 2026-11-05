@@ -1,0 +1,254 @@
+{
+  "date": "2026-11-05",
+  "starting_commit": "9b87e11",
+  "accepted_model_changed": false,
+  "status": "research checkpoint; all model trials rejected",
+  "retained_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "retained_render_sha256": "81ab25f46b5299f1ed15cc0b6ad2b681a0c7ac55257e6447b49847a1018ae04d",
+  "retained_texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "reference_hashes": {
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+  },
+  "references_unchanged": true,
+  "source_camera_degrees": 54,
+  "reopened_existing_light_patch_audit_passed": true,
+  "trial_066_scope": {
+    "passed": true,
+    "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+    "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+    "model": "build/bishop-mission/066-intermediate-base-reflection/bishop.blend",
+    "model_sha256": "9fa5c14222b17cd33857955839948fe096519fff940ed193cf6dd6dc165a4398",
+    "config": "scripts/bishop/lighting-066.json",
+    "config_sha256": "cd08acf6fbdf1d29012556080a430816f9336678804bcaecfba2d1f48dbd8bee",
+    "camera_controls_uvs_material_pixels_world_unchanged": true,
+    "only_declared_existing_light_properties_changed": true,
+    "changes": {
+      "base reflection": {
+        "declared_keys": [
+          "color",
+          "energy",
+          "matrix",
+          "shape",
+          "size",
+          "size_y"
+        ],
+        "before": {
+          "type": "AREA",
+          "energy": 6.091301918029785,
+          "color": [
+            1.0,
+            0.8700000047683716,
+            0.25
+          ],
+          "size": 0.8999999761581421,
+          "size_y": 0.25,
+          "shape": "DISK",
+          "spread": 0.5235987901687622,
+          "shadow_soft_size": 0.0,
+          "use_nodes": true,
+          "matrix": [
+            0.8710615038871765,
+            -0.039493780583143234,
+            0.4895835816860199,
+            3.73593807220459,
+            0.49117395281791687,
+            0.07003931701183319,
+            -0.8682411313056946,
+            -6.995824337005615,
+            2.323388059721765e-08,
+            0.9967620968818665,
+            0.08040686696767807,
+            1.1789131164550781,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "diffuse": false,
+          "glossy": true,
+          "hide_render": false,
+          "receivers": [
+            "Bishop - continuous turned body"
+          ],
+          "nodes": [
+            [
+              [
+                "Emission",
+                "ShaderNodeEmission",
+                [
+                  [
+                    "Color",
+                    [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  ],
+                  [
+                    "Strength",
+                    1.0
+                  ],
+                  [
+                    "Weight",
+                    0.0
+                  ]
+                ],
+                null
+              ],
+              [
+                "Light Output",
+                "ShaderNodeOutputLight",
+                [],
+                null
+              ]
+            ],
+            [
+              [
+                "Emission",
+                "Emission",
+                "Light Output",
+                "Surface"
+              ]
+            ]
+          ]
+        },
+        "after": {
+          "type": "AREA",
+          "energy": 3.948065996170044,
+          "color": [
+            1.0,
+            0.9200000166893005,
+            0.6499999761581421
+          ],
+          "size": 1.5,
+          "size_y": 0.3499999940395355,
+          "shape": "ELLIPSE",
+          "spread": 0.5235987901687622,
+          "shadow_soft_size": 0.0,
+          "use_nodes": true,
+          "matrix": [
+            0.7895588874816895,
+            0.17446579039096832,
+            0.5883523225784302,
+            4.482703685760498,
+            0.6136748194694519,
+            -0.22446908056735992,
+            -0.7569788098335266,
+            -6.200862884521484,
+            1.4807284287599032e-09,
+            0.9587363004684448,
+            -0.28429681062698364,
+            -1.4027504920959473,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "diffuse": false,
+          "glossy": true,
+          "hide_render": false,
+          "receivers": [
+            "Bishop - continuous turned body"
+          ],
+          "nodes": [
+            [
+              [
+                "Emission",
+                "ShaderNodeEmission",
+                [
+                  [
+                    "Color",
+                    [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  ],
+                  [
+                    "Strength",
+                    1.0
+                  ],
+                  [
+                    "Weight",
+                    0.0
+                  ]
+                ],
+                null
+              ],
+              [
+                "Light Output",
+                "ShaderNodeOutputLight",
+                [],
+                null
+              ]
+            ],
+            [
+              [
+                "Emission",
+                "Emission",
+                "Light Output",
+                "Surface"
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "canonical_and_preview_preservation": {
+    "passed": true,
+    "accepted_files_compared": 39,
+    "hashes": {
+      "bishop-review.html": "aa76611844d384631a76ee098ffdb42ec6cebc505aa1f836381f6d0ac16092d7",
+      "bishop-model.html": "7f17daa9ba7458932357fa099efdabe7ccab44ac86202d4de99a6beeaca0a1a0",
+      "assets/bishop/mission-validation.json": "c5ffd762433d861598ee0265880a1bf89872249e1f751d8b368485be09aa8c14",
+      "assets/bishop/original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+      "assets/bishop/button-comparison.png": "2a675d95dff9a088fa7ecd7d271def75f1f134faf56c79348efc0efe61b86e84",
+      "assets/bishop/mesh.bin": "b48f59e0a47580b3efa3d095e9cab3ea1ba7313dafbf53b8758bef1f2623b11a",
+      "assets/bishop/slit-validation.json": "76e8e798822f6ecb3f301cf972760e4d43ba1a7f67688631a4ea59186d56edbe",
+      "assets/bishop/diagnostic-cameras.json": "ae7e56568b15a392184b9e8bd53d32a3ef043756d4e95fdc727063071274a7cd",
+      "assets/bishop/join-regression.json": "afe38292b6d7f03538b81d2a376d5741490d0f9da29b4ad5098ff23ef71831a2",
+      "assets/bishop/render.png": "81ab25f46b5299f1ed15cc0b6ad2b681a0c7ac55257e6447b49847a1018ae04d",
+      "assets/bishop/comparison.png": "4779ffe6447ba64080eee2097c2e5afd86f0deb0b81697d0416ac9dc1a367e7c",
+      "assets/bishop/join-comparison.png": "9587fd0b6c00b4fc866ffd30c68b776a08351186806e89af37b834466ceb2e16",
+      "assets/bishop/black-alignment.json": "caca109f59746b21223f10ab93229cdcc9a6a04eec1c942efed9e75bc0fc4aa3",
+      "assets/bishop/head-side.png": "78dd085554d2916902cbb2d2b8a955f212d06adcc8aecb217e42fae45781523c",
+      "assets/bishop/pigment-generation.json": "976c2ff1f0cfea405663fded0b801d39019a275c52a7082c8f194749c20d3761",
+      "assets/bishop/contour-selected.png": "9437ff2d7b34c19f0df72a5577a68cf4504ad7e3d01ee32ac99ba2a0a55aff9d",
+      "assets/bishop/side-profile.png": "9350f0615e21ea45a5a43cc05e7aafe71d38351d93b7b522ed21ee67608433fb",
+      "assets/bishop/mesh.json": "ca34a41bfc81b74036678492a32a181618a94c57b39164ff0359936f9be3f2a0",
+      "assets/bishop/overlay-original.png": "fea5e1a3ba3759ae22179222727dd7ecf78d1e1b97a8a699aab4e3ed37fa28a5",
+      "assets/bishop/black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585",
+      "assets/bishop/contour-original.png": "42bcd7ef599639a2e2cc964dd8224ef4724185a889fbc7d899a818188bc7d725",
+      "assets/bishop/validation.json": "30cbb2a03a49eebe671b246b3a9e56bfabc860ba88fb36e52d752ab0ee10f432",
+      "assets/bishop/bishop-boxwood-albedo.png": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+      "assets/bishop/inferred-pigment-source-v1.png": "6b228b1e6f57e60d8f5e27f16a5479156ae69d463cfbd900408fd1510e83fe63",
+      "assets/bishop/camera.json": "927473572d4322e936b7e11aaba3ec698d05dacb6a68ffdbadd6c35d33d14080",
+      "assets/bishop/head-comparison.png": "f81996b229b386484582fc2b2c880eba6833448c2bf55ab81055f2b187fd7d4c",
+      "assets/bishop/reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "assets/bishop/rear-oblique.png": "fdda73dce473c27e0611d3003ebfff80dd9f2005ed17158febb175417535b2ea",
+      "assets/bishop/original-alignment.json": "b11ae2c0f3133ada45878eb494b7ce007cafb50f8477e774ad230983d310fbd6",
+      "assets/bishop/render-clay.png": "e075ad7172688936fdc12c423a5b4ff6a38bd14887bf37c7aa6fdc9b083564e9",
+      "assets/bishop/qa.json": "30a792d847aeced73b56baa10aab7a7d8a21db2d8e43b87bbb56afb441a77d49",
+      "assets/bishop/review-workspace.js": "0e17ad9c7dfdb36456546b5b9cc13ef267d0c5e3b555c3e0d00dca3d994dd515",
+      "assets/bishop/viewer-validation.json": "1ec05aa465a3d54593f46be3bff177c7754dc0f187a4d64d433cd87d567814dd",
+      "assets/bishop/concepts/side-01-cutout-generation.json": "a6965f646a6ccd640eac27407d0d35e5248f1d0bf1b7ec7e91aba4fd13f7ee6a",
+      "assets/bishop/concepts/side-01.png": "ea4d279f26f4d5692abe659847c9a1890d018420c258acd2cb712ea9267dad4c",
+      "assets/bishop/concepts/README.md": "82f4a2872d45f94b0e6f4d55686e55b2d67580e9223f17c6271c6a666468065c",
+      "assets/bishop/concepts/side-01-generation.json": "da8b9fc164bf1cecde84f606a7fbd61fed370967fb6162874f3ef0909ed50ace",
+      "assets/bishop/concepts/side-01-cutout.png": "a149dcbc328980d7d164c421b836c3d8f9c4ff748613ebd326eb3dd63d4d5afc",
+      "models/bishop/bishop-rebuilt.blend": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+    },
+    "model_render_camera_mesh_texture_and_pages_unchanged": true,
+    "side_defaults_sha256": "fa17c1db3fafd9bb470344cb84a25eada770d31c865293811ca8064e5b3eddbd",
+    "note": "Accepted files match the stage, canonical repository and existing preview exactly. New research records and an unused texture-source asset are not published as model alternatives. No new native UI inspection is claimed."
+  },
+  "ui_changes": false,
+  "native_browser_inspection": false,
+  "mission_complete": false,
+  "python_compilation_passed": true
+}

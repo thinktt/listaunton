@@ -105,6 +105,25 @@ not establish acceptance; render and inspect the saved real BSDF scene.
 without saving scene changes. The trial using that mask did not resolve the
 rear material boundary and is not part of the accepted atlas.
 
+Iteration 008 is a research checkpoint, not a new accepted model. Checkpoint
+007 remains current. `docs/bishop-mission/iteration-008/assessment.md` records
+five rejected pigment continuations and four rejected base-reflection trials.
+`regularize_pigment.py`, `fold_hidden_pigment.py`, `continue_fine_grain.py` and
+`generated_grain_trial.py` produce isolated atlases only. The generated source
+under `assets/bishop/materials` is inferred and is not used by the accepted
+material. `render_material_diagnostics.py` isolates pigment and bump without
+saving the diagnostic scene; emission images are not beauty renders.
+
+`capture_shading_normals.py` now accepts an explicit crop and averaging radius;
+its old slit crop and single-pixel behavior remain the defaults.
+`validate_light_patch.py` audits declared changes to existing lights after
+reopening while preserving camera, controls, UVs, materials, world and other
+light properties. It complements the existing added-light validator.
+
+The next supported geometry investigation is the base's normal distribution
+and curvature transition. Do not install any of the iteration 008 trials or
+assume a lower fitting loss establishes an improvement.
+
 ## Original geometry construction
 
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.

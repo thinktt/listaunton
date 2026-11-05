@@ -1,0 +1,50 @@
+{
+  "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+  "coverage_sha256": "f7c9d457278f9404aa2fb0866fab6dd3d2491622210fd76d034cf1b38b55e08e",
+  "output_sha256": "205490013ea5afa744b7289ef4cd1653a37566d5316c17a796f144258b5f7102",
+  "parameters": {
+    "source": "history/bishop-mission-007/bishop-boxwood-albedo.png",
+    "coverage": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+    "out": "build/bishop-mission/058-regularized-pigment",
+    "screen_weight": 0.05,
+    "grain_radius": 12,
+    "grid_width": 128,
+    "iterations": 5000
+  },
+  "regions": {
+    "body": {
+      "grid": [
+        128,
+        90
+      ],
+      "iterations": 966,
+      "max_final_update_log_rgb": 9.930134183377959e-06,
+      "confidence_mean": 0.25131890177726746,
+      "center_linear_rgb": [
+        0.19152380526065826,
+        0.07280510663986206,
+        0.013686927035450935
+      ],
+      "broad_log_rgb_mean_change": 0.2593895196914673
+    },
+    "button": {
+      "grid": [
+        128,
+        24
+      ],
+      "iterations": 377,
+      "max_final_update_log_rgb": 9.727478754939511e-06,
+      "confidence_mean": 0.42331549525260925,
+      "center_linear_rgb": [
+        0.2794420123100281,
+        0.11696601659059525,
+        0.021424805745482445
+      ],
+      "broad_log_rgb_mean_change": 0.2493284046649933
+    }
+  },
+  "method": "Screened periodic Poisson broad log-linear pigment field with soft original-confidence constraints, plus bounded existing fine grain. All broad colors may move. Caps and unused atlas areas unchanged.",
+  "status": "Unaccepted interpretation; render fixed and rear views and measure any original/reference regression."
+}

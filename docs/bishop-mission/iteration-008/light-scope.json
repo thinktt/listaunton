@@ -1,0 +1,185 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "model": "build/bishop-mission/066-intermediate-base-reflection/bishop.blend",
+  "model_sha256": "9fa5c14222b17cd33857955839948fe096519fff940ed193cf6dd6dc165a4398",
+  "config": "scripts/bishop/lighting-066.json",
+  "config_sha256": "cd08acf6fbdf1d29012556080a430816f9336678804bcaecfba2d1f48dbd8bee",
+  "camera_controls_uvs_material_pixels_world_unchanged": true,
+  "only_declared_existing_light_properties_changed": true,
+  "changes": {
+    "base reflection": {
+      "declared_keys": [
+        "color",
+        "energy",
+        "matrix",
+        "shape",
+        "size",
+        "size_y"
+      ],
+      "before": {
+        "type": "AREA",
+        "energy": 6.091301918029785,
+        "color": [
+          1.0,
+          0.8700000047683716,
+          0.25
+        ],
+        "size": 0.8999999761581421,
+        "size_y": 0.25,
+        "shape": "DISK",
+        "spread": 0.5235987901687622,
+        "shadow_soft_size": 0.0,
+        "use_nodes": true,
+        "matrix": [
+          0.8710615038871765,
+          -0.039493780583143234,
+          0.4895835816860199,
+          3.73593807220459,
+          0.49117395281791687,
+          0.07003931701183319,
+          -0.8682411313056946,
+          -6.995824337005615,
+          2.323388059721765e-08,
+          0.9967620968818665,
+          0.08040686696767807,
+          1.1789131164550781,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "diffuse": false,
+        "glossy": true,
+        "hide_render": false,
+        "receivers": [
+          "Bishop - continuous turned body"
+        ],
+        "nodes": [
+          [
+            [
+              "Emission",
+              "ShaderNodeEmission",
+              [
+                [
+                  "Color",
+                  [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                ],
+                [
+                  "Strength",
+                  1.0
+                ],
+                [
+                  "Weight",
+                  0.0
+                ]
+              ],
+              null
+            ],
+            [
+              "Light Output",
+              "ShaderNodeOutputLight",
+              [],
+              null
+            ]
+          ],
+          [
+            [
+              "Emission",
+              "Emission",
+              "Light Output",
+              "Surface"
+            ]
+          ]
+        ]
+      },
+      "after": {
+        "type": "AREA",
+        "energy": 3.948065996170044,
+        "color": [
+          1.0,
+          0.9200000166893005,
+          0.6499999761581421
+        ],
+        "size": 1.5,
+        "size_y": 0.3499999940395355,
+        "shape": "ELLIPSE",
+        "spread": 0.5235987901687622,
+        "shadow_soft_size": 0.0,
+        "use_nodes": true,
+        "matrix": [
+          0.7895588874816895,
+          0.17446579039096832,
+          0.5883523225784302,
+          4.482703685760498,
+          0.6136748194694519,
+          -0.22446908056735992,
+          -0.7569788098335266,
+          -6.200862884521484,
+          1.4807284287599032e-09,
+          0.9587363004684448,
+          -0.28429681062698364,
+          -1.4027504920959473,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "diffuse": false,
+        "glossy": true,
+        "hide_render": false,
+        "receivers": [
+          "Bishop - continuous turned body"
+        ],
+        "nodes": [
+          [
+            [
+              "Emission",
+              "ShaderNodeEmission",
+              [
+                [
+                  "Color",
+                  [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                ],
+                [
+                  "Strength",
+                  1.0
+                ],
+                [
+                  "Weight",
+                  0.0
+                ]
+              ],
+              null
+            ],
+            [
+              "Light Output",
+              "ShaderNodeOutputLight",
+              [],
+              null
+            ]
+          ],
+          [
+            [
+              "Emission",
+              "Emission",
+              "Light Output",
+              "Surface"
+            ]
+          ]
+        ]
+      }
+    }
+  }
+}

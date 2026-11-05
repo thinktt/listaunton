@@ -1,0 +1,137 @@
+{
+  "trials": [
+    {
+      "trial": "063-cream-lower-reflections",
+      "decision": "rejected",
+      "reason": "Hue improves but misplaced glints become more conspicuous.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 85,
+        "texture": 77,
+        "lighting": 73
+      },
+      "mean": 82.8394492338443,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "model_sha256": "b42169469ecc7eb117f150d2667d06e460d104244b7f0ca6207105a66d22e83e",
+      "render_sha256": "3ccfe99bfb08b8e3d0b2c83061cdb1c6d524e1bc8379482c1dbde62dcbb0ee02",
+      "samples": 96,
+      "adaptive_sampling": false,
+      "source_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+    },
+    {
+      "trial": "064-aligned-base-reflection",
+      "decision": "rejected",
+      "reason": "Reflection remains too tall/high after physical placement.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 85,
+        "texture": 77,
+        "lighting": 73
+      },
+      "mean": 82.8394492338443,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "model_sha256": "53d2541aa6d7a4728b2503a4d3f257b04d3ace9ac49466894e34f26a3684baf1",
+      "render_sha256": "d0cf7d11bc263355d57bbc9c6a8cef60b8a719393d7106d836df871edce67f1c",
+      "samples": 96,
+      "adaptive_sampling": false,
+      "source_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+    },
+    {
+      "trial": "065-shaped-base-reflection",
+      "decision": "rejected",
+      "reason": "Overshoot creates a foot flash and spill.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 85,
+        "texture": 77,
+        "lighting": 68
+      },
+      "mean": 81.8394492338443,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "model_sha256": "55823af7ff367ffdce5eee1d137c32a1f31d8c4c408065a9c18bad6112bd97fb",
+      "render_sha256": "7f301bb02b7e60a7c8f7bb0e22ad1fdae336af5f13d6bf91abf26f8f442dd2e9",
+      "samples": 96,
+      "adaptive_sampling": false,
+      "source_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+    },
+    {
+      "trial": "066-intermediate-base-reflection",
+      "decision": "rejected",
+      "reason": "Foot flash reduced, but the main reference glint is missing.",
+      "scores": {
+        "silhouette": 96.1972461692215,
+        "interior": 83,
+        "color": 85,
+        "texture": 77,
+        "lighting": 71
+      },
+      "mean": 82.4394492338443,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "metrics": {
+        "selected": {
+          "silhouette_iou": 0.9619724616922151
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787643334728172
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675316644697352
+        }
+      },
+      "model_sha256": "9fa5c14222b17cd33857955839948fe096519fff940ed193cf6dd6dc165a4398",
+      "render_sha256": "002a5f92849192430fce65ef6b007406f4eb925c3e9b9ff55a949f8d424c76a9",
+      "samples": 96,
+      "adaptive_sampling": false,
+      "source_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
+    }
+  ],
+  "all_rejected": true
+}

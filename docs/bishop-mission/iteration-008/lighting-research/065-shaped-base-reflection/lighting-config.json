@@ -1,0 +1,45 @@
+{
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "variant": "065-shaped-base-reflection",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "The first physically placed light still creates an overly tall reflection above the reference center. Aim farther down the surface and flatten the emitter to broaden the glint laterally. Normalize power by area to retain approximate emitter radiance; validate in the actual render. Geometry, material, all other lights and camera stay fixed.",
+  "lights": [
+    {
+      "name": "base reflection",
+      "position": [
+        3.2956388551687663,
+        -3.7998805101004076,
+        -5.144445844280897
+      ],
+      "target": [
+        0.3780835270881653,
+        -0.9153695106506348,
+        0.527191162109375
+      ],
+      "color": [
+        1,
+        0.92,
+        0.65
+      ],
+      "shape": "ELLIPSE",
+      "size": 1.5,
+      "size_y": 0.35,
+      "energy": 3.9480661111111104
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/lower-glint-landmarks-065.json",
+    "normal_capture": "build/bishop-mission/lower-shading-normals/normals.npy",
+    "pixel": [
+      590,
+      1015
+    ],
+    "normal": [
+      0.3847614526748657,
+      -0.9230153560638428,
+      -0.0011233368422836065
+    ],
+    "mean_radius": 3
+  }
+}
