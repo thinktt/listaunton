@@ -2,16 +2,16 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9657681096576811,
-      "mean_boundary_error_px": 5.449893390191898,
-      "p95_boundary_error_px": 18.0,
+      "silhouette_iou": 0.978691184749656,
+      "mean_boundary_error_px": 3.604957805907173,
+      "p95_boundary_error_px": 13.25,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 1.257293406911626
+      "mean_boundary_error_original_300px_units": 0.8316657514289642
     },
     "selected": {
-      "silhouette_iou": 0.9482343665712271,
-      "mean_boundary_error_px": 8.89179104477612,
-      "p95_boundary_error_px": 23.0,
+      "silhouette_iou": 0.9613943672825784,
+      "mean_boundary_error_px": 7.0168776371308015,
+      "p95_boundary_error_px": 17.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
@@ -19,8 +19,8 @@
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "One continuous rounded meridian from the collar transition into the button underside; full-thickness oblique cut and solid floor preserved.",
     "finial": "Rounded convex button sits directly on the head. No cylindrical seat, pedestal, neck ring or gap is exposed.",
-    "collars": "Three descending collar steps, preserved by exact lower-profile comparison.",
-    "lower_body": "Concave stem, raised socket lip, flared base and rounded flat-bottom foot preserved.",
+    "collars": "Three descending collar steps, preserved by exact profile comparison.",
+    "lower_body": "Concave stem, raised socket and flare are preserved. The foot has a flatter outer wall and softened lower edge; its declared ring edits are checked against the archived prior model.",
     "limits": "The accepted side guide is art direction, not a recovered source camera. Boxwood pigment, surface relief and reflections are an unfinished reconstruction. Single-view evidence cannot determine hidden geometry uniquely."
   }
 }

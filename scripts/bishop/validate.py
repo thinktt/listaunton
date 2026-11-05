@@ -1,8 +1,14 @@
 """Validate closed bishop components and renderer/viewer camera data."""
-import bpy,bmesh,json,sys,hashlib,math
+import argparse,bpy,bmesh,json,sys,hashlib,math
 from pathlib import Path
 from mathutils import Vector
-args=sys.argv[sys.argv.index('--')+1:];root=Path(args[0]);model=root/'models/bishop/bishop-rebuilt.blend';bpy.ops.wm.open_mainfile(filepath=str(model));graph=bpy.context.evaluated_depsgraph_get();report=[]
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('root',type=Path)
+parser.add_argument('--model',default='models/bishop/bishop-rebuilt.blend')
+parser.add_argument('--profile',default='scripts/bishop/profile.json')
+parser.add_argument('--out',default='assets/bishop/validation.json')
+parser.add_argument('--skip-export',action='store_true',help='Trial anatomy only; saved camera still checked, export hash deferred until promotion.')
+args=parser.parse_args(sys.argv[sys.argv.index('--')+1:]);root=args.root;model=root/args.model;bpy.ops.wm.open_mainfile(filepath=str(model));graph=bpy.context.evaluated_depsgraph_get();report=[]
 for ob in bpy.context.scene.objects:
  if ob.type!='MESH' or ob.hide_render:continue
  ev=ob.evaluated_get(graph);me=ev.to_mesh();bm=bmesh.new();bm.from_mesh(me)
@@ -12,7 +18,7 @@ for ob in bpy.context.scene.objects:
  report.append({'name':ob.name,'nonmanifold_edges':nonmanifold,'signed_volume':volume,'vertices':len(bm.verts),'faces':len(bm.faces)})
  bm.free();ev.to_mesh_clear()
 assert len(report)==2
-cfg=json.loads((root/'scripts/bishop/profile.json').read_text());alignment=json.loads((root/'assets/bishop/original-alignment.json').read_text())
+cfg=json.loads((root/args.profile).read_text());alignment=json.loads((root/'assets/bishop/original-alignment.json').read_text())
 factor=1254/300/alignment['scale']/cfg['scale'];sl=cfg['slit'];angle=math.radians(sl['angle'])
 bottom=(cfg['y0']-sl['bottom_center_y'])*factor/math.cos(math.radians(cfg['elevation']))
 body=bpy.data.objects['Bishop - continuous turned body'].evaluated_get(graph)
@@ -24,12 +30,18 @@ for dz in [7,12,17]:
  assert clear and near,('Slit must pass through thickness with material beside it',dz,clear,near)
  probes.append({'height_above_slot_bottom_original_units':dz,'through_slot_clear':clear,'adjacent_material_hit':near})
 assert body.ray_cast(Vector((sl['x']*factor,-4,bottom-3*factor)),Vector((0,1,0)),distance=8)[0], 'Slot requires a solid floor.'
-meta=json.loads((root/'assets/bishop/mesh.json').read_text());assert meta['sourceSha256']==hashlib.sha256(model.read_bytes()).hexdigest()
+meta=json.loads((root/'assets/bishop/mesh.json').read_text())
+if not args.skip_export:assert meta['sourceSha256']==hashlib.sha256(model.read_bytes()).hexdigest()
 assert meta['referenceCamera']['elevationDegrees']==54
 old_camera=json.loads((root/'history/bishop/07-before-continuous-button-join/camera.json').read_text())
 assert meta['referenceCamera']==old_camera,'The reference camera must remain unchanged during the head correction.'
 baseline=json.loads((root/'history/bishop/04-before-head-correction/profile.json').read_text())
-assert cfg['profile'][:65]==baseline['profile'][:65], 'Lower collars, stem and base must be preserved.'
+declared=cfg.get('mission_geometry',{})
+changed=set(declared.get('changed_body_rings',[]))
+if changed:
+ assert changed==set(range(1,11)), 'Only the documented lower foot rings may differ in this geometry checkpoint.'
+ assert cfg['profile'][11:65]==baseline['profile'][11:65] and cfg['profile'][0]==baseline['profile'][0], 'Flare, socket, stem and collars must be preserved.'
+else:assert cfg['profile'][:65]==baseline['profile'][:65], 'Lower collars, stem and base must be preserved.'
 button_baseline=json.loads((root/'history/bishop/07-before-continuous-button-join/profile.json').read_text())
 assert cfg['slit']==button_baseline['slit'], 'Preserve the full-depth slit dimensions.'
 button=bpy.data.objects['Bishop - domed button finial'].evaluated_get(graph);button_mesh=button.to_mesh()
@@ -78,6 +90,6 @@ assert any(x['head_radius'] is not None and x['button_radius'] is not None for x
 cam=bpy.context.scene.camera;bpy.context.view_layer.update()
 actual_matrix=[float(v) for row in cam.matrix_world.inverted() for v in row]
 assert max(abs(a-b) for a,b in zip(actual_matrix,meta['referenceCamera']['worldToCamera']))<1e-6,'Saved camera and export differ.'
-result={'components':report,'slit_ray_probes':probes,'solid_slot_floor':True,'source_hash_matches':True,'reference_camera_elevation':54,'saved_camera_matches_export':True,'head_surface_probe_count':len(head_normals),'head_surface_max_normal_step_degrees':max_head_normal_step,'lower_65_profile_points_preserved':True,'slit_parameters_preserved':True,'button_height_to_width':button_ratio,'head_button_join':{'level_section_samples':len(join),'visible_component_transitions':len(transitions),'contact_axis_y':crossing_y,'contact_width_to_button_width':contact_ratio,'minimum_exposed_head_radius_slope':min(slopes),'head_cap_concealed':True,'gap_free':True,'no_exposed_cylindrical_neck':True},'note':'Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.'}
-(root/'assets/bishop/validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+result={'components':report,'slit_ray_probes':probes,'solid_slot_floor':True,'source_hash_matches':None if args.skip_export else True,'reference_camera_elevation':54,'saved_camera_matches_export':True,'head_surface_probe_count':len(head_normals),'head_surface_max_normal_step_degrees':max_head_normal_step,'lower_65_profile_points_preserved':not bool(changed),'declared_changed_foot_rings':sorted(changed),'flare_socket_stem_collars_preserved':True,'slit_parameters_preserved':True,'button_height_to_width':button_ratio,'head_button_join':{'level_section_samples':len(join),'visible_component_transitions':len(transitions),'contact_axis_y':crossing_y,'contact_width_to_button_width':contact_ratio,'minimum_exposed_head_radius_slope':min(slopes),'head_cap_concealed':True,'gap_free':True,'no_exposed_cylindrical_neck':True},'note':'Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.'}
+(root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

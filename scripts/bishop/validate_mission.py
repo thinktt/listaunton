@@ -1,9 +1,9 @@
-"""Material-iteration invariants supplement the bishop anatomy validator."""
-import bpy,json,hashlib,sys
+"""Validate declared bishop edits, pigment data and fixed-camera provenance."""
+import bpy,json,hashlib,sys,math
 import numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-buffers={}
+buffers={};construction={}
 def geometry(path):
     bpy.ops.wm.open_mainfile(filepath=str(path),load_ui=False);bpy.context.view_layer.update();g=bpy.context.evaluated_depsgraph_get();res={}
     for ob in bpy.context.scene.objects:
@@ -11,6 +11,16 @@ def geometry(path):
         ev=ob.evaluated_get(g);me=ev.to_mesh();me.calc_loop_triangles()
         pos=np.array([tuple(v.co) for v in me.vertices],dtype='<f4');tris=np.array([tuple(t.vertices) for t in me.loop_triangles],dtype='<i4')
         buffers[(str(path),ob.name)]=(pos.copy(),tris.copy(),np.array([tuple(v.co) for v in ob.data.vertices],dtype='<f4'))
+        modifier_data=[]
+        for modifier in ob.modifiers:
+            values={'type':modifier.type}
+            for key in ['subdivision_type','levels','render_levels','operation','solver','width','segments','limit_method','angle_limit','profile']:
+                if hasattr(modifier,key):values[key]=getattr(modifier,key)
+            if modifier.type=='BOOLEAN':
+                cutter=modifier.object
+                values['cutter']={'matrix':[float(x) for row in cutter.matrix_world for x in row], 'vertices':[list(v.co) for v in cutter.data.vertices]}
+            modifier_data.append(values)
+        construction[(str(path),ob.name)]={'control_faces':[list(face.vertices) for face in ob.data.polygons], 'modifiers':modifier_data}
         assert np.isfinite(pos).all()
         # Boolean material slots can reorder vertices. Compare actual positions
         # and spatial triangles, independent of their storage indices.
@@ -20,16 +30,41 @@ def geometry(path):
         flat=corners.reshape(-1,9);flat=flat[np.lexsort(flat.T[::-1])]
         res[ob.name]={'positions':hashlib.sha256(sorted_pos.tobytes()).hexdigest(),'triangles':hashlib.sha256(flat.tobytes()).hexdigest(),'vertex_count':len(pos),'triangle_count':len(tris)};ev.to_mesh_clear()
     return res
-baseline=geometry(ROOT/'history/bishop-mission-000/bishop-rebuilt.blend')
-current=geometry(ROOT/'models/bishop/bishop-rebuilt.blend')
+profile=json.loads((ROOT/'scripts/bishop/profile.json').read_text())
+declared=profile.get('mission_geometry')
+baseline_path=ROOT/(declared['baseline_model'] if declared else 'history/bishop-mission-000/bishop-rebuilt.blend')
+current_path=ROOT/'models/bishop/bishop-rebuilt.blend'
+baseline=geometry(baseline_path)
+current=geometry(current_path)
 changes={}
 for name in baseline:
-    old,oldtri,oldcontrol=buffers[(str(ROOT/'history/bishop-mission-000/bishop-rebuilt.blend'),name)]
-    new,newtri,newcontrol=buffers[(str(ROOT/'models/bishop/bishop-rebuilt.blend'),name)]
-    diff=float(np.max(np.abs(new-old)));same_tri=bool(np.array_equal(oldtri,newtri));same_control=bool(np.array_equal(oldcontrol,newcontrol))
+    old,oldtri,oldcontrol=buffers[(str(baseline_path),name)]
+    new,newtri,newcontrol=buffers[(str(current_path),name)]
+    diff=float(np.max(np.abs(new-old))) if new.shape==old.shape else None
+    same_tri=bool(np.array_equal(oldtri,newtri));same_control=bool(np.array_equal(oldcontrol,newcontrol))
     changes[name]={'max_evaluated_coordinate_difference':diff,'triangle_indices_unchanged':same_tri,'control_vertices_exactly_unchanged':same_control}
+    if declared:
+        expected=oldcontrol.copy()
+        old_profile=json.loads((ROOT/declared['baseline_profile']).read_text())
+        if 'finial' in name:
+            expected[:,:2]*=declared['button_scale_xy']
+        else:
+            alignment=json.loads((ROOT/'assets/bishop/original-alignment.json').read_text())
+            factor=1254/300/alignment['scale']/old_profile['scale']/math.cos(math.radians(old_profile['elevation']))
+            assert sorted(int(k) for k in declared['body_rings'])==declared['changed_body_rings']
+            for key,(radius,axis_y) in declared['body_rings'].items():
+                index=int(key);old_radius,old_y=old_profile['profile'][index]
+                expected[index*128:(index+1)*128,:2]*=radius/old_radius
+                expected[index*128:(index+1)*128,2]+=(old_y-axis_y)*factor
+        difference=float(np.max(np.abs(newcontrol-expected)))
+        changes[name]['max_control_difference_from_declared_edit']=difference
+        same_construction=construction[(str(baseline_path),name)]==construction[(str(current_path),name)]
+        changes[name]['control_topology_modifiers_and_cutter_unchanged']=same_construction
+        changes[name]['evaluated_triangle_count_before']=len(oldtri)
+        changes[name]['evaluated_triangle_count_after']=len(newtri)
+        assert difference<5e-6 and same_construction, 'Undeclared control geometry, modifier or cutter edit.'
 print('GEOMETRY_NUMERICAL_COMPARISON',json.dumps(changes,indent=2),flush=True)
-assert all(v['triangle_indices_unchanged'] and v['control_vertices_exactly_unchanged'] and v['max_evaluated_coordinate_difference']<5e-6 for v in changes.values()),'Material work changed actual geometry beyond floating-point precision.'
+if not declared:assert all(v['triangle_indices_unchanged'] and v['control_vertices_exactly_unchanged'] and v['max_evaluated_coordinate_difference']<5e-6 for v in changes.values()),'Material work changed actual geometry beyond floating-point precision.'
 s=bpy.context.scene;mat=next(o for o in s.objects if o.type=='MESH' and not o.hide_render).data.materials[0]
 assert mat.node_tree.nodes['Material Output'].inputs['Surface'].links[0].from_node.type=='BSDF_PRINCIPLED'
 assert s['bishop_albedo_bakes_lighting']==False
@@ -43,5 +78,5 @@ for original in ['White-Bishop','Black-Bishop']:
     asset='original.png' if original.startswith('White') else 'black-original.png'
     assert (ROOT/f'assets/bishop/{asset}').read_bytes()==(ROOT/f'references/lichess-staunton-3d/{original}.png').read_bytes()
 assert (ROOT/'assets/bishop/reference.png').read_bytes()==(ROOT/'assets/candidates/bishop/white-candidate-3.png').read_bytes()
-report={'passed':True,'all_evaluated_geometry_preserved_within_5e_6':True,'geometry_comparison':changes,'components':current,'camera_exactly_unchanged':True,'reference_pixels_unchanged':True,'shader':'Principled BSDF','albedo_bakes_lighting':False,'texture_hash_matches':True,'finite_uvs_and_unit_normals':True,'model_sha256':meta['sourceSha256']}
+report={'passed':True,'all_evaluated_geometry_preserved_within_5e_6':not bool(declared),'declared_geometry_changes_validated':bool(declared),'baseline_model':str(baseline_path.relative_to(ROOT)),'geometry_comparison':changes,'components':current,'camera_exactly_unchanged':True,'reference_pixels_unchanged':True,'shader':'Principled BSDF','albedo_bakes_lighting':False,'texture_hash_matches':True,'finite_uvs_and_unit_normals':True,'model_sha256':meta['sourceSha256']}
 (ROOT/'assets/bishop/mission-validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

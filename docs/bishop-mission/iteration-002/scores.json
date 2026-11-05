@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.19665305468813,
+    "interior": 81,
+    "color": 70,
+    "texture": 64,
+    "lighting": 54
+  },
+  "mean_percent": 73.03933061093763,
+  "holistic_range_percent": [
+    65,
+    75
+  ],
+  "original_white_iou": 0.9787583125863621,
+  "original_black_iou": 0.9675256317057942,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+  "render_sha256": "2eb6e2ebc949205c91c0c98d2695481d63d739a32894b689cf3600a93f857e42",
+  "texture_sha256": "97ec22474d221839f9bb5885c695fe009fb217352c131d6fa0e52c4eca0e54c3",
+  "starting_model_sha256": "79a2e9988cbdf9c8d6b913723dbce4e7f55098f6ca7a9e8d33b860a258e1f478",
+  "status": "accepted geometry improvement, mission incomplete"
+}

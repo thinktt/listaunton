@@ -1,6 +1,6 @@
 """Build five reference/model review pages; never writes the queen review."""
 from pathlib import Path
-import json,argparse
+import json,argparse,subprocess,sys
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
 template=(root/'scripts/candidate-template.html').read_text(encoding='utf-8')
@@ -8,6 +8,9 @@ parser=argparse.ArgumentParser();parser.add_argument('--piece',choices=list(data
 # Model pages activate automatically when their checked standalone viewer exists.
 for piece,images in data['pieces'].items():
     if args.piece and piece!=args.piece:continue
+    if piece=='bishop':
+        subprocess.run([sys.executable,str(root/'scripts/bishop/build_review.py')],check=True)
+        continue
     page=template
     model_page=f'{piece}-model.html'
     model={'page':model_page} if model_page and (root/model_page).is_file() else None

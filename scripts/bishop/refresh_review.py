@@ -24,4 +24,10 @@ if args.preview_dir:
         shutil.copy2(root/relative, destination/relative)
     for relative in ['assets/bishop', 'models/bishop']:
         shutil.copytree(root/relative, destination/relative, dirs_exist_ok=True)
+    # The gallery uses the preserved measurements, not the current detail mesh.
+    sizing_baseline = root/'history/bishop-mission-001'
+    if sizing_baseline.is_dir():
+        shutil.copytree(sizing_baseline, destination/'history/bishop-mission-001', dirs_exist_ok=True)
+        (destination/'assets/side-views').mkdir(parents=True, exist_ok=True)
+        shutil.copy2(root/'assets/side-views/scale.json', destination/'assets/side-views/scale.json')
     print(f'Synchronized accepted bishop pages and assets to {destination}')

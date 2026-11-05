@@ -1,0 +1,10 @@
+{
+  "geometry_config": "docs/bishop-mission/iteration-002/geometry-013.json",
+  "material_config": "docs/bishop-mission/iteration-002/mission-014.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/geometry_trial.py -- docs/bishop-mission/iteration-002/geometry-013.json --no-render",
+    "blender --background --python-exit-code 1 --python scripts/bishop/mission_material.py -- docs/bishop-mission/iteration-002/mission-014.json --no-render",
+    "blender --background --python-exit-code 1 --python scripts/bishop/bake_mission.py -- --source build/bishop-mission/014-reprojected-geometry/bishop.blend --out build/bishop-mission/015-baked-geometry"
+  ],
+  "note": "Bake writes the bishop atlas; reproduce in an isolated checkout before replacing accepted assets. References and the saved 54-degree camera remain unchanged."
+}

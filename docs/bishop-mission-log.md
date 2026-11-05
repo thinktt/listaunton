@@ -19,6 +19,7 @@ Preserved under `history/bishop-mission-000/`. See
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Initial clay | 94.88 | 78 | 0 | 0 | 30 | 40.58 |
 | First boxwood checkpoint | 94.88 | 78 | 70 | 64 | 54 | 72.18 |
+| Wider button, flatter foot | 96.20 | 81 | 70 | 64 | 54 | 73.04 |
 
 Silhouette is selected-reference IoU; other scores are visual estimates.
 The separate original-white IoU is 96.58%. Initial holistic appearance was
@@ -63,3 +64,21 @@ tab commands, parent/source guards, retained orbit and comparison state,
 all candidate pairs, and a usable static overlay without WebGL. This is
 scripted UI verification, not native browser inspection. The shared candidate
 runtime and the other pieces' main pages are left to their existing writers.
+
+## Iteration 002 — wider button and flatter foot
+
+The button is 8% wider while retaining its shallow height and direct head
+contact. Ten lower-foot rings give the foot a flatter wall and a tighter
+underside turn. The head, slit, flare, socket, stem, collars, global height
+and fixed 54-degree camera are preserved. The small detail edits improve
+original-white IoU to 97.88%, selected-white IoU to 96.20%, and original-black
+IoU to 96.75% under the same mask convention.
+
+The wood projection is rebuilt for the new surfaces, packed, reopened, rendered
+and validated. The main bishop page and local preview show the accepted
+checkpoint. The gallery keeps the owner's sizes and order, citing the archived
+first wood model as its sizing baseline. See
+[`iteration-002/assessment.md`](bishop-mission/iteration-002/assessment.md)
+for comparisons, all five scores, dimensions, validation and remaining defects.
+The next target is lighting contrast and the placement/shape of reflections;
+the mission remains incomplete.

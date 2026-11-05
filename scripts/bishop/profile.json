@@ -9,43 +9,43 @@
       210.9
     ],
     [
-      51,
+      57.5,
       210.9
     ],
     [
-      56,
-      210.70000000000002
+      59.4,
+      210.7
     ],
     [
-      59,
-      209.9
+      60.1,
+      210.1
     ],
     [
-      60,
-      208.4
+      60.3,
+      209.2
     ],
     [
       60.4,
-      206.12
+      206.8
     ],
     [
-      60.2,
-      203.84
+      60.35,
+      203.4
     ],
     [
-      59,
-      201.76
+      60.05,
+      201.5
+    ],
+    [
+      59.0,
+      200.3
+    ],
+    [
+      57.8,
+      199.0
     ],
     [
       57.5,
-      200.28
-    ],
-    [
-      57,
-      198.9
-    ],
-    [
-      57,
       197.55957446808512
     ],
     [
@@ -443,51 +443,51 @@
     "shape": "Rounded shallow button with a convex dome and direct underside contact; no central cylindrical seat",
     "profile": [
       [
-        0.01,
+        0.0108,
         56.5
       ],
       [
-        10.3,
+        11.124000000000002,
         56.5
       ],
       [
-        11.7,
+        12.636,
         56.3
       ],
       [
-        13.1,
+        14.148,
         55.7
       ],
       [
-        14.05,
+        15.174000000000001,
         54.7
       ],
       [
-        14.4,
+        15.552000000000001,
         53.65
       ],
       [
-        14.2,
+        15.336,
         52.7
       ],
       [
-        13.4,
+        14.472000000000001,
         51.6
       ],
       [
-        11.6,
+        12.528,
         50.35
       ],
       [
-        8.7,
+        9.395999999999999,
         49.5
       ],
       [
-        5,
+        5.4,
         49.1
       ],
       [
-        0.01,
+        0.0108,
         49.0
       ]
     ],
@@ -520,11 +520,71 @@
     "start_profile_index": 65,
     "note": "Accepted side guide: continuous convex taper enters the button underside directly, without an exposed seat or neck."
   },
-  "revision": "09-continuous-button-join",
+  "revision": "013-flatter-foot",
   "head_button_join": {
     "head_cap_axis_y": 55.4,
     "button_bottom_axis_y": 56.5,
     "guide": "assets/bishop/concepts (accepted user side guide, saved separately with provenance)",
     "note": "Convex head continues inside the rounded button underside; the wider button conceals the cap. No exposed pedestal or neck ring. Separate closed components intersect."
+  },
+  "mission_geometry": {
+    "baseline_model": "history/bishop-mission-001/bishop-rebuilt.blend",
+    "baseline_profile": "history/bishop-mission-001/profile.json",
+    "changed_body_rings": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "button_scale_xy": 1.08,
+    "body_rings": {
+      "1": [
+        57.5,
+        210.9
+      ],
+      "2": [
+        59.4,
+        210.7
+      ],
+      "3": [
+        60.1,
+        210.1
+      ],
+      "4": [
+        60.3,
+        209.2
+      ],
+      "5": [
+        60.4,
+        206.8
+      ],
+      "6": [
+        60.35,
+        203.4
+      ],
+      "7": [
+        60.05,
+        201.5
+      ],
+      "8": [
+        59.0,
+        200.3
+      ],
+      "9": [
+        57.8,
+        199.0
+      ],
+      "10": [
+        57.5,
+        197.55957446808512
+      ]
+    },
+    "interpretation": "Slightly broader shallow button and flatter lower foot; fixed camera, head, slit, flare, socket, stem and collars preserved."
   }
 }

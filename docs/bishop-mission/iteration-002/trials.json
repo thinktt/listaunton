@@ -1,0 +1,62 @@
+[
+  {
+    "trial": "012-wider-button",
+    "metrics": {
+      "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+      "render": "build/bishop-mission/012-wider-button/wood.png",
+      "render_sha256": "0fbcad4746576d7cf30884b2332cc056b8f26319e8f694153c7e82f328a6ce22",
+      "images": {
+        "selected": {
+          "silhouette_iou": 0.9508887531359907
+        },
+        "original_white": {
+          "silhouette_iou": 0.9676367610268329
+        },
+        "original_black": {
+          "silhouette_iou": 0.9614108624188373
+        }
+      }
+    },
+    "decision": "Button-only improvement"
+  },
+  {
+    "trial": "013-flatter-foot",
+    "metrics": {
+      "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+      "render": "build/bishop-mission/013-flatter-foot/wood.png",
+      "render_sha256": "212e485154bb3e1a47d681530e19918a95f4fe5f5164981ec133fd8b1a860024",
+      "images": {
+        "selected": {
+          "silhouette_iou": 0.9619707366835304
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787441562233775
+        },
+        "original_black": {
+          "silhouette_iou": 0.9674941183567594
+        }
+      }
+    },
+    "decision": "Foot and button improvement"
+  },
+  {
+    "trial": "015-baked-geometry",
+    "metrics": {
+      "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+      "render": "build/bishop-mission/015-baked-geometry/wood.png",
+      "render_sha256": "2eb6e2ebc949205c91c0c98d2695481d63d739a32894b689cf3600a93f857e42",
+      "images": {
+        "selected": {
+          "silhouette_iou": 0.9619665305468813
+        },
+        "original_white": {
+          "silhouette_iou": 0.9787583125863621
+        },
+        "original_black": {
+          "silhouette_iou": 0.9675256317057942
+        }
+      }
+    },
+    "decision": "Accepted after pigment reprojection, bake and saved-scene render"
+  }
+]

@@ -279,11 +279,11 @@
         "fully_transparent_fraction": 0.76896
       },
       "model": {
-        "file": "assets/bishop/mesh.json",
+        "file": "history/bishop-mission-001/mesh.json",
         "sha256": "29e10d7b8e7206ab933935a3e45186b94a1372dd0a2e37b05e594b1fd43a1f98",
-        "binary": "assets/bishop/mesh.bin",
+        "binary": "history/bishop-mission-001/mesh.bin",
         "binary_sha256": "66d1bf7d7c2bd640037d175ba161617201f0f4eef2e84d07e4d300a3177cffae",
-        "camera_file": "scripts/bishop/profile.json",
+        "camera_file": "history/bishop-mission-001/profile.json",
         "camera_sha256": "e54e6fe34fa3b08a5f5dc76f57ebedfdb3f6b6816c6c5dbf775a658f09648392",
         "text_hash_normalization": "CRLF to LF",
         "assumed_elevation_degrees": 54,
@@ -295,7 +295,8 @@
         ],
         "base_search_max_z": 1.1480016708374023,
         "base_vertex_count": 76800,
-        "height_to_base": 2.284817860712305
+        "height_to_base": 2.284817860712305,
+        "sizing_baseline": "Accepted side-gallery sizing pinned to the first boxwood checkpoint; later button/foot refinements do not rescale the owner-chosen gallery."
       },
       "height_check": {
         "height_ratio_to_king": 0.8015197424901712,
