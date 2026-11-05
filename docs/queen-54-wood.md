@@ -1,6 +1,4 @@
-# Previous queen reconstruction at 54 degrees
-
-This describes the previous revision, archived under `history/queen-before-scratch`. For the current fresh queen see [the new reconstruction notes](queen-side-rebuild.md).
+# Queen reconstruction at 54 degrees
 
 The current queen is a revised version of the earlier 54-degree study. The
 saved orthographic reference camera is **54 degrees above the board**, an
@@ -30,6 +28,8 @@ its shading will not be pixel-identical to Cycles. The texture's generator,
 reference, and full prompt are recorded in `assets/queen/walnut-albedo-generation.json`.
 The photo itself is not projected onto the geometry.
 
+The review opens on the original Lichess image and includes a Side comparison tab. The side guide is an imagined view; the model render is uniformly registered to its foot width and floor, with extra room above to prevent clipping. Its neutral and wood images are rendered from the same side camera.
+
 The previous canonical model and all 39 inputs of the earlier projection
 study are archived in `history/queen-before-54-finish`. The existing projection
 pages still show those historical alternatives, not the new current queen.
@@ -47,6 +47,8 @@ blender -b --python scripts/queen/inspect_viewer_camera.py
 python scripts/queen/build_viewer.py
 python scripts/queen/overlay_qa.py --reference-mask max-channel
 python scripts/queen/compare_finished_queen.py
+blender -b --python scripts/queen/render_wood_profile.py
+python scripts/queen/build_side_comparison.py
 node scripts/queen/check_viewer_camera.cjs
 node scripts/queen/check_review_reference.cjs
 python scripts/queen/check_projection_variants.py

@@ -4,7 +4,7 @@ The generated guide is kept unchanged. A single uniform scale and translation
 align the model's base width and floor; no image warping or anisotropic scaling.
 """
 from pathlib import Path
-import json
+import hashlib,json
 import numpy as np
 from PIL import Image
 root=Path(__file__).resolve().parents[2];out=root/'assets/queen'
@@ -25,8 +25,13 @@ for name in ['queen-finished-profile.png','queen-wood-profile.png']:
  img=Image.open(out/name).convert('RGBA')
  registered=img.transform((1254,canvas_height),Image.Transform.AFFINE,(1/scale,0,-offset_x/scale,0,1/scale,-offset_y/scale),Image.Resampling.BICUBIC)
  registered.save(out/('side-aligned-neutral.png' if name.startswith('queen-finished') else 'side-aligned-wood.png'))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 record={'method':'Single uniform scale and translation: align measured foot width, horizontal center and floor. Side guide itself unchanged.',
  'side_guide_is_interpretation':True,'guide':source,
+ 'source_blend_sha256':sha(root/'models/queen/queen-rebuilt.blend'),
+ 'guide_sha256':sha(root/source['file']),
+ 'neutral_profile_sha256':sha(out/'queen-finished-profile.png'),
+ 'wood_profile_sha256':sha(out/'queen-wood-profile.png'),
  'model_base':{'width_px':width,'center_px':center,'floor_y_px':floor,'measured_row':row},
  'scale':scale,'offset_x':offset_x,'offset_y':offset_y,'guide_top_padding_px':padding_top,
  'canvas':[1254,canvas_height]}
