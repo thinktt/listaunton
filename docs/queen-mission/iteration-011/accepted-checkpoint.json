@@ -1,0 +1,20 @@
+{
+  "model_sha256": "1eb382aa47117ded52c6bb32a576fb16c24980d8f68e2f923cf9d0bcc03f19ab",
+  "scores": {
+    "silhouette": 97.9611843983474,
+    "form": 81,
+    "color": 80,
+    "grain": 77,
+    "lighting": 65
+  },
+  "working_mean": 80.19223687966948,
+  "holistic_range": [
+    75,
+    80
+  ],
+  "original_iou_percent": 97.91093182518729,
+  "geometry_uvs_topology_unchanged": true,
+  "beauty_samples": 64,
+  "trial_samples": 128,
+  "next": "Check sampling and medium-scale wood grain, preserving the accepted geometry and local bowl reflections."
+}

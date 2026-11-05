@@ -1,0 +1,145 @@
+[
+  {
+    "variant": "100-focused-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 61
+    },
+    "mean": 79.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "101-soft-focused-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 62
+    },
+    "mean": 79.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "102-tight-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 60
+    },
+    "mean": 79.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "103-subtle-tight-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 62
+    },
+    "mean": 79.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "104-dim-tight-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 61
+    },
+    "mean": 79.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "105-low-tight-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 60
+    },
+    "mean": 79.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "106-balanced-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 63
+    },
+    "mean": 79.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "107-brighter-balanced-bowl",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 63
+    },
+    "mean": 79.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "108-shaped-bowl-arcs",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "mean": 79.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "109-soft-bowl-arcs",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 63
+    },
+    "mean": 79.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject or superseded"
+  },
+  {
+    "variant": "110-fitted-bowl-arcs",
+    "scores": {
+      "silhouette": 97.95773813371254,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 65
+    },
+    "mean": 80.1915476267425,
+    "original_iou": 0.9791121665666009,
+    "decision": "accept pending delivery checks"
+  }
+]

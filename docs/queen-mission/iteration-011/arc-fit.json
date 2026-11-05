@@ -1,0 +1,53 @@
+{
+  "source_sha256": "1f29cfbc5c64bf45a7461c95704a9a4815cfc957f16ff63aaa3526e59b28ee62",
+  "sample_count": 512,
+  "crop": [
+    390,
+    125,
+    550,
+    190
+  ],
+  "gain_factors": {
+    "Bowl focused left-0": 1.6304934818234547,
+    "Bowl focused left-1": 1.2070787133660803,
+    "Bowl focused left-2": 2.03960714762555,
+    "Bowl focused left-3": 4.344269107735375,
+    "Bowl focused rear-0": 1.2429934382447174,
+    "Bowl focused rear-1": 2.1587166237396826,
+    "Bowl focused rear-2": 3.173229509284687,
+    "Bowl focused rear-3": 5.553335133796578
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.014290021686259957,
+      "after_mse": 0.012455802809014099
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.012455802809014099,
+      "after_mse": 0.012232885794146154
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.012232885794146154,
+      "after_mse": 0.012217622304793787
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.012217622304793787,
+      "after_mse": 0.012216778081505175
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.012216778081505175,
+      "after_mse": 0.012216726004408703
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.012216726004408703,
+      "after_mse": 0.012216721026496785
+    }
+  ],
+  "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+}

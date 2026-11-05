@@ -238,3 +238,13 @@ target and checks the unchanged body vertices. Gallery defaults are untouched.
 Reproduce with seat_finial_trial.py -- --variant 098-seated-finial-reproduced
 --height .90 --radius .96 from the archived eighth checkpoint. Regenerated
 receivers preserve the edited control exactly. See iteration-010 evidence.
+
+
+The eleventh checkpoint preserves tenth geometry and material and replaces
+three broad bowl reflectors with eight small, linked spot emitters shaped
+along the two reference glints. Their powers are fitted from full-wood native
+cropped responses through AgX, then judged in a real full-resolution render.
+See iteration-011 for reproduction commands and actual-render caveats.
+The public fixed and side renders use 64 samples; diagnostic fit responses
+use 512 samples and the trial beauty uses 128. Sampling differences are
+reported separately from geometric or texture improvements.

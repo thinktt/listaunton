@@ -980,3 +980,28 @@ Next: distinguish bowl curvature from the broad pale rear-bowl reflection,
 then test one focused correction. Coarse wood pattern remains unresolved.
 The mission remains active and incomplete. The earlier monitoring/resume
 instructions in historical log entries are superseded by the current mission.
+
+
+## Eleventh iteration: shaped bowl reflections
+
+The three broad bowl reflectors caused most of the misplaced pale band.
+Two-light trials 100-107 improved placement but were too broad, too bright,
+too weak or too isolated. Shaped eight-emitter trials 108-109 improved the
+arcs but were dim. Trial 110 fits only their power through full-wood response
+measurements and AgX; its actual full render provides the accepted comparison.
+The bowl-region error falls 21.2%, with modest improvement to highlight shape.
+
+All five trial scores, diagnostic images, measured responses, fitted powers
+and validation are in iteration-011. Accepted scores: outline 97.9612 measured,
+form 81, color 80, grain 77, lighting 65; working mean 80.1922%, holistic 75-80%.
+Original IoU 97.9109%. The tenth geometry, camera, atlas and material are retained;
+control vertices, UVs and topology match byte-for-byte. Side silhouettes match.
+Fixed/side renders and viewer are synchronized, with all relevant checks passed.
+No native browser GPU inspection is claimed. Model SHA-256:
+1eb382aa47117ded52c6bb32a576fb16c24980d8f68e2f923cf9d0bcc03f19ab.
+
+The front bowl crescent, stray upper-right reflection, collar/socket highlights,
+base highlight and coarse pigment pattern remain wrong. Next inspect whether
+sampling/denoising hides fine reflected grain, then address the medium-scale
+pigment pattern. Do not repeat the failed broad or unshaped light trials.
+The mission remains active and incomplete.
