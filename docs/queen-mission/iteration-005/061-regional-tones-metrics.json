@@ -1,0 +1,29 @@
+{
+  "highres_iou": 0.979611843983474,
+  "original_iou": 0.9791093182518729,
+  "previous_highres_iou": 0.979611843983474,
+  "previous_original_iou": 0.9791093182518729,
+  "regional_iou": {
+    "crown": {
+      "previous": 0.9807164884993722,
+      "trial": 0.9807164884993722
+    },
+    "body-collars": {
+      "previous": 0.9771096794718842,
+      "trial": 0.9771096794718842
+    },
+    "stem-socket": {
+      "previous": 0.9850964418353899,
+      "trial": 0.9850964418353899
+    },
+    "base-foot": {
+      "previous": 0.9734842120867717,
+      "trial": 0.9734842120867717
+    }
+  },
+  "trial_blend_sha256": "42bccf0de3c119f7797888790c1bdb5d62469e771e66cbd0dd32c85c0aa1383c",
+  "trial_render_sha256": "a4b5581f4dc698cbf4910fef10ed1e3b65b1c58303cc8916f5ca79862993663f",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "previous_image": "assets/queen/queen-brown.png",
+  "previous_image_sha256": "a6c904a628d091d91c2b65924b2e23feeb8e78fc18d1e1ef6af3135e7937f3c3"
+}

@@ -155,3 +155,25 @@ projection experiments use a fresh explicitly linear color image, save EXR
 before packing, and keep confidence in a separate grayscale image. Validate
 the saved pixel values, not only an in-memory render. The current v3 atlas is
 a conventional sRGB PNG and has a separately verified rebuild path.
+
+The fifth checkpoint uses `assets/queen/queen-pigment-albedo-v4.png` to correct
+regional pigment color. The bowl is less orange, the base and collars are
+darker, and the socket, stem and foot have small channel adjustments. It
+preserves geometry, camera, UVs, relief and lighting. All eight sampled
+non-highlight RGB medians are within one byte level per channel of the
+reference; this limited statistic does not measure the whole tonal pattern
+or establish a perfect color match. The working five-category score is 78.79%.
+
+The fourth model and renders are preserved in `history/queen-mission-004`.
+Rebuild the fifth material from tracked inputs with:
+
+```sh
+blender -b --python scripts/queen/rebuild_material_checkpoint.py -- docs/queen-mission/iteration-005/reproduction.json
+```
+
+This creates `build/queen-mission/069-fifth-reproduced`. To reconstruct the
+color grading itself, use `grade_pigment.py` with the iteration's
+`063-reproduction-config.json`, then `bake_pigment_atlas.py` with `--reuse-uv`.
+The fifth iteration's relief and sharper-varnish experiments were rejected.
+Emission passes in its evidence directory isolate color and projection
+coverage for diagnosis; the delivered images are ordinary 3D BSDF renders.

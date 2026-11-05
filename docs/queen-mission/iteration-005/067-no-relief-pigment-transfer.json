@@ -1,0 +1,90 @@
+{
+  "bowl": {
+    "Reference luminance": {
+      "correlation_to_reference": 1.0,
+      "std": 0.21055995337402203,
+      "correlation_to_expected": 0.9223170105043375
+    },
+    "Old pigment": {
+      "correlation_to_reference": 0.3540378997102085,
+      "std": 0.12667679286609643,
+      "correlation_to_expected": 0.36904301212949475
+    },
+    "Expected projection": {
+      "correlation_to_reference": 0.9223170105043375,
+      "std": 0.25012967658704643,
+      "correlation_to_expected": 0.9999999999999998
+    },
+    "Actual baked pigment": {
+      "correlation_to_reference": 0.8758139369527205,
+      "std": 0.16163164768757407,
+      "correlation_to_expected": 0.9250589543392244
+    }
+  },
+  "body": {
+    "Reference luminance": {
+      "correlation_to_reference": 0.9999999999999999,
+      "std": 0.1859837302623097,
+      "correlation_to_expected": 0.9827636083297304
+    },
+    "Old pigment": {
+      "correlation_to_reference": 0.4560245427233466,
+      "std": 0.09981694105635994,
+      "correlation_to_expected": 0.4516350349728537
+    },
+    "Expected projection": {
+      "correlation_to_reference": 0.9827636083297303,
+      "std": 0.21638353265445825,
+      "correlation_to_expected": 1.0
+    },
+    "Actual baked pigment": {
+      "correlation_to_reference": 0.9122021459952643,
+      "std": 0.1298398832799267,
+      "correlation_to_expected": 0.9157130408636551
+    }
+  },
+  "stem": {
+    "Reference luminance": {
+      "correlation_to_reference": 0.9999999999999999,
+      "std": 0.19584347788613038,
+      "correlation_to_expected": 0.9881775344848166
+    },
+    "Old pigment": {
+      "correlation_to_reference": 0.5642536632308821,
+      "std": 0.1355338288980402,
+      "correlation_to_expected": 0.5368876159938489
+    },
+    "Expected projection": {
+      "correlation_to_reference": 0.9881775344848166,
+      "std": 0.24204782986838133,
+      "correlation_to_expected": 1.0
+    },
+    "Actual baked pigment": {
+      "correlation_to_reference": 0.9468239578409766,
+      "std": 0.17050052854089684,
+      "correlation_to_expected": 0.9437182648478821
+    }
+  },
+  "base": {
+    "Reference luminance": {
+      "correlation_to_reference": 1.0,
+      "std": 0.3099794544583051,
+      "correlation_to_expected": 0.8502055551716752
+    },
+    "Old pigment": {
+      "correlation_to_reference": 0.28398160430564967,
+      "std": 0.1317644009645182,
+      "correlation_to_expected": 0.31206365842387646
+    },
+    "Expected projection": {
+      "correlation_to_reference": 0.8502055551716752,
+      "std": 0.26852393562512256,
+      "correlation_to_expected": 0.9999999999999998
+    },
+    "Actual baked pigment": {
+      "correlation_to_reference": 0.8229328294140597,
+      "std": 0.17987308985738787,
+      "correlation_to_expected": 0.9418658752007572
+    }
+  }
+}

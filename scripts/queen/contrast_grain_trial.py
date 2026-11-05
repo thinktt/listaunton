@@ -10,7 +10,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(Path(__file__).parent))
 from image_math import blur
-p=argparse.ArgumentParser();p.add_argument('--radius',type=int,default=9);p.add_argument('--exponent',type=float,default=1.6);p.add_argument('--grain-variant',default='049-contrast-grain');p.add_argument('--relief-variant',default='050-restrained-relief');p.add_argument('--relief-distance',type=float,default=.004);p.add_argument('--relief-blend',type=float,default=.8);p.add_argument('--no-relief',action='store_true')
+p=argparse.ArgumentParser();p.add_argument('--radius',type=int,default=9);p.add_argument('--exponent',type=float,default=1.6);p.add_argument('--pigment-radius',type=int,default=7);p.add_argument('--rig-config');p.add_argument('--grain-variant',default='049-contrast-grain');p.add_argument('--relief-variant',default='050-restrained-relief');p.add_argument('--relief-distance',type=float,default=.004);p.add_argument('--relief-blend',type=float,default=.8);p.add_argument('--no-relief',action='store_true')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 source=ROOT/'build/queen-mission/048-medium-grain/queen.blend'
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
@@ -19,7 +19,7 @@ n=o.data.materials[0].node_tree.nodes;l=o.data.materials[0].node_tree.links;b=n.
 response=ROOT/'build/queen-mission/pigment-fit-039'
 old=np.load(response/'pigment.npy');ref=np.load(response/'reference-linear.npy');srgb=np.load(response/'reference-srgb.npy')
 mask=(old[:,:,3]>.995).astype(np.float32)
-broad=blur(old[:,:,:3]*mask[:,:,None],r=7,passes=3)/np.maximum(blur(mask,r=7,passes=3)[:,:,None],1e-6)
+broad=blur(old[:,:,:3]*mask[:,:,None],r=args.pigment_radius,passes=3)/np.maximum(blur(mask,r=args.pigment_radius,passes=3)[:,:,None],1e-6)
 lum=np.maximum(ref@np.array([.2126,.7152,.0722],dtype=np.float32),0)
 log=np.log(lum+.003);rm=(ref.max(2)>.001).astype(np.float32)
 local=blur(log*rm,r=args.radius,passes=3)/np.maximum(blur(rm,r=args.radius,passes=3),1e-6)
@@ -46,7 +46,12 @@ coverage_image.colorspace_settings.name='Non-Color';coverage_image.pixels.foreac
 coverage_tex=n.new('ShaderNodeTexImage');coverage_tex.image=coverage_image;coverage_tex.extension='EXTEND';l.new(tex.inputs['Vector'].links[0].from_socket,coverage_tex.inputs['Vector'])
 for link in list(tex.outputs['Alpha'].links):l.new(coverage_tex.outputs['Color'],link.to_socket)
 cfg=json.loads(s['mission_material_config'])
-cfg['grain_contrast_trial']={'source':source.relative_to(ROOT).as_posix(),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'pigment_blur_radius':7,'reference_blur_radius':args.radius,'detail_log_bounds':[-.55,.55],'detail_exponent':args.exponent,'bright_neutral_suppression_min_srgb':[.28,.68],'reference_sha256':hashlib.sha256((ROOT/'assets/queen/reference.png').read_bytes()).hexdigest(),'caveat':'Reference grain is inferred with bounded local shading contamination. Hidden surfaces retain continuous prior wood; source images are unchanged.'}
+cfg['grain_contrast_trial']={'source':source.relative_to(ROOT).as_posix(),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'pigment_blur_radius':args.pigment_radius,'reference_blur_radius':args.radius,'detail_log_bounds':[-.55,.55],'detail_exponent':args.exponent,'bright_neutral_suppression_min_srgb':[.28,.68],'reference_sha256':hashlib.sha256((ROOT/'assets/queen/reference.png').read_bytes()).hexdigest(),'opaque_color_with_separate_confidence':True,'caveat':'Reference grain is inferred with bounded local shading contamination. Hidden surfaces retain prior continuous wood; source images are unchanged.'}
+if args.rig_config:
+ from configure_rig import configure
+ rig=json.loads((ROOT/args.rig_config).read_text());rig=rig.get('material_config',rig);configure(s,rig)
+ for field in ['lights','world','cycles_ray_visibility']:cfg[field]=rig[field]
+ cfg['grain_contrast_trial']['rig_config']=args.rig_config
 s.render.use_persistent_data=True;s.cycles.samples=64;s.cycles.use_denoising=True
 prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='OPTIX';prefs.get_devices()
 for d in prefs.devices:d.use=d.type=='OPTIX'

@@ -653,3 +653,100 @@ and the residual coarse relief separately; geometry and thin reflected
 crescents remain a later priority. Mission remains active and incomplete.
 
 Post-integration checks pass: eight pages and 55 local links, all twelve original PNG hashes, candidate provenance/alignment, current model/viewer hash, and all 39 protected projection-study inputs. Git whitespace checks pass with existing file modes preserved. The fourth checkpoint is ready for its local commit; no push or hosting deployment is performed.
+
+## Fifth iteration in progress: regional tone and residual relief
+
+The fourth checkpoint was committed as `3b0ecd5`; the checkout is clean and
+the local review is synchronized. Starting model hash is
+`aae6d369ed42909b451be77ed0aa9e4f6731c20b338645755353290c7907e216`.
+The next color-only test applies modest regional pigment multipliers: the
+bowl is too orange, collars/base are slightly too bright, and socket tone is
+off. Fixed-region non-highlight medians guide the direction; visual comparisons
+remain decisive because the statistic does not fully separate reflection from
+pigment. Geometry, UVs, relief and lights remain fixed for this trial.
+
+061 improves most regional color medians but makes the bowl too red/muted and
+the base slightly too cool. Scores: 97.961 / 80 / 79 / 77 / 59, working mean
+78.59. Retain as a direction, not a delivery candidate. 063 reduces its blue
+correction in the bowl and base and is awaiting examination. Separately, 062
+derives fine relief from the v3 color atlas. It sharpens the glare without
+reproducing the reference's irregular polished texture; scores 97.961 / 80 /
+75 / 77 / 58, mean 77.59. Reject. This also clarifies that some coarse invented
+lines remain in the broad color field, not only in its old relief. The next
+isolated trial smooths that field more strongly before adding reference grain.
+
+Fifth-iteration allowance at 2026-11-05 11:10:45 UTC: 17% used / 83% remaining,
+reset 2026-11-11 13:19:47 UTC. Luna's five-minute monitor remains active.
+
+063 removes 061's excess blue correction. All eight sampled non-highlight RGB
+medians are now within one byte level per channel of the reference. The full
+image also looks closer, though broad tonal variation and highlights still
+differ. Scores: 97.961 / 80 / 80 / 77 / 59, mean 78.79. Retain for subsequent
+publication checks. 064 smooths the old pigment field more strongly (radius
+25 instead of 7), keeping the same fine grain and accepted rig. It produces
+little convincing visible improvement; scores remain 97.961 / 80 / 75 / 77 /
+59, mean 77.79. Do not promote it alone. A combined color/relief test (065)
+checks whether each old component was masking the other's change.
+
+A separate planned trial (066) starts from 063 and narrows the varnish response
+without moving lights. The concrete target is the overly stretched finial
+glints and weak thin edge reflections. It must be judged against the whole
+image, especially the already improved base reflection, before acceptance.
+
+065 combines the stronger pigment smoothing with the new atlas-derived relief.
+The coarse pattern remains, and reflections become less like the source's
+broken polish. Scores: 97.961 / 80 / 75 / 77 / 58, mean 77.59; reject.
+066 narrows varnish lobes but does not resolve the stretched finial glint and
+makes the socket reflection harsher. Scores: 97.961 / 80 / 80 / 77 / 58,
+mean 78.59; reject in favor of 063. A diagnostic trial now removes all relief
+and separately renders the pigment and its projection-coverage attribute.
+Those emission diagnostics are not beauty renders or deliverable substitutes.
+
+Allowance at 2026-11-05 11:26:38 UTC: 17% used / 83% remaining, reset
+2026-11-11 13:19:48 UTC. Luna's five-minute guard continues.
+
+067 disconnects both normal inputs. It confirms that the broad coarse pattern
+is in pigment, while eliminating the irregular reflected polish makes the
+result worse: 97.961 / 80 / 80 / 74 / 54, mean 77.19. Reject. Separate emission
+diagnostics confirm broad visible projection coverage; fixed-coordinate
+high-pass correlations of the actual pigment to the reference range from
+0.82 to 0.95 in four sampled regions. The intended texture transfer works,
+but loses fine detail and preserves too much broad prior grain. Correlation
+alone does not justify increasing the visual score.
+
+The fifth delivery candidate is therefore 063's color adjustment with the
+previous accepted relief and lights. Its v4 bake reuses the existing UVs;
+all surface experiments remain evidence rather than public alternatives.
+
+068's v4 bake preserves 063 with mean foreground RGB error 0.1391/255 and
+identical alpha. Rebuilding from the tracked fourth model and v4 PNG gives
+mean error 0.00003262/255, maximum one level, and identical alpha. The saved
+delivery model is
+`16904dba7abc57e60ec8e6d73c30f46f9e0890ec46272753c648e7e88f64247e`.
+Scores stay **97.961 / 80 / 80 / 77 / 59**, mean **78.79%**, holistic 75–80%.
+
+Control geometry, topology and atlas UVs match the fourth checkpoint exactly.
+The model remains closed/manifold with eight tips, positive volume, fixed
+54-degree orthographic camera and height/base ratio 2.167048. Both reference
+IoUs remain unchanged. Four actual views were rendered; wood and clay side
+views were inspected. The side material retains prior grain stretching and
+socket gloss, with no new shape change.
+
+The viewer exports 715,776 triangles and 368,584 vertices including UV seams.
+Its binary round trip, normals and source hash pass. Camera agreement is
+within 0.0000382 pixels across 30 points and five viewport shapes. Source,
+tab, persistent-orbit, parts sandbox/CSP and side-state interaction checks
+pass in the simulated DOM/WebGL harness. Native browser GPU inspection is
+still unavailable and is not claimed.
+
+Boundary usage at 2026-11-05 11:39:57 UTC was 18% used / 82% remaining,
+reset 2026-11-11 13:19:47 UTC. Luna continues monitoring. The next targeted
+experiment will isolate broad finial reflection lights: the elongated glint
+survived removal of relief, so the light rig needs examination before another
+texture adjustment. The mission remains active and incomplete.
+
+Post-integration site checks pass for all eight pages and 55 local links,
+twelve original PNG hashes, candidate provenance/alignment, current model
+and viewer hash, parts sandbox/CSP, and all 39 protected projection inputs.
+Whitespace checks pass. The fifth checkpoint is ready for its local commit;
+no push or hosting deployment is performed.

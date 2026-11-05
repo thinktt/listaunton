@@ -1,0 +1,33 @@
+{
+  "accepted_trial": "068-fifth-atlas",
+  "source_trial_sha256": "95f585f2318ec2edb929c703b3959b6bfaa6fe8480e72938bcdd4da9612ab5d7",
+  "delivered_model_sha256": "16904dba7abc57e60ec8e6d73c30f46f9e0890ec46272753c648e7e88f64247e",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "texture": "assets/queen/queen-pigment-albedo-v4.png",
+  "texture_sha256": "30cc9e2a5bdf59d3b62e8e72808c3b5f4ad888cbe2016623e5354218192f9999",
+  "original_iou": 0.9791093182518729,
+  "highres_iou": 0.979611843983474,
+  "scores": {
+    "silhouette": 97.9611843983474,
+    "interior_form": 80,
+    "wood_color": 80,
+    "grain": 77,
+    "lighting": 59
+  },
+  "working_mean": 78.79223687966949,
+  "holistic_range": [
+    75,
+    80
+  ],
+  "delivered_samples": 64,
+  "native_browser_gpu_check_available": false,
+  "failed_models_in_public_controls": false,
+  "geometry_and_control_uvs_unchanged": true,
+  "weekly_usage": {
+    "checked_utc": "2026-11-05 11:39:57 UTC",
+    "used_percent": 18,
+    "remaining_percent": 82,
+    "reset_utc": "2026-11-11 13:19:47 UTC"
+  },
+  "mission_complete": false
+}

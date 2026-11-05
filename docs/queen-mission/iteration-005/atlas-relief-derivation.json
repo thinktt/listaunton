@@ -1,0 +1,14 @@
+{
+  "source": "assets/queen/queen-pigment-albedo-v3.png",
+  "source_sha256": "171e1364d0a6e18ae482ba25bc90acddacdee37a12926a537b4f339d5b0e11f4",
+  "height_sha256": "22556e644e67fc583bbfa557e7547f5e2a65705a861ee822187468e09393d830",
+  "method": "Bounded log-luminance high pass of linear pigment, not rendered shading",
+  "blur_radius": 5,
+  "blur_passes": 3,
+  "gain": 0.2,
+  "height_range": [
+    0.35,
+    0.65
+  ],
+  "caveat": "Pigment-derived relief is an artistic inference. Grain color does not uniquely determine height."
+}
