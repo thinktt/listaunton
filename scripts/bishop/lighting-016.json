@@ -1,0 +1,10 @@
+{
+  "variant": "016-directed-diffuse",
+  "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+  "world": 0.025,
+  "samples": 40,
+  "lights": [
+    {"name": "Broad diffuse key", "energy": 550, "size": 0.9},
+    {"name": "Diffuse fill", "energy": 15}
+  ]
+}

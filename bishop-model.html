@@ -49,7 +49,7 @@ html[data-embedded=true] header,html[data-embedded=true] .mode-tabs{display:none
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Boxwood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Bishop model comparison">
-<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176@" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7@" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="data:image/png;base64,@LISTAUNTON_ASSET:b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585@" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:2eb6e2ebc949205c91c0c98d2695481d63d739a32894b689cf3600a93f857e42@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176@" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7@" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="data:image/png;base64,@LISTAUNTON_ASSET:b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585@" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:2a2118115c2e1bc5f73cc937e2e24aa61ec5f06009591b65e396fe726ec86c36@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D bishop. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -59,9 +59,9 @@ html[data-embedded=true] header,html[data-embedded=true] .mode-tabs{display:none
 </main>
 <script id="original-alignment" type="application/json">{"scale":0.9643283023386892,"x":0.8883129091349228,"y":0.8572380172981201}</script>
 <script id="black-alignment" type="application/json">{"scale":0.938272506082725,"x":2.0255474452554743,"y":0.9128142741281389}</script>
-<script id="mesh-metadata" type="application/json">{"vertexCount":403968,"indexCount":403968,"triangleCount":134656,"vertexStrideBytes":32,"vertexByteLength":12926976,"indexByteOffset":12926976,"totalByteLength":14542848,"bounds":{"min":[-1.0061454772949219,-1.0061454772949219,0.0],"max":[1.0061454772949219,1.0061454772949219,4.592006683349609],"size":[2.0122909545898438,2.0122909545898438,4.592006683349609],"center":[0.0,0.0,2.2960033416748047]},"sourceSha256":"cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-1.061633586883545,0.0,-0.5877852439880371,0.80901700258255,-13.461213111877441,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2157922238111496,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.1078961193561554,"shiftY":0.0,"elevationDegrees":54},"material":{"texture":"assets/bishop/bishop-boxwood-albedo.png","textureSha256":"97ec22474d221839f9bb5885c695fe009fb217352c131d6fa0e52c4eca0e54c3","uvLayer":"Wood atlas","lighting":"Approximate browser studio lighting; fixed overlay uses the actual saved Cycles render."}}</script>
-<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:e1e3c0d164d7c47d67e704e45d5bb76c580d0395254b2ceb26a0b250a0c93ee1@</script>
-<script id="wood-data" type="text/plain">data:image/png;base64,@LISTAUNTON_ASSET:97ec22474d221839f9bb5885c695fe009fb217352c131d6fa0e52c4eca0e54c3@</script>
+<script id="mesh-metadata" type="application/json">{"vertexCount":403968,"indexCount":403968,"triangleCount":134656,"vertexStrideBytes":32,"vertexByteLength":12926976,"indexByteOffset":12926976,"totalByteLength":14542848,"bounds":{"min":[-1.0061454772949219,-1.0061454772949219,0.0],"max":[1.0061454772949219,1.0061454772949219,4.592006683349609],"size":[2.0122909545898438,2.0122909545898438,4.592006683349609],"center":[0.0,0.0,2.2960033416748047]},"sourceSha256":"adba4ba0d09952c262c847d8bec79d33eb20df6a128c28b44f3be4556c9aaeb3","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-1.061633586883545,0.0,-0.5877852439880371,0.80901700258255,-13.461213111877441,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2157922238111496,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.1078961193561554,"shiftY":0.0,"elevationDegrees":54},"material":{"texture":"assets/bishop/bishop-boxwood-albedo.png","textureSha256":"3c483a644e0eb4f7b3a2a34aac5875581aa3cbc30af345d9ef9dd9b8b1b21109","uvLayer":"Wood atlas","lighting":"Approximate browser studio lighting; fixed overlay uses the actual saved Cycles render.","diffuseLightScale":3.0,"cutPigment":[0.15333333333333332,0.07583333333333334,0.023],"displayView":"Standard","displayLook":"None"}}</script>
+<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:619f4f8c7b2c17b3c325976ce4627a3fa3391bf0b594ff41363ab1c14d6d9ed0@</script>
+<script id="wood-data" type="text/plain">data:image/png;base64,@LISTAUNTON_ASSET:3c483a644e0eb4f7b3a2a34aac5875581aa3cbc30af345d9ef9dd9b8b1b21109@</script>
 <script>
 'use strict';
 (() => {
@@ -141,6 +141,9 @@ in vec3 vPosition;
 in vec2 vUv;
 uniform sampler2D uWood;
 uniform bool uUseWood;
+uniform vec3 uCutPigment;
+uniform float uDiffuseLightScale;
+uniform bool uStandardView;
 uniform vec3 uColor;
 uniform float uGloss;
 uniform bool uOrthographic;
@@ -153,13 +156,13 @@ vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength,vec3 pigment){
 }
 void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
- vec3 wood=vUv.x<0.0?vec3(.42,.20,.055):pow(texture(uWood,vUv).rgb,vec3(2.2));
- vec3 pigment=uUseWood?wood:uColor;
+ vec3 wood=vUv.x<0.0?uCutPigment:pow(texture(uWood,vUv).rgb,vec3(2.2));
+ vec3 pigment=uUseWood?wood*uDiffuseLightScale:uColor;
  vec3 c=pigment*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.15,pigment);
  c+=light(n,v,normalize(vec3(-0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.35,pigment);
  c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.55,pigment);
- c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
+ c=uStandardView&&uUseWood?clamp(c,0.0,1.0):clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
 let program,vao,uniforms,meshBytes,woodTexture,lost=false,pending=false;
@@ -235,7 +238,7 @@ function initialize(){
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
  gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,24);
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood','uCutPigment','uDiffuseLightScale','uStandardView'])uniforms[name]=gl.getUniformLocation(program,name);
  woodTexture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,woodTexture);
  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([186,125,63,255]));
  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
@@ -259,6 +262,7 @@ function draw(){
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
+ gl.uniform3fv(uniforms.uCutPigment,meta.material.cutPigment??[.42,.20,.055]);gl.uniform1f(uniforms.uDiffuseLightScale,meta.material.diffuseLightScale??1);gl.uniform1i(uniforms.uStandardView,meta.material.displayView==='Standard'?1:0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
 }

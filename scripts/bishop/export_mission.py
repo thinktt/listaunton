@@ -17,6 +17,11 @@ cam=s.camera;W=s.render.resolution_x;H=s.render.resolution_y;projection=cam.calc
 camera={'type':'ORTHO','worldToCamera':[float(v) for row in cam.matrix_world.inverted() for v in row],'projectionMatrix':[float(v) for row in projection for v in row],'width':W,'height':H,'orthoScale':cam.data.ortho_scale,'shiftX':cam.data.shift_x,'shiftY':cam.data.shift_y,'elevationDegrees':54}
 assert abs(math.degrees(math.asin((cam.matrix_world.to_3x3()@__import__('mathutils').Vector((0,0,1))).z))-54)<1e-4
 texture=ROOT/'assets/bishop/bishop-boxwood-albedo.png'
+balance=json.loads(s.get('bishop_diffuse_balance','{}'))
+light_scale=balance.get('diffuse_light_factor',1)
+cut_scale=balance.get('starting_pigment_factor',1)
 meta={'vertexCount':len(ar),'indexCount':len(ar),'triangleCount':len(ar)//3,'vertexStrideBytes':32,'vertexByteLength':ar.nbytes,'indexByteOffset':ar.nbytes,'totalByteLength':len(raw),'bounds':{'min':lo.tolist(),'max':hi.tolist(),'size':(hi-lo).tolist(),'center':((hi+lo)/2).tolist()},'parts':parts,'sourceSha256':hashlib.sha256(model.read_bytes()).hexdigest(),'referenceCamera':camera,'material':{'texture':'assets/bishop/bishop-boxwood-albedo.png','textureSha256':hashlib.sha256(texture.read_bytes()).hexdigest(),'uvLayer':'Wood atlas','lighting':'Approximate browser studio lighting; fixed overlay uses the actual saved Cycles render.'}}
+meta['material'].update({'diffuseLightScale':light_scale,'cutPigment':[.46*cut_scale,.2275*cut_scale,.069*cut_scale],
+    'displayView':s.view_settings.view_transform,'displayLook':s.view_settings.look})
 out=ROOT/a.out;out.mkdir(parents=True,exist_ok=True);(out/'mesh.bin').write_bytes(raw);(out/'mesh.json').write_text(json.dumps(meta,indent=2)+'\n');(out/'camera.json').write_text(json.dumps(camera,indent=2)+'\n')
 print('BISHOP_TEXTURED_MESH_EXPORTED',meta['triangleCount'],meta['sourceSha256'])

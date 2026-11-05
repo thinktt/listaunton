@@ -20,6 +20,7 @@ Preserved under `history/bishop-mission-000/`. See
 | Initial clay | 94.88 | 78 | 0 | 0 | 30 | 40.58 |
 | First boxwood checkpoint | 94.88 | 78 | 70 | 64 | 54 | 72.18 |
 | Wider button, flatter foot | 96.20 | 81 | 70 | 64 | 54 | 73.04 |
+| Measured boxwood color, warm reflections | 96.20 | 81 | 84 | 77 | 64 | 80.44 |
 
 Silhouette is selected-reference IoU; other scores are visual estimates.
 The separate original-white IoU is 96.58%. Initial holistic appearance was
@@ -82,3 +83,29 @@ first wood model as its sizing baseline. See
 for comparisons, all five scores, dimensions, validation and remaining defects.
 The next target is lighting contrast and the placement/shape of reflections;
 the mission remains incomplete.
+
+## Iteration 003 — measured boxwood color and warmer reflections
+
+The geometry and 54-degree camera remain fixed. Interpolated shading normals
+improve reflection placement; warm glossy lights replace the cool glints.
+Measured BSDF response fitting brings the collar shadows, stem, amber color
+and grain closer to selected white candidate 3. Standard sRGB avoids the
+unreliable inverse mapping of some saturated gold tones in the previous AgX
+setup. Diffuse energy and pigment are rebalanced to avoid capped red albedo.
+
+The final atlas is pigment only, packed, reopened and rendered with actual
+Principled BSDFs. A failed bake exposed an input-atlas overwrite through the
+cut material; isolated targets and input-pixel preservation checks now catch
+that failure. The failed version was never published to the local page.
+Checkpoint 002 is preserved in `history/bishop-mission-002`.
+
+The fixed-view working mean rises from 73.04 to 80.44; holistic appearance is
+approximately 75–85%. Geometry scores remain unchanged. See
+[`iteration-003/assessment.md`](bishop-mission/iteration-003/assessment.md)
+for all five scores, rejected trials, hashes, comparisons and validation.
+The bishop workspace and local preview show the same accepted model, mesh,
+render and atlas. Gallery sizes/order and other pieces are unchanged.
+
+The next priority is extending compatible pigment around the side/rear to
+reduce the visible projected-to-procedural boundary while preserving the
+fixed-view fit. Button/foot reflections and fine relief remain unfinished.

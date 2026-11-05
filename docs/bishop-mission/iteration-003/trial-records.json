@@ -1,0 +1,782 @@
+{
+  "016-directed-diffuse": {
+    "parameters.json": {
+      "config": {
+        "variant": "016-directed-diffuse",
+        "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+        "world": 0.025,
+        "samples": 40,
+        "lights": [
+          {
+            "name": "Broad diffuse key",
+            "energy": 550,
+            "size": 0.9
+          },
+          {
+            "name": "Diffuse fill",
+            "energy": 15
+          }
+        ]
+      },
+      "source_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+      "saved_model_sha256": "b840568ab4effbd41ca7b78bc49447b908a2c6f5d6d121afcf01cf300e0bb83b",
+      "render_sha256": "c6e73011f6834e090fd4af0ff4444d233fa849c54b6bf694163262dfffccdbd3",
+      "geometry_uvs_material_and_camera_unchanged": true,
+      "preserved_state": {
+        "camera": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.80901700258255,
+          -0.5877852439880371,
+          -7.053422927856445,
+          0.0,
+          0.5877852439880371,
+          0.80901700258255,
+          11.514362335205078,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.8230767250061035,
+          0.1078961193561554,
+          0.0
+        ],
+        "meshes_and_uvs": {
+          "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+          "Mitre saw cut - editable cutter": "4049d3ec3aa5937219fa24b9cfe2b2c336659e8485513945a272d2bb41542f2f",
+          "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+        },
+        "material_inputs_links_and_packed_images": {
+          "Bishop \u2014 inferred boxwood pigment and varnish.001": "e72dcd9d028f7119a6f5573990fd32f0e1d9f6a26721247cf263de9c8079d0eb",
+          "Bishop boxwood \u2014 interior cut.001": "47f925030f955e5633c28ab27828778c3459554233b1984e444c09f280e7d0f3"
+        }
+      }
+    }
+  },
+  "017-brighter-local-glints": {
+    "parameters.json": {
+      "config": {
+        "variant": "017-brighter-local-glints",
+        "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+        "world": 0.05,
+        "samples": 40,
+        "lights": [
+          {
+            "name": "Broad diffuse key",
+            "energy": 550,
+            "size": 2.0
+          },
+          {
+            "name": "Diffuse fill",
+            "energy": 45
+          },
+          {
+            "name": "button reflection",
+            "energy": 3600
+          },
+          {
+            "name": "Button second glint",
+            "energy": 1200
+          },
+          {
+            "name": "base reflection",
+            "energy": 950
+          },
+          {
+            "name": "collars reflection",
+            "energy": 140
+          },
+          {
+            "name": "socket reflection",
+            "energy": 360
+          }
+        ]
+      },
+      "source_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+      "saved_model_sha256": "39ac993353d089c92d324ebfac88e7f01beaa0615958d5a234e2b537ed754e93",
+      "render_sha256": "734aad009a4be4c30648b2c295a6a75b2c912ba5e3a4a5fd2e21e639337c10f1",
+      "geometry_uvs_material_and_camera_unchanged": true,
+      "preserved_state": {
+        "camera": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.80901700258255,
+          -0.5877852439880371,
+          -7.053422927856445,
+          0.0,
+          0.5877852439880371,
+          0.80901700258255,
+          11.514362335205078,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.8230767250061035,
+          0.1078961193561554,
+          0.0
+        ],
+        "meshes_and_uvs": {
+          "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+          "Mitre saw cut - editable cutter": "4049d3ec3aa5937219fa24b9cfe2b2c336659e8485513945a272d2bb41542f2f",
+          "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+        },
+        "material_inputs_links_and_packed_images": {
+          "Bishop \u2014 inferred boxwood pigment and varnish.001": "e72dcd9d028f7119a6f5573990fd32f0e1d9f6a26721247cf263de9c8079d0eb",
+          "Bishop boxwood \u2014 interior cut.001": "47f925030f955e5633c28ab27828778c3459554233b1984e444c09f280e7d0f3"
+        }
+      }
+    }
+  },
+  "018-smooth-normal-glints": {
+    "parameters.json": {
+      "config": {
+        "variant": "018-smooth-normal-glints",
+        "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+        "world": 0.05,
+        "samples": 40,
+        "lights": [
+          {
+            "name": "Broad diffuse key",
+            "energy": 550,
+            "size": 2.0
+          },
+          {
+            "name": "Diffuse fill",
+            "energy": 45
+          },
+          {
+            "name": "button reflection",
+            "energy": 3600,
+            "position": [
+              2.7702524662017822,
+              -0.15775763988494873,
+              11.037179946899414
+            ],
+            "target": [
+              0.09346815943717957,
+              -0.14386463165283203,
+              4.569210052490234
+            ]
+          },
+          {
+            "name": "Button second glint",
+            "energy": 1200,
+            "position": [
+              -1.557356357574463,
+              -3.123260259628296,
+              10.73029899597168
+            ],
+            "target": [
+              -0.04114717245101929,
+              -0.19206666946411133,
+              4.557032585144043
+            ]
+          },
+          {
+            "name": "base reflection",
+            "energy": 950,
+            "position": [
+              3.73593807220459,
+              -6.995824337005615,
+              1.1789131164550781
+            ],
+            "target": [
+              0.30885279178619385,
+              -0.9181370735168457,
+              0.6160659790039062
+            ]
+          },
+          {
+            "name": "collars reflection",
+            "energy": 140,
+            "position": [
+              3.552460193634033,
+              -6.309630870819092,
+              0.6013658046722412
+            ],
+            "target": [
+              0.20885279774665833,
+              -0.6127715110778809,
+              2.917848587036133
+            ]
+          },
+          {
+            "name": "socket reflection",
+            "energy": 360,
+            "position": [
+              5.57327938079834,
+              -4.51612663269043,
+              -0.6999073028564453
+            ],
+            "target": [
+              0.27039122581481934,
+              -0.4184236526489258,
+              1.3220272064208984
+            ]
+          },
+          {
+            "name": "head reflection",
+            "position": [
+              3.3809285163879395,
+              -6.415489196777344,
+              4.692895412445068
+            ],
+            "target": [
+              0.08192968368530273,
+              -0.25517797470092773,
+              4.284008026123047
+            ]
+          }
+        ]
+      },
+      "source_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+      "saved_model_sha256": "11163dc79a3bde66346121dd848ac3e7fea41de48d5c8065f946816c7673c19b",
+      "render_sha256": "b0812c35b325490c45e7365a6cfbaa71a3274d659ca35ae96ddb352267da630b",
+      "geometry_uvs_material_and_camera_unchanged": true,
+      "preserved_state": {
+        "camera": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.80901700258255,
+          -0.5877852439880371,
+          -7.053422927856445,
+          0.0,
+          0.5877852439880371,
+          0.80901700258255,
+          11.514362335205078,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.8230767250061035,
+          0.1078961193561554,
+          0.0
+        ],
+        "meshes_and_uvs": {
+          "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+          "Mitre saw cut - editable cutter": "4049d3ec3aa5937219fa24b9cfe2b2c336659e8485513945a272d2bb41542f2f",
+          "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+        },
+        "material_inputs_links_and_packed_images": {
+          "Bishop \u2014 inferred boxwood pigment and varnish.001": "e72dcd9d028f7119a6f5573990fd32f0e1d9f6a26721247cf263de9c8079d0eb",
+          "Bishop boxwood \u2014 interior cut.001": "47f925030f955e5633c28ab27828778c3459554233b1984e444c09f280e7d0f3"
+        }
+      }
+    }
+  },
+  "019-warm-glints": {
+    "parameters.json": {
+      "config": {
+        "variant": "019-warm-glints",
+        "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+        "world": 0.05,
+        "samples": 40,
+        "lights": [
+          {
+            "name": "Broad diffuse key",
+            "energy": 550,
+            "size": 2.0
+          },
+          {
+            "name": "Diffuse fill",
+            "energy": 45
+          },
+          {
+            "name": "button reflection",
+            "energy": 7200,
+            "position": [
+              2.7702524662017822,
+              -0.15775763988494873,
+              11.037179946899414
+            ],
+            "target": [
+              0.09346815943717957,
+              -0.14386463165283203,
+              4.569210052490234
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "Button second glint",
+            "energy": 2400,
+            "position": [
+              -1.557356357574463,
+              -3.123260259628296,
+              10.73029899597168
+            ],
+            "target": [
+              -0.04114717245101929,
+              -0.19206666946411133,
+              4.557032585144043
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "base reflection",
+            "energy": 1100,
+            "position": [
+              3.73593807220459,
+              -6.995824337005615,
+              1.1789131164550781
+            ],
+            "target": [
+              0.30885279178619385,
+              -0.9181370735168457,
+              0.6160659790039062
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "collars reflection",
+            "energy": 140,
+            "position": [
+              3.552460193634033,
+              -6.309630870819092,
+              0.6013658046722412
+            ],
+            "target": [
+              0.20885279774665833,
+              -0.6127715110778809,
+              2.917848587036133
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "socket reflection",
+            "energy": 360,
+            "position": [
+              5.57327938079834,
+              -4.51612663269043,
+              -0.6999073028564453
+            ],
+            "target": [
+              0.27039122581481934,
+              -0.4184236526489258,
+              1.3220272064208984
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "head reflection",
+            "position": [
+              3.3809285163879395,
+              -6.415489196777344,
+              4.692895412445068
+            ],
+            "target": [
+              0.08192968368530273,
+              -0.25517797470092773,
+              4.284008026123047
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          }
+        ]
+      },
+      "source_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+      "saved_model_sha256": "6d7c30b04403d7f1b5b0bb2af14231c22be502c77e417a972a32360fa4d615a5",
+      "render_sha256": "a2dffe2759778e7bb848104c326f5ffbb5c251bfe2e2b200684bf601ddb1b228",
+      "geometry_uvs_material_and_camera_unchanged": true,
+      "preserved_state": {
+        "camera": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.80901700258255,
+          -0.5877852439880371,
+          -7.053422927856445,
+          0.0,
+          0.5877852439880371,
+          0.80901700258255,
+          11.514362335205078,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.8230767250061035,
+          0.1078961193561554,
+          0.0
+        ],
+        "meshes_and_uvs": {
+          "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+          "Mitre saw cut - editable cutter": "4049d3ec3aa5937219fa24b9cfe2b2c336659e8485513945a272d2bb41542f2f",
+          "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+        },
+        "material_inputs_links_and_packed_images": {
+          "Bishop \u2014 inferred boxwood pigment and varnish.001": "e72dcd9d028f7119a6f5573990fd32f0e1d9f6a26721247cf263de9c8079d0eb",
+          "Bishop boxwood \u2014 interior cut.001": "47f925030f955e5633c28ab27828778c3459554233b1984e444c09f280e7d0f3"
+        }
+      }
+    }
+  },
+  "020-measured-pigment": {
+    "parameters.json": {
+      "source": "build/bishop-mission/019-warm-glints/bishop.blend",
+      "source_sha256": "6d7c30b04403d7f1b5b0bb2af14231c22be502c77e417a972a32360fa4d615a5",
+      "variant": "020-measured-pigment",
+      "response_directory": "build/bishop-mission/response-019",
+      "relative_pigment_bounds": [
+        0.25,
+        4
+      ],
+      "max_weight": 0.9,
+      "mean_effective_weight": 0.6147841811180115,
+      "effective_weight_above_half_pixels": 213515,
+      "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "targeted_metric": "Wood color and grain, with geometry, relief, BSDF and light rig fixed.",
+      "method": "Measured black/white BSDF response, including the verified AgX Look. Reflections, clipping, failed inverse pixels and boundaries excluded. Visible-surface confidence preserves the hidden atlas.",
+      "caveat": "Approximate inferred pigment under estimated lights. Interreflections make the response nonlinear and residual shading may remain.",
+      "saved_model_sha256": "7449da889676e35bad33cb9a07eaa7ea199bfcc73121d6571b26d96ccf2c4428"
+    }
+  },
+  "021-standard-response": {
+    "parameters.json": {
+      "config": {
+        "variant": "021-standard-response",
+        "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+        "world": 0.05,
+        "samples": 40,
+        "lights": [
+          {
+            "name": "Broad diffuse key",
+            "energy": 550,
+            "size": 2.0
+          },
+          {
+            "name": "Diffuse fill",
+            "energy": 45
+          },
+          {
+            "name": "button reflection",
+            "energy": 900,
+            "position": [
+              2.7702524662017822,
+              -0.15775763988494873,
+              11.037179946899414
+            ],
+            "target": [
+              0.09346815943717957,
+              -0.14386463165283203,
+              4.569210052490234
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "Button second glint",
+            "energy": 300,
+            "position": [
+              -1.557356357574463,
+              -3.123260259628296,
+              10.73029899597168
+            ],
+            "target": [
+              -0.04114717245101929,
+              -0.19206666946411133,
+              4.557032585144043
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "base reflection",
+            "energy": 220,
+            "position": [
+              3.73593807220459,
+              -6.995824337005615,
+              1.1789131164550781
+            ],
+            "target": [
+              0.30885279178619385,
+              -0.9181370735168457,
+              0.6160659790039062
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "collars reflection",
+            "energy": 70,
+            "position": [
+              3.552460193634033,
+              -6.309630870819092,
+              0.6013658046722412
+            ],
+            "target": [
+              0.20885279774665833,
+              -0.6127715110778809,
+              2.917848587036133
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "socket reflection",
+            "energy": 180,
+            "position": [
+              5.57327938079834,
+              -4.51612663269043,
+              -0.6999073028564453
+            ],
+            "target": [
+              0.27039122581481934,
+              -0.4184236526489258,
+              1.3220272064208984
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ]
+          },
+          {
+            "name": "head reflection",
+            "position": [
+              3.3809285163879395,
+              -6.415489196777344,
+              4.692895412445068
+            ],
+            "target": [
+              0.08192968368530273,
+              -0.25517797470092773,
+              4.284008026123047
+            ],
+            "color": [
+              1,
+              0.87,
+              0.25
+            ],
+            "energy": 120
+          }
+        ],
+        "view_transform": "Standard",
+        "look": "None",
+        "hypothesis": "Standard sRGB can represent the saturated gold reference without AgX gamut loss; reduce glossy lights for the new display response before a measured pigment fit."
+      },
+      "source_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+      "saved_model_sha256": "882f1bf4bd4920cbe310fba95c52b1d9e1f2c589d52d88751ef90895d755ce3c",
+      "render_sha256": "d7416bca1edd62e15fd5475d6277b9fce5d9d414c624a7490bc7d1021fd87b73",
+      "geometry_uvs_material_and_camera_unchanged": true,
+      "preserved_state": {
+        "camera": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.80901700258255,
+          -0.5877852439880371,
+          -7.053422927856445,
+          0.0,
+          0.5877852439880371,
+          0.80901700258255,
+          11.514362335205078,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.8230767250061035,
+          0.1078961193561554,
+          0.0
+        ],
+        "meshes_and_uvs": {
+          "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+          "Mitre saw cut - editable cutter": "4049d3ec3aa5937219fa24b9cfe2b2c336659e8485513945a272d2bb41542f2f",
+          "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+        },
+        "material_inputs_links_and_packed_images": {
+          "Bishop \u2014 inferred boxwood pigment and varnish.001": "e72dcd9d028f7119a6f5573990fd32f0e1d9f6a26721247cf263de9c8079d0eb",
+          "Bishop boxwood \u2014 interior cut.001": "47f925030f955e5633c28ab27828778c3459554233b1984e444c09f280e7d0f3"
+        }
+      }
+    }
+  },
+  "022-standard-measured-pigment": {
+    "parameters.json": {
+      "source": "build/bishop-mission/021-standard-response/bishop.blend",
+      "source_sha256": "882f1bf4bd4920cbe310fba95c52b1d9e1f2c589d52d88751ef90895d755ce3c",
+      "variant": "022-standard-measured-pigment",
+      "response_directory": "build/bishop-mission/response-021",
+      "relative_pigment_bounds": [
+        0.25,
+        4
+      ],
+      "max_weight": 0.9,
+      "mean_effective_weight": 0.7138494849205017,
+      "effective_weight_above_half_pixels": 244252,
+      "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "targeted_metric": "Wood color and grain, with geometry, relief, BSDF and light rig fixed.",
+      "view": "Standard",
+      "look": "None",
+      "method": "Measured black/white BSDF response with the verified matching display/view/Look transform. Reflections, clipping, failed inverse pixels and boundaries excluded. Visible-surface confidence preserves the hidden atlas.",
+      "caveat": "Approximate inferred pigment under estimated lights. Interreflections make the response nonlinear and residual shading may remain.",
+      "saved_model_sha256": "b38076c94f85457336b089e1f578135103f32f949537ac63c4a9f95d744150c7"
+    }
+  },
+  "023-measured-feedback": {
+    "parameters.json": {
+      "source": "build/bishop-mission/022-standard-measured-pigment/bishop.blend",
+      "source_sha256": "b38076c94f85457336b089e1f578135103f32f949537ac63c4a9f95d744150c7",
+      "variant": "023-measured-feedback",
+      "response_directory": "build/bishop-mission/response-021",
+      "feedback": {
+        "source": "build/bishop-mission/022-standard-measured-pigment/bishop.blend",
+        "response_directory": "build/bishop-mission/feedback-022",
+        "ratio_bounds": [
+          0.67,
+          1.5
+        ],
+        "blur_radius": 2,
+        "method": "One actual-render correction to the initial black/white response approximation."
+      },
+      "relative_pigment_bounds": [
+        0.25,
+        4
+      ],
+      "max_weight": 0.9,
+      "mean_effective_weight": 0.7138494849205017,
+      "effective_weight_above_half_pixels": 244252,
+      "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "targeted_metric": "Wood color and grain, with geometry, relief, BSDF and light rig fixed.",
+      "view": "Standard",
+      "look": "None",
+      "method": "Measured black/white BSDF response with the verified matching display/view/Look transform. Reflections, clipping, failed inverse pixels and boundaries excluded. Visible-surface confidence preserves the hidden atlas.",
+      "caveat": "Approximate inferred pigment under estimated lights. Interreflections make the response nonlinear and residual shading may remain.",
+      "saved_model_sha256": "d30130768546adffb5fc4daf60aeae30537149148c41d5bc494ff5e4591ec96f"
+    }
+  },
+  "024-balanced-diffuse": {
+    "parameters.json": {
+      "source": "build/bishop-mission/021-standard-response/bishop.blend",
+      "source_sha256": "882f1bf4bd4920cbe310fba95c52b1d9e1f2c589d52d88751ef90895d755ce3c",
+      "variant": "024-balanced-diffuse",
+      "diffuse_light_factor": 3.0,
+      "starting_pigment_factor": 0.3333333333333333,
+      "lights": {
+        "Broad diffuse key": [
+          550.0,
+          1650.0
+        ],
+        "Diffuse fill": [
+          45.0,
+          135.0
+        ]
+      },
+      "glossy_light_powers_unchanged": true,
+      "geometry_and_camera_unchanged": true,
+      "reason": "23.55% of confident pixels required red albedo above 0.85 in the prior response. Increase incident diffuse energy and reduce starting pigment so the next fit stays physically bounded without a green clipping artifact. Indirect bounces may differ; fit and inspect actual BSDF.",
+      "saved_model_sha256": "dfe0b876ebd1674d24e2b1a73147f587387d09874a2a6505a62490db809feda3"
+    }
+  },
+  "025-balanced-pigment": {
+    "parameters.json": {
+      "source": "build/bishop-mission/024-balanced-diffuse/bishop.blend",
+      "source_sha256": "dfe0b876ebd1674d24e2b1a73147f587387d09874a2a6505a62490db809feda3",
+      "variant": "025-balanced-pigment",
+      "response_directory": "build/bishop-mission/response-024",
+      "feedback": null,
+      "relative_pigment_bounds": [
+        0.25,
+        4
+      ],
+      "max_weight": 0.9,
+      "mean_effective_weight": 0.6999515295028687,
+      "effective_weight_above_half_pixels": 238788,
+      "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "targeted_metric": "Wood color and grain, with geometry, relief, BSDF and light rig fixed.",
+      "view": "Standard",
+      "look": "None",
+      "method": "Measured black/white BSDF response with the verified matching display/view/Look transform. Reflections, clipping, failed inverse pixels and boundaries excluded. Visible-surface confidence preserves the hidden atlas.",
+      "caveat": "Approximate inferred pigment under estimated lights. Interreflections make the response nonlinear and residual shading may remain.",
+      "saved_model_sha256": "c9de2d00d7c1373a31e3ece490a98ee35ce386097de1d7069ca9bdb431864829"
+    }
+  },
+  "026-balanced-feedback": {
+    "parameters.json": {
+      "source": "build/bishop-mission/025-balanced-pigment/bishop.blend",
+      "source_sha256": "c9de2d00d7c1373a31e3ece490a98ee35ce386097de1d7069ca9bdb431864829",
+      "variant": "026-balanced-feedback",
+      "response_directory": "build/bishop-mission/response-024",
+      "feedback": {
+        "source": "build/bishop-mission/025-balanced-pigment/bishop.blend",
+        "response_directory": "build/bishop-mission/feedback-025",
+        "ratio_bounds": [
+          0.67,
+          1.5
+        ],
+        "blur_radius": 2,
+        "method": "One actual-render correction to the initial black/white response approximation."
+      },
+      "relative_pigment_bounds": [
+        0.25,
+        4
+      ],
+      "max_weight": 0.9,
+      "mean_effective_weight": 0.6999515295028687,
+      "effective_weight_above_half_pixels": 238788,
+      "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+      "targeted_metric": "Wood color and grain, with geometry, relief, BSDF and light rig fixed.",
+      "view": "Standard",
+      "look": "None",
+      "method": "Measured black/white BSDF response with the verified matching display/view/Look transform. Reflections, clipping, failed inverse pixels and boundaries excluded. Visible-surface confidence preserves the hidden atlas.",
+      "caveat": "Approximate inferred pigment under estimated lights. Interreflections make the response nonlinear and residual shading may remain.",
+      "saved_model_sha256": "c070fa92e71c61b8f2ca525d3483f554aa8f087ce089b482978d08b45b8fed83"
+    }
+  },
+  "027-baked-pigment": {
+    "bake-validation.json": {
+      "pigment_only": true,
+      "reopened_packed_pixel_max_error": 0.0,
+      "texture_sha256": "4946f747bad9fff57432b14fc8311ed7d6215665ef3cacf297629dad9bbac8c9",
+      "render_shader": "Principled BSDF",
+      "source_sha256": "c070fa92e71c61b8f2ca525d3483f554aa8f087ce089b482978d08b45b8fed83",
+      "saved_model_sha256": "00997cb3944e9c8fd1076fd93789b42ad8946dac2a66fdc68344dc2ecb8575f7"
+    }
+  }
+}

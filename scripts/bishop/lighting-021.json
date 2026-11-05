@@ -1,0 +1,134 @@
+{
+  "variant": "021-standard-response",
+  "source": "history/bishop-mission-002/bishop-rebuilt.blend",
+  "world": 0.05,
+  "samples": 40,
+  "lights": [
+    {
+      "name": "Broad diffuse key",
+      "energy": 550,
+      "size": 2.0
+    },
+    {
+      "name": "Diffuse fill",
+      "energy": 45
+    },
+    {
+      "name": "button reflection",
+      "energy": 900,
+      "position": [
+        2.7702524662017822,
+        -0.15775763988494873,
+        11.037179946899414
+      ],
+      "target": [
+        0.09346815943717957,
+        -0.14386463165283203,
+        4.569210052490234
+      ],
+      "color": [
+        1,
+        0.87,
+        0.25
+      ]
+    },
+    {
+      "name": "Button second glint",
+      "energy": 300,
+      "position": [
+        -1.557356357574463,
+        -3.123260259628296,
+        10.73029899597168
+      ],
+      "target": [
+        -0.04114717245101929,
+        -0.19206666946411133,
+        4.557032585144043
+      ],
+      "color": [
+        1,
+        0.87,
+        0.25
+      ]
+    },
+    {
+      "name": "base reflection",
+      "energy": 220,
+      "position": [
+        3.73593807220459,
+        -6.995824337005615,
+        1.1789131164550781
+      ],
+      "target": [
+        0.30885279178619385,
+        -0.9181370735168457,
+        0.6160659790039062
+      ],
+      "color": [
+        1,
+        0.87,
+        0.25
+      ]
+    },
+    {
+      "name": "collars reflection",
+      "energy": 70,
+      "position": [
+        3.552460193634033,
+        -6.309630870819092,
+        0.6013658046722412
+      ],
+      "target": [
+        0.20885279774665833,
+        -0.6127715110778809,
+        2.917848587036133
+      ],
+      "color": [
+        1,
+        0.87,
+        0.25
+      ]
+    },
+    {
+      "name": "socket reflection",
+      "energy": 180,
+      "position": [
+        5.57327938079834,
+        -4.51612663269043,
+        -0.6999073028564453
+      ],
+      "target": [
+        0.27039122581481934,
+        -0.4184236526489258,
+        1.3220272064208984
+      ],
+      "color": [
+        1,
+        0.87,
+        0.25
+      ]
+    },
+    {
+      "name": "head reflection",
+      "position": [
+        3.3809285163879395,
+        -6.415489196777344,
+        4.692895412445068
+      ],
+      "target": [
+        0.08192968368530273,
+        -0.25517797470092773,
+        4.284008026123047
+      ],
+      "color": [
+        1,
+        0.87,
+        0.25
+      ],
+      "energy": 120
+    }
+  ],
+  "view_transform": "Standard",
+  "look": "None",
+  "hypothesis": "Standard sRGB can represent the saturated gold reference without AgX gamut loss; reduce glossy lights for the new display response before a measured pigment fit."
+}

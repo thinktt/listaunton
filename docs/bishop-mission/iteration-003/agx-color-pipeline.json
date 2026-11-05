@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "display": "sRGB",
+    "view": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "comparisons": {
+    "view_only": {
+      "mean_8bit_error": 5.551651954650879,
+      "max_8bit_error": 34.0,
+      "roundtrip_max_relative_error": 2.1391780376434326
+    },
+    "view_and_look": {
+      "mean_8bit_error": 0.0004373969859443605,
+      "max_8bit_error": 0.9999999403953552,
+      "roundtrip_max_relative_error": 10.33513069152832
+    }
+  },
+  "source_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6"
+}

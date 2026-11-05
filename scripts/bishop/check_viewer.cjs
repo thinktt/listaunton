@@ -36,6 +36,9 @@ const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
 vm.runInNewContext(source,context,{filename:'bishop-model-runtime.js'});
 function flush(){let n=0;while(queue.length){assert(n++<20);queue.shift()();}}
 flush();assert(draws>0);assert(node('status').hidden);assert.equal(canvas.tabIndex,-1);assert.equal(node('model-image').style.opacity,.5);
+assert.equal(uniforms.uDiffuseLightScale,Math.fround(meta.material.diffuseLightScale??1),'Preview light balance must come from the accepted scene.');
+assert.deepEqual(uniforms.uCutPigment,Array.from(meta.material.cutPigment??[.42,.20,.055],Math.fround),'Cut material must use the exported pigment balance.');
+assert.equal(uniforms.uStandardView,meta.material.displayView==='Standard'?1:0,'Preview display response must follow scene metadata.');
 assert(html.includes('<option value="original">Original white</option><option value="selected">White candidate 3</option>'),'Original must be default reference.');
 const alignment=JSON.parse(text('original-alignment'));
 assert.equal(parseFloat(node('original-image').style.width),100/alignment.scale);

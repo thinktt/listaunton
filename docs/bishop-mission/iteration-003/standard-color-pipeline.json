@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "display": "sRGB",
+    "view": "Standard",
+    "look": "None",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "comparisons": {
+    "view_only": {
+      "mean_8bit_error": 1.4795539300394012e-06,
+      "max_8bit_error": 1.519918441772461e-05,
+      "roundtrip_max_relative_error": 3.817967080976814e-05
+    },
+    "view_and_look": {
+      "mean_8bit_error": 1.4795539300394012e-06,
+      "max_8bit_error": 1.519918441772461e-05,
+      "roundtrip_max_relative_error": 3.817967080976814e-05
+    }
+  },
+  "source_sha256": "882f1bf4bd4920cbe310fba95c52b1d9e1f2c589d52d88751ef90895d755ce3c"
+}

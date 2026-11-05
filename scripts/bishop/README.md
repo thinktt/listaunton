@@ -9,7 +9,7 @@ is inferred from selected white candidate 3 with a separately generated,
 approximately de-lit pigment source. Hidden surfaces use continuous procedural
 boxwood. This is reconstructed material, not a recovered original asset.
 
-Reproduce the material checkpoint from its recorded config under
+Reproduce the first material checkpoint from its recorded config under
 `docs/bishop-mission/iteration-001/` with Blender `mission_material.py -- CONFIG`,
 then `bake_mission.py -- --source TRIAL/bishop.blend --out BAKED_TRIAL`.
 The bake captures pigment only and reopens the saved scene before its real
@@ -53,6 +53,27 @@ previous model, texture, render, exported mesh and profile.
 The side gallery is pinned to that preserved sizing baseline by
 `preserve_gallery_sizing.py`. Its source hashes remain checkable without moving
 the owner's chosen sizes or order whenever a small model detail changes.
+
+The third checkpoint preserves the second geometry and replaces the visible
+pigment with a bounded fit to measured black/white BSDF responses. It uses
+Standard sRGB, warmer reflection lamps, and a balanced diffuse-light/pigment
+exposure. `docs/bishop-mission/iteration-003/reproduction.json` records the
+sequence from `history/bishop-mission-002`; run it in an isolated working copy.
+The reference remains unchanged. Strong reflections and uncertain pixels are
+excluded from fitting, and hidden surfaces retain procedural wood. This is
+an approximation; the side/rear pigment boundary and highlight shapes still
+need refinement.
+
+`probe_color_pipeline.py` checks the display transform against Blender's own
+PNG export. `capture_material_response.py` and `capture_pigment_feedback.py`
+write diagnostic EXRs/arrays without changing the source model. `refine_pigment.py`
+changes only base color. `bake_mission.py` now isolates cut-material bake targets
+and verifies all input image pixels remain unchanged before saving its atlas;
+it also checks packed pixels after reopening and renders the actual BSDF.
+`validate_checkpoint.py` runs the existing exporter, anatomy, material/camera
+and button-join checks together in Blender. Side and neutral renders remain
+separate steps. The rotating viewer reads the exported diffuse-energy balance
+and display response; it still uses approximate real-time lighting.
 
 ## Original geometry construction
 

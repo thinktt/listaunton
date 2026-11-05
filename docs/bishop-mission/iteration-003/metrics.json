@@ -1,0 +1,16 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+  "render": "assets/bishop/render.png",
+  "render_sha256": "2a2118115c2e1bc5f73cc937e2e24aa61ec5f06009591b65e396fe726ec86c36",
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9619724616922151
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787643334728172
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675316644697352
+    }
+  }
+}

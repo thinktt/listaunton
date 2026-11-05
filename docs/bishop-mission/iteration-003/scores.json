@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.1972461692215,
+    "interior": 81,
+    "color": 84,
+    "texture": 77,
+    "lighting": 64
+  },
+  "mean_percent": 80.4394492338443,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9787643334728172,
+  "original_black_iou": 0.9675316644697352,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "adba4ba0d09952c262c847d8bec79d33eb20df6a128c28b44f3be4556c9aaeb3",
+  "render_sha256": "2a2118115c2e1bc5f73cc937e2e24aa61ec5f06009591b65e396fe726ec86c36",
+  "texture_sha256": "3c483a644e0eb4f7b3a2a34aac5875581aa3cbc30af345d9ef9dd9b8b1b21109",
+  "starting_model_sha256": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+  "status": "accepted fixed-view material improvement, mission incomplete; rear pigment transition and reflections still need work"
+}

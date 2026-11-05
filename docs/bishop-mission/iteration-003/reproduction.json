@@ -1,0 +1,146 @@
+{
+  "run_in": "Isolated working copy, cwd at repository root. Final bake writes assets/bishop/bishop-boxwood-albedo.png. Review/validate before promotion.",
+  "blender": "5.2.2 LTS",
+  "inputs": {
+    "history/bishop-mission-002/bishop-rebuilt.blend": "cb3a77ba94cd336e015ce4f21493ade912ad3061727817be703efdd0581bbee6",
+    "assets/bishop/reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "assets/bishop/original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "assets/bishop/black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585",
+    "scripts/bishop/lighting-021.json": "5561f89e09627bfa8f71f75c920e526e1990e5a930c25e4efde291a48d99b76c"
+  },
+  "steps": [
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/lighting_trial.py",
+        "--",
+        "scripts/bishop/lighting-021.json"
+      ]
+    },
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/rebalance_diffuse.py",
+        "--",
+        "--source",
+        "build/bishop-mission/021-standard-response/bishop.blend",
+        "--variant",
+        "024-balanced-diffuse",
+        "--factor",
+        "3"
+      ]
+    },
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/capture_material_response.py",
+        "--",
+        "--source",
+        "build/bishop-mission/024-balanced-diffuse/bishop.blend",
+        "--out",
+        "build/bishop-mission/response-024",
+        "--samples",
+        "64"
+      ]
+    },
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/refine_pigment.py",
+        "--",
+        "--response",
+        "build/bishop-mission/response-024",
+        "--variant",
+        "025-balanced-pigment",
+        "--lower",
+        ".25",
+        "--upper",
+        "4",
+        "--weight",
+        ".9",
+        "--samples",
+        "48"
+      ]
+    },
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/capture_pigment_feedback.py",
+        "--",
+        "--source",
+        "build/bishop-mission/025-balanced-pigment/bishop.blend",
+        "--out",
+        "build/bishop-mission/feedback-025",
+        "--samples",
+        "64"
+      ]
+    },
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/refine_pigment.py",
+        "--",
+        "--response",
+        "build/bishop-mission/response-024",
+        "--feedback",
+        "build/bishop-mission/feedback-025",
+        "--variant",
+        "026-balanced-feedback",
+        "--lower",
+        ".25",
+        "--upper",
+        "4",
+        "--weight",
+        ".9",
+        "--samples",
+        "48"
+      ]
+    },
+    {
+      "program": "blender",
+      "arguments": [
+        "--background",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "scripts/bishop/bake_mission.py",
+        "--",
+        "--source",
+        "build/bishop-mission/026-balanced-feedback/bishop.blend",
+        "--out",
+        "build/bishop-mission/028-baked-pigment"
+      ]
+    }
+  ],
+  "final_model": "build/bishop-mission/028-baked-pigment/bishop.blend",
+  "final_render": "build/bishop-mission/028-baked-pigment/wood.png",
+  "notes": [
+    "Real BSDF beauty; emission diagnostic/bake passes are pigment only.",
+    "Exact file hashes include Blender serialization; compare shader/geometry/camera and images when reproducing.",
+    "Geometry, sources, reference registration and gallery sizing stay unchanged."
+  ]
+}
