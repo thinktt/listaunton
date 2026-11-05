@@ -8,12 +8,14 @@ be assessed. Examine, modify, render, compare, score and repeat. A matching
 outline alone is not success. Produce a usable 3D chess piece.
 
 This mission covers only the queen. Creating this file does not start or
-resume a goal, launch agents or modify a model. The queen goal remains paused.
+resume a goal, launch agents or modify a model. Follow the current owner-directed goal state.
 When explicitly activated, use an appropriate goal or assigned subtask pointing
 to this file. Do not invent a token budget or mark another unfinished goal
 complete merely to replace it.
 
-Creative tools and interpretation are authorized: procedural wood, generated
+Sustained iteration and concentrating on one score at a time are authorized.
+Choose tools by their usefulness to the visual result; the current material
+setup is not a constraint. Creative tools and interpretation are authorized: procedural wood, generated
 texture assets, reference-derived pigment, texture painting, custom UVs and
 combinations. Develop grain, color, pores, relief and polish together. Keep
 references unchanged, separate lighting from pigment where practical, and
@@ -30,7 +32,8 @@ Continue until completion, an execution/token limit, or owner stop. A plateau re
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
 - Scripts: `scripts/queen`; assets: `assets/queen`.
-- Side guide: this piece's entry in `assets/side-views/manifest.json` and its concepts directory.
+- Side guide: `assets/queen/concepts/side-01.png` and this piece's entry in
+  `assets/side-views/manifest.json`.
 
 Read AGENTS.md, current piece build notes, Git status and the latest mission
 log before work. Refine the latest accepted model; the recorded hash is a
@@ -99,13 +102,81 @@ automatic improvement. Record rejected trials honestly.
 Use the existing fixed reference-mask convention: max RGB >12 and alpha >127,
 largest component and holes filled; model alpha >127. Record original and
 selected-high-res IoUs separately. Verify masking for each reference without
-quietly changing thresholds between trials. Note source cropping and genuine
+quietly changing thresholds between trials. Use
+`scripts/queen/compare_finished_queen.py` for the established queen comparison. Note source cropping and genuine
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-
-
 Current accepted scores: 97.9612 / 80 / 80 / 77 / 64; working mean 79.7922%, holistic 75-80%. Original IoU: 97.9109%. Accepted model commit 7d7d55a; latest modeling evidence 103dac6. Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+
+## Historical baseline and detailed inspection checklist
+
+This audit predates the accepted checkpoint above. Preserve it as inspection
+history, not a claim that every defect still exists or an instruction to
+restore the old model. Recheck each item against fresh renders.
+
+The original starting revision was `3096e84`, restoring `cd6dfcd`. Its
+height/base-diameter ratio was approximately 2.1799 under the documented
+cross-piece normalization. Original scores were silhouette 97.91% measured IoU,
+interior shape 70%, color 60%, grain 30%, and lighting 40%; the working mean was
+59.58%, with a holistic estimate of 55-65%. These are historical scores, not
+the current accepted scores.
+
+
+The baseline audit was performed on the restored model at the saved 54-degree
+camera. Its reference SHA-256 is
+`bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a`;
+its starting Blender SHA-256 is
+`eb7daec22f35f4c282e9e41ac2e1a5eb26b2169b8b30f49673a0d0878b81dcc4`.
+
+### Shape
+
+- Finial is too tall and tapered; the reference has a compact egg partly
+  seated in the bowl.
+- Bowl reads as a steep funnel instead of the reference's softer depression
+  and defined circular hollow around the finial.
+- Crown-tip shoulders are too swollen and soft.
+- Rim needs flatter faces between tips and the pinched transitions visible
+  across the front; the current rim reads as rounded lumps.
+- Crown body extends too far downward into the collar assembly.
+- Collars read as broad shelves with beveled edges. The reference has compact
+  rounded plates with rolled edges and dark recesses. The upper collar is
+  under-expressed, and the internal curves miss their reference positions.
+- Lower stem/socket transition is too broad and soft; the socket reads as a
+  swollen drum instead of a tighter rolled shoulder and compact front wall.
+- Base width is close, but curvature, the small lip above the groove, and
+  the transition into the foot still differ.
+
+### Wood and surface
+
+- Color is too uniform; reproduce the reference's regional golden orange,
+  reddish brown, and dark chocolate rather than one overall color correction.
+- Crown body is substantially too bright relative to the reference.
+- Grain is too fine, dense and repetitive; larger sweeping lines and
+  irregular dark markings are missing.
+- Grain flow differs across the crown, collars, and flared base.
+- Distinctive base markings, crown mottling, and finial grain are absent.
+- Surface relief is too smooth; small pores and irregularities should break
+  reflections in the same way as the reference.
+- Polish is too uniform; reproduce local variations in gloss/roughness.
+
+### Lighting
+
+- Reflections are too broad and blurry, particularly on the finial and rims.
+- Bowl reflection is misplaced on the left wall; the reference's important
+  highlight curves behind the finial.
+- The model has a broad pale patch on the right collars absent from the
+  reference.
+- Base has two diffuse front patches instead of the stronger textured
+  highlight toward the reference's right side.
+- Recesses under collars and around the foot are insufficiently separated,
+  while the back-right bowl has an inappropriate strong dark patch.
+- Thin bright crescents on the socket, collar rims, and foot are missing.
+
+Some apparent shape differences are amplified by shading. Use both neutral
+and wood renders before deciding whether geometry, material, or lighting is
+responsible. Confirm each initial finding against fresh renders as work
+progresses; do not treat this backlog as immutable measurements.
 
 ## Iteration loop
 

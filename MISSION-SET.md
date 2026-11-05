@@ -9,4 +9,5 @@ Each file is a standalone mission. Creating them does not activate modeling.
 - [Rook](MISSION-ROOK.md)
 - [Pawn](MISSION-PAWN.md)
 
-The original [queen mission](MISSION.md) and its history remain preserved.
+The original queen mission is merged into [MISSION-QUEEN.md](MISSION-QUEEN.md),
+including its historical inspection checklist. Earlier versions remain in Git history.
