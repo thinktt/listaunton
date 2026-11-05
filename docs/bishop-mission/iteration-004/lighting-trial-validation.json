@@ -1,0 +1,90 @@
+{
+  "config": {
+    "source": "history/bishop-mission-003/bishop-rebuilt.blend",
+    "variant": "034-neutral-shaped-button",
+    "samples": 48,
+    "lights": [
+      {
+        "name": "button reflection",
+        "shape": "ELLIPSE",
+        "size": 6.75427358570156,
+        "size_y": 2.7067338923452064,
+        "location": [
+          2.7702524662017822,
+          -0.15775763988494873,
+          11.037179946899414
+        ],
+        "rotation_euler": [
+          -0.3452683985233307,
+          0.19031040370464325,
+          -1.0918118953704834
+        ],
+        "energy": 1983.2775215098218,
+        "color": [
+          1.0,
+          0.7407407407407407,
+          0.4226304101070077
+        ]
+      },
+      {
+        "name": "Button second glint",
+        "shape": "ELLIPSE",
+        "size": 3.6379708921834406,
+        "size_y": 1.7736657177804565,
+        "location": [
+          -1.557356357574463,
+          -3.123260259628296,
+          10.73029899597168
+        ],
+        "rotation_euler": [
+          0.10941769927740097,
+          0.47955405712127686,
+          -1.814411997795105
+        ],
+        "energy": 1003.1768042779507,
+        "color": [
+          1.0,
+          0.7407407407407407,
+          0.45148915453495486
+        ]
+      }
+    ],
+    "hypothesis": "Measured two-reflector RGB response, optimized through Standard sRGB clipping. Geometry, texture and the fixed camera stay unchanged. Lamp shape/pose changes, when present, are explicitly recorded in the light specifications."
+  },
+  "source_sha256": "adba4ba0d09952c262c847d8bec79d33eb20df6a128c28b44f3be4556c9aaeb3",
+  "saved_model_sha256": "920d30fb5c29c7234cd1c00ec901f12b459bfcfffb052919d9c1fab94358100b",
+  "render_sha256": "efe89f224d735f9f92057913e816f770d3e36b58809821db446850fde041e335",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+      "Mitre saw cut - editable cutter": "4049d3ec3aa5937219fa24b9cfe2b2c336659e8485513945a272d2bb41542f2f",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "33373449776e9ccb3e14fb078e5eb3eb78a47531fca2fd1d4c71ad08f280cd46",
+      "Bishop boxwood \u2014 interior cut": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  }
+}

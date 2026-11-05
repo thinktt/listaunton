@@ -57,7 +57,9 @@ for spec in cfg.get('lights',[]):
         if key in spec:setattr(data,key,spec[key])
     if 'spread_degrees' in spec:data.spread=math.radians(spec['spread_degrees'])
     if 'position' in spec:ob.location=spec['position']
+    if 'location' in spec:ob.location=spec['location']
     if 'target' in spec:ob.rotation_euler=(Vector(spec['target'])-ob.location).to_track_quat('-Z','Y').to_euler()
+    if 'rotation_euler' in spec:ob.rotation_euler=spec['rotation_euler']
     if 'diffuse' in spec:ob.visible_diffuse=spec['diffuse']
     if 'glossy' in spec:ob.visible_glossy=spec['glossy']
     if 'receiver' in spec:

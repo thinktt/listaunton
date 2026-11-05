@@ -8,6 +8,7 @@ p.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2])
 p.add_argument('--model',default='models/bishop/bishop-rebuilt.blend')
 p.add_argument('--out',default='assets/bishop')
 p.add_argument('--head-only',action='store_true')
+p.add_argument('--view',choices=['head-side','side-profile','rear-oblique'],help='Render one diagnostic view for an isolated trial.')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 root=args.root;out=root/args.out;out.mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(root/args.model))
@@ -24,6 +25,7 @@ except Exception:pass
 views=[('head-side',(0,0,head_z),0,0,1.72,900)]
 if not args.head_only:
  views += [('side-profile',(0,0,2.32),0,0,4.98,1000),('rear-oblique',(0,0,2.1),28,120,6,768)]
+if args.view:views=[v for v in views if v[0]==args.view]
 report={}
 for name,target,e,az,scale,size in views:
  target=Vector(target);e=math.radians(e);az=math.radians(az)

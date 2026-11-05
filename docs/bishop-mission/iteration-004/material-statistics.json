@@ -1,0 +1,233 @@
+{
+  "note": "Diagnostic only. RGB differences include geometry and lighting, and do not replace the visual scorecard. Reference alpha >127 and max RGB >12; model alpha >.995; shared mask eroded 4 pixels. The supplied reference has alpha 253 across much of its interior. Background and silhouette edges excluded.",
+  "renders": {
+    "history/bishop-mission-003/render.png": {
+      "all": {
+        "pixels": 309205,
+        "mean_absolute_rgb_error_8bit": 7.925685405731201,
+        "mean_reference_rgb_8bit": [
+          172.52000427246094,
+          115.61000061035156,
+          57.63999938964844
+        ],
+        "mean_render_rgb_8bit": [
+          170.88999938964844,
+          114.62000274658203,
+          58.029998779296875
+        ]
+      },
+      "button": {
+        "pixels": 13231,
+        "mean_absolute_rgb_error_8bit": 12.389337539672852,
+        "mean_reference_rgb_8bit": [
+          198.1999969482422,
+          142.97999572753906,
+          75.55000305175781
+        ],
+        "mean_render_rgb_8bit": [
+          194.17999267578125,
+          134.5399932861328,
+          67.48999786376953
+        ]
+      },
+      "head": {
+        "pixels": 56128,
+        "mean_absolute_rgb_error_8bit": 8.294951438903809,
+        "mean_reference_rgb_8bit": [
+          183.8699951171875,
+          124.05999755859375,
+          61.900001525878906
+        ],
+        "mean_render_rgb_8bit": [
+          184.8699951171875,
+          125.73999786376953,
+          62.95000076293945
+        ]
+      },
+      "collars": {
+        "pixels": 38608,
+        "mean_absolute_rgb_error_8bit": 7.418928623199463,
+        "mean_reference_rgb_8bit": [
+          167.72000122070312,
+          113.44000244140625,
+          59.029998779296875
+        ],
+        "mean_render_rgb_8bit": [
+          169.5500030517578,
+          115.2699966430664,
+          60.720001220703125
+        ]
+      },
+      "stem": {
+        "pixels": 25361,
+        "mean_absolute_rgb_error_8bit": 3.6494486331939697,
+        "mean_reference_rgb_8bit": [
+          153.77999877929688,
+          96.7699966430664,
+          43.459999084472656
+        ],
+        "mean_render_rgb_8bit": [
+          154.92999267578125,
+          98.33999633789062,
+          47.2400016784668
+        ]
+      },
+      "socket": {
+        "pixels": 35000,
+        "mean_absolute_rgb_error_8bit": 7.003343105316162,
+        "mean_reference_rgb_8bit": [
+          169.17999267578125,
+          111.2300033569336,
+          54.650001525878906
+        ],
+        "mean_render_rgb_8bit": [
+          165.66000366210938,
+          107.62000274658203,
+          51.5
+        ]
+      },
+      "base": {
+        "pixels": 88679,
+        "mean_absolute_rgb_error_8bit": 9.891112327575684,
+        "mean_reference_rgb_8bit": [
+          196.4499969482422,
+          133.08999633789062,
+          66.7699966430664
+        ],
+        "mean_render_rgb_8bit": [
+          190.8300018310547,
+          129.1300048828125,
+          64.7300033569336
+        ]
+      },
+      "foot": {
+        "pixels": 24059,
+        "mean_absolute_rgb_error_8bit": 7.854926109313965,
+        "mean_reference_rgb_8bit": [
+          147.49000549316406,
+          100.19000244140625,
+          54.689998626708984
+        ],
+        "mean_render_rgb_8bit": [
+          147.75,
+          101.3499984741211,
+          56.06999969482422
+        ]
+      }
+    },
+    "assets/bishop/render.png": {
+      "all": {
+        "pixels": 309205,
+        "mean_absolute_rgb_error_8bit": 7.775622844696045,
+        "mean_reference_rgb_8bit": [
+          172.52000427246094,
+          115.61000061035156,
+          57.63999938964844
+        ],
+        "mean_render_rgb_8bit": [
+          170.97999572753906,
+          114.83999633789062,
+          58.38999938964844
+        ]
+      },
+      "button": {
+        "pixels": 13231,
+        "mean_absolute_rgb_error_8bit": 8.893381118774414,
+        "mean_reference_rgb_8bit": [
+          198.1999969482422,
+          142.97999572753906,
+          75.55000305175781
+        ],
+        "mean_render_rgb_8bit": [
+          196.24000549316406,
+          139.7899932861328,
+          75.75
+        ]
+      },
+      "head": {
+        "pixels": 56128,
+        "mean_absolute_rgb_error_8bit": 8.292574882507324,
+        "mean_reference_rgb_8bit": [
+          183.8699951171875,
+          124.05999755859375,
+          61.900001525878906
+        ],
+        "mean_render_rgb_8bit": [
+          184.8800048828125,
+          125.73999786376953,
+          62.95000076293945
+        ]
+      },
+      "collars": {
+        "pixels": 38608,
+        "mean_absolute_rgb_error_8bit": 7.41890287399292,
+        "mean_reference_rgb_8bit": [
+          167.72000122070312,
+          113.44000244140625,
+          59.029998779296875
+        ],
+        "mean_render_rgb_8bit": [
+          169.5500030517578,
+          115.2699966430664,
+          60.720001220703125
+        ]
+      },
+      "stem": {
+        "pixels": 25361,
+        "mean_absolute_rgb_error_8bit": 3.649606227874756,
+        "mean_reference_rgb_8bit": [
+          153.77999877929688,
+          96.7699966430664,
+          43.459999084472656
+        ],
+        "mean_render_rgb_8bit": [
+          154.92999267578125,
+          98.33999633789062,
+          47.2400016784668
+        ]
+      },
+      "socket": {
+        "pixels": 35000,
+        "mean_absolute_rgb_error_8bit": 7.0034284591674805,
+        "mean_reference_rgb_8bit": [
+          169.17999267578125,
+          111.2300033569336,
+          54.650001525878906
+        ],
+        "mean_render_rgb_8bit": [
+          165.66000366210938,
+          107.62000274658203,
+          51.5
+        ]
+      },
+      "base": {
+        "pixels": 88679,
+        "mean_absolute_rgb_error_8bit": 9.891100883483887,
+        "mean_reference_rgb_8bit": [
+          196.4499969482422,
+          133.08999633789062,
+          66.7699966430664
+        ],
+        "mean_render_rgb_8bit": [
+          190.8300018310547,
+          129.1300048828125,
+          64.7300033569336
+        ]
+      },
+      "foot": {
+        "pixels": 24059,
+        "mean_absolute_rgb_error_8bit": 7.854953765869141,
+        "mean_reference_rgb_8bit": [
+          147.49000549316406,
+          100.19000244140625,
+          54.689998626708984
+        ],
+        "mean_render_rgb_8bit": [
+          147.75,
+          101.3499984741211,
+          56.06999969482422
+        ]
+      }
+    }
+  }
+}

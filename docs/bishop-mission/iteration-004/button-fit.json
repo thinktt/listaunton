@@ -1,0 +1,54 @@
+{
+  "responses": "build/bishop-mission/button-response-shaped-003",
+  "response_blur": 2,
+  "glints_only": true,
+  "max_red_green": 1.35,
+  "unconstrained_coefficients": [
+    [
+      1.9158093814845873,
+      0.07345472301888228,
+      0.04190966961358528
+    ],
+    [
+      0.1271050418885834,
+      0.037154696454738914,
+      0.022646172360626493
+    ]
+  ],
+  "coefficients": [
+    [
+      0.09916387607549108,
+      0.07345472301888228,
+      0.04190966961358528
+    ],
+    [
+      0.050158840213897535,
+      0.037154696454738914,
+      0.022646172360626493
+    ]
+  ],
+  "prior_coefficients": [
+    [
+      0.045,
+      0.03915000021457672,
+      0.01125
+    ],
+    [
+      0.015,
+      0.013050000071525573,
+      0.00375
+    ]
+  ],
+  "weighted_channel_loss_before": [
+    0.00035856816989855223,
+    0.0024609202322188367,
+    0.005591095866809165
+  ],
+  "weighted_channel_loss_after": [
+    0.00021754230145735876,
+    0.001490779905138969,
+    0.0021822459773025694
+  ],
+  "fit_pixels": 10690,
+  "caveat": "Prediction is a diagnostic. Accept only after an actual full-scene BSDF render and visual comparison."
+}

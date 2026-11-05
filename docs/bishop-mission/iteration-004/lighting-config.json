@@ -1,0 +1,52 @@
+{
+  "source": "history/bishop-mission-003/bishop-rebuilt.blend",
+  "variant": "034-neutral-shaped-button",
+  "samples": 48,
+  "lights": [
+    {
+      "name": "button reflection",
+      "shape": "ELLIPSE",
+      "size": 6.75427358570156,
+      "size_y": 2.7067338923452064,
+      "location": [
+        2.7702524662017822,
+        -0.15775763988494873,
+        11.037179946899414
+      ],
+      "rotation_euler": [
+        -0.3452683985233307,
+        0.19031040370464325,
+        -1.0918118953704834
+      ],
+      "energy": 1983.2775215098218,
+      "color": [
+        1.0,
+        0.7407407407407407,
+        0.4226304101070077
+      ]
+    },
+    {
+      "name": "Button second glint",
+      "shape": "ELLIPSE",
+      "size": 3.6379708921834406,
+      "size_y": 1.7736657177804565,
+      "location": [
+        -1.557356357574463,
+        -3.123260259628296,
+        10.73029899597168
+      ],
+      "rotation_euler": [
+        0.10941769927740097,
+        0.47955405712127686,
+        -1.814411997795105
+      ],
+      "energy": 1003.1768042779507,
+      "color": [
+        1.0,
+        0.7407407407407407,
+        0.45148915453495486
+      ]
+    }
+  ],
+  "hypothesis": "Measured two-reflector RGB response, optimized through Standard sRGB clipping. Geometry, texture and the fixed camera stay unchanged. Lamp shape/pose changes, when present, are explicitly recorded in the light specifications."
+}

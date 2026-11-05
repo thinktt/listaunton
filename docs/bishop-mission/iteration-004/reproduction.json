@@ -1,0 +1,29 @@
+{
+  "starting_model": "history/bishop-mission-003/bishop-rebuilt.blend",
+  "starting_model_sha256": "adba4ba0d09952c262c847d8bec79d33eb20df6a128c28b44f3be4556c9aaeb3",
+  "unchanged_pigment": "assets/bishop/bishop-boxwood-albedo.png",
+  "pigment_sha256": "3c483a644e0eb4f7b3a2a34aac5875581aa3cbc30af345d9ef9dd9b8b1b21109",
+  "selected_reference": "assets/bishop/reference.png",
+  "selected_reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "work_in_isolated_copy": true,
+  "blender_version": "5.2.2 LTS",
+  "accepted_scene_steps": [
+    {"script":"scripts/bishop/lighting_trial.py","args":["docs/bishop-mission/iteration-004/lighting-config.json"]},
+    {"script":"scripts/bishop/finalize_render.py","args":["--source","build/bishop-mission/034-neutral-shaped-button/bishop.blend","--out","build/bishop-mission/035-clean-button","--samples","96"]}
+  ],
+  "optional_measurement_steps": [
+    {"script":"scripts/bishop/shading_reflection_landmarks.py","args":["docs/bishop-mission/iteration-004/shape-points.json","--source","history/bishop-mission-003/bishop-rebuilt.blend","--out","build/bishop-mission/button-shape-landmarks.json"]},
+    {"script":"scripts/bishop/shape_button_reflectors.py","args":["--landmarks","build/bishop-mission/button-shape-landmarks.json","--out","build/bishop-mission/033-shaped-button/shape-config.json"]},
+    {"script":"scripts/bishop/capture_button_lights.py","args":["--source","history/bishop-mission-003/bishop-rebuilt.blend","--out","build/bishop-mission/button-response-shaped-003","--lighting-config","build/bishop-mission/033-shaped-button/shape-config.json","--basis-energy","20000"]},
+    {"runtime":"ordinary Python with NumPy and Pillow","script":"scripts/bishop/fit_button_lights.py","args":["--responses","build/bishop-mission/button-response-shaped-003","--out","build/bishop-mission/034-neutral-shaped-button","--response-blur","2","--glints-only","--max-red-green","1.35"]}
+  ],
+  "validation_after_acceptance": [
+    "Copy chosen model/render into isolated models/bishop and assets/bishop.",
+    "Run validate_checkpoint.py in Blender; this exports the exact current mesh and checks geometry, materials, slit, camera and references.",
+    "Run render_diagnostics.py and render_clay.py from that saved model.",
+    "Run mission_compare.py, material_statistics.py and compare.py; inspect the actual resulting images.",
+    "Run refresh_review.py, check_viewer.cjs and check_review.cjs. Save the viewer check JSON from stdout as assets/bishop/viewer-validation.json.",
+    "Collect the bishop checkpoint; synchronize canonical and existing preview assets; run affected site checks; commit only bishop work."
+  ],
+  "note":"Final recorded light values reproduce the accepted scene without refitting. Sampling and Blender serialization may change file bytes on a rebuild; compare declared geometry, material, lighting, camera and rendered evidence rather than demanding an identical regenerated .blend file hash."
+}

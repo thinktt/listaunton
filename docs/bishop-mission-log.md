@@ -21,6 +21,7 @@ Preserved under `history/bishop-mission-000/`. See
 | First boxwood checkpoint | 94.88 | 78 | 70 | 64 | 54 | 72.18 |
 | Wider button, flatter foot | 96.20 | 81 | 70 | 64 | 54 | 73.04 |
 | Measured boxwood color, warm reflections | 96.20 | 81 | 84 | 77 | 64 | 80.44 |
+| Rounder button reflections | 96.20 | 81 | 84 | 77 | 66 | 80.84 |
 
 Silhouette is selected-reference IoU; other scores are visual estimates.
 The separate original-white IoU is 96.58%. Initial holistic appearance was
@@ -109,3 +110,26 @@ render and atlas. Gallery sizes/order and other pieces are unchanged.
 The next priority is extending compatible pigment around the side/rear to
 reduce the visible projected-to-procedural boundary while preserving the
 fixed-view fit. Button/foot reflections and fine relief remain unfinished.
+
+## Iteration 004 — rounder button reflections
+
+Two hidden-surface pigment fills were rejected: regional color created bands,
+and a uniform amber continuation left the main boundary visible. The accepted
+atlas remains unchanged. A no-bump diagnostic identifies residual pigment
+shading as the main continuity problem.
+
+Only the two button reflectors change. Their elliptical shapes follow measured
+surface-reflection directions; actual BSDF response passes guide their power
+and warm white color. The new glints are rounder and brighter, closer to the
+selected image and original sprite. A power-only fit and an unconstrained red
+prediction were rejected. Fine highlight breakup still needs work.
+
+The working mean rises modestly from 80.44 to 80.84; holistic fixed-view
+appearance remains approximately 75–85%. The shape, camera, pigment, relief,
+gallery proportions and other lighting stay fixed. Checkpoint 003 is preserved
+in `history/bishop-mission-003`. See
+[`iteration-004/assessment.md`](bishop-mission/iteration-004/assessment.md)
+for all five scores, rejected trials, reproducible settings and validation.
+The bishop review and existing local preview show the same accepted checkpoint.
+The mission remains incomplete; lower-head glare and rear pigment continuity
+are the next priorities.

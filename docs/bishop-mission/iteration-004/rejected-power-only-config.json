@@ -1,0 +1,26 @@
+{
+  "source": "history/bishop-mission-003/bishop-rebuilt.blend",
+  "variant": "032-fitted-button",
+  "samples": 48,
+  "lights": [
+    {
+      "name": "button reflection",
+      "energy": 20598.755566406257,
+      "color": [
+        1.0,
+        0.7003161224227665,
+        0.14377749764308975
+      ]
+    },
+    {
+      "name": "Button second glint",
+      "energy": 7320.170068359376,
+      "color": [
+        1.0,
+        0.1815682529215707,
+        0.0885159521619373
+      ]
+    }
+  ],
+  "hypothesis": "Measured two-reflector RGB response, optimized through Standard sRGB clipping. Geometry, texture, light positions/sizes and the fixed camera stay unchanged."
+}

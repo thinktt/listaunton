@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.1972461692215,
+    "interior": 81,
+    "color": 84,
+    "texture": 77,
+    "lighting": 66
+  },
+  "mean_percent": 80.8394492338443,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9787643334728172,
+  "original_black_iou": 0.9675316644697352,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "8e33d8a3855a1cf46ee06f45f7a082840459edaa6e3e6207169fdade99c54a1c",
+  "render_sha256": "3fede7475e1c29226aa0dcde81e617b7b87daf5dbc8b0bf115c0a52dc767edcc",
+  "texture_sha256": "3c483a644e0eb4f7b3a2a34aac5875581aa3cbc30af345d9ef9dd9b8b1b21109",
+  "starting_model_sha256": "adba4ba0d09952c262c847d8bec79d33eb20df6a128c28b44f3be4556c9aaeb3",
+  "status": "Accepted modest button-reflection improvement; mission incomplete. Rear pigment boundary and other reflections remain unresolved."
+}
