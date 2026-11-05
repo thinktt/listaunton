@@ -59,7 +59,8 @@ this skill and the applicable threshold, not the full project history.
 Do not spawn workers merely because this skill was loaded.
 
 Start with one live read to verify that the subagent can access the tool.
-During an authorized active mission it may check about every 15 minutes,
+During an authorized active mission, follow the owner's requested cadence
+(every 5 minutes for the listaunton queen mission),
 using interruptible waits of at most 60 seconds rather than a busy loop,
 and answer on-demand checks at iteration boundaries. It should send only
 threshold alerts, failures, and requested readings to its parent. The parent

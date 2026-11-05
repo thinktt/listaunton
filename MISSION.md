@@ -60,7 +60,7 @@ mission state, rather than the modeling conversation.
 
 Luna's initial read-only check succeeded: it can access the live usage tool.
 It is idle until the mission starts. At mission start, assign it to check
-immediately and about every 15 minutes during active work, using bounded,
+immediately and every 5 minutes during active work, using bounded,
 interruptible waits rather than busy polling. It reports threshold crossings
 and reading failures to the parent with `collaboration.send_message`.
 Routine readings need no user-facing commentary.
