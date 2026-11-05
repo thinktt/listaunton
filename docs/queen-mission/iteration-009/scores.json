@@ -1,0 +1,92 @@
+[
+  {
+    "trial": "090-current-pigment-relief",
+    "model_sha256": "b3e7981cad44acc2283e03f758f25cb39f39ead630677bea306cd1318a3cc65d",
+    "render_sha256": "122f43e7fbc0005a36ff33a27c5bcfa9c17acc6f023d2932bb7ea248e9c54604",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "working_mean": 79.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "No convincing improvement from changing relief color input."
+  },
+  {
+    "trial": "091-smooth-varnish",
+    "model_sha256": "d60f0f5d3da58304af117ffc56f69707a4f4192f380cc9b43f57dfe280dd8018",
+    "render_sha256": "ee1b1e2d96b5ea092e9e2749bd6d6b53490f790f6564d4be70729d6c467291fa",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 74,
+      "lighting": 61
+    },
+    "working_mean": 78.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "Reject smooth artificial reflections; coarse color remains."
+  },
+  {
+    "trial": "092-pigment-relief-no-pores",
+    "model_sha256": "f11128b6bb9eeeae850d796e18bf2e906ab9384a8339a60fa2dfceff13524fba",
+    "render_sha256": "77c43e3488c5dfe96f03c398cad44f5f21c56c0eb20080a1dbb5086d83f18bc7",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 76,
+      "lighting": 62
+    },
+    "working_mean": 79.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "Reject scratchier highlights with no improvement in pigment grain."
+  },
+  {
+    "trial": "093-direct-pigment-graph",
+    "model_sha256": "9f1bea6e0c1417a8a5cd8dcd772509965cd4779238bf53eac763523c8c1cf081",
+    "render_sha256": "64996e8f166bae3586bde1cf1c236a549b4c7e5b025f3c43ef889f97cca88640",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "working_mean": 79.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "No convincing improvement from bypassing atlas baking."
+  },
+  {
+    "trial": "094-stronger-fine-grain",
+    "model_sha256": "92840d10539ae60e547c0df169dbfb1986fdf71d965491aadbc035e280817ba8",
+    "render_sha256": "3b233aed10b2886f42a2dae8fb86b55978bd34eb48b840ca0a610e8bcedf7fac",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 79,
+      "grain": 74,
+      "lighting": 64
+    },
+    "working_mean": 78.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "Reject exaggerated etched grain and harsher color variation."
+  },
+  {
+    "trial": "095-subtler-fine-grain",
+    "model_sha256": "fab63886f33a3263c6a8cfc0c8e927bd7e408ae97d04e41c297aafe997ebef24",
+    "render_sha256": "2591c0e6d57c5c2067e75723f102d244bde99f509bfce11a02652ee3af5bdf55",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 76,
+      "lighting": 64
+    },
+    "working_mean": 79.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "Reject softened fine detail while broad invented markings remain."
+  }
+]

@@ -925,3 +925,39 @@ render differs by 0.00002809/255. No native browser GPU result is claimed.
 The current camera-check evidence now copies the fresh build report rather
 than the stale report previously left in assets; the actual check passed
 against the current model hash. Earlier archived reports are left intact.
+
+
+## Ninth iteration: texture diagnostics; owner-requested pause
+
+The eighth checkpoint is committed as `7d7d55a` and synchronized to the local
+preview. Six material trials (090–095) were rendered, compared at fixed
+coordinates and rejected. See `queen-mission/iteration-009` for evidence,
+all five scores, hashes and a mission-start/current progress comparison.
+
+| Trial | Outline IoU | Form | Color | Grain | Lighting | Mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 090 current pigment relief | 97.961 | 80 | 80 | 77 | 64 | 79.79 |
+| 091 no bump | 97.961 | 80 | 80 | 74 | 61 | 78.59 |
+| 092 no procedural pores | 97.961 | 80 | 80 | 76 | 62 | 79.19 |
+| 093 bypass atlas baking | 97.961 | 80 | 80 | 77 | 64 | 79.79 |
+| 094 stronger fine grain | 97.961 | 80 | 79 | 74 | 64 | 78.99 |
+| 095 subtler fine grain | 97.961 | 80 | 80 | 76 | 64 | 79.59 |
+
+Removing bump or pores does not remove the coarse color pattern. Projection
+coverage is broad in the bowl and base, and bypassing the two atlas bakes
+does not provide a convincing gain. Stronger fine grain looks more etched;
+weaker grain loses detail. These results corroborate earlier material
+diagnoses; do not repeat them without a different, supported hypothesis.
+
+The accepted model stays
+`c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004`,
+working mean 79.7922%, holistic 75–80%. Both reference IoUs, the saved camera,
+viewer and local preview remain unchanged. There is no pending promotion.
+
+The owner explicitly asks to finish the current task, then pause and chat.
+The current trial recording and progress comparison are complete. Final
+usage at 2026-11-05 14:16:40 UTC is 25% used / 75% remaining, reset
+2026-11-11 13:19:48 UTC. Luna stopped monitoring on request. This pause is
+owner-directed, not a usage threshold crossing. On resume, restart Luna and
+inspect bowl/rim and collar curvature from the current profile before any
+new targeted geometry trial. The mission remains incomplete.

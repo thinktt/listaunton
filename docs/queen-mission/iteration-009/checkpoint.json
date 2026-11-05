@@ -1,0 +1,28 @@
+{
+  "status": "Owner requested pause after finishing current task. No texture trial accepted.",
+  "starting_commit": "7d7d55a",
+  "accepted_model_sha256": "c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004",
+  "accepted_render_sha256": "48b438ac22fe66f4776e169c8ec52931aff0f8734bd1da9df12dc2d4fd30e83c",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "best_scores": {
+    "silhouette": 97.9611843983474,
+    "interior_form": 80,
+    "wood_color": 80,
+    "grain": 77,
+    "lighting": 64
+  },
+  "best_working_mean": 79.79223687966949,
+  "holistic_range": [
+    75,
+    80
+  ],
+  "weekly_usage": {
+    "checked_utc": "2026-11-05 14:16:40 UTC",
+    "used_percent": 25,
+    "remaining_percent": 75,
+    "reset_utc": "2026-11-11 13:19:48 UTC"
+  },
+  "pending_validation": null,
+  "mission_complete": false,
+  "next_action": "On owner resume, restart Luna, read recent rejected-trial evidence, then inspect bowl/rim and collar curvature using the current control profile. Do not repeat pore-removal, atlas-filtering or global fine-grain-gain tests without new evidence."
+}

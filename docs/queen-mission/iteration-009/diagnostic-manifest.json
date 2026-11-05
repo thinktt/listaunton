@@ -1,0 +1,86 @@
+{
+  "source_sha256": "c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004",
+  "diagnostic_only": true,
+  "images": [
+    {
+      "node": "Image Texture",
+      "image": "walnut-fine-albedo.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\walnut-fine-albedo.png"
+    },
+    {
+      "node": "Image Texture.001",
+      "image": "reference-delit-source.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\reference-delit-source.png"
+    },
+    {
+      "node": "Image Texture.002",
+      "image": "Queen pigment atlas",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\queen-pigment-albedo.png"
+    },
+    {
+      "node": "Image Texture.003",
+      "image": "Queen pigment atlas.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\queen-pigment-albedo-v2.png"
+    },
+    {
+      "node": "Image Texture.004",
+      "image": "Queen linear inferred pigment",
+      "size": [
+        1254,
+        1254
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\build\\queen-mission\\057-opaque-pigment\\pigment.exr"
+    },
+    {
+      "node": "Image Texture.005",
+      "image": "Queen pigment confidence",
+      "size": [
+        1254,
+        1254
+      ],
+      "colorspace": "Non-Color",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\build\\queen-mission\\057-opaque-pigment\\confidence.exr"
+    },
+    {
+      "node": "Image Texture.006",
+      "image": "Queen pigment atlas.002",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\queen-pigment-albedo-v3.png"
+    },
+    {
+      "node": "Image Texture.007",
+      "image": "Queen pigment atlas.003",
+      "size": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\queen-pigment-albedo-v4.png"
+    }
+  ]
+}
