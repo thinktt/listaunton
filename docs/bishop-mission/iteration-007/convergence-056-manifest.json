@@ -1,0 +1,17 @@
+{
+  "source": "build/bishop-mission/056-aligned-soft-spot/bishop.blend",
+  "source_sha256": "d76b9b8f628246ba98457ff6d9558e3121f2cda801eefa25bf2a8d794bd3ad60",
+  "samples": [
+    512,
+    2048
+  ],
+  "adaptive_sampling": false,
+  "denoising": true,
+  "source_and_camera_unchanged": true,
+  "crop_pixels": [
+    445,
+    385,
+    565,
+    480
+  ]
+}

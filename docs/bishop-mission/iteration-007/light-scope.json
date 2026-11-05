@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+  "source_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "model": "build/bishop-mission/057-final-tip/bishop.blend",
+  "model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "config": "build/bishop-mission/lighting-056.json",
+  "config_sha256": "19306abb49a575e5f7ea23d93cfc7d7b105fe1ad479c6fdeed9fff14718144d3",
+  "camera_controls_uvs_material_pixels_world_and_original_lights_unchanged": true,
+  "new_lights": {
+    "Slit tip reflection": {
+      "type": "SPOT",
+      "energy": 130.8328857421875,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "spot_size": 0.01745329238474369,
+      "spot_blend": 0.75,
+      "shadow_soft_size": 0.014999999664723873,
+      "use_nodes": true,
+      "matrix": [
+        0.9970585107803345,
+        0.022717097774147987,
+        0.07320040464401245,
+        0.251492440700531,
+        0.0766444131731987,
+        -0.29552412033081055,
+        -0.9522557854652405,
+        -3.398836374282837,
+        -3.3451708070231234e-09,
+        0.955065131187439,
+        -0.2963959574699402,
+        2.945584297180176,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "receivers": [
+        "Bishop - continuous turned body"
+      ],
+      "nodes": [
+        [
+          [
+            "Emission",
+            "ShaderNodeEmission",
+            [
+              [
+                "Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Strength",
+                1.0
+              ],
+              [
+                "Weight",
+                0.0
+              ]
+            ],
+            null
+          ],
+          [
+            "Light Output",
+            "ShaderNodeOutputLight",
+            [],
+            null
+          ]
+        ],
+        [
+          [
+            "Emission",
+            "Emission",
+            "Light Output",
+            "Surface"
+          ]
+        ]
+      ]
+    }
+  },
+  "only_declared_light_added": true,
+  "source_geometry_and_light_scope_checked": true
+}

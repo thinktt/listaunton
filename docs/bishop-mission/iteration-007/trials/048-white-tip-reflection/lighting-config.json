@@ -1,0 +1,34 @@
+{
+  "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+  "variant": "048-white-tip-reflection",
+  "samples": 64,
+  "lights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "name": "Slit tip reflection",
+      "energy": 4.422168542294538,
+      "spread_degrees": 0.3,
+      "target": [
+        0.020391225814819336,
+        -0.5420689582824707,
+        3.8347721099853516
+      ],
+      "diffuse": false,
+      "shape": "DISK",
+      "receiver": "body",
+      "glossy": true,
+      "position": [
+        0.5327940425542973,
+        -7.207859673222574,
+        1.7600004362786366
+      ],
+      "type": "AREA",
+      "size": 0.025
+    }
+  ],
+  "hypothesis": "A confined real reflection restores the missing slit-tip glint while retaining the accepted geometry, pigment and other lights."
+}

@@ -1,0 +1,74 @@
+{
+  "render": "build/bishop-mission/057-final-tip/wood.png",
+  "baseline": "build/bishop-mission/baseline-006-512/wood.png",
+  "regions": {
+    "tip": {
+      "pixels": 555,
+      "reference_mean_rgb": [
+        246.47207207207208,
+        186.52072072072073,
+        104.81801801801802
+      ],
+      "previous_mean_rgb": [
+        236.7099099099099,
+        163.74414414414414,
+        78.83423423423423
+      ],
+      "current_mean_rgb": [
+        237.14414414414415,
+        174.1963963963964,
+        99.39279279279279
+      ],
+      "previous_mean_rgb_error": 20.67987987987988,
+      "current_mean_rgb_error": 16.4
+    },
+    "reference_bright_core": {
+      "pixels": 25,
+      "reference_mean_rgb": [
+        253.24,
+        251.28,
+        226.04
+      ],
+      "previous_mean_rgb": [
+        252.52,
+        184.68,
+        93.2
+      ],
+      "current_mean_rgb": [
+        253.04,
+        240.12,
+        206.6
+      ],
+      "previous_mean_rgb_error": 67.70666666666666,
+      "current_mean_rgb_error": 19.706666666666667
+    },
+    "all_foreground": {
+      "pixels": 322427,
+      "reference_mean_rgb": [
+        169.1342908627379,
+        113.16609341029132,
+        56.41790234688782
+      ],
+      "previous_mean_rgb": [
+        165.56057029963372,
+        109.80711292788756,
+        51.98499505314381
+      ],
+      "current_mean_rgb": [
+        165.59900690698979,
+        109.8200833056785,
+        52.00623086776231
+      ],
+      "previous_mean_rgb_error": 7.498109649626117,
+      "current_mean_rgb_error": 7.4910176050186035
+    }
+  },
+  "outside_tip_context": {
+    "pixels": 312851,
+    "mean_absolute_rgb_change": 0.1366337329911044,
+    "p99_absolute_channel_change": 2.0,
+    "maximum_channel_change": 10.0,
+    "pixels_with_any_channel_change_over_5": 120
+  },
+  "note": "Native 8-bit values at fixed registration. Small off-target changes can reflect Monte Carlo sampling/denoising. These diagnostics do not replace actual image inspection."
+}

@@ -1,0 +1,17 @@
+{
+  "source": "build/bishop-mission/052-fitted-strong-spot/bishop.blend",
+  "source_sha256": "9f35b465c7f64f46099a5042712e880873627d20ea61a1b7c6d924af4503a663",
+  "samples": [
+    256,
+    1024
+  ],
+  "adaptive_sampling": false,
+  "denoising": true,
+  "source_and_camera_unchanged": true,
+  "crop_pixels": [
+    445,
+    385,
+    565,
+    480
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source": "assets/bishop/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "visibility": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+  "visibility_sha256": "f7c9d457278f9404aa2fb0866fab6dd3d2491622210fd76d034cf1b38b55e08e",
+  "output_sha256": "006b7e7c63530882bd4b4a1a08a7f01392f2ca6fb58994e273ceeee3ff271987",
+  "protected_texels_exactly_preserved": true,
+  "parameters": {
+    "source": "assets/bishop/bishop-boxwood-albedo.png",
+    "visibility": "build/bishop-mission/pigment-coverage-006/coverage.npy",
+    "out": "build/bishop-mission/054-pigment-boundary",
+    "grid_width": 256,
+    "iterations": 2000,
+    "protection_threshold": 0.98,
+    "dilation": 0,
+    "feather": 96
+  },
+  "regions": {
+    "body": {
+      "grid": [
+        256,
+        180
+      ],
+      "iterations": 2000,
+      "last_update_max_log_rgb": 3.737211227416992e-05,
+      "protected_texels": 614753,
+      "edited_texels": 2224559
+    },
+    "button": {
+      "grid": [
+        256,
+        39
+      ],
+      "iterations": 740,
+      "last_update_max_log_rgb": 1.9669532775878906e-05,
+      "protected_texels": 241762,
+      "edited_texels": 376702
+    }
+  },
+  "method": "Periodic harmonic continuation of broad log-linear pigment, constrained by visible boundary colors, retaining 80% of existing fine grain. Hidden interpretation, not recovered artwork. Actual BSDF rendering and fixed-view validation still required."
+}

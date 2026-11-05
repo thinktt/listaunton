@@ -1,0 +1,50 @@
+{
+  "response": "build/bishop-mission/slit-response-bumped-006",
+  "fits": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "coefficient": 3.4771721744890454,
+      "loss": 0.0032826533316490224
+    },
+    {
+      "color": [
+        1,
+        1,
+        0.9
+      ],
+      "coefficient": 3.690060328029191,
+      "loss": 0.003282644047185543
+    },
+    {
+      "color": [
+        1,
+        0.9,
+        0.7
+      ],
+      "coefficient": 4.3328317838643455,
+      "loss": 0.0032749524604693595
+    }
+  ],
+  "chosen": {
+    "color": [
+      1,
+      0.9,
+      0.7
+    ],
+    "coefficient": 4.3328317838643455,
+    "loss": 0.0032749524604693595
+  },
+  "weighted_loss_before": 0.004053628041440279,
+  "tip_pixels": 555,
+  "predicted_tip_rgb_error_before": 20.710397720336914,
+  "predicted_tip_rgb_error_after": 16.40363557589881,
+  "predicted_spill_mean_8bit": 0.33530673052737003,
+  "predicted_spill_p99_8bit": 4.133978530803859,
+  "predicted_spill_max_8bit": 46.38886695018212,
+  "predicted_spill_pixels_over_5_levels": 4936,
+  "note": "Diagnostic prediction; capture noise and clipping affect this fit. Judge only after an actual full-scene render."
+}

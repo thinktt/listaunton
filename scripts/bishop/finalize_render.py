@@ -4,12 +4,14 @@ from pathlib import Path
 import bpy,numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--out',required=True);p.add_argument('--samples',type=int,default=96)
+p.add_argument('--fixed-samples',action='store_true')
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:]);source=ROOT/a.source;dest=ROOT/a.out
 assert dest.resolve().is_relative_to((ROOT/'build/bishop-mission').resolve())
 dest.mkdir(parents=True,exist_ok=True);source_hash=hashlib.sha256(source.read_bytes()).hexdigest()
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
 camera=[float(x) for row in s.camera.matrix_world for x in row]+[s.camera.data.ortho_scale,s.camera.data.shift_x,s.camera.data.shift_y]
 s.cycles.samples=a.samples;s.render.resolution_percentage=100;s.render.use_border=False;s.render.use_crop_to_border=False
+if a.fixed_samples:s.cycles.use_adaptive_sampling=False
 s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA';s.render.image_settings.color_depth='8'
 s.render.filepath=str(dest/'wood.png');bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(dest/'bishop.blend'))
@@ -37,4 +39,5 @@ report={'source':a.source,'source_sha256':source_hash,'saved_model_sha256':hashl
     'reopened_packed_pixel_max_errors':checks,'camera_preserved':True,'shader':'Principled BSDF','samples':a.samples,
     'resolution':[s.render.resolution_x,s.render.resolution_y],'display':s.view_settings.view_transform,'look':s.view_settings.look,
     'source_unchanged':True}
+report['adaptive_sampling']=s.cycles.use_adaptive_sampling
 (dest/'reopen-validation.json').write_text(json.dumps(report,indent=2)+'\n');print('BISHOP_FINAL_RENDER_COMPLETE',json.dumps(report),flush=True)

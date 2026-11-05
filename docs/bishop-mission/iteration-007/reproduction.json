@@ -1,0 +1,14 @@
+{
+  "starting_commit": "953d3a9",
+  "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+  "source_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "config": "docs/bishop-mission/iteration-007/lighting-056.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/lighting_trial.py -- docs/bishop-mission/iteration-007/lighting-056.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/finalize_render.py -- --source build/bishop-mission/056-aligned-soft-spot/bishop.blend --out build/bishop-mission/057-final-tip --samples 512 --fixed-samples",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_added_reflector.py -- --config docs/bishop-mission/iteration-007/lighting-056.json --model build/bishop-mission/057-final-tip/bishop.blend --out build/bishop-mission/057-final-tip/light-scope.json"
+  ],
+  "promotion": "After inspection, copy only the final model/render into the bishop model and assets. Keep the existing atlas and geometry declarations. Run validate_checkpoint.py, render_diagnostics.py, render_clay.py, compare.py, mission_compare.py, refresh_review.py and the affected page checks; synchronize the existing preview.",
+  "accepted_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "material_and_geometry": "Unchanged from checkpoint 006. One glossy-only body spot added to the unchanged rig."
+}

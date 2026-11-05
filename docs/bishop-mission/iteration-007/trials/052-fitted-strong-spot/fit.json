@@ -1,0 +1,36 @@
+{
+  "response": "build/bishop-mission/slit-response-strong-spot-006",
+  "fits": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "coefficient": 0.20950364307173228,
+      "loss": 0.004002444052262804
+    }
+  ],
+  "chosen": {
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "coefficient": 0.20950364307173228,
+    "loss": 0.004002444052262804
+  },
+  "weighted_loss_before": 0.005055926405118687,
+  "spill_scope": "Only the captured crop; a full render is still required.",
+  "core_weight": 4.0,
+  "white_only": true,
+  "reference_core_pixels": 25,
+  "tip_pixels": 555,
+  "predicted_tip_rgb_error_before": 20.65938949584961,
+  "predicted_tip_rgb_error_after": 18.458133671614984,
+  "predicted_spill_mean_8bit": 0.03847846043809916,
+  "predicted_spill_p99_8bit": 0.5430821826835118,
+  "predicted_spill_max_8bit": 2.3051638198259203,
+  "predicted_spill_pixels_over_5_levels": 0,
+  "note": "Diagnostic prediction; capture noise and clipping affect this fit. Judge only after an actual full-scene render."
+}

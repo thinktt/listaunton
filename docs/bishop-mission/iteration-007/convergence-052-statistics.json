@@ -1,0 +1,27 @@
+{
+  "renders": [
+    {
+      "samples": 256,
+      "tip_error": 18.866666666666667,
+      "core_error": 29.586666666666666,
+      "core_mean_rgb": [
+        252.96,
+        226.16,
+        173.24
+      ]
+    },
+    {
+      "samples": 1024,
+      "tip_error": 18.51051051051051,
+      "core_error": 32.25333333333333,
+      "core_mean_rgb": [
+        253.16,
+        224.56,
+        165.04
+      ]
+    }
+  ],
+  "last_pair_tip_mean_change": 6.372972972972973,
+  "last_pair_tip_p99_change": 59.3599999999999,
+  "note": "Convergence diagnostic, not a proof of exact reference match."
+}

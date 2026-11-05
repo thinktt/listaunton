@@ -64,7 +64,7 @@ for spec in cfg.get('lights',[]):
         ob=bpy.data.objects.new(name,data);s.collection.objects.link(ob)
     assert ob.type=='LIGHT'
     data=ob.data
-    for key in ['energy','color','size','size_y','shape','spot_size','spot_blend']:
+    for key in ['energy','color','size','size_y','shape','spot_size','spot_blend','shadow_soft_size']:
         if key in spec:setattr(data,key,spec[key])
     if 'spread_degrees' in spec:data.spread=math.radians(spec['spread_degrees'])
     if 'position' in spec:ob.location=spec['position']
@@ -83,6 +83,7 @@ after=unchanged_state();assert before==after,'Lighting trial modified geometry, 
 if 'view_transform' in cfg:s.view_settings.view_transform=cfg['view_transform']
 if 'look' in cfg:s.view_settings.look=cfg['look']
 s.render.resolution_percentage=100;s.cycles.samples=cfg.get('samples',40)
+if 'adaptive_sampling' in cfg:s.cycles.use_adaptive_sampling=bool(cfg['adaptive_sampling'])
 s.render.filepath=str(out/'wood.png');s['bishop_lighting_trial']=json.dumps(cfg,sort_keys=True)
 bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(out/'bishop.blend'))
@@ -91,5 +92,7 @@ for device in prefs.devices:device.use=device.type=='OPTIX'
 if any(device.use for device in prefs.devices):s.cycles.device='GPU'
 bpy.ops.render.render(write_still=True)
 record={'config':cfg,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'saved_model_sha256':hashlib.sha256((out/'bishop.blend').read_bytes()).hexdigest(),'render_sha256':hashlib.sha256((out/'wood.png').read_bytes()).hexdigest(),'geometry_uvs_material_and_camera_unchanged':before==after,'preserved_state':before}
+record['effective_lights']={spec['name']:{key:getattr(bpy.data.objects[spec['name']].data,key) for key in ['type','energy','spot_size','spot_blend','shadow_soft_size'] if hasattr(bpy.data.objects[spec['name']].data,key)} for spec in cfg.get('lights',[])}
+record['adaptive_sampling']=s.cycles.use_adaptive_sampling
 (out/'parameters.json').write_text(json.dumps(record,indent=2)+'\n')
 print('BISHOP_LIGHTING_TRIAL_COMPLETE',cfg['variant'],flush=True)

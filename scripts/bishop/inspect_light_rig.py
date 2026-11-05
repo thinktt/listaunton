@@ -11,6 +11,7 @@ for ob in s.objects:
     d=ob.data;spec={'name':ob.name,'type':d.type,'energy':d.energy,'color':list(d.color),'position':list(ob.location),
         'visible_diffuse':ob.visible_diffuse,'visible_glossy':ob.visible_glossy,'hide_render':ob.hide_render,
         'receiver':ob.light_linking.receiver_collection.name if ob.light_linking.receiver_collection else None}
+    spec['matrix_world']=[list(row) for row in ob.matrix_world]
     for key in ['size','size_y','shape','spread']:
         if hasattr(d,key):spec[key]=getattr(d,key)
     lights.append(spec)

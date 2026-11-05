@@ -1,0 +1,83 @@
+{
+  "config": {
+    "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+    "variant": "056-aligned-soft-spot",
+    "samples": 256,
+    "lights": [
+      {
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "name": "Slit tip reflection",
+        "energy": 130.83288730602055,
+        "target": [
+          0.03189122581481933,
+          -0.5420689582824707,
+          3.8347721099853516
+        ],
+        "diffuse": false,
+        "receiver": "body",
+        "glossy": true,
+        "position": [
+          0.2514924329888813,
+          -3.398836407542515,
+          2.945584249825331
+        ],
+        "type": "SPOT",
+        "spot_size": 0.017453292519943295,
+        "spot_blend": 0.75,
+        "shadow_soft_size": 0.015
+      }
+    ],
+    "hypothesis": "A confined real reflection restores the missing slit-tip glint while retaining the accepted geometry, pigment and other lights.",
+    "adaptive_sampling": false
+  },
+  "source_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "saved_model_sha256": "d76b9b8f628246ba98457ff6d9558e3121f2cda801eefa25bf2a8d794bd3ad60",
+  "render_sha256": "3ed4e6fb8f1a6e20171be9bb5b18abc435834ffe5d41e089669ffddf1b650fb5",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "ddc85c01571872ef26645fe8dd05b634048dfa43bfb03fa3962bb48fcf0cc2be",
+      "Mitre saw cut - editable cutter": "cfb8406e703dd84260154b47cbb424ce66e4917287331a4a79bc601667c78250",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "15dc4cd2d10b91e774f060b4ffd569acfffefde999fb78002cea7ed4023d96ab",
+      "Bishop boxwood \u2014 interior cut.001": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  },
+  "effective_lights": {
+    "Slit tip reflection": {
+      "type": "SPOT",
+      "energy": 130.8328857421875,
+      "spot_size": 0.01745329238474369,
+      "spot_blend": 0.75,
+      "shadow_soft_size": 0.014999999664723873
+    }
+  },
+  "adaptive_sampling": false
+}

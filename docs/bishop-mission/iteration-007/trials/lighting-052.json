@@ -1,0 +1,51 @@
+{
+  "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+  "samples": 64,
+  "lights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "name": "Slit tip reflection",
+      "energy": 1000,
+      "target": [
+        0.020391225814819336,
+        -0.5420689582824707,
+        3.8347721099853516
+      ],
+      "diffuse": false,
+      "receiver": "body",
+      "glossy": true,
+      "position": [
+        0.5327940425542973,
+        -7.207859673222574,
+        1.7600004362786366
+      ],
+      "type": "SPOT",
+      "spot_size": 0.010471975511965976,
+      "spot_blend": 0.75,
+      "shadow_soft_size": 0
+    }
+  ],
+  "variant": "052-spot-tip-measurement",
+  "normal_measurement": {
+    "manifest": "build/bishop-mission/slit-shading-normals/manifest.json",
+    "pixel": [
+      497,
+      431
+    ],
+    "normal": [
+      0.04505288441714376,
+      -0.9478539677240542,
+      0.3155045062680771
+    ],
+    "geometric_normal": [
+      0.03561657294631004,
+      -0.9469823241233826,
+      0.3193054497241974
+    ],
+    "difference_degrees": 0.584919811001273
+  }
+}

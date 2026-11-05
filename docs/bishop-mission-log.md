@@ -180,3 +180,27 @@ separately so the existing geometry safeguards remain effective. Accepted
 model, neutral/side renders, exported viewer and local review are synchronized
 before the checkpoint commit. Next, examine the slit-tip reflection under the
 accepted geometry without reintroducing head glare.
+
+## Iteration 007 — a localized slit-tip reflection
+
+A glossy-only soft spot restores the small cream glint at the slit termination.
+The earlier area-light trials were rejected after their brightness changed
+drastically with sampling. The accepted source is positioned from measured
+surface normals and checked in actual full and higher-sample cropped renders.
+Fine highlight noise remains; this is a local improvement, not convergence
+to a perfect reference match.
+
+Geometry, camera, pigment, material nodes, the original lighting rig and gallery
+proportions are preserved. The final scene is saved, reopened and rendered at
+512 fixed samples; an equally sampled baseline isolates the added reflection.
+The tip-region RGB error decreases from 20.68 to 16.40 /255. The lighting score
+rises from 72 to 73, and the working mean from 82.64 to 82.84. Holistic fixed-view
+appearance remains approximately 75–85%.
+
+A separate rear-pigment continuation is rejected because its main boundary
+remains visible. Checkpoint 006 is preserved in `history/bishop-mission-006`.
+See [`iteration-007/assessment.md`](bishop-mission/iteration-007/assessment.md)
+for the full scorecard, sampling limitations, rejected trials and validation.
+The bishop review and existing local preview are refreshed together at
+acceptance. The next material trial must address residual shading inside the
+projected pigment, rather than repeating a protected hidden-only fill.

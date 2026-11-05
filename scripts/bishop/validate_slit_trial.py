@@ -30,8 +30,8 @@ def capture(path):
     result['world']=nodes(s.world.node_tree)
     for ob in s.objects:
         if ob.type=='LIGHT':
-            keys=['energy','color','size','size_y','shape','spread']
-            result['lights'][ob.name]={k:serial(getattr(ob.data,k)) for k in keys}
+            keys=['type','energy','color','size','size_y','shape','spread','spot_size','spot_blend','shadow_soft_size']
+            result['lights'][ob.name]={k:serial(getattr(ob.data,k)) for k in keys if hasattr(ob.data,k)}
             result['lights'][ob.name].update(matrix=serial(ob.matrix_world),diffuse=ob.visible_diffuse,glossy=ob.visible_glossy,receiver=ob.light_linking.receiver_collection.name if ob.light_linking.receiver_collection else None)
         if ob.type!='MESH' or ob.hide_render:continue
         data={'vertices':[list(v.co) for v in ob.data.vertices],'faces':[list(f.vertices) for f in ob.data.polygons],

@@ -1,0 +1,47 @@
+{
+  "starting_commit": "953d3a9",
+  "model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "render_sha256": "81ab25f46b5299f1ed15cc0b6ad2b681a0c7ac55257e6447b49847a1018ae04d",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "camera_elevation_degrees": 54,
+  "camera_exactly_unchanged": true,
+  "mesh_preservation": {
+    "positions_normals_and_indices_exactly_unchanged": true,
+    "control_uvs_exactly_unchanged": true,
+    "max_evaluated_uv_difference": 5.960464477539063e-08,
+    "evaluated_uv_rows_with_rounding_difference": 695,
+    "note": "Re-evaluated Boolean UV interpolation differs by at most one float32 rounding step; accepted control UVs are exact in the separate scope audit."
+  },
+  "all_piece_checks_passed": true,
+  "declared_light_scope_passed": true,
+  "materials_world_and_original_lights_preserved": true,
+  "beauty_samples": 512,
+  "adaptive_sampling": false,
+  "beauty_resolution": [
+    1254,
+    1254
+  ],
+  "saved_and_reopened_before_render": true,
+  "display_view": "Standard",
+  "display_look": "None",
+  "packed_texture_pixel_error": 0,
+  "site_and_preview_checks": {
+    "bishop_viewer": "passed; 501 projected vertices; maximum camera error 0.000008767682662578041 pixels",
+    "bishop_workspace": "passed; overlay/rotation/candidate tabs, state preservation and source guards",
+    "model_site_and_historical_projections": "passed via scripts/check_model_site.py",
+    "all_candidate_reviews": "passed via scripts/check_candidate_review.cjs",
+    "set_comparison_and_approved_sizing": "passed via scripts/check_set.cjs",
+    "python_syntax": "all bishop scripts parsed successfully",
+    "scoped_git_diff_check": "passed",
+    "canonical_preview_byte_equal_files": 39,
+    "preview_directory": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires",
+    "native_browser_inspected": false,
+    "verified_at_utc": "2026-11-05T21:52:18.793922+00:00"
+  },
+  "reference_hashes": {
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+  },
+  "ui_validation": "Simulated DOM/WebGL harness; native browser not inspected."
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Reference",
+    "tip_error": 0.0,
+    "core_error": 0.0,
+    "core_mean": [
+      253.24,
+      251.28,
+      226.04
+    ]
+  },
+  {
+    "name": "64 adaptive",
+    "tip_error": 15.581981981981983,
+    "core_error": 14.28,
+    "core_mean": [
+      254.88,
+      248.64,
+      228.36
+    ]
+  },
+  {
+    "name": "96 adaptive",
+    "tip_error": 18.93933933933934,
+    "core_error": 47.50666666666667,
+    "core_mean": [
+      253.56,
+      215.56,
+      122.04
+    ]
+  },
+  {
+    "name": "96 fixed",
+    "tip_error": 20.037837837837838,
+    "core_error": 40.04,
+    "core_mean": [
+      253.4,
+      225.32,
+      135.0
+    ]
+  },
+  {
+    "name": "384 fixed",
+    "tip_error": 37.95135135135135,
+    "core_error": 12.28,
+    "core_mean": [
+      255.0,
+      253.04,
+      249.92
+    ]
+  },
+  {
+    "name": "1024 fixed",
+    "tip_error": 47.22942942942943,
+    "core_error": 11.586666666666666,
+    "core_mean": [
+      255.0,
+      254.0,
+      251.04
+    ]
+  }
+]

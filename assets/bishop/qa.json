@@ -2,15 +2,15 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9787001523353063,
-      "mean_boundary_error_px": 3.6033755274261603,
+      "silhouette_iou": 0.9787210982658959,
+      "mean_boundary_error_px": 3.5996835443037973,
       "p95_boundary_error_px": 13.25,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.8313007189118775
+      "mean_boundary_error_original_300px_units": 0.8304489763720088
     },
     "selected": {
-      "silhouette_iou": 0.9614031447752568,
-      "mean_boundary_error_px": 7.015295358649789,
+      "silhouette_iou": 0.9614294775654896,
+      "mean_boundary_error_px": 7.010548523206751,
       "p95_boundary_error_px": 17.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }

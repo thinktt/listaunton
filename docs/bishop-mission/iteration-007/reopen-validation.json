@@ -1,0 +1,21 @@
+{
+  "source": "build/bishop-mission/056-aligned-soft-spot/bishop.blend",
+  "source_sha256": "d76b9b8f628246ba98457ff6d9558e3121f2cda801eefa25bf2a8d794bd3ad60",
+  "saved_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "render_sha256": "81ab25f46b5299f1ed15cc0b6ad2b681a0c7ac55257e6447b49847a1018ae04d",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "reopened_packed_pixel_max_errors": {
+    "Bishop \u2014 inferred boxwood pigment and varnish.001": 0.0
+  },
+  "camera_preserved": true,
+  "shader": "Principled BSDF",
+  "samples": 512,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "display": "Standard",
+  "look": "None",
+  "source_unchanged": true,
+  "adaptive_sampling": false
+}

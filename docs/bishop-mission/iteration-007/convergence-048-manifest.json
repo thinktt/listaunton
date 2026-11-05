@@ -1,0 +1,18 @@
+{
+  "source": "build/bishop-mission/048-white-tip-reflection/bishop.blend",
+  "source_sha256": "e1340f47b78f20f34204d4f0bd6b512686ab8491d546849d5ed0e6f298d73a19",
+  "samples": [
+    96,
+    384,
+    1024
+  ],
+  "adaptive_sampling": false,
+  "denoising": true,
+  "source_and_camera_unchanged": true,
+  "crop_pixels": [
+    445,
+    385,
+    565,
+    480
+  ]
+}

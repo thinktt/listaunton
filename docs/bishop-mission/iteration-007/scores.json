@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.19867258999165,
+    "interior": 83,
+    "color": 85,
+    "texture": 77,
+    "lighting": 73
+  },
+  "mean_percent": 82.83973451799832,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9787850233765139,
+  "original_black_iou": 0.9675225173593306,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "render_sha256": "81ab25f46b5299f1ed15cc0b6ad2b681a0c7ac55257e6447b49847a1018ae04d",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "starting_model_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "status": "accepted localized slit-tip reflection; mission incomplete"
+}

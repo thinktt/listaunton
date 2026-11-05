@@ -1,0 +1,16 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+  "render": "build/bishop-mission/057-final-tip/wood.png",
+  "render_sha256": "81ab25f46b5299f1ed15cc0b6ad2b681a0c7ac55257e6447b49847a1018ae04d",
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9619867258999164
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787850233765139
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675225173593306
+    }
+  }
+}

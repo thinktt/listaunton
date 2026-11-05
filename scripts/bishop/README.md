@@ -87,6 +87,24 @@ The current profile declares this revision so `validate_mission.py` checks it
 in addition to the earlier foot/button edits. Keep that declaration with the
 model. Do not revert to the old cube cutter in an ordinary material iteration.
 
+Checkpoint 007 retains checkpoint 006's geometry and pigment and adds one
+glossy-only soft spot at the slit tip. Reproduce it with `lighting_trial.py`
+and `docs/bishop-mission/iteration-007/lighting-056.json`, then `finalize_render.py`
+at 512 fixed samples. See that iteration's `reproduction.json` for exact commands.
+`validate_added_reflector.py` verifies the sole declared light addition against
+the archived source, preserving all materials, camera controls, UVs and prior
+lights. Use the existing geometry and site pipeline afterward. The failed
+needle-like area lights must not replace the accepted spot: their preview
+response was strongly sample dependent. Higher-sample evidence for the accepted
+spot still shows fine noise, documented in the assessment.
+
+`capture_added_reflection.py`, `fit_added_reflection.py`, and the reflection
+convergence tools provide diagnostic measurements only. Their predictions do
+not establish acceptance; render and inspect the saved real BSDF scene.
+`bake_pigment_coverage.py` measures the original projection-blend confidence
+without saving scene changes. The trial using that mask did not resolve the
+rear material boundary and is not part of the accepted atlas.
+
 ## Original geometry construction
 
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.

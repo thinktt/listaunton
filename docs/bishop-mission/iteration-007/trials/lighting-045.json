@@ -1,0 +1,33 @@
+{
+  "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+  "samples": 64,
+  "lights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "name": "Slit tip reflection",
+      "energy": 1,
+      "spread_degrees": 3,
+      "target": [
+        0.020391225814819336,
+        -0.5420689582824707,
+        3.8347721099853516
+      ],
+      "diffuse": false,
+      "shape": "DISK",
+      "receiver": "body",
+      "glossy": true,
+      "position": [
+        0.4267492890357971,
+        -7.231921672821045,
+        1.8146858215332031
+      ],
+      "type": "AREA",
+      "size": 0.15
+    }
+  ],
+  "variant": "045-slit-tip-reflector"
+}

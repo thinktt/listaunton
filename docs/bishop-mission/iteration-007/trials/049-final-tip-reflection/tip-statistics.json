@@ -1,0 +1,73 @@
+{
+  "render": "build/bishop-mission/049-final-tip-reflection/wood.png",
+  "regions": {
+    "tip": {
+      "pixels": 555,
+      "reference_mean_rgb": [
+        246.47207207207208,
+        186.52072072072073,
+        104.81801801801802
+      ],
+      "previous_mean_rgb": [
+        236.8054054054054,
+        163.73693693693693,
+        79.09009009009009
+      ],
+      "current_mean_rgb": [
+        239.95855855855856,
+        178.35855855855857,
+        94.26846846846847
+      ],
+      "previous_mean_rgb_error": 20.649249249249248,
+      "current_mean_rgb_error": 18.93933933933934
+    },
+    "reference_bright_core": {
+      "pixels": 25,
+      "reference_mean_rgb": [
+        253.24,
+        251.28,
+        226.04
+      ],
+      "previous_mean_rgb": [
+        252.44,
+        184.68,
+        93.52
+      ],
+      "current_mean_rgb": [
+        253.56,
+        215.56,
+        122.04
+      ],
+      "previous_mean_rgb_error": 67.6,
+      "current_mean_rgb_error": 47.50666666666667
+    },
+    "all_foreground": {
+      "pixels": 322558,
+      "reference_mean_rgb": [
+        169.0991542606291,
+        113.14133272155705,
+        56.40458770205669
+      ],
+      "previous_mean_rgb": [
+        165.6706886823455,
+        109.75028056969599,
+        51.9480186509093
+      ],
+      "current_mean_rgb": [
+        165.7228994475412,
+        109.78613148643035,
+        51.970535531594315
+      ],
+      "previous_mean_rgb_error": 7.47180765423066,
+      "current_mean_rgb_error": 7.461777416774658
+    }
+  },
+  "outside_tip_context": {
+    "pixels": 312982,
+    "mean_absolute_rgb_change": 0.216561974810053,
+    "p99_absolute_channel_change": 2.0,
+    "maximum_channel_change": 23.0,
+    "pixels_with_any_channel_change_over_5": 580
+  },
+  "note": "Native 8-bit values at fixed registration. Small off-target changes can reflect Monte Carlo sampling/denoising. These diagnostics do not replace actual image inspection."
+}

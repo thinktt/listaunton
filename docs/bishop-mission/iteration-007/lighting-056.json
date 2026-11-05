@@ -1,0 +1,35 @@
+{
+  "source": "history/bishop-mission-006/bishop-rebuilt.blend",
+  "variant": "056-aligned-soft-spot",
+  "samples": 256,
+  "lights": [
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "name": "Slit tip reflection",
+      "energy": 130.83288730602055,
+      "target": [
+        0.03189122581481933,
+        -0.5420689582824707,
+        3.8347721099853516
+      ],
+      "diffuse": false,
+      "receiver": "body",
+      "glossy": true,
+      "position": [
+        0.2514924329888813,
+        -3.398836407542515,
+        2.945584249825331
+      ],
+      "type": "SPOT",
+      "spot_size": 0.017453292519943295,
+      "spot_blend": 0.75,
+      "shadow_soft_size": 0.015
+    }
+  ],
+  "hypothesis": "A confined real reflection restores the missing slit-tip glint while retaining the accepted geometry, pigment and other lights.",
+  "adaptive_sampling": false
+}
