@@ -282,3 +282,12 @@ Rebuild with scripts/queen/rebuild_socket_checkpoint.py and the iteration-014
 config. Compare unchanged geometry to history/queen-mission-013 without the
 base-transition flag. Consult iteration-014 for scores, actual-render comparisons,
 pixel reproduction checks and remaining problems.
+
+
+The fifteenth checkpoint retains the v8 atlas, relief and geometry. It refines
+collar reflections using a fourth exact receiver and omits secondary glossy
+interreflection after a diagnostic identified the crown-body stripe. Direct
+BSDF lighting remains active; the render approximation is explicit in iteration-015.
+Reproduce with rebuild_collar_checkpoint.py from archived checkpoint 14.
+Future receiver regeneration requires both socket_band=True and collar_band=True.
+See iteration-015 for rejected trials, reproduction and all five scores.

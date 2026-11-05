@@ -1,0 +1,38 @@
+{
+  "reopened": {
+    "mean_rgb_byte_difference": 0.0028226527848789246,
+    "opaque_mean_rgb_byte_difference": 0.012014403873895425,
+    "opaque_p99_rgb_byte_difference": 1.0,
+    "opaque_p999_rgb_byte_difference": 1.0,
+    "opaque_fraction_pixels_over_five_bytes": 6.252310636539591e-05,
+    "max_rgb_byte_difference": 49,
+    "alpha_identical": true
+  },
+  "reproduced": {
+    "mean_rgb_byte_difference": 0.008913528807761998,
+    "opaque_mean_rgb_byte_difference": 0.037837352934780244,
+    "opaque_p99_rgb_byte_difference": 1.0,
+    "opaque_p999_rgb_byte_difference": 1.0,
+    "opaque_fraction_pixels_over_five_bytes": 0.0001005806493704195,
+    "max_rgb_byte_difference": 17,
+    "alpha_identical": true
+  },
+  "repeat_same_saved_file": {
+    "mean_rgb_byte_difference": 0.010720611639775578,
+    "opaque_mean_rgb_byte_difference": 0.04551772756598453,
+    "opaque_p99_rgb_byte_difference": 1.0,
+    "opaque_p999_rgb_byte_difference": 2.0,
+    "opaque_fraction_pixels_over_five_bytes": 0.0001631037557358154,
+    "max_rgb_byte_difference": 49,
+    "alpha_identical": true
+  },
+  "strict_one_byte_check_passed": false,
+  "assessment": "The original all-pixel one-byte bound failed on sparse glints. Quantified over opaque piece pixels and checked a second reopen; no broad material/color or alpha change. Native 64-sample render comparisons are not claimed bit exact.",
+  "tolerances": {
+    "opaque_mean_bytes_max": 0.1,
+    "opaque_p999_bytes_max": 2,
+    "opaque_fraction_pixels_over_five_bytes_max": 0.001,
+    "max_bytes": 64,
+    "alpha_identical_required": true
+  }
+}

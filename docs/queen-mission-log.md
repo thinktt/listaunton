@@ -1070,3 +1070,23 @@ now control lights. Fixed and side renders, viewer and local review are updated
 together. Prior model: history/queen-mission-013. Delivered model SHA-256:
 eac23f7c9bbead43a22ea621f2a05a0604eeeebcc13a131e53ffabaca6302223.
 Next address fragmented collar highlights. The goal remains incomplete.
+
+
+## Fifteenth iteration: collar reflections
+
+Trials 140-142 were rejected for missing or misplaced glints. Retaining the
+accepted illumination as a local fitting basis (143-144) lowered error, but
+strengthened a secondary crown-body reflection. A bounce diagnostic isolated
+that cause. Trial 145 removes secondary glossy interreflection, preserving
+the actual BSDF material, geometry and fixed 54-degree camera. It is accepted.
+
+Scores: outline 97.9612 measured, form 82, color 84, grain 79, lighting 72;
+mean 82.9922%, holistic 79-84%. Original IoU 97.9109%. The actual collar crop
+error falls 14.61%; that local statistic is not total model fidelity.
+Four exact receivers now separate collars from the accepted stem/socket and
+finial setup. Reopened and independent reconstruction checks, all comparisons,
+rejected trials and persistent defects are recorded in iteration-015.
+
+Delivered model SHA-256: 8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0. Prior model: history/queen-mission-014.
+Local review, fixed/side renders and viewer are updated together. Next examine
+collar normals versus pigment/relief; the mission remains incomplete.

@@ -1,0 +1,314 @@
+{
+  "source_sha256": "eac23f7c9bbead43a22ea621f2a05a0604eeeebcc13a131e53ffabaca6302223",
+  "crop": [
+    290,
+    350,
+    680,
+    565
+  ],
+  "samples": 256,
+  "source_unchanged": true,
+  "lights": [
+    {
+      "key": "light-01",
+      "name": "Diffuse Right key",
+      "linear_luminance_sum": 1440.1965250647931,
+      "wrong_patch_sum": 588.0160758956811,
+      "energy": 400.0
+    },
+    {
+      "key": "light-06",
+      "name": "Display fitted base-key",
+      "linear_luminance_sum": 522.6488730954981,
+      "wrong_patch_sum": 499.05923167822834,
+      "energy": 35.119232177734375
+    },
+    {
+      "key": "light-12",
+      "name": "Display fitted finial-right",
+      "linear_luminance_sum": 107.96559978909269,
+      "wrong_patch_sum": 102.83705956581872,
+      "energy": 61.458885192871094
+    },
+    {
+      "key": "light-10",
+      "name": "Display fitted finial-top",
+      "linear_luminance_sum": 98.23454392808176,
+      "wrong_patch_sum": 93.00464603999367,
+      "energy": 39.61894607543945
+    },
+    {
+      "key": "light-18",
+      "name": "Display fitted lower-right",
+      "linear_luminance_sum": 85.44938236153791,
+      "wrong_patch_sum": 81.63899132394606,
+      "energy": 52.99650192260742
+    },
+    {
+      "key": "light-07",
+      "name": "Display fitted collars-right",
+      "linear_luminance_sum": 82.43109912861425,
+      "wrong_patch_sum": 77.02072949901078,
+      "energy": 53.272029876708984
+    },
+    {
+      "key": "light-17",
+      "name": "Display fitted upper-right",
+      "linear_luminance_sum": 83.49256492710606,
+      "wrong_patch_sum": 76.38479134360958,
+      "energy": 55.683929443359375
+    },
+    {
+      "key": "light-19",
+      "name": "Display fitted foot-right",
+      "linear_luminance_sum": 61.071719737496224,
+      "wrong_patch_sum": 58.2340127832631,
+      "energy": 40.47621536254883
+    },
+    {
+      "key": "light-02",
+      "name": "Diffuse Foot strip",
+      "linear_luminance_sum": 267.6158149838159,
+      "wrong_patch_sum": 18.890447756692105,
+      "energy": 150.0
+    },
+    {
+      "key": "light-04",
+      "name": "Display fitted original-right",
+      "linear_luminance_sum": 11.284086902435554,
+      "wrong_patch_sum": 10.38846456891497,
+      "energy": 8.32822036743164
+    },
+    {
+      "key": "world",
+      "name": "World",
+      "linear_luminance_sum": 27.59679644951624,
+      "wrong_patch_sum": 5.992732960997105,
+      "energy": 0.029999999329447746
+    },
+    {
+      "key": "light-23",
+      "name": "Display fitted tip-back-left",
+      "linear_luminance_sum": 41.31553116668297,
+      "wrong_patch_sum": 0.6819522556792413,
+      "energy": 20.258087158203125
+    },
+    {
+      "key": "light-00",
+      "name": "Diffuse Top reflection",
+      "linear_luminance_sum": 156.76151934080565,
+      "wrong_patch_sum": 0.40578872761120705,
+      "energy": 1100.0
+    },
+    {
+      "key": "light-24",
+      "name": "Display fitted bowl-inner-front",
+      "linear_luminance_sum": 2.227839502700356,
+      "wrong_patch_sum": 0.03718263190125072,
+      "energy": 1.4037238359451294
+    },
+    {
+      "key": "light-09",
+      "name": "Display fitted finial-left",
+      "linear_luminance_sum": 1.33026387255359,
+      "wrong_patch_sum": 0.014795094035434827,
+      "energy": 0.6575295329093933
+    },
+    {
+      "key": "light-08",
+      "name": "Display fitted lower-collar",
+      "linear_luminance_sum": 0.2637636523895724,
+      "wrong_patch_sum": 0.009980446822808001,
+      "energy": 3.1133928298950195
+    },
+    {
+      "key": "light-05",
+      "name": "Display fitted original-foot",
+      "linear_luminance_sum": 4.25430926381476,
+      "wrong_patch_sum": 0.008607067907181725,
+      "energy": 2.3332064151763916
+    },
+    {
+      "key": "light-20",
+      "name": "Display fitted foot-left-precise",
+      "linear_luminance_sum": 1.5282481223969808,
+      "wrong_patch_sum": 0.00253021342119887,
+      "energy": 2.242056131362915
+    },
+    {
+      "key": "light-16",
+      "name": "Display fitted middle-left",
+      "linear_luminance_sum": 1.2796945869258698,
+      "wrong_patch_sum": 0.0014774196267703067,
+      "energy": 1.0571370124816895
+    },
+    {
+      "key": "light-22",
+      "name": "Display fitted rim-front-right",
+      "linear_luminance_sum": 0.16420081926002122,
+      "wrong_patch_sum": 0.001431766203415449,
+      "energy": 6.062984466552734
+    },
+    {
+      "key": "light-03",
+      "name": "Display fitted original-top",
+      "linear_luminance_sum": 0.3556410950603432,
+      "wrong_patch_sum": 9.722085019926656e-05,
+      "energy": 48.890830993652344
+    },
+    {
+      "key": "light-11",
+      "name": "Display fitted base-rear",
+      "linear_luminance_sum": 3.746487070532744,
+      "wrong_patch_sum": 5.070958370391056e-06,
+      "energy": 7.089509010314941
+    },
+    {
+      "key": "light-21",
+      "name": "Display fitted rim-front-left",
+      "linear_luminance_sum": 0.00031840465798647075,
+      "wrong_patch_sum": 9.714945147715868e-07,
+      "energy": 21.360801696777344
+    },
+    {
+      "key": "light-13",
+      "name": "Display fitted finial-left-spot",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 3820.636962890625
+    },
+    {
+      "key": "light-14",
+      "name": "Display fitted finial-top-spot",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 16648.908203125
+    },
+    {
+      "key": "light-15",
+      "name": "Display fitted finial-right-spot",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 2699.626220703125
+    },
+    {
+      "key": "light-25",
+      "name": "Bowl focused left-0",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 163.04934692382812
+    },
+    {
+      "key": "light-26",
+      "name": "Bowl focused left-1",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 187.09719848632812
+    },
+    {
+      "key": "light-27",
+      "name": "Bowl focused left-2",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 275.3469543457031
+    },
+    {
+      "key": "light-28",
+      "name": "Bowl focused left-3",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 260.6561584472656
+    },
+    {
+      "key": "light-29",
+      "name": "Bowl focused rear-0",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 136.72927856445312
+    },
+    {
+      "key": "light-30",
+      "name": "Bowl focused rear-1",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 539.6791381835938
+    },
+    {
+      "key": "light-31",
+      "name": "Bowl focused rear-2",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 698.1104736328125
+    },
+    {
+      "key": "light-32",
+      "name": "Bowl focused rear-3",
+      "linear_luminance_sum": 0.0,
+      "wrong_patch_sum": 0.0,
+      "energy": 583.1001586914062
+    },
+    {
+      "key": "light-33",
+      "name": "Socket crescent 01",
+      "linear_luminance_sum": 0.00021318917830930625,
+      "wrong_patch_sum": 0.0,
+      "energy": 52.636505126953125
+    },
+    {
+      "key": "light-34",
+      "name": "Socket crescent 02",
+      "linear_luminance_sum": 0.00032906051413181237,
+      "wrong_patch_sum": 0.0,
+      "energy": 528.8929443359375
+    },
+    {
+      "key": "light-35",
+      "name": "Socket crescent 03",
+      "linear_luminance_sum": 0.00019896353231341966,
+      "wrong_patch_sum": 0.0,
+      "energy": 429.9660339355469
+    },
+    {
+      "key": "light-36",
+      "name": "Socket crescent 04",
+      "linear_luminance_sum": 2.7643775022339314e-05,
+      "wrong_patch_sum": 0.0,
+      "energy": 136.520263671875
+    },
+    {
+      "key": "light-37",
+      "name": "Socket crescent 05",
+      "linear_luminance_sum": 7.678262724059393e-06,
+      "wrong_patch_sum": 0.0,
+      "energy": 21.77409553527832
+    },
+    {
+      "key": "light-38",
+      "name": "Socket crescent 06",
+      "linear_luminance_sum": 7.318063123058252e-05,
+      "wrong_patch_sum": 0.0,
+      "energy": 95.63965606689453
+    },
+    {
+      "key": "light-39",
+      "name": "Socket crescent 07",
+      "linear_luminance_sum": 0.00019994752369022548,
+      "wrong_patch_sum": 0.0,
+      "energy": 300.6112060546875
+    },
+    {
+      "key": "light-40",
+      "name": "Socket crescent 08",
+      "linear_luminance_sum": 0.004446505048535606,
+      "wrong_patch_sum": 0.0,
+      "energy": 3200.0
+    },
+    {
+      "key": "light-41",
+      "name": "Socket crescent 09",
+      "linear_luminance_sum": 0.0016015426431702335,
+      "wrong_patch_sum": 0.0,
+      "energy": 70.58642578125
+    }
+  ]
+}

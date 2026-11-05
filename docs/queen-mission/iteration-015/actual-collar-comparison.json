@@ -1,0 +1,19 @@
+{
+  "crop": [
+    290,
+    350,
+    680,
+    565
+  ],
+  "measurement": "Weighted RGB display-space mean square error in actual full renders, not a visual-match percentage.",
+  "previous_mse": 0.009200959329763624,
+  "candidate_mse": 0.007857084511921781,
+  "reduction_percent": 14.60581195587534,
+  "trial_mse": {
+    "140-isolated-collars": 0.012536674475636224,
+    "141-collar-crescents": 0.014412161898983164,
+    "142-fitted-collar-crescents": 0.011524890332537941,
+    "144-retained-fitted-collars": 0.007908242934829007,
+    "145-direct-glossy-collars": 0.007857084511921781
+  }
+}

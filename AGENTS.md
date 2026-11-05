@@ -100,3 +100,13 @@ partition when regenerating receivers. Do not replace it with finial_only.
 Rebuild with rebuild_socket_checkpoint.py and iteration-014/reproduction.json.
 check_material_geometry.py now compares to history/queen-mission-013 in ordinary
 unchanged-geometry mode. Preserve fixed/side/viewer synchronization.
+
+
+The fifteenth queen checkpoint retains the v8 material and closed control.
+It adds an exact collars receiver to turned-body, stem-socket and finial; use
+partition(..., socket_band=True, collar_band=True) after future geometry edits.
+Local lights are fitted with the accepted illumination retained as a basis.
+Secondary glossy bounces are zero to remove a measured crown-body interreflection;
+this is an artistic rendering approximation, not a recovered original setting.
+Rebuild with rebuild_collar_checkpoint.py and iteration-015/reproduction.json.
+Preserve unchanged geometry/UV checks and fixed/side/viewer synchronization.

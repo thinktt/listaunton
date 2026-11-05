@@ -1,0 +1,68 @@
+{
+  "source_sha256": "002fc883d23a3ddde826b3188910ae6631f8353e51e550a02c81f880b7080001",
+  "sample_count": 512,
+  "crop": [
+    290,
+    350,
+    680,
+    565
+  ],
+  "gain_factors": {
+    "Collar crescent 00": 0.0,
+    "Collar crescent 01": 0.006795803165502842,
+    "Collar crescent 02": 0.0010205342312080432,
+    "Collar crescent 03": 0.01771244321830542,
+    "Collar crescent 04": 0.12297537990569526,
+    "Collar crescent 05": 0.10727459973180786,
+    "Collar crescent 06": 0.017000300511017273,
+    "Collar crescent 07": 0.003731285423409867,
+    "Collar crescent 08": 0.27027192997191446,
+    "Collar crescent 09": 0.8657019800084597,
+    "Collar crescent 10": 0.31957297818078895,
+    "Collar crescent 11": 0.0,
+    "Collar crescent 12": 0.021073533100746642,
+    "Collar crescent 13": 0.32411789532051943,
+    "Collar crescent 14": 4.548005254865759,
+    "Collar crescent 15": 0.4065168620780607,
+    "Collar crescent 16": 0.0,
+    "Collar crescent 17": 0.0,
+    "Collar crescent 18": 0.04252379413666866,
+    "Collar crescent 19": 1.0972081876929172,
+    "Collar crescent 20": 0.06728484536563595,
+    "Collar crescent 21": 0.0002847739133722875,
+    "Collar crescent 22": 0.0
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.015060185833628715,
+      "after_mse": 0.011652643762394334
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.011652643762394334,
+      "after_mse": 0.011588861944338745
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.011588861944338745,
+      "after_mse": 0.011581269875914709
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.011581269875914709,
+      "after_mse": 0.011580822738392688
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.011580822738392688,
+      "after_mse": 0.011580799248041411
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.011580799248041411,
+      "after_mse": 0.011580797439340087
+    }
+  ],
+  "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+}

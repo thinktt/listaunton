@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "140-isolated-collars",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 81.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Stray bands disappear but intended collar highlights become too dark."
+  },
+  {
+    "variant": "141-collar-crescents",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 64
+    },
+    "mean": 81.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Uniform spot powers overexpose multiple neighboring edges."
+  },
+  {
+    "variant": "142-fitted-collar-crescents",
+    "scores": {
+      "silhouette": 97.95615523417091,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 66
+    },
+    "mean": 81.59123104683418,
+    "original_iou": 0.9791335532999006,
+    "decision": "reject",
+    "reason": "Fitting powers suppresses excess light but leaves most intended highlights too dim; actual error is worse than accepted."
+  },
+  {
+    "variant": "144-retained-fitted-collars",
+    "scores": {
+      "silhouette": 97.95615523417091,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 70
+    },
+    "mean": 82.59123104683418,
+    "original_iou": 0.9791335532999006,
+    "decision": "reject alone",
+    "reason": "Retained regional lights lower numerical error, but strengthen the distracting crown-body reflection."
+  },
+  {
+    "variant": "145-direct-glossy-collars",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 72
+    },
+    "mean": 82.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "accept",
+    "reason": "Regional fit plus omission of secondary glossy interreflection removes the crown-body stripe and improves collar glints without a material regression in fixed or side inspection."
+  }
+]

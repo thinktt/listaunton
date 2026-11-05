@@ -18,7 +18,13 @@ def check(scene,control):
     assert control.hide_render
     settings=json.loads(scene['mission_material_config'])
     socket=settings.get('stem_socket_receiver_isolation')
+    collar=settings.get('collar_receiver_isolation')
+    if settings.get('glossy_interreflection'):
+        assert scene.cycles.glossy_bounces==settings['glossy_interreflection']['glossy_bounces']==0
     expected_parts={'turned-body','stem-socket','finial'} if socket else {'turned-body','finial'}
+    if collar:
+        assert socket
+        expected_parts.add('collars')
     assert {o['mission_render_region'] for o in parts}==expected_parts
     if socket:
         assert socket['z_interval']==[.83,2.78]
@@ -28,6 +34,12 @@ def check(scene,control):
         region=next(o for o in parts if o['mission_render_region']=='stem-socket')
         centers=np.array([tuple(p.center) for p in region.data.polygons])
         assert np.all((centers[:,2]>=.83)&(centers[:,2]<2.78))
+    if collar:
+        assert collar['z_interval']==[2.78,3.34]
+        assert hashlib.sha256(controls.tobytes()).hexdigest()==collar['closed_controls_sha256']
+        region=next(o for o in parts if o['mission_render_region']=='collars')
+        centers=np.array([tuple(p.center) for p in region.data.polygons])
+        assert np.all((centers[:,2]>=2.78)&(centers[:,2]<3.34))
     for part in parts:
         assert not part.hide_render and not part.modifiers
         assert part.matrix_world==control.matrix_world
@@ -55,6 +67,11 @@ def check(scene,control):
         if socket:
             if name.startswith('Socket crescent '):expected={'stem-socket'}
             elif name not in socket['excluded_reflectors']:expected={'turned-body','stem-socket'}
+            if collar:
+                if name.startswith(('Collar crescent ','Collar retained ')):expected={'collars'}
+                else:
+                    if 'turned-body' in expected:expected.add('collars')
+                    if name in collar['excluded_reflectors']:expected.discard('collars')
             assert set(specifications[name]['receiver_parts'])==expected
         assert receiver and {o.get('mission_render_region') for o in receiver.objects}==expected
         assert 'finial' not in expected
@@ -63,6 +80,7 @@ def check(scene,control):
             'custom_normal_mean_component_error':float(normal_error.mean()),
             'materials_shared':True,'excluded_reflector_count':len(cfg['excluded_reflectors']),
             'closed_editable_control_retained':True,
+            'collar_controls_unchanged':bool(collar) if collar else None,
             'receiver_regions':sorted(expected_parts),'socket_controls_unchanged':bool(socket) if socket else None}
     evaluated.to_mesh_clear()
     for modifier,level in levels:modifier.levels=level
