@@ -1,0 +1,593 @@
+{
+  "rubric": "Silhouette is measured IoU. Other categories are subjective visual estimates; equal mean is a working indicator, not probability or recovered truth.",
+  "holistic_range": [
+    73,
+    82
+  ],
+  "baseline004": {
+    "silhouette_iou_percent": 97.81968835023498,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 78,
+    "lighting_reflections": 58,
+    "equal_weight_mean": 79.763937670047
+  },
+  "trials": [
+    {
+      "trial": "040-exposed-foot-lip",
+      "scores": {
+        "silhouette_iou_percent": 97.82178511709823,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 58
+      },
+      "equal_weight_mean": 79.76435702341965,
+      "original_iou_percent": 96.8302998504812,
+      "decision": "not accepted",
+      "reason": "Flare underside reduction alone does not expose a convincing foot crescent.",
+      "model_sha256": "eaa728286887e47818a4078b665e74ff5d163f36476702645c67a778a7bd3763",
+      "render_sha256": "cc9087849cc1c0492e6d98d0815db7b99a21be6daf0b6bfeb3cfd403aa0b50f3"
+    },
+    {
+      "trial": "041-raised-foot-rim",
+      "scores": {
+        "silhouette_iou_percent": 97.8217101813469,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 57
+      },
+      "equal_weight_mean": 79.56434203626938,
+      "original_iou_percent": 96.82933377339576,
+      "decision": "not accepted",
+      "reason": "Raised lip changes visibility but reflected rays remain partly blocked.",
+      "model_sha256": "463407a9e2f835b871927d1e55a70d02b4ec7998f13e3a9629e2b083838d0d82",
+      "render_sha256": "3a9de376b3df5866ba4d3c046625ffd5a4245354292b2167c973e268aaadddf3"
+    },
+    {
+      "trial": "042-foot-crescent",
+      "scores": {
+        "silhouette_iou_percent": 97.8217101813469,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 55
+      },
+      "equal_weight_mean": 79.16434203626939,
+      "original_iou_percent": 96.82933377339576,
+      "decision": "not accepted",
+      "reason": "Unverified reflected rays are shadowed by the model; foot highlight largely disappears.",
+      "model_sha256": "f4d574efe2a4e91d61cf91a588887d240983d60eddba5d20a57651efe64ce066",
+      "render_sha256": "70996d474553b95daec939410eb96edf79221ce51e39fa5f8d43b3d782b0ecfc"
+    },
+    {
+      "trial": "043-visible-foot-crescent",
+      "scores": {
+        "silhouette_iou_percent": 97.8217101813469,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 57
+      },
+      "equal_weight_mean": 79.56434203626938,
+      "original_iou_percent": 96.82933377339576,
+      "decision": "not accepted",
+      "reason": "Clear-path targeting restores light but produces a narrow artificial line.",
+      "model_sha256": "ad717618cfc60433c03f8ee489ea81ab2c51146768cec43439d6c32181e146c2",
+      "render_sha256": "a26e4ca456a8583de5dee1b278a079196cad9910d461abafdc5c76ab3b71e082"
+    },
+    {
+      "trial": "044-broader-foot-polish",
+      "scores": {
+        "silhouette_iou_percent": 97.82195751753613,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 57
+      },
+      "equal_weight_mean": 79.56439150350722,
+      "original_iou_percent": 96.82909527984947,
+      "decision": "not accepted",
+      "reason": "Broader foot polish does not overcome the thin reflecting surface.",
+      "model_sha256": "d66aff79263bd2fc0ae38f65a90b94742df77c7f328435affa8cf45ff38a404a",
+      "render_sha256": "7786ab276542a2e7b45b75d783e92aad7cdff43fa2ef1d608c7fe5ef63bd6b1b"
+    },
+    {
+      "trial": "045-fitted-foot-crescent",
+      "scores": {
+        "silhouette_iou_percent": 97.82195751753613,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 57
+      },
+      "equal_weight_mean": 79.56439150350722,
+      "original_iou_percent": 96.82909527984947,
+      "decision": "not accepted",
+      "reason": "Lower numerical fit loss does not fix the low hairline reflection.",
+      "model_sha256": "f9a011d3e28f478b7418d6557a80afeac15b1f909d5d24c24c7c18bc3cd8a117",
+      "render_sha256": "c11442ae7d5ad797f31f375aacd5357ba94b9d575dbddcb48e2e7a6d875611dd"
+    },
+    {
+      "trial": "046-aligned-foot-rim",
+      "scores": {
+        "silhouette_iou_percent": 97.82206525395225,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 58
+      },
+      "equal_weight_mean": 79.76441305079045,
+      "original_iou_percent": 96.8263428810679,
+      "decision": "not accepted",
+      "reason": "Additional rim elevation corrects some placement, without a convincing finish.",
+      "model_sha256": "22bbb333b58358462ec5109dce90ff711746bf575a5b2f10f4f0ebb5cefa926b",
+      "render_sha256": "c2cbb0a28aca751b054b0b93e6df2fa5c53d6de86956988696e3765cc584cc2a"
+    },
+    {
+      "trial": "047-realigned-crescent",
+      "scores": {
+        "silhouette_iou_percent": 97.82206525395225,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 57
+      },
+      "equal_weight_mean": 79.56441305079045,
+      "original_iou_percent": 96.8263428810679,
+      "decision": "not accepted",
+      "reason": "Re-aimed foot reflections remain too thin.",
+      "model_sha256": "cd756047ed4cd6ad8183869f79c2f400bf1c67bf32442e67405e82a31be04246",
+      "render_sha256": "0c9b026b06cc585f663fff592354c31f8cbe9810ab12012b54c93f0245d692e3"
+    },
+    {
+      "trial": "048-realigned-foot-polish",
+      "scores": {
+        "silhouette_iou_percent": 97.82231257790704,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 57
+      },
+      "equal_weight_mean": 79.56446251558141,
+      "original_iou_percent": 96.82610441074696,
+      "decision": "not accepted",
+      "reason": "Local roughness adjustment still leaves a hairline.",
+      "model_sha256": "a6a5a3ed378b6c571b40eeb45d5e11c3dadbb0e7c4f7dac235279b6f3533ca8a",
+      "render_sha256": "d772c63b96faffa40a111930d16444276a6cbc49e148e1bb69537c3246f74e03"
+    },
+    {
+      "trial": "049-realigned-crescent-fit",
+      "scores": {
+        "silhouette_iou_percent": 97.82206525395225,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96441305079045,
+      "original_iou_percent": 96.82585812413338,
+      "decision": "not accepted",
+      "reason": "Brighter, better-positioned foot line is unnaturally sharp; reject the foot branch.",
+      "model_sha256": "383386478286acf5ad8f96135f7e7a350b5bcdcee1d252ce4b24912b87c47eac",
+      "render_sha256": "5026d6b95c4a11b42d12c7f2800a2d2636584b52527d8b7c7151b487b9ee33d0"
+    },
+    {
+      "trial": "050-shaped-base-glints",
+      "scores": {
+        "silhouette_iou_percent": 97.82206525395225,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16441305079044,
+      "original_iou_percent": 96.82585812413338,
+      "decision": "not accepted",
+      "reason": "Diagonal base lights improve placement but remain too bright and retain the foot regression.",
+      "model_sha256": "a47345cc9b0feabd65783e2e95ab23d0a40352d972a6ad811102bf21191fe8ac",
+      "render_sha256": "23ea143a7bd295606c056e1f2c127803a0e7c40959a17a86979beb32214dcd95"
+    },
+    {
+      "trial": "051-fitted-shaped-base",
+      "scores": {
+        "silhouette_iou_percent": 97.82231257790704,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.1644625155814,
+      "original_iou_percent": 96.82610441074696,
+      "decision": "not accepted",
+      "reason": "Fitted lower glint is smaller, but upper stripes and foot line remain.",
+      "model_sha256": "4f60ffdaef0ed05458713211e8d3126f734d3620ef8da1b1f4345e612e96b711",
+      "render_sha256": "19b1eb59320c34f590f0f69675af2f132a593248405274d83c04d1d7dff93ead"
+    },
+    {
+      "trial": "052-shallower-base-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.82231257790704,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.1644625155814,
+      "original_iou_percent": 96.82610441074696,
+      "decision": "not accepted",
+      "reason": "Shallower coat relief reduces some ridge artifacts; other branch defects remain.",
+      "model_sha256": "9eef00fd8610b26b4307288c02714ca41e8edef9dbb581e3fa8224e4fb121ac3",
+      "render_sha256": "39522c8860a103602f8d7aa784348086fe8180c59acd9dc7e49cd97471efcdaa"
+    },
+    {
+      "trial": "053-fitted-shallow-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.82255990186185,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16451198037237,
+      "original_iou_percent": 96.82586594160067,
+      "decision": "not accepted",
+      "reason": "Refitting improves lower shine but does not remove the foot and upper-glint regressions.",
+      "model_sha256": "ae74f2dfa106ad2c3083f96c98d86346a2be83d5bdf0cbdf849af5b47d7f2f12",
+      "render_sha256": "d1042e1d9e1af652fca27f3aee24a366e2202a9c375a08f8299512ca7cdb8722"
+    },
+    {
+      "trial": "054-foot-area-reflectors",
+      "scores": {
+        "silhouette_iou_percent": 97.82255990186185,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96451198037236,
+      "original_iou_percent": 96.82586594160067,
+      "decision": "not accepted",
+      "reason": "Large area lights still produce a long white knife edge on the foot.",
+      "model_sha256": "6c884fbaeccec11af0519c84bacfecf93a03d22514a6d7315466726730c47d59",
+      "render_sha256": "487d2d35d528615cae1b3d3b3e11b26a1df3fc0bd840ff0c2f6704eff51c7959"
+    },
+    {
+      "trial": "055-fitted-foot-area",
+      "scores": {
+        "silhouette_iou_percent": 97.82255990186185,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16451198037237,
+      "original_iou_percent": 96.82586594160067,
+      "decision": "not accepted",
+      "reason": "Area-power fitting does not recover the textured reference crescent.",
+      "model_sha256": "c264550ca465e4957deaae06bb0b76f7ff4670f3761c8919dda562f6f75bf04c",
+      "render_sha256": "861d32d10b3b9408e55ae3756ceb35d771a94d6453039ddec615abfbf45143a8"
+    },
+    {
+      "trial": "056-rounded-foot-shoulder",
+      "scores": {
+        "silhouette_iou_percent": 97.80968262293784,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16193652458756,
+      "original_iou_percent": 96.85343807909159,
+      "decision": "not accepted",
+      "reason": "Further shoulder rounding gives no material visible benefit; reject all geometry changes.",
+      "model_sha256": "f73905a032d93a22eaebe5fd242c6a581ce088289d012bcd71f0334ee83aadc2",
+      "render_sha256": "53e06a393479a940b12d85ad2e45e097340bd0496ae9878e8f5e15d938d184eb"
+    },
+    {
+      "trial": "057-base-only-reflectors",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Clean004 geometry restores the foot, but unfit upper glints are too strong.",
+      "model_sha256": "19e9354de8217382e41cd5885b89ce7f31f24a35b82b3305a4a32f44398fed97",
+      "render_sha256": "ae73a06cf6705b3e777bbf0f9af2a47fe77d56855b652b743eddd180efa818aa"
+    },
+    {
+      "trial": "058-base-only-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Flare-only relief is useful, but the upper-light configuration remains unsuitable.",
+      "model_sha256": "bba7f3e76922cd03f7bb8990677cacf31ad99835afb0f6bea72aa3f2ddb83182",
+      "render_sha256": "698e5fc334284207183523a1b6cec25f50ecb1b9f0150afd7771f04134f8044e"
+    },
+    {
+      "trial": "059-fitted-base-only",
+      "scores": {
+        "silhouette_iou_percent": 97.81993569131832,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16398713826366,
+      "original_iou_percent": 96.832880113502,
+      "decision": "not accepted",
+      "reason": "Lower reflection is near the correct center; upper glints are harsh narrow stripes.",
+      "model_sha256": "4eb0bd20055470d4c722e44cdccffb8e159b1da28135e8bad8df9191f43bb752",
+      "render_sha256": "7a18207f2c63b887dda0e2cab904b606d33077dd6f1179a0e6e59cd60fb8389f"
+    },
+    {
+      "trial": "060-lower-glint-shape",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 58
+      },
+      "equal_weight_mean": 79.763937670047,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Wider lower sources retain a broad tall reflection.",
+      "model_sha256": "bffba789024ff3409d278d581e26fb519cf6a0a1d2f0f7629ce1255ec276103c",
+      "render_sha256": "fe3b7d1cdeefb0f309c87717f41ce54dd544a7024e51c22680e6a9dcedb28431"
+    },
+    {
+      "trial": "061-fitted-lower-glint",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Fitted lower sources still leave a displaced upper contribution in the lower patch.",
+      "model_sha256": "5261960d3468bab05defb621cd0c8cd7c39e274a9c3ec5436ed0e896b78717b5",
+      "render_sha256": "92d590d19b64c9c44ba9a695466d28454e30e4919ff90c6618718766c7fa7e15"
+    },
+    {
+      "trial": "062-measured-lower-glint",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 58
+      },
+      "equal_weight_mean": 79.763937670047,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Geometric-aim correction is based on a different relief response; unfit lighting is not accepted.",
+      "model_sha256": "6db6e0827bd00977c9f468edf24b678f4423f9d5bd823e3f27f64622f4281c48",
+      "render_sha256": "6b922f338fb265f523bf9fa8920694185a2c51e86315721f6cc930b94f7d5923"
+    },
+    {
+      "trial": "063-fitted-measured-glint",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Reduced footprint remains vertically displaced by another light.",
+      "model_sha256": "1fe3df5f32ca31645e29d0a39da00456e6001505bef9244aa2ee093d8c28dffa",
+      "render_sha256": "e0abbe5b6b400f82e0b93509be1c1ebd21f50c8c9a7418ea909526a28eacad56"
+    },
+    {
+      "trial": "064-lower-flare-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Intermediate local relief does not fix the displaced fixed contribution.",
+      "model_sha256": "9a3ac5f2cfa418f26011a4b376dea6260a2c445924eca715c48ae28db4588bac",
+      "render_sha256": "7e9884a386ef4658bd1f1a4d68762c891bf86e29e9ba541ee028b9e87832bf28"
+    },
+    {
+      "trial": "065-fitted-local-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Refitting cannot subtract light supplied by a fixed reflector.",
+      "model_sha256": "895d6377de6762b7ec30b8a24c3e138653cda6fa4ffa35add82d089c99fd8ef0",
+      "render_sha256": "de4ffe5677e52b9b63cdb7adac2b8c511b30b62d8c6f231fde25b5756efcf857"
+    },
+    {
+      "trial": "066-confined-shallow-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Shallower relief is useful but direct upper-light spill remains.",
+      "model_sha256": "4b3ed6882c564279f082801fbbba24ccb827040af480e1eaa226851b0bc05a5b",
+      "render_sha256": "3342513010740e8fedb5d87e1019ceeb7f0815f9fcc90ae9a39221f427b58b15"
+    },
+    {
+      "trial": "067-retained-lower-shape",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 58
+      },
+      "equal_weight_mean": 79.763937670047,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "retained intermediate",
+      "reason": "Retained compact lower light placement, before finish and power fitting.",
+      "model_sha256": "e0d2a71a28cd7ea2f0f09e1c1945e67110af68b64006cd4b74fb899102929a10",
+      "render_sha256": "30e9b23751f9c4905580a7f0041fe25674853fd889fe486bfec4a9e60f734c42"
+    },
+    {
+      "trial": "068-retained-local-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "retained intermediate",
+      "reason": "Retained local relief, before final fitting and spill isolation.",
+      "model_sha256": "c3475660cf9bbd0aa6fad3410e4540f1cd8e6a98938f5a788f5037e1554e6677",
+      "render_sha256": "7b6c3c479407efbf4cae541aec61a2f100d2bf3adb67672fdabd0fcf40de2358"
+    },
+    {
+      "trial": "069-fitted-retained-lower",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "retained intermediate",
+      "reason": "Correct compact lower lights still overlap the old upper reflector spill.",
+      "model_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+      "render_sha256": "e746c1537f8880126ba915a846016f792a4b085bcafcc2bf218a24409ae73e55"
+    },
+    {
+      "trial": "070-upper-spill-diagnostic",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 58
+      },
+      "equal_weight_mean": 79.763937670047,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Causal diagnostic: disabling only the upper reflector removes the displaced lower patch, but loses the desired upper glint.",
+      "model_sha256": "cfdead34d18ed544e0b228fd0fa4b32e32e69723ff87c72e34ecd4ec9f871ab7",
+      "render_sha256": "eacc79f37ff8feffb62615840fe58b5840d5f597a952cc655fc9c149871f0116"
+    },
+    {
+      "trial": "071-direct-glossy-diagnostic",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Zero secondary glossy bounces has essentially no effect on the offending patch; reject that queen-derived hypothesis for this king.",
+      "model_sha256": "09fb887e99f0dca7230821a4d32bce2a0f63537ad58ecab85443e767898b13ad",
+      "render_sha256": "dca16cd469a2ee41fcfad02049a34b38c5c15ba24f06fe5aa8f7211b79642f28"
+    },
+    {
+      "trial": "072-confined-upper-beam",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Narrowing the upper beam reduces spill but weakens the already-small upper glint.",
+      "model_sha256": "9b04a873b7af7e839f196dd2cc29e25d561c2c6191a89f0f706ba31361b15e0c",
+      "render_sha256": "6407b6a51222cc2f18a01264138e846f4eb7884f568106de81b5c4d4389c602c"
+    },
+    {
+      "trial": "073-fitted-confined-beam",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 59
+      },
+      "equal_weight_mean": 79.96393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "not accepted",
+      "reason": "Lower-power refit cannot restore the upper glint weakened by the narrow cone.",
+      "model_sha256": "70921632eeceb11ad56a73b0426d2366418346de915b13304e2fe3616a50e745",
+      "render_sha256": "27997d81493f7818e6ddac0c52e2bcee2644a4dcf47da6dc5b0ff4b40272beee"
+    },
+    {
+      "trial": "074-separated-base-receivers",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "retained intermediate",
+      "reason": "Exact receiver separation removes direct spill while retaining the original upper beam. Final power fit remains.",
+      "model_sha256": "28ae727a62b8362a0873879ed6dfc687b879daaa96eabb4f33bad7bd6481c718",
+      "render_sha256": "008bb4ec76a162f9e900f1976c960da0d1e50aa8e5d09cb5c7bce9b187a9d56a"
+    },
+    {
+      "trial": "075-fitted-separated-base",
+      "scores": {
+        "silhouette_iou_percent": 97.81968835023498,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "equal_weight_mean": 80.16393767004699,
+      "original_iou_percent": 96.83311862811989,
+      "decision": "accepted checkpoint005",
+      "reason": "Accept the smaller correctly positioned lower reflection with unchanged geometry/pigment; retain documented residual defects.",
+      "model_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+      "render_sha256": "19d3046702ca7dc5a56ce00d7d73ffa9a3a88b9b6d39bf8ad64c83a7aba824f1"
+    }
+  ]
+}

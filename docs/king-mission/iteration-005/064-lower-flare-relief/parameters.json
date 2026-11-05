@@ -1,0 +1,29 @@
+{
+  "hypothesis": "The reflection center agrees within one pixel when relief is shallower, but with original relief it remains nine pixels high despite re-aiming lights. Reduce only lower-flare coat relief to .04, preserving foot, upper flare and all pigment; use a ring-local transition.",
+  "source": "build/king-mission/064-lower-flare-relief/prepared.blend",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.04
+    ]
+  ],
+  "profile": false,
+  "source_sha256": "f920c64dd10a3491fffc3f421d7e0c0f614a8fc391341737e8d67edf7924d2d7",
+  "variant": "064-lower-flare-relief",
+  "neutral": false,
+  "attribute": "Lower flare relief mask",
+  "samples": 128,
+  "lower_fade": [
+    10,
+    12
+  ],
+  "ring_fade": [
+    16,
+    18
+  ],
+  "original_source": "build/king-mission/063-fitted-measured-glint/king.blend",
+  "original_source_sha256": "1fe3df5f32ca31645e29d0a39da00456e6001505bef9244aa2ee093d8c28dffa",
+  "model_sha256": "9a3ac5f2cfa418f26011a4b376dea6260a2c445924eca715c48ae28db4588bac",
+  "elevation_degrees": 54.000000800055794
+}

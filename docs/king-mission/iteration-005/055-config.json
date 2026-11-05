@@ -1,0 +1,21 @@
+{
+  "source": "build/king-mission/054-foot-area-reflectors/king.blend",
+  "variant": "055-fitted-foot-area",
+  "response_samples": 512,
+  "hypothesis": "Fit the wider angular area reflectors to the reference foot crescent; retain all geometry, base glints and pigment.",
+  "profile": true,
+  "neutral": true,
+  "source_sha256": "6c884fbaeccec11af0519c84bacfecf93a03d22514a6d7315466726730c47d59",
+  "maximum_gain": 30,
+  "lights": [
+    "Foot area 00",
+    "Foot area 01"
+  ],
+  "bounds": [
+    285,
+    970,
+    650,
+    1085
+  ],
+  "samples": 128
+}

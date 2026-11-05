@@ -1,0 +1,135 @@
+{
+  "source": "build/king-mission/045-fitted-foot-crescent/prepared.blend",
+  "variant": "045-fitted-foot-crescent",
+  "samples": 128,
+  "hypothesis": "Fit the seven visible foot reflectors through AgX with the rougher foot polish and all other lights fixed.",
+  "source_sha256": "bb442396395246572de7100f0116043ec528270fc3aeaf11638a38c6e67544cf",
+  "response_samples": 512,
+  "maximum_gain": 20,
+  "bounds": [
+    310,
+    975,
+    510,
+    1075
+  ],
+  "neutral": false,
+  "profile": true,
+  "original_source": "build/king-mission/044-broader-foot-polish/king.blend",
+  "original_source_sha256": "d66aff79263bd2fc0ae38f65a90b94742df77c7f328435affa8cf45ff38a404a",
+  "light_fit": {
+    "source_sha256": "d66aff79263bd2fc0ae38f65a90b94742df77c7f328435affa8cf45ff38a404a",
+    "pixels": 18128,
+    "bounds": [
+      310,
+      975,
+      510,
+      1075
+    ],
+    "original_powers": {
+      "Foot crescent 00": 300.0,
+      "Foot crescent 01": 300.0,
+      "Foot crescent 02": 300.0,
+      "Foot crescent 03": 300.0,
+      "Foot crescent 04": 300.0,
+      "Foot crescent 05": 300.0,
+      "Foot crescent 06": 300.0
+    },
+    "fitted_powers": {
+      "Foot crescent 00": 82.49468273544939,
+      "Foot crescent 01": 76.72764617840951,
+      "Foot crescent 02": 27.246771652614544,
+      "Foot crescent 03": 6000.0,
+      "Foot crescent 04": 0.0,
+      "Foot crescent 05": 271.94661424898186,
+      "Foot crescent 06": 369.6129729801077
+    },
+    "gain": [
+      0.2749822757848313,
+      0.2557588205946984,
+      0.09082257217538181,
+      20.0,
+      0.0,
+      0.9064887141632728,
+      1.2320432432670256
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.014154504881612734,
+        "after_mse": 0.014042485804244916
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.014042485804244916,
+        "after_mse": 0.014015982604010513
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.014015982604010513,
+        "after_mse": 0.014002754243836327
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.014002754243836327,
+        "after_mse": 0.013992021305727137
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.013992021305727137,
+        "after_mse": 0.013981207654242584
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.013981207654242584,
+        "after_mse": 0.013969294383330094
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.013969294383330094,
+        "after_mse": 0.013955873464224597
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.013955873464224597,
+        "after_mse": 0.013939390892675022
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.013939390892675022,
+        "after_mse": 0.013920482639759762
+      },
+      {
+        "iteration": 9,
+        "before_mse": 0.013920482639759762,
+        "after_mse": 0.013897099031296824
+      },
+      {
+        "iteration": 10,
+        "before_mse": 0.013897099031296824,
+        "after_mse": 0.013885183271074769
+      },
+      {
+        "iteration": 11,
+        "before_mse": 0.013885183271074769,
+        "after_mse": 0.013885031201151733
+      },
+      {
+        "iteration": 12,
+        "before_mse": 0.013885031201151733,
+        "after_mse": 0.013885027445166896
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Foot crescent 00",
+    "Foot crescent 01",
+    "Foot crescent 02",
+    "Foot crescent 03",
+    "Foot crescent 04",
+    "Foot crescent 05",
+    "Foot crescent 06"
+  ],
+  "model_sha256": "f9a011d3e28f478b7418d6557a80afeac15b1f909d5d24c24c7c18bc3cd8a117",
+  "elevation_degrees": 54.000000800055794
+}

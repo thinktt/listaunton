@@ -1,0 +1,77 @@
+{
+  "variant": "062-measured-lower-glint",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "samples": 128,
+  "existing_light_power": {
+    "Base lower left focused": 0,
+    "Base lower center focused": 0,
+    "Base lower right focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base lower shaped 03",
+      "pixel": [
+        595,
+        979
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base lower shaped 04",
+      "pixel": [
+        607,
+        957
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base lower shaped 05",
+      "pixel": [
+        622,
+        938
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    }
+  ],
+  "hypothesis": "Measured isolated-response centroids drift from geometric aim points by up to 11 pixels. Correct the three aim points and tighten cones to keep the lower reflection diagonal rather than a tall oval. Preserve the complete004 geometry and material."
+}

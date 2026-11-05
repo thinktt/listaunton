@@ -1,0 +1,29 @@
+{
+  "hypothesis": "Use the .02 flare coat relief that gave the correctly placed compact reflection, with zero influence on the foot through ring10 and all accepted pigment retained.",
+  "source": "build/king-mission/068-retained-local-relief/prepared.blend",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.02
+    ]
+  ],
+  "profile": false,
+  "source_sha256": "19635e68e2cb90286d3263f16d6f70bee249a3176662892e7e33822c389861c1",
+  "variant": "068-retained-local-relief",
+  "neutral": false,
+  "attribute": "Lower flare relief mask",
+  "samples": 128,
+  "lower_fade": [
+    10,
+    12
+  ],
+  "ring_fade": [
+    18,
+    22
+  ],
+  "original_source": "build/king-mission/067-retained-lower-shape/king.blend",
+  "original_source_sha256": "e0d2a71a28cd7ea2f0f09e1c1945e67110af68b64006cd4b74fb899102929a10",
+  "model_sha256": "c3475660cf9bbd0aa6fad3410e4540f1cd8e6a98938f5a788f5037e1554e6677",
+  "elevation_degrees": 54.000000800055794
+}

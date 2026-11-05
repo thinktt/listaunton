@@ -1,0 +1,22 @@
+{
+  "source_sha256": "9a3ac5f2cfa418f26011a4b376dea6260a2c445924eca715c48ae28db4588bac",
+  "hypothesis": "Refit the lower reflection after the confined relief correction. Preserve accepted geometry, pigment, foot and upper rig; assess actual highlight shape and complete render.",
+  "samples": 128,
+  "variant": "065-fitted-local-relief",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/064-lower-flare-relief/king.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "neutral": true
+}

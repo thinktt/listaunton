@@ -1,0 +1,111 @@
+{
+  "hypothesis": "Fit only the six reshaped flare lights, preserving checkpoint004 geometry, foot, upper rig and pigment. Judge smaller lower oval and upper patch in actual full render.",
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 20,
+  "neutral": true,
+  "bounds": [
+    520,
+    815,
+    685,
+    1005
+  ],
+  "source": "build/king-mission/059-fitted-base-only/prepared.blend",
+  "source_sha256": "d93944caac0a9017d9cc1a3049f4e5624b1100bd35087bf95cb7ef9f3e317a3f",
+  "variant": "059-fitted-base-only",
+  "profile": true,
+  "original_source": "build/king-mission/058-base-only-relief/king.blend",
+  "original_source_sha256": "bba7f3e76922cd03f7bb8990677cacf31ad99835afb0f6bea72aa3f2ddb83182",
+  "light_fit": {
+    "source_sha256": "bba7f3e76922cd03f7bb8990677cacf31ad99835afb0f6bea72aa3f2ddb83182",
+    "pixels": 31350,
+    "bounds": [
+      520,
+      815,
+      685,
+      1005
+    ],
+    "original_powers": {
+      "Base contour 00": 300.0,
+      "Base contour 01": 300.0,
+      "Base contour 02": 300.0,
+      "Base contour 03": 300.0,
+      "Base contour 04": 300.0,
+      "Base contour 05": 300.0
+    },
+    "fitted_powers": {
+      "Base contour 00": 78.57331514427182,
+      "Base contour 01": 6000.0,
+      "Base contour 02": 6000.0,
+      "Base contour 03": 55.1588315669348,
+      "Base contour 04": 94.56347796085429,
+      "Base contour 05": 56.510367035213285
+    },
+    "gain": [
+      0.26191105048090607,
+      20.0,
+      20.0,
+      0.18386277188978267,
+      0.31521159320284764,
+      0.18836789011737762
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.012499541108171227,
+        "after_mse": 0.012056390223680092
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.012056390223680092,
+        "after_mse": 0.008788894716056605
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.008788894716056605,
+        "after_mse": 0.007470667003622211
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.007470667003622211,
+        "after_mse": 0.007222132603124151
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.007222132603124151,
+        "after_mse": 0.007194181630263066
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.007194181630263066,
+        "after_mse": 0.0071906565739125235
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.0071906565739125235,
+        "after_mse": 0.007190229174106529
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.007190229174106529,
+        "after_mse": 0.007190172559011611
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.007190172559011611,
+        "after_mse": 0.007190164075969092
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Base contour 00",
+    "Base contour 01",
+    "Base contour 02",
+    "Base contour 03",
+    "Base contour 04",
+    "Base contour 05"
+  ],
+  "model_sha256": "4eb0bd20055470d4c722e44cdccffb8e159b1da28135e8bad8df9191f43bb752",
+  "elevation_degrees": 54.000000800055794
+}

@@ -1,7 +1,7 @@
 # King reconstruction pipeline
 
 Read the root AGENTS.md, MISSION-KING.md and latest docs/king-mission-log.md.
-The current accepted scene has two closed editable controls and three exact
+The current accepted scene has two closed editable controls and four exact
 derived body light receivers. Select editable meshes with
 `render_regions.controls(scene)`, not by visibility. The body is intentionally
 hidden from final rendering. Export the closed controls; do not export the
@@ -12,6 +12,8 @@ After changing control geometry, UVs or float attributes, call
 material must affect both a control and its receivers. Validate all receiver
 faces, UVs, attributes, normals, shared material and light routes using
 `validate_render_regions.check`. Current procedures and scoped geometry checks
-are in docs/king-mission/iteration-004. Historical builders must not overwrite
+are in docs/king-mission/iteration-005. Historical builders must not overwrite
 the accepted model. At accepted checkpoints regenerate all king review assets,
 sync the existing local preview, run relevant checks and commit as authorized.
+
+Checkpoint 005 retains 004 closed geometry and pigment. Its exact flare receivers split at profile ring 17; `regenerate` preserves `king_split_flare`. Target `lower-flare` or `upper-flare` explicitly in new lights. Do not restore rejected foot edits or the zero-glossy-bounce diagnostic. Rebuild with `rebuild_checkpoint_005.py`; validate scope with `check_base_light_checkpoint.py --lower-relief --split-flare`. The viewer mesh remains byte-identical to 004; the accepted changes are local coat relief and lighting.

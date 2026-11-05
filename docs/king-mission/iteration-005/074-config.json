@@ -1,0 +1,9 @@
+{
+  "variant": "074-separated-base-receivers",
+  "source": "build/king-mission/069-fitted-retained-lower/king.blend",
+  "source_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "The direct upper-light spill is proven by070/071. Split the exact flare surface at profile ring17, preserving every face/UV/normal. Link the unchanged upper reflector only to upper-flare and the three lower reflectors only to lower-flare. Geometry, upper cone/power and all other lighting remain accepted."
+}

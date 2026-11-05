@@ -1,0 +1,164 @@
+{
+  "source": "build/king-mission/053-fitted-shallow-relief/prepared.blend",
+  "hypothesis": "Refit actual base/foot reflections after reducing false relief ridges, with geometry, pigment and all upper-body lights fixed.",
+  "neutral": true,
+  "maximum_gain": 20,
+  "samples": 128,
+  "variant": "053-fitted-shallow-relief",
+  "profile": true,
+  "bounds": [
+    300,
+    815,
+    690,
+    1080
+  ],
+  "response_samples": 512,
+  "source_sha256": "5e30540c837dfd3787bd86ec3749d8488fd9c3b38d679135f618868c472b6b28",
+  "original_source": "build/king-mission/052-shallower-base-relief/king.blend",
+  "original_source_sha256": "9eef00fd8610b26b4307288c02714ca41e8edef9dbb581e3fa8224e4fb121ac3",
+  "light_fit": {
+    "source_sha256": "9eef00fd8610b26b4307288c02714ca41e8edef9dbb581e3fa8224e4fb121ac3",
+    "pixels": 98144,
+    "bounds": [
+      300,
+      815,
+      690,
+      1080
+    ],
+    "original_powers": {
+      "Foot crescent 00": 220.46604919433594,
+      "Foot crescent 01": 370.7057800292969,
+      "Foot crescent 02": 999.67578125,
+      "Foot crescent 03": 6000.0,
+      "Foot crescent 04": 6000.0,
+      "Foot crescent 05": 6000.0,
+      "Foot crescent 06": 3540.744384765625,
+      "Base contour 00": 79.26697540283203,
+      "Base contour 01": 6000.0,
+      "Base contour 02": 6000.0,
+      "Base contour 03": 74.12738800048828,
+      "Base contour 04": 105.03501892089844,
+      "Base contour 05": 78.19361877441406
+    },
+    "fitted_powers": {
+      "Foot crescent 00": 207.25169605443853,
+      "Foot crescent 01": 395.21045158757954,
+      "Foot crescent 02": 755.7247972174688,
+      "Foot crescent 03": 5214.834229804572,
+      "Foot crescent 04": 51510.423185966225,
+      "Foot crescent 05": 0.0,
+      "Foot crescent 06": 4525.763798445242,
+      "Base contour 00": 43.50841709474334,
+      "Base contour 01": 24673.111728861295,
+      "Base contour 02": 9123.074675515423,
+      "Base contour 03": 55.15800458877232,
+      "Base contour 04": 94.82975265750366,
+      "Base contour 05": 56.628066654670405
+    },
+    "gain": [
+      0.9400617320073203,
+      1.0661027501549776,
+      0.7559698968324574,
+      0.869139038300762,
+      8.58507053099437,
+      0.0,
+      1.2781955732014298,
+      0.548884537017277,
+      4.112185288143549,
+      1.5205124459192372,
+      0.7440975066922497,
+      0.9028393923451346,
+      0.7242031708244692
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.00419469034568174,
+        "after_mse": 0.004069430794673508
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.004069430794673508,
+        "after_mse": 0.004024623455785073
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.004024623455785073,
+        "after_mse": 0.00400653343935026
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.00400653343935026,
+        "after_mse": 0.0039986959812273164
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.0039986959812273164,
+        "after_mse": 0.003995173375806242
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.003995173375806242,
+        "after_mse": 0.003993581744922862
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.003993581744922862,
+        "after_mse": 0.003992868929109
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.003992868929109,
+        "after_mse": 0.003992553718193496
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.003992553718193496,
+        "after_mse": 0.003992393262322227
+      },
+      {
+        "iteration": 9,
+        "before_mse": 0.003992393262322227,
+        "after_mse": 0.0039923178145493884
+      },
+      {
+        "iteration": 10,
+        "before_mse": 0.0039923178145493884,
+        "after_mse": 0.003992286627568556
+      },
+      {
+        "iteration": 11,
+        "before_mse": 0.003992286627568556,
+        "after_mse": 0.003992269921666666
+      },
+      {
+        "iteration": 12,
+        "before_mse": 0.003992269921666666,
+        "after_mse": 0.003992258501541865
+      },
+      {
+        "iteration": 13,
+        "before_mse": 0.003992258501541865,
+        "after_mse": 0.0039922494962618986
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Foot crescent 00",
+    "Foot crescent 01",
+    "Foot crescent 02",
+    "Foot crescent 03",
+    "Foot crescent 04",
+    "Foot crescent 05",
+    "Foot crescent 06",
+    "Base contour 00",
+    "Base contour 01",
+    "Base contour 02",
+    "Base contour 03",
+    "Base contour 04",
+    "Base contour 05"
+  ],
+  "model_sha256": "ae74f2dfa106ad2c3083f96c98d86346a2be83d5bdf0cbdf849af5b47d7f2f12",
+  "elevation_degrees": 54.000000800055794
+}

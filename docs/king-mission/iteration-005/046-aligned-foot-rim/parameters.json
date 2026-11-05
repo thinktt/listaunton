@@ -1,0 +1,21 @@
+{
+  "variant": "046-aligned-foot-rim",
+  "source": "build/king-mission/041-raised-foot-rim/king.blend",
+  "source_sha256": "463407a9e2f835b871927d1e55a70d02b4ec7998f13e3a9629e2b083838d0d82",
+  "profile_offsets": {
+    "5": [
+      0,
+      0.025
+    ],
+    "6": [
+      0,
+      0.025
+    ]
+  },
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "The verified visible foot reflection still falls about four pixels below the reference. Raise only the same two rim rows another 0.025 units, preserving all other geometry and fixed registration, then re-aim the real reflectors.",
+  "model_sha256": "22bbb333b58358462ec5109dce90ff711746bf575a5b2f10f4f0ebb5cefa926b",
+  "elevation_degrees": 54.000000800055794
+}

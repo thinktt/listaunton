@@ -1,0 +1,21 @@
+{
+  "variant": "040-exposed-foot-lip",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "profile_offsets": {
+    "10": [
+      -0.019,
+      0
+    ],
+    "11": [
+      -0.01,
+      0
+    ]
+  },
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Slightly taper the underside of the flared base so the upper foot lip can be seen at the reference crescent. Preserve all heights, foot radii, upper controls and fixed camera.",
+  "model_sha256": "eaa728286887e47818a4078b665e74ff5d163f36476702645c67a778a7bd3763",
+  "elevation_degrees": 54.000000800055794
+}

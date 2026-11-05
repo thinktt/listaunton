@@ -1,0 +1,22 @@
+{
+  "source_sha256": "6db6e0827bd00977c9f468edf24b678f4423f9d5bd823e3f27f64622f4281c48",
+  "hypothesis": "Refit the measured lower reflection placement through AgX, then judge actual diagonal shape and footprint against004 and the unchanged sources.",
+  "samples": 128,
+  "variant": "063-fitted-measured-glint",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/062-measured-lower-glint/king.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "neutral": true
+}

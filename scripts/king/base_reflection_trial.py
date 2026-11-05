@@ -5,7 +5,7 @@ import bpy
 from mathutils import Vector
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from mission_trial import ROOT,gpu
-from render_regions import controls,partition,link
+from render_regions import controls,partition,link,clear_light_path
 from focused_reflections import target
 
 def main(cfg):
@@ -18,13 +18,28 @@ def main(cfg):
     if cfg.get('confine_existing'):
         for name in ['Upper varnish','Front varnish']:link(bpy.data.objects[name],[by_name['upper-body']],name+' upper-body only')
     for name,power in cfg.get('existing_light_power',{}).items():bpy.data.objects[name].data.energy=power
+    for name,changes in cfg.get('existing_light_edits',{}).items():
+        data=bpy.data.objects[name].data;assert data.type=='SPOT' and set(changes)=={'degrees'};data.spot_size=math.radians(changes['degrees'])
     probes=[]
     for row in cfg.get('reflectors',[]):
-        ob,point,direction,normal=target(s,*row['pixel']);position=point+direction*row.get('distance',6)
-        data=bpy.data.lights.new(row['name'],'SPOT');data.energy=row['energy'];data.color=row.get('color',[1,.84,.70]);data.shadow_soft_size=row.get('radius',.5);data.spot_size=math.radians(row.get('degrees',8));data.spot_blend=.9
+        actual_pixel=list(row['pixel'])
+        for shift in range(row.get('seek_receiver_down',0)+1):
+            actual_pixel=[row['pixel'][0],row['pixel'][1]+shift]
+            ob,point,direction,normal=target(s,*actual_pixel)
+            unobstructed=(not row.get('require_clear_path')) or clear_light_path(s,point,normal,direction,row.get('distance',6))
+            if not row.get('seek_receiver_down') or (ob.get('king_render_region') in row['receivers'] and normal.z>=row.get('minimum_normal_z',0) and unobstructed):break
+        if row.get('seek_receiver_down'):assert ob.get('king_render_region') in row['receivers'] and normal.z>=row.get('minimum_normal_z',0) and unobstructed,(row,actual_pixel,ob.name,normal[:])
+        position=point+direction*row.get('distance',6)
+        kind=row.get('type','SPOT');data=bpy.data.lights.new(row['name'],kind);data.energy=row['energy'];data.color=row.get('color',[1,.84,.70])
+        if kind=='SPOT':
+            data.shadow_soft_size=row.get('radius',.5);data.spot_size=math.radians(row.get('degrees',8));data.spot_blend=.9
+        elif kind=='AREA':
+            data.shape=row.get('shape','RECTANGLE');data.size=row['size']
+            if data.shape=='RECTANGLE':data.size_y=row['size_y']
+        else:raise ValueError('Unsupported reflector '+kind)
         light=bpy.data.objects.new(row['name'],data);s.collection.objects.link(light);light.location=position;light.rotation_euler=(point-position).to_track_quat('-Z','Y').to_euler();light.visible_diffuse=False;light.visible_glossy=True
         link(light,[by_name[name] for name in row.get('receivers',[ob.get('king_render_region')])],row['name'])
-        probes.append(dict(row,receiver_hit=ob.name,point=list(point),normal=list(normal),position=list(position)))
+        probes.append(dict(row,actual_target_pixel=actual_pixel,receiver_hit=ob.name,point=list(point),normal=list(normal),position=list(position)))
     axis=s.camera.matrix_world.to_3x3()@Vector((0,0,1));elevation=math.degrees(math.asin(axis.z));assert s.camera.data.type=='ORTHO' and abs(elevation-54)<.001
     out=ROOT/'build/king-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True);gpu(s);s.render.engine='CYCLES';s.cycles.samples=cfg.get('samples',96);s.cycles.use_denoising=True;s.render.use_persistent_data=True;s.render.use_border=False;s.render.use_crop_to_border=False;s.render.resolution_percentage=100;s.render.film_transparent=True;s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA';s.render.image_settings.color_depth='8';s.render.filepath=str(out/'wood.png')
     cfg.update(original_source_sha256=digest,receiver_partitions=report,reflector_probes=probes,elevation_degrees=elevation)

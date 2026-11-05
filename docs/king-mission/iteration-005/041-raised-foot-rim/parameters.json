@@ -1,0 +1,21 @@
+{
+  "variant": "041-raised-foot-rim",
+  "source": "build/king-mission/040-exposed-foot-lip/king.blend",
+  "source_sha256": "eaa728286887e47818a4078b665e74ff5d163f36476702645c67a778a7bd3763",
+  "profile_offsets": {
+    "5": [
+      0,
+      0.06
+    ],
+    "6": [
+      0,
+      0.045
+    ]
+  },
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Raise the foot upper roll to the reference crescent while preserving floor, radii and total height. The reference foot front wall is visibly taller than the current wall.",
+  "model_sha256": "463407a9e2f835b871927d1e55a70d02b4ec7998f13e3a9629e2b083838d0d82",
+  "elevation_degrees": 54.000000800055794
+}

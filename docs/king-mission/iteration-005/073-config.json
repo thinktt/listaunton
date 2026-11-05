@@ -1,0 +1,22 @@
+{
+  "source_sha256": "9b04a873b7af7e839f196dd2cc29e25d561c2c6191a89f0f706ba31361b15e0c",
+  "hypothesis": "Refit only lower-glint powers after removing the upper spot direct spill with a narrower cone. The original upper light power and aim stay fixed. Verify retained upper glint, correctly centered lower reflection and unchanged foot.",
+  "samples": 128,
+  "variant": "073-fitted-confined-beam",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/072-confined-upper-beam/king.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "neutral": true
+}

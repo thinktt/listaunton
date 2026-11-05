@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-05",
+  "checkpoint": "005",
+  "status": "accepted, validated and synchronized",
+  "source_model_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "model_sha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
+  "render_sha256": "19d3046702ca7dc5a56ce00d7d73ffa9a3a88b9b6d39bf8ad64c83a7aba824f1",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+  "scores": {
+    "silhouette_iou_percent": 97.81968835023498,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 78,
+    "lighting_reflections": 60
+  },
+  "equal_weight_mean": 80.16393767004699,
+  "holistic_range": [
+    73,
+    82
+  ],
+  "validation": {
+    "saved_reopened": {
+      "alpha_identical": true,
+      "mean_foreground_rgb_error_255": 3.9078252121242355e-05,
+      "maximum_channel_error_255": 1,
+      "pixels_over_one": 0,
+      "pixels_over_four": 0,
+      "max_error_pixel_xy": [
+        515,
+        70
+      ]
+    },
+    "full_reproduction": {
+      "alpha_identical": true,
+      "mean_foreground_rgb_error_255": 4.489841733078909e-05,
+      "maximum_channel_error_255": 1,
+      "pixels_over_one": 0,
+      "pixels_over_four": 0,
+      "max_error_pixel_xy": [
+        522,
+        23
+      ]
+    },
+    "packed_pigment_sha256": "4ae543aaed7327165962a4f7167d42f23f5b39d9d72340db8691efcf5abb0ae6",
+    "all_pigment_pixels_preserved": true,
+    "viewer_mesh_bytes_identical_to004": true,
+    "canonical_model": "passed",
+    "receiver_regeneration": "passed; exact surfaces and light routes preserved",
+    "site_model_candidates_set_and_historical_projections": "passed",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "local_preview_verified_files": 32
+  },
+  "remaining": [
+    "Foot crescent too weak, thin and low; all attempted foot geometry rejected.",
+    "Upper base glint too small; lower glint now centered but still too compact and differently shaped.",
+    "Upper glints pale/regular, cross seating and collar shelves/cavity contrast differ.",
+    "Strong orange-to-dark hidden-surface pigment transition remains.",
+    "Receiver illumination cutoff can be seen in clay; it is not a geometry seam.",
+    "Browser shading remains an approximation of Cycles."
+  ],
+  "pending": "Visual mission remains active and incomplete; all required checks for this accepted checkpoint are complete."
+}

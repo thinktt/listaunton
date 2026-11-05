@@ -1,0 +1,22 @@
+{
+  "source_sha256": "bffba789024ff3409d278d581e26fb519cf6a0a1d2f0f7629ce1255ec276103c",
+  "hypothesis": "Fit only the lower diagonal reflection using actual BSDF responses; retain accepted004 geometry, material, upper base reflection and foot. Acceptance requires a visibly less tall lower oval in full and cropped images.",
+  "samples": 128,
+  "variant": "061-fitted-lower-glint",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/060-lower-glint-shape/king.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "neutral": true
+}

@@ -1,0 +1,90 @@
+{
+  "source": "build/king-mission/055-fitted-foot-area/prepared.blend",
+  "variant": "055-fitted-foot-area",
+  "response_samples": 512,
+  "hypothesis": "Fit the wider angular area reflectors to the reference foot crescent; retain all geometry, base glints and pigment.",
+  "profile": true,
+  "neutral": true,
+  "source_sha256": "6775f8add9864687257ede198b969aba65e2e18c7ac54e0238b38d7fd8341147",
+  "maximum_gain": 30,
+  "bounds": [
+    285,
+    970,
+    650,
+    1085
+  ],
+  "samples": 128,
+  "original_source": "build/king-mission/054-foot-area-reflectors/king.blend",
+  "original_source_sha256": "6c884fbaeccec11af0519c84bacfecf93a03d22514a6d7315466726730c47d59",
+  "light_fit": {
+    "source_sha256": "6c884fbaeccec11af0519c84bacfecf93a03d22514a6d7315466726730c47d59",
+    "pixels": 36245,
+    "bounds": [
+      285,
+      970,
+      650,
+      1085
+    ],
+    "original_powers": {
+      "Foot area 00": 1200.0,
+      "Foot area 01": 1200.0
+    },
+    "fitted_powers": {
+      "Foot area 00": 2052.4684606887863,
+      "Foot area 01": 636.1900252828879
+    },
+    "gain": [
+      1.710390383907322,
+      0.5301583544024066
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.004587388338141488,
+        "after_mse": 0.004545022267539213
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.004545022267539213,
+        "after_mse": 0.004533872408110801
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.004533872408110801,
+        "after_mse": 0.0045309157483987795
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.0045309157483987795,
+        "after_mse": 0.004530064923291419
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.004530064923291419,
+        "after_mse": 0.004529850041068956
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.004529850041068956,
+        "after_mse": 0.004529799279933018
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.004529799279933018,
+        "after_mse": 0.004529787926106383
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.004529787926106383,
+        "after_mse": 0.004529785710983532
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Foot area 00",
+    "Foot area 01"
+  ],
+  "model_sha256": "c264550ca465e4957deaae06bb0b76f7ff4670f3761c8919dda562f6f75bf04c",
+  "elevation_degrees": 54.000000800055794
+}

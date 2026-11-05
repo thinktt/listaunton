@@ -1,0 +1,27 @@
+{
+  "saved_reopened": {
+    "alpha_identical": true,
+    "mean_foreground_rgb_error_255": 3.9078252121242355e-05,
+    "maximum_channel_error_255": 1,
+    "pixels_over_one": 0,
+    "pixels_over_four": 0,
+    "max_error_pixel_xy": [
+      515,
+      70
+    ]
+  },
+  "full_reproduction": {
+    "alpha_identical": true,
+    "mean_foreground_rgb_error_255": 4.489841733078909e-05,
+    "maximum_channel_error_255": 1,
+    "pixels_over_one": 0,
+    "pixels_over_four": 0,
+    "max_error_pixel_xy": [
+      522,
+      23
+    ]
+  },
+  "packed_pigment_sha256": "4ae543aaed7327165962a4f7167d42f23f5b39d9d72340db8691efcf5abb0ae6",
+  "all_pigment_pixels_preserved": true,
+  "viewer_mesh_bytes_identical_to004": true
+}

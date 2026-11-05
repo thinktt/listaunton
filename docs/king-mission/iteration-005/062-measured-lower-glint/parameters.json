@@ -1,0 +1,206 @@
+{
+  "variant": "062-measured-lower-glint",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "samples": 128,
+  "existing_light_power": {
+    "Base lower left focused": 0,
+    "Base lower center focused": 0,
+    "Base lower right focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base lower shaped 03",
+      "pixel": [
+        595,
+        979
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base lower shaped 04",
+      "pixel": [
+        607,
+        957
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base lower shaped 05",
+      "pixel": [
+        622,
+        938
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    }
+  ],
+  "hypothesis": "Measured isolated-response centroids drift from geometric aim points by up to 11 pixels. Correct the three aim points and tighten cones to keep the lower reflection diagonal rather than a tall oval. Preserve the complete004 geometry and material.",
+  "original_source_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Base lower shaped 03",
+      "pixel": [
+        595,
+        979
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true,
+      "actual_target_pixel": [
+        595,
+        979
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.3330778181552887,
+        -0.8808102607727051,
+        0.5477895736694336
+      ],
+      "normal": [
+        0.2601063549518585,
+        -0.6878246068954468,
+        0.6776739358901978
+      ],
+      "position": [
+        3.306227684020996,
+        -5.216288089752197,
+        3.439849615097046
+      ]
+    },
+    {
+      "name": "Base lower shaped 04",
+      "pixel": [
+        607,
+        957
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true,
+      "actual_target_pixel": [
+        607,
+        957
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.3753165304660797,
+        -0.8158383369445801,
+        0.5926046371459961
+      ],
+      "normal": [
+        0.2987004816532135,
+        -0.6490430235862732,
+        0.6996580362319946
+      ],
+      "position": [
+        3.771658420562744,
+        -4.669003009796143,
+        3.6938915252685547
+      ]
+    },
+    {
+      "name": "Base lower shaped 05",
+      "pixel": [
+        622,
+        938
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.08,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true,
+      "actual_target_pixel": [
+        622,
+        938
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.42835336923599243,
+        -0.754157543182373,
+        0.6238670349121094
+      ],
+      "normal": [
+        0.35091960430145264,
+        -0.6177905201911926,
+        0.7036975622177124
+      ],
+      "position": [
+        4.354855537414551,
+        -4.140014171600342,
+        3.6435623168945312
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "6db6e0827bd00977c9f468edf24b678f4423f9d5bd823e3f27f64622f4281c48"
+}

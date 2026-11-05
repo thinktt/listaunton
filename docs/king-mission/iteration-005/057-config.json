@@ -1,0 +1,141 @@
+{
+  "variant": "057-base-only-reflectors",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "samples": 128,
+  "existing_light_power": {
+    "Base upper focused": 0,
+    "Base lower left focused": 0,
+    "Base lower center focused": 0,
+    "Base lower right focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base contour 00",
+      "pixel": [
+        554,
+        862
+      ],
+      "energy": 300,
+      "degrees": 1.6,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base contour 01",
+      "pixel": [
+        566,
+        850
+      ],
+      "energy": 300,
+      "degrees": 1.6,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base contour 02",
+      "pixel": [
+        578,
+        838
+      ],
+      "energy": 300,
+      "degrees": 1.6,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base contour 03",
+      "pixel": [
+        592,
+        968
+      ],
+      "energy": 300,
+      "degrees": 1.4,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base contour 04",
+      "pixel": [
+        607,
+        955
+      ],
+      "energy": 300,
+      "degrees": 1.4,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base contour 05",
+      "pixel": [
+        622,
+        942
+      ],
+      "energy": 300,
+      "degrees": 1.4,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    }
+  ],
+  "hypothesis": "Retain the improved diagonal base reflector placement, starting cleanly from accepted004. Restore all accepted foot geometry and lighting; do not retain the hairline foot experiments."
+}

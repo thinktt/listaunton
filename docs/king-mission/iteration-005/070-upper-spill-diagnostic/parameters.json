@@ -1,0 +1,15 @@
+{
+  "source_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+  "hypothesis": "Causal diagnostic: lower highlight statistics only became correctly located when the old upper reflector was removed. Disable only that light to test direct or indirect spill into the lower base. This diagnostic cannot be accepted with the upper glint missing.",
+  "variant": "070-upper-spill-diagnostic",
+  "samples": 128,
+  "existing_light_power": {
+    "Base upper focused": 0
+  },
+  "source": "build/king-mission/069-fitted-retained-lower/king.blend",
+  "original_source_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+  "receiver_partitions": [],
+  "reflector_probes": [],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "cfdead34d18ed544e0b228fd0fa4b32e32e69723ff87c72e34ecd4ec9f871ab7"
+}

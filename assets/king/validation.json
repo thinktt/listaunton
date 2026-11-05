@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "sourceSha256": "02656021866fc08e0f535d441fe401ec174992c32cf7be92ed092a6e74d1603c",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -26,7 +26,7 @@
   "note": "Body and cross remain separate closed intersecting components. Viewer lighting is approximate.",
   "renderReceivers": {
     "used": true,
-    "receiverCount": 3,
+    "receiverCount": 4,
     "exactSurfaceFacesUvsFloatAttributes": true,
     "triangles": 67200,
     "normalMaxError": 6.586313247680664e-05,
@@ -40,9 +40,10 @@
         "upper-body"
       ],
       "Platter front-right glint": [
-        "flare",
         "foot",
-        "upper-body"
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
       ],
       "Cross arm glint": [
         "King - beveled cross"
@@ -63,25 +64,39 @@
         "King - beveled cross"
       ],
       "Base upper reflection": [
-        "flare"
+        "lower-flare",
+        "upper-flare"
       ],
       "Base lower reflection": [
-        "flare"
+        "lower-flare",
+        "upper-flare"
       ],
       "Foot left reflection": [
         "foot"
       ],
       "Base upper focused": [
-        "flare"
+        "upper-flare"
       ],
       "Base lower left focused": [
-        "flare"
+        "lower-flare",
+        "upper-flare"
       ],
       "Base lower center focused": [
-        "flare"
+        "lower-flare",
+        "upper-flare"
       ],
       "Base lower right focused": [
-        "flare"
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
       ]
     }
   },

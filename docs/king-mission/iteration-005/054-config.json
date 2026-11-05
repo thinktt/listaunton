@@ -1,0 +1,64 @@
+{
+  "variant": "054-foot-area-reflectors",
+  "source": "build/king-mission/053-fitted-shallow-relief/king.blend",
+  "source_sha256": "ae74f2dfa106ad2c3083f96c98d86346a2be83d5bdf0cbdf849af5b47d7f2f12",
+  "samples": 128,
+  "existing_light_power": {
+    "Foot crescent 00": 0,
+    "Foot crescent 01": 0,
+    "Foot crescent 02": 0,
+    "Foot crescent 03": 0,
+    "Foot crescent 04": 0,
+    "Foot crescent 05": 0,
+    "Foot crescent 06": 0
+  },
+  "reflectors": [
+    {
+      "name": "Foot area 00",
+      "pixel": [
+        400,
+        1034
+      ],
+      "energy": 1200,
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 2.4,
+      "size_y": 3.6,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 9,
+      "minimum_normal_z": 0.55,
+      "require_clear_path": true
+    },
+    {
+      "name": "Foot area 01",
+      "pixel": [
+        460,
+        1045
+      ],
+      "energy": 1200,
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 2.4,
+      "size_y": 3.6,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 9,
+      "minimum_normal_z": 0.55,
+      "require_clear_path": true
+    }
+  ],
+  "hypothesis": "A tightly rounded foot rim needs a larger angular light source to form the broad reference crescent. Replace point-like spots with two actual rectangular area reflectors, confined to the same foot surface."
+}

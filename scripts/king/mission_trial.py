@@ -6,6 +6,7 @@ import numpy as np
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -85,6 +86,7 @@ def run(cfg):
     if cfg.get('lights'):lights(scene,cfg)
     out=ROOT/'build/king-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True)
     scene.render.engine='CYCLES';scene.cycles.samples=cfg.get('samples',48);scene.cycles.use_denoising=True
+    if 'glossy_bounces' in cfg:scene.cycles.glossy_bounces=cfg['glossy_bounces']
     scene.render.film_transparent=True;scene.render.resolution_percentage=100
     scene.render.image_settings.file_format='PNG';scene.render.image_settings.color_mode='RGBA'
     scene.render.use_persistent_data=True;gpu(scene)

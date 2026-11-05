@@ -1,0 +1,30 @@
+{
+  "profile": false,
+  "samples": 128,
+  "ring_fade": [
+    8,
+    10
+  ],
+  "attribute": "Foot finish mask",
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Roughness",
+      0.28
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.24
+    ]
+  ],
+  "neutral": false,
+  "hypothesis": "The reference foot reflection is a broad grain-broken band; increase only foot polish roughness to broaden the current hairline before fitting light energy.",
+  "source_sha256": "76a86b3fa08775c8733c74ac19f1415bc2aa30cd28b90ca057c2eccc2d5f7ca8",
+  "source": "build/king-mission/048-realigned-foot-polish/prepared.blend",
+  "variant": "048-realigned-foot-polish",
+  "original_source": "build/king-mission/047-realigned-crescent/king.blend",
+  "original_source_sha256": "cd756047ed4cd6ad8183869f79c2f400bf1c67bf32442e67405e82a31be04246",
+  "model_sha256": "a6a5a3ed378b6c571b40eeb45d5e11c3dadbb0e7c4f7dac235279b6f3533ca8a",
+  "elevation_degrees": 54.000000800055794
+}

@@ -1,0 +1,25 @@
+{
+  "hypothesis": "Fit only the six reshaped flare lights, preserving checkpoint004 geometry, foot, upper rig and pigment. Judge smaller lower oval and upper patch in actual full render.",
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 20,
+  "neutral": true,
+  "lights": [
+    "Base contour 00",
+    "Base contour 01",
+    "Base contour 02",
+    "Base contour 03",
+    "Base contour 04",
+    "Base contour 05"
+  ],
+  "bounds": [
+    520,
+    815,
+    685,
+    1005
+  ],
+  "source": "build/king-mission/058-base-only-relief/king.blend",
+  "source_sha256": "bba7f3e76922cd03f7bb8990677cacf31ad99835afb0f6bea72aa3f2ddb83182",
+  "variant": "059-fitted-base-only",
+  "profile": true
+}

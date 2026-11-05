@@ -1,0 +1,77 @@
+{
+  "variant": "067-retained-lower-shape",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "samples": 128,
+  "existing_light_power": {
+    "Base lower left focused": 0,
+    "Base lower center focused": 0,
+    "Base lower right focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base lower shaped 03",
+      "pixel": [
+        592,
+        968
+      ],
+      "energy": 300,
+      "degrees": 1.4,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base lower shaped 04",
+      "pixel": [
+        607,
+        955
+      ],
+      "energy": 300,
+      "degrees": 1.4,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    },
+    {
+      "name": "Base lower shaped 05",
+      "pixel": [
+        622,
+        942
+      ],
+      "energy": 300,
+      "degrees": 1.4,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "flare"
+      ],
+      "seek_receiver_down": 1,
+      "minimum_normal_z": 0.2,
+      "require_clear_path": true
+    }
+  ],
+  "hypothesis": "Retain the successful compact lower-glint placement from059 without its harsh upper reflectors. Start from004 and replace only the lower lights; do not apply the normal-offset correction measured under a different relief strength."
+}

@@ -1,0 +1,32 @@
+{
+  "source": "build/king-mission/052-shallower-base-relief/king.blend",
+  "lights": [
+    "Foot crescent 00",
+    "Foot crescent 01",
+    "Foot crescent 02",
+    "Foot crescent 03",
+    "Foot crescent 04",
+    "Foot crescent 05",
+    "Foot crescent 06",
+    "Base contour 00",
+    "Base contour 01",
+    "Base contour 02",
+    "Base contour 03",
+    "Base contour 04",
+    "Base contour 05"
+  ],
+  "hypothesis": "Refit actual base/foot reflections after reducing false relief ridges, with geometry, pigment and all upper-body lights fixed.",
+  "neutral": true,
+  "maximum_gain": 20,
+  "samples": 128,
+  "variant": "053-fitted-shallow-relief",
+  "profile": true,
+  "bounds": [
+    300,
+    815,
+    690,
+    1080
+  ],
+  "response_samples": 512,
+  "source_sha256": "9eef00fd8610b26b4307288c02714ca41e8edef9dbb581e3fa8224e4fb121ac3"
+}

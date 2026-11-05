@@ -1,0 +1,22 @@
+{
+  "source_sha256": "c3475660cf9bbd0aa6fad3410e4540f1cd8e6a98938f5a788f5037e1554e6677",
+  "hypothesis": "Fit the retained lower reflection shape under its tested local .02 relief. Keep original upper glint and foot lights; actual full/crop/side evidence determines whether to accept.",
+  "samples": 128,
+  "variant": "069-fitted-retained-lower",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/068-retained-local-relief/king.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "neutral": true
+}

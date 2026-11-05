@@ -1,0 +1,10 @@
+{
+  "variant": "071-direct-glossy-diagnostic",
+  "source": "build/king-mission/069-fitted-retained-lower/king.blend",
+  "source_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "glossy_bounces": 0,
+  "hypothesis": "The upper reflector demonstrably creates a second displaced lower-base glint. Test whether suppressing secondary glossy bounces removes that artifact while retaining its direct upper reflection. This uses the measured queen015 lesson; inspect the full king for losses before acceptance."
+}

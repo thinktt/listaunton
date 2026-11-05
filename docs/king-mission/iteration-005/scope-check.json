@@ -1,0 +1,219 @@
+{
+  "before": "history/king-mission-004/king-rebuilt.blend",
+  "after": "build/king-mission/075-fitted-separated-base/king.blend",
+  "editableGeometryAllUvsPigmentCameraAndWorldExact": true,
+  "materialExactApartFromDeclaredLowerRelief": true,
+  "materialFullyExact": false,
+  "lowerRelief": {
+    "strength": 0.02,
+    "lowerFade": [
+      10,
+      12
+    ],
+    "upperFade": [
+      18,
+      22
+    ]
+  },
+  "editedUpperConeDegrees": null,
+  "splitFlareAtRing17": true,
+  "allOtherLightSettingsExact": true,
+  "lightPathsUnchanged": {
+    "max_bounces": 12,
+    "diffuse_bounces": 4,
+    "glossy_bounces": 4,
+    "sample_clamp_indirect": 10.0
+  },
+  "disabledLights": [
+    "Base lower left focused",
+    "Base lower center focused",
+    "Base lower right focused"
+  ],
+  "addedLights": {
+    "Base lower shaped 03": {
+      "type": "SPOT",
+      "energy": 55.186073303222656,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.8211319446563721,
+        -0.30163148045539856,
+        0.48452118039131165,
+        3.2291815280914307,
+        0.5707384347915649,
+        0.43396279215812683,
+        -0.697089672088623,
+        -5.036579132080078,
+        2.889334638211949e-08,
+        0.8489373922348022,
+        0.5284934043884277,
+        3.748599052429199,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.03999999910593033,
+      "cone": 0.024434609338641167,
+      "receivers": [
+        "lower-flare"
+      ]
+    },
+    "Base lower shaped 04": {
+      "type": "SPOT",
+      "energy": 94.71358489990234,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.7474197745323181,
+        -0.3438258767127991,
+        0.5684605836868286,
+        3.7860231399536133,
+        0.6643520593643188,
+        0.3868164122104645,
+        -0.6395384669303894,
+        -4.647793292999268,
+        -2.0712251469490184e-08,
+        0.8556616306304932,
+        0.5175356864929199,
+        3.7027106285095215,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.03999999910593033,
+      "cone": 0.024434609338641167,
+      "receivers": [
+        "lower-flare"
+      ]
+    },
+    "Base lower shaped 05": {
+      "type": "SPOT",
+      "energy": 56.662750244140625,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.6606085300445557,
+        -0.3762872815132141,
+        0.6496185660362244,
+        4.326175689697266,
+        0.750730574131012,
+        0.3311155438423157,
+        -0.5716345906257629,
+        -4.194685935974121,
+        1.8284440628235643e-08,
+        0.8653151988983154,
+        0.5012280941009521,
+        3.6216893196105957,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.03999999910593033,
+      "cone": 0.024434609338641167,
+      "receivers": [
+        "lower-flare"
+      ]
+    }
+  },
+  "packedPigmentSha256": "4ae543aaed7327165962a4f7167d42f23f5b39d9d72340db8691efcf5abb0ae6",
+  "renderReceivers": {
+    "used": true,
+    "receiverCount": 4,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.586313247680664e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ]
+    }
+  }
+}

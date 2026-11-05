@@ -1,0 +1,26 @@
+{
+  "source": "build/king-mission/048-realigned-foot-polish/king.blend",
+  "variant": "049-realigned-crescent-fit",
+  "samples": 128,
+  "lights": [
+    "Foot crescent 00",
+    "Foot crescent 01",
+    "Foot crescent 02",
+    "Foot crescent 03",
+    "Foot crescent 04",
+    "Foot crescent 05",
+    "Foot crescent 06"
+  ],
+  "hypothesis": "Fit the seven visible foot reflectors through AgX with the rougher foot polish and all other lights fixed.",
+  "source_sha256": "a6a5a3ed378b6c571b40eeb45d5e11c3dadbb0e7c4f7dac235279b6f3533ca8a",
+  "response_samples": 512,
+  "maximum_gain": 20,
+  "bounds": [
+    310,
+    975,
+    510,
+    1075
+  ],
+  "neutral": false,
+  "profile": true
+}

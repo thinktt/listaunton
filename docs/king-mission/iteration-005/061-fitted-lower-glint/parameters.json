@@ -1,0 +1,74 @@
+{
+  "source_sha256": "f492cc5cba4cd55435edff7af29366d29d27278c8ab2da395c96fb022a30ec64",
+  "hypothesis": "Fit only the lower diagonal reflection using actual BSDF responses; retain accepted004 geometry, material, upper base reflection and foot. Acceptance requires a visibly less tall lower oval in full and cropped images.",
+  "samples": 128,
+  "variant": "061-fitted-lower-glint",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/061-fitted-lower-glint/prepared.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "neutral": true,
+  "original_source": "build/king-mission/060-lower-glint-shape/king.blend",
+  "original_source_sha256": "bffba789024ff3409d278d581e26fb519cf6a0a1d2f0f7629ce1255ec276103c",
+  "light_fit": {
+    "source_sha256": "bffba789024ff3409d278d581e26fb519cf6a0a1d2f0f7629ce1255ec276103c",
+    "pixels": 11700,
+    "bounds": [
+      545,
+      910,
+      675,
+      1000
+    ],
+    "original_powers": {
+      "Base lower shaped 03": 300.0,
+      "Base lower shaped 04": 300.0,
+      "Base lower shaped 05": 300.0
+    },
+    "fitted_powers": {
+      "Base lower shaped 03": 169.60098672575108,
+      "Base lower shaped 04": 222.81665443276268,
+      "Base lower shaped 05": 214.444235622512
+    },
+    "gain": [
+      0.5653366224191703,
+      0.7427221814425422,
+      0.7148141187417066
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.008376274571068702,
+        "after_mse": 0.007675688038103043
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.007675688038103043,
+        "after_mse": 0.007668210625527732
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.007668210625527732,
+        "after_mse": 0.007668166454245667
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.007668166454245667,
+        "after_mse": 0.007668166441265484
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "model_sha256": "5261960d3468bab05defb621cd0c8cd7c39e274a9c3ec5436ed0e896b78717b5",
+  "elevation_degrees": 54.000000800055794
+}

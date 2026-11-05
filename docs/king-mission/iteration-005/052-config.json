@@ -1,0 +1,21 @@
+{
+  "variant": "052-shallower-base-relief",
+  "source_sha256": "4f60ffdaef0ed05458713211e8d3126f734d3620ef8da1b1f4345e612e96b711",
+  "profile": false,
+  "neutral": false,
+  "attribute": "Refined base relief mask",
+  "hypothesis": "Reference-brightness relief creates false ridges around highlights. Reduce only base/foot coat relief from 0.0875 to 0.02, retaining the wood pigment and base-normal microrelief; then refit actual lights.",
+  "samples": 128,
+  "source": "build/king-mission/051-fitted-shaped-base/king.blend",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.02
+    ]
+  ],
+  "ring_fade": [
+    18,
+    22
+  ]
+}

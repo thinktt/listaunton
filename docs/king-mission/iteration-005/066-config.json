@@ -1,0 +1,25 @@
+{
+  "hypothesis": "The intermediate .04 relief retained the tall reflection. Test the successful .02 relief level with its established upper transition, but protect the foot with a zero mask through ring10. Keep the original upper reflection lights and all geometry.",
+  "source": "build/king-mission/063-fitted-measured-glint/king.blend",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.02
+    ]
+  ],
+  "profile": false,
+  "source_sha256": "1fe3df5f32ca31645e29d0a39da00456e6001505bef9244aa2ee093d8c28dffa",
+  "variant": "066-confined-shallow-relief",
+  "neutral": false,
+  "attribute": "Lower flare relief mask",
+  "samples": 128,
+  "lower_fade": [
+    10,
+    12
+  ],
+  "ring_fade": [
+    18,
+    22
+  ]
+}

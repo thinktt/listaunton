@@ -1,0 +1,89 @@
+{
+  "source_sha256": "23b934a8b2aea677bc138bc6a8d6d182ed8482bee302818c2ea98f37b2ca1145",
+  "hypothesis": "Fit the retained lower reflection shape under its tested local .02 relief. Keep original upper glint and foot lights; actual full/crop/side evidence determines whether to accept.",
+  "samples": 128,
+  "variant": "069-fitted-retained-lower",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/069-fitted-retained-lower/prepared.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "neutral": true,
+  "original_source": "build/king-mission/068-retained-local-relief/king.blend",
+  "original_source_sha256": "c3475660cf9bbd0aa6fad3410e4540f1cd8e6a98938f5a788f5037e1554e6677",
+  "light_fit": {
+    "source_sha256": "c3475660cf9bbd0aa6fad3410e4540f1cd8e6a98938f5a788f5037e1554e6677",
+    "pixels": 11700,
+    "bounds": [
+      545,
+      910,
+      675,
+      1000
+    ],
+    "original_powers": {
+      "Base lower shaped 03": 300.0,
+      "Base lower shaped 04": 300.0,
+      "Base lower shaped 05": 300.0
+    },
+    "fitted_powers": {
+      "Base lower shaped 03": 55.51191151404165,
+      "Base lower shaped 04": 88.51728089539812,
+      "Base lower shaped 05": 55.324206307143655
+    },
+    "gain": [
+      0.1850397050468055,
+      0.2950576029846604,
+      0.18441402102381219
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.014737569910937366,
+        "after_mse": 0.010673553147968006
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.010673553147968006,
+        "after_mse": 0.009054120464347887
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.009054120464347887,
+        "after_mse": 0.009033955657905528
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.009033955657905528,
+        "after_mse": 0.009032210630793744
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.009032210630793744,
+        "after_mse": 0.00903206625849464
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.00903206625849464,
+        "after_mse": 0.009032051893834032
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.009032051893834032,
+        "after_mse": 0.009032050250975195
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "model_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+  "elevation_degrees": 54.000000800055794
+}

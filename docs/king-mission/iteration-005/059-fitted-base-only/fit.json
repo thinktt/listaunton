@@ -1,0 +1,82 @@
+{
+  "source_sha256": "bba7f3e76922cd03f7bb8990677cacf31ad99835afb0f6bea72aa3f2ddb83182",
+  "pixels": 31350,
+  "bounds": [
+    520,
+    815,
+    685,
+    1005
+  ],
+  "original_powers": {
+    "Base contour 00": 300.0,
+    "Base contour 01": 300.0,
+    "Base contour 02": 300.0,
+    "Base contour 03": 300.0,
+    "Base contour 04": 300.0,
+    "Base contour 05": 300.0
+  },
+  "fitted_powers": {
+    "Base contour 00": 78.57331514427182,
+    "Base contour 01": 6000.0,
+    "Base contour 02": 6000.0,
+    "Base contour 03": 55.1588315669348,
+    "Base contour 04": 94.56347796085429,
+    "Base contour 05": 56.510367035213285
+  },
+  "gain": [
+    0.26191105048090607,
+    20.0,
+    20.0,
+    0.18386277188978267,
+    0.31521159320284764,
+    0.18836789011737762
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.012499541108171227,
+      "after_mse": 0.012056390223680092
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.012056390223680092,
+      "after_mse": 0.008788894716056605
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.008788894716056605,
+      "after_mse": 0.007470667003622211
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.007470667003622211,
+      "after_mse": 0.007222132603124151
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.007222132603124151,
+      "after_mse": 0.007194181630263066
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.007194181630263066,
+      "after_mse": 0.0071906565739125235
+    },
+    {
+      "iteration": 6,
+      "before_mse": 0.0071906565739125235,
+      "after_mse": 0.007190229174106529
+    },
+    {
+      "iteration": 7,
+      "before_mse": 0.007190229174106529,
+      "after_mse": 0.007190172559011611
+    },
+    {
+      "iteration": 8,
+      "before_mse": 0.007190172559011611,
+      "after_mse": 0.007190164075969092
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

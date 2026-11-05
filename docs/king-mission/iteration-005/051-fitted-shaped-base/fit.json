@@ -1,0 +1,77 @@
+{
+  "source_sha256": "a47345cc9b0feabd65783e2e95ab23d0a40352d972a6ad811102bf21191fe8ac",
+  "pixels": 31350,
+  "bounds": [
+    520,
+    815,
+    685,
+    1005
+  ],
+  "original_powers": {
+    "Base contour 00": 300.0,
+    "Base contour 01": 300.0,
+    "Base contour 02": 300.0,
+    "Base contour 03": 300.0,
+    "Base contour 04": 300.0,
+    "Base contour 05": 300.0
+  },
+  "fitted_powers": {
+    "Base contour 00": 79.26697683648301,
+    "Base contour 01": 6000.0,
+    "Base contour 02": 6000.0,
+    "Base contour 03": 74.12738449620261,
+    "Base contour 04": 105.03501846387014,
+    "Base contour 05": 78.19361631591133
+  },
+  "gain": [
+    0.26422325612161,
+    20.0,
+    20.0,
+    0.2470912816540087,
+    0.35011672821290046,
+    0.2606453877197044
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.011724855772319145,
+      "after_mse": 0.01111911397657759
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.01111911397657759,
+      "after_mse": 0.008176405460692189
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.008176405460692189,
+      "after_mse": 0.007074186860518303
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.007074186860518303,
+      "after_mse": 0.006865264139969402
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.006865264139969402,
+      "after_mse": 0.006861505653443056
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.006861505653443056,
+      "after_mse": 0.006861307791206486
+    },
+    {
+      "iteration": 6,
+      "before_mse": 0.006861307791206486,
+      "after_mse": 0.006861297283065728
+    },
+    {
+      "iteration": 7,
+      "before_mse": 0.006861297283065728,
+      "after_mse": 0.0068612969298817664
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

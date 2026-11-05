@@ -1,4 +1,4 @@
-Current checkpoint: [mission iteration 003](king-mission/iteration-003/README.md). It curves the cross cap and refines its lighting/pigment while preserving the body, physical size and 54-degree camera. Reproduce with `scripts/king/rebuild_checkpoint_003.py`; the older clay pipeline remains historical.
+Current checkpoint: [mission iteration 005](king-mission/iteration-005/README.md). It isolates and reshapes the lower base reflection while preserving geometry, pigment, proportions and the 54-degree camera. Reproduce with `scripts/king/rebuild_checkpoint_005.py`; older clay pipelines are historical.
 
 # King reconstruction
 
@@ -46,7 +46,7 @@ The first selected-image outline overlap was approximately 91.5%; the current on
 
 Use the **Model** tab on [the king review](../king-review.html). **Reference overlay** defaults to the original; switch to the selected image for larger edge detail. **Rotate model** allows an independent inspection, and **Reset view** restores the saved camera. Other unmodeled pieces have explicit placeholders. The queen review remains unchanged.
 
-## Current checkpoint 004: exact light receivers
+## Checkpoint 004 foundation: exact light receivers
 
 Follow `docs/king-mission/iteration-004/README.md` and
 `scripts/king/rebuild_checkpoint_004.py`. The current model is the accepted
@@ -60,3 +60,7 @@ validation now handle these controls explicitly. Preserve original UVs when
 baking a local pigment repair; `bake_registered_pigment.py` retains upper and
 cross atlas bytes for this base-only pass. The local profile-crossing check
 supplements, rather than replaces, closed-manifold validation.
+
+## Current checkpoint 005
+
+The current scene retains 004 geometry and pigment v5, adds local flare coat relief and fitted lower reflectors, and splits the flare receiver at ring 17. Its four exact receiver regions are foot, lower-flare, upper-flare and upper-body. `regenerate` preserves this split and all light routes. See iteration 005 for the causal spill diagnosis, exact scope checks and complete reproduction. Keep the closed control for export.

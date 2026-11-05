@@ -1,0 +1,152 @@
+{
+  "variant": "042-foot-crescent",
+  "source": "build/king-mission/041-raised-foot-rim/king.blend",
+  "source_sha256": "463407a9e2f835b871927d1e55a70d02b4ec7998f13e3a9629e2b083838d0d82",
+  "samples": 128,
+  "existing_light_power": {
+    "Foot left reflection": 0
+  },
+  "reflectors": [
+    {
+      "name": "Foot crescent 00",
+      "pixel": [
+        340,
+        1007
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 01",
+      "pixel": [
+        360,
+        1016
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 02",
+      "pixel": [
+        380,
+        1024
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 03",
+      "pixel": [
+        400,
+        1034
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 04",
+      "pixel": [
+        420,
+        1039
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 05",
+      "pixel": [
+        440,
+        1043
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 06",
+      "pixel": [
+        460,
+        1045
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    }
+  ],
+  "hypothesis": "Seven overlapping real reflected-ray spots follow the observed left foot crescent. A recorded maximum five-pixel downward targeting adjustment is allowed only to reach the actual upward-facing foot, without changing image registration."
+}

@@ -1,0 +1,22 @@
+{
+  "source_sha256": "28ae727a62b8362a0873879ed6dfc687b879daaa96eabb4f33bad7bd6481c718",
+  "hypothesis": "Final fit with the direct upper-light spill excluded by exact receiver separation. Preserve upper cone/power, foot lights, all geometry and pigment. Compare the smaller lower reflection, full source view and hidden sides.",
+  "samples": 128,
+  "variant": "075-fitted-separated-base",
+  "maximum_gain": 20,
+  "response_samples": 512,
+  "source": "build/king-mission/074-separated-base-receivers/king.blend",
+  "bounds": [
+    545,
+    910,
+    675,
+    1000
+  ],
+  "profile": true,
+  "lights": [
+    "Base lower shaped 03",
+    "Base lower shaped 04",
+    "Base lower shaped 05"
+  ],
+  "neutral": true
+}

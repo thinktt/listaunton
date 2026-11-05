@@ -1,0 +1,29 @@
+{
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.02
+    ]
+  ],
+  "attribute": "Refined flare relief mask",
+  "lower_fade": [
+    8,
+    10
+  ],
+  "hypothesis": "Reduce the reference-brightness-derived varnish relief only on the flare, tapering out before both the foot and upper body. Keep all accepted geometry, pigments and foot lighting.",
+  "ring_fade": [
+    18,
+    22
+  ],
+  "profile": false,
+  "samples": 128,
+  "variant": "058-base-only-relief",
+  "source_sha256": "fcf29fcd8778c3a1a2d1be803073c84fe6995ebb44506210ee89180f2241cc75",
+  "neutral": false,
+  "source": "build/king-mission/058-base-only-relief/prepared.blend",
+  "original_source": "build/king-mission/057-base-only-reflectors/king.blend",
+  "original_source_sha256": "19e9354de8217382e41cd5885b89ce7f31f24a35b82b3305a4a32f44398fed97",
+  "model_sha256": "bba7f3e76922cd03f7bb8990677cacf31ad99835afb0f6bea72aa3f2ddb83182",
+  "elevation_degrees": 54.000000800055794
+}

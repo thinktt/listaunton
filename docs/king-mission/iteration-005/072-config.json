@@ -1,0 +1,12 @@
+{
+  "variant": "072-confined-upper-beam",
+  "source": "build/king-mission/069-fitted-retained-lower/king.blend",
+  "source_sha256": "f8eb2ef145ef457fbf66847eb2611ed702d76b5c5fd00ab83567dd8eea05cf88",
+  "samples": 128,
+  "existing_light_edits": {
+    "Base upper focused": {
+      "degrees": 1.6
+    }
+  },
+  "hypothesis": "Disabling the upper light removes the displaced lower glint, while zero glossy bounces does not: the spill is direct. Narrow its cone from3 to1.6degrees while preserving power/aim, retaining the direct upper reflection without lighting the lower base."
+}

@@ -1,0 +1,438 @@
+{
+  "variant": "042-foot-crescent",
+  "source": "build/king-mission/041-raised-foot-rim/king.blend",
+  "source_sha256": "463407a9e2f835b871927d1e55a70d02b4ec7998f13e3a9629e2b083838d0d82",
+  "samples": 128,
+  "existing_light_power": {
+    "Foot left reflection": 0
+  },
+  "reflectors": [
+    {
+      "name": "Foot crescent 00",
+      "pixel": [
+        340,
+        1007
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 01",
+      "pixel": [
+        360,
+        1016
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 02",
+      "pixel": [
+        380,
+        1024
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 03",
+      "pixel": [
+        400,
+        1034
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 04",
+      "pixel": [
+        420,
+        1039
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 05",
+      "pixel": [
+        440,
+        1043
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    },
+    {
+      "name": "Foot crescent 06",
+      "pixel": [
+        460,
+        1045
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55
+    }
+  ],
+  "hypothesis": "Seven overlapping real reflected-ray spots follow the observed left foot crescent. A recorded maximum five-pixel downward targeting adjustment is allowed only to reach the actual upward-facing foot, without changing image registration.",
+  "original_source_sha256": "463407a9e2f835b871927d1e55a70d02b4ec7998f13e3a9629e2b083838d0d82",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Foot crescent 00",
+      "pixel": [
+        340,
+        1007
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        340,
+        1009
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.5767669081687927,
+        -0.8369808197021484,
+        0.2930173873901367
+      ],
+      "normal": [
+        0.07806017249822617,
+        0.12395364046096802,
+        0.9892129302024841
+      ],
+      "position": [
+        0.10463452339172363,
+        3.7717437744140625,
+        4.073936462402344
+      ]
+    },
+    {
+      "name": "Foot crescent 01",
+      "pixel": [
+        360,
+        1016
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        360,
+        1019
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.5050600171089172,
+        -0.8786435127258301,
+        0.290557861328125
+      ],
+      "normal": [
+        0.246945321559906,
+        0.43112578988075256,
+        0.8678413033485413
+      ],
+      "position": [
+        0.82455974817276,
+        4.969364643096924,
+        0.10914576053619385
+      ]
+    },
+    {
+      "name": "Foot crescent 02",
+      "pixel": [
+        380,
+        1024
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        380,
+        1028
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.4333812892436981,
+        -0.9194941520690918,
+        0.29305458068847656
+      ],
+      "normal": [
+        0.05441352725028992,
+        0.13014431297779083,
+        0.99000084400177
+      ],
+      "position": [
+        0.03964456915855408,
+        3.7385830879211426,
+        4.045195579528809
+      ]
+    },
+    {
+      "name": "Foot crescent 03",
+      "pixel": [
+        400,
+        1034
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        400,
+        1035
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.3617585301399231,
+        -0.9493088722229004,
+        0.2925148010253906
+      ],
+      "normal": [
+        0.07670626789331436,
+        0.20706237852573395,
+        0.975316047668457
+      ],
+      "position": [
+        0.2525104880332947,
+        4.235572338104248,
+        3.248810291290283
+      ]
+    },
+    {
+      "name": "Foot crescent 04",
+      "pixel": [
+        420,
+        1039
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        420,
+        1041
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.2901638448238373,
+        -0.9769935607910156,
+        0.2951173782348633
+      ],
+      "normal": [
+        -0.0430312380194664,
+        -0.13440905511379242,
+        0.9899911284446716
+      ],
+      "position": [
+        -0.7445342540740967,
+        1.1304826736450195,
+        5.894411563873291
+      ]
+    },
+    {
+      "name": "Foot crescent 05",
+      "pixel": [
+        440,
+        1043
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        440,
+        1045
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.2186252623796463,
+        -0.9921131134033203,
+        0.29257965087890625
+      ],
+      "normal": [
+        0.0371200256049633,
+        0.208017498254776,
+        0.977420449256897
+      ],
+      "position": [
+        0.07914279401302338,
+        4.20326566696167,
+        3.2791121006011963
+      ]
+    },
+    {
+      "name": "Foot crescent 06",
+      "pixel": [
+        460,
+        1045
+      ],
+      "energy": 300,
+      "degrees": 1.7,
+      "radius": 0.04,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "seek_receiver_down": 5,
+      "minimum_normal_z": 0.55,
+      "actual_target_pixel": [
+        460,
+        1048
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.14711476862430573,
+        -1.0039515495300293,
+        0.29160118103027344
+      ],
+      "normal": [
+        0.042246393859386444,
+        0.3521876037120819,
+        0.9349755048751831
+      ],
+      "position": [
+        0.1314074546098709,
+        4.844664096832275,
+        1.6016103029251099
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "f4d574efe2a4e91d61cf91a588887d240983d60eddba5d20a57651efe64ce066"
+}

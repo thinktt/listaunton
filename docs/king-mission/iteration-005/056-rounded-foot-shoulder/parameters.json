@@ -1,0 +1,25 @@
+{
+  "variant": "056-rounded-foot-shoulder",
+  "hypothesis": "Large area sources still make a narrow hairline because the outer foot shoulder turns sharply. Spread the convex shoulder over a wider radial interval, preserving fixed camera and all upper geometry; assess full-view and profile regression.",
+  "source_sha256": "c264550ca465e4957deaae06bb0b76f7ff4670f3761c8919dda562f6f75bf04c",
+  "neutral": true,
+  "source": "build/king-mission/055-fitted-foot-area/king.blend",
+  "profile_offsets": {
+    "5": [
+      -0.012,
+      0
+    ],
+    "6": [
+      -0.01,
+      0
+    ],
+    "4": [
+      0,
+      0.045
+    ]
+  },
+  "profile": true,
+  "samples": 128,
+  "model_sha256": "f73905a032d93a22eaebe5fd242c6a581ce088289d012bcd71f0334ee83aadc2",
+  "elevation_degrees": 54.000000800055794
+}

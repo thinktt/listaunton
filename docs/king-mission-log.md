@@ -218,3 +218,34 @@ components, export and page controls pass. See
 reproduction, validation evidence and limitations. The king reconstruction and
 local preview are synchronized at this checkpoint. No native UI inspection is
 claimed. Next: foot crescent and remaining base glint shape. Mission incomplete.
+
+## 2026-11-05 — checkpoint 005: isolate the lower base reflection
+
+The lower glint is smaller and correctly centered after removing direct spill
+from the upper-base reflector. Four exact derived receivers preserve the same
+closed geometry. All UVs, pigment pixels, dimensions and the 54-degree camera
+remain unchanged; the export is byte-identical to 004. The foot experiments
+were rejected and the accepted foot geometry/lights retained.
+
+| Metric | Checkpoint 004 | Checkpoint 005 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.820% | 97.820% |
+| Interior form | 83% | 83% |
+| Wood color | 82% | 82% |
+| Grain and surface texture | 78% | 78% |
+| Lighting and reflections | 58% | 60% |
+| Equal-weight working mean | 79.764% | 80.164% |
+
+Original IoU remains 96.833%; the holistic range remains 73–82%. Only IoU is
+measured. The lower shine is now slightly undersized, the foot crescent and
+upper glints still differ, and the side/rear pigment transition remains obvious.
+A receiver illumination cutoff is visible in clay despite exact geometry.
+This is a modest accepted refinement, not a finished match.
+
+The saved/reopened and full reproduced renders differ by at most 1/255 with
+identical alpha. Geometry/material scope, receiver fidelity and export pass.
+All trial decisions, checks, reproduction and remaining issues are in
+[iteration-005/README.md](king-mission/iteration-005/README.md). Site/model, candidate, whole-set and historical projection checks pass. The
+repository and local-preview DOM/WebGL checks pass; native UI inspection is
+not claimed. The synchronized king review and local preview expose the accepted checkpoint. Next: hidden
+wood continuity, then the foot using isolated-light diagnostics. Goal incomplete.
