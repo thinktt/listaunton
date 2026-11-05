@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.10946013611408,
+    "interior": 84,
+    "color": 84,
+    "texture": 77,
+    "lighting": 75
+  },
+  "mean_percent": 83.22189202722282,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9778635964437387,
+  "original_black_iou": 0.9666099115524281,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "render_sha256": "739823eb5560c225291f8fc281ac7e1873af951391c963b14fd2479a5ce58a27",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "starting_model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "status": "accepted small base-curve and highlight improvement with recorded tonal tradeoff; mission incomplete"
+}

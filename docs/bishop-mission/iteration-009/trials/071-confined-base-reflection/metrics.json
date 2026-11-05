@@ -1,0 +1,16 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+  "render": "build/bishop-mission/071-confined-base-reflection/wood.png",
+  "render_sha256": "54e27b67848affe01cb1a9af70e148b71c0240179aa9f59298483e12f9d9ed24",
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9610803635975776
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778429426448916
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666190527851107
+    }
+  }
+}

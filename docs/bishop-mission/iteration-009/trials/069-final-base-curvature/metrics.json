@@ -1,0 +1,16 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+  "render": "build/bishop-mission/069-final-base-curvature/wood.png",
+  "render_sha256": "14462b532ebbec6138bc9209828171a20f73b7a55e3afe6bc57f3a8c180b4551",
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9610946013611408
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778635964437387
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666099115524281
+    }
+  }
+}

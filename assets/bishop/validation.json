@@ -3,7 +3,7 @@
     {
       "name": "Bishop - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.853280972960784,
+      "signed_volume": 4.8634066226092525,
       "vertices": 61678,
       "faces": 61450
     },
@@ -51,7 +51,7 @@
     9,
     10
   ],
-  "flare_socket_stem_collars_preserved": true,
+  "flare_socket_stem_collars_preserved": false,
   "slit_parameters_preserved": false,
   "button_height_to_width": 0.4129731516300226,
   "head_button_join": {
@@ -71,5 +71,11 @@
     "baseline_model": "history/bishop-mission-005/bishop-rebuilt.blend",
     "baseline_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
     "description": "Rounded semicircular floor; parallel full-depth opening, width, angle and original bevel retained."
-  }
+  },
+  "declared_base_curvature_rings": [
+    17,
+    18
+  ],
+  "all_other_lower_profile_points_preserved": true,
+  "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json"
 }

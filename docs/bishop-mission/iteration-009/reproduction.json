@@ -1,0 +1,14 @@
+{
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "geometry_config": "docs/bishop-mission/iteration-009/geometry-067.json",
+  "lighting_config": "docs/bishop-mission/iteration-009/lighting-073.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/geometry_trial.py -- docs/bishop-mission/iteration-009/geometry-067.json --no-render",
+    "blender --background --python-exit-code 1 --python scripts/bishop/lighting_trial.py -- docs/bishop-mission/iteration-009/lighting-073.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/finalize_render.py -- --source build/bishop-mission/073-fitted-confined-reflection/bishop.blend --out build/bishop-mission/074-final-confined-base --samples 512 --fixed-samples"
+  ],
+  "promotion": "Reproduce in an isolated copy. After actual render inspection, copy final model/render and the generated 067 profile to bishop paths. Retain atlas and existing slit/foot declarations. Run validate_checkpoint.py, render_diagnostics.py, render_clay.py, compare.py, mission_compare.py and refresh_review.py; check pages before synchronizing the owner preview.",
+  "accepted_model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "note": "Hashes identify accepted files, not a promise of byte-identical Blender serialization on another machine. Two radii and one existing light change. No pigment, UV or material-node changes."
+}

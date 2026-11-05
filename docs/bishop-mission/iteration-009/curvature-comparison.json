@@ -1,0 +1,338 @@
+{
+  "note": "A normal reversal is a geometry diagnostic, not proof of the unknown original curvature. Bright-core statistics also include pigment and transport. Fixed reference and camera are unchanged.",
+  "surfaces": {
+    "before": {
+      "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+      "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+      "column_x": 584,
+      "image_y_range": [
+        940,
+        1000
+      ],
+      "total_positive_normal_tilt_step_degrees": 4.702241068971897,
+      "max_positive_step_degrees": 0.5323539199170568,
+      "samples": [
+        {
+          "y": 940,
+          "normal_tilt_degrees": 32.2981706369102
+        },
+        {
+          "y": 942,
+          "normal_tilt_degrees": 31.64232014651452
+        },
+        {
+          "y": 944,
+          "normal_tilt_degrees": 31.206935213762012
+        },
+        {
+          "y": 946,
+          "normal_tilt_degrees": 30.85417927820561
+        },
+        {
+          "y": 948,
+          "normal_tilt_degrees": 30.5012336821561
+        },
+        {
+          "y": 950,
+          "normal_tilt_degrees": 30.148170108821112
+        },
+        {
+          "y": 952,
+          "normal_tilt_degrees": 29.794984362870366
+        },
+        {
+          "y": 954,
+          "normal_tilt_degrees": 29.44144282419467
+        },
+        {
+          "y": 956,
+          "normal_tilt_degrees": 29.087631572032898
+        },
+        {
+          "y": 958,
+          "normal_tilt_degrees": 28.7963837097485
+        },
+        {
+          "y": 960,
+          "normal_tilt_degrees": 28.758665523702245
+        },
+        {
+          "y": 962,
+          "normal_tilt_degrees": 28.720877234721197
+        },
+        {
+          "y": 964,
+          "normal_tilt_degrees": 28.683005277656072
+        },
+        {
+          "y": 966,
+          "normal_tilt_degrees": 28.645041944012902
+        },
+        {
+          "y": 968,
+          "normal_tilt_degrees": 28.607002876228705
+        },
+        {
+          "y": 970,
+          "normal_tilt_degrees": 28.568874529892792
+        },
+        {
+          "y": 972,
+          "normal_tilt_degrees": 28.530666703061964
+        },
+        {
+          "y": 974,
+          "normal_tilt_degrees": 28.94937587958007
+        },
+        {
+          "y": 976,
+          "normal_tilt_degrees": 29.382676144213793
+        },
+        {
+          "y": 978,
+          "normal_tilt_degrees": 29.815867280927385
+        },
+        {
+          "y": 980,
+          "normal_tilt_degrees": 30.25020625715812
+        },
+        {
+          "y": 982,
+          "normal_tilt_degrees": 30.686279424551195
+        },
+        {
+          "y": 984,
+          "normal_tilt_degrees": 31.122220793436433
+        },
+        {
+          "y": 986,
+          "normal_tilt_degrees": 31.636230986087362
+        },
+        {
+          "y": 988,
+          "normal_tilt_degrees": 32.16858490600442
+        },
+        {
+          "y": 990,
+          "normal_tilt_degrees": 32.70081349372132
+        },
+        {
+          "y": 992,
+          "normal_tilt_degrees": 33.23290777203386
+        },
+        {
+          "y": 994,
+          "normal_tilt_degrees": 33.09959821359059
+        },
+        {
+          "y": 996,
+          "normal_tilt_degrees": 31.74043151027274
+        },
+        {
+          "y": 998,
+          "normal_tilt_degrees": 30.38072419077526
+        },
+        {
+          "y": 1000,
+          "normal_tilt_degrees": 28.878695763183018
+        }
+      ]
+    },
+    "after": {
+      "source": "build/bishop-mission/067-smooth-base-curvature/bishop.blend",
+      "source_sha256": "f75014402789f66cfec9ef9f2c47bf9091a08479dd1927a666d45ca554c45178",
+      "column_x": 584,
+      "image_y_range": [
+        940,
+        1000
+      ],
+      "total_positive_normal_tilt_step_degrees": 0.0,
+      "max_positive_step_degrees": 0.0,
+      "samples": [
+        {
+          "y": 940,
+          "normal_tilt_degrees": 34.62469297588814
+        },
+        {
+          "y": 942,
+          "normal_tilt_degrees": 34.11721410039404
+        },
+        {
+          "y": 944,
+          "normal_tilt_degrees": 33.684362523603774
+        },
+        {
+          "y": 946,
+          "normal_tilt_degrees": 33.408646979188504
+        },
+        {
+          "y": 948,
+          "normal_tilt_degrees": 33.13276795383367
+        },
+        {
+          "y": 950,
+          "normal_tilt_degrees": 32.856789736299696
+        },
+        {
+          "y": 952,
+          "normal_tilt_degrees": 32.5806258221273
+        },
+        {
+          "y": 954,
+          "normal_tilt_degrees": 32.30429578492645
+        },
+        {
+          "y": 956,
+          "normal_tilt_degrees": 32.0278551708349
+        },
+        {
+          "y": 958,
+          "normal_tilt_degrees": 31.751334721097244
+        },
+        {
+          "y": 960,
+          "normal_tilt_degrees": 31.51850127122128
+        },
+        {
+          "y": 962,
+          "normal_tilt_degrees": 31.350291651769076
+        },
+        {
+          "y": 964,
+          "normal_tilt_degrees": 31.18196320517768
+        },
+        {
+          "y": 966,
+          "normal_tilt_degrees": 31.013539025041357
+        },
+        {
+          "y": 968,
+          "normal_tilt_degrees": 30.845018167743163
+        },
+        {
+          "y": 970,
+          "normal_tilt_degrees": 30.676411601300394
+        },
+        {
+          "y": 972,
+          "normal_tilt_degrees": 30.507698499390987
+        },
+        {
+          "y": 974,
+          "normal_tilt_degrees": 30.338945226810505
+        },
+        {
+          "y": 976,
+          "normal_tilt_degrees": 30.118732309262832
+        },
+        {
+          "y": 978,
+          "normal_tilt_degrees": 29.88410763077692
+        },
+        {
+          "y": 980,
+          "normal_tilt_degrees": 29.649399148113652
+        },
+        {
+          "y": 982,
+          "normal_tilt_degrees": 29.414585881182887
+        },
+        {
+          "y": 984,
+          "normal_tilt_degrees": 29.179707653342028
+        },
+        {
+          "y": 986,
+          "normal_tilt_degrees": 28.944766831557292
+        },
+        {
+          "y": 988,
+          "normal_tilt_degrees": 28.446298904908616
+        },
+        {
+          "y": 990,
+          "normal_tilt_degrees": 27.73438454103273
+        },
+        {
+          "y": 992,
+          "normal_tilt_degrees": 27.02221097004108
+        },
+        {
+          "y": 994,
+          "normal_tilt_degrees": 26.310055130232758
+        },
+        {
+          "y": 996,
+          "normal_tilt_degrees": 25.167612668288715
+        },
+        {
+          "y": 998,
+          "normal_tilt_degrees": 23.63069673934952
+        },
+        {
+          "y": 1000,
+          "normal_tilt_degrees": 22.094041026570036
+        }
+      ]
+    }
+  },
+  "bright_blue_base_core": {
+    "reference": {
+      "image": "assets/bishop/reference.png",
+      "box": [
+        500,
+        920,
+        670,
+        1030
+      ],
+      "pixels": 371,
+      "centroid": [
+        583.3935309973045,
+        994.7466307277627
+      ],
+      "mean_rgb": [
+        252.26954177897574,
+        250.58490566037736,
+        212.1455525606469
+      ]
+    },
+    "accepted_007": {
+      "image": "history/bishop-mission-007/render.png",
+      "box": [
+        500,
+        920,
+        670,
+        1030
+      ],
+      "pixels": 364,
+      "centroid": [
+        566.9560439560439,
+        974.3708791208792
+      ],
+      "mean_rgb": [
+        255.0,
+        255.0,
+        163.63186813186815
+      ]
+    },
+    "trial_067": {
+      "image": "build/bishop-mission/067-smooth-base-curvature/wood.png",
+      "box": [
+        500,
+        920,
+        670,
+        1030
+      ],
+      "pixels": 372,
+      "centroid": [
+        569.2284946236559,
+        979.7177419354839
+      ],
+      "mean_rgb": [
+        255.0,
+        255.0,
+        154.71774193548387
+      ]
+    }
+  }
+}

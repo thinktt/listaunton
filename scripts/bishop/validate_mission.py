@@ -33,15 +33,34 @@ def geometry(path):
 profile=json.loads((ROOT/'scripts/bishop/profile.json').read_text())
 declared=profile.get('mission_geometry')
 slit_declared=profile.get('mission_slit_geometry')
+base_declared=profile.get('mission_base_curvature')
+if base_declared:
+    base_config=json.loads((ROOT/base_declared['config']).read_text())
+    assert base_declared['baseline_model']==base_config['source']
+    assert base_declared['baseline_profile']==base_config['profile']
+    assert base_declared['body_rings']==base_config['body_rings']
+    original_args=sys.argv[:]
+    sys.argv=['validate_base_curvature.py','--','--config',base_declared['config'],
+              '--model','models/bishop/bishop-rebuilt.blend','--out','assets/bishop/base-validation.json','--geometry-only']
+    runpy.run_path(str(Path(__file__).with_name('validate_base_curvature.py')),run_name='__main__')
+    sys.argv=original_args
 if slit_declared:
     slit_path=ROOT/slit_declared['config'];slit_config=json.loads(slit_path.read_text())
     assert slit_config['source']==slit_declared['baseline_model']
     assert slit_config['source_sha256']==slit_declared['baseline_sha256']
     original_args=sys.argv[:]
-    sys.argv=['validate_slit_trial.py','--','--model','models/bishop/bishop-rebuilt.blend',
+    slit_checked_model=base_declared['baseline_model'] if base_declared else 'models/bishop/bishop-rebuilt.blend'
+    sys.argv=['validate_slit_trial.py','--','--model',slit_checked_model,
               '--config',slit_declared['config'],'--out','assets/bishop/slit-validation.json','--geometry-only']
     runpy.run_path(str(Path(__file__).with_name('validate_slit_trial.py')),run_name='__main__')
     sys.argv=original_args
+    if base_declared:
+        slit_report=json.loads((ROOT/'assets/bishop/slit-validation.json').read_text())
+        slit_report['checked_model']=slit_checked_model
+        slit_report['current_model_sha256']=hashlib.sha256((ROOT/'models/bishop/bishop-rebuilt.blend').read_bytes()).hexdigest()
+        slit_report['inheritance_audit']='assets/bishop/base-validation.json'
+        slit_report['note']='Rounded cutter and upper geometry are validated on the preserved source, then inherited exactly through the independently audited two-ring base edit. The current anatomy check also probes the actual through slit and solid floor.'
+        (ROOT/'assets/bishop/slit-validation.json').write_text(json.dumps(slit_report,indent=2)+'\n')
 baseline_path=ROOT/(declared['baseline_model'] if declared else 'history/bishop-mission-000/bishop-rebuilt.blend')
 current_path=ROOT/'models/bishop/bishop-rebuilt.blend'
 baseline=geometry(baseline_path)
@@ -66,6 +85,12 @@ for name in baseline:
                 index=int(key);old_radius,old_y=old_profile['profile'][index]
                 expected[index*128:(index+1)*128,:2]*=radius/old_radius
                 expected[index*128:(index+1)*128,2]+=(old_y-axis_y)*factor
+            if base_declared:
+                base_profile=json.loads((ROOT/base_declared['baseline_profile']).read_text())
+                for key,(radius,axis_y) in base_declared['body_rings'].items():
+                    index=int(key);old_radius,old_y=base_profile['profile'][index]
+                    assert axis_y==old_y and index in [17,18]
+                    expected[index*128:(index+1)*128,:2]*=radius/old_radius
         difference=float(np.max(np.abs(newcontrol-expected)))
         changes[name]['max_control_difference_from_declared_edit']=difference
         current_construction=copy.deepcopy(construction[(str(current_path),name)])
@@ -97,4 +122,5 @@ for original in ['White-Bishop','Black-Bishop']:
 assert (ROOT/'assets/bishop/reference.png').read_bytes()==(ROOT/'assets/candidates/bishop/white-candidate-3.png').read_bytes()
 report={'passed':True,'all_evaluated_geometry_preserved_within_5e_6':not bool(declared),'declared_geometry_changes_validated':bool(declared),'baseline_model':str(baseline_path.relative_to(ROOT)),'geometry_comparison':changes,'components':current,'camera_exactly_unchanged':True,'reference_pixels_unchanged':True,'shader':'Principled BSDF','albedo_bakes_lighting':False,'texture_hash_matches':True,'finite_uvs_and_unit_normals':True,'model_sha256':meta['sourceSha256']}
 report['declared_slit_revision_validated']=bool(slit_declared)
+report['declared_base_curvature_validated']=bool(base_declared)
 (ROOT/'assets/bishop/mission-validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

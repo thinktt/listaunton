@@ -1,0 +1,40 @@
+{
+  "source": "build/bishop-mission/067-smooth-base-curvature/bishop.blend",
+  "variant": "072-base-light-off-control",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "Measure the actual contribution of the confined base lamp against trial071. Diagnostic only; do not accept a missing base highlight.",
+  "lights": [
+    {
+      "name": "base reflection",
+      "position": [
+        4.299645014241566,
+        -6.643775461503051,
+        -0.011302383699013596
+      ],
+      "target": [
+        0.355006605386734,
+        -0.8970451354980469,
+        0.6328392028808594
+      ],
+      "color": [
+        1,
+        0.97,
+        1
+      ],
+      "size": 0.2,
+      "energy": 0,
+      "spread_degrees": 3
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/lower-glint-landmarks-067.json",
+    "normals": "build/bishop-mission/lower-shading-normals-067/manifest.json",
+    "target_pixel": [
+      584,
+      995
+    ],
+    "mean_radius": 3,
+    "normal_difference_degrees": 0.6700451761992344
+  }
+}

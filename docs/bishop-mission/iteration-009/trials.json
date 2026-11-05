@@ -1,0 +1,187 @@
+[
+  {
+    "trial": "067-smooth-base-curvature",
+    "scores_percent": {
+      "silhouette": 96.10803635975776,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 72
+    },
+    "mean_percent": 82.62160727195155,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "reference_iou": {
+      "selected": {
+        "silhouette_iou": 0.9610803635975776
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778429426448916
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666190527851107
+      }
+    },
+    "render_sha256": "d1d96ba72f30e88f2099cd1d342cb27e9e4b1a06ab1f05efb986c2eccb40a91a",
+    "model_sha256": "f75014402789f66cfec9ef9f2c47bf9091a08479dd1927a666d45ca554c45178",
+    "samples": 96,
+    "decision": "Geometry used later, but the unchanged lighting leaves the core too dim and misplaced."
+  },
+  {
+    "trial": "068-smooth-base-reflection",
+    "scores_percent": {
+      "silhouette": 96.10803635975776,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 73
+    },
+    "mean_percent": 82.82160727195155,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "reference_iou": {
+      "selected": {
+        "silhouette_iou": 0.9610803635975776
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778429426448916
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666190527851107
+      }
+    },
+    "render_sha256": "31177a6806e5b2f0ebb8b0b8960ef9c67ad91397b9977faa8efe603f37519614",
+    "model_sha256": "77d74fe488f8bed1f17d17f79180efa53a8066df6f30c992d72c70661ffe9585",
+    "samples": 96,
+    "decision": "Reject this lighting: better core position, excessive foot reflection."
+  },
+  {
+    "trial": "069-final-base-curvature",
+    "scores_percent": {
+      "silhouette": 96.10946013611408,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 73
+    },
+    "mean_percent": 82.82189202722282,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "reference_iou": {
+      "selected": {
+        "silhouette_iou": 0.9610946013611408
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778635964437387
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666099115524281
+      }
+    },
+    "render_sha256": "14462b532ebbec6138bc9209828171a20f73b7a55e3afe6bc57f3a8c180b4551",
+    "model_sha256": "f31982a0982fb2b1dedbf4b9130bcd774f7cda5518afe13c6521e003f969fa36",
+    "samples": 512,
+    "decision": "512-sample check of 068; not accepted because the broader base and foot regress."
+  },
+  {
+    "trial": "070-broader-base-reflection",
+    "scores_percent": {
+      "silhouette": 96.10803635975776,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 72
+    },
+    "mean_percent": 82.62160727195155,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "reference_iou": {
+      "selected": {
+        "silhouette_iou": 0.9610803635975776
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778429426448916
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666190527851107
+      }
+    },
+    "render_sha256": "a8fafffd43ac32bcc843bbd7d9b9bd97a1ab93243fd04a730f5ba191e7a66c5f",
+    "model_sha256": "b4e277f256615303e8de8f99956c35822fb34c8355f5989a94c8d7999b1a94e0",
+    "samples": 96,
+    "decision": "Reject: widened pale light causes an obvious white foot streak."
+  },
+  {
+    "trial": "071-confined-base-reflection",
+    "scores_percent": {
+      "silhouette": 96.10803635975776,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 74
+    },
+    "mean_percent": 83.02160727195155,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "reference_iou": {
+      "selected": {
+        "silhouette_iou": 0.9610803635975776
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778429426448916
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666190527851107
+      }
+    },
+    "render_sha256": "54e27b67848affe01cb1a9af70e148b71c0240179aa9f59298483e12f9d9ed24",
+    "model_sha256": "a27d0a8eef23d14ac94415ed3eb9744f450a29c16aa3cb914b20ef7466774615",
+    "samples": 96,
+    "decision": "Foot spill controlled, core too weak; continue with a power-only fit."
+  },
+  {
+    "trial": "073-fitted-confined-reflection",
+    "scores_percent": {
+      "silhouette": 96.10803635975776,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 75
+    },
+    "mean_percent": 83.22160727195156,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "reference_iou": {
+      "selected": {
+        "silhouette_iou": 0.9610803635975776
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778429426448916
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666190527851107
+      }
+    },
+    "render_sha256": "aede8f6c54d864064b2ec9c000997f7a7279f602cca6d4c2a2260e84b8debc03",
+    "model_sha256": "e27adb06dc620f96fb05b4bb8601f14d6a54be1493cb377ad09a14719a3e09c8",
+    "samples": 96,
+    "decision": "Draft selected for reopened high-sample verification."
+  },
+  {
+    "trial": "072-base-light-off-control",
+    "role": "Actual lamp-off BSDF control for power fitting; not a beauty candidate.",
+    "scored": false
+  }
+]

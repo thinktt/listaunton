@@ -1,0 +1,81 @@
+{
+  "note": "Fixed foreground RGB and bright-core diagnostics. They combine geometry, pigment and illumination; they do not replace visual assessment. Consult the render manifests for sample counts and acceptance status.",
+  "render": "build/bishop-mission/070-broader-base-reflection/wood.png",
+  "previous": "history/bishop-mission-007/render.png",
+  "regions": {
+    "base": {
+      "pixels": 88633,
+      "before_rgb_mae": 9.313194107537072,
+      "after_rgb_mae": 10.340531555214573,
+      "mean_change": 4.477805482532841,
+      "p99_channel_change": 60.0
+    },
+    "foot": {
+      "pixels": 24020,
+      "before_rgb_mae": 6.62872606161532,
+      "after_rgb_mae": 9.423619206217042,
+      "mean_change": 4.15165140160977,
+      "p99_channel_change": 108.0
+    },
+    "main_glint": {
+      "pixels": 11700,
+      "before_rgb_mae": 24.533219373219374,
+      "after_rgb_mae": 24.053931623931625,
+      "mean_change": 17.433760683760685,
+      "p99_channel_change": 124.0
+    },
+    "socket": {
+      "pixels": 35000,
+      "before_rgb_mae": 8.804847619047619,
+      "after_rgb_mae": 9.22064761904762,
+      "mean_change": 2.2181238095238096,
+      "p99_channel_change": 39.0
+    },
+    "upper_piece": {
+      "pixels": 146848,
+      "before_rgb_mae": 6.293850330500472,
+      "after_rgb_mae": 6.264207434444686,
+      "mean_change": 0.7527579538025714,
+      "p99_channel_change": 7.0
+    }
+  },
+  "bright_core": {
+    "reference": {
+      "own_blue_p98_centroid": [
+        583.3935309973045,
+        994.7466307277627
+      ],
+      "mean_rgb_on_reference_bright_core": [
+        252.26954177897574,
+        250.58490566037736,
+        212.1455525606469
+      ],
+      "rgb_error_on_reference_bright_core": 0.0
+    },
+    "before": {
+      "own_blue_p98_centroid": [
+        566.9560439560439,
+        974.3708791208792
+      ],
+      "mean_rgb_on_reference_bright_core": [
+        248.35579514824798,
+        215.42587601078168,
+        116.47169811320755
+      ],
+      "rgb_error_on_reference_bright_core": 46.717879604672056
+    },
+    "after": {
+      "own_blue_p98_centroid": [
+        584.072192513369,
+        992.855614973262
+      ],
+      "mean_rgb_on_reference_bright_core": [
+        252.39083557951483,
+        242.7843665768194,
+        225.3989218328841
+      ],
+      "rgb_error_on_reference_bright_core": 19.4303683737646
+    }
+  },
+  "bright_core_reference_mask_pixels": 371
+}

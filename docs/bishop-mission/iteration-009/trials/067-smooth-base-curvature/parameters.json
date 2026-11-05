@@ -1,0 +1,38 @@
+{
+  "variant": "067-smooth-base-curvature",
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "profile": "history/bishop-mission-007/profile.json",
+  "samples": 96,
+  "declaration_key": "mission_base_curvature",
+  "body_rings": {
+    "17": [
+      57.4,
+      187.95744680851064
+    ],
+    "18": [
+      53.6,
+      184.11489361702127
+    ]
+  },
+  "interpretation": "Remove the measured reversal in base-flare curvature by increasing only radii 17 and 18. Preserve every ring height, foot, socket, upper anatomy, overall diameter/height, UVs, material, lighting and the 54-degree reference camera. This is an isolated unaccepted shape trial.",
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "fixed_camera": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.80901700258255,
+    -0.5877852439880371,
+    -7.053422927856445,
+    0.0,
+    0.5877852439880371,
+    0.80901700258255,
+    11.514362335205078,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "note": "Pigment UVs and lighting retained for isolated shape comparison; reproject/rebake after geometry acceptance."
+}

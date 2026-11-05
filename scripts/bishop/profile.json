@@ -73,11 +73,11 @@
       189.3
     ],
     [
-      56.5,
+      57.4,
       187.95744680851064
     ],
     [
-      53.2,
+      53.6,
       184.11489361702127
     ],
     [
@@ -520,7 +520,7 @@
     "start_profile_index": 65,
     "note": "Accepted side guide: continuous convex taper enters the button underside directly, without an exposed seat or neck."
   },
-  "revision": "013-flatter-foot",
+  "revision": "067-smooth-base-curvature",
   "head_button_join": {
     "head_cap_axis_y": 55.4,
     "button_bottom_axis_y": 56.5,
@@ -592,5 +592,27 @@
     "baseline_model": "history/bishop-mission-005/bishop-rebuilt.blend",
     "baseline_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
     "description": "Rounded semicircular floor; parallel full-depth opening, width, angle and original bevel retained."
+  },
+  "mission_base_curvature": {
+    "baseline_model": "history/bishop-mission-007/bishop-rebuilt.blend",
+    "baseline_profile": "history/bishop-mission-007/profile.json",
+    "changed_body_rings": [
+      17,
+      18
+    ],
+    "button_scale_xy": 1,
+    "body_rings": {
+      "17": [
+        57.4,
+        187.95744680851064
+      ],
+      "18": [
+        53.6,
+        184.11489361702127
+      ]
+    },
+    "interpretation": "Remove the measured reversal in base-flare curvature by increasing only radii 17 and 18. Preserve every ring height, foot, socket, upper anatomy, overall diameter/height, UVs, material, lighting and the 54-degree reference camera. This is an isolated unaccepted shape trial.",
+    "config": "docs/bishop-mission/iteration-009/geometry-067.json",
+    "baseline_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
   }
 }

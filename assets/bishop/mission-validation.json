@@ -27,8 +27,8 @@
   },
   "components": {
     "Bishop - continuous turned body": {
-      "positions": "8c427bb4e0c8937346f885c1c91e9cf7b3ce9e222b68af399eb9b519a71309e5",
-      "triangles": "d0f3f93ee88f33c171a5ad816e0a4d3efc91001e3e937867e93a22c59a98fae3",
+      "positions": "56c0edff066a0435a405ba3ba290fa772faa6741e9af9608169f5208eff66075",
+      "triangles": "c4b72c2a4568581a52ca867db7e752bb6ee90c5407844ae794965f7ea2945ac2",
       "vertex_count": 61678,
       "triangle_count": 123352
     },
@@ -45,6 +45,7 @@
   "albedo_bakes_lighting": false,
   "texture_hash_matches": true,
   "finite_uvs_and_unit_normals": true,
-  "model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
-  "declared_slit_revision_validated": true
+  "model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "declared_slit_revision_validated": true,
+  "declared_base_curvature_validated": true
 }

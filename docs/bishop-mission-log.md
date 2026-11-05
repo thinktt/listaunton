@@ -228,3 +228,22 @@ of 82.84 and a holistic fixed-view range of 75–85%. See
 for every trial's scorecard, generated-texture provenance and diagnostic
 evidence. Research scripts and records are checkpointed; failed models are
 not offered in the review controls. The mission remains incomplete.
+
+## Iteration 009 — smoother base and a better placed reflection
+
+Two lower-flare radii remove a measured curvature reversal while preserving
+every height, overall size and the upper piece. The existing base reflector
+is moved to the measured reference core; a small disk and narrow beam remove
+the foot glare introduced by broader lighting trials. The final scene is
+saved, reopened and rendered with 512 fixed samples.
+
+This is a small accepted improvement with a recorded tradeoff. The core's
+placement/color improve and foot spill decreases, but broader base tone is
+slightly worse and silhouette overlap falls about 0.09 percentage points.
+Scores are 96.11 / 84 / 84 / 77 / 75; working mean 83.22, holistic range 75–85%.
+See [`iteration-009/assessment.md`](bishop-mission/iteration-009/assessment.md)
+for all trials, measurements, limitations and checks. Checkpoint 007 remains
+archived. At acceptance, the bishop review and existing preview are refreshed
+with the matching model, render, export and side views. The mission is still
+incomplete. The owner requested a pause after finishing this checkpoint; the
+socket crescent and unwanted lower glint are the next target on resumption.

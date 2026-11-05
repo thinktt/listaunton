@@ -1,0 +1,52 @@
+{
+  "source": "build/bishop-mission/067-smooth-base-curvature/bishop.blend",
+  "source_sha256": "f75014402789f66cfec9ef9f2c47bf9091a08479dd1927a666d45ca554c45178",
+  "points": {
+    "base peak": {
+      "pixel": [
+        584,
+        995
+      ],
+      "normal": [
+        0.3357970714569092,
+        -0.8394612669944763,
+        0.4272528290748596
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "socket peak": {
+      "pixel": [
+        550,
+        790
+      ],
+      "normal": [
+        0.4057483375072479,
+        -0.7785378694534302,
+        0.4787975251674652
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "foot peak": {
+      "pixel": [
+        535,
+        1050
+      ],
+      "normal": [
+        0.1672685295343399,
+        -0.9486900568008423,
+        0.2683439254760742
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    }
+  },
+  "border_pixels": [
+    490,
+    760,
+    650,
+    1060
+  ],
+  "note": "Unsaved BSDF-normal emission diagnostic, including shader bump. This is not a beauty render; source model unchanged."
+}

@@ -1,0 +1,86 @@
+{
+  "config": {
+    "source": "build/bishop-mission/067-smooth-base-curvature/bishop.blend",
+    "variant": "071-confined-base-reflection",
+    "samples": 96,
+    "adaptive_sampling": false,
+    "hypothesis": "Confine the measured base reflector to a small physical beam so it misses the lower foot. A 0.2-unit disk with a 3-degree spread is substantially narrower at the surface than trial070; 0.07 power compensates for angular concentration. Check actual highlight area and foot spill; no material, camera or geometry changes.",
+    "lights": [
+      {
+        "name": "base reflection",
+        "position": [
+          4.299645014241566,
+          -6.643775461503051,
+          -0.011302383699013596
+        ],
+        "target": [
+          0.355006605386734,
+          -0.8970451354980469,
+          0.6328392028808594
+        ],
+        "color": [
+          1,
+          0.97,
+          1
+        ],
+        "size": 0.2,
+        "energy": 0.07,
+        "spread_degrees": 3
+      }
+    ],
+    "measurement": {
+      "landmarks": "build/bishop-mission/lower-glint-landmarks-067.json",
+      "normals": "build/bishop-mission/lower-shading-normals-067/manifest.json",
+      "target_pixel": [
+        584,
+        995
+      ],
+      "mean_radius": 3,
+      "normal_difference_degrees": 0.6700451761992344
+    }
+  },
+  "source_sha256": "f75014402789f66cfec9ef9f2c47bf9091a08479dd1927a666d45ca554c45178",
+  "saved_model_sha256": "a27d0a8eef23d14ac94415ed3eb9744f450a29c16aa3cb914b20ef7466774615",
+  "render_sha256": "54e27b67848affe01cb1a9af70e148b71c0240179aa9f59298483e12f9d9ed24",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "125ccd1bb6d741b9525a41547239ab52ae590df57a04e98ac47472da8ac44c41",
+      "Mitre saw cut - editable cutter": "cfb8406e703dd84260154b47cbb424ce66e4917287331a4a79bc601667c78250",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "15dc4cd2d10b91e774f060b4ffd569acfffefde999fb78002cea7ed4023d96ab",
+      "Bishop boxwood \u2014 interior cut.001": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  },
+  "effective_lights": {
+    "base reflection": {
+      "type": "AREA",
+      "energy": 0.07000000029802322,
+      "shadow_soft_size": 0.0
+    }
+  },
+  "adaptive_sampling": false
+}

@@ -38,10 +38,20 @@ assert meta['referenceCamera']==old_camera,'The reference camera must remain unc
 baseline=json.loads((root/'history/bishop/04-before-head-correction/profile.json').read_text())
 declared=cfg.get('mission_geometry',{})
 changed=set(declared.get('changed_body_rings',[]))
+base_curve=cfg.get('mission_base_curvature')
+expected_lower=[list(point) for point in baseline['profile']]
+if base_curve:
+ curve_config=json.loads((root/base_curve['config']).read_text())
+ assert curve_config['source']==base_curve['baseline_model']
+ assert curve_config['source_sha256']==hashlib.sha256((root/curve_config['source']).read_bytes()).hexdigest()
+ assert curve_config['body_rings']==base_curve['body_rings'] and set(map(int,curve_config['body_rings']))=={17,18}
+ for index,point in curve_config['body_rings'].items():
+  i=int(index);assert point[1]==expected_lower[i][1], 'Base curvature edit must preserve every ring height.'
+  expected_lower[i]=point
 if changed:
  assert changed==set(range(1,11)), 'Only the documented lower foot rings may differ in this geometry checkpoint.'
- assert cfg['profile'][11:65]==baseline['profile'][11:65] and cfg['profile'][0]==baseline['profile'][0], 'Flare, socket, stem and collars must be preserved.'
-else:assert cfg['profile'][:65]==baseline['profile'][:65], 'Lower collars, stem and base must be preserved.'
+ assert cfg['profile'][11:65]==expected_lower[11:65] and cfg['profile'][0]==expected_lower[0], 'Undeclared lower profile change.'
+else:assert cfg['profile'][:65]==expected_lower[:65], 'Undeclared lower profile change.'
 button_baseline=json.loads((root/'history/bishop/07-before-continuous-button-join/profile.json').read_text())
 assert cfg['slit']==button_baseline['slit'], 'Preserve the full-depth slit dimensions.'
 button=bpy.data.objects['Bishop - domed button finial'].evaluated_get(graph);button_mesh=button.to_mesh()
@@ -95,5 +105,10 @@ if cfg.get('mission_slit_geometry'):
  result['slit_parameters_preserved']=False
  result['slit_angle_width_and_original_floor_anchor_preserved']=True
  result['declared_rounded_floor']=cfg['mission_slit_geometry']
+if base_curve:
+ result['flare_socket_stem_collars_preserved']=False
+ result['declared_base_curvature_rings']=[17,18]
+ result['all_other_lower_profile_points_preserved']=True
+ result['base_curvature_config']=base_curve['config']
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

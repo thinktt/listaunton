@@ -16,6 +16,8 @@ parser.add_argument('--no-render', action='store_true')
 args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 spec = json.loads(args.config.read_text())
 source = ROOT/spec['source']
+if 'source_sha256' in spec:
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == spec['source_sha256'], 'Geometry trial source differs from its recorded baseline.'
 out = ROOT/'build/bishop-mission'/spec['variant']
 assert out.resolve().is_relative_to((ROOT/'build/bishop-mission').resolve())
 out.mkdir(parents=True, exist_ok=True)
@@ -44,14 +46,20 @@ for vertex in button.data.vertices:
 for point in profile['finial']['profile']:
     point[0] *= button_scale
 profile['revision'] = spec['variant']
-profile['mission_geometry'] = {
+declaration_key = spec.get('declaration_key', 'mission_geometry')
+assert declaration_key in {'mission_geometry', 'mission_base_curvature'}
+profile[declaration_key] = {
     'baseline_model': spec['source'],
     'baseline_profile': spec.get('profile', 'scripts/bishop/profile.json'),
     'changed_body_rings': sorted(int(index) for index in spec.get('body_rings', {})),
     'button_scale_xy': button_scale,
     'body_rings': spec.get('body_rings', {}),
-    'interpretation': 'Slightly broader shallow button and flatter lower foot; fixed camera, head, slit, flare, socket, stem and collars preserved.'
+    'interpretation': spec.get('interpretation', 'Slightly broader shallow button and flatter lower foot; fixed camera, head, slit, flare, socket, stem and collars preserved.')
 }
+if declaration_key == 'mission_base_curvature':
+    assert spec.get('declaration_config'), 'Base curvature edits require an explicit tracked reproduction config.'
+    profile[declaration_key]['config'] = spec['declaration_config']
+    profile[declaration_key]['baseline_sha256'] = hashlib.sha256(source.read_bytes()).hexdigest()
 body.data.update();button.data.update();bpy.context.view_layer.update()
 assert camera_before == [float(x) for row in scene.camera.matrix_world for x in row]
 scene.cycles.samples = spec.get('samples', 32)

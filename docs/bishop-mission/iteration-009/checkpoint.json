@@ -1,0 +1,53 @@
+{
+  "starting_commit": "4044ea2",
+  "model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "render_sha256": "739823eb5560c225291f8fc281ac7e1873af951391c963b14fd2479a5ce58a27",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "camera_elevation_degrees": 54,
+  "camera_exactly_unchanged": true,
+  "all_piece_checks_passed": true,
+  "declared_base_scope_passed": true,
+  "declared_light_scope_passed": true,
+  "material_nodes_pixels_uvs_world_preserved": true,
+  "beauty_samples": 512,
+  "adaptive_sampling": false,
+  "beauty_resolution": [
+    1254,
+    1254
+  ],
+  "saved_and_reopened_before_render": true,
+  "display_view": "Standard",
+  "display_look": "None",
+  "packed_texture_pixel_error": 0,
+  "reference_hashes": {
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+  },
+  "site_and_preview_checks": {
+    "bishop_viewer": "passed; source hash, mesh/camera projection, material, rotation/pan/zoom and reset",
+    "bishop_workspace": "passed; canonical and existing preview, overlay/rotation/candidate tabs, source guards, retained state and wipe controls",
+    "model_site_and_historical_projections": "passed via scripts/check_model_site.py",
+    "all_candidate_reviews": "passed via scripts/check_candidate_review.cjs",
+    "set_comparison_and_approved_sizing": "passed via scripts/check_set.cjs",
+    "python_syntax": "all 78 bishop scripts parsed successfully",
+    "canonical_preview_byte_equal_files": 42,
+    "preview_directory": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires",
+    "native_browser_inspected": false,
+    "verified_at_utc": "2026-11-05T23:20:25.298652+00:00"
+  },
+  "ui_validation": "Simulated DOM/WebGL harness; native browser not inspected.",
+  "render_provenance": {
+    "source_model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+    "diagnostic_samples": 24,
+    "clay_samples": 32,
+    "actual_images": {
+      "head-side.png": "9d00fd067620964c3a4c7c489ac6237e5b9f16271146887c64b8fb4fc4d1120b",
+      "side-profile.png": "20bf2349bcd96614b107c34bcc13492304755f9bd57dabb6269275607428841c",
+      "rear-oblique.png": "1b01464df25aca6d8a196a09447061aaf6f0e938d1af22213a539c5bc0ba1db4",
+      "render-clay.png": "9d133177d3b6971243918185ce075ca7f3618690d300adcbeb9b47fa29953341"
+    },
+    "note": "The final model was the source of both completed render_diagnostics.py and render_clay.py commands before synchronization."
+  },
+  "owner_requested_pause_after_checkpoint": true
+}

@@ -1,0 +1,41 @@
+{
+  "source": "build/bishop-mission/067-smooth-base-curvature/bishop.blend",
+  "variant": "073-fitted-confined-reflection",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "Use the measured on/off BSDF response to restore the confined base highlight brightness without restoring foot spill. Power-only adjustment after trial071; actual rendering and all-region comparison decide acceptance.",
+  "lights": [
+    {
+      "name": "base reflection",
+      "position": [
+        4.299645014241566,
+        -6.643775461503051,
+        -0.011302383699013596
+      ],
+      "target": [
+        0.355006605386734,
+        -0.8970451354980469,
+        0.6328392028808594
+      ],
+      "color": [
+        1,
+        0.97,
+        1
+      ],
+      "size": 0.2,
+      "energy": 0.1302,
+      "spread_degrees": 3
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/lower-glint-landmarks-067.json",
+    "normals": "build/bishop-mission/lower-shading-normals-067/manifest.json",
+    "target_pixel": [
+      584,
+      995
+    ],
+    "mean_radius": 3,
+    "normal_difference_degrees": 0.6700451761992344
+  },
+  "power_fit": "build/bishop-mission/base-light-power-fit.json"
+}

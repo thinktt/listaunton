@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "model": "models/bishop/bishop-rebuilt.blend",
+  "model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "config": "docs/bishop-mission/iteration-009/geometry-067.json",
+  "declared_rings": [
+    17,
+    18
+  ],
+  "max_control_error": {
+    "Bishop - continuous turned body": 2.957824485338989e-08,
+    "Mitre saw cut - editable cutter": 0.0,
+    "Bishop - domed button finial": 0.0
+  },
+  "all_control_heights_exact": true,
+  "camera_topology_uvs_modifiers_cutter_and_dimensions_preserved": true,
+  "outside_base_geometry_preserved": true,
+  "materials_lights_world_preserved": false,
+  "material_lighting_preservation_required": false,
+  "scope": {
+    "Bishop - continuous turned body": {
+      "closed_positive_volume": true,
+      "volume": 4.8634066226092525,
+      "evaluated_vertices": 61678,
+      "outside_base_bidirectional_distance": [
+        {
+          "max_distance": 0,
+          "samples": 58094
+        },
+        {
+          "max_distance": 0,
+          "samples": 58094
+        }
+      ]
+    },
+    "Bishop - domed button finial": {
+      "closed_positive_volume": true,
+      "volume": 0.03451065611360572,
+      "evaluated_vertices": 5890,
+      "outside_base_bidirectional_distance": [
+        {
+          "max_distance": 0,
+          "samples": 5890
+        },
+        {
+          "max_distance": 0,
+          "samples": 5890
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": "build/bishop-mission/067-smooth-base-curvature/bishop.blend",
+  "variant": "071-confined-base-reflection",
+  "samples": 96,
+  "adaptive_sampling": false,
+  "hypothesis": "Confine the measured base reflector to a small physical beam so it misses the lower foot. A 0.2-unit disk with a 3-degree spread is substantially narrower at the surface than trial070; 0.07 power compensates for angular concentration. Check actual highlight area and foot spill; no material, camera or geometry changes.",
+  "lights": [
+    {
+      "name": "base reflection",
+      "position": [
+        4.299645014241566,
+        -6.643775461503051,
+        -0.011302383699013596
+      ],
+      "target": [
+        0.355006605386734,
+        -0.8970451354980469,
+        0.6328392028808594
+      ],
+      "color": [
+        1,
+        0.97,
+        1
+      ],
+      "size": 0.2,
+      "energy": 0.07,
+      "spread_degrees": 3
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/lower-glint-landmarks-067.json",
+    "normals": "build/bishop-mission/lower-shading-normals-067/manifest.json",
+    "target_pixel": [
+      584,
+      995
+    ],
+    "mean_radius": 3,
+    "normal_difference_degrees": 0.6700451761992344
+  }
+}
