@@ -1,0 +1,11 @@
+{
+  "source": "models/queen/queen-rebuilt.blend",
+  "source_sha256": "1eb382aa47117ded52c6bb32a576fb16c24980d8f68e2f923cf9d0bcc03f19ab",
+  "resolution": [
+    1254,
+    1254
+  ],
+  "samples": 256,
+  "source_unchanged": true,
+  "caveat": "White and black shader response is an approximation when multiple diffuse bounces are present; derived pigment is inferred, not recovered ground truth."
+}

@@ -5,10 +5,18 @@ import bpy
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from queen_scene import editable_mesh
 p=argparse.ArgumentParser();p.add_argument('--source',default='build/queen-mission/012-projected-pigment/queen.blend');p.add_argument('--variant',default='013-pigment-atlas');p.add_argument('--texture',default='assets/queen/queen-pigment-albedo.png');p.add_argument('--reuse-uv',action='store_true');args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 source=ROOT/args.source
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
-scene=bpy.context.scene;obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
+scene=bpy.context.scene;obj=editable_mesh(scene)
+# Bake the closed editable control, retaining the exact existing UVs. The
+# evaluated receivers are render-only copies and must not receive a partial bake.
+visibility={o.name:(o.hide_render,o.hide_get()) for o in scene.objects if o.type=='MESH'}
+for o in scene.objects:
+    if o.get('mission_render_region'):o.hide_render=True
+obj.hide_render=False;obj.hide_set(False)
 co=np.empty(len(obj.data.vertices)*3,dtype=np.float32);obj.data.vertices.foreach_get('co',co);rings=co.reshape(-1,192,3)
 r=np.linalg.norm(rings[:,:,:2],axis=2).mean(1);z=rings[:,:,2].mean(1)
 arc=np.r_[0,np.cumsum(np.hypot(np.diff(r),np.diff(z)))];arc[0]=arc[1];arc-=arc[1];arc/=arc[-1]
@@ -40,9 +48,11 @@ try:
 except Exception as exc:print('CPU fallback',exc)
 scene.cycles.samples=1;scene.render.bake.margin=8
 bpy.ops.object.bake(type='EMIT',use_clear=True)
-atlaspath=ROOT/args.texture;atlas.filepath_raw=str(atlaspath);atlas.file_format='PNG';atlas.save();atlas.pack()
+atlaspath=ROOT/args.texture;atlaspath.parent.mkdir(parents=True,exist_ok=True);atlas.filepath_raw=str(atlaspath);atlas.file_format='PNG';atlas.save();atlas.pack()
 # All subsequent images are real BSDF renders with movable lights and camera.
 links.new(bs.outputs['BSDF'],output.inputs['Surface']);nodes.remove(emission)
+for name,(hidden,viewport_hidden) in visibility.items():
+    scene.objects[name].hide_render=hidden;scene.objects[name].hide_set(viewport_hidden)
 uvnode=nodes.new('ShaderNodeUVMap');uvnode.uv_map=uv.name;links.new(uvnode.outputs['UV'],target.inputs['Vector'])
 links.new(target.outputs['Color'],bs.inputs['Base Color'])
 cfg=json.loads(scene['mission_material_config']);cfg.update({'variant':args.variant,'source':args.source,'texture':args.texture,'uv_layer':uv.name,'image_mix':1,'value':1,'saturation':1,'atlas_size':2048,'atlas_bakes_lighting':False,'atlas_reused_uv':args.reuse_uv})

@@ -1,0 +1,20 @@
+{
+  "variant": "119-measured-pigment-atlas",
+  "model_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "texture": "assets/queen/queen-pigment-albedo-v5.png",
+  "texture_sha256": "474fecce9b4e110e64c37c39e973941b9f06ff7c71486acce59e84ea5ffd45f4",
+  "scores": {
+    "silhouette": 97.9611843983474,
+    "form": 81,
+    "color": 82,
+    "grain": 79,
+    "lighting": 65
+  },
+  "mean": 80.99223687966949,
+  "holistic_range": [
+    76,
+    81
+  ],
+  "original_iou": 0.9791093182518729
+}

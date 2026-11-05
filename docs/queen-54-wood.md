@@ -248,3 +248,13 @@ See iteration-011 for reproduction commands and actual-render caveats.
 The public fixed and side renders use 64 samples; diagnostic fit responses
 use 512 samples and the trial beauty uses 128. Sampling differences are
 reported separately from geometric or texture improvements.
+
+
+The twelfth checkpoint uses queen-pigment-albedo-v5.png. Native BSDF response
+measurements and one bounded actual-render feedback step refine visible pigment;
+strong highlights and uncertain regions are excluded. Hidden wood, geometry,
+UVs, surface normals, roughness and lights remain unchanged. The atlas bake
+now explicitly uses the closed editable control and restores the render
+receivers afterwards. See iteration-012 for reproduction, rejected alternatives,
+saved-pixel verification, all five scores and remaining defects. At each
+accepted major checkpoint, synchronize the local review, viewer and side views.

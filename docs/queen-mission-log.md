@@ -1005,3 +1005,25 @@ base highlight and coarse pigment pattern remain wrong. Next inspect whether
 sampling/denoising hides fine reflected grain, then address the medium-scale
 pigment pattern. Do not repeat the failed broad or unshaped light trials.
 The mission remains active and incomplete.
+
+
+## Twelfth iteration: measured pigment correction
+
+Trials 111-115 tested sampling, medium-scale pigment replacement and separate
+coat normals without a convincing gain. Trials 116-118 instead used measured
+black/white BSDF responses and one bounded actual-render feedback correction.
+Strong glints are excluded; hidden surfaces retain the existing wood. Trial
+119 bakes only the improved pigment into v5 and is accepted. Saved/reopened
+pixels agree to within one byte, with unchanged alpha. Shape, UVs and lighting
+remain unchanged. Full trial scores and evidence are in iteration-012.
+
+Accepted scores: outline 97.9612 measured, form 81, color 82, grain 79, lighting
+65; working mean 80.9922%, holistic 76-81%. Original IoU stays 97.9109%.
+The owner requests updating the local page at each accepted major checkpoint;
+this is now explicit in the mission. Overlay, rotating viewer and side views
+are regenerated together and synchronized with the existing local preview.
+
+Current model SHA-256: 2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b.
+The prior model and renders are preserved in history/queen-mission-011.
+Next inspect the overly strong relief in the base highlight, then the remaining
+bowl/rim and collar/socket reflections. The goal remains active and incomplete.

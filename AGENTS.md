@@ -69,3 +69,12 @@ The eleventh queen checkpoint retains tenth geometry/material and fits eight sha
 The first king mission checkpoint uses the fixed 54-degree camera and a real wood BSDF with packed pigment atlas. Current procedures and scores are in docs/king-mission-log.md. Use scripts/king/mission_trial.py for controlled edits, bake_pigment.py for pigment-only atlas baking, export_mission.py for exact mesh/camera and closure validation, audit_mission.py for the fixed mask convention, then build_viewer.py and check_viewer.cjs. The old build_king.py/profile.json describe the archived 52-degree clay baseline and must not overwrite the current model. Historical king projection preservation now checks history/king-before-54-mission; projection alternatives and side-gallery scale/defaults remain unchanged.
 
 At every accepted king checkpoint, update `king-review.html`, `king-model.html`, their fixed and side renders, and the existing local preview. The king main page opens Reconstruction; its viewer offers Reference overlay, Rotate model and Side comparison. Candidate selection and historical projection tabs remain available. Failed trials must not replace these accepted assets.
+
+The twelfth queen checkpoint retains eleventh geometry and lighting and uses
+queen-pigment-albedo-v5.png. Reproduce its bounded measured-pigment correction
+from history/queen-mission-011 using the iteration-012 instructions. Bake the
+closed control with unchanged UVs, then restore exact render receivers. Preserve
+reopened texture checks. At every accepted major queen checkpoint, update the
+repository review and existing local preview together: overlay, rotating model
+and side views. Tell the owner it is ready to refresh. Failed trials stay out
+of the public review. Current score and source hash are in MISSION-QUEEN.md.

@@ -1,0 +1,53 @@
+{
+  "method": "Mean absolute display RGB error on common foreground only, at unchanged image coordinates. Includes geometry and lighting mismatches; not a color-fidelity percentage.",
+  "regions": {
+    "crown": {
+      "bounds_xyxy": [
+        300,
+        45,
+        675,
+        365
+      ],
+      "pixels": 81107,
+      "previous_rgb_mae": 0.07602696381629656,
+      "current_rgb_mae": 0.03978644848316647,
+      "relative_error_reduction": 0.4766797661510962
+    },
+    "body_collars": {
+      "bounds_xyxy": [
+        300,
+        330,
+        675,
+        560
+      ],
+      "pixels": 67000,
+      "previous_rgb_mae": 0.08277126134035705,
+      "current_rgb_mae": 0.04895235586772022,
+      "relative_error_reduction": 0.40858270038404787
+    },
+    "stem_socket": {
+      "bounds_xyxy": [
+        320,
+        550,
+        650,
+        825
+      ],
+      "pixels": 80454,
+      "previous_rgb_mae": 0.07642127657569436,
+      "current_rgb_mae": 0.031425971338146216,
+      "relative_error_reduction": 0.5887798170052921
+    },
+    "base_foot": {
+      "bounds_xyxy": [
+        200,
+        780,
+        770,
+        1090
+      ],
+      "pixels": 131062,
+      "previous_rgb_mae": 0.08312555360966217,
+      "current_rgb_mae": 0.03266394002219974,
+      "relative_error_reduction": 0.6070529626114511
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "bowl_left": {
+    "3": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.21863631635277
+      },
+      "accepted": {
+        "correlation": 0.8713884197305609,
+        "std": 0.20378233130162787
+      },
+      "111-sampling-check": {
+        "correlation": 0.8317954046290842,
+        "std": 0.20163532361848388
+      },
+      "112-medium-grain": {
+        "correlation": 0.776637199138335,
+        "std": 0.14188840472314695
+      }
+    },
+    "7": {
+      "reference": {
+        "correlation": 0.9999999999999998,
+        "std": 0.2904124593055736
+      },
+      "accepted": {
+        "correlation": 0.8247019792194678,
+        "std": 0.26089772702782416
+      },
+      "111-sampling-check": {
+        "correlation": 0.7804311058800177,
+        "std": 0.26003737731258797
+      },
+      "112-medium-grain": {
+        "correlation": 0.7406683214056268,
+        "std": 0.21719718606154093
+      }
+    },
+    "15": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.3674452493746097
+      },
+      "accepted": {
+        "correlation": 0.7704824772154453,
+        "std": 0.3331468643401742
+      },
+      "111-sampling-check": {
+        "correlation": 0.7332323614122628,
+        "std": 0.3336448634068998
+      },
+      "112-medium-grain": {
+        "correlation": 0.7091320686677981,
+        "std": 0.2997188306234399
+      }
+    }
+  },
+  "stem": {
+    "3": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.2185922705294241
+      },
+      "accepted": {
+        "correlation": 0.8212488692607942,
+        "std": 0.2442612368735953
+      },
+      "111-sampling-check": {
+        "correlation": 0.7543933025621187,
+        "std": 0.22105868370168613
+      },
+      "112-medium-grain": {
+        "correlation": 0.6925671168249166,
+        "std": 0.1716270481968383
+      }
+    },
+    "7": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.24599351283277632
+      },
+      "accepted": {
+        "correlation": 0.7648755489405509,
+        "std": 0.2765790326503022
+      },
+      "111-sampling-check": {
+        "correlation": 0.7044812231935741,
+        "std": 0.25545907199275025
+      },
+      "112-medium-grain": {
+        "correlation": 0.6496978451991311,
+        "std": 0.21153315008799464
+      }
+    },
+    "15": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.2676481910522894
+      },
+      "accepted": {
+        "correlation": 0.6648976673772992,
+        "std": 0.3357187865973891
+      },
+      "111-sampling-check": {
+        "correlation": 0.6082912033349336,
+        "std": 0.3184811290480954
+      },
+      "112-medium-grain": {
+        "correlation": 0.5403545615521146,
+        "std": 0.28005487290808406
+      }
+    }
+  },
+  "base_left": {
+    "3": {
+      "reference": {
+        "correlation": 0.9999999999999999,
+        "std": 0.21600586491104806
+      },
+      "accepted": {
+        "correlation": 0.8492757898564701,
+        "std": 0.22314488160215304
+      },
+      "111-sampling-check": {
+        "correlation": 0.7908249090633619,
+        "std": 0.211851832286378
+      },
+      "112-medium-grain": {
+        "correlation": 0.7270296219944662,
+        "std": 0.1580848677848538
+      }
+    },
+    "7": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.26013407350591783
+      },
+      "accepted": {
+        "correlation": 0.8073940308583878,
+        "std": 0.24808385931342278
+      },
+      "111-sampling-check": {
+        "correlation": 0.7622364085781258,
+        "std": 0.23669208973266892
+      },
+      "112-medium-grain": {
+        "correlation": 0.73073279026617,
+        "std": 0.1886895408408413
+      }
+    },
+    "15": {
+      "reference": {
+        "correlation": 1.0,
+        "std": 0.3103129276750149
+      },
+      "accepted": {
+        "correlation": 0.734244546542856,
+        "std": 0.27162359891705434
+      },
+      "111-sampling-check": {
+        "correlation": 0.6995104773914046,
+        "std": 0.26188331074147747
+      },
+      "112-medium-grain": {
+        "correlation": 0.6600211463485288,
+        "std": 0.21729498892445748
+      }
+    }
+  }
+}

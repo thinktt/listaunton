@@ -1,0 +1,128 @@
+[
+  {
+    "variant": "111-sampling-check",
+    "scores": {
+      "silhouette": 97.96010708495156,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 65
+    },
+    "mean": 80.19202141699031,
+    "original_iou": 0.9791145110190254,
+    "decision": "diagnostic only",
+    "reason": "Higher samples make some reflections cleaner, but do not remove the coarse pigment pattern."
+  },
+  {
+    "variant": "112-medium-grain",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 79,
+      "grain": 74,
+      "lighting": 65
+    },
+    "mean": 79.3918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Smoothing removes useful reference-correlated wood detail and makes the surface plastic."
+  },
+  {
+    "variant": "113-defined-medium-grain",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 79,
+      "grain": 75,
+      "lighting": 65
+    },
+    "mean": 79.5918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Increasing the replacement band restores contrast but produces an etched pattern."
+  },
+  {
+    "variant": "114-thin-coat-relief",
+    "scores": {
+      "silhouette": 97.95878793102055,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "mean": 79.9917575862041,
+    "original_iou": 0.9791119986062158,
+    "decision": "reject",
+    "reason": "A separate smoother coat changes streaks without solving the pigment mismatch."
+  },
+  {
+    "variant": "115-fine-coat-pores",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "mean": 79.9918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Fine coat-only pores produce different reflections, not a closer overall fit."
+  },
+  {
+    "variant": "116-measured-pigment",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 80,
+      "grain": 78,
+      "lighting": 65
+    },
+    "mean": 80.3918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded",
+    "reason": "Bounded inverse pigment restores some darker base markings, but the correction is weak."
+  },
+  {
+    "variant": "117-expanded-pigment",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 81,
+      "grain": 78,
+      "lighting": 65
+    },
+    "mean": 80.5918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded",
+    "reason": "Wider pigment bounds improve markings; measured real shading reveals a darker-than-predicted bowl."
+  },
+  {
+    "variant": "118-feedback-pigment",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 82,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 80.9918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "accepted after atlas bake",
+    "reason": "One bounded actual-render feedback step improves bowl tone and base markings while excluding strong reflections."
+  },
+  {
+    "variant": "119-measured-pigment-atlas",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 82,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 80.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "accept",
+    "reason": "Color-only atlas retains the improvement, unchanged geometry/UVs, and real BSDF shading. Saved pixels and side view checked."
+  }
+]

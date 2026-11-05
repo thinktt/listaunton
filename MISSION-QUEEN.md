@@ -27,7 +27,7 @@ Continue until completion, an execution/token limit, or owner stop. A plateau re
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest accepted model SHA-256: `1eb382aa47117ded52c6bb32a576fb16c24980d8f68e2f923cf9d0bcc03f19ab`.
+- Latest accepted model SHA-256: `2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b`.
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -109,7 +109,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.9612 / 81 / 80 / 77 / 65; working mean 80.1922%, holistic 75-80%. Original IoU: 97.9109%. Latest accepted model and validation: docs/queen-mission/iteration-011 (shaped bowl reflections, tenth-checkpoint geometry retained). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current accepted scores: 97.9612 / 81 / 82 / 79 / 65; working mean 80.9922%, holistic 76-81%. Original IoU: 97.9109%. Latest accepted model and validation: docs/queen-mission/iteration-012 (measured pigment correction, geometry and lights retained). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 
@@ -218,7 +218,9 @@ progresses; do not treat this backlog as immutable measurements.
 8. **Checkpoint and commit.** Record the scores and evidence in the mission
    log, then commit the completed, checked iteration with the required actual
    model co-author trailer. Do not push or publish. Update the existing local
-   preview when needed so it shows the same accepted assets as the repository.
+   listaunton review page at every accepted major checkpoint: rebuild and
+   synchronize its overlay, rotating model and side views in the repository
+   and the existing local preview. Tell the owner the update is ready to refresh.
 9. **Re-examine and repeat.** Select the next discrepancy. A plateau calls for a different
    hypothesis, not a declaration of perfection.
 
