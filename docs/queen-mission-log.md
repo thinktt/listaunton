@@ -836,3 +836,36 @@ original reference PNG hashes, candidate provenance/alignment, model/viewer
 consistency, parts sandbox/CSP, and 39 protected projection inputs. Git
 whitespace checks pass. The sixth checkpoint is ready for its local commit;
 no push or hosting deployment is performed.
+
+## Seventh iteration: rejected socket and reflection experiments
+
+The sixth checkpoint is committed as `d1b806f`; its model and preview hashes
+remain `82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e`.
+The actual image remains the best accepted result. Evidence and reproducible
+experiment scripts for 077–081 are recorded in `queen-mission/iteration-007`.
+
+| Trial | Outline IoU | Form | Color | Grain | Lighting | Mean | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 077 rolled socket shoulder | 97.722 | 79 | 80 | 77 | 60 | 78.74 | Reject: outline and shoulder regress |
+| 078 distant reflectors | 97.961 | 80 | 77 | 76 | 55 | 77.19 | Reject: false crown/stem/socket highlights |
+| 079 subtler relief | 97.961 | 80 | 80 | 76 | 59 | 78.59 | Reject: crisp but misplaced reflections |
+| 080 fresh light fit for 079 | 97.961 | 80 | 77 | 75 | 54 | 76.79 | Reject: false spots and shiny bands |
+| 081 circumferential polish | 97.961 | 80 | 80 | 77 | 61 | 79.19 | Reject: no convincing improvement |
+
+The current working score stays **79.19%**, holistic 75–80%; it is not a
+perfect match. Only 077 changes geometry, and its original IoU falls from
+97.9109% to 97.7050%. The other trials retain both outlines exactly. Lower
+numeric light-fitting loss did not produce a better-looking model. The
+surface and reflected-light errors remain conspicuous in enlarged crops.
+
+At 2026-11-05 12:58:07 UTC, Luna reports weekly 21% used / 79% remaining,
+reset 2026-11-11 13:19:48 UTC. Five-minute monitoring continues. No model,
+reference, public control, other piece, or approved side default is changed
+by this checkpoint. Scripts ran in Blender; comparisons are actual saved
+renders. Source hashes and unchanged delivery assets are checked before
+committing this evidence. No push or deployment is performed.
+
+Next test light linking to isolate regional reflections, beginning with a
+render-equivalence check of temporary render partitions against the accepted
+closed editable mesh. Preserve the current model unless the actual linked
+render improves the reference match and all delivery checks pass.

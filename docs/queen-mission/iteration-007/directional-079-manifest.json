@@ -1,0 +1,1392 @@
+{
+  "source": "build/queen-mission/079-subtle-relief/queen.blend",
+  "source_sha256": "9a0cfd0a45845a2c1227aedc6741b473eea76f3a2441d370ae48c75147737c64",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "samples": 64,
+  "size": 418,
+  "specs": [
+    {
+      "name": "distant-00-03",
+      "type": "SUN",
+      "position": [
+        6.552526076652386,
+        -4.754496142070133,
+        5.870193220825931
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-00-10",
+      "type": "SUN",
+      "position": [
+        6.552526076652386,
+        -4.754496142070133,
+        5.870193220825931
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-01-03",
+      "type": "SUN",
+      "position": [
+        -9.835164188504887,
+        1.8065543125128838,
+        0.07685636663369384
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-01-10",
+      "type": "SUN",
+      "position": [
+        -9.835164188504887,
+        1.8065543125128838,
+        0.07685636663369384
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-02-03",
+      "type": "SUN",
+      "position": [
+        2.582083117584305,
+        7.611200635320266,
+        -5.949997618721077
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-02-10",
+      "type": "SUN",
+      "position": [
+        2.582083117584305,
+        7.611200635320266,
+        -5.949997618721077
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-03-03",
+      "type": "SUN",
+      "position": [
+        -3.2076857840970643,
+        -4.557407625836189,
+        -8.303058932855516
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-03-10",
+      "type": "SUN",
+      "position": [
+        -3.2076857840970643,
+        -4.557407625836189,
+        -8.303058932855516
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-04-03",
+      "type": "SUN",
+      "position": [
+        -1.4947856111129267,
+        -6.8903601682434665,
+        7.091442217820971
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-04-10",
+      "type": "SUN",
+      "position": [
+        -1.4947856111129267,
+        -6.8903601682434665,
+        7.091442217820971
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-05-03",
+      "type": "SUN",
+      "position": [
+        7.558759919984057,
+        -4.914661572425583,
+        -4.325650251761683
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-05-10",
+      "type": "SUN",
+      "position": [
+        7.558759919984057,
+        -4.914661572425583,
+        -4.325650251761683
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-06-03",
+      "type": "SUN",
+      "position": [
+        -2.780019665551745,
+        4.2588897803142345,
+        8.610072502498486
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-06-10",
+      "type": "SUN",
+      "position": [
+        -2.780019665551745,
+        4.2588897803142345,
+        8.610072502498486
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-07-03",
+      "type": "SUN",
+      "position": [
+        -1.9831491530115555,
+        9.766766045311801,
+        0.8230434089730893
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-07-10",
+      "type": "SUN",
+      "position": [
+        -1.9831491530115555,
+        9.766766045311801,
+        0.8230434089730893
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-08-03",
+      "type": "SUN",
+      "position": [
+        -7.018550980197902,
+        -7.113721881754883,
+        -0.3672916108555072
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-08-10",
+      "type": "SUN",
+      "position": [
+        -7.018550980197902,
+        -7.113721881754883,
+        -0.3672916108555072
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-09-03",
+      "type": "SUN",
+      "position": [
+        9.594773135065376,
+        2.60470247162288,
+        -1.07510628355963
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-09-10",
+      "type": "SUN",
+      "position": [
+        9.594773135065376,
+        2.60470247162288,
+        -1.07510628355963
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-10-03",
+      "type": "SUN",
+      "position": [
+        3.810688853048516,
+        0.48024443675270256,
+        9.232985202317822
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-10-10",
+      "type": "SUN",
+      "position": [
+        3.810688853048516,
+        0.48024443675270256,
+        9.232985202317822
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-11-03",
+      "type": "SUN",
+      "position": [
+        6.555743760335938,
+        -7.131573753565906,
+        2.482514762547506
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-11-10",
+      "type": "SUN",
+      "position": [
+        6.555743760335938,
+        -7.131573753565906,
+        2.482514762547506
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-12-03",
+      "type": "SUN",
+      "position": [
+        -5.308700997282233,
+        7.173228099195917,
+        -4.51248184022504
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-12-10",
+      "type": "SUN",
+      "position": [
+        -5.308700997282233,
+        7.173228099195917,
+        -4.51248184022504
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-13-03",
+      "type": "SUN",
+      "position": [
+        -8.655839208052434,
+        -0.8077944782011779,
+        4.942055815683374
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-13-10",
+      "type": "SUN",
+      "position": [
+        -8.655839208052434,
+        -0.8077944782011779,
+        4.942055815683374
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-14-03",
+      "type": "SUN",
+      "position": [
+        2.4687936053647688,
+        3.315171064301668,
+        9.1057508723074
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-14-10",
+      "type": "SUN",
+      "position": [
+        2.4687936053647688,
+        3.315171064301668,
+        9.1057508723074
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-15-03",
+      "type": "SUN",
+      "position": [
+        -2.1421348255075885,
+        -9.762762364640109,
+        0.3157996214599714
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-15-10",
+      "type": "SUN",
+      "position": [
+        -2.1421348255075885,
+        -9.762762364640109,
+        0.3157996214599714
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-16-03",
+      "type": "SUN",
+      "position": [
+        8.809785120615402,
+        -4.5908033111307365,
+        1.1455178248698303
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-16-10",
+      "type": "SUN",
+      "position": [
+        8.809785120615402,
+        -4.5908033111307365,
+        1.1455178248698303
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-17-03",
+      "type": "SUN",
+      "position": [
+        4.992883733493168,
+        -5.974436267714655,
+        6.275127353833953
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-17-10",
+      "type": "SUN",
+      "position": [
+        4.992883733493168,
+        -5.974436267714655,
+        6.275127353833953
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-18-03",
+      "type": "SUN",
+      "position": [
+        -1.3771296277178342,
+        2.6373348911792465,
+        -9.547145052853773
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-18-10",
+      "type": "SUN",
+      "position": [
+        -1.3771296277178342,
+        2.6373348911792465,
+        -9.547145052853773
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-19-03",
+      "type": "SUN",
+      "position": [
+        -7.446218016222462,
+        6.341633016718817,
+        2.0826732667765824
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-19-10",
+      "type": "SUN",
+      "position": [
+        -7.446218016222462,
+        6.341633016718817,
+        2.0826732667765824
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-20-03",
+      "type": "SUN",
+      "position": [
+        3.413337563982161,
+        9.314356076344932,
+        -1.2617042273704917
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-20-10",
+      "type": "SUN",
+      "position": [
+        3.413337563982161,
+        9.314356076344932,
+        -1.2617042273704917
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-21-03",
+      "type": "SUN",
+      "position": [
+        -4.087272896571526,
+        -7.189249819792185,
+        -5.622178163093894
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-21-10",
+      "type": "SUN",
+      "position": [
+        -4.087272896571526,
+        -7.189249819792185,
+        -5.622178163093894
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-22-03",
+      "type": "SUN",
+      "position": [
+        -4.838152215377647,
+        -4.091303406222833,
+        7.7365056439626425
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-22-10",
+      "type": "SUN",
+      "position": [
+        -4.838152215377647,
+        -4.091303406222833,
+        7.7365056439626425
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-23-03",
+      "type": "SUN",
+      "position": [
+        5.93722959873112,
+        -7.562675383580292,
+        -2.748680726192076
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-23-10",
+      "type": "SUN",
+      "position": [
+        5.93722959873112,
+        -7.562675383580292,
+        -2.748680726192076
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-24-03",
+      "type": "SUN",
+      "position": [
+        -5.6214202129766395,
+        -2.396849047570301,
+        -7.9154753131002185
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-24-10",
+      "type": "SUN",
+      "position": [
+        -5.6214202129766395,
+        -2.396849047570301,
+        -7.9154753131002185
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-25-03",
+      "type": "SUN",
+      "position": [
+        -4.347601089243155,
+        -7.811296868430549,
+        4.481295125525524
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-25-10",
+      "type": "SUN",
+      "position": [
+        -4.347601089243155,
+        -7.811296868430549,
+        4.481295125525524
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-26-03",
+      "type": "SUN",
+      "position": [
+        5.032771797027528,
+        -3.8271819336873514,
+        -7.747508404997148
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-26-10",
+      "type": "SUN",
+      "position": [
+        5.032771797027528,
+        -3.8271819336873514,
+        -7.747508404997148
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-27-03",
+      "type": "SUN",
+      "position": [
+        5.209710037931798,
+        -3.75192860325697,
+        7.666938963936968
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-27-10",
+      "type": "SUN",
+      "position": [
+        5.209710037931798,
+        -3.75192860325697,
+        7.666938963936968
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-28-03",
+      "type": "SUN",
+      "position": [
+        -4.059676169719299,
+        8.830834728575137,
+        -2.352740400810201
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-28-10",
+      "type": "SUN",
+      "position": [
+        -4.059676169719299,
+        8.830834728575137,
+        -2.352740400810201
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-29-03",
+      "type": "SUN",
+      "position": [
+        0.310708474805731,
+        9.190274836034778,
+        -3.9296703019248125
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-29-10",
+      "type": "SUN",
+      "position": [
+        0.310708474805731,
+        9.190274836034778,
+        -3.9296703019248125
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-30-03",
+      "type": "SUN",
+      "position": [
+        -2.5598679042418886,
+        7.490761153897381,
+        -6.110284252642771
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-30-10",
+      "type": "SUN",
+      "position": [
+        -2.5598679042418886,
+        7.490761153897381,
+        -6.110284252642771
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-31-03",
+      "type": "SUN",
+      "position": [
+        8.42812123975709,
+        -0.8358366951428211,
+        -5.316779982941568
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-31-10",
+      "type": "SUN",
+      "position": [
+        8.42812123975709,
+        -0.8358366951428211,
+        -5.316779982941568
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-32-03",
+      "type": "SUN",
+      "position": [
+        8.034298559219293,
+        -1.6615552975407668,
+        5.717454036067188
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-32-10",
+      "type": "SUN",
+      "position": [
+        8.034298559219293,
+        -1.6615552975407668,
+        5.717454036067188
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-33-03",
+      "type": "SUN",
+      "position": [
+        -6.882675504522593,
+        -5.5771552597348535,
+        4.639409133527299
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-33-10",
+      "type": "SUN",
+      "position": [
+        -6.882675504522593,
+        -5.5771552597348535,
+        4.639409133527299
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-34-03",
+      "type": "SUN",
+      "position": [
+        -8.711722368333758,
+        4.040520901018983,
+        -2.789280234308133
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-34-10",
+      "type": "SUN",
+      "position": [
+        -8.711722368333758,
+        4.040520901018983,
+        -2.789280234308133
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-35-03",
+      "type": "SUN",
+      "position": [
+        -1.9292337974922014,
+        0.0052227226763901825,
+        9.812136855842445
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    },
+    {
+      "name": "distant-35-10",
+      "type": "SUN",
+      "position": [
+        -1.9292337974922014,
+        0.0052227226763901825,
+        9.812136855842445
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 1.0,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1
+    }
+  ],
+  "sampled_highlight_pixels": 1455,
+  "method": "36 spherical clusters of mirror directions at bright low-chroma reference locations; actual 3- and 10-degree distant reflection responses.",
+  "directions_reused_from": "build/queen-mission/directional-reflections-006/manifest.json",
+  "geometry_unchanged_from": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+  "subtle_relief": {
+    "source_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+    "strength": 0.2,
+    "distance": 0.003,
+    "roughness": 0.16,
+    "coat_roughness": 0.06,
+    "hypothesis": "The prior relief bends polished highlights too strongly. Reduce height response before fitting a new light rig."
+  },
+  "response_hashes": {
+    "diffuse-baseline.npy": "3a44914fb3491b13479aceb2b43f4b53175629883c9282dc32681b35a180416a",
+    "distant-00-03.npy": "f99a917e9724f9c3934e934bed0245a156a18fb879cf3edb110066637c4f81c7",
+    "distant-00-10.npy": "112d2e035a14ba294991eb89275a877fd747ab26f4653601d6de6505e40a4b32",
+    "distant-01-03.npy": "0172713575ccdee6c23155b8e9a180465698bca8b798e8a95d69f8636cfffecd",
+    "distant-01-10.npy": "0fc6600b005f4dbb19c0bc3aad0fda6ed8f894d771f847c5fe2da63c6adc399c",
+    "distant-02-03.npy": "bd5fc3f68629eab6dc2149b361ffd23a30888893d87762fe46c21ff175e333d8",
+    "distant-02-10.npy": "c246bd8f6c3f8ee804e21c547690c15698ad13036d7b416923a2e04d957a429a",
+    "distant-03-03.npy": "89e46e326423c680c173ce893f6cc382c9de566ef06d3896c1f6089ac7f85f49",
+    "distant-03-10.npy": "d51652d8d13183a47e1555b9bf30a6aa615cf04e4569f4e37af92cf32494897c",
+    "distant-04-03.npy": "25ca87e86b51b6e32604368e83419c92a2b12ecb6f14a368f17cfb0cca05a8ea",
+    "distant-04-10.npy": "d77fdefb3bb1ad1a00ff514dabba07cb3d3aa6d6950388a30d2b4a489d0b5fb1",
+    "distant-05-03.npy": "bb0dd525d8e4dd451dd2800fb523bc261805e41915e660d2f8badfbe9927c366",
+    "distant-05-10.npy": "10372fc0c55ba4cfb5350569698923fb5b0c4d3743fc7fb1be5a5f3347e321b2",
+    "distant-06-03.npy": "01b43a9d85d85dc1677d3cca208e4c746c7dd3fe2d01f467e2f5deb6329c83ce",
+    "distant-06-10.npy": "eb1a6f2d2b9f8f43bc41024e60fe6eb83716df9445de6206b78de80f171c9a01",
+    "distant-07-03.npy": "6c04de375d641eae7be3627dbe3eb0da8ee9f81f23ed1c95a714809753e96439",
+    "distant-07-10.npy": "d6c23fdabb8c892a9c4d30c30c810b8932cbfe7021c2e664629d96978dfa17a0",
+    "distant-08-03.npy": "aca70dca9d3ac99d2e3827f2c4c86deb19f23ce68c870e8ebea0c809c04d22a9",
+    "distant-08-10.npy": "80f054f21d05c30eb33111f86e84d620cb63ae6a75256be0e8c7681396617057",
+    "distant-09-03.npy": "e15a98ae0e475f832ce1a35d974a24523b73e12bedf7ffaa87b2c2df9b1ca001",
+    "distant-09-10.npy": "694baca51aaae6e23ec98090905f14ec51f2c12ba67728b5f29c1ded89ec18a7",
+    "distant-10-03.npy": "92880ec986ed7aa33b02d99e8288896e6fc5c1f896bb94f8a2bac24c53763a94",
+    "distant-10-10.npy": "52d84609b23fd96c373f339be15cfbc8a3d0ba70ebaa665ebe61aa7f45016f57",
+    "distant-11-03.npy": "218d67808bb63972e0e4480191f310569a9a172f092b423989a747d901337b05",
+    "distant-11-10.npy": "8feb19048abe1370e32252bed24e9557c9535e619c3de4c602ad32d4f7fcd2fd",
+    "distant-12-03.npy": "7bb5126d16808bfcbe2a8e0d056f5dc7c22a18596c5a758ad05de82b2279b3cd",
+    "distant-12-10.npy": "d05c6e626deb8b8ed7b67307478575cf6a37e9d33d234da997f96f1e597d4b66",
+    "distant-13-03.npy": "c3ec8a4079a030a091e5bd1c6525ab8aef4084fb63373d008e8148220d8db53e",
+    "distant-13-10.npy": "c0a7e0c2d9614285c6e4688246e63faa65c95925d34cd086245083a4d7e60d76",
+    "distant-14-03.npy": "452507ad3b0f6738a97c118c520e626da9975c1d40117cfad06aacb89c6267eb",
+    "distant-14-10.npy": "ee56b0d991db4354ddd07d5504da52753f712f35862d72c8b9ee91ef4e617347",
+    "distant-15-03.npy": "89ab92b65fa091d08369805395060664609a184af6e5746afb68cf20c72afe11",
+    "distant-15-10.npy": "ca4978a34181416dc3495127de0089b40f9489c5a89df8dc8d770558823aca12",
+    "distant-16-03.npy": "7660613152030c49b35dc17280f8b3c9adecafc057488ca3b97f59688e43c5c3",
+    "distant-16-10.npy": "1a3030a09317a650775da745b37a5b16350503b560fda1511f57df832e13c04b",
+    "distant-17-03.npy": "ca178240f44b8f27422961f13d2a672e7c42d0fee6ef0176b17994dd64b67f18",
+    "distant-17-10.npy": "926a4b0a72ea71d4119f18e65ea87270e67b93cb1c36648b8618ae4d71fc92f2",
+    "distant-18-03.npy": "5e05f5f599a8512062e4c5ea31b45ebff33be67ac24efe884d99ba9ec945618f",
+    "distant-18-10.npy": "2f2e9db3a3a314094384d0ae6eed91df6c8ef8f6dcd483aaccd727b279ca4f4a",
+    "distant-19-03.npy": "78b587f8f159efc3f2970aaf6cf9f4d74774e72d1d80a7e1b1864f3dcfbf4ada",
+    "distant-19-10.npy": "ef211819cae9cc3e92ca063d445315f776403ec35ed3d9cad6068ba394865d26",
+    "distant-20-03.npy": "cab6035c13c1a0b3e9449fee014d7284d61a1f1d70e6ae4b659455f74764985b",
+    "distant-20-10.npy": "44f36713a31d803ff6c962a02a40e066f641adebbad438b71d8ef592d7e8472c",
+    "distant-21-03.npy": "00f8abc32822d2f7f440925b497897c5c309c6607ddde8fbd7130153e6dc1925",
+    "distant-21-10.npy": "fd69210d6309871a467728c6f9cb578d9f2c7399a916b27538c2c6f8ecab9039",
+    "distant-22-03.npy": "ccc10677f31b15b1762e2049711ce875789867c0c8cd1ec63c832725c3e11f2b",
+    "distant-22-10.npy": "d24f1a11b4dc5e929900eaf5ec8fbf75bb7b399bb3d98fea9391b1490094ecc8",
+    "distant-23-03.npy": "ee9d4b2b17f6118319c994354c2532eeaee7901851fe7a234d38fc7dc54d998c",
+    "distant-23-10.npy": "812c05934338da40cde080accdf8ca06459a261e556d5a5640b999dba0a24a86",
+    "distant-24-03.npy": "cc474fb0928a6a7b711aeca1648a91356f4686837288821d12a578c0fc89bc81",
+    "distant-24-10.npy": "5c26f2de70d4f65986f16c8a1362f12adb986fd03523a032b680cc5f253dc541",
+    "distant-25-03.npy": "338b40bb91be97ea38fd88be48942e17eddec82ccb9c5f8ca3f5a83a05061446",
+    "distant-25-10.npy": "2ef8d3d640ed39d4bf78ba1485a5cadeff446cdb383a0402a85cadb435ef2c17",
+    "distant-26-03.npy": "330a657cfa64993cd9af62b5ff844d53f507636d7e52b2c210a21cd7945c0679",
+    "distant-26-10.npy": "e1f4f216d76f77a45fb86e9f3e2e955efb5921e42fa5ec13a54fd8a643cbfad0",
+    "distant-27-03.npy": "13cf3fa09fefdd65c26d4742b973d11e7768ac85bb9744cc31422a2f9e0e0108",
+    "distant-27-10.npy": "8425ee26f6782cd1b57b784740bedcc798a9a375e2a5b5ae95849502877f747c",
+    "distant-28-03.npy": "53d8244d0b390d5e2ab833cfcf2a8c052d8c014fd95e4f73e8a390b7af18cd3d",
+    "distant-28-10.npy": "680ef653fc319dda584f687bf8d277790c7dea9357e0c6ad81becc12a7a19259",
+    "distant-29-03.npy": "a7ec4d601951b81dfb1baf4931d7f7afb01047118b327f0ae52c636f9f94e722",
+    "distant-29-10.npy": "649bfc45b37104b863d771d1851fbc1346de24e9a1a0b6c45a41928c70dc3c28",
+    "distant-30-03.npy": "3ea0925a17614b0548ec0b49c3bee201d654745f7289cd00c2dafb9ad3bf61c7",
+    "distant-30-10.npy": "0cc6d14f0c1b9389ae95c4f98e6a681fc7ee2b03ad2cd1bcb3806f69e45d28e8",
+    "distant-31-03.npy": "6d441d6c1ba756e37d98aa4ef61d8c9a628a91671abd348ff38677fba37bb64e",
+    "distant-31-10.npy": "1f7560d8b3d3a75a5fabddcd5ac79790f134fa18379a7c09d0e970d3791a2b97",
+    "distant-32-03.npy": "1decb0840cd9e80bcae3ee6a135ba366f0035a6bcddfb0588435a52082fe0e53",
+    "distant-32-10.npy": "bdefedeedded9c82cdbefec9bd0b88d6902559049219fc4f7992fc9ce96ea89d",
+    "distant-33-03.npy": "383c440e256e8615ffc8f9401c36e9e201eef9a4f5280c4b15226cc3a3bae8d4",
+    "distant-33-10.npy": "53c83adbc0298ec2825eef94c92be65bf02cc9938b3420e865a26d3f6a72fd32",
+    "distant-34-03.npy": "e54a76544ef75924f26d8a551402dd3f4df4203b3eb6e3d28beffd5083d1f506",
+    "distant-34-10.npy": "3e8036c270a5085fa0166ed2f59d943875468fe8c7fab947ddd0cec6261fdd91",
+    "distant-35-03.npy": "b15ffc282d1445aa7587c3fc2d680f878f1c29e8db0655bf2887315561df95c2",
+    "distant-35-10.npy": "a72dc91cd8e66afacaea6097820f8ef815501d11c08f1ded57bcfe49418c0da9"
+  }
+}

@@ -12,6 +12,7 @@ def configure(scene, settings):
    data.shape=spec.get('shape','DISK');data.size=spec['size']
    if data.shape=='RECTANGLE':data.size_y=spec['size_y']
   elif kind=='SPOT':data.shadow_soft_size=spec['size']/2;data.spot_size=math.radians(spec['spot_degrees']);data.spot_blend=spec.get('spot_blend',.3)
+  elif kind=='SUN':data.angle=math.radians(spec['angle_degrees'])
   else:raise ValueError(kind)
   data.color=spec.get('color',[1,1,1])
   if 'spread_degrees' in spec:data.spread=math.radians(spec['spread_degrees'])

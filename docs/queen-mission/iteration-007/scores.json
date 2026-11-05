@@ -1,0 +1,95 @@
+{
+  "baseline_commit": "d1b806f",
+  "baseline_scores": [
+    97.9611843983474,
+    80,
+    80,
+    77,
+    61
+  ],
+  "baseline_model_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+  "trials": [
+    {
+      "variant": "077-rolled-socket-shoulder",
+      "scores": {
+        "silhouette_iou_percent": 97.72172432407753,
+        "interior_form": 79,
+        "wood_color": 80,
+        "grain": 77,
+        "lighting": 60
+      },
+      "working_mean": 78.7443448648155,
+      "original_iou": 0.9770499341037712,
+      "model_sha256": "1e467849548c5eb0d28fc743e30349b6425b7cdac95eb114c94c606e58ad9e9c",
+      "render_sha256": "a221136974a79be35cf6d723102f183b236fafbcffceb89d83d1f90e40f7cd2c",
+      "decision": "Reject: abrupt shoulder and worse original/high-res outlines.",
+      "accepted": false
+    },
+    {
+      "variant": "078-directional-reflections",
+      "scores": {
+        "silhouette_iou_percent": 97.9611843983474,
+        "interior_form": 80,
+        "wood_color": 77,
+        "grain": 76,
+        "lighting": 55
+      },
+      "working_mean": 77.19223687966948,
+      "original_iou": 0.9791093182518729,
+      "model_sha256": "c4cefbf8ae436a4f9f8d4a8af3f22328bc640bc4f5d0050ece60b3798b405e77",
+      "render_sha256": "602c5fce4e24faf7f5b4f8d924805e00dde12226e92c50630863f32df381536e",
+      "decision": "Reject: lower fit loss but broad stem/socket streaks and back-left crown patch.",
+      "accepted": false
+    },
+    {
+      "variant": "079-subtle-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.9611843983474,
+        "interior_form": 80,
+        "wood_color": 80,
+        "grain": 76,
+        "lighting": 59
+      },
+      "working_mean": 78.59223687966949,
+      "original_iou": 0.9791093182518729,
+      "model_sha256": "9a0cfd0a45845a2c1227aedc6741b473eea76f3a2441d370ae48c75147737c64",
+      "render_sha256": "d4d9cafaac2d2084efd9af3d49992fdb7346cd23926045ddbb443a1cbf154179",
+      "decision": "Reject alone: crisper glints but wrong bowl arc and harsh base highlight.",
+      "accepted": false
+    },
+    {
+      "variant": "080-subtle-directional-reflections",
+      "scores": {
+        "silhouette_iou_percent": 97.9611843983474,
+        "interior_form": 80,
+        "wood_color": 77,
+        "grain": 75,
+        "lighting": 54
+      },
+      "working_mean": 76.79223687966949,
+      "original_iou": 0.9791093182518729,
+      "model_sha256": "5fc1ad5c8912cbcec5f035593d856234722888861369716f480a1dcbff879f9f",
+      "render_sha256": "b6d39f3e7d0239f768343e45effe8d3db044c565727f950dc3461205896bcbd0",
+      "decision": "Reject: false stem spots, glossy bands and crown patches persist after fresh-material light fit.",
+      "accepted": false
+    },
+    {
+      "variant": "081-circumferential-polish",
+      "scores": {
+        "silhouette_iou_percent": 97.9611843983474,
+        "interior_form": 80,
+        "wood_color": 80,
+        "grain": 77,
+        "lighting": 61
+      },
+      "working_mean": 79.19223687966948,
+      "original_iou": 0.9791093182518729,
+      "model_sha256": "05be40327be0a1883d4523b96b1b4bba9a346091cb38eb2d62ef2205c8493360",
+      "render_sha256": "f32380e837af252e965296fb56d19b97decf86d4faf9fe6bdb583a52b1f00e28",
+      "decision": "Reject: proper circular tangent makes no clear whole-image improvement.",
+      "accepted": false
+    }
+  ],
+  "accepted_trial": null,
+  "status": "All trials rejected; sixth model remains current."
+}

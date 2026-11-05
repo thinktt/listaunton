@@ -1,0 +1,37 @@
+{
+  "variant": "077-rolled-socket-shoulder",
+  "source": "models/queen/queen-rebuilt.blend",
+  "source_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+  "samples": 64,
+  "hypothesis": "The socket's broad conical shoulder should roll over toward a flatter upper shoulder before meeting the stem. Preserve its outer radius and stem junction, raising the middle of the shoulder without changing the accepted camera, texture, or lights.",
+  "profiles": {
+    "31": [
+      0.59676123,
+      1.14
+    ],
+    "32": [
+      0.58932918,
+      1.2
+    ],
+    "33": [
+      0.57312107,
+      1.25
+    ],
+    "34": [
+      0.55033118,
+      1.282
+    ],
+    "35": [
+      0.52538973,
+      1.3
+    ],
+    "36": [
+      0.50825495,
+      1.305
+    ],
+    "37": [
+      0.47477147,
+      1.307
+    ]
+  }
+}

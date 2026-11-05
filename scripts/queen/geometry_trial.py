@@ -6,6 +6,8 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('config');args=p.parse_args(sys.argv[sys.argv.index('--')+1:]);cfg=json.loads(Path(args.config).read_text())
 source=ROOT/cfg['source'];bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
+if cfg.get('source_sha256'):
+    assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['source_sha256']
 scene=bpy.context.scene;obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
 co=np.empty(len(obj.data.vertices)*3,dtype=np.float32);obj.data.vertices.foreach_get('co',co);rings=co.reshape(-1,192,3)
 for key,(dr,dz) in cfg.get('ring_offsets',{}).items():
@@ -16,6 +18,7 @@ for key,(r,z) in cfg.get('profiles',{}).items():
 obj.data.vertices.foreach_set('co',rings.reshape(-1));obj.data.update()
 out=ROOT/'build/queen-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True)
 scene.render.filepath=str(out/'wood.png');scene.cycles.samples=cfg.get('samples',32);scene.cycles.use_denoising=True
+scene.render.use_persistent_data=True
 scene['mission_variant']=cfg['variant'];bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(out/'queen.blend'))
 try:

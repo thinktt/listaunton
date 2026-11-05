@@ -1,0 +1,1390 @@
+{
+  "atlas_bakes_lighting": false,
+  "atlas_reused_uv": true,
+  "atlas_size": 2048,
+  "bump_distance": 0.008,
+  "bump_strength": 0.22,
+  "caveat": "Art-directed light powers; approximate diffuse/specular separation and low-resolution basis. Requires a full render and visual verification.",
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "cycles_ray_visibility": true,
+  "grain_contrast_trial": {
+    "bright_neutral_suppression_min_srgb": [
+      0.28,
+      0.68
+    ],
+    "caveat": "Reference grain is inferred with bounded local shading contamination. Hidden surfaces retain continuous prior wood; source images are unchanged.",
+    "detail_exponent": 1.5,
+    "detail_log_bounds": [
+      -0.55,
+      0.55
+    ],
+    "pigment_blur_radius": 7,
+    "reference_blur_radius": 3,
+    "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+    "source": "build/queen-mission/048-medium-grain/queen.blend",
+    "source_sha256": "02651679460f86dd8f07fe5790247b58650cb6165d3db849a86a097c9591f8b3"
+  },
+  "image_bump": true,
+  "image_mix": 1,
+  "inferred_pigment": {
+    "coverage_attribute": "Inferred pigment coverage",
+    "highlight_confidence": true,
+    "image": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\build\\queen-mission\\medium-grain-039\\inferred-pigment.exr",
+    "inference": {
+      "box_blur_passes": 3,
+      "caveat": "Low-frequency inferred color is preserved; some carving or shading edges may enter the bounded detail field. Highlight grain is suppressed, not painted into a reflective light map. Hidden surfaces retain prior continuous wood.",
+      "grain_bounds_before_exponent": [
+        0.68,
+        1.42
+      ],
+      "grain_exponent": 0.85,
+      "highlight_detail_weight_fraction_transition": [
+        0.1,
+        0.3
+      ],
+      "method": "Retain a broad normalized pigment field; replace coarse invented color lines with bounded fine/medium log-luminance variation from the unchanged reference",
+      "old_color_blur_radius": 12,
+      "projection_weight": 0.96,
+      "reference_log_blur_radius": 7,
+      "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a"
+    },
+    "projection_uv": "Inferred pigment projection",
+    "response_directory": "build/queen-mission/medium-grain-039",
+    "source": "models/queen/queen-rebuilt.blend"
+  },
+  "light_chromaticity": [
+    1.0,
+    0.7,
+    0.5
+  ],
+  "lights": [
+    {
+      "energy": 1100,
+      "name": "Diffuse Top reflection",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "size": 0.6,
+      "specular_factor": 0
+    },
+    {
+      "energy": 400,
+      "name": "Diffuse Right key",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "size": 0.5,
+      "specular_factor": 0
+    },
+    {
+      "energy": 150,
+      "name": "Diffuse Foot strip",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "size": 0.7,
+      "specular_factor": 0,
+      "target": [
+        0,
+        0,
+        0.3
+      ]
+    },
+    {
+      "name": "distant-00-10",
+      "type": "SUN",
+      "position": [
+        6.552526076652386,
+        -4.754496142070133,
+        5.870193220825931
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.8028416002319094,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-01-03",
+      "type": "SUN",
+      "position": [
+        -9.835164188504887,
+        1.8065543125128838,
+        0.07685636663369384
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.005054659441325216,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-02-10",
+      "type": "SUN",
+      "position": [
+        2.582083117584305,
+        7.611200635320266,
+        -5.949997618721077
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.009375689396871733,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-04-10",
+      "type": "SUN",
+      "position": [
+        -1.4947856111129267,
+        -6.8903601682434665,
+        7.091442217820971
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.06880861363505789,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-05-10",
+      "type": "SUN",
+      "position": [
+        7.558759919984057,
+        -4.914661572425583,
+        -4.325650251761683
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.3745943468917659,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-06-10",
+      "type": "SUN",
+      "position": [
+        -2.780019665551745,
+        4.2588897803142345,
+        8.610072502498486
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.018308550822954177,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-07-10",
+      "type": "SUN",
+      "position": [
+        -1.9831491530115555,
+        9.766766045311801,
+        0.8230434089730893
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.22004132509794652,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-09-10",
+      "type": "SUN",
+      "position": [
+        9.594773135065376,
+        2.60470247162288,
+        -1.07510628355963
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.10830903166059277,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-10-10",
+      "type": "SUN",
+      "position": [
+        3.810688853048516,
+        0.48024443675270256,
+        9.232985202317822
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.24751642503594484,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-11-10",
+      "type": "SUN",
+      "position": [
+        6.555743760335938,
+        -7.131573753565906,
+        2.482514762547506
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.8495274270853216,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-12-10",
+      "type": "SUN",
+      "position": [
+        -5.308700997282233,
+        7.173228099195917,
+        -4.51248184022504
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.022245068382530563,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-14-10",
+      "type": "SUN",
+      "position": [
+        2.4687936053647688,
+        3.315171064301668,
+        9.1057508723074
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.34270497174401965,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-16-10",
+      "type": "SUN",
+      "position": [
+        8.809785120615402,
+        -4.5908033111307365,
+        1.1455178248698303
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.29242277734247235,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-17-10",
+      "type": "SUN",
+      "position": [
+        4.992883733493168,
+        -5.974436267714655,
+        6.275127353833953
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.5868433202894872,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-19-10",
+      "type": "SUN",
+      "position": [
+        -7.446218016222462,
+        6.341633016718817,
+        2.0826732667765824
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.0011099170782249079,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-20-10",
+      "type": "SUN",
+      "position": [
+        3.413337563982161,
+        9.314356076344932,
+        -1.2617042273704917
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.09149323022200583,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-21-10",
+      "type": "SUN",
+      "position": [
+        -4.087272896571526,
+        -7.189249819792185,
+        -5.622178163093894
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.0141577753684328,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-22-10",
+      "type": "SUN",
+      "position": [
+        -4.838152215377647,
+        -4.091303406222833,
+        7.7365056439626425
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.0805169561670159,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-23-03",
+      "type": "SUN",
+      "position": [
+        5.93722959873112,
+        -7.562675383580292,
+        -2.748680726192076
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.002993235715929604,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-23-10",
+      "type": "SUN",
+      "position": [
+        5.93722959873112,
+        -7.562675383580292,
+        -2.748680726192076
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.2910540446219677,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-25-03",
+      "type": "SUN",
+      "position": [
+        -4.347601089243155,
+        -7.811296868430549,
+        4.481295125525524
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.08050782896535312,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-25-10",
+      "type": "SUN",
+      "position": [
+        -4.347601089243155,
+        -7.811296868430549,
+        4.481295125525524
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.1297362773275881,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-26-10",
+      "type": "SUN",
+      "position": [
+        5.032771797027528,
+        -3.8271819336873514,
+        -7.747508404997148
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.01173937764809577,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-27-10",
+      "type": "SUN",
+      "position": [
+        5.209710037931798,
+        -3.75192860325697,
+        7.666938963936968
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.5028020001087364,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-28-10",
+      "type": "SUN",
+      "position": [
+        -4.059676169719299,
+        8.830834728575137,
+        -2.352740400810201
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.05746192227099577,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-29-10",
+      "type": "SUN",
+      "position": [
+        0.310708474805731,
+        9.190274836034778,
+        -3.9296703019248125
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.40901200460954373,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-30-10",
+      "type": "SUN",
+      "position": [
+        -2.5598679042418886,
+        7.490761153897381,
+        -6.110284252642771
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.009987193385819586,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-31-10",
+      "type": "SUN",
+      "position": [
+        8.42812123975709,
+        -0.8358366951428211,
+        -5.316779982941568
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.14427478097696206,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-32-10",
+      "type": "SUN",
+      "position": [
+        8.034298559219293,
+        -1.6615552975407668,
+        5.717454036067188
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.3119252783376226,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-33-10",
+      "type": "SUN",
+      "position": [
+        -6.882675504522593,
+        -5.5771552597348535,
+        4.639409133527299
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.0866266535342077,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-34-03",
+      "type": "SUN",
+      "position": [
+        -8.711722368333758,
+        4.040520901018983,
+        -2.789280234308133
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.00018601769386246568,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-34-10",
+      "type": "SUN",
+      "position": [
+        -8.711722368333758,
+        4.040520901018983,
+        -2.789280234308133
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 7.38004332215193e-05,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-35-03",
+      "type": "SUN",
+      "position": [
+        -1.9292337974922014,
+        0.0052227226763901825,
+        9.812136855842445
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.0898149804065514,
+      "angle_degrees": 3,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "distant-35-10",
+      "type": "SUN",
+      "position": [
+        -1.9292337974922014,
+        0.0052227226763901825,
+        9.812136855842445
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "energy": 0.3263425942406675,
+      "angle_degrees": 10,
+      "diffuse_factor": 0,
+      "specular_factor": 1,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ]
+    }
+  ],
+  "method": "Combine roundtrip-verified 057 fine pigment with 054 expanded display-fitted reflection rig",
+  "pigment_grading": {
+    "finial_factor": [
+      0.98,
+      0.92,
+      0.86
+    ],
+    "method": "Regional median RGB discrepancies, corrected in linear pigment; artistic inference, not recovered albedo",
+    "z_zones": [
+      [
+        0.0,
+        [
+          1.0,
+          1.08,
+          0.85
+        ]
+      ],
+      [
+        0.26,
+        [
+          1.0,
+          1.08,
+          0.85
+        ]
+      ],
+      [
+        0.36,
+        [
+          0.82,
+          0.8,
+          0.88
+        ]
+      ],
+      [
+        0.78,
+        [
+          0.82,
+          0.8,
+          0.88
+        ]
+      ],
+      [
+        0.9,
+        [
+          1.15,
+          1.1,
+          0.75
+        ]
+      ],
+      [
+        1.18,
+        [
+          1.15,
+          1.1,
+          0.75
+        ]
+      ],
+      [
+        1.34,
+        [
+          1.0,
+          1.08,
+          1.12
+        ]
+      ],
+      [
+        2.55,
+        [
+          1.0,
+          1.08,
+          1.12
+        ]
+      ],
+      [
+        2.78,
+        [
+          0.82,
+          0.8,
+          0.9
+        ]
+      ],
+      [
+        3.26,
+        [
+          0.82,
+          0.8,
+          0.9
+        ]
+      ],
+      [
+        3.34,
+        [
+          0.88,
+          0.91,
+          0.65
+        ]
+      ],
+      [
+        3.9,
+        [
+          0.88,
+          0.91,
+          0.65
+        ]
+      ],
+      [
+        4.02,
+        [
+          0.87,
+          0.92,
+          1.35
+        ]
+      ],
+      [
+        4.5,
+        [
+          0.87,
+          0.92,
+          1.35
+        ]
+      ]
+    ]
+  },
+  "pore_mix": 0.2,
+  "pore_noise": 180,
+  "reflector_spread_trial": {
+    "hypothesis": "Prevent the tall base reflector from also drawing a vertical streak on the finial. Refit only its power to preserve the prior base contribution.",
+    "new_energy": 10.642192214727402,
+    "old_black_response_geometry_and_relief_preserved": true,
+    "old_response_sha256": "cd605c4cf8584098ba2c85faece3450c1bddacc1a27ab7be71fd6bfac78ecbdf",
+    "old_response_source": "build\\queen-mission\\specular-expanded-039\\base-key.npy",
+    "power_fit_roi_at_418": [
+      70,
+      270,
+      255,
+      350
+    ],
+    "previous_energy": 219.03621443426192,
+    "source_sha256": "16904dba7abc57e60ec8e6d73c30f46f9e0890ec46272753c648e7e88f64247e",
+    "spread_degrees": 36
+  },
+  "relief_from_pigment": {
+    "coat": 0.35,
+    "coat_roughness": 0.075,
+    "distance": 0.007,
+    "pore_mix": 0.22,
+    "pore_scale": 140,
+    "relief_range": 0.2,
+    "roughness": 0.19,
+    "source": "build/queen-mission/021-warm-pigment/queen.blend",
+    "strength": 0.45,
+    "variant": "022-grain-relief"
+  },
+  "response_source": "build/queen-mission/specular-expanded-039",
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "samples": 64,
+  "saturation": 1,
+  "source": "models/queen/queen-rebuilt.blend",
+  "texture": "assets/queen/queen-pigment-albedo-v4.png",
+  "uv_layer": "Pigment atlas",
+  "uv_meridian_scale": 5.5,
+  "uv_offset_v": 0.13,
+  "uv_repeat_u": 1,
+  "value": 1,
+  "variant": "078-directional-reflections",
+  "world": 0.03,
+  "directional_fit": {
+    "source": "models/queen/queen-rebuilt.blend",
+    "source_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+    "manifest": "build/queen-mission/directional-reflections-006/manifest.json",
+    "response_inputs": [
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-00-03.npy",
+        "sha256": "ed573076dbdf00d128a9c741620060a3eb2d8bb96445fb0cfd0fdf8d933995da"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-00-10.npy",
+        "sha256": "be5ea3e5e73036bbb2004189200bac1861435bf000265e0982e1af6005b2e455"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-01-03.npy",
+        "sha256": "2ce85b0adaa4820cdcae8d0a5f957a704367e6e3a4775e60bc2d11337ef25461"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-01-10.npy",
+        "sha256": "c1ff742141ff39240f2cca7114054d4174d653b01261fed81eb6b7899816529a"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-02-03.npy",
+        "sha256": "7041fa2bef1342aead5936497cdac8b3d4d3ef7bc2874e3a67aab7a16ad9bd08"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-02-10.npy",
+        "sha256": "966ecb8778e4e66eecc3816aebdb585c1c771778835e774428a84c5acb55bbf0"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-03-03.npy",
+        "sha256": "5eaa26ce82da5945d34cc63ece194f0d6c490e5801935479d4eaca1440ed670b"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-03-10.npy",
+        "sha256": "fa9f31e9d8d9f9dfeff11addcf9a88a8dc5144aa224a0e986a3f4d5ec201f027"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-04-03.npy",
+        "sha256": "ec02c40a4efbee9a54e182c11e006c5c140848b90605b1791261fffe2c427734"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-04-10.npy",
+        "sha256": "720d7735523511bc3463d1172bcd3abef8cf9c14002bdaa3d40d3c46a3216a91"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-05-03.npy",
+        "sha256": "fbeec94c2ad3a6199adc51d372909a6d5230bc4b18d9e9d3b47910b801438af5"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-05-10.npy",
+        "sha256": "a87f62ff715fa1dcd7999ad5083c251f398629d80897dc696544a55c347cfbcf"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-06-03.npy",
+        "sha256": "e7ab3d4640ebb00390490967e92ce867663722c79df6cf4821f403ee0802ada4"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-06-10.npy",
+        "sha256": "ae250cb75ad8c41794642de027d9fb3e65e9c33cc3e1656a44a3b889b5f08cbe"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-07-03.npy",
+        "sha256": "bca213a813c2c4fe71b6e27fc1b3e94abcbd8aa7806b046ac31564a486ae1425"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-07-10.npy",
+        "sha256": "e6772b8fec335ce2d99dadc6345d5244d932f1d0b5e4ea3c7a1d1cb20de079fa"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-08-03.npy",
+        "sha256": "3f644ad1d88b69c66f4ecadc57bdc83e919e7434eb451b8177a5cfcd8915e335"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-08-10.npy",
+        "sha256": "40b61bf45c9629d508c23d8bafe4822f8a2696e2e5a1b69a5aa13da439c1ea09"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-09-03.npy",
+        "sha256": "5b5726d23f3986b685ba92a3318924a859320327bb9810eefc9e55e3a63e8d25"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-09-10.npy",
+        "sha256": "a9a1d947f6546cd6885e7bb4fd0be207e663fd2a12a2de5a83ec01b6bea495a4"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-10-03.npy",
+        "sha256": "9180ed096afa4a2cf4307c45f9c6b631b7c188bb45d222747827c7703240fb34"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-10-10.npy",
+        "sha256": "2491f01fbf2bcf86696066e350fdfb4cf46404b7df67e019857430eaf59094f0"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-11-03.npy",
+        "sha256": "b6ea6c32947d480dc7f593d6fa12fe0b02e6e0343c0ea65652eb2b141b117f0d"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-11-10.npy",
+        "sha256": "6c9111547ac554e8be043afad90b4197379b2067c89b1234099df0622990566b"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-12-03.npy",
+        "sha256": "7874ae7fec436b8736fbfe261f1f523d7dc64cdc12f9d53eefaac17b53c9a223"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-12-10.npy",
+        "sha256": "fab1e8339aad5193b5138864c5e172ff3572eacee4265309bec7df882353d280"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-13-03.npy",
+        "sha256": "952341ebbddcda18a3e636c1c65d49f75046efb801165e9f0b4eab71dd88f555"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-13-10.npy",
+        "sha256": "8ef2751b2c0c76e6d170ab8fcc3f7c5b50b5051285417d34393d4cb0e6c58e39"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-14-03.npy",
+        "sha256": "14f2abd20c9c04ea7f5ee195f736ad6067589dd527135058d05b7dec7e96601b"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-14-10.npy",
+        "sha256": "38cc5f218f579d02da48fc55457d1f1c21412b1562cccc669faf481c6989aff9"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-15-03.npy",
+        "sha256": "3561183216c0d97154ff9add8f118b25d6e5c77f557768816302a5a3eda1b10f"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-15-10.npy",
+        "sha256": "ef64e73864f4de1d6b5cdcd8559330929c3471bc919b9b87c8ae40f5f685ee5d"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-16-03.npy",
+        "sha256": "6bbbe3b89d20738eff971bd1b72895bde24b888a4484ce72f988081404e7e52f"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-16-10.npy",
+        "sha256": "afe632bcddd4197f0f07c9da9c8d63c5dba59bfaedd036770e3602411db65031"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-17-03.npy",
+        "sha256": "c03eec82bb0c978b4212b81ed6438ae80285460785295de52a42e54db634222f"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-17-10.npy",
+        "sha256": "cded21f757416cf14bc4145fe9c4a4f091a9a24bb30cd6d4e083792ca381eaa3"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-18-03.npy",
+        "sha256": "c776cd014c175b40e55ea59d2527e4cd20af408ef4020e4d518cf2f96613dceb"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-18-10.npy",
+        "sha256": "87f849517bef88a4079b3406c067679a926d1b47c3f5f638cc4a7ecc78f347e7"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-19-03.npy",
+        "sha256": "289bc6465fc0f2496ca3852ea842c1b5d93b70d3a03afd27792c07783235bcfa"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-19-10.npy",
+        "sha256": "cff2fd93cbe1bcb601751c855465166c047fad3c2c24773d4389fb2d7e4cc74a"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-20-03.npy",
+        "sha256": "e6d16bf987dc0cae1fd4c5859c89236c972bb7d4f4a9a7a9e04d623af583632a"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-20-10.npy",
+        "sha256": "15f77818bcdfc2fd25aba9a429d3763edad000c0dc3e37ceee7d4b4f6f238a89"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-21-03.npy",
+        "sha256": "5ae4409082cdc4ff88d510294d4a6e335a7e2ef24f4adb4291052ba877af3cc9"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-21-10.npy",
+        "sha256": "1abf0b5e6a1e5008b411fd55f4dda32f9ce091a59def4be60c3560f547d55271"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-22-03.npy",
+        "sha256": "afac32bd3a97238d629ace0b0b28da72c390321ea8b3158f9dd2eeaa4918e258"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-22-10.npy",
+        "sha256": "9b1d40819748c7e5f3f1e80e8f8037695b01acb1b6adc96d619239cb31f08fd2"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-23-03.npy",
+        "sha256": "eaea35fefa391358032c48defd8e0391143fe0fa07912b258f497725020b0b06"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-23-10.npy",
+        "sha256": "e448243d1b7813d242b769b1390af7d0f9534f87d7f486bc30264e83624d6057"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-24-03.npy",
+        "sha256": "6709750c79c3f41cc880ba44ba5b7ad0d83e8c63377a84fae6a19d2332e6d567"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-24-10.npy",
+        "sha256": "b578f999c6ff91efde34ef428d436d1416a5c0bae890e23d78012c97ae3014c0"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-25-03.npy",
+        "sha256": "fd46f65fa5037d88010f3695d6ed8ff18596479c3bea57f60aba48db4b429a6b"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-25-10.npy",
+        "sha256": "d6b155ba2a83af391de558c8df2b85277358a2e8dab12c60d20fdb0fe239be96"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-26-03.npy",
+        "sha256": "9c495b2eda8bec9d52628b9b9416678576681735dfd92c39d6d899ee5b7f8891"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-26-10.npy",
+        "sha256": "dd3b8d0c8e267342ce96d31de941422361a8ea03e99c47d24d2d723417302dbe"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-27-03.npy",
+        "sha256": "790e0c6759d623e3e4e10b714645050b60c883e125bb591d8afa4d04f48d0726"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-27-10.npy",
+        "sha256": "c6fe4327e5a06fd4fb08cde26505794cde44c423bb47040c2807de02285638bb"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-28-03.npy",
+        "sha256": "ade963ecbe1eb9b39cf535144aa81669a4e6ac6b1cd29f964b4c98a88eaa0103"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-28-10.npy",
+        "sha256": "d3eb2f9a8a36f97fb0cfe268aa005c8facb0988df3b5d104b6a5f95ae47d6edc"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-29-03.npy",
+        "sha256": "abad7acb4734cdbe57056cad8cbba7bda8765bd6e111d3a8e35db49a22bad796"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-29-10.npy",
+        "sha256": "10098dc50b8393d375ef88f2e003c831876734246ba27d93a69f2265dd4752b1"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-30-03.npy",
+        "sha256": "feffb5463027cf69e0ad9c88e9b016ca035161cc770a5b99163f1fcf9cb1c846"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-30-10.npy",
+        "sha256": "5e3673a383dd6cd77657cac178ae16190087d3fd5340f262289e26f0d406df5c"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-31-03.npy",
+        "sha256": "3914dccec16422e35be1392e83921a22aeba7d7a2cc11c35d834dd53ccebe858"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-31-10.npy",
+        "sha256": "723f5f9150b53d96a029fd9e7f21a35f9cec0b6a45aa8414ec6b7fe0cf0ea5f4"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-32-03.npy",
+        "sha256": "1c0a5a2fafe0a7056aad4020fc09c83e4436b738c301f111d469f3f88eb9c1f7"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-32-10.npy",
+        "sha256": "3ed7fe9e94f84f261a5c7bba23bbdc3b8a325d8d6c65223071a458f6dc418254"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-33-03.npy",
+        "sha256": "2bd686ed6789bc17e8617cac16f46daf63503caee558a1e6b85103769bdc1f65"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-33-10.npy",
+        "sha256": "197d11a073270006717076bfba0d8d7c628a798024df7799f05d72b874ae3666"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-34-03.npy",
+        "sha256": "b3ed519e36f53f578b24e69600228e6d1187a2b4fa8405d80c17a900741aa1f1"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-34-10.npy",
+        "sha256": "e6ccd0b18034b62e6b494866e3b8eca5cea650c25f3584a29e5889139b45f3c7"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-35-03.npy",
+        "sha256": "234820ac8293853374b2635cd9918ba9115f628b24846a4e7aae944fe0130347"
+      },
+      {
+        "path": "build/queen-mission/directional-reflections-006/distant-35-10.npy",
+        "sha256": "1574f9d2b54c0363ed002e223284bc5cb33cb75ea9f9fe2f85355aeee14a1c36"
+      }
+    ],
+    "history": [
+      {
+        "step": 0,
+        "loss": 0.023911514359295297,
+        "accepted_loss": 0.014162142924705192
+      },
+      {
+        "step": 1,
+        "loss": 0.014162142924705192,
+        "accepted_loss": 0.011293939054907066
+      },
+      {
+        "step": 2,
+        "loss": 0.011293939054907066,
+        "accepted_loss": 0.011053063327700174
+      },
+      {
+        "step": 3,
+        "loss": 0.011053063327700174,
+        "accepted_loss": 0.01104461100900296
+      },
+      {
+        "step": 4,
+        "loss": 0.01104461100900296,
+        "accepted_loss": 0.011043987334268354
+      },
+      {
+        "step": 5,
+        "loss": 0.011043987334268354,
+        "accepted_loss": 0.011043851292058142
+      },
+      {
+        "step": 6,
+        "loss": 0.011043851292058142,
+        "accepted_loss": 0.011043809897025466
+      },
+      {
+        "step": 7,
+        "loss": 0.011043809897025466,
+        "accepted_loss": 0.01104380257998585
+      }
+    ],
+    "include_accepted_lights": false,
+    "active_gloss_lights": 34,
+    "caveat": "Art-directed distant reflectors fitted through AgX. The reference chooses directions and powers, not composited beauty pixels. Judge the actual saved-model render, not the fit loss."
+  }
+}
