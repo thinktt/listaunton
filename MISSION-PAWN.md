@@ -19,8 +19,7 @@ combinations. Develop grain, color, pores, relief and polish together. Keep
 references unchanged, separate lighting from pigment where practical, and
 inspect other angles so the material remains usable on real geometry. Never
 substitute a billboard or composited photograph for an actual BSDF render.
-Continue until completion, an execution/token limit, owner stop or the weekly
-allowance threshold. A plateau requires a new supported hypothesis.
+Continue until completion, an execution/token limit, or owner stop. A plateau requires a new supported hypothesis.
 
 ## Accepted baseline and references
 
@@ -76,73 +75,6 @@ Geometry is shared between black and white originals; finish differs. First
 match the selected reference finish. Record opposite-color checks separately;
 a selected-color score does not establish that both finishes match.
 
-## Resource check and pause rule
-
-Use [check-codex-usage](skills/check-codex-usage/SKILL.md). A discoverable copy
-is installed at `C:/Users/toby/.codex/skills/check-codex-usage/SKILL.md`.
-
-The owner selected a **Luna subagent** for usage monitoring. Reuse
-`/root/usage_guard_luna` when it is available. Otherwise spawn
-`usage_guard_luna` with `model: gpt-6-luna`, `reasoning_effort: low`, and
-`fork_turns: none`; supply only the usage skill, the 3% rule, and the current
-mission state, rather than the modeling conversation.
-
-Luna's initial read-only check succeeded: it can access the live usage tool.
-It is idle until the mission starts. At mission start, assign it to check
-immediately and every 5 minutes during active work, using bounded,
-interruptible waits rather than busy polling. It reports threshold crossings
-and reading failures to the parent with `collaboration.send_message`.
-Routine readings need no user-facing commentary.
-
-Ask Luna for a fresh check at the beginning and end of each goal turn,
-between substantial iterations, and before a new expensive batch when the
-last reading is stale. The parent handles checkpoints and goal transitions;
-Luna does not modify models or pause a potentially different child goal.
-Stop the worker when the mission stops, pauses, or completes. Confirm its
-status on continuation, and restart it if it ended; a session subagent is
-not an independently scheduled service and must not be assumed to survive
-an app restart. If Luna cannot run, use the live tool directly and disclose
-the fallback rather than silently dropping the usage check.
-
-Use the applicable **weekly** window (normally `windowDurationMins: 10080`).
-Calculate `remainingPercent = clamp(100 - usedPercent, 0, 100)`.
-Do not confuse remaining allowance with consumed allowance, a short-window
-limit, purchased credit balance, or the current goal's token budget.
-
-**When weekly remaining allowance is 3% or lower:**
-
-1. Start no new modeling, image-generation, or render batch.
-2. Save a concise checkpoint of completed work, outstanding validation,
-   current/best scores, and the next action. Preserve the best accepted model.
-3. If the mission goal is active, call `update_goal` with `status: paused`.
-   The owner explicitly authorized this conditional pause. Report the status
-   returned by the tool and the observed remaining percentage, then stop.
-4. Stop Luna's monitoring loop and keep the old heartbeat disabled until
-   the owner resumes. Do not resume automatically after a weekly reset or
-   spend a reset credit to continue.
-
-If a weekly reading is missing or the tool fails, it means **unknown**, not
-zero or unlimited. Retry once; if still unknown, checkpoint and report that
-the threshold cannot currently be verified before starting more substantial
-work. Do not claim that the 3% threshold was crossed without evidence.
-
-If the execution/goal token budget runs out first, leave an honest incomplete
-checkpoint and allow the platform's budget status to take precedence. Never
-mark the goal complete merely because time or tokens are ending.
-
-The earlier main-chat heartbeat, `queen-mission-usage-guard`, remains
-**paused**. Do not activate it automatically with the mission: Luna replaces
-its routine checks, avoiding duplicate scheduled main-agent work. A skill
-contains instructions; the actual checks are tool calls made by the Luna
-worker. This guard is still a precaution rather than a guaranteed hard cap:
-messages can wait for a tool call to finish, and other chats share the same
-allowance. Preserve the iteration-boundary checks.
-
-When several missions run together, use one shared Luna guard. Assigned workers
-report usage concerns to the coordinating parent; do not launch duplicate
-monitors or alter another agent's goal. Verify the monitor is live on activation;
-it is currently stopped for the owner-requested pause.
-
 ## Stable scorecard
 
 Rate every category after each candidate, even when only one was targeted.
@@ -177,9 +109,9 @@ Full-material baseline scores are unassessed. Examine and record them before ass
 
 ## Iteration loop
 
-1. **Check resources and recover state.** Read the latest mission log, inspect
+1. **Recover state.** Read the latest mission log, inspect
    Git status, and identify the current best accepted revision. Respect other
-   work in the checkout. Perform the weekly usage check.
+   work in the checkout.
 2. **Examine.** Inspect the actual high-res reference and current fixed-camera
    wood render side by side, at 50% overlay, and as enlarged piece-specific head, collar,
    stem/socket, and base crops. Check the neutral render, original sprite,
@@ -214,8 +146,7 @@ Full-material baseline scores are unassessed. Examine and record them before ass
    log, then commit the completed, checked iteration with the required actual
    model co-author trailer. Do not push or publish. Update the existing local
    preview when needed so it shows the same accepted assets as the repository.
-9. **Check usage and repeat.** Recheck the weekly allowance, enforce the pause
-   rule, and select the next discrepancy. A plateau calls for a different
+9. **Re-examine and repeat.** Select the next discrepancy. A plateau calls for a different
    hypothesis, not a declaration of perfection.
 
 Keep iteration records in `docs/pawn-mission-log.md`, created on the first
@@ -223,7 +154,6 @@ execution. Store useful evidence in `docs/pawn-mission/iteration-NNN/` or an
 equally clear repo-local location. Each record should contain:
 
 - Date, iteration, starting/best revision, and model/reference hashes.
-- Weekly limit source, timestamp, used/remaining percentages, and reset time.
 - Hypothesis, targeted metric, concrete changes, and render settings.
 - All five before/after scores, original and high-res IoU, overall score,
   remaining discrepancies, regressions, and acceptance/rejection reason.
@@ -256,13 +186,12 @@ Scope work to this piece's scripts, model, trial outputs and evidence. Shared
 page generators and manifests need one coordinated writer. Additional modeling
 workers require owner or applicable instruction authorization; this document
 does not launch them. Assigned workers report changes, all five scores, hashes,
-validation and remaining issues to the parent before integration. Use the
-shared usage guard and respect owner pauses.
+validation and remaining issues to the parent before integration. Respect owner pauses.
 
 Record work in `docs/pawn-mission-log.md` and
 `docs/pawn-mission/iteration-NNN/`, preserving existing history. Include
 starting/accepted hashes, reference comparisons, all five scores, render
-settings, usage readings, decisions, validation, pending work and next steps.
+settings, decisions, validation, pending work and next steps.
 Commit completed checked iterations with the actual-model co-author trailer
 required by AGENTS.md. Preserve provenance: original artwork authorship is
 unclear; do not attribute it to James Clarke or invent a license.
