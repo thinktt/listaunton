@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "all_evaluated_geometry_preserved_within_5e_6": true,
+  "geometry_comparison": {
+    "Bishop - continuous turned body": {
+      "max_evaluated_coordinate_difference": 1.9073486328125e-06,
+      "triangle_indices_unchanged": true,
+      "control_vertices_exactly_unchanged": true
+    },
+    "Bishop - domed button finial": {
+      "max_evaluated_coordinate_difference": 2.384185791015625e-06,
+      "triangle_indices_unchanged": true,
+      "control_vertices_exactly_unchanged": true
+    }
+  },
+  "components": {
+    "Bishop - continuous turned body": {
+      "positions": "444d20855c21139bf30683963da50da7b73f1f3145248fc4e2707e00691392a9",
+      "triangles": "7b32bf0a72aaeb6b1a14173dfdaa26b7d193bdfb12cf57e97ebc0a69ac52e36c",
+      "vertex_count": 60674,
+      "triangle_count": 121344
+    },
+    "Bishop - domed button finial": {
+      "positions": "f1db6983d496588fb45bc35df744d83fbea91823229ec51e6958ed3838ae9069",
+      "triangles": "4c4f87c6cbef8081dd8ffa8d43574e61f37f18e053220e0e2237b7e4e7fa312d",
+      "vertex_count": 5890,
+      "triangle_count": 11776
+    }
+  },
+  "camera_exactly_unchanged": true,
+  "reference_pixels_unchanged": true,
+  "shader": "Principled BSDF",
+  "albedo_bakes_lighting": false,
+  "texture_hash_matches": true,
+  "finite_uvs_and_unit_normals": true,
+  "model_sha256": "79a2e9988cbdf9c8d6b913723dbce4e7f55098f6ca7a9e8d33b860a258e1f478"
+}

@@ -28,11 +28,12 @@ if not blend.is_file() or hashlib.sha256(blend.read_bytes()).hexdigest() != meta
 if meta.get('referenceCamera', {}).get('type') != 'ORTHO':
     raise RuntimeError('The bishop viewer requires its saved orthographic reference camera.')
 fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes', 'vertexByteLength', 'indexByteOffset', 'totalByteLength', 'bounds', 'sourceSha256', 'referenceCamera']
+if 'material' in meta: fields.append('material')
 public_meta = {key: meta[key] for key in fields}
 mesh = (assets/'mesh.bin').read_bytes()
 assert len(mesh) == meta['totalByteLength'], 'Mesh binary length does not match metadata.'
-assert meta['vertexStrideBytes'] == 24, 'Expected interleaved position and normal.'
-assert meta['vertexCount'] * 24 == meta['vertexByteLength'] == meta['indexByteOffset']
+assert meta['vertexStrideBytes'] == 32, 'Expected interleaved position, normal and UV.'
+assert meta['vertexCount'] * 32 == meta['vertexByteLength'] == meta['indexByteOffset']
 assert meta['indexCount'] == meta['triangleCount'] * 3
 assert meta['indexByteOffset'] + meta['indexCount'] * 4 == len(mesh)
 for image in ['reference.png', 'render.png', 'original.png']:
@@ -58,6 +59,9 @@ html = html.replace('__MESH_META__',json.dumps(public_meta,separators=(',',':'))
 html = html.replace('__MESH_BASE64__',base64.b64encode(mesh).decode('ascii'))
 html = html.replace('__REFERENCE_IMAGE__',data_uri(assets/'reference.png'))
 html = html.replace('__RENDER_IMAGE__',data_uri(assets/'render.png'))
+texture=root/meta['material']['texture']
+assert hashlib.sha256(texture.read_bytes()).hexdigest()==meta['material']['textureSha256']
+html = html.replace('__WOOD_IMAGE__',data_uri(texture))
 html = html.replace('__ORIGINAL_IMAGE__',data_uri(assets/'original.png'))
 html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',',':')))
 html = html.replace('__BLACK_IMAGE__',data_uri(assets/'black-original.png'))

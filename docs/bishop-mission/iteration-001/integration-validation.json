@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-05",
+  "model_sha256": "79a2e9988cbdf9c8d6b913723dbce4e7f55098f6ca7a9e8d33b860a258e1f478",
+  "check_model_site": "PASS: all five model review frames and all king, rook and queen projection studies retain their matching sources, meshes, cameras and downloads",
+  "check_set": "PASS: all six reference pairs, candidate state, side-view sources and provenance, fixed foot anchors, approved sizes/order, sliders, resets and storage",
+  "bishop_viewer": "PASS: exact embedded texture hash and mesh, 501 camera samples, overlay endpoints, tab/orbit persistence, rotation, pan, zoom, camera reset, trusted parent activation",
+  "maximum_viewer_camera_error_pixels": 0.000008793522457932486,
+  "native_browser_visual_test": false,
+  "ui_test_method": "Actual page JavaScript exercised in a simulated DOM/WebGL harness",
+  "local_preview": "outputs/queen-hires/bishop-model.html and its bishop assets/models synchronized",
+  "other_piece_work": "Concurrent king and queen work excluded from the bishop commit",
+  "gallery_measurements": "Only two bishop provenance hashes changed; all dimensions and displayed defaults preserved",
+  "git_diff_check": "PASS"
+}

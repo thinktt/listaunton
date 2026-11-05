@@ -1,0 +1,146 @@
+{
+  "variant": "007-button-glints",
+  "source": "history/bishop-mission-000/bishop-rebuilt.blend",
+  "pigment": "assets/bishop/inferred-pigment-source-v1.png",
+  "gain": 0.8,
+  "saturation": 0.99,
+  "roughness": 0.23,
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "bump_strength": 0.25,
+  "bump_distance": 0.009,
+  "pore_scale": 180,
+  "pore_mix": 0.27,
+  "world": 0.07,
+  "samples": 48,
+  "lights": [
+    {
+      "name": "Broad diffuse key",
+      "position": [
+        3,
+        -4,
+        7
+      ],
+      "energy": 550,
+      "size": 3,
+      "glossy": false
+    },
+    {
+      "name": "Diffuse fill",
+      "position": [
+        -4,
+        -1,
+        5
+      ],
+      "energy": 65,
+      "size": 4,
+      "glossy": false
+    },
+    {
+      "target": [
+        0.09346815943717957,
+        -0.14079856872558594,
+        4.5649895668029785
+      ],
+      "name": "button reflection",
+      "size": 1.2,
+      "receiver": "button",
+      "position": [
+        3.893336057662964,
+        -1.8671543598175049,
+        10.184659957885742
+      ],
+      "diffuse": false,
+      "energy": 1200
+    },
+    {
+      "target": [
+        0.08192968368530273,
+        -0.25517797470092773,
+        4.284008026123047
+      ],
+      "name": "head reflection",
+      "size": 1.0,
+      "receiver": "body",
+      "position": [
+        3.3447306156158447,
+        -6.43996000289917,
+        4.6043219566345215
+      ],
+      "diffuse": false,
+      "energy": 240
+    },
+    {
+      "name": "collars reflection",
+      "energy": 240,
+      "receiver": "body",
+      "diffuse": false,
+      "target": [
+        0.20885279774665833,
+        -0.6127715110778809,
+        2.917848587036133
+      ],
+      "size_y": 0.7,
+      "shape": "RECTANGLE",
+      "size": 3.2,
+      "position": [
+        3.4683682918548584,
+        -5.972860813140869,
+        -0.1877899169921875
+      ]
+    },
+    {
+      "name": "socket reflection",
+      "energy": 180,
+      "receiver": "body",
+      "diffuse": false,
+      "target": [
+        0.27039122581481934,
+        -0.4184236526489258,
+        1.3220272064208984
+      ],
+      "size_y": 0.7,
+      "shape": "RECTANGLE",
+      "size": 2.4,
+      "position": [
+        5.597139358520508,
+        -4.491748809814453,
+        -0.6864054203033447
+      ]
+    },
+    {
+      "target": [
+        0.30885279178619385,
+        -0.9181370735168457,
+        0.6160659790039062
+      ],
+      "name": "base reflection",
+      "size": 0.9,
+      "receiver": "body",
+      "position": [
+        3.7603273391723633,
+        -6.836233139038086,
+        2.05253529548645
+      ],
+      "diffuse": false,
+      "energy": 350
+    },
+    {
+      "target": [
+        0,
+        0,
+        4.5
+      ],
+      "size": 0.9,
+      "diffuse": false,
+      "name": "Button second glint",
+      "position": [
+        -2.2,
+        -5,
+        9
+      ],
+      "receiver": "button",
+      "energy": 450
+    }
+  ]
+}

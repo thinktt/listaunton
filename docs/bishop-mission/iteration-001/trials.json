@@ -1,0 +1,100 @@
+[
+  {
+    "trial": "001-boxwood-baseline",
+    "scores": {
+      "silhouette": 94.8824,
+      "interior": 78,
+      "color": 60,
+      "texture": 61,
+      "lighting": 42
+    },
+    "mean": 67.17648,
+    "original_white_iou": 0.9658367232642099,
+    "render_sha256": "190447cdda708d90f0360f1ee371f3a04640abf5aa87e12c093bfd7a08bf257e",
+    "decision": "First actual wood; muted, smooth, misplaced high base reflection."
+  },
+  {
+    "trial": "002-golden-lighting",
+    "scores": {
+      "silhouette": 94.8785,
+      "interior": 78,
+      "color": 67,
+      "texture": 62,
+      "lighting": 40
+    },
+    "mean": 68.37570000000001,
+    "original_white_iou": 0.9657854325374123,
+    "render_sha256": "f4848ed1cdf28ffbe94bf3d41b8f7bcf7728d63c063784118f3fff104a20362c",
+    "decision": "Golden diffuse color improves; broad reflections obscure grain."
+  },
+  {
+    "trial": "003-targeted-reflections",
+    "scores": {
+      "silhouette": 94.8785,
+      "interior": 78,
+      "color": 70,
+      "texture": 62,
+      "lighting": 47
+    },
+    "mean": 70.37570000000001,
+    "original_white_iou": 0.9657854325374123,
+    "render_sha256": "7709bbf766287c97591cfdc199d89393718517afd08d1fb22721913b1980faa1",
+    "decision": "Targeting glints reduces spill, but strong relief scatters highlights."
+  },
+  {
+    "trial": "004-fine-relief",
+    "scores": {
+      "silhouette": 94.8785,
+      "interior": 78,
+      "color": 70,
+      "texture": 61,
+      "lighting": 52
+    },
+    "mean": 71.1757,
+    "original_white_iou": 0.9657854325374123,
+    "render_sha256": "80edc0ea918220c0da6cc4053d54f9305163bded098122ea5af02643d2d88a74",
+    "decision": "Finer relief sharpens reflections; finish is still too smooth."
+  },
+  {
+    "trial": "005-reflection-balance",
+    "scores": {
+      "silhouette": 94.8785,
+      "interior": 78,
+      "color": 60,
+      "texture": 61,
+      "lighting": 50
+    },
+    "mean": 68.7757,
+    "original_white_iou": 0.9657854325374123,
+    "render_sha256": "cb317f09b227e31ce99b8f1db0e7fc4805c18fde0dfbec2936b54b460f65a206",
+    "decision": "Rejected: reduced saturation washes wood toward pink/tan."
+  },
+  {
+    "trial": "006-confined-reflections",
+    "scores": {
+      "silhouette": 94.8785,
+      "interior": 78,
+      "color": 65,
+      "texture": 58,
+      "lighting": 35
+    },
+    "mean": 66.1757,
+    "original_white_iou": 0.9657854325374123,
+    "render_sha256": "ad94521090294d984e488d5bce5c8ad9e086733e9a4a7deab62aaa039e258bdc",
+    "decision": "Rejected: narrow area spread normalizes energy upward, blowing out reflections and adding streaks."
+  },
+  {
+    "trial": "007-button-glints",
+    "scores": {
+      "silhouette": 94.8785,
+      "interior": 78,
+      "color": 70,
+      "texture": 64,
+      "lighting": 54
+    },
+    "mean": 72.1757,
+    "original_white_iou": 0.9657854325374123,
+    "render_sha256": "1b373c0052a952dea066b253e9eeb9892f1853f80c7ff1cbeef8ac7f0638a71b",
+    "decision": "Chosen: intermediate relief, warm pigment, two finial glints; still unfinished."
+  }
+]

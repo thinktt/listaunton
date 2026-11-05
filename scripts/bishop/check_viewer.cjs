@@ -12,6 +12,9 @@ const node=id=>{if(!nodes.has(id))nodes.set(id,{id,attrs:{},hidden:false,style:{
 const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node('view-'+m[1]),{dataset:{view:m[1]}}));
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');node('original-alignment').textContent=text('original-alignment');
 node('black-alignment').textContent=text('black-alignment');
+node('wood-data').textContent=text('wood-data');
+assert(meta.vertexStrideBytes===32);
+assert.equal(require('node:crypto').createHash('sha256').update(Buffer.from(text('wood-data').split(',')[1],'base64')).digest('hex'),meta.material.textureSha256,'Embedded pigment texture must match saved atlas.');
 node('model-opacity').value='50';node('stage').dataset.mode='compare';
 node('stage').clientWidth=1254;node('stage').clientHeight=1254;
 const gl=new Proxy({NO_ERROR:0,getError:()=>0,getShaderParameter:()=>true,getProgramParameter:()=>true,
@@ -25,6 +28,7 @@ const canvas=Object.assign(node('viewer'),{clientWidth:1254,clientHeight:1254,wi
  getBoundingClientRect:()=>({left:0,top:0,width:canvas.clientWidth,height:canvas.clientHeight}),
  focus(){},setPointerCapture(){},classList:{add(){},remove(){}}});
 const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
+ Image:class{set src(value){assert(value.startsWith('data:image/png;base64,'));queue.push(()=>this.onload());}},
  document:{getElementById:node,querySelectorAll:()=>views},window:{devicePixelRatio:1,parent:parentFrame,addEventListener(name,fn){windowListeners[name]=fn;}},
  requestAnimationFrame:cb=>queue.push(cb),setTimeout:cb=>queue.push(cb),atob:s=>Buffer.from(s,'base64').toString('binary'),
  ResizeObserver:class{constructor(cb){resize=cb;}observe(){}}
@@ -48,7 +52,7 @@ function pixel(world){
 }
 const matvec=(m,v)=>[0,1,2,3].map(i=>v.reduce((a,x,j)=>a+x*m[i*4+j],0));
 const ref=meta.referenceCamera,points=[];
-for(let i=0;i<meta.vertexCount;i+=Math.max(1,Math.floor(meta.vertexCount/500))){const off=i*24;points.push([mesh.readFloatLE(off),mesh.readFloatLE(off+4),mesh.readFloatLE(off+8)]);}
+for(let i=0;i<meta.vertexCount;i+=Math.max(1,Math.floor(meta.vertexCount/500))){const off=i*meta.vertexStrideBytes;points.push([mesh.readFloatLE(off),mesh.readFloatLE(off+4),mesh.readFloatLE(off+8)]);for(const k of [24,28])assert(Number.isFinite(mesh.readFloatLE(off+k)),'Finite pigment UV required.');}
 let maxError=0;
 function compare(){
  assert.equal(uniforms.uOrthographic,1);const scale=Math.min(canvas.width/ref.width,canvas.height/ref.height);
@@ -77,5 +81,7 @@ for(const [id,value] of [['reference-only',0],['model-only',1],['half-overlay',.
 node('model-opacity').value='73';node('model-opacity').events.input();assert.equal(node('model-image').style.opacity,.73);
 assert(html.includes('#model-image{opacity:.5;background:#000}'),'Model-only image must have an opaque backing.');
 assert(parentMessages.some(m=>m.channel==='listaunton-review'&&m.event==='viewer-ready'));
+node('neutral').onclick();flush();assert.equal(uniforms.uUseWood,0);
 windowListeners.message({source:{},data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();assert.notEqual(node('brown').attrs['aria-pressed'],'true');
+windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();assert.equal(uniforms.uUseWood,1);assert.equal(node('brown').attrs['aria-pressed'],'true');
 console.log(JSON.stringify({passed:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));

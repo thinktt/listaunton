@@ -1,0 +1,12 @@
+{
+  "source": "history/bishop-mission-000/bishop-rebuilt.blend",
+  "source_sha256": "3db345fb65a1d9579344456a717f7960f0a3894dc3a95b209cb0fe1ad52f6a3f",
+  "material_config": "docs/bishop-mission/iteration-001/007-config.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/mission_material.py -- docs/bishop-mission/iteration-001/007-config.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/bake_mission.py -- --source build/bishop-mission/007-button-glints/bishop.blend --out build/bishop-mission/reproduced-001"
+  ],
+  "accepted_model_sha256": "79a2e9988cbdf9c8d6b913723dbce4e7f55098f6ca7a9e8d33b860a258e1f478",
+  "pigment_sha256": "21c9e8220c3160c5f02a8bcd6a803b90429725cba86b2b70bdc26120879f9121",
+  "note": "Texture bake captures pigment only. The corrected bake script also assigns procedural wood to the editable Boolean cut faces."
+}

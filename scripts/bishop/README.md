@@ -1,5 +1,36 @@
 # Bishop reconstruction
 
+## Current wood mission
+
+The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is
+`docs/bishop-mission-log.md`. The first material checkpoint preserves every
+control vertex and face of the accepted continuous-head geometry (evaluated coordinates agree within 0.000005 units). Its wood
+is inferred from selected white candidate 3 with a separately generated,
+approximately de-lit pigment source. Hidden surfaces use continuous procedural
+boxwood. This is reconstructed material, not a recovered original asset.
+
+Reproduce the material checkpoint from its recorded config under
+`docs/bishop-mission/iteration-001/` with Blender `mission_material.py -- CONFIG`,
+then `bake_mission.py -- --source TRIAL/bishop.blend --out BAKED_TRIAL`.
+The bake captures pigment only and reopens the saved scene before its real
+Principled-BSDF beauty render. References and registration stay unchanged.
+
+After accepting a trial into `models/bishop/bishop-rebuilt.blend`, run Blender
+`export_mission.py`, `render_diagnostics.py`, `render_clay.py`, `validate.py -- ROOT`,
+`validate_mission.py`, and `check_join_regression.py -- ROOT`. Ordinary Python
+`mission_compare.py --render assets/bishop/render.png --out EVIDENCE_DIRECTORY`
+records the mission mask convention and cropped evidence. Run ordinary Python
+`build_viewer.py`, then Node `check_viewer.cjs ROOT` for the actual page's
+texture/hash, camera and interaction harness. The rotating Boxwood view embeds
+the same pigment atlas and evaluated UVs; its lighting is approximate.
+
+`build_bishop.py` below reconstructs the original clay geometry. It is not the
+new material pipeline and would replace the wood finish if run over accepted
+outputs. `validate_mission.py` currently enforces a material-only iteration;
+future accepted geometry changes need their own documented baseline checks.
+
+## Original geometry construction
+
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.
 
 The model uses a continuous closed turned body, a separate shallow domed button with a rounded underside, and an editable Boolean saw cut through the full mitre thickness. The head's rounded Bezier meridian continues directly into the button underside, concealing the head cap. There is no exposed cylindrical seat, pedestal, neck ring or gap. The user-accepted [side guide](../../assets/bishop/concepts/side-01.png) directs this junction and the head/button appearance; the original remains the overall proportion check. The cut stops above the collars, leaving a solid floor. This is an editable visual reconstruction, not a manufacturing solid. The saved orthographic camera is 54 degrees above the board. Neutral clay remains diagnostic; grain is future work.

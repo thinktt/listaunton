@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-05",
+  "source": "assets/candidates/bishop/white-candidate-3.png",
+  "source_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "output": "assets/bishop/inferred-pigment-source-v1.png",
+  "prompt": "Use case: lighting-weather. Asset type: inferred diffuse albedo/pigment source for a real 3D bishop reconstruction. Input image 1 is the edit target: the selected white Staunton bishop render. Keep its exact camera, placement, silhouette, slit, collar boundaries and ALL distinctive wood grain markings in exactly the same locations. Change only illumination: remove all glossy white specular highlights and reflected crescents, remove directional light/shadow gradients and dark ambient occlusion, replacing those areas with plausible uninterrupted nearby golden boxwood grain. The wood should be evenly lit flat honey-gold tan with the original subtle ring grain, tiny flecks and dark vertical streaks on the lower base. No gloss, no shaded 3D lighting, no bright white glints, no bevel shading, no cast shadow. This is an albedo/pigment map, so preserve local pigment variation but make the overall wood hue and brightness consistent across surfaces facing different directions. Preserve the full transparent background and image frame. Do not redraw, reshape, crop, enlarge or rotate the bishop. Do not introduce carvings, extra cracks, labels or text. The source render remains unchanged in our project; this derived image will only supply color on actual geometry.",
+  "note": "An inferred albedo source, not recovered original texture or a replacement reference. Some ambient shading remains and grain is partly invented.",
+  "output_sha256": "6b228b1e6f57e60d8f5e27f16a5479156ae69d463cfbd900408fd1510e83fe63"
+}

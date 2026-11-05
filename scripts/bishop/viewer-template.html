@@ -42,10 +42,10 @@ header .download{font-size:12px}
 </head>
 <body>
 <main>
-<header><div><h1>Bishop model</h1><p>Original Lichess bishop · geometry study</p></div><a class="download" href="models/bishop/bishop-rebuilt.blend" download>Blender file ↗</a></header>
+<header><div><h1>Bishop model</h1><p>54° reference camera · boxwood reconstruction</p></div><a class="download" href="models/bishop/bishop-rebuilt.blend" download>Blender file ↗</a></header>
 <nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original white</option><option value="selected">White candidate 3</option><option value="black">Original black</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
-<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
+<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Boxwood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Bishop model comparison">
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="__BLACK_IMAGE__" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
@@ -60,6 +60,7 @@ header .download{font-size:12px}
 <script id="black-alignment" type="application/json">__BLACK_ALIGNMENT__</script>
 <script id="mesh-metadata" type="application/json">__MESH_META__</script>
 <script id="mesh-data" type="application/octet-stream">__MESH_BASE64__</script>
+<script id="wood-data" type="text/plain">__WOOD_IMAGE__</script>
 <script>
 'use strict';
 (() => {
@@ -102,6 +103,8 @@ const vs=`#version 300 es
 precision highp float;
 layout(location=0) in vec3 aPosition;
 layout(location=1) in vec3 aNormal;
+layout(location=2) in vec2 aUv;
+out vec2 vUv;
 uniform vec3 uCenter;
 uniform mat3 uRotation;
 uniform mat4 uProjection;
@@ -110,6 +113,7 @@ uniform float uDistance;
 out vec3 vNormal;
 out vec3 vPosition;
 void main(){
+ vUv=aUv;
  vec3 p=aPosition-uCenter;
  p=uRotation*vec3(p.x,p.z,-p.y);
  vPosition=p+vec3(uPan,-uDistance);
@@ -120,27 +124,32 @@ const fs=`#version 300 es
 precision highp float;
 in vec3 vNormal;
 in vec3 vPosition;
+in vec2 vUv;
+uniform sampler2D uWood;
+uniform bool uUseWood;
 uniform vec3 uColor;
 uniform float uGloss;
 uniform bool uOrthographic;
 out vec4 outColor;
-vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
+vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength,vec3 pigment){
  float diffuse=max(dot(n,l),0.0);
  vec3 h=normalize(l+v);
  float spec=pow(max(dot(n,h),0.0),uGloss)*step(0.001,diffuse);
- return strength*color*(uColor*diffuse+vec3(spec*0.25));
+ return strength*color*(pigment*diffuse+vec3(spec*0.25));
 }
 void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
- vec3 c=uColor*(0.19+0.06*n.y);
- c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
- c+=light(n,v,normalize(vec3(0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.55);
- c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.8);
+ vec3 wood=vUv.x<0.0?vec3(.42,.20,.055):pow(texture(uWood,vUv).rgb,vec3(2.2));
+ vec3 pigment=uUseWood?wood:uColor;
+ vec3 c=pigment*(0.19+0.06*n.y);
+ c+=light(n,v,normalize(vec3(0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.15,pigment);
+ c+=light(n,v,normalize(vec3(-0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.35,pigment);
+ c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.55,pigment);
  c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
-let program,vao,uniforms,meshBytes,ready=false,lost=false,pending=false;
-let q=[0,0,0,1],pan=[0,0],distance=9,material='neutral',autoFit=true;
+let program,vao,uniforms,meshBytes,woodTexture,ready=false,lost=false,pending=false;
+let q=[0,0,0,1],pan=[0,0],distance=9,material='brown',autoFit=true;
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 const reference=meta.referenceCamera;
 const fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
@@ -191,7 +200,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
+ document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'boxwood · approximate preview lighting':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -210,8 +219,13 @@ function initialize(){
  vao=gl.createVertexArray();gl.bindVertexArray(vao);
  const vb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
+ gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,24);
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
+ woodTexture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,woodTexture);
+ gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([186,125,63,255]));
+ gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+ const textureImage=new Image();textureImage.onload=()=>{if(lost)return;gl.bindTexture(gl.TEXTURE_2D,woodTexture);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,textureImage);gl.generateMipmap(gl.TEXTURE_2D);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);schedule();};textureImage.onerror=()=>fail(new Error('Wood texture could not load'));textureImage.src=document.getElementById('wood-data').textContent.trim();
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
@@ -230,6 +244,7 @@ function draw(){
  gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,meta.bounds.center);
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
+ gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
 }
