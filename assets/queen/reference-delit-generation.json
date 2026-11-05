@@ -1,0 +1,8 @@
+{
+  "generator": "built-in image_gen",
+  "date": "2026-11-05",
+  "input": "assets/queen/reference.png",
+  "output": "assets/queen/reference-delit-source.png",
+  "purpose": "Derived albedo source for visible-surface UV projection. Original reference is unchanged.",
+  "prompt": "Use case: lighting-weather. Edit target: the supplied queen photograph. Asset type: a de-lit base-color/albedo source for UV projection onto a 3D reconstruction. Preserve EXACT canvas, object location, camera, geometry/silhouette, features and every visible wood-grain pattern and dark wood marking as closely as possible. Change only illumination: remove all white glossy reflections, bright specular dots, directional shadows and shading gradients. Reveal the same underlying warm brown wood pigment everywhere on the visible queen, including the recessed collars and bowl. The output should look flat and evenly illuminated, with no bright glossy spots or dramatic cast shadows, as if a diffuse texture/albedo pass. Keep local grain contrast and the distinctive wavy dark lines on the base. Keep the solid black background, original framing and generous blank space exactly as they are. Do not make a new queen, change proportions, enlarge or center the piece, add details, text, border, or watermark. This is not a new beauty render; it is a flat material-color source with lighting removed."
+}

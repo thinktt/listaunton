@@ -1,11 +1,13 @@
 """Check the delivered queen mesh, material, camera and chosen relative size."""
 from pathlib import Path
-import json, math, hashlib
+import json, math, hashlib, argparse, sys
 import bpy, bmesh
 import numpy as np
 
 root=Path(__file__).resolve().parents[2]
-model=root/'models/queen/queen-rebuilt.blend'
+p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
+args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+model=args.blend
 fit=json.loads((root/'assets/queen/finish-fit.json').read_text())
 bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False)
 scene=bpy.context.scene
@@ -40,6 +42,7 @@ report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdige
         'material':obj.data.materials[0].name,'boundary_edges':boundary,'nonmanifold_edges':nonmanifold,
         'signed_volume':volume,'crown_tips':8,'body_rings_monotonic':True}
 for name in ('finish-validation.json','model-validation.json'):
-    (root/'assets/queen'/name).write_text(json.dumps(report,indent=2)+'\n')
+    args.report_dir.mkdir(parents=True,exist_ok=True)
+    (args.report_dir/name).write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))
 bm.free();evaluated.to_mesh_clear()

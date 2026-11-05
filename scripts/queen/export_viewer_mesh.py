@@ -1,7 +1,7 @@
 """Export the evaluated queen meshes for a standalone WebGL2 viewer.
 
 Run with Blender in background mode. The source .blend is only read.
-Binary layout: interleaved little-endian float32 XYZ/NXYZ vertices followed by
+Binary layout: interleaved little-endian float32 XYZ/NXYZ/UV vertices followed by
 little-endian uint32 triangle indices. No geometry is decimated or simplified.
 """
 from __future__ import annotations
@@ -109,6 +109,34 @@ def main():
             evaluated_mesh.loop_triangles.foreach_get("vertices", indices)
             positions = positions.reshape((-1, 3))
             normals = normals.reshape((-1, 3))
+            material_config = json.loads(bpy.context.scene.get('mission_material_config','{}'))
+            uv_layer_name = material_config.get('uv_layer','Turned wood')
+            uv_layer = evaluated_mesh.uv_layers.get(uv_layer_name)
+            if uv_layer is None:
+                raise RuntimeError(f'Current queen requires UV layer {uv_layer_name}.')
+            loop_vertices = np.empty(len(evaluated_mesh.loops), dtype=np.int32)
+            loop_uv = np.empty(len(evaluated_mesh.loops)*2, dtype=np.float32)
+            tri_loops = np.empty(triangle_count*3, dtype=np.int32)
+            evaluated_mesh.loops.foreach_get('vertex_index', loop_vertices)
+            uv_layer.data.foreach_get('uv', loop_uv)
+            evaluated_mesh.loop_triangles.foreach_get('loops', tri_loops)
+            loop_uv = loop_uv.reshape(-1, 2)
+            # WebGL has one attribute index, while Blender UVs live on corners.
+            # Split only UV seams; preserve exact position and smooth normal.
+            keys = np.empty(len(loop_vertices), dtype=[('v','<i4'),('u','<i8'),('t','<i8')])
+            keys['v'] = loop_vertices
+            keys['u'] = np.rint(loop_uv[:,0]*1e7).astype(np.int64)
+            keys['t'] = np.rint(loop_uv[:,1]*1e7).astype(np.int64)
+            _, first, inverse = np.unique(keys, return_index=True, return_inverse=True)
+            selected_vertices = loop_vertices[first]
+            original_vertex_count = vertex_count
+            positions, normals = positions[selected_vertices], normals[selected_vertices]
+            uvs = loop_uv[first]
+            indices = inverse[tri_loops].astype(np.int32)
+            vertex_count = len(positions)
+            corner_uv_error = float(np.max(np.abs(uvs[indices]-loop_uv[tri_loops])))
+            if corner_uv_error>1e-6 or not np.array_equal(selected_vertices[indices],loop_vertices[tri_loops]):
+                raise RuntimeError('UV seam splitting changed a triangle corner.')
 
             transform = np.array(evaluated.matrix_world, dtype=np.float64)
             positions = positions @ transform[:3, :3].T + transform[:3, 3]
@@ -125,9 +153,10 @@ def main():
             if np.linalg.det(transform[:3, :3]) < 0:
                 indices = indices.reshape((-1, 3))[:, [0, 2, 1]].reshape(-1)
 
-            interleaved = np.empty((vertex_count, 6), dtype="<f4")
+            interleaved = np.empty((vertex_count, 8), dtype="<f4")
             interleaved[:, :3] = positions
-            interleaved[:, 3:] = normals
+            interleaved[:, 3:6] = normals
+            interleaved[:, 6:8] = uvs
             global_indices = (indices.astype(np.uint64) + vertex_offset)
             if global_indices.max() > np.iinfo(np.uint32).max:
                 raise RuntimeError("Combined mesh exceeds uint32 index range.")
@@ -136,6 +165,9 @@ def main():
             index_blocks.append(global_indices)
             parts.append({
                 "name": obj.name,
+                "geometryVertexCount": original_vertex_count,
+                "uvSeamCopies": vertex_count-original_vertex_count,
+                "maxCornerUvError": corner_uv_error,
                 "vertexOffset": vertex_offset, "vertexCount": vertex_count,
                 "indexOffset": index_offset, "indexCount": int(indices.size),
                 "triangleCount": triangle_count, "bounds": bounds(interleaved[:, :3]),
@@ -151,7 +183,7 @@ def main():
     indices = np.concatenate(index_blocks)
     if indices.size % 3:
         raise RuntimeError("Triangle index buffer length is not a multiple of three.")
-    normal_lengths = np.linalg.norm(vertices[:, 3:].astype(np.float64), axis=1)
+    normal_lengths = np.linalg.norm(vertices[:, 3:6].astype(np.float64), axis=1)
     if not np.all(np.isfinite(vertices)) or not np.allclose(normal_lengths, 1.0, atol=2e-6):
         raise RuntimeError("Combined mesh failed finite/unit-normal validation.")
     mesh_bounds = bounds(vertices[:, :3])
@@ -169,7 +201,7 @@ def main():
         raise RuntimeError("Binary length does not match vertex/index buffer lengths.")
     # Verify the actual serialized file, not only the arrays used to construct it.
     serialized = binary_tmp.read_bytes()
-    read_vertices = np.frombuffer(serialized, dtype="<f4", count=vertices.size).reshape((-1, 6))
+    read_vertices = np.frombuffer(serialized, dtype="<f4", count=vertices.size).reshape((-1, 8))
     read_indices = np.frombuffer(serialized, dtype="<u4", offset=vertices.nbytes)
     if not np.array_equal(vertices, read_vertices) or not np.array_equal(indices, read_indices):
         raise RuntimeError("Binary round-trip validation failed.")
@@ -179,14 +211,16 @@ def main():
         raise RuntimeError("Source .blend changed while exporting; output withheld.")
 
     metadata = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "sourceBlend": str(blend_path), "sourceSha256": before_hash,
         "sourceUnchanged": True, "binary": str(args.binary.resolve()),
         "coordinateSystem": "Blender world XYZ, right-handed, +Z up; no axis conversion",
         "endianness": "little", "vertexType": "float32", "indexType": "uint32",
         "vertexCount": int(vertices.shape[0]), "indexCount": int(indices.size),
         "triangleCount": int(indices.size // 3),
-        "vertexStrideBytes": 24, "positionOffsetBytes": 0, "normalOffsetBytes": 12,
+        "vertexStrideBytes": 32, "positionOffsetBytes": 0, "normalOffsetBytes": 12,
+        "uvOffsetBytes": 24, "uvLayer": uv_layer_name,
+        "materialConfig": json.loads(bpy.context.scene.get('mission_material_config','{}')),
         "vertexByteOffset": 0, "vertexByteLength": int(vertices.nbytes),
         "indexByteOffset": int(vertices.nbytes), "indexByteLength": int(indices.nbytes),
         "totalByteLength": expected_length, "bounds": mesh_bounds, "parts": parts,

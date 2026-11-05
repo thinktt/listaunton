@@ -1,0 +1,64 @@
+{
+  "bump_distance": 0.008,
+  "bump_strength": 0.22,
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "image_bump": true,
+  "image_mix": 1,
+  "lights": [
+    {
+      "energy": 1100,
+      "name": "Top reflection",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "size": 0.6
+    },
+    {
+      "energy": 400,
+      "name": "Right key",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "size": 0.5
+    },
+    {
+      "energy": 150,
+      "name": "Foot strip",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "size": 0.7,
+      "target": [
+        0,
+        0,
+        0.3
+      ]
+    }
+  ],
+  "pore_mix": 0.2,
+  "pore_noise": 180,
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "samples": 64,
+  "saturation": 1,
+  "source": "build/queen-mission/012-projected-pigment/queen.blend",
+  "texture": "assets/queen/queen-pigment-albedo.png",
+  "uv_meridian_scale": 5.5,
+  "uv_offset_v": 0.13,
+  "uv_repeat_u": 1,
+  "value": 1,
+  "variant": "013-pigment-atlas",
+  "world": 0.03,
+  "uv_layer": "Pigment atlas",
+  "atlas_size": 2048,
+  "atlas_bakes_lighting": false,
+  "source_sha256": "4f97e3cfb1fcdce74167871c838f02d244bb79655aecf490897ac3b4c3bd591a",
+  "texture_sha256": "28c600f1d607cce7091d39079a40407380aab3246988ed081429254c7f727d94"
+}

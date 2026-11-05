@@ -1,0 +1,59 @@
+{
+  "variant": "011-directional-wood",
+  "source": "build/queen-mission/008-compact/queen.blend",
+  "texture": "assets/queen/walnut-fine-albedo.png",
+  "uv_repeat_u": 1,
+  "uv_meridian_scale": 5.5,
+  "uv_offset_v": 0.13,
+  "saturation": 1,
+  "value": 0.85,
+  "image_mix": 0.9,
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "bump_strength": 0.22,
+  "bump_distance": 0.008,
+  "image_bump": true,
+  "lights": [
+    {
+      "name": "Top reflection",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "energy": 1100,
+      "size": 0.6
+    },
+    {
+      "name": "Right key",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "energy": 400,
+      "size": 0.5
+    },
+    {
+      "name": "Foot strip",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "energy": 150,
+      "size": 0.7,
+      "target": [
+        0,
+        0,
+        0.3
+      ]
+    }
+  ],
+  "world": 0.03,
+  "samples": 64,
+  "pore_noise": 180,
+  "pore_mix": 0.2
+}

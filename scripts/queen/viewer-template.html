@@ -49,6 +49,7 @@ const vs=`#version 300 es
 precision highp float;
 layout(location=0) in vec3 aPosition;
 layout(location=1) in vec3 aNormal;
+layout(location=2) in vec2 aUV;
 uniform vec3 uCenter;
 uniform mat3 uRotation;
 uniform mat4 uProjection;
@@ -58,7 +59,9 @@ out vec3 vNormal;
 out vec3 vPosition;
 out vec3 vWoodPosition;
 out vec3 vWoodNormal;
+out vec2 vUV;
 void main(){
+ vUV=aUV;
  vWoodPosition=aPosition;
  vWoodNormal=aNormal;
  vec3 p=aPosition-uCenter;
@@ -73,11 +76,13 @@ in vec3 vNormal;
 in vec3 vPosition;
 in vec3 vWoodPosition;
 in vec3 vWoodNormal;
+in vec2 vUV;
 uniform vec3 uColor;
 uniform float uGloss;
 uniform bool uOrthographic;
 uniform bool uWood;
 uniform sampler2D uWoodMap;
+uniform vec3 uWoodParameters;
 out vec4 outColor;
 float hash3(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}
 float noise3(vec3 p){
@@ -95,11 +100,10 @@ void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
  vec3 base=uColor;
  if(uWood){
-  vec3 weights=pow(abs(normalize(vWoodNormal)),vec3(4.0));
-  weights/=max(weights.x+weights.y+weights.z,0.0001);
-  vec3 p=vWoodPosition*0.85;
-  vec3 wood=texture(uWoodMap,p.yz).rgb*weights.x+texture(uWoodMap,p.xz).rgb*weights.y+texture(uWoodMap,p.xy).rgb*weights.z;
-  base=mix(uColor,pow(wood,vec3(2.2)),0.78);
+  vec3 wood=pow(texture(uWoodMap,vec2(vUV.x,1.0-vUV.y)).rgb,vec3(2.2));
+  float gray=dot(wood,vec3(0.2126,0.7152,0.0722));
+  wood=mix(vec3(gray),wood,uWoodParameters.z)*uWoodParameters.y;
+  base=mix(uColor,wood,uWoodParameters.x);
  }
  vec3 c=base*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45,base);
@@ -163,7 +167,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
-  document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'procedural wood preview':'neutral surface');
+  document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'wood preview':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -182,8 +186,9 @@ function initialize(){
  vao=gl.createVertexArray();gl.bindVertexArray(vao);
  const vb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
+ gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,meta.uvOffsetBytes);
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
-  uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uWoodMap'])uniforms[name]=gl.getUniformLocation(program,name);
+  uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uWoodMap','uWoodParameters'])uniforms[name]=gl.getUniformLocation(program,name);
   woodTexture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);
   gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([100,45,18,255]));
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.REPEAT);
@@ -214,6 +219,7 @@ function draw(){
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
   gl.uniform1i(uniforms.uWood,material==='brown'?1:0);
+  const woodParams=meta.materialConfig||{};gl.uniform3fv(uniforms.uWoodParameters,[woodParams.image_mix??.78,woodParams.value??1,woodParams.saturation??1]);
   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);gl.uniform1i(uniforms.uWoodMap,0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);

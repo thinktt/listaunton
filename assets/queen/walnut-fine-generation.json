@@ -1,0 +1,8 @@
+{
+  "generator": "built-in image_gen",
+  "generated_at": "2026-11-05",
+  "input": "assets/queen/reference.png",
+  "output": "assets/queen/walnut-fine-albedo.png",
+  "purpose": "Trial unlit material swatch; source reference unchanged",
+  "prompt": "Use case: stylized-concept. Asset type: seamless flat base-color wood texture for a real Blender material. Input image 1 is a material/style reference, not the desired output composition. Study the warm antique brown polished wood on the queen, especially its broad base and crown. Generate a square, edge-to-edge unlit albedo swatch of that same wood, with smoothly flowing mostly horizontal fine growth lines, occasional delicate wandering dark branched grain lines, very subtle pores, and rich golden reddish-brown variation. Grain should be fine and restrained with a few larger, irregular dark markings like the base in the reference, not a rough coarse timber surface and not curly burl. Flat diffuse color only: remove all directional illumination, white specular reflections, shadows, bevels and vignetting. The finish will be provided by a 3D shader. No queen, chess piece, object, outline, border, background, or text. No boards or seams. Entire image should be one continuous smooth hardwood texture, evenly lit and tileable. Preserve the reference wood's natural warm brown hues without pale pink/grey colors, orange neon, or black stripes."
+}

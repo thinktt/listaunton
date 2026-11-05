@@ -7,7 +7,9 @@ The side-view target is the owner's saved queen height of **83.4% of the
 king**. To translate that cross-piece preference into a physical model size,
 we normalize the 54-degree king model by its base diameter and use the measured
 original-sprite queen-to-king base-width ratio (132/139). This implies a queen
-height/base-diameter ratio of 2.1793. The evaluated model measures 2.1799.
+height/base-diameter ratio of 2.1793. The mission's compact-finial iteration
+measures 2.1670, within the existing 0.015 validation tolerance (physical height
+is 0.59% below the mission starting model). The gallery defaults are unchanged.
 That translation depends on the king model and the assumption that the sprites
 share a render scale; it is not an independently measured physical height.
 
@@ -21,12 +23,20 @@ for the dark references. They do not establish a perfect fit of the interior
 contours, wood, lighting, or hidden surfaces. The collars, finial, and lighting
 still have visible differences from the selected image.
 
-The Blender file contains an editable, packed generated wood albedo and a
-procedural component with studio lights. The viewer embeds the same image and
-uses a real-time triplanar approximation of the Blender material and lights;
-its shading will not be pixel-identical to Cycles. The texture's generator,
-reference, and full prompt are recorded in `assets/queen/walnut-albedo-generation.json`.
-The photo itself is not projected onto the geometry.
+The first mission checkpoint improves the upper/middle collars and finial
+seating and uses reference-derived pigment with continuous generated grain on
+hidden surfaces. ImageGen made a separate de-lit material source; the original
+reference remains unchanged. Its pigment is projected into fixed mesh UVs and
+baked into `assets/queen/queen-pigment-albedo.png`, with no scene lighting in the
+bake. Some inferred pigment still contains residual recess shading and invented
+grain. Prompts are recorded in `reference-delit-generation.json` and
+`walnut-fine-generation.json` alongside those images.
+
+The Blender file contains the packed editable material and studio lights. The
+viewer embeds the same pigment atlas and exports the same UVs, with seam vertices
+split without simplifying geometry. Its real-time shading remains an
+approximation of Cycles. Mission evidence and honest scores are recorded in
+`docs/queen-mission-log.md`; this is still an unfinished reconstruction.
 
 The review opens on the original Lichess image and includes a Side comparison tab. The side guide is an imagined view; the model render is uniformly registered to its foot width and floor, with extra room above to prevent clipping. Its neutral and wood images are rendered from the same side camera.
 
@@ -35,19 +45,24 @@ study are archived in `history/queen-before-54-finish`. The existing projection
 pages still show those historical alternatives, not the new current queen.
 Their build and validation scripts use the archived baseline.
 
-Rebuild from the repository root with Blender, Python with NumPy and Pillow,
-and Node.js:
+Do not run `build_finished_queen.py` to rebuild the current material: it describes
+the older mission starting point. Reproduce the accepted mission chain from the
+repository root with Blender, Python with NumPy and Pillow, and Node.js:
 
 ```sh
-python scripts/queen/fit_54_finish.py
-blender -b --python scripts/queen/build_finished_queen.py
+blender -b --python scripts/queen/refine_mission.py -- --variant 008-compact --samples 32 --config docs/queen-mission/iteration-001/008-compact-config.json
+blender -b --python scripts/queen/material_from_config.py -- docs/queen-mission/iteration-001/011-directional-config.json
+blender -b --python scripts/queen/project_reference_material.py
+blender -b --python scripts/queen/bake_pigment_atlas.py
+blender -b --python scripts/queen/validate_finished_queen.py -- --blend build/queen-mission/013-pigment-atlas/queen.blend --report-dir build/queen-mission/013-pigment-atlas
+python scripts/queen/audit_mission.py 013-pigment-atlas
+blender -b --python scripts/queen/publish_mission_trial.py -- 013-pigment-atlas
 blender -b --python scripts/queen/validate_finished_queen.py
 blender -b --python scripts/queen/export_viewer_mesh.py
 blender -b --python scripts/queen/inspect_viewer_camera.py
 python scripts/queen/build_viewer.py
 python scripts/queen/overlay_qa.py --reference-mask max-channel
 python scripts/queen/compare_finished_queen.py
-blender -b --python scripts/queen/render_wood_profile.py
 python scripts/queen/build_side_comparison.py
 node scripts/queen/check_viewer_camera.cjs
 node scripts/queen/check_review_reference.cjs

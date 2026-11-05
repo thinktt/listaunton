@@ -11,7 +11,7 @@ out = root / 'review.html'
 meta = json.loads((work / 'viewer-mesh.json').read_text())
 fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes',
           'vertexByteLength', 'indexByteOffset', 'totalByteLength', 'bounds', 'sourceSha256',
-          'referenceCamera']
+          'referenceCamera', 'uvOffsetBytes', 'uvLayer', 'materialConfig']
 blend = root / 'models' / 'queen' / 'queen-rebuilt.blend'
 if hashlib.sha256(blend.read_bytes()).hexdigest() != meta['sourceSha256']:
     raise RuntimeError('Export the current Blender model before rebuilding its viewer.')
@@ -22,7 +22,8 @@ template = (Path(__file__).resolve().parent / 'viewer-template.html').read_text(
 payload = base64.b64encode((work / 'viewer-mesh.bin').read_bytes()).decode('ascii')
 html = template.replace('__MESH_META__', json.dumps(public_meta, separators=(',', ':')))
 html = html.replace('__MESH_BASE64__', payload)
-html = html.replace('__WOOD_BASE64__', base64.b64encode((root / 'assets/queen/walnut-albedo.png').read_bytes()).decode('ascii'))
+texture = root / meta['materialConfig'].get('texture','assets/queen/walnut-albedo.png')
+html = html.replace('__WOOD_BASE64__', base64.b64encode(texture.read_bytes()).decode('ascii'))
 page=out.read_text(encoding='utf-8')
 parts=(Path(__file__).resolve().parent/'parts-template.html').read_text(encoding='utf-8')
 for ident,document in [('viewer-document',html),('parts-document',parts)]:
