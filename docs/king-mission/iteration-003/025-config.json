@@ -1,0 +1,72 @@
+{
+  "variant": "025-confined-cross-reflections",
+  "source": "build/king-mission/024-realigned-cross-cap/king.blend",
+  "source_sha256": "57b010da2144d30cb9d1908e138d650a7ca2e2a7ada77398dd45a5cdca07a3f2",
+  "existing_light_power": {
+    "Cross arm glint": 0
+  },
+  "existing_light_receivers": {
+    "Upper varnish": [
+      "body"
+    ],
+    "Front varnish": [
+      "body"
+    ]
+  },
+  "reflectors": [
+    {
+      "name": "Cross left arm reflection",
+      "pixel": [
+        440,
+        85
+      ],
+      "energy": 550,
+      "degrees": 3.2,
+      "radius": 0.14
+    },
+    {
+      "name": "Cross right arm reflection",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 1200,
+      "degrees": 3.2,
+      "radius": 0.14
+    },
+    {
+      "name": "Cross cap center reflection",
+      "pixel": [
+        505,
+        43
+      ],
+      "energy": 600,
+      "degrees": 2,
+      "radius": 0.1
+    },
+    {
+      "name": "Cross cap left reflection",
+      "pixel": [
+        480,
+        50
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.08
+    },
+    {
+      "name": "Cross cap right reflection",
+      "pixel": [
+        535,
+        51
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.08
+    }
+  ],
+  "samples": 96,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "Confine body varnish lights to the turned body, then illuminate the rounded cross edges with independent real glossy lights. The cross roof should remain brown while its bevels catch the localized reflections."
+}

@@ -1,0 +1,29 @@
+{
+  "source_sha256": "b5a8e5937b0f1055d39ac6d83ffc1dd4b4df912eb3795ca0774574afbf07c745",
+  "original_powers": {
+    "Cross left arm reflection": 550.0,
+    "Cross right arm reflection": 1200.0,
+    "Cross cap center reflection": 600.0,
+    "Cross cap left reflection": 400.0,
+    "Cross cap right reflection": 400.0
+  },
+  "fitted_powers": {
+    "Cross left arm reflection": 543.7077300444761,
+    "Cross right arm reflection": 3642.288489768609,
+    "Cross cap center reflection": 8860.281423233431,
+    "Cross cap left reflection": 81.56865093273129,
+    "Cross cap right reflection": 857.0085693337616
+  },
+  "gain": [
+    0.9885595091717746,
+    3.0352404081405076,
+    14.767135705389054,
+    0.20392162733182823,
+    2.142521423334404
+  ],
+  "before_weighted_squared_residual": 0.38504622214220036,
+  "predicted_weighted_squared_residual": 0.3744351699303931,
+  "iterations": 5,
+  "pixels": 24549,
+  "method": "Nonnegative coordinate-descent fit of actual linear BSDF light responses; actual full render determines acceptance, not predicted loss."
+}

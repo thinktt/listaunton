@@ -1,0 +1,23 @@
+{
+  "variant": "024-realigned-cross-cap",
+  "source": "build/king-mission/024-realigned-cross-cap/prepared.blend",
+  "center_drop": 0.0,
+  "edge_drop": 0.045,
+  "back_edge_drop": 0.035,
+  "cuts": 13,
+  "smooth_cap": true,
+  "smooth_edges": true,
+  "samples": 96,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Preserve the cap center height, curve the front ends down, and gently round the upper rear contour. Prior cap lowering placed the carved edge below the reference. Body, camera and overall height remain fixed.",
+  "original_source": "models/king/king-rebuilt.blend",
+  "original_source_sha256": "26eeb9b02aae56ebe6057237c4c618ed2a1576679f2d8eea70c9812ed879faf1",
+  "changed_cross_vertices": 252,
+  "cross_volume": 0.07536784391920683,
+  "body_controls_unchanged": true,
+  "overall_height_unchanged": true,
+  "source_sha256": "cb6820871de8362d977fba7429b8b6556bc0f463022b1b84ca42b1c7e38158da",
+  "model_sha256": "57b010da2144d30cb9d1908e138d650a7ca2e2a7ada77398dd45a5cdca07a3f2",
+  "elevation_degrees": 54.000000800055794
+}

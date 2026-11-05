@@ -1,0 +1,11 @@
+{
+  "variant": "028-curved-cross-atlas",
+  "source": "history/king-mission-003-pre-atlas/king.blend",
+  "source_sha256": "c3c5d698bcd430fa437de9cd59d088b56eb0fac450c8fd2dcbd4cd52487258d3",
+  "texture": "assets/king/materials/king-pigment-atlas-v4.png",
+  "preserve_previous_atlas_uv": true,
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Bake the revised cross pigment into fresh cross UV islands, retain old UVs for source sampling, and preserve the accepted body atlas pixels exactly."
+}

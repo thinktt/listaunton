@@ -1,0 +1,64 @@
+{
+  "variant": "022-cross-edge-reflections",
+  "source": "build/king-mission/021-smooth-carved-bevels/king.blend",
+  "source_sha256": "68a8f1c800e9fdd4ce25a3fb48e655e92dd45be96f32f992b9fcbd41c4aff68d",
+  "samples": 96,
+  "neutral": false,
+  "profile": false,
+  "existing_light_power": {
+    "Cross arm glint": 0
+  },
+  "reflectors": [
+    {
+      "name": "Cross left arm reflection",
+      "pixel": [
+        440,
+        85
+      ],
+      "energy": 550,
+      "degrees": 3.2,
+      "radius": 0.14
+    },
+    {
+      "name": "Cross right arm reflection",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 550,
+      "degrees": 3.2,
+      "radius": 0.14
+    },
+    {
+      "name": "Cross cap center reflection",
+      "pixel": [
+        505,
+        48
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.1
+    },
+    {
+      "name": "Cross cap left reflection",
+      "pixel": [
+        485,
+        52
+      ],
+      "energy": 180,
+      "degrees": 2,
+      "radius": 0.08
+    },
+    {
+      "name": "Cross cap right reflection",
+      "pixel": [
+        530,
+        53
+      ],
+      "energy": 180,
+      "degrees": 2,
+      "radius": 0.08
+    }
+  ],
+  "hypothesis": "Replace the broad cross reflector with confined arm and cap-edge reflections aimed using the new actual smooth surface normals. Preserve all other lighting and pigment."
+}

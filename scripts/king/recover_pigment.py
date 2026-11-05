@@ -48,6 +48,13 @@ def main(cfg):
         im.pixels.foreach_set(rgba[::-1].copy().reshape(-1));im.file_format='OPEN_EXR';im.filepath_raw=str(out/(name+'.exr'));im.save();im.pack();return im
     color=image('king-recovered-pigment',pigment);confidence=image('king-pigment-confidence',np.repeat(reliability[:,:,None],3,axis=2))
     objects=meshes(s)
+    scoped=info.get('partial_object_response',False)
+    if scoped:
+        assert set(info['object_names']).issubset({ob.name for ob in objects})
+        for ob in objects:
+            attr=ob.data.attributes.get('Pigment response region') or ob.data.attributes.new('Pigment response region','FLOAT','POINT')
+            value=1.0 if ob.name in info['object_names'] else 0.0
+            attr.data.foreach_set('value',np.full(len(ob.data.vertices),value,dtype=np.float32))
     for ob in objects:
         uv=ob.data.uv_layers.get('Response pigment') or ob.data.uv_layers.new(name='Response pigment');coords=[]
         for v in ob.data.vertices:
@@ -59,7 +66,11 @@ def main(cfg):
     c=n.new('ShaderNodeTexImage');c.name='Pigment estimation confidence';c.image=confidence;c.extension='EXTEND';l.new(uv.outputs[0],c.inputs['Vector'])
     attribute=n.new('ShaderNodeAttribute');attribute.attribute_name='Pigment coverage'
     weight=n.new('ShaderNodeMath');weight.operation='MULTIPLY';l.new(c.outputs['Color'],weight.inputs[0]);l.new(attribute.outputs['Fac'],weight.inputs[1])
-    mix=n.new('ShaderNodeMixRGB');mix.name='Measured pigment with bounded confidence';l.new(weight.outputs[0],mix.inputs[0]);l.new(previous,mix.inputs[1]);l.new(a.outputs['Color'],mix.inputs[2]);l.new(mix.outputs[0],bs.inputs['Base Color'])
+    factor=weight.outputs[0]
+    if scoped:
+        region=n.new('ShaderNodeAttribute');region.attribute_name='Pigment response region'
+        gate=n.new('ShaderNodeMath');gate.operation='MULTIPLY';l.new(factor,gate.inputs[0]);l.new(region.outputs['Fac'],gate.inputs[1]);factor=gate.outputs[0]
+    mix=n.new('ShaderNodeMixRGB');mix.name='Measured pigment with bounded confidence';l.new(factor,mix.inputs[0]);l.new(previous,mix.inputs[1]);l.new(a.outputs['Color'],mix.inputs[2]);l.new(mix.outputs[0],bs.inputs['Base Color'])
     s['king_recovered_pigment_method']='Inverse local real-BSDF black/white response, confidence-masked; live specular/coat and all lights retained.'
     rendercfg=dict(cfg);rendercfg.update(source=(out/'prepared.blend').relative_to(ROOT).as_posix(),original_source=info['source'],original_source_sha256=digest,reference_sha256=hashlib.sha256((ROOT/'assets/king/reference.png').read_bytes()).hexdigest(),reference_pixel_500_700=list(map(float,raw[700,500])),pigment_bounds=[.001,.8],confidence_mean_foreground=float(reliability[white[:,:,3]>.99].mean()),fraction_foreground_over_half_confidence=float((reliability[white[:,:,3]>.99]>.5).mean()),limitation='Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.')
     bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'prepared.blend'));run(rendercfg)

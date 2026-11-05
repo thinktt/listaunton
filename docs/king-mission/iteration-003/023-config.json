@@ -1,0 +1,16 @@
+{
+  "variant": "023-fitted-cross-reflections",
+  "source": "build/king-mission/022-cross-edge-reflections/king.blend",
+  "source_sha256": "21079bbd8c62024a0418aed6e95ae7480a60ea69f52bb9a18ccf8e66970f0aa0",
+  "lights": [
+    "Cross left arm reflection",
+    "Cross right arm reflection",
+    "Cross cap center reflection",
+    "Cross cap left reflection",
+    "Cross cap right reflection"
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit the five confined cross light powers against actual rendered responses, retaining shape, color and all other lights. Judge the actual full render, not just the numerical loss."
+}

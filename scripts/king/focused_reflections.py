@@ -4,7 +4,7 @@ import argparse,hashlib,json,math,sys
 import bpy
 from mathutils import Vector
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from mission_trial import ROOT,run
+from mission_trial import ROOT,run,meshes
 
 def target(scene,x,y):
     graph=bpy.context.evaluated_depsgraph_get();cam=scene.camera
@@ -29,6 +29,13 @@ def target(scene,x,y):
 def main(cfg):
     source=ROOT/cfg['source'];digest=hashlib.sha256(source.read_bytes()).hexdigest();assert digest==cfg['source_sha256']
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
+    for name,energy in cfg.get('existing_light_power',{}).items():bpy.data.objects[name].data.energy=energy
+    for name,parts in cfg.get('existing_light_receivers',{}).items():
+        receiver=bpy.data.collections.new(name+' confined receiver')
+        found=[ob for ob in meshes(s) if any(part in ob.name for part in parts)]
+        assert found,(name,parts)
+        for ob in found:receiver.objects.link(ob)
+        bpy.data.objects[name].light_linking.receiver_collection=receiver
     probes=[]
     for row in cfg['reflectors']:
         ob,point,direction,normal=target(s,*row['pixel']);position=point+direction*row.get('distance',6)

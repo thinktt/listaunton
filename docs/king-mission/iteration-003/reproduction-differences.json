@@ -1,0 +1,49 @@
+{
+  "pixels_over_one_channel": 2,
+  "locations_over_one_channel": [
+    [
+      527,
+      48,
+      [
+        194,
+        165,
+        148,
+        255
+      ],
+      [
+        193,
+        162,
+        144,
+        255
+      ]
+    ],
+    [
+      528,
+      48,
+      [
+        193,
+        164,
+        149,
+        255
+      ],
+      [
+        192,
+        163,
+        147,
+        255
+      ]
+    ]
+  ],
+  "changed_pixels": 163,
+  "atlas_max_255": 1,
+  "atlas_mean_255": 1.8358230590820312e-05,
+  "atlas_changed_pixels": 303,
+  "body_atlas_identical": true,
+  "light_fit_power_differences": {
+    "Cross left arm reflection": 0.018552819657202235,
+    "Cross right arm reflection": 0.005493415117143741,
+    "Cross cap center reflection": 0.11969369379221462,
+    "Cross cap left reflection": 0.025213940092584153,
+    "Cross cap right reflection": -0.007863611937978021
+  }
+}

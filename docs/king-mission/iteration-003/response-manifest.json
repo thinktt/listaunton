@@ -1,0 +1,18 @@
+{
+  "source": "build/king-mission/026-fitted-confined-cross/king.blend",
+  "source_sha256": "2b5f2155c62806f069e318557d690764321fe14d31688c90b72a1555e77fd98e",
+  "object_names": [
+    "King - beveled cross"
+  ],
+  "partial_object_response": true,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "view_transform": "AgX",
+  "look": "None",
+  "display_device": "sRGB",
+  "exposure": 0.0,
+  "gamma": 1.0,
+  "method": "Black and white pigment in the actual Principled BSDF, retaining normals, coat, lights, geometry and camera. Difference approximates local diffuse response; multibounce effects limit inversion."
+}

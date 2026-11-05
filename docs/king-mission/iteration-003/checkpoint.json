@@ -1,0 +1,36 @@
+{
+  "model_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "render_sha256": "6bb837197a00cd1b584bac4f0b9aea815594f71713231a1f7fa796edee41b7bc",
+  "texture_sha256": "920f373a6bffa2c41e6fea81d4f01663f95c49550e7f4665f076c2c77ab6b007",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+  "accepted_trial": "028-curved-cross-atlas",
+  "scorecard": {
+    "variant": "028-curved-cross-atlas",
+    "scores": {
+      "silhouette": 97.82596329117995,
+      "interior_form": 82,
+      "wood_color": 81,
+      "grain_texture": 77,
+      "lighting": 55
+    },
+    "mean": 78.56519265823599,
+    "original_iou": 0.9682389565354454,
+    "highres_iou": 0.9782596329117994,
+    "assessment": "Accepted checkpoint 003: fresh cross islands and pigment atlas preserve body pixels exactly; saved, reopened, geometry, export and review checks pass.",
+    "accepted_checkpoint": true
+  },
+  "holistic_visual_range": [
+    70,
+    80
+  ],
+  "validation": {
+    "saved_scene_geometry_camera_material": "passed",
+    "reopened_render_and_texture_persistence": "passed",
+    "exact_viewer_camera_and_controls": "passed; simulated DOM/WebGL harness",
+    "candidate_site_set_and_historical_projection_checks": "passed",
+    "full_pipeline_reproduction": "passed with two localized glint pixels above 1/255; see full-reproduction-check.json",
+    "local_preview": "31 king files copied and hash-verified"
+  },
+  "pending": "Further visual refinement; goal active and incomplete."
+}

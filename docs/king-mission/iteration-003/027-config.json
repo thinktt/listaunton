@@ -1,0 +1,9 @@
+{
+  "variant": "027-cross-pigment-registration",
+  "response": "build/king-mission/027-cross-response",
+  "strength": 0.95,
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Estimate pigment only on the curved cross using its actual black/white BSDF response; preserve turned-body pigment and all lighting. Bright reflection pixels retain prior pigment through bounded confidence."
+}

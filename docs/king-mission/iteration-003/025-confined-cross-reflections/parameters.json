@@ -1,0 +1,218 @@
+{
+  "variant": "025-confined-cross-reflections",
+  "source": "build/king-mission/025-confined-cross-reflections/prepared.blend",
+  "existing_light_power": {
+    "Cross arm glint": 0
+  },
+  "existing_light_receivers": {
+    "Upper varnish": [
+      "body"
+    ],
+    "Front varnish": [
+      "body"
+    ]
+  },
+  "reflectors": [
+    {
+      "name": "Cross left arm reflection",
+      "pixel": [
+        440,
+        85
+      ],
+      "energy": 550,
+      "degrees": 3.2,
+      "radius": 0.14
+    },
+    {
+      "name": "Cross right arm reflection",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 1200,
+      "degrees": 3.2,
+      "radius": 0.14
+    },
+    {
+      "name": "Cross cap center reflection",
+      "pixel": [
+        505,
+        43
+      ],
+      "energy": 600,
+      "degrees": 2,
+      "radius": 0.1
+    },
+    {
+      "name": "Cross cap left reflection",
+      "pixel": [
+        480,
+        50
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.08
+    },
+    {
+      "name": "Cross cap right reflection",
+      "pixel": [
+        535,
+        51
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.08
+    }
+  ],
+  "samples": 96,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "Confine body varnish lights to the turned body, then illuminate the rounded cross edges with independent real glossy lights. The cross roof should remain brown while its bevels catch the localized reflections.",
+  "original_source": "build/king-mission/024-realigned-cross-cap/king.blend",
+  "original_source_sha256": "57b010da2144d30cb9d1908e138d650a7ca2e2a7ada77398dd45a5cdca07a3f2",
+  "reflector_probes": [
+    {
+      "name": "Cross left arm reflection",
+      "pixel": [
+        440,
+        85
+      ],
+      "energy": 550,
+      "degrees": 3.2,
+      "radius": 0.14,
+      "point": [
+        -0.2455529272556305,
+        -0.0713801383972168,
+        4.858152866363525
+      ],
+      "normal": [
+        0.0004911169526167214,
+        -0.382450133562088,
+        0.923975944519043
+      ],
+      "position": [
+        -0.23982271552085876,
+        -1.0069935321807861,
+        10.784753799438477
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Cross right arm reflection",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 1200,
+      "degrees": 3.2,
+      "radius": 0.14,
+      "point": [
+        0.21871843934059143,
+        -0.06772804260253906,
+        4.859331130981445
+      ],
+      "normal": [
+        -0.00041579021490179,
+        -0.25585445761680603,
+        0.9667152762413025
+      ],
+      "position": [
+        0.21406586468219757,
+        0.5960437655448914,
+        10.822500228881836
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Cross cap center reflection",
+      "pixel": [
+        505,
+        43
+      ],
+      "energy": 600,
+      "degrees": 2,
+      "radius": 0.1,
+      "point": [
+        -0.01459533255547285,
+        -0.07595491409301758,
+        5.122739315032959
+      ],
+      "normal": [
+        -0.04252437502145767,
+        -0.5605940818786621,
+        0.8269981741905212
+      ],
+      "position": [
+        -0.5241552591323853,
+        -3.2667157649993896,
+        10.178369522094727
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Cross cap left reflection",
+      "pixel": [
+        480,
+        50
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.08,
+      "point": [
+        -0.10368193686008453,
+        -0.08530473709106445,
+        5.091883659362793
+      ],
+      "normal": [
+        -0.13110214471817017,
+        -0.9261029958724976,
+        0.3537589907646179
+      ],
+      "position": [
+        -1.410319447517395,
+        -5.7886552810668945,
+        3.7635416984558105
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Cross cap right reflection",
+      "pixel": [
+        535,
+        51
+      ],
+      "energy": 400,
+      "degrees": 2,
+      "radius": 0.08,
+      "point": [
+        0.092768594622612,
+        -0.08654451370239258,
+        5.090138912200928
+      ],
+      "normal": [
+        0.07303948700428009,
+        -0.9732933044433594,
+        0.2176356166601181
+      ],
+      "position": [
+        0.74850994348526,
+        -5.297964572906494,
+        2.1899476051330566
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "source_sha256": "c09d4031860c80b2cd910c6140c82fad067ce26fb5382e141584ca261684a700",
+  "model_sha256": "b5a8e5937b0f1055d39ac6d83ffc1dd4b4df912eb3795ca0774574afbf07c745",
+  "elevation_degrees": 54.000000800055794
+}

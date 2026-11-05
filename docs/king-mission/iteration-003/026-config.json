@@ -1,0 +1,16 @@
+{
+  "variant": "026-fitted-confined-cross",
+  "source": "build/king-mission/025-confined-cross-reflections/king.blend",
+  "source_sha256": "b5a8e5937b0f1055d39ac6d83ffc1dd4b4df912eb3795ca0774574afbf07c745",
+  "lights": [
+    "Cross left arm reflection",
+    "Cross right arm reflection",
+    "Cross cap center reflection",
+    "Cross cap left reflection",
+    "Cross cap right reflection"
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit confined cross lights after the corrected cap curvature and body-light separation. Preserve body material and fixed camera."
+}

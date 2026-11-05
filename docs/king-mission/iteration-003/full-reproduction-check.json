@@ -1,0 +1,12 @@
+{
+  "reproduced_from": "history/king-mission-002/king-rebuilt.blend",
+  "full_chain": "curve, confined reflectors, fitted powers, cross-only measured response and pigment, preserved-body atlas",
+  "accepted_model_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "reproduced_model_sha256": "09d01f964f3aa507886bef9808976831b20cbc4059f2567861365f282d5afe70",
+  "maximum_channel_error_255": 4,
+  "mean_foreground_rgb_error_255": 0.00014714537963507945,
+  "alpha_identical": true,
+  "atlas_bytes_identical": false,
+  "pixels_over_one_channel": 2,
+  "review": "Initial 1/255 full-reproduction threshold flagged two adjacent cross-glint pixels. The independent measured light fits differ slightly and 303 cross-atlas pixels quantize differently by 1/255; body atlas and silhouette are identical. Accepted as subvisual numerical variation after localization, not hidden by a blanket mean-only test."
+}

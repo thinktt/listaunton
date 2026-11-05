@@ -1,0 +1,8 @@
+{
+  "variant":"020-curved-cross-cap",
+  "source":"models/king/king-rebuilt.blend",
+  "source_sha256":"26eeb9b02aae56ebe6057237c4c618ed2a1576679f2d8eea70c9812ed879faf1",
+  "center_drop":0.045,"edge_drop":0.05,"cuts":12,"smooth_cap":true,
+  "samples":96,"neutral":true,"profile":true,
+  "hypothesis":"Both original sprites show an arched upper-cap front edge. Lower the front cap center and its outer corners gently, keeping the back cap and total height fixed; retain the accepted material and lights."
+}

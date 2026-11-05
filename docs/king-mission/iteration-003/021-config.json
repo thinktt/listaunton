@@ -1,0 +1,8 @@
+{
+  "variant":"021-smooth-carved-bevels",
+  "source":"models/king/king-rebuilt.blend",
+  "source_sha256":"26eeb9b02aae56ebe6057237c4c618ed2a1576679f2d8eea70c9812ed879faf1",
+  "center_drop":0.045,"edge_drop":0.05,"cuts":12,"smooth_cap":true,"smooth_edges":true,
+  "samples":96,"neutral":true,"profile":false,
+  "hypothesis":"Retain the curved central cap and smooth the existing bevel strips, keeping the large cross front/back faces flat. Their flat per-strip shading currently produces unnaturally thin straight glints."
+}

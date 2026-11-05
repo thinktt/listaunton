@@ -11,6 +11,18 @@ def main(cfg):
     if cfg.get('source_sha256'):assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['source_sha256']
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
     s=bpy.context.scene;objects=meshes(s);body=next(ob for ob in objects if 'body' in ob.name);cross=next(ob for ob in objects if 'cross' in ob.name)
+    preserved_body=None
+    if cfg.get('preserve_previous_atlas_uv'):
+        previous_image=bpy.data.images[s.get('king_pigment_image','King pigment atlas')]
+        assert tuple(previous_image.size)==(2048,2048) and not previous_image.is_float
+        preserved_body=np.array(previous_image.pixels[:],dtype=np.float32).reshape(2048,2048,4).copy()
+        previous_uv='Previous pigment atlas '+cfg['variant']
+        for ob in objects:
+            assert previous_uv not in ob.data.uv_layers
+            ob.data.uv_layers['Pigment atlas'].name=previous_uv
+        for mat in {ob.data.materials[0] for ob in objects}:
+            for node in mat.node_tree.nodes:
+                if node.type=='UVMAP' and node.uv_map=='Pigment atlas':node.uv_map=previous_uv
     co=np.array([v.co[:] for v in body.data.vertices]).reshape(-1,96,3);r=np.linalg.norm(co[:,:,:2],axis=2).mean(1);z=co[:,:,2].mean(1)
     arc=np.r_[0,np.cumsum(np.hypot(np.diff(r),np.diff(z)))];arc/=arc[-1]
     uv=body.data.uv_layers.get('Pigment atlas') or body.data.uv_layers.new(name='Pigment atlas')
@@ -42,6 +54,11 @@ def main(cfg):
     for ob in objects:ob.select_set(True)
     bpy.context.view_layer.objects.active=body;gpu(s);s.cycles.samples=1;s.render.bake.margin=6
     bpy.ops.object.bake(type='EMIT',use_clear=True)
+    if preserved_body is not None:
+        baked=np.array(atlas.pixels[:],dtype=np.float32).reshape(2048,2048,4)
+        # Body UVs occupy x <= .78; the cross starts at .8. Preserve body pigment
+        # bytes instead of filtering the already accepted atlas a second time.
+        baked[:,:1618]=preserved_body[:,:1618];atlas.pixels.foreach_set(baked.reshape(-1))
     atlaspath=ROOT/cfg['texture'];atlaspath.parent.mkdir(parents=True,exist_ok=True);atlas.filepath_raw=str(atlaspath);atlas.file_format='PNG';atlas.save();atlas.pack()
     l.new(bs.outputs['BSDF'],output.inputs['Surface']);n.remove(emission)
     uvnode=n.new('ShaderNodeUVMap');uvnode.uv_map='Pigment atlas';l.new(uvnode.outputs[0],target.inputs['Vector']);l.new(target.outputs['Color'],bs.inputs['Base Color'])
@@ -52,7 +69,10 @@ def main(cfg):
     bpy.ops.wm.open_mainfile(filepath=str(out/'prepared.blend'),load_ui=False)
     packed=bpy.data.images[atlas_name];after=np.array(packed.pixels[:],dtype=np.float32)
     error=float(np.max(np.abs(before-after)));assert error<1/255+.0001,error
-    rendercfg={k:v for k,v in cfg.items() if k!='source_sha256'};rendercfg.update(source=str((out/'prepared.blend').relative_to(ROOT)),original_source=cfg['source'],original_source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),atlas_sha256=hashlib.sha256(atlaspath.read_bytes()).hexdigest(),packed_pixel_roundtrip_max_error=error,atlas_bakes_lighting=False)
+    body_error=None
+    if preserved_body is not None:
+        body_error=float(abs(after.reshape(2048,2048,4)[:,:1618]-preserved_body[:,:1618]).max());assert body_error==0,body_error
+    rendercfg={k:v for k,v in cfg.items() if k!='source_sha256'};rendercfg.update(source=str((out/'prepared.blend').relative_to(ROOT)),original_source=cfg['source'],original_source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),atlas_sha256=hashlib.sha256(atlaspath.read_bytes()).hexdigest(),packed_pixel_roundtrip_max_error=error,preserved_body_atlas_max_error=body_error,atlas_bakes_lighting=False)
     run(rendercfg)
 
 if __name__=='__main__':

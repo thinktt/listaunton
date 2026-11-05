@@ -1,0 +1,49 @@
+{
+  "variant": "026-fitted-confined-cross",
+  "source": "build/king-mission/026-fitted-confined-cross/prepared.blend",
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit confined cross lights after the corrected cap curvature and body-light separation. Preserve body material and fixed camera.",
+  "original_source": "build/king-mission/025-confined-cross-reflections/king.blend",
+  "original_source_sha256": "b5a8e5937b0f1055d39ac6d83ffc1dd4b4df912eb3795ca0774574afbf07c745",
+  "light_fit": {
+    "source_sha256": "b5a8e5937b0f1055d39ac6d83ffc1dd4b4df912eb3795ca0774574afbf07c745",
+    "original_powers": {
+      "Cross left arm reflection": 550.0,
+      "Cross right arm reflection": 1200.0,
+      "Cross cap center reflection": 600.0,
+      "Cross cap left reflection": 400.0,
+      "Cross cap right reflection": 400.0
+    },
+    "fitted_powers": {
+      "Cross left arm reflection": 543.7077300444761,
+      "Cross right arm reflection": 3642.288489768609,
+      "Cross cap center reflection": 8860.281423233431,
+      "Cross cap left reflection": 81.56865093273129,
+      "Cross cap right reflection": 857.0085693337616
+    },
+    "gain": [
+      0.9885595091717746,
+      3.0352404081405076,
+      14.767135705389054,
+      0.20392162733182823,
+      2.142521423334404
+    ],
+    "before_weighted_squared_residual": 0.38504622214220036,
+    "predicted_weighted_squared_residual": 0.3744351699303931,
+    "iterations": 5,
+    "pixels": 24549,
+    "method": "Nonnegative coordinate-descent fit of actual linear BSDF light responses; actual full render determines acceptance, not predicted loss."
+  },
+  "fitted_lights": [
+    "Cross left arm reflection",
+    "Cross right arm reflection",
+    "Cross cap center reflection",
+    "Cross cap left reflection",
+    "Cross cap right reflection"
+  ],
+  "source_sha256": "65595114bca2f38d5fbde5586864615aeb5d2bde9355d9153d9d3bfdf63ee2e7",
+  "model_sha256": "2b5f2155c62806f069e318557d690764321fe14d31688c90b72a1555e77fd98e",
+  "elevation_degrees": 54.000000800055794
+}

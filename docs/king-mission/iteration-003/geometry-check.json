@@ -1,0 +1,251 @@
+{
+  "body_controls_topology_transform_subdivision_exact": true,
+  "body_evaluated_position_max_error": 0.0,
+  "body_atlas_uv_max_error": 0.0,
+  "camera_exact": true,
+  "overall_height_and_base_diameter_preserved": true,
+  "only_cross_geometry_deliberately_changed": true,
+  "both_components_closed_positive_volume": true,
+  "before_path": "history/king-mission-002/king-rebuilt.blend",
+  "after_path": "build/king-mission/028-curved-cross-atlas/king.blend",
+  "before": {
+    "objects": {
+      "King - continuous turned body": {
+        "positions_sha256": "a69be9011c821fe459bc59b2ff3da21f78ded9bc7a526c62814d4614007aea05",
+        "faces_sha256": "12f48c6f07a72c52981179388d38f230027b4b747488a13a76f82ce47c505e72",
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "modifiers": [
+          [
+            "SUBSURF",
+            1,
+            1
+          ]
+        ],
+        "vertices": 8448,
+        "bounds": [
+          [
+            -1.0357142686843872,
+            -1.0357142686843872,
+            0.0
+          ],
+          [
+            1.0357142686843872,
+            1.0357142686843872,
+            4.361145496368408
+          ]
+        ],
+        "nonmanifold_edges": 0,
+        "volume": 4.5003003774877515
+      },
+      "King - beveled cross": {
+        "positions_sha256": "c71e807f53c77cbe372d48fe68d0f9f48659ada5d52ca17a7bb6e4d736d99e41",
+        "faces_sha256": "4c7b272694824f0a5bb26a1ae769bb034c9e376dda196027caa12072ccc53eb7",
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "modifiers": [],
+        "vertices": 24,
+        "bounds": [
+          [
+            -0.3571428656578064,
+            -0.08696740120649338,
+            4.167631149291992
+          ],
+          [
+            0.3571428656578064,
+            0.08696740120649338,
+            5.127651214599609
+          ]
+        ],
+        "nonmanifold_edges": 0,
+        "volume": 0.07606263364887055
+      }
+    },
+    "camera": {
+      "matrix": [
+        0.9999691843986511,
+        -0.00785390380769968,
+        4.2291378732350893e-10,
+        0.0,
+        0.00635394174605608,
+        0.8089920282363892,
+        -0.5877852439880371,
+        -7.053422927856445,
+        0.004616408608853817,
+        0.5877671241760254,
+        0.80901700258255,
+        11.178056716918945,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "type": "ORTHO",
+      "scale": 4.47857141494751,
+      "shift": [
+        0.09768740087747574,
+        0.0
+      ],
+      "resolution": [
+        1254,
+        1254
+      ],
+      "elevation": 54.000000800055794
+    },
+    "height": 5.127651214599609,
+    "base_diameter": 2.0663816928863525,
+    "source_sha256": "26eeb9b02aae56ebe6057237c4c618ed2a1576679f2d8eea70c9812ed879faf1"
+  },
+  "after": {
+    "objects": {
+      "King - continuous turned body": {
+        "positions_sha256": "a69be9011c821fe459bc59b2ff3da21f78ded9bc7a526c62814d4614007aea05",
+        "faces_sha256": "12f48c6f07a72c52981179388d38f230027b4b747488a13a76f82ce47c505e72",
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "modifiers": [
+          [
+            "SUBSURF",
+            1,
+            1
+          ]
+        ],
+        "vertices": 8448,
+        "bounds": [
+          [
+            -1.0357142686843872,
+            -1.0357142686843872,
+            0.0
+          ],
+          [
+            1.0357142686843872,
+            1.0357142686843872,
+            4.361145496368408
+          ]
+        ],
+        "nonmanifold_edges": 0,
+        "volume": 4.5003003774877515
+      },
+      "King - beveled cross": {
+        "positions_sha256": "ceb0935a68e13d2c45de7c4761dfcc71d060f5cdf562ef864072dfb77a9aff6f",
+        "faces_sha256": "efc2fa747bcda04eadfbad1e010312d9681832a17806d28052873695bd0cd608",
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "modifiers": [],
+        "vertices": 1584,
+        "bounds": [
+          [
+            -0.3571428656578064,
+            -0.08696740120649338,
+            4.167631149291992
+          ],
+          [
+            0.3571428656578064,
+            0.08696740120649338,
+            5.127651214599609
+          ]
+        ],
+        "nonmanifold_edges": 0,
+        "volume": 0.07536784391920683
+      }
+    },
+    "camera": {
+      "matrix": [
+        0.9999691843986511,
+        -0.00785390380769968,
+        4.2291378732350893e-10,
+        0.0,
+        0.00635394174605608,
+        0.8089920282363892,
+        -0.5877852439880371,
+        -7.053422927856445,
+        0.004616408608853817,
+        0.5877671241760254,
+        0.80901700258255,
+        11.178056716918945,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "type": "ORTHO",
+      "scale": 4.47857141494751,
+      "shift": [
+        0.09768740087747574,
+        0.0
+      ],
+      "resolution": [
+        1254,
+        1254
+      ],
+      "elevation": 54.000000800055794
+    },
+    "height": 5.127651214599609,
+    "base_diameter": 2.0663816928863525,
+    "source_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "rubric": "Silhouette is fixed-mask measured IoU. Other scores and holistic range are subjective; equal-weight mean is a working progress indicator, not proof of fidelity.",
+  "baseline": {
+    "variant": "019-measured-pigment-atlas",
+    "scores": {
+      "silhouette": 97.84942513669851,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain_texture": 76,
+      "lighting": 54
+    },
+    "mean": 77.56988502733971,
+    "original_iou": 0.9679453248674852,
+    "highres_iou": 0.9784942513669851,
+    "assessment": "Accepted checkpoint 002 after saved-pixel, reopened-render, exact editable-geometry and camera checks.",
+    "accepted_checkpoint": true
+  },
+  "trials": [
+    {
+      "variant": "020-curved-cross-cap",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 82,
+        "wood_color": 79,
+        "grain_texture": 75,
+        "lighting": 51
+      },
+      "mean": 76.9701280811568,
+      "original_iou": 0.9679185592771766,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Rejected: the cap curve was lowered too far; moved old pigment and broad roof glare created competing edges.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "021-smooth-carved-bevels",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 82,
+        "wood_color": 79,
+        "grain_texture": 75,
+        "lighting": 51
+      },
+      "mean": 76.9701280811568,
+      "original_iou": 0.9679185592771766,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Not promoted: smoother bevel normals helped, but the cap still sat too low.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "022-cross-edge-reflections",
+      "scores": {
+        "silhouette": 97.85088771444752,
+        "interior_form": 82,
+        "wood_color": 79,
+        "grain_texture": 75,
+        "lighting": 52
+      },
+      "mean": 77.1701775428895,
+      "original_iou": 0.96791617633301,
+      "highres_iou": 0.9785088771444752,
+      "assessment": "Not promoted: isolated cross lights reduced glare but did not correct the misplaced cap or its shifted pigment.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "023-fitted-cross-reflections",
+      "scores": {
+        "silhouette": 97.85014578845711,
+        "interior_form": 82,
+        "wood_color": 79,
+        "grain_texture": 75,
+        "lighting": 53
+      },
+      "mean": 77.37002915769142,
+      "original_iou": 0.9679475500888773,
+      "highres_iou": 0.9785014578845711,
+      "assessment": "Rejected as a final candidate: fitted powers lowered numerical residual, but the cap and pale roof patch remained visibly wrong.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "024-realigned-cross-cap",
+      "scores": {
+        "silhouette": 97.82669990799275,
+        "interior_form": 82,
+        "wood_color": 80,
+        "grain_texture": 76,
+        "lighting": 54
+      },
+      "mean": 77.96533998159855,
+      "original_iou": 0.9682074874581014,
+      "highres_iou": 0.9782669990799275,
+      "assessment": "Retained geometry basis: preserve the center height, lower the cap ends and gently curve the rear top contour. Original silhouette improves slightly; high-res IoU falls 0.023 percentage points.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "025-confined-cross-reflections",
+      "scores": {
+        "silhouette": 97.82669990799275,
+        "interior_form": 82,
+        "wood_color": 80,
+        "grain_texture": 76,
+        "lighting": 54
+      },
+      "mean": 77.96533998159855,
+      "original_iou": 0.9682026401339769,
+      "highres_iou": 0.9782669990799275,
+      "assessment": "Retained separation basis: body glossy lights no longer wash the cross roof; initial cross bevel glints remain weak.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "026-fitted-confined-cross",
+      "scores": {
+        "silhouette": 97.82596329117995,
+        "interior_form": 82,
+        "wood_color": 80,
+        "grain_texture": 76,
+        "lighting": 55
+      },
+      "mean": 78.165192658236,
+      "original_iou": 0.9682389565354454,
+      "highres_iou": 0.9782596329117994,
+      "assessment": "Retained lighting basis: actual-response fit improves localized cap/arm reflections without reintroducing broad pale roof glare. Glints remain too thin and regular.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "027-cross-pigment-registration",
+      "scores": {
+        "silhouette": 97.82596329117995,
+        "interior_form": 82,
+        "wood_color": 81,
+        "grain_texture": 77,
+        "lighting": 55
+      },
+      "mean": 78.56519265823599,
+      "original_iou": 0.9682389565354454,
+      "highres_iou": 0.9782596329117994,
+      "assessment": "Retained pigment basis: bounded cross-only inverse estimate restores wood figure after deformation. Body pigment is gated out of the update.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "028-curved-cross-atlas",
+      "scores": {
+        "silhouette": 97.82596329117995,
+        "interior_form": 82,
+        "wood_color": 81,
+        "grain_texture": 77,
+        "lighting": 55
+      },
+      "mean": 78.56519265823599,
+      "original_iou": 0.9682389565354454,
+      "highres_iou": 0.9782596329117994,
+      "assessment": "Accepted checkpoint 003: fresh cross islands and pigment atlas preserve body pixels exactly; saved, reopened, geometry, export and review checks pass.",
+      "accepted_checkpoint": true
+    }
+  ]
+}

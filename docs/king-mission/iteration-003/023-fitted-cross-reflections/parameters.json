@@ -1,0 +1,49 @@
+{
+  "variant": "023-fitted-cross-reflections",
+  "source": "build/king-mission/023-fitted-cross-reflections/prepared.blend",
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit the five confined cross light powers against actual rendered responses, retaining shape, color and all other lights. Judge the actual full render, not just the numerical loss.",
+  "original_source": "build/king-mission/022-cross-edge-reflections/king.blend",
+  "original_source_sha256": "21079bbd8c62024a0418aed6e95ae7480a60ea69f52bb9a18ccf8e66970f0aa0",
+  "light_fit": {
+    "source_sha256": "21079bbd8c62024a0418aed6e95ae7480a60ea69f52bb9a18ccf8e66970f0aa0",
+    "original_powers": {
+      "Cross left arm reflection": 550.0,
+      "Cross right arm reflection": 550.0,
+      "Cross cap center reflection": 400.0,
+      "Cross cap left reflection": 180.0,
+      "Cross cap right reflection": 180.0
+    },
+    "fitted_powers": {
+      "Cross left arm reflection": 155.04054465470816,
+      "Cross right arm reflection": 3185.0401195469817,
+      "Cross cap center reflection": 363.0295382564259,
+      "Cross cap left reflection": 507.44536391139604,
+      "Cross cap right reflection": 514.463750286521
+    },
+    "gain": [
+      0.28189189937219666,
+      5.790982035539967,
+      0.9075738456410647,
+      2.819140910618867,
+      2.8581319460362278
+    ],
+    "before_weighted_squared_residual": 0.388329947253872,
+    "predicted_weighted_squared_residual": 0.37953180013250754,
+    "iterations": 11,
+    "pixels": 24689,
+    "method": "Nonnegative coordinate-descent fit of actual linear BSDF light responses; actual full render determines acceptance, not predicted loss."
+  },
+  "fitted_lights": [
+    "Cross left arm reflection",
+    "Cross right arm reflection",
+    "Cross cap center reflection",
+    "Cross cap left reflection",
+    "Cross cap right reflection"
+  ],
+  "source_sha256": "fb0cbcb75b75bce6944b2e0093340a3b25fcfcf18d370db5546c8e1d5a59cef3",
+  "model_sha256": "bd812d71dc333dfde458ab852da8e3b2ca59352494a7dacc3dcd5aa43b130497",
+  "elevation_degrees": 54.000000800055794
+}

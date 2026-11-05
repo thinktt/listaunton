@@ -1,0 +1,19 @@
+{
+  "variant": "028-curved-cross-atlas",
+  "source": "build\\king-mission\\028-curved-cross-atlas\\prepared.blend",
+  "texture": "assets/king/materials/king-pigment-atlas-v4.png",
+  "preserve_previous_atlas_uv": true,
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Bake the revised cross pigment into fresh cross UV islands, retain old UVs for source sampling, and preserve the accepted body atlas pixels exactly.",
+  "original_source": "history/king-mission-003-pre-atlas/king.blend",
+  "original_source_sha256": "c3c5d698bcd430fa437de9cd59d088b56eb0fac450c8fd2dcbd4cd52487258d3",
+  "atlas_sha256": "920f373a6bffa2c41e6fea81d4f01663f95c49550e7f4665f076c2c77ab6b007",
+  "packed_pixel_roundtrip_max_error": 0.0,
+  "preserved_body_atlas_max_error": 0.0,
+  "atlas_bakes_lighting": false,
+  "source_sha256": "ef8aa7448740e37bf7f191bf6aaa175c18de225a40579c8a48a980a82d9ac2fc",
+  "model_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "elevation_degrees": 54.000000800055794
+}

@@ -1,0 +1,29 @@
+{
+  "variant": "027-cross-pigment-registration",
+  "response": "build/king-mission/027-cross-response",
+  "strength": 0.95,
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "hypothesis": "Estimate pigment only on the curved cross using its actual black/white BSDF response; preserve turned-body pigment and all lighting. Bright reflection pixels retain prior pigment through bounded confidence.",
+  "source": "build/king-mission/027-cross-pigment-registration/prepared.blend",
+  "original_source": "build/king-mission/026-fitted-confined-cross/king.blend",
+  "original_source_sha256": "2b5f2155c62806f069e318557d690764321fe14d31688c90b72a1555e77fd98e",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "reference_pixel_500_700": [
+    0.30980393290519714,
+    0.12156863510608673,
+    0.011764707043766975,
+    0.9843137860298157
+  ],
+  "pigment_bounds": [
+    0.001,
+    0.8
+  ],
+  "confidence_mean_foreground": 0.060031481087207794,
+  "fraction_foreground_over_half_confidence": 0.06315323784770226,
+  "limitation": "Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.",
+  "source_sha256": "1e6ea96f718d1a716a11190a1d92e0632962d19863cd6e41e389fa26644573c7",
+  "model_sha256": "c3c5d698bcd430fa437de9cd59d088b56eb0fac450c8fd2dcbd4cd52487258d3",
+  "elevation_degrees": 54.000000800055794
+}

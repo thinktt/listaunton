@@ -1,4 +1,4 @@
-Current material checkpoint: [mission iteration 002](king-mission/iteration-002/README.md). It preserves the 54-degree geometry and adds measured pigment, focused crown reflections and varnish grain relief. Reproduce with `scripts/king/rebuild_checkpoint_002.py`; the older clay pipeline remains historical.
+Current checkpoint: [mission iteration 003](king-mission/iteration-003/README.md). It curves the cross cap and refines its lighting/pigment while preserving the body, physical size and 54-degree camera. Reproduce with `scripts/king/rebuild_checkpoint_003.py`; the older clay pipeline remains historical.
 
 # King reconstruction
 

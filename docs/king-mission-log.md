@@ -155,3 +155,35 @@ in [iteration-002/README.md](king-mission/iteration-002/README.md).
 The next geometry target is the cross's cap and upper bevel curvature. Preserve
 this material and the 54-degree framing, and re-examine both original and selected
 reference before editing. The goal remains active and incomplete.
+
+## 2026-11-05 — checkpoint 003: rounded cross cap and localized finish
+
+The cross cap now curves like the reference, with smoother carved bevels. The
+initial lowered curve was rejected; the accepted revision preserves center and
+overall height while lowering the ends. Body geometry, base diameter and the
+54-degree camera stay fixed. Cross-only light and pigment adjustments remove
+the broad pale roof patch and restore displaced wood figure. V4 preserves body
+atlas pixels exactly.
+
+| Metric | Checkpoint 002 | Checkpoint 003 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.849% | 97.826% |
+| Interior form | 80% | 82% |
+| Wood color | 80% | 81% |
+| Grain and surface texture | 76% | 77% |
+| Lighting and reflections | 54% | 55% |
+| Equal-weight mean | 77.570% | 78.565% |
+
+Original-sprite IoU is 96.824%, up from 96.795%. Only silhouette is measured;
+the other scores are subjective, and the holistic range remains 70–80%.
+Cap and arm glints remain too thin/regular, cross seating and collar profiles
+differ, base highlights are misplaced, and side-view material transitions remain
+conspicuous. This checkpoint is a modest improvement, not a finished match.
+
+Saved/reopened texture and beauty checks, body/camera preservation, closed mesh,
+exact viewer export and affected page controls pass. The king main page and
+local preview are synchronized with this accepted model. See
+[iteration-003/README.md](king-mission/iteration-003/README.md) for trial scores,
+evidence, reproduction and limitations. No native browser inspection is claimed.
+Next target: base reflection shape, without altering fixed registration or the
+accepted cross. The goal remains active and incomplete.
