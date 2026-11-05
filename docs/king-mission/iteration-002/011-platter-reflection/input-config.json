@@ -1,0 +1,8 @@
+{
+  "variant":"011-platter-reflection",
+  "source":"models/king/king-rebuilt.blend",
+  "source_sha256":"c0c9a186a39548a6750126a9383d0b6742d52646536bedc7a27a0cfe5a0f37a3",
+  "samples":64,"neutral":false,"profile":false,
+  "hypothesis":"A confined glossy reflection on the platter will recover its missing highlight without whitening the cross or altering pigment.",
+  "reflectors":[{"name":"Platter front-right glint","pixel":[580,296],"energy":220,"degrees":4.2,"radius":0.08}]
+}

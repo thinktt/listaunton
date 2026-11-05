@@ -1,0 +1,37 @@
+{
+  "model_sha256": "26eeb9b02aae56ebe6057237c4c618ed2a1576679f2d8eea70c9812ed879faf1",
+  "render_sha256": "4eb925602dc79fc98bdd759129a609a6f6f9c9acac0d0f79c8b91375826a6ba7",
+  "texture_sha256": "c25e26848f97b331c0dfd5abd113e374cf8b69127377875e0d43f286679a470f",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+  "accepted_trial": "019-measured-pigment-atlas",
+  "scorecard": {
+    "variant": "019-measured-pigment-atlas",
+    "scores": {
+      "silhouette": 97.84942513669851,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain_texture": 76,
+      "lighting": 54
+    },
+    "mean": 77.56988502733971,
+    "original_iou": 0.9679453248674852,
+    "highres_iou": 0.9784942513669851,
+    "assessment": "Accepted checkpoint 002 after saved-pixel, reopened-render, exact editable-geometry and camera checks.",
+    "accepted_checkpoint": true
+  },
+  "holistic_visual_range": [
+    70,
+    80
+  ],
+  "validation": {
+    "saved_scene_geometry_camera_material": "passed",
+    "reopened_render_and_texture_persistence": "passed",
+    "exact_viewer_camera_and_controls": "passed; simulated DOM/WebGL harness",
+    "candidate_and_site_checks": "passed",
+    "full_pipeline_reproduction": "passed; maximum channel difference 1/255, mean foreground RGB difference 0.0000715/255",
+    "historical_king_projections_and_set_controls": "passed",
+    "local_preview": "30 king files copied and hash-verified"
+  },
+  "pending": "Further visual refinement; goal active and incomplete."
+}

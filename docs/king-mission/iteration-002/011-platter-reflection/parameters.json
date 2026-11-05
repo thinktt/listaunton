@@ -1,0 +1,55 @@
+{
+  "variant": "011-platter-reflection",
+  "source": "build/king-mission/011-platter-reflection/prepared.blend",
+  "samples": 64,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "A confined glossy reflection on the platter will recover its missing highlight without whitening the cross or altering pigment.",
+  "reflectors": [
+    {
+      "name": "Platter front-right glint",
+      "pixel": [
+        580,
+        296
+      ],
+      "energy": 220,
+      "degrees": 4.2,
+      "radius": 0.08
+    }
+  ],
+  "original_source": "models/king/king-rebuilt.blend",
+  "original_source_sha256": "c0c9a186a39548a6750126a9383d0b6742d52646536bedc7a27a0cfe5a0f37a3",
+  "reflector_probes": [
+    {
+      "name": "Platter front-right glint",
+      "pixel": [
+        580,
+        296
+      ],
+      "energy": 220,
+      "degrees": 4.2,
+      "radius": 0.08,
+      "point": [
+        0.2603501081466675,
+        -0.43560218811035156,
+        4.084129810333252
+      ],
+      "normal": [
+        0.11252748221158981,
+        -0.1888662576675415,
+        0.9755342602729797
+      ],
+      "position": [
+        1.4759663343429565,
+        1.0508174896240234,
+        9.76856803894043
+      ],
+      "receiver": "King - continuous turned body",
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "source_sha256": "ace27218c72652106dee0a61f9f8885f8d0cf8c23e492d246b31979333919bfd",
+  "model_sha256": "4404382149a90b1e363860dbef4795d44d96c1c27d2e3d74ad6cb0c34dda9ca4",
+  "elevation_degrees": 54.000000800055794
+}

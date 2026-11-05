@@ -1,0 +1,93 @@
+{
+  "variant": "014-crown-bevel-glints",
+  "source": "build/king-mission/014-crown-bevel-glints/prepared.blend",
+  "samples": 96,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "Retain the improved platter reflection and aim the cross reflector at the arm bevel rather than its flat front face.",
+  "reflectors": [
+    {
+      "name": "Platter front-right glint",
+      "pixel": [
+        580,
+        296
+      ],
+      "energy": 2200,
+      "degrees": 6,
+      "radius": 0.18
+    },
+    {
+      "name": "Cross arm glint",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 1400,
+      "degrees": 14,
+      "radius": 0.18
+    }
+  ],
+  "original_source": "models/king/king-rebuilt.blend",
+  "original_source_sha256": "c0c9a186a39548a6750126a9383d0b6742d52646536bedc7a27a0cfe5a0f37a3",
+  "reflector_probes": [
+    {
+      "name": "Platter front-right glint",
+      "pixel": [
+        580,
+        296
+      ],
+      "energy": 2200,
+      "degrees": 6,
+      "radius": 0.18,
+      "point": [
+        0.2603501081466675,
+        -0.43560218811035156,
+        4.084129810333252
+      ],
+      "normal": [
+        0.11252748221158981,
+        -0.1888662576675415,
+        0.9755342602729797
+      ],
+      "position": [
+        1.4759663343429565,
+        1.0508174896240234,
+        9.76856803894043
+      ],
+      "receiver": "King - continuous turned body",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Cross arm glint",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 1400,
+      "degrees": 14,
+      "radius": 0.18,
+      "point": [
+        0.21871843934059143,
+        -0.06771612167358398,
+        4.859314918518066
+      ],
+      "normal": [
+        -0.0003513071278575808,
+        -0.16307491064071655,
+        0.9866136312484741
+      ],
+      "position": [
+        0.21494944393634796,
+        1.709449052810669,
+        10.590080261230469
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "source_sha256": "6be4750cffb05417c52db139b0262c07c741e2cd5df3957d693eefd267eb8012",
+  "model_sha256": "d7544a29058a4a86da226233564d56b3fd333c44edb6149220d9c8b138a235c5",
+  "elevation_degrees": 54.000000800055794
+}

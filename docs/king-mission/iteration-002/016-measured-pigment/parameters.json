@@ -1,0 +1,23 @@
+{
+  "variant": "016-measured-pigment",
+  "response": "build/king-mission/pigment-response-014",
+  "samples": 96,
+  "neutral": false,
+  "profile": true,
+  "strength": 0.9,
+  "hypothesis": "Estimate wood color and grain using the actual BSDF's black/white illumination response. Exclude glints, strong specular mismatch and dark shadows so the material remains diffuse pigment lit by the real scene.",
+  "source": "build/king-mission/016-measured-pigment/prepared.blend",
+  "original_source": "build/king-mission/014-crown-bevel-glints/king.blend",
+  "original_source_sha256": "d7544a29058a4a86da226233564d56b3fd333c44edb6149220d9c8b138a235c5",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "pigment_bounds": [
+    0.001,
+    0.8
+  ],
+  "confidence_mean_foreground": 0.28116244077682495,
+  "fraction_foreground_over_half_confidence": 0.28146359359922807,
+  "limitation": "Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.",
+  "source_sha256": "8d235ae42f08aa569d4134b389190f405c0f0026964848004f3ebcd731c7ab7f",
+  "model_sha256": "08339cdad03220df156e71de214ce98c3b07a7f4ffdd929d38dda1ec729408d8",
+  "elevation_degrees": 54.000000800055794
+}

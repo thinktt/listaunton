@@ -113,3 +113,45 @@ Next: make the hidden-surface grain continuous with the visible pigment, then
 isolate single reflector responses and reconsider platter/cross curvature before
 adding more lights. Keep the fixed camera and original silhouette priority.
 The goal remains active and incomplete.
+
+## 2026-11-05 — checkpoint 002: recovered wood figure and textured reflections
+
+The accepted model keeps checkpoint 001 geometry and camera. It adds two
+confined crown reflectors, an estimated diffuse pigment field from the actual
+BSDF light response, and shallow grain relief in the varnish. The base's broad
+wood marks and regional stem/collar tone now agree more closely with black 1.
+The selected source and original Lichess sprite are unchanged.
+
+| Metric | Checkpoint 001 | Checkpoint 002 |
+| --- | ---: | ---: |
+| High-resolution silhouette IoU | 97.851% | 97.849% |
+| Interior shapes/details | 80% | 80% |
+| Wood color | 68% | 80% |
+| Grain and surface texture | 62% | 76% |
+| Lighting/reflections | 45% | 54% |
+| Equal-weight mean | 70.570% | 77.570% |
+
+Original-sprite IoU is 96.795%; the tiny silhouette change is edge sampling and
+subdivision roundoff, not a change to editable geometry. Holistic assessment is
+70–80%. The silhouette metric is measured; the other values are subjective.
+The model is still visibly short of the reference. Cross bevel curvature,
+cross seating, collar edges, base reflections and hidden-surface finish remain.
+The hidden finish transition is more visible after improving the front, and
+is explicitly unresolved. White-piece material is not assessed here.
+
+All trials, including failed mirrored grain and pigment input conversion, are
+scored in iteration-002/scores.json. The first estimated pigment was rejected
+because PNG pixels were decoded twice and an alpha threshold created mottling.
+The corrected estimate is a real surface pigment under live BSDF lighting;
+residual source shading and single-view ambiguity remain limitations.
+
+Saved texture pixels, reopened render, exact editable controls/camera, closed
+components, viewer projection and affected site controls passed. Native UI
+inspection is not claimed; interactions use the actual page's DOM/WebGL harness.
+The accepted renders, mesh, texture and side comparison are synchronized in the
+king reconstruction page. Reproduction and the remaining issues are documented
+in [iteration-002/README.md](king-mission/iteration-002/README.md).
+
+The next geometry target is the cross's cap and upper bevel curvature. Preserve
+this material and the 54-degree framing, and re-examine both original and selected
+reference before editing. The goal remains active and incomplete.

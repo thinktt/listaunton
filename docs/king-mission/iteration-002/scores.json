@@ -1,0 +1,166 @@
+{
+  "rubric": "Silhouette is measured fixed-mask IoU. Other scores and holistic range are subjective visual judgments; the equal-weight mean is a progress indicator, not proof.",
+  "baseline": {
+    "checkpoint": "001",
+    "scores": {
+      "silhouette": 97.85064040578405,
+      "interior_form": 80,
+      "wood_color": 68,
+      "grain_texture": 62,
+      "lighting": 45
+    },
+    "mean": 70.57012808115681
+  },
+  "trials": [
+    {
+      "variant": "010-continuous-hidden-grain",
+      "scores": {
+        "silhouette": 97.85043562559198,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 58,
+        "lighting": 45
+      },
+      "mean": 69.77008712511841,
+      "original_iou": 0.9679409534501265,
+      "highres_iou": 0.9785043562559198,
+      "assessment": "Rejected: mirrored hidden projection removed one finish jump but created a conspicuous V-shaped grain seam.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "011-platter-reflection",
+      "scores": {
+        "silhouette": 97.85043562559198,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 47
+      },
+      "mean": 70.9700871251184,
+      "original_iou": 0.9679409534501265,
+      "highres_iou": 0.9785043562559198,
+      "assessment": "Useful isolated probe: correct platter region, too weak for acceptance.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "012-cross-reflection",
+      "scores": {
+        "silhouette": 97.85043562559198,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 46
+      },
+      "mean": 70.77008712511841,
+      "original_iou": 0.9679409534501265,
+      "highres_iou": 0.9785043562559198,
+      "assessment": "Useful isolated probe: correct cross bevel, too weak for acceptance.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "013-shaped-crown-glints",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 80,
+        "wood_color": 66,
+        "grain_texture": 62,
+        "lighting": 25
+      },
+      "mean": 66.1701280811568,
+      "original_iou": 0.9679137144067004,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Rejected: moved cross target accidentally hit the flat front; its reflection washed out the face.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "014-crown-bevel-glints",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 52
+      },
+      "mean": 71.9701280811568,
+      "original_iou": 0.9679185592771766,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Retained lighting basis: correct bevel target and brighter confined platter reflection.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "015-fine-varnish-grain",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 52
+      },
+      "mean": 71.9701280811568,
+      "original_iou": 0.9679185592771766,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Not promoted: the weak coat relief made little visible improvement.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "016-measured-pigment",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 80,
+        "wood_color": 20,
+        "grain_texture": 18,
+        "lighting": 35
+      },
+      "mean": 50.17012808115681,
+      "original_iou": 0.9679185592771766,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Rejected technical failure: double-decoded byte PNG color and over-strict interior alpha produced mottled yellow pigment.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "017-corrected-pigment-estimate",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 80,
+        "wood_color": 80,
+        "grain_texture": 75,
+        "lighting": 52
+      },
+      "mean": 76.9701280811568,
+      "original_iou": 0.9679185592771766,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Retained pigment basis: verified PNG decoding and continuous alpha confidence recover broad base markings and regional tone.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "018-textured-varnish",
+      "scores": {
+        "silhouette": 97.84942513669851,
+        "interior_form": 80,
+        "wood_color": 80,
+        "grain_texture": 76,
+        "lighting": 54
+      },
+      "mean": 77.56988502733971,
+      "original_iou": 0.9679453248674852,
+      "highres_iou": 0.9784942513669851,
+      "assessment": "Retained pre-atlas material: stronger shallow coat relief breaks up the overly smooth glints.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "019-measured-pigment-atlas",
+      "scores": {
+        "silhouette": 97.84942513669851,
+        "interior_form": 80,
+        "wood_color": 80,
+        "grain_texture": 76,
+        "lighting": 54
+      },
+      "mean": 77.56988502733971,
+      "original_iou": 0.9679453248674852,
+      "highres_iou": 0.9784942513669851,
+      "assessment": "Accepted checkpoint 002 after saved-pixel, reopened-render, exact editable-geometry and camera checks.",
+      "accepted_checkpoint": true
+    }
+  ]
+}

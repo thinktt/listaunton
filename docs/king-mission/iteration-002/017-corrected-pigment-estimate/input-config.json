@@ -1,0 +1,7 @@
+{
+  "variant":"017-corrected-pigment-estimate",
+  "response":"build/king-mission/pigment-response-014",
+  "samples":96,"neutral":false,"profile":true,
+  "strength":0.9,
+  "hypothesis":"Correct the diagnostic input errors: byte PNG pixels are already sRGB encoded and the cutout has small interior alpha variations. Infer diffuse pigment with the verified display values and continuous alpha confidence."
+}

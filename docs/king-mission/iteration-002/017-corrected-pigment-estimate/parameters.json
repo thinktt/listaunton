@@ -1,0 +1,29 @@
+{
+  "variant": "017-corrected-pigment-estimate",
+  "response": "build/king-mission/pigment-response-014",
+  "samples": 96,
+  "neutral": false,
+  "profile": true,
+  "strength": 0.9,
+  "hypothesis": "Correct the diagnostic input errors: byte PNG pixels are already sRGB encoded and the cutout has small interior alpha variations. Infer diffuse pigment with the verified display values and continuous alpha confidence.",
+  "source": "build/king-mission/017-corrected-pigment-estimate/prepared.blend",
+  "original_source": "build/king-mission/014-crown-bevel-glints/king.blend",
+  "original_source_sha256": "d7544a29058a4a86da226233564d56b3fd333c44edb6149220d9c8b138a235c5",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "reference_pixel_500_700": [
+    0.30980393290519714,
+    0.12156863510608673,
+    0.011764707043766975,
+    0.9843137860298157
+  ],
+  "pigment_bounds": [
+    0.001,
+    0.8
+  ],
+  "confidence_mean_foreground": 0.6953346729278564,
+  "fraction_foreground_over_half_confidence": 0.7720629623673206,
+  "limitation": "Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.",
+  "source_sha256": "9f0ae230aebda0695ebe83bac3f032a9b137379762e638388179cf8453456160",
+  "model_sha256": "d6510499377179fec2869c5df1b03e85191efaa25c7b05ee5fedf6dcbc692836",
+  "elevation_degrees": 54.000000800055794
+}

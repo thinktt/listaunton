@@ -1,0 +1,8 @@
+{
+  "variant":"012-cross-reflection",
+  "source":"models/king/king-rebuilt.blend",
+  "source_sha256":"c0c9a186a39548a6750126a9383d0b6742d52646536bedc7a27a0cfe5a0f37a3",
+  "samples":64,"neutral":false,"profile":false,
+  "hypothesis":"A cross-only glossy reflection should brighten the upper arm bevel rather than wash the entire crown.",
+  "reflectors":[{"name":"Cross arm glint","pixel":[570,85],"energy":160,"degrees":6,"radius":0.08}]
+}

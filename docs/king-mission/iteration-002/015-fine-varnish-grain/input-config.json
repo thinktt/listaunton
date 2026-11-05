@@ -1,0 +1,11 @@
+{
+  "variant": "015-fine-varnish-grain",
+  "source": "build/king-mission/014-crown-bevel-glints/king.blend",
+  "source_sha256": "d7544a29058a4a86da226233564d56b3fd333c44edb6149220d9c8b138a235c5",
+  "samples": 96,
+  "neutral": false,
+  "profile": false,
+  "strength": 0.08,
+  "distance": 0.0015,
+  "hypothesis": "Fine varnish relief should break the overly smooth crown reflections into a wood-like glint without changing pigment or underlying base normals."
+}

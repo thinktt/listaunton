@@ -1,0 +1,11 @@
+{
+  "variant":"014-crown-bevel-glints",
+  "source":"models/king/king-rebuilt.blend",
+  "source_sha256":"c0c9a186a39548a6750126a9383d0b6742d52646536bedc7a27a0cfe5a0f37a3",
+  "samples":96,"neutral":false,"profile":false,
+  "hypothesis":"Retain the improved platter reflection and aim the cross reflector at the arm bevel rather than its flat front face.",
+  "reflectors":[
+    {"name":"Platter front-right glint","pixel":[580,296],"energy":2200,"degrees":6,"radius":0.18},
+    {"name":"Cross arm glint","pixel":[570,85],"energy":1400,"degrees":14,"radius":0.18}
+  ]
+}

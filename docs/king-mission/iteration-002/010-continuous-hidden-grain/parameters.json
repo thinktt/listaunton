@@ -1,0 +1,14 @@
+{
+  "variant": "010-continuous-hidden-grain",
+  "source": "build/king-mission/010-continuous-hidden-grain/prepared.blend",
+  "samples": 64,
+  "neutral": false,
+  "hypothesis": "Replace the abrupt procedural fallback on sides/rear with inferred visible pigment and relief while retaining front coverage and all accepted geometry, lights and camera.",
+  "original_source": "history/king-mission-001-pre-atlas/king.blend",
+  "original_source_sha256": "8d41fec190ab93661c046730e7e80d7274d1b6e001aabe9a06139f8941f721b0",
+  "inferred_hidden_nodes": 113,
+  "inference": "Reflect hidden surface toward camera in horizontal plane and reuse diffuse pigment/fine relief; no copied beauty lighting.",
+  "source_sha256": "c4283f47918fb12020284d7399036604ba9d7ecae2fa531ba7c401675b5fcd53",
+  "model_sha256": "1882239e8c575fd95cb986c3a718673969f7fac26022f49178ea97efd919543a",
+  "elevation_degrees": 54.000000800055794
+}

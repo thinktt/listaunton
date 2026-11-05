@@ -1,3 +1,5 @@
+Current material checkpoint: [mission iteration 002](king-mission/iteration-002/README.md). It preserves the 54-degree geometry and adds measured pigment, focused crown reflections and varnish grain relief. Reproduce with `scripts/king/rebuild_checkpoint_002.py`; the older clay pipeline remains historical.
+
 # King reconstruction
 
 Current checkpoint, 5 November 2026: the accepted king uses the fixed **54-degree** camera and a packed wood material. See [the king mission log](king-mission-log.md) for scores, evidence, remaining defects and the current rebuild procedure. The historical 52-degree clay builder below is preserved for provenance, not the current pipeline.

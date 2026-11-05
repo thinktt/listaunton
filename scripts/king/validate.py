@@ -19,7 +19,7 @@ for ob in scene.objects:
 assert len(components)==2
 meta=json.loads((root/'assets/king/mesh.json').read_text());assert meta['sourceSha256']==before
 assert sha(root/meta['texture'])==meta['textureSha256']
-atlas=bpy.data.images['King pigment atlas'];assert atlas.packed_file
+atlas=bpy.data.images[scene.get('king_pigment_image','King pigment atlas')];assert atlas.packed_file
 assert hashlib.sha256(bytes(atlas.packed_file.data)).hexdigest()==meta['textureSha256']
 cam=scene.camera;axis=cam.matrix_world.to_3x3()@Vector((0,0,1));elevation=math.degrees(math.asin(axis.z))
 assert cam.data.type=='ORTHO' and abs(elevation-54)<.001

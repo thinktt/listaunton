@@ -1,0 +1,86 @@
+{
+  "editable_geometry_and_camera_exactly_preserved": true,
+  "before": "history/king-mission-001/king-rebuilt.blend",
+  "after": "build/king-mission/019-measured-pigment-atlas/king.blend",
+  "geometry": {
+    "objects": {
+      "King - continuous turned body": {
+        "positions_sha256": "a69be9011c821fe459bc59b2ff3da21f78ded9bc7a526c62814d4614007aea05",
+        "faces_sha256": "12f48c6f07a72c52981179388d38f230027b4b747488a13a76f82ce47c505e72",
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "modifiers": [
+          [
+            "SUBSURF",
+            1,
+            1
+          ]
+        ]
+      },
+      "King - beveled cross": {
+        "positions_sha256": "c71e807f53c77cbe372d48fe68d0f9f48659ada5d52ca17a7bb6e4d736d99e41",
+        "faces_sha256": "4c7b272694824f0a5bb26a1ae769bb034c9e376dda196027caa12072ccc53eb7",
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "modifiers": []
+      }
+    },
+    "camera_matrix": [
+      0.9999691843986511,
+      -0.00785390380769968,
+      4.2291378732350893e-10,
+      0.0,
+      0.00635394174605608,
+      0.8089920282363892,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.004616408608853817,
+      0.5877671241760254,
+      0.80901700258255,
+      11.178056716918945,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "camera_type": "ORTHO",
+    "camera_scale": 4.47857141494751,
+    "camera_shift": [
+      0.09768740087747574,
+      0.0
+    ]
+  },
+  "note": "Evaluated subdivision may differ by floating-point roundoff after UV-layer changes; compare exported triangle corners separately."
+}

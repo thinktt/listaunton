@@ -1,0 +1,7 @@
+{
+  "variant":"016-measured-pigment",
+  "response":"build/king-mission/pigment-response-014",
+  "samples":96,"neutral":false,"profile":true,
+  "strength":0.9,
+  "hypothesis":"Estimate wood color and grain using the actual BSDF's black/white illumination response. Exclude glints, strong specular mismatch and dark shadows so the material remains diffuse pigment lit by the real scene."
+}

@@ -1,0 +1,55 @@
+{
+  "variant": "012-cross-reflection",
+  "source": "build/king-mission/012-cross-reflection/prepared.blend",
+  "samples": 64,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "A cross-only glossy reflection should brighten the upper arm bevel rather than wash the entire crown.",
+  "reflectors": [
+    {
+      "name": "Cross arm glint",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 160,
+      "degrees": 6,
+      "radius": 0.08
+    }
+  ],
+  "original_source": "models/king/king-rebuilt.blend",
+  "original_source_sha256": "c0c9a186a39548a6750126a9383d0b6742d52646536bedc7a27a0cfe5a0f37a3",
+  "reflector_probes": [
+    {
+      "name": "Cross arm glint",
+      "pixel": [
+        570,
+        85
+      ],
+      "energy": 160,
+      "degrees": 6,
+      "radius": 0.08,
+      "point": [
+        0.21871843934059143,
+        -0.06771612167358398,
+        4.859314918518066
+      ],
+      "normal": [
+        -0.0003513071278575808,
+        -0.16307491064071655,
+        0.9866136312484741
+      ],
+      "position": [
+        0.21494944393634796,
+        1.709449052810669,
+        10.590080261230469
+      ],
+      "receiver": "King - beveled cross",
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "source_sha256": "3884e9eb84d591b59c5eebd6cb93b7f3f733b1c40f56e0aa29bff5c593fcc65b",
+  "model_sha256": "e4e4db52de1369aa8dcd9620ada098979aefdd9045f98ada7d42ff4074446a4c",
+  "elevation_degrees": 54.000000800055794
+}

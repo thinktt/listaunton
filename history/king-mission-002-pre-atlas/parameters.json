@@ -1,0 +1,15 @@
+{
+  "variant": "018-textured-varnish",
+  "source": "build/king-mission/018-textured-varnish/prepared.blend",
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "strength": 0.25,
+  "distance": 0.006,
+  "hypothesis": "A stronger but shallow coat relief should break smooth white reflection bands into wood-grain reflections while preserving the corrected pigment estimate.",
+  "original_source": "build/king-mission/017-corrected-pigment-estimate/king.blend",
+  "original_source_sha256": "d6510499377179fec2869c5df1b03e85191efaa25c7b05ee5fedf6dcbc692836",
+  "source_sha256": "0c2601fd0364f36f2f510843edb61224348db05d7b824afcc1f9b6cd4e990efe",
+  "model_sha256": "65987d70ee506d496205873561f2ebd356a63fb242d11c8c3533acbd8f78893b",
+  "elevation_degrees": 54.000000800055794
+}
