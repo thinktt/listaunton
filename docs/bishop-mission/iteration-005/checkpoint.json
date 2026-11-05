@@ -1,0 +1,45 @@
+{
+  "starting_commit": "612517d",
+  "model_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+  "render_sha256": "c9f5c226ca7f1f7049b712131058ae9313168d87cb4af682b6f1511b5594223f",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "camera_elevation_degrees": 54,
+  "camera_exactly_unchanged": true,
+  "geometry_positions_normals_and_indices_exactly_unchanged_from_checkpoint_004": true,
+  "maximum_exported_uv_difference": 5.960464477539063e-08,
+  "piece_checks_passed": true,
+  "input_image_pixels_preserved_during_bake": true,
+  "packed_pixels_equal_after_reopen": true,
+  "beauty_samples": 96,
+  "beauty_resolution": [
+    1254,
+    1254
+  ],
+  "display_view": "Standard",
+  "display_look": "None",
+  "lighting_scope_validated": true,
+  "changed_area_lights": [
+    "socket reflection",
+    "base reflection"
+  ],
+  "glossy_environment_strength": 0,
+  "diffuse_environment_unchanged": true,
+  "reference_hashes": {
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+  },
+  "ui_validation": "Simulated DOM/WebGL harness; native browser not inspected.",
+  "site_and_preview_checks": {
+    "bishop_viewer": "passed; 501 projected vertices; max camera error 0.000008793751384157703 pixels",
+    "bishop_workspace": "passed; overlay/rotate/candidate state and source guards",
+    "all_model_pages_and_historical_projections": "passed via scripts/check_model_site.py",
+    "all_candidate_reviews": "passed via scripts/check_candidate_review.cjs",
+    "set_comparison_and_approved_sizing": "passed via scripts/check_set.cjs",
+    "scoped_git_diff_check": "passed",
+    "canonical_preview_byte_equal_files": 38,
+    "preview_directory": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires",
+    "native_browser_inspected": false,
+    "verified_at_utc": "2026-11-05T20:36:39.208518+00:00"
+  }
+}

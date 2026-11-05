@@ -10,6 +10,7 @@ p=argparse.ArgumentParser(description=__doc__);p.add_argument('renders',nargs='+
 a=p.parse_args()
 ref=np.array(Image.open(ROOT/'assets/bishop/reference.png').convert('RGBA'),dtype=np.float32)/255
 regions={'all':(0,0,1254,1254),'button':(420,160,560,280),'head':(320,275,655,470),
+    'upper_head':(450,278,590,355),'lower_head_glare':(535,417,630,477),
     'collars':(310,460,675,610),'stem':(410,610,575,765),'socket':(355,740,635,865),'base':(230,850,755,1035),'foot':(220,1020,760,1120)}
 records={}
 for name in a.renders:

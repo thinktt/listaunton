@@ -1,0 +1,118 @@
+{
+  "source": "history/bishop-mission-004/bishop-rebuilt.blend",
+  "source_sha256": "8e33d8a3855a1cf46ee06f45f7a082840459edaa6e3e6207169fdade99c54a1c",
+  "original_lights": [
+    {
+      "name": "head reflection",
+      "energy": 120.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "shape": "DISK",
+      "size": 1.0,
+      "size_y": 0.25,
+      "spread_radians": 3.1415927410125732,
+      "position": [
+        3.3809285163879395,
+        -6.415489196777344,
+        4.692895412445068
+      ],
+      "rotation_euler": [
+        1.5123505592346191,
+        1.4740670906121522e-09,
+        0.49166184663772583
+      ],
+      "receiver": "Bishop light receiver body"
+    },
+    {
+      "name": "collars reflection",
+      "energy": 70.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "shape": "RECTANGLE",
+      "size": 3.200000047683716,
+      "size_y": 0.699999988079071,
+      "spread_radians": 3.1415927410125732,
+      "position": [
+        3.552460193634033,
+        -6.309630870819092,
+        0.6013658046722412
+      ],
+      "rotation_euler": [
+        1.908081293106079,
+        1.3209532312430383e-07,
+        0.5307472944259644
+      ],
+      "receiver": "Bishop light receiver body"
+    },
+    {
+      "name": "socket reflection",
+      "energy": 180.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "shape": "RECTANGLE",
+      "size": 2.4000000953674316,
+      "size_y": 0.699999988079071,
+      "spread_radians": 3.1415927410125732,
+      "position": [
+        5.57327938079834,
+        -4.51612663269043,
+        -0.6999073028564453
+      ],
+      "rotation_euler": [
+        1.8638193607330322,
+        -6.9280474690458504e-09,
+        0.912905752658844
+      ],
+      "receiver": "Bishop light receiver body"
+    },
+    {
+      "name": "base reflection",
+      "energy": 220.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "shape": "DISK",
+      "size": 0.8999999761581421,
+      "size_y": 0.25,
+      "spread_radians": 3.1415927410125732,
+      "position": [
+        3.73593807220459,
+        -6.995824337005615,
+        1.1789131164550781
+      ],
+      "rotation_euler": [
+        1.490302562713623,
+        -2.323388059721765e-08,
+        0.5134369730949402
+      ],
+      "receiver": "Bishop light receiver body"
+    }
+  ],
+  "basis_energy": 5000,
+  "basis_color": [
+    1,
+    1,
+    1
+  ],
+  "camera_unchanged": true,
+  "source_unchanged": true,
+  "render_border_pixels": [
+    180,
+    270,
+    800,
+    1120
+  ],
+  "samples": 64,
+  "purpose": "Measure actual BSDF response and light spill. Diagnostic source remains unchanged."
+}

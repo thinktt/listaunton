@@ -1,0 +1,41 @@
+{
+  "source": "build/bishop-mission/040-baked-rebalance/albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "visibility": "build/bishop-mission/facing-visibility-040/visibility.npy",
+  "visibility_sha256": "d05132548866b05af8c30cb3487c102324793ab939b506e8e54de45f0b6a4d9e",
+  "output_sha256": "0ebe007c6895c466ae606a1aabdbffcab86b2fbb01cd194eae15464cfd91ee39",
+  "protected_texels_exactly_preserved": true,
+  "parameters": {
+    "source": "build/bishop-mission/040-baked-rebalance/albedo.png",
+    "visibility": "build/bishop-mission/facing-visibility-040/visibility.npy",
+    "out": "build/bishop-mission/041-grazing-continuity",
+    "grid_width": 256,
+    "iterations": 2000,
+    "protection_threshold": 0.5,
+    "dilation": 8,
+    "feather": 48
+  },
+  "regions": {
+    "body": {
+      "grid": [
+        256,
+        180
+      ],
+      "iterations": 1638,
+      "last_update_max_log_rgb": 1.9669532775878906e-05,
+      "protected_texels": 941691,
+      "edited_texels": 1897621
+    },
+    "button": {
+      "grid": [
+        256,
+        39
+      ],
+      "iterations": 610,
+      "last_update_max_log_rgb": 1.9669532775878906e-05,
+      "protected_texels": 291499,
+      "edited_texels": 326965
+    }
+  },
+  "method": "Periodic harmonic continuation of broad log-linear pigment, constrained by visible boundary colors, retaining 80% of existing fine grain. Hidden interpretation, not recovered artwork. Actual BSDF rendering and fixed-view validation still required."
+}

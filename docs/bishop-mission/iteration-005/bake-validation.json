@@ -1,0 +1,16 @@
+{
+  "pigment_only": true,
+  "input_image_pixels_preserved": true,
+  "checked_input_images": {
+    "Bishop boxwood albedo \u2014 no illumination": "aa1e2578742600ae30f74dde1c1993d0d62dbf6015f89c4469334e66bb8a0652",
+    "Bishop measured pigment": "ee3de8498a184a77f60c4db1cc7883c3b14379746f788adeef3213f3fde579b9",
+    "Bishop pigment confidence": "74e6a9e8d150b2b56af6ede7e53b98850551d63425cd54c8a25c341196435a64",
+    "inferred-pigment-source-v1.png.001": "189b731d27b3870c7c162b6992580d90b30f6dfe1cc1d5add3d8c2cea12df895",
+    "reference.png": "27f6025d539654399ccf89bfab9916fe2027d43c25c8774524861acb0c14d63c"
+  },
+  "reopened_packed_pixel_max_error": 0.0,
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "render_shader": "Principled BSDF",
+  "source_sha256": "574af2fb388d8c468a8606bcedc9f14fe9e289e329a951b2b057b8553f80a6bb",
+  "saved_model_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32"
+}

@@ -1,0 +1,71 @@
+{
+  "note": "Subtracted-light images are predictions from measured linear BSDF responses, not accepted beauty renders. Reference/geometry/camera unchanged.",
+  "reconstruction_mean_rgb_error_8bit": 0.7030255438160145,
+  "regions": {
+    "upper_head": {
+      "Actual current": 13.003084182739258,
+      "Without head reflection": 14.443423095915215,
+      "Without collars reflection": 13.008306209878507,
+      "Without socket reflection": 13.007348426294964,
+      "Without base reflection": 13.038865455182783,
+      "mean_reflector_contribution_8bit": {
+        "head reflection": 2.002580612385496,
+        "collars reflection": 0.030470494915488137,
+        "socket reflection": 0.03714311247811258,
+        "base reflection": 0.13103270835311726
+      }
+    },
+    "lower_head_glare": {
+      "Actual current": 9.91850471496582,
+      "Without head reflection": 9.823187287615438,
+      "Without collars reflection": 9.467582302724148,
+      "Without socket reflection": 8.99281569050548,
+      "Without base reflection": 8.969646643121544,
+      "mean_reflector_contribution_8bit": {
+        "head reflection": 0.12988454032834343,
+        "collars reflection": 0.6169071642840347,
+        "socket reflection": 3.3643644548508713,
+        "base reflection": 1.3276030585445147
+      }
+    },
+    "collars": {
+      "Actual current": 7.500766754150391,
+      "Without head reflection": 7.325523272083296,
+      "Without collars reflection": 7.503255120527724,
+      "Without socket reflection": 7.51519904325686,
+      "Without base reflection": 7.460983599421574,
+      "mean_reflector_contribution_8bit": {
+        "head reflection": 0.5897912450143633,
+        "collars reflection": 0.23376644783487488,
+        "socket reflection": 0.6417193365493933,
+        "base reflection": 0.585141599374651
+      }
+    },
+    "stem_socket": {
+      "Actual current": 6.481966495513916,
+      "Without head reflection": 6.465502925661461,
+      "Without collars reflection": 6.487592764271603,
+      "Without socket reflection": 6.628652814739058,
+      "Without base reflection": 6.46911448955346,
+      "mean_reflector_contribution_8bit": {
+        "head reflection": 0.10183148244879357,
+        "collars reflection": 0.15849076298039563,
+        "socket reflection": 0.6351615301937283,
+        "base reflection": 0.375786696086317
+      }
+    },
+    "base_foot": {
+      "Actual current": 9.747579574584961,
+      "Without head reflection": 9.93357535309937,
+      "Without collars reflection": 9.937418519197347,
+      "Without socket reflection": 10.01074758642209,
+      "Without base reflection": 10.660954825692432,
+      "mean_reflector_contribution_8bit": {
+        "head reflection": 0.30580368237471856,
+        "collars reflection": 0.595278351757514,
+        "socket reflection": 1.3418055416337662,
+        "base reflection": 2.094650515707691
+      }
+    }
+  }
+}

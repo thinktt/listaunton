@@ -1,0 +1,19 @@
+{
+  "source": "build/bishop-mission/040-baked-rebalance/bishop.blend",
+  "source_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+  "ray_tolerance_model_units": 0.12,
+  "facing_start": 0.1,
+  "facing_full": 0.55,
+  "mask": "Conservative per-control-vertex ray visibility, interpolated and baked on evaluated geometry. Optional smooth-normal facing weight exposes grazing areas to an explicit continuity trial; actual fixed-view validation is mandatory.",
+  "statistics": {
+    "Bishop - continuous turned body": {
+      "protected_vertices": 6859.0,
+      "total_vertices": 13696
+    },
+    "Bishop - domed button finial": {
+      "protected_vertices": 973.0,
+      "total_vertices": 1536
+    }
+  },
+  "source_unchanged": true
+}

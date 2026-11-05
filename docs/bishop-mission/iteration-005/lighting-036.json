@@ -1,0 +1,8 @@
+{
+  "source":"history/bishop-mission-004/bishop-rebuilt.blend",
+  "variant":"036-dark-environment-reflection",
+  "samples":48,
+  "world_glossy_factor":0,
+  "lights":[],
+  "hypothesis":"The uniform white world causes a gray reflective rim absent from the reference. Suppress only its glossy-ray branch, retaining the accepted diffuse illumination, area lights, pigment, camera and geometry."
+}

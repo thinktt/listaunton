@@ -1,0 +1,30 @@
+{
+  "previous_response": "build/bishop-mission/body-response-004",
+  "new_response": "build/bishop-mission/body-response-confined-036",
+  "lights": {
+    "socket reflection": {
+      "old_energy": 180.0,
+      "new_energy": 5.7984341032739275,
+      "primary_glint_box": [
+        520,
+        765,
+        600,
+        812
+      ],
+      "primary_glint_pixels": 233,
+      "primary_response_relative_l2_error": 0.09447899869899545
+    },
+    "base reflection": {
+      "old_energy": 220.0,
+      "new_energy": 6.091302086195657,
+      "primary_glint_box": [
+        535,
+        975,
+        610,
+        1030
+      ],
+      "primary_glint_pixels": 1241,
+      "primary_response_relative_l2_error": 0.031996623350593965
+    }
+  }
+}

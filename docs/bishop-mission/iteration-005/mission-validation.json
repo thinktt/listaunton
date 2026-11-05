@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "all_evaluated_geometry_preserved_within_5e_6": false,
+  "declared_geometry_changes_validated": true,
+  "baseline_model": "history\\bishop-mission-001\\bishop-rebuilt.blend",
+  "geometry_comparison": {
+    "Bishop - continuous turned body": {
+      "max_evaluated_coordinate_difference": null,
+      "triangle_indices_unchanged": false,
+      "control_vertices_exactly_unchanged": false,
+      "max_control_difference_from_declared_edit": 1.1920928955078125e-07,
+      "control_topology_modifiers_and_cutter_unchanged": true,
+      "evaluated_triangle_count_before": 121344,
+      "evaluated_triangle_count_after": 122880
+    },
+    "Bishop - domed button finial": {
+      "max_evaluated_coordinate_difference": 0.01907581090927124,
+      "triangle_indices_unchanged": true,
+      "control_vertices_exactly_unchanged": false,
+      "max_control_difference_from_declared_edit": 2.9802322387695312e-08,
+      "control_topology_modifiers_and_cutter_unchanged": true,
+      "evaluated_triangle_count_before": 11776,
+      "evaluated_triangle_count_after": 11776
+    }
+  },
+  "components": {
+    "Bishop - continuous turned body": {
+      "positions": "a03c6aa9a19bbd72c1ddc1463ffaf2cc44769347301d85cc1a403b8061dafea5",
+      "triangles": "7c458f8b90aa0159bc23c688d5e078ab39cb125f9ed61ee183ba2289ab2856c9",
+      "vertex_count": 61442,
+      "triangle_count": 122880
+    },
+    "Bishop - domed button finial": {
+      "positions": "6cee2cf4b947dec6d0d73b714d90d8a0ef7ee095d39fd2890c3b6454a9668707",
+      "triangles": "ff22ed56a88aa08718d1271347ea18cd4aa13840c43f23191f8fb5d9268cf546",
+      "vertex_count": 5890,
+      "triangle_count": 11776
+    }
+  },
+  "camera_exactly_unchanged": true,
+  "reference_pixels_unchanged": true,
+  "shader": "Principled BSDF",
+  "albedo_bakes_lighting": false,
+  "texture_hash_matches": true,
+  "finite_uvs_and_unit_normals": true,
+  "model_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32"
+}

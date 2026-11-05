@@ -1,0 +1,21 @@
+{
+  "source": "build/bishop-mission/037-confined-lower-reflectors/bishop.blend",
+  "source_sha256": "4afb7407ee69dd92896e1d61a7aa4a9b4304cbae650fbabf93c85e520730cde3",
+  "variant": "038-rebalanced-pigment",
+  "response_directory": "build/bishop-mission/material-response-037",
+  "feedback": null,
+  "relative_pigment_bounds": [
+    0.8,
+    1.8
+  ],
+  "max_weight": 0.85,
+  "mean_effective_weight": 0.6782928705215454,
+  "effective_weight_above_half_pixels": 243187,
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "targeted_metric": "Wood color and grain, with geometry, relief, BSDF and light rig fixed.",
+  "view": "Standard",
+  "look": "None",
+  "method": "Measured black/white BSDF response with the verified matching display/view/Look transform. Reflections, clipping, failed inverse pixels and boundaries excluded. Visible-surface confidence preserves the hidden atlas.",
+  "caveat": "Approximate inferred pigment under estimated lights. Interreflections make the response nonlinear and residual shading may remain.",
+  "saved_model_sha256": "574af2fb388d8c468a8606bcedc9f14fe9e289e329a951b2b057b8553f80a6bb"
+}

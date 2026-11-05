@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.19725744653088,
+    "interior": 81,
+    "color": 85,
+    "texture": 77,
+    "lighting": 72
+  },
+  "mean_percent": 82.23945148930618,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9787643974013932,
+  "original_black_iou": 0.9675317624063416,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+  "render_sha256": "c9f5c226ca7f1f7049b712131058ae9313168d87cb4af682b6f1511b5594223f",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "starting_model_sha256": "8e33d8a3855a1cf46ee06f45f7a082840459edaa6e3e6207169fdade99c54a1c",
+  "status": "Accepted lighting/color improvement; mission incomplete. Slit termination, fine reflections and rear pigment continuity remain unresolved."
+}

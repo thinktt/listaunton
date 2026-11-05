@@ -46,6 +46,17 @@ def unchanged_state():
 
 before=unchanged_state()
 if 'world' in cfg:s.world.node_tree.nodes['Background'].inputs[1].default_value=cfg['world']
+if 'world_glossy_factor' in cfg:
+    factor=cfg['world_glossy_factor'];assert 0<=factor<=1
+    nodes=s.world.node_tree.nodes;links=s.world.node_tree.links
+    background=nodes['Background'];output=nodes['World Output']
+    assert not background.inputs['Strength'].is_linked, 'Expected the accepted simple ambient world.'
+    glossy=nodes.get('Bishop glossy environment') or nodes.new('ShaderNodeBackground');glossy.name='Bishop glossy environment'
+    glossy.inputs['Color'].default_value=background.inputs['Color'].default_value
+    glossy.inputs['Strength'].default_value=background.inputs['Strength'].default_value*factor
+    path=nodes.get('Bishop environment ray type') or nodes.new('ShaderNodeLightPath');path.name='Bishop environment ray type'
+    mix=nodes.get('Bishop diffuse and glossy environment') or nodes.new('ShaderNodeMixShader');mix.name='Bishop diffuse and glossy environment'
+    links.new(path.outputs['Is Glossy Ray'],mix.inputs[0]);links.new(background.outputs[0],mix.inputs[1]);links.new(glossy.outputs[0],mix.inputs[2]);links.new(mix.outputs[0],output.inputs['Surface'])
 for spec in cfg.get('lights',[]):
     name=spec['name'];ob=bpy.data.objects.get(name)
     if ob is None:

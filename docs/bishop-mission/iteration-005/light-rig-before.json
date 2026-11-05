@@ -1,0 +1,218 @@
+{
+  "source": "history/bishop-mission-004/bishop-rebuilt.blend",
+  "lights": [
+    {
+      "name": "Broad diffuse key",
+      "type": "AREA",
+      "energy": 1650.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "position": [
+        3.0,
+        -4.0,
+        7.0
+      ],
+      "visible_diffuse": true,
+      "visible_glossy": false,
+      "hide_render": false,
+      "receiver": null,
+      "size": 2.0,
+      "size_y": 0.25,
+      "shape": "DISK",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "Diffuse fill",
+      "type": "AREA",
+      "energy": 135.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "position": [
+        -4.0,
+        -1.0,
+        5.0
+      ],
+      "visible_diffuse": true,
+      "visible_glossy": false,
+      "hide_render": false,
+      "receiver": null,
+      "size": 4.0,
+      "size_y": 0.25,
+      "shape": "DISK",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "button reflection",
+      "type": "AREA",
+      "energy": 1983.2774658203125,
+      "color": [
+        1.0,
+        0.7407407164573669,
+        0.4226303994655609
+      ],
+      "position": [
+        2.7702524662017822,
+        -0.15775763988494873,
+        11.037179946899414
+      ],
+      "visible_diffuse": false,
+      "visible_glossy": true,
+      "hide_render": false,
+      "receiver": "Bishop light receiver button",
+      "size": 6.754273414611816,
+      "size_y": 2.7067339420318604,
+      "shape": "ELLIPSE",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "head reflection",
+      "type": "AREA",
+      "energy": 120.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "position": [
+        3.3809285163879395,
+        -6.415489196777344,
+        4.692895412445068
+      ],
+      "visible_diffuse": false,
+      "visible_glossy": true,
+      "hide_render": false,
+      "receiver": "Bishop light receiver body",
+      "size": 1.0,
+      "size_y": 0.25,
+      "shape": "DISK",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "collars reflection",
+      "type": "AREA",
+      "energy": 70.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "position": [
+        3.552460193634033,
+        -6.309630870819092,
+        0.6013658046722412
+      ],
+      "visible_diffuse": false,
+      "visible_glossy": true,
+      "hide_render": false,
+      "receiver": "Bishop light receiver body",
+      "size": 3.200000047683716,
+      "size_y": 0.699999988079071,
+      "shape": "RECTANGLE",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "socket reflection",
+      "type": "AREA",
+      "energy": 180.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "position": [
+        5.57327938079834,
+        -4.51612663269043,
+        -0.6999073028564453
+      ],
+      "visible_diffuse": false,
+      "visible_glossy": true,
+      "hide_render": false,
+      "receiver": "Bishop light receiver body",
+      "size": 2.4000000953674316,
+      "size_y": 0.699999988079071,
+      "shape": "RECTANGLE",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "base reflection",
+      "type": "AREA",
+      "energy": 220.0,
+      "color": [
+        1.0,
+        0.8700000047683716,
+        0.25
+      ],
+      "position": [
+        3.73593807220459,
+        -6.995824337005615,
+        1.1789131164550781
+      ],
+      "visible_diffuse": false,
+      "visible_glossy": true,
+      "hide_render": false,
+      "receiver": "Bishop light receiver body",
+      "size": 0.8999999761581421,
+      "size_y": 0.25,
+      "shape": "DISK",
+      "spread": 3.1415927410125732
+    },
+    {
+      "name": "Button second glint",
+      "type": "AREA",
+      "energy": 1003.1768188476562,
+      "color": [
+        1.0,
+        0.7407407164573669,
+        0.4514891505241394
+      ],
+      "position": [
+        -1.557356357574463,
+        -3.123260259628296,
+        10.73029899597168
+      ],
+      "visible_diffuse": false,
+      "visible_glossy": true,
+      "hide_render": false,
+      "receiver": "Bishop light receiver button",
+      "size": 3.6379709243774414,
+      "size_y": 1.7736656665802002,
+      "shape": "ELLIPSE",
+      "spread": 3.1415927410125732
+    }
+  ],
+  "world_nodes": [
+    {
+      "name": "Background",
+      "type": "BACKGROUND",
+      "inputs": {
+        "Color": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Strength": 0.15000000596046448,
+        "Weight": 0.0
+      }
+    },
+    {
+      "name": "World Output",
+      "type": "OUTPUT_WORLD",
+      "inputs": {}
+    }
+  ],
+  "world_links": [
+    [
+      "Background",
+      "Background",
+      "World Output",
+      "Surface"
+    ]
+  ]
+}

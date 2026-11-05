@@ -22,6 +22,7 @@ Preserved under `history/bishop-mission-000/`. See
 | Wider button, flatter foot | 96.20 | 81 | 70 | 64 | 54 | 73.04 |
 | Measured boxwood color, warm reflections | 96.20 | 81 | 84 | 77 | 64 | 80.44 |
 | Rounder button reflections | 96.20 | 81 | 84 | 77 | 66 | 80.84 |
+| Confined lower reflections and restored color | 96.20 | 81 | 85 | 77 | 72 | 82.24 |
 
 Silhouette is selected-reference IoU; other scores are visual estimates.
 The separate original-white IoU is 96.58%. Initial holistic appearance was
@@ -133,3 +134,25 @@ for all five scores, rejected trials, reproducible settings and validation.
 The bishop review and existing local preview show the same accepted checkpoint.
 The mission remains incomplete; lower-head glare and rear pigment continuity
 are the next priorities.
+
+## Iteration 005 — less reflection spill and restored wood color
+
+Measured light passes show that the socket and base reflectors contribute to
+the unwanted glare below the slit. Their spread is narrowed and their powers
+normalized to retain the intended lower glints. The uniform gray environment
+reflection is removed while preserving diffuse illumination. A bounded
+measured-pigment fit restores the wood color under this lighting.
+
+Geometry, proportions, camera and accepted button reflectors stay unchanged.
+The atlas is baked with protected input images, packed, reopened and rendered
+with an actual Principled BSDF. The working mean rises from 80.84 to 82.24;
+holistic fixed-view appearance is still approximately 75–85%. The side/rear
+material boundary remains unresolved. Conservative and grazing-angle harmonic
+color extensions were tested and rejected for insufficient improvement.
+
+Checkpoint 004 is preserved in `history/bishop-mission-004`. See
+[`iteration-005/assessment.md`](bishop-mission/iteration-005/assessment.md)
+for the five-category scores, actual evidence, rejected trials and validation.
+The main bishop review and existing local preview are synchronized at acceptance.
+Next, examine the squared slit termination against clay and both originals;
+continue pursuing the material and reflection mismatches as well.
