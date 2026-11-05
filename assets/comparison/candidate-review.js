@@ -137,5 +137,5 @@
   for(const type of ['pointerup','pointercancel','lostpointercapture'])viewport.addEventListener(type,()=>{drag=null;});
   window.addEventListener('blur',()=>{drag=null;wipeDrag=null;});
   new ResizeObserver(()=>{if(zoom==='fit')resize('fit',false);}).observe(viewport);
-  resize('fit',false);pair();
+  resize('fit',false);pair();if(data.initialTab)showTab(data.initialTab);
 })();

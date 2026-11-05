@@ -1,5 +1,10 @@
 # King reconstruction
 
+Current checkpoint, 5 November 2026: the accepted king uses the fixed **54-degree** camera and a packed wood material. See [the king mission log](king-mission-log.md) for scores, evidence, remaining defects and the current rebuild procedure. The historical 52-degree clay builder below is preserved for provenance, not the current pipeline.
+
+## Historical clay study
+
+
 Current geometry study, 4 October 2026. The original Lichess **Black-King.png is the source of truth**. The owner's selected **black candidate 1** supplies a larger working image for locating edges; generated details do not override the original. The white original was also inspected to distinguish dark shading from geometry.
 
 ## Sources and registration

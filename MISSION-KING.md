@@ -142,6 +142,8 @@ Full-material baseline scores are unassessed. Examine and record them before ass
    from the same accepted model. Run relevant site/interaction checks when
    their assets change; preserve historical projection studies and the
    parts map's sandbox/CSP. Keep edits scoped to the assigned piece; preserve gallery defaults.
+At each accepted major checkpoint, refresh the king main review page and local preview so the owner can inspect the current model. Keep the fixed overlay, rotating mesh, and registered side comparison synchronized; open Reconstruction by default.
+
 8. **Checkpoint and commit.** Record the scores and evidence in the mission
    log, then commit the completed, checked iteration with the required actual
    model co-author trailer. Do not push or publish. Update the existing local

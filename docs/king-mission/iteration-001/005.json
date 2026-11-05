@@ -1,0 +1,22 @@
+{
+  "variant": "005-surface-directed-highlights",
+  "source": "build/king-mission/003-separated-varnish/king.blend",
+  "value": 0.76,
+  "saturation": 0.98,
+  "broad_step": 4,
+  "fine_step": 3,
+  "grain_gain": 0.7,
+  "coat_microrelief": true,
+  "relief_strength": 0.15,
+  "relief_distance": 0.004,
+  "world": 0.06,
+  "samples": 64,
+  "lights": [
+    {"name":"Diffuse right", "energy":600,"size":5,"position":[3,-4,8],"target":[0,0,2.6],"glossy":false},
+    {"name":"Diffuse left", "energy":100,"size":5,"position":[-4,-2,6],"target":[0,0,2.5],"glossy":false},
+    {"name":"Platter reflection", "energy":600,"size":2.2,"position":[-0.185,3.838,8.234],"target":[0.261,-0.448,4.058],"diffuse":false},
+    {"name":"Base reflection", "energy":450,"size":1.4,"size_y":2.4,"shape":"RECTANGLE","position":[3.312,-4.975,3.754],"target":[0.329,-0.845,0.584],"diffuse":false},
+    {"name":"Collar crescents", "energy":260,"size":3.6,"size_y":0.65,"shape":"RECTANGLE","position":[0.97,-6.38,1.35],"target":[0.064,-0.648,2.886],"diffuse":false},
+    {"name":"Socket reflection", "energy":160,"size":2.8,"size_y":0.6,"shape":"RECTANGLE","position":[-1.676,-6.099,2.74],"target":[-0.087,-0.5,1.282],"diffuse":false}
+  ]
+}

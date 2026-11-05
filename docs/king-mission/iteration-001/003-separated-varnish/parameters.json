@@ -1,0 +1,98 @@
+{
+  "variant": "003-separated-varnish",
+  "source": "build\\king-mission\\003-separated-varnish\\prepared.blend",
+  "texture": "assets/king/materials/derived-pigment-01.png",
+  "value": 0.85,
+  "saturation": 1.0,
+  "roughness": 0.28,
+  "coat": 0.35,
+  "coat_roughness": 0.22,
+  "relief_strength": 0.08,
+  "relief_distance": 0.003,
+  "world": 0.06,
+  "samples": 48,
+  "lights": [
+    {
+      "name": "Diffuse right",
+      "energy": 600,
+      "size": 5,
+      "position": [
+        3,
+        -4,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        2.6
+      ],
+      "glossy": false
+    },
+    {
+      "name": "Diffuse left",
+      "energy": 100,
+      "size": 5,
+      "position": [
+        -4,
+        -2,
+        6
+      ],
+      "target": [
+        0,
+        0,
+        2.5
+      ],
+      "glossy": false
+    },
+    {
+      "name": "Upper varnish",
+      "energy": 150,
+      "size": 1.4,
+      "position": [
+        3,
+        -4,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        3.6
+      ],
+      "diffuse": false
+    },
+    {
+      "name": "Front varnish",
+      "energy": 330,
+      "size": 1.0,
+      "size_y": 4.0,
+      "shape": "RECTANGLE",
+      "position": [
+        2,
+        -6,
+        1.4
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "diffuse": false
+    }
+  ],
+  "original_source": "build/king-mission/001-54-procedural-wood/king.blend",
+  "original_source_sha256": "624ccb67dd27d7b922019ab44caba76937b15b59aa873e7b8f8f3f0bace31d3f",
+  "coverage": {
+    "King - continuous turned body": {
+      "vertices": 8448,
+      "covered": 3115
+    },
+    "King - beveled cross": {
+      "vertices": 24,
+      "covered": 4
+    }
+  },
+  "texture_sha256": "34cd3d2659b9db51d79e4357f8ee45b7b97f8b2551c502fb917e6bdb7f404953",
+  "source_sha256": "efe8229ac71b594870b0350c8d8d9209b8113b906aad02be5c43bfba7c6c2326",
+  "model_sha256": "18cca84d1e7cf3b6c92d6dac2a1518a8d6772c3352e70668a6cc6a2c6b8e2154",
+  "elevation_degrees": 54.000000800055794
+}

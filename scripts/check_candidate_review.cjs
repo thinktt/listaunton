@@ -6,9 +6,9 @@ async function check(piece,modelOverride){
  const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
  const data=JSON.parse(html.match(/<script id="comparison-data"[^>]*>(.*?)<\/script>/s)[1]);
  if(modelOverride)data.model={page:modelOverride};
- assert.match(html,/id="tab-candidates"[^>]*role="tab"[^>]*aria-selected="true"/);
- assert.match(html,/id="tab-model"[^>]*role="tab"[^>]*aria-selected="false"/);
- assert.match(html,/id="panel-model"[^>]*hidden/);
+ assert.match(html,new RegExp(`id="tab-candidates"[^>]*role="tab"[^>]*aria-selected="${data.initialTab==='model'?'false':'true'}"`));
+ assert.match(html,new RegExp(`id="tab-model"[^>]*role="tab"[^>]*aria-selected="${data.initialTab==='model'?'true':'false'}"`));
+ if(data.initialTab!=='model')assert.match(html,/id="panel-model"[^>]*hidden/);
  assert.match(html,/id="model-frame"[^>]*sandbox="allow-scripts allow-downloads"[^>]*hidden/);
  assert(!/id="model-frame"[^>]*\ssrc=/.test(html),'Frame must load only when its tab opens');
  assert.equal(data.images.length,piece==='rook'?10:piece==='bishop'?9:8);
@@ -28,6 +28,7 @@ async function check(piece,modelOverride){
  class FakeImage{set src(value){queueMicrotask(()=>failed.has(value)?this.onerror():this.onload());}}
  vm.runInNewContext(source,{document:doc,window:{addEventListener(){}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
  await settle();
+ if(data.initialTab==='model'){assert.equal(node('panel-model').hidden,false);assert.equal(frameLoads,1);node('tab-candidates').fire('click');}
  assert.equal(node('stage').style.visibility,'visible');assert.equal(node('loading').hidden,true);
  assert.equal(node('wipe').attrs['aria-pressed'],'true');assert.equal(node('layer-b').style.clipPath,'inset(0 50% 0 0)');
  const h=node('wipe-handle');assert.equal(h.hidden,false);
@@ -67,7 +68,7 @@ async function check(piece,modelOverride){
  assert.equal(node('viewport').scrollLeft,60);assert.equal(node('viewport').scrollTop,100);
  node('image-b').value=firstCandidate;node('image-b').fire('change');node('image-b').value=lastCandidate;node('image-b').fire('change');await settle();
  assert.equal(node('photo-b').src,data.images.find(x=>x.id===lastCandidate).file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
- assert.equal(frameLoads,0,'Hidden model must not load during reference work');
+ assert.equal(frameLoads,data.initialTab==='model'?1:0,'Model loads only when opened, including explicit initial selection');
  const savedA=node('image-a').value,savedB=node('image-b').value,savedMix=node('mix').value;
  node('tab-model').fire('click');
  assert.equal(node('panel-candidates').hidden,true);assert.equal(node('panel-model').hidden,false);

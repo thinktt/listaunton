@@ -1,0 +1,159 @@
+{
+  "rubric": "Silhouette is measured IoU. Other percentages are subjective; equal-weight mean is a working progress indicator.",
+  "holistic_visual_range": [
+    60,
+    70
+  ],
+  "trials": [
+    {
+      "variant": "000-start",
+      "scores": {
+        "silhouette": 98.10221144807797,
+        "interior_form": 78,
+        "wood_color": 0,
+        "grain_texture": 0,
+        "lighting": 25
+      },
+      "mean": 40.2204422896156,
+      "original_iou": 0.9651458070346921,
+      "highres_iou": 0.9810221144807797,
+      "assessment": "Baseline: accepted 52-degree clay; no wood pigment or grain. Broad diagnostic highlights do not match the reference.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "001-54-procedural-wood",
+      "scores": {
+        "silhouette": 97.84991443183729,
+        "interior_form": 78,
+        "wood_color": 58,
+        "grain_texture": 22,
+        "lighting": 28
+      },
+      "mean": 56.76998288636746,
+      "original_iou": 0.9679501698754247,
+      "highres_iou": 0.9784991443183729,
+      "assessment": "54-degree starting study improves original outline slightly. Procedural bands are much too straight and smooth.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "002-derived-pigment",
+      "scores": {
+        "silhouette": 97.84991443183729,
+        "interior_form": 78,
+        "wood_color": 58,
+        "grain_texture": 48,
+        "lighting": 35
+      },
+      "mean": 63.36998288636746,
+      "original_iou": 0.9679501698754247,
+      "highres_iou": 0.9784991443183729,
+      "assessment": "Better irregular grain and base markings, but pale reflections and an uncovered cross patch are wrong.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "003-separated-varnish",
+      "scores": {
+        "silhouette": 97.84991443183729,
+        "interior_form": 78,
+        "wood_color": 69,
+        "grain_texture": 53,
+        "lighting": 42
+      },
+      "mean": 67.96998288636746,
+      "original_iou": 0.9679501698754247,
+      "highres_iou": 0.9784991443183729,
+      "assessment": "Fixed face coverage on cross. Warmer wood; too orange and coarse, with long vertical reflections.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "004-fine-reference-grain",
+      "scores": {
+        "silhouette": 97.85212956963453,
+        "interior_form": 78,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 45
+      },
+      "mean": 70.1704259139269,
+      "original_iou": 0.96794794464564,
+      "highres_iou": 0.9785212956963453,
+      "assessment": "Bounded fine reference grain improves scale. Broader highlights improve some edges; regional contrast and platter highlight remain weak.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "005-surface-directed-highlights",
+      "scores": {
+        "silhouette": 97.85212956963453,
+        "interior_form": 78,
+        "wood_color": 65,
+        "grain_texture": 60,
+        "lighting": 30
+      },
+      "mean": 66.1704259139269,
+      "original_iou": 0.96794794464564,
+      "highres_iou": 0.9785212956963453,
+      "assessment": "Rejected: reflectors wash out the cross and platter; relief is too strong. Lower confidence despite real surface probes.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "006-convex-platter",
+      "scores": {
+        "silhouette": 97.85043562559198,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 45
+      },
+      "mean": 70.5700871251184,
+      "original_iou": 0.9679409534501265,
+      "highres_iou": 0.9785043562559198,
+      "assessment": "Retained: reduces the platter trough with a local continuous profile correction; silhouette and proportions preserved.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "007-restrained-reflections",
+      "scores": {
+        "silhouette": 97.85088239949351,
+        "interior_form": 80,
+        "wood_color": 66,
+        "grain_texture": 62,
+        "lighting": 40
+      },
+      "mean": 69.1701764798987,
+      "original_iou": 0.967916097344806,
+      "highres_iou": 0.9785088239949351,
+      "assessment": "Rejected: even reduced rear reflection leaves grey cross tops and a misplaced left platter patch.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "008-pigment-atlas",
+      "scores": {
+        "silhouette": 97.85088239949351,
+        "interior_form": 80,
+        "wood_color": 25,
+        "grain_texture": 20,
+        "lighting": 45
+      },
+      "mean": 53.570176479898706,
+      "original_iou": 0.967916097344806,
+      "highres_iou": 0.9785088239949351,
+      "assessment": "Rejected technical export: stale edit-mode UV handle let cross islands overlap body; exposed before publication.",
+      "accepted_checkpoint": false
+    },
+    {
+      "variant": "009-verified-pigment-atlas",
+      "scores": {
+        "silhouette": 97.85064040578405,
+        "interior_form": 80,
+        "wood_color": 68,
+        "grain_texture": 62,
+        "lighting": 45
+      },
+      "mean": 70.57012808115681,
+      "original_iou": 0.9679137144067004,
+      "highres_iou": 0.9785064040578405,
+      "assessment": "Accepted first checkpoint: disjoint verified atlas, exact packed pixels, real BSDF render preserved. Not a finished match.",
+      "accepted_checkpoint": true
+    }
+  ]
+}

@@ -1,16 +1,17 @@
 {
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
+  "mask_convention": "max RGB >12 and alpha >127, largest component, holes filled; model alpha >127",
   "images": {
     "original": {
-      "silhouette_iou": 0.9599626622778467,
-      "mean_boundary_error_px": 6.158186864014801,
-      "p95_boundary_error_px": 20.0,
+      "silhouette_iou": 0.9679137144067004,
+      "mean_boundary_error_px": 5.637962962962963,
+      "p95_boundary_error_px": 17.049999999999727,
       "reference_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
     },
     "selected": {
-      "silhouette_iou": 0.9741436682789247,
-      "mean_boundary_error_px": 3.4395756457564577,
-      "p95_boundary_error_px": 10.0,
+      "silhouette_iou": 0.9785064040578405,
+      "mean_boundary_error_px": 3.8970452446906743,
+      "p95_boundary_error_px": 12.0,
       "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c"
     }
   }

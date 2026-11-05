@@ -1,0 +1,19 @@
+{
+  "variant": "004-fine-reference-grain",
+  "source": "build/king-mission/003-separated-varnish/king.blend",
+  "value": 0.76,
+  "saturation": 0.93,
+  "broad_step": 7,
+  "fine_step": 3,
+  "grain_gain": 0.8,
+  "relief_strength": 0.1,
+  "relief_distance": 0.002,
+  "world": 0.06,
+  "samples": 64,
+  "lights": [
+    {"name":"Diffuse right", "energy":600,"size":5,"position":[3,-4,8],"target":[0,0,2.6],"glossy":false},
+    {"name":"Diffuse left", "energy":100,"size":5,"position":[-4,-2,6],"target":[0,0,2.5],"glossy":false},
+    {"name":"Upper varnish", "energy":500,"size":2.3,"position":[3,-4,8],"target":[0,0,3.6],"diffuse":false},
+    {"name":"Front varnish", "energy":350,"size":3.2,"size_y":0.7,"shape":"RECTANGLE","position":[2,-6,3.0],"target":[0,0,2],"diffuse":false}
+  ]
+}

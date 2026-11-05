@@ -1,0 +1,96 @@
+{
+  "variant": "007-restrained-reflections",
+  "source": "build/king-mission/006-convex-platter/king.blend",
+  "samples": 96,
+  "coat_microrelief": true,
+  "relief_strength": 0.08,
+  "relief_distance": 0.002,
+  "world": 0.06,
+  "lights": [
+    {
+      "name": "Diffuse right",
+      "energy": 600,
+      "size": 5,
+      "position": [
+        3,
+        -4,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        2.6
+      ],
+      "glossy": false
+    },
+    {
+      "name": "Diffuse left",
+      "energy": 100,
+      "size": 5,
+      "position": [
+        -4,
+        -2,
+        6
+      ],
+      "target": [
+        0,
+        0,
+        2.5
+      ],
+      "glossy": false
+    },
+    {
+      "name": "Upper varnish",
+      "energy": 300,
+      "size": 2.3,
+      "position": [
+        3,
+        -4,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        3.6
+      ],
+      "diffuse": false
+    },
+    {
+      "name": "Front varnish",
+      "energy": 220,
+      "size": 3.2,
+      "size_y": 0.7,
+      "shape": "RECTANGLE",
+      "position": [
+        2,
+        -6,
+        3.0
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "diffuse": false
+    },
+    {
+      "name": "Platter reflection",
+      "energy": 72,
+      "size": 2.2,
+      "position": [
+        -0.185,
+        3.838,
+        8.234
+      ],
+      "target": [
+        0.261,
+        -0.448,
+        4.058
+      ],
+      "diffuse": false
+    }
+  ],
+  "source_sha256": "8d41fec190ab93661c046730e7e80d7274d1b6e001aabe9a06139f8941f721b0",
+  "model_sha256": "b417f3e42c2c1c03674f9b09524fa876dc9518d0306b22aefc8f9fe8d18d1608",
+  "elevation_degrees": 54.000000800055794
+}

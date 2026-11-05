@@ -1,0 +1,20 @@
+{
+  "variant": "003-separated-varnish",
+  "source": "build/king-mission/001-54-procedural-wood/king.blend",
+  "texture": "assets/king/materials/derived-pigment-01.png",
+  "value": 0.85,
+  "saturation": 1.0,
+  "roughness": 0.28,
+  "coat": 0.35,
+  "coat_roughness": 0.22,
+  "relief_strength": 0.08,
+  "relief_distance": 0.003,
+  "world": 0.06,
+  "samples": 48,
+  "lights": [
+    {"name":"Diffuse right", "energy":600,"size":5,"position":[3,-4,8],"target":[0,0,2.6],"glossy":false},
+    {"name":"Diffuse left", "energy":100,"size":5,"position":[-4,-2,6],"target":[0,0,2.5],"glossy":false},
+    {"name":"Upper varnish", "energy":150,"size":1.4,"position":[3,-4,8],"target":[0,0,3.6],"diffuse":false},
+    {"name":"Front varnish", "energy":330,"size":1.0,"size_y":4.0,"shape":"RECTANGLE","position":[2,-6,1.4],"target":[0,0,2],"diffuse":false}
+  ]
+}

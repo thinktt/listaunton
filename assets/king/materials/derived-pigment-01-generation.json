@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "purpose": "Derived diffuse pigment source; original reference unchanged.",
+  "prompt": "Use case: lighting-weather. Asset type: diffuse pigment source for a real Blender wood material, NOT a replacement reference or a beauty render. Edit target: the attached selected king image. Preserve the exact square composition, object position, 54-degree elevated view, silhouette, every cross and turned ring, and the existing fine irregular wood grain and distinctive dark grain marks. Change only illumination: remove the white varnish glints, broad reflected softboxes, cavity darkening and directional shading from the wood, leaving an evenly illuminated diffuse walnut pigment/albedo representation. Replace bright reflection patches with plausible continuations of the immediately surrounding small-scale grain. Preserve the warm reddish brown pigment and subtle natural regional color variation, with modest midtone contrast. Do not make long straight horizontal stripes; match the fine tangled grain visible on the cross and platter and curved grain on the base. No gloss, no cast shadow, no rim lighting, no grey highlights. Exact original framing; do not center, zoom, change proportions, enlarge the crop, add a pedestal, or change cross geometry. Transparent background. This image will be projected onto actual 3D geometry and relit, so paint only surface pigment, not lighting.",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "output": "derived-pigment-01.png"
+}

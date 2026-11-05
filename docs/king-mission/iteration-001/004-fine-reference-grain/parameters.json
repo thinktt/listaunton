@@ -1,0 +1,91 @@
+{
+  "variant": "004-fine-reference-grain",
+  "source": "build\\king-mission\\004-fine-reference-grain\\prepared.blend",
+  "value": 0.76,
+  "saturation": 0.93,
+  "broad_step": 7,
+  "fine_step": 3,
+  "grain_gain": 0.8,
+  "relief_strength": 0.1,
+  "relief_distance": 0.002,
+  "world": 0.06,
+  "samples": 64,
+  "lights": [
+    {
+      "name": "Diffuse right",
+      "energy": 600,
+      "size": 5,
+      "position": [
+        3,
+        -4,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        2.6
+      ],
+      "glossy": false
+    },
+    {
+      "name": "Diffuse left",
+      "energy": 100,
+      "size": 5,
+      "position": [
+        -4,
+        -2,
+        6
+      ],
+      "target": [
+        0,
+        0,
+        2.5
+      ],
+      "glossy": false
+    },
+    {
+      "name": "Upper varnish",
+      "energy": 500,
+      "size": 2.3,
+      "position": [
+        3,
+        -4,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        3.6
+      ],
+      "diffuse": false
+    },
+    {
+      "name": "Front varnish",
+      "energy": 350,
+      "size": 3.2,
+      "size_y": 0.7,
+      "shape": "RECTANGLE",
+      "position": [
+        2,
+        -6,
+        3.0
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "diffuse": false
+    }
+  ],
+  "original_source": "build/king-mission/003-separated-varnish/king.blend",
+  "original_source_sha256": "18cca84d1e7cf3b6c92d6dac2a1518a8d6772c3352e70668a6cc6a2c6b8e2154",
+  "fine_reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "grain_ratio_bounds": [
+    0.55,
+    1.55
+  ],
+  "source_sha256": "1c3e3406f98efb6885908ab76c3bd95069890af88d5293e217ccd3129c8b016a",
+  "model_sha256": "46321080b4317dba2b53c9b6bab215dee68e30dbd807bf33c1dca5184e4793ea",
+  "elevation_degrees": 54.000000800055794
+}

@@ -2,8 +2,8 @@
 
 Run after every variant has been built, rendered, exported and validated:
     python scripts/king/check_projection_variants.py
-The canonical king must still match baseline-preservation.json, captured before
-the experiment. This checker does not rewrite the models or their fit results.
+The archived pre-mission king must still match baseline-preservation.json,
+captured before the experiment. This checker does not rewrite the models or their fit results.
 """
 from pathlib import Path
 import argparse
@@ -42,9 +42,9 @@ def check(root, manifest_file, baseline_file):
     required_baseline = {'models/king/king-rebuilt.blend', 'assets/king/mesh.json', 'assets/king/mesh.bin', 'assets/king/render.png', 'assets/king/camera.json', 'assets/king/reference.png', 'assets/king/original.png', 'assets/king/validation.json'}
     require(required_baseline <= canonical.keys(), 'Preservation snapshot is incomplete')
     for name, expected in canonical.items():
-        actual = sha(local(name))
+        actual = sha(local('history/king-before-54-mission/' + name))
         if actual != expected and name in baseline.get('jsonContentSha256', {}):
-            content = json.dumps(json.loads(local(name).read_text()), sort_keys=True, separators=(',', ':')).encode()
+            content = json.dumps(json.loads(local('history/king-before-54-mission/' + name).read_text()), sort_keys=True, separators=(',', ':')).encode()
             require(hashlib.sha256(content).hexdigest() == baseline['jsonContentSha256'][name], f'Canonical king data changed: {name}')
         else:
             require(actual == expected, f'Canonical king changed: {name}')
@@ -140,7 +140,9 @@ def check(root, manifest_file, baseline_file):
     require(len({r['modelSha256'] for r in reports}) == 6, 'Duplicate model file in projection experiment')
     require(len({r['meshSha256'] for r in reports}) == 6, 'Geometry was not regenerated for each projection')
     require(len({r['renderSha256'] for r in reports}) == 6, 'Duplicate variant render')
-    canonical_meta = json.loads(local('assets/king/mesh.json').read_text())
+    canonical_meta = json.loads(local('history/king-before-54-mission/assets/king/mesh.json').read_text())
+    for source in ['assets/king/reference.png', 'assets/king/original.png']:
+        require(sha(local(source)) == canonical[source], 'Current source reference changed: '+source)
     base_width = canonical_meta['bounds']['size'][0]
     for result in reports:
         require(abs(result['baseDiameter']/base_width - 1) < .025, f"Physical base scale changed more than 2.5%: {result['id']}")
@@ -148,7 +150,7 @@ def check(root, manifest_file, baseline_file):
     if shared:
         require(len(shared['center']) == 3 and all(math.isfinite(x) for x in shared['center']), 'Invalid shared-view center')
         require(shared['orthoHeight'] > 0 and shared['distance'] > 0, 'Invalid common inspection camera')
-    return {'passed':True, 'canonicalKingUnchanged':True, 'preservedCanonicalFiles':sorted(canonical), 'expectedElevations':[48,52,54,56,60,64], 'physicalBaseDiameterTolerancePercent':2.5, 'closureEvidence':'Blender validation reports certify the two source components. This checker verifies hashes and exported binary structure; it does not infer manifoldness from duplicated viewer vertices.', 'variants':reports}
+    return {'passed':True, 'historicalKingBaselineUnchanged':True,'baselineArchive':'history/king-before-54-mission', 'preservedCanonicalFiles':sorted(canonical), 'expectedElevations':[48,52,54,56,60,64], 'physicalBaseDiameterTolerancePercent':2.5, 'closureEvidence':'Blender validation reports certify the two source components. This checker verifies hashes and exported binary structure; it does not infer manifoldness from duplicated viewer vertices.', 'variants':reports}
 
 
 if __name__ == '__main__':
