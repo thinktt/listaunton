@@ -1,0 +1,37 @@
+{
+  "source_sha256": "a7a928bdeb07b0bd680c7228dedf302888a23c88113783afff0757602d346e42",
+  "crop": [
+    315,
+    650,
+    635,
+    815
+  ],
+  "ellipses": [
+    {
+      "center": [
+        528,
+        695
+      ],
+      "radii": [
+        19,
+        22
+      ]
+    },
+    {
+      "center": [
+        567,
+        765
+      ],
+      "radii": [
+        22,
+        14
+      ]
+    }
+  ],
+  "mask_pixels": 2260,
+  "harmonic_iterations": 1545,
+  "last_log_color_change": 9.5367431640625e-06,
+  "fine_grain_strength": 0.7,
+  "medium_grain_strength": 1,
+  "method": "Fill only the two exposed pigment imprints from adjacent log wood color; add bounded fine reference grain and medium relief-field variation. Preserve surrounding pigment and existing hidden-surface coverage."
+}

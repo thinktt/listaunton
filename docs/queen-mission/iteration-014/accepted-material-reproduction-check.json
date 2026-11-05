@@ -1,0 +1,20 @@
+{
+  "reopened": {
+    "mean_rgb_byte_difference": 7.84305745272756e-06,
+    "p99_rgb_byte_difference": 0.0,
+    "max_rgb_byte_difference": 1,
+    "alpha_identical": true
+  },
+  "atlas_vs_projected": {
+    "mean_rgb_byte_difference": 0.0342014538060874,
+    "p99_rgb_byte_difference": 1.0,
+    "max_rgb_byte_difference": 29,
+    "alpha_identical": true
+  },
+  "reproduced": {
+    "mean_rgb_byte_difference": 6.995159349729987e-06,
+    "p99_rgb_byte_difference": 0.0,
+    "max_rgb_byte_difference": 1,
+    "alpha_identical": true
+  }
+}

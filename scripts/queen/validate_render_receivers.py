@@ -16,7 +16,18 @@ def check(scene,control):
     parts=[o for o in scene.objects if o.type=='MESH' and o.get('mission_render_region')]
     if not parts:return {'used':False}
     assert control.hide_render
-    assert {o['mission_render_region'] for o in parts}=={'turned-body','finial'}
+    settings=json.loads(scene['mission_material_config'])
+    socket=settings.get('stem_socket_receiver_isolation')
+    expected_parts={'turned-body','stem-socket','finial'} if socket else {'turned-body','finial'}
+    assert {o['mission_render_region'] for o in parts}==expected_parts
+    if socket:
+        assert socket['z_interval']==[.83,2.78]
+        controls=np.empty(len(control.data.vertices)*3,dtype=np.float32)
+        control.data.vertices.foreach_get('co',controls)
+        assert hashlib.sha256(controls.tobytes()).hexdigest()==socket['closed_controls_sha256']
+        region=next(o for o in parts if o['mission_render_region']=='stem-socket')
+        centers=np.array([tuple(p.center) for p in region.data.polygons])
+        assert np.all((centers[:,2]>=.83)&(centers[:,2]<2.78))
     for part in parts:
         assert not part.hide_render and not part.modifiers
         assert part.matrix_world==control.matrix_world
@@ -36,15 +47,23 @@ def check(scene,control):
     assert np.array_equal(source_keys[source_order],receiver_keys[receiver_order])
     normal_error=abs(original[1][source_order]-normals[receiver_order])
     assert float(normal_error.max())<.0002,float(normal_error.max())
-    cfg=json.loads(scene['mission_material_config'])['finial_receiver_isolation']
+    cfg=settings['finial_receiver_isolation']
+    specifications={spec['name']:spec for spec in settings['lights']}
     for name in cfg['excluded_reflectors']:
         receiver=bpy.data.objects[name].light_linking.receiver_collection
-        assert receiver and {o.get('mission_render_region') for o in receiver.objects}=={'turned-body'}
+        expected={'turned-body'}
+        if socket:
+            if name.startswith('Socket crescent '):expected={'stem-socket'}
+            elif name not in socket['excluded_reflectors']:expected={'turned-body','stem-socket'}
+            assert set(specifications[name]['receiver_parts'])==expected
+        assert receiver and {o.get('mission_render_region') for o in receiver.objects}==expected
+        assert 'finial' not in expected
     result={'used':True,'receivers':len(parts),'surface_faces_and_atlas_uvs_exact':True,
             'triangles':original[3],'custom_normal_max_component_error':float(normal_error.max()),
             'custom_normal_mean_component_error':float(normal_error.mean()),
             'materials_shared':True,'excluded_reflector_count':len(cfg['excluded_reflectors']),
-            'closed_editable_control_retained':True}
+            'closed_editable_control_retained':True,
+            'receiver_regions':sorted(expected_parts),'socket_controls_unchanged':bool(socket) if socket else None}
     evaluated.to_mesh_clear()
     for modifier,level in levels:modifier.levels=level
     return result

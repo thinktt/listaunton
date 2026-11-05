@@ -1,0 +1,55 @@
+{
+  "source_sha256": "f391c12fc02d551affdc466c22a11391642b9420016c104f09d4b870813a6f0b",
+  "sample_count": 512,
+  "crop": [
+    365,
+    695,
+    600,
+    795
+  ],
+  "gain_factors": {
+    "Socket crescent 00": 0.0,
+    "Socket crescent 01": 0.13159126333437954,
+    "Socket crescent 02": 1.3222323936949676,
+    "Socket crescent 03": 1.0749150957822478,
+    "Socket crescent 04": 0.34130066746968324,
+    "Socket crescent 05": 0.054435240614599645,
+    "Socket crescent 06": 0.23909914476332236,
+    "Socket crescent 07": 0.7515280338222469,
+    "Socket crescent 08": 8.0,
+    "Socket crescent 09": 0.17646607075792894
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.021814742333018822,
+      "after_mse": 0.018821603969589755
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.018821603969589755,
+      "after_mse": 0.01821446108168369
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.01821446108168369,
+      "after_mse": 0.018022621610474892
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.018022621610474892,
+      "after_mse": 0.017988422516326163
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.017988422516326163,
+      "after_mse": 0.017988393783130024
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.017988393783130024,
+      "after_mse": 0.01798839104499438
+    }
+  ],
+  "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+}

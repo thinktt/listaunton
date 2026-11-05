@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "134-isolated-socket",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 81.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject alone",
+    "reason": "Removes the stray patches but leaves the intended socket crescent too dark."
+  },
+  {
+    "variant": "135-socket-crescent",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 69
+    },
+    "mean": 82.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded",
+    "reason": "The overlapping emitters recover the crescent but make it too uniform and bright."
+  },
+  {
+    "variant": "136-fitted-socket-crescent",
+    "scores": {
+      "silhouette": 97.95615523417091,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 70
+    },
+    "mean": 82.39123104683418,
+    "original_iou": 0.9791335532999006,
+    "decision": "superseded",
+    "reason": "Fitted powers improve the crescent; removing the old glints reveals two pigment imprints."
+  },
+  {
+    "variant": "137-socket-pigment-repair",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 70
+    },
+    "mean": 82.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded by portable atlas",
+    "reason": "Local pigment repair removes the two imprints without replacing surrounding grain."
+  },
+  {
+    "variant": "138-socket-pigment-atlas",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 70
+    },
+    "mean": 82.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "accept",
+    "reason": "Portable pigment with corrected socket reflections; side view remains continuous."
+  }
+]

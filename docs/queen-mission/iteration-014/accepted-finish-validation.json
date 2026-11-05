@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "source_sha256": "80a10087c6a8106af8031dd4d147cd378aeebe14fb5b44a2eb449bf01efe3221",
+  "camera_elevation_degrees": 54.00000066135015,
+  "camera_type": "ORTHO",
+  "height": 4.4452924728393555,
+  "base_diameter": 2.0728673934936523,
+  "height_to_base_diameter": 2.1445136754971914,
+  "target_height_to_base_diameter": 2.1792891203000866,
+  "target_queen_to_king": 0.8340000000000001,
+  "material": "Walnut - reference-derived pigment",
+  "boundary_edges": 0,
+  "nonmanifold_edges": 0,
+  "signed_volume": 4.48251483168452,
+  "crown_tips": 8,
+  "body_rings_monotonic": true,
+  "finial_seating": {
+    "anchor": 4.02500057220459,
+    "height_factor": 0.9,
+    "radial_factor": 0.96,
+    "top_lowering": 0.04670000076293945,
+    "unchanged_body_sha256": "a6715121b473a1a22375925216ef81cf72c6338a8970c389a236edf580634857"
+  },
+  "base_transition": {
+    "baseline_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+    "changed_rings": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "all_other_controls_identical": true,
+    "all_heights_identical": true,
+    "maximum_vertex_displacement": 0.01797795295715332,
+    "original_body_hash_verified": true
+  },
+  "adjusted_height_target": 2.156759941197978,
+  "render_receivers": {
+    "used": true,
+    "receivers": 3,
+    "surface_faces_and_atlas_uvs_exact": true,
+    "triangles": 715776,
+    "custom_normal_max_component_error": 3.439188003540039e-05,
+    "custom_normal_mean_component_error": 5.0024155484607036e-08,
+    "materials_shared": true,
+    "excluded_reflector_count": 43,
+    "closed_editable_control_retained": true,
+    "receiver_regions": [
+      "finial",
+      "stem-socket",
+      "turned-body"
+    ],
+    "socket_controls_unchanged": true
+  }
+}

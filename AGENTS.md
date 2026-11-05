@@ -89,3 +89,14 @@ checkpoint-12 model and controls; check_material_geometry.py requires the explic
 --allow-base-transition flag for this edit. Rebuild using rebuild_base_checkpoint.py
 and iteration-013/reproduction.json. Preserve receiver regeneration after geometry
 changes and synchronized local review assets. Rejected v6 is not a public option.
+
+
+The fourteenth queen checkpoint uses queen-pigment-albedo-v8.png and three
+exact render receivers: turned-body, stem-socket and finial. Its control geometry,
+UVs and dimensions are unchanged from checkpoint 13. The stem/socket receiver
+excludes six measured stray reflectors and receives the fitted crescent spots;
+all links are checked by validate_render_receivers.py. Preserve the socket_band
+partition when regenerating receivers. Do not replace it with finial_only.
+Rebuild with rebuild_socket_checkpoint.py and iteration-014/reproduction.json.
+check_material_geometry.py now compares to history/queen-mission-013 in ordinary
+unchanged-geometry mode. Preserve fixed/side/viewer synchronization.

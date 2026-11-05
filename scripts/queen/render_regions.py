@@ -10,7 +10,7 @@ import numpy as np
 REGION_NAMES = ['foot', 'base', 'socket', 'stem', 'lower-collar',
                 'middle-collar', 'upper-collar', 'crown-body', 'bowl', 'finial']
 
-def partition(scene, obj, finial_only=False):
+def partition(scene, obj, finial_only=False, socket_band=False):
     old_levels = [(m, m.levels) for m in obj.modifiers if m.type == 'SUBSURF']
     for modifier, _ in old_levels:
         modifier.levels = modifier.render_levels
@@ -30,7 +30,13 @@ def partition(scene, obj, finial_only=False):
     labels = np.digitize(centers[:, 2], [.29, .83, 1.32, 2.78, 2.97, 3.16, 3.34, 3.95])
     labels[(np.linalg.norm(centers[:, :2], axis=1) < .235) & (centers[:, 2] > 4.04)] = 9
     names = REGION_NAMES
-    if finial_only:
+    if socket_band:
+        finial = labels == 9
+        labels = np.zeros(len(centers), dtype=np.int32)
+        labels[(centers[:, 2] >= .83) & (centers[:, 2] < 2.78)] = 1
+        labels[finial] = 2
+        names = ['turned-body', 'stem-socket', 'finial']
+    elif finial_only:
         labels = (labels == 9).astype(np.int32)
         names = ['turned-body', 'finial']
     normals = np.empty(len(mesh.loops) * 3, dtype=np.float32)

@@ -1049,3 +1049,24 @@ Delivered model SHA-256: 358e327b4aa8022117af741f87dc2af835ae9bac266c3f16f42e559
 The previous accepted model is preserved in history/queen-mission-012.
 Next address the socket's fragmented highlights and missing continuous crescent.
 Other shape, grain and lighting discrepancies remain; the goal is incomplete.
+
+
+## Fourteenth iteration: socket crescent and local pigment repair
+
+The misplaced white socket patch was dominated by six reflectors aimed
+elsewhere. Exact receiver isolation preserves their existing action while
+excluding them from the stem/socket. Ten overlapping real emitters and fitted
+powers reconstruct the crescent (134-136). Two underlying pigment marks exposed
+by the corrected lighting are repaired locally and baked to v8 (137-138).
+
+Accepted scores: silhouette 97.9612 measured, form 82, color 84, grain 79,
+lighting 70; working mean 82.5922%, holistic 78-83%. Original IoU 97.9109%.
+Actual socket-region weighted error falls 10.9%; that is a local
+supporting measurement, not whole-model fidelity. See iteration-014 for all
+trial scores, native renders, diagnostics, reproduction and validation.
+
+The editable geometry and UVs are unchanged; three exact evaluated receivers
+now control lights. Fixed and side renders, viewer and local review are updated
+together. Prior model: history/queen-mission-013. Delivered model SHA-256:
+eac23f7c9bbead43a22ea621f2a05a0604eeeebcc13a131e53ffabaca6302223.
+Next address fragmented collar highlights. The goal remains incomplete.

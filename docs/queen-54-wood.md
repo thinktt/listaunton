@@ -270,3 +270,15 @@ Use check_material_geometry.py with --allow-base-transition and the checkpoint-1
 baseline; unchanged-geometry mode remains the default. Both saved/reopened and
 independent reconstruction renders agree within one RGB byte. Current scores,
 actual diagnostics, residual defects and full validation are in iteration-013.
+
+
+The fourteenth checkpoint restores the socket crescent with exact regional
+light control and fitted physical spot emitters, then repairs two small pigment
+marks into the v8 atlas. The closed editable geometry and UVs are unchanged from
+checkpoint 13. Render receivers are now turned-body, stem-socket and finial;
+regenerate with partition(..., socket_band=True) after future geometry edits.
+Receiver verification still requires exact faces, UVs, normals, material and links.
+Rebuild with scripts/queen/rebuild_socket_checkpoint.py and the iteration-014
+config. Compare unchanged geometry to history/queen-mission-013 without the
+base-transition flag. Consult iteration-014 for scores, actual-render comparisons,
+pixel reproduction checks and remaining problems.
