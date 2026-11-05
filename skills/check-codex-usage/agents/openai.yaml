@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Usage"
+  short_description: "Check remaining Codex allowance and pause limits"
+  default_prompt: "Use $check-codex-usage to report my remaining weekly allowance and apply any threshold set for the active mission."
