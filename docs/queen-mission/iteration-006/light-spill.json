@@ -1,0 +1,452 @@
+{
+  "regions_at_418": {
+    "unwanted_finial_tail": [
+      165,
+      72,
+      170,
+      79
+    ],
+    "all_finial": [
+      143,
+      50,
+      180,
+      88
+    ],
+    "base_reflection": [
+      175,
+      282,
+      210,
+      325
+    ]
+  },
+  "source_manifest": "build/queen-mission/039-rolled-collar-refit/queen.blend",
+  "caveat": "Cached response geometry, black BSDF and relief match the accepted material; color is excluded. A diagnostic ranking, not a new render or visual score.",
+  "rankings": {
+    "unwanted_finial_tail": [
+      {
+        "light": "upper-right",
+        "linear_rgb_sum": 6.051124948686262,
+        "peak": 0.41919273138046265
+      },
+      {
+        "light": "socket-right",
+        "linear_rgb_sum": 2.442033984151418,
+        "peak": 0.19637952744960785
+      },
+      {
+        "light": "base-key",
+        "linear_rgb_sum": 2.1832812253967857,
+        "peak": 0.2347113937139511
+      },
+      {
+        "light": "foot-right",
+        "linear_rgb_sum": 1.8274999171640958,
+        "peak": 0.2040519118309021
+      },
+      {
+        "light": "collars-right",
+        "linear_rgb_sum": 0.765249239258992,
+        "peak": 0.14776518940925598
+      },
+      {
+        "light": "finial-right",
+        "linear_rgb_sum": 0.36319669541844635,
+        "peak": 0.08619460463523865
+      },
+      {
+        "light": "finial-right-spot",
+        "linear_rgb_sum": 0.35743079348758333,
+        "peak": 0.03700433298945427
+      },
+      {
+        "light": "lower-right",
+        "linear_rgb_sum": 0.13224159899546067,
+        "peak": 0.024659089744091034
+      },
+      {
+        "light": "bowl-left",
+        "linear_rgb_sum": 0.036238353317639846,
+        "peak": 0.0027686585672199726
+      },
+      {
+        "light": "rim-front-left",
+        "linear_rgb_sum": 0.014305294133100686,
+        "peak": 0.0013678536051884294
+      },
+      {
+        "light": "bowl-back",
+        "linear_rgb_sum": 0.01145226463477229,
+        "peak": 0.0007581530371680856
+      },
+      {
+        "light": "original-top",
+        "linear_rgb_sum": 0.009051444790111418,
+        "peak": 0.0013628584565594792
+      },
+      {
+        "light": "finial-top-spot",
+        "linear_rgb_sum": 0.004821010210616805,
+        "peak": 0.00023942068219184875
+      },
+      {
+        "light": "finial-top",
+        "linear_rgb_sum": 0.004357717811672046,
+        "peak": 0.00028013726114295423
+      },
+      {
+        "light": "lower-collar",
+        "linear_rgb_sum": 0.003098982457720467,
+        "peak": 0.00027563999174162745
+      },
+      {
+        "light": "bowl-arc",
+        "linear_rgb_sum": 0.0025612954500729753,
+        "peak": 0.000115841583465226
+      },
+      {
+        "light": "original-right",
+        "linear_rgb_sum": 0.0015000589916780882,
+        "peak": 5.928744576522149e-05
+      },
+      {
+        "light": "tip-back-left",
+        "linear_rgb_sum": 0.000966690050836405,
+        "peak": 7.398083835141733e-05
+      },
+      {
+        "light": "finial-left-spot",
+        "linear_rgb_sum": 0.0007221394067357778,
+        "peak": 3.78097320208326e-05
+      },
+      {
+        "light": "bowl-inner-front",
+        "linear_rgb_sum": 0.0002967068274530082,
+        "peak": 1.70789808180416e-05
+      },
+      {
+        "light": "socket-left",
+        "linear_rgb_sum": 0.00015920072879680447,
+        "peak": 4.2225210563628934e-06
+      },
+      {
+        "light": "socket-left-precise",
+        "linear_rgb_sum": 0.00011924686792781359,
+        "peak": 3.2145364912139485e-06
+      },
+      {
+        "light": "finial-left",
+        "linear_rgb_sum": 2.2304698366326647e-05,
+        "peak": 1.4075940271141008e-06
+      },
+      {
+        "light": "original-foot",
+        "linear_rgb_sum": 7.714408889469837e-10,
+        "peak": 3.5065494952135623e-10
+      },
+      {
+        "light": "base-rear",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "middle-left",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "foot-left-precise",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "rim-front-right",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      }
+    ],
+    "all_finial": [
+      {
+        "light": "finial-top-spot",
+        "linear_rgb_sum": 25.796625325604822,
+        "peak": 3.898315668106079
+      },
+      {
+        "light": "base-key",
+        "linear_rgb_sum": 23.43201801812303,
+        "peak": 0.8480656147003174
+      },
+      {
+        "light": "bowl-left",
+        "linear_rgb_sum": 18.67799953413561,
+        "peak": 0.4104529023170471
+      },
+      {
+        "light": "bowl-back",
+        "linear_rgb_sum": 12.39867156404864,
+        "peak": 0.2241400182247162
+      },
+      {
+        "light": "finial-left-spot",
+        "linear_rgb_sum": 12.002173992103412,
+        "peak": 2.0655951499938965
+      },
+      {
+        "light": "finial-right-spot",
+        "linear_rgb_sum": 10.462893107997719,
+        "peak": 0.5502027869224548
+      },
+      {
+        "light": "collars-right",
+        "linear_rgb_sum": 9.76297607644844,
+        "peak": 0.48098450899124146
+      },
+      {
+        "light": "finial-right",
+        "linear_rgb_sum": 7.756731778969682,
+        "peak": 0.5327560901641846
+      },
+      {
+        "light": "upper-right",
+        "linear_rgb_sum": 6.898225877003889,
+        "peak": 0.41919273138046265
+      },
+      {
+        "light": "original-top",
+        "linear_rgb_sum": 4.98261112725063,
+        "peak": 0.17691496014595032
+      },
+      {
+        "light": "foot-right",
+        "linear_rgb_sum": 4.943319847694944,
+        "peak": 0.2446621060371399
+      },
+      {
+        "light": "rim-front-left",
+        "linear_rgb_sum": 4.900007427685886,
+        "peak": 0.12227829545736313
+      },
+      {
+        "light": "lower-right",
+        "linear_rgb_sum": 4.4501913510766045,
+        "peak": 0.3119480013847351
+      },
+      {
+        "light": "finial-top",
+        "linear_rgb_sum": 3.3035120705363856,
+        "peak": 0.17520396411418915
+      },
+      {
+        "light": "socket-right",
+        "linear_rgb_sum": 3.0810953750598933,
+        "peak": 0.19637952744960785
+      },
+      {
+        "light": "tip-back-left",
+        "linear_rgb_sum": 1.5890730504398944,
+        "peak": 0.11504475027322769
+      },
+      {
+        "light": "lower-collar",
+        "linear_rgb_sum": 1.5657805726904557,
+        "peak": 0.04014160484075546
+      },
+      {
+        "light": "socket-left",
+        "linear_rgb_sum": 1.0098966499376307,
+        "peak": 0.07714913785457611
+      },
+      {
+        "light": "bowl-arc",
+        "linear_rgb_sum": 0.8943173256496835,
+        "peak": 0.010567167773842812
+      },
+      {
+        "light": "socket-left-precise",
+        "linear_rgb_sum": 0.7481128365502016,
+        "peak": 0.06067560240626335
+      },
+      {
+        "light": "original-right",
+        "linear_rgb_sum": 0.6399528566799189,
+        "peak": 0.07422465085983276
+      },
+      {
+        "light": "bowl-inner-front",
+        "linear_rgb_sum": 0.15172801248145368,
+        "peak": 0.009543372318148613
+      },
+      {
+        "light": "finial-left",
+        "linear_rgb_sum": 0.045084098123981065,
+        "peak": 0.002829402219504118
+      },
+      {
+        "light": "rim-front-right",
+        "linear_rgb_sum": 1.7458239286449738e-07,
+        "peak": 5.785634371591186e-08
+      },
+      {
+        "light": "original-foot",
+        "linear_rgb_sum": 1.7083927685290766e-07,
+        "peak": 5.262583968601575e-08
+      },
+      {
+        "light": "base-rear",
+        "linear_rgb_sum": 5.401954410455545e-08,
+        "peak": 1.198967236604176e-08
+      },
+      {
+        "light": "foot-left-precise",
+        "linear_rgb_sum": 2.1581437142925706e-08,
+        "peak": 5.488652199403532e-09
+      },
+      {
+        "light": "middle-left",
+        "linear_rgb_sum": 5.668931413183031e-09,
+        "peak": 7.711233318552502e-10
+      }
+    ],
+    "base_reflection": [
+      {
+        "light": "base-key",
+        "linear_rgb_sum": 559.2200576756368,
+        "peak": 0.7559706568717957
+      },
+      {
+        "light": "lower-right",
+        "linear_rgb_sum": 155.51450267388282,
+        "peak": 0.4056932032108307
+      },
+      {
+        "light": "finial-right",
+        "linear_rgb_sum": 154.0513233202033,
+        "peak": 0.44148680567741394
+      },
+      {
+        "light": "foot-right",
+        "linear_rgb_sum": 68.02011494007492,
+        "peak": 0.4238692820072174
+      },
+      {
+        "light": "upper-right",
+        "linear_rgb_sum": 53.283685574380804,
+        "peak": 0.48130252957344055
+      },
+      {
+        "light": "socket-right",
+        "linear_rgb_sum": 25.891961487323535,
+        "peak": 0.2700497508049011
+      },
+      {
+        "light": "collars-right",
+        "linear_rgb_sum": 19.93741372601635,
+        "peak": 0.3274967074394226
+      },
+      {
+        "light": "original-right",
+        "linear_rgb_sum": 10.142204701717539,
+        "peak": 0.04522322118282318
+      },
+      {
+        "light": "finial-top",
+        "linear_rgb_sum": 3.065877107138612,
+        "peak": 0.0836554691195488
+      },
+      {
+        "light": "tip-back-left",
+        "linear_rgb_sum": 0.09189922437201402,
+        "peak": 0.0004706081817857921
+      },
+      {
+        "light": "bowl-inner-front",
+        "linear_rgb_sum": 0.013605185155748245,
+        "peak": 0.00031146008404903114
+      },
+      {
+        "light": "socket-left",
+        "linear_rgb_sum": 0.011648113377862045,
+        "peak": 1.2713117939711083e-05
+      },
+      {
+        "light": "socket-left-precise",
+        "linear_rgb_sum": 0.00880532973942536,
+        "peak": 9.609416338207666e-06
+      },
+      {
+        "light": "original-top",
+        "linear_rgb_sum": 0.008674437405088664,
+        "peak": 1.051329672918655e-05
+      },
+      {
+        "light": "original-foot",
+        "linear_rgb_sum": 0.0024806622063671567,
+        "peak": 2.0047748421347933e-06
+      },
+      {
+        "light": "finial-left",
+        "linear_rgb_sum": 0.0016317321770998204,
+        "peak": 7.023525085969595e-06
+      },
+      {
+        "light": "bowl-left",
+        "linear_rgb_sum": 0.0002768751846694783,
+        "peak": 2.2247127162700053e-06
+      },
+      {
+        "light": "foot-left-precise",
+        "linear_rgb_sum": 0.00024336018731719865,
+        "peak": 8.931345405471802e-07
+      },
+      {
+        "light": "middle-left",
+        "linear_rgb_sum": 0.00012498557018096325,
+        "peak": 5.537266929422913e-07
+      },
+      {
+        "light": "lower-collar",
+        "linear_rgb_sum": 9.985132202650072e-05,
+        "peak": 5.651135097650695e-07
+      },
+      {
+        "light": "rim-front-right",
+        "linear_rgb_sum": 7.664208941804418e-06,
+        "peak": 8.217262461585051e-07
+      },
+      {
+        "light": "base-rear",
+        "linear_rgb_sum": 1.5978118725001878e-06,
+        "peak": 1.3686528177458968e-07
+      },
+      {
+        "light": "bowl-arc",
+        "linear_rgb_sum": 5.701720189321691e-08,
+        "peak": 3.803178216799097e-09
+      },
+      {
+        "light": "bowl-back",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "finial-left-spot",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "finial-top-spot",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "finial-right-spot",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      },
+      {
+        "light": "rim-front-left",
+        "linear_rgb_sum": 0.0,
+        "peak": 0.0
+      }
+    ]
+  }
+}

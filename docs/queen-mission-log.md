@@ -750,3 +750,89 @@ twelve original PNG hashes, candidate provenance/alignment, current model
 and viewer hash, parts sandbox/CSP, and all 39 protected projection inputs.
 Whitespace checks pass. The fifth checkpoint is ready for its local commit;
 no push or hosting deployment is performed.
+
+## Sixth iteration in progress: isolate reflected glints
+
+The fifth checkpoint is committed as `b623c35`; the checkout is clean and
+the local review page is synchronized. Starting model is
+`16904dba7abc57e60ec8e6d73c30f46f9e0890ec46272753c648e7e88f64247e`.
+Trial 070 removes the three broad finial area lights while retaining their
+narrow spotlights. Separate black-BSDF diagnostic passes isolate the base
+key, finial areas, finial spots, and remaining lights. The vertical base
+reflector may also be contributing the elongated finial glint. These passes
+will identify the cause before further tuning; they are not delivery images.
+
+At 2026-11-05 11:48:45 UTC, weekly allowance was 18% used / 82% remaining,
+reset 2026-11-11 13:19:48 UTC. Luna's five-minute guard remains active.
+
+070 barely changes the stretched glint and weakens part of the base reflection;
+it offers no convincing whole-image gain. Scores remain 97.961 / 80 / 80 /
+77 / 59, mean 78.79; reject. The diagnostic base-key pass clearly contains
+the long finial streak. Narrow finial spotlights make compact glints, while
+other broad lights add spill. Trial 071 limits the tall base area's spread
+to 36 degrees and fits only its power to preserve its prior base contribution.
+It starts from the accepted model, retaining the three finial areas for an
+isolated change. Geometry, pigment and camera remain fixed.
+
+071 modestly shortens the streak while keeping the base highlight. Scores:
+97.961 / 80 / 80 / 77 / 61, mean 79.19; retain as a lighting direction.
+Its base light is now 10.6422 W at 36-degree spread, versus 219.036 W at
+unrestricted spread; normalization changes the required power. The cached
+actual-response ranking identifies upper-collar, socket and foot reflections
+as additional finial spill. Trial 072 confines five such area lights to a
+12-degree spread and fits each power only around its intended highlight.
+This uses real emitters and leaves the material and geometry unchanged.
+
+072 removes measured finial spill from all five constrained lights and makes
+the finial glints more compact. However, it also weakens useful rim and collar
+reflections. Scores: 97.961 / 80 / 80 / 77 / 60, mean 78.99; not ready to
+promote. Trial 073 refits actual light powers through AgX with those confined
+responses and a fresh diffuse baseline of the current v4 pigment. This should
+test whether the lost highlights can be restored without recreating the spill.
+
+073 restores some lower highlights but adds an unwanted bright stem spot and
+overstates parts of the bowl reflection. Its numerical fit improves, but the
+full image does not justify promotion: 97.961 / 80 / 80 / 77 / 59, mean 78.79.
+Reject. 074 returns to 072 and confines the remaining targeted area lights,
+while disabling three legacy untargeted glossy lights. The three diffuse
+lights remain unchanged. Intended-neighborhood power fits precede another
+whole-image examination; actual reference appearance decides acceptance.
+
+Latest allowance at 2026-11-05 12:04:13 UTC: 19% used / 81% remaining,
+reset 2026-11-11 13:19:48 UTC. Luna's five-minute guard remains active.
+
+074 further reduces stray reflections but creates a wrong bright arc on the
+inner bowl and leaves the crown rim dull. Scores: 97.961 / 80 / 80 / 77 / 58,
+mean 78.59; reject as delivered. The final test of this direction refits the
+fully constrained response set (075). If its visual result still fails, use
+the narrower base-light improvement as the retained direction and revisit
+surface curvature rather than continuing unconstrained power searches.
+
+075 reduces its numerical fitting loss but again introduces pale vertical
+body streaks and a false stem glint; the rim remains too dull. Scores:
+97.961 / 80 / 80 / 77 / 58, mean 78.59. Reject. The sixth checkpoint retains
+only 071's narrower base reflector: 97.961 / 80 / 80 / 77 / 61, mean 79.19.
+This is a modest reduction in finial spill, not a resolution of the lighting
+mismatch. All broader confinement/refitting trials remain diagnostic evidence.
+Next examine collar/bowl curvature in neutral renders before retuning lights.
+
+The sixth delivery model is
+`82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e`.
+Its control geometry, topology and atlas UVs match the fifth checkpoint
+exactly. Closed/manifold volume, eight tips, fixed 54-degree camera and
+height/base ratio 2.167048 pass validation. Both reference IoUs are unchanged.
+Four actual views were regenerated; the side material has no new regression.
+
+A rebuild from the archived fifth model, unchanged v4 atlas and recorded
+lights agrees with trial 071 at mean foreground error 0.00002628/255,
+maximum one level, with identical alpha. The viewer retains 715,776 triangles
+and exact binary round trip. Camera error remains below 0.0000382 pixels;
+source, tabs, persistent orbit, parts sandbox/CSP and side state pass the
+simulated DOM/WebGL checks. Native browser GPU inspection remains unavailable.
+The working score is **79.19%**, holistic 75–80%, and the mission is incomplete.
+
+Post-integration checks pass for eight pages, 55 local links, all twelve
+original reference PNG hashes, candidate provenance/alignment, model/viewer
+consistency, parts sandbox/CSP, and 39 protected projection inputs. Git
+whitespace checks pass. The sixth checkpoint is ready for its local commit;
+no push or hosting deployment is performed.

@@ -177,3 +177,20 @@ color grading itself, use `grade_pigment.py` with the iteration's
 The fifth iteration's relief and sharper-varnish experiments were rejected.
 Emission passes in its evidence directory isolate color and projection
 coverage for diagnosis; the delivered images are ordinary 3D BSDF renders.
+
+The sixth checkpoint makes a small lighting-only change: the tall base
+reflector uses a 36-degree spread and 10.6422 W instead of its unrestricted
+219.036 W. Fitting its power preserves the base contribution while reducing
+spill onto the finial. Other lights, geometry, v4 pigment and relief stay the
+same. More extensive confinement and power refits were visually rejected.
+
+The fifth model and renders are preserved in `history/queen-mission-005`.
+Rebuild the sixth checkpoint with:
+
+```sh
+blender -b --python scripts/queen/rebuild_material_checkpoint.py -- docs/queen-mission/iteration-006/reproduction.json
+```
+
+This creates `build/queen-mission/076-sixth-reproduced`. The current working
+score is 79.19%, with persistent curvature, grain and reflection mismatches.
+See the iteration evidence before revisiting the rejected lighting fits.
