@@ -4,7 +4,7 @@ import sys,json,hashlib,argparse
 import bpy,numpy as np
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(Path(__file__).parent))
 from queen_scene import editable_mesh
-p=argparse.ArgumentParser();p.add_argument('--variant',default='126-repaired-base-pigment');p.add_argument('--source',default='models/queen/queen-rebuilt.blend');p.add_argument('--repair-data',default='base-pigment-repair-012');p.add_argument('--region',choices=['base','socket'],default='base');args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+p=argparse.ArgumentParser();p.add_argument('--variant',default='126-repaired-base-pigment');p.add_argument('--source',default='models/queen/queen-rebuilt.blend');p.add_argument('--repair-data',default='base-pigment-repair-012');p.add_argument('--region',choices=['base','socket','crown'],default='base');args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 source=ROOT/args.source;data=ROOT/'build/queen-mission'/args.repair_data;repair=json.loads((data/'parameters.json').read_text());source_digest=hashlib.sha256(source.read_bytes()).hexdigest();bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene;source_cfg=json.loads(s['mission_material_config']);assert source_digest==repair['source_sha256'] or source_cfg.get('base_transition_refinement',{}).get('source_sha256')==repair['source_sha256'];mat=editable_mesh(s).data.materials[0];nodes=mat.node_tree.nodes;links=mat.node_tree.links;bs=nodes.get('Principled BSDF');previous=bs.inputs['Base Color'].links[0].from_socket
 assert s.camera.data.type=='ORTHO';graph=bpy.context.evaluated_depsgraph_get();matrix=s.camera.calc_matrix_camera(graph,x=s.render.resolution_x,y=s.render.resolution_y)@s.camera.matrix_world.inverted();geom=nodes.new('ShaderNodeNewGeometry');uv=nodes.new('ShaderNodeCombineXYZ');uv.label='Fixed reference-camera local pigment repair'
 for row in range(2):
@@ -17,4 +17,5 @@ cfg=json.loads(s['mission_material_config']);cfg['variant']=args.variant;cfg[arg
 prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='OPTIX';prefs.get_devices()
 for d in prefs.devices:d.use=d.type=='OPTIX'
 if any(d.use for d in prefs.devices):s.cycles.device='GPU'
+bpy.ops.wm.open_mainfile(filepath=str(out/'queen.blend'),load_ui=False);bpy.context.scene.cycles.device='GPU' if any(d.use for d in prefs.devices) else 'CPU'
 bpy.ops.render.render(write_still=True);(out/'parameters.json').write_text(json.dumps(cfg,indent=2));print('BASE_PIGMENT_REPAIR_DONE',flush=True)

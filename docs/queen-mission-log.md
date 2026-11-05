@@ -1112,3 +1112,27 @@ See iteration-016 for every trial, validation, reproduction and remaining defect
 Delivered model SHA-256: fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94.
 Prior model: history/queen-mission-015. Local review, side views and viewer are
 updated together. Next inspect fine relief and reflection breakup. Incomplete.
+
+
+## Seventeenth iteration: finial pigment, polish and reflections
+
+Global coat/relief smoothing and broad bowl pigment repairs are rejected.
+The accepted local repair removes negative finial glint imprints, reduces
+relief only on the egg, and re-aims three real reflectors at measured reference
+glints. Wider cones and explicit .30-unit emitter radii avoid clipped spots;
+fitted powers preserve three distinct reflections. Exact prior-light copies
+retain illumination on the body. The pigment repair is baked to v9 with all
+unmasked atlas texels unchanged.
+
+Scores: outline 97.9604 measured, form 82, color 84, grain 79, lighting 76;
+mean 83.7921%, holistic 80-85%. Original IoU 97.9117%. Local
+finial RGB error falls 69.21%; this is not whole-piece fidelity.
+Geometry/UVs, 54-degree camera, source references and gallery defaults stay exact.
+The accepted render uses 256 fixed samples and standard light sampling after repeatability failures;
+the tiny silhouette-score changes are antialiasing, not geometry changes.
+Saved/reopened and independent rebuild checks, packed-texture verification,
+all trial ratings and remaining defects are recorded in iteration-017.
+
+Delivered model SHA-256: cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460. Prior model: history/queen-mission-016.
+Local review, fixed/side views and viewer are synchronized. Next address the
+bowl/rim reflection shape and grain. The goal remains incomplete.

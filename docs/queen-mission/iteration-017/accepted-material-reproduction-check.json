@@ -1,0 +1,36 @@
+{
+  "reopened": {
+    "mean_rgb_byte_difference": 6.995159349729987e-06,
+    "opaque_mean_rgb_byte_difference": 2.8090778522334436e-05,
+    "opaque_p99_rgb_byte_difference": 0.0,
+    "opaque_p999_rgb_byte_difference": 0.0,
+    "opaque_fraction_pixels_over_five_bytes": 0.0,
+    "max_rgb_byte_difference": 1,
+    "alpha_identical": true
+  },
+  "reproduced": {
+    "mean_rgb_byte_difference": 6.783184823980593e-06,
+    "opaque_mean_rgb_byte_difference": 2.8090778522334436e-05,
+    "opaque_p99_rgb_byte_difference": 0.0,
+    "opaque_p999_rgb_byte_difference": 0.0,
+    "opaque_fraction_pixels_over_five_bytes": 0.0,
+    "max_rgb_byte_difference": 1,
+    "alpha_identical": true
+  },
+  "render_sampling": {
+    "adaptive": false,
+    "reason": "Test fixed sampling at higher quality to reduce isolated specular variance. Geometry, material and lights unchanged.",
+    "samples": 256,
+    "seed": 0,
+    "light_tree": false
+  },
+  "assessment": "Quantified over opaque piece pixels. Native 256-sample render comparisons are not claimed bit exact; use the established checkpoint-15 sampling bounds.",
+  "tolerances": {
+    "opaque_mean_bytes_max": 0.1,
+    "opaque_p999_bytes_max": 2,
+    "opaque_fraction_pixels_over_five_bytes_max": 0.001,
+    "max_bytes": 64,
+    "alpha_identical_required": true
+  },
+  "strict_one_byte_check_passed": true
+}

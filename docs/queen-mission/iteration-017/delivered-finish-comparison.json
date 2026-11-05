@@ -1,0 +1,15 @@
+{
+  "camera_assumption_degrees_above_board": 54,
+  "method": "Actual render alpha and reference max RGB >12, largest component with holes filled. Original sprite uniformly registered to selected image; no separate model alignment.",
+  "silhouette_iou": {
+    "previous_54_degree_study": {
+      "original_black": 0.9337648208589183,
+      "selected_highres": 0.9317327468158338
+    },
+    "revised_54_degree": {
+      "original_black": 0.9791170234722405,
+      "selected_highres": 0.9796035993331376
+    }
+  },
+  "limitations": "Silhouette overlap does not measure internal contours, material, lighting or unseen geometry. The generated high-resolution source is an interpretation, not ground-truth geometry."
+}

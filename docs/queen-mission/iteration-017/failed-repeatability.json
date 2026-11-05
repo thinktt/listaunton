@@ -1,0 +1,38 @@
+{
+  "first-reopened": {
+    "mean": 0.0019991317523425306,
+    "opaque_mean": 0.007429376073766392,
+    "p999": 1.0,
+    "fraction_pixels_over_five": 0.00011417262901507079,
+    "max": 75,
+    "alpha_equal": true,
+    "worst_xy": [
+      615,
+      318
+    ]
+  },
+  "first-reproduced": {
+    "mean": 0.0020001916249712775,
+    "opaque_mean": 0.007433906733647942,
+    "p999": 1.0,
+    "fraction_pixels_over_five": 0.00011417262901507079,
+    "max": 75,
+    "alpha_equal": true,
+    "worst_xy": [
+      615,
+      318
+    ]
+  },
+  "reopened-reproduced": {
+    "mean": 5.299363143734839e-06,
+    "opaque_mean": 2.265329940775214e-05,
+    "p999": 0.0,
+    "fraction_pixels_over_five": 0.0,
+    "max": 1,
+    "alpha_equal": true,
+    "worst_xy": [
+      423,
+      144
+    ]
+  }
+}

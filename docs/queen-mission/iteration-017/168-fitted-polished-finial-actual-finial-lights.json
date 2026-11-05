@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Display fitted finial-left-spot",
+    "position": [
+      -1.3179106712341309,
+      -2.359262466430664,
+      9.81436824798584
+    ],
+    "rotation_euler": [
+      0.45485758781433105,
+      1.897914891912933e-08,
+      -0.5167252421379089
+    ],
+    "size": 0.3000001311302185,
+    "specified_size": 0.3000001311302185,
+    "spot_degrees": 12.000000333930423,
+    "energy": 7546.12109375,
+    "color": [
+      1.0,
+      0.699999988079071,
+      0.5
+    ],
+    "use_shadow": true,
+    "receivers": [
+      "finial"
+    ]
+  },
+  {
+    "name": "Display fitted finial-top-spot",
+    "position": [
+      3.681358814239502,
+      -0.15608517825603485,
+      9.198263168334961
+    ],
+    "rotation_euler": [
+      0.6514875292778015,
+      -8.2216061514373e-08,
+      1.5405462980270386
+    ],
+    "size": 0.29999998211860657,
+    "specified_size": 0.29999998211860657,
+    "spot_degrees": 12.000000333930423,
+    "energy": 5203.05126953125,
+    "color": [
+      1.0,
+      0.699999988079071,
+      0.5
+    ],
+    "use_shadow": true,
+    "receivers": [
+      "finial"
+    ]
+  },
+  {
+    "name": "Display fitted finial-right-spot",
+    "position": [
+      4.3716559410095215,
+      -4.067028045654297,
+      5.709185600280762
+    ],
+    "rotation_euler": [
+      1.3455768823623657,
+      8.692783382002744e-08,
+      0.8280059099197388
+    ],
+    "size": 0.29999998211860657,
+    "specified_size": 0.29999998211860657,
+    "spot_degrees": 12.000000333930423,
+    "energy": 8954.513671875,
+    "color": [
+      1.0,
+      0.699999988079071,
+      0.5
+    ],
+    "use_shadow": true,
+    "receivers": [
+      "finial"
+    ]
+  },
+  {
+    "name": "Finial retained left",
+    "position": [
+      -1.45416259765625,
+      -3.812018394470215,
+      8.936174392700195
+    ],
+    "rotation_euler": [
+      0.7277984023094177,
+      -1.3884158711618966e-08,
+      -0.36821264028549194
+    ],
+    "size": 0.15000000596046448,
+    "specified_size": 0.3,
+    "spot_degrees": 1.19999999070436,
+    "energy": 3820.636962890625,
+    "color": [
+      1.0,
+      0.699999988079071,
+      0.5
+    ],
+    "use_shadow": true,
+    "receivers": [
+      "turned-body",
+      "stem-socket",
+      "lower-collar",
+      "middle-collar",
+      "upper-collar"
+    ]
+  },
+  {
+    "name": "Finial retained top",
+    "position": [
+      3.2279295921325684,
+      -2.2384605407714844,
+      9.060192108154297
+    ],
+    "rotation_euler": [
+      0.6980124115943909,
+      -7.590890582775955e-09,
+      0.9735950827598572
+    ],
+    "size": 0.15000000596046448,
+    "specified_size": 0.3,
+    "spot_degrees": 1.19999999070436,
+    "energy": 16648.908203125,
+    "color": [
+      1.0,
+      0.699999988079071,
+      0.5
+    ],
+    "use_shadow": true,
+    "receivers": [
+      "turned-body",
+      "stem-socket",
+      "lower-collar",
+      "middle-collar",
+      "upper-collar"
+    ]
+  },
+  {
+    "name": "Finial retained right",
+    "position": [
+      3.924412965774536,
+      -4.704495906829834,
+      4.78243350982666
+    ],
+    "rotation_euler": [
+      1.5055820941925049,
+      -1.8384493927214862e-08,
+      0.7011885046958923
+    ],
+    "size": 0.15000000596046448,
+    "specified_size": 0.3,
+    "spot_degrees": 1.19999999070436,
+    "energy": 2699.626220703125,
+    "color": [
+      1.0,
+      0.699999988079071,
+      0.5
+    ],
+    "use_shadow": true,
+    "receivers": [
+      "turned-body",
+      "stem-socket",
+      "lower-collar",
+      "middle-collar",
+      "upper-collar"
+    ]
+  }
+]

@@ -22,7 +22,10 @@ bpy.ops.wm.open_mainfile(filepath=str(trial),load_ui=False)
 scene=bpy.context.scene;cam=scene.camera
 obj=editable_mesh(scene)
 wood=obj.data.materials[0]
-scene.cycles.samples=64;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.use_persistent_data=True
+sampling=json.loads(scene.get('mission_material_config','{}')).get('render_sampling',{})
+scene.cycles.samples=sampling.get('samples',64);scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.use_persistent_data=True
+if 'adaptive' in sampling:scene.cycles.use_adaptive_sampling=sampling['adaptive']
+if 'light_tree' in sampling:scene.cycles.use_light_tree=sampling['light_tree']
 scene.render.filepath='//../../assets/queen/queen-brown.png'
 scene['mission_accepted_variant']=args.variant
 bpy.context.preferences.filepaths.save_version=0

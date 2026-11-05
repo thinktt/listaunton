@@ -1,0 +1,15 @@
+{
+  "source_sha256": "65535b6a09db9d1047ce6cdb92e7fdb89d67f95358df24220958423f1a81c59f",
+  "translation": [
+    1.25,
+    -0.75,
+    0.5
+  ],
+  "comparison": "Actual emitted bump Distance, divided by diagnostic scale 100, over pixels opaque in both camera-matched views. No beauty shader/source file modified.",
+  "mean_distance_error": 2.6400721886421508e-11,
+  "p999_distance_error": 6.556510889765832e-09,
+  "max_distance_error": 2.1457672971791908e-08,
+  "opaque_pixels": 365520,
+  "source_unchanged": true,
+  "passed": true
+}

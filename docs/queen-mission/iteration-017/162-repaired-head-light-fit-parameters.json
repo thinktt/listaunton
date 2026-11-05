@@ -1,0 +1,4316 @@
+{
+  "atlas_bakes_lighting": false,
+  "atlas_reused_uv": true,
+  "atlas_size": 2048,
+  "base_pigment_repair": {
+    "applied_model_sha256": "ed69039bb6eb292aff09c038f7c3019430c76037acaef207e73b424a495098dd",
+    "crop": [
+      430,
+      740,
+      740,
+      1040
+    ],
+    "grain_log_clip": [
+      -0.3,
+      0.3
+    ],
+    "grain_radius": 3,
+    "grain_strength": 0.7,
+    "harmonic_iterations": 5000,
+    "last_log_color_change": 2.5153160095214844e-05,
+    "mask_pixels": 20299,
+    "medium_grain_source": "Existing relief-height field, bandpass radii 2 and 12, clipped to +/-0.25 in log height; excludes the invalid pigment imprint.",
+    "medium_grain_strength": 1.4,
+    "method": "Interpolate log pigment from adjacent wood through the highlight-shaped invalid region, adding bounded fine reference grain. Broad reference brightness is excluded. Existing hidden-surface coverage and all unmasked pigment are retained.",
+    "repair_window": [
+      500,
+      810,
+      660,
+      1005
+    ],
+    "source_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b"
+  },
+  "base_reflector_color_fit": {
+    "channel_gains": [
+      3.0,
+      1.7484560548329908,
+      0.8050664643672542
+    ],
+    "crop": [
+      490,
+      800,
+      680,
+      1005
+    ],
+    "history": [
+      {
+        "after_mse": 0.0161785077971082,
+        "before_mse": 0.01762076757569182,
+        "iteration": 0
+      },
+      {
+        "after_mse": 0.016031836341481476,
+        "before_mse": 0.0161785077971082,
+        "iteration": 1
+      },
+      {
+        "after_mse": 0.016031836341481476,
+        "before_mse": 0.016031836341481476,
+        "iteration": 2
+      }
+    ],
+    "method": "Fresh real BSDF baseline and isolated base light, fitted through AgX. Only the actual light color and power change; no beauty compositing.",
+    "sample_count": 512,
+    "source_sha256": "6fd6f8a7f553ac1c50ef8a54ab00a1d1758c8d9700f444f2ff6fdfa5946982c4"
+  },
+  "base_reflector_refinement": {
+    "gain": 1.1,
+    "method": "Move the physical rectangular emitter along a reflected view ray, narrowing and lengthening it according to measured reference glint moments. No geometry or material change.",
+    "original_target_pixel": [
+      578.0118317306042,
+      900.9913053810596
+    ],
+    "pixel_offset": [
+      -6,
+      -11
+    ],
+    "size_factors": [
+      0.88,
+      1.25
+    ],
+    "source_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b"
+  },
+  "base_transition_refinement": {
+    "method": "Cubic Hermite radius through rings 25-29, matching the incoming flare slope and ending tangent to the socket cylinder. Only radii of rings 26-29 change; all heights, other controls, camera, UVs, material and lights are retained.",
+    "rings": [
+      {
+        "new_radius": 0.6409454493503379,
+        "old_radius": 0.6347158551216125,
+        "ring": 26,
+        "z": 0.7958813309669495
+      },
+      {
+        "new_radius": 0.628373239199418,
+        "old_radius": 0.6103953719139099,
+        "ring": 27,
+        "z": 0.8065109848976135
+      },
+      {
+        "new_radius": 0.6071302643772848,
+        "old_radius": 0.5974092483520508,
+        "ring": 28,
+        "z": 0.8287190794944763
+      },
+      {
+        "new_radius": 0.5967612266540527,
+        "old_radius": 0.5934191942214966,
+        "ring": 29,
+        "z": 0.8546702265739441
+      }
+    ],
+    "source_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+    "unchanged_controls_sha256": "ba9072d1f3cab429e2c49b246308f2659e4fc73f21b8ea7cc2d9e244b55f3c1b"
+  },
+  "bowl_arc_fit": {
+    "crop": [
+      390,
+      125,
+      550,
+      190
+    ],
+    "gain_factors": {
+      "Bowl focused left-0": 1.6304934818234547,
+      "Bowl focused left-1": 1.2070787133660803,
+      "Bowl focused left-2": 2.03960714762555,
+      "Bowl focused left-3": 4.344269107735375,
+      "Bowl focused rear-0": 1.2429934382447174,
+      "Bowl focused rear-1": 2.1587166237396826,
+      "Bowl focused rear-2": 3.173229509284687,
+      "Bowl focused rear-3": 5.553335133796578
+    },
+    "history": [
+      {
+        "after_mse": 0.012455802809014099,
+        "before_mse": 0.014290021686259957,
+        "iteration": 0
+      },
+      {
+        "after_mse": 0.012232885794146154,
+        "before_mse": 0.012455802809014099,
+        "iteration": 1
+      },
+      {
+        "after_mse": 0.012217622304793787,
+        "before_mse": 0.012232885794146154,
+        "iteration": 2
+      },
+      {
+        "after_mse": 0.012216778081505175,
+        "before_mse": 0.012217622304793787,
+        "iteration": 3
+      },
+      {
+        "after_mse": 0.012216726004408703,
+        "before_mse": 0.012216778081505175,
+        "iteration": 4
+      },
+      {
+        "after_mse": 0.012216721026496785,
+        "before_mse": 0.012216726004408703,
+        "iteration": 5
+      }
+    ],
+    "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material.",
+    "sample_count": 512,
+    "source_sha256": "1f29cfbc5c64bf45a7461c95704a9a4815cfc957f16ff63aaa3526e59b28ee62"
+  },
+  "bowl_reflection_trial": {
+    "arc_preset": true,
+    "disabled_lights": [
+      "Display fitted bowl-left",
+      "Display fitted bowl-back",
+      "Display fitted bowl-arc"
+    ],
+    "gain": 1,
+    "method": "Physical spot lights aimed by reflected camera rays at reference glints; material and geometry unchanged.",
+    "source_sha256": "6bbc7d1dbeffd54e846895eb1f9f3854092c8b57d4267fa49c621e7f67e74325"
+  },
+  "bump_distance": 0.008,
+  "bump_strength": 0.22,
+  "caveat": "Art-directed light powers; approximate diffuse/specular separation and low-resolution basis. Requires a full render and visual verification.",
+  "coat": 0.35,
+  "coat_roughness": 0.1,
+  "combined_base_refinement": {
+    "geometry_pigment_source_sha256": "33bd190f817726b3e6506759c38b63808e039173e5f95f1036d51263d261887d",
+    "light_source_sha256": "79f8794692fb9a2dff5b28738b10490d6584844a3bb8f293fce41a9ffe8cf5ee",
+    "method": "Combine only independently inspected changes: smooth base/socket junction, local pigment repair, and warmer reshaped base reflector. Exclude rejected multi-light confinement."
+  },
+  "cycles_ray_visibility": true,
+  "finial_receiver_isolation": {
+    "baseline": "history/queen-mission-006/queen-rebuilt.blend",
+    "editable_control_tag": "mission_editable_control",
+    "excluded_reflectors": [
+      "Display fitted original-top",
+      "Display fitted original-right",
+      "Display fitted original-foot",
+      "Display fitted base-key",
+      "Display fitted socket-left",
+      "Display fitted bowl-left",
+      "Display fitted bowl-back",
+      "Display fitted collars-right",
+      "Display fitted lower-collar",
+      "Display fitted finial-left",
+      "Display fitted finial-top",
+      "Display fitted base-rear",
+      "Display fitted bowl-arc",
+      "Display fitted finial-right",
+      "Display fitted middle-left",
+      "Display fitted upper-right",
+      "Display fitted lower-right",
+      "Display fitted socket-right",
+      "Display fitted socket-left-precise",
+      "Display fitted foot-right",
+      "Display fitted foot-left-precise",
+      "Display fitted rim-front-left",
+      "Display fitted rim-front-right",
+      "Display fitted tip-back-left",
+      "Display fitted bowl-inner-front",
+      "Bowl focused left-0",
+      "Bowl focused left-1",
+      "Bowl focused left-2",
+      "Bowl focused left-3",
+      "Bowl focused rear-0",
+      "Bowl focused rear-1",
+      "Bowl focused rear-2",
+      "Bowl focused rear-3",
+      "Socket crescent 00",
+      "Socket crescent 01",
+      "Socket crescent 02",
+      "Socket crescent 03",
+      "Socket crescent 04",
+      "Socket crescent 05",
+      "Socket crescent 06",
+      "Socket crescent 07",
+      "Socket crescent 08",
+      "Socket crescent 09",
+      "Collar crescent 00",
+      "Collar crescent 01",
+      "Collar crescent 02",
+      "Collar crescent 03",
+      "Collar crescent 04",
+      "Collar crescent 05",
+      "Collar crescent 06",
+      "Collar crescent 07",
+      "Collar crescent 08",
+      "Collar crescent 09",
+      "Collar crescent 10",
+      "Collar crescent 11",
+      "Collar crescent 12",
+      "Collar crescent 13",
+      "Collar crescent 14",
+      "Collar crescent 15",
+      "Collar crescent 16",
+      "Collar crescent 17",
+      "Collar crescent 18",
+      "Collar crescent 19",
+      "Collar crescent 20",
+      "Collar crescent 21",
+      "Collar crescent 22",
+      "Collar retained 00",
+      "Collar retained 01",
+      "Collar retained 02",
+      "Collar retained 03",
+      "Collar retained 04",
+      "Collar retained 05",
+      "Collar retained 06",
+      "Collar retained 07",
+      "Collar retained 08",
+      "Collar retained 09"
+    ],
+    "method": "The unchanged closed control mesh is exported to the viewer. Two exact evaluated render receivers preserve its UVs and smooth normals. Only the intended three finial spots can reflect directly on the finial; other accepted reflectors keep their original powers on the turned body.",
+    "render_region_tag": "mission_render_region",
+    "render_regions": [
+      {
+        "name": "turned-body",
+        "faces": 157440,
+        "vertices": 158593,
+        "triangles": 314880,
+        "uv_layers": [
+          "Turned wood",
+          "Reference paint",
+          "Pigment atlas",
+          "Inferred pigment projection"
+        ],
+        "custom_corner_normals": true
+      },
+      {
+        "name": "stem-socket",
+        "faces": 70656,
+        "vertices": 71424,
+        "triangles": 141312,
+        "uv_layers": [
+          "Turned wood",
+          "Reference paint",
+          "Pigment atlas",
+          "Inferred pigment projection"
+        ],
+        "custom_corner_normals": true
+      },
+      {
+        "name": "finial",
+        "faces": 30720,
+        "vertices": 31105,
+        "triangles": 61440,
+        "uv_layers": [
+          "Turned wood",
+          "Reference paint",
+          "Pigment atlas",
+          "Inferred pigment projection"
+        ],
+        "custom_corner_normals": true
+      },
+      {
+        "name": "lower-collar",
+        "faces": 36096,
+        "vertices": 36864,
+        "triangles": 72192,
+        "uv_layers": [
+          "Turned wood",
+          "Reference paint",
+          "Pigment atlas",
+          "Inferred pigment projection"
+        ],
+        "custom_corner_normals": true
+      },
+      {
+        "name": "middle-collar",
+        "faces": 33792,
+        "vertices": 34560,
+        "triangles": 67584,
+        "uv_layers": [
+          "Turned wood",
+          "Reference paint",
+          "Pigment atlas",
+          "Inferred pigment projection"
+        ],
+        "custom_corner_normals": true
+      },
+      {
+        "name": "upper-collar",
+        "faces": 29184,
+        "vertices": 29952,
+        "triangles": 58368,
+        "uv_layers": [
+          "Turned wood",
+          "Reference paint",
+          "Pigment atlas",
+          "Inferred pigment projection"
+        ],
+        "custom_corner_normals": true
+      }
+    ],
+    "source_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+    "spots_only": true
+  },
+  "finial_seating": {
+    "anchor": 4.02500057220459,
+    "height_factor": 0.9,
+    "radial_factor": 0.96,
+    "top_lowering": 0.04670000076293945,
+    "unchanged_body_sha256": "a6715121b473a1a22375925216ef81cf72c6338a8970c389a236edf580634857"
+  },
+  "grain_contrast_trial": {
+    "bright_neutral_suppression_min_srgb": [
+      0.28,
+      0.68
+    ],
+    "caveat": "Reference grain is inferred with bounded local shading contamination. Hidden surfaces retain continuous prior wood; source images are unchanged.",
+    "detail_exponent": 1.5,
+    "detail_log_bounds": [
+      -0.55,
+      0.55
+    ],
+    "pigment_blur_radius": 7,
+    "reference_blur_radius": 3,
+    "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+    "source": "build/queen-mission/048-medium-grain/queen.blend",
+    "source_sha256": "02651679460f86dd8f07fe5790247b58650cb6165d3db849a86a097c9591f8b3"
+  },
+  "image_bump": true,
+  "image_mix": 1,
+  "inferred_pigment": {
+    "coverage_attribute": "Inferred pigment coverage",
+    "highlight_confidence": true,
+    "image": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\build\\queen-mission\\medium-grain-039\\inferred-pigment.exr",
+    "inference": {
+      "box_blur_passes": 3,
+      "caveat": "Low-frequency inferred color is preserved; some carving or shading edges may enter the bounded detail field. Highlight grain is suppressed, not painted into a reflective light map. Hidden surfaces retain prior continuous wood.",
+      "grain_bounds_before_exponent": [
+        0.68,
+        1.42
+      ],
+      "grain_exponent": 0.85,
+      "highlight_detail_weight_fraction_transition": [
+        0.1,
+        0.3
+      ],
+      "method": "Retain a broad normalized pigment field; replace coarse invented color lines with bounded fine/medium log-luminance variation from the unchanged reference",
+      "old_color_blur_radius": 12,
+      "projection_weight": 0.96,
+      "reference_log_blur_radius": 7,
+      "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a"
+    },
+    "projection_uv": "Inferred pigment projection",
+    "response_directory": "build/queen-mission/medium-grain-039",
+    "source": "models/queen/queen-rebuilt.blend"
+  },
+  "light_chromaticity": [
+    1.0,
+    0.7,
+    0.5
+  ],
+  "lights": [
+    {
+      "energy": 1100,
+      "name": "Diffuse Top reflection",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "size": 0.6,
+      "specular_factor": 0
+    },
+    {
+      "energy": 400,
+      "name": "Diffuse Right key",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "size": 0.5,
+      "specular_factor": 0
+    },
+    {
+      "energy": 150,
+      "name": "Diffuse Foot strip",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "size": 0.7,
+      "specular_factor": 0,
+      "target": [
+        0,
+        0,
+        0.3
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 48.890831164200016,
+      "name": "Display fitted original-top",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.6
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 8.328219965159695,
+      "name": "Display fitted original-right",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket"
+      ],
+      "size": 0.5
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 2.3332065271605082,
+      "name": "Display fitted original-foot",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.7,
+      "target": [
+        0,
+        0,
+        0.3
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.4079730808734894,
+        0.13417774438858032
+      ],
+      "diffuse_factor": 0,
+      "energy": 35.119232177734375,
+      "name": "Display fitted base-key",
+      "position": [
+        3.6267690658569336,
+        -3.630927562713623,
+        4.758177757263184
+      ],
+      "receiver_parts": [
+        "turned-body"
+      ],
+      "shape": "RECTANGLE",
+      "size": 0.3959999978542328,
+      "size_y": 4.75,
+      "spread_degrees": 36,
+      "target": [
+        0.33402520418167114,
+        -0.6592788696289062,
+        0.7161026000976562
+      ],
+      "target_pixel": [
+        572.0118317306042,
+        889.9913053810596
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0,
+      "name": "Display fitted socket-left",
+      "position": [
+        -3.09,
+        -3.65,
+        5.45
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.7,
+      "target": [
+        -0.2,
+        -0.45,
+        1.28
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0,
+      "name": "Display fitted bowl-left",
+      "position": [
+        0.861,
+        2.062,
+        9.663
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.7,
+      "target": [
+        -0.21,
+        0.31,
+        4.03
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0,
+      "name": "Display fitted bowl-back",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.6,
+      "target": [
+        0.08,
+        0.4,
+        4.03
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 53.27202983067507,
+      "name": "Display fitted collars-right",
+      "position": [
+        5.61,
+        -3.34,
+        2.74
+      ],
+      "receiver_parts": [
+        "turned-body"
+      ],
+      "size": 0.7,
+      "target": [
+        0.36,
+        -0.45,
+        3.08
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 3.1133927107491117,
+      "name": "Display fitted lower-collar",
+      "position": [
+        0.83,
+        2.1,
+        8.24
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket"
+      ],
+      "size": 0.7,
+      "target": [
+        0.31,
+        -0.53,
+        2.87
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0.6575295462527145,
+      "name": "Display fitted finial-left",
+      "position": [
+        -1.45,
+        -3.81,
+        8.94
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.3,
+      "target": [
+        -0.02,
+        -0.09,
+        4.46
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 39.61894709099403,
+      "name": "Display fitted finial-top",
+      "position": [
+        3.23,
+        -2.24,
+        9.06
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket"
+      ],
+      "size": 0.3,
+      "target": [
+        0.04,
+        -0.07,
+        4.46
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 7.0895087738381966,
+      "name": "Display fitted base-rear",
+      "position": [
+        -2.84,
+        5.9,
+        -0.87
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.8,
+      "target": [
+        -0.63,
+        0.53,
+        0.64
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0,
+      "name": "Display fitted bowl-arc",
+      "position": [
+        -0.14,
+        1.5,
+        9.77
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "shape": "RECTANGLE",
+      "size": 2.1,
+      "size_y": 0.45,
+      "target": [
+        0,
+        0.3,
+        4.03
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 61.45888566763327,
+      "name": "Display fitted finial-right",
+      "position": [
+        3.92,
+        -4.7,
+        4.78
+      ],
+      "receiver_parts": [
+        "turned-body"
+      ],
+      "size": 0.3,
+      "target": [
+        0.06,
+        -0.14,
+        4.36
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 923.6032104492188,
+      "name": "Display fitted finial-left-spot",
+      "position": [
+        -1.45416259765625,
+        -3.812018394470215,
+        8.936174392700195
+      ],
+      "size": 0.3,
+      "spot_blend": 0.25,
+      "spot_degrees": 1.2,
+      "target": [
+        -0.017478466033935547,
+        -0.08818817138671875,
+        4.456331253051758
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 3216.7373046875,
+      "name": "Display fitted finial-top-spot",
+      "position": [
+        3.2279295921325684,
+        -2.2384605407714844,
+        9.060192108154297
+      ],
+      "size": 0.3,
+      "spot_blend": 0.25,
+      "spot_degrees": 1.2,
+      "target": [
+        0.03920847177505493,
+        -0.07001399993896484,
+        4.463464736938477
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 12899.728515625,
+      "name": "Display fitted finial-right-spot",
+      "position": [
+        3.924412965774536,
+        -4.704495906829834,
+        4.78243350982666
+      ],
+      "size": 0.3,
+      "spot_blend": 0.25,
+      "spot_degrees": 1.2,
+      "target": [
+        0.06188327074050903,
+        -0.12978506088256836,
+        4.391425609588623
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 1.05713704600584,
+      "name": "Display fitted middle-left",
+      "position": [
+        -2.9803123474121094,
+        -3.8679416179656982,
+        -1.1053886413574219
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket"
+      ],
+      "size": 0.5,
+      "target": [
+        -0.2177722454071045,
+        -0.5403366088867188,
+        3.0533876419067383
+      ],
+      "target_pixel": [
+        426,
+        501
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 55.68392757243131,
+      "name": "Display fitted upper-right",
+      "position": [
+        4.385710716247559,
+        -4.623342514038086,
+        2.287374496459961
+      ],
+      "receiver_parts": [
+        "turned-body"
+      ],
+      "size": 0.5,
+      "target": [
+        0.2243857979774475,
+        -0.4169502258300781,
+        3.2821855545043945
+      ],
+      "target_pixel": [
+        543,
+        439
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 52.9965035058397,
+      "name": "Display fitted lower-right",
+      "position": [
+        4.396017551422119,
+        -4.31827449798584,
+        5.171351909637451
+      ],
+      "receiver_parts": [
+        "turned-body"
+      ],
+      "size": 0.5,
+      "target": [
+        0.3113057315349579,
+        -0.5554542541503906,
+        2.9006004333496094
+      ],
+      "target_pixel": [
+        566,
+        528
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0,
+      "name": "Display fitted socket-right",
+      "position": [
+        4.615477085113525,
+        -4.440490245819092,
+        2.3118438720703125
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        0.262177050113678,
+        -0.452573299407959,
+        1.2416496276855469
+      ],
+      "target_pixel": [
+        553,
+        764
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0,
+      "name": "Display fitted socket-left-precise",
+      "position": [
+        -3.086160182952881,
+        -3.6460728645324707,
+        5.452291488647461
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        -0.19509750604629517,
+        -0.45349597930908203,
+        1.2750673294067383
+      ],
+      "target_pixel": [
+        432,
+        759
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 40.476214199937935,
+      "name": "Display fitted foot-right",
+      "position": [
+        4.473654270172119,
+        -4.184988975524902,
+        3.281796932220459
+      ],
+      "receiver_parts": [
+        "turned-body"
+      ],
+      "size": 0.5,
+      "target": [
+        0.5078204274177551,
+        -0.8754034042358398,
+        0.2291259765625
+      ],
+      "target_pixel": [
+        618,
+        1012
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 2.242056093774871,
+      "name": "Display fitted foot-left-precise",
+      "position": [
+        -3.639744997024536,
+        -5.421966552734375,
+        -2.019042491912842
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        -0.3764955997467041,
+        -0.9256162643432617,
+        0.24680137634277344
+      ],
+      "target_pixel": [
+        384,
+        1020
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 21.360802605970086,
+      "name": "Display fitted rim-front-left",
+      "position": [
+        -0.2789291739463806,
+        0.5721166133880615,
+        10.167247772216797
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        -0.25178444385528564,
+        -0.6134562492370605,
+        4.285609245300293
+      ],
+      "target_pixel": [
+        417,
+        325
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 6.06298466706129,
+      "name": "Display fitted rim-front-right",
+      "position": [
+        1.9167170524597168,
+        4.291059494018555,
+        1.02315092086792
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        0.28863096237182617,
+        -0.5231056213378906,
+        4.212687969207764
+      ],
+      "target_pixel": [
+        560,
+        317
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 20.258087503409122,
+      "name": "Display fitted tip-back-left",
+      "position": [
+        -0.9184633493423462,
+        -4.1292948722839355,
+        7.945313930511475
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        -0.2706800699234009,
+        0.5526432991027832,
+        4.249393463134766
+      ],
+      "target_pixel": [
+        412,
+        81
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 1.4037237778940175,
+      "name": "Display fitted bowl-inner-front",
+      "position": [
+        0.06155819445848465,
+        -5.983484268188477,
+        2.4178812503814697
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        0.0014172196388244629,
+        -0.22000932693481445,
+        4.084836959838867
+      ],
+      "target_pixel": [
+        484,
+        272
+      ]
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 154.5506134033203,
+      "name": "Bowl focused left-0",
+      "position": [
+        1.1277223825454712,
+        2.329474925994873,
+        9.491022109985352
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        -0.25934267044067383,
+        0.27513980865478516,
+        4.026978492736816
+      ],
+      "target_pixel": [
+        415,
+        175
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 192.40126037597656,
+      "name": "Bowl focused left-1",
+      "position": [
+        0.9793937802314758,
+        2.191011667251587,
+        9.590750694274902
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        -0.22910958528518677,
+        0.29870033264160156,
+        4.026697158813477
+      ],
+      "target_pixel": [
+        423,
+        170
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 277.10986328125,
+      "name": "Bowl focused left-2",
+      "position": [
+        0.8206774592399597,
+        1.6600391864776611,
+        9.787111282348633
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        -0.19509750604629517,
+        0.32172298431396484,
+        4.027154922485352
+      ],
+      "target_pixel": [
+        432,
+        165
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 269.4946594238281,
+      "name": "Bowl focused left-3",
+      "position": [
+        1.108501672744751,
+        0.8931190967559814,
+        9.871354103088379
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        -0.14218968152999878,
+        0.34880876541137695,
+        4.028450965881348
+      ],
+      "target_pixel": [
+        446,
+        159
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 126.74148559570312,
+      "name": "Bowl focused rear-0",
+      "position": [
+        -0.16062162816524506,
+        0.9147652387619019,
+        10.010361671447754
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        0.02409195899963379,
+        0.40981149673461914,
+        4.034501075744629
+      ],
+      "target_pixel": [
+        490,
+        145
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 548.24169921875,
+      "name": "Bowl focused rear-1",
+      "position": [
+        -0.7899042367935181,
+        0.8564149141311646,
+        9.956336975097656
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        0.06566238403320312,
+        0.4048957824707031,
+        4.03483772277832
+      ],
+      "target_pixel": [
+        501,
+        146
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 691.715576171875,
+      "name": "Bowl focused rear-2",
+      "position": [
+        -1.8871679306030273,
+        0.42531371116638184,
+        9.697569847106934
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        0.0996745228767395,
+        0.3945884704589844,
+        4.036165237426758
+      ],
+      "target_pixel": [
+        510,
+        148
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 712.3546142578125,
+      "name": "Bowl focused rear-3",
+      "position": [
+        -2.0365278720855713,
+        -0.7678689956665039,
+        9.509471893310547
+      ],
+      "receiver_parts": [
+        "turned-body",
+        "stem-socket",
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.025,
+      "spot_blend": 0.8,
+      "spot_degrees": 0.75,
+      "target": [
+        0.14502406120300293,
+        0.3744931221008301,
+        4.038106918334961
+      ],
+      "target_pixel": [
+        522,
+        152
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0.0,
+      "name": "Socket crescent 00",
+      "position": [
+        -5.950959205627441,
+        -1.9110877513885498,
+        2.83103609085083
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        -0.3764955997467041,
+        -0.3440718650817871,
+        1.2594757080078125
+      ],
+      "target_pixel": [
+        384,
+        738
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 52.636505126953125,
+      "name": "Socket crescent 01",
+      "position": [
+        -5.039361953735352,
+        -2.715515613555908,
+        4.145893573760986
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        -0.3160296082496643,
+        -0.3914661407470703,
+        1.2668437957763672
+      ],
+      "target_pixel": [
+        400,
+        747
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 528.8929443359375,
+      "name": "Socket crescent 02",
+      "position": [
+        -3.8905835151672363,
+        -3.2036168575286865,
+        5.150821685791016
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        -0.24800527095794678,
+        -0.4290318489074707,
+        1.2735424041748047
+      ],
+      "target_pixel": [
+        418,
+        754
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 429.9660339355469,
+      "name": "Socket crescent 03",
+      "position": [
+        -2.6991844177246094,
+        -3.670048475265503,
+        5.671478748321533
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        -0.17242270708084106,
+        -0.45973968505859375,
+        1.277231216430664
+      ],
+      "target_pixel": [
+        438,
+        760
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 136.520263671875,
+      "name": "Socket crescent 04",
+      "position": [
+        -1.6529486179351807,
+        -4.055930137634277,
+        5.83932638168335
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        -0.10439842939376831,
+        -0.4788942337036133,
+        1.2778778076171875
+      ],
+      "target_pixel": [
+        456,
+        764
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 21.77409553527832,
+      "name": "Socket crescent 05",
+      "position": [
+        1.9188834428787231,
+        -3.854262590408325,
+        5.897170066833496
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        0.11857020854949951,
+        -0.45613765716552734,
+        1.2915620803833008
+      ],
+      "target_pixel": [
+        515,
+        757
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 95.63965606689453,
+      "name": "Socket crescent 06",
+      "position": [
+        3.0254783630371094,
+        -3.5913968086242676,
+        5.528326511383057
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        0.1828153431415558,
+        -0.43018531799316406,
+        1.2944183349609375
+      ],
+      "target_pixel": [
+        532,
+        751
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 300.6112060546875,
+      "name": "Socket crescent 07",
+      "position": [
+        3.996328830718994,
+        -3.0112340450286865,
+        5.179262638092041
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        0.24328142404556274,
+        -0.3980550765991211,
+        1.2952003479003906
+      ],
+      "target_pixel": [
+        548,
+        744
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 3200.0,
+      "name": "Socket crescent 08",
+      "position": [
+        4.8972086906433105,
+        -2.380558490753174,
+        4.574010372161865
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        0.29618921875953674,
+        -0.3574485778808594,
+        1.297175407409668
+      ],
+      "target_pixel": [
+        562,
+        735
+      ],
+      "type": "SPOT"
+    },
+    {
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 70.58642578125,
+      "name": "Socket crescent 09",
+      "position": [
+        5.765021324157715,
+        -1.549147367477417,
+        3.5539464950561523
+      ],
+      "receiver_parts": [
+        "stem-socket"
+      ],
+      "size": 0.08,
+      "spot_blend": 0.85,
+      "spot_degrees": 1.7,
+      "target": [
+        0.34531790018081665,
+        -0.3040480613708496,
+        1.3008289337158203
+      ],
+      "target_pixel": [
+        575,
+        723
+      ],
+      "type": "SPOT"
+    },
+    {
+      "name": "Collar crescent 00",
+      "position": [
+        -4.360658168792725,
+        -4.697599411010742,
+        2.540715217590332
+      ],
+      "target": [
+        -0.22155135869979858,
+        -0.4178619384765625,
+        3.283440589904785
+      ],
+      "target_pixel": [
+        425,
+        439
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 01",
+      "position": [
+        -2.4047675132751465,
+        -5.927974224090576,
+        4.1885271072387695
+      ],
+      "target": [
+        -0.11573576927185059,
+        -0.4550938606262207,
+        3.2896804809570312
+      ],
+      "target_pixel": [
+        453,
+        446
+      ],
+      "type": "SPOT",
+      "energy": 5.081223487854004,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 02",
+      "position": [
+        -0.12738701701164246,
+        -6.161056995391846,
+        5.181241989135742
+      ],
+      "target": [
+        -0.006141066551208496,
+        -0.467099666595459,
+        3.2933454513549805
+      ],
+      "target_pixel": [
+        482,
+        448
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 03",
+      "position": [
+        2.0925700664520264,
+        -5.664921283721924,
+        5.506787300109863
+      ],
+      "target": [
+        0.10345366597175598,
+        -0.45424461364746094,
+        3.294940948486328
+      ],
+      "target_pixel": [
+        511,
+        445
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 04",
+      "position": [
+        3.8713531494140625,
+        -4.722238063812256,
+        5.297754287719727
+      ],
+      "target": [
+        0.19793188571929932,
+        -0.4216341972351074,
+        3.2950620651245117
+      ],
+      "target_pixel": [
+        536,
+        438
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 05",
+      "position": [
+        5.043456077575684,
+        -3.0760250091552734,
+        5.744922161102295
+      ],
+      "target": [
+        0.2810727059841156,
+        -0.3679337501525879,
+        3.2983036041259766
+      ],
+      "target_pixel": [
+        558,
+        426
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 06",
+      "position": [
+        -4.7743330001831055,
+        0.012003958225250244,
+        -1.1109600067138672
+      ],
+      "target": [
+        -0.4689866304397583,
+        -0.3460004925727844,
+        3.052671432495117
+      ],
+      "target_pixel": [
+        359,
+        459
+      ],
+      "type": "SPOT",
+      "energy": 1.3517063856124878,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        359,
+        459
+      ],
+      "surface_normal": [
+        -0.7987468838691711,
+        -0.5878725051879883,
+        0.12809915840625763
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        359,
+        466
+      ]
+    },
+    {
+      "name": "Collar crescent 07",
+      "position": [
+        -4.799835205078125,
+        -1.7857892513275146,
+        -0.780487060546875
+      ],
+      "target": [
+        -0.3897589445114136,
+        -0.43268561363220215,
+        3.0562233924865723
+      ],
+      "target_pixel": [
+        380,
+        477
+      ],
+      "type": "SPOT",
+      "energy": 67.13509368896484,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        380,
+        477
+      ],
+      "surface_normal": [
+        -0.6626155376434326,
+        -0.7331940531730652,
+        0.15286345779895782
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        380,
+        485
+      ]
+    },
+    {
+      "name": "Collar crescent 08",
+      "position": [
+        -3.821028232574463,
+        -2.9484825134277344,
+        -1.1438908576965332
+      ],
+      "target": [
+        -0.29530584812164307,
+        -0.5028006434440613,
+        3.049905300140381
+      ],
+      "target_pixel": [
+        405,
+        493
+      ],
+      "type": "SPOT",
+      "energy": 639.0997314453125,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        405,
+        493
+      ],
+      "surface_normal": [
+        -0.506075382232666,
+        -0.857265830039978,
+        0.09477902948856354
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        405,
+        497
+      ]
+    },
+    {
+      "name": "Collar crescent 09",
+      "position": [
+        -2.537904739379883,
+        -3.781735420227051,
+        -1.431276559829712
+      ],
+      "target": [
+        -0.18944650888442993,
+        -0.5517527461051941,
+        3.0466644763946533
+      ],
+      "target_pixel": [
+        433,
+        504
+      ],
+      "type": "SPOT",
+      "energy": 814.5592041015625,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        433,
+        504
+      ],
+      "surface_normal": [
+        -0.3278560936450958,
+        -0.9432670474052429,
+        0.05251384899020195
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        433,
+        505
+      ]
+    },
+    {
+      "name": "Collar crescent 10",
+      "position": [
+        -1.1704604625701904,
+        -4.247420310974121,
+        -1.5771877765655518
+      ],
+      "target": [
+        -0.0836789608001709,
+        -0.5775198340415955,
+        3.0434978008270264
+      ],
+      "target_pixel": [
+        461,
+        510
+      ],
+      "type": "SPOT",
+      "energy": 164.9646759033203,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        461,
+        510
+      ],
+      "surface_normal": [
+        -0.14924319088459015,
+        -0.9882808327674866,
+        0.03205408528447151
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        461,
+        509
+      ]
+    },
+    {
+      "name": "Collar crescent 11",
+      "position": [
+        0.45667701959609985,
+        -4.612110614776611,
+        -1.3805499076843262
+      ],
+      "target": [
+        0.025938749313354492,
+        -0.5829262733459473,
+        3.0443954467773438
+      ],
+      "target_pixel": [
+        490,
+        511
+      ],
+      "type": "SPOT",
+      "energy": 8.85300064086914,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        490,
+        511
+      ],
+      "surface_normal": [
+        0.05682322382926941,
+        -0.9967778325080872,
+        0.05661455914378166
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        490,
+        509
+      ]
+    },
+    {
+      "name": "Collar crescent 12",
+      "position": [
+        2.1374456882476807,
+        -5.188216209411621,
+        -0.1979663372039795
+      ],
+      "target": [
+        0.13182997703552246,
+        -0.5664846301078796,
+        3.060421943664551
+      ],
+      "target_pixel": [
+        518,
+        505
+      ],
+      "type": "SPOT",
+      "energy": 66.94747924804688,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        518,
+        505
+      ],
+      "surface_normal": [
+        0.23479436337947845,
+        -0.9539257884025574,
+        0.18680773675441742
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        518,
+        502
+      ]
+    },
+    {
+      "name": "Collar crescent 13",
+      "position": [
+        2.284377098083496,
+        -1.8014732599258423,
+        -2.4790456295013428
+      ],
+      "target": [
+        0.22999584674835205,
+        -0.5326807498931885,
+        3.013648271560669
+      ],
+      "target_pixel": [
+        544,
+        505
+      ],
+      "type": "SPOT",
+      "energy": 3200.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        544,
+        505
+      ],
+      "surface_normal": [
+        0.39086684584617615,
+        -0.9123931527137756,
+        -0.12149853259325027
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        544,
+        491
+      ]
+    },
+    {
+      "name": "Collar crescent 14",
+      "position": [
+        4.543544769287109,
+        -3.6206257343292236,
+        0.18265032768249512
+      ],
+      "target": [
+        0.31318068504333496,
+        -0.48929840326309204,
+        3.063417673110962
+      ],
+      "target_pixel": [
+        566,
+        488
+      ],
+      "type": "SPOT",
+      "energy": 3200.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        566,
+        488
+      ],
+      "surface_normal": [
+        0.5202509760856628,
+        -0.8188070058822632,
+        0.2426811158657074
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        566,
+        477
+      ]
+    },
+    {
+      "name": "Collar crescent 15",
+      "position": [
+        5.747401237487793,
+        -2.7448811531066895,
+        1.6979457139968872
+      ],
+      "target": [
+        0.38503050804138184,
+        -0.4308566451072693,
+        3.0728185176849365
+      ],
+      "target_pixel": [
+        585,
+        474
+      ],
+      "type": "SPOT",
+      "energy": 3200.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        585,
+        474
+      ],
+      "surface_normal": [
+        0.6192995309829712,
+        -0.6745458841323853,
+        0.4018157720565796
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        585,
+        458
+      ]
+    },
+    {
+      "name": "Collar crescent 16",
+      "position": [
+        3.0293259620666504,
+        1.108736276626587,
+        8.316240310668945
+      ],
+      "target": [
+        0.43037235736846924,
+        -0.33177584409713745,
+        3.1037211418151855
+      ],
+      "target_pixel": [
+        597,
+        448
+      ],
+      "type": "SPOT",
+      "energy": 331.141845703125,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "middle-collar"
+      ],
+      "surface_pixel": [
+        597,
+        448
+      ],
+      "surface_normal": [
+        0.24509306252002716,
+        -0.19673803448677063,
+        0.9493278861045837
+      ],
+      "use_shadow": false,
+      "initial_target_pixel": [
+        597,
+        441
+      ]
+    },
+    {
+      "name": "Collar crescent 17",
+      "position": [
+        1.2117295265197754,
+        -5.976027965545654,
+        5.383937358856201
+      ],
+      "target": [
+        0.08077889680862427,
+        -0.6333842277526855,
+        2.898561477661133
+      ],
+      "target_pixel": [
+        505,
+        545
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 18",
+      "position": [
+        2.2111170291900635,
+        -5.380363941192627,
+        5.912879467010498
+      ],
+      "target": [
+        0.1525823473930359,
+        -0.6145024299621582,
+        2.9047203063964844
+      ],
+      "target_pixel": [
+        524,
+        540
+      ],
+      "type": "SPOT",
+      "energy": 0.010746859945356846,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 19",
+      "position": [
+        2.943286895751953,
+        -4.261134147644043,
+        6.795018672943115
+      ],
+      "target": [
+        0.22060665488243103,
+        -0.5837373733520508,
+        2.913811683654785
+      ],
+      "target_pixel": [
+        542,
+        532
+      ],
+      "type": "SPOT",
+      "energy": 40.25141525268555,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 20",
+      "position": [
+        3.320617437362671,
+        -2.8046674728393555,
+        7.577169418334961
+      ],
+      "target": [
+        0.2848518192768097,
+        -0.5430741310119629,
+        2.9221372604370117
+      ],
+      "target_pixel": [
+        559,
+        522
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 21",
+      "position": [
+        3.3063316345214844,
+        -1.0624592304229736,
+        8.119956970214844
+      ],
+      "target": [
+        0.34909701347351074,
+        -0.4844388961791992,
+        2.9314451217651367
+      ],
+      "target_pixel": [
+        576,
+        508
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar crescent 22",
+      "position": [
+        3.3201045989990234,
+        0.0608677864074707,
+        8.15919303894043
+      ],
+      "target": [
+        0.40200480818748474,
+        -0.41962099075317383,
+        2.9386720657348633
+      ],
+      "target_pixel": [
+        590,
+        493
+      ],
+      "type": "SPOT",
+      "energy": 0.0,
+      "size": 0.08,
+      "spot_degrees": 1.65,
+      "spot_blend": 0.85,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "receiver_parts": [
+        "lower-collar"
+      ]
+    },
+    {
+      "color": [
+        1.0,
+        0.4079730808734894,
+        0.13417774438858032
+      ],
+      "diffuse_factor": 0,
+      "energy": 1.8778349161148071,
+      "name": "Collar retained 00",
+      "position": [
+        3.6267690658569336,
+        -3.630927562713623,
+        4.758177757263184
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "shape": "RECTANGLE",
+      "size": 0.3959999978542328,
+      "size_y": 4.75,
+      "spread_degrees": 36,
+      "target": [
+        0.33402520418167114,
+        -0.6592788696289062,
+        0.7161026000976562
+      ],
+      "target_pixel": [
+        572.0118317306042,
+        889.9913053810596
+      ],
+      "clone_of": "Display fitted base-key"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 145.01939392089844,
+      "name": "Collar retained 01",
+      "position": [
+        4.385710716247559,
+        -4.623342514038086,
+        2.287374496459961
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        0.2243857979774475,
+        -0.4169502258300781,
+        3.2821855545043945
+      ],
+      "target_pixel": [
+        543,
+        439
+      ],
+      "clone_of": "Display fitted upper-right"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 28.69368553161621,
+      "name": "Collar retained 02",
+      "position": [
+        5.61,
+        -3.34,
+        2.74
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.7,
+      "target": [
+        0.36,
+        -0.45,
+        3.08
+      ],
+      "clone_of": "Display fitted collars-right"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 70.66090393066406,
+      "name": "Collar retained 03",
+      "position": [
+        4.473654270172119,
+        -4.184988975524902,
+        3.281796932220459
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        0.5078204274177551,
+        -0.8754034042358398,
+        0.2291259765625
+      ],
+      "target_pixel": [
+        618,
+        1012
+      ],
+      "clone_of": "Display fitted foot-right"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 138.34060668945312,
+      "name": "Collar retained 04",
+      "position": [
+        3.92,
+        -4.7,
+        4.78
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.3,
+      "target": [
+        0.06,
+        -0.14,
+        4.36
+      ],
+      "clone_of": "Display fitted finial-right"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 9.033268928527832,
+      "name": "Collar retained 05",
+      "position": [
+        3.23,
+        -2.24,
+        9.06
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.3,
+      "target": [
+        0.04,
+        -0.07,
+        4.46
+      ],
+      "clone_of": "Display fitted finial-top"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 369.92681884765625,
+      "name": "Collar retained 06",
+      "position": [
+        4.396017551422119,
+        -4.31827449798584,
+        5.171351909637451
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        0.3113057315349579,
+        -0.5554542541503906,
+        2.9006004333496094
+      ],
+      "target_pixel": [
+        566,
+        528
+      ],
+      "clone_of": "Display fitted lower-right"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0.0,
+      "name": "Collar retained 07",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "clone_of": "Display fitted original-right"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0.4024760127067566,
+      "name": "Collar retained 08",
+      "position": [
+        0.83,
+        2.1,
+        8.24
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.7,
+      "target": [
+        0.31,
+        -0.53,
+        2.87
+      ],
+      "clone_of": "Display fitted lower-collar"
+    },
+    {
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "diffuse_factor": 0,
+      "energy": 0.0,
+      "name": "Collar retained 09",
+      "position": [
+        -2.9803123474121094,
+        -3.8679416179656982,
+        -1.1053886413574219
+      ],
+      "receiver_parts": [
+        "lower-collar",
+        "middle-collar",
+        "upper-collar"
+      ],
+      "size": 0.5,
+      "target": [
+        -0.2177722454071045,
+        -0.5403366088867188,
+        3.0533876419067383
+      ],
+      "target_pixel": [
+        426,
+        501
+      ],
+      "clone_of": "Display fitted middle-left"
+    }
+  ],
+  "measured_pigment": {
+    "bounds": [
+      0.25,
+      4.0
+    ],
+    "caveat": "Approximate inverse pigment under inferred geometry and lighting; residual shading can remain.",
+    "confidence_above_half_pixels": 306353,
+    "feedback": {
+      "correction_blur_radius": 2,
+      "correction_bounds": [
+        0.67,
+        1.5
+      ],
+      "method": "One measured actual-BSDF correction after the black/white approximation; existing confidence excludes strong reflections.",
+      "source_variant": "117-expanded-pigment"
+    },
+    "max_weight": 1.0,
+    "mean_weight": 0.8788875341415405,
+    "method": "(reference-linear minus measured black BSDF) / measured white-minus-black response; exclude strong reflections and boundary pixels. Packed pigment/confidence are separate; actual BSDF/normal/roughness/lights are retained.",
+    "projection": "Fixed world-space orthographic camera; original visible-surface coverage; hidden surfaces keep the accepted atlas",
+    "response_directory": "build/queen-mission/pigment-fit-011",
+    "source_sha256": "eb29c94c3185ad2e5affa2772352f30644f5c3adfb51024d2a6f2ccb7417748c"
+  },
+  "method": "Combine roundtrip-verified 057 fine pigment with 054 expanded display-fitted reflection rig",
+  "pigment_grading": {
+    "finial_factor": [
+      0.98,
+      0.92,
+      0.86
+    ],
+    "method": "Regional median RGB discrepancies, corrected in linear pigment; artistic inference, not recovered albedo",
+    "z_zones": [
+      [
+        0.0,
+        [
+          1.0,
+          1.08,
+          0.85
+        ]
+      ],
+      [
+        0.26,
+        [
+          1.0,
+          1.08,
+          0.85
+        ]
+      ],
+      [
+        0.36,
+        [
+          0.82,
+          0.8,
+          0.88
+        ]
+      ],
+      [
+        0.78,
+        [
+          0.82,
+          0.8,
+          0.88
+        ]
+      ],
+      [
+        0.9,
+        [
+          1.15,
+          1.1,
+          0.75
+        ]
+      ],
+      [
+        1.18,
+        [
+          1.15,
+          1.1,
+          0.75
+        ]
+      ],
+      [
+        1.34,
+        [
+          1.0,
+          1.08,
+          1.12
+        ]
+      ],
+      [
+        2.55,
+        [
+          1.0,
+          1.08,
+          1.12
+        ]
+      ],
+      [
+        2.78,
+        [
+          0.82,
+          0.8,
+          0.9
+        ]
+      ],
+      [
+        3.26,
+        [
+          0.82,
+          0.8,
+          0.9
+        ]
+      ],
+      [
+        3.34,
+        [
+          0.88,
+          0.91,
+          0.65
+        ]
+      ],
+      [
+        3.9,
+        [
+          0.88,
+          0.91,
+          0.65
+        ]
+      ],
+      [
+        4.02,
+        [
+          0.87,
+          0.92,
+          1.35
+        ]
+      ],
+      [
+        4.5,
+        [
+          0.87,
+          0.92,
+          1.35
+        ]
+      ]
+    ]
+  },
+  "pore_mix": 0.2,
+  "pore_noise": 180,
+  "reflector_spread_trial": {
+    "hypothesis": "Prevent the tall base reflector from also drawing a vertical streak on the finial. Refit only its power to preserve the prior base contribution.",
+    "new_energy": 10.642192214727402,
+    "old_black_response_geometry_and_relief_preserved": true,
+    "old_response_sha256": "cd605c4cf8584098ba2c85faece3450c1bddacc1a27ab7be71fd6bfac78ecbdf",
+    "old_response_source": "build\\queen-mission\\specular-expanded-039\\base-key.npy",
+    "power_fit_roi_at_418": [
+      70,
+      270,
+      255,
+      350
+    ],
+    "previous_energy": 219.03621443426192,
+    "source_sha256": "16904dba7abc57e60ec8e6d73c30f46f9e0890ec46272753c648e7e88f64247e",
+    "spread_degrees": 36
+  },
+  "relief_from_pigment": {
+    "coat": 0.35,
+    "coat_roughness": 0.075,
+    "distance": 0.007,
+    "pore_mix": 0.22,
+    "pore_scale": 140,
+    "relief_range": 0.2,
+    "roughness": 0.19,
+    "source": "build/queen-mission/021-warm-pigment/queen.blend",
+    "strength": 0.45,
+    "variant": "022-grain-relief"
+  },
+  "response_source": "build/queen-mission/specular-expanded-039",
+  "rough_dark": 0.22,
+  "rough_light": 0.14,
+  "samples": 64,
+  "saturation": 1,
+  "socket_crescent": {
+    "method": "Overlapping physical spot emitters placed on reflected view rays; no geometry or material change.",
+    "targets": [
+      [
+        384,
+        738
+      ],
+      [
+        400,
+        747
+      ],
+      [
+        418,
+        754
+      ],
+      [
+        438,
+        760
+      ],
+      [
+        456,
+        764
+      ],
+      [
+        515,
+        757
+      ],
+      [
+        532,
+        751
+      ],
+      [
+        548,
+        744
+      ],
+      [
+        562,
+        735
+      ],
+      [
+        575,
+        723
+      ]
+    ]
+  },
+  "socket_crescent_fit": {
+    "crop": [
+      365,
+      695,
+      600,
+      795
+    ],
+    "gain_factors": {
+      "Socket crescent 00": 0.0,
+      "Socket crescent 01": 0.13159126333437954,
+      "Socket crescent 02": 1.3222323936949676,
+      "Socket crescent 03": 1.0749150957822478,
+      "Socket crescent 04": 0.34130066746968324,
+      "Socket crescent 05": 0.054435240614599645,
+      "Socket crescent 06": 0.23909914476332236,
+      "Socket crescent 07": 0.7515280338222469,
+      "Socket crescent 08": 8.0,
+      "Socket crescent 09": 0.17646607075792894
+    },
+    "history": [
+      {
+        "after_mse": 0.018821603969589755,
+        "before_mse": 0.021814742333018822,
+        "iteration": 0
+      },
+      {
+        "after_mse": 0.01821446108168369,
+        "before_mse": 0.018821603969589755,
+        "iteration": 1
+      },
+      {
+        "after_mse": 0.018022621610474892,
+        "before_mse": 0.01821446108168369,
+        "iteration": 2
+      },
+      {
+        "after_mse": 0.017988422516326163,
+        "before_mse": 0.018022621610474892,
+        "iteration": 3
+      },
+      {
+        "after_mse": 0.017988393783130024,
+        "before_mse": 0.017988422516326163,
+        "iteration": 4
+      },
+      {
+        "after_mse": 0.01798839104499438,
+        "before_mse": 0.017988393783130024,
+        "iteration": 5
+      }
+    ],
+    "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material.",
+    "sample_count": 512,
+    "source_sha256": "f391c12fc02d551affdc466c22a11391642b9420016c104f09d4b870813a6f0b"
+  },
+  "socket_pigment_repair": {
+    "applied_model_sha256": "a7a928bdeb07b0bd680c7228dedf302888a23c88113783afff0757602d346e42",
+    "crop": [
+      315,
+      650,
+      635,
+      815
+    ],
+    "ellipses": [
+      {
+        "center": [
+          528,
+          695
+        ],
+        "radii": [
+          19,
+          22
+        ]
+      },
+      {
+        "center": [
+          567,
+          765
+        ],
+        "radii": [
+          22,
+          14
+        ]
+      }
+    ],
+    "fine_grain_strength": 0.7,
+    "harmonic_iterations": 1545,
+    "last_log_color_change": 9.5367431640625e-06,
+    "mask_pixels": 2260,
+    "medium_grain_strength": 1,
+    "method": "Fill only the two exposed pigment imprints from adjacent log wood color; add bounded fine reference grain and medium relief-field variation. Preserve surrounding pigment and existing hidden-surface coverage.",
+    "source_sha256": "a7a928bdeb07b0bd680c7228dedf302888a23c88113783afff0757602d346e42"
+  },
+  "source": "build/queen-mission/137-socket-pigment-repair/queen.blend",
+  "stem_socket_receiver_isolation": {
+    "closed_controls_sha256": "c121843f44cad3d2862a054527b2e5006021b95b01a073ebe80c073a2ee5c017",
+    "disabled_socket_lights": [
+      "Display fitted socket-right",
+      "Display fitted socket-left",
+      "Display fitted socket-left-precise"
+    ],
+    "excluded_reflectors": [
+      "Display fitted base-key",
+      "Display fitted upper-right",
+      "Display fitted collars-right",
+      "Display fitted foot-right",
+      "Display fitted finial-right",
+      "Display fitted lower-right"
+    ],
+    "method": "Exact evaluated face partition with unchanged positions, UVs, normals and material. Exclude the measured stray reflectors only from stem/socket; preserve their action everywhere else.",
+    "source_sha256": "358e327b4aa8022117af741f87dc2af835ae9bac266c3f16f42e559739987ed6",
+    "z_interval": [
+      0.83,
+      2.78
+    ]
+  },
+  "texture": "assets/queen/queen-pigment-albedo-v8.png",
+  "uv_layer": "Pigment atlas",
+  "uv_meridian_scale": 5.5,
+  "uv_offset_v": 0.13,
+  "uv_repeat_u": 1,
+  "value": 1,
+  "variant": "162-repaired-head-light-fit",
+  "world": 0.03,
+  "collar_receiver_isolation": {
+    "source_sha256": "eac23f7c9bbead43a22ea621f2a05a0604eeeebcc13a131e53ffabaca6302223",
+    "closed_controls_sha256": "c121843f44cad3d2862a054527b2e5006021b95b01a073ebe80c073a2ee5c017",
+    "z_interval": [
+      2.78,
+      3.34
+    ],
+    "excluded_reflectors": [
+      "Display fitted base-key",
+      "Display fitted upper-right",
+      "Display fitted collars-right",
+      "Display fitted foot-right",
+      "Display fitted finial-right",
+      "Display fitted finial-top",
+      "Display fitted lower-right",
+      "Display fitted original-right",
+      "Display fitted lower-collar",
+      "Display fitted middle-left"
+    ],
+    "method": "Exact evaluated collar faces; keep accepted socket, finial and remaining light behavior, excluding measured stray collar reflections."
+  },
+  "collar_crescents": {
+    "targets": [
+      [
+        425,
+        439
+      ],
+      [
+        453,
+        446
+      ],
+      [
+        482,
+        448
+      ],
+      [
+        511,
+        445
+      ],
+      [
+        536,
+        438
+      ],
+      [
+        558,
+        426
+      ],
+      [
+        359,
+        466
+      ],
+      [
+        380,
+        485
+      ],
+      [
+        405,
+        497
+      ],
+      [
+        433,
+        505
+      ],
+      [
+        461,
+        509
+      ],
+      [
+        490,
+        509
+      ],
+      [
+        518,
+        502
+      ],
+      [
+        544,
+        491
+      ],
+      [
+        566,
+        477
+      ],
+      [
+        585,
+        458
+      ],
+      [
+        597,
+        441
+      ],
+      [
+        505,
+        545
+      ],
+      [
+        524,
+        540
+      ],
+      [
+        542,
+        532
+      ],
+      [
+        559,
+        522
+      ],
+      [
+        576,
+        508
+      ],
+      [
+        590,
+        493
+      ]
+    ],
+    "method": "Overlapping physical spot emitters placed on reflected view rays; no geometry or material change.",
+    "retained_basis": "Copy the accepted reflectors and link copies only to collars, keeping their action everywhere else fixed."
+  },
+  "collar_crescent_fit": {
+    "source_sha256": "21b32f31e52f99a8363e730a82d173c1c37fd9bf4ed426c73e60f809523b463b",
+    "sample_count": 512,
+    "crop": [
+      290,
+      350,
+      680,
+      565
+    ],
+    "gain_factors": {
+      "Collar crescent 00": 0.0,
+      "Collar crescent 01": 0.012703058319261938,
+      "Collar crescent 02": 0.0,
+      "Collar crescent 03": 0.0,
+      "Collar crescent 04": 0.0,
+      "Collar crescent 05": 0.0,
+      "Collar crescent 06": 0.003379265921506415,
+      "Collar crescent 07": 0.16783772981471587,
+      "Collar crescent 08": 1.597749280359066,
+      "Collar crescent 09": 2.0363979500353695,
+      "Collar crescent 10": 0.4124116814094323,
+      "Collar crescent 11": 0.022132500768341633,
+      "Collar crescent 12": 0.16736869781703853,
+      "Collar crescent 13": 8.0,
+      "Collar crescent 14": 8.0,
+      "Collar crescent 15": 8.0,
+      "Collar crescent 16": 0.8278546021270231,
+      "Collar crescent 17": 0.0,
+      "Collar crescent 18": 2.6867149147527355e-05,
+      "Collar crescent 19": 0.10062854235704684,
+      "Collar crescent 20": 0.0,
+      "Collar crescent 21": 0.0,
+      "Collar crescent 22": 0.0,
+      "Collar retained 00": 0.05347027396702528,
+      "Collar retained 01": 2.6043311596097865,
+      "Collar retained 02": 0.5386257057103715,
+      "Collar retained 03": 1.7457389868463125,
+      "Collar retained 04": 2.2509455027252576,
+      "Collar retained 05": 0.22800377662607002,
+      "Collar retained 06": 6.980211729524631,
+      "Collar retained 07": 0.0,
+      "Collar retained 08": 0.1292724773233675,
+      "Collar retained 09": 0.0
+    },
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.007616359533815225,
+        "after_mse": 0.0069042911418512485
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.0069042911418512485,
+        "after_mse": 0.006601771825212781
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.006601771825212781,
+        "after_mse": 0.006546387749665366
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.006546387749665366,
+        "after_mse": 0.006525955526925792
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.006525955526925792,
+        "after_mse": 0.006513429435573674
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.006513429435573674,
+        "after_mse": 0.006505802740835748
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.006505802740835748,
+        "after_mse": 0.006500836223877762
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.006500836223877762,
+        "after_mse": 0.006497692240499422
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.006497692240499422,
+        "after_mse": 0.0064952676551146135
+      },
+      {
+        "iteration": 9,
+        "before_mse": 0.0064952676551146135,
+        "after_mse": 0.0064935031095948925
+      },
+      {
+        "iteration": 10,
+        "before_mse": 0.0064935031095948925,
+        "after_mse": 0.00649205438045946
+      },
+      {
+        "iteration": 11,
+        "before_mse": 0.00649205438045946,
+        "after_mse": 0.006490676226394775
+      },
+      {
+        "iteration": 12,
+        "before_mse": 0.006490676226394775,
+        "after_mse": 0.006489976027733421
+      },
+      {
+        "iteration": 13,
+        "before_mse": 0.006489976027733421,
+        "after_mse": 0.006489975911125337
+      }
+    ],
+    "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+  },
+  "glossy_interreflection": {
+    "source_sha256": "7512af0481251a5b223a2011275e1e8f0172a1289ee63c85830bc246ced0b156",
+    "previous_bounces": 4,
+    "glossy_bounces": 0,
+    "method": "Keep actual BSDF direct diffuse/glossy lighting and four diffuse bounces; omit secondary glossy interreflection after diagnostic identified crown-body stripe as reflection of illuminated collars. An artistic render approximation, not a recovered original setting."
+  },
+  "middle_collar_edge_refinement": {
+    "source_sha256": "8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0",
+    "rings": [
+      {
+        "ring": 64,
+        "old_radius": 0.550000011920929,
+        "new_radius": 0.565,
+        "z": 2.989000082015991
+      },
+      {
+        "ring": 65,
+        "old_radius": 0.5700001120567322,
+        "new_radius": 0.58,
+        "z": 3.005000352859497
+      },
+      {
+        "ring": 66,
+        "old_radius": 0.5820000171661377,
+        "new_radius": 0.584,
+        "z": 3.0260002613067627
+      }
+    ],
+    "unchanged_controls_sha256": "30771db7e04eb44671a82c85d61ba102542fd0b67e7051965781953a51bdf8a4",
+    "all_heights_sha256": "7f36c95f25d441ef47bb1685a3e5fb8b8c55da50f35caf4536cdc24fd63c5fd9",
+    "method": "Fill the lower bevel radially at three controls; retain all heights, maximum middle-collar radius, peak ring, all other controls, camera, UVs, pigment and lights. Regenerate every exact light receiver."
+  },
+  "collar_surface_aim": {
+    "source_sha256": "6b3d9d76d7cba237220ffd185e0425050dc8cf9b0f6f92ab3ede3dd28bafcc7c",
+    "prior_energies": {
+      "Collar crescent 00": 0.0,
+      "Collar crescent 01": 2.2528460025787354,
+      "Collar crescent 02": 0.0,
+      "Collar crescent 03": 0.0,
+      "Collar crescent 04": 0.0,
+      "Collar crescent 05": 0.0,
+      "Collar crescent 06": 6.791161060333252,
+      "Collar crescent 07": 1.443734884262085,
+      "Collar crescent 08": 104.70510864257812,
+      "Collar crescent 09": 316.10211181640625,
+      "Collar crescent 10": 127.42386627197266,
+      "Collar crescent 11": 0.0,
+      "Collar crescent 12": 0.0,
+      "Collar crescent 13": 0.0,
+      "Collar crescent 14": 819.3043823242188,
+      "Collar crescent 15": 160.3910675048828,
+      "Collar crescent 16": 0.0,
+      "Collar crescent 17": 0.0,
+      "Collar crescent 18": 3.9555470943450928,
+      "Collar crescent 19": 58.168914794921875,
+      "Collar crescent 20": 0.0,
+      "Collar crescent 21": 0.0,
+      "Collar crescent 22": 0.0,
+      "Collar retained 00": 2.4524319171905518,
+      "Collar retained 01": 120.06417846679688,
+      "Collar retained 02": 127.84476470947266,
+      "Collar retained 03": 51.36506271362305,
+      "Collar retained 04": 120.24593353271484,
+      "Collar retained 05": 5.905733585357666,
+      "Collar retained 06": 194.71612548828125,
+      "Collar retained 07": 0.0,
+      "Collar retained 08": 0.8507665395736694,
+      "Collar retained 09": 6.543952941894531
+    },
+    "targets": [
+      {
+        "name": "Collar crescent 06",
+        "requested_pixel": [
+          359,
+          466
+        ],
+        "surface_pixel": [
+          360,
+          465
+        ],
+        "normal_samples": 6,
+        "target_z": 3.0099594593048096,
+        "normal": [
+          -0.7946893572807312,
+          -0.6063249707221985,
+          -0.02896268293261528
+        ]
+      },
+      {
+        "name": "Collar crescent 07",
+        "requested_pixel": [
+          380,
+          485
+        ],
+        "surface_pixel": [
+          381,
+          484
+        ],
+        "normal_samples": 5,
+        "target_z": 2.99763560295105,
+        "normal": [
+          -0.6646081805229187,
+          -0.7471911907196045,
+          0.0011002668179571629
+        ]
+      },
+      {
+        "name": "Collar crescent 08",
+        "requested_pixel": [
+          405,
+          497
+        ],
+        "surface_pixel": [
+          405,
+          497
+        ],
+        "normal_samples": 8,
+        "target_z": 3.0239992141723633,
+        "normal": [
+          -0.4991123080253601,
+          -0.8589708209037781,
+          -0.11426319926977158
+        ]
+      },
+      {
+        "name": "Collar crescent 09",
+        "requested_pixel": [
+          433,
+          505
+        ],
+        "surface_pixel": [
+          433,
+          505
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0403900146484375,
+        "normal": [
+          -0.3326202630996704,
+          -0.943021833896637,
+          0.00857577659189701
+        ]
+      },
+      {
+        "name": "Collar crescent 10",
+        "requested_pixel": [
+          461,
+          509
+        ],
+        "surface_pixel": [
+          461,
+          509
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0492520332336426,
+        "normal": [
+          -0.1432378888130188,
+          -0.9860288500785828,
+          0.0850304365158081
+        ]
+      },
+      {
+        "name": "Collar crescent 11",
+        "requested_pixel": [
+          490,
+          509
+        ],
+        "surface_pixel": [
+          490,
+          509
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0557291507720947,
+        "normal": [
+          0.06308744847774506,
+          -0.9854321479797363,
+          0.15793481469154358
+        ]
+      },
+      {
+        "name": "Collar crescent 12",
+        "requested_pixel": [
+          518,
+          502
+        ],
+        "surface_pixel": [
+          518,
+          502
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0736892223358154,
+        "normal": [
+          0.20160473883152008,
+          -0.882222592830658,
+          0.42548662424087524
+        ]
+      },
+      {
+        "name": "Collar crescent 13",
+        "requested_pixel": [
+          544,
+          491
+        ],
+        "surface_pixel": [
+          544,
+          491
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0870859622955322,
+        "normal": [
+          0.30750831961631775,
+          -0.6946452856063843,
+          0.6503127217292786
+        ]
+      },
+      {
+        "name": "Collar crescent 14",
+        "requested_pixel": [
+          566,
+          477
+        ],
+        "surface_pixel": [
+          566,
+          477
+        ],
+        "normal_samples": 9,
+        "target_z": 3.096803903579712,
+        "normal": [
+          0.31094980239868164,
+          -0.4618823230266571,
+          0.830647349357605
+        ]
+      },
+      {
+        "name": "Collar crescent 15",
+        "requested_pixel": [
+          585,
+          458
+        ],
+        "surface_pixel": [
+          585,
+          458
+        ],
+        "normal_samples": 9,
+        "target_z": 3.104623556137085,
+        "normal": [
+          0.17843714356422424,
+          -0.17274267971515656,
+          0.9686692357063293
+        ]
+      },
+      {
+        "name": "Collar crescent 16",
+        "requested_pixel": [
+          597,
+          441
+        ],
+        "surface_pixel": [
+          597,
+          441
+        ],
+        "normal_samples": 9,
+        "target_z": 3.107553720474243,
+        "normal": [
+          0.12871497869491577,
+          -0.08330189436674118,
+          0.9881767630577087
+        ]
+      }
+    ],
+    "method": "Native emitted world positions and actual bump normals, averaged over same-surface 3x3 neighbors. At occluding edges use the nearest middle-collar pixel within three pixels; reference registration is unchanged."
+  },
+  "subdivided_collar_receivers": {
+    "source_sha256": "91eaa37afec80ca05c7b1581da7a12ec7cd0c3a504523c9374559984f6f3736a",
+    "regions": {
+      "lower-collar": [
+        2.78,
+        2.97
+      ],
+      "middle-collar": [
+        2.97,
+        3.16
+      ],
+      "upper-collar": [
+        3.16,
+        3.34
+      ]
+    },
+    "nonshadowing_fills": [
+      "Collar crescent 06",
+      "Collar crescent 07",
+      "Collar crescent 08",
+      "Collar crescent 09",
+      "Collar crescent 10",
+      "Collar crescent 11",
+      "Collar crescent 12",
+      "Collar crescent 13",
+      "Collar crescent 14",
+      "Collar crescent 15",
+      "Collar crescent 16"
+    ],
+    "method": "Exact evaluated face subdivision preserves geometry, UVs and normals. Eleven reflected middle-collar fills omit cast shadows; the inferred reflection directions lie below adjacent collars. This is an explicit artistic lighting approximation. All other lights retain shadows."
+  },
+  "full_collar_fill": {
+    "source_sha256": "f785bd2a9cfe3c94990e36e81715eaa15abf74eb0a75eda8e44d15f8bf1ee217",
+    "reason": "Test whether neighboring rings block the remaining middle-collar crescent; retain narrow per-ring light links."
+  },
+  "collar_reference_ridge": {
+    "source_sha256": "0fe903f4bb420a41fbccd899c9edf5acda9a83132cba764e49b182ae35b474bf",
+    "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+    "targets": [
+      {
+        "name": "Collar crescent 06",
+        "initial_pixel": [
+          359,
+          466
+        ],
+        "surface_pixel": [
+          359,
+          459
+        ],
+        "normal_samples": 9,
+        "target_z": 3.052671432495117,
+        "normal": [
+          -0.7987468838691711,
+          -0.5878725051879883,
+          0.12809915840625763
+        ]
+      },
+      {
+        "name": "Collar crescent 07",
+        "initial_pixel": [
+          380,
+          485
+        ],
+        "surface_pixel": [
+          380,
+          477
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0562233924865723,
+        "normal": [
+          -0.6626155376434326,
+          -0.7331940531730652,
+          0.15286345779895782
+        ]
+      },
+      {
+        "name": "Collar crescent 08",
+        "initial_pixel": [
+          405,
+          497
+        ],
+        "surface_pixel": [
+          405,
+          493
+        ],
+        "normal_samples": 9,
+        "target_z": 3.049905300140381,
+        "normal": [
+          -0.506075382232666,
+          -0.857265830039978,
+          0.09477902948856354
+        ]
+      },
+      {
+        "name": "Collar crescent 09",
+        "initial_pixel": [
+          433,
+          505
+        ],
+        "surface_pixel": [
+          433,
+          504
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0466644763946533,
+        "normal": [
+          -0.3278560936450958,
+          -0.9432670474052429,
+          0.05251384899020195
+        ]
+      },
+      {
+        "name": "Collar crescent 10",
+        "initial_pixel": [
+          461,
+          509
+        ],
+        "surface_pixel": [
+          461,
+          510
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0434978008270264,
+        "normal": [
+          -0.14924319088459015,
+          -0.9882808327674866,
+          0.03205408528447151
+        ]
+      },
+      {
+        "name": "Collar crescent 11",
+        "initial_pixel": [
+          490,
+          509
+        ],
+        "surface_pixel": [
+          490,
+          511
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0443954467773438,
+        "normal": [
+          0.05682322382926941,
+          -0.9967778325080872,
+          0.05661455914378166
+        ]
+      },
+      {
+        "name": "Collar crescent 12",
+        "initial_pixel": [
+          518,
+          502
+        ],
+        "surface_pixel": [
+          518,
+          505
+        ],
+        "normal_samples": 9,
+        "target_z": 3.060421943664551,
+        "normal": [
+          0.23479436337947845,
+          -0.9539257884025574,
+          0.18680773675441742
+        ]
+      },
+      {
+        "name": "Collar crescent 13",
+        "initial_pixel": [
+          544,
+          491
+        ],
+        "surface_pixel": [
+          544,
+          505
+        ],
+        "normal_samples": 7,
+        "target_z": 3.013648271560669,
+        "normal": [
+          0.39086684584617615,
+          -0.9123931527137756,
+          -0.12149853259325027
+        ]
+      },
+      {
+        "name": "Collar crescent 14",
+        "initial_pixel": [
+          566,
+          477
+        ],
+        "surface_pixel": [
+          566,
+          488
+        ],
+        "normal_samples": 9,
+        "target_z": 3.063417673110962,
+        "normal": [
+          0.5202509760856628,
+          -0.8188070058822632,
+          0.2426811158657074
+        ]
+      },
+      {
+        "name": "Collar crescent 15",
+        "initial_pixel": [
+          585,
+          458
+        ],
+        "surface_pixel": [
+          585,
+          474
+        ],
+        "normal_samples": 9,
+        "target_z": 3.0728185176849365,
+        "normal": [
+          0.6192995309829712,
+          -0.6745458841323853,
+          0.4018157720565796
+        ]
+      },
+      {
+        "name": "Collar crescent 16",
+        "initial_pixel": [
+          597,
+          441
+        ],
+        "surface_pixel": [
+          597,
+          448
+        ],
+        "normal_samples": 9,
+        "target_z": 3.1037211418151855,
+        "normal": [
+          0.24509306252002716,
+          -0.19673803448677063,
+          0.9493278861045837
+        ]
+      }
+    ],
+    "measurement": [
+      {
+        "name": "Collar crescent 06",
+        "old": [
+          359,
+          466
+        ],
+        "ridge_pixel": [
+          359,
+          459
+        ],
+        "reference_min_rgb": 0.16862745098039217,
+        "surface_z": 3.052671432495117
+      },
+      {
+        "name": "Collar crescent 07",
+        "old": [
+          380,
+          485
+        ],
+        "ridge_pixel": [
+          380,
+          477
+        ],
+        "reference_min_rgb": 0.37254901960784315,
+        "surface_z": 3.0562233924865723
+      },
+      {
+        "name": "Collar crescent 08",
+        "old": [
+          405,
+          497
+        ],
+        "ridge_pixel": [
+          405,
+          493
+        ],
+        "reference_min_rgb": 0.792156862745098,
+        "surface_z": 3.049905300140381
+      },
+      {
+        "name": "Collar crescent 09",
+        "old": [
+          433,
+          505
+        ],
+        "ridge_pixel": [
+          433,
+          504
+        ],
+        "reference_min_rgb": 0.8352941176470589,
+        "surface_z": 3.0466644763946533
+      },
+      {
+        "name": "Collar crescent 10",
+        "old": [
+          461,
+          509
+        ],
+        "ridge_pixel": [
+          461,
+          510
+        ],
+        "reference_min_rgb": 0.5254901960784314,
+        "surface_z": 3.0434978008270264
+      },
+      {
+        "name": "Collar crescent 11",
+        "old": [
+          490,
+          509
+        ],
+        "ridge_pixel": [
+          490,
+          511
+        ],
+        "reference_min_rgb": 0.2196078431372549,
+        "surface_z": 3.0443954467773438
+      },
+      {
+        "name": "Collar crescent 12",
+        "old": [
+          518,
+          502
+        ],
+        "ridge_pixel": [
+          518,
+          505
+        ],
+        "reference_min_rgb": 0.2549019607843137,
+        "surface_z": 3.060421943664551
+      },
+      {
+        "name": "Collar crescent 13",
+        "old": [
+          544,
+          491
+        ],
+        "ridge_pixel": [
+          544,
+          505
+        ],
+        "reference_min_rgb": 0.6627450980392157,
+        "surface_z": 3.013648271560669
+      },
+      {
+        "name": "Collar crescent 14",
+        "old": [
+          566,
+          477
+        ],
+        "ridge_pixel": [
+          566,
+          488
+        ],
+        "reference_min_rgb": 0.8549019607843137,
+        "surface_z": 3.063417673110962
+      },
+      {
+        "name": "Collar crescent 15",
+        "old": [
+          585,
+          458
+        ],
+        "ridge_pixel": [
+          585,
+          474
+        ],
+        "reference_min_rgb": 0.7647058823529411,
+        "surface_z": 3.0728185176849365
+      },
+      {
+        "name": "Collar crescent 16",
+        "old": [
+          597,
+          441
+        ],
+        "ridge_pixel": [
+          597,
+          448
+        ],
+        "reference_min_rgb": 0.34509803921568627,
+        "surface_z": 3.1037211418151855
+      }
+    ],
+    "method": "Peak of a three-pixel horizontal median of minimum reference RGB, within a fixed +/-16-pixel vertical corridor and the visible middle-collar surface. No pixel or camera registration edits. Aim from measured native surface positions and textured normals."
+  },
+  "crown_pigment_repair": {
+    "source_sha256": "fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94",
+    "crop": [
+      345,
+      115,
+      620,
+      285
+    ],
+    "mask_pixels": 9336,
+    "harmonic_iterations": 2831,
+    "last_log_color_change": 9.5367431640625e-06,
+    "reflection_threshold": 0.12,
+    "mask_expansion_radius": 7,
+    "fine_grain_strength": 0.35,
+    "medium_grain_strength": 1.7,
+    "reference_grain_strength": 0.7,
+    "reference_grain_exclusion": "Exclude reference specular peaks (minimum RGB > .4) expanded by five pixels; remaining bounded radius-two detail only.",
+    "grain_source": "Accepted relief-field bandpass, optionally supplemented with bounded high-frequency reference grain outside expanded highlight masks; no broad reference brightness added.",
+    "method": "Fill negative highlight-shaped pigment marks from nearby log wood color only in the finial and upper bowl. Preserve surrounding pigment, hidden coverage, geometry, UVs, normals and lights. Retain medium/fine grain from the existing independent relief field.",
+    "applied_model_sha256": "fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94"
+  },
+  "crown_reflector_fit": {
+    "source_sha256": "3f0c7103b7d3da827e5684ec82e38b68ecc6ae385eecb805b90bcd984b31d3c9",
+    "sample_count": 512,
+    "crop": [
+      345,
+      110,
+      620,
+      280
+    ],
+    "gain_factors": {
+      "Display fitted finial-left-spot": 0.24174063636025594,
+      "Display fitted finial-top-spot": 0.19321010726465887,
+      "Display fitted finial-right-spot": 4.778338581009149,
+      "Bowl focused left-0": 0.947876269202996,
+      "Bowl focused left-1": 1.0283492385679638,
+      "Bowl focused left-2": 1.0064024568176217,
+      "Bowl focused left-3": 1.0339086438051013,
+      "Bowl focused rear-0": 0.9269520425699873,
+      "Bowl focused rear-1": 1.0158659756369122,
+      "Bowl focused rear-2": 0.9908396620467096,
+      "Bowl focused rear-3": 1.2216676452664743
+    },
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.007662370206089598,
+        "after_mse": 0.007519961337161564
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.007519961337161564,
+        "after_mse": 0.007485894620408624
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.007485894620408624,
+        "after_mse": 0.007473137865141562
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.007473137865141562,
+        "after_mse": 0.0074686487674286975
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.0074686487674286975,
+        "after_mse": 0.007467157484609918
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.007467157484609918,
+        "after_mse": 0.007466653484642807
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.007466653484642807,
+        "after_mse": 0.007466480312564966
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.007466480312564966,
+        "after_mse": 0.007466424157112708
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.007466424157112708,
+        "after_mse": 0.0074664054097136005
+      },
+      {
+        "iteration": 9,
+        "before_mse": 0.0074664054097136005,
+        "after_mse": 0.007466398704273575
+      }
+    ],
+    "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+  }
+}

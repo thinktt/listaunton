@@ -1,0 +1,20 @@
+{
+  "previous": "assets/queen/queen-pigment-albedo-v8.png",
+  "previous_sha256": "1aae6a240735163806f739a8de9cb50175d904e40338db724b178d618bc99ec4",
+  "texture": "assets/queen/queen-pigment-albedo-v9.png",
+  "texture_sha256": "69b7c1bc02032e62864f299215fd068c2b3745936864de1ea27425ebe27bb7d2",
+  "bake": "build/queen-mission/finial-patch-bake-017",
+  "masked_texels": 83150,
+  "changed_texels": 68682,
+  "changed_bbox": [
+    0,
+    4,
+    2048,
+    230
+  ],
+  "outside_mask_bytes_exact": true,
+  "previous_file_unchanged": true,
+  "png_reopened_exact": true,
+  "bakes_lighting": false,
+  "method": "Replace only texels reached by the local pigment repair mask. All remaining v8 texels are copied unchanged. The bake contains Base Color and coverage only."
+}

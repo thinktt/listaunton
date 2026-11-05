@@ -1,0 +1,48 @@
+{
+  "source_sha256": "45f6156f37c5ce1cbe6fdb0fb68755f1e7e9452c29e70dc698f47c87b642a379",
+  "sample_count": 512,
+  "crop": [
+    422,
+    145,
+    541,
+    275
+  ],
+  "gain_factors": {
+    "Display fitted finial-left-spot": 1.9750932882191083,
+    "Display fitted finial-top-spot": 0.3125160993050485,
+    "Display fitted finial-right-spot": 3.316946117267569
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.007702132581993077,
+      "after_mse": 0.007241522203979181
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.007241522203979181,
+      "after_mse": 0.007141192025185966
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.007141192025185966,
+      "after_mse": 0.007132783403489347
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.007132783403489347,
+      "after_mse": 0.0071324705814254504
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.0071324705814254504,
+      "after_mse": 0.007132457995204897
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.007132457995204897,
+      "after_mse": 0.007132457413471955
+    }
+  ],
+  "method": "Full colored wood BSDF response per real linked light, fit through AgX; fixed remaining rig, geometry and material."
+}

@@ -304,3 +304,16 @@ Receiver regeneration now requires socket_band=True, collar_band=True and
 split_collars=True. Export the closed control as before. Final fitting renders
 are produced after reopening the saved scene; see the iteration's failed
 in-memory comparison and successful fresh-file reproduction evidence.
+
+
+The seventeenth queen checkpoint retains checkpoint-16 geometry, UVs and all
+six receivers. Its v9 atlas repairs only finial pigment; unmasked texels stay
+byte-identical to v8. Local finial relief is reduced to .00175 while the body
+retains .007. Three measured glint reflectors link only to the finial; exact
+copies preserve their former illumination elsewhere. Explicit shadow_soft_size
+values remove the historical radius/diameter ambiguity. Reproduce from archived
+checkpoint 16 with rebuild_finial_checkpoint.py and iteration-017/reproduction.json.
+Use validate_finial_material.py for packed pixels, material and light-edit scope,
+plus the normal geometry/receiver/camera checks. Keep fixed, side and viewer
+assets synchronized; bowl/rim shaping, grain and reflections remain unfinished.
+The accepted render uses 256 fixed samples with use_light_tree=False for repeatability. Publish/reopen helpers honor explicit render_sampling metadata; earlier checkpoints retain their defaults. The polish mask uses object coordinates and is verified by a translated-piece emission-field check.

@@ -1,0 +1,18 @@
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\build_viewer.py
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_viewer_camera.cjs
+PASS: embedded readiness, parent-only material sync, persistent orbit and native camera reset.
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_review_reference.cjs
+PASS: source switching, uniform placement, stable zoom/pan, opacity, revisions/materials, hold/blink, direct source comparison, contour guard, and source hashes.
+PASS: tab-only switching, reference panning, embedded documents, readiness/source checks and persistent 3D frame.
+PASS: queen projection tab loads once, preserves overlay pan and retains current-model and parts frames.
+PASS: imagined side guide, aligned model material and opacity persist across tabs.
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_projection_variants.py
+RUN cd /home/toby/code/listaunton && python3 scripts/check_site.py && python3 scripts/check_model_site.py
+PASS: eight pages, 56 local links, overlay images, parts sandbox/CSP, and model/viewer hash.
+PASS: all twelve original PNG reference hashes and gallery images.
+PASS: original-reference alignment metadata and source image hashes.
+PASS: candidate hashes, source provenance, five comparison pages and alignment data.
+PASS: white bishops used plain upscale prompts without mitre-specific instructions.
+PASS: bounded foot-detail registration, unchanged image scale and same-color references.
+NOTE: Full-set check_model_site.py failed on king stale model, outside this queen checkpoint. The queen viewer/camera/review, root-site and queen-projection checks passed. Other piece work is untouched.
+SITE_CHECKS_DONE (queen scope; full-set king failure recorded separately)

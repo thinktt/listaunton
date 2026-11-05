@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "\\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_middle_collar_reproduction.py", line 18, in <module>
+    v=report[key];assert v['alpha_identical'] and v['opaque_mean_rgb_byte_difference']<.1 and v['opaque_p999_rgb_byte_difference']<=2 and v['opaque_fraction_pixels_over_five_bytes']<.001 and v['max_rgb_byte_difference']<=64,(key,v)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('reopened', {'mean_rgb_byte_difference': 0.015238848656123901, 'opaque_mean_rgb_byte_difference': 0.06465704716960616, 'opaque_p99_rgb_byte_difference': 1.0, 'opaque_p999_rgb_byte_difference': 3.0, 'opaque_fraction_pixels_over_five_bytes': 0.0006578518148011222, 'max_rgb_byte_difference': 22, 'alpha_identical': True})

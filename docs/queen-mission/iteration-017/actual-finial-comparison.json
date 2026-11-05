@@ -1,0 +1,30 @@
+{
+  "crop": [
+    430,
+    155,
+    535,
+    260
+  ],
+  "measurement": "Actual-render display-RGB mean square error over the finial rectangle. This local error reduction is not whole-model fidelity.",
+  "previous_mse": 0.008437852875354935,
+  "accepted_mse": 0.0025984242934646616,
+  "reduction_percent": 69.2051481360374,
+  "trials": {
+    "157-smooth-varnish": 0.00892716430072392,
+    "158-finer-varnish": 0.008415417408793582,
+    "159-finer-wood-relief": 0.009422895490803438,
+    "160-crown-pigment-repair": 0.00805861714329886,
+    "161-crown-grain-repair": 0.00793628777582202,
+    "162-repaired-head-light-fit": 0.007671099928715132,
+    "163-finial-pigment-repair": 0.007731441160342133,
+    "164-refined-finial-targets": 0.004530280608975617,
+    "165-fitted-finial-repair": 0.00352065532095191,
+    "167-refined-polished-finial": 0.0033085947814129276,
+    "168-fitted-polished-finial": 0.0024429424929013,
+    "169-finial-atlas": 0.0024433302732857847,
+    "171-uniform-finial": 0.0024433279484633356,
+    "172-high-sample-finial": 0.002596408207436933,
+    "174-portable-finial": 0.0025964049526855043,
+    "176-standard-light-sampling": 0.0025984242934646616
+  }
+}

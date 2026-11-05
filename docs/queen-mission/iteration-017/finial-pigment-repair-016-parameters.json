@@ -1,0 +1,24 @@
+{
+  "source_sha256": "fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94",
+  "only_finial": true,
+  "capture": "surface-components-016",
+  "input_pigment_sha256": "156232ccc5f636852096765007c07a14b6a536816a3b00d40bbdbdfab1380f2c",
+  "input_height_sha256": "f9997f8a5029ca086dc1677e3b4c91698decd0db628424b4bb58729d0cf65eca",
+  "crop": [
+    345,
+    115,
+    620,
+    285
+  ],
+  "mask_pixels": 2369,
+  "harmonic_iterations": 1391,
+  "last_log_color_change": 9.775161743164062e-06,
+  "reflection_threshold": 0.12,
+  "mask_expansion_radius": 7,
+  "fine_grain_strength": 0.35,
+  "medium_grain_strength": 1.7,
+  "reference_grain_strength": 0.7,
+  "reference_grain_exclusion": "Exclude reference specular peaks (minimum RGB > .4) expanded by five pixels; remaining bounded radius-two detail only.",
+  "grain_source": "Accepted relief-field bandpass, optionally supplemented with bounded high-frequency reference grain outside expanded highlight masks; no broad reference brightness added.",
+  "method": "Fill negative highlight-shaped pigment marks from nearby log wood color only in the finial and upper bowl. Preserve surrounding pigment, hidden coverage, geometry, UVs, normals and lights. Retain medium/fine grain from the existing independent relief field."
+}

@@ -1,0 +1,136 @@
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\build_viewer.py
+\\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\review.html: 32,689,040 bytes; 715,776 triangles
+
+
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_viewer_camera.cjs
+{
+  "passed": true,
+  "blenderSampleCount": 30,
+  "viewportShapes": 5,
+  "maxPixelError": 0.00004238558722882018,
+  "projectionSwitch": true,
+  "dragRotation": true,
+  "panPixelAccuracy": true,
+  "resetRestoresCamera": true,
+  "manualViewSurvivesResize": true,
+  "sourceSha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460"
+}
+PASS: embedded readiness, parent-only material sync, persistent orbit and native camera reset.
+
+
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_review_reference.cjs
+PASS: source switching, uniform placement, stable zoom/pan, opacity, revisions/materials, hold/blink, direct source comparison, contour guard, and source hashes.
+PASS: tab-only switching, reference panning, embedded documents, readiness/source checks and persistent 3D frame.
+PASS: queen projection tab loads once, preserves overlay pan and retains current-model and parts frames.
+PASS: imagined side guide, aligned model material and opacity persist across tabs.
+
+
+RUN \\wsl.localhost\Ubuntu-24.04\home\toby\code\listaunton\scripts\queen\check_projection_variants.py
+{
+  "passed": true,
+  "variants": [
+    {
+      "id": "angle-48",
+      "elevation": 47.999993868158576,
+      "baseWidth": 2.0734214782714844,
+      "height": 3.6431450843811035,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "44f4c7e03e1e44381510002a3e1a92639e83c15f7a64f88a8091fda8d77ed139",
+      "closedPositiveVolume": true
+    },
+    {
+      "id": "angle-51-5",
+      "elevation": 51.49999852934602,
+      "baseWidth": 2.0734214782714844,
+      "height": 3.910893678665161,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "36315317d5ae4a537702f552dcd3fbf7801e3ca662670c0592330cb883908bad",
+      "closedPositiveVolume": true
+    },
+    {
+      "id": "angle-52",
+      "elevation": 52.000002283442704,
+      "baseWidth": 2.0734214782714844,
+      "height": 3.9586949348449707,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "63a97b9277e6d9cbb1200d3fe29e5c559dab9eeefc0df05bde0962534b7be9a1",
+      "closedPositiveVolume": true
+    },
+    {
+      "id": "angle-54",
+      "elevation": 54.00000066135015,
+      "baseWidth": 2.0734214782714844,
+      "height": 4.143457412719727,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "47374a65e893e5cbc53479b970750e12992bfd65e26c677bbca837025772a478",
+      "closedPositiveVolume": true
+    },
+    {
+      "id": "angle-56",
+      "elevation": 56.0000042858654,
+      "baseWidth": 2.0734214782714844,
+      "height": 4.3275146484375,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "d1a377d65e055f47369b6489020bd6b40050b19c723ae6a60019e504c1fc98ac",
+      "closedPositiveVolume": true
+    },
+    {
+      "id": "angle-60",
+      "elevation": 59.999991932043294,
+      "baseWidth": 2.0734214782714844,
+      "height": 4.746461868286133,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "18d3625a41c398b93ae91198ad65264e665833784e9adcd13297cc1faff616ec",
+      "closedPositiveVolume": true
+    },
+    {
+      "id": "angle-64",
+      "elevation": 63.99999386472002,
+      "baseWidth": 2.0734214782714844,
+      "height": 5.298889636993408,
+      "triangleCount": 178944,
+      "meshBytes": 4294704,
+      "modelSha256": "706cfc34bfd2d50d933062219a79b62de6795626b756bb8ff2dbc5f377b36630",
+      "closedPositiveVolume": true
+    }
+  ],
+  "fixedPhysicalBaseWidth": true,
+  "floorAtZero": true,
+  "commonProfileCamera": true,
+  "actualGeometryRefits": true,
+  "originalAndSelectedHashesAndAlignmentValid": true,
+  "reducedSurfaceCheck": {
+    "dense_triangles": 715776,
+    "candidate_triangles": 178944,
+    "sample_count": 5041,
+    "surface_distance_max": 0.0014670755481347442,
+    "surface_distance_p95": 0.0004958351491950452,
+    "surface_distance_max_original_pixels": 0.09512223564210122,
+    "method": "Dense subdivision-2 sampled vertices to nearest triangle of subdivision-1 surface; same editable controls."
+  },
+  "htmlBytes": 51345071,
+  "canonicalBaselineSha256": "dcffeafda38af779c8bd0856ac0001cd468ca14bbfaf792918f13c921a2a5a32",
+  "preservedBaselineFilesVerified": 39,
+  "fullBaselineVerified": true
+}
+
+
+RUN cd /home/toby/code/listaunton && python3 scripts/check_site.py && python3 scripts/check_model_site.py
+PASS: eight pages, 56 local links, overlay images, parts sandbox/CSP, and model/viewer hash.
+PASS: all twelve original PNG reference hashes and gallery images.
+PASS: original-reference alignment metadata and source image hashes.
+PASS: candidate hashes, source provenance, five comparison pages and alignment data.
+PASS: white bishops used plain upscale prompts without mitre-specific instructions.
+PASS: bounded foot-detail registration, unchanged image scale and same-color references.
+
+Traceback (most recent call last):
+  File "/home/toby/code/listaunton/scripts/check_model_site.py", line 34, in <module>
+    assert meta['sourceSha256']==disk['sourceSha256']==sha(root/f'models/{piece}/{piece}-rebuilt.blend'),piece+' stale model'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: king stale model

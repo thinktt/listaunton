@@ -113,3 +113,16 @@ Preserve unchanged geometry/UV checks and fixed/side/viewer synchronization.
 
 
 The sixteenth queen checkpoint changes only lower-bevel radii 64-66 of the middle collar. All heights, peak ring and other controls stay exact; v8 pigment and relief stay unchanged. Six exact receivers now split lower/middle/upper collars: regenerate with socket_band=True, collar_band=True, split_collars=True. Eleven measured middle-collar reflection fills omit cast shadows as an explicit artistic approximation. Reproduce from archived checkpoint 15 with rebuild_collar_checkpoint.py and docs/queen-mission/iteration-016/reproduction.json. Compare geometry using --allow-middle-collar-edge against checkpoint 15. Always judge a fresh saved-file render after a response-fitting session; checkpoint 16 records a transient in-memory mismatch and successful independent reconstruction. See iteration-016 for current scores, validation and remaining defects.
+
+
+The seventeenth queen checkpoint retains checkpoint-16 geometry, UVs and all
+six receivers. Its v9 atlas repairs only finial pigment; unmasked texels stay
+byte-identical to v8. Local finial relief is reduced to .00175 while the body
+retains .007. Three measured glint reflectors link only to the finial; exact
+copies preserve their former illumination elsewhere. Explicit shadow_soft_size
+values remove the historical radius/diameter ambiguity. Reproduce from archived
+checkpoint 16 with rebuild_finial_checkpoint.py and iteration-017/reproduction.json.
+Use validate_finial_material.py for packed pixels, material and light-edit scope,
+plus the normal geometry/receiver/camera checks. Keep fixed, side and viewer
+assets synchronized; bowl/rim shaping, grain and reflections remain unfinished.
+The accepted render uses 256 fixed samples with use_light_tree=False for repeatability. Publish/reopen helpers honor explicit render_sampling metadata; earlier checkpoints retain their defaults. The polish mask uses object coordinates and is verified by a translated-piece emission-field check.

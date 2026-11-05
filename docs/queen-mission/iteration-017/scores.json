@@ -1,0 +1,226 @@
+[
+  {
+    "variant": "157-smooth-varnish",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 78,
+      "lighting": 74
+    },
+    "mean": 83.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Separating a smooth varnish normal fails to remove negative pigment marks and makes the base too polished."
+  },
+  {
+    "variant": "158-finer-varnish",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 74
+    },
+    "mean": 83.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Reduced coat relief makes little useful difference to the finial defect."
+  },
+  {
+    "variant": "159-finer-wood-relief",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 77,
+      "lighting": 73
+    },
+    "mean": 82.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Global relief reduction loses needed base texture and introduces a smoother tall highlight."
+  },
+  {
+    "variant": "160-crown-pigment-repair",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 77,
+      "lighting": 73
+    },
+    "mean": 82.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Harmonic pigment repair removes negative glint marks but loses grain and worsens the bowl."
+  },
+  {
+    "variant": "161-crown-grain-repair",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 78,
+      "lighting": 73
+    },
+    "mean": 82.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Restored bounded grain improves the patch, but the bowl is still worse."
+  },
+  {
+    "variant": "162-repaired-head-light-fit",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 78,
+      "lighting": 72
+    },
+    "mean": 82.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Power fitting alone dims two misplaced glints and brightens the third; this does not recover the reference."
+  },
+  {
+    "variant": "163-finial-pigment-repair",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 74
+    },
+    "mean": 83.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "intermediate",
+    "reason": "Restricting repair to the finial removes its dark glint-shaped marks and preserves the bowl pigment."
+  },
+  {
+    "variant": "164-refined-finial-targets",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 74
+    },
+    "mean": 83.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject alone",
+    "reason": "Measured glint targets and wider emitters improve placement, but coarse relief fragments the highlights and changed light links alter illumination elsewhere."
+  },
+  {
+    "variant": "165-fitted-finial-repair",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 75
+    },
+    "mean": 83.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject alone",
+    "reason": "Positions and fitted powers improve local error, but glints remain ragged and prior light contributions elsewhere are missing."
+  },
+  {
+    "variant": "167-refined-polished-finial",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 74
+    },
+    "mean": 83.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "intermediate",
+    "reason": "Local finer relief and copies of the prior emitters preserve body lighting, but the new finial powers need fitting."
+  },
+  {
+    "variant": "168-fitted-polished-finial",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "mean": 83.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "accept after UV bake",
+    "reason": "Three properly placed, smoother glints; negative pigment marks removed. Temporary projection must be baked into existing UVs."
+  },
+  {
+    "variant": "169-finial-atlas",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "mean": 83.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "intermediate",
+    "reason": "The UV bake preserves the improvement, but 64-sample repeated renders fail established pixel-error bounds."
+  },
+  {
+    "variant": "171-uniform-finial",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "mean": 83.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject sampling setting",
+    "reason": "Disabling adaptive stopping at 64 samples does not sufficiently stabilize the isolated highlight pixels."
+  },
+  {
+    "variant": "172-high-sample-finial",
+    "scores": {
+      "silhouette": 97.96035993331375,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "mean": 83.79207198666275,
+    "original_iou": 0.9791170234722405,
+    "decision": "accept after portability correction",
+    "reason": "The same UV material and lights at 256 fixed samples pass saved-file and independent rebuild bounds. Its world-space polish mask must follow the piece."
+  },
+  {
+    "variant": "174-portable-finial",
+    "scores": {
+      "silhouette": 97.96035993331375,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "mean": 83.79207198666275,
+    "original_iou": 0.9791170234722405,
+    "decision": "intermediate",
+    "reason": "Object-space polish preserves the view, but another light-tree render pair exceeds the p99.9 repeatability bound."
+  },
+  {
+    "variant": "176-standard-light-sampling",
+    "scores": {
+      "silhouette": 97.96035993331375,
+      "form": 82,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "mean": 83.79207198666275,
+    "original_iou": 0.9791170234722405,
+    "decision": "accept",
+    "reason": "Disabling the light-tree sampling accelerator preserves the visual improvement and restores repeatability. Object-space polish follows a translated piece; all existing bounds pass."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "source": "build/queen-mission/168-fitted-polished-finial/queen.blend",
+  "source_sha256": "430a9e989ddc45001200ba308c6855206bbf71b67510150bac643090bafc8052",
+  "source_unchanged": true,
+  "uv": "Pigment atlas",
+  "size": 2048,
+  "samples": 1,
+  "margin": 8,
+  "emission_only": true,
+  "bakes_lighting": false,
+  "files": {
+    "color": {
+      "path": "build/queen-mission/finial-patch-bake-017/color.png",
+      "sha256": "0fe83b458bf2d0d2bf99e08ec6731170dc2e015f20a1f1840fd7a08b511f2f3c",
+      "colorspace": "sRGB"
+    },
+    "coverage": {
+      "path": "build/queen-mission/finial-patch-bake-017/coverage.png",
+      "sha256": "6115c9807589ad50db1dc93761b4d7c7b10e6ba73097ec1b87f440cc795be917",
+      "colorspace": "Non-Color"
+    }
+  }
+}
