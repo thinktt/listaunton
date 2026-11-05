@@ -27,7 +27,7 @@ Continue until completion, an execution/token limit, or owner stop. A plateau re
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Model SHA-256 at drafting: `c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004`.
+- Model SHA-256 at drafting: `6bbc7d1dbeffd54e846895eb1f9f3854092c8b57d4267fa49c621e7f67e74325`.
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -59,7 +59,9 @@ The approved displayed queen height is **83.4% of king**. Preserve
 uniform image scaling. These are presentation conventions, not independently
 measured physical dimensions. Use the existing original-sprite base-width and
 model-height normalization to translate them into model dimensions; do not
-apply slider percentages directly to mesh scale. Preserve established sizing
+apply slider percentages directly to mesh scale. The owner-requested finial correction lowers the highest point by 0.0467
+world units; preserve the documented adjusted height target and existing
+tolerance without stretching the body. Preserve other established sizing
 tolerances and historical projections. Do not change other pieces to disguise
 a discrepancy in this one.
 
@@ -107,7 +109,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.9612 / 80 / 80 / 77 / 64; working mean 79.7922%, holistic 75-80%. Original IoU: 97.9109%. Accepted model commit 7d7d55a; latest modeling evidence 103dac6. Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current accepted scores: 97.9583 / 81 / 80 / 77 / 64; working mean 79.9917%, holistic 75-80%. Original IoU: 97.9123%. Latest accepted model and validation: docs/queen-mission/iteration-010 (smaller, deeper-seated finial). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 

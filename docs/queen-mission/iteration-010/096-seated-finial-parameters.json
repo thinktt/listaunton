@@ -1,0 +1,46 @@
+{
+  "source_sha256": "c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004",
+  "height_factor": 0.85,
+  "radial_factor": 0.96,
+  "anchor": 4.02500057220459,
+  "changed_rings": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "receivers": [
+    {
+      "name": "turned-body",
+      "faces": 327168,
+      "vertices": 327553,
+      "triangles": 654336,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "finial",
+      "faces": 30720,
+      "vertices": 31105,
+      "triangles": 61440,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    }
+  ]
+}

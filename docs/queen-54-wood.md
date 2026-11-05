@@ -226,3 +226,15 @@ checks normals within precision, shared material and intended light links.
 The browser's lighting remains approximate. Fixed renders and side images
 are actual Cycles BSDF renders. The working score is 79.79%, holistic 75–80%;
 coarse relief, bowl/rim shaping and collar/socket highlights remain unfinished.
+
+
+The tenth checkpoint follows the owner correction to seat a smaller finial
+farther inside the crown. Rings 107-116 are compressed 10% vertically around
+ring 106 and reduced 4% radially, with a blended root. Rings 0-106, the camera,
+UVs, material and light powers remain unchanged. Because the egg is the highest
+point, its 0.0467-unit lowering intentionally lowers total model height; the
+height validator retains its tolerance around the correspondingly adjusted
+target and checks the unchanged body vertices. Gallery defaults are untouched.
+Reproduce with seat_finial_trial.py -- --variant 098-seated-finial-reproduced
+--height .90 --radius .96 from the archived eighth checkpoint. Regenerated
+receivers preserve the edited control exactly. See iteration-010 evidence.

@@ -961,3 +961,22 @@ usage at 2026-11-05 14:16:40 UTC is 25% used / 75% remaining, reset
 owner-directed, not a usage threshold crossing. On resume, restart Luna and
 inspect bowl/rim and collar curvature from the current profile before any
 new targeted geometry trial. The mission remains incomplete.
+
+
+## Tenth iteration: smaller finial seated deeper
+
+Owner resumed the mission with a correction visible in both references.
+Trial 096 reduced exposed finial height 15%; 097 reduced it 10%. Both narrowed
+it 4%. The 10% version fits better and was reproduced as 098, validated, and
+accepted. No body vertices, camera, UVs, pigment or light powers changed.
+Render receivers were regenerated. The intentional 0.0467-unit top lowering
+is documented in the adjusted height check; gallery defaults are unchanged.
+
+Scores: silhouette 97.9583 measured / form 81 / color 80 / grain 77 / lighting
+64. Mean 79.9917; holistic 75-80%. Original IoU 97.9123%. Full evidence and
+checks are in iteration-010. Model SHA-256: 6bbc7d1dbeffd54e846895eb1f9f3854092c8b57d4267fa49c621e7f67e74325.
+
+Next: distinguish bowl curvature from the broad pale rear-bowl reflection,
+then test one focused correction. Coarse wood pattern remains unresolved.
+The mission remains active and incomplete. The earlier monitoring/resume
+instructions in historical log entries are superseded by the current mission.
