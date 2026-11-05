@@ -7,6 +7,18 @@ high-resolution reference as closely as can be honestly assessed. Examine,
 change, render, compare, score, and repeat. Improve the actual geometry, wood
 material, and lighting; a close outside silhouette alone is not success.
 
+The owner explicitly authorizes creative ideas, experiments, and appropriate
+tools to get the wood texture right. Explore techniques such as procedural
+grain, image-generated texture assets, reference-derived texture projection,
+texture painting, custom UV mapping, and combinations of these approaches.
+Develop color, grain direction and scale, surface relief, and roughness/gloss
+together as needed. Choose tools by their usefulness to the visual result;
+the current material setup is not a constraint. Keep the reference images
+unchanged, separate baked lighting from surface color where practical, and
+check the material from other angles so it remains useful on a real 3D model.
+Judge each experiment through the same reference comparisons and scorecard,
+preserving the best accepted result.
+
 The owner authorizes sustained iteration and permits concentrating on one
 score at a time. Continue until the visual-match completion criteria below
 are met, the available execution/token budget ends, the owner stops the work,
