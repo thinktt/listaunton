@@ -146,6 +146,13 @@ Full-material baseline scores are unassessed. Examine and record them before ass
    log, then commit the completed, checked iteration with the required actual
    model co-author trailer. Do not push or publish. Update the existing local
    preview when needed so it shows the same accepted assets as the repository.
+   At each major accepted iteration, run `scripts/bishop/refresh_review.py`
+   after the mesh/render export (and after any shared page regeneration).
+   Validate the bishop viewer and workspace controls, and synchronize the
+   owner's existing local preview. `bishop-review.html` must open on the
+   accepted reconstruction, with the reference overlay, rotation and source
+   candidates directly accessible. Never replace that checkpoint with an
+   unaccepted experiment.
 9. **Re-examine and repeat.** Select the next discrepancy. A plateau calls for a different
    hypothesis, not a declaration of perfection.
 

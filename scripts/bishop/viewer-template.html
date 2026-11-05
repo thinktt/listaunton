@@ -37,6 +37,7 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 .stage[data-mode="rotate"] .comparison-stage{visibility:hidden;pointer-events:none}
 .comparison-note{margin-left:auto;color:#969fa9;font-size:12px}
 header .download{font-size:12px}
+html[data-embedded=true] header,html[data-embedded=true] .mode-tabs{display:none}
 @media(max-width:720px){.comparison-controls{padding:10px 14px;gap:8px}.mode-tabs{padding:8px 12px}.comparison-note{display:none}}
 </style>
 </head>
@@ -86,6 +87,7 @@ function paintOverlay(){
 }
 opacity.addEventListener('input',paintOverlay);
 for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',100]])document.getElementById(id).onclick=()=>{opacity.value=value;paintOverlay();};
+let ready=false;
 function mode(name){
  const rotate=name==='rotate';stage.dataset.mode=name;
  compareTab.setAttribute('aria-pressed',String(!rotate));rotateTab.setAttribute('aria-pressed',String(rotate));
@@ -93,10 +95,22 @@ function mode(name){
  document.getElementById('rotation-controls').hidden=!rotate;document.getElementById('view-controls').hidden=!rotate;
  canvas.tabIndex=rotate?0:-1;
  status.hidden=!rotate||ready;
- fitComparison();if(rotate){if(autoFit)fit();schedule();}
+ fitComparison();if(rotate&&gl){if(autoFit)fit();schedule();}
 }
 compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');
 paintOverlay();canvas.tabIndex=-1;status.hidden=true;
+// Only the embedding review page may select a workspace or surface.
+// Install before WebGL setup so the static overlay still works without WebGL.
+if(window.parent&&window.parent!==window)window.addEventListener('message',event=>{
+ const data=event.data;
+ if(event.source!==window.parent||!data||data.channel!=='listaunton-review'||data.action!=='activate')return;
+ if(data.embedded===true)document.documentElement.dataset.embedded='true';
+ if(data.mode==='compare'||data.mode==='rotate')mode(data.mode);
+ if(!gl)return;
+ if(autoFit)fit();
+ if(data.material==='neutral'||data.material==='brown')document.getElementById(data.material).onclick();
+ schedule();
+});
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
 if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
 const vs=`#version 300 es
@@ -148,7 +162,7 @@ void main(){
  c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
-let program,vao,uniforms,meshBytes,woodTexture,ready=false,lost=false,pending=false;
+let program,vao,uniforms,meshBytes,woodTexture,lost=false,pending=false;
 let q=[0,0,0,1],pan=[0,0],distance=9,material='brown',autoFit=true;
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 const reference=meta.referenceCamera;
@@ -294,14 +308,6 @@ new ResizeObserver(()=>{fitComparison();if(autoFit)fit();schedule();}).observe(c
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the view…';});
 canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();}catch(e){fail(e);}});
 function fail(error){status.hidden=stage.dataset.mode!=='rotate';status.textContent='The 3D view could not load. You can still open the Blender file below.';console.error(error);}
-// Synchronize material when the parent selects the 3D tab; retain the orbit.
-if(window.parent&&window.parent!==window)window.addEventListener('message',event=>{
- const data=event.data;
- if(event.source!==window.parent||!data||data.channel!=='listaunton-review'||data.action!=='activate')return;
- if(autoFit)fit();
- if(data.material==='neutral'||data.material==='brown')document.getElementById(data.material).onclick();
- schedule();
-});
 view('overlay');
 requestAnimationFrame(()=>setTimeout(()=>{try{
  const encoded=document.getElementById('mesh-data');const raw=atob(encoded.textContent.trim());meshBytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)meshBytes[i]=raw.charCodeAt(i);encoded.remove();

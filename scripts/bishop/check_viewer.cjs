@@ -29,7 +29,7 @@ const canvas=Object.assign(node('viewer'),{clientWidth:1254,clientHeight:1254,wi
  focus(){},setPointerCapture(){},classList:{add(){},remove(){}}});
 const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
  Image:class{set src(value){assert(value.startsWith('data:image/png;base64,'));queue.push(()=>this.onload());}},
- document:{getElementById:node,querySelectorAll:()=>views},window:{devicePixelRatio:1,parent:parentFrame,addEventListener(name,fn){windowListeners[name]=fn;}},
+ document:{getElementById:node,querySelectorAll:()=>views,documentElement:{dataset:{}}},window:{devicePixelRatio:1,parent:parentFrame,addEventListener(name,fn){windowListeners[name]=fn;}},
  requestAnimationFrame:cb=>queue.push(cb),setTimeout:cb=>queue.push(cb),atob:s=>Buffer.from(s,'base64').toString('binary'),
  ResizeObserver:class{constructor(cb){resize=cb;}observe(){}}
 };
@@ -84,4 +84,21 @@ assert(parentMessages.some(m=>m.channel==='listaunton-review'&&m.event==='viewer
 node('neutral').onclick();flush();assert.equal(uniforms.uUseWood,0);
 windowListeners.message({source:{},data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();assert.notEqual(node('brown').attrs['aria-pressed'],'true');
 windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();assert.equal(uniforms.uUseWood,1);assert.equal(node('brown').attrs['aria-pressed'],'true');
+windowListeners.message({source:{},data:{channel:'listaunton-review',action:'activate',mode:'rotate',embedded:true}});flush();
+assert.equal(node('stage').dataset.mode,'compare');assert.equal(context.document.documentElement.dataset.embedded,undefined);
+const embeddedOrbit=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
+for(const mode of ['rotate','compare','rotate']){
+ windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',mode,embedded:true}});flush();
+ assert.equal(node('stage').dataset.mode,mode);assert.equal(node('model-image').style.opacity,.73);
+ assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),embeddedOrbit,'Embedding must preserve the orbit');
+}
+assert.equal(context.document.documentElement.dataset.embedded,'true');
+// A browser without WebGL still has a usable reference overlay and a clear 3D fallback.
+const noGlListeners={};canvas.getContext=()=>null;
+vm.runInNewContext(source,{...context,window:{parent:parentFrame,addEventListener(name,fn){noGlListeners[name]=fn;}}},{filename:'bishop-no-webgl.js'});
+for(const mode of ['compare','rotate','compare']){
+ noGlListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'activate',mode,embedded:true}});
+ assert.equal(node('stage').dataset.mode,mode);assert.equal(node('status').hidden,mode==='compare');
+}
+assert.match(node('status').textContent,/could not start 3D/);
 console.log(JSON.stringify({passed:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));

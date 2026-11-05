@@ -1,0 +1,116 @@
+// Exercise the bishop workspace, embedded model commands, and every candidate pair.
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=process.argv[2]||path.resolve(__dirname,'../..'),source=fs.readFileSync(path.join(root,'assets/bishop/review-workspace.js'),'utf8');
+const settle=()=>new Promise(resolve=>setImmediate(resolve));
+async function check(piece,modelOverride){
+ const html=fs.readFileSync(path.join(root,piece+'-review.html'),'utf8');
+ const data=JSON.parse(html.match(/<script id="comparison-data"[^>]*>(.*?)<\/script>/s)[1]);
+ if(modelOverride)data.model={page:modelOverride};
+ const reconstruction=Boolean(data.reconstructionWorkspace&&data.model?.page);
+ const startsWithModel=reconstruction||data.initialTab==='model';
+ assert.match(html,new RegExp('id="tab-candidates"[^>]*role="tab"[^>]*aria-selected="'+!startsWithModel+'"'));
+ assert.match(html,new RegExp('id="tab-model"[^>]*role="tab"[^>]*aria-selected="'+startsWithModel+'"'));
+ if(reconstruction){assert.match(html,/id="tab-rotate"/);assert(!/id="panel-model"[^>]*hidden/.test(html));assert.match(html,/id="panel-candidates"[^>]*hidden/);}
+ else if(!startsWithModel)assert.match(html,/id="panel-model"[^>]*hidden/);
+ assert.match(html,/id="model-frame"[^>]*sandbox="allow-scripts allow-downloads"[^>]*hidden/);
+ assert(!/id="model-frame"[^>]*\ssrc=/.test(html),'Runtime opens the selected workspace once');
+ assert.equal(data.images.length,piece==='rook'?10:piece==='bishop'?9:8);
+ for(const color of ['Black','White'])assert.equal(data.images.filter(item=>item.label.startsWith(color+' candidate')).length,piece==='rook'&&color==='Black'?5:piece==='bishop'&&color==='White'?4:3);
+ const firstCandidate=data.images.find(x=>x.id.startsWith('candidate-')).id,lastCandidate=data.images.filter(x=>x.id.startsWith('candidate-')).at(-1).id;
+ const nodes=new Map(),failed=new Set(),windowListeners={},frameMessages=[];let errors=0;
+ function node(id){if(!nodes.has(id))nodes.set(id,{id,style:{},attrs:{},listeners:{},value:'',checked:false,hidden:false,clientWidth:900,clientHeight:700,scrollLeft:0,scrollTop:0,offsetLeft:0,offsetTop:0,decode:()=>Promise.resolve(),setPointerCapture(){},focus(){},getBoundingClientRect(){return {left:-100,width:1000};},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},fire(k,event={}){return this.listeners[k]?.({target:this,preventDefault(){},stopPropagation(){},...event});}});return nodes.get(id);}
+ const zooms=['fit','1','2'].map(value=>Object.assign(node('zoom-'+value),{dataset:{zoom:value}}));
+ node('comparison-data').textContent=JSON.stringify(data);node('image-a').value='black';node('image-b').value=firstCandidate;node('align').checked=true;node('mix').value='50';
+ const frame=node('model-frame');let frameLoads=0,frameSource;
+ frame.contentWindow={postMessage(message){frameMessages.push(message);}};
+ Object.defineProperty(frame,'src',{get(){return frameSource;},set(value){frameSource=value;frameLoads++;}});
+ const projectionFrame=node('projections-frame');let projectionLoads=0;
+ Object.defineProperty(projectionFrame,'src',{set(value){this.page=value;projectionLoads++;}});
+ if(data.projections){assert.match(html,/id="tab-projections"/);assert(!/id="projections-frame"[^>]*\ssrc=/.test(html));}
+ else assert(!html.includes('id="tab-projections"'));
+ const doc={getElementById:node,querySelectorAll:()=>zooms,documentElement:{style:{setProperty(){}}}};
+ class FakeImage{set src(value){queueMicrotask(()=>failed.has(value)?this.onerror():this.onload());}}
+ vm.runInNewContext(source,{document:doc,window:{addEventListener(name,fn){windowListeners[name]=fn;}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
+ await settle();
+ if(reconstruction){
+   assert.equal(node('panel-model').hidden,false);assert.equal(node('panel-candidates').hidden,true);assert.equal(frameLoads,1);
+   assert.equal(frame.src,data.model.page+'?v='+data.model.revision);
+   assert.equal(frameMessages.at(-1).mode,'compare');assert.equal(frameMessages.at(-1).embedded,true);
+   const count=frameMessages.length;
+   windowListeners.message({source:{},data:{channel:'listaunton-review',event:'viewer-ready'}});assert.equal(frameMessages.length,count);
+   node('tab-rotate').fire('click');assert.equal(frameMessages.at(-1).mode,'rotate');assert.equal(node('panel-model').attrs['aria-labelledby'],'tab-rotate');
+   frame.fire('load');assert.equal(frameMessages.at(-1).mode,'rotate');
+   windowListeners.message({source:frame.contentWindow,data:{channel:'listaunton-review',event:'viewer-ready'}});assert.equal(frameMessages.at(-1).mode,'rotate');
+   node('tab-model').fire('click');assert.equal(frameMessages.at(-1).mode,'compare');assert.equal(frameLoads,1);
+   node('tab-candidates').fire('click');
+ }else if(startsWithModel){assert.equal(node('panel-model').hidden,false);assert.equal(frameLoads,1);node('tab-candidates').fire('click');}
+ assert.equal(node('stage').style.visibility,'visible');assert.equal(node('loading').hidden,true);
+ assert.equal(node('wipe').attrs['aria-pressed'],'true');assert.equal(node('layer-b').style.clipPath,'inset(0 50% 0 0)');
+ const h=node('wipe-handle');assert.equal(h.hidden,false);
+ node('viewport').scrollLeft=70;node('viewport').scrollTop=80;
+ h.fire('pointerdown',{button:0,pointerId:7,clientX:400});h.fire('pointermove',{pointerId:7,clientX:650});
+ assert.equal(node('mix').value,'75');assert.equal(h.attrs['aria-valuenow'],'75');assert.equal(node('layer-b').style.clipPath,'inset(0 25% 0 0)');
+ assert.equal(node('viewport').scrollLeft,70);assert.equal(node('viewport').scrollTop,80);
+ h.fire('pointermove',{pointerId:8,clientX:200});assert.equal(node('mix').value,'75');
+ h.fire('pointermove',{pointerId:7,clientX:1500});assert.equal(node('mix').value,'100');assert.equal(h.hidden,false);
+ h.fire('pointermove',{pointerId:7,clientX:-500});assert.equal(node('mix').value,'0');assert.equal(h.hidden,false);
+ h.fire('pointercancel',{pointerId:7});h.fire('pointermove',{pointerId:7,clientX:650});assert.equal(node('mix').value,'0');
+ h.fire('keydown',{key:'ArrowRight',shiftKey:true});assert.equal(node('mix').value,'10');h.fire('keydown',{key:'End'});assert.equal(node('mix').value,'100');h.fire('keydown',{key:'Home'});assert.equal(node('mix').value,'0');
+ node('blend').fire('click');assert.equal(h.hidden,true);
+
+ for(const a of data.images)for(const b of data.images){
+   node('image-a').value=a.id;node('image-b').value=b.id;node('image-b').fire('change');await settle();
+   assert.equal(node('photo-a').src,a.file);assert.equal(node('photo-b').src,b.file);
+   assert.equal(node('photo-a').style.transform,a.flip?'scaleX(-1)':'none');assert.equal(node('photo-b').style.transform,b.flip?'scaleX(-1)':'none');
+   if(piece==='king')for(const id of ['photo-a','photo-b']){const style=node(id).style;assert(parseFloat(style.top)>=3,'King needs top headroom');assert(parseFloat(style.left)>=0);assert(parseFloat(style.top)+parseFloat(style.height)<=100);assert(parseFloat(style.left)+parseFloat(style.width)<=100);}
+   assert.equal(node('download-a').href,a.file);assert.equal(node('download-b').href,b.file);
+   node('only-a').fire('click');assert.equal(node('layer-b').style.opacity,'0');
+   node('only-b').fire('click');assert.equal(node('layer-b').style.opacity,'1');
+   node('half').fire('click');assert.equal(node('layer-b').style.opacity,'0.5');
+ }
+ node('wipe').fire('click');node('mix').value='25';node('mix').fire('input');
+ assert.equal(node('layer-b').style.clipPath,'inset(0 75% 0 0)');assert.equal(node('divider').hidden,false);
+ node('only-a').fire('click');assert.equal(node('layer-b').style.clipPath,'inset(0 100% 0 0)');assert.equal(node('divider').hidden,true);
+ node('only-b').fire('click');assert.equal(node('layer-b').style.clipPath,'inset(0 0% 0 0)');
+ node('blend').fire('click');assert.equal(node('layer-b').style.clipPath,'none');
+ node('image-a').value='black';node('image-b').value='white';node('image-b').fire('change');await settle();
+ assert.equal(node('photo-b').style.transform,piece==='knight'?'scaleX(-1)':'none');
+ node('align').checked=false;node('align').fire('change');assert.equal(node('photo-b').style.transform,'none');assert.equal(node('photo-b').style.width,piece==='king'?'90%':'100%');
+ node('mix').value='20';node('swap').fire('click');await settle();assert.equal(node('image-a').value,'white');assert.equal(node('image-b').value,'black');assert.equal(node('mix').value,'80');
+ node('zoom-2').fire('click');assert.equal(node('stage').style.width,'2508px');
+ node('viewport').scrollLeft=100;node('viewport').scrollTop=120;
+ node('viewport').fire('pointerdown',{button:0,pointerId:1,clientX:100,clientY:100});node('viewport').fire('pointermove',{pointerId:1,clientX:140,clientY:120});node('viewport').fire('pointerup');
+ assert.equal(node('viewport').scrollLeft,60);assert.equal(node('viewport').scrollTop,100);
+ node('image-b').value=firstCandidate;node('image-b').fire('change');node('image-b').value=lastCandidate;node('image-b').fire('change');await settle();
+ assert.equal(node('photo-b').src,data.images.find(x=>x.id===lastCandidate).file);assert.equal(node('viewport').scrollLeft,60);assert.equal(node('stage').style.width,'2508px');
+ assert.equal(frameLoads,startsWithModel?1:0,'Candidate interaction must not reload the model');
+ const savedA=node('image-a').value,savedB=node('image-b').value,savedMix=node('mix').value;
+ node('tab-model').fire('click');
+ assert.equal(node('panel-candidates').hidden,true);assert.equal(node('panel-model').hidden,false);
+ assert.equal(node('tab-model').attrs['aria-selected'],'true');assert.equal(node('tab-candidates').tabIndex,-1);
+ if(data.model?.page){
+   assert.equal(frame.hidden,false);assert.equal(node('model-empty').hidden,true);assert.equal(frame.src,data.model.page+(data.model.revision?'?v='+data.model.revision:''));assert.equal(frameLoads,1);
+ }else{
+   assert.equal(frame.hidden,true);assert.equal(node('model-empty').hidden,false);assert.equal(frameLoads,0);
+ }
+ node('tab-model').fire('keydown',{key:'ArrowLeft'});
+ assert.equal(node('panel-candidates').hidden,false);assert.equal(node('panel-model').hidden,true);
+ assert.equal(node('tab-candidates').attrs['aria-selected'],'true');assert.equal(node('tab-candidates').tabIndex,0);
+ assert.equal(node('stage').style.width,'2508px');assert.equal(node('viewport').scrollLeft,60);
+ assert.equal(node('image-a').value,savedA);assert.equal(node('image-b').value,savedB);assert.equal(node('mix').value,savedMix);
+ node('tab-candidates').fire('keydown',{key:'End'});node('tab-model').fire('keydown',{key:'Home'});
+ node('tab-candidates').fire('keydown',{key:'ArrowRight'});node('tab-model').fire('click');
+ assert.equal(frameLoads,data.model?.page?1:0,'Model iframe is retained between visits');
+ if(data.projections){
+   assert.equal(projectionLoads,1,'End key lazily opens projection frame');
+   node('tab-projections').fire('click');assert.equal(node('panel-projections').hidden,false);assert.equal(node('panel-model').hidden,true);
+   assert.equal(projectionFrame.page,data.projections.page);assert.equal(projectionLoads,1);
+   node('tab-projections').fire('keydown',{key:'ArrowRight'});assert.equal(node('panel-candidates').hidden,false);
+   node('tab-candidates').fire('keydown',{key:'ArrowLeft'});assert.equal(node('panel-projections').hidden,false);
+   node('tab-projections').fire('keydown',{key:'Home'});assert.equal(node('panel-candidates').hidden,false);
+   assert.equal(node('image-a').value,savedA);assert.equal(node('image-b').value,savedB);assert.equal(node('stage').style.width,'2508px');assert.equal(node('viewport').scrollLeft,60);
+ }else assert.equal(projectionLoads,0);
+ assert.equal(errors,0);
+ console.log('PASS: '+piece+(modelOverride?' (model frame)':'')+' — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.');
+}
+(async()=>{await check('bishop');})().catch(error=>{console.error(error);process.exitCode=1;});

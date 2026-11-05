@@ -20,9 +20,20 @@ After accepting a trial into `models/bishop/bishop-rebuilt.blend`, run Blender
 `validate_mission.py`, and `check_join_regression.py -- ROOT`. Ordinary Python
 `mission_compare.py --render assets/bishop/render.png --out EVIDENCE_DIRECTORY`
 records the mission mask convention and cropped evidence. Run ordinary Python
-`build_viewer.py`, then Node `check_viewer.cjs ROOT` for the actual page's
+`refresh_review.py`, then Node `check_viewer.cjs ROOT` and `check_review.cjs ROOT` for the actual page's
 texture/hash, camera and interaction harness. The rotating Boxwood view embeds
 the same pigment atlas and evaluated UVs; its lighting is approximate.
+
+At every accepted major checkpoint, `refresh_review.py` rebuilds both
+`bishop-model.html` and the main `bishop-review.html`. The main page opens the
+current reference overlay, with direct tabs for rotation and reference
+candidates. The same sandboxed model frame survives tab changes, preserving
+the orbit and overlay controls. Its URL includes a hash of the embedded
+checkpoint so a refresh gets the accepted render and mesh together.
+Pass `--preview-dir PATH` to synchronize the existing local preview as well.
+Run this bishop refresh after any general `scripts/build_candidate_pages.py`
+rebuild; the bishop workspace has its own generator/runtime so concurrent
+work on another piece's review does not overwrite its controls.
 
 `build_bishop.py` below reconstructs the original clay geometry. It is not the
 new material pipeline and would replace the wood finish if run over accepted

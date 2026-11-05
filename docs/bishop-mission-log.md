@@ -45,3 +45,21 @@ measure and refine the button, base and foot against both image sources.
 No claim of completion is made. The
 mission remains active until the owner/authorized alerter stops it or its
 visual-match criteria are met.
+
+### Checkpoint delivery — main bishop page
+
+The owner requested visible updates at each accepted major iteration.
+`bishop-review.html` now opens the current reconstruction overlay and provides
+three direct tabs: Reference overlay, Rotate model, and Reference candidates.
+The model iframe and its orbit persist between tabs; original/selected/black
+reference controls remain inside the overlay. The sidebar-free workspace
+suppresses the embedded viewer's duplicate heading and tabs. No model,
+material, camera or score changed in this delivery update.
+
+`scripts/bishop/refresh_review.py` rebuilds both pages and can sync the
+existing local preview. The iframe revision is derived from the complete
+embedded viewer, including the rendered checkpoint. DOM/WebGL harnesses cover
+tab commands, parent/source guards, retained orbit and comparison state,
+all candidate pairs, and a usable static overlay without WebGL. This is
+scripted UI verification, not native browser inspection. The shared candidate
+runtime and the other pieces' main pages are left to their existing writers.
