@@ -5,11 +5,12 @@ import bpy
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(Path(__file__).parent))
 from configure_rig import configure
+from queen_scene import editable_mesh
 p=argparse.ArgumentParser();p.add_argument('config');args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 cfg=json.loads(Path(args.config).read_text());source=ROOT/cfg['baseline'];texture=ROOT/cfg['texture']
 assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['baseline_sha256']
 assert hashlib.sha256(texture.read_bytes()).hexdigest()==cfg['texture_sha256']
-bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene;o=next(o for o in s.objects if o.type=='MESH' and not o.hide_render)
+bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene;o=editable_mesh(s)
 nodes=o.data.materials[0].node_tree.nodes;links=o.data.materials[0].node_tree.links;bs=nodes.get('Principled BSDF')
 im=bpy.data.images.load(str(texture),check_existing=False);im.colorspace_settings.name='sRGB';im.pack()
 tex=nodes.new('ShaderNodeTexImage');tex.image=im;uv=nodes.new('ShaderNodeUVMap');uv.uv_map='Pigment atlas';assert o.data.uv_layers.get(uv.uv_map)

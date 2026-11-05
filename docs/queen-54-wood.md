@@ -194,3 +194,35 @@ blender -b --python scripts/queen/rebuild_material_checkpoint.py -- docs/queen-m
 This creates `build/queen-mission/076-sixth-reproduced`. The current working
 score is 79.19%, with persistent curvature, grain and reflection mismatches.
 See the iteration evidence before revisiting the rejected lighting fits.
+
+
+The eighth checkpoint keeps the sixth geometry, v4 pigment, relief, camera
+and light powers. It removes unwanted finial reflections by linking 25
+non-finial glossy lights to the turned body only. Three finial spots retain
+the compact glints. Larger regional lighting fits were rejected after actual
+renders; the seventh checkpoint records earlier rejected trials.
+
+The Blender scene retains one closed editable control mesh. Final renders
+use two derived receiver meshes with exactly the same evaluated face positions
+and atlas UVs, shared wood material, and copied smooth corner normals. They
+are hidden in the viewport; the editable control is hidden from rendering.
+The viewer still exports the closed control surface, not separate open parts.
+`queen_scene.py` selects the correct objects for exporting and material changes.
+
+Rebuild from the archived sixth checkpoint with:
+
+```sh
+blender -b --python scripts/queen/build_finial_receiver_checkpoint.py -- --variant 089-eighth-reproduced
+```
+
+This creates a separate trial, preserving the delivered model. Validate and
+publish it through the usual pipeline. Geometry edits require regenerating
+the derived receivers before rendering; otherwise they would still show the
+old surface. Never edit a receiver directly. The geometry-trial helper stops
+on receiver-bearing sources to prevent that mistake. The receiver validator
+compares every evaluated face and atlas UV against the closed control,
+checks normals within precision, shared material and intended light links.
+
+The browser's lighting remains approximate. Fixed renders and side images
+are actual Cycles BSDF renders. The working score is 79.79%, holistic 75–80%;
+coarse relief, bowl/rim shaping and collar/socket highlights remain unfinished.

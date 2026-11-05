@@ -869,3 +869,59 @@ Next test light linking to isolate regional reflections, beginning with a
 render-equivalence check of temporary render partitions against the accepted
 closed editable mesh. Preserve the current model unless the actual linked
 render improves the reference match and all delivery checks pass.
+
+
+## Eighth iteration: compact finial reflections
+
+Start from `0390d4b`, retaining the sixth accepted model as the baseline.
+Detailed evidence is in `queen-mission/iteration-008`. Broad fits using linked
+reflectors (083–085) strengthened some edges but added a gray sheen and false
+body highlights. Direct-only lighting and high-sample diagnostics did not
+make those rigs acceptable. Their lower fitting loss did not establish a
+better image. All were rejected.
+
+| Trial | Outline IoU | Form | Color | Grain | Lighting | Mean | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 082 exact render partitions | 97.961 | 80 | 80 | 77 | 61 | 79.19 | Technique check only |
+| 083 linked regional rig | 97.961 | 80 | 74 | 75 | 58 | 76.99 | Reject gray sheen |
+| 084 direct-only paths | 97.961 | 80 | 74 | 75 | 58 | 76.99 | Reject; sheen persists |
+| 085 full-wood area fit | 97.960 | 80 | 77 | 76 | 59 | 77.99 | Reject false highlights |
+| 086 finial areas and spots | 97.961 | 80 | 80 | 77 | 63 | 79.59 | Improved; superseded |
+| 087 finial spots only | 97.961 | 80 | 80 | 77 | 64 | 79.79 | Selected direction |
+| 088 two receivers | 97.961 | 80 | 80 | 77 | 64 | 79.79 | Accept simplified equivalent |
+
+088 preserves every accepted light's power but prevents 25 non-finial glossy
+reflectors from directly lighting the finial. Three intended spots remain.
+The long merged streak becomes three compact glints, closer to the reference.
+The geometry, UVs, color and relief remain unchanged. Original IoU stays
+97.9109%. The holistic assessment is still 75–80%; the mission is incomplete.
+
+The closed editable control remains the viewer/export source. Two exact
+surface copies provide light receivers for final rendering. Validation checks
+positions and UVs face-for-face, smooth normals, material sharing and links,
+as well as the original closed-mesh, eight-tip, 54-degree and sizing checks.
+A geometry helper refuses stale receiver-bearing inputs. The side views are
+regenerated with the same shared material and show no new regression.
+
+Current model SHA-256:
+`c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004`.
+A clean rebuild from `history/queen-mission-006` is checked against the trial.
+The six earlier geometry/light changes remain archived; failed new models
+are not added to the public controls. No push or hosting deployment occurs.
+
+At 2026-11-05 13:51:43 UTC Luna reports weekly 23% used / 77% remaining,
+reset 2026-11-11 13:19:48 UTC. Monitoring continues. Next target the coarse
+relief on the bowl and rim: color and relief currently derive from different
+atlas revisions, and thick etched-looking lines remain unlike the reference.
+
+
+The eighth checkpoint passes both review interaction harnesses, camera
+regression (maximum error 0.0000382 pixels), all eight site pages and 55 local
+links, original/candidate hashes and all 39 protected projection inputs.
+Control positions, UVs and topology are byte-identical to the sixth model.
+The reproduced render differs from the selected trial by mean
+0.00002537/255, maximum one byte level, with identical alpha; the delivered
+render differs by 0.00002809/255. No native browser GPU result is claimed.
+The current camera-check evidence now copies the fresh build report rather
+than the stale report previously left in assets; the actual check passed
+against the current model hash. Earlier archived reports are left intact.

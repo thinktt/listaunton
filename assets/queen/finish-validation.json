@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "source_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+  "source_sha256": "c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004",
   "camera_elevation_degrees": 54.00000066135015,
   "camera_type": "ORTHO",
   "height": 4.492003440856934,
@@ -13,5 +13,16 @@
   "nonmanifold_edges": 0,
   "signed_volume": 4.486083726967967,
   "crown_tips": 8,
-  "body_rings_monotonic": true
+  "body_rings_monotonic": true,
+  "render_receivers": {
+    "used": true,
+    "receivers": 2,
+    "surface_faces_and_atlas_uvs_exact": true,
+    "triangles": 715776,
+    "custom_normal_max_component_error": 3.2335519790649414e-05,
+    "custom_normal_mean_component_error": 2.4012548394125588e-08,
+    "materials_shared": true,
+    "excluded_reflector_count": 25,
+    "closed_editable_control_retained": true
+  }
 }

@@ -1,0 +1,137 @@
+{
+  "variant": "082-render-regions-equivalence",
+  "source_sha256": "82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e",
+  "regions": [
+    {
+      "name": "foot",
+      "faces": 43008,
+      "vertices": 43393,
+      "triangles": 86016,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "base",
+      "faces": 43776,
+      "vertices": 44544,
+      "triangles": 87552,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "socket",
+      "faces": 30720,
+      "vertices": 31488,
+      "triangles": 61440,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "stem",
+      "faces": 39936,
+      "vertices": 40704,
+      "triangles": 79872,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "lower-collar",
+      "faces": 36096,
+      "vertices": 36864,
+      "triangles": 72192,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "middle-collar",
+      "faces": 33792,
+      "vertices": 34560,
+      "triangles": 67584,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "upper-collar",
+      "faces": 29184,
+      "vertices": 29952,
+      "triangles": 58368,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "crown-body",
+      "faces": 24320,
+      "vertices": 25096,
+      "triangles": 48640,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "bowl",
+      "faces": 47104,
+      "vertices": 47880,
+      "triangles": 94208,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    },
+    {
+      "name": "finial",
+      "faces": 29952,
+      "vertices": 30337,
+      "triangles": 59904,
+      "uv_layers": [
+        "Turned wood",
+        "Reference paint",
+        "Pigment atlas",
+        "Inferred pigment projection"
+      ],
+      "custom_corner_normals": true
+    }
+  ],
+  "method": "Exact evaluated faces partitioned by turned region, with original UVs and custom smooth corner normals; all accepted lights still global."
+}

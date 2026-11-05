@@ -1,0 +1,79 @@
+{
+  "82": {
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 77,
+      "lighting": 61
+    },
+    "mean": 79.19223687966948,
+    "decision": "Technique check only: identical surface, no visible seam."
+  },
+  "83": {
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 74,
+      "grain": 75,
+      "lighting": 58
+    },
+    "mean": 76.99223687966949,
+    "decision": "Rejected: gray sheen and incorrect body highlights."
+  },
+  "84": {
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 74,
+      "grain": 75,
+      "lighting": 58
+    },
+    "mean": 76.99223687966949,
+    "decision": "Rejected: direct-only lighting does not resolve the sheen."
+  },
+  "85": {
+    "scores": {
+      "silhouette": 97.96035993331375,
+      "interior_form": 80,
+      "wood_color": 77,
+      "grain": 76,
+      "lighting": 59
+    },
+    "mean": 77.99207198666275,
+    "decision": "Rejected: pale base, wrong body glints and weak collar crescents."
+  },
+  "86": {
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 77,
+      "lighting": 63
+    },
+    "mean": 79.59223687966949,
+    "decision": "Improves finial spill; superseded by the more selective 087."
+  },
+  "87": {
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "mean": 79.79223687966949,
+    "decision": "Selected visual direction; simplified to two receivers in 088."
+  },
+  "88": {
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "interior_form": 80,
+      "wood_color": 80,
+      "grain": 77,
+      "lighting": 64
+    },
+    "mean": 79.79223687966949,
+    "decision": "Accepted modest finial lighting improvement; other defects remain."
+  }
+}

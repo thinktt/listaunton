@@ -17,6 +17,8 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from queen_scene import editable_mesh
 DELIVERABLES = ROOT / "models" / "queen"
 WORK = ROOT / "build" / "queen"
 WORK.mkdir(parents=True, exist_ok=True)
@@ -75,6 +77,8 @@ def main():
 
     objects = sorted((obj for obj in bpy.context.scene.objects
                       if obj.type == "MESH" and not obj.hide_render), key=lambda obj: obj.name)
+    if bpy.context.scene.get('mission_render_partitions'):
+        objects=[editable_mesh(bpy.context.scene)]
     expected_count = 1 if bpy.context.scene.get('continuous_crown') else 2
     if len(objects) != expected_count:
         raise RuntimeError(f"Expected {expected_count} queen mesh objects, found {len(objects)}: {[obj.name for obj in objects]}")

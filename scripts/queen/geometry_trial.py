@@ -8,7 +8,9 @@ p=argparse.ArgumentParser();p.add_argument('config');args=p.parse_args(sys.argv[
 source=ROOT/cfg['source'];bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
 if cfg.get('source_sha256'):
     assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['source_sha256']
-scene=bpy.context.scene;obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
+scene=bpy.context.scene
+assert not scene.get('mission_render_partitions'), 'Geometry edits require rebuilding the derived light receivers; do not edit a receiver or render stale copies. Use the closed archived control model as the source, then recreate its receivers.'
+obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
 co=np.empty(len(obj.data.vertices)*3,dtype=np.float32);obj.data.vertices.foreach_get('co',co);rings=co.reshape(-1,192,3)
 for key,(dr,dz) in cfg.get('ring_offsets',{}).items():
     i=int(key);oldr=np.linalg.norm(rings[i,:,:2],axis=1);rings[i,:,:2]*=((oldr+dr)/oldr)[:,None];rings[i,:,2]+=dz

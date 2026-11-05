@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "source_sha256": "56c167cb08b1152daae32d47d39c4dee7d5f3d15cf07b587fefdf634698b8718",
+  "camera_elevation_degrees": 54.00000066135015,
+  "camera_type": "ORTHO",
+  "height": 4.492003440856934,
+  "base_diameter": 2.0728673934936523,
+  "height_to_base_diameter": 2.16704814546097,
+  "target_height_to_base_diameter": 2.1792891203000866,
+  "target_queen_to_king": 0.8340000000000001,
+  "material": "Walnut - reference-derived pigment",
+  "boundary_edges": 0,
+  "nonmanifold_edges": 0,
+  "signed_volume": 4.486083726967967,
+  "crown_tips": 8,
+  "body_rings_monotonic": true,
+  "render_receivers": {
+    "used": true,
+    "receivers": 2,
+    "surface_faces_and_atlas_uvs_exact": true,
+    "triangles": 715776,
+    "custom_normal_max_component_error": 3.2335519790649414e-05,
+    "custom_normal_mean_component_error": 2.4012548394125588e-08,
+    "materials_shared": true,
+    "excluded_reflector_count": 25,
+    "closed_editable_control_retained": true
+  }
+}

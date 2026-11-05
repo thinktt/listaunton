@@ -4,9 +4,11 @@ import argparse,hashlib,json,sys
 import bpy
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from queen_scene import editable_mesh
 def read(path):
  bpy.ops.wm.open_mainfile(filepath=str(path),load_ui=False)
- o=next(o for o in bpy.context.scene.objects if o.type=='MESH' and not o.hide_render)
+ o=editable_mesh(bpy.context.scene)
  co=np.empty(len(o.data.vertices)*3,dtype=np.float32);o.data.vertices.foreach_get('co',co)
  uv=np.empty(len(o.data.loops)*2,dtype=np.float32);o.data.uv_layers['Pigment atlas'].data.foreach_get('uv',uv)
  loops=np.empty(len(o.data.loops),dtype=np.int32);o.data.loops.foreach_get('vertex_index',loops)

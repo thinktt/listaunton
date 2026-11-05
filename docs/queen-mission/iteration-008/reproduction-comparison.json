@@ -1,0 +1,18 @@
+[
+  {
+    "label": "reproduced",
+    "sha256": "e6d0cbe39bf782688d550feb73ee47a179e8e138558639da36ef46531435c42c",
+    "foreground_mean_absolute_error_255": 2.5371695336682396e-05,
+    "foreground_p95_absolute_error_255": 0.0,
+    "max_error_255": 1,
+    "alpha_identical": true
+  },
+  {
+    "label": "delivered",
+    "sha256": "48b438ac22fe66f4776e169c8ec52931aff0f8734bd1da9df12dc2d4fd30e83c",
+    "foreground_mean_absolute_error_255": 2.8090091265612655e-05,
+    "foreground_p95_absolute_error_255": 0.0,
+    "max_error_255": 1,
+    "alpha_identical": true
+  }
+]

@@ -20,4 +20,9 @@ def configure(scene, settings):
   if settings.get('cycles_ray_visibility'):
    assert spec.get('diffuse_factor',1) in (0,1) and spec.get('specular_factor',1) in (0,1)
    light.visible_diffuse=bool(spec.get('diffuse_factor',1));light.visible_glossy=bool(spec.get('specular_factor',1))
+  if spec.get('receiver_parts'):
+   from render_regions import link
+   receivers=[o for o in scene.objects if o.get('mission_render_region') in spec['receiver_parts']]
+   assert len(receivers)==len(spec['receiver_parts'])
+   link(light,receivers,'+'.join(spec['receiver_parts']))
  scene.world.node_tree.nodes['Background'].inputs['Strength'].default_value=settings['world']

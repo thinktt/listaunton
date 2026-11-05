@@ -5,13 +5,16 @@ import bpy, bmesh
 import numpy as np
 
 root=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from queen_scene import editable_mesh
+from validate_render_receivers import check as check_receivers
 p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=args.blend
 fit=json.loads((root/'assets/queen/finish-fit.json').read_text())
 bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False)
 scene=bpy.context.scene
-obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
+obj=editable_mesh(scene)
 camera=scene.camera
 back=camera.matrix_world.to_3x3()@__import__('mathutils').Vector((0,0,1))
 elevation=math.degrees(math.atan2(back.z, math.hypot(back.x,back.y)))
@@ -41,6 +44,7 @@ report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdige
         'target_queen_to_king':fit['target_queen_to_king_height'],
         'material':obj.data.materials[0].name,'boundary_edges':boundary,'nonmanifold_edges':nonmanifold,
         'signed_volume':volume,'crown_tips':8,'body_rings_monotonic':True}
+report['render_receivers']=check_receivers(scene,obj)
 for name in ('finish-validation.json','model-validation.json'):
     args.report_dir.mkdir(parents=True,exist_ok=True)
     (args.report_dir/name).write_text(json.dumps(report,indent=2)+'\n')

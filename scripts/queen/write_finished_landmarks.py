@@ -1,10 +1,12 @@
 """Record feature circles from the current queen and its fitted camera."""
 from pathlib import Path
-import json
+import json,sys
 import bpy
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from queen_scene import editable_mesh
 def write(scene,obj,fit):
     n=int(obj['ring_segments'])
     coords=np.empty(len(obj.data.vertices)*3,dtype=np.float32)
@@ -21,5 +23,5 @@ def write(scene,obj,fit):
 
 if __name__=='__main__':
     bpy.ops.wm.open_mainfile(filepath=str(ROOT/'models/queen/queen-rebuilt.blend'),load_ui=False)
-    obj=next(o for o in bpy.context.scene.objects if o.type=='MESH' and not o.hide_render)
+    obj=editable_mesh(bpy.context.scene)
     print(json.dumps(write(bpy.context.scene,obj,json.loads((ROOT/'assets/queen/finish-fit.json').read_text())),indent=2))
