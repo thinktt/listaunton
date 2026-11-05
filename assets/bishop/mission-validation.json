@@ -9,26 +9,28 @@
       "triangle_indices_unchanged": false,
       "control_vertices_exactly_unchanged": false,
       "max_control_difference_from_declared_edit": 1.1920928955078125e-07,
-      "control_topology_modifiers_and_cutter_unchanged": true,
+      "control_topology_and_non_cutter_modifiers_unchanged": true,
+      "cutter_unchanged_or_declared_revision_validated": true,
       "evaluated_triangle_count_before": 121344,
-      "evaluated_triangle_count_after": 122880
+      "evaluated_triangle_count_after": 123352
     },
     "Bishop - domed button finial": {
       "max_evaluated_coordinate_difference": 0.01907581090927124,
       "triangle_indices_unchanged": true,
       "control_vertices_exactly_unchanged": false,
       "max_control_difference_from_declared_edit": 2.9802322387695312e-08,
-      "control_topology_modifiers_and_cutter_unchanged": true,
+      "control_topology_and_non_cutter_modifiers_unchanged": true,
+      "cutter_unchanged_or_declared_revision_validated": true,
       "evaluated_triangle_count_before": 11776,
       "evaluated_triangle_count_after": 11776
     }
   },
   "components": {
     "Bishop - continuous turned body": {
-      "positions": "a03c6aa9a19bbd72c1ddc1463ffaf2cc44769347301d85cc1a403b8061dafea5",
-      "triangles": "7c458f8b90aa0159bc23c688d5e078ab39cb125f9ed61ee183ba2289ab2856c9",
-      "vertex_count": 61442,
-      "triangle_count": 122880
+      "positions": "8c427bb4e0c8937346f885c1c91e9cf7b3ce9e222b68af399eb9b519a71309e5",
+      "triangles": "d0f3f93ee88f33c171a5ad816e0a4d3efc91001e3e937867e93a22c59a98fae3",
+      "vertex_count": 61678,
+      "triangle_count": 123352
     },
     "Bishop - domed button finial": {
       "positions": "6cee2cf4b947dec6d0d73b714d90d8a0ef7ee095d39fd2890c3b6454a9668707",
@@ -43,5 +45,6 @@
   "albedo_bakes_lighting": false,
   "texture_hash_matches": true,
   "finite_uvs_and_unit_normals": true,
-  "model_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32"
+  "model_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "declared_slit_revision_validated": true
 }

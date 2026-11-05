@@ -23,6 +23,7 @@ Preserved under `history/bishop-mission-000/`. See
 | Measured boxwood color, warm reflections | 96.20 | 81 | 84 | 77 | 64 | 80.44 |
 | Rounder button reflections | 96.20 | 81 | 84 | 77 | 66 | 80.84 |
 | Confined lower reflections and restored color | 96.20 | 81 | 85 | 77 | 72 | 82.24 |
+| Rounded slit termination | 96.20 | 83 | 85 | 77 | 72 | 82.64 |
 
 Silhouette is selected-reference IoU; other scores are visual estimates.
 The separate original-white IoU is 96.58%. Initial holistic appearance was
@@ -156,3 +157,26 @@ for the five-category scores, actual evidence, rejected trials and validation.
 The main bishop review and existing local preview are synchronized at acceptance.
 Next, examine the squared slit termination against clay and both originals;
 continue pursuing the material and reflection mismatches as well.
+
+## Iteration 006 — a rounded slit termination
+
+The flat cutter floor produced a triangular facet visible in both wood and
+neutral renders. It is replaced with a semicircular termination while retaining
+the original slit width, angle, through opening and edge bevel. The surrounding
+head surface, button and lower piece are unchanged. A deeper rounded floor and
+a doubled bevel were examined; the simpler shallow rounding was chosen.
+
+The local shape improvement raises the interior score from 81 to 83 and the
+working mean from 82.24 to 82.64. All other scores remain unchanged. At the
+same 96-sample render quality all three silhouette IoUs equal checkpoint 005.
+Holistic fixed-view appearance is still approximately 75–85%, not a perfect
+match. The cut-edge glint, collar and foot reflections, fine relief and rear
+pigment continuity remain unfinished.
+
+Checkpoint 005 is preserved in `history/bishop-mission-005`. See
+[`iteration-006/assessment.md`](bishop-mission/iteration-006/assessment.md)
+for the trials, full scorecard and checks. The declared cutter is audited
+separately so the existing geometry safeguards remain effective. Accepted
+model, neutral/side renders, exported viewer and local review are synchronized
+before the checkpoint commit. Next, examine the slit-tip reflection under the
+accepted geometry without reintroducing head glare.

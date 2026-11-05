@@ -1,5 +1,5 @@
 """Validate declared bishop edits, pigment data and fixed-camera provenance."""
-import bpy,json,hashlib,sys,math
+import bpy,json,hashlib,sys,math,copy,runpy
 import numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
@@ -32,6 +32,16 @@ def geometry(path):
     return res
 profile=json.loads((ROOT/'scripts/bishop/profile.json').read_text())
 declared=profile.get('mission_geometry')
+slit_declared=profile.get('mission_slit_geometry')
+if slit_declared:
+    slit_path=ROOT/slit_declared['config'];slit_config=json.loads(slit_path.read_text())
+    assert slit_config['source']==slit_declared['baseline_model']
+    assert slit_config['source_sha256']==slit_declared['baseline_sha256']
+    original_args=sys.argv[:]
+    sys.argv=['validate_slit_trial.py','--','--model','models/bishop/bishop-rebuilt.blend',
+              '--config',slit_declared['config'],'--out','assets/bishop/slit-validation.json','--geometry-only']
+    runpy.run_path(str(Path(__file__).with_name('validate_slit_trial.py')),run_name='__main__')
+    sys.argv=original_args
 baseline_path=ROOT/(declared['baseline_model'] if declared else 'history/bishop-mission-000/bishop-rebuilt.blend')
 current_path=ROOT/'models/bishop/bishop-rebuilt.blend'
 baseline=geometry(baseline_path)
@@ -58,8 +68,15 @@ for name in baseline:
                 expected[index*128:(index+1)*128,2]+=(old_y-axis_y)*factor
         difference=float(np.max(np.abs(newcontrol-expected)))
         changes[name]['max_control_difference_from_declared_edit']=difference
-        same_construction=construction[(str(baseline_path),name)]==construction[(str(current_path),name)]
-        changes[name]['control_topology_modifiers_and_cutter_unchanged']=same_construction
+        current_construction=copy.deepcopy(construction[(str(current_path),name)])
+        if slit_declared:
+            # Only the independently checked rounded cutter may differ here.
+            # All other modifiers, controls and topology retain the old checks.
+            for index,mod in enumerate(current_construction['modifiers']):
+                if mod['type']=='BOOLEAN':mod['cutter']=construction[(str(baseline_path),name)]['modifiers'][index]['cutter']
+        same_construction=construction[(str(baseline_path),name)]==current_construction
+        changes[name]['control_topology_and_non_cutter_modifiers_unchanged']=same_construction
+        changes[name]['cutter_unchanged_or_declared_revision_validated']=same_construction
         changes[name]['evaluated_triangle_count_before']=len(oldtri)
         changes[name]['evaluated_triangle_count_after']=len(newtri)
         assert difference<5e-6 and same_construction, 'Undeclared control geometry, modifier or cutter edit.'
@@ -79,4 +96,5 @@ for original in ['White-Bishop','Black-Bishop']:
     assert (ROOT/f'assets/bishop/{asset}').read_bytes()==(ROOT/f'references/lichess-staunton-3d/{original}.png').read_bytes()
 assert (ROOT/'assets/bishop/reference.png').read_bytes()==(ROOT/'assets/candidates/bishop/white-candidate-3.png').read_bytes()
 report={'passed':True,'all_evaluated_geometry_preserved_within_5e_6':not bool(declared),'declared_geometry_changes_validated':bool(declared),'baseline_model':str(baseline_path.relative_to(ROOT)),'geometry_comparison':changes,'components':current,'camera_exactly_unchanged':True,'reference_pixels_unchanged':True,'shader':'Principled BSDF','albedo_bakes_lighting':False,'texture_hash_matches':True,'finite_uvs_and_unit_normals':True,'model_sha256':meta['sourceSha256']}
+report['declared_slit_revision_validated']=bool(slit_declared)
 (ROOT/'assets/bishop/mission-validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

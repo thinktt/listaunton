@@ -75,6 +75,18 @@ and button-join checks together in Blender. Side and neutral renders remain
 separate steps. The rotating viewer reads the exported diffuse-energy balance
 and display response; it still uses approximate real-time lighting.
 
+The sixth checkpoint rounds the bottom of the editable mitre cutter. The
+original parallel sides, slit width and angle, bevel, visible control meshes,
+UVs, material, lighting and fixed camera remain unchanged. Reproduce the
+isolated trial with `slit_trial.py` and
+`docs/bishop-mission/iteration-006/slit-044.json`. Its rounded floor is an
+interpretation supported by the reference, not recovered original geometry.
+`validate_slit_trial.py` checks the exact declared cutter, closed components,
+through opening, solid floor and unchanged surface outside the cut region.
+The current profile declares this revision so `validate_mission.py` checks it
+in addition to the earlier foot/button edits. Keep that declaration with the
+model. Do not revert to the old cube cutter in an ordinary material iteration.
+
 ## Original geometry construction
 
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.
@@ -93,7 +105,7 @@ Run from the repository root:
 
 `profile.json` stores radius and projected axis-center heights in the 300px original white image coordinates. The exporter maps those measurements into the selected-candidate frame using `original-alignment.json`. This registration is composed from candidate-to-black and original-white-to-black registrations, rather than applying the black registration directly to white. The browser uses the same inverse affine placement as the image comparisons. No reference pixels are warped or rewritten.
 
-The historical clay revision was `09-continuous-button-join`. The preceding shallow-button revision still exposed a short cylindrical seat in a true level view; the next pass removed it, and the final pass narrowed the button toward the guide and concealed the head cap more deeply. That head curve and slit remain exact in the wood mission. The accepted guide is art direction, not evidence for a recovered source camera or absolute dimensions.
+The historical clay revision was `09-continuous-button-join`. The preceding shallow-button revision still exposed a short cylindrical seat in a true level view; the next pass removed it, and the final pass narrowed the button toward the guide and concealed the head cap more deeply. That head curve remains exact in the wood mission; checkpoint 006 changes only the slit termination. The accepted guide is art direction, not evidence for a recovered source camera or absolute dimensions.
 
 `assets/bishop/join-comparison.png` compares the previous and current head at the exact same level camera. `head-side.png`, `side-profile.png` and `rear-oblique.png` document the head contact, full proportions and open cut; `diagnostic-cameras.json` records those cameras. `overlay-original.png` blends the actual original with the current neutral render at the unchanged saved 54-degree reference camera. The historical `head-comparison.png` and `button-comparison.png` document earlier corrections and are not current-render comparisons.
 

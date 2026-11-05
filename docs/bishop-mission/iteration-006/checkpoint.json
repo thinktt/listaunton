@@ -1,0 +1,39 @@
+{
+  "starting_commit": "361fb05",
+  "model_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "render_sha256": "2a9b6947ae6e3e1726d3c069164af440e40f4a95890d14a27b3fe789c46721f1",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "camera_elevation_degrees": 54,
+  "camera_exactly_unchanged": true,
+  "geometry_edit": "Rounded termination of the editable saw cutter; no visible control-mesh or UV changes.",
+  "declared_cut_scope_passed": true,
+  "all_piece_checks_passed": true,
+  "materials_lights_world_and_packed_images_preserved": true,
+  "beauty_samples": 96,
+  "beauty_resolution": [
+    1254,
+    1254
+  ],
+  "saved_and_reopened_before_render": true,
+  "display_view": "Standard",
+  "display_look": "None",
+  "silhouette_ious_equal_checkpoint_005": true,
+  "site_and_preview_checks": {
+    "bishop_viewer": "passed; 501 projected vertices; max camera error 0.000008767682662578041 pixels",
+    "bishop_workspace": "passed; overlay/rotate/candidate state and source guards",
+    "all_model_pages_and_historical_projections": "passed via scripts/check_model_site.py",
+    "all_candidate_reviews": "passed via scripts/check_candidate_review.cjs",
+    "set_comparison_and_approved_sizing": "passed via scripts/check_set.cjs",
+    "scoped_git_diff_check": "passed",
+    "canonical_preview_byte_equal_files": 39,
+    "preview_directory": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires",
+    "native_browser_inspected": false,
+    "verified_at_utc": "2026-11-05T20:55:02.100190+00:00"
+  },
+  "reference_hashes": {
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+  },
+  "ui_validation": "Simulated DOM/WebGL harness; native browser not inspected."
+}

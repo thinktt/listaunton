@@ -1,0 +1,16 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.",
+  "render": "build/bishop-mission/043-soft-cut-edge/wood.png",
+  "render_sha256": "0380716527cf95183daa73144a6a3dc13977030f4b0c578713e489bc3daac231",
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9619964116783559
+    },
+    "original_white": {
+      "silhouette_iou": 0.9787587602051875
+    },
+    "original_black": {
+      "silhouette_iou": 0.9675144480774103
+    }
+  }
+}

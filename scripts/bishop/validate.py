@@ -91,5 +91,9 @@ cam=bpy.context.scene.camera;bpy.context.view_layer.update()
 actual_matrix=[float(v) for row in cam.matrix_world.inverted() for v in row]
 assert max(abs(a-b) for a,b in zip(actual_matrix,meta['referenceCamera']['worldToCamera']))<1e-6,'Saved camera and export differ.'
 result={'components':report,'slit_ray_probes':probes,'solid_slot_floor':True,'source_hash_matches':None if args.skip_export else True,'reference_camera_elevation':54,'saved_camera_matches_export':True,'head_surface_probe_count':len(head_normals),'head_surface_max_normal_step_degrees':max_head_normal_step,'lower_65_profile_points_preserved':not bool(changed),'declared_changed_foot_rings':sorted(changed),'flare_socket_stem_collars_preserved':True,'slit_parameters_preserved':True,'button_height_to_width':button_ratio,'head_button_join':{'level_section_samples':len(join),'visible_component_transitions':len(transitions),'contact_axis_y':crossing_y,'contact_width_to_button_width':contact_ratio,'minimum_exposed_head_radius_slope':min(slopes),'head_cap_concealed':True,'gap_free':True,'no_exposed_cylindrical_neck':True},'note':'Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.'}
+if cfg.get('mission_slit_geometry'):
+ result['slit_parameters_preserved']=False
+ result['slit_angle_width_and_original_floor_anchor_preserved']=True
+ result['declared_rounded_floor']=cfg['mission_slit_geometry']
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

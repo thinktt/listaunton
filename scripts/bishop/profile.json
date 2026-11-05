@@ -586,5 +586,11 @@
       ]
     },
     "interpretation": "Slightly broader shallow button and flatter lower foot; fixed camera, head, slit, flare, socket, stem and collars preserved."
+  },
+  "mission_slit_geometry": {
+    "config": "docs/bishop-mission/iteration-006/slit-044.json",
+    "baseline_model": "history/bishop-mission-005/bishop-rebuilt.blend",
+    "baseline_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+    "description": "Rounded semicircular floor; parallel full-depth opening, width, angle and original bevel retained."
   }
 }

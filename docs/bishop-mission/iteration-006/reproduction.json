@@ -1,0 +1,13 @@
+{
+  "starting_commit": "361fb05",
+  "source": "history/bishop-mission-005/bishop-rebuilt.blend",
+  "source_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+  "config": "docs/bishop-mission/iteration-006/slit-044.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/slit_trial.py -- docs/bishop-mission/iteration-006/slit-044.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_slit_trial.py -- --model build/bishop-mission/044-round-floor-only/bishop.blend --config docs/bishop-mission/iteration-006/slit-044.json --out build/bishop-mission/044-round-floor-only/scope-validation.json"
+  ],
+  "promotion": "After inspection and scope validation, copy the trial model/render to the bishop model and assets, retain the mission_slit_geometry declaration from scripts/bishop/profile.json, then run validate_checkpoint.py, render_diagnostics.py, render_clay.py, mission_compare.py and refresh_review.py with the ordinary checks.",
+  "accepted_model_sha256": "319c43917d2084ffd5a0d378a3dec2d5e8cbb803d368730009a79d763aa6d2b3",
+  "material_and_lighting": "Exactly retained from checkpoint 005; no pigment rebake or camera change."
+}
