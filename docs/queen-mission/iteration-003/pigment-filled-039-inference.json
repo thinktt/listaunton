@@ -1,0 +1,15 @@
+{
+  "method": "Use reference color divided by measured diffuse response only where estimated specular fraction is low; normalized local convolution fills uncertain highlights from nearby reliable pigment before uniform visible-surface projection",
+  "source_response_directory": "build/queen-mission/pigment-fit-039",
+  "reliable_specular_fraction_transition": [
+    0.1,
+    0.25
+  ],
+  "local_fill_radii": [
+    10,
+    25
+  ],
+  "projection_weight": 0.96,
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "caveat": "Filled grain is smoothed inference in highlight regions; low-level residual shading can remain. No reference is modified and hidden surfaces retain continuous prior wood."
+}

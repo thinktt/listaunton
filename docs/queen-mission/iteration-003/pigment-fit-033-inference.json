@@ -1,0 +1,26 @@
+{
+  "response_source": {
+    "source": "build/queen-mission/033-limited-environment/queen.blend",
+    "source_sha256": "52edb193e268113436d2404f25b7a8b78b1d940ee1fc71755756271ca163727a",
+    "resolution": [
+      1254,
+      1254
+    ],
+    "samples": 64,
+    "source_unchanged": true,
+    "caveat": "White and black shader response is an approximation when multiple diffuse bounces are present; derived pigment is inferred, not recovered ground truth."
+  },
+  "method": "(reference-linear - black-BSDF response) / (white-BSDF response - black-BSDF response), bounded and confidence weighted",
+  "foreground_pixels": 365021,
+  "pixels_with_weight_above_half": 296838,
+  "mean_foreground_weight": 0.7302160263061523,
+  "highlight_exclusion_srgb_min_channel": [
+    0.12,
+    0.28
+  ],
+  "correction_factor_limits": [
+    0.3,
+    3.5
+  ],
+  "caveat": "Inferred pigment under estimated geometry and illumination; residual shading remains possible. Hidden surfaces keep the existing continuous wood."
+}

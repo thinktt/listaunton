@@ -1,0 +1,26 @@
+{
+  "method": "Estimate a warm specular component from the unchanged reference, subtract it, and divide remaining color by measured white-minus-black BSDF response",
+  "diffuse_chromaticity_hypothesis": [
+    1.0,
+    0.23,
+    0.08
+  ],
+  "specular_chromaticity_hypothesis": [
+    1.0,
+    0.58,
+    0.4
+  ],
+  "relative_pigment_bounds": [
+    0.15,
+    6
+  ],
+  "absolute_pigment_max": 0.9,
+  "maximum_projection_weight": 0.98,
+  "bright_specular_fraction_confidence_transition": [
+    0.4,
+    0.65
+  ],
+  "mean_interior_confidence": 0.9026976823806763,
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "caveat": "Reference-derived inferred pigment. Unknown source shading and color processing make diffuse/specular separation approximate; residual shadows may remain. Source image is unchanged; hidden surfaces keep continuous prior pigment."
+}

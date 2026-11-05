@@ -1,0 +1,11 @@
+{
+  "source": "build/queen-mission/039-rolled-collar-refit/queen.blend",
+  "source_sha256": "d849747e86761e1e0b4c1a1f2046c86146f41d3d17f35a172e9b2a07fc780090",
+  "resolution": [
+    1254,
+    1254
+  ],
+  "samples": 64,
+  "source_unchanged": true,
+  "caveat": "White and black shader response is an approximation when multiple diffuse bounces are present; derived pigment is inferred, not recovered ground truth."
+}

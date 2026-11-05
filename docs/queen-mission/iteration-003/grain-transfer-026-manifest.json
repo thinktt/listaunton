@@ -1,0 +1,7 @@
+{
+  "source": "build/queen-mission/026-graded-atlas/queen.blend",
+  "source_sha256": "58196e0e397fd0bd04cd9e1beca1f14257ede6ef1b518b86057bec9701d22d90",
+  "unlit_pigment_pass": "build/queen-mission/pigment-fit-033/pigment.npy",
+  "unlit_pigment_pass_sha256": "f31c45c27c263eaf8099e7ff820011d269e1e7ff1ad4d47d4c9297131fe7871d",
+  "note": "The 033 scene uses the identical 026 pigment and geometry; its emission pass is independent of changed lights."
+}

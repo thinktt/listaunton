@@ -1,0 +1,9 @@
+{
+  "source": "build/queen-mission/034-inferred-pigment/queen.blend",
+  "source_sha256": "948538d6d6f709f2c9fbdb4a1f5ca30bc73ba320d576ce481d6af444e5f325e4",
+  "samples": 512,
+  "adaptive_sampling": false,
+  "geometry_material_lights_unchanged": true,
+  "primary_denoised": true,
+  "additional_raw_render": "without-denoising.png"
+}

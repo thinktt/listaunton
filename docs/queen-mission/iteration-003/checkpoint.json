@@ -1,0 +1,19 @@
+{
+  "accepted_trial": "039-rolled-collar-refit",
+  "source_trial_sha256": "d849747e86761e1e0b4c1a1f2046c86146f41d3d17f35a172e9b2a07fc780090",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "failed_models_in_public_controls": false,
+  "delivered_model_sha256": "a6594fab05ae5f9c9cdbe9b32d01542129b5f6ca8825e8b16a7cb8fa0aa5b8db",
+  "delivered_samples": 64,
+  "highres_iou": 0.979611843983474,
+  "original_iou": 0.9791093182518729,
+  "scores": {
+    "silhouette": 97.9611843983474,
+    "interior_form": 80,
+    "wood_color": 75,
+    "grain": 69,
+    "lighting": 50
+  },
+  "working_mean": 74.39223687966948,
+  "native_browser_gpu_check_available": false
+}

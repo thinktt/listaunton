@@ -289,3 +289,245 @@ Repository checks after integration pass: eight site pages, 55 local links,
 model/viewer hash, parts sandbox/CSP, all twelve original PNG hashes, candidate
 provenance and alignment, and all 39 protected historical projection inputs.
 Git whitespace checks pass and no executable-bit changes were introduced.
+
+## Third iteration in progress: measured light fitting
+
+Starting accepted revision is `9e03943`, saved model SHA-256
+`f2e65f66fa65de9f212e5300d889350b877259aaf422c8d29a9430a49a016b99`.
+The repository and local preview both show that checked checkpoint. The
+following lighting trials have not replaced it.
+
+| Trial | High-res IoU | Original IoU | Interior form | Color | Grain | Lighting | Overall | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 027 socket light | 97.904% | 97.904% | 78 | 73 | 70 | 51 | 73.98 | Reject: stem streak improves, but a large left base reflection appears |
+| 028 base key | 97.904% | 97.904% | 78 | 73 | 70 | 54 | 74.58 | Retain measured key position for study; do not promote the unwanted second base patch |
+| 029 balanced lights | 97.904% | 97.904% | 78 | 70 | 70 | 53 | 73.78 | Reject: base position improves, but the bowl becomes a bright ring and overall tones darken |
+| 030 blended lights | 97.904% | 97.904% | 78 | 69 | 70 | 54 | 73.78 | Reject: dimming the bowl does not fix its reflection shape or the darker overall color |
+| 031 controlled key | 97.904% | 97.904% | 78 | 70 | 69 | 51 | 73.18 | Reject: narrow spread removes finial streak but concentrates excessive light on base/collars |
+
+`highlight_regions.py` measures bright, low-saturation reflection mass,
+centroids and spread in fixed image regions. These are diagnostics, not a
+replacement score or a proof of recovered source lighting. The reference's
+main base highlight is centered near (579.31,903.45); trial 028 reaches
+(578.94,904.25), while the accepted rig is near (540.39,898.19). However,
+028's vertical spread is 24.47 pixels versus the reference's 37.69, and it
+has excess brightness and an unwanted second patch. A correct centroid alone
+does not justify acceptance. The updated finial normals were measured again
+after the 024 geometry edit; old light directions must not be reused blindly.
+
+The coupled lighting trials plateaued. The next method renders 14 independent
+low-resolution light contributions (including the existing rig, measured
+highlight directions and world light), then solves nonnegative light energies
+against the reference. Blender already bundles PyOpenColorIO; no installation
+was needed. The inverse AgX/sRGB transform was checked with a forward round
+trip: mean error 0.000196 in normalized RGB over foreground pixels, maximum
+0.0374. This converts the comparison target into the current renderer's
+linear color space for fitting; it does not assert the reference used AgX.
+
+Basis EXRs and their linear sums are diagnostic only. A fitted rig must be
+rendered normally at full resolution, visually scored, and validated before
+replacing the public beauty render. No reference pixels or composited image
+will be substituted for the actual model render. The fit excludes background
+and silhouette-edge pixels, balances major height regions, and retains
+nonnegative physical light strengths. It cannot by itself repair wrong
+geometry, albedo, roughness or unknown source image processing.
+
+Pre-batch resource reading at 2026-11-05 08:28:46 UTC: weekly 10% used / 90%
+remaining, reset 2026-11-11 13:19:48 UTC. Luna remains active on five-minute
+checks. The mission is incomplete, with the accepted working score 73.98%.
+
+The 14 basis renders completed and have distinct hashes. The first fit uses
+38,969 foreground draft pixels and converges in 22 coordinate-descent passes.
+Its weighted scene-linear RMSE is 0.3713 versus 0.7997 for the previous rig
+under that diagnostic loss. It selects weaker individual lights and much
+stronger world illumination (1.3874 rather than 0.03). That numerical result
+is not yet a visual improvement claim; a full actual render is in progress.
+
+The full trial 032 render was rejected: the high world strength covers the
+wood in a gray reflective veil. Scores were 97.904 / 78 / 62 / 65 / 50,
+mean 70.58. A smaller mathematical residual was not a better visual match.
+Trial 033 adds one broad fill with specular contribution disabled and caps
+world strength at 0.08. It avoids the gray veil and fits several reflection
+positions better, but remains too dark and has misplaced bright bands.
+Scores: 97.904 / 78 / 71 / 70 / 55, mean 74.38; not promoted. Its fitted
+rig is being used as an experimental shading estimate, not a recovered claim
+about the source artist's lighting. Accepted/public assets remain 9e03943.
+
+The next material experiment measures the 033 shader's black/white base-color
+responses under those lights, plus its unlit pigment. It estimates pigment
+from `(reference - black response) / (white response - black response)`,
+bounded to 0.3–3.5 times the prior pigment. It suppresses obvious source
+highlights, pixels dominated by the model's specular response, silhouette
+edges and weakly lit pixels. These limitations avoid directly painting bright
+photographic reflections into color. Residual source shading is still possible;
+multiple diffuse bounces also make the response only approximately linear.
+
+Trial 034 applies that inferred pigment to fixed mesh UVs with view visibility
+coverage. Hidden surfaces retain continuous wood, the output remains a
+Principled BSDF, and no reference photograph replaces the beauty render. The
+estimate has confidence above 0.5 for 296,838 pixels of 365,021 foreground
+pixels, with mean confidence 0.7302. Its actual render and angular inspection
+are pending; no new texture or lighting has been accepted yet.
+
+Material-batch resource reading at 2026-11-05 08:46:03 UTC: weekly 11% used /
+89% remaining, reset 2026-11-11 13:19:47 UTC. Luna continues five-minute checks.
+
+Trials 034–036 have now been rendered and inspected at full-piece and detail
+scales. None replaces the accepted checkpoint.
+
+| Trial | High-res IoU | Original IoU | Interior form | Color | Grain | Lighting | Overall | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 034 inferred pigment | 97.904% | 97.904% | 78 | 72 | 71 | 55 | 74.78 | Reject: some local color detail returns, but the fitted lights make chalky patches across the crown and collars |
+| 035 quality diagnostic | 97.905% | 97.904% | 78 | 72 | 71 | 55 | 74.78 | No acceptance: 512 samples and a separate undenoised render retain the same reflection defects |
+| 036 fine grain only | 97.904% | 97.904% | 78 | 75 | 70 | 49 | 73.98 | Reject: returning to accepted lights avoids the chalky patches, but color-only grain transfer is too subtle to establish an improvement |
+
+034/035's higher arithmetic mean does not outweigh their visible local
+regressions. They are not accepted. The 036 experiment transfers only fine
+luminance variation while retaining the accepted broad pigment field and
+hue, with highlight/edge confidence masking. Existing coarse relief still
+dominates the appearance, suggesting that normal response needs separate
+attention rather than another full pigment fit.
+
+The next isolated shape trial, 037, rounds the upper quadrant of the lowest
+collar. Its lower support points and maximum radius remain fixed. The
+reference shows a substantial rolled edge where the model shows a thin
+horizontal shelf. Actual render comparisons will decide whether the new
+curve improves it without losing the original outline.
+
+Continuation check at 2026-11-05 09:08:57 UTC: weekly 12% used / 88% remaining,
+reset 2026-11-11 13:19:47 UTC. Luna confirms the five-minute monitor is active.
+
+037 improves the lower collar's roll but grows its back edge beyond the
+source outline: high-res IoU 97.7908%, original 97.8039%. Scores 80 / 75 /
+69 / 49 for form/color/grain/light, mean 74.16; reject the silhouette loss.
+038 separately replaces visible relief with fine high-pass reference detail.
+It leaves color and lighting unchanged, but over-breaks several reflections
+and makes the polished surface look pitted. Scores 78 / 75 / 67 / 48, mean
+73.18; reject. High-res/original IoU 97.9016% / 97.9025%, with unchanged mesh.
+
+039 pulls the raised collar quadrant inward using the fixed 54-degree
+projection relationship. The rolled edge remains and its excessive back
+width is removed. Both outline metrics improve: high-res 97.9583%, original
+97.9123%. Form rises to 80; color remains 75; local stretching of the mapped
+collar grain is a small tradeoff (grain 69); the curved edge catches a more
+coherent reflection (lighting 50). Working mean 74.39. This is a promising
+geometry candidate, pending full validation and side inspection, not yet
+the public accepted model. 040 tests a restrained physical light rig on it;
+no pigment or relief changes from the accepted 026 material are included.
+
+040 puts the main base reflection farther right, but its lights combine into
+unwanted broad pale bands. Scores: silhouette 97.961%, form 80, color 73,
+grain 69, lighting 54, mean 74.79; reject the bands. Original IoU 97.9109%.
+The next method separates estimated warm specular highlights from the brown
+diffuse field, using an explicitly artistic two-color linear decomposition.
+Sixteen black-base-color light responses are diagnostic measurements of the
+actual shader. Nonnegative fitting selects light strengths; the beauty image
+must still be rendered normally. No reference pixels are composited into it.
+
+041 exposed an implementation error: `Light.specular_factor = 0` does not
+disable Cycles reflections in this installation. The requested separation
+was not achieved, so the old reflections remained beneath the new lights.
+The diagnostic `check_light_visibility.py` confirms identical reflected RGB
+sum 1272.720459 with data factor 1 and 0, while setting the light object's
+`visible_glossy = False` produces zero. This also means the earlier 033/040
+"diffuse fill" labels described intent, not actual Cycles isolation.
+041 scores remain approximately 97.959 / 80 / 75 / 69 / 50, mean 74.39;
+it is not accepted. Original IoU 97.9117%.
+
+042 repeats the fitted setup with explicit Cycles ray visibility. The script
+requires binary diffuse/specular settings when that mode is enabled; older
+configs retain their actual historical behavior. Reflection lights use warm
+linear color [1,0.58,0.4], while the accepted white diffuse rig is retained.
+This is art-directed shading, not a claim to recover a physically measured
+source studio. The actual render is pending. No public asset has changed.
+
+Pre-fit usage check at 2026-11-05 09:26:17 UTC: weekly 12% used / 88% remaining;
+reset 2026-11-11 13:19:48 UTC. Five-minute monitoring continues.
+
+The corrected separation operates, but its initial fit is too dull. A second
+diagnostic verifies that turning off a light's diffuse visibility preserves
+the full black-BSDF glossy response, so the separation itself is now measured.
+The remaining problem is the fitted distribution, not that renderer control.
+
+| Trial | High-res / original IoU | Form | Color | Grain | Light | Mean | Decision |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 042 corrected Cycles fit | 97.9593% / 97.9117% | 80 | 74 | 69 | 42 | 72.59 | Reject: unwanted old patches disappear, but the reference's polish and rim crescents are lost |
+| 043 highlight-weighted fit | 97.9591% / 97.9115% | 80 | 74 | 69 | 44 | 72.99 | Reject: reflections strengthen somewhat but remain too weak and incomplete |
+| 044 focused finial lights | 97.9593% / 97.9117% | 80 | 74 | 69 | 46 | 73.39 | Reject: some finial spots return, but spill and weak rim reflections remain |
+| 045 narrower finial lights | 97.9599% / 97.9117% | 80 | 74 | 69 | 47 | 73.59 | Reject: tighter spots improve one detail without restoring the rest of the polished surface |
+
+The three focused lights are ordinary spot emitters aimed at measured mesh
+points. Their source angles are constrained and their energies fitted; they
+do not project the reference photograph. The 045 fit reuses unchanged basis
+responses after checking the source hash and renders only the three modified
+spot responses. Its narrow beams require large fitted powers, another reason
+not to treat these experimental settings as recovered studio data.
+
+A new built-in ImageGen reflection-removal experiment was also rejected. Even
+with a conservative prompt, it redraws fine grain into coarse, winding lines.
+The generated image and full prompt are preserved in iteration-003 evidence;
+neither reference nor the accepted material was replaced. Inspection confirms
+the earlier de-lit source has the same grain defect. The next material trial
+therefore derives pigment from the unchanged reference itself: estimate and
+subtract its warm glossy component, divide by measured white-minus-black
+shader response, and suppress low-confidence highlights and edges. It remains
+an inferred 3D material with actual BSDF shading, not a photo substitute.
+
+Pre-image experiment usage at 2026-11-05 09:44:07 UTC: weekly 13% used / 87%
+remaining, reset 2026-11-11 13:19:47 UTC. The monitor remains active.
+
+046's direct pigment estimate recovers some source grain but creates conspicuous
+halos and blotches around highlights. Scores: silhouette 97.961%, form 80,
+color 72, grain 68, lighting 48; mean 73.19. Reject. 047 fills uncertain
+highlight areas from nearby reliable pigment before projection. It reduces
+the abrupt blotches but retains halos on the finial and smooths away too much
+grain on collars, socket and foot. Scores: 97.961 / 80 / 74 / 69 / 48, mean
+73.79. Reject. Both original IoUs are 97.9109%; the reference remains unchanged.
+
+The third checkpoint therefore selects **039, geometry only**. It retains
+the previously accepted v2 color atlas, relief and lights. The visible benefit
+is the lower collar's rounded upper quadrant, with its back edge pulled inward
+to improve rather than sacrifice the fixed-view outline. Local grain stretching
+on that curved band is a small documented tradeoff. Pending final side/viewer
+checks, scores are silhouette 97.958%, interior 80, color 75, grain 69, lighting
+50: working mean **74.39%**, holistic still about 70–75%. It is not a perfect
+match. The flat parts of the other collars, broad socket shoulder, overly coarse
+grain, misplaced highlights and missing fine bright crescents remain.
+
+The second accepted model and its two fixed-view renders are preserved in
+`history/queen-mission-002`. 039 passes closed/manifold mesh, positive volume
+4.486084, eight tips, monotonic turned body, 54-degree orthographic camera and
+unchanged height/base ratio 2.167048. The next step is regenerating all current
+views and the exact viewer mesh, then checking and committing the checkpoint.
+
+Checkpoint usage at 2026-11-05 10:01:47 UTC: weekly 13% used / 87% remaining,
+reset 2026-11-11 13:19:47 UTC. Luna's monitor remains active.
+
+The third checkpoint's final fixed-view and side renders are complete and
+visually inspected. The side confirms a fuller rolled lower collar, while
+the other collars and socket still need work. The material remains attached
+and retains the same limitations. Actual 64-sample delivery overlap is
+**97.9612% high-res / 97.9109% original**; the small difference from the trial
+is render sampling/edge precision. The working mean remains **74.39%**.
+
+Delivered model SHA-256:
+`a6594fab05ae5f9c9cdbe9b32d01542129b5f6ca8825e8b16a7cb8fa0aa5b8db`.
+The validated export contains the same 715,776 triangles, with exact binary
+round trip, unit normals, UV seam handling and unchanged source file. Camera
+checks cover 30 points over five viewport shapes with maximum error 0.0000382
+pixels. Review interactions, source hashes, persistent tabs/orbit, parts-map
+sandbox/CSP and side-state checks pass in the simulated DOM/GL harness.
+Native browser GPU inspection remains unavailable and is not claimed.
+
+The mission is still active. The next texture hypothesis is to remove the
+coarse invented pigment variation before transferring bounded fine/medium
+reference grain, while retaining the accepted broad color field. Earlier
+grain-only blending left too much of the coarse source intact. Avoid another
+full-color inversion until its highlight-mask artifacts are resolved.
+
+Post-integration checks pass for eight site pages and 55 local links, the
+model/viewer hash, all twelve original PNGs, candidate provenance/alignment,
+parts sandbox/CSP, and all 39 protected projection-study inputs. Git whitespace
+checks pass and there are no executable-bit changes. Other pieces and approved
+side-gallery defaults remain unchanged. The checkpoint is ready for its local
+commit; no push or hosting deployment is part of this mission.

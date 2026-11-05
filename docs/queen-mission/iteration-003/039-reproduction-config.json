@@ -1,0 +1,41 @@
+{
+  "variant": "039-rolled-collar-refit",
+  "source": "history/queen-mission-002/queen-rebuilt.blend",
+  "samples": 48,
+  "hypothesis": "Round the lower collar while pulling its upper quadrant inward to retain its elevated-view back edge, rather than widening the plate behind the crown.",
+  "profiles": {
+    "56": [
+      0.66597,
+      2.858
+    ],
+    "57": [
+      0.64021,
+      2.9
+    ],
+    "58": [
+      0.60878,
+      2.929
+    ],
+    "59": [
+      0.55596,
+      2.948
+    ],
+    "60": [
+      0.542,
+      2.956
+    ],
+    "61": [
+      0.5396,
+      2.96
+    ],
+    "62": [
+      0.53932482,
+      2.965
+    ],
+    "63": [
+      0.54319614,
+      2.97
+    ]
+  },
+  "reproduction_note": "The accepted second checkpoint has identical geometry/material/camera to the pre-publication 026 working source used for the original trial; scene bookkeeping differs."
+}

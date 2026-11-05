@@ -1,0 +1,9 @@
+{
+ "source":"build/queen-mission/026-graded-atlas/queen.blend",
+ "variant":"027-socket-light","world":0.03,
+ "lights":[
+  {"name":"Top reflection","position":[-1,-0.3,12],"energy":1100,"size":0.6},
+  {"name":"Right key","position":[3,-5,7],"energy":400,"size":0.5},
+  {"name":"Socket strip","position":[-3.09,-3.65,5.45],"target":[-0.2,-0.45,1.05],"energy":250,"size":0.7}
+ ]
+}

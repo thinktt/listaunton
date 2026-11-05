@@ -1,0 +1,11 @@
+{
+  "generator": "built-in image_gen",
+  "date": "2026-11-05",
+  "input": "assets/queen/reference.png",
+  "output": "docs/queen-mission/iteration-003/specular-removal-imagegen.png",
+  "prompt": "Edit target: the attached high-resolution wooden queen. This is a highly conservative specular-removal material study for a 3D reconstruction. Keep the exact original canvas, framing, silhouette, camera angle, dark background, wood color, every grain strand, pore, knot and scratch, and all diffuse shading and cavity shadows. Change ONLY the shiny pale/white reflected-light spots and streaks: the three tiny bright spots on the egg finial; the pale arc on the bowl behind the finial; thin bright reflections on tips and rims/collars; the socket reflection; the tall pale highlight on the right of the flared base; and bright foot-edge streaks. Inpaint ONLY these glossy reflections with a very faithful continuation of the surrounding same brown wood grain and diffuse tone, as if the photograph were cross-polarized. Preserve all ordinary darker and lighter brown variation, existing texture contrast and lighting gradients outside those spots. Do not flatten or equalize the image, do not create an albedo pass, do not redraw the grain, do not sharpen it or add outlines, black dots, wormlike squiggles or embossed texture. The normal tiny natural pores and delicate wood fibers must remain at their original fine scale. Make the smallest possible edit. Keep the original warm deep reddish walnut color and dark recesses. Output the same queen and same composition on black, with its glossy reflections removed and no other changes. No text or borders.",
+  "purpose": "Conservative reflection-removal experiment; rejected because fine grain was redrawn into coarse lines.",
+  "accepted": false,
+  "source_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "output_sha256": "c6543174384d495e43e815f6b7e2abe683693d46585af8f3112cc0e5fdc76b69"
+}

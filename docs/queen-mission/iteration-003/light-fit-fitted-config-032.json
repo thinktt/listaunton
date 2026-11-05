@@ -1,0 +1,194 @@
+{
+  "source": "models/queen/queen-rebuilt.blend",
+  "variant": "032-fitted-lights",
+  "world": 1.387438,
+  "lights": [
+    {
+      "name": "original-top",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "energy": 103.991,
+      "size": 0.6
+    },
+    {
+      "name": "original-right",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "energy": 35.1676,
+      "size": 0.5
+    },
+    {
+      "name": "original-foot",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "target": [
+        0,
+        0,
+        0.3
+      ],
+      "energy": 0.6807,
+      "size": 0.7
+    },
+    {
+      "name": "base-key",
+      "position": [
+        3.74,
+        -3.69,
+        4.63
+      ],
+      "target": [
+        0.3567,
+        -0.6887,
+        0.6858
+      ],
+      "energy": 173.0631,
+      "shape": "RECTANGLE",
+      "size": 0.45,
+      "size_y": 3.8
+    },
+    {
+      "name": "socket-left",
+      "position": [
+        -3.09,
+        -3.65,
+        5.45
+      ],
+      "target": [
+        -0.2,
+        -0.45,
+        1.28
+      ],
+      "energy": 12.1319,
+      "size": 0.7
+    },
+    {
+      "name": "bowl-left",
+      "position": [
+        0.861,
+        2.062,
+        9.663
+      ],
+      "target": [
+        -0.21,
+        0.31,
+        4.03
+      ],
+      "energy": 35.7658,
+      "size": 0.7
+    },
+    {
+      "name": "bowl-back",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "target": [
+        0.08,
+        0.4,
+        4.03
+      ],
+      "energy": 43.2378,
+      "size": 0.6
+    },
+    {
+      "name": "collars-right",
+      "position": [
+        5.61,
+        -3.34,
+        2.74
+      ],
+      "target": [
+        0.36,
+        -0.45,
+        3.08
+      ],
+      "energy": 51.044,
+      "size": 0.7
+    },
+    {
+      "name": "lower-collar",
+      "position": [
+        0.83,
+        2.1,
+        8.24
+      ],
+      "target": [
+        0.31,
+        -0.53,
+        2.87
+      ],
+      "energy": 10.0999,
+      "size": 0.7
+    },
+    {
+      "name": "finial-left",
+      "position": [
+        -1.45,
+        -3.81,
+        8.94
+      ],
+      "target": [
+        -0.02,
+        -0.09,
+        4.46
+      ],
+      "energy": 26.0089,
+      "size": 0.3
+    },
+    {
+      "name": "finial-top",
+      "position": [
+        3.23,
+        -2.24,
+        9.06
+      ],
+      "target": [
+        0.04,
+        -0.07,
+        4.46
+      ],
+      "energy": 51.1406,
+      "size": 0.3
+    },
+    {
+      "name": "foot-low",
+      "position": [
+        -3.64,
+        -5.42,
+        -2.02
+      ],
+      "target": [
+        -0.38,
+        -0.93,
+        0.25
+      ],
+      "energy": 0.3715,
+      "size": 0.8
+    },
+    {
+      "name": "base-rear",
+      "position": [
+        -2.84,
+        5.9,
+        -0.87
+      ],
+      "target": [
+        -0.63,
+        0.53,
+        0.64
+      ],
+      "energy": 2.965,
+      "size": 0.8
+    }
+  ]
+}

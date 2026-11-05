@@ -1,0 +1,202 @@
+{
+  "source_sha256": "f2e65f66fa65de9f212e5300d889350b877259aaf422c8d29a9430a49a016b99",
+  "width": 418,
+  "height": 418,
+  "samples": 32,
+  "denoising": false,
+  "color_config": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\datafiles\\colormanagement\\config.ocio",
+  "inverse_round_trip_mae": 0.00019624015840236098,
+  "specs": [
+    {
+      "name": "original-top",
+      "position": [
+        -1,
+        -0.3,
+        12
+      ],
+      "energy": 1100,
+      "size": 0.6
+    },
+    {
+      "name": "original-right",
+      "position": [
+        3,
+        -5,
+        7
+      ],
+      "energy": 400,
+      "size": 0.5
+    },
+    {
+      "name": "original-foot",
+      "position": [
+        -3,
+        -3,
+        1.5
+      ],
+      "target": [
+        0,
+        0,
+        0.3
+      ],
+      "energy": 150,
+      "size": 0.7
+    },
+    {
+      "name": "base-key",
+      "position": [
+        3.74,
+        -3.69,
+        4.63
+      ],
+      "target": [
+        0.3567,
+        -0.6887,
+        0.6858
+      ],
+      "energy": 280,
+      "shape": "RECTANGLE",
+      "size": 0.45,
+      "size_y": 3.8
+    },
+    {
+      "name": "socket-left",
+      "position": [
+        -3.09,
+        -3.65,
+        5.45
+      ],
+      "target": [
+        -0.2,
+        -0.45,
+        1.28
+      ],
+      "energy": 250,
+      "size": 0.7
+    },
+    {
+      "name": "bowl-left",
+      "position": [
+        0.861,
+        2.062,
+        9.663
+      ],
+      "target": [
+        -0.21,
+        0.31,
+        4.03
+      ],
+      "energy": 300,
+      "size": 0.7
+    },
+    {
+      "name": "bowl-back",
+      "position": [
+        -1.14,
+        0.93,
+        9.88
+      ],
+      "target": [
+        0.08,
+        0.4,
+        4.03
+      ],
+      "energy": 500,
+      "size": 0.6
+    },
+    {
+      "name": "collars-right",
+      "position": [
+        5.61,
+        -3.34,
+        2.74
+      ],
+      "target": [
+        0.36,
+        -0.45,
+        3.08
+      ],
+      "energy": 300,
+      "size": 0.7
+    },
+    {
+      "name": "lower-collar",
+      "position": [
+        0.83,
+        2.1,
+        8.24
+      ],
+      "target": [
+        0.31,
+        -0.53,
+        2.87
+      ],
+      "energy": 300,
+      "size": 0.7
+    },
+    {
+      "name": "finial-left",
+      "position": [
+        -1.45,
+        -3.81,
+        8.94
+      ],
+      "target": [
+        -0.02,
+        -0.09,
+        4.46
+      ],
+      "energy": 150,
+      "size": 0.3
+    },
+    {
+      "name": "finial-top",
+      "position": [
+        3.23,
+        -2.24,
+        9.06
+      ],
+      "target": [
+        0.04,
+        -0.07,
+        4.46
+      ],
+      "energy": 150,
+      "size": 0.3
+    },
+    {
+      "name": "foot-low",
+      "position": [
+        -3.64,
+        -5.42,
+        -2.02
+      ],
+      "target": [
+        -0.38,
+        -0.93,
+        0.25
+      ],
+      "energy": 200,
+      "size": 0.8
+    },
+    {
+      "name": "base-rear",
+      "position": [
+        -2.84,
+        5.9,
+        -0.87
+      ],
+      "target": [
+        -0.63,
+        0.53,
+        0.64
+      ],
+      "energy": 100,
+      "size": 0.8
+    },
+    {
+      "name": "world",
+      "world": 0.1
+    }
+  ]
+}

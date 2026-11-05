@@ -20,7 +20,7 @@ bpy.ops.wm.open_mainfile(filepath=str(trial),load_ui=False)
 scene=bpy.context.scene;cam=scene.camera
 obj=next(o for o in scene.objects if o.type=='MESH' and not o.hide_render)
 wood=obj.data.materials[0]
-scene.cycles.samples=64;scene.cycles.use_denoising=True;scene.cycles.device='CPU'
+scene.cycles.samples=64;scene.cycles.use_denoising=True;scene.cycles.device='CPU';scene.render.use_persistent_data=True
 scene.render.filepath='//../../assets/queen/queen-brown.png'
 scene['mission_accepted_variant']=args.variant
 bpy.context.preferences.filepaths.save_version=0

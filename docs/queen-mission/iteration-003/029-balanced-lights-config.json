@@ -1,0 +1,9 @@
+{
+ "source":"build/queen-mission/026-graded-atlas/queen.blend",
+ "variant":"029-balanced-lights","world":0.035,
+ "lights":[
+  {"name":"Bowl and collar reflection","position":[0.85,2.1,9],"target":[0,0,3.8],"energy":400,"size":0.75},
+  {"name":"Base vertical key","position":[3.74,-3.69,4.63],"target":[0.3567,-0.6887,0.6858],"energy":380,"shape":"RECTANGLE","size":0.45,"size_y":3.8},
+  {"name":"Socket strip","position":[-3.09,-3.65,5.45],"target":[-0.2,-0.45,1.05],"energy":60,"size":0.7}
+ ]
+}

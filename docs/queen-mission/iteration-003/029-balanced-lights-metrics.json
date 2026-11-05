@@ -1,0 +1,27 @@
+{
+  "highres_iou": 0.9790422868832602,
+  "original_iou": 0.9790358191678635,
+  "previous_highres_iou": 0.9790422868832602,
+  "previous_original_iou": 0.9790358191678635,
+  "regional_iou": {
+    "crown": {
+      "previous": 0.9794867424703562,
+      "trial": 0.9794867424703562
+    },
+    "body-collars": {
+      "previous": 0.9753564736892248,
+      "trial": 0.9753564736892248
+    },
+    "stem-socket": {
+      "previous": 0.9850964418353899,
+      "trial": 0.9850964418353899
+    },
+    "base-foot": {
+      "previous": 0.9734842120867717,
+      "trial": 0.9734842120867717
+    }
+  },
+  "trial_blend_sha256": "449d642e4be5f37bde76e9985c1ad4172f3d7f9caa3dd55c8bb50c43a010c877",
+  "trial_render_sha256": "8afff3f8a7948ce528d4bfb3c0f2cf26cb3f26fc80801b66693e757034df4fda",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a"
+}

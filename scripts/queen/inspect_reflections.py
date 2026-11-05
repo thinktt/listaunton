@@ -30,7 +30,8 @@ targets={'finial-left':(479,186),'finial-top':(494,181),'finial-right':(500,205)
          'bowl-back':(505,148),'bowl-left':(428,168),'upper-collar-right':(543,439),
          'middle-collar-right':(580,477),'middle-collar-left':(426,501),
          'lower-collar-right':(566,528),'socket-left':(432,759),'socket-right':(553,764),
-         'base-left':(316,647),'base-right':(578,901),'foot-left':(384,1020),'foot-right':(618,1012)}
+         'base-left':(316,647),'base-right':(578,901),'base-right-upper':(574,850),'base-right-lower':(583,955),
+         'foot-left':(384,1020),'foot-right':(618,1012)}
 results={}
 for name,(x,y) in targets.items():
     near=inv@Vector((2*x/W-1,1-2*y/H,-1,1));near=near.xyz/near.w

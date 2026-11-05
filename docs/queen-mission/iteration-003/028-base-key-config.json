@@ -1,0 +1,9 @@
+{
+ "source":"build/queen-mission/026-graded-atlas/queen.blend",
+ "variant":"028-base-key","world":0.03,
+ "lights":[
+  {"name":"Top reflection","position":[-1,-0.3,12],"energy":1100,"size":0.6},
+  {"name":"Base vertical key","position":[3.74,-3.69,4.63],"target":[0.3567,-0.6887,0.6858],"energy":280,"shape":"RECTANGLE","size":0.45,"size_y":1.8},
+  {"name":"Socket strip","position":[-3.09,-3.65,5.45],"target":[-0.2,-0.45,1.05],"energy":250,"size":0.7}
+ ]
+}

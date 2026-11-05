@@ -96,3 +96,27 @@ python scripts/queen/audit_mission.py 026-graded-atlas
 
 The runtime checks execute the viewer code with a simulated DOM and WebGL
 interface; they do not replace a native browser GPU inspection.
+
+The third checkpoint changes only the lowest collar's geometry. Its upper
+quadrant is rounded into a rolled edge and drawn inward to retain the elevated
+view's back outline. Both original and high-res silhouette overlap improve
+slightly. The second checkpoint's pigment, relief and lights remain in use;
+the subsequent texture and light trials were rejected after actual renders.
+The second accepted model is preserved in `history/queen-mission-002`.
+
+Reproduce the third geometry checkpoint, then use the existing export,
+viewer/comparison and validation sequence above:
+
+```sh
+blender -b --python scripts/queen/geometry_trial.py -- docs/queen-mission/iteration-003/039-reproduction-config.json
+blender -b --python scripts/queen/validate_finished_queen.py -- --blend build/queen-mission/039-rolled-collar-refit/queen.blend --report-dir build/queen-mission/039-rolled-collar-refit
+python scripts/queen/audit_mission.py 039-rolled-collar-refit
+blender -b --python scripts/queen/publish_mission_trial.py -- 039-rolled-collar-refit
+```
+
+The publishing helper retains renderer data between the four renders to avoid
+repeating initialization. It still renders each view normally. Failed lighting
+studies also established that the light data's diffuse/specular factors do not
+provide the intended Cycles separation here; explicit object ray visibility
+does. Their diagnostic results, full scores and rejected ImageGen texture
+experiment are recorded under `docs/queen-mission/iteration-003`.

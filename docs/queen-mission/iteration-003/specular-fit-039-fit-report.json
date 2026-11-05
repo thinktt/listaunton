@@ -1,0 +1,25 @@
+{
+  "foreground_pixels": 32430,
+  "iterations": 32,
+  "weighted_rmse": 0.23051796196059737,
+  "factors": {
+    "original-top": 0.018916735129163743,
+    "original-right": 0.016351163454529218,
+    "original-foot": 0.009800709934946411,
+    "base-key": 0.2865121465632358,
+    "socket-left": 0.01863716552195719,
+    "bowl-left": 0.052584869694338385,
+    "bowl-back": 0.016690799732366868,
+    "collars-right": 0.0210891872280326,
+    "lower-collar": 0.0077338435805772736,
+    "finial-left": 0.0318088798023185,
+    "finial-top": 0.08459970768998003,
+    "foot-low": 0.016056648664365722,
+    "base-rear": 0.049455275310527035,
+    "world": 0.0,
+    "bowl-arc": 0.004746871600805057,
+    "finial-right": 0.09878946675925392
+  },
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "caveat": "Subjective chromatic separation of unknown source shading; actual full BSDF render and visual inspection required."
+}

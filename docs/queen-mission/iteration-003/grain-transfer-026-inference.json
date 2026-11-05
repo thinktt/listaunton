@@ -1,0 +1,14 @@
+{
+  "method": "Fine luminance grain from the unchanged reference divided by its local mean; accepted low-frequency pigment and hue retained",
+  "blur": "Three radius-3 box passes, approximately 3.46-pixel Gaussian sigma",
+  "grain_ratio_limits": [
+    0.45,
+    1.8
+  ],
+  "retained_old_detail_weight": 0.25,
+  "source_highlights_feathered_out": true,
+  "silhouette_interior_margin_pixels": 7,
+  "max_projection_weight": 0.85,
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "caveat": "Some fine carving/shading edges can enter a high-pass grain estimate; inspect geometry and other views independently."
+}
