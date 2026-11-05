@@ -1027,3 +1027,25 @@ Current model SHA-256: 2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582
 The prior model and renders are preserved in history/queen-mission-011.
 Next inspect the overly strong relief in the base highlight, then the remaining
 bowl/rim and collar/socket reflections. The goal remains active and incomplete.
+
+
+## Thirteenth iteration: base junction and pigment repair
+
+Trials 120-124 separate relief and reflected-light errors; the useful component
+is the warmer, reshaped base light. A neutral render reveals a small ledge,
+fixed by changing only rings 26-29 (125). Pigment-only diagnostics expose a
+second dark imprint. Its initial repair looks too plain in side view (126-129),
+so it is rejected until bounded medium grain restores continuity (130-132).
+Trial 132 is accepted with v7 pigment, a smoother junction and one changed light.
+
+Scores: outline 97.9612 measured, form 82, color 83, grain 79, lighting 67;
+working mean 81.7922%, holistic 77-82%. Original IoU stays 97.9109%.
+Shape outside four radial rings, all heights, UVs, topology, camera, finial and
+gallery defaults stay unchanged. Saved/reopened and reproduced renders match
+within one RGB byte. Overlay, viewer and side views are synchronized together.
+See iteration-013 for all trial ratings, diagnostics, side inspection and checks.
+
+Delivered model SHA-256: 358e327b4aa8022117af741f87dc2af835ae9bac266c3f16f42e559739987ed6.
+The previous accepted model is preserved in history/queen-mission-012.
+Next address the socket's fragmented highlights and missing continuous crescent.
+Other shape, grain and lighting discrepancies remain; the goal is incomplete.

@@ -1,0 +1,27 @@
+{
+  "source_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+  "crop": [
+    430,
+    740,
+    740,
+    1040
+  ],
+  "repair_window": [
+    500,
+    810,
+    660,
+    1005
+  ],
+  "mask_pixels": 20299,
+  "harmonic_iterations": 5000,
+  "last_log_color_change": 2.5153160095214844e-05,
+  "grain_log_clip": [
+    -0.3,
+    0.3
+  ],
+  "grain_strength": 0.7,
+  "grain_radius": 3,
+  "medium_grain_strength": 1.4,
+  "medium_grain_source": "Existing relief-height field, bandpass radii 2 and 12, clipped to +/-0.25 in log height; excludes the invalid pigment imprint.",
+  "method": "Interpolate log pigment from adjacent wood through the highlight-shaped invalid region, adding bounded fine reference grain. Broad reference brightness is excluded. Existing hidden-surface coverage and all unmasked pigment are retained."
+}

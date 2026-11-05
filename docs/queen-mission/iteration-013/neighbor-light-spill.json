@@ -1,0 +1,77 @@
+{
+  "source_sha256": "79f8794692fb9a2dff5b28738b10490d6584844a3bb8f293fce41a9ffe8cf5ee",
+  "crop": [
+    480,
+    780,
+    720,
+    1040
+  ],
+  "samples": 256,
+  "source_unchanged": true,
+  "lights": [
+    {
+      "name": "Display fitted lower-right",
+      "linear_luminance_sum": 473.72916013283316,
+      "centroid": [
+        580.0372395160821,
+        907.1788019752339
+      ]
+    },
+    {
+      "name": "Display fitted foot-right",
+      "linear_luminance_sum": 266.87445489806674,
+      "centroid": [
+        603.0663664477999,
+        943.7082904856169
+      ]
+    },
+    {
+      "name": "Display fitted socket-right",
+      "linear_luminance_sum": 142.91939591593663,
+      "centroid": [
+        607.1171453919644,
+        953.6544799196392
+      ]
+    },
+    {
+      "name": "Display fitted original-right",
+      "linear_luminance_sum": 38.527648291379336,
+      "centroid": [
+        540.7691942565305,
+        899.0059292602549
+      ]
+    },
+    {
+      "name": "Display fitted socket-left-precise",
+      "linear_luminance_sum": 0.20756975112200493,
+      "centroid": [
+        538.9604001549595,
+        898.5554206231366
+      ]
+    },
+    {
+      "name": "Display fitted original-top",
+      "linear_luminance_sum": 0.0700958638466698,
+      "centroid": [
+        533.9318448923591,
+        942.9555169867212
+      ]
+    },
+    {
+      "name": "Display fitted original-foot",
+      "linear_luminance_sum": 0.06647020482711806,
+      "centroid": [
+        540.9566484514346,
+        920.8816252003729
+      ]
+    },
+    {
+      "name": "Display fitted lower-collar",
+      "linear_luminance_sum": 0.008748781929564011,
+      "centroid": [
+        664.2139709523293,
+        835.4811062128873
+      ]
+    }
+  ]
+}

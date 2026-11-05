@@ -78,3 +78,14 @@ reopened texture checks. At every accepted major queen checkpoint, update the
 repository review and existing local preview together: overlay, rotating model
 and side views. Tell the owner it is ready to refresh. Failed trials stay out
 of the public review. Current score and source hash are in MISSION-QUEEN.md.
+
+
+The thirteenth queen checkpoint uses queen-pigment-albedo-v7.png. It changes
+only radii of rings 26-29 to smooth the base/socket junction, repairs a local
+pigment imprint with continuous grain, and reshapes/warms only the base-key light.
+The finial, all heights, other controls, UVs and topology stay unchanged.
+validate_base_transition.py verifies the exact scope against the archived
+checkpoint-12 model and controls; check_material_geometry.py requires the explicit
+--allow-base-transition flag for this edit. Rebuild using rebuild_base_checkpoint.py
+and iteration-013/reproduction.json. Preserve receiver regeneration after geometry
+changes and synchronized local review assets. Rejected v6 is not a public option.

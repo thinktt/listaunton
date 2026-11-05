@@ -8,6 +8,7 @@ root=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(Path(__file__).parent))
 from queen_scene import editable_mesh
 from validate_render_receivers import check as check_receivers
+from validate_base_transition import check as check_base_transition
 p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=args.blend
@@ -37,13 +38,16 @@ height=float(np.ptp(co[:,2]));low=co[co[:,2]<=co[:,2].min()+height*.25]
 diameter=float((np.ptp(low[:,0])+np.ptp(low[:,1]))/2)
 ratio=height/diameter
 # The owner's smaller, deeper finial intentionally lowers the maximum height.
-# Keep the original tolerance around the adjusted target, and require every
-# non-finial control vertex to remain identical for this scoped correction.
-seating=json.loads(scene.get('mission_material_config','{}')).get('finial_seating')
+# Keep the original tolerance around the adjusted target. All other controls
+# remain identical except the four separately validated base-junction rings.
+material_settings=json.loads(scene.get('mission_material_config','{}'))
+seating=material_settings.get('finial_seating')
+base_transition=check_base_transition(controls,material_settings)
 adjusted_target=fit['target_height_to_base_width']
 if seating:
     assert seating['height_factor']==.90 and seating['radial_factor']==.96
-    assert hashlib.sha256(controls[:107].astype(np.float32).tobytes()).hexdigest()==seating['unchanged_body_sha256']
+    if not base_transition:
+        assert hashlib.sha256(controls[:107].astype(np.float32).tobytes()).hexdigest()==seating['unchanged_body_sha256']
     assert abs(seating['top_lowering']-.0467)<.00001
     adjusted_target-=seating['top_lowering']/diameter
 assert abs(ratio-adjusted_target)<.015,(ratio,adjusted_target)
@@ -55,6 +59,7 @@ report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdige
         'material':obj.data.materials[0].name,'boundary_edges':boundary,'nonmanifold_edges':nonmanifold,
         'signed_volume':volume,'crown_tips':8,'body_rings_monotonic':True}
 report['finial_seating']=seating
+report['base_transition']=base_transition
 report['adjusted_height_target']=adjusted_target
 report['render_receivers']=check_receivers(scene,obj)
 for name in ('finish-validation.json','model-validation.json'):

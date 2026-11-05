@@ -1,0 +1,343 @@
+{
+  "model_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+  "normal_graph": [
+    {
+      "name": "Bump.001",
+      "type": "BUMP",
+      "depth": 0,
+      "inputs": [
+        {
+          "name": "Strength",
+          "value": 0.44999998807907104
+        },
+        {
+          "name": "Distance",
+          "value": 0.007000000216066837
+        },
+        {
+          "name": "Filter Width",
+          "value": 0.10000000149011612
+        },
+        {
+          "name": "Height",
+          "from": "Mix (Legacy).006",
+          "socket": "Color"
+        },
+        {
+          "name": "Normal",
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mix (Legacy).006",
+      "type": "MIX_RGB",
+      "depth": 1,
+      "inputs": [
+        {
+          "name": "Factor",
+          "value": 0.2199999988079071
+        },
+        {
+          "name": "Color1",
+          "from": "Map Range.005",
+          "socket": "Result"
+        },
+        {
+          "name": "Color2",
+          "from": "Noise Texture.003",
+          "socket": "Factor"
+        }
+      ]
+    },
+    {
+      "name": "Map Range.005",
+      "type": "MAP_RANGE",
+      "depth": 2,
+      "inputs": [
+        {
+          "name": "Value",
+          "from": "RGB to BW.002",
+          "socket": "Val"
+        },
+        {
+          "name": "From Min",
+          "value": 0.009999999776482582
+        },
+        {
+          "name": "From Max",
+          "value": 0.20000000298023224
+        },
+        {
+          "name": "To Min",
+          "value": 0.0
+        },
+        {
+          "name": "To Max",
+          "value": 1.0
+        },
+        {
+          "name": "Steps",
+          "value": 4.0
+        },
+        {
+          "name": "Vector",
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "From Min",
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "From Max",
+          "value": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "To Min",
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "To Max",
+          "value": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Steps",
+          "value": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RGB to BW.002",
+      "type": "RGBTOBW",
+      "depth": 3,
+      "inputs": [
+        {
+          "name": "Color",
+          "from": "Image Texture.002",
+          "socket": "Color"
+        }
+      ]
+    },
+    {
+      "name": "Image Texture.002",
+      "type": "TEX_IMAGE",
+      "depth": 4,
+      "inputs": [
+        {
+          "name": "Vector",
+          "from": "UV Map.002",
+          "socket": "UV"
+        }
+      ],
+      "image": {
+        "name": "Queen pigment atlas",
+        "size": [
+          2048,
+          2048
+        ],
+        "colorspace": "sRGB",
+        "filepath": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-mission-run\\assets\\queen\\queen-pigment-albedo.png"
+      }
+    },
+    {
+      "name": "UV Map.002",
+      "type": "UVMAP",
+      "depth": 5,
+      "inputs": []
+    },
+    {
+      "name": "Noise Texture.003",
+      "type": "TEX_NOISE",
+      "depth": 2,
+      "inputs": [
+        {
+          "name": "Vector",
+          "from": "Texture Coordinate.002",
+          "socket": "Object"
+        },
+        {
+          "name": "W",
+          "value": 0.0
+        },
+        {
+          "name": "Scale",
+          "value": 140.0
+        },
+        {
+          "name": "Detail",
+          "value": 2.0
+        },
+        {
+          "name": "Roughness",
+          "value": 0.699999988079071
+        },
+        {
+          "name": "Lacunarity",
+          "value": 2.0
+        },
+        {
+          "name": "Offset",
+          "value": 0.0
+        },
+        {
+          "name": "Gain",
+          "value": 1.0
+        },
+        {
+          "name": "Distortion",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Texture Coordinate.002",
+      "type": "TEX_COORD",
+      "depth": 3,
+      "inputs": []
+    }
+  ],
+  "lights": [
+    {
+      "name": "Diffuse Foot strip",
+      "type": "AREA",
+      "energy": 150.0,
+      "position": [
+        -3.0,
+        -3.0,
+        1.5
+      ],
+      "size": 0.699999988079071,
+      "size_y": 0.25,
+      "spread": 3.1415927410125732,
+      "spot_size": null,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Display fitted original-foot",
+      "type": "AREA",
+      "energy": 2.3332064151763916,
+      "position": [
+        -3.0,
+        -3.0,
+        1.5
+      ],
+      "size": 0.699999988079071,
+      "size_y": 0.25,
+      "spread": 3.1415927410125732,
+      "spot_size": null,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted base-key",
+      "type": "AREA",
+      "energy": 10.642191886901855,
+      "position": [
+        3.740000009536743,
+        -3.690000057220459,
+        4.630000114440918
+      ],
+      "size": 0.44999998807907104,
+      "size_y": 3.799999952316284,
+      "spread": 0.6283185482025146,
+      "spot_size": null,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted base-rear",
+      "type": "AREA",
+      "energy": 7.089509010314941,
+      "position": [
+        -2.8399999141693115,
+        5.900000095367432,
+        -0.8700000047683716
+      ],
+      "size": 0.800000011920929,
+      "size_y": 0.25,
+      "spread": 3.1415927410125732,
+      "spot_size": null,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted foot-right",
+      "type": "AREA",
+      "energy": 40.47621536254883,
+      "position": [
+        4.473654270172119,
+        -4.184988975524902,
+        3.281796932220459
+      ],
+      "size": 0.5,
+      "size_y": 0.25,
+      "spread": 3.1415927410125732,
+      "spot_size": null,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ]
+    },
+    {
+      "name": "Display fitted foot-left-precise",
+      "type": "AREA",
+      "energy": 2.242056131362915,
+      "position": [
+        -3.639744997024536,
+        -5.421966552734375,
+        -2.019042491912842
+      ],
+      "size": 0.5,
+      "size_y": 0.25,
+      "spread": 3.1415927410125732,
+      "spot_size": null,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ]
+    }
+  ]
+}

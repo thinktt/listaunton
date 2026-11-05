@@ -258,3 +258,15 @@ now explicitly uses the closed editable control and restores the render
 receivers afterwards. See iteration-012 for reproduction, rejected alternatives,
 saved-pixel verification, all five scores and remaining defects. At each
 accepted major checkpoint, synchronize the local review, viewer and side views.
+
+
+The thirteenth checkpoint uses queen-pigment-albedo-v7.png with a localized
+repair beneath the socket. Four radial control rings gain a smooth transition;
+all heights and other controls stay exact. Only the base-key light is reshaped
+and warmed. Side inspection rejected the first plain pigment fill; the accepted
+material restores bounded medium grain. Reproduce from the archived twelfth
+model with scripts/queen/rebuild_base_checkpoint.py and the iteration-013 config.
+Use check_material_geometry.py with --allow-base-transition and the checkpoint-12
+baseline; unchanged-geometry mode remains the default. Both saved/reopened and
+independent reconstruction renders agree within one RGB byte. Current scores,
+actual diagnostics, residual defects and full validation are in iteration-013.

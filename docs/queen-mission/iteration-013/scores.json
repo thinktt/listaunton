@@ -1,0 +1,184 @@
+[
+  {
+    "variant": "120-aligned-relief",
+    "scores": {
+      "silhouette": 97.9590517589645,
+      "form": 81,
+      "color": 82,
+      "grain": 77,
+      "lighting": 64
+    },
+    "mean": 80.3918103517929,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Relief from the new pigment makes the reflection edges more rippled."
+  },
+  {
+    "variant": "121-rectified-base-panel",
+    "scores": {
+      "silhouette": 97.95932108441198,
+      "form": 81,
+      "color": 82,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 80.99186421688239,
+    "original_iou": 0.9791119986062158,
+    "decision": "superseded",
+    "reason": "Measured displacement and panel aspect improve only part of the broad glint."
+  },
+  {
+    "variant": "122-color-refined-base",
+    "scores": {
+      "silhouette": 97.95800195527642,
+      "form": 81,
+      "color": 83,
+      "grain": 79,
+      "lighting": 66
+    },
+    "mean": 81.39160039105528,
+    "original_iou": 0.9791147909200804,
+    "decision": "light component accepted in combined candidate",
+    "reason": "Warmer fitted base light is closer; the upper dark notch remains."
+  },
+  {
+    "variant": "123-confined-neighbor-lights",
+    "scores": {
+      "silhouette": 97.960634756472,
+      "form": 81,
+      "color": 83,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 81.1921269512944,
+    "original_iou": 0.9791197598370323,
+    "decision": "not promoted",
+    "reason": "Confinement identifies spill but does not provide a clear whole-image gain."
+  },
+  {
+    "variant": "124-refit-confined-base",
+    "scores": {
+      "silhouette": 97.95746881261715,
+      "form": 81,
+      "color": 83,
+      "grain": 79,
+      "lighting": 66
+    },
+    "mean": 81.39149376252342,
+    "original_iou": 0.9791147909200804,
+    "decision": "not promoted",
+    "reason": "Refit restores energy, but the remaining notch is not resolved and the extra rig complexity adds little."
+  },
+  {
+    "variant": "125-smooth-base-transition",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 82,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 81.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "component accepted",
+    "reason": "The neutral junction is smoother; pigment still contains the dark notch."
+  },
+  {
+    "variant": "126-repaired-base-pigment",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 81,
+      "color": 83,
+      "grain": 78,
+      "lighting": 65
+    },
+    "mean": 80.99223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded",
+    "reason": "The pigment notch disappears but a geometric ridge and plain side patch remain."
+  },
+  {
+    "variant": "127-repaired-smooth-base",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 78,
+      "lighting": 65
+    },
+    "mean": 81.19223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded",
+    "reason": "The two causes are repaired together; side pigment is too uniform."
+  },
+  {
+    "variant": "128-combined-base-refinement",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 78,
+      "lighting": 67
+    },
+    "mean": 81.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded",
+    "reason": "Warmer base light improves the fixed view, but the plain side patch remains."
+  },
+  {
+    "variant": "129-base-refinement-atlas",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 78,
+      "lighting": 67
+    },
+    "mean": 81.59223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "reject",
+    "reason": "Atlas is technically sound, but side inspection reveals a plain orange patch."
+  },
+  {
+    "variant": "130-grained-smooth-base",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 65
+    },
+    "mean": 81.39223687966948,
+    "original_iou": 0.9791093182518729,
+    "decision": "component accepted",
+    "reason": "Bounded medium grain restores continuity through the repaired side region."
+  },
+  {
+    "variant": "131-grained-base-refinement",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 67
+    },
+    "mean": 81.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "superseded by portable atlas",
+    "reason": "Combines the inspected geometry, pigment, grain and single-light changes."
+  },
+  {
+    "variant": "132-grained-base-atlas",
+    "scores": {
+      "silhouette": 97.9611843983474,
+      "form": 82,
+      "color": 83,
+      "grain": 79,
+      "lighting": 67
+    },
+    "mean": 81.79223687966949,
+    "original_iou": 0.9791093182518729,
+    "decision": "accept",
+    "reason": "Saved atlas retains the fixed-view improvement and usable grain from the side."
+  }
+]

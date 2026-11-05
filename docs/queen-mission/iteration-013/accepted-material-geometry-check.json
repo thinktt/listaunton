@@ -1,0 +1,23 @@
+{
+  "baseline": "history/queen-mission-012/queen-rebuilt.blend",
+  "current": "build/queen-mission/132-grained-base-atlas/queen.blend",
+  "baseline_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+  "current_sha256": "2bc013b5f535e0c2dd118629a54780274980b82fbf33eac00ecdb7537dfbb002",
+  "control_vertices_identical": false,
+  "atlas_control_uvs_identical": true,
+  "topology_identical": true,
+  "scoped_geometry_change": {
+    "baseline_sha256": "2cb513a71cf36e6bbaa3619b95cc53208e1245f9dbefebc745470e582fc11a9b",
+    "changed_rings": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "all_other_controls_identical": true,
+    "all_heights_identical": true,
+    "maximum_vertex_displacement": 0.01797795295715332,
+    "original_body_hash_verified": true
+  },
+  "passed": true
+}
