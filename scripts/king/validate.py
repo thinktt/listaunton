@@ -5,8 +5,11 @@ from mathutils import Vector
 args=sys.argv[sys.argv.index('--')+1:];root=Path(args[0]);model=root/'models/king/king-rebuilt.blend'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();before=sha(model)
 bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False);scene=bpy.context.scene;graph=bpy.context.evaluated_depsgraph_get();components=[]
-for ob in scene.objects:
-    if ob.type!='MESH' or ob.hide_render:continue
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from render_regions import controls
+from validate_render_regions import check as check_regions
+receiver_validation=check_regions(scene)
+for ob in controls(scene):
     ev=ob.evaluated_get(graph);me=ev.to_mesh(preserve_all_data_layers=True,depsgraph=graph);bm=bmesh.new();bm.from_mesh(me)
     count=sum(not e.is_manifold for e in bm.edges);volume=bm.calc_volume(signed=True)
     assert count==0 and volume>0,(ob.name,count,volume)
@@ -26,5 +29,5 @@ assert cam.data.type=='ORTHO' and abs(elevation-54)<.001
 actual=[float(v) for row in cam.matrix_world.inverted() for v in row]
 assert max(abs(a-b) for a,b in zip(actual,meta['referenceCamera']['worldToCamera']))<1e-7
 report=json.loads((root/'assets/king/validation.json').read_text());assert report['sourceSha256']==before
-report.update(components=components,cameraMatchesExport=True,packedPigmentPngHashMatches=True,realPrincipledBeautyMaterial=True,sourceUnchanged=sha(model)==before,elevationDegrees=elevation)
+report.update(renderReceivers=receiver_validation,components=components,cameraMatchesExport=True,packedPigmentPngHashMatches=True,realPrincipledBeautyMaterial=True,sourceUnchanged=sha(model)==before,elevationDegrees=elevation)
 (root/'assets/king/validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,indent=2));print('KING_VALIDATION_PASS')

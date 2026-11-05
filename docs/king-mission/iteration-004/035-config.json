@@ -1,0 +1,27 @@
+{
+  "variant": "035-fitted-focused-base-glints",
+  "source": "build/king-mission/034-focused-base-glint-shapes/king.blend",
+  "source_sha256": "ff408312f9c63759f81031c5323f34b35a5347bdfc23514708a1dc689de547c0",
+  "lights": [
+    "Base upper focused",
+    "Base lower left focused",
+    "Base lower center focused",
+    "Base lower right focused"
+  ],
+  "render_bounds": [
+    180,
+    780,
+    830,
+    1110
+  ],
+  "fit_bounds": [
+    220,
+    805,
+    790,
+    1040
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit the four shaped base reflectors; retain the foot and upper-body lights. Distinguish the remaining pigment haze from actual glossy light response."
+}

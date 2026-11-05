@@ -3,7 +3,7 @@
     {
       "name": "King - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.5003003774877515,
+      "signed_volume": 4.506099689590173,
       "vertices": 33602,
       "faces": 33600
     },
@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "sourceSha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -24,6 +24,67 @@
   "allNormalsUnit": true,
   "packedPigment": true,
   "note": "Body and cross remain separate closed intersecting components. Viewer lighting is approximate.",
+  "renderReceivers": {
+    "used": true,
+    "receiverCount": 3,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.586313247680664e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "flare",
+        "foot",
+        "upper-body"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "flare"
+      ],
+      "Base lower reflection": [
+        "flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "flare"
+      ],
+      "Base lower left focused": [
+        "flare"
+      ],
+      "Base lower center focused": [
+        "flare"
+      ],
+      "Base lower right focused": [
+        "flare"
+      ]
+    }
+  },
   "cameraMatchesExport": true,
   "packedPigmentPngHashMatches": true,
   "realPrincipledBeautyMaterial": true,

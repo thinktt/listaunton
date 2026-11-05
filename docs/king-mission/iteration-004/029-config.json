@@ -1,0 +1,7 @@
+{
+  "variant": "029-body-receiver-equivalence",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "samples": 128,
+  "hypothesis": "Partition only the evaluated body into exact foot/flare/upper-body light receivers, preserving all original light links and powers. Verify equivalence before changing lighting."
+}

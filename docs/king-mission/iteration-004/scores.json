@@ -1,0 +1,194 @@
+{
+  "rubric": "Silhouette measured using fixed reference-mask convention. Other scores are subjective visual assessments; equal mean is a working indicator, not proof of fidelity. Full render, crops, original overlay, clay and side/rear inspections inform acceptance.",
+  "previous": {
+    "silhouette": 97.82596329117995,
+    "interior_form": 82,
+    "wood_color": 81,
+    "grain_texture": 77,
+    "lighting": 55,
+    "mean": 78.56519265823599
+  },
+  "trials": [
+    {
+      "trial": "029-body-receiver-equivalence",
+      "status": "diagnostic",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82596329117995,
+        "interior_form_subjective": 82,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 55
+      },
+      "equal_weight_mean": 78.56519265823599,
+      "original_iou_percent": 96.82389565354454,
+      "reason": "Exact receiver representation; visually unchanged within 1/255 numerical noise.",
+      "model_sha256": "d9cb841322caa6ea6b1e7f76944e7068c8e10df6fdf1d8d7985c3eaa59bf70c1",
+      "render_sha256": "84e0b7a2daa27507c630f09838899bf89af3a4eeb278e0b489ae51a6c12afa1d"
+    },
+    {
+      "trial": "030-separated-base-reflections",
+      "status": "rejected",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82572133815462,
+        "interior_form_subjective": 82,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 52
+      },
+      "equal_weight_mean": 77.96514426763092,
+      "original_iou_percent": 96.82414193955157,
+      "reason": "Lower reflection moves right, but the foot light hits the wrong surface and produces a bright bottom edge.",
+      "model_sha256": "db22d32e7065b3fa824e093491ed2c49d33a992ecdc576f6ad539a1f44fc43d5",
+      "render_sha256": "cc908395e804b8d5b871fbe77fa8246ddbb9a5c5636d3b5bcd77e81457a0e1ec"
+    },
+    {
+      "trial": "031-narrower-foot-groove",
+      "status": "geometry retained",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82090888628903,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 55
+      },
+      "equal_weight_mean": 78.7641817772578,
+      "original_iou_percent": 96.83238748325057,
+      "reason": "Narrower groove and flatter foot lip; removes a real self-crossing in the evaluated lower lathe profile. Base lighting remains too broad.",
+      "model_sha256": "38cc4cac05df6a0c3fcb39020145d4289680f86a6ce12553fa528ae543c266f3",
+      "render_sha256": "7e45342942b8e818cfc8266f485ee65ff4b042fb598da5c8f9c35802a003f73e"
+    },
+    {
+      "trial": "032-reflections-after-foot-correction",
+      "status": "intermediate",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82017224918253,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 55
+      },
+      "equal_weight_mean": 78.7640344498365,
+      "original_iou_percent": 96.83262599665503,
+      "reason": "Profile-based light receivers and corrected foot target remove the wrong bottom glow. Foot glint remains too weak; broad base oval persists.",
+      "model_sha256": "2f944662314087068f0b05f97e1a70b9d0d269e5b4a9fc5b1ae3647ec8e7415d",
+      "render_sha256": "cbdfb11bcc5c7ca6ecfbc5a363e11589f725cc9910af0bd93561a78c0847c896"
+    },
+    {
+      "trial": "033-fitted-base-reflections",
+      "status": "intermediate",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82017224918253,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 56
+      },
+      "equal_weight_mean": 78.9640344498365,
+      "original_iou_percent": 96.83262599665503,
+      "reason": "Measured power fit modestly improves the balance but does not fix the oval shape or thin foot glint.",
+      "model_sha256": "e89fea4b79393120aa28b22a101827df08f478e78bf0f850eaaced7529b0552c",
+      "render_sha256": "f0bea88739ae229a058a89ca25c7b2d583e6b871ac367371e7b7751d001e59a7"
+    },
+    {
+      "trial": "034-focused-base-glint-shapes",
+      "status": "intermediate",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82017224918253,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 56
+      },
+      "equal_weight_mean": 78.9640344498365,
+      "original_iou_percent": 96.83262599665503,
+      "reason": "Narrower reflection sources move the shine toward the reference, but pigment haze and rough polish still spread it.",
+      "model_sha256": "ff408312f9c63759f81031c5323f34b35a5347bdfc23514708a1dc689de547c0",
+      "render_sha256": "e8e2e8b8935832cebf06a6dbc25fd5061dc7e4a888640af72e756b5abf615fd7"
+    },
+    {
+      "trial": "035-fitted-focused-base-glints",
+      "status": "intermediate",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82041420045164,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 81,
+        "grain_texture_subjective": 77,
+        "lighting_subjective": 56
+      },
+      "equal_weight_mean": 78.96408284009033,
+      "original_iou_percent": 96.8323796809226,
+      "reason": "Fitted focused sources improve brightness placement slightly; actual crop remains too broad. Lower fit loss is not sufficient for acceptance.",
+      "model_sha256": "245ee59625ce3099d3380093e26be35c55c0963c198470dadb1cc5bb9dd24fde",
+      "render_sha256": "c6ac4221b3ee2d32b96146c33304aaa7e8305fd0dd7a51c67bcfa50bab5a9059"
+    },
+    {
+      "trial": "036-base-pigment-correction",
+      "status": "pigment retained",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.82041420045164,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 82,
+        "grain_texture_subjective": 78,
+        "lighting_subjective": 56
+      },
+      "equal_weight_mean": 79.36408284009033,
+      "original_iou_percent": 96.8323796809226,
+      "reason": "Base-limited measured pigment recovery strengthens the broad wood figure and reduces pale haze; lighting is still wrong.",
+      "model_sha256": "1979e0fea6a2af9339f2233525606055a769d875348215245ccb189b9a4520e3",
+      "render_sha256": "d4a9b767dec87f3ac8423f12b1dcaeeb7bcf6fed14eb43a87b59953f9531357a"
+    },
+    {
+      "trial": "037-finer-base-varnish",
+      "status": "polish retained; powers rejected",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.81968835023498,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 82,
+        "grain_texture_subjective": 78,
+        "lighting_subjective": 56
+      },
+      "equal_weight_mean": 79.363937670047,
+      "original_iou_percent": 96.83311862811989,
+      "reason": "Finer local coat relief and lower roughness sharpen the base sheen, but unchanged light powers create an overly bright blob.",
+      "model_sha256": "c8f55ca855c2c67a72b9824e7cf68011ff58b88b111129d35498d9172d6c2846",
+      "render_sha256": "e207a6229b153ce10666ea4d4eb5b34fd48c461453852f36d48f50fd944df845"
+    },
+    {
+      "trial": "038-fitted-finer-base",
+      "status": "visual candidate accepted",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.81968835023498,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 82,
+        "grain_texture_subjective": 78,
+        "lighting_subjective": 58
+      },
+      "equal_weight_mean": 79.763937670047,
+      "original_iou_percent": 96.83311862811989,
+      "reason": "Refitted lights reduce the broad central white wash and reveal grain. Remaining diagonal glint is too tall and the foot crescent too thin and low.",
+      "model_sha256": "bf7083119b25a3add7a0d342e658d34aa0e334b5de05e6458597dc7006b89de9",
+      "render_sha256": "497cb7a35c7fac0d8261bad9d016699a6192f04c91056517e6c026c95547de72"
+    },
+    {
+      "trial": "039-base-atlas",
+      "status": "checkpoint accepted",
+      "scores": {
+        "silhouette_measured_iou_percent": 97.81968835023498,
+        "interior_form_subjective": 83,
+        "wood_color_subjective": 82,
+        "grain_texture_subjective": 78,
+        "lighting_subjective": 58
+      },
+      "equal_weight_mean": 79.763937670047,
+      "original_iou_percent": 96.83311862811989,
+      "reason": "Same visual pass with portable pigment atlas. Inspected filtering differences are confined to fine base texture; cross and upper pigment bytes stay exact.",
+      "model_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+      "render_sha256": "e98e1b4002e7624eb33d5bb9b9948e38851a169135ebc8df1aca3097ecded8f1"
+    }
+  ],
+  "accepted_holistic_range_percent": [
+    73,
+    82
+  ],
+  "white_finish_assessed": false
+}

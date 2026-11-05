@@ -8,7 +8,11 @@ ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('source');p.add_argument('output');args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 source=ROOT/args.source;out=ROOT/args.output;out.mkdir(parents=True,exist_ok=True);sha=lambda path:hashlib.sha256(path.read_bytes()).hexdigest();before=sha(source)
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
-objects=sorted((ob for ob in s.objects if ob.type=='MESH' and not ob.hide_render),key=lambda ob:ob.name);assert len(objects)==2
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from render_regions import controls
+from validate_render_regions import check as check_regions
+receiver_validation=check_regions(s)
+objects=sorted(controls(s),key=lambda ob:ob.name);assert len(objects)==2
 for ob in objects:
     for modifier in ob.modifiers:
         if modifier.type=='SUBSURF':modifier.levels=modifier.render_levels
@@ -34,5 +38,6 @@ lo=vertices[:,:3].min(0);hi=vertices[:,:3].max(0)
 meta={'vertexCount':len(vertices),'indexCount':len(indices),'triangleCount':len(indices)//3,'vertexStrideBytes':32,'uvOffsetBytes':24,'uvLayer':'Pigment atlas','vertexByteLength':vertices.nbytes,'indexByteOffset':vertices.nbytes,'totalByteLength':len(raw),'bounds':{'min':lo.tolist(),'max':hi.tolist(),'size':(hi-lo).tolist(),'center':((hi+lo)/2).tolist()},'parts':parts,'sourceSha256':before,'referenceCamera':camera,'texture':s['king_pigment_atlas'],'textureSha256':sha(ROOT/s['king_pigment_atlas'])}
 assert sha(source)==before
 validation={'components':parts,'sourceSha256':before,'source_hash_matches':True,'elevationDegrees':elevation,'cameraOrthographic':True,'exactCornerPositionNormalUvRoundtrip':True,'allAttributesFinite':True,'allNormalsUnit':True,'packedPigment':bool(bpy.data.images[s.get('king_pigment_image','King pigment atlas')].packed_file),'note':'Body and cross remain separate closed intersecting components. Viewer lighting is approximate.'}
+validation['renderReceivers']=receiver_validation
 for name,value in [('mesh.json',meta),('camera.json',camera),('validation.json',validation)]: (out/name).write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(validation,indent=2));print('KING_EXPORT_DONE',meta['triangleCount'],len(vertices),len(raw))

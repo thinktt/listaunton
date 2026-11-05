@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-05",
+  "checkpoint": "004",
+  "source": "history/king-mission-003/king-rebuilt.blend",
+  "source_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "accepted_model_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+  "accepted_render_sha256": "e98e1b4002e7624eb33d5bb9b9948e38851a169135ebc8df1aca3097ecded8f1",
+  "texture": "assets/king/materials/king-pigment-atlas-v5.png",
+  "texture_sha256": "4ae543aaed7327165962a4f7167d42f23f5b39d9d72340db8691efcf5abb0ae6",
+  "camera_degrees": 54.000000800055794,
+  "triangles": 70364,
+  "height": 5.127651214599609,
+  "base_diameter": 2.0663814544677734,
+  "accepted_scores": {
+    "silhouette_measured_iou_percent": 97.81968835023498,
+    "interior_form_subjective": 83,
+    "wood_color_subjective": 82,
+    "grain_texture_subjective": 78,
+    "lighting_subjective": 58
+  },
+  "working_mean": 79.763937670047,
+  "holistic_range_percent": [
+    73,
+    82
+  ],
+  "validation": {
+    "exact_controls_edit_scope": "passed",
+    "two_closed_positive_volume_components": "passed",
+    "exact_derived_surfaces_uvs_attributes_normals_light_routes": "passed",
+    "old_local_profile_self_crossing_removed": "passed; inspected lower axisymmetric section only",
+    "packed_texture_and_reopened_pixels": "passed",
+    "atlas_filtering": "inspected; mean 0.105/255, maximum 15/255 in fine base grain; not claimed bit-identical",
+    "viewer_mesh_texture_camera_and_controls": "passed in actual-page DOM/WebGL harness",
+    "candidate_and_whole_set_controls": "passed",
+    "full_reproduction": "passed with localized numerical variation; see full-reproduction-check.json",
+    "site_and_historical_projection_checks": "passed; global site check rerun successfully after the concurrent queen viewer/model update completed",
+    "native_browser_inspection": "not performed",
+    "canonical_model_and_packed_texture": "passed",
+    "model_site_and_historical_projection_checks": "passed",
+    "local_preview_sync": "passed: 32 files verified by SHA-256",
+    "local_preview_interaction_harness": "passed: model, atlas, camera, overlay endpoints, tabs, orbit/pan/zoom, side comparison"
+  },
+  "pending": "Visual mission remains active and incomplete; all required checks for this accepted checkpoint are complete."
+}

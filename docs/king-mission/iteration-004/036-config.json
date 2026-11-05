@@ -1,0 +1,13 @@
+{
+  "variant": "036-base-pigment-correction",
+  "response": "build/king-mission/036-base-response",
+  "strength": 0.95,
+  "profile_region_fade": [
+    18,
+    22
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "Correct remaining pigment haze under the newly localized reflections using measured BSDF response. Fade the update out above the flare, preserving upper-body and cross pigment."
+}

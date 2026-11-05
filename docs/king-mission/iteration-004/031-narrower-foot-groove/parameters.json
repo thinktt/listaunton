@@ -1,0 +1,33 @@
+{
+  "variant": "031-narrower-foot-groove",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "profile_offsets": {
+    "4": [
+      0,
+      0.02
+    ],
+    "5": [
+      0,
+      0.055
+    ],
+    "6": [
+      0,
+      0.03
+    ],
+    "8": [
+      0,
+      -0.04
+    ],
+    "9": [
+      0,
+      0.02
+    ]
+  },
+  "hypothesis": "Raise the foot's upper rollover and remove the reversed control-profile fold inside its groove. Preserve radii, total height, camera and all upper geometry/material. The original foot highlight should fall on the exposed foot instead of the flare underside.",
+  "model_sha256": "38cc4cac05df6a0c3fcb39020145d4289680f86a6ce12553fa528ae543c266f3",
+  "elevation_degrees": 54.000000800055794
+}

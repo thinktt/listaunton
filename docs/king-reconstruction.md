@@ -45,3 +45,18 @@ The first selected-image outline overlap was approximately 91.5%; the current on
 `validation.json` confirms both mesh components have outward volume and no nonmanifold edges. The viewer embeds the exact exported mesh and saved Blender camera, verified against the model file's hash. Its runtime check covers camera projection, rotation/pan/zoom/reset, source switching and image registration. The local browser automation policy prevents direct inspection of file-URL pages, so browser layout has not been screenshot-verified by that tool.
 
 Use the **Model** tab on [the king review](../king-review.html). **Reference overlay** defaults to the original; switch to the selected image for larger edge detail. **Rotate model** allows an independent inspection, and **Reset view** restores the saved camera. Other unmodeled pieces have explicit placeholders. The queen review remains unchanged.
+
+## Current checkpoint 004: exact light receivers
+
+Follow `docs/king-mission/iteration-004/README.md` and
+`scripts/king/rebuild_checkpoint_004.py`. The current model is the accepted
+five-ring foot correction, base pigment v5 and fitted local base polish rig.
+Use `render_regions.controls(scene)` for the two closed editable components.
+The body is tagged `king_editable_control` and hidden only from rendering.
+Three `king_render_region` objects are exact evaluated receivers; never edit
+them directly. Regenerate after geometry/UV/attribute changes and validate
+with `validate_render_regions.check(scene)`. `mission_trial.py`, export and
+validation now handle these controls explicitly. Preserve original UVs when
+baking a local pigment repair; `bake_registered_pigment.py` retains upper and
+cross atlas bytes for this base-only pass. The local profile-crossing check
+supplements, rather than replaces, closed-manifold validation.

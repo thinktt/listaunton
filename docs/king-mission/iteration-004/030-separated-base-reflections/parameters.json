@@ -1,0 +1,142 @@
+{
+  "variant": "030-separated-base-reflections",
+  "source": "build/king-mission/029-body-receiver-equivalence/king.blend",
+  "source_sha256": "d9cb841322caa6ea6b1e7f76944e7068c8e10df6fdf1d8d7985c3eaa59bf70c1",
+  "samples": 128,
+  "confine_existing": true,
+  "reflectors": [
+    {
+      "name": "Base upper reflection",
+      "pixel": [
+        570,
+        850
+      ],
+      "energy": 500,
+      "degrees": 9,
+      "radius": 0.45,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower reflection",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 500,
+      "degrees": 10,
+      "radius": 0.65,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Foot left reflection",
+      "pixel": [
+        435,
+        1044
+      ],
+      "energy": 450,
+      "degrees": 16,
+      "radius": 0.75,
+      "receivers": [
+        "foot"
+      ]
+    }
+  ],
+  "hypothesis": "Shift the two base reflections rightward and give the foot its left-front glint, using actual separate receiver lights while retaining upper-body illumination.",
+  "original_source_sha256": "d9cb841322caa6ea6b1e7f76944e7068c8e10df6fdf1d8d7985c3eaa59bf70c1",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Base upper reflection",
+      "pixel": [
+        570,
+        850
+      ],
+      "energy": 500,
+      "degrees": 9,
+      "radius": 0.45,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.24017642438411713,
+        -0.5356221199035645,
+        0.8552751541137695
+      ],
+      "normal": [
+        0.2814956307411194,
+        -0.6264569163322449,
+        0.7268508076667786
+      ],
+      "position": [
+        3.4703609943389893,
+        -4.197554111480713,
+        4.34184455871582
+      ]
+    },
+    {
+      "name": "Base lower reflection",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 500,
+      "degrees": 10,
+      "radius": 0.65,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.36128371953964233,
+        -0.8420815467834473,
+        0.5738525390625
+      ],
+      "normal": [
+        0.28339648246765137,
+        -0.6605252623558044,
+        0.6952646374702454
+      ],
+      "position": [
+        3.5944786071777344,
+        -4.851126670837402,
+        3.6518402099609375
+      ]
+    },
+    {
+      "name": "Foot left reflection",
+      "pixel": [
+        435,
+        1044
+      ],
+      "energy": 450,
+      "degrees": 16,
+      "radius": 0.75,
+      "receivers": [
+        "foot"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        -0.23650988936424255,
+        -0.9789681434631348,
+        0.28032398223876953
+      ],
+      "normal": [
+        -0.22458434104919434,
+        -0.9296666979789734,
+        -0.292030394077301
+      ],
+      "position": [
+        -1.0724670886993408,
+        -0.9127007722854614,
+        -5.660785675048828
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "db22d32e7065b3fa824e093491ed2c49d33a992ecdc576f6ad539a1f44fc43d5"
+}

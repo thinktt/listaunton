@@ -1,0 +1,29 @@
+{
+  "source_sha256": "c8f55ca855c2c67a72b9824e7cf68011ff58b88b111129d35498d9172d6c2846",
+  "original_powers": {
+    "Base upper focused": 4201.40869140625,
+    "Base lower left focused": 362.2377624511719,
+    "Base lower center focused": 495.9692687988281,
+    "Base lower right focused": 1244.579833984375,
+    "Foot left reflection": 2536.35205078125
+  },
+  "fitted_powers": {
+    "Base upper focused": 1054.0883540350408,
+    "Base lower left focused": 165.63115312215092,
+    "Base lower center focused": 417.7926711540375,
+    "Base lower right focused": 309.7001981662537,
+    "Foot left reflection": 1696.9194857067898
+  },
+  "gain": [
+    0.2508892686853151,
+    0.4572443027512277,
+    0.8423761257746393,
+    0.24883915817178653,
+    0.6690394124049549
+  ],
+  "before_weighted_squared_residual": 0.1198483505756882,
+  "predicted_weighted_squared_residual": 0.09694800577811667,
+  "iterations": 10,
+  "pixels": 133631,
+  "method": "Nonnegative coordinate-descent fit of actual linear BSDF light responses; actual full render determines acceptance, not predicted loss."
+}

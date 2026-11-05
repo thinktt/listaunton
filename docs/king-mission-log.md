@@ -187,3 +187,34 @@ local preview are synchronized with this accepted model. See
 evidence, reproduction and limitations. No native browser inspection is claimed.
 Next target: base reflection shape, without altering fixed registration or the
 accepted cross. The goal remains active and incomplete.
+
+## 2026-11-05 — checkpoint 004: base grain and a cleaner foot groove
+
+The accepted base has clearer wood figure and a smaller, right-shifted reflection
+instead of the previous broad central white wash. Five lower profile heights
+narrow the foot groove and remove a discovered local profile self-intersection.
+All radii, other controls, physical height/base width, atlas UVs and the fixed
+54-degree camera are preserved. Exact derived receivers separate the base
+lighting from the upper body; the closed control is exported to the viewer.
+
+| Metric | Checkpoint 003 | Checkpoint 004 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.826% | 97.820% |
+| Interior form | 82% | 83% |
+| Wood color | 81% | 82% |
+| Grain and surface texture | 77% | 78% |
+| Lighting and reflections | 55% | 58% |
+| Equal-weight mean | 78.565% | 79.764% |
+
+Original-sprite IoU is 96.833%, previously 96.824%. Only IoU is measured; other
+ratings are subjective. Holistic assessment is 73–82%. The remaining base glint
+is too tall and the foot crescent is too weak and low. Cross/collar reflections,
+cavity contrast and the obvious hidden-surface pigment transition remain.
+These are accepted improvements, not a completed match.
+
+Saved texture/reopened beauty, exact edit scope, derived receivers, closed
+components, export and page controls pass. See
+[iteration-004/README.md](king-mission/iteration-004/README.md) for trial scores,
+reproduction, validation evidence and limitations. The king reconstruction and
+local preview are synchronized at this checkpoint. No native UI inspection is
+claimed. Next: foot crescent and remaining base glint shape. Mission incomplete.

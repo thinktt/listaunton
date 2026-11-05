@@ -1,0 +1,59 @@
+{
+  "variant": "035-fitted-focused-base-glints",
+  "source": "build/king-mission/035-fitted-focused-base-glints/prepared.blend",
+  "render_bounds": [
+    180,
+    780,
+    830,
+    1110
+  ],
+  "fit_bounds": [
+    220,
+    805,
+    790,
+    1040
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit the four shaped base reflectors; retain the foot and upper-body lights. Distinguish the remaining pigment haze from actual glossy light response.",
+  "original_source": "build/king-mission/034-focused-base-glint-shapes/king.blend",
+  "original_source_sha256": "34a8ab42584adb5161d1e8f3df51ff5ae4daaa934dd8fbbdfc2a725c5332a2b2",
+  "light_fit": {
+    "source_sha256": "ff408312f9c63759f81031c5323f34b35a5347bdfc23514708a1dc689de547c0",
+    "original_powers": {
+      "Base upper focused": 600.0,
+      "Base lower left focused": 400.0,
+      "Base lower center focused": 600.0,
+      "Base lower right focused": 400.0
+    },
+    "fitted_powers": {
+      "Base upper focused": 4201.408724954171,
+      "Base lower left focused": 362.23776437037634,
+      "Base lower center focused": 495.96925557878905,
+      "Base lower right focused": 1244.5798525838213
+    },
+    "gain": [
+      7.002347874923618,
+      0.9055944109259408,
+      0.8266154259646484,
+      3.1114496314595534
+    ],
+    "before_weighted_squared_residual": 0.09989198295106785,
+    "predicted_weighted_squared_residual": 0.09625846825660186,
+    "iterations": 96,
+    "pixels": 121681,
+    "method": "Nonnegative coordinate-descent fit of actual linear BSDF light responses; actual full render determines acceptance, not predicted loss."
+  },
+  "fitted_lights": [
+    "Base upper focused",
+    "Base lower left focused",
+    "Base lower center focused",
+    "Base lower right focused"
+  ],
+  "source_sha256": "34a8ab42584adb5161d1e8f3df51ff5ae4daaa934dd8fbbdfc2a725c5332a2b2",
+  "receiver_partitions": [],
+  "reflector_probes": [],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "245ee59625ce3099d3380093e26be35c55c0963c198470dadb1cc5bb9dd24fde"
+}

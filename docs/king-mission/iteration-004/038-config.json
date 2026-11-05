@@ -1,0 +1,28 @@
+{
+  "variant": "038-fitted-finer-base",
+  "source": "build/king-mission/037-finer-base-varnish/king.blend",
+  "source_sha256": "c8f55ca855c2c67a72b9824e7cf68011ff58b88b111129d35498d9172d6c2846",
+  "lights": [
+    "Base upper focused",
+    "Base lower left focused",
+    "Base lower center focused",
+    "Base lower right focused",
+    "Foot left reflection"
+  ],
+  "render_bounds": [
+    180,
+    780,
+    830,
+    1110
+  ],
+  "fit_bounds": [
+    220,
+    805,
+    790,
+    1095
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Refit focused base and foot glints after the local polish correction; preserve all upper material, shape and camera."
+}

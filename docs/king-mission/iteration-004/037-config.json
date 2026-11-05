@@ -1,0 +1,10 @@
+{
+  "variant": "037-finer-base-varnish",
+  "source": "build/king-mission/036-base-pigment-correction/king.blend",
+  "source_sha256": "1979e0fea6a2af9339f2233525606055a769d875348215245ccb189b9a4520e3",
+  "samples": 128,
+  "roughness": 0.19,
+  "coat_roughness": 0.1,
+  "coat_relief_strength": 0.0875,
+  "hypothesis": "The base glare is diffuse and wrinkled relative to the reference. Locally polish the varnish and reduce excessive coat bump, preserving the upper-body/cross material and geometry."
+}

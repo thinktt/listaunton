@@ -3,11 +3,12 @@ from pathlib import Path
 import argparse,hashlib,json,sys
 import bpy,numpy as np
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 p=argparse.ArgumentParser();p.add_argument('before');p.add_argument('after');p.add_argument('output');a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 def read(path):
     bpy.ops.wm.open_mainfile(filepath=str(ROOT/path),load_ui=False);s=bpy.context.scene;objects={}
-    for ob in s.objects:
-        if ob.type!='MESH' or ob.hide_render:continue
+    from render_regions import controls
+    for ob in controls(s):
         co=np.array([v.co[:] for v in ob.data.vertices],dtype='<f4');faces=[list(f.vertices) for f in ob.data.polygons]
         objects[ob.name]={'positions_sha256':hashlib.sha256(co.tobytes()).hexdigest(),'faces_sha256':hashlib.sha256(json.dumps(faces).encode()).hexdigest(),'matrix':list(v for row in ob.matrix_world for v in row),'modifiers':[(m.type,m.levels,m.render_levels) for m in ob.modifiers if m.type=='SUBSURF']}
     cam=s.camera

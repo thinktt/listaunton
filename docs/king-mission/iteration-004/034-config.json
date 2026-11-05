@@ -1,0 +1,65 @@
+{
+  "variant": "034-focused-base-glint-shapes",
+  "source": "build/king-mission/033-fitted-base-reflections/king.blend",
+  "source_sha256": "e89fea4b79393120aa28b22a101827df08f478e78bf0f850eaaced7529b0552c",
+  "samples": 128,
+  "existing_light_power": {
+    "Base upper reflection": 0,
+    "Base lower reflection": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base upper focused",
+      "pixel": [
+        569,
+        850
+      ],
+      "energy": 600,
+      "degrees": 3,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower left focused",
+      "pixel": [
+        584,
+        976
+      ],
+      "energy": 400,
+      "degrees": 2.8,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower center focused",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 600,
+      "degrees": 3,
+      "radius": 0.3,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower right focused",
+      "pixel": [
+        618,
+        954
+      ],
+      "energy": 400,
+      "degrees": 2.8,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ]
+    }
+  ],
+  "hypothesis": "Replace the broad base patches with a narrow upper glint and three overlapping focused lights along the reference lower diagonal glint; retain foot and upper-body lighting."
+}

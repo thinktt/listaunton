@@ -12,7 +12,11 @@ def target(scene,x,y):
     projection=cam.calc_matrix_camera(graph,x=w,y=h)
     p=projection.inverted()@Vector((2*x/w-1,1-2*y/h,-1,1));origin=cam.matrix_world@(p.xyz/p.w)
     view=(cam.matrix_world.to_3x3()@Vector((0,0,1))).normalized()
-    hit,point,normal,fi,ob,_=scene.ray_cast(graph,origin,-view);assert hit,(x,y)
+    if scene.get('king_render_regions'):
+        from render_regions import visible_hit
+        hit,point,normal,fi,ob,_=visible_hit(scene,origin,-view)
+    else:hit,point,normal,fi,ob,_=scene.ray_cast(graph,origin,-view)
+    assert hit,(x,y)
     ev=ob.evaluated_get(graph);mesh=ev.to_mesh();mesh.calc_loop_triangles();found=False
     for tri in mesh.loop_triangles:
         if tri.polygon_index!=fi:continue

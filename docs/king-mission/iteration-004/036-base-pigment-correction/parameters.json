@@ -1,0 +1,35 @@
+{
+  "variant": "036-base-pigment-correction",
+  "response": "build/king-mission/036-base-response",
+  "strength": 0.95,
+  "profile_region_fade": [
+    18,
+    22
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "hypothesis": "Correct remaining pigment haze under the newly localized reflections using measured BSDF response. Fade the update out above the flare, preserving upper-body and cross pigment.",
+  "source": "build/king-mission/036-base-pigment-correction/prepared.blend",
+  "original_source": "build/king-mission/035-fitted-focused-base-glints/king.blend",
+  "original_source_sha256": "6cefe66d684f518c24d2f4ccf977fd5a0937eda06e5c670cab96c7ddf7132051",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "reference_pixel_500_700": [
+    0.30980393290519714,
+    0.12156863510608673,
+    0.011764707043766975,
+    0.9843137860298157
+  ],
+  "pigment_bounds": [
+    0.001,
+    0.8
+  ],
+  "confidence_mean_foreground": 0.7108784914016724,
+  "fraction_foreground_over_half_confidence": 0.7533063129205178,
+  "limitation": "Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.",
+  "source_sha256": "6cefe66d684f518c24d2f4ccf977fd5a0937eda06e5c670cab96c7ddf7132051",
+  "receiver_partitions": [],
+  "reflector_probes": [],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "1979e0fea6a2af9339f2233525606055a769d875348215245ccb189b9a4520e3"
+}

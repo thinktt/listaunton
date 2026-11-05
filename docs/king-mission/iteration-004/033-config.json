@@ -1,0 +1,26 @@
+{
+  "variant": "033-fitted-base-reflections",
+  "source": "build/king-mission/032-reflections-after-foot-correction/king.blend",
+  "source_sha256": "2f944662314087068f0b05f97e1a70b9d0d269e5b4a9fc5b1ae3647ec8e7415d",
+  "lights": [
+    "Base upper reflection",
+    "Base lower reflection",
+    "Foot left reflection"
+  ],
+  "render_bounds": [
+    180,
+    780,
+    830,
+    1110
+  ],
+  "fit_bounds": [
+    220,
+    805,
+    790,
+    1095
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit the three base/foot reflection powers using actual linear BSDF response after fixing the groove; judge the full render against both references."
+}

@@ -1,0 +1,55 @@
+{
+  "variant": "033-fitted-base-reflections",
+  "source": "build/king-mission/033-fitted-base-reflections/prepared.blend",
+  "render_bounds": [
+    180,
+    780,
+    830,
+    1110
+  ],
+  "fit_bounds": [
+    220,
+    805,
+    790,
+    1095
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": true,
+  "hypothesis": "Fit the three base/foot reflection powers using actual linear BSDF response after fixing the groove; judge the full render against both references.",
+  "original_source": "build/king-mission/032-reflections-after-foot-correction/king.blend",
+  "original_source_sha256": "568b1b001090b85827a2543363b4feccaf8bc23a769928d492b74fa77dc9e6c7",
+  "light_fit": {
+    "source_sha256": "2f944662314087068f0b05f97e1a70b9d0d269e5b4a9fc5b1ae3647ec8e7415d",
+    "original_powers": {
+      "Base upper reflection": 500.0,
+      "Base lower reflection": 500.0,
+      "Foot left reflection": 450.0
+    },
+    "fitted_powers": {
+      "Base upper reflection": 481.1709203286742,
+      "Base lower reflection": 1130.9661799851247,
+      "Foot left reflection": 2536.3519630027968
+    },
+    "gain": [
+      0.9623418406573484,
+      2.2619323599702494,
+      5.636337695561771
+    ],
+    "before_weighted_squared_residual": 0.09629012844322524,
+    "predicted_weighted_squared_residual": 0.09507664656013054,
+    "iterations": 31,
+    "pixels": 133632,
+    "method": "Nonnegative coordinate-descent fit of actual linear BSDF light responses; actual full render determines acceptance, not predicted loss."
+  },
+  "fitted_lights": [
+    "Base upper reflection",
+    "Base lower reflection",
+    "Foot left reflection"
+  ],
+  "source_sha256": "568b1b001090b85827a2543363b4feccaf8bc23a769928d492b74fa77dc9e6c7",
+  "receiver_partitions": [],
+  "reflector_probes": [],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "e89fea4b79393120aa28b22a101827df08f478e78bf0f850eaaced7529b0552c"
+}

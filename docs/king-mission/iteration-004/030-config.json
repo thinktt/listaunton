@@ -1,0 +1,49 @@
+{
+  "variant": "030-separated-base-reflections",
+  "source": "build/king-mission/029-body-receiver-equivalence/king.blend",
+  "source_sha256": "d9cb841322caa6ea6b1e7f76944e7068c8e10df6fdf1d8d7985c3eaa59bf70c1",
+  "samples": 128,
+  "confine_existing": true,
+  "reflectors": [
+    {
+      "name": "Base upper reflection",
+      "pixel": [
+        570,
+        850
+      ],
+      "energy": 500,
+      "degrees": 9,
+      "radius": 0.45,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower reflection",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 500,
+      "degrees": 10,
+      "radius": 0.65,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Foot left reflection",
+      "pixel": [
+        435,
+        1044
+      ],
+      "energy": 450,
+      "degrees": 16,
+      "radius": 0.75,
+      "receivers": [
+        "foot"
+      ]
+    }
+  ],
+  "hypothesis": "Shift the two base reflections rightward and give the foot its left-front glint, using actual separate receiver lights while retaining upper-body illumination."
+}

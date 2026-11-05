@@ -10,6 +10,7 @@ import bpy,numpy as np,PyOpenColorIO as ocio
 from bpy_extras.object_utils import world_to_camera_view
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from mission_trial import ROOT,run,meshes
+from render_regions import controls,regenerate
 
 def pixels(image):
     w,h=image.size;out=np.empty(w*h*4,dtype=np.float32);image.pixels.foreach_get(out);return out.reshape(h,w,4)[::-1].copy()
@@ -47,14 +48,17 @@ def main(cfg):
         im=bpy.data.images.new(name,width=w,height=h,alpha=False,float_buffer=True);im.colorspace_settings.name='Linear Rec.709'
         im.pixels.foreach_set(rgba[::-1].copy().reshape(-1));im.file_format='OPEN_EXR';im.filepath_raw=str(out/(name+'.exr'));im.save();im.pack();return im
     color=image('king-recovered-pigment',pigment);confidence=image('king-pigment-confidence',np.repeat(reliability[:,:,None],3,axis=2))
-    objects=meshes(s)
+    objects=controls(s) if s.get("king_render_regions") else meshes(s)
     scoped=info.get('partial_object_response',False)
     if scoped:
         assert set(info['object_names']).issubset({ob.name for ob in objects})
         for ob in objects:
             attr=ob.data.attributes.get('Pigment response region') or ob.data.attributes.new('Pigment response region','FLOAT','POINT')
             value=1.0 if ob.name in info['object_names'] else 0.0
-            attr.data.foreach_set('value',np.full(len(ob.data.vertices),value,dtype=np.float32))
+            values=np.full(len(ob.data.vertices),value,dtype=np.float32)
+            if cfg.get('profile_region_fade') and 'body' in ob.name:
+                start,end=cfg['profile_region_fade'];ring=np.arange(len(values))//96;t=np.clip((ring-start)/(end-start),0,1);values*=1-t*t*(3-2*t)
+            attr.data.foreach_set('value',values)
     for ob in objects:
         uv=ob.data.uv_layers.get('Response pigment') or ob.data.uv_layers.new(name='Response pigment');coords=[]
         for v in ob.data.vertices:
@@ -73,7 +77,12 @@ def main(cfg):
     mix=n.new('ShaderNodeMixRGB');mix.name='Measured pigment with bounded confidence';l.new(factor,mix.inputs[0]);l.new(previous,mix.inputs[1]);l.new(a.outputs['Color'],mix.inputs[2]);l.new(mix.outputs[0],bs.inputs['Base Color'])
     s['king_recovered_pigment_method']='Inverse local real-BSDF black/white response, confidence-masked; live specular/coat and all lights retained.'
     rendercfg=dict(cfg);rendercfg.update(source=(out/'prepared.blend').relative_to(ROOT).as_posix(),original_source=info['source'],original_source_sha256=digest,reference_sha256=hashlib.sha256((ROOT/'assets/king/reference.png').read_bytes()).hexdigest(),reference_pixel_500_700=list(map(float,raw[700,500])),pigment_bounds=[.001,.8],confidence_mean_foreground=float(reliability[white[:,:,3]>.99].mean()),fraction_foreground_over_half_confidence=float((reliability[white[:,:,3]>.99]>.5).mean()),limitation='Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.')
-    bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'prepared.blend'));run(rendercfg)
+    if s.get('king_render_regions'):regenerate(s)
+    bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'prepared.blend'))
+    if s.get('king_render_regions'):
+        from base_reflection_trial import main as render_regions_trial
+        rendercfg['source_sha256']=hashlib.sha256((out/'prepared.blend').read_bytes()).hexdigest();render_regions_trial(rendercfg)
+    else:run(rendercfg)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('config');args=p.parse_args(sys.argv[sys.argv.index('--')+1:]);main(json.loads(Path(args.config).read_text(encoding='utf-8')))

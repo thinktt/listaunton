@@ -1,0 +1,50 @@
+{
+  "variant": "032-reflections-after-foot-correction",
+  "source": "build/king-mission/031-narrower-foot-groove/king.blend",
+  "source_sha256": "38cc4cac05df6a0c3fcb39020145d4289680f86a6ce12553fa528ae543c266f3",
+  "samples": 128,
+  "confine_existing": true,
+  "reflectors": [
+    {
+      "name": "Base upper reflection",
+      "pixel": [
+        570,
+        850
+      ],
+      "energy": 500,
+      "degrees": 9,
+      "radius": 0.45,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower reflection",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 500,
+      "degrees": 10,
+      "radius": 0.65,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Foot left reflection",
+      "pixel": [
+        435,
+        1052
+      ],
+      "energy": 450,
+      "degrees": 16,
+      "radius": 0.75,
+      "receivers": [
+        "foot"
+      ]
+    }
+  ],
+  "hypothesis": "Use the corrected noncrossing groove, partition by lathe profile rather than height, and aim the foot reflector at its actual upward-facing lip.",
+  "profile_sections": true
+}

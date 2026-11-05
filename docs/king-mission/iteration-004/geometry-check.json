@@ -1,0 +1,17 @@
+{
+  "before": "models/king/king-rebuilt.blend",
+  "after": "build/king-mission/039-base-atlas/king.blend",
+  "cameraAndFramingExact": true,
+  "atlasUvsExact": true,
+  "topologyExact": true,
+  "allRadiiExact": true,
+  "crossExact": true,
+  "onlyChangedBodyRingHeights": {
+    "4": 0.02,
+    "5": 0.055,
+    "6": 0.03,
+    "8": -0.04,
+    "9": 0.02
+  },
+  "maxExpectedPositionError": 1.0728836041806744e-08
+}

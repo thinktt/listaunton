@@ -1,0 +1,187 @@
+{
+  "variant": "034-focused-base-glint-shapes",
+  "source": "build/king-mission/033-fitted-base-reflections/king.blend",
+  "source_sha256": "e89fea4b79393120aa28b22a101827df08f478e78bf0f850eaaced7529b0552c",
+  "samples": 128,
+  "existing_light_power": {
+    "Base upper reflection": 0,
+    "Base lower reflection": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base upper focused",
+      "pixel": [
+        569,
+        850
+      ],
+      "energy": 600,
+      "degrees": 3,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower left focused",
+      "pixel": [
+        584,
+        976
+      ],
+      "energy": 400,
+      "degrees": 2.8,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower center focused",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 600,
+      "degrees": 3,
+      "radius": 0.3,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower right focused",
+      "pixel": [
+        618,
+        954
+      ],
+      "energy": 400,
+      "degrees": 2.8,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ]
+    }
+  ],
+  "hypothesis": "Replace the broad base patches with a narrow upper glint and three overlapping focused lights along the reference lower diagonal glint; retain foot and upper-body lighting.",
+  "original_source_sha256": "e89fea4b79393120aa28b22a101827df08f478e78bf0f850eaaced7529b0552c",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Base upper focused",
+      "pixel": [
+        569,
+        850
+      ],
+      "energy": 600,
+      "degrees": 3,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.23660512268543243,
+        -0.5361618995666504,
+        0.8559703826904297
+      ],
+      "normal": [
+        0.2793644368648529,
+        -0.632286012172699,
+        0.7226133346557617
+      ],
+      "position": [
+        3.4423277378082275,
+        -4.2649688720703125,
+        4.293898105621338
+      ]
+    },
+    {
+      "name": "Base lower left focused",
+      "pixel": [
+        584,
+        976
+      ],
+      "energy": 400,
+      "degrees": 2.8,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.2937091290950775,
+        -0.8790521621704102,
+        0.5630722045898438
+      ],
+      "normal": [
+        0.2299789935350418,
+        -0.6882758736610413,
+        0.6880305409431458
+      ],
+      "position": [
+        2.9463419914245605,
+        -5.291080951690674,
+        3.6448802947998047
+      ]
+    },
+    {
+      "name": "Base lower center focused",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 600,
+      "degrees": 3,
+      "radius": 0.3,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.36128371953964233,
+        -0.8420815467834473,
+        0.5738525390625
+      ],
+      "normal": [
+        0.28339648246765137,
+        -0.6605252623558044,
+        0.6952646374702454
+      ],
+      "position": [
+        3.5944786071777344,
+        -4.851126670837402,
+        3.6518402099609375
+      ]
+    },
+    {
+      "name": "Base lower right focused",
+      "pixel": [
+        618,
+        954
+      ],
+      "energy": 400,
+      "degrees": 2.8,
+      "radius": 0.25,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.4145168960094452,
+        -0.7999787330627441,
+        0.5895299911499023
+      ],
+      "normal": [
+        0.32893797755241394,
+        -0.6346087455749512,
+        0.6993366479873657
+      ],
+      "position": [
+        4.120155334472656,
+        -4.422429084777832,
+        3.6137807369232178
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "ff408312f9c63759f81031c5323f34b35a5347bdfc23514708a1dc689de547c0"
+}

@@ -10,7 +10,9 @@ def main(cfg):
     source=ROOT/cfg['source']
     if cfg.get('source_sha256'):assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['source_sha256']
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
-    s=bpy.context.scene;objects=meshes(s);body=next(ob for ob in objects if 'body' in ob.name);cross=next(ob for ob in objects if 'cross' in ob.name)
+    s=bpy.context.scene
+    assert not s.get('king_render_regions'), 'Use bake_registered_pigment.py for receiver-bearing scenes; do not render stale receiver UVs.'
+    objects=meshes(s);body=next(ob for ob in objects if 'body' in ob.name);cross=next(ob for ob in objects if 'cross' in ob.name)
     preserved_body=None
     if cfg.get('preserve_previous_atlas_uv'):
         previous_image=bpy.data.images[s.get('king_pigment_image','King pigment atlas')]

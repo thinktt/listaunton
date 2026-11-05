@@ -1,0 +1,10 @@
+{
+  "source_sha256": "bf7083119b25a3add7a0d342e658d34aa0e334b5de05e6458597dc7006b89de9",
+  "source": "build/king-mission/038-fitted-finer-base/king.blend",
+  "texture": "assets/king/materials/king-pigment-atlas-v5.png",
+  "neutral": true,
+  "hypothesis": "Package the improved base pigment using unchanged UVs, preserving cross and upper-body atlas bytes, actual BSDF finish and lights.",
+  "variant": "039-base-atlas",
+  "samples": 128,
+  "profile": true
+}

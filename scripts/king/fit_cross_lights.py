@@ -16,7 +16,8 @@ def main(cfg):
     out=ROOT/'build/king-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True)
     s.cycles.samples=96;s.cycles.use_denoising=True;s.render.use_persistent_data=True
     s.render.use_border=True;s.render.use_crop_to_border=False;w=s.render.resolution_x;h=s.render.resolution_y
-    s.render.border_min_x=350/w;s.render.border_max_x=660/w;s.render.border_min_y=1-235/h;s.render.border_max_y=1
+    x0,y0,x1,y1=cfg.get('render_bounds',[350,0,660,235])
+    s.render.border_min_x=x0/w;s.render.border_max_x=x1/w;s.render.border_min_y=1-y1/h;s.render.border_max_y=1-y0/h
     s.render.image_settings.file_format='OPEN_EXR';s.render.image_settings.color_mode='RGBA';s.render.image_settings.color_depth='32'
     def capture(name):
         s.render.filepath=str(out/(name+'.exr'));bpy.ops.render.render(write_still=True)
@@ -31,7 +32,8 @@ def main(cfg):
     transform=ocio.DisplayViewTransform(src=ocio.ROLE_SCENE_LINEAR,display='sRGB',view='AgX');transform.setDirection(ocio.TRANSFORM_DIR_INVERSE)
     assert s.view_settings.look=='None' and s.view_settings.exposure==0 and s.view_settings.gamma==1
     color.getProcessor(transform).getDefaultCPUProcessor().applyRGB(target)
-    mask=np.zeros((h,w),dtype=bool);mask[6:155,400:615]=True;mask&=(base[:,:,3]>.99)&(a[:,:,3]>.8)
+    x0,y0,x1,y1=cfg.get('fit_bounds',[400,6,615,155])
+    mask=np.zeros((h,w),dtype=bool);mask[y0:y1,x0:x1]=True;mask&=(base[:,:,3]>.99)&(a[:,:,3]>.8)
     weights=np.sqrt(1+3*np.clip((display.min(2)-.15)/.25,0,1))
     A=np.stack([(v[mask]*weights[mask,None]).reshape(-1) for v in responses],axis=1).astype(float)
     b=((target[:,:,:3]-base[:,:,:3])[mask]*weights[mask,None]).reshape(-1).astype(float)
@@ -49,7 +51,11 @@ def main(cfg):
     bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'prepared.blend'))
     rendercfg={k:v for k,v in cfg.items() if k!='source_sha256'};rendercfg.update(source=(out/'prepared.blend').relative_to(ROOT).as_posix(),original_source=cfg['source'],original_source_sha256=digest,light_fit=report)
     # mission_trial interprets a 'lights' list as a complete light replacement.
-    rendercfg['fitted_lights']=rendercfg.pop('lights');run(rendercfg)
+    rendercfg['fitted_lights']=rendercfg.pop('lights')
+    if s.get('king_render_regions'):
+        from base_reflection_trial import main as render_regions_trial
+        rendercfg['source_sha256']=hashlib.sha256((out/'prepared.blend').read_bytes()).hexdigest();render_regions_trial(rendercfg)
+    else:run(rendercfg)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('config');a=p.parse_args(sys.argv[sys.argv.index('--')+1:]);main(json.loads(Path(a.config).read_text(encoding='utf-8')))

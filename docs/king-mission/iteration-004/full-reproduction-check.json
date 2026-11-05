@@ -1,0 +1,19 @@
+{
+  "source": "history/king-mission-003/king-rebuilt.blend",
+  "full_chain_executed": true,
+  "maximum_channel_error_255": 3,
+  "mean_foreground_rgb_error_255": 0.0012480097113613782,
+  "pixels_over_one": 6,
+  "pixels_over_four": 0,
+  "alpha_identical": true,
+  "maximum_error_pixel_xy": [
+    629,
+    937
+  ],
+  "atlas_identical": false,
+  "atlas_max_error_255": 1,
+  "atlas_changed_pixels": 123,
+  "cross_atlas_identical": true,
+  "upper_body_atlas_identical": true,
+  "assessment": "Inspected localized differences around the lower base reflection: six pixels above 1/255, maximum 3/255, no shape difference. Independent measured light fits and 123 base-atlas pixels quantize slightly differently. Accepted as subvisual numerical variation, not bit-exact reproduction."
+}

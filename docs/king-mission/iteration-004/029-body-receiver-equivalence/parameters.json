@@ -1,0 +1,34 @@
+{
+  "variant": "029-body-receiver-equivalence",
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "samples": 128,
+  "hypothesis": "Partition only the evaluated body into exact foot/flare/upper-body light receivers, preserving all original light links and powers. Verify equivalence before changing lighting.",
+  "original_source_sha256": "db6167327c1ba4e0073059182bc5aa984dd1e744115557a90bb6cded2766a2b3",
+  "receiver_partitions": [
+    {
+      "name": "foot",
+      "faces": 2784,
+      "triangles": 5568,
+      "vertices": 2881,
+      "custom_normals": true
+    },
+    {
+      "name": "flare",
+      "faces": 4800,
+      "triangles": 9600,
+      "vertices": 4992,
+      "custom_normals": true
+    },
+    {
+      "name": "upper-body",
+      "faces": 26016,
+      "triangles": 52032,
+      "vertices": 26113,
+      "custom_normals": true
+    }
+  ],
+  "reflector_probes": [],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "d9cb841322caa6ea6b1e7f76944e7068c8e10df6fdf1d8d7985c3eaa59bf70c1"
+}

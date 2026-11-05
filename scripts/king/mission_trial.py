@@ -19,7 +19,8 @@ def gpu(scene):
     except Exception as exc: print('CPU fallback:',exc)
 
 def meshes(scene):
-    return [ob for ob in scene.objects if ob.type=='MESH' and not ob.hide_render]
+    from render_regions import controls
+    return controls(scene)
 
 def procedural_material(cfg):
     mat=bpy.data.materials.new('King walnut - turned grain')
@@ -78,6 +79,9 @@ def run(cfg):
         mat.node_tree.links.new(bump.outputs['Normal'],bs.inputs['Coat Normal'])
         bump.inputs['Strength'].default_value=cfg.get('relief_strength',.1)
         bump.inputs['Distance'].default_value=cfg.get('relief_distance',.002)
+    if scene.get('king_render_regions') and (cfg.get('profile_offsets') or cfg.get('procedural')):
+        from render_regions import regenerate
+        regenerate(scene)
     if cfg.get('lights'):lights(scene,cfg)
     out=ROOT/'build/king-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True)
     scene.render.engine='CYCLES';scene.cycles.samples=cfg.get('samples',48);scene.cycles.use_denoising=True
@@ -94,9 +98,10 @@ def run(cfg):
         old=[ob.data.materials[0] for ob in objects]
         clay=bpy.data.materials.new('King mission inspection clay');clay.use_nodes=True
         bs=clay.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.24,.26,.29,1);bs.inputs['Roughness'].default_value=.32
-        for ob in objects:ob.data.materials[0]=clay
+        from render_regions import assign_material
+        for ob in objects:assign_material(scene,ob,clay)
         scene.render.filepath=str(out/'neutral.png');bpy.ops.render.render(write_still=True)
-        for ob,mat in zip(objects,old):ob.data.materials[0]=mat
+        for ob,mat in zip(objects,old):assign_material(scene,ob,mat)
     if cfg.get('profile',True):
         camera=scene.camera;camera.data.shift_x=0;camera.data.shift_y=0;camera.data.sensor_fit='VERTICAL';camera.data.ortho_scale=6
         camera.location=(0,-16,2.65);camera.rotation_euler=(Vector((0,0,2.65))-camera.location).to_track_quat('-Z','Y').to_euler()

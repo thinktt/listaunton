@@ -1,0 +1,165 @@
+{
+  "variant": "032-reflections-after-foot-correction",
+  "source": "build/king-mission/031-narrower-foot-groove/king.blend",
+  "source_sha256": "38cc4cac05df6a0c3fcb39020145d4289680f86a6ce12553fa528ae543c266f3",
+  "samples": 128,
+  "confine_existing": true,
+  "reflectors": [
+    {
+      "name": "Base upper reflection",
+      "pixel": [
+        570,
+        850
+      ],
+      "energy": 500,
+      "degrees": 9,
+      "radius": 0.45,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Base lower reflection",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 500,
+      "degrees": 10,
+      "radius": 0.65,
+      "receivers": [
+        "flare"
+      ]
+    },
+    {
+      "name": "Foot left reflection",
+      "pixel": [
+        435,
+        1052
+      ],
+      "energy": 450,
+      "degrees": 16,
+      "radius": 0.75,
+      "receivers": [
+        "foot"
+      ]
+    }
+  ],
+  "hypothesis": "Use the corrected noncrossing groove, partition by lathe profile rather than height, and aim the foot reflector at its actual upward-facing lip.",
+  "profile_sections": true,
+  "original_source_sha256": "38cc4cac05df6a0c3fcb39020145d4289680f86a6ce12553fa528ae543c266f3",
+  "receiver_partitions": [
+    {
+      "name": "foot",
+      "faces": 3168,
+      "triangles": 6336,
+      "vertices": 3265,
+      "custom_normals": true
+    },
+    {
+      "name": "flare",
+      "faces": 4608,
+      "triangles": 9216,
+      "vertices": 4800,
+      "custom_normals": true
+    },
+    {
+      "name": "upper-body",
+      "faces": 25824,
+      "triangles": 51648,
+      "vertices": 25921,
+      "custom_normals": true
+    }
+  ],
+  "reflector_probes": [
+    {
+      "name": "Base upper reflection",
+      "pixel": [
+        570,
+        850
+      ],
+      "energy": 500,
+      "degrees": 9,
+      "radius": 0.45,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.24017642438411713,
+        -0.5356221199035645,
+        0.8552751541137695
+      ],
+      "normal": [
+        0.2814956307411194,
+        -0.6264569163322449,
+        0.7268508076667786
+      ],
+      "position": [
+        3.4703609943389893,
+        -4.197554111480713,
+        4.34184455871582
+      ]
+    },
+    {
+      "name": "Base lower reflection",
+      "pixel": [
+        603,
+        966
+      ],
+      "energy": 500,
+      "degrees": 10,
+      "radius": 0.65,
+      "receivers": [
+        "flare"
+      ],
+      "receiver_hit": "King receiver flare",
+      "point": [
+        0.36128371953964233,
+        -0.8420815467834473,
+        0.5738525390625
+      ],
+      "normal": [
+        0.28339648246765137,
+        -0.6605252623558044,
+        0.6952646374702454
+      ],
+      "position": [
+        3.5944786071777344,
+        -4.851126670837402,
+        3.6518402099609375
+      ]
+    },
+    {
+      "name": "Foot left reflection",
+      "pixel": [
+        435,
+        1052
+      ],
+      "energy": 450,
+      "degrees": 16,
+      "radius": 0.75,
+      "receivers": [
+        "foot"
+      ],
+      "receiver_hit": "King receiver foot",
+      "point": [
+        -0.2362854927778244,
+        -0.9895319938659668,
+        0.24625778198242188
+      ],
+      "normal": [
+        -0.1029779240489006,
+        -0.42709946632385254,
+        0.8983215689659119
+      ],
+      "position": [
+        -1.4445874691009521,
+        -2.474235773086548,
+        5.932703495025635
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "2f944662314087068f0b05f97e1a70b9d0d269e5b4a9fc5b1ae3647ec8e7415d"
+}

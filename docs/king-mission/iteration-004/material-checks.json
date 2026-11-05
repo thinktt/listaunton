@@ -1,0 +1,49 @@
+{
+  "reopened": {
+    "maximum_channel_error_255": 1,
+    "mean_foreground_rgb_error_255": 3.824679994844996e-05,
+    "pixels_over_one": 0,
+    "pixels_over_four": 0,
+    "alpha_identical": true
+  },
+  "final_atlas_vs_unbaked": {
+    "maximum_channel_error_255": 15,
+    "mean_foreground_rgb_error_255": 0.10495088196289229,
+    "pixels_over_one": 5704,
+    "pixels_over_four": 91,
+    "alpha_identical": true
+  },
+  "texture": {
+    "source_sha256": "7814db35b825e990b6dfd9f529b3ee0ed45680893e9716bc9c6a85a3c109377a",
+    "source": "build/king-mission/039-base-atlas/prepared.blend",
+    "texture": "assets/king/materials/king-pigment-atlas-v5.png",
+    "neutral": true,
+    "hypothesis": "Package the improved base pigment using unchanged UVs, preserving cross and upper-body atlas bytes, actual BSDF finish and lights.",
+    "variant": "039-base-atlas",
+    "samples": 128,
+    "profile": true,
+    "original_source": "build/king-mission/038-fitted-finer-base/king.blend",
+    "original_source_sha256": "bf7083119b25a3add7a0d342e658d34aa0e334b5de05e6458597dc7006b89de9",
+    "atlas_sha256": "4ae543aaed7327165962a4f7167d42f23f5b39d9d72340db8691efcf5abb0ae6",
+    "packed_pixel_roundtrip_max_error": 0.0,
+    "upper_body_preserved_from_row": 755,
+    "cross_atlas_max_error": 0.0,
+    "upper_body_atlas_max_error": 0.0,
+    "atlas_bakes_lighting": false,
+    "model_sha256": "a8420d9101f555daadc52a8ae983b0b15cd9ea653097afdeaa0f5fc30972aad6",
+    "elevation_degrees": 54.000000800055794
+  },
+  "upper_body_mean_rgb_change_from_checkpoint003_255": 0.633597158210658,
+  "cross_texture_bytes_exact": true,
+  "upper_texture_bytes_exact": true,
+  "atlas_max_difference_pixel_xy": [
+    453,
+    931
+  ],
+  "atlas_filtering_crop": [
+    383,
+    861,
+    523,
+    1001
+  ]
+}
