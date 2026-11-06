@@ -1,0 +1,26 @@
+{
+  "trial": "018-carved-muzzle",
+  "model_sha256": "790f8c70f8eb76a3f78baa1ce51dbf4e91ccc6b9d1ae0039d4aaa1e72d439675",
+  "render_sha256": "8cb9485529317287d68327bc409c245a71f9f1ea27454e20ec67d649574be1df",
+  "previous_render_sha256": "92bb7b50dfd5479a7c6faaaf9665984b26621052e437b1315f7d0bc9bfad642b",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9621773123762924,
+      "previous_iou": 0.9581093988125358
+    },
+    "selected": {
+      "iou": 0.9557038366241035,
+      "previous_iou": 0.9529506885881343
+    },
+    "white_mirrored": {
+      "iou": 0.9544019277909344,
+      "previous_iou": 0.950869059350105
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

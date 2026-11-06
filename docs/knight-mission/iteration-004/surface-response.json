@@ -1,0 +1,45 @@
+{
+  "source_sha256": "72fd12b19fa0a424e2c3183dd6f42560bdbb7afbfe2dae9b7884b3dddd817742",
+  "texture_sha256": "553d8670f7ee06eba8a9c5f9d89237a33decad911bcfb325fd2308f44b797690",
+  "samples": 128,
+  "dim_gain": 0.42,
+  "objects": [
+    {
+      "file": "surface-0.npz",
+      "object": "Knight | turned pedestal",
+      "triangles": 62464
+    },
+    {
+      "file": "surface-1.npz",
+      "object": "Knight | swept rounded mane",
+      "triangles": 25600
+    },
+    {
+      "file": "surface-2.npz",
+      "object": "Knight | near swept ear",
+      "triangles": 13312
+    },
+    {
+      "file": "surface-3.npz",
+      "object": "Knight | near eye",
+      "triangles": 960
+    },
+    {
+      "file": "surface-4.npz",
+      "object": "Knight | far swept ear",
+      "triangles": 13312
+    },
+    {
+      "file": "surface-5.npz",
+      "object": "Knight | far eye",
+      "triangles": 960
+    },
+    {
+      "file": "surface-6.npz",
+      "object": "Knight | continuous horse head and neck",
+      "triangles": 86994
+    }
+  ],
+  "camera": "fixed 54 degrees, same registration",
+  "method": "Measured full and reduced actual Principled base color with unchanged material normals, finish, lights and camera. Measured camera Z for visible-surface rejection."
+}

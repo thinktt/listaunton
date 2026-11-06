@@ -1,0 +1,18 @@
+{
+  "source_sha256": "bfe004b7e1653b52fc6f577e68b27b9da88421babf639883e84441318a48416f",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "advance_lift_underdrop_width": [
+    0.027999999999999997,
+    0.09200000000000001,
+    0.09800000000000002,
+    0.0
+  ],
+  "original_weight": 0.83,
+  "initial_boundary_loss": 6.090124999999988,
+  "proxy_boundary_loss": 1.9496510767638668,
+  "method": "Fit only the conical muzzle and lower jaw envelope. Keep the ears, eye, neck, pedestal, maximum height and saved camera."
+}

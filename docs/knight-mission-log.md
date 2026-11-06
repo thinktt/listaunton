@@ -125,3 +125,28 @@ Mean absolute RGB error over the common opaque foreground fell from 16.64 to 14.
 The actual reopened scene rendered both registered views at 144 Cycles samples. The delivered fixed and side alpha match the selected trial exactly, with foreground mean RGB deltas of 0.000051/255 and 0.000036/255. Both eyes and all nine connected mesh shells passed validation. The browser now loads the evaluated varnish coverage for every exported vertex and uses the same pigment and grain relief distance. Its preview lighting is approximate. Headless Microsoft Edge with ANGLE SwiftShader compiled and drew the shader, switched wood and neutral, changed camera presets, orbited on drag and opened both comparisons.
 
 Accepted model SHA-256 `bfe004b7e1653b52fc6f577e68b27b9da88421babf639883e84441318a48416f`. [Four-view comparison](knight-mission/iteration-003/comparison.png), [registered side comparison](knight-mission/iteration-003/side-study.png), [trial scores](knight-mission/iteration-003/scores.json) and [browser views](knight-mission/iteration-003/browser-views.png). Next examine the carved nostril, mouth opening and dark lower eye against both originals.
+
+
+## Checkpoint 004 | Conical muzzle, nostrils and inset eyes
+
+Recorded 2026-11-05 from local commit `786501b`.
+
+The previous muzzle was too blunt at the front and its lower jaw receded too soon. Both original colors show a curved nostril near the end of the snout. The chosen high-resolution image also resolves a shallow crease extending back from that cut. A fit weighted 83% toward the black original advanced the tip by 0.028 model units, raised it by 0.092 and lowered the rear underside by up to 0.098. The second cut reduced the nostril depth to 0.054 and the mouth depth to 0.014. Both flanks of the editable skull and the continuous outer carving received the same change.
+
+The eyes and the deepest carved surfaces received a restrained walnut tone. For the reshaped face, two actual Cycles renders measured the response to a known change in diffuse pigment. A neutral reflection term separates glare from a bounded wood-color estimate. Camera depth and the surface normals determine which existing pigment texels can receive that estimate. This adjustment is attached to the three-dimensional surface. All other components retain their former tone from trial 020.
+
+| Trial | Outline | Form | Wood color | Grain | Lighting | Mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 017-fitted-varnish | 95.30 | 77 | 80 | 71 | 56 | 75.86 |
+| 018-carved-muzzle | 95.57 | 78 | 79 | 71 | 55 | 75.71 |
+| 019-fine-nostril | 95.57 | 80 | 79 | 71 | 56 | 76.31 |
+| 020-dark-carved-wood | 95.57 | 80 | 81 | 71 | 56 | 76.71 |
+| 021-registered-muzzle | 95.57 | 80 | 83 | 73 | 56 | 77.51 |
+
+The working mean is **77.51%**. Original black outline overlap is 96.22%, selected black is 95.57% and mirrored white is 95.44%. The other four categories are visual assessments. The independent holistic estimate is 73–79%.
+
+On the common opaque area, selected-reference RGB error fell from 10.36 to 8.91 on the muzzle, 17.51 to 16.14 around the nostril and 26.90 to 21.46 around the eye. The whole foreground improved from 14.19 to 13.92 on a 0–255 scale. The later grading pass changed sampled triangle centers only on the continuous head and neck. The outer silhouette now follows the original more closely, though the modeled eye remains short and the nostril still has pinpoints of reflected light where the source shows a lower crescent. The large forehead and swept ear still miss the original glints.
+
+The delivered 144-sample fixed and side renders reproduce the selected reopened trial with identical alpha and mean foreground RGB differences of 0.000038 and 0.000032 on the 0–255 scale. All nine closed shells passed validation and both eyes meet their sockets. The camera, maximum height and floor match checkpoint 003. The live viewer contains the actual pigment UVs, atlas and varnish coverage. Its lights are approximate. The Node interaction checks and headless Edge/ANGLE SwiftShader tests passed. Accepted scene SHA-256 `2a661dbd11c46d1929d4e7a901924213e1ecf3683aff001fde523a6073833c88`.
+
+Next, trace the forehead and swept ear reflections on the actual carving and compare the deep cheek crease with the black and mirrored white originals. [Trial decisions](knight-mission/iteration-004/scores.json) and [registered comparisons](knight-mission/iteration-004/comparison.png).

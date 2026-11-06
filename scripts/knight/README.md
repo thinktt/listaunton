@@ -65,6 +65,17 @@ For a native browser check, run `node scripts/knight/check_native_viewer.cjs`
 with Playwright available. Set `LISTAUNTON_CHROMIUM_BINARY` to an installed
 Chrome or Edge executable when using a system browser.
 
+Checkpoint 004 uses the scene and mesh from `786501b`. Run
+`fit_muzzle_profile.py` with ordinary Python to generate the nose fit. In
+Blender, `carve_muzzle.py` applies that envelope and the paired nostrils.
+The retained trial uses depth 0.054, mouth depth 0.014, width 0.024, lip
+size 0.013 and cut slope 0.84. Run `grade_muzzle_atlas.py` and
+`render_pigment_grade.py` for the dark eyes and recesses. Measure this
+scene with `capture_surface_response.py` in Blender. Then use
+`refit_face_pigment.py` and `render_pigment_grade.py` to produce the
+registered finish. Exact parameters, input hashes and the trial sequence
+are in `docs/knight-mission/iteration-004`.
+
 The standalone viewer embeds the actual pigment, UVs and local polish. Its real-time
 lighting is an approximation. Its Front and Side presets retain the horse
 orientation, and the side comparison uses the saved 7-degree camera and

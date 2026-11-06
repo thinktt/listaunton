@@ -1,0 +1,58 @@
+[
+  {
+    "variant": "018-carved-muzzle",
+    "silhouette": 95.57038366241035,
+    "form": 78,
+    "color": 79,
+    "grain": 71,
+    "lighting": 55,
+    "working_mean": 75.71407673248207,
+    "original_iou": 0.9621773123762924,
+    "mirrored_white_iou": 0.9544019277909344,
+    "decision": "Closer nose envelope. Reject the tall raised lip and long glossy smile visible in profile.",
+    "blend_sha256": "790f8c70f8eb76a3f78baa1ce51dbf4e91ccc6b9d1ae0039d4aaa1e72d439675",
+    "render_sha256": "8cb9485529317287d68327bc409c245a71f9f1ea27454e20ec67d649574be1df"
+  },
+  {
+    "variant": "019-fine-nostril",
+    "silhouette": 95.57212673985056,
+    "form": 80,
+    "color": 79,
+    "grain": 71,
+    "lighting": 56,
+    "working_mean": 76.31442534797011,
+    "original_iou": 0.9621949393621799,
+    "mirrored_white_iou": 0.9544193279380823,
+    "decision": "A narrower, shallower cut gives the muzzle a credible nostril from both cameras.",
+    "blend_sha256": "818e0fb1766e043407ad7da30fd16f47e8dd71df2255be1d974cdf33c8804f8d",
+    "render_sha256": "e4970da47d75e37a07cde52d94003cfdf22dd72063a621e05ea2b8a9c0de278e"
+  },
+  {
+    "variant": "020-dark-carved-wood",
+    "silhouette": 95.57212673985056,
+    "form": 80,
+    "color": 81,
+    "grain": 71,
+    "lighting": 56,
+    "working_mean": 76.7144253479701,
+    "original_iou": 0.9621949393621799,
+    "mirrored_white_iou": 0.9544193279380823,
+    "decision": "Darker walnut helps the eyes and recesses. The face pigment is still displaced after the shape change.",
+    "blend_sha256": "72fd12b19fa0a424e2c3183dd6f42560bdbb7afbfe2dae9b7884b3dddd817742",
+    "render_sha256": "726669c6e9f6402ec72a38e81335bff11dd6a6f9d26e8cd61a730193993879c0"
+  },
+  {
+    "variant": "021-registered-muzzle",
+    "silhouette": 95.57212673985056,
+    "form": 80,
+    "color": 83,
+    "grain": 73,
+    "lighting": 56,
+    "working_mean": 77.5144253479701,
+    "original_iou": 0.9621949393621799,
+    "mirrored_white_iou": 0.9544193279380823,
+    "decision": "Accept. Bounded diffuse measurements improve the wood grain and color on the actual reshaped face. The eye and snout read more clearly in profile and in the elevated originals.",
+    "blend_sha256": "5cd298a819a3dafa601eee074af51660e0a680f6120ac125a96950c50c38e2d1",
+    "render_sha256": "2a193b192d577b998cc8dcb384b86620871f8acde7f4862a418464ed79219427"
+  }
+]

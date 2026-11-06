@@ -1,0 +1,12 @@
+{
+  "source_sha256": "818e0fb1766e043407ad7da30fd16f47e8dd71df2255be1d974cdf33c8804f8d",
+  "previous_texture_sha256": "bdb41d2890358acc5a41cca7ec21ba67a0c634c501faa3b362053daae9d70331",
+  "pigment_sha256": "553d8670f7ee06eba8a9c5f9d89237a33decad911bcfb325fd2308f44b797690",
+  "eye_linear_gain": 0.38,
+  "deepest_nostril_gain": 0.39,
+  "deepest_mouth_gain": 0.78,
+  "changed_texels": 40409,
+  "method": "Multiply linear walnut reflectance on the two eye UV islands and inside the actual bilateral incisions; protect unaffected surfaces and the original pigment atlas.",
+  "samples": 144,
+  "reopened_packed_bytes_match": true
+}

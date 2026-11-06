@@ -1,0 +1,30 @@
+{
+  "source_sha256": "2a661dbd11c46d1929d4e7a901924213e1ecf3683aff001fde523a6073833c88",
+  "prior_sha256": "bfe004b7e1653b52fc6f577e68b27b9da88421babf639883e84441318a48416f",
+  "fixed": {
+    "alpha_equal": true,
+    "mean_rgb_foreground_255": 3.75297702366607e-05,
+    "maximum": 1
+  },
+  "side": {
+    "alpha_equal": true,
+    "mean_rgb_foreground_255": 3.2262953575860707e-05,
+    "maximum": 1
+  },
+  "geometry_changed": [
+    "Knight | continuous horse head and neck"
+  ],
+  "preserved_bounds_z": [
+    0.03999996557831764,
+    5.142221927642822
+  ],
+  "camera_matches_previous": true,
+  "source_references": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+    "concepts/side-01.png": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e"
+  },
+  "selected_reference_sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+  "texture_sha256": "2ccc6408b20f2871355b9caba494d402b79d65212765e9fc29293032f5084417"
+}

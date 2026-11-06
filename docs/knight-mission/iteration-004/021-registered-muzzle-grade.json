@@ -1,0 +1,14 @@
+{
+  "source_sha256": "72fd12b19fa0a424e2c3183dd6f42560bdbb7afbfe2dae9b7884b3dddd817742",
+  "previous_texture_sha256": "553d8670f7ee06eba8a9c5f9d89237a33decad911bcfb325fd2308f44b797690",
+  "pigment_sha256": "2ccc6408b20f2871355b9caba494d402b79d65212765e9fc29293032f5084417",
+  "changed_texels": 145253,
+  "visible_samples": 165466,
+  "gain_quantiles_05_50_95": [
+    0.6452554225921631,
+    0.9882432222366333,
+    1.3595584630966187
+  ],
+  "receiver": "Knight | continuous horse head and neck",
+  "method": "Use measured diffuse response and a separate neutral-reflection component; refit bounded warm pigment on the visible actual face UVs. Preserve the existing wood hue, hidden surfaces, eyes, pedestal and other components."
+}
