@@ -116,6 +116,8 @@ def attach_coverage(scene,objects,field,material,cover,region="all"):
                 weight*=np.clip((x-425)/60,0,1)*np.clip((555-y)/32,0,1)*np.clip((y-309)/47,0,1)
             elif not obj.name.endswith("swept ear"):
                 weight.fill(0)
+        elif region=="pedestal" and not obj.name.endswith("turned pedestal"):
+            weight.fill(0)
         values=previous+(field[y,x]-previous)*weight
         if attr is None:attr=obj.data.attributes.new(ATTRIBUTE,"FLOAT","POINT")
         attr.data.foreach_set("value",values.astype(np.float32))
@@ -132,7 +134,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument("--source",type=Path,required=True)
     p.add_argument("--variant",required=True);p.add_argument("--radius",type=int,default=5)
     p.add_argument("--samples",type=int,default=144)
-    p.add_argument("--region",choices=["all","head"],default="all")
+    p.add_argument("--region",choices=["all","head","pedestal"],default="all")
     args=p.parse_args(sys.argv[sys.argv.index("--")+1:])
     out=BUILD/args.variant;out.mkdir(parents=True,exist_ok=True)
     bpy.ops.wm.open_mainfile(filepath=str(args.source),load_ui=False)

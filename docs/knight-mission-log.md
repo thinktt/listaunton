@@ -177,3 +177,36 @@ The strongest ear patch remains broader and more forward than the reference. Its
 The delivered 144-sample fixed and side renders reproduce the selected reopened trial with identical alpha and mean foreground RGB differences of 0.000051 and 0.000035 on the 0–255 scale. All nine closed shells passed validation and both eyes meet their sockets. The camera, maximum height and floor match checkpoint 004. The live viewer contains the actual pigment UVs, atlas and varnish coverage. Its lights are approximate. The Node interaction checks and headless Edge/ANGLE SwiftShader tests passed. Accepted scene SHA-256 `95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1`.
 
 Next, fit the foot groove and upper collar against the original's curved edges, then verify the wood and lighting on those surfaces. At 54 degrees the front foot glint measures near row 1010 in the original and near row 1000 in the model. [Trial decisions](knight-mission/iteration-005/scores.json) and [registered comparisons](knight-mission/iteration-005/comparison.png).
+
+
+## Checkpoint 006 | Turned pedestal, foot groove and collar
+
+Recorded 2026-11-05 from local commit `0cf7b33`.
+
+The black original places the front foot glint at row 1010 and the selected image at 1013. Checkpoint 005 placed it at 1000. The black and selected collar arcs both reach row 869. The new foot has a shallower turned groove and a less pinched edge. A narrower upper bead replaces the rounded shoulder on the collar. Both edits use the original 31 radial control rings and retain the evaluated diameter and floor.
+
+The base was also left of the original. A fit weighted 81% toward the black original moved its turning axis by 0.03252 physical units in X, equivalent to 5.5 pixels across the 1254-pixel fixed image. The join follows rigidly through Z 1.76 and blends to zero displacement by Z 2.48. The reference camera remains fixed at 54 degrees. The independent side camera follows the physical foot center in X to retain the established side registration. The opaque side base still spans columns 343â€“904 and ends at row 1126.
+
+Mirror rays from the selected rim identified low front-left and right light directions. Broad cards added false pale patches to the flared barrel. Directed strips removed those patches. Two measured material responses adjusted local polish, and diffuse/neutral spectral separation guided wood-tone and grain correction only on visible pedestal UVs. A fresh neutral response for each card then fitted a shared warm spectrum and independent powers. The editable scene retains physical lights and a packed walnut material.
+
+| Trial | Outline | Form | Wood color | Grain | Lighting | Mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 027-focused-brow | 95.67 | 82 | 84 | 74 | 59 | 78.93 |
+| 028-shallow-foot | 95.69 | 83 | 84 | 74 | 58 | 78.94 |
+| 029-foot-and-collar | 95.69 | 84 | 84 | 74 | 58 | 79.14 |
+| 030-seated-pedestal | 96.28 | 85 | 83 | 73 | 58 | 79.06 |
+| 031-low-reflectors | 96.28 | 85 | 79 | 70 | 49 | 75.86 |
+| 032-directed-rim | 96.28 | 85 | 83 | 73 | 61 | 79.66 |
+| 033-turned-polish | 96.28 | 85 | 83 | 73 | 61 | 79.66 |
+| 034-turned-walnut | 96.28 | 85 | 86 | 76 | 61 | 80.86 |
+| 035-warm-turning | 96.28 | 85 | 86 | 76 | 62 | 81.06 |
+
+The working mean is **81.06%**. Original black outline overlap is 96.85%, selected black is 96.28% and mirrored white is 95.94%. The other four categories are visual assessments. The independent holistic estimate is 77â€“83%.
+
+The strongest front foot arc now measures at row 1010 and the collar arc at 870. Over the common opaque pixels, mean absolute RGB error fell from 18.42 to 13.80 in the front collar crop and from 10.15 to 7.35 at the foot. Across the full foreground it fell from 13.83 to 13.10 on a 0â€“255 scale. The shallow foot groove is still less broken and mottled than the selected wood. The collar reads slightly golden in parts of the front arc. The raised shoulder below the mane and the thin upper poll reflection remain more conspicuous whole-piece differences.
+
+The evaluated pedestal diameter differs by less than 0.000001 model units. The world-space mesh intersection test found 1,059 intersecting face pairs at the seat. The carving below Z 1.76 retains its prior position relative to the foot. Geometry at and above Z 2.48 retains its prior world coordinates.
+
+The delivered 144-sample fixed and side renders reproduce the selected reopened trial with identical alpha and mean foreground RGB differences of 0.000046 and 0.000039 on the 0–255 scale. All nine closed shells passed validation and both eyes meet their sockets. The camera, maximum height and floor match checkpoint 005. The live viewer contains the actual pigment UVs, atlas and varnish coverage. Its lights are approximate. The Node interaction checks and headless Edge/ANGLE SwiftShader tests passed. Accepted scene SHA-256 `92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3`.
+
+Next, compare the strongest remaining material and lighting discrepancies on the mane, eye and chest, using the fixed render and the original. Fit the physical carving and the light response of the most discrepant feature. [Trial decisions](knight-mission/iteration-006/scores.json) and [registered comparisons](knight-mission/iteration-006/comparison.png).

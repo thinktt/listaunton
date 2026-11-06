@@ -85,6 +85,19 @@ the skyline. Use `locate_head_glints.py` on its exported trial mesh, then
 `fit_brow_key.py`. The log records the rejected tall ear, retained settings,
 source images and actual comparison renders.
 
+Checkpoint 006 starts from `0cf7b33`. Use `turn_pedestal.py --collar` in
+Blender for the turned rings. With ordinary Python, `measure_pedestal_arcs.py`
+reads the registered front arcs and `fit_pedestal_center.py` estimates the
+physical axis. Apply it with `seat_pedestal.py`. The 7-degree side camera
+follows the new axis horizontally to retain the foot registration.
+Run the arc measurement with `--mesh` and `--landmarks` on that export to
+locate the target mirror rays for `fit_pedestal_lights.py --focused`.
+Use `fit_surface_polish.py --region pedestal` and the diffuse measurement and
+UV fitting steps with the same region. Finally run `fit_card_color.py` on
+the registered walnut. `verify_pedestal_seat.py` checks the original
+diameter, floor, mesh intersection, seat-relative coordinates and protected
+upper carving. The per-trial parameters are in `docs/knight-mission/iteration-006`.
+
 The standalone viewer embeds the actual pigment, UVs and local polish. Its real-time
 lighting is an approximation. Its Front and Side presets retain the horse
 orientation, and the side comparison uses the saved 7-degree camera and

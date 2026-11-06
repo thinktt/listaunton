@@ -1,0 +1,23 @@
+{
+  "source_sha256": "c6992db1ecee161be16260d6827496e572abab883f10c22897ff46130c2a95f0",
+  "samples": 112,
+  "center_fit": {
+    "screen_dx": 5.5,
+    "screen_dy": 0.945790475347815,
+    "world_x": 0.03251595380318414,
+    "scores": {
+      "original": 0.9684349114378086,
+      "selected": 0.9634562872040426,
+      "white_mirrored": 0.9599682669851853
+    },
+    "loss": 32.80255425414935
+  },
+  "carried_lower_vertices": {
+    "Knight | swept rounded mane": 128,
+    "Knight | continuous horse head and neck": 13497,
+    "Knight | curved neck and chest": 1216
+  },
+  "lower_seat_rigid_through_z": 1.76,
+  "carving_fixed_above_z": 2.48,
+  "method": "A small physical X offset fits the shared round pedestal to the visible original. The carving follows rigidly at the wood joint and tapers to its previous position above it. Keep the 54-degree camera, aperture size, base diameter, floor and high points."
+}

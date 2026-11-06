@@ -1,9 +1,9 @@
 {
   "guide": "assets/knight/concepts/side-01.png",
   "profile": "assets/knight/guide-render.png",
-  "source_blend_sha256": "95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1",
+  "source_blend_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
   "guide_sha256": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e",
-  "profile_sha256": "bce2d0fe81c8e45dd140067493772c7d9ebcac487f80d96d1614e72e4f22108f",
+  "profile_sha256": "71b078c51d634bfddffd4677e6b3534320896177abcc76fb83770c49eacb9f4c",
   "profile_size": [
     1254,
     1254
@@ -16,5 +16,6 @@
   "scale": 1,
   "offset_x": 0,
   "offset_y": 0,
-  "method": "Actual registered 7-degree side-camera render; shared 565px base width and projected foot at 1127px."
+  "physical_foot_center_x": 0.03251595380318414,
+  "method": "Actual registered 7-degree side-camera render. The camera follows the turned axis horizontally and preserves the shared 565px base width and projected foot at 1127px."
 }

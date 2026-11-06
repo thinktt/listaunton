@@ -79,7 +79,8 @@ def main():
                   "source_blend_sha256":sha(MODEL),"guide_sha256":sha(ASSETS/"concepts/side-01.png"),
                   "profile_sha256":sha(ASSETS/"guide-render.png"),"profile_size":[1254,1254],
                   "canvas":[1254,1254],"guide_top":0,"scale":1,"offset_x":0,"offset_y":0,
-                  "method":"Actual registered 7-degree side-camera render; shared 565px base width and projected foot at 1127px."}
+                  "physical_foot_center_x":float(scene.get("knight_foot_center_x",0.0)),
+                  "method":"Actual registered 7-degree side-camera render. The camera follows the turned axis horizontally and preserves the shared 565px base width and projected foot at 1127px."}
     json_file(ASSETS/"side-registration.json",registration)
     for obj in objects:obj.data.materials[0]=clay
     angles(scene)

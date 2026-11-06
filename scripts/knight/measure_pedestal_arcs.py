@@ -37,7 +37,10 @@ def strongest_arc(image,radii,fronts,band,orientations):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("out",type=Path);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument("out",type=Path)
+    p.add_argument("--mesh",type=Path,help="A candidate export on which to trace the measured bright arcs.")
+    p.add_argument("--landmarks",type=Path);args=p.parse_args()
+    if bool(args.mesh)!=bool(args.landmarks):p.error("--mesh and --landmarks must be used together")
     cam=json.loads((ASSETS/"camera.json").read_text())
     vp=np.reshape(cam["projectionMatrix"],(4,4))@np.reshape(cam["worldToCamera"],(4,4))
     sy=(1-vp[1,3])*627;scale=1254/cam["orthoScale"]
@@ -52,6 +55,22 @@ def main():
             report[name][source]={"center_x":cx,"radius_pixels":r,"front_y":front,"radius_world":r/scale,
                                   "height_world_at_bright_edge":float(z),"trimmed_log_contrast":score}
     args.out.parent.mkdir(exist_ok=True,parents=True);args.out.write_text(json.dumps(report,indent=2)+"\n")
+    if args.mesh:
+        from probe_reflections import surface_probe
+        probe,digest=surface_probe(args.mesh)
+        target=np.asarray(refs["selected"].convert("RGB"),dtype=float);features={}
+        for name,records in report.items():
+            d=records["selected"];rows=[]
+            for u in np.linspace(-.82,.82,15):
+                x=round(d["center_x"]+d["radius_pixels"]*u)
+                y=round(d["front_y"]-d["radius_pixels"]*np.sin(np.deg2rad(54))*(1-np.sqrt(1-u*u)))
+                band=np.arange(y-2,y+3);cy=int(band[target[band,x-2:x+3,1].mean(1).argmax()])
+                hit=probe(x,cy)
+                if hit and hit["part"].endswith("turned pedestal"):
+                    hit["reference_rgb"]=target[cy,x].tolist();rows.append(hit)
+            features[name]=rows
+        args.landmarks.parent.mkdir(exist_ok=True,parents=True)
+        args.landmarks.write_text(json.dumps({"source_sha256":digest,"features":features},indent=2)+"\n")
     print(json.dumps(report,indent=2))
 
 

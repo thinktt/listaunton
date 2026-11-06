@@ -1,0 +1,26 @@
+{
+  "trial": "029-foot-and-collar",
+  "model_sha256": "c6992db1ecee161be16260d6827496e572abab883f10c22897ff46130c2a95f0",
+  "render_sha256": "26f4ea4d0fe005de09ac960982a79509f974d75dfe473f1c1b991312b157c6de",
+  "previous_render_sha256": "21abfa6fbc704e5a41aa0058662d8ee43475ac543ad55ae8f12387176b8de1bd",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9634865640865796,
+      "previous_iou": 0.9637241813790931
+    },
+    "selected": {
+      "iou": 0.9568632814590605,
+      "previous_iou": 0.9567082950227483
+    },
+    "white_mirrored": {
+      "iou": 0.9571285045062183,
+      "previous_iou": 0.9559555452485863
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

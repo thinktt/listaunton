@@ -67,6 +67,7 @@ def use_side_camera(scene):
     framing = json.loads((ASSETS / "guide-camera.json").read_text())
     camera = scene.camera
     target = Vector(framing["target"])
+    target.x += float(scene.get("knight_foot_center_x",0.0))
     elevation = math.radians(framing["elevation"])
     camera.data.ortho_scale = framing["orthoScale"]
     camera.data.shift_x = framing["shiftX"]

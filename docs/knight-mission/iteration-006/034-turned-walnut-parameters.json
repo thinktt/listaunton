@@ -1,0 +1,19 @@
+{
+  "source_sha256": "07bef40f7e050c4c126a6d730bf18adb39021df9fd325d4f635b7d38ee3fa242",
+  "previous_texture_sha256": "f60dacf83084bbc84b28f84911445bd144eb1ebf913fcfd202baf52d36dfa2e8",
+  "pigment_sha256": "1cbe7f955a1395249a1432019ade0b87ab30cd3d1458d208487823da1f9af8c3",
+  "changed_texels": 457346,
+  "visible_samples": 469534,
+  "gain_quantiles_05_50_95": [
+    0.5904587060213089,
+    0.9871102273464203,
+    1.27380833029747
+  ],
+  "receivers": [
+    "Knight | turned pedestal"
+  ],
+  "region": "pedestal",
+  "method": "Use measured diffuse response and a separate neutral-reflection component. Refit bounded warm pigment on visible wood UVs while retaining the underlying hue and the hidden wood.",
+  "samples": 144,
+  "reopened_packed_bytes_match": true
+}

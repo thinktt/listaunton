@@ -1,0 +1,59 @@
+{
+  "source_sha256": "302e2b67c36101b8ab2f948e75cbae519e6f2fa22644a28da8f4178f7afa46d2",
+  "samples": 144,
+  "measured_samples": 192,
+  "prior_powers": [
+    8.319999694824219,
+    4.0,
+    0.47999998927116394
+  ],
+  "prior_colors": [
+    [
+      1.0,
+      0.8600000143051147,
+      0.7300000190734863
+    ],
+    [
+      1.0,
+      0.8600000143051147,
+      0.7300000190734863
+    ],
+    [
+      1.0,
+      0.9100000262260437,
+      0.8100000023841858
+    ]
+  ],
+  "original_loss": 0.04222048074007034,
+  "fitted_loss": 0.04129556939005852,
+  "cards": [
+    {
+      "name": "Walnut | left collar strip",
+      "watts": 7.529599666595459,
+      "color": [
+        1.0,
+        0.5473999977111816,
+        0.22196798026561737
+      ]
+    },
+    {
+      "name": "Walnut | right collar strip",
+      "watts": 3.799999952316284,
+      "color": [
+        1.0,
+        0.5473999977111816,
+        0.22196798026561737
+      ]
+    },
+    {
+      "name": "Knight | front foot reflector",
+      "watts": 0.10319999605417252,
+      "color": [
+        1.0,
+        0.9100000262260437,
+        0.8100000023841858
+      ]
+    }
+  ],
+  "method": "Measure neutral-light response for the three retained physical cards. Fit their nonnegative powers and a shared warm spectrum for the collar in the scene's real display transform."
+}

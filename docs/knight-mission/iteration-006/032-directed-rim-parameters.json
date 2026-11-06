@@ -1,0 +1,142 @@
+{
+  "source_sha256": "3ce632793b6babf6877fde68ccd278afbe612cf0ed20c132cf1bbbea551f64bd",
+  "samples": 144,
+  "basis_samples": 144,
+  "crop": [
+    199,
+    603,
+    784,
+    1064
+  ],
+  "lights": [
+    {
+      "name": "left collar strip",
+      "center": [
+        -0.13202017231424185,
+        -1.9080766663985724,
+        1.0399844681883181
+      ],
+      "normal": [
+        -0.14920065067191085,
+        -0.8331870552406629,
+        -0.5324833300850563
+      ],
+      "long_axis": [
+        0.9624764494514272,
+        0.0010732463681362482,
+        -0.2713631006485733
+      ],
+      "size": [
+        1.2303219535819743,
+        0.1903216689825058
+      ],
+      "target_pixels": [
+        [
+          400,
+          850
+        ],
+        [
+          424,
+          859
+        ],
+        [
+          448,
+          865
+        ],
+        [
+          472,
+          868
+        ],
+        [
+          496,
+          869
+        ]
+      ],
+      "spread": 16,
+      "color": [
+        1.0,
+        0.8600000143051147,
+        0.7300000190734863
+      ],
+      "watts": 8.319999694824219
+    },
+    {
+      "name": "right collar strip",
+      "center": [
+        1.256730515382863,
+        -1.1361802713758085,
+        0.8629535569138296
+      ],
+      "normal": [
+        0.5712748130422713,
+        -0.24811339545339164,
+        -0.7823585054053588
+      ],
+      "long_axis": [
+        0.6523589196573364,
+        0.7157101651410985,
+        0.24937281218531895
+      ],
+      "size": [
+        1.0678691774159748,
+        0.2199999988079071
+      ],
+      "target_pixels": [
+        [
+          544,
+          865
+        ],
+        [
+          568,
+          859
+        ],
+        [
+          592,
+          850
+        ],
+        [
+          615,
+          838
+        ],
+        [
+          639,
+          823
+        ]
+      ],
+      "spread": 18,
+      "color": [
+        1.0,
+        0.8600000143051147,
+        0.7300000190734863
+      ],
+      "watts": 4.0
+    },
+    {
+      "name": "front foot reflector",
+      "position": [
+        0.12,
+        -3.57,
+        1.21
+      ],
+      "size": [
+        3.45,
+        0.84
+      ],
+      "color": [
+        1,
+        0.91,
+        0.81
+      ],
+      "target": [
+        0.1,
+        -1.3,
+        0.42
+      ],
+      "watts": 0.47999998927116394
+    }
+  ],
+  "start_loss": 0.06396859139204025,
+  "selected_loss": 0.05065031349658966,
+  "fit_samples": 96348,
+  "method": "Trace mirror directions from the turned rims and fit two finite low warm cards plus a foot reflector against the measured full-resolution response. Retain nonnegative powers, protect the rest of the piece by linking these reflections to its turned base."
+}

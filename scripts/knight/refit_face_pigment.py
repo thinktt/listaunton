@@ -36,7 +36,7 @@ def diffuse_field(response,measurement,region):
     chroma=diffuse-(diffuse@neutral)[:,:,None]*neutral
     observed=target-(target@neutral)[:,:,None]*neutral
     norm=(chroma*chroma).sum(2)
-    lower=.30 if region=="brow" else .37
+    lower=.30 if region in ("brow","pedestal") else .37
     gain=np.clip(((observed*chroma).sum(2)+.00009)/(norm+.00009),lower,1.85)
     reflection=np.maximum(0,(target-diffuse*gain[:,:,None])@neutral)
     interior=(full[:,:,3]>.99)&(ref[:,:,3]>.85)&(ref[:,:,:3].max(2)>.055)
@@ -47,6 +47,8 @@ def diffuse_field(response,measurement,region):
     local=blur(log*conf,2,2)/np.maximum(blur(conf,2,2),1e-5)
     detail=.68 if region=="brow" else .50
     result=broad+detail*np.clip(log-local,-.34,.34)*conf
+    if region=="pedestal":
+        result=broad+.83*(local-broad)*conf+.77*np.clip(log-local,-.35,.35)*conf
     return (result*blur(interior,2,2)*np.clip(blur(conf,4,3)/.48,0,1)*.91).astype(np.float32)
 
 
@@ -91,7 +93,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument("--carving",required=True);p.add_argument("--variant",required=True)
     p.add_argument("--response",type=Path,default=BUILD/"muzzle-response")
     p.add_argument("--texture",type=Path)
-    p.add_argument("--region",choices=("muzzle","brow"),default="muzzle")
+    p.add_argument("--region",choices=("muzzle","brow","pedestal"),default="muzzle")
     args=p.parse_args()
     out=BUILD/args.variant;out.mkdir(exist_ok=True)
     source=BUILD/args.carving;texture=args.texture or source/"pigment.png"
@@ -103,16 +105,19 @@ def main():
     y,x=np.indices(field.shape)
     if args.region=="muzzle":
         jobs=[("continuous horse head and neck",ease(x,467,556)*ease(y,302,352)*(1-ease(y,521,557)),(466,300,748,559))]
-    else:
+    elif args.region=="brow":
         jobs=[("near swept ear",ease(x,255,279)*(1-ease(x,542,562)),(254,349,563,483)),
               ("continuous horse head and neck",ease(x,455,498)*(1-ease(x,602,638))*ease(y,352,388)*(1-ease(y,498,523)),(454,351,639,524))]
+    else:
+        jobs=[("turned pedestal",1.0,(219,480,773,1057))]
     visibility=0;receivers=[]
     for suffix,weight,box in jobs:
         receiver=next(o for o in measured["objects"] if o["object"].endswith(suffix))
         visibility+=project_surface(args.response/receiver["file"],data["depth"],field*weight,log_gain,box)
         receivers.append(receiver["object"])
     changed=np.abs(log_gain)>.001
-    assert 12000<changed.sum()<750000,(visibility,changed.sum(),float(data["depth"].max()))
+    limit=.50*log_gain.size if args.region=="pedestal" else 750000
+    assert 12000<changed.sum()<limit,(visibility,changed.sum(),float(data["depth"].max()))
     color=prior.copy();display=color[changed].astype(float)/255
     linear=np.where(display<=.04045,display/12.92,((display+.055)/1.055)**2.4)*np.exp(log_gain[changed,None])
     result=np.where(linear<=.0031308,12.92*linear,1.055*np.maximum(linear,0)**(1/2.4)-.055)

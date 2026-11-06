@@ -1,0 +1,52 @@
+{
+  "previous_sha256": "95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1",
+  "source_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
+  "axis_shift_world": [
+    0.03251595422625542,
+    0.0,
+    0.0
+  ],
+  "base_mesh_intersection_pairs_before": 1070,
+  "base_mesh_intersection_pairs_after": 1059,
+  "diameter_change": 7.152557373046875e-07,
+  "physical_bounds_relative_to_foot_preserved": true,
+  "floor_and_camera_preserved": true,
+  "parts": {
+    "Knight | swept rounded mane": {
+      "seat_vertices": 0,
+      "protected_upper_vertices": 704,
+      "seat_relative_error": 0,
+      "upper_coordinate_error": 0.0
+    },
+    "Knight | near swept ear": {
+      "seat_vertices": 0,
+      "protected_upper_vertices": 448,
+      "seat_relative_error": 0,
+      "upper_coordinate_error": 0.0
+    },
+    "Knight | near eye": {
+      "seat_vertices": 0,
+      "protected_upper_vertices": 482,
+      "seat_relative_error": 0,
+      "upper_coordinate_error": 0.0
+    },
+    "Knight | far swept ear": {
+      "seat_vertices": 0,
+      "protected_upper_vertices": 448,
+      "seat_relative_error": 0,
+      "upper_coordinate_error": 0.0
+    },
+    "Knight | far eye": {
+      "seat_vertices": 0,
+      "protected_upper_vertices": 482,
+      "seat_relative_error": 0,
+      "upper_coordinate_error": 0.0
+    },
+    "Knight | continuous horse head and neck": {
+      "seat_vertices": 4332,
+      "protected_upper_vertices": 30002,
+      "seat_relative_error": 5.960464477539063e-08,
+      "upper_coordinate_error": 0.0
+    }
+  }
+}

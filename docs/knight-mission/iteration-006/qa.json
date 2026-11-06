@@ -1,0 +1,26 @@
+{
+  "note": "Silhouette scores document visible-boundary differences only. The original black sprite governs the fixed elevated fit. Black candidate 2 guides detail; the side study guides anatomy and plausible side proportions. Scores do not validate anatomy, wood, lighting or unseen surfaces.",
+  "images": {
+    "original": {
+      "silhouette_iou": 0.9649402510058248,
+      "mean_boundary_error_px": 6.608053691275168,
+      "mean_boundary_error_source_px": 1.5808740888218105,
+      "p95_boundary_error_px": 23.0,
+      "reference_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
+    },
+    "selected": {
+      "silhouette_iou": 0.9598614494790954,
+      "mean_boundary_error_px": 8.001994680851064,
+      "mean_boundary_error_source_px": 1.914352794461977,
+      "p95_boundary_error_px": 25.0,
+      "reference_sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+    },
+    "white-original-mirrored": {
+      "silhouette_iou": 0.9592373125763743,
+      "mean_boundary_error_px": 8.353297442799462,
+      "mean_boundary_error_source_px": 1.9983965174161393,
+      "p95_boundary_error_px": 22.0,
+      "reference_sha256": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304"
+    }
+  }
+}

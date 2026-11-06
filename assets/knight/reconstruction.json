@@ -1,6 +1,6 @@
 {
   "piece": "Knight",
-  "revision": "mission-005-swept-ear",
+  "revision": "mission-006-registered-pedestal",
   "source_priority": [
     "Original black Lichess sprite; mirrored white sprite as an independent check",
     "Selected black candidate 2 for detailed fixed-view fitting",
@@ -18,7 +18,7 @@
     "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
   },
   "geometry": {
-    "method": "Closed continuous head and neck, an original-fitted conical muzzle, dark seated eyes and paired swept ears with broader upper surfaces above the eye.",
+    "method": "A closed, turned pedestal with a shallow lower groove and narrowed collar supports the seated horse. The lower carving follows the measured turn axis and blends into the accepted neck. Both swept ears, eyes and conical muzzle retain their accepted shape.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
     "triangles": 203602,
@@ -69,27 +69,27 @@
     "final_reference_metrics": "assets/knight/qa.json"
   },
   "mission": {
-    "checkpoint": "005",
-    "source_sha256": "95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1",
+    "checkpoint": "006",
+    "source_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
     "scores": {
-      "variant": "027-focused-brow",
-      "silhouette": 95.67082950227484,
-      "form": 82,
-      "color": 84,
-      "grain": 74,
-      "lighting": 59,
-      "working_mean": 78.93416590045497,
-      "original_iou": 0.9637241813790931,
-      "mirrored_white_iou": 0.9559555452485863,
-      "decision": "Accept. One compact real lamp replaces the broad ear patch panel. The dominant ear reflection moves closer to the observed patch without restoring the protruding far ear.",
-      "blend_sha256": "8bceee33ae1ec450ccbbe6318e98817aa6e30ea4b4bc0a281df617f6c7001a7a",
-      "render_sha256": "f2597cda537681c9f07c506d7bd8c1ce8acd5cfb6eaace6937b5c30a741b24f5"
+      "variant": "035-warm-turning",
+      "silhouette": 96.28193858851924,
+      "form": 85,
+      "color": 86,
+      "grain": 76,
+      "lighting": 62,
+      "working_mean": 81.05638771770384,
+      "original_iou": 0.9685468884625892,
+      "mirrored_white_iou": 0.9593771741521921,
+      "decision": "Accept. Two calibrated warm strips give the outer collar a narrow, mobile reflection on the agreed turning. The foot and collar fit, side floor, maximum height, head and seated joint all pass review.",
+      "blend_sha256": "1496a972c0a1c9b6f78a0e1aefdc537b0e750d9aa0e30d01d26d4bf3c40a0519",
+      "render_sha256": "1ebc256981664e0059f9d5f69a6cba267ff05b430624a864c0639209513d8672"
     },
     "current_notes": "docs/knight-mission-log.md",
     "limitations": [
-      "The poll carries a broad reflection in place of the original's thin curved edge. The lower lid and outer shoulder still lack their strongest crescent reflections.",
-      "The ear reflection is too smooth and forward. The cheek recess and eye transition need further carving.",
-      "The lower foot groove sits higher and reads narrower in the current fixed view. The top of the pedestal has more bright bands than the reference."
+      "The chest still needs a deeper dark channel beside its narrow reflected crest and a broader, brighter outer shoulder.",
+      "The poll has a broad highlight where the reference has a thin curved edge. The source lower eyelid carries a brighter crescent.",
+      "The foot groove lacks some dark, broken grain and its fine reflected flecks. The collar is slightly golden compared with the selected brown."
     ]
   },
   "history_at_activation": {

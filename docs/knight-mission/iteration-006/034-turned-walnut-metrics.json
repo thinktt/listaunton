@@ -1,0 +1,26 @@
+{
+  "trial": "034-turned-walnut",
+  "model_sha256": "302e2b67c36101b8ab2f948e75cbae519e6f2fa22644a28da8f4178f7afa46d2",
+  "render_sha256": "62a7e973b9863c0fab07c152df166b371d91a8c066e38a294b5df24d03a74d78",
+  "previous_render_sha256": "21abfa6fbc704e5a41aa0058662d8ee43475ac543ad55ae8f12387176b8de1bd",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9685468884625892,
+      "previous_iou": 0.9637241813790931
+    },
+    "selected": {
+      "iou": 0.9628193858851924,
+      "previous_iou": 0.9567082950227483
+    },
+    "white_mirrored": {
+      "iou": 0.9593771741521921,
+      "previous_iou": 0.9559555452485863
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

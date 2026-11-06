@@ -1,0 +1,42 @@
+{
+  "checkpoint": "006",
+  "variant": "035-warm-turning",
+  "prior_model_sha256": "95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1",
+  "source_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
+  "render_sha256": "583df97a40eeaf6095772baaba7313a7de0acabefe7053ef3220b0f1770e8e82",
+  "texture_sha256": "1cbe7f955a1395249a1432019ade0b87ab30cd3d1458d208487823da1f9af8c3",
+  "texture_file": "wood-atlas-v4.png",
+  "packed_texture_exact": true,
+  "surface_color_coverage": {
+    "Knight | turned pedestal": {
+      "sampled_triangle_centers": 62464,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | swept rounded mane": {
+      "sampled_triangle_centers": 25600,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | near swept ear": {
+      "sampled_triangle_centers": 13312,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | near eye": {
+      "sampled_triangle_centers": 960,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | far swept ear": {
+      "sampled_triangle_centers": 13312,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | far eye": {
+      "sampled_triangle_centers": 960,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | continuous horse head and neck": {
+      "sampled_triangle_centers": 86994,
+      "uncolored_fraction": 3.448513690599352e-05
+    }
+  },
+  "camera_degrees": 54,
+  "side_degrees": 7
+}
