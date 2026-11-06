@@ -1,0 +1,137 @@
+{
+  "variant": "028-warm-reflections",
+  "source": "build/pawn-mission/027-curved-base-reflections/pawn.blend",
+  "source_sha256": "7df9fa9049856ffa8381c35a074c26d4d7fe4b66178cbb54eb3d023639095a2a",
+  "samples": 128,
+  "response_samples": 96,
+  "groups": [
+    {
+      "name": "Left head",
+      "lamps": [
+        "Left head glint",
+        "Left head glint core",
+        "Left polish core"
+      ],
+      "ellipses": [
+        [
+          461,
+          451,
+          17,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "Upper head",
+      "lamps": [
+        "Upper head glint",
+        "Upper head glint core",
+        "Upper polish core"
+      ],
+      "ellipses": [
+        [
+          509,
+          435,
+          20,
+          20
+        ]
+      ]
+    },
+    {
+      "name": "Right head",
+      "lamps": [
+        "Right head glint",
+        "Right head glint core",
+        "Right polish core"
+      ],
+      "ellipses": [
+        [
+          515,
+          490,
+          17,
+          25
+        ]
+      ]
+    },
+    {
+      "name": "Left flare",
+      "lamps": [
+        "Flare left edge",
+        "Flare left sweep",
+        "Flare left center",
+        "Flare left taper",
+        "Flare left lip"
+      ],
+      "ellipses": [
+        [
+          408,
+          882,
+          51,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "Right flare",
+      "lamps": [
+        "Flare right inner",
+        "Flare right sweep",
+        "Flare right edge",
+        "Flare front lip",
+        "Flare right lip",
+        "Flare lip taper"
+      ],
+      "ellipses": [
+        [
+          569,
+          882,
+          56,
+          22
+        ],
+        [
+          553,
+          906,
+          37,
+          8
+        ]
+      ]
+    },
+    {
+      "name": "Socket",
+      "lamps": [
+        "Socket right"
+      ],
+      "ellipses": [
+        [
+          516,
+          739,
+          15,
+          12
+        ]
+      ]
+    },
+    {
+      "name": "Collar",
+      "lamps": [
+        "Bowl left",
+        "Bowl left inner",
+        "Bowl right",
+        "Lip right"
+      ],
+      "ellipses": [
+        [
+          451,
+          611,
+          24,
+          11
+        ],
+        [
+          533,
+          607,
+          25,
+          20
+        ]
+      ]
+    }
+  ]
+}

@@ -151,3 +151,28 @@ the same roughness and pigment maps as the saved pawn. See the
 [checkpoint evidence](pawn-mission/iteration-005/README.md) for brightness
 and contrast measurements, side views and the independent replay. Next
 test how fine changes in surface orientation break up the three glints.
+
+## Checkpoint 006 · 2026-11-05
+
+Small surface slopes break up the pale patches in the varnish. Fitting
+the lower emitters along the measured flare curves restores a narrow second
+reflection on the right. The head, socket and flare now catch warmer light.
+The left flare still has a short, broad patch, and the head-to-collar
+shadow remains soft.
+
+| Metric | Checkpoint 005 | Checkpoint 006 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 88 | 88 |
+| Wood color | 88 | 90 |
+| Grain and surface | 81 | 85 |
+| Lighting | 80 | 84 |
+| Working mean | 86.76% | 88.76% |
+
+Original black IoU is 98.51% and white is 98.14%. All three head glints
+fall within one original sprite pixel of their reference centers. The
+fixed-view holistic assessment is 85–91%. The five-category mean includes
+four visual ratings. The [checkpoint evidence](pawn-mission/iteration-006/README.md)
+includes the native-size comparison, full-size crops and measured surface
+tilts. Next remeasure the diffuse contribution under these revised lights,
+especially the walnut beside the dark contact and around the flare.

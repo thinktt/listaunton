@@ -1,0 +1,41 @@
+{
+  "accepted_trial": "028-warm-reflections",
+  "model_sha256": "f361da90abafd81874adf0a71e6f692db6a2e39e52bc7cc4340bf9d00c59ca82",
+  "selected_reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "scores": {
+    "silhouette": 96.80923425744615,
+    "interior_form": 88,
+    "wood_color": 90,
+    "grain": 85,
+    "lighting": 84
+  },
+  "working_mean": 88.76184685148924,
+  "holistic_range": [
+    85,
+    91
+  ],
+  "iou": {
+    "selected": 0.9680923425744615,
+    "original_black": 0.9850584724491426,
+    "original_white": 0.9814041491380021
+  },
+  "reproduction": {
+    "reopened": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 5.211373301092304e-05,
+      "max_error_255": 1,
+      "render_sha256": "9e4a838e4bafcccc155aee6805da0eda9fb2c6b6b9a3eee372f7a0e85a63250d"
+    },
+    "reproduced": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 5.211373301092304e-05,
+      "max_error_255": 1,
+      "render_sha256": "569a3f979d3d6fb0b65e9044f2dbcad16622ccdcfae1e2069d7745cb46e3d0a9"
+    }
+  },
+  "mesh_sha256": "541f6811887e98edc402098706744b68bc6c2fc438c6927434f132123ea8c569",
+  "same_mesh_and_uvs_as_previous": true,
+  "native_browser_gpu_check": false,
+  "goal_complete": false
+}

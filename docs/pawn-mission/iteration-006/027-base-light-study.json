@@ -1,0 +1,249 @@
+{
+  "variant": "027-curved-base-reflections",
+  "source": "build/pawn-mission/026-fine-grain-slopes/pawn.blend",
+  "source_sha256": "ca06f64452cd203f4afc1e9e652c7d5915b23ca86db6f8382a41c4aa1253f1bf",
+  "samples": 128,
+  "response_percent": 100,
+  "response_samples": 80,
+  "dense_bounds": [
+    316,
+    817,
+    653,
+    925
+  ],
+  "glint_weight": 7,
+  "protect_recesses": true,
+  "protect_quiet_head": true,
+  "landmarks": [
+    {
+      "name": "Flare left edge",
+      "pixel": [
+        370,
+        870
+      ],
+      "half_axes": [
+        12,
+        7
+      ],
+      "angle": 35,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare left sweep",
+      "pixel": [
+        392,
+        876
+      ],
+      "half_axes": [
+        18,
+        8
+      ],
+      "angle": 26,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare left center",
+      "pixel": [
+        415,
+        883
+      ],
+      "half_axes": [
+        17,
+        8.5
+      ],
+      "angle": 22,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare left taper",
+      "pixel": [
+        440,
+        889
+      ],
+      "half_axes": [
+        15,
+        6.4
+      ],
+      "angle": 16,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare left lip",
+      "pixel": [
+        451,
+        903
+      ],
+      "half_axes": [
+        18,
+        2
+      ],
+      "angle": 9,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.76,
+        0.52
+      ]
+    },
+    {
+      "name": "Flare right inner",
+      "pixel": [
+        543,
+        889
+      ],
+      "half_axes": [
+        15,
+        4.5
+      ],
+      "angle": -16,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare right sweep",
+      "pixel": [
+        571,
+        879
+      ],
+      "half_axes": [
+        20,
+        5.8
+      ],
+      "angle": -28,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare right edge",
+      "pixel": [
+        601,
+        863
+      ],
+      "half_axes": [
+        18,
+        3.7
+      ],
+      "angle": -36,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.66,
+        0.43
+      ]
+    },
+    {
+      "name": "Flare front lip",
+      "pixel": [
+        527,
+        915
+      ],
+      "half_axes": [
+        15,
+        1.9
+      ],
+      "angle": -11,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.76,
+        0.52
+      ]
+    },
+    {
+      "name": "Flare right lip",
+      "pixel": [
+        552,
+        909
+      ],
+      "half_axes": [
+        16,
+        2.1
+      ],
+      "angle": -19,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.76,
+        0.52
+      ]
+    },
+    {
+      "name": "Flare lip taper",
+      "pixel": [
+        580,
+        899
+      ],
+      "half_axes": [
+        16,
+        1.9
+      ],
+      "angle": -28,
+      "distance": 1.05,
+      "spread": 11,
+      "color": [
+        1,
+        0.76,
+        0.52
+      ]
+    }
+  ],
+  "keep_reflectors": [
+    "Left head glint",
+    "Upper head glint",
+    "Right head glint",
+    "Upper head glint core",
+    "Right head glint core",
+    "Socket right",
+    "Foot right",
+    "Foot front",
+    "Foot center-right",
+    "Foot edge outer left",
+    "Foot edge center left",
+    "Bowl left",
+    "Bowl left inner",
+    "Bowl right",
+    "Lip right",
+    "Left polish core",
+    "Upper polish core",
+    "Right polish core",
+    "Base upper"
+  ]
+}

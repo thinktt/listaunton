@@ -110,14 +110,22 @@ def run(cfg):
     fixed_lights=[ob for ob in scene.objects if ob.type=="LIGHT"]
     fixed_powers=[ob.data.energy for ob in fixed_lights]
     bg=scene.world.node_tree.nodes["Background"].inputs["Strength"];world_power=bg.default_value
-    scene.render.resolution_percentage=50
+    percentage=cfg.get("response_percent",50)
+    assert percentage in (50,100)
+    scene.render.resolution_percentage=percentage
     scene.cycles.samples=cfg.get("response_samples",96)
     scene.cycles.use_denoising=False;scene.cycles.use_adaptive_sampling=False
     scene.render.image_settings.file_format="OPEN_EXR";scene.render.image_settings.color_depth="32"
     fixed=response(scene,directory)
     rgba=reference_srgb()
-    target=rgba.reshape(627,2,627,2,3).mean((1,3))
+    stride=100//percentage
+    target=rgba if stride==1 else rgba.reshape(627,2,627,2,3).mean((1,3))
     mask=(fixed[:,:,3]>.995)&(target.max(2)>.065)
+    if cfg.get("dense_bounds"):
+        y,x=np.indices(mask.shape)
+        x0,y0,x1,y1=cfg["dense_bounds"]
+        dense=(x*stride>=x0)&(x*stride<x1)&(y*stride>=y0)&(y*stride<y1)
+        mask&=dense|((x%4==0)&(y%4==0))
     # Same registered coordinates and foreground for every basis image.
     fixed=fixed[:,:,:3][mask];target=target[mask].astype(np.float64)
     for ob in fixed_lights:ob.data.energy=0
@@ -138,13 +146,13 @@ def run(cfg):
     weight=1+cfg.get("glint_weight",6)*np.clip((target.min(1)-.16)/.55,0,1)
     if cfg.get("protect_recesses"):
         ys,xs=np.nonzero(mask)
-        xs=xs*2+1;ys=ys*2+1
+        xs=xs*stride+stride//2;ys=ys*stride+stride//2
         groove=(xs>330)&(xs<630)&(ys>903)&(ys<963)&(target.max(1)<.18)
         stem=(xs>487)&(xs<522)&(ys>640)&(ys<705)
         weight+=6*groove+3*stem
     if cfg.get("protect_quiet_head"):
         ys,xs=np.nonzero(mask)
-        xs=xs*2+1;ys=ys*2+1
+        xs=xs*stride+stride//2;ys=ys*stride+stride//2
         head=(np.hypot(xs-483,ys-469)<115)&(ys<586)
         neck=(xs>439)&(xs<530)&(ys>645)&(ys<713)
         weight+=40*head+16*neck

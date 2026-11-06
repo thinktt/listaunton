@@ -1,0 +1,35 @@
+{
+  "config": {
+    "measurement": "slopes-005",
+    "geometry_measurement": "finish-004",
+    "mesh_sha256": "541f6811887e98edc402098706744b68bc6c2fc438c6927434f132123ea8c569",
+    "pigment": "assets/pawn/pawn-walnut-v5.png",
+    "texture": "assets/pawn/pawn-fine-slopes-v1.png",
+    "max_slope": 0.085,
+    "prior_255": 4,
+    "broad_scale_fraction": 0.4,
+    "grain_gain": 0.3
+  },
+  "source": {
+    "config": {
+      "source": "history/pawn-mission-005/pawn-rebuilt.blend",
+      "source_sha256": "90415a9fb53e62e155368aaa1491fc84e868b0aab7ce519dc3ad81d0a1fdbc09",
+      "measurement": "slopes-005",
+      "step": 0.085,
+      "samples": 128
+    },
+    "pass_sha256": {
+      "flat": "4fdd401328ef916fa386f252a66888186e9b8fff02beb1fe1b15954dded0aaa5",
+      "u-plus": "b192729ac702e6f0d9004813b12a7c4d09dc6fabf3b1e79a6bd944731af173a8",
+      "u-minus": "7ba21ff868bb511435eb729a03522580625e594237fa3452de2ee2c9e614772c",
+      "v-plus": "ca1362de2ac15ba245d16620c2a194493a252642de0ea9752194fa13aae8d385",
+      "v-minus": "927491683353bfe49a60bdc78a70ecfd1b88c987bb30651bc49deade9e8d224e"
+    },
+    "method": "Five actual Cycles renders with slopes in the real wood UV tangent frame. Hold all lights, pigment, roughness, existing grain, geometry and camera."
+  },
+  "sha256": "494ffc2d2da38c53444ad3f55b36b97ebbb96e295146d75b08a6f9b21175e3d6",
+  "confident_observed_pixels": 20420,
+  "median_angle_degrees": 0.6319683194160461,
+  "q99_angle_degrees": 2.429396867752075,
+  "max_angle_degrees": 4.858462810516357
+}

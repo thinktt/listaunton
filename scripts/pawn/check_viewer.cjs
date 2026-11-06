@@ -14,11 +14,12 @@ node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textCo
 node('side-registration').textContent=text('side-registration');node('side-opacity').value='50';
 node('wood-texture').textContent=text('wood-texture');
 assert.equal(require('node:crypto').createHash('sha256').update(Buffer.from(text('wood-texture'),'base64')).digest('hex'),meta.textureSha256);
-if(meta.varnish){
- const varnish=Buffer.from(text('varnish-texture'),'base64');
- node('varnish-texture').textContent=text('varnish-texture');
- assert.equal(require('node:crypto').createHash('sha256').update(varnish).digest('hex'),meta.varnish.sha256);
- assert.deepEqual(varnish,fs.readFileSync(path.join(root,meta.varnish.file)));
+for(const key of ['varnish','slope']){
+ if(!meta[key])continue;
+ const id=key+'-texture',bytes=Buffer.from(text(id),'base64');
+ node(id).textContent=text(id);
+ assert.equal(require('node:crypto').createHash('sha256').update(bytes).digest('hex'),meta[key].sha256);
+ assert.deepEqual(bytes,fs.readFileSync(path.join(root,meta[key].file)));
 }
 assert.equal(meta.vertexStrideBytes,32);
 node('model-opacity').value='50';node('stage').dataset.mode='compare';
@@ -44,6 +45,10 @@ flush();assert(draws>0);assert(node('status').hidden);assert.equal(canvas.tabInd
 if(meta.varnish){
  assert.equal(uniforms.uVarnish,1);
  assert.deepEqual(uniforms.uVarnishRange,Array.from(meta.varnish.gain,Math.fround));
+}
+if(meta.slope){
+ assert.equal(uniforms.uSlope,2);
+ assert.equal(uniforms.uSlopeLimit,Math.fround(meta.slope.limit));
 }
 assert(html.includes('<option value="original">Original black</option><option value="selected">Black candidate 2</option>'),'Original must be default reference.');
 const alignment=JSON.parse(text('original-alignment'));
@@ -101,4 +106,4 @@ assert.deepEqual(sr.profile_dimensions,[sidePng.readUInt32BE(16),sidePng.readUIn
 assert.equal(parseFloat(node('side-model').style.width),sr.profile_dimensions[0]*sr.scale/sr.canvas[0]*100);
 assert.equal(parseFloat(node('side-model').style.height),sr.profile_dimensions[1]*sr.scale/sr.canvas[1]*100);
 node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),beforeSide,'Side comparison changed orbit');
-console.log(JSON.stringify({passed:true,pigmentAtlasHashMatches:true,varnishAtlasChecked:!!meta.varnish,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));
+console.log(JSON.stringify({passed:true,pigmentAtlasHashMatches:true,varnishAtlasChecked:!!meta.varnish,slopeAtlasChecked:!!meta.slope,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));

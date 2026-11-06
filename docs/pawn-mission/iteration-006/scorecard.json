@@ -1,0 +1,59 @@
+[
+  {
+    "trial": "026-fine-grain-slopes",
+    "scores": {
+      "silhouette": 96.80923425744615,
+      "interior_form": 88,
+      "wood_color": 88,
+      "grain": 85,
+      "lighting": 81
+    },
+    "working_mean": 87.76184685148924,
+    "iou": {
+      "selected": 0.9680923425744615,
+      "original_black": 0.9850584724491426,
+      "original_white": 0.9814041491380021
+    },
+    "source_sha256": "ca06f64452cd203f4afc1e9e652c7d5915b23ca86db6f8382a41c4aa1253f1bf",
+    "render_sha256": "1eac7185ff01eb3707e2d7c8611557b882dfb5240a4b09389a26efff0e649566",
+    "decision": "Bounded tangent normals break up the head and base patches. The native glint centers remain within one original pixel. The lower-left flare still has a short, broad reflection."
+  },
+  {
+    "trial": "027-curved-base-reflections",
+    "scores": {
+      "silhouette": 96.80923425744615,
+      "interior_form": 88,
+      "wood_color": 88,
+      "grain": 85,
+      "lighting": 83
+    },
+    "working_mean": 88.16184685148923,
+    "iou": {
+      "selected": 0.9680923425744615,
+      "original_black": 0.9850584724491426,
+      "original_white": 0.9814041491380021
+    },
+    "source_sha256": "7df9fa9049856ffa8381c35a074c26d4d7fe4b66178cbb54eb3d023639095a2a",
+    "render_sha256": "0b3ae6c3cfa61b8eb5f0fc2f86d19462d5b0afbec8595f1bc5223eeb7ecbb0f3",
+    "decision": "A longer sweep and a narrow second line appear on the right flare. Mean color error in the base rises from 7.37 to 7.85, and the pale highlights still look washed out."
+  },
+  {
+    "trial": "028-warm-reflections",
+    "scores": {
+      "silhouette": 96.80923425744615,
+      "interior_form": 88,
+      "wood_color": 90,
+      "grain": 85,
+      "lighting": 84
+    },
+    "working_mean": 88.76184685148924,
+    "iou": {
+      "selected": 0.9680923425744615,
+      "original_black": 0.9850584724491426,
+      "original_white": 0.9814041491380021
+    },
+    "source_sha256": "12c8888cdf210b67dbaeec58a1470d28416443145e078793156dd7d724869f96",
+    "render_sha256": "b6a406cd9c6f6f5d69fb44d181cebdff4f170b3a7c69a256b4a8a039bcbf76cc",
+    "decision": "Warmer light brings the upper and right glints into the walnut palette while retaining their bright centers. The lower flare and sharp contact shadows still need work. Original-scale RGB error is marginally better than the previous checkpoint. Accepted."
+  }
+]

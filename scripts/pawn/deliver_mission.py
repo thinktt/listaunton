@@ -45,6 +45,12 @@ def export(scene,body,model):
         assert packed.colorspace_settings.name=="Non-Color" and packed.packed_file.data==path.read_bytes()
         assert sha(path)==scene["pawn_roughness_sha256"]
         report["varnish"]={"file":scene["pawn_roughness_path"],"sha256":sha(path),"gain":list(scene["pawn_roughness_range"])}
+    if "pawn_slope_path" in scene:
+        path=ROOT/scene["pawn_slope_path"]
+        packed=body.data.materials[0].node_tree.nodes["Pawn fine slope atlas"].image
+        assert packed.colorspace_settings.name=="Non-Color" and packed.packed_file.data==path.read_bytes()
+        assert sha(path)==scene["pawn_slope_sha256"]
+        report["slope"]={"file":scene["pawn_slope_path"],"sha256":sha(path),"limit":scene["pawn_slope_limit"]}
     save_json(ASSETS/"mesh.json",report);save_json(ASSETS/"camera.json",camera)
     return {"triangle_count":count//3,"closed_nonmanifold_edges":bad_edges,"signed_volume":volume,"euler_characteristic":euler,"height":float(bounds[2]),"diameter":float(bounds[0]),"height_to_diameter":float(bounds[2]/bounds[0]),"baseline_height_to_diameter":reference[2]/reference[0],"model_sha256":sha(model),"texture_sha256":sha(tex)}
 
