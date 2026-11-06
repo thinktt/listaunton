@@ -11,6 +11,10 @@ const node=id=>{if(!nodes.has(id))nodes.set(id,{id,attrs:{},hidden:false,style:{
  setAttribute(k,v){this.attrs[k]=v;},remove(){},addEventListener(k,v){this.events[k]=v;},textContent:''});return nodes.get(id);};
 const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node('view-'+m[1]),{dataset:{view:m[1]}}));
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');node('original-alignment').textContent=text('original-alignment');
+node('side-registration').textContent=text('side-registration');node('side-opacity').value='50';
+node('wood-texture').textContent=text('wood-texture');
+assert.equal(require('node:crypto').createHash('sha256').update(Buffer.from(text('wood-texture'),'base64')).digest('hex'),meta.textureSha256);
+assert.equal(meta.vertexStrideBytes,32);
 node('model-opacity').value='50';node('stage').dataset.mode='compare';
 node('stage').clientWidth=1254;node('stage').clientHeight=1254;
 const gl=new Proxy({NO_ERROR:0,getError:()=>0,getShaderParameter:()=>true,getProgramParameter:()=>true,
@@ -23,7 +27,7 @@ const canvas=Object.assign(node('viewer'),{clientWidth:1254,clientHeight:1254,wi
  getContext:()=>gl,addEventListener:(name,fn)=>listeners[name]=fn,
  getBoundingClientRect:()=>({left:0,top:0,width:canvas.clientWidth,height:canvas.clientHeight}),
  focus(){},setPointerCapture(){},classList:{add(){},remove(){}}});
-const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
+const context={Image:class{set src(value){this._src=value;queue.push(()=>this.onload());}},console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
  document:{getElementById:node,querySelectorAll:()=>views},window:{devicePixelRatio:1,parent:parentFrame,addEventListener(name,fn){windowListeners[name]=fn;}},
  requestAnimationFrame:cb=>queue.push(cb),setTimeout:cb=>queue.push(cb),atob:s=>Buffer.from(s,'base64').toString('binary'),
  ResizeObserver:class{constructor(cb){resize=cb;}observe(){}}
@@ -46,7 +50,7 @@ function pixel(world){
 }
 const matvec=(m,v)=>[0,1,2,3].map(i=>v.reduce((a,x,j)=>a+x*m[i*4+j],0));
 const ref=meta.referenceCamera,points=[];
-for(let i=0;i<meta.vertexCount;i+=Math.max(1,Math.floor(meta.vertexCount/500))){const off=i*24;points.push([mesh.readFloatLE(off),mesh.readFloatLE(off+4),mesh.readFloatLE(off+8)]);}
+for(let i=0;i<meta.vertexCount;i+=Math.max(1,Math.floor(meta.vertexCount/500))){const off=i*meta.vertexStrideBytes;points.push([mesh.readFloatLE(off),mesh.readFloatLE(off+4),mesh.readFloatLE(off+8)]);}
 let maxError=0;
 function compare(){
  assert.equal(uniforms.uOrthographic,1);const scale=Math.min(canvas.width/ref.width,canvas.height/ref.height);
@@ -76,8 +80,17 @@ node('reset').onclick();flush();compare();
 node('compare-tab').onclick();flush();
 for(const [id,value] of [['reference-only',0],['model-only',1],['half-overlay',.5]]){node(id).onclick();assert.equal(node('model-image').style.opacity,value);}
 node('model-opacity').value='73';node('model-opacity').events.input();assert.equal(node('model-image').style.opacity,.73);
-assert(html.includes('#model-image{opacity:.5;background:#000}'),'Model-only image must have an opaque backnight.');
+assert(html.includes('#model-image{opacity:.5;background:#000}'),'Model-only image must have an opaque backing.');
 assert(parentMessages.some(m=>m.channel==='listaunton-review'&&m.event==='viewer-ready'));
+node('neutral').onclick();flush();assert.equal(uniforms.uUseWood,0);
 windowListeners.message({source:{},data:{channel:'listaunton-review',action:'activate',material:'brown'}});flush();assert.notEqual(node('brown').attrs['aria-pressed'],'true');
-const report={passed:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,horseFrontSidePresets:true,cameraReset:true,sourceSha256:meta.sourceSha256};
-fs.writeFileSync(path.join(root,'assets/knight/viewer-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+node('brown').onclick();flush();assert.equal(uniforms.uUseWood,1);
+const beforeSide=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
+node('side-tab').onclick();flush();assert.equal(node('stage').dataset.mode,'side');assert(!node('side-controls').hidden);assert(node('comparison-controls').hidden);
+for(const [id,amount] of [['side-guide-only',0],['side-model-only',1],['side-half',.5]]){node(id).onclick();assert.equal(node('side-model').style.opacity,amount);}
+const sr=JSON.parse(text('side-registration'));assert.equal(sr.source_blend_sha256,meta.sourceSha256);
+assert.equal(parseFloat(node('side-model').style.width),sr.profile_size[0]*sr.scale/sr.canvas[0]*100);
+node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),beforeSide,'Side comparison changed orbit');
+const report={passed:true,horseFrontSidePresets:true,pigmentAtlasHashMatches:true,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256};
+fs.writeFileSync(path.join(root,'assets/knight/viewer-validation.json'),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

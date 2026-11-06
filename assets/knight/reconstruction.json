@@ -1,10 +1,10 @@
 {
   "piece": "Knight",
-  "revision": "12-approved-side-guide-match",
+  "revision": "mission-001-registered-walnut",
   "source_priority": [
-    "Owner request: match approved generated side study assets/knight/concepts/side-01.png first, including broad cheek, rounded muzzle and wide neck/chest",
-    "Original black Lichess sprite for best-effort secondary overhead fit, with mirrored white as a check",
-    "Selected black candidate 2 enlargement for secondary detail interpretation"
+    "Original black Lichess sprite; mirrored white sprite as an independent check",
+    "Selected black candidate 2 for detailed fixed-view fitting",
+    "Imagined side guide for profile style and proportions"
   ],
   "reference_camera": {
     "projection": "orthographic",
@@ -18,30 +18,12 @@
     "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
   },
   "geometry": {
-    "method": "Guide-derived broad continuous skull/cheek and gently conical rounded muzzle joined to a wide S neck/chest; thick arched mane, swept ears, socket-seated eyes, flatter foot. Single Y-depth reduction retained XZ side profiles.",
+    "method": "Retain the accepted carving, with a height-dependent placement of its upper mass. Upper head moves rigidly and the socket transition bends smoothly.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
     "triangles": 203602,
     "parts_intersect": true,
     "manufacturing_ready": false
-  },
-  "internal_review": {
-    "observations": [
-      "Previous committed thin pointed model preserved before edits in history/knight/11-before-guide-match.",
-      "Large side masses rebuilt directly from the approved guide; same-base-width and floor overlay reviewed before secondary depth/camera work.",
-      "Small gap behind the ear closed; sloping forehead corrected against actual source outline; cheek cross-sections rounded.",
-      "Single targeted Y-depth correction narrows the head and upper neck, retaining guide XZ profiles. Eyes are seated on the final smoothed socket surfaces.",
-      "Level profile, front, three-quarter, side, opposite and reference-camera renders visually inspected.",
-      "All nine mesh objects have one connected closed shell and positive volume; seven are visible. Saved camera/mesh and viewer interaction checks pass.",
-      "Final original silhouette IoU is 88.46% with 6.20 original-pixel mean boundary discrepancy; frozen previous camera on the same final geometry gives 85.76%."
-    ],
-    "limitations": [
-      "The generated side guide is an owner-approved interpretation. Side camera elevation, depth and unseen surfaces remain inferred.",
-      "The side study and original overhead silhouette are not simultaneously matched exactly. The guide-derived chest and head extent remain visibly different in the original view, despite bounded framing and one Y-only depth correction.",
-      "Fine carving and local anatomical transitions remain approximations. Neutral clay lighting differs from wood; no material study was performed.",
-      "Mane, ears, eyes and pedestal are separate closed components intersecting the continuous head-neck skin, not fused for manufacturing.",
-      "Native browser rendering was not exercised. Controls, Front/Side presets and saved-camera projection were checked with the Node VM harness."
-    ]
   },
   "history": [
     "01-volumetric-lofts",
@@ -85,5 +67,48 @@
     "guide_comparison": "assets/knight/guide-comparison.png",
     "reference_fit": "assets/knight/reference-fit/fit.json",
     "final_reference_metrics": "assets/knight/qa.json"
+  },
+  "mission": {
+    "checkpoint": "001",
+    "source_sha256": "d10b2b09377981b915ac8fd418c7c654fdec6e6b6f9f631d8971276dcbcf67b7",
+    "scores": {
+      "variant": "008-packed-walnut",
+      "silhouette": 94.32691621255027,
+      "form": 72,
+      "color": 78,
+      "grain": 67,
+      "lighting": 39,
+      "working_mean": 70.06538324251005,
+      "original_iou": 0.9508159836803264,
+      "mirrored_white_iou": 0.9459630861392889,
+      "decision": "Accept validated equivalent of 005. All seven parts use the verified baked pigment.",
+      "blend_sha256": "8328521358200b3c9a77afc3bacbecb7c30e4376f44bcfd2533b6e9b945149e5",
+      "render_sha256": "b27d239e07db74ec1fee8c161936f75eea0a9afdb7abb652d47edf2e041c4a87"
+    },
+    "current_notes": "docs/knight-mission-log.md",
+    "limitations": [
+      "Eye obscured in the elevated view",
+      "Lower mane, throat and collar boundaries differ",
+      "Unresolved neck and forehead reflection patterns",
+      "Hidden wood and lateral depth remain interpreted"
+    ]
+  },
+  "history_at_activation": {
+    "observations": [
+      "Previous committed thin pointed model preserved before edits in history/knight/11-before-guide-match.",
+      "Large side masses rebuilt directly from the approved guide; same-base-width and floor overlay reviewed before secondary depth/camera work.",
+      "Small gap behind the ear closed; sloping forehead corrected against actual source outline; cheek cross-sections rounded.",
+      "Single targeted Y-depth correction narrows the head and upper neck, retaining guide XZ profiles. Eyes are seated on the final smoothed socket surfaces.",
+      "Level profile, front, three-quarter, side, opposite and reference-camera renders visually inspected.",
+      "All nine mesh objects have one connected closed shell and positive volume; seven are visible. Saved camera/mesh and viewer interaction checks pass.",
+      "Final original silhouette IoU is 88.46% with 6.20 original-pixel mean boundary discrepancy; frozen previous camera on the same final geometry gives 85.76%."
+    ],
+    "limitations": [
+      "The generated side guide is an owner-approved interpretation. Side camera elevation, depth and unseen surfaces remain inferred.",
+      "The side study and original overhead silhouette are not simultaneously matched exactly. The guide-derived chest and head extent remain visibly different in the original view, despite bounded framing and one Y-only depth correction.",
+      "Fine carving and local anatomical transitions remain approximations. Neutral clay lighting differs from wood; no material study was performed.",
+      "Mane, ears, eyes and pedestal are separate closed components intersecting the continuous head-neck skin, not fused for manufacturing.",
+      "Native browser rendering was not exercised. Controls, Front/Side presets and saved-camera projection were checked with the Node VM harness."
+    ]
   }
 }

@@ -1,0 +1,9 @@
+{
+  "method": "Invert AgX, subtract measured black-BSDF response, divide by measured diffuse response. Bound pigment to wood colors and blend only on camera-visible surfaces. Eye and nostril cavities excluded from direct color estimation.",
+  "source_sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+  "gray_calibration": 0.16,
+  "foreground_pixels": 300375,
+  "direct_weight_mean": 0.8138827681541443,
+  "reference_modified": false,
+  "caveat": "Local diffuse response and single-view light separation are approximate. Hidden surfaces use continuous wood."
+}

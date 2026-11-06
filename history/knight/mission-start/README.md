@@ -1,0 +1,1 @@
+Knight mission starting geometry and registered clay views from commit 0794bf0. The original model SHA-256 is 2c0c11c5d29bdb417ec415723f9aadf825acbf4a6bc769922dce953c288de333. These inputs reproduce the first carving placement.

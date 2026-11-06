@@ -1,0 +1,19 @@
+{
+  "reference_sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+  "source_box": [
+    350,
+    888,
+    604,
+    963
+  ],
+  "base_linear_pigment": [
+    0.10999999940395355,
+    0.03099999949336052,
+    0.008500000461935997
+  ],
+  "log_detail_bounds": [
+    -0.65,
+    0.5
+  ],
+  "method": "Retain bounded local luminance texture after removing broad illumination. Reflect across tile edges and apply to a world-volume wood grain field."
+}

@@ -1,0 +1,26 @@
+{
+  "trial": "004-measured-pigment",
+  "model_sha256": "4503b4bb5681947ac4477550a8d3751845d15d2ea295ea15714b0d58ab42ca2e",
+  "render_sha256": "99ff68ecbfb5a3e82d9607317beb7722823e9f04649df5e8dd66bc184306c9e2",
+  "previous_render_sha256": "09a6e2a34dcb9aada56fc4a98d71b2d8fabfb1a00297d7b050ed127fac33ee25",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9508159836803264,
+      "previous_iou": 0.8860976596965205
+    },
+    "selected": {
+      "iou": 0.9432691621255027,
+      "previous_iou": 0.8826403816610588
+    },
+    "white_mirrored": {
+      "iou": 0.9459630861392889,
+      "previous_iou": 0.8799615350184383
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "baseline_sha256": "2c0c11c5d29bdb417ec415723f9aadf825acbf4a6bc769922dce953c288de333",
+  "variant": "001-carving-pose",
+  "dx": -0.313,
+  "dy": -0.045,
+  "twist_degrees": 10.3,
+  "initial_loss": 53.241426612409384,
+  "final_loss": 16.8278746340429,
+  "target_eye_pixel": [
+    507.0,
+    478.0
+  ],
+  "original_contour_weight": 0.8,
+  "elevation": 54,
+  "camera_changed": false,
+  "pedestal_changed": false,
+  "note": "Smooth transition above the socket. Upper head is moved rigidly in XY. All heights are locked. Fit uses the registered original and selected image; actual renders determine acceptance."
+}

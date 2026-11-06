@@ -1,37 +1,55 @@
 # Knight reconstruction
 
-The current instruction is to match the owner-approved side study in `assets/knight/concepts/side-01.png` first, while fitting the original image as well as possible. The broad cheek, thick rounded muzzle, wide S-shaped neck/chest, arched mane, sloping forehead and flat lower plinth now follow that study. The head and cheek remain one envelope joined to the neck. The study is an imagined interpretation, not recovered geometry. The original black and mirrored white Lichess sprites and selected black candidate 2 remain unchanged secondary reference checks.
+The current knight uses a fixed 54-degree orthographic reference camera with
+12-degree yaw. Compare the original black Lichess sprite first, black candidate
+2 for detailed carving and finish, and the mirrored white sprite as a second
+shape check. The imagined side study supplies style and plausible proportions.
+The visible model has seven closed components and two hidden construction lofts.
 
-The previous committed anatomy correction is preserved in `history/knight/11-before-guide-match`. That model was too thin through the neck and cheek and too pointed at the muzzle. This revision rebuilds the large side masses from the guide's coordinates. A single subsequent depth correction narrows the head and upper neck along Y while retaining their XZ profiles. Both eye forms are seated in the evaluated socket surfaces after smoothing the skin.
+Read [the knight mission](../../MISSION-KNIGHT.md) and
+[the current checkpoint log](../../docs/knight-mission-log.md) before editing.
+The historical clay builder and its profile describe the archived starting
+model. Use the current mission pipeline for new iterations. Staged builds
+protect the accepted outputs until validation passes.
 
-`assets/knight/guide-comparison.png` places the untouched guide, neutral-clay side render and silhouette overlay at the same 565-pixel base width and 1127-pixel projected floor. The inferred side camera is 7 degrees above level. `guide-camera.json` records that independent framing. `anatomy-angles.png` shows level profile, front, three-quarter, side, opposite and the saved reference camera. These images show the substantial side-shape improvement; silhouette overlap alone does not establish anatomical fidelity. Fine carving, material, depth and unseen surfaces still differ from the study.
+## Reproduce checkpoint 001
 
-Seven visible components are individually closed and connected: continuous head/neck skin, mane, two ears, two eyes and pedestal. Two closed construction lofts remain hidden and editable. The visible export has 203,602 triangles. The separate overlapping components are not fused for manufacturing. Neutral clay is diagnostic; wood materials have not been reconstructed.
+Run Blender scripts in background mode with `--python-exit-code 1`, from
+the repository root. Ordinary Python steps require NumPy and Pillow. Each
+trial writes into `build/knight-mission`. Keep the fixed original placement
+and candidate images intact.
 
-## Secondary reference fit
+1. Run `fit_mission_pose.py` with ordinary Python. In Blender run
+   `apply_mission_pose.py` on the archived clay, then `build_wood_trial.py`.
+2. Run `prepare_grain_tile.py` with ordinary Python, then
+   `capture_material.py` in Blender to measure the material response.
+   `infer_pigment.py` and `project_mission_pigment.py` document trial 004.
+   The retained trial uses ordinary Python `regularize_pigment.py` and Blender
+   `project_mission_pigment.py -- --variant 005-softened-pigment --estimate soft-pigment`.
+3. In Blender run `bake_mission_atlas.py`, `complete_pedestal_bake.py`,
+   then `pack_mission_texture.py`. The last stage verifies reopened packed PNG
+   bytes and sampled color coverage on every visible component. Inspect its
+   actual beauty and side renders against 005.
+4. Compare a trial with `python scripts/knight/audit_mission.py VARIANT`.
+   Use `--previous` to identify the prior accepted render if reproducing a
+   historical comparison. Record all five scores and the separate original
+   and mirrored-white IoUs.
+5. Promote an inspected trial in staging using Blender
+   `publish_mission.py -- VARIANT --checkpoint NNN --atlas-name NAME.png --previous-hash HASH`.
+   The publisher exports the same evaluated mesh, camera, normals and pigment
+   UVs used by the renderer, then renders the wood, clay, registered side and
+   supplementary views. New geometry trials may reuse a verified existing
+   atlas when its coordinates remain valid.
+6. Run Blender `validate.py -- ROOT`; run ordinary Python `compare.py`,
+   `compare_guide.py`, `build_qa_sheet.py` and `build_viewer.py`. Run
+   `node scripts/knight/check_viewer.cjs` followed by affected site and review
+   checks. The original source hashes, canvas registration and gallery
+   defaults must match their accepted inputs.
 
-After the side shape was established, a bounded camera study tried yaw angles -12, -6, 0, 6 and 12 degrees at the existing 54-degree elevation, with uniform scale and translation. It did not warp source images or alter their registration. The chosen saved camera uses 12-degree yaw, 0.985 framing scale and an 8.36-pixel shift left and up at 1254-pixel output resolution. Render, Blender camera, exported camera and viewer use the same result.
-
-For the final geometry, original-black silhouette IoU is 85.76% under the frozen previous camera and 88.46% under the fitted camera; mean boundary discrepancy falls from 7.59 to 6.20 original-source pixels. Selected candidate IoU is 88.12%; mirrored original white is 87.98%. `assets/knight/reference-fit/fit.json` records the bounded study, while `frozen-camera.png`, `frozen-camera.json` and `frozen-qa.json` preserve its baseline. The final `qa.json` records the full-resolution fitted result. The broader guide-derived chest and longer side head extent do not simultaneously reproduce the original overhead silhouette. This is an explicit remaining limitation, not a claim of recovered geometry.
-
-## Rebuild
-
-From the repository root, using Blender, ordinary Python with Pillow/NumPy, and Node:
-
-```sh
-blender --background --python scripts/knight/build_knight.py
-blender --background --python scripts/knight/guide_view.py
-python scripts/knight/compare_guide.py
-blender --background --python scripts/knight/qa_views.py
-python scripts/knight/compare.py
-blender --background --python scripts/knight/validate.py -- "$PWD"
-python scripts/knight/build_qa_sheet.py
-python scripts/knight/build_viewer.py
-node scripts/knight/check_viewer.cjs
-python scripts/build_candidate_pages.py
-python scripts/check_model_site.py
-```
-
-The normal build uses the selected framing stored in `profile.json`; it does not rerun the camera study. `fit_reference.py` and `choose_reference_fit.py` document that optional bounded study and do not apply a new choice automatically. Use Windows/UNC paths when Windows Blender works on the WSL repository. The viewer's Front button faces the muzzle; Side shows the horse profile. Reset returns to the fitted reference camera.
-
-Validation checks manifold closed components, one connected shell per component, positive volumes, eye/socket overlap, mesh bounds/normals/indices, source hash and both saved camera matrices. The Node viewer harness passes camera and interaction checks, including Front/Side presets, with sampled projection error below 0.00003 pixels. Native browser rendering has not been independently tested here.
+The standalone viewer embeds the actual pigment and UVs. Its real-time
+lighting is an approximation. Its Front and Side presets retain the horse
+orientation, and the side comparison uses the saved 7-degree camera and
+shared foot registration. Update the existing local review at each accepted
+checkpoint. Detailed trial evidence and remaining discrepancies are in the
+mission log. The prior guide-first clay workflow is archived alongside its
+model in `history/knight/mission-start`.

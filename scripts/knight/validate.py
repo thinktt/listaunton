@@ -26,9 +26,19 @@ assert len(report)==9
 assert sum(not item['hidden_construction'] for item in report)==7
 meta=json.loads((root/'assets/knight/mesh.json').read_text());assert meta['sourceSha256']==hashlib.sha256(model.read_bytes()).hexdigest()
 raw=(root/'assets/knight/mesh.bin').read_bytes();assert len(raw)==meta['totalByteLength']
-vertices=np.frombuffer(raw[:meta['vertexByteLength']],dtype='<f4').reshape(-1,6);indices=np.frombuffer(raw[meta['indexByteOffset']:],dtype='<u4')
+stride=meta['vertexStrideBytes']//4
+assert stride in (6,8)
+vertices=np.frombuffer(raw[:meta['vertexByteLength']],dtype='<f4').reshape(-1,stride);indices=np.frombuffer(raw[meta['indexByteOffset']:],dtype='<u4')
 assert np.isfinite(vertices).all();assert len(indices)==meta['indexCount'];assert int(indices.max())<len(vertices)
-assert np.max(np.abs(np.linalg.norm(vertices[:,3:],axis=1)-1))<1e-4
+assert np.max(np.abs(np.linalg.norm(vertices[:,3:6],axis=1)-1))<1e-4
+if stride==8:
+ assert np.all((vertices[:,6:]>=-.0001)&(vertices[:,6:]<=1.0001))
+ texture=root/meta['texture'];assert hashlib.sha256(texture.read_bytes()).hexdigest()==meta['textureSha256']
+ visible=[o for o in bpy.context.scene.objects if o.type=='MESH' and not o.hide_render]
+ for ob in visible:
+  mat=ob.data.materials[0];bs=mat.node_tree.nodes.get('Principled BSDF');atlas=bs.inputs['Base Color'].links[0].from_node
+  assert atlas.type=='TEX_IMAGE' and atlas.image.packed_file and bytes(atlas.image.packed_file.data)==texture.read_bytes()
+  assert atlas.inputs['Vector'].links[0].from_node.uv_map==meta['uvLayer']
 assert len(meta['parts'])==7
 assert sum(part['vertexCount'] for part in meta['parts'])==meta['vertexCount']
 assert np.allclose(vertices[:,:3].min(0),meta['bounds']['min'])

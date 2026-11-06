@@ -1,0 +1,11 @@
+{
+  "source": "material-observations",
+  "method": "Estimate warm diffuse color with a constrained neutral reflection component. Interpolate broad pigment across uncertain pixels, use bounded high-pass detail, feather transfer at geometry edges. Preserve continuous 3D walnut on hidden surfaces.",
+  "bounds": [
+    0.016,
+    0.46
+  ],
+  "broad_radius": 8,
+  "detail_radius": 3,
+  "mean_direct_weight": 0.873457133769989
+}

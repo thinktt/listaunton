@@ -1,0 +1,1 @@
+Compare the authoritative sprite, selected black candidate 2, starting clay and accepted wood in comparison.png. The four component crops/overlays, trial scorecard and reopened model/atlas validation accompany the mission log. All rendered candidates are real model images.

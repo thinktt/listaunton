@@ -1,0 +1,37 @@
+{
+  "source_sha256": "840da73b7d4461152fc634e1bdd228ab952d24d9f5a605b31daf40104c3675bf",
+  "saved_sha256": "b9a3b5b8f3d6da13509861a89e12514234283a2264e204bc8dffe4ad95140f2f",
+  "texture_sha256": "bdb41d2890358acc5a41cca7ec21ba67a0c634c501faa3b362053daae9d70331",
+  "coverage": {
+    "Knight | turned pedestal": {
+      "sampled_triangle_centers": 62464,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | swept rounded mane": {
+      "sampled_triangle_centers": 25600,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | near swept ear": {
+      "sampled_triangle_centers": 13312,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | near eye": {
+      "sampled_triangle_centers": 960,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | far swept ear": {
+      "sampled_triangle_centers": 13312,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | far eye": {
+      "sampled_triangle_centers": 960,
+      "uncolored_fraction": 0.0
+    },
+    "Knight | continuous horse head and neck": {
+      "sampled_triangle_centers": 86994,
+      "uncolored_fraction": 3.448513690599352e-05
+    }
+  },
+  "samples": 64,
+  "method": "Isolated pedestal pigment bake into the pre-existing non-overlapping atlas. All seven parts checked before rendering the reopened real BSDF."
+}

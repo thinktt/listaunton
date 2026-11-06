@@ -1,0 +1,15 @@
+{
+  "source_sha256": "6d3bf42cb911bc8083ff75f076fa7425e593e257aa79163b9741531ac7877cb0",
+  "coverage_by_component": {
+    "Knight | turned pedestal": 0.2851039469242096,
+    "Knight | swept rounded mane": 0.2689059376716614,
+    "Knight | near swept ear": 0.34213167428970337,
+    "Knight | near eye": 0.08242204785346985,
+    "Knight | far swept ear": 0.05235552415251732,
+    "Knight | far eye": 0.0,
+    "Knight | continuous horse head and neck": 0.3719978332519531
+  },
+  "inference": "build/knight-mission/material-observations/inference.json",
+  "fixed_camera_and_geometry": true,
+  "samples": 64
+}
