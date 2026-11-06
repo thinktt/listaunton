@@ -20,6 +20,16 @@ def run(cfg):
     else:
         bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
         scene=bpy.context.scene;body=control(scene)
+    if "rig_config" in cfg:
+        from fit_lighting import clear_reflectors, make_light
+        from shape_trial import edit
+        rig=json.loads((ROOT/cfg["rig_config"]).read_text())
+        assert rig["source_sha256"]==cfg["source_sha256"]
+        edit(body,rig["profiles"])
+        clear_reflectors(scene,rig.get("keep_reflectors",()))
+        for row in rig["fitted_lights"]:
+            if row["energy"]>.00001:
+                make_light(scene,row)
     fixed_camera(scene);setup(scene,cfg.get("samples",96));add_lathe_uv(body)
     material=body.data.materials[0]
     nodes,links=material.node_tree.nodes,material.node_tree.links
@@ -27,10 +37,18 @@ def run(cfg):
     image=bpy.data.images.load(str(texture),check_existing=False)
     image.colorspace_settings.name="sRGB"
     image.pack()
+    previous=nodes.get("Pawn walnut pigment")
+    if previous:
+        # Existing grain-relief nodes may still use this source. Color and
+        # relief can then be compared independently with the same light rig.
+        previous.name="Earlier pigment | "+previous.image.name
     pigment=nodes.new("ShaderNodeTexImage");pigment.name="Pawn walnut pigment";pigment.image=image
     uv=nodes.new("ShaderNodeUVMap");uv.uv_map=UV_NAME
     links.new(uv.outputs["UV"],pigment.inputs["Vector"])
     links.new(pigment.outputs["Color"],bs.inputs["Base Color"])
+    if cfg.get("recess_config"):
+        from recess_finish import add_finish
+        add_finish(material,json.loads((ROOT/cfg["recess_config"]).read_text()))
     directory=BUILD/cfg["variant"];directory.mkdir(parents=True,exist_ok=True)
     scene["pawn_texture_path"]=cfg["texture"]
     scene["pawn_texture_sha256"]=cfg["texture_sha256"]

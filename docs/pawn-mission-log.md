@@ -48,7 +48,7 @@ below 0.000011 pixels in the DOM/WebGL interaction check. See the full trial
 scorecard, views, checks, and rebuild instructions under
 [iteration 001](pawn-mission/iteration-001/README.md). Mission in progress.
 
-## Checkpoint 002 � 2026-11-05
+## Checkpoint 002 · 2026-11-05
 
 Grain relief and real shaped reflectors give the head three textured glints.
 The unwanted fourth glint is gone. The base and socket now catch light in
@@ -67,10 +67,36 @@ The left base reflection is also too square. These limit the current result.
 
 Original black IoU is 97.816% and white is 97.911%. Geometry, UVs, pigment
 and camera are preserved. The exported geometry binary is identical to the
-previous checkpoint. Only IoU is measured. Holistic assessment is 75�83%.
+previous checkpoint. Only IoU is measured. Holistic assessment is 75–83%.
 Saved/reopened and independent replay renders agree with the chosen trial
 within 1/255, with identical alpha. The site and existing local preview are
 refreshed at this checkpoint. For all trials, actual settings and remaining
 issues, see [iteration 002](pawn-mission/iteration-002/README.md).
 Next inspect the flare curvature and actual groove geometry against both
 originals. The mission remains active.
+
+## Checkpoint 003 · 2026-11-05
+
+The upper flare follows both original silhouettes more closely. Its lower
+edge turns into a single dark recess above a flatter foot. Isolated light
+renders identified the stray reflector on the stem. The revised lower rig
+removes its streak. Fresh diffuse estimates register the walnut to the
+reshaped surface, and a narrow band of darker, less polished wood follows
+the groove around the full piece.
+
+| Metric | Checkpoint 002 | Checkpoint 003 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 95.65% | 96.84% |
+| Interior form | 80 | 85 |
+| Wood color | 79 | 83 |
+| Grain and surface | 76 | 78 |
+| Lighting | 66 | 72 |
+| Working mean | 79.33% | 82.97% |
+
+Original black IoU is 98.49% and white is 98.12%. The four visual scores
+are estimates. Holistic range is 78–85%. The approved height is preserved.
+The base reflections are still too broad. A longer lower hemisphere and
+soft shadow make the head and collar read as one mass in the elevated view.
+Next test a rounder lower head seated directly in a shallow collar. See the
+[checkpoint record](pawn-mission/iteration-003/README.md) for the render
+comparisons, light measurements, finish assumptions and replay instructions.

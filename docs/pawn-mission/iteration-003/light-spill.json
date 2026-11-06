@@ -1,0 +1,265 @@
+{
+  "source_sha256": "14ca03968949bc6fc584e2f2e30971486a65b51cb2205c6b0d7a08585964a0ea",
+  "values_linear_rgb_mean": {
+    "diffuse/world": {
+      "stem-streak": 0.03903864324092865,
+      "socket-wall": 0.06455276161432266,
+      "foot-wall": 0.02693074755370617,
+      "dark-groove": 0.02678639441728592
+    },
+    "Left head glint": {
+      "stem-streak": 1.1747778216886218e-06,
+      "socket-wall": 3.959840455536323e-07,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Upper head glint": {
+      "stem-streak": 1.9796846117969835e-07,
+      "socket-wall": 2.494887439752347e-06,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Right head glint": {
+      "stem-streak": 3.453079671089654e-07,
+      "socket-wall": 2.1393047688889055e-07,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Collar right lip": {
+      "stem-streak": 0.000320360908517614,
+      "socket-wall": 0.00013200398825574666,
+      "foot-wall": 0.0,
+      "dark-groove": 7.515650395362172e-07
+    },
+    "Socket right": {
+      "stem-streak": 0.00012178048200439662,
+      "socket-wall": 0.005534900352358818,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Socket shoulder": {
+      "stem-streak": 0.030486660078167915,
+      "socket-wall": 0.0018311121966689825,
+      "foot-wall": 0.004186270292848349,
+      "dark-groove": 0.0006271289312280715
+    },
+    "Rear left flare": {
+      "stem-streak": 2.9610300877891405e-09,
+      "socket-wall": 4.995875935165373e-10,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Base left": {
+      "stem-streak": 6.889048336233827e-07,
+      "socket-wall": 0.0001927825651364401,
+      "foot-wall": 7.3291380431328434e-06,
+      "dark-groove": 0.00011512727360241115
+    },
+    "Base right": {
+      "stem-streak": 1.2261530173418578e-06,
+      "socket-wall": 0.0006949235685169697,
+      "foot-wall": 2.5403637664567214e-06,
+      "dark-groove": 6.916718848515302e-05
+    },
+    "Base upper": {
+      "stem-streak": 1.1557564221220673e-06,
+      "socket-wall": 0.014713319018483162,
+      "foot-wall": 4.3084571643703384e-07,
+      "dark-groove": 1.1109325441793771e-06
+    },
+    "Foot left": {
+      "stem-streak": 1.2113616776332492e-06,
+      "socket-wall": 0.0009306290885433555,
+      "foot-wall": 0.0035266904160380363,
+      "dark-groove": 0.03228852525353432
+    },
+    "Foot right": {
+      "stem-streak": 8.672046760693775e-07,
+      "socket-wall": 0.0002260895853396505,
+      "foot-wall": 0.00020239157311152667,
+      "dark-groove": 0.0014643344329670072
+    },
+    "Foot front": {
+      "stem-streak": 1.742163924234319e-08,
+      "socket-wall": 6.30366912446334e-07,
+      "foot-wall": 0.0008640215964987874,
+      "dark-groove": 0.0008264324860647321
+    },
+    "Upper head glint core": {
+      "stem-streak": 4.276378695600158e-10,
+      "socket-wall": 3.989693553307916e-08,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Right head glint core": {
+      "stem-streak": 0.0,
+      "socket-wall": 5.642827716201282e-08,
+      "foot-wall": 0.0,
+      "dark-groove": 0.0
+    },
+    "Base left inner": {
+      "stem-streak": 3.929038427941123e-07,
+      "socket-wall": 0.0007027750834822655,
+      "foot-wall": 4.226578766974853e-06,
+      "dark-groove": 2.8549857233883813e-05
+    },
+    "Base left outer": {
+      "stem-streak": 6.967852783645867e-08,
+      "socket-wall": 9.002445949590765e-06,
+      "foot-wall": 1.0498582696527592e-06,
+      "dark-groove": 2.3468157451134175e-05
+    },
+    "Base right inner": {
+      "stem-streak": 1.39945120736229e-06,
+      "socket-wall": 0.0016661622794345021,
+      "foot-wall": 1.17138733912725e-05,
+      "dark-groove": 0.0002380853402428329
+    },
+    "Collar left front": {
+      "stem-streak": 5.240694349595287e-07,
+      "socket-wall": 0.00012179752229712903,
+      "foot-wall": 2.572853372839745e-05,
+      "dark-groove": 2.9308303055586293e-06
+    },
+    "Foot center-left": {
+      "stem-streak": 7.865893536518342e-08,
+      "socket-wall": 1.2413286640367005e-05,
+      "foot-wall": 0.0029144182335585356,
+      "dark-groove": 0.0016722134314477444
+    },
+    "Foot center-right": {
+      "stem-streak": 3.249312285902306e-08,
+      "socket-wall": 3.635577513705357e-06,
+      "foot-wall": 0.0006096627912484109,
+      "dark-groove": 0.0001852975256042555
+    }
+  },
+  "ranking": {
+    "stem-streak": [
+      [
+        "diffuse/world",
+        0.039039
+      ],
+      [
+        "Socket shoulder",
+        0.030487
+      ],
+      [
+        "Collar right lip",
+        0.00032
+      ],
+      [
+        "Socket right",
+        0.000122
+      ],
+      [
+        "Left head glint",
+        1e-06
+      ],
+      [
+        "Base left",
+        1e-06
+      ],
+      [
+        "Base right",
+        1e-06
+      ]
+    ],
+    "socket-wall": [
+      [
+        "diffuse/world",
+        0.064553
+      ],
+      [
+        "Base upper",
+        0.014713
+      ],
+      [
+        "Socket right",
+        0.005535
+      ],
+      [
+        "Socket shoulder",
+        0.001831
+      ],
+      [
+        "Base right inner",
+        0.001666
+      ],
+      [
+        "Foot left",
+        0.000931
+      ],
+      [
+        "Base left inner",
+        0.000703
+      ]
+    ],
+    "foot-wall": [
+      [
+        "diffuse/world",
+        0.026931
+      ],
+      [
+        "Socket shoulder",
+        0.004186
+      ],
+      [
+        "Foot left",
+        0.003527
+      ],
+      [
+        "Foot center-left",
+        0.002914
+      ],
+      [
+        "Foot front",
+        0.000864
+      ],
+      [
+        "Foot center-right",
+        0.00061
+      ],
+      [
+        "Foot right",
+        0.000202
+      ]
+    ],
+    "dark-groove": [
+      [
+        "Foot left",
+        0.032289
+      ],
+      [
+        "diffuse/world",
+        0.026786
+      ],
+      [
+        "Foot center-left",
+        0.001672
+      ],
+      [
+        "Foot right",
+        0.001464
+      ],
+      [
+        "Foot front",
+        0.000826
+      ],
+      [
+        "Socket shoulder",
+        0.000627
+      ],
+      [
+        "Base right inner",
+        0.000238
+      ]
+    ]
+  },
+  "pixels": {
+    "stem-streak": 348,
+    "socket-wall": 1007,
+    "foot-wall": 734,
+    "dark-groove": 779
+  }
+}

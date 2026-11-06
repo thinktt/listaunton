@@ -1,0 +1,398 @@
+{
+  "variant": "013-reshaped-base-lights",
+  "source": "history/pawn-mission-002/pawn-rebuilt.blend",
+  "source_sha256": "8d81351fee5d4cbe6a290ea80e8915a92a7ebef31f4a5e40c86dadedd940b5f0",
+  "samples": 128,
+  "response_samples": 128,
+  "glint_weight": 6,
+  "landmarks": [
+    {
+      "name": "Collar left",
+      "pixel": [
+        448,
+        609
+      ],
+      "half_axes": [
+        16,
+        4
+      ],
+      "angle": 24,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Collar right lip",
+      "pixel": [
+        539,
+        618
+      ],
+      "half_axes": [
+        11,
+        2.2
+      ],
+      "angle": -23,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Socket right",
+      "pixel": [
+        516,
+        739
+      ],
+      "half_axes": [
+        14,
+        6
+      ],
+      "angle": -40,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Rear left flare",
+      "pixel": [
+        391,
+        656
+      ],
+      "half_axes": [
+        16,
+        3
+      ],
+      "angle": -56,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base left",
+      "pixel": [
+        403,
+        878
+      ],
+      "half_axes": [
+        22,
+        7
+      ],
+      "angle": 22,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base right",
+      "pixel": [
+        590,
+        873
+      ],
+      "half_axes": [
+        21,
+        3
+      ],
+      "angle": -28,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base upper",
+      "pixel": [
+        540,
+        829
+      ],
+      "half_axes": [
+        14,
+        4
+      ],
+      "angle": -15,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Foot right",
+      "pixel": [
+        576,
+        945
+      ],
+      "half_axes": [
+        24,
+        2
+      ],
+      "angle": -20,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Foot front",
+      "pixel": [
+        481,
+        965
+      ],
+      "half_axes": [
+        15,
+        1.6
+      ],
+      "angle": 0,
+      "spread": 13,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base left inner",
+      "pixel": [
+        428,
+        886
+      ],
+      "half_axes": [
+        15,
+        6
+      ],
+      "angle": 14,
+      "spread": 12,
+      "color": [
+        1,
+        0.69,
+        0.49
+      ]
+    },
+    {
+      "name": "Base left outer",
+      "pixel": [
+        383,
+        872
+      ],
+      "half_axes": [
+        16,
+        7
+      ],
+      "angle": 35,
+      "spread": 12,
+      "color": [
+        1,
+        0.69,
+        0.49
+      ]
+    },
+    {
+      "name": "Base right inner",
+      "pixel": [
+        560,
+        889
+      ],
+      "half_axes": [
+        21,
+        3.4
+      ],
+      "angle": -16,
+      "spread": 12,
+      "color": [
+        1,
+        0.69,
+        0.49
+      ]
+    },
+    {
+      "name": "Collar left front",
+      "pixel": [
+        463,
+        618
+      ],
+      "half_axes": [
+        13,
+        3.7
+      ],
+      "angle": 15,
+      "spread": 12,
+      "color": [
+        1,
+        0.69,
+        0.49
+      ]
+    },
+    {
+      "name": "Foot center-left",
+      "pixel": [
+        446,
+        959
+      ],
+      "half_axes": [
+        17,
+        1.8
+      ],
+      "angle": 8,
+      "spread": 12,
+      "color": [
+        1,
+        0.69,
+        0.49
+      ]
+    },
+    {
+      "name": "Foot center-right",
+      "pixel": [
+        521,
+        962
+      ],
+      "half_axes": [
+        18,
+        2
+      ],
+      "angle": -7,
+      "spread": 12,
+      "color": [
+        1,
+        0.69,
+        0.49
+      ]
+    },
+    {
+      "name": "Foot edge outer left",
+      "pixel": [
+        394,
+        945
+      ],
+      "half_axes": [
+        14,
+        1.6
+      ],
+      "angle": 23,
+      "spread": 9,
+      "color": [
+        1,
+        0.67,
+        0.5
+      ]
+    },
+    {
+      "name": "Foot edge center left",
+      "pixel": [
+        420,
+        954
+      ],
+      "half_axes": [
+        15,
+        1.7
+      ],
+      "angle": 14,
+      "spread": 10,
+      "color": [
+        1,
+        0.71,
+        0.49
+      ]
+    }
+  ],
+  "profiles": {
+    "13": [
+      51.11059,
+      185.0771
+    ],
+    "14": [
+      49.93629,
+      183.32876
+    ],
+    "15": [
+      48.70751,
+      181.75533
+    ],
+    "16": [
+      47.33378,
+      180.34229
+    ],
+    "17": [
+      43.53919,
+      177.40452
+    ],
+    "18": [
+      39.67446,
+      174.1446
+    ],
+    "19": [
+      34.80118,
+      171.96698
+    ],
+    "20": [
+      29.91816,
+      170.40575
+    ],
+    "1": [
+      51.25,
+      200.3
+    ],
+    "2": [
+      51.7,
+      200.26
+    ],
+    "3": [
+      51.88,
+      200.09
+    ],
+    "4": [
+      51.9,
+      199.62
+    ],
+    "7": [
+      50.6,
+      194.65
+    ],
+    "8": [
+      49.2,
+      194.5
+    ],
+    "9": [
+      47.25,
+      193.4
+    ],
+    "10": [
+      46.35,
+      191.8
+    ],
+    "11": [
+      50.8,
+      189.65
+    ],
+    "12": [
+      51.55,
+      187.8
+    ]
+  },
+  "keep_reflectors": [
+    "Left head glint",
+    "Upper head glint",
+    "Right head glint",
+    "Upper head glint core",
+    "Right head glint core"
+  ],
+  "protect_recesses": true
+}

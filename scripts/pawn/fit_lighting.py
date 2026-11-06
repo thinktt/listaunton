@@ -44,9 +44,9 @@ def make_light(scene,row):
     light.visible_diffuse=False;light.visible_glossy=True
     return light
 
-def clear_reflectors(scene):
+def clear_reflectors(scene,keep=()):
     for obj in list(scene.objects):
-        if obj.type=="LIGHT" and not obj.visible_diffuse and obj.visible_glossy:
+        if obj.type=="LIGHT" and obj.name not in keep and not obj.visible_diffuse and obj.visible_glossy:
             bpy.data.objects.remove(obj,do_unlink=True)
 
 def response(scene,directory):
@@ -93,8 +93,11 @@ def nonnegative_fit(base,responses,target,weight,processor,initial):
 
 def run(cfg):
     scene,body=open_source(cfg)
+    if cfg.get("profiles"):
+        from shape_trial import edit
+        edit(body,cfg["profiles"])
     if cfg.get("finish"):finish(scene,body,cfg["finish"])
-    clear_reflectors(scene)
+    clear_reflectors(scene,cfg.get("keep_reflectors",()))
     if "fitted_lights" in cfg:
         for row in cfg["fitted_lights"]:
             if row["energy"]>.00001:make_light(scene,row)
@@ -131,6 +134,12 @@ def run(cfg):
     transform=ocio.DisplayViewTransform(src=ocio.ROLE_SCENE_LINEAR,display=scene.display_settings.display_device,view=scene.view_settings.view_transform)
     processor=config.getProcessor(transform).getDefaultCPUProcessor()
     weight=1+cfg.get("glint_weight",6)*np.clip((target.min(1)-.16)/.55,0,1)
+    if cfg.get("protect_recesses"):
+        ys,xs=np.nonzero(mask)
+        xs=xs*2+1;ys=ys*2+1
+        groove=(xs>330)&(xs<630)&(ys>903)&(ys<963)&(target.max(1)<.18)
+        stem=(xs>487)&(xs<522)&(ys>640)&(ys<705)
+        weight+=6*groove+3*stem
     power,errors=nonnegative_fit(fixed,np.stack(responses,axis=-1),target,weight,processor,np.ones(len(rows)))
     for ob,energy in zip(fixed_lights,fixed_powers):ob.data.energy=energy
     bg.default_value=world_power

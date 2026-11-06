@@ -1,0 +1,97 @@
+[
+  {
+    "trial": "011-original-flare-fit",
+    "scores": {
+      "silhouette": 96.6213568201976,
+      "interior_form": 82,
+      "wood_color": 78,
+      "grain": 75,
+      "lighting": 63
+    },
+    "working_mean": 78.92427136403953,
+    "iou": {
+      "selected": 0.966213568201976,
+      "original_black": 0.9821076018206842,
+      "original_white": 0.981496591613303
+    },
+    "source_sha256": "17c568404f8ae72964b8bea68260d6818697da988b57b88db1fadeb241a7f175",
+    "render_sha256": "02aaf322d9835ec2c05be53cfdcbe31d139ab85f1d5728712e170b3d658b65eb",
+    "decision": "The rear outline of the flare approaches both sprite edges. Existing pigment and reflectors slip relative to the newly shaped wood."
+  },
+  {
+    "trial": "012-undercut-groove",
+    "scores": {
+      "silhouette": 96.83707700156137,
+      "interior_form": 84,
+      "wood_color": 77,
+      "grain": 75,
+      "lighting": 62
+    },
+    "working_mean": 78.96741540031228,
+    "iou": {
+      "selected": 0.9683707700156137,
+      "original_black": 0.9849071965207713,
+      "original_white": 0.981212792825297
+    },
+    "source_sha256": "14ca03968949bc6fc584e2f2e30971486a65b51cb2205c6b0d7a08585964a0ea",
+    "render_sha256": "a0df1e582391638f2446687212d1766a7392bf1bbc99d9d0d52c2db948676431",
+    "decision": "The foot reads flatter and the recessed cut is clearer in clay. Previous highlights no longer follow its edge."
+  },
+  {
+    "trial": "013-reshaped-base-lights",
+    "scores": {
+      "silhouette": 96.83657800084508,
+      "interior_form": 84,
+      "wood_color": 79,
+      "grain": 76,
+      "lighting": 69
+    },
+    "working_mean": 80.96731560016902,
+    "iou": {
+      "selected": 0.9683657800084509,
+      "original_black": 0.9849021214322888,
+      "original_white": 0.9812077354444995
+    },
+    "source_sha256": "ab70b62f5a4820f1ff1387bce721f819cf84554f3618ebeddc9696b344498b60",
+    "render_sha256": "0666d7f9f1cbc0488c702fec3592790017e501769b52b468757410b7007040cf",
+    "decision": "Removing the stray socket reflector fixes the stem streak. New foot-edge lights protect the cut, which still reads too bright."
+  },
+  {
+    "trial": "014-reregistered-walnut",
+    "scores": {
+      "silhouette": 96.83657800084508,
+      "interior_form": 84,
+      "wood_color": 82,
+      "grain": 78,
+      "lighting": 69
+    },
+    "working_mean": 81.96731560016902,
+    "iou": {
+      "selected": 0.9683657800084509,
+      "original_black": 0.9849021214322888,
+      "original_white": 0.9812077354444995
+    },
+    "source_sha256": "e0e99f3b6f40f5d896f45891aec086490ce25601d649e1f4bd5afcf77c10a867",
+    "render_sha256": "f32852daa422e481582f05bcc2f2e94fdc8dd24734deee269d8b845f27749589",
+    "decision": "Remeasuring pigment on the revised physical surface reduces misregistration and color error. The center of the groove still fills with brown."
+  },
+  {
+    "trial": "015-recessed-finish",
+    "scores": {
+      "silhouette": 96.83657800084508,
+      "interior_form": 85,
+      "wood_color": 83,
+      "grain": 78,
+      "lighting": 72
+    },
+    "working_mean": 82.96731560016902,
+    "iou": {
+      "selected": 0.9683657800084509,
+      "original_black": 0.9849021214322888,
+      "original_white": 0.9812077354444995
+    },
+    "source_sha256": "eebeb82a8aa3ff35f816e74c79ee74aadd5d3885872b776a14b35bb3272dfcd7",
+    "render_sha256": "ce25d416e0c0a70d5d105efe8c9dd6729a5026befd896fbb55c5fa1ae7fba940",
+    "decision": "A continuous darker, less glossy finish around the recessed turning restores separation. The broken highlights on the broad flare and head-to-collar shadow still differ. Accepted."
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "rows": [
+    609,
+    864
+  ],
+  "original_black_weight": 0.64,
+  "original_white_weight": 0.23,
+  "selected_weight": 0.13,
+  "method": "Registered row half-widths against the envelope of projected lathe rings. Bounded smooth control edits; front-landmark and curvature penalties. No camera fit.",
+  "prior_width_rmse_px": 5.466903393209698,
+  "trial_width_rmse_px": 1.243755852387639,
+  "profiles": {
+    "13": [
+      51.11059,
+      185.0771
+    ],
+    "14": [
+      49.93629,
+      183.32876
+    ],
+    "15": [
+      48.70751,
+      181.75533
+    ],
+    "16": [
+      47.33378,
+      180.34229
+    ],
+    "17": [
+      43.53919,
+      177.40452
+    ],
+    "18": [
+      39.67446,
+      174.1446
+    ],
+    "19": [
+      34.80118,
+      171.96698
+    ],
+    "20": [
+      29.91816,
+      170.40575
+    ]
+  },
+  "parameters": [
+    -1.9430176127431207,
+    -0.3533049161549783,
+    -0.28689123588277887,
+    -0.21937418286583038,
+    0.17758216825892034,
+    0.9075677006901178,
+    -0.049068451479089385,
+    0.32404912301942
+  ]
+}

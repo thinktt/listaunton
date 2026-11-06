@@ -105,7 +105,11 @@ interior, which need separate detailed inspection.
 
 
 
-Checkpoint 002 has fitted wood reflections and grain relief. Scores are 95.65 / 80 / 79 / 76 / 66, working mean 79.33%; original black IoU is 97.82%. Read docs/pawn-mission-log.md and the latest accepted checkpoint before revising these scores. Update the pawn review page and local preview between accepted iterations.
+Checkpoint 003 refits the flare, foot and recessed finish. Scores are
+96.84 / 85 / 83 / 78 / 72, with a working mean of 82.97%. Original black
+IoU is 98.49%. Read the latest entry in docs/pawn-mission-log.md before
+revising these scores. Update the pawn review and local preview between
+accepted iterations.
 
 ## Iteration loop
 
