@@ -1,0 +1,230 @@
+{
+  "canvas": [
+    1254,
+    1254
+  ],
+  "selected_and_original_black_iou": 0.9701014607469238,
+  "rows": {
+    "600": {
+      "selected": {
+        "left": 389,
+        "right": 577,
+        "span": 189
+      },
+      "original_black": {
+        "left": 390,
+        "right": 575,
+        "span": 186
+      },
+      "original_white": {
+        "left": 386,
+        "right": 574,
+        "span": 189
+      },
+      "model": {
+        "left": 394,
+        "right": 574,
+        "span": 181
+      }
+    },
+    "612": {
+      "selected": {
+        "left": 398,
+        "right": 567,
+        "span": 170
+      },
+      "original_black": {
+        "left": 368,
+        "right": 593,
+        "span": 226
+      },
+      "original_white": {
+        "left": 366,
+        "right": 597,
+        "span": 232
+      },
+      "model": {
+        "left": 373,
+        "right": 595,
+        "span": 223
+      }
+    },
+    "625": {
+      "selected": {
+        "left": 370,
+        "right": 596,
+        "span": 227
+      },
+      "original_black": {
+        "left": 347,
+        "right": 614,
+        "span": 268
+      },
+      "original_white": {
+        "left": 344,
+        "right": 617,
+        "span": 274
+      },
+      "model": {
+        "left": 353,
+        "right": 616,
+        "span": 264
+      }
+    },
+    "638": {
+      "selected": {
+        "left": 348,
+        "right": 616,
+        "span": 269
+      },
+      "original_black": {
+        "left": 329,
+        "right": 631,
+        "span": 303
+      },
+      "original_white": {
+        "left": 329,
+        "right": 632,
+        "span": 304
+      },
+      "model": {
+        "left": 336,
+        "right": 632,
+        "span": 297
+      }
+    },
+    "646": {
+      "selected": {
+        "left": 338,
+        "right": 627,
+        "span": 290
+      },
+      "original_black": {
+        "left": 321,
+        "right": 640,
+        "span": 320
+      },
+      "original_white": {
+        "left": 321,
+        "right": 640,
+        "span": 320
+      },
+      "model": {
+        "left": 327,
+        "right": 641,
+        "span": 315
+      }
+    },
+    "655": {
+      "selected": {
+        "left": 328,
+        "right": 637,
+        "span": 310
+      },
+      "original_black": {
+        "left": 312,
+        "right": 649,
+        "span": 338
+      },
+      "original_white": {
+        "left": 311,
+        "right": 649,
+        "span": 339
+      },
+      "model": {
+        "left": 319,
+        "right": 649,
+        "span": 331
+      }
+    },
+    "672": {
+      "selected": {
+        "left": 312,
+        "right": 653,
+        "span": 342
+      },
+      "original_black": {
+        "left": 299,
+        "right": 662,
+        "span": 364
+      },
+      "original_white": {
+        "left": 299,
+        "right": 662,
+        "span": 364
+      },
+      "model": {
+        "left": 305,
+        "right": 663,
+        "span": 359
+      }
+    },
+    "688": {
+      "selected": {
+        "left": 300,
+        "right": 665,
+        "span": 366
+      },
+      "original_black": {
+        "left": 290,
+        "right": 673,
+        "span": 384
+      },
+      "original_white": {
+        "left": 291,
+        "right": 672,
+        "span": 382
+      },
+      "model": {
+        "left": 294,
+        "right": 674,
+        "span": 381
+      }
+    },
+    "994": {
+      "selected": {
+        "left": 417,
+        "right": 545,
+        "span": 129
+      },
+      "original_black": {
+        "left": 430,
+        "right": 536,
+        "span": 107
+      },
+      "original_white": {
+        "left": 437,
+        "right": 525,
+        "span": 89
+      },
+      "model": {
+        "left": 438,
+        "right": 530,
+        "span": 93
+      }
+    },
+    "998": {
+      "selected": {
+        "left": 449,
+        "right": 518,
+        "span": 70
+      },
+      "original_black": {
+        "left": 452,
+        "right": 512,
+        "span": 61
+      },
+      "original_white": {
+        "left": 458,
+        "right": 510,
+        "span": 53
+      },
+      "model": {
+        "left": 480,
+        "right": 488,
+        "span": 9
+      }
+    }
+  },
+  "decision": "Where the upper rear flare emerges below the collar, both original sprites show more width than the selected enlargement. Preserve the original silhouette and use the enlargement for detail."
+}

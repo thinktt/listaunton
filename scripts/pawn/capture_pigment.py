@@ -60,7 +60,7 @@ def meridian_samples(obj):
         return np.vstack(([0,0,min(height),0,-1],result,[1,0,max(height),0,1]))
     finally:ev.to_mesh_clear()
 
-def capture(source,directory):
+def capture(source,directory,with_beauty=False):
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
     scene=bpy.context.scene;body=control(scene)
     fixed_camera(scene);setup(scene,96);add_lathe_uv(body)
@@ -78,6 +78,8 @@ def capture(source,directory):
         bpy.data.images.remove(im)
     mat=body.data.materials[0];nodes=mat.node_tree.nodes;links=mat.node_tree.links
     bsdf=nodes.get("Principled BSDF")
+    if with_beauty:
+        read_pass("beauty")
     for link in list(bsdf.inputs["Base Color"].links):links.remove(link)
     bsdf.inputs["Base Color"].default_value=(0,0,0,1)
     read_pass("black")
@@ -101,5 +103,6 @@ def capture(source,directory):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("source");p.add_argument("output")
+    p.add_argument("--with-beauty",action="store_true")
     args=p.parse_args(sys.argv[sys.argv.index("--")+1:])
-    capture(BUILD/args.source/"pawn.blend",BUILD/args.output)
+    capture(BUILD/args.source/"pawn.blend",BUILD/args.output,args.with_beauty)

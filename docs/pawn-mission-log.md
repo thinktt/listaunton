@@ -176,3 +176,29 @@ four visual ratings. The [checkpoint evidence](pawn-mission/iteration-006/README
 includes the native-size comparison, full-size crops and measured surface
 tilts. Next remeasure the diffuse contribution under these revised lights,
 especially the walnut beside the dark contact and around the flare.
+
+## Checkpoint 007 · 2026-11-05
+
+The lower cheek now occludes the collar within half a pixel of the selected
+edge. Small front studio sources cast a narrow physical shadow. Its core
+measures 6.3 brightness levels against the reference's 4.2. Six pixels out,
+the collar returns to 28.7 against 29.1. Fresh diffuse measurements recover
+the surrounding walnut. The four-angle orbit check also exposes broader,
+inferred grain around the back.
+
+| Metric | Checkpoint 006 | Checkpoint 007 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 88 | 91 |
+| Wood color | 90 | 92 |
+| Grain and surface | 85 | 87 |
+| Lighting | 84 | 87 |
+| Working mean | 88.76% | 90.76% |
+
+Original black IoU is 98.50% and white is 98.14%. The selected enlargement
+disagrees with both originals on the width of the rear flare. The model
+follows the originals there. The holistic range is 87–93%. The four visual
+ratings remain estimates. The [checkpoint evidence](pawn-mission/iteration-007/README.md)
+includes the measured disagreement, shadow profiles and four-angle views.
+Next inspect the remaining narrow flare and foot reflections and the
+texture visible through their brightest areas.

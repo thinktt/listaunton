@@ -105,9 +105,9 @@ interior, which need separate detailed inspection.
 
 
 
-Checkpoint 006 adds fine wood relief, warm reflections and a clearer
-right flare arc. Scores are 96.81 / 88 / 90 / 85 / 84, with a working mean of 88.76%.
-Original black IoU is 98.51%. Read docs/pawn-mission-log.md before
+Checkpoint 007 fits the lower ball and the narrow shadow it casts into
+the collar. Scores are 96.81 / 91 / 92 / 87 / 87, with a working mean of 90.76%.
+Original black IoU is 98.50%. Read docs/pawn-mission-log.md before
 revising these scores. Update the pawn review and local preview between
 accepted iterations.
 

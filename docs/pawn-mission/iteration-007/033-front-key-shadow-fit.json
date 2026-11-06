@@ -1,0 +1,144 @@
+{
+  "method": "Actual one-light Cycles diffuse responses, nonnegative powers through the AgX display transform, stronger weight on the dark edge beneath the ball. Gloss reflectors preserved.",
+  "foreground_samples": 23256,
+  "loss": [
+    0.29620804517120014,
+    0.07361502625612239,
+    0.029514826544823465,
+    0.016721581451409222,
+    0.01600982647613562,
+    0.016002633387786545,
+    0.016002596900589007,
+    0.01600259452854664
+  ],
+  "panels": [
+    {
+      "name": "Right bounce",
+      "position": [
+        3,
+        -2,
+        4
+      ],
+      "target": [
+        0,
+        0,
+        1.35
+      ],
+      "energy": 88.71921417833023,
+      "size": 3,
+      "spread": 180
+    },
+    {
+      "name": "Back bounce",
+      "position": [
+        0,
+        3,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        1.35
+      ],
+      "energy": 165.07427621886154,
+      "size": 3,
+      "spread": 180
+    },
+    {
+      "name": "High left card",
+      "position": [
+        -1.7,
+        0.75,
+        7.8
+      ],
+      "target": [
+        0,
+        0,
+        1.4
+      ],
+      "energy": 95.73224589359262,
+      "size": 1.6,
+      "spread": 125
+    },
+    {
+      "name": "Lower front bounce",
+      "position": [
+        -0.5,
+        -2.9,
+        1.15
+      ],
+      "target": [
+        0,
+        0,
+        0.7
+      ],
+      "energy": 2.2188177909188758,
+      "size": 1.2,
+      "spread": 24
+    },
+    {
+      "name": "Lower right bounce",
+      "position": [
+        2.5,
+        -1.65,
+        1.85
+      ],
+      "target": [
+        0,
+        0,
+        0.95
+      ],
+      "energy": 2.0414361304789432,
+      "size": 0.95,
+      "spread": 26
+    },
+    {
+      "name": "Upper face bounce",
+      "position": [
+        -0.25,
+        -1.7,
+        2.9
+      ],
+      "target": [
+        0,
+        0,
+        2.45
+      ],
+      "energy": 0.7638178386593507,
+      "size": 0.55,
+      "spread": 25
+    },
+    {
+      "name": "Front shadow key",
+      "position": [
+        0.0,
+        -5.264235601034671,
+        10.678556959398996
+      ],
+      "target": [
+        0,
+        0,
+        1.45
+      ],
+      "energy": 23.973630012569632,
+      "size": 0.42,
+      "spread": 175
+    },
+    {
+      "name": "Front shadow feather",
+      "position": [
+        0.0,
+        -4.723711467890775,
+        10.96294046299167
+      ],
+      "target": [
+        0,
+        0,
+        1.45
+      ],
+      "energy": 643.0450591324142,
+      "size": 0.65,
+      "spread": 175
+    }
+  ]
+}

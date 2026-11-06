@@ -1,0 +1,144 @@
+{
+  "method": "Actual one-light Cycles diffuse responses, nonnegative powers through the AgX display transform, stronger weight on the dark edge beneath the ball. Gloss reflectors preserved.",
+  "foreground_samples": 23084,
+  "loss": [
+    0.18881938510523535,
+    0.0628305694980206,
+    0.02231300755845198,
+    0.009977759290443979,
+    0.00916354109693202,
+    0.009154514460489848,
+    0.009154483237996247,
+    0.009154483093927968
+  ],
+  "panels": [
+    {
+      "name": "Softbox above left",
+      "position": [
+        -3,
+        -4,
+        7
+      ],
+      "target": [
+        0,
+        0,
+        1.35
+      ],
+      "energy": 42.98554739818278,
+      "size": 4,
+      "spread": 180
+    },
+    {
+      "name": "Right bounce",
+      "position": [
+        3,
+        -2,
+        4
+      ],
+      "target": [
+        0,
+        0,
+        1.35
+      ],
+      "energy": 148.64763640181906,
+      "size": 3,
+      "spread": 180
+    },
+    {
+      "name": "Back bounce",
+      "position": [
+        0,
+        3,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        1.35
+      ],
+      "energy": 49.74107628753676,
+      "size": 3,
+      "spread": 180
+    },
+    {
+      "name": "High left card",
+      "position": [
+        -1.7,
+        0.75,
+        7.8
+      ],
+      "target": [
+        0,
+        0,
+        1.4
+      ],
+      "energy": 179.16343937015165,
+      "size": 1.6,
+      "spread": 125
+    },
+    {
+      "name": "High right card",
+      "position": [
+        2.1,
+        1.2,
+        6.8
+      ],
+      "target": [
+        0,
+        0,
+        1.3
+      ],
+      "energy": 66.27745773342214,
+      "size": 1.55,
+      "spread": 125
+    },
+    {
+      "name": "Lower front bounce",
+      "position": [
+        -0.5,
+        -2.9,
+        1.15
+      ],
+      "target": [
+        0,
+        0,
+        0.7
+      ],
+      "energy": 3.162335537416479,
+      "size": 1.2,
+      "spread": 24
+    },
+    {
+      "name": "Lower right bounce",
+      "position": [
+        2.5,
+        -1.65,
+        1.85
+      ],
+      "target": [
+        0,
+        0,
+        0.95
+      ],
+      "energy": 1.5068196868482795,
+      "size": 0.95,
+      "spread": 26
+    },
+    {
+      "name": "Upper face bounce",
+      "position": [
+        -0.25,
+        -1.7,
+        2.9
+      ],
+      "target": [
+        0,
+        0,
+        2.45
+      ],
+      "energy": 0.9649035551381253,
+      "size": 0.55,
+      "spread": 25
+    }
+  ]
+}

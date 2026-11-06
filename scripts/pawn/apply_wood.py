@@ -28,6 +28,9 @@ def run(cfg):
         edit(body,rig["profiles"])
         if "world_strength" in rig:
             scene.world.node_tree.nodes["Background"].inputs["Strength"].default_value=rig["world_strength"]
+        if "fitted_panels" in rig:
+            from fit_diffuse import install
+            install(scene,rig["fitted_panels"])
         clear_reflectors(scene,rig.get("keep_reflectors",()))
         for row in rig["fitted_lights"]:
             if row["energy"]>.00001:

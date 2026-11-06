@@ -135,8 +135,11 @@ def run(cfg):
         ob=make_light(scene,row);reflectors.append(ob)
         a=response(scene,directory)[:,:,:3][mask]
         # Normalize energy columns for the solver; restore actual watts below.
-        positive=a.max(1);peak=np.quantile(positive[positive>max(positive.max()*.025,1e-8)],.92)
-        scale=1/max(float(peak),.00001)
+        positive=a.max(1)
+        lit=positive[positive>max(positive.max()*.025,1e-8)]
+        # A close source can be fully hidden by the actual ball. It has no
+        # measured contribution and receives zero energy in the saved rig.
+        scale=1/max(float(np.quantile(lit,.92)),.00001) if lit.size else 0.
         responses.append(a*scale);scales.append(scale)
         ob.data.energy=0
         print("PAWN_MEASURED_LIGHT",row["name"],flush=True)
@@ -156,6 +159,13 @@ def run(cfg):
         head=(np.hypot(xs-483,ys-469)<115)&(ys<586)
         neck=(xs>439)&(xs<530)&(ys>645)&(ys<713)
         weight+=40*head+16*neck
+    if cfg.get("contact_edge"):
+        ys,xs=np.nonzero(mask)
+        xs=xs*stride+stride//2;ys=ys*stride+stride//2
+        edge=np.asarray(cfg["contact_edge"])
+        offset=ys-np.interp(xs,edge[:,0],edge[:,1])
+        underside=(xs>=edge[0,0])&(xs<=edge[-1,0])&(offset>=-8)&(offset<1)
+        weight+=100*underside
     power,errors=nonnegative_fit(fixed,np.stack(responses,axis=-1),target,weight,processor,np.ones(len(rows)))
     for ob,energy in zip(fixed_lights,fixed_powers):ob.data.energy=energy
     bg.default_value=world_power

@@ -76,6 +76,23 @@ def audit(directory, previous):
         valid=roi[y0:y1,x0:x1]
         delta=np.abs(rs[y0:y1,x0:x1]-ts[y0:y1,x0:x1])[valid]
         regions[name]={"mean_absolute_rgb_error_255":float(delta.mean()),"overlap_pixels":int(valid.sum())}
+    # Rank separated foreground patches so a good average cannot conceal
+    # a missing reflection, displaced turning or localized color cast.
+    error=np.abs(rs-ts).mean(2)
+    tiles=[]
+    x0,y0,x1,y1=FULL
+    for y in range(y0,y1-31,12):
+        for x in range(x0,x1-31,12):
+            valid=roi[y:y+32,x:x+32]
+            if valid.mean()>=.86:
+                tiles.append((float(error[y:y+32,x:x+32][valid].mean()),x,y))
+    worst=[]
+    for value,x,y in sorted(tiles,reverse=True):
+        if any(abs(x-item["xy"][0])<36 and abs(y-item["xy"][1])<36 for item in worst):
+            continue
+        worst.append({"xy":[x,y],"size":32,"mean_absolute_rgb_error_255":round(value,3)})
+        if len(worst)==8:
+            break
     prev=rgba(previous)
     items=[("Selected black 2",ref),("Previous model",prev),("Trial "+directory.name.split("-")[0],trial)]
     sheet(items,FULL,330,directory/"comparison.png")
@@ -84,6 +101,7 @@ def audit(directory, previous):
     for name in ["selected","original_black"]:
         Image.blend(black(refs[name]),black(trial),.5).crop(FULL).save(directory/("overlay-"+name+".png"))
     result={"trial":directory.name,"iou":results,"regions":regions,"render_sha256":sha(directory/"fixed.png"),"model_sha256":sha(directory/"pawn.blend"),"previous_render_sha256":sha(previous),"reference_sha256":sha(ASSETS/"reference.png"),"original_sha256":sha(ASSETS/"original.png"),"camera_assumption_above_board":54,"method":"Fixed registration. Foreground alpha >127 and reference max RGB >12. Largest component, filled holes. RGB errors only on common foreground."}
+    result["largest_local_residuals"]=worst
     (directory/"metrics.json").write_text(json.dumps(result,indent=2)+"\n")
     print(directory.name,results,flush=True)
     return result

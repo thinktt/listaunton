@@ -1,0 +1,116 @@
+[
+  {
+    "trial": "030-refined-pigment",
+    "scores": {
+      "silhouette": 96.80923425744615,
+      "interior_form": 88,
+      "wood_color": 91,
+      "grain": 87,
+      "lighting": 84
+    },
+    "working_mean": 89.36184685148923,
+    "iou": {
+      "selected": 0.9680923425744615,
+      "original_black": 0.9850584724491426,
+      "original_white": 0.9814041491380021
+    },
+    "source_sha256": "40ec11133d4564e51c9c488be72713f9cc8fc444078122f36aa384c9b990e8a0",
+    "render_sha256": "aa99d8547a4fb57f4b24cc72c8eea4f1cad2a80b25247eb3861928e8f25d5e77",
+    "decision": "The diffuse grain follows the walnut more closely; head RGB error drops from 4.92 to 3.63. The ball edge still exposes the collar too early."
+  },
+  {
+    "trial": "031-lower-cheek",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 91,
+      "grain": 87,
+      "lighting": 84
+    },
+    "working_mean": 89.96246521694322,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850280112766648,
+      "original_white": 0.9813737923639251
+    },
+    "source_sha256": "ac761f8c063760b1c9d93847c6d4976ed3dc64f8b870226f0d314df4b6cb9538",
+    "render_sha256": "d345b11390261dab7960f1f1128293179b6f8e49c23214a9eb862f363a7d2fe4",
+    "decision": "A slight fullness in the lower arc brings the ray-traced edge within half a pixel of the selected falling edge. The top and seat retain their positions. The cast shadow is still too light."
+  },
+  {
+    "trial": "032-real-contact-shadow",
+    "scores": {
+      "silhouette": 96.8128578127496,
+      "interior_form": 91,
+      "wood_color": 85,
+      "grain": 85,
+      "lighting": 84
+    },
+    "working_mean": 88.36257156254992,
+    "iou": {
+      "selected": 0.968128578127496,
+      "original_black": 0.9850332422821213,
+      "original_white": 0.9813790436911973
+    },
+    "source_sha256": "651d4ee385854ee769ffabbb38ec0cf3eeede360dd98104bbda4ef41b79f8cbf",
+    "render_sha256": "96c2385a9507dc60e1b618159cbecceec694a93d9400d279c8b00260b8999022",
+    "decision": "High fill actually darkens the front contact, but also darkens surrounding wood too broadly and makes the socket uneven. Reject as a finished look."
+  },
+  {
+    "trial": "033-front-key-shadow",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 86,
+      "grain": 85,
+      "lighting": 87
+    },
+    "working_mean": 89.16246521694322,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "1835d9e3b500b6c6da56206a9d33a818bc2af22722d9d372f2166799217ca98c",
+    "render_sha256": "39dc2ed4b079f7cee0a23f7986dbc1f80b4fd83e8f58ca7ecd8f6d63044a3e8b",
+    "decision": "Directions chosen by tracing the real collar restore the brightness just outside the shadow while preserving a dark core. The wood requires fresh diffuse measurements."
+  },
+  {
+    "trial": "034-confined-collar",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 86,
+      "grain": 85,
+      "lighting": 88
+    },
+    "working_mean": 89.3624652169432,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "345e21fbbfe0c1c92478b51da8f8518c89b2e6e5960d2efd4a215c7b4d551dda",
+    "render_sha256": "01662578f85edf7489fbf55f3094fa0bf076c45339c71b9752976e199d108d51",
+    "decision": "Smaller collar sources protect the edge and improve the shadow core. One attempted inner glint is fully occluded and gets zero energy. The underside still catches a thin stray reflection."
+  },
+  {
+    "trial": "035-seated-walnut",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 87,
+      "lighting": 87
+    },
+    "working_mean": 90.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "3093d305210aebe18e9d2fde626d9f20a9128253f547e51e93c5ce7e75b1bcce",
+    "render_sha256": "37ec1f96af07446b3edf2757dc351c21893b0e93e1d00da1aab1e3b58203c59a",
+    "decision": "The newly measured wood restores neighboring tones while retaining the narrow actual cast shadow. The seated shape also agrees with both originals. The broad flare highlights and hidden-side grain still differ. Accepted."
+  }
+]
