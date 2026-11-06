@@ -1,6 +1,6 @@
 # Provenance of the Lichess Staunton pieces
 
-This is a continuing investigation into the source images used by **listaunton**. It records what we can verify, separates interpretation from evidence, and leaves room for new findings. Last updated: **October 4, 2026**.
+This is a continuing investigation into the source images used by **listaunton**. It records what we can verify, separates interpretation from evidence, and leaves room for new findings. Last updated: **November 6, 2026**.
 
 ## What these pieces are
 
@@ -86,3 +86,5 @@ Add dated findings with direct source links, commit IDs or file hashes. Preserve
 ### Investigation log
 
 - **October 4, 2026:** traced both king PNGs to the January 2017 import; confirmed clipping in those original blobs; recovered the import’s Userstyles source link; extracted and inspected XMP from all twelve original PNGs. Saved per-piece metadata and original SHA-256 hashes. No verified artwork author or original 3D application found.
+
+- **November 6, 2026:** began a visual comparison with historical and modern Staunton families. [A Chavet set shown from the side](https://www.chess.com/forum/view/chess-equipment/finally-please-help-identify-these-pieces) and [another seen from above](https://www.chess.com/forum/view/chess-equipment/help-identifying-a-chavet-chess-set) share several features with the Lichess queen, including a low finial within a flared crown. The accompanying bishop and turned bases also provide useful comparisons, while the knights differ visibly. These are observations of resemblance, not evidence that a Chavet set was used as a reference, nor a new attribution of the Lichess artwork. The [queen study](queen-study.html) records the photograph sources and distinguishes historical examples from reproductions.
