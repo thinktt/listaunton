@@ -28,13 +28,20 @@ def check(scene,control):
         expected_parts.update(subdivisions['regions'] if subdivisions else ['collars'])
     assert {o['mission_render_region'] for o in parts}==expected_parts
     if socket:
-        assert socket['z_interval']==[.83,2.78]
+        boundary = settings.get('raised_flare_compact_socket', {}).get('socket_partition')
+        lower, upper = socket['z_interval']
+        assert upper == 2.78 and lower == (boundary['lower_height'] if boundary else .83)
+        if boundary:
+            from refine_socket_flare import atlas_signature
+            assert {o['mission_render_region']: atlas_signature(o.data) for o in parts} == boundary['atlas_hashes']
         controls=np.empty(len(control.data.vertices)*3,dtype=np.float32)
         control.data.vertices.foreach_get('co',controls)
         assert hashlib.sha256(controls.tobytes()).hexdigest()==socket['closed_controls_sha256']
         region=next(o for o in parts if o['mission_render_region']=='stem-socket')
         centers=np.array([tuple(p.center) for p in region.data.polygons])
-        assert np.all((centers[:,2]>=.83)&(centers[:,2]<2.78))
+        assert np.all((centers[:,2]>=lower)&(centers[:,2]<upper))
+        if boundary:
+            assert len(centers) == boundary['faces']
     if collar:
         assert collar['z_interval']==[2.78,3.34]
         assert hashlib.sha256(controls.tobytes()).hexdigest()==collar['closed_controls_sha256']
@@ -95,7 +102,7 @@ def check(scene,control):
             'collar_control_hash_verified':bool(collar) if collar else None,
             'collar_controls_unchanged':bool(collar) and not bool(settings.get('middle_collar_edge_refinement')) if collar else None,
             'nonshadowing_collar_fills':subdivisions['nonshadowing_fills'] if subdivisions else [],
-            'receiver_regions':sorted(expected_parts),'socket_controls_unchanged':bool(socket) if socket else None}
+            'receiver_regions':sorted(expected_parts),'socket_controls_unchanged':not bool(settings.get('raised_flare_compact_socket')) if socket else None}
     evaluated.to_mesh_clear()
     for modifier,level in levels:modifier.levels=level
     return result

@@ -1,0 +1,39 @@
+{
+  "baseline_sha256": "fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94",
+  "current_sha256": "e7d771e8436eb9cd76bbf7e9396950f36900e55d72fe1ec9f2f4bad7859c16bd",
+  "texture_sha256": "69b7c1bc02032e62864f299215fd068c2b3745936864de1ea27425ebe27bb7d2",
+  "roughness_ior_and_coat_parameters_unchanged": true,
+  "other_existing_lights_exact": false,
+  "later_socket_and_flare_powers": {
+    "Display fitted base-key": {
+      "factor": 0.42,
+      "before": 35.119232177734375,
+      "after": 14.750077247619629
+    },
+    "Socket crescent 08": {
+      "factor": 0.2,
+      "before": 3200.0,
+      "after": 640.0
+    }
+  },
+  "all_lights_match_documented_scope": true,
+  "changed_existing_lights": [
+    "Display fitted finial-left-spot",
+    "Display fitted finial-right-spot",
+    "Display fitted finial-top-spot"
+  ],
+  "preserved_body_light_copies": [
+    "Finial retained left",
+    "Finial retained right",
+    "Finial retained top"
+  ],
+  "body_copies_match_baseline": true,
+  "finial_lights_linked_only_to_finial": true,
+  "packed_png_bytes_and_decoded_pixels_exact": true,
+  "base_color_uses_fixed_uv_atlas": true,
+  "bump_distance_body": 0.007,
+  "bump_distance_finial": 0.00175,
+  "finial_polish_in_object_coordinates": true,
+  "real_bsdf_output": true,
+  "passed": true
+}

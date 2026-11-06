@@ -1136,3 +1136,10 @@ all trial ratings and remaining defects are recorded in iteration-017.
 Delivered model SHA-256: cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460. Prior model: history/queen-mission-016.
 Local review, fixed/side views and viewer are synchronized. Next address the
 bowl/rim reflection shape and grain. The goal remains incomplete.
+
+
+## Eighteenth iteration - raise the flare around the socket
+
+The owner's comparison with the original black sprite led to a higher inner flare, a 5.4% narrower socket and 19.6% less exposed socket height. The light assignments follow the original faces and two local reflections have lower power. Outline overlap is 97.9122% for the original and 97.9657% for the selected high-res. The new profile reduces lower-body image error against both. Form 84, color 84, grain 79 and lighting 76 are visual estimates. The working mean is 84.1931%. A visible difference remains in the breakup of the base highlight.
+
+Accepted model `8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6`. See [checkpoint 18](queen-mission/iteration-018/README.md) for dimensions, comparisons and reproduction.

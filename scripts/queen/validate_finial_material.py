@@ -22,10 +22,21 @@ _,_,_,_,old_props,old_lights=inspect(baseline)
 s,obj,nodes,bs,props,lights=inspect(current)
 assert props==old_props,(props,old_props)
 allowed={n for n in old_lights if 'finial-' in n and n.endswith('-spot')};assert len(allowed)==3
+cfg=json.loads(s['mission_material_config'])
+local_power=cfg.get('raised_flare_compact_socket',{}).get('reflection_power',{})
+assert set(local_power) <= {'Display fitted base-key','Socket crescent 08'}
 for name,prior in old_lights.items():
-    if name not in allowed:assert lights[name]==prior,(name,lights[name],prior)
+    if name in allowed:
+        continue
+    expected=prior.copy()
+    if name in local_power:
+        change=local_power[name]
+        assert prior['energy']==change['before'] and 0<change['factor']<=1
+        expected['energy']=float(np.float32(change['before']*change['factor']))
+        assert expected['energy']==change['after']
+    assert lights[name]==expected,(name,lights[name],expected)
 clones={n for n in lights if n not in old_lights};assert len(clones)==3
-cfg=json.loads(s['mission_material_config']);regions={o['mission_render_region'] for o in s.objects if o.get('mission_render_region')}
+regions={o['mission_render_region'] for o in s.objects if o.get('mission_render_region')}
 for name in allowed:assert lights[name]['parts']==['finial']
 for name in clones:
     spec=next(x for x in cfg['lights'] if x['name']==name);prior=old_lights[spec['clone_of']].copy();actual=lights[name].copy()
@@ -51,7 +62,7 @@ assert coordinates.type=='VECT_TRANSFORM' and coordinates.vector_type=='POINT' a
 assert cfg['finial_polish']['coordinate_space']=='OBJECT'
 output=next(n for n in nodes if n.type=='OUTPUT_MATERIAL');assert output.inputs['Surface'].links[0].from_node==bs
 report={'baseline_sha256':hashlib.sha256(baseline.read_bytes()).hexdigest(),'current_sha256':hashlib.sha256(current.read_bytes()).hexdigest(),'texture_sha256':sha,
-        'roughness_ior_and_coat_parameters_unchanged':True,'other_existing_lights_exact':True,'changed_existing_lights':sorted(allowed),'preserved_body_light_copies':sorted(clones),
+        'roughness_ior_and_coat_parameters_unchanged':True,'other_existing_lights_exact':not bool(local_power),'later_socket_and_flare_powers':local_power,'all_lights_match_documented_scope':True,'changed_existing_lights':sorted(allowed | set(local_power)),'preserved_body_light_copies':sorted(clones),
         'body_copies_match_baseline':True,'finial_lights_linked_only_to_finial':True,'packed_png_bytes_and_decoded_pixels_exact':True,'base_color_uses_fixed_uv_atlas':True,
         'bump_distance_body':.007,'bump_distance_finial':.00175,'finial_polish_in_object_coordinates':True,'real_bsdf_output':True,'passed':True}
 (ROOT/a.report_dir/'finial-material-check.json').write_text(json.dumps(report,indent=2)+'\n');print('FINIAL_MATERIAL_VALIDATED',json.dumps(report),flush=True)

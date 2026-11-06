@@ -1,0 +1,57 @@
+{
+  "method": "Mean squared RGB error in display space on shared opaque piece pixels. Both inputs receive the same blur, 2.5 pixels for the enlarged original and 1 pixel for high-res.",
+  "boxes": {
+    "roll_and_socket": [
+      323,
+      651,
+      644,
+      855
+    ],
+    "flare": [
+      257,
+      786,
+      711,
+      994
+    ],
+    "whole_lower_body": [
+      206,
+      570,
+      763,
+      1080
+    ]
+  },
+  "original": {
+    "roll_and_socket": {
+      "previous_mse": 261.61441873732895,
+      "current_mse": 255.89006387725786,
+      "percent_error_reduction": 2.188088442410574
+    },
+    "flare": {
+      "previous_mse": 338.00747102434775,
+      "current_mse": 307.32591585192165,
+      "percent_error_reduction": 9.077182548493434
+    },
+    "whole_lower_body": {
+      "previous_mse": 308.74206712750896,
+      "current_mse": 283.34276918711,
+      "percent_error_reduction": 8.22670463300007
+    }
+  },
+  "selected_highres": {
+    "roll_and_socket": {
+      "previous_mse": 575.6002715546504,
+      "current_mse": 471.5498198339339,
+      "percent_error_reduction": 18.07685938710287
+    },
+    "flare": {
+      "previous_mse": 283.30393166513284,
+      "current_mse": 230.95386885198008,
+      "percent_error_reduction": 18.478410273187063
+    },
+    "whole_lower_body": {
+      "previous_mse": 340.2436394530581,
+      "current_mse": 324.26361504891037,
+      "percent_error_reduction": 4.696641627110399
+    }
+  }
+}

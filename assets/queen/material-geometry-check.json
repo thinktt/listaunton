@@ -1,10 +1,43 @@
 {
-  "baseline": "history/queen-mission-016/queen-rebuilt.blend",
+  "baseline": "history/queen-mission-017/queen-rebuilt.blend",
   "current": "models/queen/queen-rebuilt.blend",
-  "baseline_sha256": "fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94",
-  "current_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
-  "control_vertices_identical": true,
+  "baseline_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
+  "current_sha256": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
+  "control_vertices_identical": false,
   "atlas_control_uvs_identical": true,
   "topology_identical": true,
+  "scoped_geometry_change": {
+    "baseline_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
+    "rings": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "all_other_control_vertices_identical": true,
+    "socket_outer_radius_before_after": [
+      0.5967612266540527,
+      0.5644999146461487
+    ],
+    "straight_wall_height_before_after": [
+      0.24354052543640137,
+      0.14699995517730713
+    ],
+    "flare_to_wall_join_height_before_after": [
+      0.8546701669692993,
+      0.9440000057220459
+    ],
+    "socket_to_stem_seat_height_before_after": [
+      1.3093900680541992,
+      1.3093900680541992
+    ]
+  },
   "passed": true
 }

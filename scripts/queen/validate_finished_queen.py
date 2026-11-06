@@ -10,6 +10,7 @@ from queen_scene import editable_mesh
 from validate_render_receivers import check as check_receivers
 from validate_base_transition import check as check_base_transition
 from validate_middle_collar_edge import check as check_middle_edge
+from refine_socket_flare import check_scope as check_socket_flare
 p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=args.blend
@@ -39,13 +40,15 @@ height=float(np.ptp(co[:,2]));low=co[co[:,2]<=co[:,2].min()+height*.25]
 diameter=float((np.ptp(low[:,0])+np.ptp(low[:,1]))/2)
 ratio=height/diameter
 # The owner's smaller, deeper finial intentionally lowers the maximum height.
-# Keep the original tolerance around the adjusted target. All other controls
-# remain identical except separately validated base-junction and middle-lip rings.
+# Keep the sizing tolerance and validate each local profile edit against its own baseline.
 material_settings=json.loads(scene.get('mission_material_config','{}'))
 seating=material_settings.get('finial_seating')
-middle_edge,pre_collar_controls=check_middle_edge(controls,material_settings)
+socket_flare, prior_controls = check_socket_flare(controls, material_settings, obj.data.name)
+middle_edge,pre_collar_controls=check_middle_edge(prior_controls,material_settings)
 base_transition=check_base_transition(pre_collar_controls,material_settings)
 if middle_edge and base_transition:base_transition['verification_scope']='Prior base edit checked on pre-collar snapshot; current base is identical to it by the separate middle-edge scope check.'
+if socket_flare and base_transition:
+    base_transition['verification_scope'] = 'Checked on the pre-collar snapshot after verifying the current socket edit against the archived checkpoint.'
 adjusted_target=fit['target_height_to_base_width']
 if seating:
     assert seating['height_factor']==.90 and seating['radial_factor']==.96
@@ -64,6 +67,8 @@ report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdige
 report['finial_seating']=seating
 report['base_transition']=base_transition
 report['middle_collar_edge_refinement']=middle_edge
+if socket_flare:
+    report['raised_flare_compact_socket'] = socket_flare
 report['adjusted_height_target']=adjusted_target
 report['render_receivers']=check_receivers(scene,obj)
 for name in ('finish-validation.json','model-validation.json'):

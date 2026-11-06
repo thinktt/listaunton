@@ -1,0 +1,59 @@
+{
+  "source_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
+  "accepted_model_sha256": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
+  "trials": [
+    {
+      "trial": "180-fitted-socket-flare",
+      "original_silhouette_iou": 0.9791330499252167,
+      "highres_silhouette_iou": 0.9796356996070426,
+      "visual_scores": {
+        "form": 83,
+        "color": 83,
+        "grain": 79,
+        "lighting": 70
+      },
+      "decision": "Rejected. The lower edge of the socket light group cut across the raised flare."
+    },
+    {
+      "trial": "181-transported-flare",
+      "original_silhouette_iou": 0.9791330499252167,
+      "highres_silhouette_iou": 0.9796356996070426,
+      "visual_scores": {
+        "form": 83,
+        "color": 83,
+        "grain": 79,
+        "lighting": 73
+      },
+      "decision": "Rejected. The correct surfaces received the lights, but the stronger lift produced a broad bright patch."
+    },
+    {
+      "trial": "182-eased-socket-roll",
+      "original_silhouette_iou": 0.9791221044618494,
+      "highres_silhouette_iou": 0.9796566983680648,
+      "visual_scores": {
+        "form": 84,
+        "color": 84,
+        "grain": 79,
+        "lighting": 75
+      },
+      "decision": "Kept the geometry. The right spot and base strip needed less power on the new curve."
+    },
+    {
+      "trial": "183-raised-flare-short-socket",
+      "original_silhouette_iou": 0.9791221044618494,
+      "highres_silhouette_iou": 0.9796566983680648,
+      "visual_scores": {
+        "form": 84,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Accepted after fixed, profile and regional comparisons against both registered references."
+    }
+  ],
+  "accepted_equal_weight_mean_percent": 84.19313396736129,
+  "holistic_visual_estimate_percent": [
+    80,
+    85
+  ]
+}

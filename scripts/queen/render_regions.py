@@ -10,7 +10,8 @@ import numpy as np
 REGION_NAMES = ['foot', 'base', 'socket', 'stem', 'lower-collar',
                 'middle-collar', 'upper-collar', 'crown-body', 'bowl', 'finial']
 
-def partition(scene, obj, finial_only=False, socket_band=False, collar_band=False, split_collars=False):
+def partition(scene, obj, finial_only=False, socket_band=False, collar_band=False, split_collars=False,
+              socket_face_count=None):
     assert not collar_band or socket_band, 'Collar partition requires the accepted socket partition'
     assert not split_collars or collar_band, 'Subdivided collars require the collar partition'
     old_levels = [(m, m.levels) for m in obj.modifiers if m.type == 'SUBSURF']
@@ -35,7 +36,20 @@ def partition(scene, obj, finial_only=False, socket_band=False, collar_band=Fals
     if socket_band:
         finial = labels == 9
         labels = np.zeros(len(centers), dtype=np.int32)
-        labels[(centers[:, 2] >= .83) & (centers[:, 2] < 2.78)] = 1
+        socket_floor = .83
+        if socket_face_count is not None:
+            # The turned body has horizontal rings. Carry the original socket faces
+            # with a deformed shoulder so its lighting follows the same wood.
+            below_collar = centers[centers[:, 2] < 2.78, 2]
+            boundary = len(below_collar) - socket_face_count
+            if not 0 < boundary < len(below_collar):
+                raise ValueError("Socket face count falls outside the turned body")
+            ranked = np.partition(below_collar, (boundary - 1, boundary))
+            lower, upper = ranked[boundary-1:boundary+1]
+            if upper - lower < 1e-5:
+                raise ValueError("Socket light boundary would split a meridian row")
+            socket_floor = float((lower + upper) / 2)
+        labels[(centers[:, 2] >= socket_floor) & (centers[:, 2] < 2.78)] = 1
         labels[finial] = 2
         names = ['turned-body', 'stem-socket', 'finial']
         if collar_band:
@@ -94,6 +108,8 @@ def partition(scene, obj, finial_only=False, socket_band=False, collar_band=Fals
         reports.append({'name': name, 'faces': len(faces), 'vertices': len(selected_vertices),
                         'triangles': int((counts[faces] - 2).sum()), 'uv_layers': list(uv_layers),
                         'custom_corner_normals': part_mesh.has_custom_normals})
+        if name == 'stem-socket' and socket_face_count is not None:
+            reports[-1]['lower_height'] = socket_floor
     assert sum(r['faces'] for r in reports) == len(mesh.polygons)
     evaluated.to_mesh_clear()
     for modifier, level in old_levels:

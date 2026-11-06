@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "source_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
+  "source_sha256": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
   "camera_elevation_degrees": 54.00000066135015,
   "camera_type": "ORTHO",
   "height": 4.4452924728393555,
@@ -11,7 +11,7 @@
   "material": "Walnut - reference-derived pigment",
   "boundary_edges": 0,
   "nonmanifold_edges": 0,
-  "signed_volume": 4.484234500141332,
+  "signed_volume": 4.4818284760634,
   "crown_tips": 8,
   "body_rings_monotonic": true,
   "finial_seating": {
@@ -33,7 +33,7 @@
     "all_heights_identical": true,
     "maximum_vertex_displacement": 0.01797795295715332,
     "original_body_hash_verified": true,
-    "verification_scope": "Prior base edit checked on pre-collar snapshot; current base is identical to it by the separate middle-edge scope check."
+    "verification_scope": "Checked on the pre-collar snapshot after verifying the current socket edit against the archived checkpoint."
   },
   "middle_collar_edge_refinement": {
     "baseline_sha256": "8b1c052b8c6960c6faf6760635090a7c081b04e5ad779641a4b9e49433f628c0",
@@ -47,6 +47,39 @@
     "peak_ring_identical": true,
     "maximum_vertex_displacement": 0.015000076033174992
   },
+  "raised_flare_compact_socket": {
+    "baseline_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
+    "rings": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "all_other_control_vertices_identical": true,
+    "socket_outer_radius_before_after": [
+      0.5967612266540527,
+      0.5644999146461487
+    ],
+    "straight_wall_height_before_after": [
+      0.24354052543640137,
+      0.14699995517730713
+    ],
+    "flare_to_wall_join_height_before_after": [
+      0.8546701669692993,
+      0.9440000057220459
+    ],
+    "socket_to_stem_seat_height_before_after": [
+      1.3093900680541992,
+      1.3093900680541992
+    ]
+  },
   "adjusted_height_target": 2.156759941197978,
   "render_receivers": {
     "used": true,
@@ -54,7 +87,7 @@
     "surface_faces_and_atlas_uvs_exact": true,
     "triangles": 715776,
     "custom_normal_max_component_error": 4.3332576751708984e-05,
-    "custom_normal_mean_component_error": 1.0615170964456411e-07,
+    "custom_normal_mean_component_error": 1.1618175221883575e-07,
     "materials_shared": true,
     "excluded_reflector_count": 79,
     "closed_editable_control_retained": true,
@@ -81,6 +114,6 @@
       "turned-body",
       "upper-collar"
     ],
-    "socket_controls_unchanged": true
+    "socket_controls_unchanged": false
   }
 }

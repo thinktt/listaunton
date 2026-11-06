@@ -126,3 +126,6 @@ Use validate_finial_material.py for packed pixels, material and light-edit scope
 plus the normal geometry/receiver/camera checks. Keep fixed, side and viewer
 assets synchronized; bowl/rim shaping, grain and reflections remain unfinished.
 The accepted render uses 256 fixed samples with use_light_tree=False for repeatability. Publish/reopen helpers honor explicit render_sampling metadata; earlier checkpoints retain their defaults. The polish mask uses object coordinates and is verified by a translated-piece emission-field check.
+
+
+Queen checkpoint 18 raises the inner flare and shortens the socket. Rebuild with `scripts/queen/refine_socket_flare.py` and `docs/queen-mission/iteration-018/profile.json` from the archived seventeenth queen. Preserve the stem/socket face membership when regenerating the six light receivers. The camera stays at 54°. See `docs/queen-mission/iteration-018/README.md` for the profile, light settings and validation.
