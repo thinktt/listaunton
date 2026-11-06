@@ -1,0 +1,41 @@
+{
+  "baseline": "history/knight/mission-001/knight-rebuilt.blend",
+  "source_sha256": "d10b2b09377981b915ac8fd418c7c654fdec6e6b6f9f631d8971276dcbcf67b7",
+  "center_xz": [
+    0.42,
+    4.155
+  ],
+  "socket_depth": 0.078,
+  "eye_half_length": 0.198,
+  "eye_half_height": 0.063,
+  "convex_lens": true,
+  "before": {
+    "grid_spacing_pixels": 2,
+    "visible_samples": 18,
+    "bounds": [
+      [
+        519,
+        463
+      ],
+      [
+        533,
+        467
+      ]
+    ]
+  },
+  "after": {
+    "grid_spacing_pixels": 2,
+    "visible_samples": 223,
+    "bounds": [
+      [
+        479,
+        469
+      ],
+      [
+        531,
+        489
+      ]
+    ]
+  },
+  "method": "Carve a bilateral almond hollow and raised eyelid in the continuous skull. Seat both closed eye forms against the remodeled surface. Preserve pedestal, camera, pigment coordinates, lighting and all other components."
+}

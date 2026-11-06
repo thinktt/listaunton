@@ -1,0 +1,85 @@
+{
+  "source_sha256": "f0a6a7ca28129aed27636af70887c3b43ddddeb4582e3ba30b4bcfda5a38a9a6",
+  "crop": [
+    459,
+    451,
+    558,
+    510
+  ],
+  "initial_display_loss": 0.09262136117561251,
+  "predicted_display_loss": 0.07341290306534261,
+  "reflectors": [
+    {
+      "name": "Eye reflection upper",
+      "nominal_pixel": [
+        504,
+        473
+      ],
+      "on_eye_pixel": [
+        504,
+        473
+      ],
+      "position": [
+        1.2388198375701904,
+        -0.1648232787847519,
+        4.584595203399658
+      ],
+      "size": 0.15,
+      "normal": [
+        0.6616239547729492,
+        -0.25818485021591187,
+        0.7039846181869507
+      ],
+      "energy": 4.099999904632568
+    },
+    {
+      "name": "Eye reflection lower",
+      "nominal_pixel": [
+        509,
+        481
+      ],
+      "on_eye_pixel": [
+        509,
+        481
+      ],
+      "position": [
+        1.3199412822723389,
+        -0.6086332201957703,
+        4.2365899085998535
+      ],
+      "size": 0.22,
+      "normal": [
+        0.6860542297363281,
+        -0.489280104637146,
+        0.5384557247161865
+      ],
+      "energy": 0.30000001192092896
+    },
+    {
+      "name": "Eye reflection upper-wide",
+      "nominal_pixel": [
+        503,
+        474
+      ],
+      "on_eye_pixel": [
+        503,
+        474
+      ],
+      "position": [
+        1.2516963481903076,
+        -0.23190616071224213,
+        4.558916091918945
+      ],
+      "size": 0.3,
+      "normal": [
+        0.6675636172294617,
+        -0.2886120676994324,
+        0.6863394379615784
+      ],
+      "energy": 0.0
+    }
+  ],
+  "basis_samples": 256,
+  "samples": 96,
+  "method": "Only the eyes receive the added glossy light. Solve nonnegative powers against actual cropped Cycles responses with the saved AgX display transform."
+}

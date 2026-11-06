@@ -64,7 +64,7 @@ def main():
     saved=objects[0].data.materials[0].node_tree.nodes["Principled BSDF"].inputs["Base Color"].links[0].from_node.image
     assert saved.packed_file and bytes(saved.packed_file.data)==texture.read_bytes()
     coverage=check_coverage(scene,saved)
-    configure_render(scene,64)
+    configure_render(scene,scene.cycles.samples)
     export(scene,texture)
     render(scene,ASSETS/"render.png")
     clay=bpy.data.materials.get("Neutral satin clay")

@@ -1,0 +1,26 @@
+{
+  "trial": "009-carved-eye",
+  "model_sha256": "88b1f2cbbbfcd17ed35f65449be284b02b444b041a0a6a26040f777bfbe1b8e4",
+  "render_sha256": "2786306ef9108d3442736480bb4a7a924d2510098bae4d1b0c6ff0ced9b1b0f2",
+  "previous_render_sha256": "55547f91203c3ccae5c9fe62c8ba94ef5d27cfeaf6054821f450ad29bfb4d5cd",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9508159836803264,
+      "previous_iou": 0.9508159836803264
+    },
+    "selected": {
+      "iou": 0.9432691621255027,
+      "previous_iou": 0.9432691621255027
+    },
+    "white_mirrored": {
+      "iou": 0.9459630861392889,
+      "previous_iou": 0.9459630861392889
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

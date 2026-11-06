@@ -12,7 +12,7 @@
     {
       "name": "Knight | swept rounded mane",
       "nonmanifold_edges": 0,
-      "signed_volume": 1.2628591766178199,
+      "signed_volume": 1.5758052612987803,
       "connected_components": 1,
       "vertices": 12802,
       "faces": 12800,
@@ -21,7 +21,7 @@
     {
       "name": "Knight | near swept ear",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.02677651926896206,
+      "signed_volume": 0.04489385549337576,
       "connected_components": 1,
       "vertices": 6658,
       "faces": 6656,
@@ -30,7 +30,7 @@
     {
       "name": "Knight | near eye",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.0006137400482973928,
+      "signed_volume": 0.0033532522270030675,
       "connected_components": 1,
       "vertices": 482,
       "faces": 512,
@@ -39,7 +39,7 @@
     {
       "name": "Knight | far swept ear",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.026776518828918332,
+      "signed_volume": 0.04489387144597555,
       "connected_components": 1,
       "vertices": 6658,
       "faces": 6656,
@@ -48,7 +48,7 @@
     {
       "name": "Knight | far eye",
       "nonmanifold_edges": 0,
-      "signed_volume": 0.0006137400388805373,
+      "signed_volume": 0.003348745152654331,
       "connected_components": 1,
       "vertices": 482,
       "faces": 512,
@@ -57,7 +57,7 @@
     {
       "name": "Knight | continuous horse head and neck",
       "nonmanifold_edges": 0,
-      "signed_volume": 5.6251138588895495,
+      "signed_volume": 5.620621269528396,
       "connected_components": 1,
       "vertices": 43499,
       "faces": 59880,
@@ -66,7 +66,7 @@
     {
       "name": "Knight | curved neck and chest",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.497859377058479,
+      "signed_volume": 4.4978593499479365,
       "connected_components": 1,
       "vertices": 57858,
       "faces": 57856,
@@ -75,7 +75,7 @@
     {
       "name": "Knight | coherent skull cheek and conical muzzle",
       "nonmanifold_edges": 0,
-      "signed_volume": 1.398393911707234,
+      "signed_volume": 1.3939159726691441,
       "connected_components": 1,
       "vertices": 27778,
       "faces": 27776,
@@ -85,14 +85,14 @@
   "eyes": [
     {
       "name": "near",
-      "socket_center_depth_difference": 0.004239439964294434,
-      "half_eye_depth": 0.03589191287755966,
+      "socket_center_depth_difference": 0.011081576347351074,
+      "half_eye_depth": 0.11128408461809158,
       "seated_in_surface": true
     },
     {
       "name": "far",
-      "socket_center_depth_difference": 0.003903627395629883,
-      "half_eye_depth": 0.035891905426979065,
+      "socket_center_depth_difference": 0.009338021278381348,
+      "half_eye_depth": 0.07995685935020447,
       "seated_in_surface": true
     }
   ],

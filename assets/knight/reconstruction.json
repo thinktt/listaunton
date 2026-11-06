@@ -1,6 +1,6 @@
 {
   "piece": "Knight",
-  "revision": "mission-001-registered-walnut",
+  "revision": "mission-002-carved-eye-and-mane",
   "source_priority": [
     "Original black Lichess sprite; mirrored white sprite as an independent check",
     "Selected black candidate 2 for detailed fixed-view fitting",
@@ -18,7 +18,7 @@
     "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
   },
   "geometry": {
-    "method": "Retain the accepted carving, with a height-dependent placement of its upper mass. Upper head moves rigidly and the socket transition bends smoothly.",
+    "method": "A continuous carved skull and neck with bilateral eye sockets, convex seated eyes, a swept brow and a fuller lower mane.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
     "triangles": 203602,
@@ -69,28 +69,28 @@
     "final_reference_metrics": "assets/knight/qa.json"
   },
   "mission": {
-    "checkpoint": "001",
-    "source_sha256": "d10b2b09377981b915ac8fd418c7c654fdec6e6b6f9f631d8971276dcbcf67b7",
+    "checkpoint": "002",
+    "source_sha256": "68e2e1a41f06bf19ff843bc0c0d2d042f1f846bef4f1447c00048b2cb96fb07f",
     "scores": {
-      "variant": "008-packed-walnut",
-      "silhouette": 94.32691621255027,
-      "form": 72,
+      "variant": "013-eye-reflection",
+      "silhouette": 95.29423305005396,
+      "form": 77,
       "color": 78,
       "grain": 67,
-      "lighting": 39,
-      "working_mean": 70.06538324251005,
-      "original_iou": 0.9508159836803264,
-      "mirrored_white_iou": 0.9459630861392889,
-      "decision": "Accept validated equivalent of 005. All seven parts use the verified baked pigment.",
-      "blend_sha256": "8328521358200b3c9a77afc3bacbecb7c30e4376f44bcfd2533b6e9b945149e5",
-      "render_sha256": "b27d239e07db74ec1fee8c161936f75eea0a9afdb7abb652d47edf2e041c4a87"
+      "lighting": 43,
+      "working_mean": 72.05884661001079,
+      "original_iou": 0.9580950555998012,
+      "mirrored_white_iou": 0.9508665287502337,
+      "decision": "Accept. A real eye reflection improves the elevated eye while preserving the improved carving and registered side silhouette.",
+      "blend_sha256": "c71b969b3c3a97bb9df77a635f63781f5575c05ce93dba4028435cbf9bcb551e",
+      "render_sha256": "7397bd32876bfff6cd50efad71a22b0b7af300c656efba3ce6beb9605a0b19d8"
     },
     "current_notes": "docs/knight-mission-log.md",
     "limitations": [
-      "Eye obscured in the elevated view",
-      "Lower mane, throat and collar boundaries differ",
-      "Unresolved neck and forehead reflection patterns",
-      "Hidden wood and lateral depth remain interpreted"
+      "Elevated eye remains too orange, with a flatter lower lid and a weaker catchlight than the detail reference.",
+      "Chest lacks the bright broken reflection along its carved ridge. Mane and collar reflections are too wide.",
+      "The lower mane still recedes early near the foot. The cheek and muzzle need the deeper channel seen on the original.",
+      "Oblique grain and regions hidden in the original remain inferred."
     ]
   },
   "history_at_activation": {

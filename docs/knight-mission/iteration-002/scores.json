@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "009-carved-eye",
+    "silhouette": 94.32691621255027,
+    "form": 73,
+    "color": 78,
+    "grain": 67,
+    "lighting": 39,
+    "working_mean": 70.26538324251005,
+    "original_iou": 0.9508159836803264,
+    "mirrored_white_iou": 0.9459630861392889,
+    "decision": "The real eye becomes visible. Its flattened, angular front follows the cavity too closely.",
+    "blend_sha256": "88b1f2cbbbfcd17ed35f65449be284b02b444b041a0a6a26040f777bfbe1b8e4",
+    "render_sha256": "2786306ef9108d3442736480bb4a7a924d2510098bae4d1b0c6ff0ced9b1b0f2"
+  },
+  {
+    "variant": "010-convex-eye",
+    "silhouette": 94.32691621255027,
+    "form": 75,
+    "color": 78,
+    "grain": 67,
+    "lighting": 39,
+    "working_mean": 70.66538324251005,
+    "original_iou": 0.9508159836803264,
+    "mirrored_white_iou": 0.9459630861392889,
+    "decision": "A convex almond seats inside the carved socket and reads as an eye in both views.",
+    "blend_sha256": "afd7c14e1b76ad095a7ef2239c53946b98c1b51dfd79862a56d5142fe762e59b",
+    "render_sha256": "09064801cfc95a000958a4f82035c4de93bdab721ab24a52554e9f836591166b"
+  },
+  {
+    "variant": "011-seated-brow",
+    "silhouette": 94.23642498686792,
+    "form": 75,
+    "color": 78,
+    "grain": 67,
+    "lighting": 38,
+    "working_mean": 70.44728499737359,
+    "original_iou": 0.9489175339457885,
+    "mirrored_white_iou": 0.9440347251912024,
+    "decision": "The swept brow is better attached, but it covers the upper catchlight and slightly reduces outline fit.",
+    "blend_sha256": "7ab06a267e0192c75520183de22d31fb1f253f028b6a34a9129b05f6dc44b79c",
+    "render_sha256": "ee30c416801b00c97d6db872b6b44348a45b9af4d3e4b6a3ebe428b937271953"
+  },
+  {
+    "variant": "012-lower-carving",
+    "silhouette": 95.29447435146679,
+    "form": 77,
+    "color": 78,
+    "grain": 67,
+    "lighting": 40,
+    "working_mean": 71.45889487029335,
+    "original_iou": 0.9581092733870678,
+    "mirrored_white_iou": 0.9508978658989048,
+    "decision": "The extended lower mane fits the original. Lifting the brow tip recovers the visible eye.",
+    "blend_sha256": "f0a6a7ca28129aed27636af70887c3b43ddddeb4582e3ba30b4bcfda5a38a9a6",
+    "render_sha256": "546f06f95207d55bbcf5a2ada2e86e4f6306e8324303a43bd1b53062eb82f916"
+  },
+  {
+    "variant": "013-eye-reflection",
+    "silhouette": 95.29423305005396,
+    "form": 77,
+    "color": 78,
+    "grain": 67,
+    "lighting": 43,
+    "working_mean": 72.05884661001079,
+    "original_iou": 0.9580950555998012,
+    "mirrored_white_iou": 0.9508665287502337,
+    "decision": "Accept. A real eye reflection improves the elevated eye while preserving the improved carving and registered side silhouette.",
+    "blend_sha256": "c71b969b3c3a97bb9df77a635f63781f5575c05ce93dba4028435cbf9bcb551e",
+    "render_sha256": "7397bd32876bfff6cd50efad71a22b0b7af300c656efba3ce6beb9605a0b19d8"
+  }
+]

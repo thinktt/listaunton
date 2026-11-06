@@ -1,0 +1,26 @@
+{
+  "trial": "012-lower-carving",
+  "model_sha256": "f0a6a7ca28129aed27636af70887c3b43ddddeb4582e3ba30b4bcfda5a38a9a6",
+  "render_sha256": "546f06f95207d55bbcf5a2ada2e86e4f6306e8324303a43bd1b53062eb82f916",
+  "previous_render_sha256": "55547f91203c3ccae5c9fe62c8ba94ef5d27cfeaf6054821f450ad29bfb4d5cd",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9581092733870678,
+      "previous_iou": 0.9508159836803264
+    },
+    "selected": {
+      "iou": 0.952944743514668,
+      "previous_iou": 0.9432691621255027
+    },
+    "white_mirrored": {
+      "iou": 0.9508978658989048,
+      "previous_iou": 0.9459630861392889
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "forward": 0.076,
+  "mane_width_gain": 0.6450000000000002,
+  "mane_rear_offset": 0.0,
+  "baseline_loss": 19.544330700149413,
+  "proxy_loss": 12.739474251517466,
+  "row_range": [
+    535,
+    699
+  ],
+  "original_weight": 0.82,
+  "purpose": "Bring the lower mane forward and fill its prematurely narrowing elevated outline. Lock Z, floor, upper head, pedestal and reference registration. Validate actual fixed and side renders.",
+  "source_sha256": "7ab06a267e0192c75520183de22d31fb1f253f028b6a34a9129b05f6dc44b79c",
+  "eye_visibility": {
+    "grid_spacing_pixels": 2,
+    "visible_samples": 223,
+    "bounds": [
+      [
+        479,
+        469
+      ],
+      [
+        531,
+        489
+      ]
+    ]
+  },
+  "brow_adjustment": "Raise the forward blade enough to expose the observed upper eye glint; preserve the length and seated tip."
+}

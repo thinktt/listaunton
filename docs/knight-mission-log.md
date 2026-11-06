@@ -77,3 +77,27 @@ and some pigment follows residual shading on the side. The fixed image is
 visibly short of completion.
 
 See [the comparisons and all trial decisions](knight-mission/iteration-001/scores.json).
+
+
+## Checkpoint 002 | Eye socket, brow and lower mane
+
+The first walnut model at `ab58349` is archived in `history/knight/mission-001`.
+Its fixed-view eye was visible at only 18 samples on a two-pixel grid. The reference shows a long inset eye below a swept brow. The lower mane also disappears sooner in the old carving than in both registered originals.
+
+Two bilateral recesses now join the continuous skull, and the closed convex eyes sit into their floors. The forward end of each swept ear sits closer to the forehead. A height-dependent change fills the lower mane and brings its termination forward. Two small area lights reflect off the eyes. The wood pigment stays fixed and the highlight moves with the viewing direction. Selected black candidate 2 supplied the detailed target and the original black sprite guided the mane fit.
+
+| Trial | Outline | Form | Wood color | Grain | Lighting | Mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 009-carved-eye | 94.33 | 73 | 78 | 67 | 39 | 70.27 |
+| 010-convex-eye | 94.33 | 75 | 78 | 67 | 39 | 70.67 |
+| 011-seated-brow | 94.24 | 75 | 78 | 67 | 38 | 70.45 |
+| 012-lower-carving | 95.29 | 77 | 78 | 67 | 40 | 71.46 |
+| 013-eye-reflection | 95.29 | 77 | 78 | 67 | 43 | 72.06 |
+
+The working mean rose from 70.07% to **72.06%**. The measured silhouette overlap rose from 95.08% to 95.81% on original black, from 94.33% to 95.29% on the selected reference and from 94.60% to 95.09% on mirrored white. The other four scores are visual judgments. The five-category mean includes the silhouette once. Independently, the unfilled-boundary check measures 2.05 original pixels of mean error.
+
+The visible eye now spans 52 by 20 pixels and 223 two-pixel grid samples. Its iris still reads too orange and too uniformly lit. The original has a darker tapered socket, a stronger compact glint and a bright lower rim. The body retains its earlier grain and chest reflection discrepancy. The side view retains a recognizable broad jaw, tapering muzzle and arched neck.
+
+The reopened Blender model rendered at 96 Cycles samples at the existing 54-degree camera and the registered 7-degree side camera. Both delivered images have the selected trial's exact alpha. Their foreground mean RGB changes are 0.000044/255 and 0.000048/255. The pedestal vertices, normals and pigment UVs are byte-identical to checkpoint 001. The maximum height, floor and camera matrices also match. All nine connected shells passed manifold and positive-volume checks. Both eyes intersect their sockets. The packed atlas matches the external PNG. The Node viewer harness passed all controls and sampled the camera within 0.000030 pixels.
+
+Accepted model SHA-256 `68e2e1a41f06bf19ff843bc0c0d2d042f1f846bef4f1447c00048b2cb96fb07f`. The review uses the fixed and side renders and the exported mesh from that scene. Next compare the two chest highlights, the broad mane reflection and the collar against the original. [Trial decisions and scores](knight-mission/iteration-002/scores.json) and [enlarged eye comparison](knight-mission/iteration-002/eye-comparison.png).

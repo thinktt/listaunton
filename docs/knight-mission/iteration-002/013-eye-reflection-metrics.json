@@ -1,0 +1,26 @@
+{
+  "trial": "013-eye-reflection",
+  "model_sha256": "c71b969b3c3a97bb9df77a635f63781f5575c05ce93dba4028435cbf9bcb551e",
+  "render_sha256": "7397bd32876bfff6cd50efad71a22b0b7af300c656efba3ce6beb9605a0b19d8",
+  "previous_render_sha256": "55547f91203c3ccae5c9fe62c8ba94ef5d27cfeaf6054821f450ad29bfb4d5cd",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9580950555998012,
+      "previous_iou": 0.9508159836803264
+    },
+    "selected": {
+      "iou": 0.9529423305005396,
+      "previous_iou": 0.9432691621255027
+    },
+    "white_mirrored": {
+      "iou": 0.9508665287502337,
+      "previous_iou": 0.9459630861392889
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}
