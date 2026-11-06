@@ -33,10 +33,11 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
 <div class="status" id="status" role="status" aria-live="polite">Loading the queen…</div>
 </section>
-<footer><p><strong>Drag</strong> rotate &nbsp;·&nbsp; <strong>Scroll / pinch</strong> zoom &nbsp;·&nbsp; <strong>Shift-drag / two fingers</strong> pan</p><a href="models/queen/queen-rebuilt.blend" download>Blender file ↗</a></footer>
+<footer><p><strong>Drag</strong> rotate &nbsp;·&nbsp; <strong>Scroll / pinch</strong> zoom &nbsp;·&nbsp; <strong>Shift-drag / two fingers</strong> pan</p><a id="viewer-model-file" href="models/queen/queen-rebuilt.blend" download>Blender file ↗</a></footer>
 </main>
 <script id="mesh-metadata" type="application/json">__MESH_META__</script>
 <script id="mesh-data" type="application/octet-stream">__MESH_BASE64__</script>
+__STUDY_PATCHES__
 <script id="wood-data" type="application/octet-stream">__WOOD_BASE64__</script>
 <script>
 'use strict';
@@ -178,16 +179,61 @@ function view(name){
  schedule();
 }
 function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){const info=gl.getShaderInfoLog(s);gl.deleteShader(s);throw new Error(info);}return s;}
+// Base studies share the camera, UVs, atlas and buffer layout. Restore the
+// evaluated mesh byte for byte, including triangles whose chosen diagonal moved.
+let vertexBuffer, indexBuffer, originalBytes, activeStudy = 'socket';
+const studyMeshes = new Map();
+function uploadGeometry() {
+  gl.bindVertexArray(vao);
+  gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,indexBuffer);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
+}
+function studyMesh(id) {
+  if (id === 'socket') return originalBytes;
+  if (studyMeshes.has(id)) return studyMeshes.get(id);
+  const encoded=document.getElementById(meta.baseStudies[id].patch);
+  const raw=atob(encoded.textContent.trim());
+  const patch=Uint8Array.from(raw,ch=>ch.charCodeAt(0));
+  const header=new DataView(patch.buffer);
+  if (raw.slice(0,4)!=='QBP1' || header.getUint32(4,true)!==originalBytes.length) throw Error('Invalid study mesh header');
+  const result=originalBytes.slice(), runs=header.getUint32(8,true);
+  let pos=12, previousEnd=0;
+  for (let i=0;i<runs;i++) {
+    const offset=header.getUint32(pos,true), len=header.getUint32(pos+4,true);
+    pos+=8;
+    if (offset<previousEnd || offset+len>result.length || pos+len>patch.length) throw Error('Invalid study mesh range');
+    result.set(patch.subarray(pos,pos+len),offset);
+    previousEnd=offset+len;
+    pos+=len;
+  }
+  if (pos!==patch.length) throw Error('Invalid study mesh length');
+  studyMeshes.set(id,result);
+  encoded.remove();
+  return result;
+}
+function selectStudy(id) {
+  if (!meta.baseStudies || !Object.prototype.hasOwnProperty.call(meta.baseStudies,id) || !originalBytes) return;
+  if (activeStudy!==id) {
+    meshBytes=studyMesh(id);
+    if (ready&&!lost) uploadGeometry();
+    activeStudy=id;
+  }
+  document.getElementById('viewer-model-file').href=meta.baseStudies[id].download;
+  document.documentElement.dataset.baseStudy=id;
+}
+
 function initialize(){
  const vert=shader(gl.VERTEX_SHADER,vs),frag=shader(gl.FRAGMENT_SHADER,fs);
  program=gl.createProgram();gl.attachShader(program,vert);gl.attachShader(program,frag);gl.linkProgram(program);
  if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));
  gl.deleteShader(vert);gl.deleteShader(frag);
  vao=gl.createVertexArray();gl.bindVertexArray(vao);
- const vb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
+ vertexBuffer=gl.createBuffer();indexBuffer=gl.createBuffer();uploadGeometry();
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
  gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,meta.uvOffsetBytes);
- const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
+
   uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uWoodMap','uWoodParameters'])uniforms[name]=gl.getUniformLocation(program,name);
   woodTexture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);
   gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([100,45,18,255]));
@@ -274,13 +320,14 @@ function fail(error){status.hidden=false;status.textContent='The 3D view could n
 if(window.parent&&window.parent!==window)window.addEventListener('message',event=>{
  const data=event.data;
  if(event.source!==window.parent||!data||data.channel!=='listaunton-review'||data.action!=='activate')return;
+ if(data.baseStudy)selectStudy(data.baseStudy);
  if(autoFit)fit();
  if(data.material==='neutral'||data.material==='brown')document.getElementById(data.material).onclick();
  schedule();
 });
-view('overlay');
+view(meta.baseStudies?'side':'overlay');
 requestAnimationFrame(()=>setTimeout(()=>{try{
- const encoded=document.getElementById('mesh-data');const raw=atob(encoded.textContent.trim());meshBytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)meshBytes[i]=raw.charCodeAt(i);encoded.remove();
+ const encoded=document.getElementById('mesh-data');const raw=atob(encoded.textContent.trim());meshBytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)meshBytes[i]=raw.charCodeAt(i);encoded.remove();originalBytes=meshBytes;
  if(meshBytes.byteLength!==meta.totalByteLength)throw new Error('Mesh size mismatch');initialize();
 }catch(e){fail(e);}},0));
 })();

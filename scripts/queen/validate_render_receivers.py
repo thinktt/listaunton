@@ -29,6 +29,8 @@ def check(scene,control):
     assert {o['mission_render_region'] for o in parts}==expected_parts
     if socket:
         boundary = settings.get('raised_flare_compact_socket', {}).get('socket_partition')
+        if settings.get('queen_base_study'):
+            boundary = settings['queen_base_study']['socket_partition']
         lower, upper = socket['z_interval']
         assert upper == 2.78 and lower == (boundary['lower_height'] if boundary else .83)
         if boundary:

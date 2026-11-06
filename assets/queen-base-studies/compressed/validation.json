@@ -1,0 +1,134 @@
+{
+  "model_sha256": "a97298e2f4cbd575c82d40a1e8fb1345d0b1c6812e359fdc7c819f5c63241c23",
+  "based_on": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
+  "variant": "compressed",
+  "closed_manifold": true,
+  "source_profile_verified": true,
+  "same_reference_camera": true,
+  "fixed_camera": {
+    "world_matrix": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.2076997756958,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "ortho_scale": 4.739027500152588,
+    "shift": [
+      0.11433412879705429,
+      0.0
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "type": "ORTHO"
+  },
+  "side_camera": {
+    "world_matrix": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.6292068494294654e-07,
+      -1.0,
+      -16.0,
+      0.0,
+      1.0,
+      -1.6292068494294654e-07,
+      2.549999952316284,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "ortho_scale": 6.599999904632568,
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "size": [
+      600,
+      900
+    ],
+    "type": "ORTHO"
+  },
+  "texture_sha256": "69b7c1bc02032e62864f299215fd068c2b3745936864de1ea27425ebe27bb7d2",
+  "seat_z": 1.1522632837295532,
+  "profile_measurements": {
+    "rings_scaled_together": [
+      0,
+      38
+    ],
+    "height_factor": 0.88,
+    "max_base_height_error": 4.270009812401554e-08,
+    "all_horizontal_coordinates_identical": true,
+    "floor_and_upper_body_identical": true,
+    "ring_heights_before_after": {
+      "foot_groove": [
+        0.24948152899742126,
+        0.21954374015331268
+      ],
+      "flare_to_socket": [
+        0.9440000057220459,
+        0.8307200074195862
+      ],
+      "stem_seat": [
+        1.3093900680541992,
+        1.1522632837295532
+      ]
+    },
+    "socket_straight_wall_before_after": [
+      0.14699995517730713,
+      0.12935996055603027
+    ]
+  },
+  "same_footprint_and_overall_height": true,
+  "receivers": {
+    "used": true,
+    "receivers": 6,
+    "surface_faces_and_atlas_uvs_exact": true,
+    "triangles": 715776,
+    "custom_normal_max_component_error": 4.3332576751708984e-05,
+    "custom_normal_mean_component_error": 1.0629309343812565e-07,
+    "materials_shared": true,
+    "excluded_reflector_count": 79,
+    "closed_editable_control_retained": true,
+    "collar_control_hash_verified": true,
+    "collar_controls_unchanged": false,
+    "nonshadowing_collar_fills": [
+      "Collar crescent 06",
+      "Collar crescent 07",
+      "Collar crescent 08",
+      "Collar crescent 09",
+      "Collar crescent 10",
+      "Collar crescent 11",
+      "Collar crescent 12",
+      "Collar crescent 13",
+      "Collar crescent 14",
+      "Collar crescent 15",
+      "Collar crescent 16"
+    ],
+    "receiver_regions": [
+      "finial",
+      "lower-collar",
+      "middle-collar",
+      "stem-socket",
+      "turned-body",
+      "upper-collar"
+    ],
+    "socket_controls_unchanged": false
+  }
+}

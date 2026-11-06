@@ -1,0 +1,26 @@
+{
+  "camera_degrees_above_board": 54,
+  "silhouettes": {
+    "socket": {
+      "lichess_black": {
+        "full_iou": 0.9791221044618494,
+        "below_row_570_iou": 0.9784644359565592
+      },
+      "selected_highres": {
+        "full_iou": 0.9796566983680648,
+        "below_row_570_iou": 0.9799889563776919
+      }
+    },
+    "compressed": {
+      "lichess_black": {
+        "full_iou": 0.9708345179407678,
+        "below_row_570_iou": 0.964922326120182
+      },
+      "selected_highres": {
+        "full_iou": 0.97616532435638,
+        "below_row_570_iou": 0.9742697327532629
+      }
+    }
+  },
+  "method": "Fixed registration. Intersection divided by union of foreground pixels, using the queen mission's reference and render masks."
+}

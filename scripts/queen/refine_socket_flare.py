@@ -92,16 +92,8 @@ def check_scope(controls, settings, mesh_name):
     }, before
 
 
-def build(config, out):
-    if config["source_sha256"] != BASELINE_SHA:
-        raise ValueError("This profile belongs to another source model")
-    source = verified_source()
-    bpy.ops.wm.open_mainfile(filepath=str(source), load_ui=False)
-    scene = bpy.context.scene
-    obj = editable_mesh(scene)
-    settings = json.loads(scene["mission_material_config"])
-    before = read_controls(obj.data, int(obj["ring_segments"]))
-    after = apply_profile(before, config["rings"])
+def replace_meridian(scene, obj, settings, after):
+    """Regenerate the exact render surface and carry every light assignment with its faces."""
     # Carry over actual per-light assignments, including the three finial-only lights.
     assignments = {}
     old_collections = set()
@@ -138,6 +130,20 @@ def build(config, out):
     digest = hashlib.sha256(after.tobytes()).hexdigest()
     for key in ("stem_socket_receiver_isolation", "collar_receiver_isolation"):
         settings[key]["closed_controls_sha256"] = digest
+    return {"lower_height": floor, "faces": socket_faces, "atlas_hashes": source_atlas}
+
+
+def build(config, out):
+    if config["source_sha256"] != BASELINE_SHA:
+        raise ValueError("This profile belongs to another source model")
+    source = verified_source()
+    bpy.ops.wm.open_mainfile(filepath=str(source), load_ui=False)
+    scene = bpy.context.scene
+    obj = editable_mesh(scene)
+    settings = json.loads(scene["mission_material_config"])
+    before = read_controls(obj.data, int(obj["ring_segments"]))
+    after = apply_profile(before, config["rings"])
+    socket_partition = replace_meridian(scene, obj, settings, after)
     # The new normals catch the base strip and right shoulder spot differently.
     # Preserve their color, position and light links when setting the fitted powers.
     changes = {}
@@ -154,7 +160,7 @@ def build(config, out):
         "source_sha256": BASELINE_SHA,
         "baseline_control_sha256": hashlib.sha256(before.tobytes()).hexdigest(),
         "rings": config["rings"],
-        "socket_partition": {"lower_height": floor, "faces": socket_faces, "atlas_hashes": source_atlas},
+        "socket_partition": socket_partition,
         "reflection_power": changes,
     }
     settings["variant"] = config["variant"]

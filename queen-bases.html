@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queen base studies</title>
+<style>
+:root{color-scheme:dark;font:15px/1.45 system-ui,"Segoe UI",sans-serif;color:#edf1f8;background:#0e1219}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0}main{max-width:1450px;margin:auto;padding:clamp(12px,2vw,25px)}
+header,.bar,.group,figcaption{display:flex;align-items:center;flex-wrap:wrap;gap:7px}header,figcaption{justify-content:space-between}
+h1{font-size:24px;margin:0}header{margin:0 0 15px}a{color:#afd0ff}button{font:inherit;color:inherit;background:#1e2837;border:1px solid #40506a;border-radius:6px;padding:6px 11px;cursor:pointer}
+button:hover{background:#2c394c}button[aria-pressed=true]{background:#abcafa;color:#101923;border-color:#c1d9ff;font-weight:650}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffc571;outline-offset:2px}
+.bar{gap:10px 20px;margin-bottom:12px}.bar+.bar{padding-top:12px;border-top:1px solid #303a48}.label,small,output{color:#b4bfce;font-size:13px}.group{gap:4px}.group .label{margin-right:4px}
+.profiles{display:grid;grid-template-columns:repeat(2,minmax(min(180px,72vw),1fr));gap:10px;overflow-x:auto}
+figure{margin:0;border:1px solid #323c49;border-radius:7px;background:#131820;overflow:hidden}figcaption{padding:9px 12px}figcaption a{font-size:12px}
+.picture{position:relative;overflow:hidden;background:#080a0d;aspect-ratio:336/273}.picture img{position:absolute;width:178.5714286%;height:auto;left:-39.2857143%;top:-194.8717949%;display:block}
+.profiles.whole .picture{aspect-ratio:480/740}.profiles.whole img{width:125%;left:-12.5%;top:-12.1621622%}
+.overlay{background:#030405;border:1px solid #303a48;border-radius:7px}.overlay svg{width:100%;height:clamp(380px,64vh,780px);display:block}
+input[type=range]{width:clamp(100px,14vw,190px);accent-color:#accfff}output{min-width:3ch}
+iframe{display:block;width:100%;height:clamp(535px,69vh,850px);border:1px solid #303a48;border-radius:8px;background:#11161b}
+@media(max-width:680px){.bar{gap:8px}main{padding:10px}.profiles{gap:5px}button{padding:6px 8px}figcaption{padding:7px}}
+</style>
+</head>
+<body><main>
+<header id="standalone-head"><h1>Queen base studies</h1><a href="review.html">Queen review</a></header>
+<div class="bar"><div class="group" role="group" aria-label="Comparison view">
+  <button data-mode="profiles" aria-pressed="true">Side profiles</button>
+  <button data-mode="overlay" aria-pressed="false">54° overlay</button>
+  <button data-mode="orbit" aria-pressed="false">Rotate model</button>
+</div></div>
+<div class="bar">
+  <div class="group" id="models" role="group" aria-label="Base interpretation" hidden><span class="label">Base</span>
+    <button data-model="socket" aria-pressed="false">Raised socket</button>
+    <button data-model="compressed" aria-pressed="true">12% compressed</button>
+  </div>
+  <div class="group" id="surfaces" role="group" aria-label="Material"><span class="label">Surface</span>
+    <button data-surface="wood" aria-pressed="true">Wood</button><button data-surface="neutral" aria-pressed="false">Neutral</button>
+  </div>
+  <div class="group" id="framing" role="group" aria-label="Framing"><span class="label">Framing</span>
+    <button data-crop="base" aria-pressed="true">Base</button><button data-crop="whole" aria-pressed="false">Whole piece</button>
+  </div>
+  <small id="scale-note">Same widths and ground line · height compared from foot to stem seat</small>
+  <a id="download" href="models/queen-base-studies/compressed.blend" download hidden>Download model</a>
+</div>
+<div class="bar" id="reference-tools" hidden>
+  <div class="group" role="group" aria-label="Reference image"><span class="label">Reference</span>
+    <button data-ref="original" aria-pressed="true">Lichess black</button><button data-ref="selected" aria-pressed="false">Selected high-res</button>
+  </div>
+  <div class="group"><label class="label" for="opacity">Model opacity</label><input type="range" id="opacity" min="0" max="100" value="100"><output for="opacity" id="percent">100%</output></div>
+  <div class="group"><button data-opacity="0">Reference</button><button data-opacity="50">50 / 50</button><button data-opacity="100">Model</button></div>
+</div>
+<section id="profiles" class="profiles" aria-label="Side profiles of the raised socket before and after vertical compression">
+  <figure><figcaption><strong>Raised socket</strong><a href="models/queen-base-studies/socket.blend" download aria-label="Download raised socket Blender model">Blender file</a></figcaption><div class="picture"><img data-side="socket" src="assets/queen-base-studies/socket/side-wood.png" alt="Checkpoint 18, side view"></div></figure>
+  <figure><figcaption><strong>Raised socket · 12% compressed</strong><a href="models/queen-base-studies/compressed.blend" download aria-label="Download the compressed raised-socket Blender model">Blender file</a></figcaption><div class="picture"><img data-side="compressed" src="assets/queen-base-studies/compressed/side-wood.png" alt="The same raised socket, flare, groove and foot compressed together in height"></div></figure>
+</section>
+<section class="overlay" id="overlay" hidden aria-label="Registered render and reference">
+  <svg id="frame" viewBox="185 548 598 555" role="img" aria-label="Queen base at the fixed 54-degree camera">
+    <image id="ref-image" preserveAspectRatio="none" href="references/lichess-staunton-3d/Black-Queen.png"></image>
+    <image id="model-image" x="0" y="0" width="1254" height="1254" preserveAspectRatio="none" href="assets/queen-base-studies/compressed/fixed-wood.png"></image>
+  </svg>
+</section>
+<section id="orbit" hidden><iframe id="orbit-frame" title="Rotate the raised socket and its compressed version" src="about:blank"></iframe></section>
+<script id="study-registration" type="application/json">{"method":"Uniform scale and translation; no rotation, anisotropic stretch or warp","fit_target":"Selected high-resolution reference silhouette; not the reconstructed model","source":"references/lichess-staunton-3d/Black-Queen.png","target":"assets/queen/reference.png","source_sha256":"b214bd3b522122f9a6040c4fd6ed4e00b2fe9d16436bf4f52e5f155b4b190567","target_sha256":"bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a","source_size":[300,300],"canvas_size":[1254,1254],"scale":4.218205761316873,"offset_x":-1.7027654320988321,"offset_y":-3.1759835390946662,"silhouette_iou_at_quarter_resolution":0.9846504428583713,"mask":"max RGB >12 and alpha >127; largest component and filled holes","display":"Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated."}</script>
+<script>
+(() => {
+  'use strict';
+  const byId = id => document.getElementById(id);
+  const registration = JSON.parse(byId('study-registration').textContent);
+  const orbit = byId('orbit-frame');
+  const path = (id, name) => 'assets/queen-base-studies/' + id + '/' + name + '.png';
+  const blend = id => 'models/queen-base-studies/' + id + '.blend';
+  let view = 'profiles', model = 'compressed', surface = 'wood', crop = 'base', ref = 'original';
+  let orbitStarted = false, orbitReady = false;
+  byId('standalone-head').hidden = window.parent !== window;
+  function press(group, value) {
+    for (const b of document.querySelectorAll('[data-' + group + ']')) b.setAttribute('aria-pressed',String(b.dataset[group] === value));
+  }
+  function sendOrbit() {
+    if (orbitReady) orbit.contentWindow.postMessage({channel:'listaunton-review',action:'activate',baseStudy:model,material:surface === 'wood'?'brown':'neutral'},'*');
+  }
+  window.addEventListener('message',e => {
+    if (!orbitStarted || e.source !== orbit.contentWindow || e.data?.channel !== 'listaunton-review' || e.data.event !== 'viewer-ready') return;
+    orbitReady=true;
+    sendOrbit();
+  });
+  function showReference() {
+    const im=byId('ref-image'), original=ref === 'original';
+    im.setAttribute('href',original ? registration.source : registration.target);
+    im.setAttribute('x',original ? registration.offset_x : 0);
+    im.setAttribute('y',original ? registration.offset_y : 0);
+    im.setAttribute('width',original ? registration.source_size[0]*registration.scale : 1254);
+    im.setAttribute('height',original ? registration.source_size[1]*registration.scale : 1254);
+  }
+  function draw() {
+    for (const key of ['profiles','overlay','orbit']) byId(key).hidden = view !== key;
+    byId('models').hidden = byId('download').hidden = view === 'profiles';
+    byId('framing').hidden = view === 'orbit';
+    byId('reference-tools').hidden = view !== 'overlay';
+    byId('scale-note').hidden = view !== 'profiles';
+    byId('download').href = blend(model);
+    press('mode',view); press('model',model); press('surface',surface); press('crop',crop); press('ref',ref);
+    if (view === 'profiles') {
+      byId('profiles').classList.toggle('whole',crop === 'whole');
+      for (const im of document.querySelectorAll('[data-side]')) im.src = path(im.dataset.side,'side-'+surface);
+    } else if (view === 'overlay') {
+      byId('frame').setAttribute('viewBox',crop === 'base' ? '185 548 598 555' : '182 30 608 1075');
+      byId('model-image').setAttribute('href',path(model,'fixed-'+surface));
+      showReference();
+    } else {
+      if (!orbitStarted) {orbitStarted=true; orbit.src='assets/queen-base-studies/orbit-compressed.html';}
+      sendOrbit();
+    }
+  }
+  function bind(key, set) {
+    for (const button of document.querySelectorAll('[data-'+key+']')) button.addEventListener('click',() => {set(button.dataset[key]); draw();});
+  }
+  bind('mode',v=>view=v); bind('model',v=>model=v); bind('surface',v=>surface=v); bind('crop',v=>crop=v); bind('ref',v=>ref=v);
+  function opacity(v) {
+    byId('opacity').value=v;
+    byId('model-image').style.opacity=Number(v)/100;
+    byId('percent').textContent=v+'%';
+  }
+  byId('opacity').addEventListener('input',e=>opacity(e.target.value));
+  for (const b of document.querySelectorAll('[data-opacity]')) b.addEventListener('click',()=>opacity(b.dataset.opacity));
+  draw();
+})();
+</script>
+</main></body></html>
