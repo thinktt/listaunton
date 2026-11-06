@@ -1,0 +1,59 @@
+[
+  {
+    "trial": "007-grain-polish",
+    "scores": {
+      "silhouette": 95.65270646837266,
+      "interior_form": 80,
+      "wood_color": 78,
+      "grain": 76,
+      "lighting": 52
+    },
+    "working_mean": 76.33054129367454,
+    "iou": {
+      "selected": 0.9565270646837265,
+      "original_black": 0.9781753240439871,
+      "original_white": 0.9791444344114267
+    },
+    "source_sha256": "f26f6501533a71f240f2a1207a0068d4e347e906daadf5a586732d3c6db664f1",
+    "render_sha256": "14bbdac1c1f8eceb1fe656c8698545bd9bc2cef633f5f74b629029aef5c5e53e",
+    "decision": "Keep relief direction. Glints break over the grain, but the extra head streak and misplaced base light remain."
+  },
+  {
+    "trial": "008-shaped-reflections",
+    "scores": {
+      "silhouette": 95.64975528597603,
+      "interior_form": 80,
+      "wood_color": 78,
+      "grain": 76,
+      "lighting": 63
+    },
+    "working_mean": 78.5299510571952,
+    "iou": {
+      "selected": 0.9564975528597602,
+      "original_black": 0.9781451802728398,
+      "original_white": 0.9791040334910065
+    },
+    "source_sha256": "17992abe58c9847b78dfab3ca523df799d0438b494985e869a9e4cee140a5918",
+    "render_sha256": "e848aac8ce2371a7cafc2ef6d2adaf2ac3c9d4c3fc33ad6c5d23d22ee3544a5e",
+    "decision": "Three intended head glints and better socket lighting. Stem spill and broad false foot glints remain."
+  },
+  {
+    "trial": "009-confined-reflections",
+    "scores": {
+      "silhouette": 95.65073159777688,
+      "interior_form": 80,
+      "wood_color": 79,
+      "grain": 76,
+      "lighting": 66
+    },
+    "working_mean": 79.33014631955538,
+    "iou": {
+      "selected": 0.9565073159777688,
+      "original_black": 0.9781551907646963,
+      "original_white": 0.9791140799113465
+    },
+    "source_sha256": "4ad375269a898d65cfde447aa5c42abac8ccf24339868c988969d5654815138b",
+    "render_sha256": "7aaebc7e470768926075c1b9fbed1fc86d083ba227d2e70811f6cb7a11127f0e",
+    "decision": "Accept. Narrower beams and extended reflector shapes preserve three glints, reduce stray left socket shine and improve the spread of the base reflection. A thin stem streak, duplicated lower highlights and insufficient groove darkness remain."
+  }
+]

@@ -2,20 +2,20 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9781753240439871,
-      "mean_boundary_error_px": 3.091614906832298,
+      "silhouette_iou": 0.9781551907646963,
+      "mean_boundary_error_px": 3.0947204968944098,
       "p95_boundary_error_px": 10.0,
       "reference_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
     },
     "original_white": {
-      "silhouette_iou": 0.9791444344114267,
-      "mean_boundary_error_px": 2.7422360248447206,
+      "silhouette_iou": 0.9791140799113465,
+      "mean_boundary_error_px": 2.7468944099378882,
       "p95_boundary_error_px": 9.0,
       "reference_sha256": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3"
     },
     "selected": {
-      "silhouette_iou": 0.9565270646837265,
-      "mean_boundary_error_px": 6.408385093167702,
+      "silhouette_iou": 0.9565073159777688,
+      "mean_boundary_error_px": 6.411490683229814,
       "p95_boundary_error_px": 24.0,
       "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
     }

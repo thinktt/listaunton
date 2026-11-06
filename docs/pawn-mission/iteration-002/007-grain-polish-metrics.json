@@ -1,0 +1,29 @@
+{
+  "trial": "007-grain-polish",
+  "iou": {
+    "selected": 0.9565270646837265,
+    "original_black": 0.9781753240439871,
+    "original_white": 0.9791444344114267
+  },
+  "regions": {
+    "head": {
+      "mean_absolute_rgb_error_255": 8.49587427374544,
+      "overlap_pixels": 49971
+    },
+    "collar-stem": {
+      "mean_absolute_rgb_error_255": 8.28495349765186,
+      "overlap_pixels": 65158
+    },
+    "base-foot": {
+      "mean_absolute_rgb_error_255": 12.404102165031544,
+      "overlap_pixels": 107943
+    }
+  },
+  "render_sha256": "14bbdac1c1f8eceb1fe656c8698545bd9bc2cef633f5f74b629029aef5c5e53e",
+  "model_sha256": "f26f6501533a71f240f2a1207a0068d4e347e906daadf5a586732d3c6db664f1",
+  "previous_render_sha256": "0bf51aecc1619f5ca8056ab0069f312e0e68f03c1135450bf713738cdaa490e1",
+  "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "camera_assumption_above_board": 54,
+  "method": "Fixed registration. Foreground alpha >127 and reference max RGB >12. Largest component, filled holes. RGB errors only on common foreground."
+}

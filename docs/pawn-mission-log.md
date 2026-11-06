@@ -47,3 +47,30 @@ positive-volume component with 57,984 triangles. Camera regression error is
 below 0.000011 pixels in the DOM/WebGL interaction check. See the full trial
 scorecard, views, checks, and rebuild instructions under
 [iteration 001](pawn-mission/iteration-001/README.md). Mission in progress.
+
+## Checkpoint 002 · 2026-11-05
+
+Grain relief and real shaped reflectors give the head three textured glints.
+The unwanted fourth glint is gone. The base and socket now catch light in
+more of the intended places. The base still has broad highlights, the stem
+has an unwanted narrow streak, and the deep foot groove remains too light.
+The left base reflection is also too square. These limit the current result.
+
+| Metric | Checkpoint 001 | Checkpoint 002 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 95.653% | 95.651% |
+| Interior form | 80 | 80 |
+| Wood color | 78 | 79 |
+| Grain and surface | 72 | 76 |
+| Lighting | 48 | 66 |
+| Working mean | 74.73% | 79.33% |
+
+Original black IoU is 97.816% and white is 97.911%. Geometry, UVs, pigment
+and camera are preserved. The exported geometry binary is identical to the
+previous checkpoint. Only IoU is measured. Holistic assessment is 75–83%.
+Saved/reopened and independent replay renders agree with the chosen trial
+within 1/255, with identical alpha. The site and existing local preview are
+refreshed at this checkpoint. For all trials, actual settings and remaining
+issues, see [iteration 002](pawn-mission/iteration-002/README.md).
+Next inspect the flare curvature and actual groove geometry against both
+originals. The mission remains active.

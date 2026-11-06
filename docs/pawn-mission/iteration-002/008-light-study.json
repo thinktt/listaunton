@@ -1,0 +1,268 @@
+{
+  "variant": "008-shaped-reflections",
+  "source": "history/pawn-mission-001/pawn-rebuilt.blend",
+  "source_sha256": "1e63ae8c6cf92e5c129687414f77f38413bdc3e9cc68ab5c6328b58696d7e508",
+  "finish": {
+    "strength": 0.46,
+    "distance": 0.008,
+    "roughness": 0.19,
+    "coat_roughness": 0.075
+  },
+  "samples": 128,
+  "response_samples": 96,
+  "glint_weight": 6,
+  "landmarks": [
+    {
+      "name": "Left head glint",
+      "pixel": [
+        461,
+        451
+      ],
+      "half_axes": [
+        6.3,
+        5.6
+      ],
+      "angle": 22,
+      "spread": 32,
+      "color": [
+        1,
+        0.62,
+        0.57
+      ]
+    },
+    {
+      "name": "Upper head glint",
+      "pixel": [
+        509,
+        435
+      ],
+      "half_axes": [
+        8.2,
+        6.5
+      ],
+      "angle": -27,
+      "spread": 32,
+      "color": [
+        1,
+        0.67,
+        0.46
+      ]
+    },
+    {
+      "name": "Right head glint",
+      "pixel": [
+        515,
+        491
+      ],
+      "half_axes": [
+        8,
+        5.7
+      ],
+      "angle": 70,
+      "spread": 32,
+      "color": [
+        1,
+        0.61,
+        0.37
+      ]
+    },
+    {
+      "name": "Collar left",
+      "pixel": [
+        448,
+        609
+      ],
+      "half_axes": [
+        16,
+        4
+      ],
+      "angle": 24,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Collar right lip",
+      "pixel": [
+        539,
+        618
+      ],
+      "half_axes": [
+        11,
+        2.2
+      ],
+      "angle": -23,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Socket right",
+      "pixel": [
+        516,
+        739
+      ],
+      "half_axes": [
+        14,
+        6
+      ],
+      "angle": -40,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Socket shoulder",
+      "pixel": [
+        520,
+        757
+      ],
+      "half_axes": [
+        8,
+        2
+      ],
+      "angle": -20,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Rear left flare",
+      "pixel": [
+        391,
+        656
+      ],
+      "half_axes": [
+        16,
+        3
+      ],
+      "angle": -56,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base left",
+      "pixel": [
+        409,
+        881
+      ],
+      "half_axes": [
+        29,
+        10
+      ],
+      "angle": 22,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base right",
+      "pixel": [
+        591,
+        873
+      ],
+      "half_axes": [
+        28,
+        6
+      ],
+      "angle": -28,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Base upper",
+      "pixel": [
+        540,
+        829
+      ],
+      "half_axes": [
+        14,
+        4
+      ],
+      "angle": -15,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Foot left",
+      "pixel": [
+        407,
+        949
+      ],
+      "half_axes": [
+        23,
+        2.2
+      ],
+      "angle": 17,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Foot right",
+      "pixel": [
+        576,
+        945
+      ],
+      "half_axes": [
+        24,
+        2
+      ],
+      "angle": -20,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "name": "Foot front",
+      "pixel": [
+        481,
+        965
+      ],
+      "half_axes": [
+        15,
+        1.6
+      ],
+      "angle": 0,
+      "spread": 21,
+      "color": [
+        1,
+        0.7,
+        0.5
+      ]
+    }
+  ]
+}
