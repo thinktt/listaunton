@@ -16,7 +16,7 @@ MODEL_SOURCES = {
     'rook': ('assets/rook-projections/angle-54/mesh.json', 'assets/rook-projections/angle-54/profile.json'),
     'bishop': ('assets/bishop/mesh.json', 'scripts/bishop/profile.json'),
     'knight': ('assets/knight/mesh.json', 'assets/knight/reconstruction.json'),
-    'pawn': ('assets/pawn/mesh.json', 'scripts/pawn/profile.json'),
+    'pawn': ('history/pawn-mission-start/mesh.json', 'history/pawn-mission-start/profile.json'),
 }
 
 

@@ -27,12 +27,12 @@ if not blend.is_file() or hashlib.sha256(blend.read_bytes()).hexdigest() != meta
     raise RuntimeError('Export the current Blender model before rebuilding its viewer.')
 if meta.get('referenceCamera', {}).get('type') != 'ORTHO':
     raise RuntimeError('The pawn viewer requires its saved orthographic reference camera.')
-fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes', 'vertexByteLength', 'indexByteOffset', 'totalByteLength', 'bounds', 'sourceSha256', 'referenceCamera']
+fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes', 'vertexByteLength', 'indexByteOffset', 'totalByteLength', 'bounds', 'sourceSha256', 'referenceCamera', 'texture', 'textureSha256', 'uvLayer']
 public_meta = {key: meta[key] for key in fields}
 mesh = (assets/'mesh.bin').read_bytes()
 assert len(mesh) == meta['totalByteLength'], 'Mesh binary length does not match metadata.'
-assert meta['vertexStrideBytes'] == 24, 'Expected interleaved position and normal.'
-assert meta['vertexCount'] * 24 == meta['vertexByteLength'] == meta['indexByteOffset']
+assert meta['vertexStrideBytes'] == 32, 'Expected interleaved position, normal and pigment UV.'
+assert meta['vertexCount'] * 32 == meta['vertexByteLength'] == meta['indexByteOffset']
 assert meta['indexCount'] == meta['triangleCount'] * 3
 assert meta['indexByteOffset'] + meta['indexCount'] * 4 == len(mesh)
 for image in ['reference.png', 'render.png', 'original.png']:
@@ -59,6 +59,14 @@ html = html.replace('__MESH_BASE64__',base64.b64encode(mesh).decode('ascii'))
 html = html.replace('__REFERENCE_IMAGE__',data_uri(assets/'reference.png'))
 html = html.replace('__RENDER_IMAGE__',data_uri(assets/'render.png'))
 html = html.replace('__ORIGINAL_IMAGE__',data_uri(assets/'original.png'))
+texture=root/meta['texture']
+assert hashlib.sha256(texture.read_bytes()).hexdigest()==meta['textureSha256'], 'Stale pigment texture.'
+html=html.replace('__WOOD_TEXTURE__',base64.b64encode(texture.read_bytes()).decode('ascii'))
+registration=json.loads((assets/'side-registration.json').read_text(encoding='utf-8'))
+assert registration['source_blend_sha256']==meta['sourceSha256']
+for key in ('guide','profile'):
+    assert hashlib.sha256((root/registration[key]).read_bytes()).hexdigest()==registration[key+'_sha256']
+html=html.replace('__SIDE_GUIDE__',data_uri(root/registration['guide'])).replace('__SIDE_MODEL__',data_uri(root/registration['profile'])).replace('__SIDE_REGISTRATION__',json.dumps(registration,separators=(',',':')))
 html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',',':')))
 out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

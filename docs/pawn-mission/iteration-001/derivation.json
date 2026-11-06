@@ -1,0 +1,22 @@
+{
+  "method": "Bounded diffuse pigment inferred from measured scene-linear black/0.1-gray responses, with multiscale highlight filling and depth/facing visibility. Hidden wood uses a continuous object-space sample of the existing unlit walnut source.",
+  "assumptions": "Local de-lighting and hidden grain are artistic estimates. The PNG stores pigment, rendered through a real Principled BSDF and real lamps.",
+  "resolution": 2048,
+  "median_linear_pigment": [
+    0.121771901845932,
+    0.02781764045357704,
+    0.005229962058365345
+  ],
+  "mean_projected_weight": 0.32813395969423154,
+  "source_measurement": {
+    "source_sha256": "d51db5a0029a7cdcb6155a4bd6135c34021547e5be0b3292c2cc32285db0b37d",
+    "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+    "camera_above_board_degrees": 54,
+    "gray_linear_value": 0.1,
+    "samples": 96,
+    "depth_samples": 12,
+    "method": "Scene-linear black and neutral 0.1 BSDF passes preserve actual reflections, geometry and lights. The separate depth pass measures visibility for UV projection. Diagnostics never enter the public beauty images."
+  },
+  "hidden_wood_sha256": "6f53ca452af04c72b75825848aa3e2b3b1d6555d0dabcc9f626282cce451d2c9",
+  "atlas_sha256": "43ee7545185e171f6d09b5a2fc43bc9c49bf8697e1d49c8ed0ce18d1156c9d32"
+}

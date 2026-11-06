@@ -1,0 +1,110 @@
+{
+  "variant": "003-walnut-seated-sphere",
+  "source": "history/pawn-mission-start/pawn-rebuilt.blend",
+  "source_sha256": "133796d71e3d3f21b4dd25abf00e765e75e6d54d2a990bea55180ffee844f89e",
+  "samples": 64,
+  "round_head": {
+    "foot_profile": [
+      [
+        0.01,
+        200.3
+      ],
+      [
+        49,
+        200.3
+      ],
+      [
+        51.1,
+        200.2
+      ],
+      [
+        51.75,
+        199.95
+      ],
+      [
+        51.9,
+        199.4
+      ]
+    ],
+    "preserve_seat": true
+  },
+  "wood": {
+    "roughness": 0.235,
+    "coat": 0.32,
+    "coat_roughness": 0.12
+  },
+  "studio": {
+    "world": 0.065,
+    "diffuse": [
+      {
+        "name": "Softbox above left",
+        "position": [
+          -3,
+          -4,
+          7
+        ],
+        "energy": 560,
+        "size": 4
+      },
+      {
+        "name": "Right bounce",
+        "position": [
+          3,
+          -2,
+          4
+        ],
+        "energy": 235,
+        "size": 3
+      },
+      {
+        "name": "Back bounce",
+        "position": [
+          0,
+          3,
+          5
+        ],
+        "energy": 180,
+        "size": 3
+      }
+    ],
+    "reflectors": [
+      {
+        "name": "Left head glint",
+        "pixel": [
+          461,
+          451
+        ],
+        "size": 0.62,
+        "energy": 55
+      },
+      {
+        "name": "Upper head glint",
+        "pixel": [
+          509,
+          435
+        ],
+        "size": 0.78,
+        "energy": 85
+      },
+      {
+        "name": "Right head glint",
+        "pixel": [
+          515,
+          490
+        ],
+        "size": 0.55,
+        "energy": 58
+      },
+      {
+        "name": "Broad foot softbox",
+        "pixel": [
+          408,
+          882
+        ],
+        "size": 0.8,
+        "size_y": 2.3,
+        "energy": 68
+      }
+    ]
+  }
+}

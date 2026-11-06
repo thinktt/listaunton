@@ -1,0 +1,116 @@
+[
+  {
+    "trial": "000-clay-baseline",
+    "scores": {
+      "silhouette": 94.21192552151238,
+      "interior_form": 74,
+      "wood_color": 0,
+      "grain": 0,
+      "lighting": 23
+    },
+    "working_mean": 38.24238510430248,
+    "iou": {
+      "selected": 0.9421192552151239,
+      "original_black": 0.9653697353156128,
+      "original_white": 0.9589765580331618
+    },
+    "model_sha256": "55ebedb0dbfa51516201c418ed7e4d4c1c02011d179aeafbf2c7a102ec51a8df",
+    "render_sha256": "df13f4a8db8aaa9b913aa116c0bc39f5e7a8771e509315b92f2b9a7f69403961",
+    "decision": "Baseline clay: broad seat, head too low, simplified base and no wood finish."
+  },
+  {
+    "trial": "001-seated-head-fit",
+    "scores": {
+      "silhouette": 95.1645273023635,
+      "interior_form": 74,
+      "wood_color": 0,
+      "grain": 0,
+      "lighting": 23
+    },
+    "working_mean": 38.432905460472696,
+    "iou": {
+      "selected": 0.9516452730236349,
+      "original_black": 0.9756701199619559,
+      "original_white": 0.9692216541445551
+    },
+    "model_sha256": "39cc3f21ccebbe2480aa54e16f18ab8fffbdbb6686d321654ceb2a297668a19b",
+    "render_sha256": "b68fc9c23617b301f34b42afa3d73e4ca8669e30e43bf0b4d1c0654b49259738",
+    "decision": "Reject: outline improves, but redistributing the upper hemisphere makes the side head egg-shaped."
+  },
+  {
+    "trial": "002-round-head-coin-foot",
+    "scores": {
+      "silhouette": 95.62472568413102,
+      "interior_form": 73,
+      "wood_color": 0,
+      "grain": 0,
+      "lighting": 23
+    },
+    "working_mean": 38.3249451368262,
+    "iou": {
+      "selected": 0.9562472568413102,
+      "original_black": 0.978279005256235,
+      "original_white": 0.9792993385435643
+    },
+    "model_sha256": "95b297971850e2e6f7f35604819267d8105bc66aef479a4f64f71830c3e4dd4a",
+    "render_sha256": "372c900a36b1f0beebe7156bd2a53bf5d5bc3bc68e66db56c19bba379b8d5556",
+    "decision": "Reject this join: round head and more compact foot fit, but raising the inner seat creates a visible pedestal."
+  },
+  {
+    "trial": "003-walnut-seated-sphere",
+    "scores": {
+      "silhouette": 95.65337211972748,
+      "interior_form": 80,
+      "wood_color": 48,
+      "grain": 26,
+      "lighting": 46
+    },
+    "working_mean": 59.13067442394549,
+    "iou": {
+      "selected": 0.9565337211972748,
+      "original_black": 0.9781609783554214,
+      "original_white": 0.9791198530694329
+    },
+    "model_sha256": "d51db5a0029a7cdcb6155a4bd6135c34021547e5be0b3292c2cc32285db0b37d",
+    "render_sha256": "d0dd459c43773a87015c1ff7c7dad96cf5ad949a48391f7b0a4457346a8b7ba4",
+    "decision": "Retain geometry as the material baseline. Broad contact returns, height is preserved, but procedural wood has repetitive dark stripes and four head glints."
+  },
+  {
+    "trial": "004-measured-walnut",
+    "scores": {
+      "silhouette": 95.65224048178014,
+      "interior_form": 80,
+      "wood_color": 76,
+      "grain": 64,
+      "lighting": 46
+    },
+    "working_mean": 72.33044809635604,
+    "iou": {
+      "selected": 0.9565224048178014,
+      "original_black": 0.978170430297355,
+      "original_white": 0.9791293640817792
+    },
+    "model_sha256": "744241bc262f445d9cb75d073196c93ccd669e3e684515eb5dfca4c30e278d37",
+    "render_sha256": "7e50e1a172d5563f1df38cb3ea89321cb0a3ed024750e437a70dd43c92ab8b12",
+    "decision": "Improved visible grain and color. Reject the first atlas: abrupt transitions and large smooth pigment holes show in side and fixed views."
+  },
+  {
+    "trial": "005-continuous-walnut",
+    "scores": {
+      "silhouette": 95.65270646837266,
+      "interior_form": 80,
+      "wood_color": 78,
+      "grain": 72,
+      "lighting": 48
+    },
+    "working_mean": 74.73054129367453,
+    "iou": {
+      "selected": 0.9565270646837265,
+      "original_black": 0.9781753240439871,
+      "original_white": 0.9791444344114267
+    },
+    "model_sha256": "20d0153d075dfb221d5616cd69c73dddfb47462fbf3677d0ba1e5c41d66cf1bb",
+    "render_sha256": "5492b0309d87547bc38cf83a47c820a24313e675bc62d3ad83584857ac807e58",
+    "decision": "Accept after checks. Surface-space filling preserves grain across highlight gaps and reduces side transitions. Glints are still too soft, an extra base reflector hits the head, and lower reflections disagree."
+  }
+]

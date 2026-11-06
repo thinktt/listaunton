@@ -1,0 +1,29 @@
+{
+  "trial": "002-round-head-coin-foot",
+  "iou": {
+    "selected": 0.9562472568413102,
+    "original_black": 0.978279005256235,
+    "original_white": 0.9792993385435643
+  },
+  "regions": {
+    "head": {
+      "mean_absolute_rgb_error_255": 95.90610497920046,
+      "overlap_pixels": 49921
+    },
+    "collar-stem": {
+      "mean_absolute_rgb_error_255": 93.11389238466496,
+      "overlap_pixels": 65158
+    },
+    "base-foot": {
+      "mean_absolute_rgb_error_255": 82.27576229209514,
+      "overlap_pixels": 107942
+    }
+  },
+  "render_sha256": "372c900a36b1f0beebe7156bd2a53bf5d5bc3bc68e66db56c19bba379b8d5556",
+  "model_sha256": "95b297971850e2e6f7f35604819267d8105bc66aef479a4f64f71830c3e4dd4a",
+  "previous_render_sha256": "aa299373234bdf3561037d8253feae26b2659ca2836eb82b06859569d71bc2df",
+  "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "camera_assumption_above_board": 54,
+  "method": "Fixed registration. Foreground alpha >127 and reference max RGB >12. Largest component, filled holes. RGB errors only on common foreground."
+}

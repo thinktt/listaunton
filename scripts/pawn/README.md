@@ -1,3 +1,9 @@
+# Current pawn reconstruction
+
+The accepted model uses a fixed 54-degree camera, a seated round head, a flatter sole and packed walnut pigment. See [the pawn mission log](../../docs/pawn-mission-log.md) for the current scores and [checkpoint 001](../../docs/pawn-mission/iteration-001/README.md) for reproducible build and validation steps. Open [the pawn review](../../pawn-review.html) for the fixed overlay, textured rotation and side comparison.
+
+## Historical clay pipeline
+
 # Pawn reconstruction
 
 The original black and white Lichess sprites govern the shape; selected black candidate 2 supports detail interpretation. All three source PNGs are unchanged and packed into the editable scene.

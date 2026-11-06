@@ -105,7 +105,7 @@ interior, which need separate detailed inspection.
 
 
 
-Full-material baseline scores are unassessed. Examine and record them before assigning percentages. Diagnostic clay does not establish a wood-material match. Never copy scores from another piece.
+Checkpoint 001 has an assessed walnut material. Scores are 95.65 / 80 / 78 / 72 / 48, working mean 74.73%; original black IoU is 97.82%. Read docs/pawn-mission-log.md and the latest accepted checkpoint before revising these scores. Update the pawn review page and local preview between accepted iterations.
 
 ## Iteration loop
 

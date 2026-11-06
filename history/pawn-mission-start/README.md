@@ -1,0 +1,1 @@
+Accepted seated-head pawn before the wood reconstruction mission. The original black sprite and selected black candidate 2 retain their saved alignment. This Blender file contains the closed control surface and fixed 54-degree camera.

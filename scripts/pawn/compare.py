@@ -3,6 +3,7 @@ from pathlib import Path
 import json,sys
 import numpy as np
 from PIL import Image,ImageDraw
+from audit_mission import mask
 root=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parents[2]
 out=root/'assets/pawn';ref=np.array(Image.open(out/'reference.png').convert('RGBA'));ren=np.array(Image.open(out/'render.png').convert('RGBA'))
 placement=json.loads((out/'original-alignment.json').read_text());s=placement['scale'];x=placement['x'];y=placement['y'];W=ref.shape[1]
@@ -15,7 +16,7 @@ white=np.array(white)
 def bounds(mask):return np.argmax(mask,axis=1),mask.shape[1]-1-np.argmax(mask[:,::-1],axis=1)
 report={'note':'Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.','images':{}}
 for name,ar in [('original',original),('original_white',white),('selected',ref)]:
- a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
+ a=mask(Image.fromarray(ar),True);b=mask(Image.fromarray(ren),False);l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])
  report['images'][name]={'silhouette_iou':float((a&b).sum()/(a|b).sum()),'mean_boundary_error_px':float(error.mean()),'p95_boundary_error_px':float(np.quantile(error,.95)),'reference_sha256':__import__('hashlib').sha256((out/({'original':'original.png','original_white':'white-original.png','selected':'reference.png'}[name])).read_bytes()).hexdigest()}
  canvas=Image.fromarray((ar[:,:,:3]*.65).astype('uint8'));d=ImageDraw.Draw(canvas)
@@ -29,4 +30,7 @@ report['internal_feature_review']={
  'stem':'Curved narrow stem widens into an upper shoulder bead and a short lower wall; both original sprites inspected.',
  'base':'Two broad rolls separated by a continuous narrow groove. Base underside and back edge lowered after pass 1.',
  'limitations':'Single-view rotational reconstruction. Unseen underside and exact material are inferred. Neutral clay does not reproduce wood or its reflections. Selected Black 2 differs measurably from the original silhouette.'}
+if (out/'mission-validation.json').is_file():
+ report['internal_feature_review'].update(head='Round upper sphere with the widest latitude raised to fit both originals; original physical apex-to-floor height retained.',collar='The accepted broad seat radius and collar remain attached to the lower head; the lower spherical flank curves into the seat.',base='Compact turned base with a flatter sole edge; the existing front groove and upper flare remain inspection priorities.',limitations='The unseen surface, illumination and pigment are inferred. Compare fixed beauty, clay and rotating model separately.')
+ report['mask_method']='Largest component with holes filled; reference max RGB >12 and alpha >127, model alpha >127.'
 (out/'qa.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

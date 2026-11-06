@@ -422,11 +422,11 @@
         "fully_transparent_fraction": 0.7465
       },
       "model": {
-        "file": "assets/pawn/mesh.json",
+        "file": "history/pawn-mission-start/mesh.json",
         "sha256": "04e39f6c6dd660bcc67232c4f0906cd883f0abffd87aec82a386313a3d60e0f0",
-        "binary": "assets/pawn/mesh.bin",
+        "binary": "history/pawn-mission-start/mesh.bin",
         "binary_sha256": "3c3ad4470a692b90d5356d601ac33c8615a361415e64dbb3e985b071cd4e1539",
-        "camera_file": "scripts/pawn/profile.json",
+        "camera_file": "history/pawn-mission-start/profile.json",
         "camera_sha256": "cf5e86096185c58bab78a706ca910fd808800e0db1bcca8e54c7db46c5bad83a",
         "text_hash_normalization": "CRLF to LF",
         "assumed_elevation_degrees": 54,
@@ -438,7 +438,8 @@
         ],
         "base_search_max_z": 0.5852199252694845,
         "base_vertex_count": 38016,
-        "height_to_base": 1.68177218041685
+        "height_to_base": 1.68177218041685,
+        "sizing_baseline": "Owner-approved side-gallery dimensions use the original seated-head pawn. Mission refinements preserve this display preset."
       },
       "height_check": {
         "height_ratio_to_king": 0.5022057230986264,

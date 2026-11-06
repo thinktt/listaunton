@@ -38,17 +38,26 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 .comparison-note{margin-left:auto;color:#969fa9;font-size:12px}
 header .download{font-size:12px}
 @media(max-width:720px){.comparison-controls{padding:10px 14px;gap:8px}.mode-tabs{padding:8px 12px}.comparison-note{display:none}}
+
+.side-stage{position:absolute;inset:0;background:#000;overflow:hidden;visibility:hidden}
+.side-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
+.side-frame img{position:absolute;display:block;pointer-events:none;user-select:none}
+#side-model{opacity:.5}
+.stage[data-mode="side"] canvas,.stage[data-mode="side"] .zoom,.stage[data-mode="side"] .badge,.stage[data-mode="side"] .comparison-stage{visibility:hidden;pointer-events:none}
+.stage[data-mode="side"] .side-stage{visibility:visible}
 </style>
 </head>
 <body>
 <main>
-<header><div><h1>Pawn model</h1><p>Original Lichess pawn · geometry study</p></div><a class="download" href="models/pawn/pawn-rebuilt.blend" download>Blender file ↗</a></header>
-<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button></nav>
+<header><div><h1>Pawn model</h1><p>54° reference camera · wood reconstruction</p></div><a class="download" href="assets/pawn/profile.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/pawn/pawn-rebuilt.blend" download>Blender file ↗</a></header>
+<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 2</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
-<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
+<div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">Imagined side guide · base width and foot aligned</span></div>
+<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Pawn model comparison">
-<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f@" alt="Selected reference: black pawn candidate 2" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052@" alt="Original Lichess black pawn, the authoritative shape reference" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:aa299373234bdf3561037d8253feae26b2659ca2836eb82b06859569d71bc2df@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f@" alt="Selected reference: black pawn candidate 2" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052@" alt="Original Lichess black pawn" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:0bf51aecc1619f5ca8056ab0069f312e0e68f03c1135450bf713738cdaa490e1@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="data:image/png;base64,@LISTAUNTON_ASSET:2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37@" alt="Imagined pawn side guide"><img id="side-model" src="data:image/png;base64,@LISTAUNTON_ASSET:19b738c90d2baca580c2dc6066bbbbd34bc8a2578efffb6866f2ff35ed82755b@" alt="Current pawn side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D pawn. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -57,8 +66,10 @@ header .download{font-size:12px}
 
 </main>
 <script id="original-alignment" type="application/json">{"scale":1.0084160756501184,"x":-0.46631205673759263,"y":0.3767139479905349}</script>
-<script id="mesh-metadata" type="application/json">{"vertexCount":173952,"indexCount":173952,"triangleCount":57984,"vertexStrideBytes":24,"vertexByteLength":4174848,"indexByteOffset":4174848,"totalByteLength":4870656,"bounds":{"min":[-0.8249794244766235,-0.8249794244766235,-0.10849379748106003],"max":[0.8249794244766235,0.8249794244766235,2.666361093521118],"size":[1.649958848953247,1.649958848953247,2.774854898452759],"center":[0.0,0.0,1.2789336442947388]},"sourceSha256":"133796d71e3d3f21b4dd25abf00e765e75e6d54d2a990bea55180ffee844f89e","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-0.7589936256408691,0.0,-0.5877852439880371,0.80901700258255,-13.044665336608887,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2271779328584671,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.11358894407749176,"shiftY":0,"elevationDegrees":54}}</script>
-<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:3c3ad4470a692b90d5356d601ac33c8615a361415e64dbb3e985b071cd4e1539@</script>
+<script id="side-registration" type="application/json">{"guide":"assets/pawn/concepts/side-01-cutout.png","profile":"assets/pawn/profile.png","guide_sha256":"2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37","profile_sha256":"19b738c90d2baca580c2dc6066bbbbd34bc8a2578efffb6866f2ff35ed82755b","source_blend_sha256":"1e63ae8c6cf92e5c129687414f77f38413bdc3e9cc68ab5c6328b58696d7e508","canvas":[1254,1414],"guide_top":160,"scale":2.19205298013245,"offset_x":-74.45695364238406,"offset_y":82.91390728476836,"guide_foot":{"width":662,"center":627.0,"floor":1168,"row":1081},"model_foot":{"width":302,"center":320.0,"floor":568,"row":565},"method":"Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth.","profile_dimensions":[640,640],"guide_dimensions":[1254,1254]}</script>
+<script id="wood-texture" type="application/octet-stream">@LISTAUNTON_ASSET:e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7@</script>
+<script id="mesh-metadata" type="application/json">{"vertexCount":173952,"indexCount":173952,"triangleCount":57984,"vertexStrideBytes":32,"vertexByteLength":5566464,"indexByteOffset":5566464,"totalByteLength":6262272,"bounds":{"min":[-0.8266224265098572,-0.8266224265098572,-0.008137050084769726],"max":[0.8266224265098572,0.8266223669052124,2.7667155265808105],"size":[1.6532448530197144,1.6532447338104248,2.7748525142669678],"center":[0.0,-2.9802322387695312e-08,1.3792892694473267]},"sourceSha256":"1e63ae8c6cf92e5c129687414f77f38413bdc3e9cc68ab5c6328b58696d7e508","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-0.7589936256408691,0.0,-0.5877852439880371,0.80901700258255,-13.044665336608887,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2271779328584671,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.11358894407749176,"shiftY":0.0,"elevationDegrees":54},"texture":"assets/pawn/pawn-walnut-v2.png","textureSha256":"e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7","uvLayer":"Pawn pigment"}</script>
+<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:7e398b43d13078035813c99377a34bb1d84a1540724124c90378d4d5802bc758@</script>
 <script>
 'use strict';
 (() => {
@@ -66,11 +77,23 @@ const canvas=document.getElementById('viewer'), status=document.getElementById('
 const meta=JSON.parse(document.getElementById('mesh-metadata').textContent);
 const compareTab=document.getElementById('compare-tab'),rotateTab=document.getElementById('rotate-tab');
 const stage=document.getElementById('stage'),opacity=document.getElementById('model-opacity');
+let ready=false;
+const sideTab=document.getElementById('side-tab'),sideFrame=document.getElementById('side-frame');
+const sideRegistration=JSON.parse(document.getElementById('side-registration').textContent);
+const sideGuide=document.getElementById('side-guide'),sideModel=document.getElementById('side-model'),sideOpacity=document.getElementById('side-opacity');
+const [sideWidth,sideHeight]=sideRegistration.canvas;
+const [profileWidth,profileHeight]=sideRegistration.profile_dimensions;
+Object.assign(sideGuide.style,{width:'100%',height:(sideRegistration.guide_dimensions[1]/sideHeight*100)+'%',left:'0%',top:(sideRegistration.guide_top/sideHeight*100)+'%'});
+Object.assign(sideModel.style,{width:(profileWidth*sideRegistration.scale/sideWidth*100)+'%',height:(profileHeight*sideRegistration.scale/sideHeight*100)+'%',left:(sideRegistration.offset_x/sideWidth*100)+'%',top:(sideRegistration.offset_y/sideHeight*100)+'%'});
+function paintSide(){const value=Math.min(100,Math.max(0,Number(sideOpacity.value)||0));sideModel.style.opacity=value/100;document.getElementById('side-opacity-value').textContent=value+'%';}
+sideOpacity.addEventListener('input',paintSide);
+for(const [id,value] of [['side-guide-only',0],['side-half',50],['side-model-only',100]])document.getElementById(id).onclick=()=>{sideOpacity.value=value;paintSide();};
+paintSide();
 const originalAlignment=JSON.parse(document.getElementById('original-alignment').textContent);
 const originalImage=document.getElementById('original-image'),frame=document.getElementById('comparison-frame');
 originalImage.style.width=(100/originalAlignment.scale)+'%';originalImage.style.height=(100/originalAlignment.scale)+'%';
 originalImage.style.left=(-originalAlignment.x/originalAlignment.scale)+'%';originalImage.style.top=(-originalAlignment.y/originalAlignment.scale)+'%';
-function fitComparison(){const side=Math.max(1,Math.min(stage.clientWidth,stage.clientHeight));frame.style.width=side+'px';frame.style.height=side+'px';}
+function fitComparison(){const side=Math.max(1,Math.min(stage.clientWidth,stage.clientHeight));frame.style.width=side+'px';frame.style.height=side+'px';const k=Math.min(stage.clientWidth/sideWidth,stage.clientHeight/sideHeight);sideFrame.style.width=sideWidth*k+'px';sideFrame.style.height=sideHeight*k+'px';}
 document.getElementById('reference-choice').addEventListener('change',event=>{
  const original=event.target.value==='original';originalImage.hidden=!original;document.getElementById('reference-image').hidden=original;
 });
@@ -84,14 +107,14 @@ opacity.addEventListener('input',paintOverlay);
 for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',100]])document.getElementById(id).onclick=()=>{opacity.value=value;paintOverlay();};
 function mode(name){
  const rotate=name==='rotate';stage.dataset.mode=name;
- compareTab.setAttribute('aria-pressed',String(!rotate));rotateTab.setAttribute('aria-pressed',String(rotate));
- document.getElementById('comparison-controls').hidden=rotate;
+ compareTab.setAttribute('aria-pressed',String(name==='compare'));sideTab.setAttribute('aria-pressed',String(name==='side'));rotateTab.setAttribute('aria-pressed',String(rotate));
+ document.getElementById('comparison-controls').hidden=name!=='compare';document.getElementById('side-controls').hidden=name!=='side';
  document.getElementById('rotation-controls').hidden=!rotate;document.getElementById('view-controls').hidden=!rotate;
  canvas.tabIndex=rotate?0:-1;
  status.hidden=!rotate||ready;
  fitComparison();if(rotate){if(autoFit)fit();schedule();}
 }
-compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');
+compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');sideTab.onclick=()=>mode('side');
 paintOverlay();canvas.tabIndex=-1;status.hidden=true;
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
 if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
@@ -99,6 +122,8 @@ const vs=`#version 300 es
 precision highp float;
 layout(location=0) in vec3 aPosition;
 layout(location=1) in vec3 aNormal;
+layout(location=2) in vec2 aUV;
+out vec2 vUV;
 uniform vec3 uCenter;
 uniform mat3 uRotation;
 uniform mat4 uProjection;
@@ -107,6 +132,7 @@ uniform float uDistance;
 out vec3 vNormal;
 out vec3 vPosition;
 void main(){
+ vUV=aUV;
  vec3 p=aPosition-uCenter;
  p=uRotation*vec3(p.x,p.z,-p.y);
  vPosition=p+vec3(uPan,-uDistance);
@@ -119,25 +145,34 @@ in vec3 vNormal;
 in vec3 vPosition;
 uniform vec3 uColor;
 uniform float uGloss;
+uniform sampler2D uWood;
+uniform bool uUseWood;
+in vec2 vUV;
+vec3 surfaceColor;
 uniform bool uOrthographic;
 out vec4 outColor;
 vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
  float diffuse=max(dot(n,l),0.0);
  vec3 h=normalize(l+v);
  float spec=pow(max(dot(n,h),0.0),uGloss)*step(0.001,diffuse);
- return strength*color*(uColor*diffuse+vec3(spec*0.25));
+ return strength*color*(surfaceColor*diffuse+vec3(spec*0.25));
 }
 void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
- vec3 c=uColor*(0.19+0.06*n.y);
+ surfaceColor=uUseWood?pow(texture(uWood,vUV).rgb,vec3(2.2)):uColor;
+ vec3 c=surfaceColor*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
  c+=light(n,v,normalize(vec3(0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.55);
  c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.8);
  c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
-let program,vao,uniforms,meshBytes,ready=false,lost=false,pending=false;
-let q=[0,0,0,1],pan=[0,0],distance=9,material='neutral',autoFit=true;
+let program,vao,uniforms,meshBytes,lost=false,pending=false;
+let q=[0,0,0,1],pan=[0,0],distance=9,material='brown',autoFit=true;
+let woodReady=false;const woodImage=new Image();
+woodImage.onload=()=>{woodReady=true;if(meshBytes&&!ready){try{initialize();}catch(e){fail(e);}}};
+woodImage.onerror=()=>fail(new Error('Pigment texture failed to load'));
+woodImage.src='data:image/png;base64,'+document.getElementById('wood-texture').textContent.trim();
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 const reference=meta.referenceCamera;
 const fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
@@ -188,7 +223,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
+ document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'wood pigment · approximate lighting':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -207,8 +242,12 @@ function initialize(){
  vao=gl.createVertexArray();gl.bindVertexArray(vao);
  const vb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
+ gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,24);
+ const texture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);
+ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,woodImage);
+ gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.generateMipmap(gl.TEXTURE_2D);
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
@@ -227,6 +266,7 @@ function draw(){
  gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,meta.bounds.center);
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
+ gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
 }
@@ -287,7 +327,7 @@ if(window.parent&&window.parent!==window)window.addEventListener('message',event
 view('overlay');
 requestAnimationFrame(()=>setTimeout(()=>{try{
  const encoded=document.getElementById('mesh-data');const raw=atob(encoded.textContent.trim());meshBytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)meshBytes[i]=raw.charCodeAt(i);encoded.remove();
- if(meshBytes.byteLength!==meta.totalByteLength)throw new Error('Mesh size mismatch');initialize();
+ if(meshBytes.byteLength!==meta.totalByteLength)throw new Error('Mesh size mismatch');if(woodReady)initialize();
 }catch(e){fail(e);}},0));
 })();
 </script>

@@ -31,7 +31,8 @@ references={}
 for copied,source in [('original.png','references/lichess-staunton-3d/Black-Pawn.png'),('white-original.png','references/lichess-staunton-3d/White-Pawn.png'),('reference.png','assets/candidates/pawn/candidate-2.png')]:
  a=(root/'assets/pawn'/copied).read_bytes();b=(root/source).read_bytes();assert a==b;references[copied]=hashlib.sha256(a).hexdigest()
 # The editable meridian must not cross itself. Adjacent segments share endpoints.
-cfg=json.loads((root/'scripts/pawn/profile.json').read_text());profile=cfg['profile']
+body=next(o for o in bpy.context.scene.objects if o.type=='MESH' and not o.hide_render)
+profile=[(math.hypot(v.co.x,v.co.y),v.co.z) for v in list(body.data.vertices)[::96]]
 def orientation(a,b,c):return (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0])
 for i,(a,b) in enumerate(zip(profile,profile[1:])):
  for j in range(i+2,len(profile)-1):
