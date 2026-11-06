@@ -12,7 +12,7 @@ from mission_scene import ASSETS,ROOT,MODEL,json_file,sha,visible_meshes
 LAYER = "Knight wood atlas"
 
 
-def export(scene, texture):
+def export(scene, texture, *, output=ASSETS, source=MODEL):
     graph=bpy.context.evaluated_depsgraph_get()
     vertex_blocks=[];index_blocks=[];parts=[];finish_blocks=[]
     vert_offset=index_offset=0
@@ -54,7 +54,7 @@ def export(scene, texture):
         ev.to_mesh_clear()
     vertices=np.concatenate(vertex_blocks);indices=np.concatenate(index_blocks)
     raw=vertices.tobytes()+indices.astype("<u4").tobytes()
-    (ASSETS/"mesh.bin").write_bytes(raw)
+    (output/"mesh.bin").write_bytes(raw)
     lo=vertices[:,:3].min(0);hi=vertices[:,:3].max(0)
     cam=scene.camera
     projection=cam.calc_matrix_camera(graph,x=scene.render.resolution_x,y=scene.render.resolution_y)
@@ -69,16 +69,16 @@ def export(scene, texture):
     meta={"vertexCount":len(vertices),"indexCount":len(indices),"triangleCount":len(indices)//3,
           "vertexStrideBytes":32,"vertexByteLength":vertices.nbytes,"indexByteOffset":vertices.nbytes,
           "totalByteLength":len(raw),"bounds":{"min":lo.tolist(),"max":hi.tolist(),"size":(hi-lo).tolist(),"center":((hi+lo)/2).tolist()},
-          "parts":parts,"sourceSha256":sha(MODEL),"referenceCamera":camera,"texture":texture.relative_to(ROOT).as_posix(),
+          "parts":parts,"sourceSha256":sha(source),"referenceCamera":camera,"texture":texture.relative_to(ROOT).as_posix(),
           "textureSha256":sha(texture),"uvLayer":LAYER,"exactCornerData":True}
     if finish_blocks:
         assert len(finish_blocks)==len(parts)
-        finish=ASSETS/"varnish.bin"
+        finish=output/"varnish.bin"
         finish.write_bytes(np.concatenate(finish_blocks).tobytes())
         assert finish.stat().st_size==len(vertices)
         relief=visible_meshes(scene)[0].data.materials[0].node_tree.nodes.get("Open walnut grain under the varnish")
         meta["finish"]={"file":finish.relative_to(ROOT).as_posix(),"sha256":sha(finish),
                         "attribute":"Knight varnish coverage","encoding":"unorm8",
                         "reliefDistance":relief.inputs["Distance"].default_value if relief else 0}
-    json_file(ASSETS/"camera.json",camera);json_file(ASSETS/"mesh.json",meta)
+    json_file(output/"camera.json",camera);json_file(output/"mesh.json",meta)
     return meta

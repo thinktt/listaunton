@@ -1,0 +1,18 @@
+{
+  "source_sha256": "73af3b94137441cd49c2c0620e01b596ed2fc6a70cf9dc7411895ef8ba2db271",
+  "previous_texture_sha256": "2ccc6408b20f2871355b9caba494d402b79d65212765e9fc29293032f5084417",
+  "pigment_sha256": "f60dacf83084bbc84b28f84911445bd144eb1ebf913fcfd202baf52d36dfa2e8",
+  "changed_texels": 115981,
+  "visible_samples": 126555,
+  "gain_quantiles_05_50_95": [
+    0.5323150157928467,
+    0.9939969778060913,
+    1.3521008491516113
+  ],
+  "receivers": [
+    "Knight | near swept ear",
+    "Knight | continuous horse head and neck"
+  ],
+  "region": "brow",
+  "method": "Use measured diffuse response and a separate neutral-reflection component. Refit bounded warm pigment on visible wood UVs while retaining the underlying hue and the hidden wood."
+}

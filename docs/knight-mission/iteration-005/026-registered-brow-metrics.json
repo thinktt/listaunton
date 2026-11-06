@@ -1,0 +1,26 @@
+{
+  "trial": "026-registered-brow",
+  "model_sha256": "2f5db0aba291b4adfdf58f5007ad03b133c7d9c85e4f2a85ac4bd33d5dd9d392",
+  "render_sha256": "b395c36936f87058c94e0b0db791a8019de7b75ec6fe2ad0332f0fceffc2e736",
+  "previous_render_sha256": "0df101a3db5999808793c576bff9cfc0333b083332ce7fd8c03c7c74e4c264f0",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9637241813790931,
+      "previous_iou": 0.9621949393621799
+    },
+    "selected": {
+      "iou": 0.9567082950227483,
+      "previous_iou": 0.9557212673985056
+    },
+    "white_mirrored": {
+      "iou": 0.9559555452485863,
+      "previous_iou": 0.9544193279380823
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

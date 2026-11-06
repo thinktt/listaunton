@@ -21,7 +21,7 @@ def main():
     source_node=mat.node_tree.nodes["Principled BSDF"].inputs["Base Color"].links[0].from_node
     prior=source_node.image
     fresh=bpy.data.images.load(str(pigment),check_existing=False)
-    fresh.name="Knight | walnut on carved muzzle and eyes";fresh.colorspace_settings.name="sRGB"
+    fresh.name="Knight | registered walnut pigment";fresh.colorspace_settings.name="sRGB"
     fresh.pack(data=raw,data_len=len(raw));source_node.image=fresh
     if prior.users==0:bpy.data.images.remove(prior)
     scene["knight_pigment_grade"]=json.dumps(grade)

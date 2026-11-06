@@ -1,6 +1,6 @@
 {
   "piece": "Knight",
-  "revision": "mission-004-carved-muzzle",
+  "revision": "mission-005-swept-ear",
   "source_priority": [
     "Original black Lichess sprite; mirrored white sprite as an independent check",
     "Selected black candidate 2 for detailed fixed-view fitting",
@@ -18,7 +18,7 @@
     "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
   },
   "geometry": {
-    "method": "Continuous carved head and neck with bilateral eye sockets, an extended lower mane, a conical snout shaped against the original, paired incised nostrils and a shallow mouth crease.",
+    "method": "Closed continuous head and neck, an original-fitted conical muzzle, dark seated eyes and paired swept ears with broader upper surfaces above the eye.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
     "triangles": 203602,
@@ -69,27 +69,27 @@
     "final_reference_metrics": "assets/knight/qa.json"
   },
   "mission": {
-    "checkpoint": "004",
-    "source_sha256": "2a661dbd11c46d1929d4e7a901924213e1ecf3683aff001fde523a6073833c88",
+    "checkpoint": "005",
+    "source_sha256": "95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1",
     "scores": {
-      "variant": "021-registered-muzzle",
-      "silhouette": 95.57212673985056,
-      "form": 80,
-      "color": 83,
-      "grain": 73,
-      "lighting": 56,
-      "working_mean": 77.5144253479701,
-      "original_iou": 0.9621949393621799,
-      "mirrored_white_iou": 0.9544193279380823,
-      "decision": "Accept. Bounded diffuse measurements improve the wood grain and color on the actual reshaped face. The eye and snout read more clearly in profile and in the elevated originals.",
-      "blend_sha256": "5cd298a819a3dafa601eee074af51660e0a680f6120ac125a96950c50c38e2d1",
-      "render_sha256": "2a193b192d577b998cc8dcb384b86620871f8acde7f4862a418464ed79219427"
+      "variant": "027-focused-brow",
+      "silhouette": 95.67082950227484,
+      "form": 82,
+      "color": 84,
+      "grain": 74,
+      "lighting": 59,
+      "working_mean": 78.93416590045497,
+      "original_iou": 0.9637241813790931,
+      "mirrored_white_iou": 0.9559555452485863,
+      "decision": "Accept. One compact real lamp replaces the broad ear patch panel. The dominant ear reflection moves closer to the observed patch without restoring the protruding far ear.",
+      "blend_sha256": "8bceee33ae1ec450ccbbe6318e98817aa6e30ea4b4bc0a281df617f6c7001a7a",
+      "render_sha256": "f2597cda537681c9f07c506d7bd8c1ce8acd5cfb6eaace6937b5c30a741b24f5"
     },
     "current_notes": "docs/knight-mission-log.md",
     "limitations": [
-      "The cheek and swept brow need the broken highlights and dark separation seen above the reference eye.",
-      "The modeled eye remains shorter and less tilted, and the nostril reflects several small points instead of a lower crescent.",
-      "The chest crest highlight remains broad and cool. The mane, collar and lower pedestal still have different reflected edge shapes."
+      "The poll carries a broad reflection in place of the original's thin curved edge. The lower lid and outer shoulder still lack their strongest crescent reflections.",
+      "The ear reflection is too smooth and forward. The cheek recess and eye transition need further carving.",
+      "The lower foot groove sits higher and reads narrower in the current fixed view. The top of the pedestal has more bright bands than the reference."
     ]
   },
   "history_at_activation": {

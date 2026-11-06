@@ -150,3 +150,30 @@ On the common opaque area, selected-reference RGB error fell from 10.36 to 8.91 
 The delivered 144-sample fixed and side renders reproduce the selected reopened trial with identical alpha and mean foreground RGB differences of 0.000038 and 0.000032 on the 0–255 scale. All nine closed shells passed validation and both eyes meet their sockets. The camera, maximum height and floor match checkpoint 003. The live viewer contains the actual pigment UVs, atlas and varnish coverage. Its lights are approximate. The Node interaction checks and headless Edge/ANGLE SwiftShader tests passed. Accepted scene SHA-256 `2a661dbd11c46d1929d4e7a901924213e1ecf3683aff001fde523a6073833c88`.
 
 Next, trace the forehead and swept ear reflections on the actual carving and compare the deep cheek crease with the black and mirrored white originals. [Trial decisions](knight-mission/iteration-004/scores.json) and [registered comparisons](knight-mission/iteration-004/comparison.png).
+
+
+## Checkpoint 005 | Swept ear, brow reflection and forehead
+
+Recorded 2026-11-05 from local commit `1b952e4`.
+
+Ray intersections showed that the bright patch on the reference ear landed on the mane in the prior model. Eleven approximate image landmarks put the model's upper ear edge an average of 17.36 pixels below the intended contour. The first trial enlarged the paired blades vertically and exposed the patch. Its far-side ear protruded above the original skyline, so the trial was rejected. The second trial put more width toward the inside of each swept blade, with a smaller rise. The upper-edge discrepancy fell to 3.09 pixels on those same landmarks. The near ear's lower edge retained the same sampled rows. These are interpreted internal feature measurements, separate from the measured outside silhouette.
+
+The revised wood responds to real area lights. One scene with a satin finish and another with a burnished finish measured the available reflection range. Updated coverage is limited to the swept ears and nearby face. Two diffuse response passes guided the restrained wood-tone correction on the visible ear and forehead, with the existing pigment providing the underlying hue and hidden wood. Finally, four compact light placements were compared against the prior broad ear light. A 0.15-unit disk at 2.67 watts gave the best measured crop match. The final scene retains one replacement.
+
+| Trial | Outline | Form | Wood color | Grain | Lighting | Mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 021-registered-muzzle | 95.57 | 80 | 83 | 73 | 56 | 77.51 |
+| 022-broad-swept-ear | 95.16 | 78 | 81 | 72 | 55 | 76.23 |
+| 023-flat-swept-ear | 95.67 | 82 | 81 | 72 | 55 | 77.13 |
+| 024-brow-reflections | 95.67 | 82 | 81 | 72 | 57 | 77.53 |
+| 025-brow-polish | 95.67 | 82 | 82 | 72 | 58 | 77.93 |
+| 026-registered-brow | 95.67 | 82 | 84 | 74 | 58 | 78.73 |
+| 027-focused-brow | 95.67 | 82 | 84 | 74 | 59 | 78.93 |
+
+The working mean is **78.93%**. Original black outline overlap is 96.37%, selected black is 95.67% and mirrored white is 95.60%. The other four categories are visual assessments. The independent holistic estimate is 74–80%.
+
+The strongest ear patch remains broader and more forward than the reference. Its mean absolute RGB error nevertheless fell from 45.90 to 34.29 on a 0–255 scale. Error on the forehead fell from 12.22 to 8.97 and around the lower lid from 23.07 to 19.46. The complete brow region changed only from 16.71 to 16.54. This limits the lighting score. The broad glint on the poll, the shape of the lower eyelid and the thin front collar reflection remain visibly different. The side guide is an independent anatomy check, and its more continuous brow still guides future carving.
+
+The delivered 144-sample fixed and side renders reproduce the selected reopened trial with identical alpha and mean foreground RGB differences of 0.000051 and 0.000035 on the 0–255 scale. All nine closed shells passed validation and both eyes meet their sockets. The camera, maximum height and floor match checkpoint 004. The live viewer contains the actual pigment UVs, atlas and varnish coverage. Its lights are approximate. The Node interaction checks and headless Edge/ANGLE SwiftShader tests passed. Accepted scene SHA-256 `95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1`.
+
+Next, fit the foot groove and upper collar against the original's curved edges, then verify the wood and lighting on those surfaces. At 54 degrees the front foot glint measures near row 1010 in the original and near row 1000 in the model. [Trial decisions](knight-mission/iteration-005/scores.json) and [registered comparisons](knight-mission/iteration-005/comparison.png).

@@ -76,6 +76,15 @@ scene with `capture_surface_response.py` in Blender. Then use
 registered finish. Exact parameters, input hashes and the trial sequence
 are in `docs/knight-mission/iteration-004`.
 
+Checkpoint 005 starts from the model at `1b952e4`. In Blender,
+`fit_swept_ear.py -- --preserve-profile` fits the upper blade while checking
+the skyline. Use `locate_head_glints.py` on its exported trial mesh, then
+`fit_head_reflections.py` in Blender. Run `fit_surface_polish.py` with
+`--region head` and reuse the diffuse measurement and UV fitting steps with
+`refit_face_pigment.py --region brow`. The last light adjustment is
+`fit_brow_key.py`. The log records the rejected tall ear, retained settings,
+source images and actual comparison renders.
+
 The standalone viewer embeds the actual pigment, UVs and local polish. Its real-time
 lighting is an approximation. Its Front and Side presets retain the horse
 orientation, and the side comparison uses the saved 7-degree camera and

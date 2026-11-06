@@ -1,0 +1,61 @@
+{
+  "source_sha256": "bd87a7254844d5e7f7862ee3b4bd2e2fb752eb53aa55a637345cb90b5650a04c",
+  "samples": 144,
+  "measurement_samples": 112,
+  "attribute": "Knight varnish coverage",
+  "hidden_prior": 0.32,
+  "image_smoothing_radius": 3,
+  "per_component": {
+    "Knight | turned pedestal": {
+      "vertex_count": 1984,
+      "minimum": 0.03329998254776001,
+      "mean": 0.3138132691383362,
+      "maximum": 0.5038940906524658,
+      "visible_fraction": 0.0
+    },
+    "Knight | swept rounded mane": {
+      "vertex_count": 832,
+      "minimum": 0.03329998254776001,
+      "mean": 0.3069920241832733,
+      "maximum": 0.46092987060546875,
+      "visible_fraction": 0.0
+    },
+    "Knight | near swept ear": {
+      "vertex_count": 448,
+      "minimum": 0.03329998254776001,
+      "mean": 0.3056058883666992,
+      "maximum": 0.5082418918609619,
+      "visible_fraction": 0.4174107142857143
+    },
+    "Knight | near eye": {
+      "vertex_count": 482,
+      "minimum": 0.21780729293823242,
+      "mean": 0.32077163457870483,
+      "maximum": 0.44421136379241943,
+      "visible_fraction": 0.0
+    },
+    "Knight | far swept ear": {
+      "vertex_count": 448,
+      "minimum": 0.13139565289020538,
+      "mean": 0.3193393647670746,
+      "maximum": 0.4177059531211853,
+      "visible_fraction": 0.05357142857142857
+    },
+    "Knight | far eye": {
+      "vertex_count": 482,
+      "minimum": 0.3199999928474426,
+      "mean": 0.3199999928474426,
+      "maximum": 0.3199999928474426,
+      "visible_fraction": 0.0
+    },
+    "Knight | continuous horse head and neck": {
+      "vertex_count": 43499,
+      "minimum": 0.03329998254776001,
+      "mean": 0.31480133533477783,
+      "maximum": 0.9399999976158142,
+      "visible_fraction": 0.12388790546909124
+    }
+  },
+  "region": "head",
+  "method": "Two measured dielectric finishes share the same albedo and relief. Fit a smoothed coverage scalar only at visible 3D vertices; use a uniform prior elsewhere. No reference RGB is connected to a shader."
+}

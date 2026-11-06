@@ -1,0 +1,26 @@
+{
+  "trial": "023-flat-swept-ear",
+  "model_sha256": "38fd28204694168f4245c442704804bc69eae36352384bedfca6958cf8b8fccc",
+  "render_sha256": "855106373768da3c30d0fb22bb1bdb8761d048de291e141cb5c7b575ed9b55b3",
+  "previous_render_sha256": "0df101a3db5999808793c576bff9cfc0333b083332ce7fd8c03c7c74e4c264f0",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9637241813790931,
+      "previous_iou": 0.9621949393621799
+    },
+    "selected": {
+      "iou": 0.9567082950227483,
+      "previous_iou": 0.9557212673985056
+    },
+    "white_mirrored": {
+      "iou": 0.9559555452485863,
+      "previous_iou": 0.9544193279380823
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

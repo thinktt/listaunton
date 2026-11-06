@@ -86,7 +86,7 @@ def solve_field(scene,low,high,target,radius):
     return np.clip(PRIOR+np.minimum(.94,gate)*(smooth-PRIOR),.025,.94)
 
 
-def attach_coverage(scene,objects,field,material,cover):
+def attach_coverage(scene,objects,field,material,cover,region="all"):
     graph=bpy.context.evaluated_depsgraph_get()
     tree=surface_tree(objects)
     camera=scene.camera
@@ -108,12 +108,22 @@ def attach_coverage(scene,objects,field,material,cover):
             hit=tree.ray_cast(Vector(world[i])+15*toward,-toward,30)
             if hit[0] is not None:
                 weight[i]=facing[i]*np.clip((.075-abs(hit[3]-15))/.05,0,1)
-        values=PRIOR+(field[y,x]-PRIOR)*weight
-        attr=obj.data.attributes.get(ATTRIBUTE) or obj.data.attributes.new(ATTRIBUTE,"FLOAT","POINT")
+        attr=obj.data.attributes.get(ATTRIBUTE)
+        previous=np.full(len(world),PRIOR,np.float32)
+        if attr is not None:attr.data.foreach_get("value",previous)
+        if region=="head":
+            if obj.name.endswith("continuous horse head and neck"):
+                weight*=np.clip((x-425)/60,0,1)*np.clip((555-y)/32,0,1)*np.clip((y-309)/47,0,1)
+            elif not obj.name.endswith("swept ear"):
+                weight.fill(0)
+        values=previous+(field[y,x]-previous)*weight
+        if attr is None:attr=obj.data.attributes.new(ATTRIBUTE,"FLOAT","POINT")
         attr.data.foreach_set("value",values.astype(np.float32))
         stats[obj.name]={"vertex_count":len(values),"minimum":float(values.min()),"mean":float(values.mean()),
                          "maximum":float(values.max()),"visible_fraction":float(np.mean(weight>.5))}
-    node=material.node_tree.nodes.new("ShaderNodeAttribute");node.attribute_name=ATTRIBUTE
+    node=next((n for n in material.node_tree.nodes if n.type=="ATTRIBUTE" and n.attribute_name==ATTRIBUTE),None)
+    if node is None:
+        node=material.node_tree.nodes.new("ShaderNodeAttribute");node.attribute_name=ATTRIBUTE
     material.node_tree.links.new(node.outputs["Fac"],cover.inputs[0])
     return stats
 
@@ -122,18 +132,25 @@ def main():
     p=argparse.ArgumentParser();p.add_argument("--source",type=Path,required=True)
     p.add_argument("--variant",required=True);p.add_argument("--radius",type=int,default=5)
     p.add_argument("--samples",type=int,default=144)
+    p.add_argument("--region",choices=["all","head"],default="all")
     args=p.parse_args(sys.argv[sys.argv.index("--")+1:])
     out=BUILD/args.variant;out.mkdir(parents=True,exist_ok=True)
     bpy.ops.wm.open_mainfile(filepath=str(args.source),load_ui=False)
     scene=bpy.context.scene;objects=visible_meshes(scene);material=objects[0].data.materials[0]
-    mix=varnish_endpoints(material)
+    mix=material.node_tree.nodes.get("Fraction of burnished surface")
+    if mix is None:
+        mix=varnish_endpoints(material)
+    else:
+        assert mix.type=="MIX_SHADER" and mix.inputs[0].is_linked
+        assert mix.inputs[0].links[0].from_node.attribute_name==ATTRIBUTE
+        material.node_tree.links.remove(mix.inputs[0].links[0])
     configure_render(scene,112);mix.inputs[0].default_value=0
     satin=read_pass(scene,out/"satin.exr")
     mix.inputs[0].default_value=1;polished=read_pass(scene,out/"burnished.exr")
     field=solve_field(scene,satin,polished,read_reference(),args.radius)
-    stats=attach_coverage(scene,objects,field,material,mix)
+    stats=attach_coverage(scene,objects,field,material,mix,args.region)
     cfg={"source_sha256":sha(args.source),"samples":args.samples,"measurement_samples":112,
-         "attribute":ATTRIBUTE,"hidden_prior":PRIOR,"image_smoothing_radius":args.radius,"per_component":stats,
+         "attribute":ATTRIBUTE,"hidden_prior":PRIOR,"image_smoothing_radius":args.radius,"per_component":stats,"region":args.region,
          "method":"Two measured dielectric finishes share the same albedo and relief. Fit a smoothed coverage scalar only at visible 3D vertices; use a uniform prior elsewhere. No reference RGB is connected to a shader."}
     scene["knight_variable_polish"]=json.dumps(cfg)
     configure_render(scene,args.samples);save_model(scene,out/"knight.blend")

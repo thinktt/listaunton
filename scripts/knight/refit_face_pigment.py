@@ -24,7 +24,7 @@ def ease(x,low,high):
     return t*t*(3-2*t)
 
 
-def diffuse_field(response,measurement):
+def diffuse_field(response,measurement,region):
     ref=np.asarray(Image.open(ASSETS/"ref.png").convert("RGBA"),dtype=np.float32)/255
     target=np.load(BUILD/"material-observations/reference-linear.npy")
     assert np.max(np.abs(np.load(BUILD/"material-observations/reference-display.npy")-ref))<1e-6
@@ -36,7 +36,8 @@ def diffuse_field(response,measurement):
     chroma=diffuse-(diffuse@neutral)[:,:,None]*neutral
     observed=target-(target@neutral)[:,:,None]*neutral
     norm=(chroma*chroma).sum(2)
-    gain=np.clip(((observed*chroma).sum(2)+.00009)/(norm+.00009),.37,1.85)
+    lower=.30 if region=="brow" else .37
+    gain=np.clip(((observed*chroma).sum(2)+.00009)/(norm+.00009),lower,1.85)
     reflection=np.maximum(0,(target-diffuse*gain[:,:,None])@neutral)
     interior=(full[:,:,3]>.99)&(ref[:,:,3]>.85)&(ref[:,:,:3].max(2)>.055)
     interior=np.asarray(Image.fromarray(np.uint8(interior)*255).filter(ImageFilter.MinFilter(9)),np.float32)/255
@@ -44,10 +45,9 @@ def diffuse_field(response,measurement):
     log=np.log(gain)
     broad=blur(log*conf,4,3)/np.maximum(blur(conf,4,3),1e-5)
     local=blur(log*conf,2,2)/np.maximum(blur(conf,2,2),1e-5)
-    result=broad+.50*np.clip(log-local,-.34,.34)*conf
-    y,x=np.indices(gain.shape)
-    face=ease(x,467,556)*ease(y,302,352)*(1-ease(y,521,557))
-    return (result*face*blur(interior,2,2)*np.clip(blur(conf,4,3)/.48,0,1)*.91).astype(np.float32)
+    detail=.68 if region=="brow" else .50
+    result=broad+detail*np.clip(log-local,-.34,.34)*conf
+    return (result*blur(interior,2,2)*np.clip(blur(conf,4,3)/.48,0,1)*.91).astype(np.float32)
 
 
 def sample(field,x,y):
@@ -57,13 +57,14 @@ def sample(field,x,y):
             (1-u)*v*field[iy+1,ix]+u*v*field[iy+1,ix+1])
 
 
-def project_surface(path,depth,field,atlas):
+def project_surface(path,depth,field,atlas,box):
     data=np.load(path)
     h,w=atlas.shape
     uv=data["uv"].astype(float)*[w,-h]+[-.5,h-.5]
     screen=data["screen"];normal=data["facing"];tri=data["triangles"]
     points=screen[tri];highest=points.max(1);lowest=points.min(1)
-    valid=(highest[:,0]>466)&(lowest[:,0]<748)&(highest[:,1]>300)&(lowest[:,1]<559)&(normal[tri].max(1)>.07)
+    x0,y0,x1,y1=box
+    valid=(highest[:,0]>x0)&(lowest[:,0]<x1)&(highest[:,1]>y0)&(lowest[:,1]<y1)&(normal[tri].max(1)>.07)
     visible=0
     for face in tri[valid]:
         texels=uv[face];origin=texels[0];a=texels[1]-origin;b=texels[2]-origin
@@ -89,16 +90,27 @@ def project_surface(path,depth,field,atlas):
 def main():
     p=argparse.ArgumentParser();p.add_argument("--carving",required=True);p.add_argument("--variant",required=True)
     p.add_argument("--response",type=Path,default=BUILD/"muzzle-response")
+    p.add_argument("--texture",type=Path)
+    p.add_argument("--region",choices=("muzzle","brow"),default="muzzle")
     args=p.parse_args()
     out=BUILD/args.variant;out.mkdir(exist_ok=True)
-    source=BUILD/args.carving;texture=source/"pigment.png"
+    source=BUILD/args.carving;texture=args.texture or source/"pigment.png"
     measured=json.loads((args.response/"measurement.json").read_text())
     assert measured["source_sha256"]==sha(source/"knight.blend") and measured["texture_sha256"]==sha(texture)
     data=np.load(args.response/"light-response.npz")
-    field=diffuse_field(data,measured)
+    field=diffuse_field(data,measured,args.region)
     prior=np.asarray(Image.open(texture).convert("RGB"));log_gain=np.zeros(prior.shape[:2],np.float32)
-    receiver=next(o for o in measured["objects"] if o["object"].endswith("continuous horse head and neck"))
-    visibility=project_surface(args.response/receiver["file"],data["depth"],field,log_gain)
+    y,x=np.indices(field.shape)
+    if args.region=="muzzle":
+        jobs=[("continuous horse head and neck",ease(x,467,556)*ease(y,302,352)*(1-ease(y,521,557)),(466,300,748,559))]
+    else:
+        jobs=[("near swept ear",ease(x,255,279)*(1-ease(x,542,562)),(254,349,563,483)),
+              ("continuous horse head and neck",ease(x,455,498)*(1-ease(x,602,638))*ease(y,352,388)*(1-ease(y,498,523)),(454,351,639,524))]
+    visibility=0;receivers=[]
+    for suffix,weight,box in jobs:
+        receiver=next(o for o in measured["objects"] if o["object"].endswith(suffix))
+        visibility+=project_surface(args.response/receiver["file"],data["depth"],field*weight,log_gain,box)
+        receivers.append(receiver["object"])
     changed=np.abs(log_gain)>.001
     assert 12000<changed.sum()<750000,(visibility,changed.sum(),float(data["depth"].max()))
     color=prior.copy();display=color[changed].astype(float)/255
@@ -109,7 +121,7 @@ def main():
     report={"source_sha256":sha(source/"knight.blend"),"previous_texture_sha256":sha(texture),
             "pigment_sha256":sha(out/"pigment.png"),"changed_texels":int(changed.sum()),"visible_samples":visibility,
             "gain_quantiles_05_50_95":np.quantile(np.exp(log_gain[changed]),[.05,.5,.95]).tolist(),
-            "receiver":receiver["object"],"method":"Use measured diffuse response and a separate neutral-reflection component; refit bounded warm pigment on the visible actual face UVs. Preserve the existing wood hue, hidden surfaces, eyes, pedestal and other components."}
+            "receivers":receivers,"region":args.region,"method":"Use measured diffuse response and a separate neutral-reflection component. Refit bounded warm pigment on visible wood UVs while retaining the underlying hue and the hidden wood."}
     (out/"grade.json").write_text(json.dumps(report,indent=2)+"\n")
     print(report)
 
