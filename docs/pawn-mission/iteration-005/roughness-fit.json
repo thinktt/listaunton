@@ -1,0 +1,48 @@
+{
+  "source_calibration": {
+    "source": "history/pawn-mission-004/pawn-rebuilt.blend",
+    "source_sha256": "1e5ebe001c76e4b16f397bc7256bbbca7676ef6d56e8521d7730f29c0a390ab1",
+    "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+    "camera_above_board": 54,
+    "roughness": 0.1899999976158142,
+    "coat_roughness": 0.07500000298023224,
+    "samples": 128,
+    "response_passes": [
+      {
+        "name": "smooth",
+        "multiplier": 0.55,
+        "sha256": "ae2e93cfeb1b0cbc921f4810bc76407a17342d38fe16848df57c3577d7114556"
+      },
+      {
+        "name": "middle",
+        "multiplier": 1,
+        "sha256": "93d85e8d864f1135d6896b87b609c9f26d3a7c6cd9b0243172d8eccd0bed29c2"
+      },
+      {
+        "name": "matte",
+        "multiplier": 1.85,
+        "sha256": "42b1e70c97c53ae7e73f394cefb301f3ba1c95e52b9272473990499ee43a868c"
+      }
+    ]
+  },
+  "parameters": {
+    "measurement": "finish-004",
+    "pigment": "assets/pawn/pawn-walnut-v5.png",
+    "texture": "assets/pawn/pawn-varnish-v1.png",
+    "range": [
+      0.55,
+      1.85
+    ],
+    "broad_scale_fraction": 0.25,
+    "prior_255": 5.5
+  },
+  "property": "non-color linear roughness multiplier",
+  "sha256": "be1aea975f796fb776ea6a3186d5e47a749c11219b5e5e77abc953c1e25fcdb7",
+  "common_foreground": 157761,
+  "confident_pixels": 19656,
+  "fraction_of_atlas_beyond_10_percent": 0.0256955623626709,
+  "measured_range": [
+    0.550000011920929,
+    1.850000023841858
+  ]
+}

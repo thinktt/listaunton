@@ -1,0 +1,29 @@
+{
+  "trial": "024-varnish-and-cores",
+  "iou": {
+    "selected": 0.9680974956199113,
+    "original_black": 0.9850636264772733,
+    "original_white": 0.9814093046275675
+  },
+  "regions": {
+    "head": {
+      "mean_absolute_rgb_error_255": 5.799879711307137,
+      "overlap_pixels": 49880
+    },
+    "collar-stem": {
+      "mean_absolute_rgb_error_255": 5.574168778315288,
+      "overlap_pixels": 65115
+    },
+    "base-foot": {
+      "mean_absolute_rgb_error_255": 8.946433893451564,
+      "overlap_pixels": 108489
+    }
+  },
+  "render_sha256": "912fa50344106c18afa7cf837f1d472a81e46d6063d330e90ede95bfdaa11e9a",
+  "model_sha256": "e9efcf2fba6db8ef72f4302d81888eb8da2ed0d303de5086b97d4d6484376104",
+  "previous_render_sha256": "824f63623293bd7da64376cc01b329291f88ec2976101b3b2c7075aae5a49b94",
+  "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "camera_assumption_above_board": 54,
+  "method": "Fixed registration. Foreground alpha >127 and reference max RGB >12. Largest component, filled holes. RGB errors only on common foreground."
+}

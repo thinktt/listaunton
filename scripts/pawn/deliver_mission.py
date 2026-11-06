@@ -39,6 +39,12 @@ def export(scene,body,model):
     camera={"type":cam.data.type,"worldToCamera":[float(v) for row in cam.matrix_world.inverted() for v in row],"projectionMatrix":[float(v) for row in projection for v in row],"width":1254,"height":1254,"orthoScale":cam.data.ortho_scale,"shiftX":cam.data.shift_x,"shiftY":cam.data.shift_y,"elevationDegrees":54}
     tex=ROOT/scene["pawn_texture_path"]
     report={"vertexCount":count,"indexCount":count,"triangleCount":count//3,"vertexStrideBytes":32,"vertexByteLength":block.nbytes,"indexByteOffset":block.nbytes,"totalByteLength":len(raw),"bounds":{"min":lo.tolist(),"max":hi.tolist(),"size":bounds.tolist(),"center":((lo+hi)/2).tolist()},"parts":[{"name":body.name,"vertexCount":count,"indexCount":count,"indexOffset":0,"vertexOffset":0,"triangleCount":count//3}],"sourceSha256":sha(model),"referenceCamera":camera,"texture":scene["pawn_texture_path"],"textureSha256":sha(tex),"uvLayer":UV_NAME}
+    if "pawn_roughness_path" in scene:
+        path=ROOT/scene["pawn_roughness_path"]
+        packed=body.data.materials[0].node_tree.nodes["Pawn varnish roughness"].image
+        assert packed.colorspace_settings.name=="Non-Color" and packed.packed_file.data==path.read_bytes()
+        assert sha(path)==scene["pawn_roughness_sha256"]
+        report["varnish"]={"file":scene["pawn_roughness_path"],"sha256":sha(path),"gain":list(scene["pawn_roughness_range"])}
     save_json(ASSETS/"mesh.json",report);save_json(ASSETS/"camera.json",camera)
     return {"triangle_count":count//3,"closed_nonmanifold_edges":bad_edges,"signed_volume":volume,"euler_characteristic":euler,"height":float(bounds[2]),"diameter":float(bounds[0]),"height_to_diameter":float(bounds[2]/bounds[0]),"baseline_height_to_diameter":reference[2]/reference[0],"model_sha256":sha(model),"texture_sha256":sha(tex)}
 
@@ -54,16 +60,25 @@ def deliver(variant):
     assert pigment.packed_file and pigment.packed_file.data==tex.read_bytes()
     # Rebuilds or exports can be moved between Windows and WSL. Runtime
     # texture data is packed; this relative path is also valid on checkout.
-    pigment.filepath="//../../"+scene["pawn_texture_path"]
+    # The accepted file lives in models/pawn. Write paths relative to that
+    # destination for every packed image still driving the wood material.
+    known_images={sha(path):path for path in ASSETS.glob("pawn-*.png")}
+    import hashlib
+    for tex_node in material.node_tree.nodes:
+        if tex_node.type=="TEX_IMAGE" and tex_node.image and tex_node.image.packed_file:
+            key=hashlib.sha256(tex_node.image.packed_file.data).hexdigest()
+            if key in known_images:
+                tex_node.image.filepath="//../../"+known_images[key].relative_to(ROOT).as_posix()
     scene["pawn_accepted_trial"]=variant;scene.render.filepath="//../../assets/pawn/render.png"
     scene.cycles.device="CPU";bpy.context.preferences.filepaths.save_version=0
     model=ROOT/"models/pawn/pawn-rebuilt.blend"
-    bpy.ops.wm.save_as_mainfile(filepath=str(model))
+    bpy.ops.wm.save_as_mainfile(filepath=str(model),relative_remap=False)
     bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False)
     scene=bpy.context.scene;body=control(scene);fixed_camera(scene)
     material=body.data.materials[0]
     node=material.node_tree.nodes["Pawn walnut pigment"]
     assert node.image.packed_file.data==tex.read_bytes()
+    assert Path(bpy.path.abspath(node.image.filepath)).resolve()==tex.resolve()
     bs=material.node_tree.nodes.get("Principled BSDF")
     assert bs.inputs["Base Color"].links[0].from_node==node
     assert material.node_tree.nodes.get("Material Output").inputs["Surface"].links[0].from_node==bs

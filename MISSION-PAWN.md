@@ -105,9 +105,9 @@ interior, which need separate detailed inspection.
 
 
 
-Checkpoint 004 seats a rounder head and remeasures walnut in a darker
-studio. Scores are 96.81 / 88 / 87 / 79 / 75, with a working mean of
-85.16%. Original black IoU is 98.51%. Read docs/pawn-mission-log.md before
+Checkpoint 005 adds measured varnish and brighter head glints.
+Scores are 96.81 / 88 / 88 / 81 / 80, with a working mean of 86.76%.
+Original black IoU is 98.51%. Read docs/pawn-mission-log.md before
 revising these scores. Update the pawn review and local preview between
 accepted iterations.
 

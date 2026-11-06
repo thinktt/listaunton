@@ -11,6 +11,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from derive_wood import ROOT, blur, display, linear, pigment_field, ramp, sample
+from lathe_projection import visible_tiles
 
 def wrapped_blur(a,radius):
     pad=2*radius
@@ -31,25 +32,12 @@ def run(directory,output,size=2048,keep_lower=None,transition_z=(1.77,1.92)):
     profile=np.load(directory/"meridian.npy")
     depth=np.load(directory/"depth.npy")[:,:,0]
     camera=json.loads((ROOT/"assets/pawn/camera.json").read_text())
-    view=np.array(camera["worldToCamera"]).reshape(4,4)
-    proj=np.array(camera["projectionMatrix"]).reshape(4,4)@view
-    theta=((np.arange(size)+.5)/size+.25)*2*np.pi
-    cs,sn=np.cos(theta),np.sin(theta)
     wood=linear(np.asarray(Image.open(ROOT/"assets/queen/walnut-fine-albedo.png").convert("RGB"),dtype=np.float32)/255)
     wm=np.median(wood[::4,::4].reshape(-1,3),axis=0)
     base=np.empty((size,size,3),dtype=np.float32)
     known=np.empty_like(base);weights=np.empty((size,size),np.float32)
-    W,H=camera["width"],camera["height"]
-    for first in range(0,size,64):
-        rows=np.arange(first,min(first+64,size));v=1-(rows+.5)/size
-        r,z,nr,nz=[np.interp(v,profile[:,0],profile[:,i])[:,None] for i in (1,2,3,4)]
-        x=r*cs;y=r*sn
-        def project(row):
-            return row[0]*x+row[1]*y+row[2]*z+row[3]
-        px=(project(proj[0])+1)*W/2-.5;py=(1-project(proj[1]))*H/2-.5
-        dz=np.abs(sample(depth,px,py)+project(view[2]))
-        facing=(nr*cs*view[2,0]+nr*sn*view[2,1]+nz*view[2,2])/np.maximum(np.hypot(nr,nz),.01)
-        weights[rows]=(1-ramp(dz,.008,.035))*ramp(facing,.08,.48)*sample(reliability,px,py)
+    for rows,x,y,z,px,py,visible in visible_tiles(profile,depth,camera,size):
+        weights[rows]=visible*sample(reliability,px,py)
         known[rows]=sample(observed,px,py)
         tx=1-np.abs((.45+.63*x+.25*y)%2-1)
         ty=1-np.abs((.20+.59*z+.12*y+.035*np.sin(7*x))%2-1)

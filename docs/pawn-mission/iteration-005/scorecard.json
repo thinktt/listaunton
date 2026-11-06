@@ -1,0 +1,40 @@
+[
+  {
+    "trial": "023-walnut-polish",
+    "scores": {
+      "silhouette": 96.80974956199113,
+      "interior_form": 88,
+      "wood_color": 88,
+      "grain": 80,
+      "lighting": 76
+    },
+    "working_mean": 85.76194991239822,
+    "iou": {
+      "selected": 0.9680974956199113,
+      "original_black": 0.9850636264772733,
+      "original_white": 0.9814093046275675
+    },
+    "source_sha256": "8b01314756f3f784962d862c3827fff71f12d274b36b0c6687de0d433c77263f",
+    "render_sha256": "ed1859f3fd31c9767c4cc7abf5d98812ce1c11867810992a382d6724db6b9798",
+    "decision": "Measured changes in roughness give the socket and flare some grain-dependent variation and reduce regional RGB error. The upper and right head highlights are still too dim."
+  },
+  {
+    "trial": "024-varnish-and-cores",
+    "scores": {
+      "silhouette": 96.80974956199113,
+      "interior_form": 88,
+      "wood_color": 88,
+      "grain": 81,
+      "lighting": 80
+    },
+    "working_mean": 86.76194991239822,
+    "iou": {
+      "selected": 0.9680974956199113,
+      "original_black": 0.9850636264772733,
+      "original_white": 0.9814093046275675
+    },
+    "source_sha256": "e9efcf2fba6db8ef72f4302d81888eb8da2ed0d303de5086b97d4d6484376104",
+    "render_sha256": "912fa50344106c18afa7cf837f1d472a81e46d6063d330e90ede95bfdaa11e9a",
+    "decision": "Compact physical emitters restore much of the missing peak brightness at all three original glints. The upper and right highlights gain fine contrast. The left glint remains too smooth, and the broad base patches remain. Accepted."
+  }
+]

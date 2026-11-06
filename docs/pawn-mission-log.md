@@ -127,3 +127,27 @@ The broad base reflections and soft, pale head glints still differ from the
 broken highlights in the original finish. Next measure how the actual
 varnish responds to changes in roughness. The [checkpoint evidence](pawn-mission/iteration-004/README.md)
 includes the darker-studio test, rejected lighting setup and exact replay.
+
+## Checkpoint 005 · 2026-11-05
+
+The walnut carries a measured roughness map. Three compact area emitters
+bring the bright end of the original head-glint pattern closer to the
+selected reference. The right glint rises from 170 to 233 at the 99th
+percentile, against 239 in the reference. The left glint still has a
+smooth, flat core. The broad reflections on the flare also stand out.
+
+| Metric | Checkpoint 004 | Checkpoint 005 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 88 | 88 |
+| Wood color | 87 | 88 |
+| Grain and surface | 79 | 81 |
+| Lighting | 75 | 80 |
+| Working mean | 85.16% | 86.76% |
+
+Original black IoU is 98.51% and white is 98.14%. The other four scores
+are visual estimates. Holistic range is 83–90%. The rotating viewer uses
+the same roughness and pigment maps as the saved pawn. See the
+[checkpoint evidence](pawn-mission/iteration-005/README.md) for brightness
+and contrast measurements, side views and the independent replay. Next
+test how fine changes in surface orientation break up the three glints.

@@ -1,0 +1,84 @@
+{
+  "variant": "024-varnish-and-cores",
+  "source": "build/pawn-mission/023-walnut-polish/pawn.blend",
+  "source_sha256": "8b01314756f3f784962d862c3827fff71f12d274b36b0c6687de0d433c77263f",
+  "samples": 128,
+  "response_samples": 96,
+  "max_watts": 20,
+  "broad_energy_scale": {
+    "Left head glint": 0.6,
+    "Upper head glint": 0.76,
+    "Right head glint": 0.79
+  },
+  "cores": [
+    {
+      "name": "Left polish core",
+      "pixel": [
+        461,
+        451
+      ],
+      "half_axes": [
+        3.4,
+        3.1
+      ],
+      "angle": 15,
+      "distance": 1.65,
+      "spread": 9,
+      "color": [
+        1,
+        0.82,
+        0.82
+      ],
+      "region_half_size": [
+        15,
+        14
+      ]
+    },
+    {
+      "name": "Upper polish core",
+      "pixel": [
+        509,
+        435
+      ],
+      "half_axes": [
+        6.2,
+        4
+      ],
+      "angle": -30,
+      "distance": 1.65,
+      "spread": 9,
+      "color": [
+        1,
+        0.9,
+        0.8
+      ],
+      "region_half_size": [
+        20,
+        20
+      ]
+    },
+    {
+      "name": "Right polish core",
+      "pixel": [
+        515,
+        490
+      ],
+      "half_axes": [
+        8.2,
+        3.2
+      ],
+      "angle": 64,
+      "distance": 1.65,
+      "spread": 9,
+      "color": [
+        1,
+        0.85,
+        0.72
+      ],
+      "region_half_size": [
+        18,
+        24
+      ]
+    }
+  ]
+}

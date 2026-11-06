@@ -1,0 +1,94 @@
+{
+  "variant": "025-replay-walnut-polish",
+  "source": "history/pawn-mission-004/pawn-rebuilt.blend",
+  "source_sha256": "1e5ebe001c76e4b16f397bc7256bbbca7676ef6d56e8521d7730f29c0a390ab1",
+  "samples": 128,
+  "response_samples": 96,
+  "max_watts": 20,
+  "broad_energy_scale": {
+    "Left head glint": 0.6,
+    "Upper head glint": 0.76,
+    "Right head glint": 0.79
+  },
+  "fitted_lights": [
+    {
+      "name": "Left polish core",
+      "pixel": [
+        461,
+        451
+      ],
+      "position": [
+        -0.7187343835830688,
+        -0.6272586584091187,
+        4.173947334289551
+      ],
+      "rotation": [
+        -0.4430149793624878,
+        0.19298405945301056,
+        2.5540173053741455
+      ],
+      "size": 0.22342772330644992,
+      "size_y": 0.19426790424068446,
+      "spread": 9,
+      "color": [
+        1,
+        0.82,
+        0.82
+      ],
+      "energy": 0.09848370516258373
+    },
+    {
+      "name": "Upper polish core",
+      "pixel": [
+        509,
+        435
+      ],
+      "position": [
+        0.7516855001449585,
+        -0.10897362977266312,
+        4.24765682220459
+      ],
+      "rotation": [
+        -0.2757836878299713,
+        -0.3061606287956238,
+        -2.3439462184906006
+      ],
+      "size": 0.4172478876327746,
+      "size_y": 0.24520756184852568,
+      "spread": 9,
+      "color": [
+        1,
+        0.9,
+        0.8
+      ],
+      "energy": 0.4491744051300183
+    },
+    {
+      "name": "Right polish core",
+      "pixel": [
+        515,
+        490
+      ],
+      "position": [
+        0.9478549361228943,
+        -1.5277795791625977,
+        3.3651931285858154
+      ],
+      "rotation": [
+        -0.19510206580162048,
+        -1.0896422863006592,
+        2.389108657836914
+      ],
+      "size": 0.5390876877944394,
+      "size_y": 0.20061989139376601,
+      "spread": 9,
+      "color": [
+        1,
+        0.85,
+        0.72
+      ],
+      "energy": 0.5079129369659618
+    }
+  ],
+  "varnish_config": "docs/pawn-mission/iteration-005/023-varnish.json"
+}
