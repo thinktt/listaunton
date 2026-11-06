@@ -99,6 +99,9 @@ def run(cfg):
         from shape_trial import edit
         edit(body,cfg["profiles"])
     if cfg.get("finish"):finish(scene,body,cfg["finish"])
+    if cfg.get("slope_config"):
+        from micro_normals import apply
+        apply(scene,body,json.loads((ROOT/cfg["slope_config"]).read_text()))
     clear_reflectors(scene,cfg.get("keep_reflectors",()))
     if "fitted_lights" in cfg:
         for row in cfg["fitted_lights"]:
@@ -106,7 +109,10 @@ def run(cfg):
         save_trial(scene,cfg)
         return
     directory=BUILD/cfg["variant"];directory.mkdir(parents=True,exist_ok=True)
-    surface=Surface(scene,body);rows=[shape(surface,p) for p in cfg["landmarks"]]
+    if "probe_lights" in cfg:
+        rows=[dict(row) for row in cfg["probe_lights"]]
+    else:
+        surface=Surface(scene,body);rows=[shape(surface,p) for p in cfg["landmarks"]]
     fixed_lights=[ob for ob in scene.objects if ob.type=="LIGHT"]
     fixed_powers=[ob.data.energy for ob in fixed_lights]
     bg=scene.world.node_tree.nodes["Background"].inputs["Strength"];world_power=bg.default_value
@@ -118,6 +124,11 @@ def run(cfg):
     scene.render.image_settings.file_format="OPEN_EXR";scene.render.image_settings.color_depth="32"
     fixed=response(scene,directory)
     rgba=reference_srgb()
+    if cfg.get("original_weight"):
+        original=np.load(ROOT/cfg["registered_original"])
+        assert original.shape==rgba.shape and original.dtype==np.float32
+        w=cfg["original_weight"]
+        rgba=(1-w)*rgba+w*original
     stride=100//percentage
     target=rgba if stride==1 else rgba.reshape(627,2,627,2,3).mean((1,3))
     mask=(fixed[:,:,3]>.995)&(target.max(2)>.065)
@@ -170,12 +181,12 @@ def run(cfg):
     for ob,energy in zip(fixed_lights,fixed_powers):ob.data.energy=energy
     bg.default_value=world_power
     for ob,row,scale,gain in zip(reflectors,rows,scales,power):
-        row["energy"]=float(20*scale*gain)
+        row["energy"]=float(row["energy"]*scale*gain)
         ob.data.energy=row["energy"]
         if row["energy"]<=.00001:bpy.data.objects.remove(ob,do_unlink=True)
     save_json(directory/"fit.json",{"method":"Actual colored-BSDF isolated area responses, fixed diffuse rig, nonnegative real light energies through the AgX display transform. The independent full render determines the decision.","foreground_pixels":len(target),"loss":errors,"lights":rows,"fixed_light_powers":dict(zip([o.name for o in fixed_lights],fixed_powers))})
     scene.cycles.use_adaptive_sampling=True
-    delivery=dict(cfg);delivery.pop("landmarks");delivery["fitted_lights"]=rows
+    delivery=dict(cfg);delivery.pop("landmarks",None);delivery.pop("probe_lights",None);delivery["fitted_lights"]=rows
     save_json(directory/"reproduction.json",delivery)
     save_trial(scene,delivery)
 

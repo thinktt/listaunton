@@ -1,0 +1,41 @@
+{
+  "accepted_trial": "040-spatial-flare-fit",
+  "model_sha256": "62a216c56e8885be4a3955fc99a57c8d860d8739e92c36b052fbb9b29529b99b",
+  "selected_reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "scores": {
+    "silhouette": 96.81232608471608,
+    "interior_form": 91,
+    "wood_color": 93,
+    "grain": 90,
+    "lighting": 90
+  },
+  "working_mean": 92.16246521694322,
+  "holistic_range": [
+    89,
+    94
+  ],
+  "iou": {
+    "selected": 0.9681232608471607,
+    "original_black": 0.9850177807555532,
+    "original_white": 0.9813635777806419
+  },
+  "reproduction": {
+    "reopened": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 6.0797454150034224e-05,
+      "max_error_255": 1,
+      "render_sha256": "70a051d3434c382d8578e8dc879a8d36e017616aa85df58f7ca84b01f4f72320"
+    },
+    "reproduced": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 5.037503343859978e-05,
+      "max_error_255": 1,
+      "render_sha256": "e96eae4f5f767ffcfcd3ca72e87b578674810feb91a3b82f757708325d27f7e6"
+    }
+  },
+  "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+  "same_mesh_and_uvs_as_previous": true,
+  "native_browser_gpu_check": false,
+  "goal_complete": false
+}

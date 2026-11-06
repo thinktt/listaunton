@@ -1,0 +1,78 @@
+[
+  {
+    "trial": "037-flare-and-socket-cores",
+    "scores": {
+      "silhouette": 96.81335669380604,
+      "interior_form": 91,
+      "wood_color": 79,
+      "grain": 76,
+      "lighting": 52
+    },
+    "working_mean": 78.96267133876121,
+    "iou": {
+      "selected": 0.9681335669380604,
+      "original_black": 0.985028088439932,
+      "original_white": 0.9813636738565595
+    },
+    "source_sha256": "c648baa2071c86e4162e0e35c40254149a4dd928a77428bb4d402dee66d00d52",
+    "render_sha256": "6c542d2c62de232e53d855ed0ac5c1e0a9a001c0902f366d1c9b68577275cf2c",
+    "decision": "Reject. The power optimizer discarded the useful dim range when both test powers clipped, producing white patches on the stem and flare."
+  },
+  {
+    "trial": "038-unsaturated-cores",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 90,
+      "grain": 87,
+      "lighting": 85
+    },
+    "working_mean": 89.96246521694322,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "5c6eb51fc68a6304974e8c6a36c61a9105519c3daa779010691441a173336d3b",
+    "render_sha256": "52c4213e122f0221af1e2c32a9fc4c07b6342b2fe408857cf30fdab2cd1ee0c3",
+    "decision": "A log-watt bracket restores sensible powers. The stem rim and socket lip appear, but their smooth bright patches still raise native RGB error."
+  },
+  {
+    "trial": "039-directional-grain",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 90,
+      "lighting": 89
+    },
+    "working_mean": 91.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "eaacba721949ec311d9e92166d16828a025efdd791c1ef13b22f6acab92a7922",
+    "render_sha256": "d5ffd19af618550b310aa5a2cc5d9e52dbfab3886340bbabaeb5fbfcd68d471f",
+    "decision": "Measured responses in eight tangent directions at two slopes break up all three head glints and both lower highlights. The narrow flare line is positively correlated with the reference for the first time in this comparison."
+  },
+  {
+    "trial": "040-spatial-flare-fit",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 90,
+      "lighting": 90
+    },
+    "working_mean": 92.16246521694322,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "e2b0a34e0bd398fcb1c67c7195a2dff04b7f4c1a3d77be3028e22fdb8eb08887",
+    "render_sha256": "5427184cd076336e75e7d38f89ac54e0431199e3cea0f7fcafd1a1f73174c16e",
+    "decision": "Refitting the actual reflector powers against selected and original pixels improves contrast through the left flare and reduces native and selected errors. The original silhouette and proportions are retained. Accepted."
+  }
+]

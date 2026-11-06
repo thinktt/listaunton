@@ -1,0 +1,202 @@
+{
+  "selected": {
+    "head-left": {
+      "median": 132.74,
+      "p99": 244.18,
+      "ripple_rms": 18.264,
+      "ripple_correlation": 1.0
+    },
+    "head-upper": {
+      "median": 119.69,
+      "p99": 248.05,
+      "ripple_rms": 18.399,
+      "ripple_correlation": 1.0
+    },
+    "head-right": {
+      "median": 119.63,
+      "p99": 239.28,
+      "ripple_rms": 20.049,
+      "ripple_correlation": 1.0
+    },
+    "flare-left": {
+      "median": 186.39,
+      "p99": 251.41,
+      "ripple_rms": 29.384,
+      "ripple_correlation": 1.0
+    },
+    "flare-line": {
+      "median": 106.94,
+      "p99": 245.65,
+      "ripple_rms": 29.408,
+      "ripple_correlation": 1.0
+    },
+    "socket-lip": {
+      "median": 159.3,
+      "p99": 251.61,
+      "ripple_rms": 26.115,
+      "ripple_correlation": 1.0
+    },
+    "foot-line": {
+      "median": 80.81,
+      "p99": 224.66,
+      "ripple_rms": 30.448,
+      "ripple_correlation": 1.0
+    },
+    "stem-edge": {
+      "median": 59.91,
+      "p99": 227.87,
+      "ripple_rms": 24.52,
+      "ripple_correlation": 1.0
+    }
+  },
+  "checkpoint-007": {
+    "head-left": {
+      "median": 141.48,
+      "p99": 225.43,
+      "ripple_rms": 15.022,
+      "ripple_correlation": 0.6837
+    },
+    "head-upper": {
+      "median": 119.55,
+      "p99": 232.0,
+      "ripple_rms": 14.223,
+      "ripple_correlation": 0.7817
+    },
+    "head-right": {
+      "median": 121.99,
+      "p99": 225.81,
+      "ripple_rms": 13.764,
+      "ripple_correlation": 0.7994
+    },
+    "flare-left": {
+      "median": 203.73,
+      "p99": 232.99,
+      "ripple_rms": 11.383,
+      "ripple_correlation": 0.6012
+    },
+    "flare-line": {
+      "median": 147.47,
+      "p99": 199.05,
+      "ripple_rms": 19.827,
+      "ripple_correlation": -0.3469
+    },
+    "socket-lip": {
+      "median": 114.38,
+      "p99": 132.79,
+      "ripple_rms": 6.073,
+      "ripple_correlation": 0.2849
+    },
+    "foot-line": {
+      "median": 77.43,
+      "p99": 117.6,
+      "ripple_rms": 10.154,
+      "ripple_correlation": 0.7673
+    },
+    "stem-edge": {
+      "median": 17.14,
+      "p99": 39.63,
+      "ripple_rms": 1.917,
+      "ripple_correlation": -0.0374
+    }
+  },
+  "039-directional-grain": {
+    "head-left": {
+      "median": 136.59,
+      "p99": 227.33,
+      "ripple_rms": 16.278,
+      "ripple_correlation": 0.7643
+    },
+    "head-upper": {
+      "median": 118.04,
+      "p99": 234.52,
+      "ripple_rms": 17.594,
+      "ripple_correlation": 0.799
+    },
+    "head-right": {
+      "median": 121.03,
+      "p99": 229.21,
+      "ripple_rms": 16.047,
+      "ripple_correlation": 0.8493
+    },
+    "flare-left": {
+      "median": 208.35,
+      "p99": 240.74,
+      "ripple_rms": 15.157,
+      "ripple_correlation": 0.7442
+    },
+    "flare-line": {
+      "median": 152.74,
+      "p99": 205.54,
+      "ripple_rms": 18.63,
+      "ripple_correlation": 0.3674
+    },
+    "socket-lip": {
+      "median": 158.04,
+      "p99": 240.35,
+      "ripple_rms": 20.852,
+      "ripple_correlation": 0.7716
+    },
+    "foot-line": {
+      "median": 87.7,
+      "p99": 200.91,
+      "ripple_rms": 18.903,
+      "ripple_correlation": 0.7882
+    },
+    "stem-edge": {
+      "median": 70.22,
+      "p99": 206.79,
+      "ripple_rms": 19.642,
+      "ripple_correlation": 0.3455
+    }
+  },
+  "040-spatial-flare-fit": {
+    "head-left": {
+      "median": 135.82,
+      "p99": 227.43,
+      "ripple_rms": 16.517,
+      "ripple_correlation": 0.764
+    },
+    "head-upper": {
+      "median": 118.07,
+      "p99": 234.53,
+      "ripple_rms": 17.626,
+      "ripple_correlation": 0.8002
+    },
+    "head-right": {
+      "median": 121.35,
+      "p99": 229.24,
+      "ripple_rms": 15.983,
+      "ripple_correlation": 0.8494
+    },
+    "flare-left": {
+      "median": 188.73,
+      "p99": 229.13,
+      "ripple_rms": 17.71,
+      "ripple_correlation": 0.7861
+    },
+    "flare-line": {
+      "median": 140.85,
+      "p99": 190.44,
+      "ripple_rms": 17.888,
+      "ripple_correlation": 0.3722
+    },
+    "socket-lip": {
+      "median": 134.74,
+      "p99": 212.83,
+      "ripple_rms": 18.591,
+      "ripple_correlation": 0.8119
+    },
+    "foot-line": {
+      "median": 83.42,
+      "p99": 186.0,
+      "ripple_rms": 17.149,
+      "ripple_correlation": 0.7894
+    },
+    "stem-edge": {
+      "median": 64.65,
+      "p99": 188.13,
+      "ripple_rms": 19.379,
+      "ripple_correlation": 0.3323
+    }
+  }
+}

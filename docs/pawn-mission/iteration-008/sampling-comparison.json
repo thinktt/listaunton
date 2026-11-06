@@ -1,0 +1,90 @@
+{
+  "head": {
+    "registered_xy": [
+      420,
+      401
+    ],
+    "crop_dimensions": [
+      128,
+      128
+    ],
+    "128_full_vs_crop_mae": 1.235,
+    "reference_fine_contrast": 12.1,
+    "checks": {
+      "128-clean-0": {
+        "mae_to_reference": 4.328,
+        "rms_fine_contrast": 11.145,
+        "fine_correlation_to_reference": 0.8435,
+        "mae_to_768_other_seed": 3.903
+      },
+      "512-clean-0": {
+        "mae_to_reference": 4.746,
+        "rms_fine_contrast": 12.461,
+        "fine_correlation_to_reference": 0.8417,
+        "mae_to_768_other_seed": 3.352
+      },
+      "768-clean-0": {
+        "mae_to_reference": 4.725,
+        "rms_fine_contrast": 12.442,
+        "fine_correlation_to_reference": 0.8481,
+        "mae_to_768_other_seed": 3.189
+      },
+      "768-clean-31": {
+        "mae_to_reference": 4.888,
+        "rms_fine_contrast": 12.573,
+        "fine_correlation_to_reference": 0.8448,
+        "mae_to_768_other_seed": 0.0
+      },
+      "768-raw-0": {
+        "mae_to_reference": 6.534,
+        "rms_fine_contrast": 13.493,
+        "fine_correlation_to_reference": 0.7799,
+        "mae_to_768_other_seed": 5.037
+      }
+    }
+  },
+  "flare": {
+    "registered_xy": [
+      349,
+      835
+    ],
+    "crop_dimensions": [
+      284,
+      92
+    ],
+    "128_full_vs_crop_mae": 1.428,
+    "reference_fine_contrast": 16.099,
+    "checks": {
+      "128-clean-0": {
+        "mae_to_reference": 9.612,
+        "rms_fine_contrast": 12.254,
+        "fine_correlation_to_reference": 0.7211,
+        "mae_to_768_other_seed": 5.218
+      },
+      "512-clean-0": {
+        "mae_to_reference": 9.683,
+        "rms_fine_contrast": 13.839,
+        "fine_correlation_to_reference": 0.7268,
+        "mae_to_768_other_seed": 4.132
+      },
+      "768-clean-0": {
+        "mae_to_reference": 9.715,
+        "rms_fine_contrast": 14.101,
+        "fine_correlation_to_reference": 0.7227,
+        "mae_to_768_other_seed": 3.998
+      },
+      "768-clean-31": {
+        "mae_to_reference": 9.728,
+        "rms_fine_contrast": 14.013,
+        "fine_correlation_to_reference": 0.7281,
+        "mae_to_768_other_seed": 0.0
+      },
+      "768-raw-0": {
+        "mae_to_reference": 10.949,
+        "rms_fine_contrast": 15.657,
+        "fine_correlation_to_reference": 0.6701,
+        "mae_to_768_other_seed": 5.787
+      }
+    }
+  }
+}

@@ -202,3 +202,29 @@ ratings remain estimates. The [checkpoint evidence](pawn-mission/iteration-007/R
 includes the measured disagreement, shadow profiles and four-angle views.
 Next inspect the remaining narrow flare and foot reflections and the
 texture visible through their brightest areas.
+
+## Checkpoint 008 · 2026-11-06
+
+Compact reflectors and a second measured normal map bring out the upper
+head glint, left stem edge, socket lip and flare reflections. One blown-out
+lighting trial was rejected and the low-power search corrected. On the
+left flare, fine brightness contrast rises from 11.4 to 17.7, against
+29.4 in the target. The fine-pattern correlation improves from 0.60 to
+0.79. The narrow right flare and foot lines still need a crisper finish.
+
+| Metric | Checkpoint 007 | Checkpoint 008 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 92 | 93 |
+| Grain and surface | 87 | 90 |
+| Lighting | 87 | 90 |
+| Working mean | 90.76% | 92.16% |
+
+Original black IoU is 98.50% and white is 98.14%. Native original RGB
+error improves from 16.75 to 16.37, compared with 15.74 for the chosen
+enlargement. Holistic range is 89–94%. See the
+[checkpoint evidence](pawn-mission/iteration-008/README.md) for actual
+sampling, fine-contrast, material and reflector checks. Next test whether
+variation in polished and porous wood can recover the remaining grain
+contrast along these thin reflections.

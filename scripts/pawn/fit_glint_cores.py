@@ -27,7 +27,8 @@ def run(cfg):
     adjust(scene,cfg)
     if "fitted_lights" in cfg:
         for row in cfg["fitted_lights"]:
-            make_light(scene,row)
+            if row["energy"]>.00001:
+                make_light(scene,row)
         save_trial(scene,cfg)
         return
     out = BUILD/cfg["variant"]
@@ -58,6 +59,11 @@ def run(cfg):
         roi=np.s_[y-ry:y+ry,x-rx:x+rx]
         region=base[roi].copy()
         delta=isolated[roi]
+        if float(delta.max())<1e-7:
+            row["energy"]=0.
+            lamp.data.energy=0.
+            reports.append({"name":row["name"],"watts":0.,"reason":"No measured response in its target region."})
+            continue
         q=[.5,.9,.99]
         weights=np.array([.24,.53,.23])
         desired=np.quantile(target[roi]@weights,q)
@@ -69,15 +75,26 @@ def run(cfg):
             return float(np.dot([.22,.33,.45],(levels(energy)-desired)**2))
         # One-dimensional bounded minimization. Each reflector has its own
         # small target region and the previous regions retain their powers.
-        lo,hi=0.,cfg.get("max_watts",18.)
+        # Compact sources can saturate the display across most of the watt
+        # range. Bracket the useful response in log watts before refining;
+        # two equally clipped probes cannot rule out a dimmer solution.
+        ceiling=cfg.get("max_watts",18.)
+        grid=np.r_[0.,np.geomspace(1e-6,ceiling,44)]
+        costs=[loss(energy) for energy in grid]
+        index=int(np.argmin(costs))
+        energy=float(grid[index]);best=costs[index]
+        lo=float(grid[max(index-1,0)]);hi=float(grid[min(index+1,len(grid)-1)])
         for _ in range(24):
             left=lo+(hi-lo)/3;right=hi-(hi-lo)/3
-            if loss(left)<loss(right):
+            a,b=loss(left),loss(right)
+            if a<best:energy,best=left,a
+            if b<best:energy,best=right,b
+            if a<=b:
                 hi=right
             else:
                 lo=left
-        energy=(hi+lo)/2
-        reports.append({"name":row["name"],"percentiles":q,"reference":desired.tolist(),"without":levels(0).tolist(),"predicted":levels(energy).tolist(),"watts":energy})
+        assert best<=costs[0]
+        reports.append({"name":row["name"],"percentiles":q,"reference":desired.tolist(),"without":levels(0).tolist(),"predicted":levels(energy).tolist(),"loss_without":costs[0],"loss_with":best,"watts":energy})
         row["energy"]=energy
         base+=isolated*energy
         lamp.data.energy=0
@@ -86,7 +103,11 @@ def run(cfg):
         ob.data.energy=energy
     world.default_value=world_power
     for row in rows:
-        scene.objects[row["name"]].data.energy=row["energy"]
+        lamp=scene.objects[row["name"]]
+        if row["energy"]>.00001:
+            lamp.data.energy=row["energy"]
+        else:
+            bpy.data.objects.remove(lamp,do_unlink=True)
     explicit=dict(cfg)
     explicit.pop("cores")
     explicit["fitted_lights"]=rows

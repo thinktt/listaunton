@@ -105,8 +105,8 @@ interior, which need separate detailed inspection.
 
 
 
-Checkpoint 007 fits the lower ball and the narrow shadow it casts into
-the collar. Scores are 96.81 / 91 / 92 / 87 / 87, with a working mean of 90.76%.
+Checkpoint 008 fits fine grain within the flare and socket reflections.
+Scores are 96.81 / 91 / 93 / 90 / 90, with a working mean of 92.16%.
 Original black IoU is 98.50%. Read docs/pawn-mission-log.md before
 revising these scores. Update the pawn review and local preview between
 accepted iterations.
