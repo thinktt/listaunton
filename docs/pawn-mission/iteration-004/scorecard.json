@@ -1,0 +1,97 @@
+[
+  {
+    "trial": "017-round-head-cradle",
+    "scores": {
+      "silhouette": 96.8087353976327,
+      "interior_form": 88,
+      "wood_color": 76,
+      "grain": 75,
+      "lighting": 67
+    },
+    "working_mean": 80.56174707952654,
+    "iou": {
+      "selected": 0.9680873539763271,
+      "original_black": 0.9850636264772733,
+      "original_white": 0.9814093046275675
+    },
+    "source_sha256": "00b9a7320037a269a93aa3499838b1a14dee6bb89cdfe708232ae1ee6bd73a7c",
+    "render_sha256": "56fcd2f4ec3c36a378cf5a3f86c4288de332a000f25cff0111be8240062a215f",
+    "decision": "The rounder head seats directly into the collar and the front contact moves up to the reference. Yellow, stretched wood and old highlights on the reshaped collar need remeasurement."
+  },
+  {
+    "trial": "018-dark-studio",
+    "scores": {
+      "silhouette": 96.80974956199113,
+      "interior_form": 88,
+      "wood_color": 79,
+      "grain": 75,
+      "lighting": 72
+    },
+    "working_mean": 82.16194991239823,
+    "iou": {
+      "selected": 0.9680974956199113,
+      "original_black": 0.9850533954562323,
+      "original_white": 0.9813990895452366
+    },
+    "source_sha256": "4fcd3135b9035d68a7a3c9c00c2e41f48d5c65ef0840d24889a70d79a0513391",
+    "render_sha256": "63c91862c4a9050ab3631885d4cf874dbd6dea80cd1fc1a0c64ccc7f1573228d",
+    "decision": "The gray edge reflection recedes across head and outer base. The existing diffuse wood becomes too warm on the outer head. Continue with new response measurements."
+  },
+  {
+    "trial": "019-dark-studio-walnut",
+    "scores": {
+      "silhouette": 96.80974956199113,
+      "interior_form": 88,
+      "wood_color": 87,
+      "grain": 79,
+      "lighting": 72
+    },
+    "working_mean": 84.56194991239822,
+    "iou": {
+      "selected": 0.9680974956199113,
+      "original_black": 0.9850636264772733,
+      "original_white": 0.9814093046275675
+    },
+    "source_sha256": "610f3d7bb0dcaeae09dbc609ac2dfd20677cdf733b5fc0c1d38a6659cb33b4f1",
+    "render_sha256": "5d56122e4318dd946cb9a7af028fbcf8e03d0a7bbf0abd111c470af7b33145d8",
+    "decision": "Fresh diffuse pigment restores head and base color in the darker studio. Keep the previous foot treatment. The collar reflections remain thin and misplaced."
+  },
+  {
+    "trial": "020-fitted-bowl",
+    "scores": {
+      "silhouette": 96.80875184219477,
+      "interior_form": 88,
+      "wood_color": 84,
+      "grain": 77,
+      "lighting": 65
+    },
+    "working_mean": 82.16175036843894,
+    "iou": {
+      "selected": 0.9680875184219476,
+      "original_black": 0.9850637034593659,
+      "original_white": 0.9814094004712093
+    },
+    "source_sha256": "be7380ee4175f04c2c7653051f13de9b5ba540f9650a6f252f558aaba5b8da4e",
+    "render_sha256": "8e98d03c947a041fbe2ddabfeedbb1d12f24cdeab5d80c3178832f4d1fa5347f",
+    "decision": "The left collar catches light, but the broad emitters introduce glints in the lower head and twin bars on the stem from the side. Reject this rig."
+  },
+  {
+    "trial": "021-close-bowl-lights",
+    "scores": {
+      "silhouette": 96.80974956199113,
+      "interior_form": 88,
+      "wood_color": 87,
+      "grain": 79,
+      "lighting": 75
+    },
+    "working_mean": 85.16194991239823,
+    "iou": {
+      "selected": 0.9680974956199113,
+      "original_black": 0.9850636264772733,
+      "original_white": 0.9814093046275675
+    },
+    "source_sha256": "996cc9e81515f85100f7c25dbba6919c36dac9c24ee0dbd962cb87f0a68317e5",
+    "render_sha256": "6d6c816748c57323fc757675d954a0bd9e3effef88a1a84e52821dc8439cf37d",
+    "decision": "Four closer, narrower area reflectors restore separation within the collar. The head retains its three intended glints in the fixed view. The socket and base glints remain smooth. Accept."
+  }
+]

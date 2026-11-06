@@ -100,3 +100,30 @@ soft shadow make the head and collar read as one mass in the elevated view.
 Next test a rounder lower head seated directly in a shallow collar. See the
 [checkpoint record](pawn-mission/iteration-003/README.md) for the render
 comparisons, light measurements, finish assumptions and replay instructions.
+
+## Checkpoint 004 · 2026-11-05
+
+The lower head now follows a circular arc into a shallow collar. The dark
+contact moves from around row 601 to 589, against rows 589–592 in the
+references. The head's highest point and the overall pawn height are
+preserved. Darkening the studio brings the gray rim much closer to the
+reference brown. The wood is measured again under that lighting. Four
+close reflectors brighten the collar while preserving the fixed-view head
+glints. A wider rig was rejected after its reflections crossed the head.
+
+| Metric | Checkpoint 003 | Checkpoint 004 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.84% | 96.81% |
+| Interior form | 85 | 88 |
+| Wood color | 83 | 87 |
+| Grain and surface | 78 | 79 |
+| Lighting | 72 | 75 |
+| Working mean | 82.97% | 85.16% |
+
+Original black and white IoU rise to 98.51% and 98.14%. The selected
+silhouette decreases by 0.03 percentage points. The visual estimates favor
+the clearer join and closer regional color. Holistic range is 81–88%.
+The broad base reflections and soft, pale head glints still differ from the
+broken highlights in the original finish. Next measure how the actual
+varnish responds to changes in roughness. The [checkpoint evidence](pawn-mission/iteration-004/README.md)
+includes the darker-studio test, rejected lighting setup and exact replay.

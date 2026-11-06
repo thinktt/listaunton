@@ -1,0 +1,31 @@
+{
+  "contact_radius_fraction": 0.65,
+  "collar": [
+    [
+      38,
+      27.1,
+      -0.08
+    ],
+    [
+      39,
+      25.6,
+      -0.038
+    ],
+    [
+      40,
+      23.5,
+      -0.012
+    ],
+    [
+      41,
+      20.8,
+      0.004
+    ]
+  ],
+  "trial": {
+    "variant": "017-round-head-cradle",
+    "source": "history/pawn-mission-003/pawn-rebuilt.blend",
+    "source_sha256": "629fd0c4505251bc7ff04b3a0c11258ce09cbae417b87b434aed1105bebb7733",
+    "samples": 128
+  }
+}

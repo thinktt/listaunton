@@ -26,6 +26,8 @@ def run(cfg):
         rig=json.loads((ROOT/cfg["rig_config"]).read_text())
         assert rig["source_sha256"]==cfg["source_sha256"]
         edit(body,rig["profiles"])
+        if "world_strength" in rig:
+            scene.world.node_tree.nodes["Background"].inputs["Strength"].default_value=rig["world_strength"]
         clear_reflectors(scene,rig.get("keep_reflectors",()))
         for row in rig["fitted_lights"]:
             if row["energy"]>.00001:
@@ -46,6 +48,14 @@ def run(cfg):
     uv=nodes.new("ShaderNodeUVMap");uv.uv_map=UV_NAME
     links.new(uv.outputs["UV"],pigment.inputs["Vector"])
     links.new(pigment.outputs["Color"],bs.inputs["Base Color"])
+    if previous and not any(output.is_linked for output in previous.outputs):
+        old_image=previous.image
+        old_uv=previous.inputs["Vector"].links[0].from_node if previous.inputs["Vector"].is_linked else None
+        nodes.remove(previous)
+        if old_uv and old_uv.type=="UVMAP" and not any(output.is_linked for output in old_uv.outputs):
+            nodes.remove(old_uv)
+        if old_image.users==0:
+            bpy.data.images.remove(old_image)
     if cfg.get("recess_config"):
         from recess_finish import add_finish
         add_finish(material,json.loads((ROOT/cfg["recess_config"]).read_text()))

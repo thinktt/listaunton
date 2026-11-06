@@ -1,0 +1,107 @@
+{
+  "variant": "021-close-bowl-lights",
+  "source": "build/pawn-mission/019-dark-studio-walnut/pawn.blend",
+  "source_sha256": "610f3d7bb0dcaeae09dbc609ac2dfd20677cdf733b5fc0c1d38a6659cb33b4f1",
+  "samples": 128,
+  "response_samples": 128,
+  "keep_reflectors": [
+    "Left head glint",
+    "Upper head glint",
+    "Right head glint",
+    "Upper head glint core",
+    "Right head glint core",
+    "Socket right",
+    "Base left",
+    "Base right",
+    "Base upper",
+    "Foot right",
+    "Foot front",
+    "Base left inner",
+    "Base left outer",
+    "Base right inner",
+    "Foot center-right",
+    "Foot edge outer left",
+    "Foot edge center left"
+  ],
+  "landmarks": [
+    {
+      "name": "Bowl left",
+      "pixel": [
+        444,
+        606
+      ],
+      "half_axes": [
+        13.5,
+        5.5
+      ],
+      "angle": 25,
+      "spread": 6.5,
+      "color": [
+        1,
+        0.71,
+        0.52
+      ],
+      "distance": 0.68
+    },
+    {
+      "name": "Bowl left inner",
+      "pixel": [
+        457,
+        613
+      ],
+      "half_axes": [
+        10.3,
+        4.7
+      ],
+      "angle": 14,
+      "spread": 6.5,
+      "color": [
+        1,
+        0.71,
+        0.52
+      ],
+      "distance": 0.68
+    },
+    {
+      "name": "Bowl right",
+      "pixel": [
+        539,
+        600
+      ],
+      "half_axes": [
+        14,
+        3.1
+      ],
+      "angle": -29,
+      "spread": 6.5,
+      "color": [
+        1,
+        0.71,
+        0.52
+      ],
+      "distance": 0.68
+    },
+    {
+      "name": "Lip right",
+      "pixel": [
+        528,
+        624
+      ],
+      "half_axes": [
+        14,
+        1.5
+      ],
+      "angle": -13,
+      "spread": 6.5,
+      "color": [
+        1,
+        0.71,
+        0.52
+      ],
+      "distance": 0.68
+    }
+  ],
+  "glint_weight": 8,
+  "protect_recesses": true,
+  "protect_quiet_head": true
+}

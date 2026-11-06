@@ -105,9 +105,9 @@ interior, which need separate detailed inspection.
 
 
 
-Checkpoint 003 refits the flare, foot and recessed finish. Scores are
-96.84 / 85 / 83 / 78 / 72, with a working mean of 82.97%. Original black
-IoU is 98.49%. Read the latest entry in docs/pawn-mission-log.md before
+Checkpoint 004 seats a rounder head and remeasures walnut in a darker
+studio. Scores are 96.81 / 88 / 87 / 79 / 75, with a working mean of
+85.16%. Original black IoU is 98.51%. Read docs/pawn-mission-log.md before
 revising these scores. Update the pawn review and local preview between
 accepted iterations.
 

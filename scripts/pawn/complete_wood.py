@@ -17,7 +17,7 @@ def wrapped_blur(a,radius):
     extended=np.concatenate((a[:,-pad:],a,a[:,:pad]),axis=1)
     return blur(extended,r=radius,passes=2)[:,pad:-pad]
 
-def run(directory,output,size=2048):
+def run(directory,output,size=2048,keep_lower=None,transition_z=(1.77,1.92)):
     _,median,interior,weight=pigment_field(directory)
     black=np.load(directory/"black.npy")[:,:,:3]
     gray=np.load(directory/"gray.npy")[:,:,:3]
@@ -76,11 +76,24 @@ def run(directory,output,size=2048):
     # direct high-frequency pigment in reliable camera-facing areas.
     w=weights[:,:,None]
     pigment=np.exp(log_base+correction*(1-w)+difference*w)
+    retained=None
+    if keep_lower:
+        previous=np.asarray(Image.open(keep_lower).convert("RGB"),dtype=np.float32)/255
+        assert previous.shape==pigment.shape
+        v=1-(np.arange(size)+.5)/size
+        z=np.interp(v,profile[:,0],profile[:,2])
+        handoff=ramp(z,*transition_z)[:,None,None]
+        pigment=linear(previous)*(1-handoff)+pigment*handoff
+        retained={"texture":keep_lower.relative_to(ROOT).as_posix(),"sha256":hashlib.sha256(keep_lower.read_bytes()).hexdigest(),"transition_model_z":list(transition_z)}
     output.parent.mkdir(parents=True,exist_ok=True)
     Image.fromarray(np.uint8(np.rint(np.clip(display(pigment),0,1)*255))).save(output)
     report={"method":"Surface-space, confidence-weighted log pigment interpolation plus continuous unlit walnut grain. Exclude model-dominated glints and unreliable chromaticities; retain measured detail on trustworthy faces.","size":size,"mean_confidence":float(weights.mean()),"direct_coverage_fraction":float(np.mean(weights>.8)),"atlas_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),"source_measurement":json.loads((directory/"measurement.json").read_text())}
+    if retained:
+        report["retained_lower_pigment"]=retained
     (directory/"surface-completion.json").write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps(report,indent=2))
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("measurement");p.add_argument("texture");p.add_argument("--size",type=int,default=2048)
-    a=p.parse_args();run(ROOT/"build/pawn-mission"/a.measurement,ROOT/a.texture,a.size)
+    p.add_argument("--keep-lower",type=Path)
+    p.add_argument("--transition-z",type=float,nargs=2,default=(1.77,1.92))
+    a=p.parse_args();run(ROOT/"build/pawn-mission"/a.measurement,ROOT/a.texture,a.size,ROOT/a.keep_lower if a.keep_lower else None,a.transition_z)

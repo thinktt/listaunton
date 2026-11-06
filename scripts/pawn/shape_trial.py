@@ -21,6 +21,8 @@ def edit(body,profiles):
 def run(cfg):
     scene,body=open_source(cfg)
     edit(body,cfg["profiles"]);fixed_camera(scene)
+    if "world_strength" in cfg:
+        scene.world.node_tree.nodes["Background"].inputs["Strength"].default_value=cfg["world_strength"]
     out=BUILD/cfg["variant"];out.mkdir(parents=True,exist_ok=True)
     scene["pawn_mission_variant"]=cfg["variant"];scene["pawn_trial_config"]=json.dumps(cfg,sort_keys=True)
     scene.render.filepath=str(out/"fixed.png")

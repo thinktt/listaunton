@@ -1,0 +1,41 @@
+{
+  "accepted_trial": "021-close-bowl-lights",
+  "model_sha256": "1e5ebe001c76e4b16f397bc7256bbbca7676ef6d56e8521d7730f29c0a390ab1",
+  "selected_reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "scores": {
+    "silhouette": 96.80974956199113,
+    "interior_form": 88,
+    "wood_color": 87,
+    "grain": 79,
+    "lighting": 75
+  },
+  "working_mean": 85.16194991239823,
+  "holistic_range": [
+    81,
+    88
+  ],
+  "iou": {
+    "selected": 0.9680974956199113,
+    "original_black": 0.9850636264772733,
+    "original_white": 0.9814093046275675
+  },
+  "reproduction": {
+    "reopened": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 4.690211528539937e-05,
+      "max_error_255": 1,
+      "render_sha256": "824f63623293bd7da64376cc01b329291f88ec2976101b3b2c7075aae5a49b94"
+    },
+    "reproduced": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 4.169076914257722e-05,
+      "max_error_255": 1,
+      "render_sha256": "68de7723d4fe8b02d6192a3d9ed5e3c77f5b37dc8761a6fdd8b939ffbf651e6f"
+    }
+  },
+  "mesh_sha256": "541f6811887e98edc402098706744b68bc6c2fc438c6927434f132123ea8c569",
+  "same_mesh_and_uvs_as_previous": false,
+  "native_browser_gpu_check": false,
+  "goal_complete": false
+}

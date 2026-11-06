@@ -93,6 +93,8 @@ def nonnegative_fit(base,responses,target,weight,processor,initial):
 
 def run(cfg):
     scene,body=open_source(cfg)
+    if "world_strength" in cfg:
+        scene.world.node_tree.nodes["Background"].inputs["Strength"].default_value=cfg["world_strength"]
     if cfg.get("profiles"):
         from shape_trial import edit
         edit(body,cfg["profiles"])
@@ -140,6 +142,12 @@ def run(cfg):
         groove=(xs>330)&(xs<630)&(ys>903)&(ys<963)&(target.max(1)<.18)
         stem=(xs>487)&(xs<522)&(ys>640)&(ys<705)
         weight+=6*groove+3*stem
+    if cfg.get("protect_quiet_head"):
+        ys,xs=np.nonzero(mask)
+        xs=xs*2+1;ys=ys*2+1
+        head=(np.hypot(xs-483,ys-469)<115)&(ys<586)
+        neck=(xs>439)&(xs<530)&(ys>645)&(ys<713)
+        weight+=40*head+16*neck
     power,errors=nonnegative_fit(fixed,np.stack(responses,axis=-1),target,weight,processor,np.ones(len(rows)))
     for ob,energy in zip(fixed_lights,fixed_powers):ob.data.energy=energy
     bg.default_value=world_power
