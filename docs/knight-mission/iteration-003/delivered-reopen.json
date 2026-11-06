@@ -1,0 +1,27 @@
+{
+  "fixed": {
+    "alpha_equal": true,
+    "foreground_rgb_mae_255": 5.091545997026537e-05,
+    "max": 1
+  },
+  "side": {
+    "alpha_equal": true,
+    "foreground_rgb_mae_255": 3.6246412171545204e-05,
+    "max": 1
+  },
+  "geometry_sha256": "f3dc7ad4cd76527acdd8679bccc2a0be81522fe35885b9df4818a11c8c48a451",
+  "camera_sha256": "6a93ea53cdd663e5d941b44bcbb6c610f4e0e50317f40ad00f02097f94e4276a",
+  "finish_sha256": "20a35df73429c498f7439c588e8954f33bf82aaa8fd5f8949f8fd5b669dfd16f",
+  "before_mae_255": {
+    "foreground": 16.63776561470346,
+    "chest": 21.313394714303193,
+    "head_and_mane": 18.05861194882225,
+    "lower_pedestal": 11.072065788747823
+  },
+  "after_mae_255": {
+    "foreground": 14.18685200965772,
+    "chest": 19.481310412333293,
+    "head_and_mane": 15.296518928161152,
+    "lower_pedestal": 9.599608343774872
+  }
+}

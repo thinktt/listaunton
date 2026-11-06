@@ -13,6 +13,13 @@ const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');node('original-alignment').textContent=text('original-alignment');
 node('side-registration').textContent=text('side-registration');node('side-opacity').value='50';
 node('wood-texture').textContent=text('wood-texture');
+node('varnish-data').textContent=text('varnish-data');
+if(meta.finish){
+ const finish=Buffer.from(text('varnish-data'),'base64');
+ assert.equal(finish.length,meta.vertexCount);
+ assert.equal(require('node:crypto').createHash('sha256').update(finish).digest('hex'),meta.finish.sha256);
+ assert.deepEqual(finish,fs.readFileSync(path.join(root,meta.finish.file)));
+}
 assert.equal(require('node:crypto').createHash('sha256').update(Buffer.from(text('wood-texture'),'base64')).digest('hex'),meta.textureSha256);
 assert.equal(meta.vertexStrideBytes,32);
 node('model-opacity').value='50';node('stage').dataset.mode='compare';
@@ -92,5 +99,6 @@ const sr=JSON.parse(text('side-registration'));assert.equal(sr.source_blend_sha2
 assert.equal(parseFloat(node('side-model').style.width),sr.profile_size[0]*sr.scale/sr.canvas[0]*100);
 node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),beforeSide,'Side comparison changed orbit');
 const report={passed:true,horseFrontSidePresets:true,pigmentAtlasHashMatches:true,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256};
+if(meta.finish){assert.equal(uniforms.uReliefDistance,Math.fround(meta.finish.reliefDistance));report.varnishCoverageAndReliefMatch=true;}
 fs.writeFileSync(path.join(root,'assets/knight/viewer-validation.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

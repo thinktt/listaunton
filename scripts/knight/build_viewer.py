@@ -29,6 +29,12 @@ if meta.get('referenceCamera', {}).get('type') != 'ORTHO':
     raise RuntimeError('The knight viewer requires its saved orthographic reference camera.')
 fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes', 'vertexByteLength', 'indexByteOffset', 'totalByteLength', 'bounds', 'sourceSha256', 'referenceCamera', 'texture', 'textureSha256', 'uvLayer']
 public_meta = {key: meta[key] for key in fields}
+finish = b''
+if 'finish' in meta:
+    public_meta['finish'] = meta['finish']
+    finish = (root/meta['finish']['file']).read_bytes()
+    assert len(finish) == meta['vertexCount']
+    assert hashlib.sha256(finish).hexdigest() == meta['finish']['sha256']
 mesh = (assets/'mesh.bin').read_bytes()
 assert len(mesh) == meta['totalByteLength'], 'Mesh binary length does not match metadata.'
 assert meta['vertexStrideBytes'] == 32, 'Expected interleaved position, normal and pigment UV.'
@@ -56,6 +62,7 @@ def data_uri(path):
 html = (Path(__file__).with_name('viewer-template.html')).read_text(encoding='utf-8')
 html = html.replace('__MESH_META__',json.dumps(public_meta,separators=(',',':')))
 html = html.replace('__MESH_BASE64__',base64.b64encode(mesh).decode('ascii'))
+html = html.replace('__VARNISH__',base64.b64encode(finish).decode('ascii'))
 html = html.replace('__REFERENCE_IMAGE__',data_uri(assets/'ref.png'))
 html = html.replace('__RENDER_IMAGE__',data_uri(assets/'render.png'))
 html = html.replace('__ORIGINAL_IMAGE__',data_uri(assets/'original.png'))

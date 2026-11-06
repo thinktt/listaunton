@@ -101,3 +101,27 @@ The visible eye now spans 52 by 20 pixels and 223 two-pixel grid samples. Its ir
 The reopened Blender model rendered at 96 Cycles samples at the existing 54-degree camera and the registered 7-degree side camera. Both delivered images have the selected trial's exact alpha. Their foreground mean RGB changes are 0.000044/255 and 0.000048/255. The pedestal vertices, normals and pigment UVs are byte-identical to checkpoint 001. The maximum height, floor and camera matrices also match. All nine connected shells passed manifold and positive-volume checks. Both eyes intersect their sockets. The packed atlas matches the external PNG. The Node viewer harness passed all controls and sampled the camera within 0.000030 pixels.
 
 Accepted model SHA-256 `68e2e1a41f06bf19ff843bc0c0d2d042f1f846bef4f1447c00048b2cb96fb07f`. The review uses the fixed and side renders and the exported mesh from that scene. Next compare the two chest highlights, the broad mane reflection and the collar against the original. [Trial decisions and scores](knight-mission/iteration-002/scores.json) and [enlarged eye comparison](knight-mission/iteration-002/eye-comparison.png).
+
+
+## Checkpoint 003 | Reflections on the carved chest
+
+The second checkpoint at `d91c807` supplied the geometry and baseline finish. At 54 degrees, both originals and selected black candidate 2 show a pair of diagonal reflections on the chest. The accepted carving had a faint tonal streak there. The wider shoulder, thin chest ridge and lower portion of the mane are distinct surfaces in the reference.
+
+The first trial traced the original camera rays through the exported triangles, interpolated their surface normals and placed finite area lights along the corresponding mirror directions. Actual Cycles response passes determined their powers. The initial panels exposed the chest carving but added smooth stripes and light across the jaw. Narrower beams improve the placement. Relief taken from fine local changes in the walnut pigment breaks up the highlights. The deeper experiment looked leathery. The retained relief distance is 0.0028 model units.
+
+Two more response passes measured a satin finish and a burnished finish on the same walnut. A bounded scalar at each camera-visible control vertex selects the local mixture. The far side uses the baseline finish where the picture provides no evidence. The renderer recomputes reflections as the camera or lights move. Pigment, surface relief, varnish and light remain separate in the editable scene.
+
+| Trial | Outline | Form | Wood color | Grain | Lighting | Mean |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 014-chest-panels | 95.29 | 77 | 77 | 67 | 47 | 72.66 |
+| 015-grain-polish | 95.30 | 77 | 77 | 56 | 45 | 70.06 |
+| 016-burnished-grain | 95.30 | 77 | 78 | 69 | 50 | 73.86 |
+| 017-fitted-varnish | 95.30 | 77 | 80 | 71 | 56 | 75.86 |
+
+The working mean rose from 72.06% to **75.86%**. Original, selected and mirrored-white silhouette overlap are 95.81%, 95.30% and 95.09% respectively. The fixed camera and complete position/normal/UV/index buffer are byte-identical to checkpoint 002. Form remains at 77. Wood color, grain and lighting remain visual estimates.
+
+Mean absolute RGB error over the common opaque foreground fell from 16.64 to 14.19 on a 0–255 scale. The chest went from 21.31 to 19.48. The first smooth-light trial increased the full error to 18.22 even as the ridges became visible, which is why it was rejected. The final chest streak remains broader and cooler than the source, with too little light on the outer shoulder. The real nose and eye still lack carving detail.
+
+The actual reopened scene rendered both registered views at 144 Cycles samples. The delivered fixed and side alpha match the selected trial exactly, with foreground mean RGB deltas of 0.000051/255 and 0.000036/255. Both eyes and all nine connected mesh shells passed validation. The browser now loads the evaluated varnish coverage for every exported vertex and uses the same pigment and grain relief distance. Its preview lighting is approximate. Headless Microsoft Edge with ANGLE SwiftShader compiled and drew the shader, switched wood and neutral, changed camera presets, orbited on drag and opened both comparisons.
+
+Accepted model SHA-256 `bfe004b7e1653b52fc6f577e68b27b9da88421babf639883e84441318a48416f`. [Four-view comparison](knight-mission/iteration-003/comparison.png), [registered side comparison](knight-mission/iteration-003/side-study.png), [trial scores](knight-mission/iteration-003/scores.json) and [browser views](knight-mission/iteration-003/browser-views.png). Next examine the carved nostril, mouth opening and dark lower eye against both originals.

@@ -41,6 +41,17 @@ if stride==8:
   assert atlas.inputs['Vector'].links[0].from_node.uv_map==meta['uvLayer']
 assert len(meta['parts'])==7
 assert sum(part['vertexCount'] for part in meta['parts'])==meta['vertexCount']
+if 'finish' in meta:
+ finish=meta['finish'];packed=(root/finish['file']).read_bytes()
+ assert hashlib.sha256(packed).hexdigest()==finish['sha256'] and len(packed)==len(vertices)
+ values=np.frombuffer(packed,np.uint8)
+ for part in meta['parts']:
+  ob=bpy.data.objects[part['name']].evaluated_get(graph);me=ob.to_mesh()
+  attr=me.attributes[finish['attribute']]
+  coverage=np.empty(len(me.vertices),np.float32);attr.data.foreach_get('value',coverage)
+  block=values[part['vertexOffset']:part['vertexOffset']+part['vertexCount']]
+  assert block.min()==round(float(coverage.min())*255) and block.max()==round(float(coverage.max())*255)
+  ob.to_mesh_clear()
 assert np.allclose(vertices[:,:3].min(0),meta['bounds']['min'])
 assert np.allclose(vertices[:,:3].max(0),meta['bounds']['max'])
 assert np.allclose(np.array(meta['referenceCamera']['worldToCamera']).reshape(4,4),np.array(bpy.context.scene.camera.matrix_world.inverted()),atol=1e-7)

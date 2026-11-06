@@ -1,6 +1,6 @@
 {
   "piece": "Knight",
-  "revision": "mission-002-carved-eye-and-mane",
+  "revision": "mission-003-fitted-walnut-polish",
   "source_priority": [
     "Original black Lichess sprite; mirrored white sprite as an independent check",
     "Selected black candidate 2 for detailed fixed-view fitting",
@@ -69,28 +69,33 @@
     "final_reference_metrics": "assets/knight/qa.json"
   },
   "mission": {
-    "checkpoint": "002",
-    "source_sha256": "68e2e1a41f06bf19ff843bc0c0d2d042f1f846bef4f1447c00048b2cb96fb07f",
+    "checkpoint": "003",
+    "source_sha256": "bfe004b7e1653b52fc6f577e68b27b9da88421babf639883e84441318a48416f",
     "scores": {
-      "variant": "013-eye-reflection",
-      "silhouette": 95.29423305005396,
+      "variant": "017-fitted-varnish",
+      "silhouette": 95.29506885881342,
       "form": 77,
-      "color": 78,
-      "grain": 67,
-      "lighting": 43,
-      "working_mean": 72.05884661001079,
-      "original_iou": 0.9580950555998012,
-      "mirrored_white_iou": 0.9508665287502337,
-      "decision": "Accept. A real eye reflection improves the elevated eye while preserving the improved carving and registered side silhouette.",
-      "blend_sha256": "c71b969b3c3a97bb9df77a635f63781f5575c05ce93dba4028435cbf9bcb551e",
-      "render_sha256": "7397bd32876bfff6cd50efad71a22b0b7af300c656efba3ce6beb9605a0b19d8"
+      "color": 80,
+      "grain": 71,
+      "lighting": 56,
+      "working_mean": 75.85901377176268,
+      "original_iou": 0.9581093988125358,
+      "mirrored_white_iou": 0.950869059350105,
+      "decision": "Accept. Measured varnish coverage reduces excess broad reflections while retaining the two chest ridges and mobile grain highlights.",
+      "blend_sha256": "f50c9bad069ed4a7773becbe5cea230524de8d3607299b1140ba12c7b18ac1f9",
+      "render_sha256": "9b10a14bf8547c8f94d042f1187711abdc8c083b54e0ebed10657e418e3c7f8b",
+      "foreground_photometry": {
+        "foreground": 14.186839478015322,
+        "chest": 19.481320608507687,
+        "head_and_mane": 15.296508909727233,
+        "lower_pedestal": 9.599604403571401
+      }
     },
     "current_notes": "docs/knight-mission-log.md",
     "limitations": [
-      "Elevated eye remains too orange, with a flatter lower lid and a weaker catchlight than the detail reference.",
-      "Chest lacks the bright broken reflection along its carved ridge. Mane and collar reflections are too wide.",
-      "The lower mane still recedes early near the foot. The cheek and muzzle need the deeper channel seen on the original.",
-      "Oblique grain and regions hidden in the original remain inferred."
+      "The main chest reflection remains wider and cooler than the original. The outer shoulder still needs its broader, warm reflection.",
+      "The eye is too pale and the muzzle lacks the original's prominent angled nostril and mouth opening.",
+      "The mane and collar rim carry different reflection shapes. The lowest mane and oblique grain remain inferred."
     ]
   },
   "history_at_activation": {

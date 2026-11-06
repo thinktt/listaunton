@@ -1,0 +1,60 @@
+{
+  "source_sha256": "2b75e1478a3107d4fd22a793c15da8423750f45756c190209a675bc5e1dcd753",
+  "samples": 144,
+  "measurement_samples": 112,
+  "attribute": "Knight varnish coverage",
+  "hidden_prior": 0.32,
+  "image_smoothing_radius": 4,
+  "per_component": {
+    "Knight | turned pedestal": {
+      "vertex_count": 1984,
+      "minimum": 0.03329998254776001,
+      "mean": 0.3138132691383362,
+      "maximum": 0.5038940906524658,
+      "visible_fraction": 0.2807459677419355
+    },
+    "Knight | swept rounded mane": {
+      "vertex_count": 832,
+      "minimum": 0.03329998254776001,
+      "mean": 0.3069920241832733,
+      "maximum": 0.46092987060546875,
+      "visible_fraction": 0.27283653846153844
+    },
+    "Knight | near swept ear": {
+      "vertex_count": 448,
+      "minimum": 0.12841272354125977,
+      "mean": 0.31287336349487305,
+      "maximum": 0.3942933976650238,
+      "visible_fraction": 0.39732142857142855
+    },
+    "Knight | near eye": {
+      "vertex_count": 482,
+      "minimum": 0.21780729293823242,
+      "mean": 0.32077163457870483,
+      "maximum": 0.44421136379241943,
+      "visible_fraction": 0.2925311203319502
+    },
+    "Knight | far swept ear": {
+      "vertex_count": 448,
+      "minimum": 0.13139565289020538,
+      "mean": 0.3176639974117279,
+      "maximum": 0.4177059531211853,
+      "visible_fraction": 0.08035714285714286
+    },
+    "Knight | far eye": {
+      "vertex_count": 482,
+      "minimum": 0.3199999928474426,
+      "mean": 0.3199999928474426,
+      "maximum": 0.3199999928474426,
+      "visible_fraction": 0.0
+    },
+    "Knight | continuous horse head and neck": {
+      "vertex_count": 43499,
+      "minimum": 0.03329998254776001,
+      "mean": 0.314883291721344,
+      "maximum": 0.9399999976158142,
+      "visible_fraction": 0.36074392514770454
+    }
+  },
+  "method": "Two measured dielectric finishes share the same albedo and relief. Fit a smoothed coverage scalar only at visible 3D vertices; use a uniform prior elsewhere. No reference RGB is connected to a shader."
+}

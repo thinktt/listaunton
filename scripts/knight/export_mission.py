@@ -14,7 +14,7 @@ LAYER = "Knight wood atlas"
 
 def export(scene, texture):
     graph=bpy.context.evaluated_depsgraph_get()
-    vertex_blocks=[];index_blocks=[];parts=[]
+    vertex_blocks=[];index_blocks=[];parts=[];finish_blocks=[]
     vert_offset=index_offset=0
     for obj in visible_meshes(scene):
         ev=obj.evaluated_get(graph);mesh=ev.to_mesh();mesh.calc_loop_triangles()
@@ -33,9 +33,20 @@ def export(scene, texture):
         normal=normal@np.linalg.inv(transform[:3,:3])
         normal/=np.linalg.norm(normal,axis=1)[:,None]
         data=np.column_stack((co[loop_verts],normal,uv)).astype("<f4")
-        unique,remap=np.unique(data,axis=0,return_inverse=True)
+        varnish=mesh.attributes.get("Knight varnish coverage")
+        if varnish is not None:
+            coverage=np.empty(len(mesh.vertices),np.float32)
+            varnish.data.foreach_get("value",coverage)
+            assert np.isfinite(coverage).all() and coverage.min()>=0 and coverage.max()<=1
+            keys=np.column_stack((data,np.rint(255*coverage[loop_verts])))
+        else:
+            keys=data
+        unique,remap=np.unique(keys,axis=0,return_inverse=True)
         indices=remap.reshape(-1)[triangles].astype("<u4").ravel()
-        assert np.array_equal(unique[indices],data[triangles.ravel()])
+        assert np.array_equal(unique[indices],keys[triangles.ravel()])
+        if varnish is not None:
+            finish_blocks.append(unique[:,8].astype(np.uint8))
+            unique=unique[:,:8].copy()
         vertex_blocks.append(unique);index_blocks.append(indices+vert_offset)
         parts.append({"name":obj.name,"vertexCount":len(unique),"indexCount":len(indices),
             "indexOffset":index_offset,"vertexOffset":vert_offset,"triangleCount":len(indices)//3})
@@ -60,5 +71,14 @@ def export(scene, texture):
           "totalByteLength":len(raw),"bounds":{"min":lo.tolist(),"max":hi.tolist(),"size":(hi-lo).tolist(),"center":((hi+lo)/2).tolist()},
           "parts":parts,"sourceSha256":sha(MODEL),"referenceCamera":camera,"texture":texture.relative_to(ROOT).as_posix(),
           "textureSha256":sha(texture),"uvLayer":LAYER,"exactCornerData":True}
+    if finish_blocks:
+        assert len(finish_blocks)==len(parts)
+        finish=ASSETS/"varnish.bin"
+        finish.write_bytes(np.concatenate(finish_blocks).tobytes())
+        assert finish.stat().st_size==len(vertices)
+        relief=visible_meshes(scene)[0].data.materials[0].node_tree.nodes.get("Open walnut grain under the varnish")
+        meta["finish"]={"file":finish.relative_to(ROOT).as_posix(),"sha256":sha(finish),
+                        "attribute":"Knight varnish coverage","encoding":"unorm8",
+                        "reliefDistance":relief.inputs["Distance"].default_value if relief else 0}
     json_file(ASSETS/"camera.json",camera);json_file(ASSETS/"mesh.json",meta)
     return meta

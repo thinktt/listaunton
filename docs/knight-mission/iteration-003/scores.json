@@ -1,0 +1,82 @@
+[
+  {
+    "variant": "014-chest-panels",
+    "silhouette": 95.29423305005396,
+    "form": 77,
+    "color": 77,
+    "grain": 67,
+    "lighting": 47,
+    "working_mean": 72.65884661001078,
+    "original_iou": 0.9580950555998012,
+    "mirrored_white_iou": 0.9508665287502337,
+    "decision": "Physical chest reflections appear, but form broad smooth stripes and spill across the jaw. Whole-image RGB error worsens.",
+    "blend_sha256": "28a331af7709c3610f5c2b5b7d9dd1d246ac9a6b5767b0861825b8c57024e4e0",
+    "render_sha256": "77089d9548ab321b52d25c888dca3328af2ef3a29e04a491ffd77917675e6519",
+    "foreground_photometry": {
+      "foreground": 18.224997728561537,
+      "chest": 25.444864186957055,
+      "head_and_mane": 20.2461601659169,
+      "lower_pedestal": 11.076238661528398
+    }
+  },
+  {
+    "variant": "015-grain-polish",
+    "silhouette": 95.29506885881342,
+    "form": 77,
+    "color": 77,
+    "grain": 56,
+    "lighting": 45,
+    "working_mean": 70.05901377176268,
+    "original_iou": 0.9581093988125358,
+    "mirrored_white_iou": 0.950869059350105,
+    "decision": "Focused panels reduce jaw spill. Deep relief scatters highlights like pebbled leather; reject this finish.",
+    "blend_sha256": "de656b62c862e720ee6ba1f667368bc323dc4ffe40adaf047436713548a4278d",
+    "render_sha256": "a2d07995a6dac979e0cdf9bc0ba52392776f1dd13e5886985b5acd60349272b7",
+    "foreground_photometry": {
+      "foreground": 18.189895110153138,
+      "chest": 27.37662628981606,
+      "head_and_mane": 18.319354278539183,
+      "lower_pedestal": 11.625601866080366
+    }
+  },
+  {
+    "variant": "016-burnished-grain",
+    "silhouette": 95.29506885881342,
+    "form": 77,
+    "color": 78,
+    "grain": 69,
+    "lighting": 50,
+    "working_mean": 73.85901377176268,
+    "original_iou": 0.9581093988125358,
+    "mirrored_white_iou": 0.950869059350105,
+    "decision": "Shallow grain restores finer wood texture. The reflections are still wider than the reference.",
+    "blend_sha256": "2b75e1478a3107d4fd22a793c15da8423750f45756c190209a675bc5e1dcd753",
+    "render_sha256": "04736a42998445a06fa20ae76fb16ef09ac4dd58d2b28864d0448918a64366af",
+    "foreground_photometry": {
+      "foreground": 17.497064462768492,
+      "chest": 25.44027081039194,
+      "head_and_mane": 18.07611004247816,
+      "lower_pedestal": 11.015618966563432
+    }
+  },
+  {
+    "variant": "017-fitted-varnish",
+    "silhouette": 95.29506885881342,
+    "form": 77,
+    "color": 80,
+    "grain": 71,
+    "lighting": 56,
+    "working_mean": 75.85901377176268,
+    "original_iou": 0.9581093988125358,
+    "mirrored_white_iou": 0.950869059350105,
+    "decision": "Accept. Measured varnish coverage reduces excess broad reflections while retaining the two chest ridges and mobile grain highlights.",
+    "blend_sha256": "f50c9bad069ed4a7773becbe5cea230524de8d3607299b1140ba12c7b18ac1f9",
+    "render_sha256": "9b10a14bf8547c8f94d042f1187711abdc8c083b54e0ebed10657e418e3c7f8b",
+    "foreground_photometry": {
+      "foreground": 14.186839478015322,
+      "chest": 19.481320608507687,
+      "head_and_mane": 15.296508909727233,
+      "lower_pedestal": 9.599604403571401
+    }
+  }
+]

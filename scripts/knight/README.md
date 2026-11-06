@@ -46,7 +46,26 @@ and candidate images intact.
    checks. The original source hashes, canvas registration and gallery
    defaults must match their accepted inputs.
 
-The standalone viewer embeds the actual pigment and UVs. Its real-time
+## Later checkpoints
+
+Checkpoint 002 starts with the saved scene in `history/knight/mission-001`.
+The accepted eye uses `refine_eye.py` with a convex lens, followed by
+`shape_brow.py`, the fit in `lower_carving_fit.py`, `apply_lower_carving.py`
+and `fit_eye_reflection.py`. The trial parameters are recorded in the mission log.
+
+For checkpoint 003, use the model and exported mesh from `d91c807` in a
+staging copy. Run `probe_reflections.py build/knight-mission/chest-light-study/probes.json`
+with ordinary Python. Run `fit_chest_reflections.py` in Blender with
+`--variant 016-burnished-grain --grain-height 0.0028 --beam-degrees 48 --strip-width 0.5 --samples 144`.
+Then run `fit_surface_polish.py` with
+`--source build/knight-mission/016-burnished-grain/knight.blend --variant 017-fitted-varnish --radius 4 --samples 144`.
+The scene stores the local polish on the surface as `Knight varnish coverage`.
+The viewer export writes one coverage byte per vertex in `varnish.bin`.
+For a native browser check, run `node scripts/knight/check_native_viewer.cjs`
+with Playwright available. Set `LISTAUNTON_CHROMIUM_BINARY` to an installed
+Chrome or Edge executable when using a system browser.
+
+The standalone viewer embeds the actual pigment, UVs and local polish. Its real-time
 lighting is an approximation. Its Front and Side presets retain the horse
 orientation, and the side comparison uses the saved 7-degree camera and
 shared foot registration. Update the existing local review at each accepted

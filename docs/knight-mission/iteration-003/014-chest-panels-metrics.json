@@ -1,0 +1,26 @@
+{
+  "trial": "014-chest-panels",
+  "model_sha256": "28a331af7709c3610f5c2b5b7d9dd1d246ac9a6b5767b0861825b8c57024e4e0",
+  "render_sha256": "77089d9548ab321b52d25c888dca3328af2ef3a29e04a491ffd77917675e6519",
+  "previous_render_sha256": "459dc142d48f1619d02b49c40e08b3d3d37ff6335d74762e35febe992252de85",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9580950555998012,
+      "previous_iou": 0.9580950555998012
+    },
+    "selected": {
+      "iou": 0.9529423305005396,
+      "previous_iou": 0.9529423305005396
+    },
+    "white_mirrored": {
+      "iou": 0.9508665287502337,
+      "previous_iou": 0.9508665287502337
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}
