@@ -2,26 +2,42 @@
 
 ## Objective and activation
 
-Refine the accepted queen's actual geometry, wood material and lighting until
-its fixed-view render matches the selected reference as closely as can honestly
-be assessed. Examine, modify, render, compare, score and repeat. A matching
-outline alone is not success. Produce a usable 3D chess piece.
+Improve the queen's **actual 3D shape and side profile**, starting from accepted
+checkpoint 22. The owner redirected this mission on November 11, 2026. This
+shape-focused goal replaces the earlier all-metric finishing loop for now;
+do not resume the unfinished contact-light experiments as the active task.
 
-This mission covers only the queen. Creating this file does not start or
-resume a goal, launch agents or modify a model. Follow the current owner-directed goal state.
-When explicitly activated, use an appropriate goal or assigned subtask pointing
-to this file. Do not invent a token budget or mark another unfinished goal
-complete merely to replace it.
+Work through these priorities:
 
-Sustained iteration and concentrating on one score at a time are authorized.
-Choose tools by their usefulness to the visual result; the current material
-setup is not a constraint. Creative tools and interpretation are authorized: procedural wood, generated
-texture assets, reference-derived pigment, texture painting, custom UVs and
-combinations. Develop grain, color, pores, relief and polish together. Keep
-references unchanged, separate lighting from pigment where practical, and
-inspect other angles so the material remains usable on real geometry. Never
-substitute a billboard or composited photograph for an actual BSDF render.
-Continue until completion, an execution/token limit, or owner stop. A plateau requires a new supported hypothesis.
+1. **Lower, shorter socket.** Reduce the apparent height of the raised socket
+   and make its transition into the stem and flare more convincing.
+2. **Rounded bottom collar.** Replace the outward-flaring shelf with a compact,
+   rounded bead whose upper and lower faces both curve. Compare the actual
+   collars in the inspiration study, not just the existing model's underside.
+3. **Smaller, thinner upper collar.** Experiment with reduced diameter and
+   vertical thickness, taking cues from the fine collar lines on the Chavet
+   examples. Keep the collars closely stacked and check their original-view fit.
+4. **A substantially flatter whole base, including the socket.** Experiment
+   with compressing the foot, flare and socket as one coherent assembly, with
+   a broader shape and a raised shoulder toward the stem. Test moderate and
+   strong compression, not only tiny adjustments. Keep the foot grounded;
+   lifting the shoulder must not float the piece above its base plane.
+
+The original Lichess images remain the master reference. The selected high-res
+image helps locate details. The Chavet, Lardy, modern German Knight and other
+study examples guide plausible shape; the generated side render is an imagined
+style reference. None of them overrides the original Lichess piece.
+
+Make the side improvement visible at normal viewing size. Examine, change
+geometry, render side and elevated views, compare, and repeat. Refine related
+proportions and the estimated camera when necessary to retain the original
+match. Do not substitute a color correction or a lighting adjustment for the
+requested shape work. Preserve the distinctive inverted crown and seated egg.
+
+This mission covers only the queen. It starts or resumes only through the
+owner-directed goal state. Preserve accepted results and pursue the complete
+shape objective until its requirements are achieved or the owner stops work.
+Do not invent a token budget or launch additional agents from this file.
 
 ## Accepted baseline and references
 
@@ -52,31 +68,35 @@ recolor or replace a reference to improve a score.
 
 ## Camera and proportions
 
-The accepted reference camera is orthographic, **54 degrees above the board**.
-On November 11, 2026, the owner explicitly allowed experiments away from 54°
-using the inspiration study. Treat angle as an estimate. Keep reference pixels,
-registration and image scale fixed within each candidate; record any camera
-and physical proportion changes separately. Retain the accepted camera/model
-until a candidate improves the side view and remains consistent with the
-authoritative original. Do not equate an improved silhouette score with proof
-of the original projection.
+The accepted camera is orthographic, **54 degrees above the board**. It remains
+the starting estimate, not a recovered historical fact. The owner permits
+camera experiments. Record angle, framing, scale and physical dimensions for
+every candidate, keeping reference pixels and registration unchanged. Never
+warp or independently stretch a reference to make a candidate fit.
 
-The approved displayed queen height is **83.4% of king**. Preserve
-`assets/side-views/defaults.json`, shared foot baseline, gallery order and
-uniform image scaling. These are presentation conventions, not independently
-measured physical dimensions. Use the existing original-sprite base-width and
-model-height normalization to translate them into model dimensions; do not
-apply slider percentages directly to mesh scale. The earlier owner-requested finial correction lowered the highest point by
-0.0467 world units. Checkpoint 21 lowers only the exposed egg cap by a further
-0.0380 units; body, crown and bowl dimensions remain unchanged. Preserve the
-documented adjusted height target and existing 0.015 ratio tolerance without
-stretching the body. Preserve other established sizing
-tolerances and historical projections. Do not change other pieces to disguise
-a discrepancy in this one.
+The new shape request explicitly authorizes changes to socket/base heights,
+base breadth, collar radii/thicknesses and related proportions needed to restore
+the elevated fit. Earlier exact-profile and height-ratio checks describe the
+accepted baseline; they must not silently veto those authorized experiments.
+Validate the new intended changes directly and preserve untouched geometry,
+UVs and source assets. Report departures from the baseline rather than widening
+test tolerances and calling the old shape checks a pass.
+
+Keep side comparisons at a shared physical scale and foot baseline. Preserve
+the approved side-gallery defaults, including its displayed **83.4% queen-to-
+king** relationship; do not silently change the gallery or other pieces to
+hide a queen-shape discrepancy. Record candidate height/base ratios separately.
+The whole-set guide remains pawn < rook < knight < bishop < queen < king,
+with the queen relatively close to the king.
+
+Keep material and lighting fixed during the first shape comparisons. Use
+neutral renders and actual profiles to judge curvature. If a geometric change
+requires re-aiming lights or adapting object-space material masks later, record
+that separately and verify it does not conceal a shape mismatch.
 
 ## Feature examination
 
-Compact egg finial seated in a shallow bowl; continuous splash-like crown; eight tips, flattened rim intervals; compact rolled collars; socket and base transitions.
+Primary examination: socket height and seating; both faces of the bottom collar; upper-collar diameter and thickness; whole base/socket compression, breadth and shoulder height. Preserve the compact egg, shallow inverted bowl, continuous splash-like crown, eight tips and flattened rim intervals.
 
 Establish a fresh baseline: historical findings are inspection priorities,
 not proof that every defect persists. Inspect full silhouettes and enlarged
@@ -91,7 +111,7 @@ a selected-color score does not establish that both finishes match.
 
 ## Stable scorecard
 
-Rate every category after each candidate, even when only one was targeted.
+Shape and side-profile judgments are primary in this phase. Record the measured socket/base heights and collar dimensions, and compare clear before/after side views. Continue to rate every category as a regression check, even when only shape was targeted.
 Maintain separate scores for all six pieces; never transfer the queen's scores
 to unexamined models. Use the same rubric throughout.
 
@@ -214,8 +234,9 @@ progresses; do not treat this backlog as immutable measurements.
    metrics; rate all five categories and the overall result. List persistent
    defects and any regressions. Distinguish measured results from estimates.
 6. **Accept or revert.** Keep a candidate only when the visible fit improves
-   without a material regression in the original-image match or accepted
-   proportions. Document any small tradeoff. Revert failed trials without
+   while maintaining a strong original-image match. Explicitly report any
+   change in fit and physical proportions; a tiny numerical gain does not
+   outweigh an implausible side profile. Document tradeoffs. Revert failed trials without
    disturbing unrelated work; keep brief findings, not extra failed models
    in the public review controls.
 7. **Validate and synchronize accepted changes.** Follow the current build
@@ -282,13 +303,33 @@ unclear; do not attribute it to James Clarke or invent a license.
 
 ## Completion
 
-Complete only when this queen is assessed to be visually indistinguishable
-from the detailed reference in the fixed view while consistent with the original.
-Independently re-examine the full image, native/enlarged crops, original
-comparison, neutral and side views; resolve every remaining issue across all
-five metrics. Do not round high scores to perfection or mistake outline fit
-for texture/lighting accuracy. If stopped by resources or the owner, checkpoint
-honestly as incomplete. Unseen geometry and original camera/material settings
-remain inferred even after a successful visual match.
+Complete this shape-focused goal only when the four requested areas have been
+experimented with, rendered and compared, and the selected queen visibly has:
 
-Read `docs/queen-54-wood.md`. Export the closed editable control rather than derived light receivers. Regenerate receivers after geometry edits and validate evaluated faces, UVs, normals, shared material and links against the control. Preserve the established height/base tolerance.
+- A lower/shorter socket with a coherent stem-to-base transition.
+- A bottom collar rounded on both upper and lower faces, without the flaring
+  shelf that prompted this task.
+- A smaller, thinner upper collar that reads as a subtle turned ring.
+- A visibly more compact base/socket assembly, with tested broader and raised-
+  shoulder interpretations and a grounded foot.
+
+The selected result must retain a convincing match to the authoritative
+original, with numerical and visual before/after evidence at the original
+view. Inspect both original colors, the high-res image, side/profile views and
+neutral renders. If a requested interpretation cannot yet be reconciled with
+the original, record the conflict and continue investigating; do not silently
+drop the requirement or claim the reconstruction is perfect.
+
+Validate the actual saved mesh, camera, UVs, render receivers and unchanged
+reference assets. Synchronize the local review's overlay, rotating model and
+side comparisons from the same accepted Blender file, provide a clear visual
+before-and-after, and commit each completed checked iteration. Do not push or
+publish. Keep rejected alternatives separate from the accepted model.
+
+Finishing every texture and lighting discrepancy is deferred during this
+phase. Do not claim those aspects are finished when the shape goal is met.
+The inferred side geometry and camera remain interpretations.
+
+Read `docs/queen-54-wood.md`. Export the closed editable control rather than
+derived light receivers. Regenerate receivers after geometry changes and
+validate their evaluated faces, UVs, normals, shared material and links.

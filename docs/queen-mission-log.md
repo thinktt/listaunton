@@ -1257,3 +1257,16 @@ Local overlay, side images and viewer share `f390b7d335ff020b47ec9eab661e21d6925
 rejected experiments, diagnostics and reproduction. Native browser checks are
 recorded separately. The thin bright contact crescent remains unresolved, as do
 rear-bowl reflections, some grain, the base highlight and socket wall. Mission incomplete.
+
+
+## Direction change — side shape, November 11, 2026
+
+The owner cleared the prior finishing goal and requested a new shape-focused
+version of the same mission: lower the socket, round both faces of the bottom
+collar, make the upper collar smaller/thinner with Chavet-like restraint, and
+experiment with substantially compressing, broadening and lifting the base
+shoulder together with the socket. MISSION-QUEEN.md now records these priorities.
+Checkpoint 22 remains the accepted source. The unpromoted contact-light trials
+205–209 are parked; none changes the site. The original remains authoritative,
+camera experiments are allowed, and source images/gallery defaults stay intact.
+No new shape or improved score is claimed by this mission rewrite.
