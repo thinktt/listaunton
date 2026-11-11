@@ -1,0 +1,23 @@
+{
+  "baseline": "history/queen-mission-019/queen-rebuilt.blend",
+  "current": "build/queen-mission/192-preserved-crest/queen.blend",
+  "baseline_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+  "current_sha256": "0e73b806b3a47dd5d0652b53e5e94ee0e51851932933fac79fdec9b91aa42a25",
+  "control_vertices_identical": false,
+  "atlas_control_uvs_identical": true,
+  "topology_identical": true,
+  "scoped_geometry_change": {
+    "baseline_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+    "changed_rings": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "all_heights_identical": true,
+    "all_other_controls_identical": true,
+    "maximum_radial_displacement": 0.05224723741412163,
+    "base_socket_stem_upper_collars_and_crown_unchanged": true
+  },
+  "passed": true
+}

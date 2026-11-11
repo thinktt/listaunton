@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "source_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+  "source_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
   "camera_elevation_degrees": 54.00000066135015,
   "camera_type": "ORTHO",
   "height": 4.4452924728393555,
@@ -11,7 +11,7 @@
   "material": "Walnut - reference-derived pigment",
   "boundary_edges": 0,
   "nonmanifold_edges": 0,
-  "signed_volume": 4.50483906848626,
+  "signed_volume": 4.5115286149872125,
   "crown_tips": 8,
   "body_rings_monotonic": true,
   "finial_seating": {
@@ -71,6 +71,19 @@
     "maximum_radial_displacement": 0.03565694019198418,
     "crown_tips_bowl_finial_base_collars_unchanged": true
   },
+  "lower_collar_rounding": {
+    "baseline_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+    "changed_rings": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "all_heights_identical": true,
+    "all_other_controls_identical": true,
+    "maximum_radial_displacement": 0.05224723741412163,
+    "base_socket_stem_upper_collars_and_crown_unchanged": true
+  },
   "raised_flare_compact_socket": {
     "baseline_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
     "rings": [
@@ -111,7 +124,7 @@
     "surface_faces_and_atlas_uvs_exact": true,
     "triangles": 715776,
     "custom_normal_max_component_error": 4.3332576751708984e-05,
-    "custom_normal_mean_component_error": 1.1722302417638275e-07,
+    "custom_normal_mean_component_error": 1.2938050986122107e-07,
     "materials_shared": true,
     "excluded_reflector_count": 79,
     "closed_editable_control_retained": true,

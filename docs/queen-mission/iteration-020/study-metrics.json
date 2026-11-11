@@ -1,0 +1,32 @@
+{
+  "accepted-19": {
+    "original_iou": 0.9791772718260879,
+    "highres_iou": 0.9797012257336769,
+    "original_collar_rgb_mse": 336.3897920339906,
+    "highres_collar_rgb_mse": 236.55053418103165
+  },
+  "189-rounded-lower-edge": {
+    "original_iou": 0.9788295566291274,
+    "highres_iou": 0.9802049270849607,
+    "original_collar_rgb_mse": 325.5909501332771,
+    "highres_collar_rgb_mse": 225.75378303669956
+  },
+  "190-shoulder-and-edge": {
+    "original_iou": 0.9788295566291274,
+    "highres_iou": 0.9802049270849607,
+    "original_collar_rgb_mse": 325.5941779803518,
+    "highres_collar_rgb_mse": 225.75629049351556
+  },
+  "191-rounded-edge-refit": {
+    "original_iou": 0.9792671592981742,
+    "highres_iou": 0.9789978021268525,
+    "original_collar_rgb_mse": 329.5057437867562,
+    "highres_collar_rgb_mse": 234.3581084402497
+  },
+  "192-preserved-crest": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_collar_rgb_mse": 336.47622667550854,
+    "highres_collar_rgb_mse": 236.5839450743921
+  }
+}

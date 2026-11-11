@@ -1,4 +1,4 @@
-"""Controlled shape/camera studies from the accepted eighteenth queen.
+"""Controlled shape/camera studies from a recorded accepted queen checkpoint.
 
 Every trial is a real shaded mesh. Source, registration and UVs stay intact.
 Camera experiments use a physical axial scale, recorded separately from local
@@ -20,9 +20,10 @@ SOURCE_SHA = '8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6'
 def main():
     p=argparse.ArgumentParser();p.add_argument('config',type=Path);p.add_argument('--render',action='store_true');p.add_argument('--samples',type=int,default=64)
     a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
-    cfg=json.loads(a.config.read_text());source=ROOT/'history/queen-mission-018/queen-rebuilt.blend'
+    cfg=json.loads(a.config.read_text());source=ROOT/cfg.get('source_archive','history/queen-mission-018/queen-rebuilt.blend')
     if not source.exists():source=ROOT/'models/queen/queen-rebuilt.blend'
-    assert hashlib.sha256(source.read_bytes()).hexdigest()==SOURCE_SHA
+    source_sha=cfg.get('source_sha256',SOURCE_SHA)
+    assert hashlib.sha256(source.read_bytes()).hexdigest()==source_sha
     out=ROOT/'build/queen-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True)
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
     s=bpy.context.scene;o=editable_mesh(s);settings=json.loads(s['mission_material_config'])
@@ -49,7 +50,7 @@ def main():
         target=Vector((0,0,((fit['camera_floor']+cfg.get('camera_floor_offset',0)-s.render.resolution_y/2)/fit['camera_scale']+dy)/math.cos(el)))
         cam.location=target+Vector((0,-12*math.cos(el),12*math.sin(el)))
         cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler()
-    settings['profile_study']={'source_sha256':SOURCE_SHA,'config':cfg,'control_sha256':hashlib.sha256(after.tobytes()).hexdigest()}
+    settings[cfg.get('feature_key','profile_study')]={'source_sha256':source_sha,'config':cfg,'control_sha256':hashlib.sha256(after.tobytes()).hexdigest()}
     settings['variant']=cfg['variant'];s['mission_material_config']=json.dumps(settings)
     s['mission_variant']=cfg['variant'];s.render.use_persistent_data=True
     bpy.context.view_layer.update()

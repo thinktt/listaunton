@@ -1163,3 +1163,28 @@ modest. The socket wall, lower collar underside, finial exposure and fine
 reflections still need investigation. Source and opposite-color images remain
 unchanged. See [checkpoint 19](queen-mission/iteration-019/README.md) for all
 five trial ratings, comparisons and validation. Model `d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0`.
+
+
+## Twentieth iteration — rounded lower collar underside, November 11, 2026
+
+Four local trials compared edge rounding, a fuller stem shoulder and bounded
+radius fitting. The accepted version softens only the lowest collar's underside,
+keeping its crest, upper surface, every height and all other queen features.
+The shoulder change was unhelpful; expanding the crest traded too much upscale
+agreement for a tiny original-outline gain. All material pixels, lights, camera,
+topology and UVs are preserved. Six render receivers were rebuilt and checked.
+
+Original IoU 97.9191%; high-res IoU
+97.9683%. Both are effectively unchanged;
+the high-res reduction is 0.0018 percentage points. The small side-profile
+improvement raises the subjective form rating from 85 to 85.5. Color 84, grain
+79 and lighting 76 remain unchanged. Working mean 84.4937%, holistic
+80–85%. Local image error is effectively unchanged at 256 samples; the draft's
+apparent color/shading improvement was not reproduced at full quality. The
+camera remains 54 degrees; gallery size defaults are unchanged. This does not resolve
+the finial exposure, socket wall or highlight/grain differences.
+
+See [checkpoint 20](queen-mission/iteration-020/README.md) for all trial scores,
+renders and validation. The next examination is the finial's relationship to
+the crown tips in both original and side views. Model `652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c`. Local overlay,
+side renders and interactive mesh are synchronized; the mission is incomplete.

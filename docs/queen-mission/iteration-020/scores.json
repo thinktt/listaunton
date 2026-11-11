@@ -1,0 +1,88 @@
+{
+  "source_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+  "accepted_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+  "scores": {
+    "silhouette_selected_measured": 97.96827635964227,
+    "silhouette_original_measured": 97.9190723569111,
+    "interior_form_subjective": 85.5,
+    "wood_color_subjective": 84,
+    "grain_subjective": 79,
+    "lighting_subjective": 76
+  },
+  "mean": 84.49365527192846,
+  "holistic_visual_range": [
+    80,
+    85
+  ],
+  "trial_sampling": 64,
+  "accepted_sampling": 256,
+  "trials": {
+    "accepted-19": {
+      "original_iou": 0.9791772718260879,
+      "highres_iou": 0.9797012257336769,
+      "original_collar_rgb_mse": 336.3897920339906,
+      "highres_collar_rgb_mse": 236.55053418103165
+    },
+    "189-rounded-lower-edge": {
+      "original_iou": 0.9788295566291274,
+      "highres_iou": 0.9802049270849607,
+      "original_collar_rgb_mse": 325.5909501332771,
+      "highres_collar_rgb_mse": 225.75378303669956,
+      "visual_scores": {
+        "form": 85.5,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Rejected for publication: a softer underside, but slightly narrows the original outline; retained as a useful intermediate.",
+      "working_mean": 84.50409854169922,
+      "sampling": 64
+    },
+    "190-shoulder-and-edge": {
+      "original_iou": 0.9788295566291274,
+      "highres_iou": 0.9802049270849607,
+      "original_collar_rgb_mse": 325.5941779803518,
+      "highres_collar_rgb_mse": 225.75629049351556,
+      "visual_scores": {
+        "form": 85.5,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Rejected: additional stem-shoulder expansion is not supported by the fixed view; its result is nearly identical to 189 there.",
+      "working_mean": 84.50409854169922,
+      "sampling": 64
+    },
+    "191-rounded-edge-refit": {
+      "original_iou": 0.9792671592981742,
+      "highres_iou": 0.9789978021268525,
+      "original_collar_rgb_mse": 329.5057437867562,
+      "highres_collar_rgb_mse": 234.3581084402497,
+      "visual_scores": {
+        "form": 85.5,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Rejected for publication: improves original outline slightly but expands the collar crest and worsens high-res overlap more than necessary.",
+      "working_mean": 84.47995604253705,
+      "sampling": 64
+    },
+    "192-preserved-crest": {
+      "original_iou": 0.9791907235691111,
+      "highres_iou": 0.9796827635964227,
+      "original_collar_rgb_mse": 336.47622667550854,
+      "highres_collar_rgb_mse": 236.5839450743921,
+      "visual_scores": {
+        "form": 85.5,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Accepted for its subtle side-contour improvement: rounded underside with original crest/upper surface preserved. Source outlines and local image error are effectively unchanged at full quality; the draft color/shading improvement did not persist.",
+      "working_mean": 84.49365527192846,
+      "sampling": 256
+    }
+  },
+  "limitations": "Only silhouette is an objective score. The form change is modest; the 0.5-point visual increase is a subjective estimate, not measured precision."
+}

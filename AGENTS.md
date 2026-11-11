@@ -142,3 +142,14 @@ is checked by validate_profile_preservation.py. The owner now permits other
 camera-angle experiments; record them separately and prefer the original
 sprite when they conflict with plausible side references. Two 52-degree tests
 were rejected, not proof that every alternative angle is wrong.
+
+
+Queen checkpoint 20 rounds only lower-collar radial controls 51–54; heights,
+crest/upper surface and all other queen controls are preserved. Reproduce with
+profile_study.py and docs/queen-mission/iteration-020/profile.json, starting at
+history/queen-mission-019. validate_lower_collar.py unwraps this local change
+before checkpoint 19 and earlier scope checks. check_material_geometry.py uses
+--allow-lower-collar against checkpoint 19. validate_profile_preservation.py now
+accepts --baseline; use checkpoint 19 for this iteration. Six receivers, exact
+UVs, packed textures, lights and the saved camera remain validated. The small
+side improvement does not establish that the inferred proportions are exact.

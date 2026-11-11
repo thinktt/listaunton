@@ -1,0 +1,34 @@
+{
+  "variant": "191-rounded-edge-refit",
+  "source_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+  "source_archive": "history/queen-mission-019/queen-rebuilt.blend",
+  "feature_key": "lower_collar_rounding",
+  "hypothesis": "Keep the rounded collar underside and refit its radii within small bounds to the original outline, with lower weight for the generated high-resolution image.",
+  "elevation": 54,
+  "radii": {
+    "51": 0.575313564876758,
+    "52": 0.6421419341614383,
+    "53": 0.6589999375343322,
+    "54": 0.6730000424385071,
+    "55": 0.6767369561519534,
+    "56": 0.6669709386824403,
+    "57": 0.6409003386825551,
+    "58": 0.6093322594905083
+  },
+  "fit": {
+    "success": true,
+    "initial_loss": 2.8589447463768116,
+    "fitted_loss": 2.565286310555242,
+    "radius_adjustments": [
+      0.003313538173877172,
+      0.004141922717346438,
+      0.005999999999999937,
+      0.004999999999999974,
+      0.002358501466742243,
+      0.0010010304449830365,
+      0.0006903658241262298,
+      0.0005522926593009893
+    ],
+    "note": "Calibrated projected B-spline approximation; actual saved Blender renders decide acceptance."
+  }
+}

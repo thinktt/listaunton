@@ -27,7 +27,7 @@ Continue until completion, an execution/token limit, or owner stop. A plateau re
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest accepted model SHA-256: `d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0`.
+- Latest accepted model SHA-256: `652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c`.
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -116,7 +116,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.9701 / 85 / 84 / 79 / 76; working mean 84.3940%, holistic 80-85%. Original IoU: 97.9177%. Latest accepted model and validation: docs/queen-mission/iteration-019 (fuller stem and flowing crown body, accepted at 54 degrees after two rejected 52-degree tests). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current accepted scores: 97.9683 / 85.5 / 84 / 79 / 76; working mean 84.4937%, holistic 80-85%. Original IoU: 97.9191%. Latest accepted model and validation: docs/queen-mission/iteration-020 (subtly rounded lower collar underside, preserving crest, upper surface and all heights at 54 degrees). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 
