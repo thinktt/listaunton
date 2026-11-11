@@ -1270,3 +1270,28 @@ Checkpoint 22 remains the accepted source. The unpromoted contact-light trials
 205–209 are parked; none changes the site. The original remains authoritative,
 camera experiments are allowed, and source images/gallery defaults stay intact.
 No new shape or improved score is claimed by this mission rewrite.
+
+
+## Twenty-fifth iteration — restrained compact base with fuller flare, November 11, 2026
+
+Starting from the restored shelf/drop of checkpoint 24, the accepted model
+compresses the coherent foot-through-socket assembly by 4% through the lower
+body, then smoothly returns to the unchanged lower-collar entry. The exposed
+socket wall stays horizontal and its radius is unchanged; its height is only
+0.14700 to 0.14112 units. A restrained five-ring swell makes the lower flare
+less triangular before it drops into that shelf. The accepted collar refinement,
+UVs, material, lighting, orthographic 54-degree camera and source registration
+are retained. The 6% and 10% compression trials were rejected: the strong
+version was visibly squat and both harmed the source fit.
+
+The final selected-high-res IoU is 98.0707%, an increase of 0.1351 percentage
+points from checkpoint 24. The authoritative original-black IoU is 97.5207%,
+a 0.2360-point decrease, so this is explicitly an owner-directed
+side-profile interpretation rather than a claim of a pure source-fit win.
+Form remains 86, color 85, grain 79 and lighting 76; the equal-weight working
+mean is 84.7041%, with a holistic range of 80–85%. The closed positive-volume
+mesh, exact receiver/UV correspondence, 82 light links and saved orthographic
+camera all pass. Fixed/side renders, overlay evidence and the embedded viewer
+are synchronized. See [checkpoint 25](queen-mission/iteration-025/README.md)
+for profile measurements, comparison reports and validation. The active model
+is `cae7d51be3faf3743a7a1180daa719477b01ba892c216de6e1e4cf8cdd03d5a3`.

@@ -1,0 +1,103 @@
+{
+  "source": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\work\\queen-shape-001\\active-224-local.blend",
+  "source_sha256": "fdfb52bc279c836b326b79325cf772ff4f589f9f16675926a6b6e52108c2c9eb",
+  "variant": "229-compression04-fuller-flare",
+  "samples": 256,
+  "measurements": {
+    "factor": 0.96,
+    "directly_compressed_rings": [
+      0,
+      38
+    ],
+    "blend_rings": [
+      38,
+      50
+    ],
+    "flare_bulk": 1.04,
+    "radii_preserved_outside_flare": true,
+    "floor_preserved": true,
+    "upper_collar_entry_preserved": true,
+    "vertical_order_preserved": true,
+    "rings": {
+      "foot_outer": {
+        "ring": 5,
+        "radius": 1.0367107391357422,
+        "height_before_after": [
+          0.039296578615903854,
+          0.03772471472620964
+        ]
+      },
+      "flare_low": {
+        "ring": 24,
+        "radius": 0.7940000891685486,
+        "height_before_after": [
+          0.6859999895095825,
+          0.6585599780082703
+        ]
+      },
+      "socket_shelf": {
+        "ring": 29,
+        "radius": 0.5644999146461487,
+        "height_before_after": [
+          0.9440000057220459,
+          0.9062399864196777
+        ]
+      },
+      "socket_wall_top": {
+        "ring": 31,
+        "radius": 0.5644999146461487,
+        "height_before_after": [
+          1.090999960899353,
+          1.0473599433898926
+        ]
+      },
+      "socket_to_stem": {
+        "ring": 38,
+        "radius": 0.4457608163356781,
+        "height_before_after": [
+          1.3093900680541992,
+          1.2570143938064575
+        ]
+      },
+      "lower_collar_start": {
+        "ring": 50,
+        "radius": 0.5399999618530273,
+        "height_before_after": [
+          2.750000476837158,
+          2.750000476837158
+        ]
+      }
+    },
+    "socket_wall_height_before_after": [
+      0.14699995517730713,
+      0.14111995697021484
+    ],
+    "socket_wall_radius_before_after": [
+      0.5644999146461487,
+      0.5644999146461487
+    ],
+    "flare_radii_before_after": {
+      "24": [
+        0.7940000891685486,
+        0.806704044342041
+      ],
+      "25": [
+        0.6800000071525574,
+        0.7017599940299988
+      ],
+      "26": [
+        0.6219999194145203,
+        0.6468799710273743
+      ],
+      "27": [
+        0.5989999771118164,
+        0.6181679368019104
+      ],
+      "28": [
+        0.574999988079071,
+        0.5841999650001526
+      ]
+    }
+  },
+  "geometry_only": true
+}
