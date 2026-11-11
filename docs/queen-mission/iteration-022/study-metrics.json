@@ -1,0 +1,130 @@
+{
+  "accepted-21": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_finial_rgb_mse": 416.25411859947377,
+    "original_contact_rgb_mse": 405.1753846153846,
+    "original_bowl_rgb_mse": 301.2537502605795,
+    "highres_finial_rgb_mse": 207.09348310058692,
+    "highres_contact_rgb_mse": 324.479943019943,
+    "highres_bowl_rgb_mse": 158.0638148843027
+  },
+  "199-shadowed-contact-fit": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_finial_rgb_mse": 408.0501922687715,
+    "original_contact_rgb_mse": 402.01299145299146,
+    "original_bowl_rgb_mse": 305.32514488221807,
+    "highres_finial_rgb_mse": 201.15654725764014,
+    "highres_contact_rgb_mse": 321.51242165242166,
+    "highres_bowl_rgb_mse": 163.58181363352094,
+    "visual_scores": {
+      "form": 86,
+      "color": 84,
+      "grain": 79,
+      "lighting": 76
+    },
+    "samples": 256,
+    "decision": "Rejected: all seven central reflection rays are blocked. Negligible measured transport does not support calling small sampled-image changes a lighting improvement.",
+    "working_mean": 84.59365527192845
+  },
+  "200-rounded-bowl-floor": {
+    "original_iou": 0.979185699780042,
+    "highres_iou": 0.9796777076648073,
+    "original_finial_rgb_mse": 498.49765229710584,
+    "original_contact_rgb_mse": 580.2480911680912,
+    "original_bowl_rgb_mse": 367.4289430894309,
+    "highres_finial_rgb_mse": 474.3948593402145,
+    "highres_contact_rgb_mse": 576.79698005698,
+    "highres_bowl_rgb_mse": 345.2476381071503,
+    "before_egg_tip_height_difference": 0.11175775527954102,
+    "after_egg_tip_height_difference": 0.11175775527954102,
+    "visual_scores": {
+      "form": 85.5,
+      "color": 84,
+      "grain": 79,
+      "lighting": 73
+    },
+    "samples": 64,
+    "decision": "Rejected: gentler contact opens reflection paths but produces a worse original and high-res match.",
+    "working_mean": 83.89355415329615
+  },
+  "201-rounded-floor-contact-fit": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_finial_rgb_mse": 469.07124063954666,
+    "original_contact_rgb_mse": 508.84153846153845,
+    "original_bowl_rgb_mse": 370.7671544715447,
+    "highres_finial_rgb_mse": 388.2736085812588,
+    "highres_contact_rgb_mse": 367.7300284900285,
+    "highres_bowl_rgb_mse": 321.2668417761101,
+    "visual_scores": {
+      "form": 85.5,
+      "color": 84,
+      "grain": 79,
+      "lighting": 74
+    },
+    "samples": 256,
+    "decision": "Rejected: fitted shadowed reflectors improve the rejected floor trial, but still regress from accepted 21.",
+    "working_mean": 84.09365527192845
+  },
+  "202-subtle-bowl-floor": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_finial_rgb_mse": 426.82440801457193,
+    "original_contact_rgb_mse": 506.5719658119658,
+    "original_bowl_rgb_mse": 317.2622972691265,
+    "highres_finial_rgb_mse": 291.31505768063147,
+    "highres_contact_rgb_mse": 431.937264957265,
+    "highres_bowl_rgb_mse": 220.3746174692516,
+    "before_egg_tip_height_difference": 0.11175775527954102,
+    "after_egg_tip_height_difference": 0.11175775527954102,
+    "visual_scores": {
+      "form": 86,
+      "color": 84,
+      "grain": 79,
+      "lighting": 75.5
+    },
+    "samples": 256,
+    "decision": "Rejected: a half-strength floor change still worsens both contact comparisons.",
+    "working_mean": 84.49365527192846
+  },
+  "203-root-pigment": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_finial_rgb_mse": 371.5097753491196,
+    "original_contact_rgb_mse": 382.7708262108262,
+    "original_bowl_rgb_mse": 286.2950427350427,
+    "highres_finial_rgb_mse": 237.15201376239628,
+    "highres_contact_rgb_mse": 472.4705982905983,
+    "highres_bowl_rgb_mse": 194.14105482593288,
+    "visual_scores": {
+      "form": 86,
+      "color": 83.5,
+      "grain": 79,
+      "lighting": 76
+    },
+    "samples": 256,
+    "decision": "Rejected: broad pigment correction helps the original finial but creates an orange band and harms high-res contact color.",
+    "working_mean": 84.49365527192846
+  },
+  "204-inner-root-pigment": {
+    "original_iou": 0.9791907235691111,
+    "highres_iou": 0.9796827635964227,
+    "original_finial_rgb_mse": 342.5434122647237,
+    "original_contact_rgb_mse": 250.62900284900286,
+    "original_bowl_rgb_mse": 270.04325203252034,
+    "highres_finial_rgb_mse": 202.96346893341428,
+    "highres_contact_rgb_mse": 308.442735042735,
+    "highres_bowl_rgb_mse": 156.1726245570148,
+    "visual_scores": {
+      "form": 86,
+      "color": 85,
+      "grain": 79,
+      "lighting": 76
+    },
+    "samples": 256,
+    "decision": "Accepted: narrow root correction improves both references, retains the geometry and all lighting, and avoids the orange bowl band.",
+    "working_mean": 84.79365527192846
+  }
+}

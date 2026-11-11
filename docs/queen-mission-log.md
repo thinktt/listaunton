@@ -1223,3 +1223,37 @@ Model `6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48`. Fixed 
 synchronized. The viewer uses approximate lighting; UI checks used a simulated
 DOM/WebGL harness. Gallery defaults and source images remain unchanged. Next
 isolate contact illumination on the unchanged accepted bowl. Mission incomplete.
+
+
+## Twenty-second iteration — pigment at the egg root, November 11, 2026
+
+Six rendered trials separated reflected light, local bowl curvature and pigment.
+All seven tested central reflection rays at the accepted contact curve were
+blocked by the rim; the measured light contributions were negligible. Raising
+the floor cleared the rays but worsened both references, including after fitting
+light powers. A half-strength floor edit also failed. Those trials are rejected.
+
+A pigment-only diagnostic found a dark root band without scene illumination:
+median linear luminance 0.00557 versus 0.02477 on the egg and 0.02587 in the bowl.
+A broad correction made an orange band and was rejected. The accepted narrow
+mask reduces this inferred residual shading, preserving the v9 pixels and
+grain, all geometry/UVs/relief, all 85 lights and the 54-degree camera. The same
+object-space color formula is included in the rotating viewer. This procedural
+grade must be retained or baked when exporting to another material system.
+
+Original finial/contact RGB error improves 17.71% / 38.14%; selected-high-res
+error improves 1.99% / 4.94%. Both bowl comparisons also improve. These are
+local diagnostics, not overall match percentages. Outline IoUs remain
+97.9191% original and 97.9683% high-res.
+Form 86, color 85, grain 79 and lighting 76 are subjective estimates. Color
+rises one point; the other estimates stay fixed. Working mean 84.7937%,
+holistic 80–85%. Original and opposite-color images and gallery defaults stay exact.
+
+Saved/reopened and published renders agree within one RGB byte. Geometry,
+material/light scope and camera checks pass. A diagnostic verifies the actual
+Blender color mask matches the viewer formula and follows a translated piece.
+Local overlay, side images and viewer share `f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4`. See
+[checkpoint 22](queen-mission/iteration-022/README.md) for all six ratings,
+rejected experiments, diagnostics and reproduction. Native browser checks are
+recorded separately. The thin bright contact crescent remains unresolved, as do
+rear-bowl reflections, some grain, the base highlight and socket wall. Mission incomplete.

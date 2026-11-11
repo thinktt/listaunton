@@ -1,0 +1,511 @@
+{
+  "source_sha256": "c04cb64bcf4c60812c4ccab2cc8cfcd910caed1edf20df0b706dd335dcd717b1",
+  "config": {
+    "variant": "201-rounded-floor-contact-fit",
+    "source": "build/queen-mission/200-rounded-bowl-floor/queen.blend",
+    "source_sha256": "c04cb64bcf4c60812c4ccab2cc8cfcd910caed1edf20df0b706dd335dcd717b1",
+    "capture": "build/queen-mission/finial-contact-surface-200",
+    "targets": "build/queen-mission/contact-targets-021",
+    "samples": 256,
+    "reference_weights": [
+      0.7,
+      0.3
+    ],
+    "color": [
+      1,
+      0.8,
+      0.6
+    ],
+    "radius": 0.14,
+    "cone": 4,
+    "distance": 6,
+    "receiver_parts": [
+      "turned-body",
+      "finial"
+    ],
+    "target_pixels": [
+      [
+        437,
+        263
+      ],
+      [
+        448,
+        271
+      ],
+      [
+        458,
+        275
+      ],
+      [
+        471,
+        278
+      ],
+      [
+        497,
+        274
+      ],
+      [
+        510,
+        267
+      ],
+      [
+        528,
+        268
+      ]
+    ],
+    "energy": 1500,
+    "power_gain_limit": 4,
+    "fit_steps": 15
+  },
+  "targets": {
+    "crop": [
+      415,
+      239,
+      552,
+      293
+    ],
+    "blur_radius": 2,
+    "original_weight": 0.7,
+    "highres_weight": 0.3,
+    "original_sha256": "b214bd3b522122f9a6040c4fd6ed4e00b2fe9d16436bf4f52e5f155b4b190567",
+    "highres_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+    "original_registration": {
+      "method": "Uniform scale and translation; no rotation, anisotropic stretch or warp",
+      "fit_target": "Selected high-resolution reference silhouette; not the reconstructed model",
+      "source": "references/lichess-staunton-3d/Black-Queen.png",
+      "target": "assets/queen/reference.png",
+      "source_sha256": "b214bd3b522122f9a6040c4fd6ed4e00b2fe9d16436bf4f52e5f155b4b190567",
+      "target_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+      "source_size": [
+        300,
+        300
+      ],
+      "canvas_size": [
+        1254,
+        1254
+      ],
+      "scale": 4.218205761316873,
+      "offset_x": -1.7027654320988321,
+      "offset_y": -3.1759835390946662,
+      "silhouette_iou_at_quarter_resolution": 0.9846504428583713,
+      "mask": "max RGB >12 and alpha >127; largest component and filled holes",
+      "display": "Browser enlarges the untouched PNG with smooth interpolation. No new detail is generated."
+    },
+    "method": "Unchanged source images, existing uniform registration, black background; two-pixel blur for lighting comparison only."
+  },
+  "lights": [
+    {
+      "spec": {
+        "name": "Bowl contact 00",
+        "type": "SPOT",
+        "energy": 6.930246829986572,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          -4.365829944610596,
+          -0.7177802920341492,
+          8.317002296447754
+        ],
+        "target": [
+          -0.1743084192276001,
+          -0.16233086585998535,
+          4.059935569763184
+        ],
+        "target_pixel": [
+          437,
+          263
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          0.7819921970367432,
+          7.550941205636263e-08,
+          -1.439046859741211
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        -0.3870990574359894,
+        -0.3769993185997009,
+        0.8414426445960999
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.013108915649354458,
+      "max_linear_response": 3.033254623413086,
+      "gain": 0.004620164594180115
+    },
+    {
+      "spec": {
+        "name": "Bowl contact 01",
+        "type": "SPOT",
+        "energy": 62.702171325683594,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          -3.4656190872192383,
+          -1.636744737625122,
+          8.83682632446289
+        ],
+        "target": [
+          -0.13275384902954102,
+          -0.19905179738998413,
+          4.059269428253174
+        ],
+        "target_pixel": [
+          448,
+          271
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          0.6497098207473755,
+          -3.788084868006081e-08,
+          -1.1635440587997437
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        -0.2939874231815338,
+        -0.4379032254219055,
+        0.8495952486991882
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.014377985149621964,
+      "max_linear_response": 4.631503105163574,
+      "gain": 0.0418014478928693
+    },
+    {
+      "spec": {
+        "name": "Bowl contact 02",
+        "type": "SPOT",
+        "energy": 250.4766082763672,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          -2.718696355819702,
+          -2.537540912628174,
+          8.93206787109375
+        ],
+        "target": [
+          -0.09487658739089966,
+          -0.21837055683135986,
+          4.060002326965332
+        ],
+        "target_pixel": [
+          458,
+          275
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          0.6232070922851562,
+          4.9827850290284914e-08,
+          -0.8469529151916504
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        -0.22527487576007843,
+        -0.5019134283065796,
+        0.8350653648376465
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.012563582509756088,
+      "max_linear_response": 2.664978504180908,
+      "gain": 0.16698440295176908
+    },
+    {
+      "spec": {
+        "name": "Bowl contact 03",
+        "type": "SPOT",
+        "energy": 124.46534729003906,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          -1.2079004049301147,
+          -3.0761454105377197,
+          9.214664459228516
+        ],
+        "target": [
+          -0.04589557647705078,
+          -0.23283123970031738,
+          4.060510158538818
+        ],
+        "target_pixel": [
+          471,
+          278
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          0.5374327301979065,
+          2.8135541896290306e-08,
+          -0.38796645402908325
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        -0.09748149663209915,
+        -0.5343863368034363,
+        0.8396003246307373
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.012594726867973804,
+      "max_linear_response": 4.662302494049072,
+      "gain": 0.08297689892803539
+    },
+    {
+      "spec": {
+        "name": "Bowl contact 04",
+        "type": "SPOT",
+        "energy": 0.0,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          1.9941763877868652,
+          -4.6372480392456055,
+          7.635674476623535
+        ],
+        "target": [
+          0.05236327648162842,
+          -0.22031903266906738,
+          4.069149971008301
+        ],
+        "target_pixel": [
+          497,
+          274
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          0.9342512488365173,
+          -6.527502094400006e-09,
+          0.41419658064842224
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        0.16543062031269073,
+        -0.6767496466636658,
+        0.71738600730896
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.006687894929200411,
+      "max_linear_response": 3.5013620853424072,
+      "gain": 0.0
+    },
+    {
+      "spec": {
+        "name": "Bowl contact 05",
+        "type": "SPOT",
+        "energy": 0.0,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          4.132806777954102,
+          -4.232470989227295,
+          5.932232856750488
+        ],
+        "target": [
+          0.10165393352508545,
+          -0.19384711980819702,
+          4.077690124511719
+        ],
+        "target_pixel": [
+          510,
+          267
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          1.25655996799469,
+          4.2797410060302354e-09,
+          0.7844722867012024
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        0.3703288733959198,
+        -0.6950027942657471,
+        0.6163014769554138
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.008750608190894127,
+      "max_linear_response": 6.331321716308594,
+      "gain": 0.0
+    },
+    {
+      "spec": {
+        "name": "Bowl contact 06",
+        "type": "SPOT",
+        "energy": 189.75962829589844,
+        "color": [
+          1.0,
+          0.800000011920929,
+          0.6000000238418579
+        ],
+        "position": [
+          3.5877246856689453,
+          -0.32733145356178284,
+          8.983165740966797
+        ],
+        "target": [
+          0.169638991355896,
+          -0.1815176010131836,
+          4.054126262664795
+        ],
+        "target_pixel": [
+          528,
+          268
+        ],
+        "size": 0.28,
+        "shadow_soft_size": 0.14,
+        "spot_degrees": 4,
+        "spot_blend": 0.9,
+        "rotation_euler": [
+          0.6067482829093933,
+          -5.7427961053235776e-08,
+          1.5281628370285034
+        ],
+        "diffuse_factor": 0,
+        "receiver_parts": [
+          "turned-body",
+          "finial"
+        ],
+        "use_shadow": true
+      },
+      "normal": [
+        0.3108884394168854,
+        -0.33403077721595764,
+        0.8898155689239502
+      ],
+      "center_ray_blocked": false,
+      "block_distance": null,
+      "mean_linear_response": 0.02332371287047863,
+      "max_linear_response": 4.329809188842773,
+      "gain": 0.12650641820766514
+    }
+  ],
+  "history": [
+    {
+      "step": 0,
+      "before_loss": 0.0074613635699092235,
+      "after_loss": 0.00635563024894567,
+      "reference_errors_before": [
+        0.007601507534605409,
+        0.0071343609856181255
+      ]
+    },
+    {
+      "step": 1,
+      "before_loss": 0.00635563024894567,
+      "after_loss": 0.0062189553010997675,
+      "reference_errors_before": [
+        0.0068372179324207236,
+        0.005231925654170545
+      ]
+    },
+    {
+      "step": 2,
+      "before_loss": 0.0062189553010997675,
+      "after_loss": 0.006214106602745425,
+      "reference_errors_before": [
+        0.006845500834519665,
+        0.0047570157231200064
+      ]
+    },
+    {
+      "step": 3,
+      "before_loss": 0.006214106602745425,
+      "after_loss": 0.006214031538056569,
+      "reference_errors_before": [
+        0.0068691866451458085,
+        0.004685586503811199
+      ]
+    },
+    {
+      "step": 4,
+      "before_loss": 0.006214031538056569,
+      "after_loss": 0.00621402937485545,
+      "reference_errors_before": [
+        0.0068719056837646475,
+        0.004678991864737721
+      ]
+    }
+  ],
+  "predicted_errors_before": [
+    0.007601507534605409,
+    0.0071343609856181255
+  ],
+  "predicted_errors_after": [
+    0.006872123256899833,
+    0.004678476983418559
+  ],
+  "method": "Real shadowed glossy BSDF transport, nonnegative light powers fitted through AgX to both unchanged registered references. No material or geometry edit."
+}

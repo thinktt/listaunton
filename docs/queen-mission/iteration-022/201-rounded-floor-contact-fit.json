@@ -1,0 +1,57 @@
+{
+  "variant": "201-rounded-floor-contact-fit",
+  "source": "build/queen-mission/200-rounded-bowl-floor/queen.blend",
+  "source_sha256": "c04cb64bcf4c60812c4ccab2cc8cfcd910caed1edf20df0b706dd335dcd717b1",
+  "capture": "build/queen-mission/finial-contact-surface-200",
+  "targets": "build/queen-mission/contact-targets-021",
+  "samples": 256,
+  "reference_weights": [
+    0.7,
+    0.3
+  ],
+  "color": [
+    1,
+    0.8,
+    0.6
+  ],
+  "radius": 0.14,
+  "cone": 4,
+  "distance": 6,
+  "receiver_parts": [
+    "turned-body",
+    "finial"
+  ],
+  "target_pixels": [
+    [
+      437,
+      263
+    ],
+    [
+      448,
+      271
+    ],
+    [
+      458,
+      275
+    ],
+    [
+      471,
+      278
+    ],
+    [
+      497,
+      274
+    ],
+    [
+      510,
+      267
+    ],
+    [
+      528,
+      268
+    ]
+  ],
+  "energy": 1500,
+  "power_gain_limit": 4,
+  "fit_steps": 15
+}

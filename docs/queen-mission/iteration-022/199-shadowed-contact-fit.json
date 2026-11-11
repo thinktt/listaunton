@@ -1,0 +1,56 @@
+{
+  "variant": "199-shadowed-contact-fit",
+  "source": "history/queen-mission-021/queen-rebuilt.blend",
+  "source_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
+  "capture": "build/queen-mission/finial-contact-surface-021",
+  "targets": "build/queen-mission/contact-targets-021",
+  "samples": 256,
+  "reference_weights": [
+    0.7,
+    0.3
+  ],
+  "color": [
+    1,
+    0.8,
+    0.6
+  ],
+  "radius": 0.14,
+  "cone": 4,
+  "distance": 6,
+  "receiver_parts": [
+    "turned-body"
+  ],
+  "target_pixels": [
+    [
+      437,
+      263
+    ],
+    [
+      448,
+      271
+    ],
+    [
+      458,
+      275
+    ],
+    [
+      471,
+      278
+    ],
+    [
+      497,
+      274
+    ],
+    [
+      510,
+      267
+    ],
+    [
+      528,
+      268
+    ]
+  ],
+  "energy": 1500,
+  "power_gain_limit": 4,
+  "fit_steps": 15
+}

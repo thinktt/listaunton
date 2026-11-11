@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_sha256": "534dc512c42722b6f0aa320d3663d07c24b1e4af3b8c217452ae4a450e80ef55",
+  "baseline_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
+  "all_existing_material_nodes_and_packed_images_identical": true,
+  "only_base_color_link_extended": true,
+  "all_lights_camera_transform_identical": true,
+  "lights": 85,
+  "relief_unchanged": true,
+  "coordinate_space": "OBJECT",
+  "field_formula_mean_error": 0.0010924770031124353,
+  "field_formula_p99_error": 0.010365227237343788,
+  "translation_mean_error": 1.0275061868014745e-06,
+  "translation_p99_error": 1.1086463928222656e-05,
+  "gain_bounds": [
+    1,
+    2.5
+  ],
+  "diagnostic_only": "Emission field images validate the mask, not visual fidelity."
+}

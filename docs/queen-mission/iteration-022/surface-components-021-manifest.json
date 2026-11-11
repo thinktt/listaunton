@@ -1,0 +1,109 @@
+{
+  "source_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
+  "samples": 64,
+  "clean_linear_capture": true,
+  "render_view": "Saved 54-degree camera, AgX, original resolution. Emission views are material diagnostics, not beauty candidates.",
+  "height_remap": {
+    "data_type": "FLOAT",
+    "interpolation_type": "LINEAR",
+    "clamp": false,
+    "inputs": [
+      {
+        "index": 0,
+        "name": "Value",
+        "identifier": "Value",
+        "value": 1.0
+      },
+      {
+        "index": 1,
+        "name": "From Min",
+        "identifier": "From Min",
+        "value": 0.009999999776482582
+      },
+      {
+        "index": 2,
+        "name": "From Max",
+        "identifier": "From Max",
+        "value": 0.20000000298023224
+      },
+      {
+        "index": 3,
+        "name": "To Min",
+        "identifier": "To Min",
+        "value": 0.0
+      },
+      {
+        "index": 4,
+        "name": "To Max",
+        "identifier": "To Max",
+        "value": 1.0
+      },
+      {
+        "index": 5,
+        "name": "Steps",
+        "identifier": "Steps",
+        "value": 4.0
+      },
+      {
+        "index": 6,
+        "name": "Vector",
+        "identifier": "Vector",
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "index": 7,
+        "name": "From Min",
+        "identifier": "From_Min_FLOAT3",
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "index": 8,
+        "name": "From Max",
+        "identifier": "From_Max_FLOAT3",
+        "value": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 9,
+        "name": "To Min",
+        "identifier": "To_Min_FLOAT3",
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "index": 10,
+        "name": "To Max",
+        "identifier": "To_Max_FLOAT3",
+        "value": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 11,
+        "name": "Steps",
+        "identifier": "Steps_FLOAT3",
+        "value": [
+          4.0,
+          4.0,
+          4.0
+        ]
+      }
+    ]
+  }
+}

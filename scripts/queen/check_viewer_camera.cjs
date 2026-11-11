@@ -19,6 +19,7 @@ const gl=new Proxy({NO_ERROR:0,getError:()=>0,getShaderParameter:()=>true,getPro
  getUniformLocation:(_,name)=>name,drawElements:()=>draws++,texImage2D:(...args)=>textureUploads.push(args),vertexAttribPointer:(...args)=>attributes.push(args),
  uniformMatrix4fv:(name,_,v)=>uniforms[name]=Array.from(v,Math.fround),
  uniformMatrix3fv:(name,_,v)=>uniforms[name]=Array.from(v,Math.fround),
+ uniform4fv:(name,v)=>uniforms[name]=Array.from(v,Math.fround),
  uniform3fv:(name,v)=>uniforms[name]=Array.from(v,Math.fround),
  uniform2fv:(name,v)=>uniforms[name]=Array.from(v,Math.fround),
  uniform1f:(name,v)=>uniforms[name]=Math.fround(v),uniform1i:(name,v)=>uniforms[name]=v
@@ -83,6 +84,10 @@ windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',ac
 assert.equal(node('brown').attrs['aria-pressed'],'true');
 assert.equal(uniforms.uWood,1,'Wood mode should enable the texture in the shader');
 assert.equal(uniforms.uWoodMap,0,'Wood sampler must use the uploaded texture unit');
+const rootPigment=metadata.materialConfig.finial_root_pigment?.config;
+assert.deepEqual(uniforms.uRootHeight,(rootPigment?[...rootPigment.height_rise,...rootPigment.height_fall]:[0,1,2,3]).map(Math.fround));
+assert.deepEqual(uniforms.uRootRadiusGain,(rootPigment?[...rootPigment.radius_fall,rootPigment.gain]:[0,1,1]).map(Math.fround));
+assert(source.includes('rootPigmentGain(vWoodPosition)'),'Root grade must follow object-space geometry in the fragment shader');
 assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbitBefore);
 windowListeners.message({source:parentFrame,data:{channel:'listaunton-review',action:'orbit',dx:.1,dy:.1}});flush();
 assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),orbitBefore);

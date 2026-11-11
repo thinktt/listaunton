@@ -1,0 +1,16 @@
+{
+  "variant": "202-subtle-bowl-floor",
+  "source_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
+  "source_archive": "history/queen-mission-021/queen-rebuilt.blend",
+  "feature_key": "bowl_contact_profile",
+  "elevation": 54,
+  "preserve_face_assignments": true,
+  "hypothesis": "Half the floor curvature adjustment to reduce the original-view reflection regressions while testing a gentler egg contact.",
+  "z_offsets": {
+    "103": 0.002,
+    "104": 0.006,
+    "105": 0.0125,
+    "106": 0.0155,
+    "107": 0.003
+  }
+}

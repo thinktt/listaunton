@@ -3,8 +3,8 @@ from pathlib import Path
 import bpy,json,hashlib,sys,numpy as np,argparse
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(Path(__file__).parent))
 from queen_scene import editable_mesh
-p=argparse.ArgumentParser();p.add_argument('--source',default='models/queen/queen-rebuilt.blend');p.add_argument('--out',default='surface-components-016');p.add_argument('--clean-linear',action='store_true');p.add_argument('--modes',nargs='+',default=['pigment-only','reflection-only','relief-height']);args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
-source=ROOT/args.source;digest=hashlib.sha256(source.read_bytes()).hexdigest();assert digest=='fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94'
+p=argparse.ArgumentParser();p.add_argument('--source',default='models/queen/queen-rebuilt.blend');p.add_argument('--out',default='surface-components-016');p.add_argument('--sha256',default='fcb5255f30f89090b5c7fb3b422d15fab2d70c3db4ec478f8bd50e0367c59d94');p.add_argument('--clean-linear',action='store_true');p.add_argument('--modes',nargs='+',default=['pigment-only','reflection-only','relief-height']);args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+source=ROOT/args.source;digest=hashlib.sha256(source.read_bytes()).hexdigest();assert digest==args.sha256
 out=ROOT/'build/queen-mission'/args.out;out.mkdir(exist_ok=True,parents=True)
 report={'source_sha256':digest,'samples':64,'clean_linear_capture':args.clean_linear,'render_view':'Saved 54-degree camera, AgX, original resolution. Emission views are material diagnostics, not beauty candidates.'}
 for mode in args.modes:

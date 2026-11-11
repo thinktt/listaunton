@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "date": "2026-11-11",
+  "source_sha256_verified_separately_by_http": "f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4",
+  "url": "http://localhost:8080/review.html?checkpoint=22",
+  "method": "Native in-app browser UI and screenshots, not a simulated WebGL harness.",
+  "observed": [
+    "The review opens with the original-reference overlay.",
+    "The 3D tab loads the textured queen with Wood and Orthographic selected.",
+    "The Side preset renders the complete queen profile.",
+    "Overlay camera restores the elevated view and the wood remains visible.",
+    "No browser console error messages were reported."
+  ],
+  "automation_limitation": "The native accessibility snapshot exceeded the bridge frame limit after the Side action. Screenshot-only observation confirmed the action succeeded; the final camera selection was clicked at its observed screen coordinates.",
+  "scope": "Confirms native shader rendering and view controls. It does not establish parity with the Cycles lighting."
+}

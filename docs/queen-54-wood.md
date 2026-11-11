@@ -323,3 +323,10 @@ The accepted render uses 256 fixed samples with use_light_tree=False for repeata
 
 
 Queen checkpoint 18 raises the inner flare and shortens the socket. Rebuild with `scripts/queen/refine_socket_flare.py` and `docs/queen-mission/iteration-018/profile.json` from the archived seventeenth queen. Preserve the stem/socket face membership when regenerating the six light receivers. The camera stays at 54°. See `docs/queen-mission/iteration-018/README.md` for the profile, light settings and validation.
+
+
+Checkpoint 22 retains the packed v9 atlas and adds a narrow procedural pigment
+grade at the egg root. The source texture pixels and relief remain unchanged.
+The local object-space field is reproduced in the WebGL material; it is not
+contained in the atlas PNG itself. Preserve or bake that grade when exporting
+to another renderer. See iteration-022 for the exact mask, validation and scores.

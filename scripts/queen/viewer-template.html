@@ -84,7 +84,15 @@ uniform bool uOrthographic;
 uniform bool uWood;
 uniform sampler2D uWoodMap;
 uniform vec3 uWoodParameters;
+uniform vec4 uRootHeight;
+uniform vec3 uRootRadiusGain;
 out vec4 outColor;
+float rootPigmentGain(vec3 p){
+ float mask=smoothstep(uRootHeight.x,uRootHeight.y,p.z)
+           *(1.0-smoothstep(uRootHeight.z,uRootHeight.w,p.z))
+           *(1.0-smoothstep(uRootRadiusGain.x,uRootRadiusGain.y,length(p.xy)));
+ return 1.0+(uRootRadiusGain.z-1.0)*mask;
+}
 float hash3(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}
 float noise3(vec3 p){
  vec3 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
@@ -104,7 +112,7 @@ void main(){
   vec3 wood=pow(texture(uWoodMap,vec2(vUV.x,1.0-vUV.y)).rgb,vec3(2.2));
   float gray=dot(wood,vec3(0.2126,0.7152,0.0722));
   wood=mix(vec3(gray),wood,uWoodParameters.z)*uWoodParameters.y;
-  base=mix(uColor,wood,uWoodParameters.x);
+  base=mix(uColor,wood,uWoodParameters.x)*rootPigmentGain(vWoodPosition);
  }
  vec3 c=base*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45,base);
@@ -234,7 +242,7 @@ function initialize(){
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
  gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,meta.uvOffsetBytes);
 
-  uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uWoodMap','uWoodParameters'])uniforms[name]=gl.getUniformLocation(program,name);
+  uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uWoodMap','uWoodParameters','uRootHeight','uRootRadiusGain'])uniforms[name]=gl.getUniformLocation(program,name);
   woodTexture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);
   gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([100,45,18,255]));
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.REPEAT);
@@ -266,6 +274,9 @@ function draw(){
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
   gl.uniform1i(uniforms.uWood,material==='brown'?1:0);
   const woodParams=meta.materialConfig||{};gl.uniform3fv(uniforms.uWoodParameters,[woodParams.image_mix??.78,woodParams.value??1,woodParams.saturation??1]);
+  const rootPigment=woodParams.finial_root_pigment?.config;
+  gl.uniform4fv(uniforms.uRootHeight,rootPigment?[...rootPigment.height_rise,...rootPigment.height_fall]:[0,1,2,3]);
+  gl.uniform3fv(uniforms.uRootRadiusGain,rootPigment?[...rootPigment.radius_fall,rootPigment.gain]:[0,1,1]);
   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,woodTexture);gl.uniform1i(uniforms.uWoodMap,0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);

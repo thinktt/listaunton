@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "source_sha256": "f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4",
+  "checks": [
+    "python3 scripts/check_site.py",
+    "python3 scripts/check_model_site.py"
+  ],
+  "results": "Both exited 0. Local links, original/candidate hashes, queen sandbox/CSP and viewer hash, five other models, and king/queen/rook historical projections passed."
+}

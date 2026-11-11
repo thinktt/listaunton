@@ -167,3 +167,16 @@ changing its tolerance or rescaling the body. Actual camera remains 54 degrees.
 The optional UV-face membership preservation added for a rejected bowl trial
 is off for the accepted cap; never adopt rejected geometry or emitters silently.
 Keep accepted overlay, side views and exported control mesh synchronized.
+
+
+Queen checkpoint 22 preserves checkpoint 21 geometry, UVs, relief, camera and
+all 85 lights. A smooth object-space grade multiplies only the inner finial-root
+pigment by 1–2.5; the v9 atlas pixels remain unchanged. Reproduce using
+grade_finial_root.py and iteration-022/204-inner-root-pigment.json from the
+checkpoint-21 archive. validate_root_pigment.py checks graph scope, original
+material/light data and an actual translated-field render. Recreate its position
+capture as documented before running it in a fresh checkout. The viewer carries
+the same field through uRootHeight/uRootRadiusGain and vWoodPosition; preserve
+these when rebuilding, and retain or bake the procedural grade for other exports.
+The older bowl-floor changes and added contact lights are rejected, not public
+alternatives. Keep the saved/reopened comparison and synchronized current views.
