@@ -1,0 +1,129 @@
+{
+  "source_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+  "accepted_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
+  "scores": {
+    "silhouette_selected_measured": 97.96827635964227,
+    "silhouette_original_measured": 97.9190723569111,
+    "interior_form_subjective": 86,
+    "wood_color_subjective": 84,
+    "grain_subjective": 79,
+    "lighting_subjective": 76
+  },
+  "mean": 84.59365527192845,
+  "holistic_visual_range": [
+    80,
+    85
+  ],
+  "trials": {
+    "accepted-20": {
+      "original_iou": 0.9791907235691111,
+      "highres_iou": 0.9796827635964227,
+      "original_finial_rgb_mse": 442.9722930580854,
+      "original_contact_rgb_mse": 397.2892877492877,
+      "original_bowl_rgb_mse": 308.3227600583698,
+      "highres_finial_rgb_mse": 205.43035822707955,
+      "highres_contact_rgb_mse": 345.4134472934473,
+      "highres_bowl_rgb_mse": 157.35281217427558
+    },
+    "193-lower-egg-cap": {
+      "original_iou": 0.979185699780042,
+      "highres_iou": 0.9796777076648073,
+      "original_finial_rgb_mse": 529.2686500708359,
+      "original_contact_rgb_mse": 388.8882621082621,
+      "original_bowl_rgb_mse": 349.42549093183237,
+      "highres_finial_rgb_mse": 436.9484112527828,
+      "highres_contact_rgb_mse": 338.53846153846155,
+      "highres_bowl_rgb_mse": 254.25885345007296,
+      "before_egg_tip_height_difference": 0.14973783493041992,
+      "after_egg_tip_height_difference": 0.11175775527954102,
+      "visual_scores": {
+        "form": 86,
+        "color": 84,
+        "grain": 79,
+        "lighting": 73
+      },
+      "sampling": 64,
+      "decision": "Supported geometry intermediate: lower cap, but the unchanged reflector directions displace the glints.",
+      "working_mean": 83.99355415329615
+    },
+    "195-lower-cap-reaimed": {
+      "original_iou": 0.9791907235691111,
+      "highres_iou": 0.9796827635964227,
+      "original_finial_rgb_mse": 416.25411859947377,
+      "original_contact_rgb_mse": 405.1753846153846,
+      "original_bowl_rgb_mse": 301.2537502605795,
+      "highres_finial_rgb_mse": 207.09348310058692,
+      "highres_contact_rgb_mse": 324.479943019943,
+      "highres_bowl_rgb_mse": 158.0638148843027,
+      "visual_scores": {
+        "form": 86,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "sampling": 256,
+      "decision": "Accepted: lower exposed cap and re-aimed existing glints, with improved original-image finial fit and unchanged outside silhouette.",
+      "working_mean": 84.59365527192845
+    },
+    "196-shallow-egg-seat": {
+      "original_iou": 0.979185699780042,
+      "highres_iou": 0.9796777076648073,
+      "original_finial_rgb_mse": 586.9544626593807,
+      "original_contact_rgb_mse": 611.5047863247863,
+      "original_bowl_rgb_mse": 376.07347091932456,
+      "highres_finial_rgb_mse": 500.31582675571747,
+      "highres_contact_rgb_mse": 528.9561253561253,
+      "highres_bowl_rgb_mse": 290.33731081926203,
+      "before_egg_tip_height_difference": 0.14973783493041992,
+      "after_egg_tip_height_difference": 0.11175775527954102,
+      "visual_scores": {
+        "form": 85,
+        "color": 84,
+        "grain": 79,
+        "lighting": 73
+      },
+      "sampling": 64,
+      "decision": "Rejected: raising the inner bowl changes the contact curve and produces an overly concentrated right reflection.",
+      "working_mean": 83.79355415329614
+    },
+    "197-seat-reaimed": {
+      "original_iou": 0.979185699780042,
+      "highres_iou": 0.9796777076648073,
+      "original_finial_rgb_mse": 424.0777575389597,
+      "original_contact_rgb_mse": 490.9238746438746,
+      "original_bowl_rgb_mse": 307.5518282259746,
+      "highres_finial_rgb_mse": 238.54845173041895,
+      "highres_contact_rgb_mse": 417.18467236467234,
+      "highres_bowl_rgb_mse": 182.51200333541797,
+      "visual_scores": {
+        "form": 85,
+        "color": 84,
+        "grain": 79,
+        "lighting": 75
+      },
+      "sampling": 64,
+      "decision": "Rejected: fixing the three glints does not recover the original contact-area match after raising the seat.",
+      "working_mean": 84.19355415329615
+    },
+    "198-contact-reflections": {
+      "original_iou": 0.9791907235691111,
+      "highres_iou": 0.9796827635964227,
+      "original_finial_rgb_mse": 432.29210686095934,
+      "original_contact_rgb_mse": 512.2899145299145,
+      "original_bowl_rgb_mse": 312.7887679799875,
+      "highres_finial_rgb_mse": 180.58684476826554,
+      "highres_contact_rgb_mse": 268.6364102564103,
+      "highres_bowl_rgb_mse": 156.90164686262247,
+      "visual_scores": {
+        "form": 85,
+        "color": 84,
+        "grain": 79,
+        "lighting": 75
+      },
+      "sampling": 256,
+      "decision": "Rejected: two genuinely shadowed emitters strengthen the crescent and improve upscale contact error, but regress the authoritative original contact fit.",
+      "working_mean": 84.19365527192846
+    }
+  },
+  "limitations": "Only silhouette IoU is an objective percentage. Regional RGB errors do not establish geometric correctness. Side geometry and the 54-degree camera remain inferred."
+}

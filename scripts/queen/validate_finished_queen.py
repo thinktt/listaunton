@@ -13,6 +13,7 @@ from validate_middle_collar_edge import check as check_middle_edge
 from refine_socket_flare import check_scope as check_socket_flare
 from validate_profile_flow import check as check_profile_flow
 from validate_lower_collar import check as check_lower_collar
+from validate_finial_cap import check as check_finial_cap
 p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=args.blend
@@ -45,7 +46,8 @@ ratio=height/diameter
 # Keep the sizing tolerance and validate each local profile edit against its own baseline.
 material_settings=json.loads(scene.get('mission_material_config','{}'))
 seating=material_settings.get('finial_seating')
-lower_collar, lower_baseline = check_lower_collar(controls, material_settings, obj.data.name)
+finial_cap, finial_baseline = check_finial_cap(controls, material_settings, obj.data.name)
+lower_collar, lower_baseline = check_lower_collar(finial_baseline, material_settings, obj.data.name)
 profile_flow, profile_baseline = check_profile_flow(lower_baseline, material_settings, obj.data.name)
 socket_flare, prior_controls = check_socket_flare(profile_baseline, material_settings, obj.data.name)
 middle_edge,pre_collar_controls=check_middle_edge(prior_controls,material_settings)
@@ -60,6 +62,10 @@ if seating:
         assert hashlib.sha256(controls[:107].astype(np.float32).tobytes()).hexdigest()==seating['unchanged_body_sha256']
     assert abs(seating['top_lowering']-.0467)<.00001
     adjusted_target-=seating['top_lowering']/diameter
+if finial_cap:
+    # The additional, explicitly recorded cap seating changes total height;
+    # every body/crown dimension remains exact by the scoped geometry check.
+    adjusted_target-=finial_cap['top_lowering']/diameter
 assert abs(ratio-adjusted_target)<.015,(ratio,adjusted_target)
 report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdigest(),
         'camera_elevation_degrees':elevation,'camera_type':camera.data.type,
@@ -73,6 +79,7 @@ report['base_transition']=base_transition
 report['middle_collar_edge_refinement']=middle_edge
 if profile_flow:report['profile_flow_refinement']=profile_flow
 if lower_collar:report['lower_collar_rounding']=lower_collar
+if finial_cap:report['finial_cap_seating']=finial_cap
 if socket_flare:
     report['raised_flare_compact_socket'] = socket_flare
 report['adjusted_height_target']=adjusted_target

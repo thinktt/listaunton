@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "source_sha256": "a3c6388b408da1aa7c697affdcce0e4f66e0f96763b7c087f8fda1a69ad26f61",
+  "baseline_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+  "all_material_nodes_links_and_packed_images_identical": true,
+  "camera_and_object_matrix_identical": true,
+  "light_count": 85,
+  "moved_lights": [
+    "Display fitted finial-left-spot",
+    "Display fitted finial-right-spot",
+    "Display fitted finial-top-spot"
+  ],
+  "all_other_lights_identical": true,
+  "finial_only_receivers": true,
+  "light_colors_and_powers_preserved_with_float_tolerance": true,
+  "fixed_12_degree_cones": true,
+  "all_three_lights_cast_shadows": true,
+  "no_contact_emitters_added": true
+}

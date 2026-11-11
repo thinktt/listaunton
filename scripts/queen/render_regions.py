@@ -11,7 +11,7 @@ REGION_NAMES = ['foot', 'base', 'socket', 'stem', 'lower-collar',
                 'middle-collar', 'upper-collar', 'crown-body', 'bowl', 'finial']
 
 def partition(scene, obj, finial_only=False, socket_band=False, collar_band=False, split_collars=False,
-              socket_face_count=None):
+              socket_face_count=None, face_regions_by_uv=None):
     assert not collar_band or socket_band, 'Collar partition requires the accepted socket partition'
     assert not split_collars or collar_band, 'Subdivided collars require the collar partition'
     old_levels = [(m, m.levels) for m in obj.modifiers if m.type == 'SUBSURF']
@@ -70,6 +70,13 @@ def partition(scene, obj, finial_only=False, socket_band=False, collar_band=Fals
         uv = np.empty(len(mesh.loops) * 2, dtype=np.float32)
         layer.data.foreach_get('uv', uv)
         uv_layers[layer.name] = uv.reshape(-1, 2)
+    if face_regions_by_uv is not None:
+        # A local shape edit may move a face past a height threshold. Preserve
+        # its existing light membership using the unchanged atlas face corners.
+        atlas = uv_layers['Pigment atlas']
+        name_to_label = {name: i for i, name in enumerate(names)}
+        labels = np.array([name_to_label[face_regions_by_uv[
+            atlas[start:start+count].tobytes()]] for start, count in zip(starts, counts)], dtype=np.int32)
     float_attributes = {}
     for attribute in mesh.attributes:
         if attribute.data_type == 'FLOAT' and attribute.domain in ('POINT', 'CORNER') and not attribute.name.startswith('.'):
@@ -108,6 +115,8 @@ def partition(scene, obj, finial_only=False, socket_band=False, collar_band=Fals
         reports.append({'name': name, 'faces': len(faces), 'vertices': len(selected_vertices),
                         'triangles': int((counts[faces] - 2).sum()), 'uv_layers': list(uv_layers),
                         'custom_corner_normals': part_mesh.has_custom_normals})
+        if face_regions_by_uv is not None:
+            reports[-1]['face_membership_preserved_by_atlas'] = True
         if name == 'stem-socket' and socket_face_count is not None:
             reports[-1]['lower_height'] = socket_floor
     assert sum(r['faces'] for r in reports) == len(mesh.polygons)

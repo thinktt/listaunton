@@ -1,17 +1,17 @@
 {
   "passed": true,
-  "source_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+  "source_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
   "camera_elevation_degrees": 54.00000066135015,
   "camera_type": "ORTHO",
-  "height": 4.4452924728393555,
+  "height": 4.407266139984131,
   "base_diameter": 2.0728673934936523,
-  "height_to_base_diameter": 2.1445136754971914,
+  "height_to_base_diameter": 2.126168877863449,
   "target_height_to_base_diameter": 2.1792891203000866,
   "target_queen_to_king": 0.8340000000000001,
   "material": "Walnut - reference-derived pigment",
   "boundary_edges": 0,
   "nonmanifold_edges": 0,
-  "signed_volume": 4.5115286149872125,
+  "signed_volume": 4.508027736651367,
   "crown_tips": 8,
   "body_rings_monotonic": true,
   "finial_seating": {
@@ -84,6 +84,26 @@
     "maximum_radial_displacement": 0.05224723741412163,
     "base_socket_stem_upper_collars_and_crown_unchanged": true
   },
+  "finial_cap_seating": {
+    "baseline_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+    "changed_rings": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+    ],
+    "cap_height_factor": 0.9,
+    "all_radii_identical": true,
+    "bowl_and_all_other_controls_identical": true,
+    "top_lowering": 0.037980079650878906,
+    "egg_above_tip_before": 0.14973783493041992,
+    "egg_above_tip_after": 0.11175775527954102
+  },
   "raised_flare_compact_socket": {
     "baseline_sha256": "cf248e4a1766fbdb1e51b7e823931bc26729531dfda4ffbda12a83ee961ad460",
     "rings": [
@@ -117,14 +137,14 @@
       1.3093900680541992
     ]
   },
-  "adjusted_height_target": 2.156759941197978,
+  "adjusted_height_target": 2.1384374571982336,
   "render_receivers": {
     "used": true,
     "receivers": 6,
     "surface_faces_and_atlas_uvs_exact": true,
     "triangles": 715776,
     "custom_normal_max_component_error": 4.3332576751708984e-05,
-    "custom_normal_mean_component_error": 1.2938050986122107e-07,
+    "custom_normal_mean_component_error": 1.3452692826376733e-07,
     "materials_shared": true,
     "excluded_reflector_count": 79,
     "closed_editable_control_retained": true,

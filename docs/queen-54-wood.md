@@ -7,9 +7,12 @@ The side-view target is the owner's saved queen height of **83.4% of the
 king**. To translate that cross-piece preference into a physical model size,
 we normalize the 54-degree king model by its base diameter and use the measured
 original-sprite queen-to-king base-width ratio (132/139). This implies a queen
-height/base-diameter ratio of 2.1793. The mission's compact-finial iteration
-measures 2.1670, within the existing 0.015 validation tolerance (physical height
-is 0.59% below the mission starting model). The gallery defaults are unchanged.
+height/base-diameter ratio of 2.1793 before subsequent finial refinements.
+Checkpoint 21 measures 2.1262 after the two documented finial-height corrections
+(0.0467 and 0.0380 world units). Validation accounts explicitly for those
+corrections and retains the existing 0.015 ratio tolerance. The body is not
+rescaled to compensate; the gallery defaults remain unchanged. See the current
+mission log and iteration-021 evidence for the accepted dimensions.
 That translation depends on the king model and the assumption that the sprites
 share a render scale; it is not an independently measured physical height.
 
@@ -224,7 +227,7 @@ compares every evaluated face and atlas UV against the closed control,
 checks normals within precision, shared material and intended light links.
 
 The browser's lighting remains approximate. Fixed renders and side images
-are actual Cycles BSDF renders. The working score is 79.79%, holistic 75–80%;
+are actual Cycles BSDF renders. The working score is 79.79%, holistic 75â€“80%;
 coarse relief, bowl/rim shaping and collar/socket highlights remain unfinished.
 
 

@@ -1,0 +1,30 @@
+{
+  "baseline": "history/queen-mission-020/queen-rebuilt.blend",
+  "current": "build/queen-mission/195-lower-cap-reaimed/queen.blend",
+  "baseline_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+  "current_sha256": "a3c6388b408da1aa7c697affdcce0e4f66e0f96763b7c087f8fda1a69ad26f61",
+  "control_vertices_identical": false,
+  "atlas_control_uvs_identical": true,
+  "topology_identical": true,
+  "scoped_geometry_change": {
+    "baseline_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+    "changed_rings": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+    ],
+    "cap_height_factor": 0.9,
+    "all_radii_identical": true,
+    "bowl_and_all_other_controls_identical": true,
+    "top_lowering": 0.037980079650878906,
+    "egg_above_tip_before": 0.14973783493041992,
+    "egg_above_tip_after": 0.11175775527954102
+  },
+  "passed": true
+}

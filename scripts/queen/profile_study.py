@@ -32,7 +32,7 @@ def main():
         i=int(key);after[i,:,:2] *= (radius/np.linalg.norm(after[i,:,:2],axis=1))[:,None]
     for key,delta in cfg.get('z_offsets',{}).items():after[int(key),:,2]+=delta
     if cfg.get('radii') or cfg.get('z_offsets'):
-        boundary=replace_meridian(s,o,settings,after)
+        boundary=replace_meridian(s,o,settings,after,preserve_face_assignments=cfg.get('preserve_face_assignments',False))
         settings['raised_flare_compact_socket']['socket_partition']=boundary
     angle=cfg.get('elevation',54)
     axial=cfg.get('axial_scale',1)

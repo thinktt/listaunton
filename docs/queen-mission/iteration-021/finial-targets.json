@@ -1,0 +1,49 @@
+{
+  "reference": "assets/queen/reference.png",
+  "reference_sha256": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+  "method": "Minimum RGB core weighted by max(minRGB - 0.50, 0)^2 within isolated glint windows.",
+  "targets": [
+    {
+      "name": "Display fitted finial-left-spot",
+      "pixel": [
+        478.52136200557595,
+        186.44682602272601
+      ],
+      "window": [
+        466,
+        168,
+        487,
+        191
+      ],
+      "peak_min_rgb": 0.9176470588235294
+    },
+    {
+      "name": "Display fitted finial-top-spot",
+      "pixel": [
+        494.71531394173485,
+        180.80000790571864
+      ],
+      "window": [
+        487,
+        162,
+        507,
+        186
+      ],
+      "peak_min_rgb": 0.9529411764705882
+    },
+    {
+      "name": "Display fitted finial-right-spot",
+      "pixel": [
+        499.9553979129731,
+        204.23662533055565
+      ],
+      "window": [
+        487,
+        193,
+        512,
+        217
+      ],
+      "peak_min_rgb": 0.9058823529411765
+    }
+  ]
+}

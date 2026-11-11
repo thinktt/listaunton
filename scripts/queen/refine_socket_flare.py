@@ -92,7 +92,7 @@ def check_scope(controls, settings, mesh_name):
     }, before
 
 
-def replace_meridian(scene, obj, settings, after):
+def replace_meridian(scene, obj, settings, after, preserve_face_assignments=False):
     """Regenerate the exact render surface and carry every light assignment with its faces."""
     # Carry over actual per-light assignments, including the three finial-only lights.
     assignments = {}
@@ -106,6 +106,19 @@ def replace_meridian(scene, obj, settings, after):
     receivers = {o["mission_render_region"]: o for o in scene.objects if o.get("mission_render_region")}
     socket_faces = len(receivers["stem-socket"].data.polygons)
     source_atlas = {name: atlas_signature(o.data) for name, o in receivers.items()}
+    face_regions = None
+    if preserve_face_assignments:
+        face_regions = {}
+        for name, receiver in receivers.items():
+            mesh = receiver.data
+            uv = np.empty(len(mesh.loops)*2, dtype=np.float32)
+            mesh.uv_layers['Pigment atlas'].data.foreach_get('uv', uv)
+            uv = uv.reshape(-1, 2)
+            for face in mesh.polygons:
+                key = uv[face.loop_start:face.loop_start+face.loop_total].tobytes()
+                if key in face_regions:
+                    assert face_regions[key] == name, 'Ambiguous atlas face assignment'
+                face_regions[key] = name
     for receiver in receivers.values():
         bpy.data.objects.remove(receiver, do_unlink=True)
     for collection in old_collections:
@@ -115,7 +128,7 @@ def replace_meridian(scene, obj, settings, after):
     obj.data.update()
     bpy.context.view_layer.update()
     parts, report = partition(scene, obj, socket_band=True, collar_band=True, split_collars=True,
-                              socket_face_count=socket_faces)
+                              socket_face_count=socket_faces, face_regions_by_uv=face_regions)
     indexed = {part["mission_render_region"]: part for part in parts}
     new_atlas = {name: atlas_signature(o.data) for name, o in indexed.items()}
     if new_atlas != source_atlas:

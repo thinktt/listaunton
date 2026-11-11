@@ -153,3 +153,17 @@ before checkpoint 19 and earlier scope checks. check_material_geometry.py uses
 accepts --baseline; use checkpoint 19 for this iteration. Six receivers, exact
 UVs, packed textures, lights and the saved camera remain validated. The small
 side improvement does not establish that the inferred proportions are exact.
+
+
+Queen checkpoint 21 lowers only finial-cap controls 108–116 by 10% toward
+ring 107; radii, body, bowl, rim and tips stay exact. Reproduce from checkpoint
+20 using iteration-021/profile.json, then the documented surface capture and
+aim_finial_reflections.py step. validate_finial_cap.py unwraps the cap before
+older geometry scope checks; check_material_geometry.py uses --allow-finial-cap
+against checkpoint 20. validate_cap_lights.py permits only the three existing
+finial reflectors to be re-aimed, preserving all other light and material data.
+The height target accounts for the additional 0.0380-unit cap reduction without
+changing its tolerance or rescaling the body. Actual camera remains 54 degrees.
+The optional UV-face membership preservation added for a rejected bowl trial
+is off for the accepted cap; never adopt rejected geometry or emitters silently.
+Keep accepted overlay, side views and exported control mesh synchronized.

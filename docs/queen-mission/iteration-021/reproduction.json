@@ -1,0 +1,22 @@
+{
+  "source_sha256": "652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c",
+  "geometry_config": "docs/queen-mission/iteration-021/profile.json",
+  "geometry_variant": "193-lower-egg-cap",
+  "capture_crop": [
+    410,
+    135,
+    558,
+    292
+  ],
+  "capture_samples": 32,
+  "glint_target_method": "measure_finial_glints.py on the unchanged selected reference",
+  "reaim": {
+    "emitter_radius_factor": 1,
+    "cone_degrees": 12,
+    "retain_elsewhere": false
+  },
+  "accepted_variant": "195-lower-cap-reaimed",
+  "accepted_sampling": 256,
+  "accepted_scene_sha256": "6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48",
+  "accepted_trial_sha256": "a3c6388b408da1aa7c697affdcce0e4f66e0f96763b7c087f8fda1a69ad26f61"
+}

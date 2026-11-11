@@ -27,7 +27,7 @@ Continue until completion, an execution/token limit, or owner stop. A plateau re
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest accepted model SHA-256: `652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c`.
+- Latest accepted model SHA-256: `6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48`.
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -66,9 +66,11 @@ The approved displayed queen height is **83.4% of king**. Preserve
 uniform image scaling. These are presentation conventions, not independently
 measured physical dimensions. Use the existing original-sprite base-width and
 model-height normalization to translate them into model dimensions; do not
-apply slider percentages directly to mesh scale. The owner-requested finial correction lowers the highest point by 0.0467
-world units; preserve the documented adjusted height target and existing
-tolerance without stretching the body. Preserve other established sizing
+apply slider percentages directly to mesh scale. The earlier owner-requested finial correction lowered the highest point by
+0.0467 world units. Checkpoint 21 lowers only the exposed egg cap by a further
+0.0380 units; body, crown and bowl dimensions remain unchanged. Preserve the
+documented adjusted height target and existing 0.015 ratio tolerance without
+stretching the body. Preserve other established sizing
 tolerances and historical projections. Do not change other pieces to disguise
 a discrepancy in this one.
 
@@ -116,7 +118,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.9683 / 85.5 / 84 / 79 / 76; working mean 84.4937%, holistic 80-85%. Original IoU: 97.9191%. Latest accepted model and validation: docs/queen-mission/iteration-020 (subtly rounded lower collar underside, preserving crest, upper surface and all heights at 54 degrees). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current accepted scores: 97.9683 / 86 / 84 / 79 / 76; working mean 84.5937%, holistic 80-85%. Original IoU: 97.9191%. Latest accepted model and validation: docs/queen-mission/iteration-021 (lower exposed egg cap, re-aimed existing finial reflections, unchanged body and bowl at 54 degrees). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 

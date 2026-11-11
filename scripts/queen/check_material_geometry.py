@@ -17,12 +17,20 @@ p=argparse.ArgumentParser();p.add_argument('--baseline',default='history/queen-m
 p.add_argument('--allow-socket-flare', action='store_true')
 p.add_argument('--allow-profile-flow', action='store_true')
 p.add_argument('--allow-lower-collar', action='store_true')
+p.add_argument('--allow-finial-cap', action='store_true')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 baseline=ROOT/args.baseline;current=ROOT/args.current
 a=read(baseline);b=read(current)
 report={'baseline':args.baseline,'current':args.current,'baseline_sha256':hashlib.sha256(baseline.read_bytes()).hexdigest(),'current_sha256':hashlib.sha256(current.read_bytes()).hexdigest(),'control_vertices_identical':bool(np.array_equal(a[0],b[0])),'atlas_control_uvs_identical':bool(np.array_equal(a[1],b[1])),'topology_identical':bool(np.array_equal(a[2],b[2]))}
-assert sum((args.allow_base_transition, args.allow_middle_collar_edge, args.allow_socket_flare,args.allow_profile_flow,args.allow_lower_collar)) <= 1
-if args.allow_lower_collar:
+assert sum((args.allow_base_transition, args.allow_middle_collar_edge, args.allow_socket_flare,args.allow_profile_flow,args.allow_lower_collar,args.allow_finial_cap)) <= 1
+if args.allow_finial_cap:
+ from validate_finial_cap import check
+ control=editable_mesh(bpy.context.scene)
+ scoped,before=check(b[0].reshape(-1,192,3),json.loads(bpy.context.scene['mission_material_config']),control.data.name)
+ assert scoped and report['baseline_sha256']==scoped['baseline_sha256']
+ assert np.array_equal(a[0].reshape(before.shape),before)
+ report['scoped_geometry_change']=scoped
+elif args.allow_lower_collar:
  from validate_lower_collar import check
  control=editable_mesh(bpy.context.scene)
  scoped,before=check(b[0].reshape(-1,192,3),json.loads(bpy.context.scene['mission_material_config']),control.data.name)

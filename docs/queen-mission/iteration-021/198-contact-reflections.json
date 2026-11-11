@@ -1,0 +1,9 @@
+{
+  "variant": "198-contact-reflections",
+  "source": "build/queen-mission/197-seat-reaimed/queen.blend",
+  "capture": "build/queen-mission/finial-surface-196",
+  "lights": [
+    {"name": "Finial contact left", "pixel": [458,275], "energy": 2000, "radius": 0.16, "cone": 4},
+    {"name": "Finial contact right", "pixel": [528,268], "energy": 2000, "radius": 0.16, "cone": 4}
+  ]
+}

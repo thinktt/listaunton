@@ -1188,3 +1188,38 @@ See [checkpoint 20](queen-mission/iteration-020/README.md) for all trial scores,
 renders and validation. The next examination is the finial's relationship to
 the crown tips in both original and side views. Model `652bc91ad251ca5a4ea183256b45bae31c7cffe69121ba21582103d91617a63c`. Local overlay,
 side renders and interactive mesh are synchronized; the mission is incomplete.
+
+
+## Twenty-first iteration — lower the exposed egg, November 11, 2026
+
+The cap's upper contour was high in both the fixed reference and side view.
+The accepted change compresses control rings 108–116 by 10% toward ring 107,
+with every radius and every body, bowl and crown control preserved. Actual
+overall height falls 0.0380 units (0.855%), entirely at the egg. Its projection
+above the crown tips reduces by about a quarter at the control profile. Three
+existing finial glint reflectors follow the changed surface; their power,
+color, size, shadows and links remain intact. All other 82 lights, pigment,
+relief, UVs and the 54-degree camera are unchanged. Six receivers were rebuilt.
+
+Five actual rendered trials tested the lower cap, reflection re-aiming, a
+shallower bowl seat and extra contact reflections. The raised seat and new
+emitters were rejected: they strengthened the upscale crescent but worsened
+the original-image contact fit. A deeper-cap config was not rendered and is
+not counted as an evaluated candidate. The accepted published image reproduces
+the saved 256-sample trial within one RGB byte, with identical alpha.
+
+Original outline IoU 97.9191%; high-res
+97.9683%, both unchanged. Finial-crop RGB
+error improves 6.03% against the original and rises 0.81% against the upscale.
+Original contact-area error rises slightly while the upscale contact improves;
+the small tradeoff is recorded. Subjective form rises from 85.5 to 86; color
+84, grain 79 and lighting 76 stay unchanged. Working mean 84.5937%,
+holistic 80–85%. This is a modest shape improvement, not a claim of a perfect
+model. The contact crescent, rear-bowl glints, grain and socket wall remain.
+
+See [checkpoint 21](queen-mission/iteration-021/README.md) for every trial's
+ratings, source crops, saved-render comparison, scoped checks and reproduction.
+Model `6ac2fe2309b0e6046db892be11ffbb986059228341c3b7ea140956e792de8c48`. Fixed and side renders, interactive mesh and local preview are
+synchronized. The viewer uses approximate lighting; UI checks used a simulated
+DOM/WebGL harness. Gallery defaults and source images remain unchanged. Next
+isolate contact illumination on the unchanged accepted bowl. Mission incomplete.
