@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "source_sha256": "5e4dd96a77a76767d5f59001ad673d1ce53051dc8e381fa8fb541a24c9fe6eb8",
+  "source_sha256": "fdfb52bc279c836b326b79325cf772ff4f589f9f16675926a6b6e52108c2c9eb",
   "shape_source_sha256": "f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4",
-  "variant": "217-socket-flow-collars",
+  "variant": "224-collars-only-baseline-base",
   "camera_elevation_degrees": 54.00000066135015,
   "camera_type": "ORTHO",
   "height": 4.407266139984131,
@@ -13,26 +13,10 @@
   "material": "Walnut - reference-derived pigment",
   "boundary_edges": 0,
   "nonmanifold_edges": 0,
-  "signed_volume": 4.543735530221855,
+  "signed_volume": 4.537900985233627,
   "crown_tips": 8,
   "body_rings_monotonic": true,
   "changed_rings": [
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39,
     50,
     51,
     52,
@@ -61,20 +45,6 @@
   ],
   "undeclared_control_rings_identical": true,
   "intent_measurements": {
-    "socket": {
-      "seat_height_before_after": [
-        1.3093900680541992,
-        1.2700001001358032
-      ],
-      "straight_wall_before_after": [
-        0.14699995517730713,
-        0.12000036239624023
-      ],
-      "upper_wall_radius_before_after": [
-        0.5644999146461487,
-        0.5450000762939453
-      ]
-    },
     "collars": {
       "lower_peak_radius": 0.6744001507759094,
       "lower_end_radii": [

@@ -43,6 +43,10 @@ co=np.empty(len(mesh.vertices)*3,dtype=np.float32);mesh.vertices.foreach_get('co
 height=float(np.ptp(co[:,2]));low=co[co[:,2]<=co[:,2].min()+height*.25]
 diameter=float((np.ptp(low[:,0])+np.ptp(low[:,1]))/2)
 ratio=height/diameter
+# The scoped receiver check below evaluates the same subdivided surface again.
+# Release this first evaluated copy before that check so the validator does not
+# hold two dense meshes at once.
+bm.free();evaluated.to_mesh_clear()
 # The owner's smaller, deeper finial intentionally lowers the maximum height.
 # Keep the sizing tolerance and validate each local profile edit against its own baseline.
 material_settings=json.loads(scene.get('mission_material_config','{}'))
@@ -86,7 +90,7 @@ if side_shape:
         args.report_dir.mkdir(parents=True,exist_ok=True)
         (args.report_dir/name).write_text(json.dumps(side_report,indent=2)+'\n')
     print(json.dumps(side_report,indent=2))
-    bm.free();evaluated.to_mesh_clear();sys.exit(0)
+    sys.exit(0)
 seating=material_settings.get('finial_seating')
 finial_cap, finial_baseline = check_finial_cap(controls, material_settings, obj.data.name)
 lower_collar, lower_baseline = check_lower_collar(finial_baseline, material_settings, obj.data.name)
@@ -130,4 +134,3 @@ for name in ('finish-validation.json','model-validation.json'):
     args.report_dir.mkdir(parents=True,exist_ok=True)
     (args.report_dir/name).write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))
-bm.free();evaluated.to_mesh_clear()

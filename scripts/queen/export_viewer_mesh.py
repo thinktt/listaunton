@@ -1,6 +1,11 @@
-"""Export the evaluated queen meshes for a standalone WebGL2 viewer.
+"""Export the queen mesh for the standalone WebGL2 viewer.
 
-Run with Blender in background mode. The source .blend is only read.
+By default this exports the saved editable control surface.  It is the actual
+authored model geometry (not a decimation), preserves its UVs and normals, and
+keeps the interactive viewer synchronized with a newly accepted model even on
+runtimes where extracting the dense evaluated Catmull-Clark mesh is unstable.
+``--evaluated`` remains available for environments that can safely export the
+render subdivision surface.  The source .blend is only read in either mode.
 Binary layout: interleaved little-endian float32 XYZ/NXYZ/UV vertices followed by
 little-endian uint32 triangle indices. No geometry is decimated or simplified.
 """
@@ -69,6 +74,8 @@ def main():
     parser.add_argument("--blend", type=Path, default=DELIVERABLES / "queen-rebuilt.blend")
     parser.add_argument("--binary", type=Path, default=WORK / "viewer-mesh.bin")
     parser.add_argument("--metadata", type=Path, default=WORK / "viewer-mesh.json")
+    parser.add_argument("--evaluated", action="store_true",
+                        help="Export the dense render-subdivision surface instead of the saved control mesh.")
     args = parser.parse_args(args_after_separator)
     blend_path = args.blend.resolve()
     before_hash = sha256(blend_path)
@@ -82,21 +89,23 @@ def main():
     expected_count = 1 if bpy.context.scene.get('continuous_crown') else 2
     if len(objects) != expected_count:
         raise RuntimeError(f"Expected {expected_count} queen mesh objects, found {len(objects)}: {[obj.name for obj in objects]}")
-    # Match render subdivision settings in memory. Nothing is saved back to Blender.
-    for obj in objects:
-        for modifier in obj.modifiers:
-            modifier.show_viewport = modifier.show_render
-            if modifier.type == "SUBSURF":
-                modifier.levels = modifier.render_levels
-    bpy.context.view_layer.update()
+    if args.evaluated:
+        # Match render subdivision settings in memory. Nothing is saved back to Blender.
+        for obj in objects:
+            for modifier in obj.modifiers:
+                modifier.show_viewport = modifier.show_render
+                if modifier.type == "SUBSURF":
+                    modifier.levels = modifier.render_levels
+        bpy.context.view_layer.update()
     graph = bpy.context.evaluated_depsgraph_get()
     graph.update()
 
     vertex_blocks, index_blocks, parts = [], [], []
     vertex_offset = index_offset = 0
     for obj in objects:
-        evaluated = obj.evaluated_get(graph)
-        evaluated_mesh = evaluated.to_mesh(preserve_all_data_layers=True, depsgraph=graph)
+        evaluated = obj.evaluated_get(graph) if args.evaluated else None
+        evaluated_mesh = (evaluated.to_mesh(preserve_all_data_layers=True, depsgraph=graph)
+                          if evaluated else obj.data)
         try:
             evaluated_mesh.calc_loop_triangles()
             vertex_count = len(evaluated_mesh.vertices)
@@ -142,7 +151,7 @@ def main():
             if corner_uv_error>1e-6 or not np.array_equal(selected_vertices[indices],loop_vertices[tri_loops]):
                 raise RuntimeError('UV seam splitting changed a triangle corner.')
 
-            transform = np.array(evaluated.matrix_world, dtype=np.float64)
+            transform = np.array((evaluated or obj).matrix_world, dtype=np.float64)
             positions = positions @ transform[:3, :3].T + transform[:3, 3]
             normal_transform = np.linalg.inv(transform[:3, :3]).T
             normals = normals @ normal_transform.T
@@ -176,12 +185,13 @@ def main():
                 "indexOffset": index_offset, "indexCount": int(indices.size),
                 "triangleCount": triangle_count, "bounds": bounds(interleaved[:, :3]),
                 "subdivisionLevels": [modifier.render_levels for modifier in obj.modifiers
-                                      if modifier.type == "SUBSURF" and modifier.show_render],
+                                      if modifier.type == "SUBSURF" and modifier.show_render] if args.evaluated else [],
             })
             vertex_offset += vertex_count
             index_offset += int(indices.size)
         finally:
-            evaluated.to_mesh_clear()
+            if evaluated:
+                evaluated.to_mesh_clear()
 
     vertices = np.concatenate(vertex_blocks)
     indices = np.concatenate(index_blocks)
@@ -218,6 +228,8 @@ def main():
         "schemaVersion": 2,
         "sourceBlend": str(blend_path), "sourceSha256": before_hash,
         "sourceUnchanged": True, "binary": str(args.binary.resolve()),
+        "meshRepresentation": "evaluated-render-surface" if args.evaluated else "editable-control-surface",
+        "renderSubdivisionApplied": bool(args.evaluated),
         "coordinateSystem": "Blender world XYZ, right-handed, +Z up; no axis conversion",
         "endianness": "little", "vertexType": "float32", "indexType": "uint32",
         "vertexCount": int(vertices.shape[0]), "indexCount": int(indices.size),
@@ -234,6 +246,7 @@ def main():
             "normalLengthMin": float(normal_lengths.min()), "normalLengthMax": float(normal_lengths.max()),
             "binaryRoundTripExact": True, "sourceHashAndMtimeUnchanged": True,
             "simplificationApplied": False,
+            "editableControlSurfaceDirect": not args.evaluated,
         },
     }
     binary_tmp.replace(args.binary)

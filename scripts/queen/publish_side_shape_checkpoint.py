@@ -34,7 +34,10 @@ def main():
     trial = ROOT / 'build' / 'queen-mission' / variant / 'queen.blend'
     validation = json.loads((args.evidence / 'finish-validation.json').read_text())
     assert validation['passed']
-    assert validation['source_sha256'] == sha256(trial)
+    # The general finish validator calls the active file ``source_sha256``;
+    # the scoped geometry validator calls it ``model_sha256``.
+    trial_sha = validation.get('model_sha256', validation.get('source_sha256'))
+    assert trial_sha == sha256(trial)
     assert validation['variant'] == variant
     assert validation['camera_type'] == 'ORTHO'
     assert abs(validation['camera_elevation_degrees'] - 54) < 1e-4
@@ -45,7 +48,8 @@ def main():
     settings = json.loads(scene['mission_material_config'])
     feature = settings.get('side_shape_study')
     assert feature and feature['config']['variant'] == variant
-    assert feature['source_sha256'] == validation['shape_source_sha256']
+    checkpoint_sha = validation.get('shape_source_sha256', validation['source_sha256'])
+    assert feature['source_sha256'] == checkpoint_sha
     wood = obj.data.materials[0]
     sampling = settings.get('render_sampling', {})
     scene.cycles.samples = sampling.get('samples', 64)
@@ -60,7 +64,7 @@ def main():
     bpy.context.preferences.filepaths.save_version = 0
     active = ROOT / 'models' / 'queen' / 'queen-rebuilt.blend'
     bpy.ops.wm.save_as_mainfile(filepath=str(active), compress=True)
-    assert sha256(active) != validation['shape_source_sha256']
+    assert sha256(active) != checkpoint_sha
     write(scene, obj, json.loads((ROOT / 'assets/queen/finish-fit.json').read_text()))
 
     try:
@@ -100,7 +104,7 @@ def main():
         'variant': variant,
         'source_trial_sha256': sha256(trial),
         'active_model_sha256': sha256(active),
-        'source_checkpoint_sha256': validation['shape_source_sha256'],
+        'source_checkpoint_sha256': checkpoint_sha,
         'assets': [str(assets / name) for name in ('queen-brown.png', 'queen-matched.png', 'queen-wood-profile.png', 'queen-finished-profile.png')],
         'saved_model_camera_preserved': 'The active blend is saved before the temporary side camera is set.',
     }

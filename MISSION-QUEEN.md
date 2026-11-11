@@ -9,8 +9,10 @@ do not resume the unfinished contact-light experiments as the active task.
 
 Work through these priorities:
 
-1. **Lower, shorter socket.** Reduce the apparent height of the raised socket
-   and make its transition into the stem and flare more convincing.
+1. **Socket shelf and drop are essential.** The raised socket must retain its
+   clearly legible horizontal shelf followed by a steep drop into the flare.
+   It may be made lower or shorter only when that two-stage profile remains
+   intact; do not smooth it into a continuous tapered drum.
 2. **Rounded bottom collar.** Replace the outward-flaring shelf with a compact,
    rounded bead whose upper and lower faces both curve. Compare the actual
    collars in the inspiration study, not just the existing model's underside.
@@ -43,7 +45,8 @@ Do not invent a token budget or launch additional agents from this file.
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest accepted model SHA-256: `f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4`.
+- Latest accepted working model SHA-256: `fdfb52bc279c836b326b79325cf772ff4f589f9f16675926a6b6e52108c2c9eb`
+  (checkpoint 24; its checkpoint-22 source archive remains recorded below).
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -101,7 +104,11 @@ that separately and verify it does not conceal a shape mismatch.
 
 ## Feature examination
 
-Primary examination: socket height and seating; both faces of the bottom collar; upper-collar diameter and thickness; whole base/socket compression, breadth and shoulder height. Preserve the compact egg, shallow inverted bowl, continuous splash-like crown, eight tips and flattened rim intervals.
+Primary examination: socket height and seating; its distinct shelf followed by
+the steep flare drop; both faces of the bottom collar; upper-collar diameter
+and thickness; whole base/socket compression, breadth and shoulder height.
+Preserve the compact egg, shallow inverted bowl, continuous splash-like crown,
+eight tips and flattened rim intervals.
 
 Establish a fresh baseline: historical findings are inspection priorities,
 not proof that every defect persists. Inspect full silhouettes and enlarged
