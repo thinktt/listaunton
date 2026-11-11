@@ -138,7 +138,7 @@ original IoU by +0.000028 points, consistent with antialiasing precision, with
 no meaningful external outline regression. This is not the rejected 001b trial.
 
 The working five-category mean is 70.18%, up from 59.58%; the holistic visual
-assessment is roughly 65–70%. These are explicitly subjective except the two
+assessment is roughly 65â€“70%. These are explicitly subjective except the two
 IoUs. The mission remains incomplete.
 
 Completed checks for this checkpoint:
@@ -234,7 +234,7 @@ the small wrinkles remain somewhat too uniform and artificial. Roughness is
 0.19, coat roughness 0.075, coat weight 0.35; bump strength 0.45 and distance
 0.007. Trial 025's directional polish was inspected but did not merit adoption.
 
-Trial 024 only changes rings 107–116, making the finial fuller near its top
+Trial 024 only changes rings 107â€“116, making the finial fuller near its top
 and raising the lower shoulder. It keeps the apex at the same height; the
 neutral render was completed too. Its small IoU variation is antialiasing
 precision from 48 rather than 64 samples, not a change to the outer boundary.
@@ -255,7 +255,7 @@ visible grain are retained. This is not claimed to be an exact pixel match.
 
 Accepted scores: silhouette **97.904%**, interior **78**, color **75**, grain
 **70**, lighting **49**; equal-weight working mean **73.98%** (holistic visual
-assessment about 70–75%). Original sprite IoU is **97.9036%**, unchanged from
+assessment about 70â€“75%). Original sprite IoU is **97.9036%**, unchanged from
 the first checkpoint. The finial remains somewhat tall, the bowl and rim
 still differ, the collars are shelf-like, and the socket's shoulder is too
 soft. Strong reflections remain in the wrong places, especially on the base,
@@ -356,7 +356,7 @@ about the source artist's lighting. Accepted/public assets remain 9e03943.
 The next material experiment measures the 033 shader's black/white base-color
 responses under those lights, plus its unlit pigment. It estimates pigment
 from `(reference - black response) / (white response - black response)`,
-bounded to 0.3–3.5 times the prior pigment. It suppresses obvious source
+bounded to 0.3â€“3.5 times the prior pigment. It suppresses obvious source
 highlights, pixels dominated by the model's specular response, silhouette
 edges and weakly lit pixels. These limitations avoid directly painting bright
 photographic reflections into color. Residual source shading is still possible;
@@ -372,7 +372,7 @@ are pending; no new texture or lighting has been accepted yet.
 Material-batch resource reading at 2026-11-05 08:46:03 UTC: weekly 11% used /
 89% remaining, reset 2026-11-11 13:19:47 UTC. Luna continues five-minute checks.
 
-Trials 034–036 have now been rendered and inspected at full-piece and detail
+Trials 034â€“036 have now been rendered and inspected at full-piece and detail
 scales. None replaces the accepted checkpoint.
 
 | Trial | High-res IoU | Original IoU | Interior form | Color | Grain | Lighting | Overall | Decision |
@@ -490,7 +490,7 @@ is the lower collar's rounded upper quadrant, with its back edge pulled inward
 to improve rather than sacrifice the fixed-view outline. Local grain stretching
 on that curved band is a small documented tradeoff. Pending final side/viewer
 checks, scores are silhouette 97.958%, interior 80, color 75, grain 69, lighting
-50: working mean **74.39%**, holistic still about 70–75%. It is not a perfect
+50: working mean **74.39%**, holistic still about 70â€“75%. It is not a perfect
 match. The flat parts of the other collars, broad socket shoulder, overly coarse
 grain, misplaced highlights and missing fine bright crescents remain.
 
@@ -599,7 +599,7 @@ than an artistic failure: editing and repacking a reopened sRGB-tagged float
 EXR converted the newly assigned linear pigment again. The saved 051 pigment
 was substantially darker than the in-memory render. 055's actual render scores
 97.961 / 80 / 22 / 25 / 59, mean 56.79; it is rejected. The in-memory scores
-of 049–052 do not qualify those saved files for publication.
+of 049â€“052 do not qualify those saved files for publication.
 
 056 creates a fresh explicitly linear float image and saves EXR before packing.
 Its color survives, but alpha-associated storage complicates an exact pixel
@@ -614,7 +614,7 @@ generated linear input. No reference or public asset was changed by this bug.
 full render retains the finer aligned grain and the improvement in base
 reflection placement. It is a candidate for the fourth checkpoint, with
 scores **97.961 / 80 / 75 / 77 / 59**, working mean **77.79%** and holistic
-assessment around 75–80%. It remains visibly incomplete. The bowl still has
+assessment around 75â€“80%. It remains visibly incomplete. The bowl still has
 coarse grain from the old relief field; finial glints are elongated; the socket
 crescent and thin rim/plate reflections are incomplete; collar and socket
 curvature remain wrong. Some grain contrast on the crown and stem is too strong.
@@ -723,7 +723,7 @@ identical alpha. Rebuilding from the tracked fourth model and v4 PNG gives
 mean error 0.00003262/255, maximum one level, and identical alpha. The saved
 delivery model is
 `16904dba7abc57e60ec8e6d73c30f46f9e0890ec46272753c648e7e88f64247e`.
-Scores stay **97.961 / 80 / 80 / 77 / 59**, mean **78.79%**, holistic 75–80%.
+Scores stay **97.961 / 80 / 80 / 77 / 59**, mean **78.79%**, holistic 75â€“80%.
 
 Control geometry, topology and atlas UVs match the fourth checkpoint exactly.
 The model remains closed/manifold with eight tips, positive volume, fixed
@@ -829,7 +829,7 @@ maximum one level, with identical alpha. The viewer retains 715,776 triangles
 and exact binary round trip. Camera error remains below 0.0000382 pixels;
 source, tabs, persistent orbit, parts sandbox/CSP and side state pass the
 simulated DOM/WebGL checks. Native browser GPU inspection remains unavailable.
-The working score is **79.19%**, holistic 75–80%, and the mission is incomplete.
+The working score is **79.19%**, holistic 75â€“80%, and the mission is incomplete.
 
 Post-integration checks pass for eight pages, 55 local links, all twelve
 original reference PNG hashes, candidate provenance/alignment, model/viewer
@@ -842,7 +842,7 @@ no push or hosting deployment is performed.
 The sixth checkpoint is committed as `d1b806f`; its model and preview hashes
 remain `82100ad9047426b1be46e72d01d769189b4e9f667005fd8c8bcc5d743c16526e`.
 The actual image remains the best accepted result. Evidence and reproducible
-experiment scripts for 077–081 are recorded in `queen-mission/iteration-007`.
+experiment scripts for 077â€“081 are recorded in `queen-mission/iteration-007`.
 
 | Trial | Outline IoU | Form | Color | Grain | Lighting | Mean | Decision |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
@@ -852,7 +852,7 @@ experiment scripts for 077–081 are recorded in `queen-mission/iteration-007`.
 | 080 fresh light fit for 079 | 97.961 | 80 | 77 | 75 | 54 | 76.79 | Reject: false spots and shiny bands |
 | 081 circumferential polish | 97.961 | 80 | 80 | 77 | 61 | 79.19 | Reject: no convincing improvement |
 
-The current working score stays **79.19%**, holistic 75–80%; it is not a
+The current working score stays **79.19%**, holistic 75â€“80%; it is not a
 perfect match. Only 077 changes geometry, and its original IoU falls from
 97.9109% to 97.7050%. The other trials retain both outlines exactly. Lower
 numeric light-fitting loss did not produce a better-looking model. The
@@ -875,7 +875,7 @@ render improves the reference match and all delivery checks pass.
 
 Start from `0390d4b`, retaining the sixth accepted model as the baseline.
 Detailed evidence is in `queen-mission/iteration-008`. Broad fits using linked
-reflectors (083�085) strengthened some edges but added a gray sheen and false
+reflectors (083–085) strengthened some edges but added a gray sheen and false
 body highlights. Direct-only lighting and high-sample diagnostics did not
 make those rigs acceptable. Their lower fitting loss did not establish a
 better image. All were rejected.
@@ -894,7 +894,7 @@ better image. All were rejected.
 reflectors from directly lighting the finial. Three intended spots remain.
 The long merged streak becomes three compact glints, closer to the reference.
 The geometry, UVs, color and relief remain unchanged. Original IoU stays
-97.9109%. The holistic assessment is still 75�80%; the mission is incomplete.
+97.9109%. The holistic assessment is still 75–80%; the mission is incomplete.
 
 The closed editable control remains the viewer/export source. Two exact
 surface copies provide light receivers for final rendering. Validation checks
@@ -930,7 +930,7 @@ against the current model hash. Earlier archived reports are left intact.
 ## Ninth iteration: texture diagnostics; owner-requested pause
 
 The eighth checkpoint is committed as `7d7d55a` and synchronized to the local
-preview. Six material trials (090�095) were rendered, compared at fixed
+preview. Six material trials (090–095) were rendered, compared at fixed
 coordinates and rejected. See `queen-mission/iteration-009` for evidence,
 all five scores, hashes and a mission-start/current progress comparison.
 
@@ -951,7 +951,7 @@ diagnoses; do not repeat them without a different, supported hypothesis.
 
 The accepted model stays
 `c32bccbf33e5e137d982bdeafd881a783b006f62e644dbd5db2df57d02801004`,
-working mean 79.7922%, holistic 75�80%. Both reference IoUs, the saved camera,
+working mean 79.7922%, holistic 75–80%. Both reference IoUs, the saved camera,
 viewer and local preview remain unchanged. There is no pending promotion.
 
 The owner explicitly asks to finish the current task, then pause and chat.
@@ -1143,3 +1143,23 @@ bowl/rim reflection shape and grain. The goal remains incomplete.
 The owner's comparison with the original black sprite led to a higher inner flare, a 5.4% narrower socket and 19.6% less exposed socket height. The light assignments follow the original faces and two local reflections have lower power. Outline overlap is 97.9122% for the original and 97.9657% for the selected high-res. The new profile reduces lower-body image error against both. Form 84, color 84, grain 79 and lighting 76 are visual estimates. The working mean is 84.1931%. A visible difference remains in the breakup of the base highlight.
 
 Accepted model `8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6`. See [checkpoint 18](queen-mission/iteration-018/README.md) for dimensions, comparisons and reproduction.
+
+
+## Nineteenth iteration â€” profile study, November 11, 2026
+
+The owner allowed camera experiments and identified Chavet/Lardy as whole-set
+height guides. Five purposeful variants tested the base, the stem/crown curves,
+and a simple plus bounded-refitted 52-degree projection. The accepted radial
+edit gives the stem a fuller waist and the crown body a more gradual flare.
+All vertical proportions, base, socket, collars, bowl and finial stay exact;
+the saved camera remains at 54 degrees. The base trial and both 52-degree
+experiments were rejected. Neither a lower image error nor a plausible camera
+alone establishes the correct geometry.
+
+Original IoU 97.9177%; high-res IoU
+97.9701%. Form 85, color 84, grain 79,
+lighting 76; mean 84.3940%, holistic 80â€“85%. Improvements remain
+modest. The socket wall, lower collar underside, finial exposure and fine
+reflections still need investigation. Source and opposite-color images remain
+unchanged. See [checkpoint 19](queen-mission/iteration-019/README.md) for all
+five trial ratings, comparisons and validation. Model `d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0`.

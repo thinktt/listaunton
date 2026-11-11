@@ -1,0 +1,34 @@
+{
+  "baseline": "history/queen-mission-018/queen-rebuilt.blend",
+  "current": "build/queen-mission/188-stronger-flow/queen.blend",
+  "baseline_sha256": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
+  "current_sha256": "63003d77e19ef9b7ba126d24e29105deacc5cb70b74bd95efc40f0f2ae7ad0a9",
+  "control_vertices_identical": false,
+  "atlas_control_uvs_identical": true,
+  "topology_identical": true,
+  "scoped_geometry_change": {
+    "baseline_sha256": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
+    "changed_rings": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90
+    ],
+    "all_heights_identical": true,
+    "all_other_controls_identical": true,
+    "maximum_radial_displacement": 0.03565694019198418,
+    "crown_tips_bowl_finial_base_collars_unchanged": true
+  },
+  "passed": true
+}

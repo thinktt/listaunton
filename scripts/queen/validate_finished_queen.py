@@ -11,6 +11,7 @@ from validate_render_receivers import check as check_receivers
 from validate_base_transition import check as check_base_transition
 from validate_middle_collar_edge import check as check_middle_edge
 from refine_socket_flare import check_scope as check_socket_flare
+from validate_profile_flow import check as check_profile_flow
 p=argparse.ArgumentParser();p.add_argument('--blend',type=Path,default=root/'models/queen/queen-rebuilt.blend');p.add_argument('--report-dir',type=Path,default=root/'assets/queen')
 args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=args.blend
@@ -43,7 +44,8 @@ ratio=height/diameter
 # Keep the sizing tolerance and validate each local profile edit against its own baseline.
 material_settings=json.loads(scene.get('mission_material_config','{}'))
 seating=material_settings.get('finial_seating')
-socket_flare, prior_controls = check_socket_flare(controls, material_settings, obj.data.name)
+profile_flow, profile_baseline = check_profile_flow(controls, material_settings, obj.data.name)
+socket_flare, prior_controls = check_socket_flare(profile_baseline, material_settings, obj.data.name)
 middle_edge,pre_collar_controls=check_middle_edge(prior_controls,material_settings)
 base_transition=check_base_transition(pre_collar_controls,material_settings)
 if middle_edge and base_transition:base_transition['verification_scope']='Prior base edit checked on pre-collar snapshot; current base is identical to it by the separate middle-edge scope check.'
@@ -67,6 +69,7 @@ report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdige
 report['finial_seating']=seating
 report['base_transition']=base_transition
 report['middle_collar_edge_refinement']=middle_edge
+if profile_flow:report['profile_flow_refinement']=profile_flow
 if socket_flare:
     report['raised_flare_compact_socket'] = socket_flare
 report['adjusted_height_target']=adjusted_target

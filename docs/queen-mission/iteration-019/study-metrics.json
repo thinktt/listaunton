@@ -1,0 +1,50 @@
+{
+  "accepted-18": {
+    "original_iou": 0.9791221044618494,
+    "highres_iou": 0.9796566983680648,
+    "original_base_rgb_mse": 262.4285396685653,
+    "original_whole_rgb_mse": 289.1995473853749,
+    "highres_base_rgb_mse": 217.7774897414961,
+    "highres_whole_rgb_mse": 213.8971500368411
+  },
+  "184-soft-base": {
+    "original_iou": 0.9787972419263639,
+    "highres_iou": 0.9792501958925836,
+    "original_base_rgb_mse": 271.89253064485763,
+    "original_whole_rgb_mse": 293.7900324985558,
+    "highres_base_rgb_mse": 234.38624905348252,
+    "highres_whole_rgb_mse": 223.10904361359582
+  },
+  "185-body-flow": {
+    "original_iou": 0.9791458424334674,
+    "highres_iou": 0.9797230704603105,
+    "original_base_rgb_mse": 262.25396959434437,
+    "original_whole_rgb_mse": 288.16694628346846,
+    "highres_base_rgb_mse": 216.17393075295863,
+    "highres_whole_rgb_mse": 212.47849624914338
+  },
+  "186-angle-52": {
+    "original_iou": 0.9626549904930237,
+    "highres_iou": 0.9664697097941117,
+    "original_base_rgb_mse": 251.27326376059287,
+    "original_whole_rgb_mse": 283.5444415079818,
+    "highres_base_rgb_mse": 255.64705882352942,
+    "highres_whole_rgb_mse": 304.60885333720086
+  },
+  "187-refitted-52": {
+    "original_iou": 0.9688092278492856,
+    "highres_iou": 0.9684624575440669,
+    "original_base_rgb_mse": 224.8907693812755,
+    "original_whole_rgb_mse": 260.46083655016184,
+    "highres_base_rgb_mse": 337.0663633135901,
+    "highres_whole_rgb_mse": 342.47625028070496
+  },
+  "188-stronger-flow": {
+    "original_iou": 0.9791695690846934,
+    "highres_iou": 0.9796988068573398,
+    "original_base_rgb_mse": 261.90683169108564,
+    "original_whole_rgb_mse": 288.1501708725857,
+    "highres_base_rgb_mse": 216.80516053103185,
+    "highres_whole_rgb_mse": 213.16005569066036
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "source_sha256": "8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6",
+  "accepted_sha256": "d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0",
+  "scores": {
+    "silhouette_selected_measured": 97.97012257336769,
+    "silhouette_original_measured": 97.9177271826088,
+    "interior_form_subjective": 85,
+    "wood_color_subjective": 84,
+    "grain_subjective": 79,
+    "lighting_subjective": 76
+  },
+  "mean": 84.39402451467353,
+  "holistic_visual_range": [
+    80,
+    85
+  ],
+  "trial_sampling": 64,
+  "accepted_sampling": 256,
+  "trials": {
+    "accepted-18": {
+      "original_iou": 0.9791221044618494,
+      "highres_iou": 0.9796566983680648,
+      "original_base_rgb_mse": 262.4285396685653,
+      "original_whole_rgb_mse": 289.1995473853749,
+      "highres_base_rgb_mse": 217.7774897414961,
+      "highres_whole_rgb_mse": 213.8971500368411
+    },
+    "184-soft-base": {
+      "original_iou": 0.9787972419263639,
+      "highres_iou": 0.9792501958925836,
+      "original_base_rgb_mse": 271.89253064485763,
+      "original_whole_rgb_mse": 293.7900324985558,
+      "highres_base_rgb_mse": 234.38624905348252,
+      "highres_whole_rgb_mse": 223.10904361359582,
+      "visual_scores": {
+        "form": 84,
+        "color": 83,
+        "grain": 79,
+        "lighting": 75
+      },
+      "decision": "Rejected: barely changed the side contour and broadened the base reflection.",
+      "silhouette_score": 97.92501958925835,
+      "working_mean": 83.78500391785167
+    },
+    "185-body-flow": {
+      "original_iou": 0.9791458424334674,
+      "highres_iou": 0.9797230704603105,
+      "original_base_rgb_mse": 262.25396959434437,
+      "original_whole_rgb_mse": 288.16694628346846,
+      "highres_base_rgb_mse": 216.17393075295863,
+      "highres_whole_rgb_mse": 212.47849624914338,
+      "visual_scores": {
+        "form": 84.5,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Supported intermediate trial; stronger local curve preferred.",
+      "silhouette_score": 97.97230704603105,
+      "working_mean": 84.2944614092062
+    },
+    "186-angle-52": {
+      "original_iou": 0.9626549904930237,
+      "highres_iou": 0.9664697097941117,
+      "original_base_rgb_mse": 251.27326376059287,
+      "original_whole_rgb_mse": 283.5444415079818,
+      "highres_base_rgb_mse": 255.64705882352942,
+      "highres_whole_rgb_mse": 304.60885333720086,
+      "visual_scores": {
+        "form": 82,
+        "color": 83,
+        "grain": 79,
+        "lighting": 73
+      },
+      "decision": "Rejected: axial compensation alone loses ring and silhouette registration.",
+      "silhouette_score": 96.64697097941118,
+      "working_mean": 82.72939419588224
+    },
+    "187-refitted-52": {
+      "original_iou": 0.9688092278492856,
+      "highres_iou": 0.9684624575440669,
+      "original_base_rgb_mse": 224.8907693812755,
+      "original_whole_rgb_mse": 260.46083655016184,
+      "highres_base_rgb_mse": 337.0663633135901,
+      "highres_whole_rgb_mse": 342.47625028070496,
+      "visual_scores": {
+        "form": 82,
+        "color": 83,
+        "grain": 79,
+        "lighting": 72
+      },
+      "decision": "Rejected: bounded refit improves on the simple 52-degree trial but widens the socket, loses the original outline and disrupts highlights.",
+      "silhouette_score": 96.8462457544067,
+      "working_mean": 82.56924915088135
+    },
+    "188-stronger-flow": {
+      "original_iou": 0.9791695690846934,
+      "highres_iou": 0.9796988068573398,
+      "original_base_rgb_mse": 261.90683169108564,
+      "original_whole_rgb_mse": 288.1501708725857,
+      "highres_base_rgb_mse": 216.80516053103185,
+      "highres_whole_rgb_mse": 213.16005569066036,
+      "visual_scores": {
+        "form": 85,
+        "color": 84,
+        "grain": 79,
+        "lighting": 76
+      },
+      "decision": "Accepted: fuller stem and more concave crown body, unchanged vertical proportions and slightly improved original/high-res outline fit.",
+      "silhouette_score": 97.96988068573398,
+      "working_mean": 84.3939761371468
+    }
+  },
+  "limitations": "Visual scores are subjective; side geometry is inferred. Silhouette scores do not prove the original projection or form."
+}

@@ -27,7 +27,7 @@ Continue until completion, an execution/token limit, or owner stop. A plateau re
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest accepted model SHA-256: `8420d47bbbd8cb86c1eee77e5b326f945fe57b4e3acf7d30e18414f9aa0864c6`.
+- Latest accepted model SHA-256: `d5882d44aa0dc3f2f72ea7449f353e530e59888fb3804ef32233544ce6feffb0`.
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -40,6 +40,8 @@ log before work. Refine the latest accepted model; the recorded hash is a
 baseline, not a command to undo subsequent accepted work. Do not restart from
 scratch or restore rejected alternatives without owner direction.
 
+The owner identifies Chavet and Lardy as useful **whole-set proportion** guides: pawn, rook, knight, bishop, queen, king progressively taller, with the queen relatively close to the king. This is visual interpretation, not a claim of documented design ancestry. Preserve the gallery defaults until a separate set-height decision. For the queen base, the modern German Knight study is a useful reference for a broad continuous slope with restrained rounding near the foot, rather than a pronounced separate bulge.
+
 The original Lichess sprite is the ultimate source of truth. The selected
 high-res image supports precise detail fitting. Record conflicts and prefer
 the original. Imagined side renders guide style and plausible side proportions;
@@ -50,9 +52,14 @@ recolor or replace a reference to improve a score.
 
 ## Camera and proportions
 
-Keep the reference camera orthographic, **54 degrees above the board**. This
-is the owner's assumption, not a historically recovered fact. Keep framing,
-scale and registration fixed during an iteration and compare identical pixels.
+The accepted reference camera is orthographic, **54 degrees above the board**.
+On November 11, 2026, the owner explicitly allowed experiments away from 54°
+using the inspiration study. Treat angle as an estimate. Keep reference pixels,
+registration and image scale fixed within each candidate; record any camera
+and physical proportion changes separately. Retain the accepted camera/model
+until a candidate improves the side view and remains consistent with the
+authoritative original. Do not equate an improved silhouette score with proof
+of the original projection.
 
 The approved displayed queen height is **83.4% of king**. Preserve
 `assets/side-views/defaults.json`, shared foot baseline, gallery order and
@@ -109,7 +116,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.9657 / 84 / 84 / 79 / 76; working mean 84.1931%, holistic 80-85%. Original IoU: 97.9122%. Latest accepted model and validation: docs/queen-mission/iteration-018 (higher flare and compact socket). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current accepted scores: 97.9701 / 85 / 84 / 79 / 76; working mean 84.3940%, holistic 80-85%. Original IoU: 97.9177%. Latest accepted model and validation: docs/queen-mission/iteration-019 (fuller stem and flowing crown body, accepted at 54 degrees after two rejected 52-degree tests). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 
@@ -197,7 +204,7 @@ progresses; do not treat this backlog as immutable measurements.
    render sweep.
 4. **Modify and render.** Change the actual Blender model/material/lights and
    their reproducible scripts. Use draft renders for decisions and a clean
-   render for acceptance. Keep the 54-degree camera fixed. Do not substitute
+   render for acceptance. Use the recorded candidate camera consistently. Do not substitute
    a reference photograph, billboard, or composited image for a real model
    render. Reference-derived texture work must remain a usable 3D material.
 5. **Re-examine and score everything.** Compare the new render against both

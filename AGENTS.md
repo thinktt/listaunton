@@ -129,3 +129,16 @@ The accepted render uses 256 fixed samples with use_light_tree=False for repeata
 
 
 Queen checkpoint 18 raises the inner flare and shortens the socket. Rebuild with `scripts/queen/refine_socket_flare.py` and `docs/queen-mission/iteration-018/profile.json` from the archived seventeenth queen. Preserve the stem/socket face membership when regenerating the six light receivers. The camera stays at 54°. See `docs/queen-mission/iteration-018/README.md` for the profile, light settings and validation.
+
+
+Queen checkpoint 19 changes only radial controls 40–48 (stem) and 85–90
+(crown body), keeping all heights and the accepted 54-degree camera. Rebuild
+with profile_study.py and docs/queen-mission/iteration-019/profile.json from
+history/queen-mission-018. validate_profile_flow.py verifies the scoped edit
+before the older checkpoint validators; check_material_geometry.py accepts
+--allow-profile-flow against checkpoint 18. Regenerate the same six receivers
+after future geometry edits. Full material, light, camera and atlas preservation
+is checked by validate_profile_preservation.py. The owner now permits other
+camera-angle experiments; record them separately and prefer the original
+sprite when they conflict with plausible side references. Two 52-degree tests
+were rejected, not proof that every alternative angle is wrong.
