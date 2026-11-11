@@ -1,0 +1,53 @@
+{
+  "checkpoint": 23,
+  "variant": "217-socket-flow-collars",
+  "camera": {
+    "type": "ORTHO",
+    "elevation_degrees": 54.00000066135015,
+    "object_scale_xyz": [1, 1, 1]
+  },
+  "source": {
+    "checkpoint_22_blend_sha256": "f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4",
+    "active_checkpoint_23_blend_sha256": "5e4dd96a77a76767d5f59001ad673d1ce53051dc8e381fa8fb541a24c9fe6eb8"
+  },
+  "silhouette_iou": {
+    "original_black": 0.9769968786640897,
+    "selected_highres": 0.9793040874898364,
+    "original_white_secondary": 0.9357150179395182,
+    "checkpoint_22_original_black": 0.9791907235691111,
+    "checkpoint_22_selected_highres": 0.9796827635964227,
+    "checkpoint_22_original_white_secondary": 0.934066834255756
+  },
+  "delta_percentage_points": {
+    "original_black": -0.21938449050214022,
+    "selected_highres": -0.03786761065862771,
+    "original_white_secondary": 0.164818368376216
+  },
+  "physical_shape": {
+    "height": 4.407266139984131,
+    "base_diameter": 2.0728673934936523,
+    "height_to_base_diameter": 2.126168877863449,
+    "socket_seat_height_before_after": [1.3093900680541992, 1.2700001001358032],
+    "socket_wall_height_before_after": [0.14699995517730713, 0.12000036239624023],
+    "socket_upper_wall_radius_before_after": [0.5644999146461487, 0.5450000762939453],
+    "upper_collar_peak_radius_before_after": [0.48099997639656067, 0.45200011134147644],
+    "upper_collar_height_before_after": [0.15000009536743164, 0.07999992370605469]
+  },
+  "shape_experiments": {
+    "220_shorter_stem_52_5deg": {
+      "original_black": 0.9648065186166095,
+      "selected_highres": 0.9679254710442757,
+      "decision": "rejected"
+    },
+    "218_compact_50deg": {
+      "original_black": 0.9270030239824869,
+      "selected_highres": 0.930933006056402,
+      "decision": "rejected"
+    },
+    "219_compact_48deg": {
+      "original_black": 0.909264472106767,
+      "selected_highres": 0.9130618548753678,
+      "decision": "rejected"
+    }
+  }
+}

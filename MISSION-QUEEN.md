@@ -74,6 +74,11 @@ camera experiments. Record angle, framing, scale and physical dimensions for
 every candidate, keeping reference pixels and registration unchanged. Never
 warp or independently stretch a reference to make a candidate fit.
 
+The owner identifies the original Lichess piece art itself as a pre-rendered
+orthographic sprite placed intact on the 2D board. Treat that as the working
+source-rendering constraint: do not explain shape differences as CSS stretching
+or compensate them with reference warping. Camera experiments alter the actual
+model/camera hypothesis and must be judged against unchanged source pixels.
 The new shape request explicitly authorizes changes to socket/base heights,
 base breadth, collar radii/thicknesses and related proportions needed to restore
 the elevated fit. Earlier exact-profile and height-ratio checks describe the

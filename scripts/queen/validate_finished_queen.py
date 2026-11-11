@@ -24,6 +24,7 @@ obj=editable_mesh(scene)
 camera=scene.camera
 back=camera.matrix_world.to_3x3()@__import__('mathutils').Vector((0,0,1))
 elevation=math.degrees(math.atan2(back.z, math.hypot(back.x,back.y)))
+assert camera.data.type=='ORTHO',camera.data.type
 assert abs(elevation-54)<1e-4,elevation
 assert obj.data.materials and 'Walnut' in obj.data.materials[0].name
 assert obj.data.materials[0].use_nodes
@@ -45,6 +46,47 @@ ratio=height/diameter
 # The owner's smaller, deeper finial intentionally lowers the maximum height.
 # Keep the sizing tolerance and validate each local profile edit against its own baseline.
 material_settings=json.loads(scene.get('mission_material_config','{}'))
+side_shape=material_settings.get('side_shape_study')
+if side_shape:
+    # Checkpoint 23 deliberately changes the lower socket and collars.  The
+    # historic validators below correctly freeze the older control rings, so
+    # route this explicit, recorded feature through its exact companion scope
+    # check rather than weakening those older invariants.
+    from validate_side_shape_iteration import (load_source_controls,
+        expected_controls, validate_shape_intent, check_side_shape_receivers)
+    cfg=side_shape['config']
+    source=root/cfg['source_archive']
+    assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['source_sha256']
+    before=load_source_controls(source,obj.data.name,controls.shape[1])
+    expected=expected_controls(before,cfg)
+    assert np.allclose(controls,expected,atol=1e-6,rtol=0)
+    changed={int(key) for key in cfg.get('radii',{})}|{int(key) for key in cfg.get('z_offsets',{})}
+    untouched=np.array([i not in changed for i in range(len(controls))])
+    assert np.array_equal(controls[untouched],before[untouched])
+    assert side_shape['source_sha256']==cfg['source_sha256']
+    assert side_shape['control_sha256']==hashlib.sha256(controls.tobytes()).hexdigest()
+    expected_scale=float(cfg.get('axial_scale',1))
+    assert abs(obj.matrix_world[0][0]-1)<1e-6
+    assert abs(obj.matrix_world[1][1]-1)<1e-6
+    assert abs(obj.matrix_world[2][2]-expected_scale)<1e-6
+    assert abs(elevation-float(cfg.get('elevation',54)))<1e-4
+    side_report={'passed':True,'source_sha256':hashlib.sha256(model.read_bytes()).hexdigest(),
+                 'shape_source_sha256':cfg['source_sha256'],'variant':cfg['variant'],
+                 'camera_elevation_degrees':elevation,'camera_type':camera.data.type,
+                 'height':height,'base_diameter':diameter,'height_to_base_diameter':ratio,
+                 'target_height_to_base_diameter':fit['target_height_to_base_width'],
+                 'target_queen_to_king':fit['target_queen_to_king_height'],
+                 'material':obj.data.materials[0].name,'boundary_edges':boundary,
+                 'nonmanifold_edges':nonmanifold,'signed_volume':volume,
+                 'crown_tips':8,'body_rings_monotonic':True,
+                 'changed_rings':sorted(changed),'undeclared_control_rings_identical':True,
+                 'intent_measurements':validate_shape_intent(before,controls,cfg),
+                 'render_receivers':check_side_shape_receivers(scene,obj)}
+    for name in ('finish-validation.json','model-validation.json'):
+        args.report_dir.mkdir(parents=True,exist_ok=True)
+        (args.report_dir/name).write_text(json.dumps(side_report,indent=2)+'\n')
+    print(json.dumps(side_report,indent=2))
+    bm.free();evaluated.to_mesh_clear();sys.exit(0)
 seating=material_settings.get('finial_seating')
 finial_cap, finial_baseline = check_finial_cap(controls, material_settings, obj.data.name)
 lower_collar, lower_baseline = check_lower_collar(finial_baseline, material_settings, obj.data.name)

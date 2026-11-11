@@ -1,0 +1,17 @@
+{
+  "source_checkpoint": 22,
+  "accepted_checkpoint": 23,
+  "variant": "217-socket-flow-collars",
+  "scores": {
+    "silhouette_selected_measured": 97.93040874898364,
+    "silhouette_original_measured": 97.69968786640897,
+    "silhouette_white_secondary_measured": 93.57150179395182,
+    "interior_form_subjective": 87,
+    "wood_color_subjective": 85,
+    "grain_subjective": 79,
+    "lighting_subjective": 76
+  },
+  "working_mean": 84.98608174979673,
+  "holistic_visual_range": [80, 85],
+  "assessment": "The form estimate rises one point for the local socket/collar correction. Color, grain and lighting are unchanged; fixed-view silhouette remains strong but is reported separately because it decreases slightly against both black-source references."
+}
