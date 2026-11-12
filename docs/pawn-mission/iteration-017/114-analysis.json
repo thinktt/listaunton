@@ -1,0 +1,266 @@
+{
+  "regions": {
+    "head": {
+      "errors_rgb_255": {
+        "before-0": 2.748782101401335,
+        "after-0": 2.8405271212151586,
+        "before-31": 2.8974626277206417,
+        "after-31": 2.912097458618178
+      },
+      "before_seed_difference_rgb": 1.1613306335745741,
+      "after_seed_difference_rgb": 1.158263333400159,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          0.04117800364868387,
+          0.012950822958641566,
+          0.009442473085944548
+        ],
+        "31": [
+          0.08658607485816243,
+          0.021471101220905755,
+          -0.019045327880355244
+        ]
+      },
+      "delta_correlation": 0.0257410907494428,
+      "isolated_response_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "isolated_response_max": 0.0
+    },
+    "collar-stem": {
+      "errors_rgb_255": {
+        "before-0": 2.3074556418998475,
+        "after-0": 2.4031800636831813,
+        "before-31": 2.4590461856641173,
+        "after-31": 2.4773576598990488
+      },
+      "before_seed_difference_rgb": 0.9239692436854338,
+      "after_seed_difference_rgb": 0.9112940381484781,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          0.04000675737936542,
+          0.005759130140983506,
+          0.003824062413613048
+        ],
+        "31": [
+          0.09578585250483766,
+          0.0359984028012409,
+          0.009613907915348465
+        ]
+      },
+      "delta_correlation": 0.019247418260609758,
+      "isolated_response_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "isolated_response_max": 0.0
+    },
+    "base-foot": {
+      "errors_rgb_255": {
+        "before-0": 2.763181263692874,
+        "after-0": 2.8046939095325447,
+        "before-31": 2.94119093051625,
+        "after-31": 2.9156257777859715
+      },
+      "before_seed_difference_rgb": 1.3140980140915612,
+      "after_seed_difference_rgb": 1.34141462560264,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          0.0498612660281524,
+          0.08197748914556466,
+          0.11484038679584443
+        ],
+        "31": [
+          0.1178086485190955,
+          0.0965699062508642,
+          0.11506162369447184
+        ]
+      },
+      "delta_correlation": 0.6409938606260001,
+      "isolated_response_mean": [
+        8.222860196838155e-05,
+        6.987127562751994e-05,
+        5.7536330132279545e-05
+      ],
+      "isolated_response_max": 0.17202645540237427
+    },
+    "worst": {
+      "errors_rgb_255": {
+        "before-0": 12.5244140625,
+        "after-0": 10.4208984375,
+        "before-31": 12.80859375,
+        "after-31": 10.522786458333334
+      },
+      "before_seed_difference_rgb": 2.4404296875,
+      "after_seed_difference_rgb": 3.7457682291666665,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          4.330078125,
+          4.6484375,
+          4.40625
+        ],
+        "31": [
+          4.49609375,
+          4.6650390625,
+          4.4384765625
+        ]
+      },
+      "delta_correlation": 0.9260681916631129,
+      "isolated_response_mean": [
+        0.005600252188742161,
+        0.004758753348141909,
+        0.003918677568435669
+      ],
+      "isolated_response_max": 0.17202645540237427
+    },
+    "groove": {
+      "errors_rgb_255": {
+        "before-0": 13.357870370370371,
+        "after-0": 10.369444444444444,
+        "before-31": 13.432407407407407,
+        "after-31": 10.194907407407408
+      },
+      "before_seed_difference_rgb": 0.7337962962962963,
+      "after_seed_difference_rgb": 3.0180555555555557,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          7.625,
+          8.045833333333333,
+          7.675
+        ],
+        "31": [
+          7.572222222222222,
+          7.969444444444444,
+          7.7375
+        ]
+      },
+      "delta_correlation": 0.9394471181772465,
+      "isolated_response_mean": [
+        0.009186215698719025,
+        0.007806694600731134,
+        0.00642866687849164
+      ],
+      "isolated_response_max": 0.17202645540237427
+    },
+    "right-line": {
+      "errors_rgb_255": {
+        "before-0": 7.011072261072261,
+        "after-0": 6.464160839160839,
+        "before-31": 7.2890442890442895,
+        "after-31": 6.32051282051282
+      },
+      "before_seed_difference_rgb": 2.523892773892774,
+      "after_seed_difference_rgb": 3.0515734265734267,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          2.0865384615384617,
+          2.1687062937062938,
+          2.0812937062937062
+        ],
+        "31": [
+          2.263111888111888,
+          2.3653846153846154,
+          2.2805944055944054
+        ]
+      },
+      "delta_correlation": 0.9090067030574923,
+      "isolated_response_mean": [
+        0.0025093716103583574,
+        0.00213201018050313,
+        0.001755601610057056
+      ],
+      "isolated_response_max": 0.14646631479263306
+    },
+    "front-line": {
+      "errors_rgb_255": {
+        "before-0": 1.4847020933977455,
+        "after-0": 1.5229468599033817,
+        "before-31": 1.6239935587761676,
+        "after-31": 1.535426731078905
+      },
+      "before_seed_difference_rgb": 0.7367149758454107,
+      "after_seed_difference_rgb": 0.7564412238325282,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          -0.024154589371980676,
+          -0.033816425120772944,
+          -0.020531400966183576
+        ],
+        "31": [
+          -0.1956521739130435,
+          -0.10144927536231885,
+          0.007246376811594203
+        ]
+      },
+      "delta_correlation": -0.053364966350603414,
+      "isolated_response_mean": [
+        1.372151281486822e-08,
+        1.2709813201894349e-09,
+        2.5065499675847036e-10
+      ],
+      "isolated_response_max": 8.979824997368269e-06
+    },
+    "left-line": {
+      "errors_rgb_255": {
+        "before-0": 6.642258382642998,
+        "after-0": 6.754191321499014,
+        "before-31": 6.722879684418146,
+        "after-31": 6.72361932938856
+      },
+      "before_seed_difference_rgb": 2.894723865877712,
+      "after_seed_difference_rgb": 2.989644970414201,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          0.005177514792899409,
+          -0.026627218934911243,
+          -0.009615384615384616
+        ],
+        "31": [
+          0.0,
+          -0.051775147928994084,
+          -0.0673076923076923
+        ]
+      },
+      "delta_correlation": 0.05236811574583499,
+      "isolated_response_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "isolated_response_max": 0.0
+    },
+    "flare": {
+      "errors_rgb_255": {
+        "before-0": 5.409032258064516,
+        "after-0": 5.440286738351254,
+        "before-31": 5.621505376344086,
+        "after-31": 5.59899641577061
+      },
+      "before_seed_difference_rgb": 3.708673835125448,
+      "after_seed_difference_rgb": 3.6643727598566307,
+      "after_minus_before_mean_rgb": {
+        "0": [
+          0.015483870967741935,
+          -0.018494623655913978,
+          0.021075268817204302
+        ],
+        "31": [
+          0.043440860215053764,
+          0.035698924731182795,
+          0.09849462365591398
+        ]
+      },
+      "delta_correlation": -0.010086937345030815,
+      "isolated_response_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "isolated_response_max": 0.0
+    }
+  },
+  "note": "Same camera, maps, original 44 lamps and 512-sample setup. Seed 31 is an independent sample check. RGB is composited on black using the common foreground of all four renders; whole-region values therefore differ from the uncomposited single-pair mission audit. Isolated response is linear radiance at the probe power, not display RGB."
+}

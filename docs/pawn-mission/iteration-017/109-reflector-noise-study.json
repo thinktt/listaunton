@@ -1,0 +1,16 @@
+{
+  "measurement": "reflector-sampling-109",
+  "sources": [
+    {
+      "name": "before",
+      "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+      "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa"
+    },
+    {
+      "name": "after",
+      "source": "build/pawn-mission/108-thin-groove-reflector/pawn.blend",
+      "source_sha256": "3a0cd0639969a5505d29c3be7119483ff027c2347f9e5f46c1312e0ffc4cdb6e"
+    }
+  ],
+  "isolated_response": "build/pawn-mission/108-thin-groove-reflector/lighting-response.exr"
+}

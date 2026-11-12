@@ -1,0 +1,141 @@
+{
+  "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+  "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+  "samples": 512,
+  "crop": [
+    300,
+    895,
+    668,
+    1005
+  ],
+  "measurement": "inner-reflector-106",
+  "poses": [
+    {
+      "name": "baseline"
+    },
+    {
+      "name": "polish-only",
+      "groove_knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ]
+    },
+    {
+      "name": "near-slit",
+      "groove_knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ],
+      "landmark": {
+        "name": "Inner groove ribbon",
+        "pixel": [
+          559,
+          941.8
+        ],
+        "half_axes": [
+          45,
+          0.8
+        ],
+        "angle": -16,
+        "distance": 0.12,
+        "spread": 3,
+        "color": [
+          1,
+          0.85,
+          0.7
+        ]
+      },
+      "physical": {
+        "size": 0.22,
+        "size_y": 0.004,
+        "energy": 0.00016
+      }
+    },
+    {
+      "name": "middle-slit",
+      "groove_knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ],
+      "landmark": {
+        "name": "Inner groove ribbon",
+        "pixel": [
+          559,
+          941.8
+        ],
+        "half_axes": [
+          45,
+          0.8
+        ],
+        "angle": -16,
+        "distance": 0.22,
+        "spread": 3,
+        "color": [
+          1,
+          0.85,
+          0.7
+        ]
+      },
+      "physical": {
+        "size": 0.35,
+        "size_y": 0.008,
+        "energy": 0.0005
+      }
+    },
+    {
+      "name": "far-slit",
+      "groove_knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ],
+      "landmark": {
+        "name": "Inner groove ribbon",
+        "pixel": [
+          559,
+          941.8
+        ],
+        "half_axes": [
+          45,
+          0.8
+        ],
+        "angle": -16,
+        "distance": 0.35,
+        "spread": 3,
+        "color": [
+          1,
+          0.85,
+          0.7
+        ]
+      },
+      "physical": {
+        "size": 0.5,
+        "size_y": 0.01,
+        "energy": 0.0009
+      }
+    }
+  ]
+}

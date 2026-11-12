@@ -1,0 +1,273 @@
+{
+  "config": {
+    "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+    "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+    "samples": 512,
+    "crop": [
+      300,
+      895,
+      668,
+      1005
+    ],
+    "measurement": "inner-reflector-106",
+    "poses": [
+      {
+        "name": "baseline"
+      },
+      {
+        "name": "polish-only",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ]
+      },
+      {
+        "name": "near-slit",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.12,
+          "spread": 3,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.22,
+          "size_y": 0.004,
+          "energy": 0.00016
+        }
+      },
+      {
+        "name": "middle-slit",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.22,
+          "spread": 3,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.35,
+          "size_y": 0.008,
+          "energy": 0.0005
+        }
+      },
+      {
+        "name": "far-slit",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.35,
+          "spread": 3,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.5,
+          "size_y": 0.01,
+          "energy": 0.0009
+        }
+      }
+    ]
+  },
+  "baseline_knots": [
+    {
+      "position": 0.0,
+      "gain": 1.0
+    },
+    {
+      "position": 0.15000000596046448,
+      "gain": 1.0
+    },
+    {
+      "position": 0.1679999977350235,
+      "gain": 0.7099999785423279
+    },
+    {
+      "position": 0.18000000715255737,
+      "gain": 0.2800000011920929
+    },
+    {
+      "position": 0.1899999976158142,
+      "gain": 0.10000000149011612
+    },
+    {
+      "position": 0.21299999952316284,
+      "gain": 0.10999999940395355
+    },
+    {
+      "position": 0.23499999940395355,
+      "gain": 0.20000000298023224
+    },
+    {
+      "position": 0.26100000739097595,
+      "gain": 0.5
+    },
+    {
+      "position": 0.289000004529953,
+      "gain": 0.8899999856948853
+    },
+    {
+      "position": 0.3100000023841858,
+      "gain": 1.0
+    }
+  ],
+  "renders": {
+    "baseline": "c456328dcfa4be1a9c29a45efb1807b7d82282e9858c00558ddf6bc3c1b88101",
+    "polish-only": "ea7c016bfe1dd846af23a9cf435f9af7326a5f1a7dc98e7d2a5efd89f765ea00",
+    "near-slit": "fb877fae8e816c762483f40c3ec4920358680f797ed0504a7263a8146b1dbe42",
+    "middle-slit": "2d5071bbc000482c0ba3fb3e24a577e274d15faa5ff635c0751fbe1cc6cd329c",
+    "far-slit": "b74a8457fd7ad58dacfba744bc3628684db77c1eae0d8fe144b723e95919e5b4"
+  },
+  "lights": {
+    "near-slit": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.35732725262641907,
+        -0.7925934195518494,
+        0.16795119643211365
+      ],
+      "rotation": [
+        -1.728088617324829,
+        0.1916939914226532,
+        -2.5497348308563232
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 3,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.00016
+    },
+    "middle-slit": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.4149058759212494,
+        -0.8728943467140198,
+        0.15257367491722107
+      ],
+      "rotation": [
+        -1.7328565120697021,
+        0.30766382813453674,
+        -2.568995952606201
+      ],
+      "size": 0.35,
+      "size_y": 0.008,
+      "spread": 3,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0005
+    },
+    "far-slit": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.48975807428359985,
+        -0.9772855639457703,
+        0.132582888007164
+      ],
+      "rotation": [
+        1.4022326469421387,
+        2.730294942855835,
+        0.5541346669197083
+      ],
+      "size": 0.5,
+      "size_y": 0.01,
+      "spread": 3,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0009
+    }
+  },
+  "note": "Real area-light crops at fixed camera. No accepted asset is saved or replaced."
+}

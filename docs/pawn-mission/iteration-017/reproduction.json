@@ -1,0 +1,154 @@
+{
+  "variant": "115-groove-reflector-replay",
+  "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+  "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+  "samples": 512,
+  "response_samples": 512,
+  "response_percent": 100,
+  "keep_reflectors": [
+    "Left head glint",
+    "Upper head glint",
+    "Right head glint",
+    "Upper head glint core",
+    "Right head glint core",
+    "Base upper",
+    "Foot right",
+    "Foot front",
+    "Foot center-right",
+    "Foot edge outer left",
+    "Foot edge center left",
+    "Left polish core",
+    "Upper polish core",
+    "Right polish core",
+    "Flare left edge",
+    "Flare left taper",
+    "Flare left lip",
+    "Flare right inner",
+    "Flare right edge",
+    "Flare front lip",
+    "Flare lip taper",
+    "Right bounce",
+    "Back bounce",
+    "High left card",
+    "Lower front bounce",
+    "Lower right bounce",
+    "Upper face bounce",
+    "Front shadow key",
+    "Front shadow feather",
+    "Socket right",
+    "Flare left sweep",
+    "Flare left center",
+    "Flare right sweep",
+    "Flare right lip",
+    "Upper stem rim",
+    "Lower stem rim",
+    "Socket lip core",
+    "Right flare core",
+    "Outer flare line",
+    "Foot lip core",
+    "Collar left ribbon",
+    "Collar tip of ribbon",
+    "Collar right flank",
+    "Lower collar glint"
+  ],
+  "dense_bounds": [
+    400,
+    915,
+    635,
+    989
+  ],
+  "protect_recesses": true,
+  "protect_quiet_head": true,
+  "glint_weight": 2,
+  "region_weights": [
+    {
+      "bounds": [
+        518,
+        927,
+        603,
+        955
+      ],
+      "weight": 5
+    }
+  ],
+  "fitted_lights": [
+    {
+      "name": "Inner groove arc 535",
+      "pixel": [
+        535,
+        949.0
+      ],
+      "position": [
+        0.2767443060874939,
+        -0.9114904403686523,
+        0.1783255785703659
+      ],
+      "rotation": [
+        -1.5989307165145874,
+        0.15568530559539795,
+        -2.7297980785369873
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 4,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0008907732976815654
+    },
+    {
+      "name": "Inner groove arc 550",
+      "pixel": [
+        550,
+        945.25
+      ],
+      "position": [
+        0.3567911386489868,
+        -0.8818602561950684,
+        0.17796282470226288
+      ],
+      "rotation": [
+        -1.5992929935455322,
+        0.10179678350687027,
+        -2.6022250652313232
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 4,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0011654657953283575
+    },
+    {
+      "name": "Inner groove arc 565",
+      "pixel": [
+        565,
+        940.25
+      ],
+      "position": [
+        0.4353885352611542,
+        -0.8435479402542114,
+        0.17140327394008636
+      ],
+      "rotation": [
+        -1.6356898546218872,
+        0.1969732791185379,
+        -2.483459711074829
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 4,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0019341923463107862
+    }
+  ]
+}

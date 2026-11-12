@@ -1,0 +1,323 @@
+{
+  "config": {
+    "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+    "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+    "samples": 512,
+    "crop": [
+      300,
+      895,
+      668,
+      1005
+    ],
+    "measurement": "inner-reflector-107",
+    "poses": [
+      {
+        "name": "baseline"
+      },
+      {
+        "name": "narrow-3",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.35,
+          "spread": 3,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.5,
+          "size_y": 0.01,
+          "energy": 0.0009
+        }
+      },
+      {
+        "name": "spread-6",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.35,
+          "spread": 6,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.5,
+          "size_y": 0.01,
+          "energy": 0.0009
+        }
+      },
+      {
+        "name": "spread-10",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.35,
+          "spread": 10,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.5,
+          "size_y": 0.01,
+          "energy": 0.0009
+        }
+      },
+      {
+        "name": "wider-6",
+        "groove_knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "landmark": {
+          "name": "Inner groove ribbon",
+          "pixel": [
+            559,
+            941.8
+          ],
+          "half_axes": [
+            45,
+            0.8
+          ],
+          "angle": -16,
+          "distance": 0.35,
+          "spread": 6,
+          "color": [
+            1,
+            0.85,
+            0.7
+          ]
+        },
+        "physical": {
+          "size": 0.75,
+          "size_y": 0.012,
+          "energy": 0.0016
+        }
+      }
+    ]
+  },
+  "baseline_knots": [
+    {
+      "position": 0.0,
+      "gain": 1.0
+    },
+    {
+      "position": 0.15000000596046448,
+      "gain": 1.0
+    },
+    {
+      "position": 0.1679999977350235,
+      "gain": 0.7099999785423279
+    },
+    {
+      "position": 0.18000000715255737,
+      "gain": 0.2800000011920929
+    },
+    {
+      "position": 0.1899999976158142,
+      "gain": 0.10000000149011612
+    },
+    {
+      "position": 0.21299999952316284,
+      "gain": 0.10999999940395355
+    },
+    {
+      "position": 0.23499999940395355,
+      "gain": 0.20000000298023224
+    },
+    {
+      "position": 0.26100000739097595,
+      "gain": 0.5
+    },
+    {
+      "position": 0.289000004529953,
+      "gain": 0.8899999856948853
+    },
+    {
+      "position": 0.3100000023841858,
+      "gain": 1.0
+    }
+  ],
+  "renders": {
+    "baseline": "4bcf268b3f791fe6264c6de4a6740db7b615b9c9fd75188b938c772949498455",
+    "narrow-3": "0135257ac28173df04ecdb374e6581c2825c5c1703e1f2460bcb3d1cb40b09c9",
+    "spread-6": "291e1feee6da37439d890f46b27e618f130dfa5b13abcf70d0c37ef34028299b",
+    "spread-10": "3bb9a328073767d76a4998cfa35f6c246ccf9b66e42448235c49b7bff75a9a2e",
+    "wider-6": "24633c8979662195217c3fc22858ee3a30715effb50d97fb8561d2ff9c638cc5"
+  },
+  "lights": {
+    "narrow-3": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.48975807428359985,
+        -0.9772855639457703,
+        0.132582888007164
+      ],
+      "rotation": [
+        1.4022326469421387,
+        2.730294942855835,
+        0.5541346669197083
+      ],
+      "size": 0.5,
+      "size_y": 0.01,
+      "spread": 3,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0009
+    },
+    "spread-6": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.48975807428359985,
+        -0.9772855639457703,
+        0.132582888007164
+      ],
+      "rotation": [
+        1.4022326469421387,
+        2.730294942855835,
+        0.5541346669197083
+      ],
+      "size": 0.5,
+      "size_y": 0.01,
+      "spread": 6,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0009
+    },
+    "spread-10": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.48975807428359985,
+        -0.9772855639457703,
+        0.132582888007164
+      ],
+      "rotation": [
+        1.4022326469421387,
+        2.730294942855835,
+        0.5541346669197083
+      ],
+      "size": 0.5,
+      "size_y": 0.01,
+      "spread": 10,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0009
+    },
+    "wider-6": {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.48975807428359985,
+        -0.9772855639457703,
+        0.132582888007164
+      ],
+      "rotation": [
+        1.4022326469421387,
+        2.730294942855835,
+        0.5541346669197083
+      ],
+      "size": 0.75,
+      "size_y": 0.012,
+      "spread": 6,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0016
+    }
+  },
+  "note": "Real area-light crops at fixed camera. No accepted asset is saved or replaced."
+}

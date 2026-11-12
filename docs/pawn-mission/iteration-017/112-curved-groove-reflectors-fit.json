@@ -1,0 +1,139 @@
+{
+  "method": "Actual colored-BSDF isolated area responses, fixed diffuse rig, nonnegative real light energies through the AgX display transform. The independent full render determines the decision.",
+  "foreground_pixels": 25512,
+  "loss": [
+    0.016610234636508816,
+    0.007115726681273445,
+    0.006359366110672865,
+    0.006161171993434783,
+    0.0061517087997358146,
+    0.006151641778151924,
+    0.006151641053230757
+  ],
+  "lights": [
+    {
+      "name": "Inner groove arc 535",
+      "pixel": [
+        535,
+        949.0
+      ],
+      "position": [
+        0.2767443060874939,
+        -0.9114904403686523,
+        0.1783255785703659
+      ],
+      "rotation": [
+        -1.5989307165145874,
+        0.15568530559539795,
+        -2.7297980785369873
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 4,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0011602551157990546
+    },
+    {
+      "name": "Inner groove arc 565",
+      "pixel": [
+        565,
+        940.25
+      ],
+      "position": [
+        0.4353885352611542,
+        -0.8435479402542114,
+        0.17140327394008636
+      ],
+      "rotation": [
+        -1.6356898546218872,
+        0.1969732791185379,
+        -2.483459711074829
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 4,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0023050299322786316
+    },
+    {
+      "name": "Inner groove arc 595",
+      "pixel": [
+        595,
+        926.5
+      ],
+      "position": [
+        0.587574303150177,
+        -0.7386777400970459,
+        0.16200773417949677
+      ],
+      "rotation": [
+        -1.6850584745407104,
+        0.21051102876663208,
+        -2.2223622798919678
+      ],
+      "size": 0.22,
+      "size_y": 0.004,
+      "spread": 4,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0001442845394202228
+    }
+  ],
+  "fixed_light_powers": {
+    "Left head glint": 2.3068480491638184,
+    "Upper head glint": 1.1351019144058228,
+    "Right head glint": 0.630704402923584,
+    "Upper head glint core": 2.3231687545776367,
+    "Right head glint core": 1.5328316688537598,
+    "Base upper": 0.38810569047927856,
+    "Foot right": 1.0469048023223877,
+    "Foot front": 0.04045619070529938,
+    "Foot center-right": 0.2120899260044098,
+    "Foot edge outer left": 0.6605644822120667,
+    "Foot edge center left": 0.9123812913894653,
+    "Left polish core": 0.17766346037387848,
+    "Upper polish core": 0.7186764478683472,
+    "Right polish core": 0.7280065417289734,
+    "Flare left edge": 0.020248202607035637,
+    "Flare left taper": 0.03094121813774109,
+    "Flare left lip": 0.018656767904758453,
+    "Flare right inner": 0.01145761739462614,
+    "Flare right edge": 0.07910601794719696,
+    "Flare front lip": 0.0025612679310142994,
+    "Flare lip taper": 0.012449936009943485,
+    "Right bounce": 88.7192153930664,
+    "Back bounce": 165.07427978515625,
+    "High left card": 95.73224639892578,
+    "Lower front bounce": 2.218817710876465,
+    "Lower right bounce": 2.041436195373535,
+    "Upper face bounce": 0.7638178467750549,
+    "Front shadow key": 23.973630905151367,
+    "Front shadow feather": 643.0450439453125,
+    "Socket right": 1.3917787075042725,
+    "Flare left sweep": 0.16110479831695557,
+    "Flare left center": 0.34790489077568054,
+    "Flare right sweep": 0.16274282336235046,
+    "Flare right lip": 0.0915931761264801,
+    "Upper stem rim": 0.0017277590231969953,
+    "Lower stem rim": 0.0003212390001863241,
+    "Socket lip core": 0.05734500288963318,
+    "Right flare core": 0.023406486958265305,
+    "Outer flare line": 0.0059013208374381065,
+    "Foot lip core": 0.0383736751973629,
+    "Collar left ribbon": 0.048960402607917786,
+    "Collar tip of ribbon": 0.05534058436751366,
+    "Collar right flank": 0.022733593359589577,
+    "Lower collar glint": 0.15061980485916138
+  }
+}

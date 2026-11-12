@@ -6,9 +6,9 @@ from audit_mission import ROOT,BUILD,rgba,registered,black,sheet
 from audit_foot_isolation import REGIONS
 from derive_wood import blur
 
-def run(output,trials):
+def run(output,trials,baseline=None,baseline_label='checkpoint-015'):
     images=registered();images.pop('original_white')
-    images['checkpoint-015']=rgba(ROOT/'history/pawn-mission-015/render.png')
+    images[baseline_label]=rgba(baseline or ROOT/'history/pawn-mission-015/render.png')
     images.update({name:rgba(BUILD/name/'fixed.png') for name in trials})
     target=np.asarray(black(images['selected']),float);report={}
     for label,im in images.items():
@@ -26,10 +26,12 @@ def run(output,trials):
         report[label]=stats
     output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps({'images':report,'note':'Fixed registration. Patch RGB/luma and fine pattern correlation are descriptive display-space diagnostics. Original sprite remains authoritative; it is lower resolution and cannot establish every generated highlight.'},indent=2)+'\n',encoding='utf8')
-    keys=['selected','checkpoint-015',*trials]
+    keys=['selected',baseline_label,*trials]
     sheet([(k,images[k]) for k in keys],(511,916,598,989),280,output.with_suffix('.png'))
     sheet([(k,images[k]) for k in keys],(310,880,665,1006),330,output.with_name(output.stem+'-wide.png'))
     for name,stats in report.items():print(name,{k:round(stats[k]['rgb_mae_255'],3) for k in REGIONS})
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('output',type=Path);p.add_argument('trials',nargs='*');a=p.parse_args();run(a.output,a.trials)
+    p=argparse.ArgumentParser();p.add_argument('output',type=Path);p.add_argument('trials',nargs='*')
+    p.add_argument('--baseline',type=Path);p.add_argument('--baseline-label',default='checkpoint-015')
+    a=p.parse_args();run(a.output,a.trials,a.baseline,a.baseline_label)

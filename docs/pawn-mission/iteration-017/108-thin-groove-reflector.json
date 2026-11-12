@@ -1,0 +1,112 @@
+{
+  "variant": "108-thin-groove-reflector",
+  "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+  "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+  "samples": 512,
+  "response_samples": 512,
+  "response_percent": 100,
+  "keep_reflectors": [
+    "Left head glint",
+    "Upper head glint",
+    "Right head glint",
+    "Upper head glint core",
+    "Right head glint core",
+    "Base upper",
+    "Foot right",
+    "Foot front",
+    "Foot center-right",
+    "Foot edge outer left",
+    "Foot edge center left",
+    "Left polish core",
+    "Upper polish core",
+    "Right polish core",
+    "Flare left edge",
+    "Flare left taper",
+    "Flare left lip",
+    "Flare right inner",
+    "Flare right edge",
+    "Flare front lip",
+    "Flare lip taper",
+    "Right bounce",
+    "Back bounce",
+    "High left card",
+    "Lower front bounce",
+    "Lower right bounce",
+    "Upper face bounce",
+    "Front shadow key",
+    "Front shadow feather",
+    "Socket right",
+    "Flare left sweep",
+    "Flare left center",
+    "Flare right sweep",
+    "Flare right lip",
+    "Upper stem rim",
+    "Lower stem rim",
+    "Socket lip core",
+    "Right flare core",
+    "Outer flare line",
+    "Foot lip core",
+    "Collar left ribbon",
+    "Collar tip of ribbon",
+    "Collar right flank",
+    "Lower collar glint"
+  ],
+  "dense_bounds": [
+    400,
+    915,
+    635,
+    989
+  ],
+  "protect_recesses": true,
+  "protect_quiet_head": true,
+  "glint_weight": 2,
+  "region_weights": [
+    {
+      "bounds": [
+        518,
+        927,
+        603,
+        955
+      ],
+      "weight": 5
+    }
+  ],
+  "groove_knots": [
+    {
+      "position": 0.18,
+      "gain": 0.8
+    },
+    {
+      "position": 0.19,
+      "gain": 0.6
+    }
+  ],
+  "probe_lights": [
+    {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "position": [
+        0.48975807428359985,
+        -0.9772855639457703,
+        0.132582888007164
+      ],
+      "rotation": [
+        1.4022326469421387,
+        2.730294942855835,
+        0.5541346669197083
+      ],
+      "size": 0.75,
+      "size_y": 0.012,
+      "spread": 6,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ],
+      "energy": 0.0016
+    }
+  ]
+}

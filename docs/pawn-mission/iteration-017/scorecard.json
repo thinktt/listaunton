@@ -1,0 +1,116 @@
+[
+  {
+    "trial": "103-tight-foot-bevel",
+    "scores": {
+      "silhouette": 96.80997969846553,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 91
+    },
+    "working_mean": 92.96199593969311,
+    "iou": {
+      "selected": 0.9680997969846553,
+      "original_black": 0.985105626362526,
+      "original_white": 0.9813391480960261
+    },
+    "source_sha256": "15668b2a644f7c7a8432be602b0f2279908eb1effc7a1cd1e91d97d79307112d",
+    "render_sha256": "9ae943ea04cc7b83577591242aefc4be8c5f75d411db06489d4ba6d0c97e30b6",
+    "decision": "Rejected: the flatter outer bevel preserves the outline but disrupts the accepted foot highlight; no supporting improvement in the original."
+  },
+  {
+    "trial": "104-mild-foot-bevel",
+    "scores": {
+      "silhouette": 96.81182720897039,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 91
+    },
+    "working_mean": 92.96236544179408,
+    "iou": {
+      "selected": 0.9681182720897038,
+      "original_black": 0.9850331651454164,
+      "original_white": 0.9813585185796181
+    },
+    "source_sha256": "51b2bd7a6b9e216988b16777a77bd52065cd291a1a1258260d139eb2fda22acc",
+    "render_sha256": "93ca23d5c4e3445016accddd8890bf2920478678c1a89bb270795e307e5d175f",
+    "decision": "Rejected: milder bevel still loses the matched foot reflection. Geometry is preserved in the final result."
+  },
+  {
+    "trial": "108-thin-groove-reflector",
+    "scores": {
+      "silhouette": 96.81176149275728,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36235229855146,
+    "iou": {
+      "selected": 0.9681176149275729,
+      "original_black": 0.985002164636032,
+      "original_white": 0.9813581341636938
+    },
+    "source_sha256": "3a0cd0639969a5505d29c3be7119483ff027c2347f9e5f46c1312e0ffc4cdb6e",
+    "render_sha256": "4f0e5215ae1c67cbdb17cd6f13889dec8657ce9cdd7a0d6b5d8994492642cb46",
+    "decision": "Useful narrower reflector; stronger groove polish brightens the left foot and the reflected line remains short. Superseded."
+  },
+  {
+    "trial": "110-thin-reflector-original-polish",
+    "scores": {
+      "silhouette": 96.81176149275728,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36235229855146,
+    "iou": {
+      "selected": 0.9681176149275729,
+      "original_black": 0.985002164636032,
+      "original_white": 0.9813581341636938
+    },
+    "source_sha256": "cc174ebcf2bc4affcfdeb0d9f8a09858f049681f27b1b14b791f6e27aa65f5e3",
+    "render_sha256": "170e623af1b9f90f33d9ff7d2d944b0716014eced7b7f44f73c5abb629da2efa",
+    "decision": "Preserves the full material and restores part of the line, but leaves a small stray outer glint. Superseded."
+  },
+  {
+    "trial": "112-curved-groove-reflectors",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813580380572353
+    },
+    "source_sha256": "033f36df7752ab5fd96efb28fcadfba066ddd21c48a9b0f33c71f7b5094b4c18",
+    "render_sha256": "a0bb6ab7280d9ed9a437111a2535c558128d3f9dd8fdc664888537d5573bf19b",
+    "decision": "Smaller lights follow the groove and suppress outer spill; a gap remains at the brightest central part. Superseded."
+  },
+  {
+    "trial": "113-continuous-groove-reflectors",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813580380572353
+    },
+    "source_sha256": "83f02ced1aa414adb515fb97c7f80e0bbff12361b26b6792c6f6d34c8d28d351",
+    "render_sha256": "24f0405b2ab9d37ee0350bc859580fccb6909150ec1edc16bae67df4b3f41381",
+    "decision": "Accepted after independent replay and saved-model checks. Three thin physical reflectors partly restore the inner groove line; all material, geometry, camera and original 44 lights are preserved. Both render seeds support the local gain; broad RGB and fine-pattern tradeoffs are retained. Whole-piece scores remain held."
+  }
+]

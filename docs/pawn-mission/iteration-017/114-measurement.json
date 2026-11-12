@@ -1,0 +1,26 @@
+{
+  "config": {
+    "measurement": "reflector-sampling-114",
+    "sources": [
+      {
+        "name": "after",
+        "source": "build/pawn-mission/113-continuous-groove-reflectors/pawn.blend",
+        "source_sha256": "83f02ced1aa414adb515fb97c7f80e0bbff12361b26b6792c6f6d34c8d28d351"
+      }
+    ],
+    "isolate_lights": [
+      "Inner groove arc 535",
+      "Inner groove arc 550",
+      "Inner groove arc 565"
+    ],
+    "prior_baseline": {
+      "render": "build/pawn-mission/reflector-sampling-109/before-seed31.png",
+      "sha256": "383c7db99b2a3e495b3112c52521fbf480fe10af0c764a86689f3e5c77f6d566"
+    }
+  },
+  "renders": {
+    "after": "e43ddf2e29f5bd9e3c635ab9b040b3251c9ca60adc43176762167fcc368e9bc8"
+  },
+  "reused_before_seed31_sha256": "383c7db99b2a3e495b3112c52521fbf480fe10af0c764a86689f3e5c77f6d566",
+  "isolated_response_sha256": "0bcffa57b4199fddfe501d4afea8708c9c3cc2557cd9598aa120328624d2b537"
+}

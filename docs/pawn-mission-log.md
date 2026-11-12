@@ -507,3 +507,43 @@ validation. The next step is to inspect groove/outer-foot meridian normals
 at both glints and compare the shape with the originals before attempting
 a bounded profile change. Preserve accepted dimensions, upper finish and
 camera. The mission remains incomplete.
+
+
+## Checkpoint 017 - inner groove reflection
+
+Three thin area reflectors follow the inner groove's curved reflection field.
+They partly restore the missing line while avoiding the additional outer-foot
+stripe of the earlier broad-light trials. All geometry, packed maps, material
+settings, the original 44 lights and the fixed 54-degree camera are preserved.
+The rig now has 47 lights. Bevel, groove-floor and stronger-polish alternatives
+remain rejected.
+
+| Category | Previous | Current |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 94 | 94 |
+| Lighting | 92 | 92 |
+| Working mean | 93.36% | 93.36% |
+
+Groove-patch RGB error falls from 13.358 to 10.369, about 22%. A second
+render seed confirms the local improvement, from 13.432 to 10.195. Native
+original RGB error changes from 16.69 to 16.67. The standard whole-base
+error rises from 2.640 to 2.706; that broad gain is not claimed. The second
+seed and isolated-source tests distinguish the stable groove change from
+sample-sequence variation elsewhere. Foot fine-pattern correlation changes
+from 0.9295 to 0.9258, while contrast rises from 25.76 to 26.04 against 30.45
+in the selected image. These tradeoffs are retained in the evidence.
+
+The line remains too weak in places. The extra edge under the flare, collar
+residuals, fragmented stem highlight and inferred rear grain are unresolved.
+The holistic visual estimate stays 90-95%; the five-category working mean
+is not a calibrated match probability. The mission remains incomplete.
+
+See [checkpoint evidence](pawn-mission/iteration-017/README.md) for profile
+tests, source placement, both render seeds, isolated light responses, exact
+reproduction and saved-model checks. Next inspect the left/front collar
+residual at x=425-457, y=606-638, using both originals to separate turning,
+finish and lighting effects. The review assets remain synchronized at each
+accepted checkpoint.

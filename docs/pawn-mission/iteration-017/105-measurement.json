@@ -1,0 +1,122 @@
+{
+  "config": {
+    "source": "history/pawn-mission-016/pawn-rebuilt.blend",
+    "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+    "samples": 512,
+    "crop": [
+      300,
+      895,
+      668,
+      1005
+    ],
+    "measurement": "groove-profile-105",
+    "poses": [
+      {
+        "name": "baseline",
+        "profiles": {}
+      },
+      {
+        "name": "lower-inner-floor",
+        "profiles": {
+          "10": [
+            46.35,
+            192.9
+          ]
+        }
+      },
+      {
+        "name": "mild-inner-floor",
+        "profiles": {
+          "10": [
+            46.35,
+            192.35
+          ]
+        }
+      },
+      {
+        "name": "reduced-underlip",
+        "profiles": {
+          "11": [
+            50.55,
+            189.65
+          ],
+          "12": [
+            51.15,
+            187.8
+          ]
+        }
+      },
+      {
+        "name": "floor-and-underlip",
+        "profiles": {
+          "10": [
+            46.35,
+            192.9
+          ],
+          "11": [
+            50.55,
+            189.65
+          ],
+          "12": [
+            51.15,
+            187.8
+          ]
+        }
+      }
+    ]
+  },
+  "renders": {
+    "baseline": "f58ec1f8cbd3b73ca156be1ac44a0b75d0c5b4a7b8597e823e436aaac13c1952",
+    "lower-inner-floor": "4e57d6ce7dfcdd26f904cba5ef6538d24bff44aa77a4ea5c16c5a272792474bf",
+    "mild-inner-floor": "c56b2b8478923c2bdc6c3ac155cbaeb39d93d6adf9bdc963648a11005a74d660",
+    "reduced-underlip": "04b195c9e9049f340bf260909ffc5898911df61d920247ccc187935bc70a9116",
+    "floor-and-underlip": "1f93c6aa1f222b8fca91b429e283992ccf11264ba071c90cb1628b25f0041d03"
+  },
+  "edited_controls": {
+    "baseline": {},
+    "lower-inner-floor": {
+      "10": [
+        0.7389463782310486,
+        0.0,
+        0.1925763040781021
+      ]
+    },
+    "mild-inner-floor": {
+      "10": [
+        0.7389463782310486,
+        0.0,
+        0.20749418437480927
+      ]
+    },
+    "reduced-underlip": {
+      "11": [
+        0.8059058785438538,
+        0.0,
+        0.28072741627693176
+      ],
+      "12": [
+        0.8154715299606323,
+        0.0,
+        0.3309057652950287
+      ]
+    },
+    "floor-and-underlip": {
+      "10": [
+        0.7389463782310486,
+        0.0,
+        0.1925763040781021
+      ],
+      "11": [
+        0.8059058785438538,
+        0.0,
+        0.28072741627693176
+      ],
+      "12": [
+        0.8154715299606323,
+        0.0,
+        0.3309057652950287
+      ]
+    }
+  },
+  "note": "Cropped geometry diagnosis under unchanged material, lights and camera. A full model render and original-sprite audit are required before acceptance."
+}

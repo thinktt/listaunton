@@ -1,0 +1,370 @@
+{
+  "passed": true,
+  "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+  "model_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "camera_above_board": 54,
+  "mesh_normals_uv_sha256": "050130e04a46ed0be05786029df26cf5e4e4845f08992c3335dc86cf7fc818cd",
+  "geometry_normals_uv_unchanged": true,
+  "original_lights_unchanged": 44,
+  "light_count": 47,
+  "new_reflectors": {
+    "Inner groove arc 535": {
+      "matrix": [
+        [
+          -0.9053205847740173,
+          0.13077932596206665,
+          0.40409335494041443,
+          0.2767443060874939
+        ],
+        [
+          -0.3954136371612549,
+          0.08781683444976807,
+          -0.914295494556427,
+          -0.9114904403686523
+        ],
+        [
+          -0.1550571471452713,
+          -0.9875145554542542,
+          -0.027790451422333717,
+          0.1783255785703659
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.0008907733135856688,
+      "color": [
+        1.0,
+        0.8500000238418579,
+        0.699999988079071
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.2199999988079071,
+        "size_y": 0.004000000189989805,
+        "spread": 0.06981316953897476,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Inner groove arc 550": {
+      "matrix": [
+        [
+          -0.8535917401313782,
+          0.07252516597509384,
+          0.5158693790435791,
+          0.3567911386489868
+        ],
+        [
+          -0.5109347105026245,
+          0.07661851495504379,
+          -0.8561981916427612,
+          -0.8818602561950684
+        ],
+        [
+          -0.10162106156349182,
+          -0.994419276714325,
+          -0.02834530733525753,
+          0.17796282470226288
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.0011654658010229468,
+      "color": [
+        1.0,
+        0.8500000238418579,
+        0.699999988079071
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.2199999988079071,
+        "size_y": 0.004000000189989805,
+        "spread": 0.06981316953897476,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Inner groove arc 565": {
+      "matrix": [
+        [
+          -0.7758377194404602,
+          0.11483728140592575,
+          0.6203936338424683,
+          0.4353885352611542
+        ],
+        [
+          -0.5998137593269348,
+          0.1707509607076645,
+          -0.7817081212997437,
+          -0.8435479402542114
+        ],
+        [
+          -0.19570203125476837,
+          -0.9785992503166199,
+          -0.06359405070543289,
+          0.17140327394008636
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.0019341923762112856,
+      "color": [
+        1.0,
+        0.8500000238418579,
+        0.699999988079071
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.2199999988079071,
+        "size_y": 0.004000000189989805,
+        "spread": 0.06981316953897476,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    }
+  },
+  "groove_ramp_before": {
+    "interpolation": "EASE",
+    "color_mode": "RGB",
+    "hue_interpolation": "NEAR",
+    "elements": [
+      [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.15000000596046448,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.1679999977350235,
+        0.7099999785423279,
+        0.7099999785423279,
+        0.7099999785423279,
+        1.0
+      ],
+      [
+        0.18000000715255737,
+        0.2800000011920929,
+        0.2800000011920929,
+        0.2800000011920929,
+        1.0
+      ],
+      [
+        0.1899999976158142,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        1.0
+      ],
+      [
+        0.21299999952316284,
+        0.10999999940395355,
+        0.10999999940395355,
+        0.10999999940395355,
+        1.0
+      ],
+      [
+        0.23499999940395355,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      [
+        0.26100000739097595,
+        0.5,
+        0.5,
+        0.5,
+        1.0
+      ],
+      [
+        0.289000004529953,
+        0.8899999856948853,
+        0.8899999856948853,
+        0.8899999856948853,
+        1.0
+      ],
+      [
+        0.3100000023841858,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "groove_ramp_after": {
+    "interpolation": "EASE",
+    "color_mode": "RGB",
+    "hue_interpolation": "NEAR",
+    "elements": [
+      [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.15000000596046448,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.1679999977350235,
+        0.7099999785423279,
+        0.7099999785423279,
+        0.7099999785423279,
+        1.0
+      ],
+      [
+        0.18000000715255737,
+        0.2800000011920929,
+        0.2800000011920929,
+        0.2800000011920929,
+        1.0
+      ],
+      [
+        0.1899999976158142,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        1.0
+      ],
+      [
+        0.21299999952316284,
+        0.10999999940395355,
+        0.10999999940395355,
+        0.10999999940395355,
+        1.0
+      ],
+      [
+        0.23499999940395355,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      [
+        0.26100000739097595,
+        0.5,
+        0.5,
+        0.5,
+        1.0
+      ],
+      [
+        0.289000004529953,
+        0.8899999856948853,
+        0.8899999856948853,
+        0.8899999856948853,
+        1.0
+      ],
+      [
+        0.3100000023841858,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "all_material_settings_preserved": true,
+  "other_ramps_and_full_shader_graph_preserved": true,
+  "all_surface_map_pixels_preserved": true,
+  "finish_sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+  "other_packed_images": {
+    "Earlier pigment | pawn-walnut-v2.png": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+    "Pawn fine slope atlas": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+    "Pawn walnut pigment": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400"
+  },
+  "world_and_ray_depth_preserved": true,
+  "matte_band": {
+    "fall": [
+      0.785,
+      0.818
+    ],
+    "fraction": 0.35,
+    "rise": [
+      0.744,
+      0.757
+    ]
+  },
+  "sampling": {
+    "samples": 512,
+    "seed": 0,
+    "light_tree": false,
+    "denoising": true,
+    "adaptive_sampling": true,
+    "adaptive_threshold": 0.009999999776482582,
+    "adaptive_min_samples": 0,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "animated_seed": false
+  }
+}
