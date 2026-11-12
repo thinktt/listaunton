@@ -330,3 +330,34 @@ and exporter checks. Texture needs relief separated from broad pigment and
 illumination; simply multiplying color-derived bump is not sufficient. The
 side/rear material boundary remains unresolved. This is an incomplete research
 checkpoint, not a pause or a completed reconstruction.
+
+## Iteration 012 — wider socket reflections without the upper arc
+
+The owner has not requested a pause. Exact derived render regions let the
+17 socket reflectors use wider beams without illuminating the upper stem.
+Their power, color and placement stay unchanged. Excluding the collar reflector
+from the socket reduces the stray lower glint. The original closed editable
+body, button, slit, packed wood, UV controls and fixed 54-degree camera remain
+preserved; the viewer still exports the two closed components.
+
+The saved/reopened 512-sample result is a small accepted improvement with a
+tradeoff: the cream band is broader and its reference-core error decreases
+45.20 → 35.03 /255, but the lower socket becomes slightly too dark. Whole-piece
+foreground RGB error improves 7.72 → 7.69. The reference's broader, irregular
+band is still not reproduced. Scores are 96.11 / 84 / 84 / 77 / 77, working mean
+83.62%, holistic 75–85%. See
+[`iteration-012/assessment.md`](bishop-mission/iteration-012/assessment.md).
+
+An invalid initial save lost temporary evaluated-material links. That render
+is rejected; the corrected builder uses persistent material slots, with a
+reopened scope audit. All render-region faces, materials and surface data are
+checked against the unchanged closed control. Evaluated UV rounding of at
+most 5.96e-8 is reported explicitly; geometry and control UVs are exact.
+The bishop pages, fixed/side/neutral renders and local preview are synchronized
+from the accepted model after validation. Checkpoint 010 remains archived.
+
+The major side/rear pigment boundary, fine grain, collar/base highlights,
+slit-edge finish and residual socket mismatch remain unresolved. Next inspect
+pigment continuity separately from illumination, consulting the previous
+rejected studies while preserving this accepted fixed-view result. The full
+mission remains active and incomplete. No quota monitoring was performed.

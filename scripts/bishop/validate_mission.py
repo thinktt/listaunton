@@ -3,11 +3,13 @@ import bpy,json,hashlib,sys,math,copy,runpy
 import numpy as np
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from bishop_scene import editable_meshes
+from validate_render_receivers import audit as audit_receivers
 buffers={};construction={}
 def geometry(path):
     bpy.ops.wm.open_mainfile(filepath=str(path),load_ui=False);bpy.context.view_layer.update();g=bpy.context.evaluated_depsgraph_get();res={}
-    for ob in bpy.context.scene.objects:
-        if ob.type!='MESH' or ob.hide_render:continue
+    for ob in editable_meshes(bpy.context.scene):
         ev=ob.evaluated_get(g);me=ev.to_mesh();me.calc_loop_triangles()
         pos=np.array([tuple(v.co) for v in me.vertices],dtype='<f4');tris=np.array([tuple(t.vertices) for t in me.loop_triangles],dtype='<i4')
         buffers[(str(path),ob.name)]=(pos.copy(),tris.copy(),np.array([tuple(v.co) for v in ob.data.vertices],dtype='<f4'))
@@ -34,16 +36,29 @@ profile=json.loads((ROOT/'scripts/bishop/profile.json').read_text())
 declared=profile.get('mission_geometry')
 slit_declared=profile.get('mission_slit_geometry')
 base_declared=profile.get('mission_base_curvature')
+current_path=ROOT/'models/bishop/bishop-rebuilt.blend'
+bpy.ops.wm.open_mainfile(filepath=str(current_path),load_ui=False)
+receiver_cfg=json.loads(bpy.context.scene['bishop_receiver_trial']) if bpy.context.scene.get('bishop_receiver_trial') else None
+receiver_report=audit_receivers(current_path,receiver_cfg) if receiver_cfg else {'used':False}
+if receiver_cfg:
+    (ROOT/'assets/bishop/receiver-validation.json').write_text(json.dumps(receiver_report,indent=2)+'\n')
 if base_declared:
     base_config=json.loads((ROOT/base_declared['config']).read_text())
     assert base_declared['baseline_model']==base_config['source']
     assert base_declared['baseline_profile']==base_config['profile']
     assert base_declared['body_rings']==base_config['body_rings']
     original_args=sys.argv[:]
+    base_checked_model=receiver_cfg['source'] if receiver_cfg else 'models/bishop/bishop-rebuilt.blend'
     sys.argv=['validate_base_curvature.py','--','--config',base_declared['config'],
-              '--model','models/bishop/bishop-rebuilt.blend','--out','assets/bishop/base-validation.json','--geometry-only']
+              '--model',base_checked_model,'--out','assets/bishop/base-validation.json','--geometry-only']
     runpy.run_path(str(Path(__file__).with_name('validate_base_curvature.py')),run_name='__main__')
     sys.argv=original_args
+    if receiver_cfg:
+        base_report=json.loads((ROOT/'assets/bishop/base-validation.json').read_text())
+        base_report.update(checked_model=base_checked_model,current_model_sha256=hashlib.sha256(current_path.read_bytes()).hexdigest(),
+          inheritance_audit='assets/bishop/receiver-validation.json',
+          note='The base edit is checked on the archived closed source. The independent receiver audit proves current controls, cutter, modifiers and UVs exactly inherit that surface. Current anatomy is also probed directly.')
+        (ROOT/'assets/bishop/base-validation.json').write_text(json.dumps(base_report,indent=2)+'\n')
 if slit_declared:
     slit_path=ROOT/slit_declared['config'];slit_config=json.loads(slit_path.read_text())
     assert slit_config['source']==slit_declared['baseline_model']
@@ -123,4 +138,5 @@ assert (ROOT/'assets/bishop/reference.png').read_bytes()==(ROOT/'assets/candidat
 report={'passed':True,'all_evaluated_geometry_preserved_within_5e_6':not bool(declared),'declared_geometry_changes_validated':bool(declared),'baseline_model':str(baseline_path.relative_to(ROOT)),'geometry_comparison':changes,'components':current,'camera_exactly_unchanged':True,'reference_pixels_unchanged':True,'shader':'Principled BSDF','albedo_bakes_lighting':False,'texture_hash_matches':True,'finite_uvs_and_unit_normals':True,'model_sha256':meta['sourceSha256']}
 report['declared_slit_revision_validated']=bool(slit_declared)
 report['declared_base_curvature_validated']=bool(base_declared)
+report['render_receivers']=receiver_report
 (ROOT/'assets/bishop/mission-validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

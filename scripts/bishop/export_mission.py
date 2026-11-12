@@ -4,10 +4,12 @@ from pathlib import Path
 import bpy
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from bishop_scene import editable_meshes
 p=argparse.ArgumentParser();p.add_argument('--model',default='models/bishop/bishop-rebuilt.blend');p.add_argument('--out',default='assets/bishop');a=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 model=ROOT/a.model;bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False)
 s=bpy.context.scene;bpy.context.view_layer.update();g=bpy.context.evaluated_depsgraph_get();blocks=[];parts=[];count=0
-for ob in [o for o in s.objects if o.type=='MESH' and not o.hide_render]:
+for ob in editable_meshes(s):
     ev=ob.evaluated_get(g);me=ev.to_mesh();me.calc_loop_triangles();uv=me.uv_layers['Wood atlas'];block=[]
     for tri in me.loop_triangles:
         for vi,li in zip(tri.vertices,tri.loops):block.append(tuple(ob.matrix_world@me.vertices[vi].co)+tuple((ob.matrix_world.to_3x3()@me.corner_normals[li].vector).normalized())+(tuple(uv.data[li].uv) if tri.material_index==0 else (-1.,-1.)))

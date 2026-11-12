@@ -158,6 +158,34 @@ UVs, camera, lights and render-path preservation. The comparison helpers keep
 the original registration and show actual BSDF renders. Failed trials are not
 public model choices. See `docs/bishop-mission/iteration-011/reproduction.json`.
 
+Checkpoint 012 confines the wider socket reflectors to two derived body render
+regions. The closed turned body remains the editable control, tagged
+`bishop_editable_control` and hidden only from rendering; the button stays a
+separate closed component. `bishop_scene.editable_meshes` selects these controls
+for export and anatomy checks. Derived objects carry `bishop_render_region`
+and share the persistent control materials. Never use temporary evaluated
+material pointers: they become empty slots after saving/reopening.
+
+Reproduce with `socket_receiver_trial.py` and
+`docs/bishop-mission/iteration-012/receiver-097.json`, starting from checkpoint
+010, then the documented 512-sample finalization. `validate_render_receivers.py`
+independently checks controls, topology, packed pixels, camera, world and the
+declared light-only changes. It proves complete evaluated-face coverage, exact
+positions/material indices, shared material slots, normals below .0002 error
+and evaluated UVs within 1e-7 (observed one float32 ULP); control UVs stay exact.
+The previous base/slit checks validate the archived closed source, connected
+to the current model by this exact-control audit, while current anatomy is
+still probed directly. Export retains the two closed controls.
+
+Do not edit derived regions or render stale copies after a geometry/cutter
+change. Both `geometry_trial.py` and `slit_trial.py` reject receiver-bearing
+sources until receiver regeneration is implemented for the intended edit.
+Material edits must preserve shared slots; light experiments must preserve
+the explicit socket/body-rest receiver links unless deliberately changing them.
+The 094/095 scripts are unsaved cropped diagnostics, not accepted substitutes
+for the reopened full render. See iteration 012 for the residual lower-tone
+tradeoff, side/rear texture defect and next work.
+
 ## Original geometry construction
 
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.

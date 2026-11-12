@@ -2,6 +2,8 @@
 import argparse,bpy,bmesh,json,sys,hashlib,math
 from pathlib import Path
 from mathutils import Vector
+sys.path.insert(0,str(Path(__file__).parent))
+from bishop_scene import editable_meshes
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('root',type=Path)
 parser.add_argument('--model',default='models/bishop/bishop-rebuilt.blend')
@@ -9,8 +11,7 @@ parser.add_argument('--profile',default='scripts/bishop/profile.json')
 parser.add_argument('--out',default='assets/bishop/validation.json')
 parser.add_argument('--skip-export',action='store_true',help='Trial anatomy only; saved camera still checked, export hash deferred until promotion.')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:]);root=args.root;model=root/args.model;bpy.ops.wm.open_mainfile(filepath=str(model));graph=bpy.context.evaluated_depsgraph_get();report=[]
-for ob in bpy.context.scene.objects:
- if ob.type!='MESH' or ob.hide_render:continue
+for ob in editable_meshes(bpy.context.scene):
  ev=ob.evaluated_get(graph);me=ev.to_mesh();bm=bmesh.new();bm.from_mesh(me)
  nonmanifold=sum(not e.is_manifold for e in bm.edges);volume=bm.calc_volume(signed=True)
  assert nonmanifold==0,(ob.name,nonmanifold)

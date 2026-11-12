@@ -27,6 +27,7 @@ factor = 1254/300/alignment['scale']/profile['scale']
 cosine = math.cos(math.radians(profile['elevation']))
 bpy.ops.wm.open_mainfile(filepath=str(source), load_ui=False)
 scene = bpy.context.scene
+assert not any(o.get('bishop_render_region') for o in scene.objects), 'Regenerate exact render receivers after editing the closed control; stale copies cannot be rendered.'
 camera_before = [float(x) for row in scene.camera.matrix_world for x in row]
 body = bpy.data.objects['Bishop - continuous turned body']
 button = bpy.data.objects['Bishop - domed button finial']

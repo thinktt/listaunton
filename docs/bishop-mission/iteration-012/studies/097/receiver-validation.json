@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+  "evaluated_uv_error_below_1e_7": true,
+  "closed_editable_control_retained": true,
+  "regions": [
+    {
+      "region": "body-rest",
+      "faces": 53514,
+      "vertices": 53998,
+      "normal_max_component_error": 2.562999725341797e-05,
+      "uv_max_component_errors": {
+        "Pigment projection": 5.960464477539063e-08,
+        "Wood atlas": 5.960464477539063e-08
+      }
+    },
+    {
+      "region": "socket-lip",
+      "faces": 7936,
+      "vertices": 8192,
+      "normal_max_component_error": 4.336237907409668e-05,
+      "uv_max_component_errors": {
+        "Pigment projection": 5.960464477539063e-08,
+        "Wood atlas": 5.960464477539063e-08
+      }
+    }
+  ],
+  "all_faces_once": true,
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "model": "build\\bishop-mission\\097-socket-receivers-persistent\\bishop.blend",
+  "model_sha256": "2b9127671093a7fa2c3e080b09afa81d80c720ff458631ea3e1b99f111753aee",
+  "only_declared_light_parameters_and_links_changed": true,
+  "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
+  "camera_world_display_render_path_preserved": true,
+  "reopened_audit": true,
+  "config": {
+    "variant": "097-socket-receivers-persistent",
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+    "socket_z_band": [
+      0.99,
+      1.38
+    ],
+    "arc_shadow_soft_size": 0.024,
+    "arc_spot_degrees": 2.0,
+    "exclude_from_socket": [
+      "collars reflection"
+    ],
+    "samples": 256
+  }
+}

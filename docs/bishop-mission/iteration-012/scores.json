@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.10946013611408,
+    "interior": 84,
+    "color": 84,
+    "texture": 77,
+    "lighting": 77
+  },
+  "mean_percent": 83.62189202722281,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9778635964437387,
+  "original_black_iou": 0.9666099115524281,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "accepted_model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "render_sha256": "9811f367fe5ffed79a045278ed76aaf780bc3a21cf5294342557247037042b41",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "starting_model_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "status": "Accepted small socket-lighting improvement; full reconstruction remains incomplete."
+}

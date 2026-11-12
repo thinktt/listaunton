@@ -1,0 +1,64 @@
+{
+  "note": "Fixed registered RGB measurements on actual renders, not fidelity scores. No image alignment or color adjustment.",
+  "core_pixels": 246,
+  "regions": {
+    "whole_socket": [
+      350,
+      735,
+      640,
+      870
+    ],
+    "lip": [
+      400,
+      775,
+      605,
+      825
+    ],
+    "lower_streak": [
+      510,
+      830,
+      600,
+      860
+    ]
+  },
+  "renders": {
+    "history/bishop-mission-010/render.png": {
+      "sha256": "010891e67d4d06b51d75427e05e44a93788d8f32deb213c88fca880f9f3e97f9",
+      "reference_cream_core_rgb_error": 45.20460891723633,
+      "whole_socket": {
+        "pixels": 39150,
+        "rgb_mae": 8.115930557250977,
+        "cream_pixels": 140
+      },
+      "lip": {
+        "pixels": 10250,
+        "rgb_mae": 13.429235458374023,
+        "cream_pixels": 138
+      },
+      "lower_streak": {
+        "pixels": 2700,
+        "rgb_mae": 8.37827205657959,
+        "cream_pixels": 0
+      }
+    },
+    "assets/bishop/render.png": {
+      "sha256": "9811f367fe5ffed79a045278ed76aaf780bc3a21cf5294342557247037042b41",
+      "reference_cream_core_rgb_error": 35.03252029418945,
+      "whole_socket": {
+        "pixels": 39150,
+        "rgb_mae": 7.97006368637085,
+        "cream_pixels": 227
+      },
+      "lip": {
+        "pixels": 10250,
+        "rgb_mae": 12.847967147827148,
+        "cream_pixels": 225
+      },
+      "lower_streak": {
+        "pixels": 2700,
+        "rgb_mae": 8.715062141418457,
+        "cream_pixels": 0
+      }
+    }
+  }
+}

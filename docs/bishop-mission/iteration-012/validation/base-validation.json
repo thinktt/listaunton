@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-007/bishop-rebuilt.blend",
+  "source_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
+  "model": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "model_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "config": "docs/bishop-mission/iteration-009/geometry-067.json",
+  "declared_rings": [
+    17,
+    18
+  ],
+  "max_control_error": {
+    "Bishop - continuous turned body": 2.957824485338989e-08,
+    "Mitre saw cut - editable cutter": 0.0,
+    "Bishop - domed button finial": 0.0
+  },
+  "all_control_heights_exact": true,
+  "camera_topology_uvs_modifiers_cutter_and_dimensions_preserved": true,
+  "outside_base_geometry_preserved": true,
+  "materials_lights_world_preserved": false,
+  "material_lighting_preservation_required": false,
+  "scope": {
+    "Bishop - continuous turned body": {
+      "closed_positive_volume": true,
+      "volume": 4.8634066226092525,
+      "evaluated_vertices": 61678,
+      "outside_base_bidirectional_distance": [
+        {
+          "max_distance": 0,
+          "samples": 58094
+        },
+        {
+          "max_distance": 0,
+          "samples": 58094
+        }
+      ]
+    },
+    "Bishop - domed button finial": {
+      "closed_positive_volume": true,
+      "volume": 0.03451065611360572,
+      "evaluated_vertices": 5890,
+      "outside_base_bidirectional_distance": [
+        {
+          "max_distance": 0,
+          "samples": 5890
+        },
+        {
+          "max_distance": 0,
+          "samples": 5890
+        }
+      ]
+    }
+  },
+  "checked_model": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "current_model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "inheritance_audit": "assets/bishop/receiver-validation.json",
+  "note": "The base edit is checked on the archived closed source. The independent receiver audit proves current controls, cutter, modifiers and UVs exactly inherit that surface. Current anatomy is also probed directly."
+}

@@ -1,0 +1,49 @@
+{
+  "config": {
+    "variant": "097-socket-receivers-persistent",
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+    "socket_z_band": [
+      0.99,
+      1.38
+    ],
+    "arc_shadow_soft_size": 0.024,
+    "arc_spot_degrees": 2.0,
+    "exclude_from_socket": [
+      "collars reflection"
+    ],
+    "samples": 256
+  },
+  "source_unchanged": true,
+  "saved_model_sha256": "2b9127671093a7fa2c3e080b09afa81d80c720ff458631ea3e1b99f111753aee",
+  "render_sha256": "1bd39a09e6d0ddcdc1bb12558edb7c2f88f8c4fe3cb0e9f0e9c9a30967513a44",
+  "partition": [
+    {
+      "name": "body-rest",
+      "faces": 53514,
+      "triangles": 107480,
+      "vertices": 53998,
+      "z_min": 0.0,
+      "z_max": 4.410513877868652,
+      "uv_layers": [
+        "Pigment projection",
+        "Wood atlas"
+      ],
+      "max_custom_normal_component_error": 2.562999725341797e-05
+    },
+    {
+      "name": "socket-lip",
+      "faces": 7936,
+      "triangles": 15872,
+      "vertices": 8192,
+      "z_min": 1.0012600421905518,
+      "z_max": 1.3572490215301514,
+      "uv_layers": [
+        "Pigment projection",
+        "Wood atlas"
+      ],
+      "max_custom_normal_component_error": 4.336237907409668e-05
+    }
+  ],
+  "reopened_before_render": true
+}

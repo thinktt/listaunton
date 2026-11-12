@@ -1,0 +1,30 @@
+{
+  "note": "Fixed crops, no realignment or grading. These are image diagnostics, not fidelity scores.",
+  "renders": {
+    "Reference": {
+      "path": "assets/bishop/reference.png",
+      "crop_rgb_mae": 0.0,
+      "pixels": 39150
+    },
+    "control": {
+      "path": "build/bishop-mission/087-socket-finish-probe/control.png",
+      "crop_rgb_mae": 8.189791400595999,
+      "pixels": 39150
+    },
+    "confined-wide14": {
+      "path": "build/bishop-mission/094-socket-receiver-probe/confined-wide14.png",
+      "crop_rgb_mae": 7.998561089825458,
+      "pixels": 39150
+    },
+    "confined-wide20": {
+      "path": "build/bishop-mission/094-socket-receiver-probe/confined-wide20.png",
+      "crop_rgb_mae": 7.856568752660706,
+      "pixels": 39150
+    },
+    "confined-soft20": {
+      "path": "build/bishop-mission/094-socket-receiver-probe/confined-soft20.png",
+      "crop_rgb_mae": 7.8772584078331205,
+      "pixels": 39150
+    }
+  }
+}

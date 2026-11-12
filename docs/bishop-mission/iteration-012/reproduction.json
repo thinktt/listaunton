@@ -1,0 +1,13 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "config": "docs/bishop-mission/iteration-012/receiver-097.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/socket_receiver_trial.py -- docs/bishop-mission/iteration-012/receiver-097.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_render_receivers.py -- --config docs/bishop-mission/iteration-012/receiver-097.json --model build/bishop-mission/097-socket-receivers-persistent/bishop.blend --out build/bishop-mission/097-socket-receivers-persistent/receiver-validation.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/finalize_render.py -- --source build/bishop-mission/097-socket-receivers-persistent/bishop.blend --out build/bishop-mission/098-socket-checkpoint --samples 512 --fixed-samples"
+  ],
+  "follow_up": "In an isolated copy, stage the checked model/render while retaining the profile and atlas. Run validate_checkpoint.py, render_diagnostics.py, render_clay.py, compare.py, mission_compare.py, refresh_review.py and the bishop viewer/review checks before canonical synchronization.",
+  "accepted_model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "note": "No changes to closed control geometry, UVs, pigment, world, camera, light power/color/position, or four glossy bounces. Derived receivers use the persistent control materials. The renderer uses two exact body surface partitions plus the unchanged button; export retains the two closed editable controls."
+}

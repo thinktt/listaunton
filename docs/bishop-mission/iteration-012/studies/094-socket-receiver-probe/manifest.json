@@ -1,0 +1,200 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "diagnostics_only": true,
+  "samples": 256,
+  "crop": [
+    330,
+    710,
+    660,
+    885
+  ],
+  "z_band": [
+    1.2,
+    1.38
+  ],
+  "variants": [
+    {
+      "name": "partition-control",
+      "socket_lights_confined": false,
+      "radius": null,
+      "cone_degrees": null,
+      "power_factor": 1,
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 55562,
+          "triangles": 111576,
+          "vertices": 56046,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 3.24249267578125e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 5888,
+          "triangles": 11776,
+          "vertices": 6144,
+          "z_min": 1.2357017993927002,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "dde7e4002dfe35f905175be787cdbf0e5d68905243586a3867aab9e053074013"
+    },
+    {
+      "name": "confined-control",
+      "socket_lights_confined": true,
+      "radius": null,
+      "cone_degrees": null,
+      "power_factor": 1,
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 55562,
+          "triangles": 111576,
+          "vertices": 56046,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 3.24249267578125e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 5888,
+          "triangles": 11776,
+          "vertices": 6144,
+          "z_min": 1.2357017993927002,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "a765c2627cea69b901b5ace5a93b418ff49330053d49169d2de22625374010af"
+    },
+    {
+      "name": "confined-wide14",
+      "socket_lights_confined": true,
+      "radius": 0.024,
+      "cone_degrees": 1.4,
+      "power_factor": 1,
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 55562,
+          "triangles": 111576,
+          "vertices": 56046,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 3.24249267578125e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 5888,
+          "triangles": 11776,
+          "vertices": 6144,
+          "z_min": 1.2357017993927002,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "58092f3c58666532dd7a68e952549931180d2ee215213c2ae27bc987c9e302ba"
+    },
+    {
+      "name": "confined-wide20",
+      "socket_lights_confined": true,
+      "radius": 0.024,
+      "cone_degrees": 2,
+      "power_factor": 1,
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 55562,
+          "triangles": 111576,
+          "vertices": 56046,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 3.24249267578125e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 5888,
+          "triangles": 11776,
+          "vertices": 6144,
+          "z_min": 1.2357017993927002,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "9554c6a81c3969785404f51afbaca17fdafc3d3a8835322eb5c6d05053977272"
+    },
+    {
+      "name": "confined-soft20",
+      "socket_lights_confined": true,
+      "radius": 0.05,
+      "cone_degrees": 2,
+      "power_factor": 1,
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 55562,
+          "triangles": 111576,
+          "vertices": 56046,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 3.24249267578125e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 5888,
+          "triangles": 11776,
+          "vertices": 6144,
+          "z_min": 1.2357017993927002,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "6edff62a27f063300e7f73ca80f4ec7b7f8f1c457a3cae9f31b042169b06e326"
+    }
+  ],
+  "note": "Unchanged evaluated surface, UVs, materials and custom smooth normals. Control remains closed/editable. Diagnostic scenes are not saved."
+}

@@ -1,0 +1,49 @@
+{
+  "094": {
+    "kind": "Unsaved cropped BSDF diagnostics",
+    "variants": [
+      "partition control",
+      "confined control",
+      "1.4 degree cone",
+      "2 degree cone",
+      "larger source"
+    ],
+    "finding": "Exact regions allow wider beams without the false upper-stem arc. Two degrees and radius .024 are the useful draft; larger radius adds no clear benefit."
+  },
+  "095": {
+    "kind": "Unsaved cropped BSDF diagnostics",
+    "variants": [
+      "socket control",
+      "exclude collar reflection",
+      "exclude head and collar reflection"
+    ],
+    "finding": "Collar reflection produces most of the unwanted lower glint. Keep the head lamp unchanged; removing it too adds no convincing benefit."
+  },
+  "096": {
+    "kind": "Invalid save/reopen pipeline test",
+    "accepted": false,
+    "finding": "Evaluated temporary material pointers became null slots after reopening. This white render is a pipeline failure, not a visual candidate. Persistent control material slots fix the cause; reopened slot assertions prevent recurrence."
+  },
+  "097": {
+    "kind": "Saved/reopened 256-sample full candidate",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 77
+    },
+    "decision": "Promoted for final 512-sample examination, after independent receiver/light-scope checks."
+  },
+  "098": {
+    "kind": "Saved/reopened 512-sample full candidate",
+    "scores_percent": {
+      "silhouette": 96.10946013611408,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 77
+    },
+    "decision": "Accepted with the documented lower-socket tone tradeoff."
+  }
+}

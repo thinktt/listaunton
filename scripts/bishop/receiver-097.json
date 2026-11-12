@@ -1,0 +1,10 @@
+{
+  "variant": "097-socket-receivers-persistent",
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "socket_z_band": [0.99, 1.38],
+  "arc_shadow_soft_size": 0.024,
+  "arc_spot_degrees": 2.0,
+  "exclude_from_socket": ["collars reflection"],
+  "samples": 256
+}

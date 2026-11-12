@@ -3,6 +3,9 @@ import argparse,hashlib,json,sys
 from pathlib import Path
 import bpy,numpy as np
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).parent))
+from bishop_scene import editable_meshes,render_meshes
+from validate_render_receivers import check as check_receivers
 p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--out',required=True);p.add_argument('--samples',type=int,default=96)
 p.add_argument('--fixed-samples',action='store_true')
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:]);source=ROOT/a.source;dest=ROOT/a.out
@@ -17,7 +20,8 @@ s.render.filepath=str(dest/'wood.png');bpy.context.preferences.filepaths.save_ve
 bpy.ops.wm.save_as_mainfile(filepath=str(dest/'bishop.blend'))
 bpy.ops.wm.open_mainfile(filepath=str(dest/'bishop.blend'),load_ui=False);s=bpy.context.scene
 assert camera==[float(x) for row in s.camera.matrix_world for x in row]+[s.camera.data.ortho_scale,s.camera.data.shift_x,s.camera.data.shift_y]
-objects=[o for o in s.objects if o.type=='MESH' and not o.hide_render];assert len(objects)==2
+controls=editable_meshes(s);objects=render_meshes(s)
+receiver_report=check_receivers(s,json.loads(s['bishop_receiver_trial'])) if s.get('bishop_receiver_trial') else {'used':False}
 texture=ROOT/'assets/bishop/bishop-boxwood-albedo.png';checks={}
 disk=bpy.data.images.load(str(texture),check_existing=False);disk_pixels=np.array(disk.pixels[:],dtype=np.float32)
 for mat in {m for obj in objects for m in obj.data.materials if m}:
@@ -41,4 +45,6 @@ report={'source':a.source,'source_sha256':source_hash,'saved_model_sha256':hashl
     'source_unchanged':True}
 report['adaptive_sampling']=s.cycles.use_adaptive_sampling
 report['glossy_bounces']=s.cycles.glossy_bounces
+report['render_receivers']=receiver_report
+report['editable_components']=len(controls)
 (dest/'reopen-validation.json').write_text(json.dumps(report,indent=2)+'\n');print('BISHOP_FINAL_RENDER_COMPLETE',json.dumps(report),flush=True)

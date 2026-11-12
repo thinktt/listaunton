@@ -16,6 +16,7 @@ assert out.resolve().is_relative_to((ROOT/'build/bishop-mission').resolve())
 out.mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
 scene=bpy.context.scene
+assert not any(o.get('bishop_render_region') for o in scene.objects),'Regenerate exact render receivers after a cutter edit; stale render copies are not valid.'
 body=bpy.data.objects['Bishop - continuous turned body']
 modifier=next(m for m in body.modifiers if m.type=='BOOLEAN')
 cutter=modifier.object

@@ -1,0 +1,25 @@
+{
+  "note": "Fixed crops, no realignment or grading. These are image diagnostics, not fidelity scores.",
+  "renders": {
+    "Reference": {
+      "path": "assets/bishop/reference.png",
+      "crop_rgb_mae": 0.0,
+      "pixels": 39150
+    },
+    "socket-control": {
+      "path": "build/bishop-mission/095-socket-spill-probe/socket-control.png",
+      "crop_rgb_mae": 7.854448701575138,
+      "pixels": 39150
+    },
+    "without-collar-spill": {
+      "path": "build/bishop-mission/095-socket-spill-probe/without-collar-spill.png",
+      "crop_rgb_mae": 7.980766283524904,
+      "pixels": 39150
+    },
+    "without-head-collar-spill": {
+      "path": "build/bishop-mission/095-socket-spill-probe/without-head-collar-spill.png",
+      "crop_rgb_mae": 8.01698595146871,
+      "pixels": 39150
+    }
+  }
+}

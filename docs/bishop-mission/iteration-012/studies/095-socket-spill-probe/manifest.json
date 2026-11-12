@@ -1,0 +1,120 @@
+{
+  "source": "history\\bishop-mission-010\\bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "samples": 256,
+  "z_band": [
+    0.99,
+    1.38
+  ],
+  "arc_radius": 0.024,
+  "arc_cone_degrees": 2,
+  "arc_power_factor": 1,
+  "diagnostics_only": true,
+  "variants": [
+    {
+      "name": "socket-control",
+      "excluded_lights": [],
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 53514,
+          "triangles": 107480,
+          "vertices": 53998,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 2.562999725341797e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 7936,
+          "triangles": 15872,
+          "vertices": 8192,
+          "z_min": 1.0012600421905518,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "a736ed09cfc46fbe52c902cf4683a68e066d70e1c253fa7f629ae90dfb207544"
+    },
+    {
+      "name": "without-collar-spill",
+      "excluded_lights": [
+        "collars reflection"
+      ],
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 53514,
+          "triangles": 107480,
+          "vertices": 53998,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 2.562999725341797e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 7936,
+          "triangles": 15872,
+          "vertices": 8192,
+          "z_min": 1.0012600421905518,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "5ca2eb5cd1e80e29d66234db793abf5cd0185eb66692c040717b8bce2918a073"
+    },
+    {
+      "name": "without-head-collar-spill",
+      "excluded_lights": [
+        "head reflection",
+        "collars reflection"
+      ],
+      "partition": [
+        {
+          "name": "body-rest",
+          "faces": 53514,
+          "triangles": 107480,
+          "vertices": 53998,
+          "z_min": 0.0,
+          "z_max": 4.410513877868652,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 2.562999725341797e-05
+        },
+        {
+          "name": "socket-lip",
+          "faces": 7936,
+          "triangles": 15872,
+          "vertices": 8192,
+          "z_min": 1.0012600421905518,
+          "z_max": 1.3572490215301514,
+          "uv_layers": [
+            "Pigment projection",
+            "Wood atlas"
+          ],
+          "max_custom_normal_component_error": 4.336237907409668e-05
+        }
+      ],
+      "render_sha256": "4871edfe863d6c67481c9e2cc1cec137fea51d3066cd9475313fe6533898338c"
+    }
+  ]
+}

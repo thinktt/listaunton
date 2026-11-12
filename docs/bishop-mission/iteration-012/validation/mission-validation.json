@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "all_evaluated_geometry_preserved_within_5e_6": false,
+  "declared_geometry_changes_validated": true,
+  "baseline_model": "history\\bishop-mission-001\\bishop-rebuilt.blend",
+  "geometry_comparison": {
+    "Bishop - continuous turned body": {
+      "max_evaluated_coordinate_difference": null,
+      "triangle_indices_unchanged": false,
+      "control_vertices_exactly_unchanged": false,
+      "max_control_difference_from_declared_edit": 1.1920928955078125e-07,
+      "control_topology_and_non_cutter_modifiers_unchanged": true,
+      "cutter_unchanged_or_declared_revision_validated": true,
+      "evaluated_triangle_count_before": 121344,
+      "evaluated_triangle_count_after": 123352
+    },
+    "Bishop - domed button finial": {
+      "max_evaluated_coordinate_difference": 0.01907581090927124,
+      "triangle_indices_unchanged": true,
+      "control_vertices_exactly_unchanged": false,
+      "max_control_difference_from_declared_edit": 2.9802322387695312e-08,
+      "control_topology_and_non_cutter_modifiers_unchanged": true,
+      "cutter_unchanged_or_declared_revision_validated": true,
+      "evaluated_triangle_count_before": 11776,
+      "evaluated_triangle_count_after": 11776
+    }
+  },
+  "components": {
+    "Bishop - continuous turned body": {
+      "positions": "56c0edff066a0435a405ba3ba290fa772faa6741e9af9608169f5208eff66075",
+      "triangles": "c4b72c2a4568581a52ca867db7e752bb6ee90c5407844ae794965f7ea2945ac2",
+      "vertex_count": 61678,
+      "triangle_count": 123352
+    },
+    "Bishop - domed button finial": {
+      "positions": "6cee2cf4b947dec6d0d73b714d90d8a0ef7ee095d39fd2890c3b6454a9668707",
+      "triangles": "ff22ed56a88aa08718d1271347ea18cd4aa13840c43f23191f8fb5d9268cf546",
+      "vertex_count": 5890,
+      "triangle_count": 11776
+    }
+  },
+  "camera_exactly_unchanged": true,
+  "reference_pixels_unchanged": true,
+  "shader": "Principled BSDF",
+  "albedo_bakes_lighting": false,
+  "texture_hash_matches": true,
+  "finite_uvs_and_unit_normals": true,
+  "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "declared_slit_revision_validated": true,
+  "declared_base_curvature_validated": true,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 53514,
+        "vertices": 53998,
+        "normal_max_component_error": 2.562999725341797e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 4.336237907409668e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true,
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+    "model": "models\\bishop\\bishop-rebuilt.blend",
+    "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+    "only_declared_light_parameters_and_links_changed": true,
+    "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
+    "camera_world_display_render_path_preserved": true,
+    "reopened_audit": true,
+    "config": {
+      "arc_shadow_soft_size": 0.024,
+      "arc_spot_degrees": 2.0,
+      "exclude_from_socket": [
+        "collars reflection"
+      ],
+      "samples": 256,
+      "socket_z_band": [
+        0.99,
+        1.38
+      ],
+      "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "variant": "097-socket-receivers-persistent"
+    }
+  }
+}
