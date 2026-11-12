@@ -86,6 +86,7 @@ def run(cfg):
     if cfg.get('lights'):lights(scene,cfg)
     out=ROOT/'build/king-mission'/cfg['variant'];out.mkdir(parents=True,exist_ok=True)
     scene.render.engine='CYCLES';scene.cycles.samples=cfg.get('samples',48);scene.cycles.use_denoising=True
+    if 'use_light_tree' in cfg:scene.cycles.use_light_tree=cfg['use_light_tree']
     if 'glossy_bounces' in cfg:scene.cycles.glossy_bounces=cfg['glossy_bounces']
     scene.render.film_transparent=True;scene.render.resolution_percentage=100
     scene.render.image_settings.file_format='PNG';scene.render.image_settings.color_mode='RGBA'

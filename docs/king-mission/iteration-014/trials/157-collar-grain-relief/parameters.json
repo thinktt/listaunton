@@ -1,0 +1,28 @@
+{
+  "source": "build/king-mission/157-collar-grain-relief/prepared.blend",
+  "source_sha256": "65640e2e7568973f75a3e33bd8a158f2730bf0ba9c92cdbceae8fc8510dad8d6",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "attribute": "Collar varnish texture 014",
+  "lower_fade": [
+    34,
+    37
+  ],
+  "ring_fade": [
+    60,
+    63
+  ],
+  "variant": "157-collar-grain-relief",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.6
+    ]
+  ],
+  "original_source": "history/king-mission-013/king-rebuilt.blend",
+  "original_source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "model_sha256": "332e7907e61bbcca80a338fba756262ffaa739361eafb66655e4fad7602b0987",
+  "elevation_degrees": 54.000000800055794
+}

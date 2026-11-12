@@ -1,0 +1,18 @@
+{
+  "source": "models/king/king-rebuilt.blend",
+  "source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "object_names": [
+    "King - continuous turned body"
+  ],
+  "partial_object_response": true,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "view_transform": "AgX",
+  "look": "None",
+  "display_device": "sRGB",
+  "exposure": 0.0,
+  "gamma": 1.0,
+  "method": "Black and white pigment in the actual Principled BSDF, retaining normals, coat, lights, geometry and camera. Difference approximates local diffuse response; multibounce effects limit inversion."
+}

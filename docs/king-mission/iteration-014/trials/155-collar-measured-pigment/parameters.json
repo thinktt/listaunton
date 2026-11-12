@@ -1,0 +1,40 @@
+{
+  "source": "build/king-mission/155-collar-measured-pigment/prepared.blend",
+  "response": "build/king-mission/154-collar-pigment-response",
+  "variant": "155-collar-measured-pigment",
+  "strength": 0.85,
+  "region_attribute": "Collar response region 014",
+  "projection_uv": "Collar response projection 014",
+  "profile_region_lower_fade": [
+    34,
+    37
+  ],
+  "profile_region_fade": [
+    60,
+    63
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "original_source": "models/king/king-rebuilt.blend",
+  "original_source_sha256": "1467e1ac96fdd8a3a10e6bea4a028546a5f10c65f1d0ac3a16e71803b044c22d",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "reference_pixel_500_700": [
+    0.30980393290519714,
+    0.12156863510608673,
+    0.011764707043766975,
+    0.9843137860298157
+  ],
+  "pigment_bounds": [
+    0.001,
+    0.8
+  ],
+  "confidence_mean_foreground": 0.6533019542694092,
+  "fraction_foreground_over_half_confidence": 0.764397642467765,
+  "limitation": "Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.",
+  "source_sha256": "1467e1ac96fdd8a3a10e6bea4a028546a5f10c65f1d0ac3a16e71803b044c22d",
+  "receiver_partitions": [],
+  "reflector_probes": [],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "9a8d4e9fd2bce15fe2a30f76913c9cc6b3bf0c4eb3838d203687a19cb96772a1"
+}

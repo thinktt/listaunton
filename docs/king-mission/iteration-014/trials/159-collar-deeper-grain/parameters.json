@@ -1,0 +1,28 @@
+{
+  "source": "build/king-mission/159-collar-deeper-grain/prepared.blend",
+  "source_sha256": "8922cf9b5f5c1946963ddd599a6c2d29033ddbd833a7ff70de4b13c37b86e654",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "attribute": "Collar varnish texture 014",
+  "lower_fade": [
+    34,
+    37
+  ],
+  "ring_fade": [
+    60,
+    63
+  ],
+  "variant": "159-collar-deeper-grain",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.9
+    ]
+  ],
+  "original_source": "history/king-mission-013/king-rebuilt.blend",
+  "original_source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "model_sha256": "9cb21f6dbffe900cf5797ee9b0fccfadc27d780278ba9957b1a8b4e857a704ab",
+  "elevation_degrees": 54.000000800055794
+}

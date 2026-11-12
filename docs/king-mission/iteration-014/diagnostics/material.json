@@ -1,0 +1,1045 @@
+{
+  "source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "nodes": {
+    "Principled BSDF": {
+      "type": "ShaderNodeBsdfPrincipled",
+      "inputs": {
+        "Metallic": 0.0,
+        "IOR": 1.5,
+        "Alpha": 1.0,
+        "Thin Wall": false,
+        "Weight": 0.0,
+        "Diffuse Roughness": 0.0,
+        "Subsurface Weight": 0.0,
+        "Subsurface Radius": "(1.0, 0.20000000298023224, 0.10000000149011612)",
+        "Subsurface Scale": 0.004999999888241291,
+        "Subsurface IOR": 1.399999976158142,
+        "Subsurface Anisotropy": 0.0,
+        "Specular IOR Level": 0.3499999940395355,
+        "Specular Tint": "(1.0, 1.0, 1.0, 1.0)",
+        "Anisotropic": 0.0,
+        "Anisotropic Rotation": 0.0,
+        "Tangent": "(0.0, 0.0, 0.0)",
+        "Transmission Weight": 0.0,
+        "Coat Weight": 0.3499999940395355,
+        "Coat IOR": 1.5,
+        "Coat Tint": "(1.0, 1.0, 1.0, 1.0)",
+        "Sheen Weight": 0.0,
+        "Sheen Roughness": 0.5,
+        "Sheen Tint": "(1.0, 1.0, 1.0, 1.0)",
+        "Emission Color": "(1.0, 1.0, 1.0, 1.0)",
+        "Emission Strength": 0.0,
+        "Thin Film Thickness": 0.0,
+        "Thin Film IOR": 1.3300000429153442
+      }
+    },
+    "Material Output": {
+      "type": "ShaderNodeOutputMaterial",
+      "inputs": {
+        "Displacement": "(0.0, 0.0, 0.0)",
+        "Thickness": 0.0
+      }
+    },
+    "Texture Coordinate": {
+      "type": "ShaderNodeTexCoord",
+      "inputs": {}
+    },
+    "Vector Math": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Noise Texture": {
+      "type": "ShaderNodeTexNoise",
+      "inputs": {
+        "W": 0.0,
+        "Scale": 1.0,
+        "Detail": 4.0,
+        "Roughness": 0.7200000286102295,
+        "Lacunarity": 2.0,
+        "Offset": 0.0,
+        "Gain": 1.0,
+        "Distortion": 0.0
+      }
+    },
+    "Walnut pigment": {
+      "type": "ShaderNodeValToRGB",
+      "inputs": {}
+    },
+    "Noise Texture.001": {
+      "type": "ShaderNodeTexNoise",
+      "inputs": {
+        "W": 0.0,
+        "Scale": 280.0,
+        "Detail": 2.0,
+        "Roughness": 0.5,
+        "Lacunarity": 2.0,
+        "Offset": 0.0,
+        "Gain": 1.0,
+        "Distortion": 0.0
+      }
+    },
+    "Bump": {
+      "type": "ShaderNodeBump",
+      "inputs": {
+        "Strength": 0.15000000596046448,
+        "Distance": 0.0020000000949949026,
+        "Filter Width": 0.10000000149011612,
+        "Normal": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Derived king pigment": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "UV Map": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "Pigment grade": {
+      "type": "ShaderNodeHueSaturation",
+      "inputs": {
+        "Hue": 0.5,
+        "Saturation": 0.9300000071525574,
+        "Value": 0.7599999904632568,
+        "Factor": 1.0
+      }
+    },
+    "Attribute": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Math": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Continuous pigment": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {}
+    },
+    "RGB to BW": {
+      "type": "ShaderNodeRGBToBW",
+      "inputs": {}
+    },
+    "Pigment microrelief": {
+      "type": "ShaderNodeBump",
+      "inputs": {
+        "Strength": 0.10000000149011612,
+        "Distance": 0.0020000000949949026,
+        "Filter Width": 0.10000000149011612,
+        "Normal": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Vector Math.001": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.002": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.001": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.003": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.004": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.002": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.005": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.006": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.003": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.007": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.008": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.004": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.009": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.010": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.005": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.011": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.012": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.006": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.013": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.014": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.007": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.015": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.016": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.008": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.017": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.018": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.009": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.019": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.020": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.010": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.021": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.022": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.011": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.023": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.024": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.012": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.025": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.026": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.013": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.027": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.028": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.014": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.029": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.030": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.015": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.031": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.032": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.016": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.033": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.034": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.017": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.035": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.036": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.018": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.037": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.038": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.019": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.039": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.040": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.020": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.041": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.042": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.021": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.043": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.044": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.022": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.045": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.046": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.023": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.047": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.048": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.024": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.049": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.050": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 0.03999999910593033
+      }
+    },
+    "Image Texture.025": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.051": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.026": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.052": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.027": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.053": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.054": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.028": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.055": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.056": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.029": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.057": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.058": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.030": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.059": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.060": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.031": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.061": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.062": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.032": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.063": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.064": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.033": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.065": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.066": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Image Texture.034": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Vector Math.067": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 1.0
+      }
+    },
+    "Vector Math.068": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)",
+        "Scale": 0.1111111119389534
+      }
+    },
+    "Math.001": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "RGB to BW.001": {
+      "type": "ShaderNodeRGBToBW",
+      "inputs": {}
+    },
+    "Math.002": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "RGB to BW.002": {
+      "type": "ShaderNodeRGBToBW",
+      "inputs": {}
+    },
+    "Math.003": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Math.004": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Math.005": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Vector Math.069": {
+      "type": "ShaderNodeVectorMath",
+      "inputs": {
+        "Vector": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Baked pigment only": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "UV Map.001": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "UV Map.002": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "Estimated diffuse pigment": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Pigment estimation confidence": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Attribute.001": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Math.006": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Measured pigment with bounded confidence": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {}
+    },
+    "Fine varnish relief": {
+      "type": "ShaderNodeBump",
+      "inputs": {
+        "Distance": 0.006000000052154064,
+        "Filter Width": 0.10000000149011612,
+        "Normal": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Baked pigment only.001": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "UV Map.003": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "UV Map.004": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "Estimated diffuse pigment.001": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Pigment estimation confidence.001": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Attribute.002": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Math.007": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Attribute.003": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Math.008": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Measured pigment with bounded confidence.001": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {}
+    },
+    "Baked pigment only.002": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "UV Map.005": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "UV Map.006": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "Estimated diffuse pigment.002": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Pigment estimation confidence.002": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "Attribute.004": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Math.009": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Attribute.005": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Math.010": {
+      "type": "ShaderNodeMath",
+      "inputs": {
+        "Value": 0.5
+      }
+    },
+    "Measured pigment with bounded confidence.002": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {}
+    },
+    "Attribute.006": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Map Range": {
+      "type": "ShaderNodeMapRange",
+      "inputs": {
+        "From Min": "(0.0, 0.0, 0.0)",
+        "From Max": "(1.0, 1.0, 1.0)",
+        "To Min": "(0.0, 0.0, 0.0)",
+        "To Max": "(1.0, 1.0, 1.0)",
+        "Steps": "(4.0, 4.0, 4.0)",
+        "Vector": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Map Range.001": {
+      "type": "ShaderNodeMapRange",
+      "inputs": {
+        "From Min": "(0.0, 0.0, 0.0)",
+        "From Max": "(1.0, 1.0, 1.0)",
+        "To Min": "(0.0, 0.0, 0.0)",
+        "To Max": "(1.0, 1.0, 1.0)",
+        "Steps": "(4.0, 4.0, 4.0)",
+        "Vector": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Map Range.002": {
+      "type": "ShaderNodeMapRange",
+      "inputs": {
+        "From Min": "(0.0, 0.0, 0.0)",
+        "From Max": "(1.0, 1.0, 1.0)",
+        "To Min": "(0.0, 0.0, 0.0)",
+        "To Max": "(1.0, 1.0, 1.0)",
+        "Steps": "(4.0, 4.0, 4.0)",
+        "Vector": "(0.0, 0.0, 0.0)"
+      }
+    },
+    "Baked base pigment correction": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "UV Map.007": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "Attribute.007": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Mix (Legacy)": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {
+        "Color2": "(0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 1.0)"
+      }
+    },
+    "Completed king pigment atlas": {
+      "type": "ShaderNodeTexImage",
+      "inputs": {}
+    },
+    "UV Map.008": {
+      "type": "ShaderNodeUVMap",
+      "inputs": {}
+    },
+    "Attribute.008": {
+      "type": "ShaderNodeAttribute",
+      "inputs": {}
+    },
+    "Mix (Legacy).001": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {
+        "Color2": "(0.3199999928474426, 0.3199999928474426, 0.3199999928474426, 1.0)"
+      }
+    },
+    "Mix (Legacy).002": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {
+        "Color2": "(0.2800000011920929, 0.2800000011920929, 0.2800000011920929, 1.0)"
+      }
+    },
+    "Mix (Legacy).003": {
+      "type": "ShaderNodeMixRGB",
+      "inputs": {
+        "Color2": "(0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 1.0)"
+      }
+    }
+  },
+  "principled_inputs": {
+    "Base Color": [
+      [
+        "Completed king pigment atlas",
+        "Color"
+      ]
+    ],
+    "Roughness": [
+      [
+        "Mix (Legacy).001",
+        "Color"
+      ]
+    ],
+    "Normal": [
+      [
+        "Pigment microrelief",
+        "Normal"
+      ]
+    ],
+    "Coat Roughness": [
+      [
+        "Mix (Legacy).002",
+        "Color"
+      ]
+    ],
+    "Coat Normal": [
+      [
+        "Fine varnish relief",
+        "Normal"
+      ]
+    ]
+  }
+}

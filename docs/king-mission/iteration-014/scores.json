@@ -1,0 +1,121 @@
+{
+  "rubric": "Only silhouette IoU is measured. Other values are subjective visual assessments; a small grain improvement does not resolve the visible lighting and form mismatches.",
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "trials": [
+    {
+      "variant": "153-collar-neutral-chroma",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.56515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Chroma-only repair has negligible visible benefit and does not remove the pale bands.",
+      "model_sha256": "987995614544c4d5a00cc104bd89e38567d740414e74fea4e11bc0baab36417e",
+      "render_sha256": "701ef0944d040ca681c25a8f36f448ad20d2ef04abd2bd90ad8ca06a0954ec2c"
+    },
+    {
+      "variant": "155-collar-measured-pigment",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.56515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Current-light inverse pigment changes little; the remaining streaks are substantially reflections. Its legacy helper also mislabeled the prepared-scene hash as the original source hash; no prototype asset is promoted.",
+      "model_sha256": "9a8d4e9fd2bce15fe2a30f76913c9cc6b3bf0c4eb3838d203687a19cb96772a1",
+      "render_sha256": "e9f5e22e580f4804165a5cee7f52ce5f6228a762138d88fcc4e4b196ade94722"
+    },
+    {
+      "variant": "157-collar-grain-relief",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.76515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "superseded; repetition check failed",
+      "reason": "Moderate relief improves collar highlights, but a repeated saved-file render differs by 45/255 at a small socket glint. Failed checks are retained; this version is not promoted.",
+      "model_sha256": "332e7907e61bbcca80a338fba756262ffaa739361eafb66655e4fad7602b0987",
+      "render_sha256": "1198e2c72d61b713fc81c9188949617e32f2747bb53d12d47a9638f4ccccc144"
+    },
+    {
+      "variant": "158-collar-soft-grain",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.56515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Extra coat roughness softens useful contrast without clearly improving the match beyond the medium relief trial.",
+      "model_sha256": "f4596a9cbe2bc0470991eaa947d95080d68052add4c5370437a5db6e2d8697ee",
+      "render_sha256": "5b93b7261ecd9484701b836aefbb592c10cc7a87885da17621db45b8843af7d8"
+    },
+    {
+      "variant": "159-collar-deeper-grain",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.16515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Stronger relief makes the collar surface too dotted and uneven.",
+      "model_sha256": "9cb21f6dbffe900cf5797ee9b0fccfadc27d780278ba9957b1a8b4e857a704ab",
+      "render_sha256": "680ce5e4c65979bbb09832da403a94c09c6f308f3cbe7684ca116cf8b9cf6a6b"
+    },
+    {
+      "variant": "161-no-tree-baseline",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.56519910853203,
+      "original_iou_percent": 96.84661715256992,
+      "decision": "sampling diagnostic",
+      "reason": "Unchanged checkpoint-013 geometry and material with light-tree sampling disabled; no appearance score gain is assigned for sampling alone.",
+      "model_sha256": "c5827f47a1da3fbf8f5d1eadb9ca8f1fdf44cc0a94e4883ed70c336240b6fcfe",
+      "render_sha256": "3f0c57c0fad3466cb51ae17d9a84f2634981713e040733b8c72e550817f6468f"
+    },
+    {
+      "variant": "162-no-tree-collar",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.76519910853202,
+      "original_iou_percent": 96.84661715256992,
+      "decision": "accepted",
+      "reason": "Moderate collar varnish relief with light-tree sampling disabled. Grain is less smooth; pale bands and exact highlight positions remain unresolved.",
+      "model_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+      "render_sha256": "02df7625a18d6ca5112e5f0619210f306c558063cad8b95d84ce18e9d4079ea9"
+    }
+  ]
+}

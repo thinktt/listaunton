@@ -1,0 +1,27 @@
+{
+  "initial_session_vs_fresh": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 7.631082926978168e-06,
+    "alpha_exact": true
+  },
+  "independent_saved_reproduction": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 7.154140244042032e-06,
+    "alpha_exact": true
+  },
+  "repeat_saved_render": {
+    "maximum_channel_error_255": 45,
+    "mean_channel_error_255": 0.0005383093081405849,
+    "alpha_exact": true
+  },
+  "alternate_entrypoint": {
+    "maximum_channel_error_255": 45,
+    "mean_channel_error_255": 0.000538786250823521,
+    "alpha_exact": true
+  },
+  "reproduction_mesh_exact": true,
+  "baseline_mesh_exact": true,
+  "camera_export_exact": true,
+  "physical_bounds_exact": true,
+  "canonical_render_entrypoint": "scripts/king/render_fixed_diagnostics.py -- SOURCE OUTPUT --beauty-only"
+}

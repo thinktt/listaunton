@@ -102,3 +102,18 @@ views, export and independent reconstruction before publication. Preserve all
 nine receivers and routes; never promote the rejected brighter or larger-curve
 tests. Use the canonical fresh renderer and synchronize fixed, side and viewer
 assets. Read the mission log for current limitations and next work.
+
+
+Checkpoint 014 preserves 013 geometry, all original UVs/attributes, packed v6
+pigment and lights. `Collar varnish texture 014` changes only Fine varnish relief
+strength to .60, fading over rings 34–37 and 60–63; cross values are zero.
+Keep this model-space field and regenerate all nine receivers after edits.
+Reproduce with local_finish_trial.py and iteration-014/reproduction.json from
+archived 013. check_local_finish.py validates the exact scope; the finish
+verification helper reopens, exports and independently reconstructs candidates.
+The canonical repeat exposed the old tiny socket-glint instability again.
+use_light_tree=False now restores the tested repeat/independent agreement within
+1/255. Retain 128 adaptive/denoised samples, the explicit sampling toggle and
+fixed 54-degree camera. The failed tree-enabled checks remain in iteration-014;
+do not promote rejected pigment, roughness or stronger-relief experiments.
+Synchronize fixed, side and viewer assets, and consult the mission log before work.

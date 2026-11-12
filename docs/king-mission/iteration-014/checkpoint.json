@@ -1,0 +1,88 @@
+{
+  "checkpoint": "014",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "162-no-tree-collar",
+  "previous_checkpoint": "013",
+  "model_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "render_sha256": "02df7625a18d6ca5112e5f0619210f306c558063cad8b95d84ce18e9d4079ea9",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "scores": {
+    "silhouette_iou_percent": 97.82599554266011,
+    "interior_form": 85,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "original_iou_percent": 96.84661715256992,
+  "equal_weight_mean": 82.76519910853202,
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "geometry_changed": false,
+  "material_changed": true,
+  "lights_changed": false,
+  "declared_finish": {
+    "attribute": "Collar varnish texture 014",
+    "lower_fade": [
+      34,
+      37
+    ],
+    "ring_fade": [
+      60,
+      63
+    ],
+    "inputs": [
+      [
+        "Fine varnish relief",
+        "Strength",
+        0.6
+      ]
+    ]
+  },
+  "camera_elevation_degrees": 54.000000800055794,
+  "receiver_count": 9,
+  "mission_complete": false,
+  "validation": {
+    "scope": "passed",
+    "receiver_regeneration": "passed",
+    "export": "passed",
+    "reproduction": {
+      "initial_session_vs_fresh": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 6.041273983857716e-06,
+        "alpha_exact": true
+      },
+      "independent_saved_reproduction": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 7.154140244042032e-06,
+        "alpha_exact": true
+      },
+      "repeat_saved_render": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 6.677197561105896e-06,
+        "alpha_exact": true
+      },
+      "alternate_entrypoint": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 6.3592357724818065e-06,
+        "alpha_exact": true
+      },
+      "reproduction_mesh_exact": true,
+      "baseline_mesh_exact": true,
+      "camera_export_exact": true,
+      "physical_bounds_exact": true,
+      "canonical_render_entrypoint": "scripts/king/render_fixed_diagnostics.py -- SOURCE OUTPUT --beauty-only"
+    },
+    "site": "passed king checks",
+    "canonical_model": "passed",
+    "site_model_candidates": "passed",
+    "historical_projections": "unchanged; not rerun this local finish checkpoint",
+    "whole_set": "not rerun; known knight sizing metadata mismatch documented at checkpoint 012",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": true,
+    "local_preview_verified_files": 34,
+    "browser_verification": "Reloaded the existing king review, selected Black candidate 1 and Model, and inspected a full-page screenshot with the complete cross and foot visible.",
+    "http_current_source_and_render_hashes": "passed"
+  }
+}

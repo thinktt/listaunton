@@ -1,0 +1,153 @@
+{
+  "before": "history/king-mission-013/king-rebuilt.blend",
+  "after": "build/king-mission/157-collar-grain-relief/king.blend",
+  "source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "model_sha256": "332e7907e61bbcca80a338fba756262ffaa739361eafb66655e4fad7602b0987",
+  "identity_check": false,
+  "geometry_topology_original_uvs_and_attributes_exact": true,
+  "all_packed_images_exact": true,
+  "remaining_material_graph_exact": true,
+  "lights_shadows_camera_world_render_settings_exact": true,
+  "render_receivers": {
+    "used": true,
+    "receiverCount": 9,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-collar",
+        "lower-flare",
+        "middle-collar",
+        "socket",
+        "socket-seam",
+        "upper-body",
+        "upper-collar",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket left inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
+      ],
+      "Collar upper left": [
+        "upper-collar"
+      ],
+      "Collar upper right": [
+        "upper-collar"
+      ],
+      "Collar middle left": [
+        "middle-collar"
+      ],
+      "Collar middle right": [
+        "middle-collar"
+      ],
+      "Collar lower left": [
+        "lower-collar"
+      ],
+      "Collar lower right": [
+        "lower-collar"
+      ]
+    }
+  },
+  "declared_finish": {
+    "attribute": "Collar varnish texture 014",
+    "lower_fade": [
+      34,
+      37
+    ],
+    "ring_fade": [
+      60,
+      63
+    ],
+    "inputs": [
+      [
+        "Fine varnish relief",
+        "Strength",
+        0.6
+      ]
+    ]
+  }
+}

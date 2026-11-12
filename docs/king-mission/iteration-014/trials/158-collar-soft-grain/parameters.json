@@ -1,0 +1,33 @@
+{
+  "source": "build/king-mission/158-collar-soft-grain/prepared.blend",
+  "source_sha256": "3646690c04dc2946a86566ac78872aa5464a1ea4120074d20d7ed32f339de3dd",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "attribute": "Collar varnish texture 014",
+  "lower_fade": [
+    34,
+    37
+  ],
+  "ring_fade": [
+    60,
+    63
+  ],
+  "variant": "158-collar-soft-grain",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.6
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.3
+    ]
+  ],
+  "original_source": "history/king-mission-013/king-rebuilt.blend",
+  "original_source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "model_sha256": "f4596a9cbe2bc0470991eaa947d95080d68052add4c5370437a5db6e2d8697ee",
+  "elevation_degrees": 54.000000800055794
+}

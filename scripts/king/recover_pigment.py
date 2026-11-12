@@ -16,7 +16,7 @@ def pixels(image):
     w,h=image.size;out=np.empty(w*h*4,dtype=np.float32);image.pixels.foreach_get(out);return out.reshape(h,w,4)[::-1].copy()
 
 def main(cfg):
-    response=ROOT/cfg['response'];info=json.loads((response/'response.json').read_text());source=ROOT/info['source']
+    response=ROOT/cfg['response'];info=json.loads((response/'response.json').read_text());source=ROOT/cfg.get('source',info['source'])
     digest=hashlib.sha256(source.read_bytes()).hexdigest();assert digest==info['source_sha256']
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
     assert s.view_settings.look=='None' and s.view_settings.exposure==0 and s.view_settings.gamma==1
@@ -50,36 +50,44 @@ def main(cfg):
     color=image('king-recovered-pigment',pigment);confidence=image('king-pigment-confidence',np.repeat(reliability[:,:,None],3,axis=2))
     objects=controls(s) if s.get("king_render_regions") else meshes(s)
     scoped=info.get('partial_object_response',False)
+    region_name=cfg.get('region_attribute','Pigment response region')
+    uv_name=cfg.get('projection_uv','Response pigment')
     if scoped:
         assert set(info['object_names']).issubset({ob.name for ob in objects})
         for ob in objects:
-            attr=ob.data.attributes.get('Pigment response region') or ob.data.attributes.new('Pigment response region','FLOAT','POINT')
+            attr=ob.data.attributes.get(region_name) or ob.data.attributes.new(region_name,'FLOAT','POINT')
             value=1.0 if ob.name in info['object_names'] else 0.0
             values=np.full(len(ob.data.vertices),value,dtype=np.float32)
             if cfg.get('profile_region_fade') and 'body' in ob.name:
                 start,end=cfg['profile_region_fade'];ring=np.arange(len(values))//96;t=np.clip((ring-start)/(end-start),0,1);values*=1-t*t*(3-2*t)
+            if cfg.get('profile_region_lower_fade') and 'body' in ob.name:
+                start,end=cfg['profile_region_lower_fade'];ring=np.arange(len(values))//96;t=np.clip((ring-start)/(end-start),0,1);values*=t*t*(3-2*t)
             attr.data.foreach_set('value',values)
     for ob in objects:
-        uv=ob.data.uv_layers.get('Response pigment') or ob.data.uv_layers.new(name='Response pigment');coords=[]
+        uv=ob.data.uv_layers.get(uv_name) or ob.data.uv_layers.new(name=uv_name);coords=[]
         for v in ob.data.vertices:
             p=world_to_camera_view(s,s.camera,ob.matrix_world@v.co);coords.append((p.x,p.y))
         for loop in ob.data.loops:uv.data[loop.index].uv=coords[loop.vertex_index]
     mat=objects[0].data.materials[0];n=mat.node_tree.nodes;l=mat.node_tree.links;bs=n['Principled BSDF'];previous=bs.inputs['Base Color'].links[0].from_socket
-    uv=n.new('ShaderNodeUVMap');uv.uv_map='Response pigment'
+    uv=n.new('ShaderNodeUVMap');uv.uv_map=uv_name
     a=n.new('ShaderNodeTexImage');a.name='Estimated diffuse pigment';a.image=color;a.extension='EXTEND';l.new(uv.outputs[0],a.inputs['Vector'])
     c=n.new('ShaderNodeTexImage');c.name='Pigment estimation confidence';c.image=confidence;c.extension='EXTEND';l.new(uv.outputs[0],c.inputs['Vector'])
     attribute=n.new('ShaderNodeAttribute');attribute.attribute_name='Pigment coverage'
     weight=n.new('ShaderNodeMath');weight.operation='MULTIPLY';l.new(c.outputs['Color'],weight.inputs[0]);l.new(attribute.outputs['Fac'],weight.inputs[1])
     factor=weight.outputs[0]
     if scoped:
-        region=n.new('ShaderNodeAttribute');region.attribute_name='Pigment response region'
+        region=n.new('ShaderNodeAttribute');region.attribute_name=region_name
         gate=n.new('ShaderNodeMath');gate.operation='MULTIPLY';l.new(factor,gate.inputs[0]);l.new(region.outputs['Fac'],gate.inputs[1]);factor=gate.outputs[0]
     mix=n.new('ShaderNodeMixRGB');mix.name='Measured pigment with bounded confidence';l.new(factor,mix.inputs[0]);l.new(previous,mix.inputs[1]);l.new(a.outputs['Color'],mix.inputs[2]);l.new(mix.outputs[0],bs.inputs['Base Color'])
     s['king_recovered_pigment_method']='Inverse local real-BSDF black/white response, confidence-masked; live specular/coat and all lights retained.'
     rendercfg=dict(cfg);rendercfg.update(source=(out/'prepared.blend').relative_to(ROOT).as_posix(),original_source=info['source'],original_source_sha256=digest,reference_sha256=hashlib.sha256((ROOT/'assets/king/reference.png').read_bytes()).hexdigest(),reference_pixel_500_700=list(map(float,raw[700,500])),pigment_bounds=[.001,.8],confidence_mean_foreground=float(reliability[white[:,:,3]>.99].mean()),fraction_foreground_over_half_confidence=float((reliability[white[:,:,3]>.99]>.5).mean()),limitation='Low-confidence regions use prior pigment. Inversion is approximate because of multibounce light and single-view ambiguity; it is not a unique recovered albedo.')
     if s.get('king_render_regions'):regenerate(s)
     bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'prepared.blend'))
-    if s.get('king_render_regions'):
+    if cfg.get('preserve_light_rig'):
+        rendercfg.update(original_source=source.relative_to(ROOT).as_posix(),original_source_sha256=digest,
+                         measured_source=info['source'],measured_source_sha256=info['source_sha256'])
+        run(rendercfg)
+    elif s.get('king_render_regions'):
         from base_reflection_trial import main as render_regions_trial
         rendercfg['source_sha256']=hashlib.sha256((out/'prepared.blend').read_bytes()).hexdigest();render_regions_trial(rendercfg)
     else:run(rendercfg)

@@ -1,0 +1,10 @@
+{
+  "result": "known pre-existing knight sizing metadata mismatch",
+  "shared_paths_unchanged_since_resume": [
+    "assets/knight/mesh.json",
+    "assets/side-views/scale.json",
+    "set-comparison.html"
+  ],
+  "baseline_commit": "bd64248",
+  "assertions_after_failure_not_executed": true
+}

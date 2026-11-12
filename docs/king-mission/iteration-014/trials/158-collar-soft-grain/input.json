@@ -1,0 +1,29 @@
+{
+  "source": "history/king-mission-013/king-rebuilt.blend",
+  "source_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "attribute": "Collar varnish texture 014",
+  "lower_fade": [
+    34,
+    37
+  ],
+  "ring_fade": [
+    60,
+    63
+  ],
+  "variant": "158-collar-soft-grain",
+  "inputs": [
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.6
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.3
+    ]
+  ]
+}

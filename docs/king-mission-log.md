@@ -536,3 +536,32 @@ The existing shared knight metadata failure is not rerun or reported as a pass.
 Next: improve the remaining pigment bands and varnish/grain variation while
 preserving the accepted collar shape; then revisit the broad base and upper-rim
 reflections. No watcher, subagent, push or publication was started.
+
+
+## 2026-11-12 — checkpoint 014: collar grain and stable light sampling
+
+Accepted 162, independently reproduced as 163 from checkpoint 013. A bounded
+varnish-relief field makes collar highlights less smooth, preserving all geometry,
+v6 pigment, source art, dimensions, lights and the 54-degree camera. Chroma/inverse
+pigment repairs, extra coat roughness and stronger relief were rejected. See
+[iteration-014/README.md](king-mission/iteration-014/README.md).
+
+The first selected finish passed independent identity but failed a repeat render
+by 45/255 at the familiar small socket glint. Failed checks remain in the record.
+Disabling only light-tree sampling restores the tested canonical repeat and
+independent render agreement within 1/255, with exact alpha. Other sampling
+settings remain 128 adaptive/denoised. No threshold was relaxed.
+
+High-res IoU is 97.8260%; original IoU is
+96.8466%. Subjective scores: interior 85, color 82, grain
+80, lighting 69. Working mean 82.7652%; holistic range 75–85%.
+This is a small grain improvement; the full match remains incomplete.
+
+Scope, packed-image preservation, nine receivers/regeneration, closed geometry,
+exact mesh/camera export, canonical validation and king/candidate/site checks
+pass. All 34 Windows preview files
+are synchronized. Browser lighting remains approximate; whole-set knight
+metadata and unchanged historical projections were not re-tested here.
+
+Next: broader base and upper-platter reflections, then remaining pigment bands.
+The goal remains active. No watcher, subagent, push or publication was started.

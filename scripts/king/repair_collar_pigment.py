@@ -57,7 +57,8 @@ def main(cfg):
     grade.inputs[0].default_value = 1
     grade.inputs[2].default_value = (*cfg.get('linear_multiplier', [1, 1, 1]), 1)
     l.new(inferred, grade.inputs[1]); inferred = grade.outputs[0]
-    if cfg.get('mode') == 'neutral_residual':
+    chroma_weight = None
+    if cfg.get('mode') in ('neutral_residual', 'neutral_chroma'):
         # Approximate neutral glare carried by the old pigment. Only subtract
         # a component supported by BOTH green/red and blue/red excess; this
         # preserves warmer wood and its fine chromatic/luminance variation.
@@ -69,23 +70,42 @@ def main(cfg):
                 if isinstance(value, (int, float)): sock.default_value = value
                 else: l.new(value, sock)
             return node.outputs[0]
-        residuals = []
-        for channel, ratio in zip(('Green', 'Blue'), cfg['diffuse_ratios']):
-            excess = math_node('SUBTRACT', split.outputs[channel], math_node('MULTIPLY', split.outputs['Red'], ratio))
-            residuals.append(math_node('DIVIDE', excess, 1-ratio))
-        residual = math_node('MAXIMUM', math_node('MINIMUM', *residuals), 0)
         combine = n.new('ShaderNodeCombineColor'); combine.mode = 'RGB'
-        for channel in ('Red', 'Green', 'Blue'):
-            cleaned = math_node('MAXIMUM', math_node('SUBTRACT', split.outputs[channel], residual), .0001)
-            l.new(cleaned, combine.inputs[channel])
+        if cfg['mode'] == 'neutral_chroma':
+            # Preserve red-channel grain instead of subtracting a neutral value
+            # from every channel. Correct only pixels neutral in BOTH ratios.
+            red = split.outputs['Red']; l.new(red, combine.inputs['Red'])
+            safe = math_node('MAXIMUM', red, .0001); weights = []
+            for channel, target_ratio, threshold, width in zip(('Green', 'Blue'), cfg['diffuse_ratios'], cfg['neutral_thresholds'], cfg['neutral_widths']):
+                ratio = math_node('DIVIDE', split.outputs[channel], safe)
+                t = math_node('DIVIDE', math_node('SUBTRACT', ratio, threshold), width)
+                t = math_node('MINIMUM', math_node('MAXIMUM', t, 0), 1)
+                weights.append(math_node('MULTIPLY', math_node('MULTIPLY', t, t), math_node('SUBTRACT', 3, math_node('MULTIPLY', 2, t))))
+                cleaned = math_node('MINIMUM', split.outputs[channel], math_node('MULTIPLY', red, target_ratio))
+                l.new(cleaned, combine.inputs[channel])
+            chroma_weight = math_node('MINIMUM', *weights)
+        else:
+            residuals = []
+            for channel, ratio in zip(('Green', 'Blue'), cfg['diffuse_ratios']):
+                excess = math_node('SUBTRACT', split.outputs[channel], math_node('MULTIPLY', split.outputs['Red'], ratio))
+                residuals.append(math_node('DIVIDE', excess, 1-ratio))
+            residual = math_node('MAXIMUM', math_node('MINIMUM', *residuals), 0)
+            for channel in ('Red', 'Green', 'Blue'):
+                cleaned = math_node('MAXIMUM', math_node('SUBTRACT', split.outputs[channel], residual), .0001)
+                l.new(cleaned, combine.inputs[channel])
         inferred = combine.outputs['Color']
     attrnode = n.new('ShaderNodeAttribute'); attrnode.attribute_name = ATTRIBUTE
     mix = n.new('ShaderNodeMixRGB'); mix.name = 'Inferred collar pigment blend'
-    l.new(attrnode.outputs['Fac'], mix.inputs[0]); l.new(oldcolor, mix.inputs[1])
+    weight = attrnode.outputs['Fac']
+    if chroma_weight is not None: weight = math_node('MULTIPLY', weight, chroma_weight)
+    l.new(weight, mix.inputs[0]); l.new(oldcolor, mix.inputs[1])
     l.new(inferred, mix.inputs[2]); l.new(mix.outputs[0], bs.inputs['Base Color'])
     out = ROOT / 'build/king-mission' / cfg['variant']; out.mkdir(parents=True, exist_ok=True)
     report = dict(source_sha256=digest, geometry_camera_lights_relief_unchanged_by_construction=True,
                   inferred_not_observed=True, baked=bool(cfg.get('bake')), mask={k: cfg[k] for k in ['lower_fade', 'upper_fade', 'angular_fade', 'strength']})
+    report['mode'] = cfg.get('mode', 'inferred_blend')
+    if chroma_weight is not None:
+        report['chroma_correction'] = {k: cfg[k] for k in ('diffuse_ratios', 'neutral_thresholds', 'neutral_widths')}
     if cfg.get('bake'):
         output = next(x for x in n if x.type == 'OUTPUT_MATERIAL')
         emission = n.new('ShaderNodeEmission'); l.new(emission.outputs[0], output.inputs['Surface'])
@@ -100,7 +120,7 @@ def main(cfg):
         target.select = True; n.active = target
         mask = bpy.data.images.new('King collar pigment mask', width=2048, height=2048, alpha=False, float_buffer=True)
         mask.colorspace_settings.name = 'Non-Color'; target.image = mask
-        l.new(attrnode.outputs['Fac'], emission.inputs['Color']); bpy.ops.object.bake(type='EMIT', use_clear=True)
+        l.new(weight, emission.inputs['Color']); bpy.ops.object.bake(type='EMIT', use_clear=True)
         weights = np.array(mask.pixels[:], dtype=np.float32).reshape(2048, 2048, 4)[:, :, 0]
         atlas = bpy.data.images.new('King repaired pigment ' + Path(cfg['texture']).stem, width=2048, height=2048, alpha=False)
         atlas.colorspace_settings.name = 'sRGB'; target.image = atlas
