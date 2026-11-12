@@ -35,7 +35,12 @@ improve a score.
 
 ## Defining features
 
-Match the thin, consistent turret walls and battlements, interior opening, tapered shaft and compact base. Do not thicken the far-side battlements merely because an upscale interpreted them that way. Inspect wall thickness, openings and the interior floor directly; a filled silhouette score cannot establish their accuracy.
+Match the thin, consistent turret walls and battlements and the interior
+opening. Derive the shaft profile and base proportions from the rook's own
+original images and selected reference. Do not thicken the far-side battlements
+merely because an upscale interpreted them that way. Inspect wall thickness,
+openings and the interior floor directly; a filled silhouette score cannot
+establish their accuracy.
 
 ## Camera and proportions
 

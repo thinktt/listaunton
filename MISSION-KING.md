@@ -35,7 +35,10 @@ improve a score.
 
 ## Defining features
 
-Reproduce the cross shape, thickness and seating; the flared crown; compact stacked collars; tapered stem; raised socket; base and foot. Treat the original cross clipping as missing evidence, rather than a required flat cut on the model.
+Match the king's cross shape, thickness and seating on its supporting upper
+body. Derive the remaining turned profile and base proportions from the king's
+own original images and selected reference. Treat the original cross clipping
+as missing evidence, rather than a required flat cut on the model.
 
 ## Camera and proportions
 

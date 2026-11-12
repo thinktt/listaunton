@@ -35,7 +35,10 @@ improve a score.
 
 ## Defining features
 
-Match the rounded head comfortably seated in its collar with no floating gap, the collar profile, stem taper, raised socket, flare, single base groove and foot. Inspect the head-to-collar contact in both the original view and side profile.
+Match the pawn's rounded head comfortably seated in its collar with no
+floating gap. Derive the collar, stem and base profiles from the pawn's own
+original images and selected reference. Inspect the head-to-collar contact
+in both the original view and side profile.
 
 ## Camera and proportions
 

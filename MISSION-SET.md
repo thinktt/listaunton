@@ -37,6 +37,10 @@ studies guide plausible unseen form; they do not establish original geometry,
 camera settings, or design ancestry. Preserve source images and registration.
 Record uncertainty and distinguish observed features from interpretation.
 
+Derive each piece's profile from its own references. Feature shapes or
+proportions approved for one piece do not automatically become requirements
+for another piece.
+
 The owner's intended height progression is **pawn < rook < knight < bishop <
 queen < king**, with the queen relatively close to the king. Chavet and Lardy
 examples are useful visual guides. Preserve `assets/side-views/defaults.json`,

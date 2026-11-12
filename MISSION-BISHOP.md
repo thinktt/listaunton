@@ -35,7 +35,11 @@ improve a score.
 
 ## Defining features
 
-Reproduce a continuous curved bishop head with a deep, open mitre slit. The button-like finial sits directly on the head and flows into it without a gap or pedestal. Match the collars, tapered stem, socket, base and foot. Inspect the slit itself; a filled silhouette score cannot establish that the opening is correct.
+Reproduce a continuous curved bishop head with a deep, open mitre slit. The
+button-like finial sits directly on the head and flows into it without a gap
+or pedestal. Derive the supporting turned body and base from the bishop's own
+original images and selected reference. Inspect the slit itself; a filled
+silhouette score cannot establish that the opening is correct.
 
 ## Camera and proportions
 
