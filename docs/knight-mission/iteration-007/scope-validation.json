@@ -1,0 +1,71 @@
+{
+  "prior_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
+  "source_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
+  "camera_and_foot_center_preserved": true,
+  "parts": {
+    "Knight | turned pedestal": {
+      "vertices": 1984,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | swept rounded mane": {
+      "vertices": 832,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | near swept ear": {
+      "vertices": 448,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | near eye": {
+      "vertices": 482,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | far swept ear": {
+      "vertices": 448,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | far eye": {
+      "vertices": 482,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | continuous horse head and neck": {
+      "vertices": 43499,
+      "changed_vertices": 8881,
+      "maximum_displacement": 0.05762908235192299,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | curved neck and chest": {
+      "vertices": 3648,
+      "changed_vertices": 879,
+      "maximum_displacement": 0.05780985206365585,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    },
+    "Knight | coherent skull cheek and conical muzzle": {
+      "vertices": 6976,
+      "changed_vertices": 0,
+      "maximum_displacement": 0.0,
+      "maximum_height_change": 0.0,
+      "uvs_and_faces_preserved": true
+    }
+  },
+  "scope": "Only the chest and matching hidden construction loft may move; all heights, upper head, lower seat, UVs, topology and other components are preserved."
+}

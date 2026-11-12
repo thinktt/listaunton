@@ -1,0 +1,17 @@
+{
+  "source_sha256": "0b36b426501fed27a82adb15fb0aaafc7fbf11ab8b2c3598550217b1f772e513",
+  "previous_texture_sha256": "1cbe7f955a1395249a1432019ade0b87ab30cd3d1458d208487823da1f9af8c3",
+  "pigment_sha256": "b65e6ad2fc4a1641c1d9a28d87203858c8f83498a97fc17cafdd741fb3f72b76",
+  "changed_texels": 181902,
+  "visible_samples": 308430,
+  "gain_quantiles_05_50_95": [
+    0.5736224323511123,
+    1.0058773159980774,
+    1.5713997602462764
+  ],
+  "receivers": [
+    "Knight | continuous horse head and neck"
+  ],
+  "region": "chest",
+  "method": "Use measured diffuse response and a separate neutral-reflection component. Refit bounded warm pigment on visible wood UVs while retaining the underlying hue and the hidden wood."
+}

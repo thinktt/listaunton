@@ -1,0 +1,29 @@
+{
+  "source_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
+  "landmarks_sha256": "2074bdf7fe16a162c4284e24e5786ebf6aa723728454e115ceb460787bb729e9",
+  "samples": 96,
+  "widths": {
+    "trough": 0.043,
+    "bevel": 0.039,
+    "crest": 0.052,
+    "shoulder": 0.148,
+    "panel": 0.145,
+    "far_lip": 0.047
+  },
+  "depths": {
+    "trough": 0.042,
+    "bevel": 0.016,
+    "crest": 0.02,
+    "shoulder": 0.038,
+    "panel": 0.022,
+    "far_lip": 0.013
+  },
+  "crop": [
+    294,
+    534,
+    704,
+    777
+  ],
+  "render_measurements": [],
+  "method": "Carve six smooth bilateral cross-section terms in real mesh coordinates along the observed shoulder, channel, bevels and inset panel. The chosen model retains the accepted physical height and seated base."
+}

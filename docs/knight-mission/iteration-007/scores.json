@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "036-routed-chest",
+    "silhouette": 96.29331592798238,
+    "form": 85,
+    "color": 84,
+    "grain": 75,
+    "lighting": 60,
+    "working_mean": 80.05866318559647,
+    "original_iou": 0.9687633255857252,
+    "mirrored_white_iou": 0.9596997257796839,
+    "decision": "Rejected as a final result. The channel is clearer but harsh, and its reflection turns away from the old light rig.",
+    "blend_sha256": "893f92f11f2ff71b5f5d137a73b1ebdf98a32b0a32838dac75cb9ff17df358b7",
+    "render_sha256": "6f1e80f76f906311e1ba3fa06182ab943f9ac6d059b96b500c3d83a9f09fa0be"
+  },
+  {
+    "variant": "037-fitted-channel",
+    "silhouette": 96.28564531846479,
+    "form": 86,
+    "color": 85,
+    "grain": 75,
+    "lighting": 61,
+    "working_mean": 80.65712906369296,
+    "original_iou": 0.9686677095750399,
+    "mirrored_white_iou": 0.9595768851035483,
+    "decision": "Retained geometry only. Two actual-render fitting rounds reduce excessive depth; the primary bright crest remains too dark.",
+    "blend_sha256": "a74c6e9c63340817620d355b97432270c37c91b2558ebe608770dde95abfc34b",
+    "render_sha256": "7860cfd118c93717432f3c5070d6753d7ecd9956160af83e4bdb19e995d4e4bf"
+  },
+  {
+    "variant": "038-routed-reflections",
+    "silhouette": 96.28564531846479,
+    "form": 86,
+    "color": 86,
+    "grain": 76,
+    "lighting": 64,
+    "working_mean": 81.65712906369296,
+    "original_iou": 0.9686677095750399,
+    "mirrored_white_iou": 0.9595768851035483,
+    "decision": "Retained light-placement method and local finish. Measured satin and polished responses restore the crest, but its reflection is broad and the wood pattern needs registration.",
+    "blend_sha256": "0b36b426501fed27a82adb15fb0aaafc7fbf11ab8b2c3598550217b1f772e513",
+    "render_sha256": "eca9a9d957cb5f6f03e0588dc9f7b1bec4cf9bbc900fcc93a16a3d3b0e71e473"
+  },
+  {
+    "variant": "039-chest-walnut",
+    "silhouette": 96.28564531846479,
+    "form": 86,
+    "color": 87,
+    "grain": 79,
+    "lighting": 65,
+    "working_mean": 82.65712906369296,
+    "original_iou": 0.9686677095750399,
+    "mirrored_white_iou": 0.9595768851035483,
+    "decision": "Retained pigment. A bounded diffuse-response grade improves the visible chest grain and warm tone. Other components retain their sampled pigment exactly.",
+    "blend_sha256": "97c822e8afbc19aaa9f08a734319924d535d83b0ee2d636ce95f658bc693d088",
+    "render_sha256": "c78d43bd1a09802a8fa70aed46b55122b05f1caf6c101f504f0550a05cbed161"
+  },
+  {
+    "variant": "040-chest-reflection-segments",
+    "silhouette": 96.28564531846479,
+    "form": 86,
+    "color": 87,
+    "grain": 79,
+    "lighting": 67,
+    "working_mean": 83.05712906369295,
+    "original_iou": 0.9686677095750399,
+    "mirrored_white_iou": 0.9595768851035483,
+    "decision": "Accepted after saved-scene, geometry, atlas, viewer and review checks. Smaller finite reflectors better follow the carved crest, with no outline regression. A visibly imperfect result, not mission completion.",
+    "blend_sha256": "11c0c11cffdc04f0454262c72f0b953f5daae4dd093901f01a3d0b533d0b0b0f",
+    "render_sha256": "42f361a921cb65e46715eb24f0ae70635761c11e884ea1ad84b727b62df8fc14"
+  }
+]

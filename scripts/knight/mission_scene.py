@@ -47,6 +47,7 @@ def configure_render(scene, samples=64):
     scene.cycles.seed = 0
     scene.render.use_persistent_data = True
     prefs = bpy.context.preferences.addons["cycles"].preferences
+    scene.cycles.device = "CPU"
     try:
         prefs.compute_device_type = "OPTIX"
         prefs.get_devices()
@@ -56,6 +57,10 @@ def configure_render(scene, samples=64):
             scene.cycles.device = "GPU"
     except (TypeError, RuntimeError):
         scene.cycles.device = "CPU"
+    devices = [{"name":d.name,"type":d.type,"enabled":bool(d.use)} for d in prefs.devices]
+    scene["knight_render_device"] = json.dumps({"backend":prefs.compute_device_type,
+        "scene_device":scene.cycles.device,"devices":devices})
+    print("KNIGHT_RENDER_DEVICE", scene["knight_render_device"], flush=True)
 
 
 def render(scene, path):

@@ -1,0 +1,107 @@
+{
+  "components": [
+    {
+      "name": "Knight | turned pedestal",
+      "nonmanifold_edges": 0,
+      "signed_volume": 10.002691660445445,
+      "connected_components": 1,
+      "vertices": 31234,
+      "faces": 31232,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | swept rounded mane",
+      "nonmanifold_edges": 0,
+      "signed_volume": 1.5759608115458776,
+      "connected_components": 1,
+      "vertices": 12802,
+      "faces": 12800,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | near swept ear",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.07596853085544554,
+      "connected_components": 1,
+      "vertices": 6658,
+      "faces": 6656,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | near eye",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.0033532522270030675,
+      "connected_components": 1,
+      "vertices": 482,
+      "faces": 512,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | far swept ear",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.07596856076205835,
+      "connected_components": 1,
+      "vertices": 6658,
+      "faces": 6656,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | far eye",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.003348745152654331,
+      "connected_components": 1,
+      "vertices": 482,
+      "faces": 512,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | continuous horse head and neck",
+      "nonmanifold_edges": 0,
+      "signed_volume": 5.680825303308479,
+      "connected_components": 1,
+      "vertices": 43499,
+      "faces": 59880,
+      "hidden_construction": false
+    },
+    {
+      "name": "Knight | curved neck and chest",
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.515387119747877,
+      "connected_components": 1,
+      "vertices": 57858,
+      "faces": 57856,
+      "hidden_construction": true
+    },
+    {
+      "name": "Knight | coherent skull cheek and conical muzzle",
+      "nonmanifold_edges": 0,
+      "signed_volume": 1.4367612473739761,
+      "connected_components": 1,
+      "vertices": 27778,
+      "faces": 27776,
+      "hidden_construction": true
+    }
+  ],
+  "eyes": [
+    {
+      "name": "near",
+      "socket_center_depth_difference": 0.011081576347351074,
+      "half_eye_depth": 0.11128408461809158,
+      "seated_in_surface": true
+    },
+    {
+      "name": "far",
+      "socket_center_depth_difference": 0.009338021278381348,
+      "half_eye_depth": 0.07995685935020447,
+      "seated_in_surface": true
+    }
+  ],
+  "source_hash_matches": true,
+  "mesh_finite": true,
+  "bounds_match": true,
+  "normals_unit_length": true,
+  "camera_matches_saved_blend": true,
+  "visible_component_count": 7,
+  "hidden_construction_count": 2,
+  "note": "One continuous broad skull, cheek and rounded gently conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+}

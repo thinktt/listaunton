@@ -116,6 +116,13 @@ def attach_coverage(scene,objects,field,material,cover,region="all"):
                 weight*=np.clip((x-425)/60,0,1)*np.clip((555-y)/32,0,1)*np.clip((y-309)/47,0,1)
             elif not obj.name.endswith("swept ear"):
                 weight.fill(0)
+        elif region=="chest":
+            if obj.name.endswith("continuous horse head and neck"):
+                center=np.interp(y,[547,585,625,665,705,745],[400,432,473,514,554,600])
+                offset=x-center
+                weight*=np.clip((y-533)/24,0,1)*np.clip((778-y)/26,0,1)
+                weight*=np.clip((offset+135)/24,0,1)*np.clip((123-offset)/23,0,1)
+            else:weight.fill(0)
         elif region=="pedestal" and not obj.name.endswith("turned pedestal"):
             weight.fill(0)
         values=previous+(field[y,x]-previous)*weight
@@ -134,7 +141,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument("--source",type=Path,required=True)
     p.add_argument("--variant",required=True);p.add_argument("--radius",type=int,default=5)
     p.add_argument("--samples",type=int,default=144)
-    p.add_argument("--region",choices=["all","head","pedestal"],default="all")
+    p.add_argument("--region",choices=["all","head","pedestal","chest"],default="all")
     args=p.parse_args(sys.argv[sys.argv.index("--")+1:])
     out=BUILD/args.variant;out.mkdir(parents=True,exist_ok=True)
     bpy.ops.wm.open_mainfile(filepath=str(args.source),load_ui=False)

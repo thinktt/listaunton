@@ -1,11 +1,11 @@
 {
-  "checkpoint": "006",
-  "variant": "035-warm-turning",
-  "prior_model_sha256": "95e938f47b58c7fd48de6fd0b2158092d0cf1490b57ab505ddc8f356120b4cd1",
-  "source_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
-  "render_sha256": "583df97a40eeaf6095772baaba7313a7de0acabefe7053ef3220b0f1770e8e82",
-  "texture_sha256": "1cbe7f955a1395249a1432019ade0b87ab30cd3d1458d208487823da1f9af8c3",
-  "texture_file": "wood-atlas-v4.png",
+  "checkpoint": "007",
+  "variant": "040-chest-reflection-segments",
+  "prior_model_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
+  "source_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
+  "render_sha256": "0c9b60d1bf9a8f479a301eae06a9ee62d02f53f73d4f79123f6d9cf65d0e9395",
+  "texture_sha256": "b65e6ad2fc4a1641c1d9a28d87203858c8f83498a97fc17cafdd741fb3f72b76",
+  "texture_file": "wood-atlas-v5.png",
   "packed_texture_exact": true,
   "surface_color_coverage": {
     "Knight | turned pedestal": {

@@ -1,6 +1,6 @@
 {
   "piece": "Knight",
-  "revision": "mission-006-registered-pedestal",
+  "revision": "mission-007-carved-chest",
   "source_priority": [
     "Original black Lichess sprite; mirrored white sprite as an independent check",
     "Selected black candidate 2 for detailed fixed-view fitting",
@@ -18,7 +18,7 @@
     "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
   },
   "geometry": {
-    "method": "A closed, turned pedestal with a shallow lower groove and narrowed collar supports the seated horse. The lower carving follows the measured turn axis and blends into the accepted neck. Both swept ears, eyes and conical muzzle retain their accepted shape.",
+    "method": "The seated horse keeps its conical muzzle, paired swept ears, eyes, mane and turned pedestal. Small bilateral depth changes shape the chest channel, adjacent bevels and inset panel. All heights, the upper head, lower seat, UVs, topology and other components are preserved.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
     "triangles": 203602,
@@ -69,27 +69,28 @@
     "final_reference_metrics": "assets/knight/qa.json"
   },
   "mission": {
-    "checkpoint": "006",
-    "source_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
+    "checkpoint": "007",
+    "source_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
     "scores": {
-      "variant": "035-warm-turning",
-      "silhouette": 96.28193858851924,
-      "form": 85,
-      "color": 86,
-      "grain": 76,
-      "lighting": 62,
-      "working_mean": 81.05638771770384,
-      "original_iou": 0.9685468884625892,
-      "mirrored_white_iou": 0.9593771741521921,
-      "decision": "Accept. Two calibrated warm strips give the outer collar a narrow, mobile reflection on the agreed turning. The foot and collar fit, side floor, maximum height, head and seated joint all pass review.",
-      "blend_sha256": "1496a972c0a1c9b6f78a0e1aefdc537b0e750d9aa0e30d01d26d4bf3c40a0519",
-      "render_sha256": "1ebc256981664e0059f9d5f69a6cba267ff05b430624a864c0639209513d8672"
+      "variant": "040-chest-reflection-segments",
+      "silhouette": 96.28564531846479,
+      "form": 86,
+      "color": 87,
+      "grain": 79,
+      "lighting": 67,
+      "working_mean": 83.05712906369295,
+      "original_iou": 0.9686677095750399,
+      "mirrored_white_iou": 0.9595768851035483,
+      "decision": "Accepted after saved-scene, geometry, atlas, viewer and review checks. Smaller finite reflectors better follow the carved crest, with no outline regression. A visibly imperfect result, not mission completion.",
+      "blend_sha256": "11c0c11cffdc04f0454262c72f0b953f5daae4dd093901f01a3d0b533d0b0b0f",
+      "render_sha256": "42f361a921cb65e46715eb24f0ae70635761c11e884ea1ad84b727b62df8fc14"
     },
     "current_notes": "docs/knight-mission-log.md",
     "limitations": [
-      "The chest still needs a deeper dark channel beside its narrow reflected crest and a broader, brighter outer shoulder.",
-      "The poll has a broad highlight where the reference has a thin curved edge. The source lower eyelid carries a brighter crescent.",
-      "The foot groove lacks some dark, broken grain and its fine reflected flecks. The collar is slightly golden compared with the selected brown."
+      "The broad shoulder reflection is still too narrow and uniform; the crest's glint is uneven and the dark channel is more sharply edged in places.",
+      "The poll retains a broad highlight where the reference has a thin curved edge; the lower eyelid, forehead grain and nose glints still differ.",
+      "The foot groove needs more broken grain and reflected flecks. The collar still has a golden cast in portions of the front arc.",
+      "Side and unseen geometry remain interpretations; the browser's lighting is approximate. The full visual-match mission remains incomplete."
     ]
   },
   "history_at_activation": {
