@@ -1,0 +1,221 @@
+{
+  "source": "build/king-mission/122-collar-textured-normals/aim-prepared.blend",
+  "source_sha256": "72979e8afabb3440db971c3e741364169e39adb6ccf21d12d2d1dc1cc1e24445",
+  "capture": "build/king-mission/121-collar-surface",
+  "variant": "122-collar-textured-normals",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "targets": [
+    {
+      "name": "Collar upper left",
+      "pixel": [
+        470,
+        423
+      ],
+      "distance": 0.8,
+      "size": 0.35,
+      "size_y": 0.07,
+      "energy": 4
+    },
+    {
+      "name": "Collar upper right",
+      "pixel": [
+        555,
+        428
+      ],
+      "distance": 0.8,
+      "size": 0.35,
+      "size_y": 0.07,
+      "energy": 4
+    },
+    {
+      "name": "Collar middle left",
+      "pixel": [
+        445,
+        491
+      ],
+      "distance": 0.05,
+      "size": 0.12,
+      "size_y": 0.006,
+      "energy": 0.4
+    },
+    {
+      "name": "Collar middle right",
+      "pixel": [
+        580,
+        477
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 2
+    },
+    {
+      "name": "Collar lower left",
+      "pixel": [
+        450,
+        517
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 5.5
+    },
+    {
+      "name": "Collar lower right",
+      "pixel": [
+        566,
+        531
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 32
+    }
+  ],
+  "aim_original_source": "build/king-mission/115-collar-local-reflections/king.blend",
+  "aim_original_source_sha256": "f3c06bc3bf5a25a452a1f1778dd7e8c64526d921f93b5ec435d610cfd2139e6f",
+  "normal_targeting": [
+    {
+      "name": "Collar upper left",
+      "pixel": [
+        470,
+        423
+      ],
+      "distance": 0.8,
+      "size": 0.35,
+      "size_y": 0.07,
+      "energy": 4,
+      "position": [
+        -0.1271885633468628,
+        -0.44749170541763306,
+        3.3205060958862305
+      ],
+      "actual_normal": [
+        -0.25395169854164124,
+        -0.8795787692070007,
+        0.4023054242134094
+      ],
+      "normal_samples": 9,
+      "center_light_path_clear": true
+    },
+    {
+      "name": "Collar upper right",
+      "pixel": [
+        555,
+        428
+      ],
+      "distance": 0.8,
+      "size": 0.35,
+      "size_y": 0.07,
+      "energy": 4,
+      "position": [
+        0.17650961875915527,
+        -0.45029670000076294,
+        3.2982234954833984
+      ],
+      "actual_normal": [
+        0.2494966685771942,
+        -0.6102814674377441,
+        0.7518696784973145
+      ],
+      "normal_samples": 9,
+      "center_light_path_clear": true
+    },
+    {
+      "name": "Collar middle left",
+      "pixel": [
+        445,
+        491
+      ],
+      "distance": 0.05,
+      "size": 0.12,
+      "size_y": 0.006,
+      "energy": 0.4,
+      "position": [
+        -0.2144789695739746,
+        -0.5389025807380676,
+        3.032024383544922
+      ],
+      "actual_normal": [
+        -0.36292174458503723,
+        -0.9046742916107178,
+        -0.22327592968940735
+      ],
+      "normal_samples": 9,
+      "center_light_path_clear": true
+    },
+    {
+      "name": "Collar middle right",
+      "pixel": [
+        580,
+        477
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 2,
+      "position": [
+        0.26729702949523926,
+        -0.5096146464347839,
+        3.08335542678833
+      ],
+      "actual_normal": [
+        0.3678133189678192,
+        -0.6977412700653076,
+        0.6147116422653198
+      ],
+      "normal_samples": 9,
+      "center_light_path_clear": true
+    },
+    {
+      "name": "Collar lower left",
+      "pixel": [
+        450,
+        517
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 5.5,
+      "position": [
+        -0.1959434151649475,
+        -0.5808630585670471,
+        2.9320359230041504
+      ],
+      "actual_normal": [
+        -0.14300797879695892,
+        -0.4251335859298706,
+        0.8937618136405945
+      ],
+      "normal_samples": 9,
+      "center_light_path_clear": true
+    },
+    {
+      "name": "Collar lower right",
+      "pixel": [
+        566,
+        531
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 32,
+      "position": [
+        0.2187877893447876,
+        -0.6105533242225647,
+        2.8933656215667725
+      ],
+      "actual_normal": [
+        0.30800867080688477,
+        -0.8594793677330017,
+        0.4079533815383911
+      ],
+      "normal_samples": 9,
+      "center_light_path_clear": true
+    }
+  ],
+  "model_sha256": "3090cadacbe012fd54543f1483f04c9039d987ed76d8d713bf13e3da9030d202",
+  "elevation_degrees": 54.000000800055794
+}

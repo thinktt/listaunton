@@ -1,7 +1,7 @@
 """Validate exact derived surfaces, every UV/float attribute, normals and links."""
 import hashlib
 import bpy,numpy as np
-from render_regions import controls
+from render_regions import controls,COLLAR_RANGES
 
 def records(mesh):
     indices=np.array([l.vertex_index for l in mesh.loops]);values=[np.array([v.co[:] for v in mesh.vertices],dtype=np.float32)[indices]]
@@ -21,14 +21,23 @@ def check(scene):
     split=bool(scene.get('king_split_flare',False))
     socket=bool(scene.get('king_split_socket',False))
     seam=bool(scene.get('king_split_socket_seam',False));assert not seam or socket
+    collars=bool(scene.get('king_split_collars',False))
     expected_regions=({'foot','lower-flare','upper-flare','upper-body'} if split else {'foot','flare','upper-body'})
     if socket:expected_regions.add('socket')
     if seam:expected_regions.add('socket-seam')
+    if collars:expected_regions.update(COLLAR_RANGES)
     assert {o['king_render_region'] for o in parts}==expected_regions
     body=next(o for o in controls(scene) if 'body' in o.name);assert body.hide_render and body.get('king_editable_control')
     for part in parts:
         assert not part.hide_render and not part.modifiers and part.matrix_world==body.matrix_world
         assert part.data.materials[0]==body.data.materials[0]
+        if collars:
+            me=part.data;rings=np.array([a.value for a in me.attributes['King profile ring'].data],dtype=np.float32)
+            loops=np.array([l.vertex_index for l in me.loops]);starts=np.array([p.loop_start for p in me.polygons]);counts=np.array([p.loop_total for p in me.polygons])
+            mean=np.add.reduceat(rings[loops],starts)/counts
+            for region,(lo,hi) in COLLAR_RANGES.items():
+                inside=(mean>=lo)&(mean<hi)
+                assert inside.all() if part['king_render_region']==region else not inside.any()
         if seam and part['king_render_region'] in ('socket','socket-seam'):
             me=part.data;rings=np.array([a.value for a in me.attributes['King profile ring'].data],dtype=np.float32)
             loops=np.array([l.vertex_index for l in me.loops]);starts=np.array([p.loop_start for p in me.polygons]);counts=np.array([p.loop_total for p in me.polygons])
@@ -49,6 +58,7 @@ def check(scene):
         if light.name in ('Upper varnish','Front varnish'):
             expected={'upper-body','socket'} if socket and not scene.get('king_socket_broad_excluded',False) else {'upper-body'}
             if seam and 'socket' in expected:expected.add('socket-seam')
+            if collars and not scene.get('king_collar_broad_excluded',False):expected.update(COLLAR_RANGES)
             assert names==expected,(light.name,names,expected)
         if light.name.startswith('Base '):
             expected={'flare'}
@@ -61,6 +71,8 @@ def check(scene):
             if seam and light.name.startswith('Socket seam ') and scene.get('king_socket_seam_lights_confined',False):expected={'socket-seam'}
             assert socket and names==expected,(light.name,names,expected)
         if light.name.startswith('Cross '):assert not any(o.get('king_render_region') for o in light.light_linking.receiver_collection.objects)
+        if light.name.startswith('Collar '):
+            target=light.name.split()[1]+'-collar';assert collars and target in COLLAR_RANGES and names=={target},(light.name,names)
     ev.to_mesh_clear()
     for m,level in levels:m.levels=level
     return dict(used=True,receiverCount=len(parts),exactSurfaceFacesUvsFloatAttributes=True,triangles=original[3],normalMaxError=error,materialsShared=True,closedControlRetained=True,lightRoutes=routes)

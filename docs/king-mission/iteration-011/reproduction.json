@@ -1,0 +1,135 @@
+{
+  "source": "history/king-mission-010/king-rebuilt.blend",
+  "source_sha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+  "variant": "126-collar-checkpoint-reproduction",
+  "samples": 128,
+  "exclude_broad": true,
+  "reflectors": [
+    {
+      "name": "Collar upper left",
+      "pixel": [
+        470,
+        423
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 0.78493656431064,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar upper right",
+      "pixel": [
+        555,
+        428
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 2.650903504683849,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar middle left",
+      "pixel": [
+        445,
+        491
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 0.0,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    {
+      "name": "Collar middle right",
+      "pixel": [
+        580,
+        477
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 1.6873542425524621,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    {
+      "name": "Collar lower left",
+      "pixel": [
+        450,
+        517
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 5.509087453143786,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar lower right",
+      "pixel": [
+        566,
+        531
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 32.0,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "lower-collar"
+      ]
+    }
+  ]
+}

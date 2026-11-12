@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+  "sourceSha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -26,7 +26,7 @@
   "note": "Body and cross remain separate closed intersecting components. Viewer lighting is approximate.",
   "renderReceivers": {
     "used": true,
-    "receiverCount": 6,
+    "receiverCount": 9,
     "exactSurfaceFacesUvsFloatAttributes": true,
     "triangles": 67200,
     "normalMaxError": 6.699562072753906e-05,
@@ -41,10 +41,13 @@
       ],
       "Platter front-right glint": [
         "foot",
+        "lower-collar",
         "lower-flare",
+        "middle-collar",
         "socket",
         "socket-seam",
         "upper-body",
+        "upper-collar",
         "upper-flare"
       ],
       "Cross arm glint": [
@@ -124,6 +127,24 @@
       ],
       "Socket seam right": [
         "socket-seam"
+      ],
+      "Collar upper left": [
+        "upper-collar"
+      ],
+      "Collar upper right": [
+        "upper-collar"
+      ],
+      "Collar middle left": [
+        "middle-collar"
+      ],
+      "Collar middle right": [
+        "middle-collar"
+      ],
+      "Collar lower left": [
+        "lower-collar"
+      ],
+      "Collar lower right": [
+        "lower-collar"
       ]
     }
   },

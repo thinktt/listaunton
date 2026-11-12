@@ -1,0 +1,22 @@
+{
+  "source": "build/king-mission/118-collar-near-reflections/king.blend",
+  "source_sha256": "129390cc9c6dc8fe203f5b33073dd6d21de2faf2ed310ce3015639445a32a4ea",
+  "variant": "119-collar-near-fitted",
+  "lights": [
+    "Collar upper left",
+    "Collar upper right",
+    "Collar middle left",
+    "Collar middle right",
+    "Collar lower left",
+    "Collar lower right"
+  ],
+  "bounds": [
+    330,
+    390,
+    675,
+    555
+  ],
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 8
+}

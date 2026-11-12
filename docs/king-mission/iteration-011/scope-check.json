@@ -1,0 +1,377 @@
+{
+  "before": "history/king-mission-010/king-rebuilt.blend",
+  "after": "build/king-mission/117-collar-fitted-reflections/king.blend",
+  "source_sha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+  "model_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
+  "all_control_geometry_uvs_float_attributes_material_packed_images_world_camera_exact": true,
+  "all_existing_light_settings_exact": true,
+  "source_files_unchanged": true,
+  "baseline_split_only": false,
+  "collar_profile_intervals": {
+    "lower-collar": [
+      34.5,
+      45.5
+    ],
+    "middle-collar": [
+      45.5,
+      53.5
+    ],
+    "upper-collar": [
+      53.5,
+      61.5
+    ]
+  },
+  "intervals_upper_exclusive": true,
+  "existing_routes_preserved_except_declared_broad_collar_exclusion": true,
+  "added_lights": {
+    "Collar lower left": {
+      "type": "AREA",
+      "energy": 5.509087562561035,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.6059842109680176,
+        0.7476401329040527,
+        -0.27169346809387207,
+        -0.4150770306587219,
+        -0.7954766750335693,
+        0.5695429444313049,
+        -0.20697267353534698,
+        -0.7445667386054993,
+        7.531767209911777e-09,
+        0.34154799580574036,
+        0.9398643374443054,
+        3.684401035308838,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "lower-collar"
+      ]
+    },
+    "Collar lower right": {
+      "type": "AREA",
+      "energy": 32.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.8577463626861572,
+        0.04767827317118645,
+        0.5118573904037476,
+        0.6264292001724243,
+        0.5140731334686279,
+        -0.07955276221036911,
+        -0.8540492653846741,
+        -1.2932124137878418,
+        7.414743663503032e-08,
+        0.9956898093223572,
+        -0.09274621307849884,
+        2.821432113647461,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "lower-collar"
+      ]
+    },
+    "Collar middle left": {
+      "type": "AREA",
+      "energy": 0.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.4095328450202942,
+        -0.8657222986221313,
+        -0.287763386964798,
+        -0.44651883840560913,
+        -0.9122953414916992,
+        -0.38862600922584534,
+        -0.12917809188365936,
+        -0.6421007513999939,
+        2.1319031873190397e-08,
+        0.31542786955833435,
+        -0.9489495754241943,
+        2.275712490081787,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    "Collar middle right": {
+      "type": "AREA",
+      "energy": 1.6873542070388794,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.7150285243988037,
+        -0.25565680861473083,
+        0.6506718397140503,
+        0.7859644889831543,
+        0.6990952491760254,
+        0.26148346066474915,
+        -0.6655014753341675,
+        -1.0412163734436035,
+        5.3453334203368286e-08,
+        0.9307340979576111,
+        0.36569660902023315,
+        3.377720355987549,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    "Collar upper left": {
+      "type": "AREA",
+      "energy": 0.7849365472793579,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.9013164043426514,
+        -0.0995444804430008,
+        -0.4215680956840515,
+        -0.4661872386932373,
+        -0.4331613779067993,
+        -0.2071308195590973,
+        -0.8771932721138,
+        -1.148199200630188,
+        3.819334182253442e-09,
+        0.9732356667518616,
+        -0.2298092246055603,
+        3.1383180618286133,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    "Collar upper right": {
+      "type": "AREA",
+      "energy": 2.6509034633636475,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.7985707521438599,
+        -0.3728954792022705,
+        0.47247618436813354,
+        0.5527504682540894,
+        0.6019009947776794,
+        0.4947381913661957,
+        -0.6268567442893982,
+        -0.9508084654808044,
+        4.148160925865341e-08,
+        0.7849733233451843,
+        0.6195296049118042,
+        3.795428514480591,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "upper-collar"
+      ]
+    }
+  },
+  "declared_shadow_exceptions": [],
+  "added_light_shadow_settings": {
+    "Collar lower left": true,
+    "Collar lower right": true,
+    "Collar middle left": true,
+    "Collar middle right": true,
+    "Collar upper left": true,
+    "Collar upper right": true
+  },
+  "render_receivers": {
+    "used": true,
+    "receiverCount": 9,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-collar",
+        "lower-flare",
+        "middle-collar",
+        "socket",
+        "socket-seam",
+        "upper-body",
+        "upper-collar",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket left inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
+      ],
+      "Collar upper left": [
+        "upper-collar"
+      ],
+      "Collar upper right": [
+        "upper-collar"
+      ],
+      "Collar middle left": [
+        "middle-collar"
+      ],
+      "Collar middle right": [
+        "middle-collar"
+      ],
+      "Collar lower left": [
+        "lower-collar"
+      ],
+      "Collar lower right": [
+        "lower-collar"
+      ]
+    }
+  }
+}

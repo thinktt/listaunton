@@ -1,0 +1,70 @@
+{
+  "method": "Composited RGB error in fixed rectangles, excluding background; not a perceptual match percentage.",
+  "regions": {
+    "head": {
+      "bounds": [
+        185,
+        0,
+        815,
+        350
+      ],
+      "foreground_pixels": 88634,
+      "previous_rgb_mse": 597.4508879211138,
+      "trial_rgb_mse": 596.8670713270302,
+      "maximum_render_change_255": 29.0,
+      "mean_render_change_255": 0.05411016088634159
+    },
+    "collars": {
+      "bounds": [
+        300,
+        390,
+        710,
+        555
+      ],
+      "foreground_pixels": 49868,
+      "previous_rgb_mse": 873.5856795272854,
+      "trial_rgb_mse": 484.7196197962621,
+      "maximum_render_change_255": 161.0,
+      "mean_render_change_255": 8.858399508034545
+    },
+    "stem": {
+      "bounds": [
+        185,
+        560,
+        815,
+        720
+      ],
+      "foreground_pixels": 59967,
+      "previous_rgb_mse": 77.45893018938193,
+      "trial_rgb_mse": 77.46238208792613,
+      "maximum_render_change_255": 5.0,
+      "mean_render_change_255": 0.0242077587117359
+    },
+    "socket": {
+      "bounds": [
+        370,
+        720,
+        630,
+        810
+      ],
+      "foreground_pixels": 23400,
+      "previous_rgb_mse": 201.00599715099716,
+      "trial_rgb_mse": 201.64612535612537,
+      "maximum_render_change_255": 45.0,
+      "mean_render_change_255": 0.05710826210826211
+    },
+    "base-foot": {
+      "bounds": [
+        185,
+        840,
+        815,
+        1110
+      ],
+      "foreground_pixels": 114716,
+      "previous_rgb_mse": 292.24281704383,
+      "trial_rgb_mse": 292.2133529760452,
+      "maximum_render_change_255": 3.0,
+      "mean_render_change_255": 0.010448992875158361
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "rubric": "Only IoU is measured; other scores are visual judgments using the unchanged rubric. Emission and partition diagnostics are not accepted beauty renders.",
+  "trials": [
+    {
+      "variant": "115-collar-local-reflections",
+      "decision": "superseded",
+      "reason": "Broad striping is reduced, but unfitted sources are weak and one is obstructed.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 64
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.36347321976217,
+      "regional_rgb_mse": {
+        "upper": 606.902393939394,
+        "middle": 737.2575,
+        "lower": 518.6197777777778
+      },
+      "render_sha256": "75e32380f3c794746c99db009259aebcc4a5ab1aded6c4108d4b9d2735dfc4c7",
+      "model_sha256": "f3c06bc3bf5a25a452a1f1778dd7e8c64526d921f93b5ec435d610cfd2139e6f"
+    },
+    {
+      "variant": "116-collar-partition-baseline",
+      "decision": "diagnostic",
+      "reason": "Illumination-preservation render; no improvement claimed.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 64
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.36347321976217,
+      "regional_rgb_mse": {
+        "upper": 851.124,
+        "middle": 1289.1284722222222,
+        "lower": 861.8163950617284
+      },
+      "render_sha256": "3e17275155fde2524f6599b69df023d9ca0c4635215fc4ddec3578feab0e19fd",
+      "model_sha256": "eb15757328381c495e3e51ccdb773a86729ae9a616122c69e434d409ecb51523"
+    },
+    {
+      "variant": "117-collar-fitted-reflections",
+      "decision": "accepted",
+      "reason": "Warmer separated lower glints and reduced repeated pale bands; missing upper/middle glints remain.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.76347321976218,
+      "regional_rgb_mse": {
+        "upper": 587.7666666666667,
+        "middle": 739.2876388888889,
+        "lower": 322.1804938271605
+      },
+      "render_sha256": "d1686e7af1183d0e3ec719a9d312a752b7d711b7e78c2e81166704f905ba7dc0",
+      "model_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040"
+    },
+    {
+      "variant": "118-collar-near-reflections",
+      "decision": "rejected",
+      "reason": "Near emitters do not recover broad natural crescents.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 64
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.36347321976217,
+      "regional_rgb_mse": {
+        "upper": 899.7567575757575,
+        "middle": 740.1014285714285,
+        "lower": 328.91832098765434
+      },
+      "render_sha256": "7728a3a71577d542d78de1563c736a10acacf1ed972e877cfa77a8c21d1a5d5f",
+      "model_sha256": "129390cc9c6dc8fe203f5b33073dd6d21de2faf2ed310ce3015639445a32a4ea"
+    },
+    {
+      "variant": "119-collar-near-fitted",
+      "decision": "rejected",
+      "reason": "A bright isolated middle-collar dot is less faithful than the simpler trial.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 65
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.56347321976217,
+      "regional_rgb_mse": {
+        "upper": 590.6028181818182,
+        "middle": 745.4990873015873,
+        "lower": 335.23703703703706
+      },
+      "render_sha256": "08cc375779c2be33af543e6b9ad9173bb9dbbe3d84c92519658d4f35f08b66fb",
+      "model_sha256": "58d1f04cd0b072d7010d440fbe62e1dc832ad8ff34d70895a26d7075d59ef54a"
+    },
+    {
+      "variant": "122-collar-textured-normals",
+      "decision": "rejected",
+      "reason": "Measured-normal aiming still leaves an unsuitable near-field highlight.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 64
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.36347321976217,
+      "regional_rgb_mse": {
+        "upper": 642.4760303030303,
+        "middle": 741.7781349206349,
+        "lower": 343.4900740740741
+      },
+      "render_sha256": "87d527dba3ee3eca47ccf059fdf4f4190d3c5b2782ab44595e6e5bd35a1fa663",
+      "model_sha256": "3090cadacbe012fd54543f1483f04c9039d987ed76d8d713bf13e3da9030d202"
+    },
+    {
+      "variant": "123-collar-textured-fitted",
+      "decision": "rejected",
+      "reason": "Lower fitting loss does not outweigh the bright dot and poorer full-render regional match.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 65
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.56347321976217,
+      "regional_rgb_mse": {
+        "upper": 583.5183030303031,
+        "middle": 748.1181944444445,
+        "lower": 356.9423950617284
+      },
+      "render_sha256": "87cb58d89512d4350981d162b5eac4502236c7620822e31b8641143b2fc6790a",
+      "model_sha256": "b3c8ffb09c51a4f1ebd3dc421280b445669b53ee8f98489f2b01ec9e5b0df922"
+    },
+    {
+      "variant": "124-collar-middle-shadow-study",
+      "decision": "rejected",
+      "reason": "Single-light shadow omission gives no worthwhile visible benefit.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 65
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.56347321976217,
+      "regional_rgb_mse": {
+        "upper": 588.1382727272727,
+        "middle": 783.010753968254,
+        "lower": 322.41834567901236
+      },
+      "render_sha256": "eab965dcd544ed2b26450253bb1eb2ec331fc17445ae474bf12369e8ca5c4539",
+      "model_sha256": "9b1fb88f2a24d9c986bfc653db2ac20816a447bc53b69b0ba4bf546219fd2aa6"
+    },
+    {
+      "variant": "125-collar-middle-fitted",
+      "decision": "not accepted",
+      "reason": "Almost the same visible result as 117; the added shadow approximation is unjustified.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.76347321976218,
+      "regional_rgb_mse": {
+        "upper": 587.9539090909091,
+        "middle": 738.9042658730159,
+        "lower": 322.3240987654321
+      },
+      "render_sha256": "4e7b198966a652dff4653b38d5f0a334617761f57e6455402aff49629b8c0ffa",
+      "model_sha256": "3668ed914f50e35c83159a0bdbfc1720469d3469b3f7b2f1899d4ea916c0498c"
+    }
+  ],
+  "holistic_visual_range_percent": [
+    75,
+    84
+  ]
+}

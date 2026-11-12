@@ -1,0 +1,463 @@
+{
+  "checkpoint": "011",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "117-collar-fitted-reflections",
+  "previous_checkpoint": "010",
+  "model_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
+  "render_sha256": "d1686e7af1183d0e3ec719a9d312a752b7d711b7e78c2e81166704f905ba7dc0",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "scores": {
+    "silhouette_iou_percent": 97.81736609881087,
+    "interior_form": 84,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 66
+  },
+  "original_iou_percent": 96.83378283518675,
+  "equal_weight_mean": 81.76347321976218,
+  "holistic_visual_range_percent": [
+    75,
+    84
+  ],
+  "geometry_changed": false,
+  "material_changed": false,
+  "camera_elevation_degrees": 54.000000800055794,
+  "receiver_count": 9,
+  "added_lights": {
+    "Collar lower left": {
+      "type": "AREA",
+      "energy": 5.509087562561035,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.6059842109680176,
+        0.7476401329040527,
+        -0.27169346809387207,
+        -0.4150770306587219,
+        -0.7954766750335693,
+        0.5695429444313049,
+        -0.20697267353534698,
+        -0.7445667386054993,
+        7.531767209911777e-09,
+        0.34154799580574036,
+        0.9398643374443054,
+        3.684401035308838,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "lower-collar"
+      ]
+    },
+    "Collar lower right": {
+      "type": "AREA",
+      "energy": 32.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.8577463626861572,
+        0.04767827317118645,
+        0.5118573904037476,
+        0.6264292001724243,
+        0.5140731334686279,
+        -0.07955276221036911,
+        -0.8540492653846741,
+        -1.2932124137878418,
+        7.414743663503032e-08,
+        0.9956898093223572,
+        -0.09274621307849884,
+        2.821432113647461,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "lower-collar"
+      ]
+    },
+    "Collar middle left": {
+      "type": "AREA",
+      "energy": 0.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.4095328450202942,
+        -0.8657222986221313,
+        -0.287763386964798,
+        -0.44651883840560913,
+        -0.9122953414916992,
+        -0.38862600922584534,
+        -0.12917809188365936,
+        -0.6421007513999939,
+        2.1319031873190397e-08,
+        0.31542786955833435,
+        -0.9489495754241943,
+        2.275712490081787,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    "Collar middle right": {
+      "type": "AREA",
+      "energy": 1.6873542070388794,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.7150285243988037,
+        -0.25565680861473083,
+        0.6506718397140503,
+        0.7859644889831543,
+        0.6990952491760254,
+        0.26148346066474915,
+        -0.6655014753341675,
+        -1.0412163734436035,
+        5.3453334203368286e-08,
+        0.9307340979576111,
+        0.36569660902023315,
+        3.377720355987549,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    "Collar upper left": {
+      "type": "AREA",
+      "energy": 0.7849365472793579,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.9013164043426514,
+        -0.0995444804430008,
+        -0.4215680956840515,
+        -0.4661872386932373,
+        -0.4331613779067993,
+        -0.2071308195590973,
+        -0.8771932721138,
+        -1.148199200630188,
+        3.819334182253442e-09,
+        0.9732356667518616,
+        -0.2298092246055603,
+        3.1383180618286133,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    "Collar upper right": {
+      "type": "AREA",
+      "energy": 2.6509034633636475,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.7985707521438599,
+        -0.3728954792022705,
+        0.47247618436813354,
+        0.5527504682540894,
+        0.6019009947776794,
+        0.4947381913661957,
+        -0.6268567442893982,
+        -0.9508084654808044,
+        4.148160925865341e-08,
+        0.7849733233451843,
+        0.6195296049118042,
+        3.795428514480591,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.03999999910593033,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "upper-collar"
+      ]
+    }
+  },
+  "mission_complete": false,
+  "validation": {
+    "reproduction": {
+      "saved_reopened": {
+        "maximum_channel_error_255": 0,
+        "mean_channel_error_255": 0.0,
+        "alpha_exact": true
+      },
+      "full_reproduction": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 7.790063821290212e-06,
+        "alpha_exact": true
+      },
+      "reproduction_mesh_exact": true,
+      "accepted_geometry_export_byte_identical_to_010": true,
+      "camera_export_byte_identical_to_010": true,
+      "physical_bounds_exact": true,
+      "partition_preservation": {
+        "initial_full_render": {
+          "maximum_channel_error_255": 45,
+          "mean_channel_error_255": 0.0005551612829376617,
+          "alpha_exact": true,
+          "max_pixel": [
+            481,
+            754
+          ],
+          "old_pixel": [
+            123,
+            89,
+            69,
+            255
+          ],
+          "new_pixel": [
+            161,
+            134,
+            112,
+            255
+          ],
+          "pixels_above": {
+            "0": 1972,
+            "1": 115,
+            "2": 65,
+            "4": 28,
+            "8": 10,
+            "16": 4,
+            "32": 2
+          },
+          "bounds_above_one": [
+            448,
+            450,
+            544,
+            767
+          ],
+          "largest_differences": [
+            {
+              "pixel": [
+                480,
+                753
+              ],
+              "delta": 8
+            },
+            {
+              "pixel": [
+                481,
+                753
+              ],
+              "delta": 10
+            },
+            {
+              "pixel": [
+                473,
+                754
+              ],
+              "delta": 11
+            },
+            {
+              "pixel": [
+                474,
+                754
+              ],
+              "delta": 13
+            },
+            {
+              "pixel": [
+                475,
+                754
+              ],
+              "delta": 9
+            },
+            {
+              "pixel": [
+                478,
+                754
+              ],
+              "delta": 16
+            },
+            {
+              "pixel": [
+                479,
+                754
+              ],
+              "delta": 29
+            },
+            {
+              "pixel": [
+                480,
+                754
+              ],
+              "delta": 34
+            },
+            {
+              "pixel": [
+                481,
+                754
+              ],
+              "delta": 45
+            },
+            {
+              "pixel": [
+                482,
+                754
+              ],
+              "delta": 27
+            },
+            {
+              "pixel": [
+                483,
+                754
+              ],
+              "delta": 11
+            },
+            {
+              "pixel": [
+                474,
+                755
+              ],
+              "delta": 8
+            },
+            {
+              "pixel": [
+                482,
+                755
+              ],
+              "delta": 8
+            }
+          ]
+        },
+        "initial_one_level_check_passed": false,
+        "fixed_sample_diagnostic": {
+          "source_hashes": [
+            "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+            "eb15757328381c495e3e51ccdb773a86729ae9a616122c69e434d409ecb51523"
+          ],
+          "source_files_unchanged": true,
+          "unchanged_receiver_normals": {
+            "foot": {
+              "shape_exact": true,
+              "byte_exact": true,
+              "max_error": 0.0
+            },
+            "lower-flare": {
+              "shape_exact": true,
+              "byte_exact": true,
+              "max_error": 0.0
+            },
+            "upper-flare": {
+              "shape_exact": true,
+              "byte_exact": true,
+              "max_error": 0.0
+            },
+            "socket": {
+              "shape_exact": true,
+              "byte_exact": true,
+              "max_error": 0.0
+            },
+            "socket-seam": {
+              "shape_exact": true,
+              "byte_exact": true,
+              "max_error": 0.0
+            }
+          },
+          "diagnostic_sampling": {
+            "samples": 1024,
+            "adaptive": false,
+            "denoising": false,
+            "bounds": [
+              440,
+              730,
+              550,
+              780
+            ]
+          },
+          "render_differences": {
+            "4": {
+              "max_linear_error": 2.1457672119140625e-06,
+              "mean_linear_error": 2.1344982670257195e-08,
+              "alpha_exact": true
+            },
+            "0": {
+              "max_linear_error": 2.115964889526367e-06,
+              "mean_linear_error": 2.1384710890970382e-08,
+              "alpha_exact": true
+            }
+          }
+        },
+        "interpretation": "The initial 128-sample adaptive/denoised render failed the 1/255 maximum check. The unchanged receiver normals are byte-identical and fixed 1024-sample undenoised comparisons agree to 2.15e-6 linear. This supports sampling/denoising sensitivity; the failed initial check is retained, not relabeled as a pass."
+      }
+    },
+    "scope": "passed",
+    "receiver_regeneration": "passed",
+    "export": "passed",
+    "site": "passed king checks",
+    "canonical_model": "passed",
+    "site_model_candidates_and_historical_projections": "passed",
+    "whole_set": "known pre-existing knight sizing metadata mismatch",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "local_preview_verified_files": 34
+  }
+}

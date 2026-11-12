@@ -1,0 +1,278 @@
+{
+  "source_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
+  "source_unchanged": true,
+  "responses": [
+    {
+      "light": "Collar upper left",
+      "maximum_linear_luminance": 0.3143450949579477,
+      "max_pixel": [
+        468,
+        436
+      ],
+      "fitted_power": 0.78493656431064
+    },
+    {
+      "light": "Collar upper right",
+      "maximum_linear_luminance": 0.3343380172252655,
+      "max_pixel": [
+        553,
+        426
+      ],
+      "fitted_power": 2.650903504683849
+    },
+    {
+      "light": "Collar middle left",
+      "maximum_linear_luminance": 0.0,
+      "max_pixel": [
+        0,
+        0
+      ],
+      "fitted_power": 0.0
+    },
+    {
+      "light": "Collar middle right",
+      "maximum_linear_luminance": 0.2865308825403452,
+      "max_pixel": [
+        578,
+        477
+      ],
+      "fitted_power": 1.6873542425524621
+    },
+    {
+      "light": "Collar lower left",
+      "maximum_linear_luminance": 0.25211060021817683,
+      "max_pixel": [
+        450,
+        516
+      ],
+      "fitted_power": 5.509087453143786
+    },
+    {
+      "light": "Collar lower right",
+      "maximum_linear_luminance": 0.33841586424708364,
+      "max_pixel": [
+        565,
+        531
+      ],
+      "fitted_power": 32.0
+    }
+  ],
+  "probes": [
+    {
+      "pixel": [
+        470,
+        423
+      ],
+      "receiver": "upper-collar",
+      "normal": [
+        -0.258510947227478,
+        -0.8983433842658997,
+        0.3551776707172394
+      ],
+      "reflection": [
+        -0.42156821489334106,
+        -0.8771933317184448,
+        -0.22980916500091553
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    },
+    {
+      "pixel": [
+        555,
+        428
+      ],
+      "receiver": "upper-collar",
+      "normal": [
+        0.24433329701423645,
+        -0.6281322836875916,
+        0.7387498021125793
+      ],
+      "reflection": [
+        0.47247594594955444,
+        -0.6268565654754639,
+        0.6195299029350281
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    },
+    {
+      "pixel": [
+        445,
+        491
+      ],
+      "receiver": "middle-collar",
+      "normal": [
+        -0.3665178716182709,
+        -0.9131806492805481,
+        -0.17822903394699097
+      ],
+      "reflection": [
+        -0.2877632975578308,
+        -0.12917810678482056,
+        -0.9489495754241943
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": false,
+        "0.2": false,
+        "0.4": false,
+        "0.8": false,
+        "1.6": false
+      }
+    },
+    {
+      "pixel": [
+        445,
+        486
+      ],
+      "receiver": "middle-collar",
+      "normal": [
+        -0.36098843812942505,
+        -0.9005314707756042,
+        0.24234335124492645
+      ],
+      "reflection": [
+        -0.5237069129943848,
+        -0.7186680436134338,
+        -0.4574355185031891
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    },
+    {
+      "pixel": [
+        450,
+        487
+      ],
+      "receiver": "middle-collar",
+      "normal": [
+        -0.32560017704963684,
+        -0.8960882425308228,
+        0.3016793131828308
+      ],
+      "reflection": [
+        -0.5019264221191406,
+        -0.7935726642608643,
+        -0.3439655900001526
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    },
+    {
+      "pixel": [
+        580,
+        477
+      ],
+      "receiver": "middle-collar",
+      "normal": [
+        0.3542306125164032,
+        -0.6822986006736755,
+        0.6395227909088135
+      ],
+      "reflection": [
+        0.6506717801094055,
+        -0.6655014157295227,
+        0.36569663882255554
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    },
+    {
+      "pixel": [
+        450,
+        517
+      ],
+      "receiver": "lower-collar",
+      "normal": [
+        -0.14003989100456238,
+        -0.4096449315547943,
+        0.9014320969581604
+      ],
+      "reflection": [
+        -0.2716934084892273,
+        -0.20697274804115295,
+        0.9398643374443054
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    },
+    {
+      "pixel": [
+        566,
+        531
+      ],
+      "receiver": "lower-collar",
+      "normal": [
+        0.30298933386802673,
+        -0.8534809350967407,
+        0.4239901304244995
+      ],
+      "reflection": [
+        0.5118573904037476,
+        -0.8540493249893188,
+        -0.09274608641862869
+      ],
+      "clear_distance": {
+        "0.03": true,
+        "0.05": true,
+        "0.08": true,
+        "0.12": true,
+        "0.2": true,
+        "0.4": true,
+        "0.8": true,
+        "1.6": true
+      }
+    }
+  ]
+}

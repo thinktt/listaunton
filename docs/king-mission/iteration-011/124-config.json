@@ -1,0 +1,32 @@
+{
+  "source": "build/king-mission/115-collar-local-reflections/king.blend",
+  "source_sha256": "f3c06bc3bf5a25a452a1f1778dd7e8c64526d921f93b5ec435d610cfd2139e6f",
+  "capture": "build/king-mission/121-collar-surface",
+  "variant": "124-collar-middle-shadow-study",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "targets": [
+    {
+      "name": "Collar middle left",
+      "pixel": [
+        445,
+        491
+      ],
+      "distance": 0.8,
+      "size": 0.24,
+      "size_y": 0.04,
+      "energy": 2,
+      "use_shadow": false
+    }
+  ],
+  "existing_light_power": {
+    "Collar upper left": 0.78493656431064,
+    "Collar upper right": 2.650903504683849,
+    "Collar middle left": 0.0,
+    "Collar middle right": 1.6873542425524621,
+    "Collar lower left": 5.509087453143786,
+    "Collar lower right": 32.0
+  },
+  "note": "Deliberate one-light shadow omission to test the otherwise occluded middle-left crescent. Artistic illumination approximation, not an inferred original renderer setting."
+}

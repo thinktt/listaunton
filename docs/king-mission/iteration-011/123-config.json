@@ -1,0 +1,22 @@
+{
+  "source": "build/king-mission/122-collar-textured-normals/king.blend",
+  "source_sha256": "3090cadacbe012fd54543f1483f04c9039d987ed76d8d713bf13e3da9030d202",
+  "variant": "123-collar-textured-fitted",
+  "lights": [
+    "Collar upper left",
+    "Collar upper right",
+    "Collar middle left",
+    "Collar middle right",
+    "Collar lower left",
+    "Collar lower right"
+  ],
+  "bounds": [
+    330,
+    390,
+    675,
+    555
+  ],
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 8
+}

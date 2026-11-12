@@ -1,0 +1,57 @@
+{
+  "source_hashes": [
+    "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+    "eb15757328381c495e3e51ccdb773a86729ae9a616122c69e434d409ecb51523"
+  ],
+  "source_files_unchanged": true,
+  "unchanged_receiver_normals": {
+    "foot": {
+      "shape_exact": true,
+      "byte_exact": true,
+      "max_error": 0.0
+    },
+    "lower-flare": {
+      "shape_exact": true,
+      "byte_exact": true,
+      "max_error": 0.0
+    },
+    "upper-flare": {
+      "shape_exact": true,
+      "byte_exact": true,
+      "max_error": 0.0
+    },
+    "socket": {
+      "shape_exact": true,
+      "byte_exact": true,
+      "max_error": 0.0
+    },
+    "socket-seam": {
+      "shape_exact": true,
+      "byte_exact": true,
+      "max_error": 0.0
+    }
+  },
+  "diagnostic_sampling": {
+    "samples": 1024,
+    "adaptive": false,
+    "denoising": false,
+    "bounds": [
+      440,
+      730,
+      550,
+      780
+    ]
+  },
+  "render_differences": {
+    "4": {
+      "max_linear_error": 2.1457672119140625e-06,
+      "mean_linear_error": 2.1344982670257195e-08,
+      "alpha_exact": true
+    },
+    "0": {
+      "max_linear_error": 2.115964889526367e-06,
+      "mean_linear_error": 2.1384710890970382e-08,
+      "alpha_exact": true
+    }
+  }
+}

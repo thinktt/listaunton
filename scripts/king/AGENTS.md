@@ -1,7 +1,7 @@
 # King reconstruction pipeline
 
 Read the root AGENTS.md, MISSION-KING.md and latest docs/king-mission-log.md.
-The current accepted scene has two closed editable controls and six exact
+The current accepted scene has two closed editable controls and nine exact
 derived body light receivers. Select editable meshes with
 `render_regions.controls(scene)`, not by visibility. The body is intentionally
 hidden from final rendering. Export the closed controls; do not export the
@@ -60,3 +60,18 @@ Reproduce with socket_seam_trial.py and iteration-010/reproduction.json from
 archived 009; verify scope with check_socket_seam_checkpoint.py. The rejected
 pigment and local-polish trials are not part of the accepted material. Keep
 fixed/side/viewer assets synchronized and read the log for remaining defects.
+
+
+Checkpoint 011 retains 010 closed geometry, all attributes, v6 material and 54°
+camera. Nine exact receivers now include lower/middle/upper collars using
+COLLAR_RANGES in render_regions.py: [34.5,45.5), [45.5,53.5), [53.5,61.5).
+Preserve king_split_collars and king_collar_broad_excluded during regeneration.
+Front/Upper varnish omit collars; each new Collar source links only to its named
+collar. All accepted sources retain shadows; the middle-left source fits to zero.
+Reproduce from archived 010 with collar_reflection_trial.py and
+iteration-011/reproduction.json; validate with check_collar_checkpoint.py.
+Always use a fresh saved-file beauty after fitting: this study records a tiny
+transient socket-glint mismatch and a passing independent fresh reproduction.
+Keep the original failed checks as evidence. Do not promote rejected close-light
+or shadow-omission trials. Export closed controls and synchronize all review
+assets before another accepted iteration; consult the mission log for status.

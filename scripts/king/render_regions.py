@@ -7,10 +7,11 @@ UVs, float attributes, corner normals and material.
 import bpy,numpy as np
 from mathutils import Vector
 
+COLLAR_RANGES={'lower-collar':(34.5,45.5),'middle-collar':(45.5,53.5),'upper-collar':(53.5,61.5)}
 def controls(scene):
     return [o for o in scene.objects if o.type=='MESH' and not o.get('king_render_region') and (not o.hide_render or o.get('king_editable_control'))]
 
-def partition(scene,body,profile_sections=False,split_flare=False,split_socket=False,split_socket_seam=False):
+def partition(scene,body,profile_sections=False,split_flare=False,split_socket=False,split_socket_seam=False,split_collars=False):
     assert not any(o.get('king_render_region') for o in scene.objects),'Start from an unpartitioned source.'
     if profile_sections:
         attr=body.data.attributes.get('King profile ring') or body.data.attributes.new('King profile ring','FLOAT','POINT')
@@ -22,7 +23,8 @@ def partition(scene,body,profile_sections=False,split_flare=False,split_socket=F
     names=['foot','lower-flare','upper-flare'] if split_flare else ['foot','flare']
     assert not split_socket_seam or split_socket
     names+=(['socket','socket-seam','upper-body'] if split_socket_seam else ['socket','upper-body']) if split_socket else ['upper-body']
-    assert not (split_flare or split_socket) or profile_sections
+    if split_collars:names.extend(COLLAR_RANGES)
+    assert not (split_flare or split_socket or split_collars) or profile_sections
     if profile_sections:
         ring=np.array([v.value for v in mesh.attributes['King profile ring'].data],dtype=np.float32)
         bins=([8,17,19.8] if split_flare else [8,19.8])+([28] if split_socket else [])
@@ -30,6 +32,8 @@ def partition(scene,body,profile_sections=False,split_flare=False,split_socket=F
         if split_socket_seam:
             seam_index=names.index('socket-seam');labels[labels==seam_index]=seam_index+1
             labels[(face_ring>=26.55)&(face_ring<27.25)]=seam_index
+        if split_collars:
+            for name,(lo,hi) in COLLAR_RANGES.items():labels[(face_ring>=lo)&(face_ring<hi)]=names.index(name)
     else:labels=np.digitize(centers[:,2],[.24,.88])
     normals=np.array([n.vector[:] for n in mesh.corner_normals],dtype=np.float32)
     uvs={layer.name:np.array([v.uv[:] for v in layer.data],dtype=np.float32) for layer in mesh.uv_layers}
@@ -58,7 +62,8 @@ def partition(scene,body,profile_sections=False,split_flare=False,split_socket=F
     scene['king_split_flare']=split_flare
     scene['king_split_socket']=split_socket
     scene['king_split_socket_seam']=split_socket_seam
-    scene['king_partition_spec']=('Interpolated profile-ring bins '+', '.join(str(x) for x in bins) if profile_sections else 'Face-center Z bins 0.24 and 0.88')+('; socket seam [26.55, 27.25)' if split_socket_seam else '')+': '+', '.join(names)+'; exact evaluated control surface.'
+    scene['king_split_collars']=split_collars
+    scene['king_partition_spec']=('Interpolated profile-ring bins '+', '.join(str(x) for x in bins) if profile_sections else 'Face-center Z bins 0.24 and 0.88')+('; socket seam [26.55, 27.25)' if split_socket_seam else '')+('; collars '+str(COLLAR_RANGES) if split_collars else '')+': '+', '.join(names)+'; exact evaluated control surface.'
     bpy.context.view_layer.update();return parts,report
 
 def link(light,parts,name):
@@ -83,7 +88,7 @@ def assign_material(scene,control,material):
     for ob in scene.objects:
         if ob.get('king_render_region') and ob.get('king_control_source')==control.name:ob.data.materials[0]=material
 
-def regenerate(scene,split_flare=None,split_socket=None,split_socket_seam=None):
+def regenerate(scene,split_flare=None,split_socket=None,split_socket_seam=None,split_collars=None):
     """Rebuild derived surfaces after changing control positions, UVs or attributes."""
     if not scene.get('king_render_regions'):return
     old=[o for o in scene.objects if o.get('king_render_region')]
@@ -99,9 +104,11 @@ def regenerate(scene,split_flare=None,split_socket=None,split_socket_seam=None):
     if split_socket is None:split_socket=old_split_socket
     old_socket_seam=bool(scene.get('king_split_socket_seam',False))
     if split_socket_seam is None:split_socket_seam=old_socket_seam
+    old_split_collars=bool(scene.get('king_split_collars',False))
+    if split_collars is None:split_collars=old_split_collars
     for ob in old:bpy.data.objects.remove(ob,do_unlink=True)
     body.hide_render=False;scene['king_render_regions']=False
-    parts,report=partition(scene,body,profile_sections=by_profile,split_flare=split_flare,split_socket=split_socket,split_socket_seam=split_socket_seam);mapping={o['king_render_region']:o for o in parts}
+    parts,report=partition(scene,body,profile_sections=by_profile,split_flare=split_flare,split_socket=split_socket,split_socket_seam=split_socket_seam,split_collars=split_collars);mapping={o['king_render_region']:o for o in parts}
     for light,members in routing:
         receivers=[]
         for region,name in members:
@@ -111,7 +118,9 @@ def regenerate(scene,split_flare=None,split_socket=None,split_socket_seam=None):
             elif region=='socket' and split_socket_seam and not old_socket_seam:receivers.extend([mapping['socket'],mapping['socket-seam']])
             elif region=='socket-seam' and not split_socket_seam:receivers.append(mapping['socket'] if split_socket else mapping['upper-body'])
             elif region=='socket' and not split_socket:receivers.append(mapping['upper-body'])
+            elif region in COLLAR_RANGES and not split_collars:receivers.append(mapping['upper-body'])
             else:receivers.append(mapping[region] if region else bpy.data.objects[name])
+        if split_collars and not old_split_collars and mapping['upper-body'] in receivers:receivers.extend(mapping[n] for n in COLLAR_RANGES)
         receivers=list(dict.fromkeys(receivers))
         link(light,receivers,light.name+' regenerated')
     bpy.context.view_layer.update();return report

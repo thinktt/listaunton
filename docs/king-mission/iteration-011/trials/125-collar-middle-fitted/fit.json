@@ -1,0 +1,117 @@
+{
+  "source_sha256": "9b1fb88f2a24d9c986bfc653db2ac20816a447bc53b69b0ba4bf546219fd2aa6",
+  "pixels": 4125,
+  "bounds": [
+    390,
+    470,
+    515,
+    503
+  ],
+  "original_powers": {
+    "Collar middle left": 2.0
+  },
+  "fitted_powers": {
+    "Collar middle left": 0.6091964472901755
+  },
+  "gain": [
+    0.30459822364508776
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.018754856921540223,
+      "after_mse": 0.018681283452177525
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.018681283452177525,
+      "after_mse": 0.01863385905833195
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.01863385905833195,
+      "after_mse": 0.018604266880385103
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.018604266880385103,
+      "after_mse": 0.018582769600980358
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.018582769600980358,
+      "after_mse": 0.018570258966901027
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.018570258966901027,
+      "after_mse": 0.018561991429004235
+    },
+    {
+      "iteration": 6,
+      "before_mse": 0.018561991429004235,
+      "after_mse": 0.01855697336551378
+    },
+    {
+      "iteration": 7,
+      "before_mse": 0.01855697336551378,
+      "after_mse": 0.0185539128992131
+    },
+    {
+      "iteration": 8,
+      "before_mse": 0.0185539128992131,
+      "after_mse": 0.018552410883971145
+    },
+    {
+      "iteration": 9,
+      "before_mse": 0.018552410883971145,
+      "after_mse": 0.018551491972131334
+    },
+    {
+      "iteration": 10,
+      "before_mse": 0.018551491972131334,
+      "after_mse": 0.018550730596689404
+    },
+    {
+      "iteration": 11,
+      "before_mse": 0.018550730596689404,
+      "after_mse": 0.01855015360845566
+    },
+    {
+      "iteration": 12,
+      "before_mse": 0.01855015360845566,
+      "after_mse": 0.018549766307553773
+    },
+    {
+      "iteration": 13,
+      "before_mse": 0.018549766307553773,
+      "after_mse": 0.01854948097489094
+    },
+    {
+      "iteration": 14,
+      "before_mse": 0.01854948097489094,
+      "after_mse": 0.018549323013652586
+    },
+    {
+      "iteration": 15,
+      "before_mse": 0.018549323013652586,
+      "after_mse": 0.01854925504829874
+    },
+    {
+      "iteration": 16,
+      "before_mse": 0.01854925504829874,
+      "after_mse": 0.018549225844604694
+    },
+    {
+      "iteration": 17,
+      "before_mse": 0.018549225844604694,
+      "after_mse": 0.018549209252148268
+    },
+    {
+      "iteration": 18,
+      "before_mse": 0.018549209252148268,
+      "after_mse": 0.018549200567374045
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

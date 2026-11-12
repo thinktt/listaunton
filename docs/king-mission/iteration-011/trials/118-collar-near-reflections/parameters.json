@@ -1,0 +1,724 @@
+{
+  "source": "build/king-mission/118-collar-near-reflections/collars-prepared.blend",
+  "source_sha256": "135890bccd5ef0acd344432a1b0ed3fa90198555823eb21554b0ddd220c10e53",
+  "variant": "118-collar-near-reflections",
+  "samples": 128,
+  "exclude_broad": true,
+  "reflectors": [
+    {
+      "name": "Collar upper left",
+      "pixel": [
+        470,
+        423
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.07,
+      "size_y": 0.012,
+      "distance": 0.16,
+      "energy": 1,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar upper right",
+      "pixel": [
+        555,
+        428
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 2.650903504683849,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    {
+      "name": "Collar middle left",
+      "pixel": [
+        445,
+        491
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.03,
+      "size_y": 0.006,
+      "distance": 0.05,
+      "energy": 0.05,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    {
+      "name": "Collar middle right",
+      "pixel": [
+        580,
+        477
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 1.6873542425524621,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    {
+      "name": "Collar lower left",
+      "pixel": [
+        450,
+        517
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 5.509087453143786,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "lower-collar"
+      ]
+    },
+    {
+      "name": "Collar lower right",
+      "pixel": [
+        566,
+        531
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 40,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "lower-collar"
+      ]
+    }
+  ],
+  "collar_original_source": "history/king-mission-010/king-rebuilt.blend",
+  "collar_original_source_sha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+  "collar_partition_before": {
+    "used": true,
+    "receiverCount": 6,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "socket",
+        "socket-seam",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket left inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
+      ]
+    }
+  },
+  "collar_preserved_partition": {
+    "used": true,
+    "receiverCount": 9,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "lower-collar",
+        "middle-collar",
+        "upper-body",
+        "upper-collar"
+      ],
+      "Front varnish": [
+        "lower-collar",
+        "middle-collar",
+        "upper-body",
+        "upper-collar"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-collar",
+        "lower-flare",
+        "middle-collar",
+        "socket",
+        "socket-seam",
+        "upper-body",
+        "upper-collar",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket left inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
+      ]
+    }
+  },
+  "collar_partition_after": {
+    "used": true,
+    "receiverCount": 9,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-collar",
+        "lower-flare",
+        "middle-collar",
+        "socket",
+        "socket-seam",
+        "upper-body",
+        "upper-collar",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket left inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
+      ]
+    }
+  },
+  "collar_intervals": {
+    "lower-collar": [
+      34.5,
+      45.5
+    ],
+    "middle-collar": [
+      45.5,
+      53.5
+    ],
+    "upper-collar": [
+      53.5,
+      61.5
+    ]
+  },
+  "original_source_sha256": "135890bccd5ef0acd344432a1b0ed3fa90198555823eb21554b0ddd220c10e53",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Collar upper left",
+      "pixel": [
+        470,
+        423
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.07,
+      "size_y": 0.012,
+      "distance": 0.16,
+      "energy": 1,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "upper-collar"
+      ],
+      "actual_target_pixel": [
+        470,
+        423
+      ],
+      "receiver_hit": "King receiver upper-collar",
+      "point": [
+        -0.1289326399564743,
+        -0.4464445114135742,
+        3.3221654891967773
+      ],
+      "normal": [
+        -0.258510947227478,
+        -0.8983433842658997,
+        0.3551776707172394
+      ],
+      "position": [
+        -0.1963835507631302,
+        -0.586795449256897,
+        3.285396099090576
+      ]
+    },
+    {
+      "name": "Collar upper right",
+      "pixel": [
+        555,
+        428
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 2.650903504683849,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "upper-collar"
+      ],
+      "actual_target_pixel": [
+        555,
+        428
+      ],
+      "receiver_hit": "King receiver upper-collar",
+      "point": [
+        0.17476971447467804,
+        -0.4493231773376465,
+        3.2998046875
+      ],
+      "normal": [
+        0.24433329701423645,
+        -0.6281322836875916,
+        0.7387498021125793
+      ],
+      "position": [
+        0.5527504682540894,
+        -0.9508084654808044,
+        3.795428514480591
+      ]
+    },
+    {
+      "name": "Collar middle left",
+      "pixel": [
+        445,
+        491
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.03,
+      "size_y": 0.006,
+      "distance": 0.05,
+      "energy": 0.05,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "middle-collar"
+      ],
+      "actual_target_pixel": [
+        445,
+        491
+      ],
+      "receiver_hit": "King receiver middle-collar",
+      "point": [
+        -0.21630819141864777,
+        -0.5387582778930664,
+        3.034872055053711
+      ],
+      "normal": [
+        -0.3665178716182709,
+        -0.9131806492805481,
+        -0.17822903394699097
+      ],
+      "position": [
+        -0.23069635033607483,
+        -0.5452171564102173,
+        2.987424612045288
+      ]
+    },
+    {
+      "name": "Collar middle right",
+      "pixel": [
+        580,
+        477
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 1.6873542425524621,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "middle-collar"
+      ],
+      "actual_target_pixel": [
+        580,
+        477
+      ],
+      "receiver_hit": "King receiver middle-collar",
+      "point": [
+        0.2654270827770233,
+        -0.5088152885437012,
+        3.085163116455078
+      ],
+      "normal": [
+        0.3542306125164032,
+        -0.6822986006736755,
+        0.6395227909088135
+      ],
+      "position": [
+        0.7859644889831543,
+        -1.0412163734436035,
+        3.377720355987549
+      ]
+    },
+    {
+      "name": "Collar lower left",
+      "pixel": [
+        450,
+        517
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 5.509087453143786,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "lower-collar"
+      ],
+      "actual_target_pixel": [
+        450,
+        517
+      ],
+      "receiver_hit": "King receiver lower-collar",
+      "point": [
+        -0.19772230088710785,
+        -0.5789885520935059,
+        2.932509422302246
+      ],
+      "normal": [
+        -0.14003989100456238,
+        -0.4096449315547943,
+        0.9014320969581604
+      ],
+      "position": [
+        -0.4150770306587219,
+        -0.7445667386054993,
+        3.684401035308838
+      ]
+    },
+    {
+      "name": "Collar lower right",
+      "pixel": [
+        566,
+        531
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.24,
+      "size_y": 0.04,
+      "distance": 0.8,
+      "energy": 40,
+      "color": [
+        1,
+        0.73,
+        0.5
+      ],
+      "receivers": [
+        "lower-collar"
+      ],
+      "actual_target_pixel": [
+        566,
+        531
+      ],
+      "receiver_hit": "King receiver lower-collar",
+      "point": [
+        0.21694332361221313,
+        -0.6099729537963867,
+        2.8956289291381836
+      ],
+      "normal": [
+        0.30298933386802673,
+        -0.8534809350967407,
+        0.4239901304244995
+      ],
+      "position": [
+        0.6264292001724243,
+        -1.2932124137878418,
+        2.821432113647461
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "129390cc9c6dc8fe203f5b33073dd6d21de2faf2ed310ce3015639445a32a4ea"
+}

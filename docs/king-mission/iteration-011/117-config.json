@@ -1,0 +1,22 @@
+{
+  "source": "build/king-mission/115-collar-local-reflections/king.blend",
+  "source_sha256": "f3c06bc3bf5a25a452a1f1778dd7e8c64526d921f93b5ec435d610cfd2139e6f",
+  "variant": "117-collar-fitted-reflections",
+  "lights": [
+    "Collar upper left",
+    "Collar upper right",
+    "Collar middle left",
+    "Collar middle right",
+    "Collar lower left",
+    "Collar lower right"
+  ],
+  "bounds": [
+    330,
+    390,
+    675,
+    555
+  ],
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 16
+}

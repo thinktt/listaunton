@@ -1,0 +1,88 @@
+{
+  "source": "build/king-mission/117-collar-fitted-reflections/prepared.blend",
+  "source_sha256": "cc558c756090d748c5f42b37c785cc8692b236648178e7de949a783486356301",
+  "variant": "117-collar-fitted-reflections",
+  "bounds": [
+    330,
+    390,
+    675,
+    555
+  ],
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 16,
+  "original_source": "build/king-mission/115-collar-local-reflections/king.blend",
+  "original_source_sha256": "f3c06bc3bf5a25a452a1f1778dd7e8c64526d921f93b5ec435d610cfd2139e6f",
+  "light_fit": {
+    "source_sha256": "f3c06bc3bf5a25a452a1f1778dd7e8c64526d921f93b5ec435d610cfd2139e6f",
+    "pixels": 48441,
+    "bounds": [
+      330,
+      390,
+      675,
+      555
+    ],
+    "original_powers": {
+      "Collar upper left": 2.0,
+      "Collar upper right": 2.0,
+      "Collar middle left": 2.0,
+      "Collar middle right": 2.0,
+      "Collar lower left": 2.0,
+      "Collar lower right": 2.0
+    },
+    "fitted_powers": {
+      "Collar upper left": 0.78493656431064,
+      "Collar upper right": 2.650903504683849,
+      "Collar middle left": 0.0,
+      "Collar middle right": 1.6873542425524621,
+      "Collar lower left": 5.509087453143786,
+      "Collar lower right": 32.0
+    },
+    "gain": [
+      0.39246828215532,
+      1.3254517523419245,
+      0.0,
+      0.8436771212762311,
+      2.754543726571893,
+      16.0
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.009658710457266781,
+        "after_mse": 0.008680971379459116
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.008680971379459116,
+        "after_mse": 0.008280130752937407
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.008280130752937407,
+        "after_mse": 0.008208051033685571
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.008208051033685571,
+        "after_mse": 0.008208038808889978
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.008208038808889978,
+        "after_mse": 0.008208038326174
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Collar upper left",
+    "Collar upper right",
+    "Collar middle left",
+    "Collar middle right",
+    "Collar lower left",
+    "Collar lower right"
+  ],
+  "model_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
+  "elevation_degrees": 54.000000800055794
+}

@@ -1,0 +1,67 @@
+{
+  "source_sha256": "3090cadacbe012fd54543f1483f04c9039d987ed76d8d713bf13e3da9030d202",
+  "pixels": 48441,
+  "bounds": [
+    330,
+    390,
+    675,
+    555
+  ],
+  "original_powers": {
+    "Collar upper left": 4.0,
+    "Collar upper right": 4.0,
+    "Collar middle left": 0.4000000059604645,
+    "Collar middle right": 2.0,
+    "Collar lower left": 5.5,
+    "Collar lower right": 32.0
+  },
+  "fitted_powers": {
+    "Collar upper left": 1.5881471339999622,
+    "Collar upper right": 2.569192938154438,
+    "Collar middle left": 3.200000047683716,
+    "Collar middle right": 1.8406721228048555,
+    "Collar lower left": 5.403007187622251,
+    "Collar lower right": 42.668299480565025
+  },
+  "gain": [
+    0.39703678349999055,
+    0.6422982345386095,
+    8.0,
+    0.9203360614024277,
+    0.9823649432040455,
+    1.333384358767657
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.008103973967488827,
+      "after_mse": 0.008008181726067171
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.008008181726067171,
+      "after_mse": 0.007980992473934417
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.007980992473934417,
+      "after_mse": 0.007954894585227546
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.007954894585227546,
+      "after_mse": 0.007929383521781037
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.007929383521781037,
+      "after_mse": 0.0079207985398502
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.0079207985398502,
+      "after_mse": 0.007920796891624393
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

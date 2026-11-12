@@ -1,0 +1,37 @@
+{
+  "in_memory_vs_reopened": {
+    "maximum_channel_error_255": 45,
+    "mean_channel_error_255": 0.0005375144036690246,
+    "pixels_over_one": 112,
+    "max_pixel": [
+      481,
+      754
+    ],
+    "alpha_exact": true
+  },
+  "in_memory_vs_reproduced": {
+    "maximum_channel_error_255": 45,
+    "mean_channel_error_255": 0.0005383093081405849,
+    "pixels_over_one": 112,
+    "max_pixel": [
+      481,
+      754
+    ],
+    "alpha_exact": true
+  },
+  "reopened_vs_reproduced": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 7.790063821290212e-06,
+    "pixels_over_one": 0,
+    "max_pixel": [
+      479,
+      101
+    ],
+    "alpha_exact": true
+  },
+  "hashes": {
+    "in_memory": "96c8044962ea837408f36d09d1b514889d2fb509a940171f0765acce84b5f256",
+    "reopened": "d1686e7af1183d0e3ec719a9d312a752b7d711b7e78c2e81166704f905ba7dc0",
+    "reproduced": "6b98d3774c5f15930b1495cbaa65a241180adcd75470e1e482ebb3fc95b6f1f9"
+  }
+}

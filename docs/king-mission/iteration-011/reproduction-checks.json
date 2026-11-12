@@ -1,0 +1,206 @@
+{
+  "saved_reopened": {
+    "maximum_channel_error_255": 0,
+    "mean_channel_error_255": 0.0,
+    "alpha_exact": true
+  },
+  "full_reproduction": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 7.790063821290212e-06,
+    "alpha_exact": true
+  },
+  "reproduction_mesh_exact": true,
+  "accepted_geometry_export_byte_identical_to_010": true,
+  "camera_export_byte_identical_to_010": true,
+  "physical_bounds_exact": true,
+  "partition_preservation": {
+    "initial_full_render": {
+      "maximum_channel_error_255": 45,
+      "mean_channel_error_255": 0.0005551612829376617,
+      "alpha_exact": true,
+      "max_pixel": [
+        481,
+        754
+      ],
+      "old_pixel": [
+        123,
+        89,
+        69,
+        255
+      ],
+      "new_pixel": [
+        161,
+        134,
+        112,
+        255
+      ],
+      "pixels_above": {
+        "0": 1972,
+        "1": 115,
+        "2": 65,
+        "4": 28,
+        "8": 10,
+        "16": 4,
+        "32": 2
+      },
+      "bounds_above_one": [
+        448,
+        450,
+        544,
+        767
+      ],
+      "largest_differences": [
+        {
+          "pixel": [
+            480,
+            753
+          ],
+          "delta": 8
+        },
+        {
+          "pixel": [
+            481,
+            753
+          ],
+          "delta": 10
+        },
+        {
+          "pixel": [
+            473,
+            754
+          ],
+          "delta": 11
+        },
+        {
+          "pixel": [
+            474,
+            754
+          ],
+          "delta": 13
+        },
+        {
+          "pixel": [
+            475,
+            754
+          ],
+          "delta": 9
+        },
+        {
+          "pixel": [
+            478,
+            754
+          ],
+          "delta": 16
+        },
+        {
+          "pixel": [
+            479,
+            754
+          ],
+          "delta": 29
+        },
+        {
+          "pixel": [
+            480,
+            754
+          ],
+          "delta": 34
+        },
+        {
+          "pixel": [
+            481,
+            754
+          ],
+          "delta": 45
+        },
+        {
+          "pixel": [
+            482,
+            754
+          ],
+          "delta": 27
+        },
+        {
+          "pixel": [
+            483,
+            754
+          ],
+          "delta": 11
+        },
+        {
+          "pixel": [
+            474,
+            755
+          ],
+          "delta": 8
+        },
+        {
+          "pixel": [
+            482,
+            755
+          ],
+          "delta": 8
+        }
+      ]
+    },
+    "initial_one_level_check_passed": false,
+    "fixed_sample_diagnostic": {
+      "source_hashes": [
+        "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+        "eb15757328381c495e3e51ccdb773a86729ae9a616122c69e434d409ecb51523"
+      ],
+      "source_files_unchanged": true,
+      "unchanged_receiver_normals": {
+        "foot": {
+          "shape_exact": true,
+          "byte_exact": true,
+          "max_error": 0.0
+        },
+        "lower-flare": {
+          "shape_exact": true,
+          "byte_exact": true,
+          "max_error": 0.0
+        },
+        "upper-flare": {
+          "shape_exact": true,
+          "byte_exact": true,
+          "max_error": 0.0
+        },
+        "socket": {
+          "shape_exact": true,
+          "byte_exact": true,
+          "max_error": 0.0
+        },
+        "socket-seam": {
+          "shape_exact": true,
+          "byte_exact": true,
+          "max_error": 0.0
+        }
+      },
+      "diagnostic_sampling": {
+        "samples": 1024,
+        "adaptive": false,
+        "denoising": false,
+        "bounds": [
+          440,
+          730,
+          550,
+          780
+        ]
+      },
+      "render_differences": {
+        "4": {
+          "max_linear_error": 2.1457672119140625e-06,
+          "mean_linear_error": 2.1344982670257195e-08,
+          "alpha_exact": true
+        },
+        "0": {
+          "max_linear_error": 2.115964889526367e-06,
+          "mean_linear_error": 2.1384710890970382e-08,
+          "alpha_exact": true
+        }
+      }
+    },
+    "interpretation": "The initial 128-sample adaptive/denoised render failed the 1/255 maximum check. The unchanged receiver normals are byte-identical and fixed 1024-sample undenoised comparisons agree to 2.15e-6 linear. This supports sampling/denoising sensitivity; the failed initial check is retained, not relabeled as a pass."
+  }
+}

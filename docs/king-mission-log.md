@@ -433,3 +433,44 @@ native browser screenshot inspection is not claimed.
 Next: isolate the collar reflection sources. Preserve the accepted foot/socket
 and the unchanged source art. The goal remains active and incomplete; no
 watchers or subagents were started.
+
+
+## 2026-11-12 — checkpoint 011: separate collar reflections
+
+Accepted trial 117 using its verified fresh saved-file render. The regular pale
+collar bands are reduced and the lower collar has warmer, separated glints.
+Three exact collar receivers bring the total to nine; closed geometry, UVs,
+float attributes, v6 pigment/material, physical bounds and the fixed 54-degree
+camera remain exact from 010. All old light settings remain exact. No shadow
+omission or near-field reflector experiment is accepted.
+
+| Metric | Checkpoint 010 | Checkpoint 011 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.8174% | 97.8174% |
+| Interior form | 84% | 84% |
+| Wood color | 82% | 82% |
+| Grain and surface | 79% | 79% |
+| Lighting / reflections | 64% | 66% |
+| Equal-weight working mean | 81.3635% | 81.7635% |
+
+Only IoU is measured; other scores are visual judgments. Original IoU remains
+96.8338%; holistic estimate is 75–84%. Collar foreground RGB error drops about
+45%, but missing left highlights and gray pigment bands remain. Later close-light,
+actual-normal and one-light shadow-omission trials were rejected visually.
+See [iteration-011/README.md](king-mission/iteration-011/README.md).
+
+A tiny socket glint made the initial partition-only and fitting-session images
+fail the 1/255 maximum check. Untouched normals are byte-identical; fixed-sample
+diagnostics agree to 2.15e-6 linear. The verified fresh saved-file render is used
+for acceptance and agrees with the independent rebuild within 1/255. The failed
+checks and original fitting image remain evidence; tolerances were not loosened.
+
+Geometry/export, receiver scope/regeneration and source preservation pass.
+The review, rotating viewer, fixed/side assets and all 34 existing preview files
+are synchronized. King/candidate, site/model and historical projection checks
+pass; the known whole-set knight sizing failure remains documented separately.
+Native browser screenshot inspection is not claimed.
+
+Next: separate collar pigment bands from local curvature mismatches at the
+missing left glints, preserving this best result. The goal remains active and
+incomplete. No watchers/subagents or push/publication were started.
