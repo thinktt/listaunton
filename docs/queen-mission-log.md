@@ -1454,3 +1454,29 @@ Checkpoint 31 is archived. Mesh, receiver UV/normal/link checks, all 85
 lights and packed-material preservation pass; fixed/side renders and the
 interactive viewer are regenerated together. The Queen goal stays active,
 without watchers or subagents.
+
+## 2026-11-11 — checkpoint 33: continuous lower-flare turn
+
+Accepted a single convex curve into the base groove, replacing the previous
+small inward/outward inflection that produced an extra side-view band. Only
+radial controls 9–21 change. All heights, the foot wall, compact socket's shelf
+and steep drop, stem, rounded collars, inverted crown and seated egg remain
+exact from checkpoint 32. Camera stays orthographic 54°. Material, packed
+texture pixels, all 85 lights and reference registration are preserved.
+
+Three neutral proposals were compared; the moderate turn with a 0.006-unit
+groove fill was accepted after a real wood render. The lower turn helped the
+generated silhouette but lost more original agreement, so it was rejected.
+Final original IoU is 97.7787% (-0.0129 points); selected-high-res IoU is
+97.9770% (-0.0205 points). Interior/side form rises from 89 to 90 by visual
+judgment; color 85, grain 79, lighting 76 and holistic 80–85% remain unchanged.
+Working mean: 85.5557%. This is a local form improvement, not a perfect match.
+
+The saved model is
+`243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68`;
+checkpoint 32 is archived. Closed-mesh and exact receiver/UV/normal/link checks
+pass. The fixed/side renders and viewer are rebuilt from the same accepted
+model. See [checkpoint 33](queen-mission/iteration-033/README.md) for source
+comparisons, geometry scope, scores, reproduction and delivery checks.
+The socket crescent remains the next investigation; preserve its shelf/drop
+while separating geometry from the effects of the existing reflection rig.

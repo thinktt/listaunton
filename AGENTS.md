@@ -202,3 +202,13 @@ saved model, then rebuild fixed/side renders and the viewer together. The
 original silhouette tradeoff and rejected camera/straight-stem fits are in
 iteration-032. Do not promote those rejected alternatives or alter gallery
 defaults. The shape goal remains active; socket reflections need refinement.
+
+Queen checkpoint 33 removes an extra inflection above the base groove. Only
+radial controls 9–21 change; every height and the socket shelf/drop, stem,
+collars, crown and egg remain exact from checkpoint 32. Reproduce with
+study_compact_turning.py and iteration-033/264-shallow-groove-roll.json from
+the archived checkpoint 32. All six receivers are regenerated; material,
+lights, source pixels, gallery defaults and the 54-degree camera remain
+unchanged. record_base_turn_checkpoint.py records the scoped measurements.
+Keep fixed/side/viewer assets synchronized. The original outline tradeoff
+and rejected lower-round-over candidate are documented in iteration-033.

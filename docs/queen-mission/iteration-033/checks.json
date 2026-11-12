@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "active_model_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "reports": {
+    "side-shape-validation.json": true,
+    "profile-preservation.json": true,
+    "finish-validation.json": true,
+    "model-validation.json": true,
+    "viewer-camera-check.json": true
+  },
+  "commands_passed": [
+    "python3 scripts/check_site.py",
+    "python3 scripts/check_model_site.py",
+    "node scripts/queen/check_viewer_camera.cjs",
+    "node scripts/queen/check_review_reference.cjs",
+    "python3 -m py_compile scripts/queen/record_base_turn_checkpoint.py docs/queen-mission/iteration-033/propose_flare_roll.py docs/queen-mission/iteration-033/analyze_flare_roll.py",
+    "git diff --check"
+  ],
+  "native_browser": {
+    "url": "http://localhost:8080/review.html?checkpoint=33",
+    "overlay_opened": true,
+    "current_model_visually_loaded": true,
+    "side_and_neutral_buttons_worked": true,
+    "free_drag_rotation_worked": true,
+    "side_comparison_neutral_and_opacity_worked": true
+  },
+  "http": {
+    "embedded_model_hash_matches": true,
+    "side_status": 200,
+    "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "served_side_registration_hash_matches": true,
+    "review_status": 200
+  },
+  "references_and_gallery_defaults_unchanged": true,
+  "checkpoint_32_archived": true,
+  "legacy_preview_model_hash_matches": true,
+  "goal_complete": false
+}

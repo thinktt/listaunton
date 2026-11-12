@@ -46,8 +46,8 @@ Do not invent a token budget or launch additional agents from this file.
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
 - Latest accepted working baseline SHA-256:
-  `d58316454daad02fafaacbe7ff50215f042911cbd2e1609fbc8431f1c52ab0b4`
-  (checkpoint 32, with a 6% shallower whole base, narrower shelf-and-drop socket,
+  `243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68`
+  (checkpoint 33, with a continuous lower-flare turn, a 6% shallower whole base, narrower shelf-and-drop socket,
   preserved stem radii and collar join, lower-foot support, and a narrower seated egg; the checkpoint-22
   source archive remains recorded below).
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
@@ -153,7 +153,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current working-baseline scores: 97.7916 / 89 / 85 / 79 / 76; working mean 85.3583%, holistic 80-85%. Original Lichess IoU: 97.7916%; selected high-res IoU: 97.9975%. Latest accepted model and validation: docs/queen-mission/iteration-032 (6% whole-base compression, a narrower shelf/drop socket and broader inner flare, with accepted stem radii and controls 48 onward preserved). The original outline tradeoff is -0.0607 percentage points. The earlier 10% compression, straight-stem fit and 52-48-degree camera fits remain rejected. Refine the socket crescent and the flare's turn into the foot without losing the shelf/drop. Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current working-baseline scores: 97.7787 / 90 / 85 / 79 / 76; working mean 85.5557%, holistic 80-85%. Original Lichess IoU: 97.7787%; selected high-res IoU: 97.9770%. Latest accepted model and validation: docs/queen-mission/iteration-033 (continuous lower-flare turn and shallower groove, preserving checkpoint 32's compact base, narrower shelf/drop socket and broader inner flare). The current original outline tradeoff is -0.0129 percentage points from checkpoint 32. The earlier 10% compression, straight-stem fit and 52-48-degree camera fits remain rejected. Refine the socket crescent without losing the shelf/drop or the single curve into the foot. Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 

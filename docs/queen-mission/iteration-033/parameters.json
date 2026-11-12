@@ -1,0 +1,75 @@
+{
+  "source_sha256": "d58316454daad02fafaacbe7ff50215f042911cbd2e1609fbc8431f1c52ab0b4",
+  "changed_rings": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "join_lift": 0,
+  "base_profile": {
+    "variant": "264-shallow-groove-roll",
+    "angle": 54,
+    "floor": 860.223491056495,
+    "source_sha256": "d58316454daad02fafaacbe7ff50215f042911cbd2e1609fbc8431f1c52ab0b4",
+    "scope": "Only radial controls 9-21; all heights, foot wall, socket and upper geometry exact.",
+    "bezier_control_points": [
+      [
+        1.003174901008606,
+        0.23451262712478638
+      ],
+      [
+        1.031,
+        0.27
+      ],
+      [
+        1.059,
+        0.365
+      ],
+      [
+        0.9878712296485901,
+        0.4881097376346588
+      ]
+    ],
+    "groove_radial_fill": 0.006,
+    "ring_radii": {
+      "9": 1.018800139427185,
+      "10": 1.007299780845642,
+      "11": 1.003174901008606,
+      "12": 1.0112857818603516,
+      "13": 1.0184897184371948,
+      "14": 1.0245978832244873,
+      "15": 1.0295019149780273,
+      "16": 1.0321279764175415,
+      "17": 1.0327757596969604,
+      "18": 1.0314382314682007,
+      "19": 1.0274475812911987,
+      "20": 1.018986463546753,
+      "21": 1.0049052238464355
+    },
+    "ring_z_offsets": {},
+    "control_peak_radius": 1.0327757596969604,
+    "control_peak_ring": 17
+  },
+  "receiver_partition": {
+    "lower_height": 0.9549604952335358,
+    "faces": 70656,
+    "atlas_hashes": {
+      "turned-body": "c37426b98d3418f49f17123572a12b92dfa1ec8f7fb6f43abb849dea57b8da5b",
+      "stem-socket": "2b349f4e5471bcd37888a71a1db1a8424cd0492b0f29435dbae72a191640b50a",
+      "finial": "3461aa976eb1a3757cf357c69ea191376ecc3adf70f8a7f6e52e0d42c696a207",
+      "lower-collar": "4474a8b8e6d654c52cc9c37cf9c3f3dae40a285c821cf14d84869b56b7ed6201",
+      "middle-collar": "96083658c1bc9de055e17a1b914f39ccc360492db6cd395b7fe60a9d89100740",
+      "upper-collar": "721f842f99c4b313db0c20cad039b8e68d87412382b201c5115e81bc8773c7a5"
+    }
+  }
+}

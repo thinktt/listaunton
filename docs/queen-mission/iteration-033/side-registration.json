@@ -1,0 +1,28 @@
+{
+  "method": "Single uniform scale and translation: align measured foot width, horizontal center and floor. Side guide itself unchanged.",
+  "side_guide_is_interpretation": true,
+  "guide": {
+    "file": "assets/queen/concepts/side-01.png",
+    "base_left": 344,
+    "base_right": 876,
+    "floor_y": 1105
+  },
+  "source_blend_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "guide_sha256": "64508964896844556c409e74c2ec04441efd47c373ab703c150ecc669695538d",
+  "neutral_profile_sha256": "2ab9e79c18c6d96231842f0fa8be1313d0e968bc9f858086274bc6129349dbbb",
+  "wood_profile_sha256": "fabb014c01aa3202e8e90260e005e29b4f16c8e6ee4c9c405de0155e7d71e1f2",
+  "model_base": {
+    "width_px": 284,
+    "center_px": 300.0,
+    "floor_y_px": 798,
+    "measured_row": 794
+  },
+  "scale": 1.8732394366197183,
+  "offset_x": 48.02816901408448,
+  "offset_y": -229.84507042253517,
+  "guide_top_padding_px": 160,
+  "canvas": [
+    1254,
+    1414
+  ]
+}
