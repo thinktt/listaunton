@@ -45,11 +45,11 @@ Do not invent a token budget or launch additional agents from this file.
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest owner-approved working baseline SHA-256:
-  `450314c8fad35964022e3797ccf4bcbbcda3c9e26cf372a5228940ebb03f6929`
-  (checkpoint 26, an owner-directed restoration of checkpoint 24's
-  shelf-and-drop base/socket with its accepted collar refinements; the
-  checkpoint-22 source archive remains recorded below).
+- Latest accepted working baseline SHA-256:
+  `8aa9492357a703f656189ad479294c5882da3c129cfb99a120b5ee1b7a85e3b3`
+  (checkpoint 27, retaining checkpoint 26's restored shelf-and-drop
+  base/socket and compact collar refinements while adding only a restrained
+  lower-foot support; the checkpoint-22 source archive remains recorded below).
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -153,7 +153,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current working-baseline scores: 97.7567 / 86 / 85 / 79 / 76; working mean 84.7513%, holistic 80-85%. Original Lichess IoU: 97.7567%; selected high-res IoU: 97.9356%. Latest accepted model and validation: docs/queen-mission/iteration-026 (owner-directed restoration of checkpoint 24's shelf/drop base and accepted collar refinements; it recovers 0.2360 original-IoU points versus checkpoint 25 while yielding 0.1351 selected-detail points). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current working-baseline scores: 97.8523 / 86 / 85 / 79 / 76; working mean 84.7705%, holistic 80-85%. Original Lichess IoU: 97.8523%; selected high-res IoU: 97.9622%. Latest accepted model and validation: docs/queen-mission/iteration-027 (a restrained lower-foot support change that retains checkpoint 26's shelf/drop socket and compact collars while improving both fixed silhouette measurements). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 

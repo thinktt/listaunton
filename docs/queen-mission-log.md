@@ -1318,3 +1318,26 @@ receiver-light links. The active blend, fixed and side renders, and embedded
 viewer were regenerated together. The publisher now reads scoped validation
 evidence so it verifies the actual staged model hash rather than an unrelated
 repacked active file. See [checkpoint 26](queen-mission/iteration-026/README.md).
+
+## Twenty-seventh iteration — support the lower foot, November 11, 2026
+
+A fixed 54-degree contour audit of the restored checkpoint-26 model identified
+a small, repeatable lower-foot mismatch: the outer support closed inward sooner
+than both registered sources at its lowest edge. The raised socket shelf and
+steep flare drop were therefore held exactly fixed. Two fully receiver-rebuilt
+trials changed only rings 2–9 of the lower foot. The 0.018-unit radius peak
+improved the original sprite but visibly overshot the selected high-resolution
+rim, so it is rejected. The accepted half-strength 0.009-unit peak creates a
+slightly flatter, more supported foot with no separate bulge.
+
+The published saved render scores 97.8523% original-black IoU and 97.9622%
+selected-high-res IoU, gains of 0.0956 and 0.0267 points from checkpoint 26.
+Form remains 86, color 85, grain 79 and lighting 76; the equal-weight working
+mean is 84.7705%, with a holistic range of 80–85%. The staged source validates
+as closed positive volume with zero boundary/non-manifold edges, six exact
+receiver/atlas-UV regions and 82 light links. The 54-degree orthographic camera
+and source registration are unchanged.
+
+The active model is `8aa9492357a703f656189ad479294c5882da3c129cfb99a120b5ee1b7a85e3b3`.
+Fixed and side renders, the registered side comparison, embedded viewer mesh
+and review page are synchronized. See [checkpoint 27](queen-mission/iteration-027/README.md).

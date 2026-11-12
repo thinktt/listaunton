@@ -1,0 +1,35 @@
+{
+  "iteration": 27,
+  "camera_assumption_degrees_above_board": 54,
+  "method": "Actual rendered alpha and reference max RGB >12; largest component with holes filled. Original sprite uses the preserved registration. No source image shifts, scaling, recoloring, or warping.",
+  "accepted_foot_lip": {
+    "variant": "235-foot-lip-half-strength",
+    "peak_radial_delta": 0.009,
+    "changed_control_rings": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "all_rings_12_plus_identical": true,
+    "original_black": 0.9785231885955886,
+    "selected_highres": 0.9796221529171267
+  },
+  "checkpoint_26_comparison": {
+    "original_black": 0.9775674315512202,
+    "selected_highres": 0.9793556374989907,
+    "original_black_delta": 0.0009557570443684197,
+    "selected_highres_delta": 0.0002665154181359601
+  },
+  "rejected_stronger_foot_lip": {
+    "variant": "234-foot-lip-supported-rim",
+    "peak_radial_delta": 0.018,
+    "original_black": 0.9787900204019042,
+    "selected_highres": 0.9782547560188446,
+    "reason": "The lower rim became visibly too broad against the selected high-resolution contour despite improving the master source silhouette."
+  }
+}
