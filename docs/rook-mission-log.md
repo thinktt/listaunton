@@ -24,3 +24,7 @@ Activation and pause state belong to the relevant goal, not this piece's mission
 Future checkpoints, scores, defect lists and phase completion belong in this
 log and the iteration evidence. Change the static goal only at the owner's
 direction. Apply [the shared mission standards](../MISSION-SET.md).
+
+## Iteration 001 — 2026-11-12
+
+Activated the full rook mission at the owner's direction. Inspected the original, selected black candidate 8 and accepted neutral model. Completed and rejected an initial procedural wood study for promotion: smeared horizontal grain, cloudy floor, insufficient red/orange color, and misplaced broad reflections. Saved/reopened NVIDIA render succeeded. Accepted model and public assets remain unchanged. See [the full examination and scores](rook-mission/iteration-001/README.md). Next: reference-informed pigment with separated illumination and continuous unseen-surface wood. Accepted iterations must update the review, local preview, rotating viewer and side views before further iteration; this operational requirement is separate from the goal objective.
