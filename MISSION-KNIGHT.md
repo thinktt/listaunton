@@ -1,208 +1,96 @@
 # Knight reconstruction mission
 
-## Objective and activation
+> This is a static statement of the goal and acceptance standards.
+> Change it only at the owner's direction. Put progress, scores, model hashes,
+> checkpoints, trials and current status in the piece mission log.
 
-Refine the accepted knight's actual geometry, wood material and lighting until
-its fixed-view render matches the selected reference as closely as can honestly
-be assessed. Examine, modify, render, compare, score and repeat. A matching
-outline alone is not success. Produce a usable 3D chess piece.
+## Goal
 
-This mission covers only the knight. Creating this file does not start or
-resume a goal, launch agents or modify a model. The queen goal remains paused.
-When explicitly activated, use an appropriate goal or assigned subtask pointing
-to this file. Do not invent a token budget or mark another unfinished goal
-complete merely to replace it.
+Recover a usable, editable 3D knight faithful to the Lichess Staunton set.
+Refine its geometry, wood color, grain, surface finish and lighting until its
+fixed-view render is visually indistinguishable from the selected detail
+reference while consistent with the authoritative original. A matching outline
+alone does not complete the mission.
 
-Creative tools and interpretation are authorized: procedural wood, generated
-texture assets, reference-derived pigment, texture painting, custom UVs and
-combinations. Develop grain, color, pores, relief and polish together. Keep
-references unchanged, separate lighting from pigment where practical, and
-inspect other angles so the material remains usable on real geometry. Never
-substitute a billboard or composited photograph for an actual BSDF render.
-Continue until completion, an execution/token limit, or owner stop. A plateau requires a new supported hypothesis.
+This mission covers the knight. Reading or editing it does not activate a
+modeling goal or launch workers. When activated, iterate until the full goal is
+met, an execution limit is reached, or the owner stops work. A plateau calls
+for a new supported hypothesis.
 
-## Accepted baseline and references
+## References and working locations
 
-- Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
-- Model: `models/knight/knight-rebuilt.blend`.
-- Model SHA-256 at drafting: `2c0c11c5d29bdb417ec415723f9aadf825acbf4a6bc769922dce953c288de333`.
-- Primary original: `references/lichess-staunton-3d/Black-Knight.png`; consult the opposite color too.
-- Selected detail reference: `assets/candidates/knight/candidate-2.png` — black 2.
-- Review page: `knight-review.html`.
-- Scripts: `scripts/knight`; assets: `assets/knight`.
-- Side guide: this piece's entry in `assets/side-views/manifest.json` and its concepts directory.
+- Master original: `references/lichess-staunton-3d/Black-Knight.png`; inspect the opposite color for additional geometry clues.
+- Selected detail reference: `assets/candidates/knight/candidate-2.png` — black candidate 2.
+- Side guide: this piece's entry in `assets/side-views/manifest.json` and `assets/knight/concepts/`.
+- Editable model: `models/knight/knight-rebuilt.blend`.
+- Scripts and assets: `scripts/knight/` and `assets/knight/`.
+- Review: `knight-review.html`.
+- Progress and accepted state: `docs/knight-mission-log.md`; evidence: `docs/knight-mission/`.
 
-Read AGENTS.md, current piece build notes, Git status and the latest mission
-log before work. Refine the latest accepted model; the recorded hash is a
-baseline, not a command to undo subsequent accepted work. Do not restart from
-scratch or restore rejected alternatives without owner direction.
+The original settles conflicts. Generated enlargements help interpret detail;
+imagined side views guide style and plausible proportions, and cannot overrule
+the original. Verify the owner's selections in `docs/reference-selections.md`.
+Preserve source pixels, hashes and registration; never alter a reference to
+improve a score.
 
-The original Lichess sprite is the ultimate source of truth. The selected
-high-res image supports precise detail fitting. Record conflicts and prefer
-the original. Imagined side renders guide style and plausible side proportions;
-they do not override the elevated original. Verify selections against
-`docs/reference-selections.md`; later explicit owner choices take precedence.
-Preserve reference pixels, hashes and registration. Never warp, retouch,
-recolor or replace a reference to improve a score.
+## Defining features
+
+Create recognizable horse anatomy with the characteristic conical muzzle, coherent jaw, eyes, ears, mane and neck flowing into the base. Use the approved imagined side guide for style and plausible proportions while preserving the authoritative elevated original. Check the opposite-color original with its mirrored facing taken into account.
 
 ## Camera and proportions
 
-Keep the reference camera orthographic, **54 degrees above the board**. This
-is the owner's assumption, not a historically recovered fact. Keep framing,
-scale and registration fixed during an iteration and compare identical pixels.
+Use the orthographic camera at **54 degrees above the board** for the standard
+reference comparison. This is a working assumption, not recovered historical
+metadata. Keep framing, scale and registration fixed within each comparison.
+Keep the standard camera fixed during refinement; a different acceptance camera requires owner direction.
 
-The approved displayed knight height is **66.2% of king**. Preserve
-`assets/side-views/defaults.json`, shared foot baseline, gallery order and
-uniform image scaling. These are presentation conventions, not independently
-measured physical dimensions. Use the existing original-sprite base-width and
-model-height normalization to translate them into model dimensions; do not
-apply slider percentages directly to mesh scale. Preserve established sizing
-tolerances and historical projections. Do not change other pieces to disguise
-a discrepancy in this one.
+The approved side-gallery relationship is **66.2% of king**. Preserve gallery
+defaults, order, uniform scaling and the shared foot baseline. These are display
+conventions, not independently measured physical dimensions; use the documented
+normalization rather than applying slider percentages directly to mesh scale.
+Keep side comparisons at a shared physical scale. Follow the whole-set height
+interpretation in [MISSION-SET.md](MISSION-SET.md).
 
-## Feature examination
+## Work and evaluation
 
-Recognizable horse anatomy, conical muzzle, jaw, eyes, ears, mane and neck flowing into the base. Use the approved imagined side guide for style while preserving the original elevated fit.
+Read `AGENTS.md`, the current build guide and the latest piece log before work.
+Start from the latest accepted model. Preserve it until a candidate is checked;
+do not restart or revive rejected alternatives without owner direction.
 
-Establish a fresh baseline: historical findings are inspection priorities,
-not proof that every defect persists. Inspect full silhouettes and enlarged
-head, collar, stem/socket, base and foot crops, including openings and negative
-space. Compare wood and neutral renders to distinguish shape from shading.
-Inspect grain direction and scale, distinctive markings, regional wood color,
-pores, relief, varnish variation, cavity shadows and reflected crescents.
+Examine, choose a concrete discrepancy, modify, render, compare and repeat.
+Use wood and neutral renders, unchanged originals of both colors, the selected
+high-res reference, enlarged feature crops, overlays and side views. Assess all
+five categories every iteration: silhouette and placement; interior form;
+wood color; grain and surface texture; lighting and reflections. Apply the
+stable rubric and mask convention in [MISSION-SET.md](MISSION-SET.md).
+Distinguish measured overlap from subjective ratings. Report tradeoffs and
+remaining defects; an improved fitting loss alone does not justify acceptance.
 
-Geometry is shared between black and white originals; finish differs. First
-match the selected reference finish. Record opposite-color checks separately;
-a selected-color score does not establish that both finishes match.
+Creative tools are authorized: procedural wood, generated texture assets,
+reference-derived pigment, painting, custom UVs and combinations. Keep the
+result a real material on real geometry, usable from other angles. Separate
+pigment from illumination where practical. A billboard, composited reference,
+or emission diagnostic cannot stand in for the final shaded render.
 
-## Stable scorecard
-
-Rate every category after each candidate, even when only one was targeted.
-Maintain separate scores for all six pieces; never transfer the queen's scores
-to unexamined models. Use the same rubric throughout.
-
-| Metric | Examine |
-| --- | --- |
-| Outside silhouette and placement | Actual rendered alpha, outline, head, neck, collar, base and foot boundaries at fixed registration |
-| Interior shapes and carved details | Piece-specific anatomy and carving, openings, thicknesses, curvature and transitions |
-| Wood color and tonal variation | Regional hue, saturation, light/dark distribution and transitions |
-| Grain pattern and surface texture | Grain scale, direction, distinctive markings, pores, relief and polish variation |
-| Lighting and reflections | Highlight position, shape, size, brightness and sharpness; shadows and edge reflections |
-
-Silhouette is measured IoU; other percentages are subjective visual assessments.
-Use an equal-weight mean of the five scores as a working progress indicator,
-not a probability or proof of fidelity. Report a holistic visual range too.
-Exclude empty background pixels from material statistics. Explain each score
-change with actual visible evidence; lower numerical fitting loss is not an
-automatic improvement. Record rejected trials honestly.
-
-Use the existing fixed reference-mask convention: max RGB >12 and alpha >127,
-largest component and holes filled; model alpha >127. Record original and
-selected-high-res IoUs separately. Verify masking for each reference without
-quietly changing thresholds between trials. Note source cropping and genuine
-openings; hole-filled silhouette metrics do not assess the bishop slit or rook
-interior, which need separate detailed inspection.
-
-
-
-Full-material baseline scores are unassessed. Examine and record them before assigning percentages. Diagnostic clay does not establish a wood-material match. Never copy scores from another piece.
-
-## Iteration loop
-
-1. **Recover state.** Read the latest mission log, inspect
-   Git status, and identify the current best accepted revision. Respect other
-   work in the checkout.
-2. **Examine.** Inspect the actual high-res reference and current fixed-camera
-   wood render side by side, at 50% overlay, and as enlarged piece-specific head, collar,
-   stem/socket, and base crops. Check the neutral render, original sprite,
-   and side guide. Do not judge a blended overlay alone: it can hide defects.
-3. **Choose a concrete improvement.** Select one dominant mismatch or a
-   closely related group. Record what is wrong, the intended change, the
-   targeted score, and what would count as a visible improvement. Prefer
-   changing geometry, material, or lighting separately when it helps isolate
-   the cause. Use a small number of purposeful trials, not an indiscriminate
-   render sweep.
-4. **Modify and render.** Change the actual Blender model/material/lights and
-   their reproducible scripts. Use draft renders for decisions and a clean
-   render for acceptance. Keep the 54-degree camera fixed. Do not substitute
-   a reference photograph, billboard, or composited image for a real model
-   render. Reference-derived texture work must remain a usable 3D material.
-5. **Re-examine and score everything.** Compare the new render against both
-   the reference and the prior best at identical framing. Recompute outline
-   metrics; rate all five categories and the overall result. List persistent
-   defects and any regressions. Distinguish measured results from estimates.
-6. **Accept or revert.** Keep a candidate only when the visible fit improves
-   without a material regression in the original-image match or accepted
-   proportions. Document any small tradeoff. Revert failed trials without
-   disturbing unrelated work; keep brief findings, not extra failed models
-   in the public review controls.
-7. **Validate and synchronize accepted changes.** Follow the current build
-   guide. Check mesh integrity, saved camera, viewer mesh/hash, both reference
-   comparisons, and the review page. Regenerate side renders and viewer assets
-   from the same accepted model. Run relevant site/interaction checks when
-   their assets change; preserve historical projection studies and the
-   parts map's sandbox/CSP. Keep edits scoped to the assigned piece; preserve gallery defaults.
-8. **Checkpoint and commit.** Record the scores and evidence in the mission
-   log, then commit the completed, checked iteration with the required actual
-   model co-author trailer. Do not push or publish. Update the existing local
-   preview when needed so it shows the same accepted assets as the repository.
-9. **Re-examine and repeat.** Select the next discrepancy. A plateau calls for a different
-   hypothesis, not a declaration of perfection.
-
-Keep iteration records in `docs/knight-mission-log.md`, created on the first
-execution. Store useful evidence in `docs/knight-mission/iteration-NNN/` or an
-equally clear repo-local location. Each record should contain:
-
-- Date, iteration, starting/best revision, and model/reference hashes.
-- Hypothesis, targeted metric, concrete changes, and render settings.
-- All five before/after scores, original and high-res IoU, overall score,
-  remaining discrepancies, regressions, and acceptance/rejection reason.
-- Comparison images, actual validation results, and the next specific step.
-
-Checkpoints must distinguish completed work from unrendered or unvalidated
-changes. Rejected experiments must not displace the best accepted result.
-
-## Validation, coordination and delivery
-
-Follow the current knight pipeline, not obsolete history scripts. Check finite
-geometry, intended topology/components, normals and UVs; apply closed/manifold
-checks where appropriate. Verify openings and intentional intersections rather
-than imposing another piece's construction. Preserve the accepted baseline
-until candidate validation passes. Reopen saved materials to check texture
-packing and color, not only an in-memory render.
-
-Keep Blender model, fixed wood/clay renders, side renders and interactive
-mesh/camera/material synchronized. Browser lighting is approximate; distinguish
-it from actual Cycles render fidelity. State whether UI inspection is native
-or a simulated DOM/WebGL harness. Do not claim unavailable checks passed.
-
-Run relevant piece/camera checks and affected site, model, candidate, set and
-projection checks. Preserve source hashes, gallery defaults, candidate state,
-lazy frames, tabs, wipe controls and the queen parts map's sandbox/CSP. Keep
-rejected trials out of public controls. Update the existing local preview
-with accepted changes. Do not push or publish.
-
-Scope work to this piece's scripts, model, trial outputs and evidence. Shared
-page generators and manifests need one coordinated writer. Additional modeling
-workers require owner or applicable instruction authorization; this document
-does not launch them. Assigned workers report changes, all five scores, hashes,
-validation and remaining issues to the parent before integration. Respect owner pauses.
-
-Record work in `docs/knight-mission-log.md` and
-`docs/knight-mission/iteration-NNN/`, preserving existing history. Include
-starting/accepted hashes, reference comparisons, all five scores, render
-settings, decisions, validation, pending work and next steps.
-Commit completed checked iterations with the actual-model co-author trailer
-required by AGENTS.md. Preserve provenance: original artwork authorship is
-unclear; do not attribute it to James Clarke or invent a license.
+Validate the saved geometry, normals, UVs, packed textures, camera and applicable
+render receivers using the current piece pipeline. Reopen the saved scene.
+At accepted checkpoints synchronize the local review, fixed renders, rotating
+mesh and side comparison from that same model. Preserve source selections,
+historical studies and existing review interactions. Record findings, scores,
+hashes, accepted/rejected decisions and next steps in the piece log and evidence.
+Commit completed checked iterations with the actual-model attribution required
+by `AGENTS.md`. Pushing or publishing requires owner direction.
 
 ## Completion
 
-Complete only when this knight is assessed to be visually indistinguishable
-from the detailed reference in the fixed view while consistent with the original.
-Independently re-examine the full image, native/enlarged crops, original
-comparison, neutral and side views; resolve every remaining issue across all
-five metrics. Do not round high scores to perfection or mistake outline fit
-for texture/lighting accuracy. If stopped by resources or the owner, checkpoint
-honestly as incomplete. Unseen geometry and original camera/material settings
-remain inferred even after a successful visual match.
+Complete only after an independent examination finds no unresolved visible
+mismatch across all five categories in the fixed reference view, consistent
+with the original and a plausible usable 3D form. Inspect full images, native
+and enlarged crops, neutral renders, side views and the synchronized viewer.
+A geometry-only phase, a high silhouette score, or a rounded-up percentage
+does not establish a complete visual match. Assess the selected finish first;
+record opposite-color checks separately.
+
+If stopped before that standard is met, record an honest incomplete checkpoint
+in the log. Unseen geometry and original camera/material settings remain
+inferred even after a successful visual match.

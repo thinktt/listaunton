@@ -1,5 +1,110 @@
 # Queen mission log
 
+## Mission-statement cleanup — 2026-11-12
+
+The owner requested static goals with progress recorded separately. The
+piece mission now preserves the original full visual-match objective and
+five-category standard. This is a documentation migration, not a new model
+iteration, fresh assessment, or change to the accepted model. The complete
+pre-cleanup statement is available in Git at `fb75902169d17a993280dbd593f8d5163204e592:MISSION-QUEEN.md`.
+
+### Information moved out of the mission
+
+**Status at the November 12, 2026 audit:** The narrower shape phase was marked
+complete at checkpoint 33; its evidence is in
+`docs/queen-mission/iteration-034/README.md`. That does not complete this
+full visual-match mission. Re-examine all five metrics against the references
+and consult the mission log for subsequent work and current status.
+
+- Latest accepted working baseline SHA-256:
+  `243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68`
+  (checkpoint 33, with a continuous lower-flare turn, a 6% shallower whole base, narrower shelf-and-drop socket,
+  preserved stem radii and collar join, lower-foot support, and a narrower seated egg; the checkpoint-22
+  source archive remains recorded below).
+
+At the checkpoint-33 audit the working scores were 97.7787 / 90 / 85 / 79 /
+76, with working mean 85.5557% and holistic range 80-85%. Original Lichess
+IoU was 97.7787%; selected high-res IoU was 97.9770%. These are the recorded
+baseline, not proof of a finished model. Consult the mission log for later
+scores and re-examine the evidence before changing an assessment. The earlier
+10% compression, straight-stem fit and 52-48-degree camera fits were rejected;
+retain those findings and do not silently replace the accepted model with a
+rejected alternative, including reconstruction 2cb3cfd.
+
+### Historical baseline and detailed inspection checklist
+
+This audit predates the accepted checkpoint above. Preserve it as inspection
+history, not a claim that every defect still exists or an instruction to
+restore the old model. Recheck each item against fresh renders.
+
+The original starting revision was `3096e84`, restoring `cd6dfcd`. Its
+height/base-diameter ratio was approximately 2.1799 under the documented
+cross-piece normalization. Original scores were silhouette 97.91% measured IoU,
+interior shape 70%, color 60%, grain 30%, and lighting 40%; the working mean was
+59.58%, with a holistic estimate of 55-65%. These are historical scores, not
+the current accepted scores.
+
+
+The baseline audit was performed on the restored model at the saved 54-degree
+camera. Its reference SHA-256 is
+`bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a`;
+its starting Blender SHA-256 is
+`eb7daec22f35f4c282e9e41ac2e1a5eb26b2169b8b30f49673a0d0878b81dcc4`.
+
+#### Shape
+
+- Finial is too tall and tapered; the reference has a compact egg partly
+  seated in the bowl.
+- Bowl reads as a steep funnel instead of the reference's softer depression
+  and defined circular hollow around the finial.
+- Crown-tip shoulders are too swollen and soft.
+- Rim needs flatter faces between tips and the pinched transitions visible
+  across the front; the current rim reads as rounded lumps.
+- Crown body extends too far downward into the collar assembly.
+- Collars read as broad shelves with beveled edges. The reference has compact
+  rounded plates with rolled edges and dark recesses. The upper collar is
+  under-expressed, and the internal curves miss their reference positions.
+- Lower stem/socket transition is too broad and soft; the socket reads as a
+  swollen drum instead of a tighter rolled shoulder and compact front wall.
+- Base width is close, but curvature, the small lip above the groove, and
+  the transition into the foot still differ.
+
+#### Wood and surface
+
+- Color is too uniform; reproduce the reference's regional golden orange,
+  reddish brown, and dark chocolate rather than one overall color correction.
+- Crown body is substantially too bright relative to the reference.
+- Grain is too fine, dense and repetitive; larger sweeping lines and
+  irregular dark markings are missing.
+- Grain flow differs across the crown, collars, and flared base.
+- Distinctive base markings, crown mottling, and finial grain are absent.
+- Surface relief is too smooth; small pores and irregularities should break
+  reflections in the same way as the reference.
+- Polish is too uniform; reproduce local variations in gloss/roughness.
+
+#### Lighting
+
+- Reflections are too broad and blurry, particularly on the finial and rims.
+- Bowl reflection is misplaced on the left wall; the reference's important
+  highlight curves behind the finial.
+- The model has a broad pale patch on the right collars absent from the
+  reference.
+- Base has two diffuse front patches instead of the stronger textured
+  highlight toward the reference's right side.
+- Recesses under collars and around the foot are insufficiently separated,
+  while the back-right bowl has an inappropriate strong dark patch.
+- Thin bright crescents on the socket, collar rims, and foot are missing.
+
+Some apparent shape differences are amplified by shading. Use both neutral
+and wood renders before deciding whether geometry, material, or lighting is
+responsible. Confirm each initial finding against fresh renders as work
+progresses; do not treat this backlog as immutable measurements.
+
+Future checkpoints, scores, defect lists and phase completion belong in this
+log and the iteration evidence. Change the static goal only at the owner's
+direction. Apply [the shared mission standards](../MISSION-SET.md).
+
+
 ## Baseline and current state
 
 Mission activated from repository commit `b9daa1a`. The accepted model at

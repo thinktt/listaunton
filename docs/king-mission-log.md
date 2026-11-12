@@ -1,5 +1,32 @@
 # King mission log
 
+## Mission-statement cleanup — 2026-11-12
+
+The owner requested static goals with progress recorded separately. The
+piece mission now preserves the original full visual-match objective and
+five-category standard. This is a documentation migration, not a new model
+iteration, fresh assessment, or change to the accepted model. The complete
+pre-cleanup statement is available in Git at `fb75902169d17a993280dbd593f8d5163204e592:MISSION-KING.md`.
+
+### Information moved out of the mission
+
+Former drafting snapshot (historical, not the current accepted hash):
+
+- Model SHA-256 at drafting: `44f651f674dcfeab2b9837cf4640017e0d72aaeab4f024913601a07f674a5300`.
+
+The former statement directed readers here for executed full-material scores.
+The recorded construction was a turned body plus a separate intersecting
+beveled cross, not a boolean-fused mesh. Preserve that construction unless a
+later deliberate revision is validated.
+
+The statement also carried a snapshot saying the queen goal was paused.
+Activation and pause state belong to the relevant goal, not this piece's mission.
+
+Future checkpoints, scores, defect lists and phase completion belong in this
+log and the iteration evidence. Change the static goal only at the owner's
+direction. Apply [the shared mission standards](../MISSION-SET.md).
+
+
 ## 2026-11-05 — checkpoint 001: 54-degree wood baseline
 
 The owner activated MISSION-KING.md and explicitly removed the need for watchers

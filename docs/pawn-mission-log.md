@@ -1,5 +1,33 @@
 # Pawn reconstruction log
 
+## Mission-statement cleanup — 2026-11-12
+
+The owner requested static goals with progress recorded separately. The
+piece mission now preserves the original full visual-match objective and
+five-category standard. This is a documentation migration, not a new model
+iteration, fresh assessment, or change to the accepted model. The complete
+pre-cleanup statement is available in Git at `fb75902169d17a993280dbd593f8d5163204e592:MISSION-PAWN.md`.
+
+### Information moved out of the mission
+
+Former drafting snapshot (historical, not the current accepted hash):
+
+- Model SHA-256 at drafting: `133796d71e3d3f21b4dd25abf00e765e75e6d54d2a990bea55180ffee844f89e`.
+
+Checkpoint 008 fits fine grain within the flare and socket reflections.
+Scores are 96.81 / 91 / 93 / 90 / 90, with a working mean of 92.16%.
+Original black IoU is 98.50%. Read docs/pawn-mission-log.md before
+revising these scores. Update the pawn review and local preview between
+accepted iterations.
+
+The statement also carried a snapshot saying the queen goal was paused.
+Activation and pause state belong to the relevant goal, not this piece's mission.
+
+Future checkpoints, scores, defect lists and phase completion belong in this
+log and the iteration evidence. Change the static goal only at the owner's
+direction. Apply [the shared mission standards](../MISSION-SET.md).
+
+
 ## Checkpoint 001 · 2026-11-05
 
 The first walnut checkpoint lifts the round part of the head about 15 reference
