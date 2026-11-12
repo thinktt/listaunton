@@ -45,6 +45,7 @@ flush();assert(draws>0);assert(node('status').hidden);assert.equal(canvas.tabInd
 if(meta.varnish){
  assert.equal(uniforms.uVarnish,1);
  assert.deepEqual(uniforms.uVarnishRange,Array.from(meta.varnish.gain,Math.fround));
+ assert.deepEqual(uniforms.uPolishRange,Array.from(meta.varnish.polishGain||[1,1],Math.fround));
 }
 if(meta.slope){
  assert.equal(uniforms.uSlope,2);

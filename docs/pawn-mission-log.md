@@ -256,3 +256,32 @@ enlargement. Holistic range is 89–94%. See the
 sampling, fine-contrast, material and reflector checks. Next test whether
 variation in polished and porous wood can recover the remaining grain
 contrast along these thin reflections.
+
+## Checkpoint 009 · 2026-11-12
+
+A measured finish map restores more of the wood pattern inside the thin
+flare and foot reflections. It varies real roughness and polish strength,
+with the existing geometry, pigment, normal map, camera and 44 lights held.
+On the foot line, fine-pattern correlation improves from 0.79 to 0.90.
+Its fine contrast rises from 17.1 to 22.7 against 30.4 in the selected image.
+
+| Metric | Checkpoint 008 | Checkpoint 009 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 90 | 92 |
+| Lighting | 90 | 91 |
+| Working mean | 92.16% | 92.76% |
+
+Original black and white IoU remain 98.50% and 98.14%. Native original
+RGB error changes from 16.37 to 16.40, a small tradeoff. The visual ratings
+are estimates, with a holistic range of 90–95%. The reopened model and an
+independent reconstruction agree with the inspected trial to within one RGB
+level. See the [checkpoint evidence](pawn-mission/iteration-009/README.md).
+
+Tests traced the pale line beneath the ball to reflected light from the
+collar. Disabling secondary glossy rays removed it but darkened the lower
+ball, including after a measured pigment correction. Both trials are rejected.
+The accepted scene retains its original ray depths. Next constrain that
+reflection while preserving the surrounding walnut and contact shadow.

@@ -56,8 +56,8 @@ header .download{font-size:12px}
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Pawn model comparison">
-<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f@" alt="Selected reference: black pawn candidate 2" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052@" alt="Original Lichess black pawn" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:70a051d3434c382d8578e8dc879a8d36e017616aa85df58f7ca84b01f4f72320@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
-<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="data:image/png;base64,@LISTAUNTON_ASSET:2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37@" alt="Imagined pawn side guide"><img id="side-model" src="data:image/png;base64,@LISTAUNTON_ASSET:6b2a89d8bec9daa9005900b182d821d06cbcd9476f4639f2d4344cf68dabf359@" alt="Current pawn side render, uniformly registered at the foot"></div></div>
+<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f@" alt="Selected reference: black pawn candidate 2" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052@" alt="Original Lichess black pawn" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:4550656c494b29906237598f52c198412e5ab4748906b4e409e24e4ca52f1f3b@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="data:image/png;base64,@LISTAUNTON_ASSET:2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37@" alt="Imagined pawn side guide"><img id="side-model" src="data:image/png;base64,@LISTAUNTON_ASSET:dab1a84f1ec3ca4cf621aca7ddbb173a2dff4bc058814071291384841094565c@" alt="Current pawn side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D pawn. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -66,11 +66,11 @@ header .download{font-size:12px}
 
 </main>
 <script id="original-alignment" type="application/json">{"scale":1.0084160756501184,"x":-0.46631205673759263,"y":0.3767139479905349}</script>
-<script id="side-registration" type="application/json">{"guide":"assets/pawn/concepts/side-01-cutout.png","profile":"assets/pawn/profile.png","guide_sha256":"2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37","profile_sha256":"6b2a89d8bec9daa9005900b182d821d06cbcd9476f4639f2d4344cf68dabf359","source_blend_sha256":"62a216c56e8885be4a3955fc99a57c8d860d8739e92c36b052fbb9b29529b99b","canvas":[1254,1414],"guide_top":160,"scale":2.19205298013245,"offset_x":-74.45695364238406,"offset_y":82.91390728476836,"guide_foot":{"width":662,"center":627.0,"floor":1168,"row":1081},"model_foot":{"width":302,"center":320.0,"floor":568,"row":567},"method":"Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth.","profile_dimensions":[640,640],"guide_dimensions":[1254,1254]}</script>
+<script id="side-registration" type="application/json">{"guide":"assets/pawn/concepts/side-01-cutout.png","profile":"assets/pawn/profile.png","guide_sha256":"2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37","profile_sha256":"dab1a84f1ec3ca4cf621aca7ddbb173a2dff4bc058814071291384841094565c","source_blend_sha256":"ccf5c337af2717370244d9b4b70a5bdc0ceffeb70b3cde7237d3341d28780719","canvas":[1254,1414],"guide_top":160,"scale":2.19205298013245,"offset_x":-74.45695364238406,"offset_y":82.91390728476836,"guide_foot":{"width":662,"center":627.0,"floor":1168,"row":1081},"model_foot":{"width":302,"center":320.0,"floor":568,"row":567},"method":"Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth.","profile_dimensions":[640,640],"guide_dimensions":[1254,1254]}</script>
 <script id="wood-texture" type="application/octet-stream">@LISTAUNTON_ASSET:defede067371b284bcbe452fcadc340061ad2d60d71e07723d6f5dc48903187c@</script>
-<script id="varnish-texture" type="application/octet-stream">@LISTAUNTON_ASSET:be1aea975f796fb776ea6a3186d5e47a749c11219b5e5e77abc953c1e25fcdb7@</script>
+<script id="varnish-texture" type="application/octet-stream">@LISTAUNTON_ASSET:438fbd14036469cd8cd5c6b4a87b88fdfb1f84d6c707ed0eee0a1daa3782f5c7@</script>
 <script id="slope-texture" type="application/octet-stream">@LISTAUNTON_ASSET:3377741e7571413197e4c55e4356cc889e6f670bf9ad8968e4391bbe57de70b8@</script>
-<script id="mesh-metadata" type="application/json">{"vertexCount":173952,"indexCount":173952,"triangleCount":57984,"vertexStrideBytes":32,"vertexByteLength":5566464,"indexByteOffset":5566464,"totalByteLength":6262272,"bounds":{"min":[-0.8267850279808044,-0.8267850279808044,-0.008137050084769726],"max":[0.8267850279808044,0.8267850875854492,2.7667155265808105],"size":[1.6535700559616089,1.6535701751708984,2.7748525142669678],"center":[0.0,2.9802322387695312e-08,1.3792892694473267]},"sourceSha256":"62a216c56e8885be4a3955fc99a57c8d860d8739e92c36b052fbb9b29529b99b","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-0.7589936256408691,0.0,-0.5877852439880371,0.80901700258255,-13.044665336608887,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2271779328584671,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.11358894407749176,"shiftY":0.0,"elevationDegrees":54},"texture":"assets/pawn/pawn-walnut-v7.png","textureSha256":"defede067371b284bcbe452fcadc340061ad2d60d71e07723d6f5dc48903187c","uvLayer":"Pawn pigment","varnish":{"file":"assets/pawn/pawn-varnish-v1.png","sha256":"be1aea975f796fb776ea6a3186d5e47a749c11219b5e5e77abc953c1e25fcdb7","gain":[0.55,1.85]},"slope":{"file":"assets/pawn/pawn-fine-slopes-v2.png","sha256":"3377741e7571413197e4c55e4356cc889e6f670bf9ad8968e4391bbe57de70b8","limit":0.135}}</script>
+<script id="mesh-metadata" type="application/json">{"vertexCount":173952,"indexCount":173952,"triangleCount":57984,"vertexStrideBytes":32,"vertexByteLength":5566464,"indexByteOffset":5566464,"totalByteLength":6262272,"bounds":{"min":[-0.8267850279808044,-0.8267850279808044,-0.008137050084769726],"max":[0.8267850279808044,0.8267850875854492,2.7667155265808105],"size":[1.6535700559616089,1.6535701751708984,2.7748525142669678],"center":[0.0,2.9802322387695312e-08,1.3792892694473267]},"sourceSha256":"ccf5c337af2717370244d9b4b70a5bdc0ceffeb70b3cde7237d3341d28780719","referenceCamera":{"type":"ORTHO","worldToCamera":[1.0,-0.0,0.0,-0.0,-0.0,0.80901700258255,0.5877852439880371,-0.7589936256408691,0.0,-0.5877852439880371,0.80901700258255,-13.044665336608887,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4146730601787567,0.0,0.0,-0.2271779328584671,0.0,0.4146730601787567,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.8230767250061035,"shiftX":0.11358894407749176,"shiftY":0.0,"elevationDegrees":54},"texture":"assets/pawn/pawn-walnut-v7.png","textureSha256":"defede067371b284bcbe452fcadc340061ad2d60d71e07723d6f5dc48903187c","uvLayer":"Pawn pigment","varnish":{"file":"assets/pawn/pawn-varnish-v2.png","sha256":"438fbd14036469cd8cd5c6b4a87b88fdfb1f84d6c707ed0eee0a1daa3782f5c7","gain":[0.3,2.4],"polishGain":[0.38,1.85]},"slope":{"file":"assets/pawn/pawn-fine-slopes-v2.png","sha256":"3377741e7571413197e4c55e4356cc889e6f670bf9ad8968e4391bbe57de70b8","limit":0.135}}</script>
 <script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5@</script>
 <script>
 'use strict';
@@ -150,19 +150,21 @@ uniform float uGloss;
 uniform sampler2D uWood;
 uniform sampler2D uVarnish;
 uniform vec2 uVarnishRange;
+uniform vec2 uPolishRange;
 uniform sampler2D uSlope;
 uniform float uSlopeLimit;
 uniform bool uUseWood;
 in vec2 vUV;
 vec3 surfaceColor;
 float gloss;
+float polish;
 uniform bool uOrthographic;
 out vec4 outColor;
 vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
  float diffuse=max(dot(n,l),0.0);
  vec3 h=normalize(l+v);
  float spec=pow(max(dot(n,h),0.0),gloss)*step(0.001,diffuse);
- return strength*color*(surfaceColor*diffuse+vec3(spec*0.25));
+ return strength*color*(surfaceColor*diffuse+vec3(spec*0.25*polish));
 }
 void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
@@ -181,7 +183,9 @@ void main(){
   }
  }
  surfaceColor=uUseWood?pow(texture(uWood,vUV).rgb,vec3(2.2)):uColor;
- float gain=uUseWood?mix(uVarnishRange.x,uVarnishRange.y,texture(uVarnish,vUV).r):1.0;
+ vec2 finish=texture(uVarnish,vUV).rg;
+ float gain=uUseWood?mix(uVarnishRange.x,uVarnishRange.y,finish.r):1.0;
+ polish=uUseWood?mix(uPolishRange.x,uPolishRange.y,finish.g):1.0;
  gloss=clamp(uGloss/(gain*gain),8.0,512.0);
  vec3 c=surfaceColor*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
@@ -280,7 +284,7 @@ function initialize(){
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.generateMipmap(gl.TEXTURE_2D);
  }
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uVarnish','uVarnishRange','uSlope','uSlopeLimit','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uVarnish','uVarnishRange','uPolishRange','uSlope','uSlopeLimit','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
@@ -301,6 +305,7 @@ function draw(){
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
  gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
  gl.uniform1i(uniforms.uVarnish,1);gl.uniform2fv(uniforms.uVarnishRange,meta.varnish?meta.varnish.gain:[1,1]);
+ gl.uniform2fv(uniforms.uPolishRange,meta.varnish?.polishGain||[1,1]);
  gl.uniform1i(uniforms.uSlope,2);gl.uniform1f(uniforms.uSlopeLimit,meta.slope?meta.slope.limit:0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);

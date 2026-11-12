@@ -1,0 +1,59 @@
+[
+  {
+    "trial": "042-polished-ridges",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 91
+    },
+    "working_mean": 92.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "f1191437fe726afdc5c17180d5984423521dfc6bbb6bca2edec0296d251ddaa1",
+    "render_sha256": "cb4e7f7e09b39295824b7c2663e198dcc61361f428999eebbe42583e28233e96",
+    "decision": "Accept. Bounded roughness and polish variation restores fine detail in the flare and foot reflections. Geometry, pigment, normals, camera and lights are unchanged. A small native-original RGB tradeoff remains."
+  },
+  {
+    "trial": "043-direct-varnish",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 91,
+      "grain": 92,
+      "lighting": 88
+    },
+    "working_mean": 91.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "d21b65f742f6fb2981c49d41a5ec65c09e16fde6856a388a636afa63fc54ca11",
+    "render_sha256": "deb6367dd4c6757aa68c5a64b1a72055cee0a8855ae4b4a5b3c03637de6f9ff2",
+    "decision": "Reject. Removing secondary glossy bounces clears the pale ball-edge reflection but makes its underside too dark and worsens the selected contact profile."
+  },
+  {
+    "trial": "044-dark-seam-wood",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 92,
+      "lighting": 89
+    },
+    "working_mean": 92.16246521694322,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "571bd356165a2102c9fe6a64cc82d8dd05a4cce799e6dce45e98014aea12d1d9",
+    "render_sha256": "3a43ddeb599af152dd8d28fb9da5c7160d9e574a7d6ef35244f4569f93ea8e4a",
+    "decision": "Reject. Re-estimating pigment improves some diffuse wood after the ray-depth change, but the dark lower ball and contact profile still regress."
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "config": {
+    "measurement": "polish-008",
+    "geometry_measurement": "measure-034",
+    "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+    "roughness_source": "assets/pawn/pawn-varnish-v1.png",
+    "roughness_sha256": "be1aea975f796fb776ea6a3186d5e47a749c11219b5e5e77abc953c1e25fcdb7",
+    "prior_rough_range": [
+      0.55,
+      1.85
+    ],
+    "rough_range": [
+      0.3,
+      2.4
+    ],
+    "polish_range": [
+      0.38,
+      1.85
+    ],
+    "texture": "assets/pawn/pawn-varnish-v2.png",
+    "prior_255": 4,
+    "noise_prior": 0.6,
+    "update": 0.94,
+    "broad_fraction": 0.56
+  },
+  "calibration": {
+    "config": {
+      "source": "history/pawn-mission-008/pawn-rebuilt.blend",
+      "source_sha256": "62a216c56e8885be4a3955fc99a57c8d860d8739e92c36b052fbb9b29529b99b",
+      "samples": 128,
+      "measurement": "polish-008",
+      "rough_scales": [
+        0.53,
+        1,
+        1.6
+      ],
+      "polish_scales": [
+        0.38,
+        1,
+        1.85
+      ]
+    },
+    "poses": {
+      "response-0-0": {
+        "rough": 0.53,
+        "polish": 0.38,
+        "sha256": "70cf36558a26967653e404663cba2048af5d0629e5ac4def6dd9ef11dc286ac4"
+      },
+      "response-0-1": {
+        "rough": 0.53,
+        "polish": 1,
+        "sha256": "5306c2e0bfa8c90b6f57ac663d510d52b26875b282c97cde26dba54e73052bce"
+      },
+      "response-0-2": {
+        "rough": 0.53,
+        "polish": 1.85,
+        "sha256": "f7576af1c0925c02f0c01fdc301fdebacd9d383a9d3b43c7fc9af4614dc6fa65"
+      },
+      "response-1-0": {
+        "rough": 1,
+        "polish": 0.38,
+        "sha256": "8280ac31e2d41599185c4b5294a327fa22773913ec17071e5a9a16111081c34f"
+      },
+      "flat": {
+        "rough": 1,
+        "polish": 1,
+        "sha256": "df086b4af6f41b2c051093aaa03a5f433c10dcfe1e9b4f695e7508a0ed857e54"
+      },
+      "response-1-2": {
+        "rough": 1,
+        "polish": 1.85,
+        "sha256": "2436f7a77c183448a8b114ab5ed23fcb241e1f317c4610c50cefdd5f71a84474"
+      },
+      "response-2-0": {
+        "rough": 1.6,
+        "polish": 0.38,
+        "sha256": "527e798cf048f7d6ae08fa36ecf66c2e69686683b54024e467c388b7adc2a7e9"
+      },
+      "response-2-1": {
+        "rough": 1.6,
+        "polish": 1,
+        "sha256": "27c5c85c2f150128d5da4ccf1daa54000a4885bc27075b664718f6b8392c5f7a"
+      },
+      "response-2-2": {
+        "rough": 1.6,
+        "polish": 1.85,
+        "sha256": "f9d863e52408ad0cf7406a5f6b40250406af3f3f47584d30e68c40d574455264"
+      }
+    },
+    "independent_sha256": "4c808b9d883a6041eac0c21d0aa0b2cc78e6f9e18ff0eb42120f6110ab74e7a4",
+    "method": "Actual fixed-view Cycles responses for nine combinations of roughness and reflectance on wood and coat. A second seed measures where noise competes with the material signal."
+  },
+  "sha256": "438fbd14036469cd8cd5c6b4a87b88fdfb1f84d6c707ed0eee0a1daa3782f5c7",
+  "confident_pixels": 11944,
+  "polish_range_fitted": [
+    0.4027138650417328,
+    1.782959222793579
+  ],
+  "fraction_of_uv_with_polish_change_over_10pct": 0.012401580810546875
+}

@@ -45,6 +45,9 @@ def export(scene,body,model):
         assert packed.colorspace_settings.name=="Non-Color" and packed.packed_file.data==path.read_bytes()
         assert sha(path)==scene["pawn_roughness_sha256"]
         report["varnish"]={"file":scene["pawn_roughness_path"],"sha256":sha(path),"gain":list(scene["pawn_roughness_range"])}
+        if "pawn_polish_range" in scene:
+            report["varnish"]["polishGain"]=list(scene["pawn_polish_range"])
+            assert body.data.materials[0].node_tree.nodes["Pawn finish channels"].inputs["Color"].links[0].from_node.image==packed
     if "pawn_slope_path" in scene:
         path=ROOT/scene["pawn_slope_path"]
         packed=body.data.materials[0].node_tree.nodes["Pawn fine slope atlas"].image
