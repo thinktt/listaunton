@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-12",
+  "status": "owner_requested_pause_after_completed_diagnostic",
+  "goal_complete": false,
+  "accepted_checkpoint": "007",
+  "accepted_commit": "ed5e0f57cbcac179a357deb9c76f96a99a4db40c",
+  "new_model_accepted": false,
+  "model_material_light_camera_and_review_changes": false,
+  "protected_paths_unchanged_since_accepted_commit": [
+    "assets/king",
+    "models/king/king-rebuilt.blend",
+    "king-model.html",
+    "king-review.html",
+    "scripts/king/render_regions.py",
+    "scripts/king/validate_render_regions.py",
+    "scripts/king/check_region_regeneration.py"
+  ],
+  "source_checks": {
+    "models/king/king-rebuilt.blend": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+    "assets/king/render.png": "14f0cc0aa43ecf833e8cffd0c8527a37415b1d07617873ce6bbdbb13ddcd4d52",
+    "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+    "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "assets/king/materials/king-pigment-atlas-v6.png": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4"
+  },
+  "archive_checks": [
+    {
+      "path": "history/king-mission-007/king-rebuilt.blend",
+      "sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/render.png",
+      "sha256": "14f0cc0aa43ecf833e8cffd0c8527a37415b1d07617873ce6bbdbb13ddcd4d52",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/neutral.png",
+      "sha256": "6b48d244809c7974d4724ff0cdd51452b0d8dba2d18a798cfb8e06a2723dfc49",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/profile.png",
+      "sha256": "c2a555022b996d3dce32c1d7238eb342c5b004f25c2541fc952047ccc346b85b",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/side.png",
+      "sha256": "238f2bdd3666423f11773cb48e38755dafb2c3cfa4426d61ad2b0a4da1ee7be6",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/rear.png",
+      "sha256": "d522346f891c359b87e3cd74b4c5eb2961d4e904d969bcd99c628e3a3c294f42",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/camera.json",
+      "sha256": "bcdcd3da9d55d8f804d8c601ca98b77353004d59fe77c365c6812908d55d550e",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/mesh.bin",
+      "sha256": "c8c74e5961c28d5f61996e407cd91f54e65497312baa0686b9c880d1a5034e79",
+      "matches_current": true
+    },
+    {
+      "path": "history/king-mission-007/mesh.json",
+      "sha256": "9514bd651af6125da2bab5d838c85c581b31612877eb8527718c1ff70abec2d6",
+      "matches_current": true
+    }
+  ],
+  "diagnostic_script_syntax": "pass",
+  "diagnostic_render_completed": true,
+  "scores_carried_from_checkpoint_007_not_new_measurements": {
+    "high_res_silhouette_iou_percent": 97.81712417363087,
+    "original_silhouette_iou_percent": 96.83354433185717,
+    "interior_form_subjective_percent": 84,
+    "wood_color_subjective_percent": 82,
+    "grain_surface_subjective_percent": 79,
+    "lighting_reflections_subjective_percent": 62,
+    "working_mean_percent": 80.96342483472617,
+    "holistic_subjective_range_percent": [
+      74,
+      83
+    ]
+  },
+  "next_step_only_when_owner_resumes": "Test independently routed socket reflectors with warmer, separated glints; preserve checkpoint 007 until visually and technically validated."
+}

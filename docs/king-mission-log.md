@@ -341,3 +341,22 @@ commit in iteration-007. Native browser inspection is not claimed.
 Next: isolate socket/collar glossy responses and improve their placement and
 warmth. Preserve the current foot placement for a later grain-relief study.
 The goal is active and incomplete. No watchers or subagents were started.
+
+
+## 2026-11-12 — owner pause after diagnostic 096
+
+Finished the current socket/collar illumination diagnostic and saved its
+renders, source checks and findings in
+[iteration-008/README.md](king-mission/iteration-008/README.md).
+The broad front source is responsible for most of the socket's doubled white
+streak; the upper source contributes repeated pale collar crescents. Residual
+pigment shading remains visible when both are disabled.
+
+No new model is accepted. Checkpoint 007, its scores, fixed 54-degree camera,
+review page and local preview remain unchanged. Its nine principal assets are
+archived exactly under `history/king-mission-007`. The proposed socket receiver
+and targeted warmer reflections have not been implemented. No new render
+batches or model trials will begin until the owner resumes the mission.
+
+The owner has requested the active goal be paused. The mission remains
+incomplete; no watchers or subagents were started.
