@@ -1,0 +1,31 @@
+{
+  "source_sha256": "d0d3d82c694d555c6620070744906388abbd7c2ce282dc59a6eec52bcc0daf7e",
+  "regions": [
+    {
+      "region": "body",
+      "faces": 26376,
+      "normal_max_error": 6.717443466186523e-05,
+      "coordinates_uv_exact": true
+    },
+    {
+      "region": "rim",
+      "faces": 2152,
+      "normal_max_error": 0.00047266483306884766,
+      "coordinates_uv_exact": true
+    },
+    {
+      "region": "shoulder",
+      "faces": 1792,
+      "normal_max_error": 1.9073486328125e-05,
+      "coordinates_uv_exact": true
+    },
+    {
+      "region": "foot",
+      "faces": 512,
+      "normal_max_error": 5.3882598876953125e-05,
+      "coordinates_uv_exact": true
+    }
+  ],
+  "all_faces_partitioned_once": true,
+  "model_sha256": "d46f28acbea639ff1badedd0ac76415cf66de6545ef863190ab8cf22ba05c1f2"
+}
