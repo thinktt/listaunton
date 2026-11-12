@@ -14,7 +14,8 @@ def run(folder,kind):
         filename=value['file'] if isinstance(value,dict) else label+'.png'
         images[label]=rgba(out/filename)
     regions={'left':(405,588,481,630),'right':(516,578,569,617),
-             'front':(495,616,558,642),'worst':(437,606,469,638),'head-line':(425,570,509,594)}
+             'front':(495,616,558,642),'worst':(437,606,469,638),'head-line':(425,570,509,594),
+             'left-outer':(389,606,421,638),'left-front':(425,606,457,638)}
     target=np.asarray(images['selected'])[:,:,:3].astype(float);stats={}
     for label,im in images.items():
         a=np.asarray(im)[:,:,:3].astype(float);rows={}

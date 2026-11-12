@@ -1,0 +1,49 @@
+{
+  "source_render_sha256": "461a968dcf868622f0e3aba7c8a524215694d35c770c34af2adc93b5e2985564",
+  "source_model_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "regions": {
+    "left-outer": {
+      "bounds": [
+        389,
+        606,
+        421,
+        638
+      ],
+      "rgb_mae_255": 14.385091145833334,
+      "signed_mean_rgb": [
+        -11.5615234375,
+        0.9228515625,
+        7.8798828125
+      ]
+    },
+    "left-front": {
+      "bounds": [
+        425,
+        606,
+        457,
+        638
+      ],
+      "rgb_mae_255": 13.376953125,
+      "signed_mean_rgb": [
+        -17.8681640625,
+        -9.453125,
+        -3.8818359375
+      ]
+    },
+    "main-glint": {
+      "bounds": [
+        405,
+        588,
+        481,
+        630
+      ],
+      "rgb_mae_255": 7.805764411027569,
+      "signed_mean_rgb": [
+        -2.74968671679198,
+        -1.206140350877193,
+        -0.5717418546365914
+      ]
+    }
+  },
+  "note": "Sources are unchanged, uniformly magnified only for inspection. White supplies additional form cues, not color matching."
+}

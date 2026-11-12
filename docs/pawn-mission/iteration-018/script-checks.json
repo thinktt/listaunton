@@ -1,0 +1,21 @@
+{
+  "parsed": [
+    "inspect_collar_checkpoint.py",
+    "study_collar_material.py",
+    "study_foot_profile.py",
+    "audit_collar_isolation.py",
+    "capture_uv_transfer.py",
+    "transfer_collar_maps.py",
+    "validate_collar_profile.py"
+  ],
+  "runtime_evidence": {
+    "inspect_collar_checkpoint": "collar-inspection-017/inspection.json",
+    "study_collar_material": "collar-material-116/measurement.json",
+    "study_foot_profile": "collar-profile-118/measurement.json",
+    "audit_collar_isolation": "collar-sources-123/analysis.json",
+    "capture_uv_transfer": "121-measurement.json",
+    "transfer_collar_maps": "121-transfer.json",
+    "validate_collar_profile": "124-scope-validation.json"
+  },
+  "all_completed": true
+}

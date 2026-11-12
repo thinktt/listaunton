@@ -1,0 +1,87 @@
+{
+  "method": "Actual colored-BSDF isolated area responses, fixed diffuse rig, nonnegative real light energies through the AgX display transform. The independent full render determines the decision.",
+  "foreground_pixels": 26535,
+  "loss": [
+    0.011604045404943863,
+    0.011508934880175903,
+    0.01150132622742478,
+    0.011500937798820617,
+    0.011500928854956797
+  ],
+  "lights": [
+    {
+      "name": "Lower collar glint",
+      "pixel": [
+        521,
+        626.4
+      ],
+      "position": [
+        0.25735750794410706,
+        -0.57328861951828,
+        1.6350698471069336
+      ],
+      "rotation": [
+        0.7080792784690857,
+        3.030144691467285,
+        0.49682360887527466
+      ],
+      "size": 0.2577721353341689,
+      "size_y": 0.07108874238625741,
+      "spread": 5.4,
+      "color": [
+        1,
+        0.4460281431674957,
+        0.2098516821861267
+      ],
+      "energy": 0.015503951477409357
+    }
+  ],
+  "fixed_light_powers": {
+    "Left head glint": 2.3068480491638184,
+    "Upper head glint": 1.1351019144058228,
+    "Right head glint": 0.630704402923584,
+    "Upper head glint core": 2.3231687545776367,
+    "Right head glint core": 1.5328316688537598,
+    "Base upper": 0.38810569047927856,
+    "Foot right": 1.0469048023223877,
+    "Foot front": 0.04045619070529938,
+    "Foot center-right": 0.2120899260044098,
+    "Foot edge outer left": 0.6605644822120667,
+    "Foot edge center left": 0.9123812913894653,
+    "Left polish core": 0.17766346037387848,
+    "Upper polish core": 0.7186764478683472,
+    "Right polish core": 0.7280065417289734,
+    "Flare left edge": 0.020248202607035637,
+    "Flare left taper": 0.03094121813774109,
+    "Flare left lip": 0.018656767904758453,
+    "Flare right inner": 0.01145761739462614,
+    "Flare right edge": 0.07910601794719696,
+    "Flare front lip": 0.0025612679310142994,
+    "Flare lip taper": 0.012449936009943485,
+    "Right bounce": 88.7192153930664,
+    "Back bounce": 165.07427978515625,
+    "High left card": 95.73224639892578,
+    "Lower front bounce": 2.218817710876465,
+    "Lower right bounce": 2.041436195373535,
+    "Upper face bounce": 0.7638178467750549,
+    "Front shadow key": 23.973630905151367,
+    "Front shadow feather": 643.0450439453125,
+    "Socket right": 1.3917787075042725,
+    "Flare left sweep": 0.16110479831695557,
+    "Flare left center": 0.34790489077568054,
+    "Flare right sweep": 0.16274282336235046,
+    "Flare right lip": 0.0915931761264801,
+    "Upper stem rim": 0.0017277590231969953,
+    "Lower stem rim": 0.0003212390001863241,
+    "Socket lip core": 0.05734500288963318,
+    "Right flare core": 0.023406486958265305,
+    "Outer flare line": 0.0059013208374381065,
+    "Foot lip core": 0.0383736751973629,
+    "Collar left ribbon": 0.048960402607917786,
+    "Collar tip of ribbon": 0.05534058436751366,
+    "Collar right flank": 0.022733593359589577,
+    "Inner groove arc 535": 0.0008907733135856688,
+    "Inner groove arc 550": 0.0011654658010229468,
+    "Inner groove arc 565": 0.0019341923762112856
+  }
+}

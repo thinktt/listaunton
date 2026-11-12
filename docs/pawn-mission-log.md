@@ -547,3 +547,26 @@ reproduction and saved-model checks. Next inspect the left/front collar
 residual at x=425-457, y=606-638, using both originals to separate turning,
 finish and lighting effects. The review assets remain synchronized at each
 accepted checkpoint.
+
+## Iteration 018 - collar trials rejected; owner requested pause
+
+The underside study fills more of the selected image's left brown collar band,
+but the full render moves and broadens the front glint. Re-registering the
+existing material maps and re-aiming its source do not recover the accepted
+appearance. Trial 124 improves selected silhouette overlap from 96.811% to
+96.911%, while collar/stem RGB error worsens from 2.306 to 2.628. Front-glint
+luma error rises from 2.96 to 13.83 and fine-pattern correlation falls from
+0.890 to 0.157. Native original RGB error changes from 16.67 to 16.70.
+
+All trials are rejected. Checkpoint 017 remains the current editable model,
+fixed overlay, rotating viewer and side comparison, with unchanged scores:
+96.81 silhouette, 91 interior form, 93 wood color, 94 grain/surface and 92
+lighting; equal-weight mean 93.36%, holistic estimate 90-95%. Only silhouette
+overlap is measured. The mission remains incomplete.
+
+The owner requested that this iteration be finished and the goal paused.
+No further modeling batch was started after that request. The saved-trial
+scope check and public/preview preservation check accompany the
+[rejection evidence](pawn-mission/iteration-018/README.md). This is a research
+and stopping record, not a new accepted visual checkpoint. Resume only on
+the owner's direction.

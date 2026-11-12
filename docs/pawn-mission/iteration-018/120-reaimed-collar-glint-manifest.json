@@ -1,0 +1,53 @@
+{
+  "config": {
+    "source": "build/pawn-mission/119-rounded-collar-underlip/pawn.blend",
+    "source_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d",
+    "variant": "120-reaimed-collar-glint",
+    "samples": 512,
+    "light": "Lower collar glint",
+    "crop": [
+      489,
+      611,
+      568,
+      648
+    ],
+    "landmark": {
+      "name": "Lower collar glint",
+      "pixel": [
+        521,
+        626.4
+      ],
+      "half_axes": [
+        18,
+        1.5
+      ],
+      "angle": -16,
+      "distance": 0.3
+    },
+    "steps": [
+      0.8,
+      0.8,
+      0.15,
+      0.2,
+      0.2,
+      0.1
+    ],
+    "limits": [
+      4,
+      4,
+      0.5,
+      0.6,
+      0.8,
+      0.3
+    ],
+    "ridge": 0.001,
+    "bright_weight": 3,
+    "rates": [
+      0.3,
+      0.6,
+      1
+    ]
+  },
+  "model_sha256": "f09aa88a2165a9e56e53ff2d9fa5feeb57d63d45ea810b1119022dc3dd632240",
+  "render_sha256": "2871552890297b2051e888192334f17b4984bbac1130de58f1234651e97a5edb"
+}

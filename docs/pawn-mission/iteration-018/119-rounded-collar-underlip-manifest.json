@@ -1,0 +1,20 @@
+{
+  "config": {
+    "variant": "119-rounded-collar-underlip",
+    "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+    "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+    "samples": 512,
+    "profiles": {
+      "35": [
+        26,
+        135.25
+      ],
+      "36": [
+        27.3,
+        134
+      ]
+    }
+  },
+  "model_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d",
+  "render_sha256": "cc10188b309c2a983b90a1a6de69f3978831e990742e61bd46b80c932a531b1c"
+}

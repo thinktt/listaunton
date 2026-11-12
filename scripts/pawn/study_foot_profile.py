@@ -1,4 +1,4 @@
-"""Render small meridian alternatives with the current foot finish held fixed."""
+"""Render small meridian alternatives with the current finish held fixed."""
 import argparse,json,sys
 from pathlib import Path
 import numpy as np
@@ -19,7 +19,7 @@ def run(cfg):
         path=out/(row['name']+'.png');render(scene,path);report['renders'][row['name']]=sha(path)
         report['edited_controls'][row['name']]={key:list(body.data.vertices[int(key)*96].co) for key in row['profiles']}
     save_json(out/'measurement.json',report)
-    print('Foot profile study complete; accepted scene was not saved.',flush=True)
+    print('Profile study complete; accepted scene was not saved.',flush=True)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('config',type=Path);a=p.parse_args(sys.argv[sys.argv.index('--')+1:]);run(json.loads(a.config.read_text(encoding='utf8')))

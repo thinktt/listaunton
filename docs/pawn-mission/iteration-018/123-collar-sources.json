@@ -1,0 +1,28 @@
+{
+  "source": "build/pawn-mission/119-rounded-collar-underlip/pawn.blend",
+  "source_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d",
+  "samples": 512,
+  "crop": [
+    370,
+    575,
+    592,
+    654
+  ],
+  "measurement": "collar-sources-123",
+  "groups": {
+    "left": [
+      "Collar left ribbon"
+    ],
+    "tip": [
+      "Collar tip of ribbon"
+    ],
+    "right": [
+      "Collar right flank"
+    ],
+    "lower": [
+      "Lower collar glint"
+    ]
+  },
+  "cover_all": true,
+  "include_world": true
+}

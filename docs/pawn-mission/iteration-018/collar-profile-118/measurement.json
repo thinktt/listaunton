@@ -1,0 +1,141 @@
+{
+  "config": {
+    "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+    "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+    "samples": 512,
+    "measurement": "collar-profile-118",
+    "crop": [
+      370,
+      535,
+      592,
+      648
+    ],
+    "poses": [
+      {
+        "name": "baseline",
+        "profiles": {}
+      },
+      {
+        "name": "deep-117",
+        "profiles": {
+          "33": [
+            18,
+            134.75
+          ],
+          "34": [
+            22,
+            134.75
+          ],
+          "35": [
+            26,
+            134.5
+          ],
+          "36": [
+            27.3,
+            133.25
+          ]
+        }
+      },
+      {
+        "name": "lower-collar-edge",
+        "profiles": {
+          "33": [
+            18,
+            135.5
+          ],
+          "34": [
+            22,
+            135.5
+          ],
+          "35": [
+            26,
+            135.25
+          ],
+          "36": [
+            27.3,
+            134
+          ]
+        }
+      },
+      {
+        "name": "round-underlip-only",
+        "profiles": {
+          "35": [
+            26,
+            135.25
+          ],
+          "36": [
+            27.3,
+            134
+          ]
+        }
+      }
+    ]
+  },
+  "renders": {
+    "baseline": "aa3370b793da79f5de6cad2ed892ad084f740b2448485ff1e04dadb9c7b57243",
+    "deep-117": "70a96ace2c64d0ca24b3a4680a09005b36fdf7f7b9ffde67e220ca90e8e225b1",
+    "lower-collar-edge": "65572d0c93c339537f9e584c223d7858f2ab21253675791980a4712a9a211160",
+    "round-underlip-only": "840fc756552b602c881c49e38fbfa205b4a52ae89f0a9777f207e279ab731c03"
+  },
+  "edited_controls": {
+    "baseline": {},
+    "deep-117": {
+      "33": [
+        0.28696945309638977,
+        0.0,
+        1.7698032855987549
+      ],
+      "34": [
+        0.3507404625415802,
+        0.0,
+        1.7698032855987549
+      ],
+      "35": [
+        0.41451144218444824,
+        0.0,
+        1.7765841484069824
+      ],
+      "36": [
+        0.43523702025413513,
+        0.0,
+        1.8104884624481201
+      ]
+    },
+    "lower-collar-edge": {
+      "33": [
+        0.28696945309638977,
+        0.0,
+        1.7494606971740723
+      ],
+      "34": [
+        0.3507404625415802,
+        0.0,
+        1.7494606971740723
+      ],
+      "35": [
+        0.41451144218444824,
+        0.0,
+        1.7562415599822998
+      ],
+      "36": [
+        0.43523702025413513,
+        0.0,
+        1.7901458740234375
+      ]
+    },
+    "round-underlip-only": {
+      "35": [
+        0.41451144218444824,
+        0.0,
+        1.7562415599822998
+      ],
+      "36": [
+        0.43523702025413513,
+        0.0,
+        1.7901458740234375
+      ]
+    }
+  },
+  "note": "Cropped geometry diagnosis under unchanged material, lights and camera. A full model render and original-sprite audit are required before acceptance."
+}

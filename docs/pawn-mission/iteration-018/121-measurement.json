@@ -1,0 +1,17 @@
+{
+  "config": {
+    "measurement": "collar-uv-transfer-121",
+    "old": {
+      "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+      "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6"
+    },
+    "new": {
+      "source": "build/pawn-mission/119-rounded-collar-underlip/pawn.blend",
+      "source_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d"
+    }
+  },
+  "old_uv_z_sha256": "fb3845e4c38df128cf89981ad456ce26ff4535ae7bcfa485da0455eecc3e887b",
+  "new_depth_sha256": "b407491bd6206ec4c7639d3d7c563ed04e5de26e378e367e742edcfbc7254625",
+  "new_meridian_sha256": "526d613681eb3d7311b9198b24f54ce2f031809352b1098ac90c2c70a685f623",
+  "note": "Old UV and world Z; new camera depth and evaluated meridian. Sources are opened by hash, never saved."
+}

@@ -1,0 +1,29 @@
+{
+  "measurement": "build/pawn-mission/collar-uv-transfer-121",
+  "old_meridian": "build/pawn-mission/pigment-060/meridian.npy",
+  "old_meridian_sha256": "23f67606c50298120cf2384d0119d9fe3f72733355db9425fcb2844001bb60f6",
+  "maps": [
+    {
+      "name": "pigment",
+      "source": "assets/pawn/pawn-walnut-v11.png",
+      "source_sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+      "output": "assets/pawn/pawn-walnut-v12.png",
+      "srgb": true
+    },
+    {
+      "name": "finish",
+      "source": "assets/pawn/pawn-varnish-v9.png",
+      "source_sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+      "output": "assets/pawn/pawn-varnish-v10.png",
+      "srgb": false
+    },
+    {
+      "name": "slopes",
+      "source": "assets/pawn/pawn-fine-slopes-v10.png",
+      "source_sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+      "output": "assets/pawn/pawn-fine-slopes-v11.png",
+      "srgb": false
+    }
+  ],
+  "record": "build/pawn-mission/collar-uv-transfer-121/transfer.json"
+}

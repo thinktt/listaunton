@@ -1,0 +1,73 @@
+{
+  "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+  "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "samples": 512,
+  "measurement": "collar-profile-118",
+  "crop": [
+    370,
+    535,
+    592,
+    648
+  ],
+  "poses": [
+    {
+      "name": "baseline",
+      "profiles": {}
+    },
+    {
+      "name": "deep-117",
+      "profiles": {
+        "33": [
+          18,
+          134.75
+        ],
+        "34": [
+          22,
+          134.75
+        ],
+        "35": [
+          26,
+          134.5
+        ],
+        "36": [
+          27.3,
+          133.25
+        ]
+      }
+    },
+    {
+      "name": "lower-collar-edge",
+      "profiles": {
+        "33": [
+          18,
+          135.5
+        ],
+        "34": [
+          22,
+          135.5
+        ],
+        "35": [
+          26,
+          135.25
+        ],
+        "36": [
+          27.3,
+          134
+        ]
+      }
+    },
+    {
+      "name": "round-underlip-only",
+      "profiles": {
+        "35": [
+          26,
+          135.25
+        ],
+        "36": [
+          27.3,
+          134
+        ]
+      }
+    }
+  ]
+}

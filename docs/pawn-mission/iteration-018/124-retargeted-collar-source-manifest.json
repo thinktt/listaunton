@@ -1,0 +1,107 @@
+{
+  "config": {
+    "source": "build/pawn-mission/119-rounded-collar-underlip/pawn.blend",
+    "source_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d",
+    "variant": "124-retargeted-collar-source",
+    "samples": 512,
+    "response_samples": 512,
+    "response_percent": 100,
+    "keep_reflectors": [
+      "Left head glint",
+      "Upper head glint",
+      "Right head glint",
+      "Upper head glint core",
+      "Right head glint core",
+      "Base upper",
+      "Foot right",
+      "Foot front",
+      "Foot center-right",
+      "Foot edge outer left",
+      "Foot edge center left",
+      "Left polish core",
+      "Upper polish core",
+      "Right polish core",
+      "Flare left edge",
+      "Flare left taper",
+      "Flare left lip",
+      "Flare right inner",
+      "Flare right edge",
+      "Flare front lip",
+      "Flare lip taper",
+      "Right bounce",
+      "Back bounce",
+      "High left card",
+      "Lower front bounce",
+      "Lower right bounce",
+      "Upper face bounce",
+      "Front shadow key",
+      "Front shadow feather",
+      "Socket right",
+      "Flare left sweep",
+      "Flare left center",
+      "Flare right sweep",
+      "Flare right lip",
+      "Upper stem rim",
+      "Lower stem rim",
+      "Socket lip core",
+      "Right flare core",
+      "Outer flare line",
+      "Foot lip core",
+      "Collar left ribbon",
+      "Collar tip of ribbon",
+      "Collar right flank",
+      "Inner groove arc 535",
+      "Inner groove arc 550",
+      "Inner groove arc 565"
+    ],
+    "dense_bounds": [
+      370,
+      575,
+      592,
+      654
+    ],
+    "glint_weight": 3,
+    "protect_quiet_head": true,
+    "region_weights": [
+      {
+        "bounds": [
+          490,
+          611,
+          566,
+          645
+        ],
+        "weight": 6
+      }
+    ],
+    "fitted_lights": [
+      {
+        "name": "Lower collar glint",
+        "pixel": [
+          521,
+          626.4
+        ],
+        "position": [
+          0.25735750794410706,
+          -0.57328861951828,
+          1.6350698471069336
+        ],
+        "rotation": [
+          0.7080792784690857,
+          3.030144691467285,
+          0.49682360887527466
+        ],
+        "size": 0.2577721353341689,
+        "size_y": 0.07108874238625741,
+        "spread": 5.4,
+        "color": [
+          1,
+          0.4460281431674957,
+          0.2098516821861267
+        ],
+        "energy": 0.015503951477409357
+      }
+    ]
+  },
+  "model_sha256": "05da94919083eac40dee9abbeb7e62fe99faa3379b0dc140919ef6d996dae24c",
+  "render_sha256": "0683a2d9396cb5699f7579ea2cc75acafa12103d5f9c8a6a6fcebc267252c383"
+}

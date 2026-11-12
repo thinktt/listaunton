@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "model_sha256": "05da94919083eac40dee9abbeb7e62fe99faa3379b0dc140919ef6d996dae24c",
+  "profile_edits": {
+    "35": {
+      "radius": 0.41451144218444824,
+      "z_before": 1.8037075996398926,
+      "z_after": 1.7562415599822998
+    },
+    "36": {
+      "radius": 0.43523702025413513,
+      "z_before": 1.8308310508728027,
+      "z_after": 1.7901458740234375
+    }
+  },
+  "all_other_control_vertices_exact": true,
+  "radii_preserved": true,
+  "control_topology_uv_smoothing_modifiers_preserved": true,
+  "full_shader_and_all_map_pixels_preserved": true,
+  "all_ramps_preserved": true,
+  "matte_band": {
+    "fall": [
+      0.785,
+      0.818
+    ],
+    "fraction": 0.35,
+    "rise": [
+      0.744,
+      0.757
+    ]
+  },
+  "unchanged_lights": 46,
+  "edited_lights": {
+    "Lower collar glint": {
+      "matrix": [
+        [
+          -0.8736470937728882,
+          -0.2984701991081238,
+          0.3842606544494629,
+          0.25735750794410706
+        ],
+        [
+          -0.4736785888671875,
+          0.7022526264190674,
+          -0.5314789414405823,
+          -0.57328861951828
+        ],
+        [
+          -0.11121739447116852,
+          -0.64634108543396,
+          -0.7548999190330505,
+          1.6350698471069336
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.015503951348364353,
+      "color": [
+        1.0,
+        0.4460281431674957,
+        0.2098516821861267
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.25777214765548706,
+        "size_y": 0.07108873873949051,
+        "spread": 0.09424778074026108,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    }
+  },
+  "world_and_ray_depth_preserved": true,
+  "sampling": {
+    "samples": 512,
+    "seed": 0,
+    "light_tree": false,
+    "denoising": true,
+    "adaptive_sampling": true,
+    "adaptive_threshold": 0.009999999776482582,
+    "adaptive_min_samples": 0,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "animated_seed": false
+  },
+  "camera_above_board": 54,
+  "closed_manifold": true,
+  "euler": 2,
+  "volume": 2.332608609116637,
+  "evaluated_mesh_normals_uv_sha256": "f3ef1b156fbb36114d72d8e96ba9295b3f88970b823e9ae790b34951780ba62c"
+}

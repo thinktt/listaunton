@@ -1,0 +1,27 @@
+{
+  "variant": "122-registered-collar-finish",
+  "source": "build/pawn-mission/119-rounded-collar-underlip/pawn.blend",
+  "source_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d",
+  "samples": 512,
+  "seed": 0,
+  "light_tree": false,
+  "texture": "assets/pawn/pawn-walnut-v12.png",
+  "texture_sha256": "ee0f41fdf401dc71f668ccbcce58fffc4070c6695670ed91f02b87761bb853ee",
+  "finish": {
+    "texture": "assets/pawn/pawn-varnish-v10.png",
+    "texture_sha256": "db11c345a0e58922289ac4ca9fa7552a83cf9599d3544d627cafced33f09f094",
+    "range": [
+      0.3,
+      2.4
+    ],
+    "polish_range": [
+      0.38,
+      1.85
+    ]
+  },
+  "slopes": {
+    "texture": "assets/pawn/pawn-fine-slopes-v11.png",
+    "texture_sha256": "27f36cdedc8ab6c2f957c6234964b9cb7ac1ef9bdd763c1ba8df64d90d5ba742",
+    "max_slope": 0.135
+  }
+}

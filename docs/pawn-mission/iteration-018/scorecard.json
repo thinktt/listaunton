@@ -1,0 +1,82 @@
+[
+  {
+    "trial": "119-rounded-collar-underlip",
+    "scores": {
+      "silhouette": 96.91092435242771,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 89
+    },
+    "working_mean": 92.58218487048555,
+    "iou": {
+      "selected": 0.9691092435242772,
+      "original_black": 0.9850311122099971,
+      "original_white": 0.9810216571534547
+    },
+    "model_sha256": "154ad68e6a6cf542ec7f681dddecdc48f3aa401f3a3e9bce7be555aca66a9d5d",
+    "render_sha256": "cc10188b309c2a983b90a1a6de69f3978831e990742e61bd46b80c932a531b1c",
+    "decision": "Lower edge fills more of the selected brown band, but moves and broadens the front glint; rejected.",
+    "scope": "Whole-frame judgment after full, enlarged and native comparison; silhouette measured, other categories estimated."
+  },
+  {
+    "trial": "120-reaimed-collar-glint",
+    "scores": {
+      "silhouette": 96.91092435242771,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 89
+    },
+    "working_mean": 92.58218487048555,
+    "iou": {
+      "selected": 0.9691092435242772,
+      "original_black": 0.9850311122099971,
+      "original_white": 0.9810216571534547
+    },
+    "model_sha256": "f09aa88a2165a9e56e53ff2d9fa5feeb57d63d45ea810b1119022dc3dd632240",
+    "render_sha256": "2871552890297b2051e888192334f17b4984bbac1130de58f1234651e97a5edb",
+    "decision": "Small local reflector changes do not recover the front reflection; rejected.",
+    "scope": "Whole-frame judgment after full, enlarged and native comparison; silhouette measured, other categories estimated."
+  },
+  {
+    "trial": "122-registered-collar-finish",
+    "scores": {
+      "silhouette": 96.91092435242771,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 89
+    },
+    "working_mean": 92.58218487048555,
+    "iou": {
+      "selected": 0.9691092435242772,
+      "original_black": 0.9850311122099971,
+      "original_white": 0.9810216571534547
+    },
+    "model_sha256": "800a6394080c81bdf3ba50e83412ba96e4a6594725f7f81cabe7f1d4d6efbc8f",
+    "render_sha256": "274b006f36a8ccafbfdf412f629d854ffc26e9f9c1e81593a7c78cf965acfb1b",
+    "decision": "Transfer of existing pigment/finish/slopes has only a small effect and retains the front regression; rejected.",
+    "scope": "Whole-frame judgment after full, enlarged and native comparison; silhouette measured, other categories estimated."
+  },
+  {
+    "trial": "124-retargeted-collar-source",
+    "scores": {
+      "silhouette": 96.91092435242771,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 90
+    },
+    "working_mean": 92.78218487048555,
+    "iou": {
+      "selected": 0.9691092435242772,
+      "original_black": 0.9850311122099971,
+      "original_white": 0.9810216571534547
+    },
+    "model_sha256": "05da94919083eac40dee9abbeb7e62fe99faa3379b0dc140919ef6d996dae24c",
+    "render_sha256": "0683a2d9396cb5699f7579ea2cc75acafa12103d5f9c8a6a6fcebc267252c383",
+    "decision": "Re-aiming the source reduces the regression but leaves a displaced, fragmented glint and worse overall collar error; rejected.",
+    "scope": "Whole-frame judgment after full, enlarged and native comparison; silhouette measured, other categories estimated."
+  }
+]
