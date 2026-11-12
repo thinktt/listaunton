@@ -48,7 +48,7 @@ The current queen uses an assumed 54° camera and the owner’s 83.4% queen-to-k
 
 The queen review opens with the original Lichess image selected and includes a Side comparison tab. The side tab uses `scripts/queen/render_wood_profile.py` and `scripts/queen/build_side_comparison.py` to register the current model uniformly to the imagined side guide at the foot. Keep the side renders, overlay, rotating viewer, and saved Blender model synchronized.
 
-The owner-defined queen refinement loop is in `MISSION-QUEEN.md`. Read it before running that mission; it fixes the 54-degree camera, the five-category scorecard, and evidence and iteration requirements. Writing the mission did not itself start its modeling goal.
+The owner-defined queen refinement loop is in `MISSION-QUEEN.md`. Read it before running that mission; it specifies a 54-degree fixed-view comparison, the five-category scorecard, and evidence and iteration requirements. Toby has also authorized documented exploratory angle studies. Revising the mission does not itself start a modeling goal. Toby's explicit approval is required before modifying the Queen mission statement, including its status, baseline, scores or completion criteria; record routine progress in `docs/queen-mission-log.md` and the iteration evidence instead.
 
 The third mission checkpoint rounds the lowest collar while preserving the second checkpoint's material and lights. Its reproduction config is `docs/queen-mission/iteration-003/039-reproduction-config.json`, starting from `history/queen-mission-002`. Failed material and lighting experiments remain evidence, not alternatives in the public controls. For Cycles light separation, the verified binary controls are the light object's `visible_diffuse` and `visible_glossy`; the data-level factors did not affect Cycles in the measured diagnostic. `place_lights.py` applies ray visibility only when explicitly enabled in the config, preserving older experimental behavior.
 
@@ -77,7 +77,7 @@ closed control with unchanged UVs, then restore exact render receivers. Preserve
 reopened texture checks. At every accepted major queen checkpoint, update the
 repository review and existing local preview together: overlay, rotating model
 and side views. Tell the owner it is ready to refresh. Failed trials stay out
-of the public review. Current score and source hash are in MISSION-QUEEN.md.
+of the public review. Consult the queen mission log for current scores and source hash.
 
 
 The thirteenth queen checkpoint uses queen-pigment-albedo-v7.png. It changes
@@ -218,5 +218,7 @@ docs/queen-mission/iteration-034. Checkpoint 33 remains the accepted model.
 The final flatter-socket experiments preserve the exterior mask but worsen
 the lip/crescent and are rejected. The audit covers all four shape priorities,
 source preservation, current model validation and synchronized review assets.
-Color, grain and lighting finishing remain deferred; completion is not a
-claim of exact recovered geometry or a perfect full-image match.
+At that time, color, grain and lighting finishing were deferred. The restored
+Queen mission includes those aspects and remains incomplete until it meets the
+full visual-match criteria. Shape-phase completion is not a claim of exact
+recovered geometry or a perfect full-image match.
