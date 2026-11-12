@@ -8,6 +8,7 @@ from color_pipeline import processors
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--source',required=True);p.add_argument('--out',required=True)
 p.add_argument('--samples',type=int,default=64)
+p.add_argument('--crop',type=int,nargs=4,metavar=('X0','Y0','X1','Y1'),help='Optional fixed-frame diagnostic crop.')
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 source=ROOT/a.source;digest=hashlib.sha256(source.read_bytes()).hexdigest()
 out=ROOT/a.out;out.mkdir(parents=True,exist_ok=True)
@@ -29,6 +30,12 @@ bpy.data.images.remove(im)
 for link in list(bs.inputs['Base Color'].links):ls.remove(link)
 s.render.image_settings.file_format='OPEN_EXR';s.render.image_settings.color_depth='32';s.render.image_settings.color_mode='RGBA'
 s.render.resolution_percentage=100;s.render.use_persistent_data=True;s.cycles.samples=a.samples;s.cycles.use_denoising=True
+if a.crop:
+    x0,y0,x1,y1=a.crop
+    assert 0<=x0<x1<=w and 0<=y0<y1<=h
+    s.render.use_border=True;s.render.use_crop_to_border=False
+    s.render.border_min_x=x0/w;s.render.border_max_x=x1/w
+    s.render.border_min_y=1-y1/h;s.render.border_max_y=1-y0/h
 prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='OPTIX';prefs.get_devices()
 for d in prefs.devices:d.use=d.type=='OPTIX'
 if any(d.use for d in prefs.devices):s.cycles.device='GPU'
@@ -55,7 +62,7 @@ coverage=ns.new('ShaderNodeAttribute');coverage.attribute_name='Pigment coverage
 ls.new(coverage.outputs['Fac'],em.inputs['Color']);render('coverage')
 assert hashlib.sha256(source.read_bytes()).hexdigest()==digest
 record={'source':a.source,'source_sha256':digest,'reference_sha256':hashlib.sha256(reference.read_bytes()).hexdigest(),
-    'resolution':[w,h],'samples':a.samples,'diagnostic_only':True,'source_unchanged':True,
+    'resolution':[w,h],'samples':a.samples,'crop':a.crop,'diagnostic_only':True,'source_unchanged':True,
     'view':s.view_settings.view_transform,'look':s.view_settings.look,
     'inverse_roundtrip_max_error':float(error.max()),
     'inverse_roundtrip_p99_error':float(np.quantile(error,.99)),

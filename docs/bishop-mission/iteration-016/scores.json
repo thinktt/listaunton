@@ -1,0 +1,19 @@
+{
+  "accepted_checkpoint": "015",
+  "accepted_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "scores_percent": {
+    "silhouette": 96.10946013611408,
+    "interior": 84,
+    "color": 86,
+    "texture": 78,
+    "lighting": 77
+  },
+  "mean_percent": 84.22189202722282,
+  "holistic_fixed_view_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_ratings_subjective": true,
+  "unchanged_from_accepted_checkpoint": true,
+  "mission_complete": false
+}

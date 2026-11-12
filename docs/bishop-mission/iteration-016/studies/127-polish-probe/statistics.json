@@ -1,0 +1,27 @@
+{
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "source_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "metrics": [
+    {
+      "label": "control",
+      "mean_absolute_rgb_error_8bit": 7.940661013448322,
+      "pixels": 117809
+    },
+    {
+      "label": "coat-grain",
+      "mean_absolute_rgb_error_8bit": 7.921958424229048,
+      "pixels": 117809
+    },
+    {
+      "label": "base-and-coat",
+      "mean_absolute_rgb_error_8bit": 7.92396732564292,
+      "pixels": 117809
+    },
+    {
+      "label": "reversed-grain",
+      "mean_absolute_rgb_error_8bit": 7.867845410792045,
+      "pixels": 117809
+    }
+  ],
+  "note": "Cropped material diagnostics at unchanged registration; shared opaque foreground eroded four pixels. These errors are not whole-model fidelity scores. Inspect the actual glint pattern before choosing a full candidate."
+}

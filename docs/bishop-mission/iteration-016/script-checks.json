@@ -1,0 +1,52 @@
+[
+  {
+    "script": "scripts\\bishop\\prepare_spatial_polish.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\probe_spatial_polish.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\analyze_spatial_polish.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\probe_base_receiver.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\analyze_base_reflection.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\render_material_diagnostics.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\fit_base_light_power.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\capture_material_response.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\refine_base_pigment.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  },
+  {
+    "script": "scripts\\bishop\\record_base_finish_study.py",
+    "syntax_passed": true,
+    "normalized_crlf": 0
+  }
+]

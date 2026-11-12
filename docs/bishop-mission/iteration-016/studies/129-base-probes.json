@@ -1,0 +1,12 @@
+{
+  "hypothesis": "Exclude the physical foot and groove below z=.42, isolate base-light response, and enlarge its disk while reducing the clipped core. The prior .19 band inadvertently included the foot shoulder; no previous probe is accepted.",
+  "z_band": [0.42, 0.99],
+  "variants": [
+    {"label":"isolated-control", "partition":true, "isolated":true, "size":0.2, "spread":3, "power_factor":1},
+    {"label":"base-off", "partition":true, "isolated":true, "size":0.2, "spread":3, "power_factor":0},
+    {"label":"size04-spread6-half", "partition":true, "isolated":true, "size":0.4, "spread":6, "power_factor":2},
+    {"label":"size04-spread12-half", "partition":true, "isolated":true, "size":0.4, "spread":12, "power_factor":8},
+    {"label":"size08-spread12-half", "partition":true, "isolated":true, "size":0.8, "spread":12, "power_factor":8},
+    {"label":"size12-spread12-half", "partition":true, "isolated":true, "size":1.2, "spread":12, "power_factor":8}
+  ]
+}

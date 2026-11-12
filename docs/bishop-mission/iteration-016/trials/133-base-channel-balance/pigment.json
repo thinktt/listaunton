@@ -1,0 +1,50 @@
+{
+  "source_atlas": "history/bishop-mission-015/bishop-boxwood-albedo.png",
+  "source_atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "response": "build/bishop-mission/131-base-response",
+  "response_manifest_sha256": "45d1030a2874a8214b7b43b821b060e52d50a3ad67eafcd9b67fd3da3a63c398",
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "capture": "build/bishop-mission/099-atlas-surface",
+  "capture_manifest_sha256": "8a0386a6eb64e9d9493e3f7d47f5a9d2ce301c6259961465633f5b8316bd810c",
+  "geometry_inheritance_audits": [
+    {
+      "path": "docs/bishop-mission/iteration-013/validation/pigment-validation.json",
+      "sha256": "d1d5725812c033f22fa3a48ed474b902c44dc6762aeaf2c52c4f1a3f26eae83c"
+    },
+    {
+      "path": "docs/bishop-mission/iteration-015/validation/pigment-validation.json",
+      "sha256": "40f95e57ae138919ea5828640b4d8b17d59d99208e166b60aa666551ca79131f"
+    }
+  ],
+  "strength": 1,
+  "clipped_bound_weight": 1.0,
+  "feedback_bounds": [
+    0.8,
+    2.0
+  ],
+  "linear_pigment_cap": 0.85,
+  "ellipse": [
+    583,
+    978,
+    100,
+    65
+  ],
+  "radial_feather": [
+    0.7,
+    1.15
+  ],
+  "height_feather": [
+    0.44,
+    0.5,
+    0.9,
+    0.99
+  ],
+  "changed_texels": 24572,
+  "scope_texels": 31936,
+  "alpha_and_outside_scope_exact": true,
+  "output_sha256": "e67baef07e83e8b077ceb41aa3a8a8b7088afe16d6f266a2ad0c103cbe12003a",
+  "scope_sha256": "922698566f3808482cdac2059f3e6383711fb45fd0ed812be00e6bf0d4a260b8",
+  "note": "Local approximate material inference from actual BSDF response. Clipped reference channels are lower bounds; other channels remain usable. Specular-dominated samples have low weight. No reference pixels, lights, relief, UVs, camera or geometry are changed. Requires a fresh real-BSDF render and scope audit."
+}

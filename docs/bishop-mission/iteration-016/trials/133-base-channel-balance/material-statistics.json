@@ -1,0 +1,289 @@
+{
+  "note": "Diagnostic only. RGB differences include geometry and lighting, and do not replace the visual scorecard. Reference alpha >127 and max RGB >12; model alpha >.995; shared mask eroded 4 pixels. The supplied reference has alpha 253 across much of its interior. Background and silhouette edges excluded.",
+  "renders": {
+    "history/bishop-mission-015/render.png": {
+      "all": {
+        "pixels": 309309,
+        "mean_absolute_rgb_error_8bit": 5.981627464294434,
+        "mean_reference_rgb_8bit": [
+          172.5,
+          115.5999984741211,
+          57.630001068115234
+        ],
+        "mean_render_rgb_8bit": [
+          170.1999969482422,
+          112.98999786376953,
+          54.599998474121094
+        ]
+      },
+      "button": {
+        "pixels": 13240,
+        "mean_absolute_rgb_error_8bit": 7.331797122955322,
+        "mean_reference_rgb_8bit": [
+          198.13999938964844,
+          142.92999267578125,
+          75.5199966430664
+        ],
+        "mean_render_rgb_8bit": [
+          195.10000610351562,
+          138.32000732421875,
+          72.12000274658203
+        ]
+      },
+      "head": {
+        "pixels": 56154,
+        "mean_absolute_rgb_error_8bit": 6.6897873878479,
+        "mean_reference_rgb_8bit": [
+          183.83999633789062,
+          124.04000091552734,
+          61.88999938964844
+        ],
+        "mean_render_rgb_8bit": [
+          182.49000549316406,
+          122.47000122070312,
+          58.34000015258789
+        ]
+      },
+      "upper_head": {
+        "pixels": 10780,
+        "mean_absolute_rgb_error_8bit": 12.440971374511719,
+        "mean_reference_rgb_8bit": [
+          208.85000610351562,
+          148.25999450683594,
+          80.44999694824219
+        ],
+        "mean_render_rgb_8bit": [
+          205.38999938964844,
+          142.77000427246094,
+          69.51000213623047
+        ]
+      },
+      "lower_head_glare": {
+        "pixels": 5700,
+        "mean_absolute_rgb_error_8bit": 5.204093933105469,
+        "mean_reference_rgb_8bit": [
+          188.07000732421875,
+          126.12000274658203,
+          63.22999954223633
+        ],
+        "mean_render_rgb_8bit": [
+          190.36000061035156,
+          127.9000015258789,
+          62.91999816894531
+        ]
+      },
+      "collars": {
+        "pixels": 38612,
+        "mean_absolute_rgb_error_8bit": 5.221994876861572,
+        "mean_reference_rgb_8bit": [
+          167.74000549316406,
+          113.44999694824219,
+          59.040000915527344
+        ],
+        "mean_render_rgb_8bit": [
+          167.6300048828125,
+          112.80999755859375,
+          57.849998474121094
+        ]
+      },
+      "stem": {
+        "pixels": 25361,
+        "mean_absolute_rgb_error_8bit": 1.8091294765472412,
+        "mean_reference_rgb_8bit": [
+          153.77999877929688,
+          96.7699966430664,
+          43.459999084472656
+        ],
+        "mean_render_rgb_8bit": [
+          153.63999938964844,
+          96.86000061035156,
+          43.36000061035156
+        ]
+      },
+      "socket": {
+        "pixels": 35000,
+        "mean_absolute_rgb_error_8bit": 4.230905055999756,
+        "mean_reference_rgb_8bit": [
+          169.17999267578125,
+          111.2300033569336,
+          54.650001525878906
+        ],
+        "mean_render_rgb_8bit": [
+          168.0399932861328,
+          109.88999938964844,
+          53.70000076293945
+        ]
+      },
+      "base": {
+        "pixels": 88707,
+        "mean_absolute_rgb_error_8bit": 9.013708114624023,
+        "mean_reference_rgb_8bit": [
+          196.41000366210938,
+          133.05999755859375,
+          66.75
+        ],
+        "mean_render_rgb_8bit": [
+          190.38999938964844,
+          126.62999725341797,
+          61.099998474121094
+        ]
+      },
+      "foot": {
+        "pixels": 24077,
+        "mean_absolute_rgb_error_8bit": 5.492918491363525,
+        "mean_reference_rgb_8bit": [
+          147.44000244140625,
+          100.1500015258789,
+          54.65999984741211
+        ],
+        "mean_render_rgb_8bit": [
+          146.6300048828125,
+          99.02999877929688,
+          51.810001373291016
+        ]
+      }
+    },
+    "build/bishop-mission/133-base-channel-balance/wood.png": {
+      "all": {
+        "pixels": 309309,
+        "mean_absolute_rgb_error_8bit": 5.35391902923584,
+        "mean_reference_rgb_8bit": [
+          172.5,
+          115.5999984741211,
+          57.630001068115234
+        ],
+        "mean_render_rgb_8bit": [
+          170.60000610351562,
+          114.08999633789062,
+          55.2400016784668
+        ]
+      },
+      "button": {
+        "pixels": 13240,
+        "mean_absolute_rgb_error_8bit": 7.332149028778076,
+        "mean_reference_rgb_8bit": [
+          198.13999938964844,
+          142.92999267578125,
+          75.5199966430664
+        ],
+        "mean_render_rgb_8bit": [
+          195.10000610351562,
+          138.32000732421875,
+          72.12000274658203
+        ]
+      },
+      "head": {
+        "pixels": 56154,
+        "mean_absolute_rgb_error_8bit": 6.689728736877441,
+        "mean_reference_rgb_8bit": [
+          183.83999633789062,
+          124.04000091552734,
+          61.88999938964844
+        ],
+        "mean_render_rgb_8bit": [
+          182.49000549316406,
+          122.47000122070312,
+          58.34000015258789
+        ]
+      },
+      "upper_head": {
+        "pixels": 10780,
+        "mean_absolute_rgb_error_8bit": 12.44106388092041,
+        "mean_reference_rgb_8bit": [
+          208.85000610351562,
+          148.25999450683594,
+          80.44999694824219
+        ],
+        "mean_render_rgb_8bit": [
+          205.38999938964844,
+          142.77000427246094,
+          69.51000213623047
+        ]
+      },
+      "lower_head_glare": {
+        "pixels": 5700,
+        "mean_absolute_rgb_error_8bit": 5.20421028137207,
+        "mean_reference_rgb_8bit": [
+          188.07000732421875,
+          126.12000274658203,
+          63.22999954223633
+        ],
+        "mean_render_rgb_8bit": [
+          190.36000061035156,
+          127.9000015258789,
+          62.91999816894531
+        ]
+      },
+      "collars": {
+        "pixels": 38612,
+        "mean_absolute_rgb_error_8bit": 5.222555637359619,
+        "mean_reference_rgb_8bit": [
+          167.74000549316406,
+          113.44999694824219,
+          59.040000915527344
+        ],
+        "mean_render_rgb_8bit": [
+          167.6300048828125,
+          112.80999755859375,
+          57.849998474121094
+        ]
+      },
+      "stem": {
+        "pixels": 25361,
+        "mean_absolute_rgb_error_8bit": 1.8090770244598389,
+        "mean_reference_rgb_8bit": [
+          153.77999877929688,
+          96.7699966430664,
+          43.459999084472656
+        ],
+        "mean_render_rgb_8bit": [
+          153.63999938964844,
+          96.86000061035156,
+          43.36000061035156
+        ]
+      },
+      "socket": {
+        "pixels": 35000,
+        "mean_absolute_rgb_error_8bit": 4.230961799621582,
+        "mean_reference_rgb_8bit": [
+          169.17999267578125,
+          111.2300033569336,
+          54.650001525878906
+        ],
+        "mean_render_rgb_8bit": [
+          168.0399932861328,
+          109.88999938964844,
+          53.70000076293945
+        ]
+      },
+      "base": {
+        "pixels": 88707,
+        "mean_absolute_rgb_error_8bit": 6.824707984924316,
+        "mean_reference_rgb_8bit": [
+          196.41000366210938,
+          133.05999755859375,
+          66.75
+        ],
+        "mean_render_rgb_8bit": [
+          191.77000427246094,
+          130.47000122070312,
+          63.310001373291016
+        ]
+      },
+      "foot": {
+        "pixels": 24077,
+        "mean_absolute_rgb_error_8bit": 5.464662075042725,
+        "mean_reference_rgb_8bit": [
+          147.44000244140625,
+          100.1500015258789,
+          54.65999984741211
+        ],
+        "mean_render_rgb_8bit": [
+          146.72000122070312,
+          99.0999984741211,
+          51.849998474121094
+        ]
+      }
+    }
+  }
+}

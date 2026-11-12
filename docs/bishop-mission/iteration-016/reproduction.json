@@ -1,0 +1,38 @@
+{
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "prerequisite": "Recreate build/bishop-mission/099-atlas-surface and visibility using the first two commands in iteration-015/reproduction.json. The immutable 013 and 015 atlas audits establish unchanged geometry.",
+  "commands": [
+    "python scripts/bishop/prepare_spatial_polish.py",
+    "blender --background --python-exit-code 1 --python scripts/bishop/probe_spatial_polish.py",
+    "python scripts/bishop/analyze_spatial_polish.py",
+    "blender --background --python-exit-code 1 --python scripts/bishop/probe_base_receiver.py",
+    "python scripts/bishop/analyze_base_reflection.py --probe build/bishop-mission/128-base-receiver-probe",
+    "blender --background --python-exit-code 1 --python scripts/bishop/probe_base_receiver.py -- --config docs/bishop-mission/iteration-016/studies/129-base-probes.json --out build/bishop-mission/129-base-receiver-probe",
+    "python scripts/bishop/analyze_base_reflection.py --probe build/bishop-mission/129-base-receiver-probe",
+    "blender --background --python-exit-code 1 --python scripts/bishop/render_material_diagnostics.py -- --source history/bishop-mission-015/bishop-rebuilt.blend --out build/bishop-mission/130-base-material-isolation --fixed-view --crop 460 920 690 1090 --samples 256",
+    "blender --background --python-exit-code 1 --python scripts/bishop/capture_material_response.py -- --source history/bishop-mission-015/bishop-rebuilt.blend --out build/bishop-mission/131-base-response --crop 430 860 740 1060 --samples 512",
+    "python scripts/bishop/refine_base_pigment.py",
+    "python scripts/bishop/refine_base_pigment.py --out build/bishop-mission/133-base-channel-balance --clipped-bound-weight 1 --max-gain 2",
+    "blender --background --python-exit-code 1 --python scripts/bishop/apply_atlas_trial.py -- --source history/bishop-mission-015/bishop-rebuilt.blend --atlas build/bishop-mission/132-base-pigment/albedo.png --variant 132-base-pigment --samples 512",
+    "python scripts/bishop/mission_compare.py --render build/bishop-mission/132-base-pigment/wood.png --previous history/bishop-mission-015/render.png --out build/bishop-mission/132-base-pigment/comparison",
+    "python scripts/bishop/material_statistics.py history/bishop-mission-015/render.png build/bishop-mission/132-base-pigment/wood.png --out build/bishop-mission/132-base-pigment/material-statistics.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/apply_atlas_trial.py -- --source history/bishop-mission-015/bishop-rebuilt.blend --atlas build/bishop-mission/133-base-channel-balance/albedo.png --variant 133-base-channel-balance --samples 512",
+    "python scripts/bishop/mission_compare.py --render build/bishop-mission/133-base-channel-balance/wood.png --previous history/bishop-mission-015/render.png --out build/bishop-mission/133-base-channel-balance/comparison",
+    "python scripts/bishop/material_statistics.py history/bishop-mission-015/render.png build/bishop-mission/133-base-channel-balance/wood.png --out build/bishop-mission/133-base-channel-balance/material-statistics.json"
+  ],
+  "environment": "Blender 5.2.2 Cycles OPTIX; ordinary Python with NumPy and Pillow.",
+  "scripts": {
+    "scripts/bishop/prepare_spatial_polish.py": "4f6f0395f76e8c014096bc9e8a24954097839f60354bbce4422f8b2201452ec1",
+    "scripts/bishop/probe_spatial_polish.py": "57bcb2223552f48ceeaaf70d55e0faf3cc27ea20a6d4eb21adb4be2d479091f6",
+    "scripts/bishop/analyze_spatial_polish.py": "e69e57ca27773a4bc3740c3b8d5d5f59c9c19733ec0bd7d7aaa08680e7e0b508",
+    "scripts/bishop/probe_base_receiver.py": "b06942be0b0b7c96f3bea5a7ae14b8b539f4f63177577080cdfcd521a865c40f",
+    "scripts/bishop/analyze_base_reflection.py": "55b06c1f305292272a478c54490975cacdfd8aff1053727633fb96aa3dca8ced",
+    "scripts/bishop/render_material_diagnostics.py": "22a229a078c0b9ed02d0e6d2331fbfccbc7e89c1fd6b757c0a9d0579771159b7",
+    "scripts/bishop/fit_base_light_power.py": "3a53616f1beb3378eaf5917cdf1ad53bde4c4566cc7e4e0f1abd99f2ce31f876",
+    "scripts/bishop/capture_material_response.py": "2d36f8df4a4663a5f0899037dc1e73058447f3d91ea1d5051a76bc29b082c75d",
+    "scripts/bishop/refine_base_pigment.py": "11df88b06efa5edc4ea722b048725cedf5afb49b838d40403ae93224839baccd",
+    "scripts/bishop/record_base_finish_study.py": "42ca60494ae4079d6be6aabe9071396ca7bf5b749b4a356a55785907753d89b9"
+  },
+  "note": "Rejected diagnostics and trials only. Do not overwrite accepted model/review assets. EXR/NumPy working arrays are reproducible scratch data and are not repository assets."
+}

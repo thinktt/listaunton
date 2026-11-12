@@ -25,7 +25,10 @@ def loss(factor):
     return float((np.abs(predicted-r).mean(2)*w).sum()/w.sum())
 factors=np.linspace(0,12,601);losses=np.array([loss(float(f)) for f in factors]);best=float(factors[losses.argmin()])
 cfg=json.loads((ROOT/a.config).read_text());lamp=cfg['lights'][0]
-record={'note':'Predicted fit from actual 96-sample BSDF passes, not a rendered result or fidelity score. Power only; geometry, material and beam stay fixed.',
+response_manifest=(ROOT/a.on).parent/'manifest.json'
+response_samples=json.loads(response_manifest.read_text()).get('samples') if response_manifest.exists() else None
+record={'note':'Predicted fit from actual on/off BSDF passes, not a rendered result or fidelity score. Power only; geometry, material and beam stay fixed.',
+ 'measured_samples':response_samples,
  'on':a.on,'off':a.off,'fit_box':[500,920,670,1090],'core_weight':4,'foot_weight':2,
  'old_power':lamp['energy'],'power_factor':best,'new_power':lamp['energy']*best,
  'weighted_predicted_rgb_mae_before':loss(1)*255,'weighted_predicted_rgb_mae_after':loss(best)*255,

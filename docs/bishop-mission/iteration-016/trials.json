@@ -1,0 +1,48 @@
+[
+  {
+    "trial": "132-base-pigment",
+    "decision": "rejected",
+    "samples": 512,
+    "source_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+    "model_sha256": "0627641de5abfef16f40daa29722e0af50e8300b7d1bb79aa854bb6608cd23ac",
+    "render_sha256": "1193f2f8dc77bf3f1168bcbe231918d2090bbc6a1198b8af62f9b34811359b0f",
+    "atlas_sha256": "8e1ddc4c76cc5d84a211cb978d3980321c58cebf6c1d35e0e1d9a82a5c4c0660",
+    "scores_percent": {
+      "silhouette": 96.10946013611408,
+      "interior": 84,
+      "color": 85,
+      "texture": 78,
+      "lighting": 77
+    },
+    "mean_percent": 84.02189202722282,
+    "silhouette_measured_other_ratings_subjective": true,
+    "reason": "Lower pixel error does not remove the local green/yellow patch or recover the reference glint structure. Retain checkpoint 015.",
+    "saved_and_reopened": true,
+    "packed_pixel_max_error": 0,
+    "full_promotion_audit_run": false,
+    "validation_limit": "Rejected by visual comparison before the independent whole-scene promotion audit; never synchronized as current."
+  },
+  {
+    "trial": "133-base-channel-balance",
+    "decision": "rejected",
+    "samples": 512,
+    "source_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+    "model_sha256": "0ba1aecc36d8d85cd6c4b48e6fc70e30afe07bcaa06da45d367fc53471fbec36",
+    "render_sha256": "7aaf3c6c278e2b06440ea0b2a50fe4a1fdcca9b9ef9a95a658b39d6de3b9ea7e",
+    "atlas_sha256": "e67baef07e83e8b077ceb41aa3a8a8b7088afe16d6f266a2ad0c103cbe12003a",
+    "scores_percent": {
+      "silhouette": 96.10946013611408,
+      "interior": 84,
+      "color": 85,
+      "texture": 78,
+      "lighting": 77
+    },
+    "mean_percent": 84.02189202722282,
+    "silhouette_measured_other_ratings_subjective": true,
+    "reason": "Lower pixel error does not remove the local green/yellow patch or recover the reference glint structure. Retain checkpoint 015.",
+    "saved_and_reopened": true,
+    "packed_pixel_max_error": 0,
+    "full_promotion_audit_run": false,
+    "validation_limit": "Rejected by visual comparison before the independent whole-scene promotion audit; never synchronized as current."
+  }
+]

@@ -1,18 +1,29 @@
-"""Separate pigment, bump and lighting in a rear view; never save diagnostic shaders."""
+"""Separate pigment, bump and lighting; never save diagnostic shaders."""
 import argparse,hashlib,json,math,sys
 from pathlib import Path
 import bpy
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--out',required=True)
+p.add_argument('--fixed-view',action='store_true',help='Preserve the saved reference camera and image dimensions.')
+p.add_argument('--crop',type=int,nargs=4,metavar=('X0','Y0','X1','Y1'))
+p.add_argument('--samples',type=int,default=64)
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:]);source=ROOT/a.source;out=ROOT/a.out;out.mkdir(parents=True,exist_ok=True)
 digest=hashlib.sha256(source.read_bytes()).hexdigest();bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
 target=Vector((0,0,2.1));e=math.radians(28);az=math.radians(120);cam=s.camera
-cam.location=target+Vector((10*math.sin(az)*math.cos(e),-10*math.cos(az)*math.cos(e),10*math.sin(e)))
-cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler();cam.scale=(1,1,1);cam.data.shift_x=0;cam.data.shift_y=0;cam.data.ortho_scale=6
-s.render.resolution_x=s.render.resolution_y=768;s.render.resolution_percentage=100;s.render.use_border=False
+if not a.fixed_view:
+    cam.location=target+Vector((10*math.sin(az)*math.cos(e),-10*math.cos(az)*math.cos(e),10*math.sin(e)))
+    cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler();cam.scale=(1,1,1);cam.data.shift_x=0;cam.data.shift_y=0;cam.data.ortho_scale=6
+    s.render.resolution_x=s.render.resolution_y=768
+s.render.resolution_percentage=100;s.render.use_border=False
+if a.crop:
+    x0,y0,x1,y1=a.crop;w,h=s.render.resolution_x,s.render.resolution_y
+    assert 0<=x0<x1<=w and 0<=y0<y1<=h
+    s.render.use_border=True;s.render.use_crop_to_border=False
+    s.render.border_min_x=x0/w;s.render.border_max_x=x1/w
+    s.render.border_min_y=1-y1/h;s.render.border_max_y=1-y0/h
 s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA';s.render.image_settings.color_depth='8'
-s.cycles.samples=64;s.cycles.use_adaptive_sampling=False;s.cycles.use_denoising=True;s.render.use_persistent_data=True
+s.cycles.samples=a.samples;s.cycles.use_adaptive_sampling=False;s.cycles.use_denoising=True;s.render.use_persistent_data=True
 prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='OPTIX';prefs.get_devices()
 for d in prefs.devices:d.use=d.type=='OPTIX'
 if any(d.use for d in prefs.devices):s.cycles.device='GPU'
@@ -39,5 +50,7 @@ for mat in mats:
     bs.inputs['Base Color'].default_value=(.2,.08,.015,1)
 render('constant-pigment-no-relief-diagnostic')
 assert hashlib.sha256(source.read_bytes()).hexdigest()==digest
-(out/'manifest.json').write_text(json.dumps({'source':a.source,'source_sha256':digest,'source_unchanged':True,'camera':'Same rear-oblique diagnostic: elevation 28, azimuth 120, scale 6, 768 square.',
- 'samples':64,'adaptive_sampling':False,'diagnostics_only':True,'note':'Pigment emission is a measurement only; other views are real BSDF isolation renders. No diagnostic scene is saved or promoted.'},indent=2)+'\n')
+(out/'manifest.json').write_text(json.dumps({'source':a.source,'source_sha256':digest,'source_unchanged':True,
+ 'camera':'Saved reference camera and dimensions, unchanged.' if a.fixed_view else 'Same rear-oblique diagnostic: elevation 28, azimuth 120, scale 6, 768 square.',
+ 'crop':a.crop,'samples':a.samples,'adaptive_sampling':False,'diagnostics_only':True,
+ 'note':'Pigment emission is a measurement only; other views are real BSDF isolation renders. No diagnostic scene is saved or promoted.'},indent=2)+'\n')

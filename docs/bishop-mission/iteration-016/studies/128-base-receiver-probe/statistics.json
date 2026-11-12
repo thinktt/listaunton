@@ -1,0 +1,109 @@
+{
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "source_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "metrics": [
+    {
+      "label": "control",
+      "regions": {
+        "base and foot": {
+          "pixels": 117809,
+          "mean_absolute_rgb_error_8bit": 7.940672331202767
+        },
+        "glint": {
+          "pixels": 11700,
+          "mean_absolute_rgb_error_8bit": 24.33190883190883
+        },
+        "foot": {
+          "pixels": 16835,
+          "mean_absolute_rgb_error_8bit": 5.914919314919314
+        }
+      }
+    },
+    {
+      "label": "partition-control",
+      "regions": {
+        "base and foot": {
+          "pixels": 117809,
+          "mean_absolute_rgb_error_8bit": 7.940621401307765
+        },
+        "glint": {
+          "pixels": 11700,
+          "mean_absolute_rgb_error_8bit": 24.331794871794873
+        },
+        "foot": {
+          "pixels": 16835,
+          "mean_absolute_rgb_error_8bit": 5.9148203148203145
+        }
+      }
+    },
+    {
+      "label": "isolated-control",
+      "regions": {
+        "base and foot": {
+          "pixels": 117809,
+          "mean_absolute_rgb_error_8bit": 7.940867562466932
+        },
+        "glint": {
+          "pixels": 11700,
+          "mean_absolute_rgb_error_8bit": 24.331424501424504
+        },
+        "foot": {
+          "pixels": 16835,
+          "mean_absolute_rgb_error_8bit": 5.915354915354915
+        }
+      }
+    },
+    {
+      "label": "isolated-spread6",
+      "regions": {
+        "base and foot": {
+          "pixels": 117809,
+          "mean_absolute_rgb_error_8bit": 7.858038576566023
+        },
+        "glint": {
+          "pixels": 11700,
+          "mean_absolute_rgb_error_8bit": 22.49732193732194
+        },
+        "foot": {
+          "pixels": 16835,
+          "mean_absolute_rgb_error_8bit": 6.963706563706563
+        }
+      }
+    },
+    {
+      "label": "isolated-spread12",
+      "regions": {
+        "base and foot": {
+          "pixels": 117809,
+          "mean_absolute_rgb_error_8bit": 8.151912559029162
+        },
+        "glint": {
+          "pixels": 11700,
+          "mean_absolute_rgb_error_8bit": 22.579800569800568
+        },
+        "foot": {
+          "pixels": 16835,
+          "mean_absolute_rgb_error_8bit": 9.211820611820611
+        }
+      }
+    },
+    {
+      "label": "isolated-size04-spread6",
+      "regions": {
+        "base and foot": {
+          "pixels": 117809,
+          "mean_absolute_rgb_error_8bit": 7.998701287677512
+        },
+        "glint": {
+          "pixels": 11700,
+          "mean_absolute_rgb_error_8bit": 22.95860398860399
+        },
+        "foot": {
+          "pixels": 16835,
+          "mean_absolute_rgb_error_8bit": 7.431779031779031
+        }
+      }
+    }
+  ],
+  "note": "Actual BSDF crop errors at fixed registration. Shared opaque foreground eroded four pixels. Provisional powers are not optimized. These are not full-model fidelity percentages."
+}

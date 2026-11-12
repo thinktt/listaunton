@@ -1,0 +1,82 @@
+{
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "source_unchanged": true,
+  "fields": "build/bishop-mission/126-polish-fields/manifest.json",
+  "fields_sha256": "4ac8cf71f952396bea819971c900dc35ef0195ece1264d1cff9f60bbcd4f3772",
+  "samples": 512,
+  "crop": [
+    240,
+    825,
+    780,
+    1170
+  ],
+  "fixed_camera": true,
+  "diagnostics_only": true,
+  "variants": [
+    {
+      "parameters": {
+        "label": "control"
+      },
+      "render_sha256": "b5413b61dc1c738968e6312322beba14c6ca94739fe1a18c9741dc526824207e"
+    },
+    {
+      "parameters": {
+        "label": "coat-grain",
+        "path": "build/bishop-mission/126-polish-fields/coat-grain.npy",
+        "sha256": "f422f03aa9c34f7aeb17844505262714913c7554fe90eca2e41ae0c92b929ae5",
+        "base_amplitude": 0,
+        "coat_amplitude": 0.08,
+        "sign": 1,
+        "base_range": [
+          0.23000000417232513,
+          0.23000000417232513
+        ],
+        "coat_range": [
+          0.02000001072883606,
+          0.18000000715255737
+        ]
+      },
+      "render_sha256": "fddfa4726a6fa1595c779b0ba4c45a7243ff458c5a44d27fa235596b5a6e0b2d"
+    },
+    {
+      "parameters": {
+        "label": "base-and-coat",
+        "path": "build/bishop-mission/126-polish-fields/base-and-coat.npy",
+        "sha256": "9f18e681c8b084317bb1c646d56208e0e37983d80f7d7b7cc5ce0ef72b79874c",
+        "base_amplitude": 0.1,
+        "coat_amplitude": 0.08,
+        "sign": 1,
+        "base_range": [
+          0.1300000101327896,
+          0.33000001311302185
+        ],
+        "coat_range": [
+          0.02000001072883606,
+          0.18000000715255737
+        ]
+      },
+      "render_sha256": "af7c84a205886ecc6dda9dde29ba814692b19bd2894a7c5802fb1ddd00d3b4b3"
+    },
+    {
+      "parameters": {
+        "label": "reversed-grain",
+        "path": "build/bishop-mission/126-polish-fields/reversed-grain.npy",
+        "sha256": "f413621bcc745d18d7951abf7dcd6eea4e108ca9ea61bb25a99423b498e7a377",
+        "base_amplitude": 0.1,
+        "coat_amplitude": 0.08,
+        "sign": -1,
+        "base_range": [
+          0.12999999523162842,
+          0.32999998331069946
+        ],
+        "coat_range": [
+          0.020000003278255463,
+          0.17999999225139618
+        ]
+      },
+      "render_sha256": "7cd218a0576d2c54250a2c6dac0d99675e8f4aff8ca76e8e450bba767e40ea93"
+    }
+  ],
+  "note": "Unsaved local roughness probes. Geometry, color, lights and normal/relief inputs unchanged; these crops are not whole-model candidates."
+}

@@ -1,0 +1,23 @@
+{
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "resolution": [
+    1254,
+    1254
+  ],
+  "samples": 512,
+  "crop": [
+    430,
+    860,
+    740,
+    1060
+  ],
+  "diagnostic_only": true,
+  "source_unchanged": true,
+  "view": "Standard",
+  "look": "None",
+  "inverse_roundtrip_max_error": 1.7404556274414062e-05,
+  "inverse_roundtrip_p99_error": 1.049041748046875e-05,
+  "caveat": "Approximate diffuse response under inferred lighting, with interreflection. Inverse transforms may be unreliable near clipping; confidence rejects uncertain pixels. Pigment is inferred, not recovered source artwork."
+}

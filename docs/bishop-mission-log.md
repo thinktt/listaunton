@@ -453,3 +453,26 @@ validated model; delivery hashes and checks are in iteration-015/checkpoint.json
 Checkpoint 013 remains archived. Next investigate fine grain and spatial
 polish variation while preserving this color result. No quota monitoring,
 subagents, publication or push occurred.
+
+## Iteration 016 — base finish research; retain 015 and pause
+
+The current iteration is finished. Grain-dependent polish barely changes the
+base glint. Exact-surface light-receiver probes allow a broader reflector
+without foot spill after correcting the receiver band, but still do not match
+the reference pattern. A pigment-only diagnostic identifies a dark color-map
+patch beneath the glare. Two localized per-channel pigment repairs lower RGB
+error while retaining a visibly wrong yellow-green patch; both are rejected.
+See [`iteration-016/assessment.md`](bishop-mission/iteration-016/assessment.md).
+
+The public checkpoint remains **015**, including the checked Blender model,
+atlas, fixed/side/clay renders, rotating export and HTML/local preview. Its
+scores remain 96.11 / 84 / 86 / 78 / 77, working mean 84.22%, holistic 75–85%.
+The 54-degree camera, original references, selected white candidate 3 and
+gallery proportions are preserved. No failed experiment becomes a public
+model choice. Source and public delivery hashes are recorded in iteration 016.
+
+Toby directed the project manager to have current workers finish their ongoing
+iteration and then pause because these pieces have plateaued. No further
+modeling or render batch is pending; the goal is to be paused after this checked
+record is committed. The full visual-match mission is incomplete. Resume only
+on the owner's direction. No quota monitoring, subagents, publication or push.

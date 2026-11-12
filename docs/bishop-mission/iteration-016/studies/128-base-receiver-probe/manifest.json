@@ -1,0 +1,167 @@
+{
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "source_unchanged": true,
+  "diagnostics_only": true,
+  "samples": 512,
+  "crop": [
+    240,
+    825,
+    780,
+    1170
+  ],
+  "z_band": [
+    0.19,
+    0.99
+  ],
+  "variants": [
+    {
+      "parameters": {
+        "label": "control",
+        "partition": false,
+        "isolated": false,
+        "size": 0.2,
+        "spread": 3,
+        "power_factor": 1
+      },
+      "partition_check": [],
+      "render_sha256": "a35bdb640fcc95332f2ce2bd1f6d92abdfc0be178172c8efdded97d776fc0df0"
+    },
+    {
+      "parameters": {
+        "label": "partition-control",
+        "partition": true,
+        "isolated": false,
+        "size": 0.2,
+        "spread": 3,
+        "power_factor": 1
+      },
+      "partition_check": [
+        {
+          "name": "body-rest",
+          "faces": 45578,
+          "vertices": 46062,
+          "normal_max_component_error": 4.526972770690918e-05,
+          "positions_uvs_materials_attributes_exact": true
+        },
+        {
+          "name": "base-flare",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 3.427267074584961e-06,
+          "positions_uvs_materials_attributes_exact": true
+        }
+      ],
+      "render_sha256": "608648afc881d5512b17d4da9415feeebabdfe540c0dc52d3bb3b51455886f56"
+    },
+    {
+      "parameters": {
+        "label": "isolated-control",
+        "partition": true,
+        "isolated": true,
+        "size": 0.2,
+        "spread": 3,
+        "power_factor": 1
+      },
+      "partition_check": [
+        {
+          "name": "body-rest",
+          "faces": 45578,
+          "vertices": 46062,
+          "normal_max_component_error": 4.526972770690918e-05,
+          "positions_uvs_materials_attributes_exact": true
+        },
+        {
+          "name": "base-flare",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 3.427267074584961e-06,
+          "positions_uvs_materials_attributes_exact": true
+        }
+      ],
+      "render_sha256": "d63e71e60ed3e28a1916e18c863336283629417c3f4b5646cbdf731d3d0fb14d"
+    },
+    {
+      "parameters": {
+        "label": "isolated-spread6",
+        "partition": true,
+        "isolated": true,
+        "size": 0.2,
+        "spread": 6,
+        "power_factor": 4
+      },
+      "partition_check": [
+        {
+          "name": "body-rest",
+          "faces": 45578,
+          "vertices": 46062,
+          "normal_max_component_error": 4.526972770690918e-05,
+          "positions_uvs_materials_attributes_exact": true
+        },
+        {
+          "name": "base-flare",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 3.427267074584961e-06,
+          "positions_uvs_materials_attributes_exact": true
+        }
+      ],
+      "render_sha256": "0254ea834f9e125f80c0b3f21f1d5d01d4109655f3ec756a251aa141fad55383"
+    },
+    {
+      "parameters": {
+        "label": "isolated-spread12",
+        "partition": true,
+        "isolated": true,
+        "size": 0.2,
+        "spread": 12,
+        "power_factor": 16
+      },
+      "partition_check": [
+        {
+          "name": "body-rest",
+          "faces": 45578,
+          "vertices": 46062,
+          "normal_max_component_error": 4.526972770690918e-05,
+          "positions_uvs_materials_attributes_exact": true
+        },
+        {
+          "name": "base-flare",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 3.427267074584961e-06,
+          "positions_uvs_materials_attributes_exact": true
+        }
+      ],
+      "render_sha256": "048140eaf180ba98c345180314746a8f8f8a9c5da3d2f3c5d20b8fec747f7c93"
+    },
+    {
+      "parameters": {
+        "label": "isolated-size04-spread6",
+        "partition": true,
+        "isolated": true,
+        "size": 0.4,
+        "spread": 6,
+        "power_factor": 4
+      },
+      "partition_check": [
+        {
+          "name": "body-rest",
+          "faces": 45578,
+          "vertices": 46062,
+          "normal_max_component_error": 4.526972770690918e-05,
+          "positions_uvs_materials_attributes_exact": true
+        },
+        {
+          "name": "base-flare",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 3.427267074584961e-06,
+          "positions_uvs_materials_attributes_exact": true
+        }
+      ],
+      "render_sha256": "f94d76300114ab174671169d0168b00fe7f862d360fa6a42c4815e1b2b615761"
+    }
+  ],
+  "note": "Actual BSDF crop probes, unchanged geometry/color/normal inputs. Broader lamp illumination confined to exact lower flare faces. Powers are provisional, not fitted. Diagnostic scenes are not saved."
+}
