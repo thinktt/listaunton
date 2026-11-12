@@ -1,0 +1,97 @@
+[
+  {
+    "trial": "083-collar-broad-finish",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "b8b4ff2a5f282481d730a4a9c122b71d616e8bbd8a28b5334b2e4a330c8b0fb3",
+    "render_sha256": "e2a270ab158fe40d2c009226566fe78166a7d1a2cdc13d28525e99da2196134f",
+    "decision": "Useful broader collar finish; superseded by normal/color refinements."
+  },
+  {
+    "trial": "084-collar-normal-field",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "e1574855b9e4bea5d05913541b86838f35ddc26eb1dbb478019839f8b1b9d1ac",
+    "render_sha256": "ee3669935dc233e82d0dfc99c1b2359339cc8e6d55af748045845d6bf24d2cbd",
+    "decision": "Improved reflected grain; superseded by the warmer reflectors and finer normal pass."
+  },
+  {
+    "trial": "086-warm-collar-reflections",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "e413b334cba58181b1dbefdf1e47a0b9177dffe0d8931e9805610712d1b13cb8",
+    "render_sha256": "4b795c65e53ce8b5409d070246d677436f41f638c3cd4bdebb1d8fbed84eff69",
+    "decision": "Improved right/front color, supported by the original. The front red-power adjustment hit its conservative bound; refined in 087."
+  },
+  {
+    "trial": "087-front-collar-tint",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "9fd8ebc7fba565e03e8c671ab36136a0578ebd49cbabdf97cfa946182f479fb0",
+    "render_sha256": "a479763ffcc8c22987db8cdf4c6434d315e9533f728de56fd7340b0981883779",
+    "decision": "Selected reflector colors, with remaining grain refined in 088."
+  },
+  {
+    "trial": "088-finer-collar-grain",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "71de4237a5bba80e839b04788621a449a919469b4f4d063f9124c393d674d6f2",
+    "render_sha256": "4084c00ea0b84d7071505164d6032a32a77d1057a4fb818053a510d2594f9bdc",
+    "decision": "Accepted after saved-model scope and independent replay checks. The collar finish and normal field improves fine reflection shape, and two existing reflectors better match the selected color, supported by the warmer original. Native original RGB error rises by about 0.02; whole-piece ratings are held because visible residuals remain."
+  }
+]

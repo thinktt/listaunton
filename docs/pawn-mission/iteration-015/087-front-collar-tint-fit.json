@@ -1,0 +1,151 @@
+{
+  "config": {
+    "source": "build/pawn-mission/086-warm-collar-reflections/pawn.blend",
+    "source_sha256": "e413b334cba58181b1dbefdf1e47a0b9177dffe0d8931e9805610712d1b13cb8",
+    "variant": "087-front-collar-tint",
+    "samples": 512,
+    "lights": [
+      "Lower collar glint"
+    ],
+    "crop": [
+      370,
+      535,
+      592,
+      648
+    ],
+    "step": 0.12,
+    "limit": 0.25,
+    "ridge": 0.003,
+    "rates": [
+      0.5,
+      1
+    ],
+    "regions": [
+      {
+        "box": [
+          425,
+          570,
+          509,
+          594
+        ],
+        "weight": 4
+      },
+      {
+        "box": [
+          405,
+          588,
+          481,
+          630
+        ],
+        "weight": 3
+      },
+      {
+        "box": [
+          516,
+          578,
+          569,
+          617
+        ],
+        "weight": 3
+      },
+      {
+        "box": [
+          495,
+          616,
+          558,
+          642
+        ],
+        "weight": 3
+      }
+    ]
+  },
+  "before": [
+    {
+      "name": "Lower collar glint",
+      "energy": 0.1427866518497467,
+      "color": [
+        1.0,
+        0.46227046847343445,
+        0.24104458093643188
+      ]
+    }
+  ],
+  "after": [
+    {
+      "name": "Lower collar glint",
+      "energy": 0.15061980911176123,
+      "color": [
+        1.0,
+        0.4460281523867863,
+        0.20985167498451318
+      ]
+    }
+  ],
+  "proposed": [
+    0.053407270227597115,
+    0.01763919281815933,
+    -0.08517365772873489
+  ],
+  "selected": [
+    0.053407270227597115,
+    0.01763919281815933,
+    -0.08517365772873489
+  ],
+  "records": {
+    "baseline": {
+      "parameters": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "loss": 0.004122105944668261,
+      "sha256": "65ae2419197bd2c70f4284788e149a1e1a44f98b3ee458a5669e02801edb2e92"
+    },
+    "response-0": {
+      "parameters": [
+        0.12,
+        0.0,
+        0.0
+      ],
+      "loss": 0.004122491547309979,
+      "sha256": "8f79a3722d46e4ae049442fce1f2992e525b30251da20f861d3a2dcfb1b910d6"
+    },
+    "response-1": {
+      "parameters": [
+        0.0,
+        0.12,
+        0.0
+      ],
+      "loss": 0.004123508374452007,
+      "sha256": "0b60172b4025cb378ba96b9150550c3dbd78af18b2c382000ba1b9814296cfd5"
+    },
+    "response-2": {
+      "parameters": [
+        0.0,
+        0.0,
+        0.12
+      ],
+      "loss": 0.004125269022501746,
+      "sha256": "d49af34f8e45dd716ef2c4c1a6aa06bbe44a17fb96905c0d0198c7c142cc3718"
+    },
+    "step-0.5": {
+      "parameters": [
+        0.026703635113798557,
+        0.008819596409079665,
+        -0.042586828864367446
+      ],
+      "loss": 0.004121384601598032,
+      "sha256": "8355cde90998f4706667ef14d61f2c33a3dbf25894f0cd6da4898289f8d3a326"
+    },
+    "step-1": {
+      "parameters": [
+        0.053407270227597115,
+        0.01763919281815933,
+        -0.08517365772873489
+      ],
+      "loss": 0.0041204204955069,
+      "sha256": "73f3429e83966d121a7e66fc48895213b736d0d86a42cc59b77b23506fff9862"
+    }
+  },
+  "method": "Actual rendered per-channel power derivatives; bounded log-gain and independent full-image evaluation. Only existing lamp color/energy changes."
+}

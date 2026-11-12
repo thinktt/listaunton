@@ -1,0 +1,536 @@
+{
+  "config": {
+    "source": "build/pawn-mission/084-collar-normal-field/pawn.blend",
+    "source_sha256": "e1574855b9e4bea5d05913541b86838f35ddc26eb1dbb478019839f8b1b9d1ac",
+    "measurement": "collar-lamps-084",
+    "samples": 512,
+    "crop": [
+      370,
+      535,
+      592,
+      648
+    ],
+    "groups": {
+      "left-ribbon": [
+        "Collar left ribbon"
+      ],
+      "ribbon-tip": [
+        "Collar tip of ribbon"
+      ],
+      "right-flank": [
+        "Collar right flank"
+      ],
+      "lower-glint": [
+        "Lower collar glint"
+      ]
+    }
+  },
+  "lights": [
+    {
+      "name": "Left head glint",
+      "power": 2.3068480491638184,
+      "color": [
+        1.0,
+        0.2597499489784241,
+        0.12098134309053421
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Upper head glint",
+      "power": 1.1351019144058228,
+      "color": [
+        1.0,
+        0.2806975543498993,
+        0.07993601262569427
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Right head glint",
+      "power": 0.630704402923584,
+      "color": [
+        1.0,
+        0.28527653217315674,
+        0.06055203080177307
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Upper head glint core",
+      "power": 2.3231687545776367,
+      "color": [
+        1.0,
+        0.2806975543498993,
+        0.07993601262569427
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Right head glint core",
+      "power": 1.5328316688537598,
+      "color": [
+        1.0,
+        0.28527653217315674,
+        0.06055203080177307
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Base upper",
+      "power": 0.38810569047927856,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Foot right",
+      "power": 0.5878307223320007,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Foot front",
+      "power": 0.04045619070529938,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.5
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Foot center-right",
+      "power": 0.11972080916166306,
+      "color": [
+        1.0,
+        0.6899999976158142,
+        0.49000000953674316
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Foot edge outer left",
+      "power": 0.5031619668006897,
+      "color": [
+        1.0,
+        0.6700000166893005,
+        0.5
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Foot edge center left",
+      "power": 0.6387251615524292,
+      "color": [
+        1.0,
+        0.7099999785423279,
+        0.49000000953674316
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Left polish core",
+      "power": 0.17766346037387848,
+      "color": [
+        1.0,
+        0.3435402810573578,
+        0.17404334247112274
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Upper polish core",
+      "power": 0.7186764478683472,
+      "color": [
+        1.0,
+        0.37705639004707336,
+        0.1390191614627838
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Right polish core",
+      "power": 0.7280065417289734,
+      "color": [
+        1.0,
+        0.3975164592266083,
+        0.11783098429441452
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare left edge",
+      "power": 0.020248202607035637,
+      "color": [
+        1.0,
+        0.37699800729751587,
+        0.1696580946445465
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare left taper",
+      "power": 0.03094121813774109,
+      "color": [
+        1.0,
+        0.37699800729751587,
+        0.1696580946445465
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare left lip",
+      "power": 0.018656767904758453,
+      "color": [
+        1.0,
+        0.4341188967227936,
+        0.20516791939735413
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare right inner",
+      "power": 0.01145761739462614,
+      "color": [
+        1.0,
+        0.351510614156723,
+        0.14171035587787628
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare right edge",
+      "power": 0.07910601794719696,
+      "color": [
+        1.0,
+        0.351510614156723,
+        0.14171035587787628
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare front lip",
+      "power": 0.0025612679310142994,
+      "color": [
+        1.0,
+        0.40476977825164795,
+        0.17137065529823303
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare lip taper",
+      "power": 0.012449936009943485,
+      "color": [
+        1.0,
+        0.40476977825164795,
+        0.17137065529823303
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Right bounce",
+      "power": 88.7192153930664,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Back bounce",
+      "power": 165.07427978515625,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "High left card",
+      "power": 95.73224639892578,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Lower front bounce",
+      "power": 2.218817710876465,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Lower right bounce",
+      "power": 2.041436195373535,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Upper face bounce",
+      "power": 0.7638178467750549,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Front shadow key",
+      "power": 23.973630905151367,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Front shadow feather",
+      "power": 643.0450439453125,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "diffuse": true,
+      "glossy": false
+    },
+    {
+      "name": "Socket right",
+      "power": 1.3917787075042725,
+      "color": [
+        1.0,
+        0.32736650109291077,
+        0.1104549914598465
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare left sweep",
+      "power": 0.16110479831695557,
+      "color": [
+        1.0,
+        0.37699800729751587,
+        0.1696580946445465
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare left center",
+      "power": 0.34790489077568054,
+      "color": [
+        1.0,
+        0.37699800729751587,
+        0.1696580946445465
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare right sweep",
+      "power": 0.16274282336235046,
+      "color": [
+        1.0,
+        0.351510614156723,
+        0.14171035587787628
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Flare right lip",
+      "power": 0.0915931761264801,
+      "color": [
+        1.0,
+        0.40476977825164795,
+        0.17137065529823303
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Upper stem rim",
+      "power": 0.0017277590231969953,
+      "color": [
+        1.0,
+        0.800000011920929,
+        0.6600000262260437
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Lower stem rim",
+      "power": 0.0003212390001863241,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5600000023841858
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Socket lip core",
+      "power": 0.05734500288963318,
+      "color": [
+        1.0,
+        0.8399999737739563,
+        0.6800000071525574
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Right flare core",
+      "power": 0.023406486958265305,
+      "color": [
+        1.0,
+        0.8299999833106995,
+        0.6600000262260437
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Outer flare line",
+      "power": 0.0059013208374381065,
+      "color": [
+        1.0,
+        0.8199999928474426,
+        0.6399999856948853
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Foot lip core",
+      "power": 0.02023303136229515,
+      "color": [
+        1.0,
+        0.8199999928474426,
+        0.6600000262260437
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Collar left ribbon",
+      "power": 0.048960402607917786,
+      "color": [
+        1.0,
+        0.6200000047683716,
+        0.4300000071525574
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Collar tip of ribbon",
+      "power": 0.05534058436751366,
+      "color": [
+        1.0,
+        0.6499999761581421,
+        0.47999998927116394
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Collar right flank",
+      "power": 0.01955823227763176,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.47999998927116394
+      ],
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Lower collar glint",
+      "power": 0.09104479104280472,
+      "color": [
+        1.0,
+        0.7400000095367432,
+        0.5
+      ],
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "groups": {
+    "left-ribbon": [
+      "Collar left ribbon"
+    ],
+    "ribbon-tip": [
+      "Collar tip of ribbon"
+    ],
+    "right-flank": [
+      "Collar right flank"
+    ],
+    "lower-glint": [
+      "Lower collar glint"
+    ]
+  },
+  "renders": {
+    "all": "a8814c0d7730ffc211ccee26dc27e8312388aa3dadf5e98751a31e5496ea05e2",
+    "without-left-ribbon": "a87f93d67fcb7ca110c2a0c82ddec743d243e45e01cffeaa92cf08c17d93a299",
+    "without-ribbon-tip": "e694d1b4abdf31d3b6c4e388ca281efa88676dc9821d4edf359980d93cbbe256",
+    "without-right-flank": "3d06cd796b137329c83d0fec98ea88867730471f277f4045cd716a8bc820ceb4",
+    "without-lower-glint": "f3ff09ed214ebb75c6356224870ff2bc87426414296b6f00a7a1f94d215f3e0a",
+    "direct-gloss-only": "fa399331fd459215ff5d80fbb2ee9989470050740f906dde3ac2b851cacabc4b"
+  }
+}

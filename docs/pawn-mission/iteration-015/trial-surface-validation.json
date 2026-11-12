@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "source_sha256": "e876a4a803bde6f2a1f98a9b059b83b325c4b2d4dae94b8a05de1c1a42b26ab9",
+  "model_sha256": "71de4237a5bba80e839b04788621a449a919469b4f4d063f9124c393d674d6f2",
+  "camera_above_board": 54,
+  "mesh_normals_uv_unchanged": true,
+  "lights_total": 44,
+  "lights_unchanged": 42,
+  "changed_lamp_colors": {
+    "Collar right flank": {
+      "energy": 0.022733593359589577,
+      "color": [
+        1.0,
+        0.5583459734916687,
+        0.38852551579475403
+      ]
+    },
+    "Lower collar glint": {
+      "energy": 0.15061980485916138,
+      "color": [
+        1.0,
+        0.4460281431674957,
+        0.2098516821861267
+      ]
+    }
+  },
+  "all_lamp_positions_shapes_and_visibility_preserved": true,
+  "world_ray_depth_unchanged": true,
+  "pigment_and_prior_relief_unchanged": {
+    "Earlier pigment | pawn-walnut-v2.png": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+    "Pawn walnut pigment": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400"
+  },
+  "full_shader_graph_and_matte_band_preserved": true,
+  "sampling": {
+    "samples": 512,
+    "seed": 0,
+    "light_tree": false,
+    "denoising": true
+  },
+  "uv_focus": [
+    0.672,
+    0.688,
+    0.736,
+    0.746
+  ],
+  "maps": {
+    "finish": {
+      "file": "assets/pawn/pawn-varnish-v9.png",
+      "sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+      "outside_focus_identical": true,
+      "changed_fraction": 0.0018351078033447266
+    },
+    "slopes": {
+      "file": "assets/pawn/pawn-fine-slopes-v10.png",
+      "sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+      "outside_focus_identical": true,
+      "changed_fraction": 0.0022966861724853516
+    }
+  }
+}

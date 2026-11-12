@@ -1,0 +1,79 @@
+{
+  "config": {
+    "source": "history/pawn-mission-014/pawn-rebuilt.blend",
+    "source_sha256": "e876a4a803bde6f2a1f98a9b059b83b325c4b2d4dae94b8a05de1c1a42b26ab9",
+    "measurement": "collar-broad-finish-014",
+    "samples": 512,
+    "crop": [
+      370,
+      548,
+      598,
+      648
+    ],
+    "uv_focus": [
+      0.672,
+      0.688,
+      0.736,
+      0.746
+    ],
+    "rough_scales": [
+      0.5,
+      1,
+      1.85
+    ],
+    "polish_scales": [
+      0.5,
+      1,
+      1.75
+    ]
+  },
+  "poses": {
+    "response-0-0": {
+      "rough": 0.5,
+      "polish": 0.5,
+      "sha256": "81e012093c4c4ea2e77157fdd5672ea3a0b34b370d267aa446adc083bcabb622"
+    },
+    "response-0-1": {
+      "rough": 0.5,
+      "polish": 1,
+      "sha256": "5f1c7fdce5ada07e0335cb36c85a1b22dbbc676697766d406ae188829cd250dd"
+    },
+    "response-0-2": {
+      "rough": 0.5,
+      "polish": 1.75,
+      "sha256": "94e1b8d1513ade353f4f3fdec4bdde53efa9a75ba43600aa6908bfc13f2107dc"
+    },
+    "response-1-0": {
+      "rough": 1,
+      "polish": 0.5,
+      "sha256": "59bb748143983a1dfc42b329352df889a0cea8081d8b1a4475fde7ee2eaadb6d"
+    },
+    "flat": {
+      "rough": 1,
+      "polish": 1,
+      "sha256": "a7b698c6910bf79df3f02fe0e92f58425db83f6f65b147bb6a460823ef44ff78"
+    },
+    "response-1-2": {
+      "rough": 1,
+      "polish": 1.75,
+      "sha256": "16ddd576c9896d8432d8abc0d267de00d82af4631128ae0a772b55b197ecbc0e"
+    },
+    "response-2-0": {
+      "rough": 1.85,
+      "polish": 0.5,
+      "sha256": "1214d406bc188829e22a8ab289b9e1432c5913663a267bb84f1239885dbbfc40"
+    },
+    "response-2-1": {
+      "rough": 1.85,
+      "polish": 1,
+      "sha256": "b8482faf24a875f9a14a386266b9f4145986ee17f411f7f46f904a26facc098a"
+    },
+    "response-2-2": {
+      "rough": 1.85,
+      "polish": 1.75,
+      "sha256": "f376b2cfc3aca3fa8afef3347864288cd21b9866c52b67010c22a70b52861e00"
+    }
+  },
+  "independent_sha256": "1c8b2447b32e4ad9128d657dc8200622114827d04415fa244ce4b6757f1d32f7",
+  "method": "Actual fixed-view Cycles responses for nine combinations of roughness and reflectance on wood and coat. A second seed measures where noise competes with the material signal."
+}

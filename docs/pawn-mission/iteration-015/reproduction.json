@@ -1,0 +1,53 @@
+{
+  "variant": "089-collar-finish-replay",
+  "source": "history/pawn-mission-014/pawn-rebuilt.blend",
+  "source_sha256": "e876a4a803bde6f2a1f98a9b059b83b325c4b2d4dae94b8a05de1c1a42b26ab9",
+  "finish": {
+    "texture": "assets/pawn/pawn-varnish-v9.png",
+    "texture_sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+    "range": [
+      0.3,
+      2.4
+    ],
+    "polish_range": [
+      0.38,
+      1.85
+    ]
+  },
+  "slopes": {
+    "texture": "assets/pawn/pawn-fine-slopes-v10.png",
+    "texture_sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+    "max_slope": 0.135
+  },
+  "texture": "assets/pawn/pawn-walnut-v11.png",
+  "texture_sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+  "samples": 512,
+  "seed": 0,
+  "light_tree": false,
+  "uv_focus": [
+    0.672,
+    0.688,
+    0.736,
+    0.746
+  ],
+  "lamp_colors": [
+    {
+      "name": "Collar right flank",
+      "energy": 0.02273359365216454,
+      "color": [
+        1,
+        0.5583459687498841,
+        0.3885255060887767
+      ]
+    },
+    {
+      "name": "Lower collar glint",
+      "energy": 0.15061980911176123,
+      "color": [
+        1,
+        0.4460281523867863,
+        0.20985167498451318
+      ]
+    }
+  ]
+}

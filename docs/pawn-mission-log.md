@@ -435,3 +435,37 @@ for actual layer ablations, rejected lighting changes, reproduction and
 saved-model checks. The mission remains incomplete. Next examine the
 larger collar residual at reference x=437-469, y=606-638, while preserving
 the accepted stem, head and base refinements.
+
+## Checkpoint 015 · 2026-11-12
+
+The collar now has finer reflected grain and warmer right/front highlights.
+Local finish and normal maps change, along with the color/power of two
+existing reflectors. Geometry, pigment, camera, every lamp's position and
+shape, and the other 42 lamps remain unchanged. Actual source and relief
+isolation rejected removal of the existing texture layers.
+
+| Metric | Checkpoint 014 | Checkpoint 015 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 94 | 94 |
+| Lighting | 92 | 92 |
+| Working mean | 93.36% | 93.36% |
+
+Left/right/front collar pattern correlations improve from
+0.837/0.825/0.871 to 0.893/0.872/0.892. The right reflection's color is
+close to the selected image; the front is warmer but still differs. The
+original sprite supports that color direction. Collar/stem RGB error falls
+from 2.303 to 2.206. Native original RGB error rises slightly from 16.61
+to 16.63. Contact-profile error improves from 3.48 to 3.45, while its dark
+core rises from 6.53 to 6.64 against the reference's 4.19.
+
+The whole-piece ratings remain estimates, with a holistic range of 90-95%.
+Original black/white IoU remain 98.499%/98.135%. The local improvement is
+insufficient to raise those whole-piece ratings. See the
+[checkpoint evidence](pawn-mission/iteration-015/README.md) for measured
+responses, color statistics, tradeoffs, scope checks and independent replay.
+The mission remains incomplete. Next examine the base-groove/foot residual
+at reference x=545-577, y=930-962, distinguishing profile, material and light
+effects while preserving the accepted collar, stem and head finish.

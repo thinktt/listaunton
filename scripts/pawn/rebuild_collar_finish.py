@@ -21,6 +21,9 @@ def run(cfg):
     scene["pawn_texture_path"]=cfg["texture"];scene["pawn_texture_sha256"]=cfg["texture_sha256"]
     scene.cycles.use_light_tree=cfg["light_tree"];scene.cycles.seed=cfg["seed"]
     scene["pawn_sampling"]=json.dumps({"samples":cfg["samples"],"light_tree":cfg["light_tree"],"seed":cfg["seed"]},sort_keys=True)
+    if cfg.get('lamp_colors'):
+        from fit_lamp_colors import install
+        install(scene,cfg['lamp_colors'])
     validate(scene,body);save_trial(scene,cfg)
 
 if __name__=="__main__":

@@ -20,7 +20,8 @@ def fingerprint(scene,body):
         lamps[o.name]={"matrix":[list(row) for row in o.matrix_world],
                       "energy":d.energy,"color":list(d.color),"type":d.type,
                       "diffuse":o.visible_diffuse,"glossy":o.visible_glossy,
-                      "settings":{k:getattr(d,k) for k in ("shape","size","size_y","spread","shadow_soft_size","normalize") if hasattr(d,k)}}
+                      "settings":{k:getattr(d,k) for k in ("shape","size","size_y","spread","shadow_soft_size","normalize","use_shadow","use_nodes","diffuse_factor","specular_factor","volume_factor","transmission_factor") if hasattr(d,k)},
+                      "visibility":{k:getattr(o,k) for k in ("visible_camera","visible_shadow","visible_transmission","visible_volume_scatter") if hasattr(o,k)}}
     n=body.data.materials[0].node_tree.nodes
     images={x.name:hashlib.sha256(x.image.packed_file.data).hexdigest() for x in n if x.type=="TEX_IMAGE" and x.image and x.image.packed_file and x.name!="Pawn varnish roughness"}
     bs=n["Principled BSDF"]

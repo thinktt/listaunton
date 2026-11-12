@@ -1,0 +1,61 @@
+{
+  "source": "build/pawn-mission/084-collar-normal-field/pawn.blend",
+  "source_sha256": "e1574855b9e4bea5d05913541b86838f35ddc26eb1dbb478019839f8b1b9d1ac",
+  "variant": "086-warm-collar-reflections",
+  "samples": 512,
+  "lights": [
+    "Collar right flank",
+    "Lower collar glint"
+  ],
+  "crop": [
+    370,
+    535,
+    592,
+    648
+  ],
+  "step": 0.18,
+  "limit": 0.45,
+  "ridge": 0.003,
+  "rates": [
+    0.5,
+    1
+  ],
+  "regions": [
+    {
+      "box": [
+        425,
+        570,
+        509,
+        594
+      ],
+      "weight": 4
+    },
+    {
+      "box": [
+        405,
+        588,
+        481,
+        630
+      ],
+      "weight": 3
+    },
+    {
+      "box": [
+        516,
+        578,
+        569,
+        617
+      ],
+      "weight": 3
+    },
+    {
+      "box": [
+        495,
+        616,
+        558,
+        642
+      ],
+      "weight": 3
+    }
+  ]
+}

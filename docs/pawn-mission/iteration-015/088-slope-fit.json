@@ -1,0 +1,137 @@
+{
+  "config": {
+    "measurement": "collar-fine-slopes-087",
+    "geometry_measurement": "pigment-060",
+    "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+    "pigment": "assets/pawn/pawn-walnut-v11.png",
+    "prior_texture": "assets/pawn/pawn-fine-slopes-v9.png",
+    "prior_sha256": "14df7064185e3304e941e325ece65bbf6a72d0fa25e3b00539fcb5df960e4dfb",
+    "prior_slope_limit": 0.135,
+    "max_slope": 0.135,
+    "prior_255": 12,
+    "broad_scale_fraction": 0.6,
+    "delta_scale": 0.8,
+    "uv_focus": [
+      0.672,
+      0.688,
+      0.736,
+      0.746
+    ],
+    "texture": "assets/pawn/pawn-fine-slopes-v10.png"
+  },
+  "source": {
+    "config": {
+      "source": "build/pawn-mission/087-front-collar-tint/pawn.blend",
+      "source_sha256": "9fd8ebc7fba565e03e8c671ab36136a0578ebd49cbabdf97cfa946182f479fb0",
+      "measurement": "collar-fine-slopes-087",
+      "samples": 512,
+      "crop": [
+        375,
+        548,
+        594,
+        646
+      ],
+      "step": 0.08,
+      "rings": [
+        0.018,
+        0.045
+      ],
+      "directions": 8
+    },
+    "pass_sha256": {
+      "flat": "96e3eb01cfd3a4c4d952ee3f21809161e0568005941a93e82ef2475b7a4c1608",
+      "ring-0-0": "fdffacf498f276af5b42e5008e635b1ba7fee48038afef8a7f9a8a37d8e9b457",
+      "ring-0-1": "c7d908c4be1bceeb1082c53099aa0387fabff367e203699b1d9ef61d40ebde56",
+      "ring-0-2": "8c14b96f9b5c861e971975acbb54eb1678eb149214e13d2899fb10e83dbfa5be",
+      "ring-0-3": "8a0b3599f7db2e9916fe496621abcb67b2b96976753731e7896e4370ebcd1dca",
+      "ring-0-4": "c06de16a2733b481b6a40ad6340fcd21013dd71e32b48300a0e49b0407c9521f",
+      "ring-0-5": "4327772388bc63b7d1553be86d561f358b9dfa369f2bd3bba3bcfe000efe2475",
+      "ring-0-6": "58068e46fadd5f1e0a99499218f734c863537e0cb3203e959f60b533ed1fd139",
+      "ring-0-7": "fb9fd5e8ce5d2ef7dbd3401385f0212b1027fd16a63d3fcb9c51dc374f2efc92",
+      "ring-1-0": "e81dd3a2826e81dff2c6190c42b352e9031d42bfaaa1db2c50978d4ae7532644",
+      "ring-1-1": "43e891dcfdf90036b8b38f8bc9791800d18dd43299b0a74c562e9c3d4964df73",
+      "ring-1-2": "50f903ba8a490529c8cea5d3c8a96f087b15538181877c6c9c6aeea7be9e19c5",
+      "ring-1-3": "4d710803dffaa65f6b28aa9b8d0386f8ec7567001b7206d7fbb57155f011c936",
+      "ring-1-4": "880c513d1f5c41681adbf3e72319e8ab543556bcd754524286be16a6441fe2ba",
+      "ring-1-5": "b13e019fe33413a71ae2348e96266559b2895f0b71c13bfa07d8b36503ca364b",
+      "ring-1-6": "311c9c28e576b7e6c87f13353c24b6b610d35ad27ee9f1e2b33bee96b577429a",
+      "ring-1-7": "d86829bf42e2664054b91d3feb1754073f09c49f7e9e9336323fd19b1b181c5f"
+    },
+    "poses": {
+      "flat": [
+        0.0,
+        0.0
+      ],
+      "ring-0-0": [
+        0.018,
+        0.0
+      ],
+      "ring-0-1": [
+        0.012727922061357855,
+        0.012727922061357855
+      ],
+      "ring-0-2": [
+        1.1021821192326178e-18,
+        0.018
+      ],
+      "ring-0-3": [
+        -0.012727922061357854,
+        0.012727922061357855
+      ],
+      "ring-0-4": [
+        -0.018,
+        2.2043642384652355e-18
+      ],
+      "ring-0-5": [
+        -0.012727922061357857,
+        -0.012727922061357854
+      ],
+      "ring-0-6": [
+        -3.3065463576978533e-18,
+        -0.018
+      ],
+      "ring-0-7": [
+        0.012727922061357852,
+        -0.012727922061357857
+      ],
+      "ring-1-0": [
+        0.045,
+        0.0
+      ],
+      "ring-1-1": [
+        0.03181980515339464,
+        0.03181980515339464
+      ],
+      "ring-1-2": [
+        2.7554552980815448e-18,
+        0.045
+      ],
+      "ring-1-3": [
+        -0.03181980515339464,
+        0.03181980515339464
+      ],
+      "ring-1-4": [
+        -0.045,
+        5.5109105961630896e-18
+      ],
+      "ring-1-5": [
+        -0.031819805153394644,
+        -0.03181980515339464
+      ],
+      "ring-1-6": [
+        -8.266365894244633e-18,
+        -0.045
+      ],
+      "ring-1-7": [
+        0.03181980515339463,
+        -0.031819805153394644
+      ]
+    },
+    "method": "Actual Cycles renders with slopes in the wood UV tangent frame. Hold all lights, pigment, roughness, existing grain, geometry and camera."
+  },
+  "sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+  "confident_observed_pixels": 1407,
+  "median_angle_degrees": 0.6474010944366455,
+  "q99_angle_degrees": 3.16908860206604,
+  "max_angle_degrees": 7.688447952270508
+}

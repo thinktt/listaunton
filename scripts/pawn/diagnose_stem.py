@@ -21,6 +21,10 @@ def run(cfg):
             'diffuse':[o for o in lamps if o.visible_diffuse]}
     if cfg.get('groups'):
         groups={key:[scene.objects[name] for name in names] for key,names in cfg['groups'].items()}
+    if cfg.get('cover_all'):
+        covered={ob.name for objects in groups.values() for ob in objects}
+        remaining=[ob for ob in lamps if ob.name not in covered]
+        if remaining:groups['other']=remaining
     record={'config':cfg,'lights':[{'name':o.name,'power':o.data.energy,'color':list(o.data.color),
                                    'diffuse':o.visible_diffuse,'glossy':o.visible_glossy} for o in lamps],
             'groups':{k:[o.name for o in v] for k,v in groups.items()},'renders':{}}

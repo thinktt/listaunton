@@ -33,8 +33,24 @@ def run(cfg,target,out):
     prior={key:pixels(n[name].image) for key,name in MAPS.items()}
     bpy.ops.wm.open_mainfile(filepath=str(target),load_ui=False)
     scene=bpy.context.scene;fixed_camera(scene);body=control(scene);new=fingerprint(scene,body)
-    for key in ('evaluated_mesh_normals_uv_sha256','lights','world','ray_depth','prior_finish_inputs'):
+    for key in ('evaluated_mesh_normals_uv_sha256','world','ray_depth','prior_finish_inputs'):
         assert old[key]==new[key],key
+    permitted={row['name']:row for row in cfg.get('lamp_colors',[])}
+    assert len(permitted)==len(cfg.get('lamp_colors',[])),'Duplicate lamp-color specification'
+    assert set(old['lights'])==set(new['lights']) and set(permitted)<=set(old['lights'])
+    changed_colors={}
+    for name,previous in old['lights'].items():
+        current=dict(new['lights'][name]);before=dict(previous)
+        if name in permitted:
+            spec=permitted[name]
+            assert not current['diffuse'] and current['glossy']
+            assert np.isfinite(spec['energy']) and spec['energy']>0
+            assert len(spec['color'])==3 and all(np.isfinite(v) and 0<=v<=1 for v in spec['color'])
+            assert np.isclose(current['energy'],spec['energy'],atol=1e-8,rtol=1e-6),name
+            assert np.allclose(current['color'],spec['color'],atol=1e-7,rtol=0),name
+            changed_colors[name]={'energy':current['energy'],'color':current['color']}
+            for key in ('energy','color'):current[key]=before[key]
+        assert current==before,'Unexpected lamp change: '+name
     unchanged_images={k:v for k,v in old['other_packed_images'].items() if k not in MAPS.values()}
     assert unchanged_images=={k:v for k,v in new['other_packed_images'].items() if k not in MAPS.values()}
     assert graph(surface(body),tuple(MAPS.values()))==old_graph,'Full BSDF graph changed'
@@ -54,7 +70,9 @@ def run(cfg,target,out):
                      'outside_focus_identical':True,'changed_fraction':float(np.any(a!=b,axis=2).mean())}
     report={'passed':True,'source_sha256':sha(source),'model_sha256':sha(target),
             'camera_above_board':54,'mesh_normals_uv_unchanged':True,
-            'lights_unchanged':len(new['lights']),'world_ray_depth_unchanged':True,
+            'lights_total':len(new['lights']),'lights_unchanged':len(new['lights'])-len(permitted),
+            'changed_lamp_colors':changed_colors,'all_lamp_positions_shapes_and_visibility_preserved':True,
+            'world_ray_depth_unchanged':True,
             'pigment_and_prior_relief_unchanged':unchanged_images,
             'full_shader_graph_and_matte_band_preserved':True,
             'sampling':old_sampling,'uv_focus':cfg['uv_focus'],'maps':checks}

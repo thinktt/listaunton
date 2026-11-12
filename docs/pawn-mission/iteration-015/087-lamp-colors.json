@@ -1,0 +1,60 @@
+{
+  "source": "build/pawn-mission/086-warm-collar-reflections/pawn.blend",
+  "source_sha256": "e413b334cba58181b1dbefdf1e47a0b9177dffe0d8931e9805610712d1b13cb8",
+  "variant": "087-front-collar-tint",
+  "samples": 512,
+  "lights": [
+    "Lower collar glint"
+  ],
+  "crop": [
+    370,
+    535,
+    592,
+    648
+  ],
+  "step": 0.12,
+  "limit": 0.25,
+  "ridge": 0.003,
+  "rates": [
+    0.5,
+    1
+  ],
+  "regions": [
+    {
+      "box": [
+        425,
+        570,
+        509,
+        594
+      ],
+      "weight": 4
+    },
+    {
+      "box": [
+        405,
+        588,
+        481,
+        630
+      ],
+      "weight": 3
+    },
+    {
+      "box": [
+        516,
+        578,
+        569,
+        617
+      ],
+      "weight": 3
+    },
+    {
+      "box": [
+        495,
+        616,
+        558,
+        642
+      ],
+      "weight": 3
+    }
+  ]
+}

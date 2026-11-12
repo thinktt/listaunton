@@ -1,0 +1,26 @@
+{
+  "source": "build/pawn-mission/084-collar-normal-field/pawn.blend",
+  "source_sha256": "e1574855b9e4bea5d05913541b86838f35ddc26eb1dbb478019839f8b1b9d1ac",
+  "measurement": "collar-lamps-084",
+  "samples": 512,
+  "crop": [
+    370,
+    535,
+    592,
+    648
+  ],
+  "groups": {
+    "left-ribbon": [
+      "Collar left ribbon"
+    ],
+    "ribbon-tip": [
+      "Collar tip of ribbon"
+    ],
+    "right-flank": [
+      "Collar right flank"
+    ],
+    "lower-glint": [
+      "Lower collar glint"
+    ]
+  }
+}
