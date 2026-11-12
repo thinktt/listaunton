@@ -1,0 +1,16 @@
+{
+  "prediction_reference_mae": 13.38764476776123,
+  "actual_reference_mae_same_mask": 13.205939292907715,
+  "prediction_actual_mae_same_mask": 3.034384250640869,
+  "mean_prediction_rgb": [
+    152.13954162597656,
+    97.4190444946289,
+    45.96443557739258
+  ],
+  "mean_actual_rgb": [
+    152.03717041015625,
+    97.2823486328125,
+    47.45570755004883
+  ],
+  "note": "Saved actual full render reduced in linear RGB, same fitting mask; prediction is not an accepted image."
+}

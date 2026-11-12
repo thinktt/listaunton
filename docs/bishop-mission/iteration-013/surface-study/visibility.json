@@ -1,0 +1,20 @@
+{
+  "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+  "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "atlas": "history/bishop-mission-012/bishop-boxwood-albedo.png",
+  "atlas_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "valid_texels": 3544267,
+  "measured_visible_texels": 1377401,
+  "visible_fraction": 0.3886278883616838,
+  "visible_with_legacy_confidence_below_98_percent": 496327,
+  "legacy_transition_texels": 532407,
+  "transition_visible_fraction": 0.8864646783381886,
+  "mean_broad_gradient_on_visible_transition": 0.012485402636229992,
+  "mean_broad_gradient_on_hidden_transition": 0.013113386929035187,
+  "thresholds": {
+    "depth_tolerance_world_units": 0.02,
+    "nearest_neighborhood_pixels": 3,
+    "facing_dot_min": -0.005
+  },
+  "method": "Atlas positions are reprojected into an independently rendered fixed-view position field. A conservative 3x3 neighborhood and depth tolerance protect grazing/antialiased edges. This is a visibility measurement, not a final material."
+}

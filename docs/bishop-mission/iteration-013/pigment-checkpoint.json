@@ -1,0 +1,10 @@
+{
+  "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+  "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "atlas": "assets/bishop/bishop-boxwood-albedo.png",
+  "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "config": "scripts/bishop/pigment-106.json",
+  "config_sha256": "7d5b3bab3d7c09f5b09b5327fc5368fcb5ceca6fcd71c34848be3a3cf5ab82ec",
+  "description": "Smooth bounded boxwood color lift on socket, stem and collars. Foot, lower base, head and button atlas pixels remain exact. Old relief, geometry, lamps and 54-degree camera are retained.",
+  "residual_limitation": "The inherited pigment retains broad illumination and a side/rear projection boundary. This local grade does not resolve intrinsic texture/lighting separation."
+}

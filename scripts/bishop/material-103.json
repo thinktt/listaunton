@@ -1,0 +1,22 @@
+{
+  "source": "build/bishop-mission/102-fitted-continuous-wood/bishop.blend",
+  "variant": "103-continuous-wood-pore-relief",
+  "samples": 128,
+  "inputs": [
+    {
+      "material": "Bishop — inferred boxwood pigment and varnish.001",
+      "node": "Subtle pigment and pores",
+      "input": "Fac",
+      "expected_before": 0.27,
+      "value": 1.0
+    },
+    {
+      "material": "Bishop — inferred boxwood pigment and varnish.001",
+      "node": "Wood micro relief",
+      "input": "Distance",
+      "expected_before": 0.009,
+      "value": 0.00243
+    }
+  ],
+  "hypothesis": "Remove projected pigment from surface relief while retaining the previous pore-height coefficient. The continuous pigment and fitted diffuse rig remain exact."
+}

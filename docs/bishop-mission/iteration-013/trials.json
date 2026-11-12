@@ -1,0 +1,224 @@
+[
+  {
+    "trial": "100-coherent-pigment",
+    "decision": "rejected",
+    "reason": "Removing broad pigment variation loses the fixed-view color and contrast; the retained high-pass carries false tonal bands.",
+    "scores_percent": {
+      "silhouette": 96.11093004651714,
+      "interior": 84,
+      "color": 68,
+      "texture": 68,
+      "lighting": 67
+    },
+    "mean_percent": 76.62218600930342,
+    "holistic_range_percent": [
+      65,
+      75
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "model_sha256": "b4cb488cdfa7fd78be30831cd85b309d4faf4ad60fd682cea26c647b1d7b2a87",
+    "render_sha256": "321d35f75ed95b491c831a37614dcab159f48e901093fadb692abdd614b66692",
+    "fixed_camera_degrees": 54,
+    "samples": 128,
+    "source_geometry_unchanged": true,
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9611093004651714,
+        "legacy_raw_model_mask_iou": 0.9611093004651714
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778547732693308,
+        "legacy_raw_model_mask_iou": 0.9778547732693308
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666070992686169,
+        "legacy_raw_model_mask_iou": 0.9666070992686169
+      }
+    }
+  },
+  {
+    "trial": "102-fitted-continuous-wood",
+    "decision": "rejected",
+    "reason": "Measured global diffuse lights improve the flat-pigment control but cannot restore regional color and contrast. Actual render confirms the rejection.",
+    "scores_percent": {
+      "silhouette": 96.11093004651714,
+      "interior": 84,
+      "color": 73,
+      "texture": 69,
+      "lighting": 70
+    },
+    "mean_percent": 78.42218600930343,
+    "holistic_range_percent": [
+      65,
+      75
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "model_sha256": "847291a98e9e47c9fa083d145c985161743c89a75625ec95cab6fe3166347c4e",
+    "render_sha256": "7ed9c7cc44a07e0ca01cbe62325d069ec8c9ffc9a30eacbe1a2c2084dbc04960",
+    "fixed_camera_degrees": 54,
+    "samples": 128,
+    "source_geometry_unchanged": true,
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9611093004651714,
+        "legacy_raw_model_mask_iou": 0.9611093004651714
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778547732693308,
+        "legacy_raw_model_mask_iou": 0.9778547732693308
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666070992686169,
+        "legacy_raw_model_mask_iou": 0.9666070992686169
+      }
+    }
+  },
+  {
+    "trial": "103-continuous-wood-pore-relief",
+    "decision": "rejected",
+    "reason": "Removing pigment from relief barely changes fixed-view error. Rear color is more continuous but the reference view stays too flat and plastic.",
+    "scores_percent": {
+      "silhouette": 96.11093004651714,
+      "interior": 84,
+      "color": 73,
+      "texture": 69,
+      "lighting": 70
+    },
+    "mean_percent": 78.42218600930343,
+    "holistic_range_percent": [
+      65,
+      75
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "model_sha256": "3e50f21267adf64af0dcd56adb4fbb7b097769d456d9ae5b79be2e5c31254df0",
+    "render_sha256": "33e69c4ccf7533315db74bccf74ea406dd96c5a260230e191bb57f16a6ad62cc",
+    "fixed_camera_degrees": 54,
+    "samples": 128,
+    "source_geometry_unchanged": true,
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9611093004651714,
+        "legacy_raw_model_mask_iou": 0.9611093004651714
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778547732693308,
+        "legacy_raw_model_mask_iou": 0.9778547732693308
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666070992686169,
+        "legacy_raw_model_mask_iou": 0.9666070992686169
+      }
+    }
+  },
+  {
+    "trial": "104-measured-hidden-continuation",
+    "decision": "rejected",
+    "reason": "Protecting measured visible texels preserves the front but leaves the conspicuous side/rear patch essentially unchanged; tiny error movement is not a visual improvement.",
+    "scores_percent": {
+      "silhouette": 96.11093004651714,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 77
+    },
+    "mean_percent": 83.62218600930342,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "model_sha256": "2eac80e842dc06c17e372cd17a554b08f2433b67cac321cbae933aa0a665130b",
+    "render_sha256": "6e60d228afe63a6e3efc528dbf20469df67b8c62c28bf3e4c1f33c96c75a361f",
+    "fixed_camera_degrees": 54,
+    "samples": 128,
+    "source_geometry_unchanged": true,
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9611093004651714,
+        "legacy_raw_model_mask_iou": 0.9611093004651714
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778547732693308,
+        "legacy_raw_model_mask_iou": 0.9778547732693308
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666070992686169,
+        "legacy_raw_model_mask_iou": 0.9666070992686169
+      }
+    }
+  },
+  {
+    "trial": "105-bounded-regional-boxwood-grade",
+    "decision": "rejected",
+    "reason": "Socket, stem and collar color improve, but foot error increases and base error does not improve; reject the broad grade.",
+    "scores_percent": {
+      "silhouette": 96.11093004651714,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 77
+    },
+    "mean_percent": 83.62218600930342,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "model_sha256": "d81670fe5c2e67c5aad9782e1865f0309a6d87d68a93d4d373450391c488e605",
+    "render_sha256": "9accaac84fffb66113d45e893eaf5f54f5159e630fdaad9112595788e94432ae",
+    "fixed_camera_degrees": 54,
+    "samples": 128,
+    "source_geometry_unchanged": true,
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9611093004651714,
+        "legacy_raw_model_mask_iou": 0.9611093004651714
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778547732693308,
+        "legacy_raw_model_mask_iou": 0.9778547732693308
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666070992686169,
+        "legacy_raw_model_mask_iou": 0.9666070992686169
+      }
+    }
+  },
+  {
+    "trial": "106-middle-body-boxwood-grade",
+    "decision": "accepted after finalization",
+    "reason": "Restrict the grade to socket, stem and collars. Keep protected foot, lower-base, head and button atlas pixels exact. Accepted only after the full saved-file checks.",
+    "scores_percent": {
+      "silhouette": 96.11093004651714,
+      "interior": 84,
+      "color": 85,
+      "texture": 77,
+      "lighting": 77
+    },
+    "mean_percent": 83.82218600930342,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "model_sha256": "dd6a6f546ce155fbf137a4640c4b0d18a04d9b7bdcca82f80e69f38a8b04fced",
+    "render_sha256": "6d4df8f284733a73bdd16a78c55b0333f2f98497f97226e8152e9351acf49ca3",
+    "fixed_camera_degrees": 54,
+    "samples": 128,
+    "source_geometry_unchanged": true,
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9611093004651714,
+        "legacy_raw_model_mask_iou": 0.9611093004651714
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778547732693308,
+        "legacy_raw_model_mask_iou": 0.9778547732693308
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666070992686169,
+        "legacy_raw_model_mask_iou": 0.9666070992686169
+      }
+    }
+  }
+]

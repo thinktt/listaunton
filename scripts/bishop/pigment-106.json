@@ -1,0 +1,90 @@
+{
+  "source": "history/bishop-mission-012/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "capture": "build/bishop-mission/099-atlas-surface",
+  "variant": "106-middle-body-boxwood-grade",
+  "amount": 1.0,
+  "height_gain_knots": [
+    [
+      0,
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      0.96,
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      1.12,
+      [
+        1.16,
+        1.21,
+        1.25
+      ]
+    ],
+    [
+      1.28,
+      [
+        1.16,
+        1.21,
+        1.25
+      ]
+    ],
+    [
+      1.52,
+      [
+        1.04,
+        1.06,
+        1.12
+      ]
+    ],
+    [
+      2.6,
+      [
+        1.04,
+        1.06,
+        1.12
+      ]
+    ],
+    [
+      2.82,
+      [
+        1.05,
+        1.07,
+        1.12
+      ]
+    ],
+    [
+      3.3,
+      [
+        1.05,
+        1.07,
+        1.12
+      ]
+    ],
+    [
+      3.43,
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      5,
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  ],
+  "hypothesis": "Keep only the beneficial middle-body color lift from trial 105. Foot, lower base, head and button pigment remain exact; the socket, stem and collars receive a smooth all-azimuth grade. Geometry, grain layout, relief and lights remain fixed. Existing side projection boundaries remain unresolved."
+}

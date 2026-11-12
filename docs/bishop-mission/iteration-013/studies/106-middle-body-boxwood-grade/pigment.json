@@ -1,0 +1,112 @@
+{
+  "config": "scripts/bishop/pigment-106.json",
+  "config_sha256": "7d5b3bab3d7c09f5b09b5327fc5368fcb5ceca6fcd71c34848be3a3cf5ab82ec",
+  "parameters": {
+    "source": "history/bishop-mission-012/bishop-boxwood-albedo.png",
+    "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+    "capture": "build/bishop-mission/099-atlas-surface",
+    "variant": "106-middle-body-boxwood-grade",
+    "amount": 1.0,
+    "height_gain_knots": [
+      [
+        0,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        0.96,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        1.12,
+        [
+          1.16,
+          1.21,
+          1.25
+        ]
+      ],
+      [
+        1.28,
+        [
+          1.16,
+          1.21,
+          1.25
+        ]
+      ],
+      [
+        1.52,
+        [
+          1.04,
+          1.06,
+          1.12
+        ]
+      ],
+      [
+        2.6,
+        [
+          1.04,
+          1.06,
+          1.12
+        ]
+      ],
+      [
+        2.82,
+        [
+          1.05,
+          1.07,
+          1.12
+        ]
+      ],
+      [
+        3.3,
+        [
+          1.05,
+          1.07,
+          1.12
+        ]
+      ],
+      [
+        3.43,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    ],
+    "hypothesis": "Keep only the beneficial middle-body color lift from trial 105. Foot, lower base, head and button pigment remain exact; the socket, stem and collars receive a smooth all-azimuth grade. Geometry, grain layout, relief and lights remain fixed. Existing side projection boundaries remain unresolved."
+  },
+  "capture_source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "position_field_sha256": "a47c617d941feedaf5fea940c6e23ecdaeaa7475f4256a96f356cdc8726d1716",
+  "valid_mask_sha256": "c84f74c56d8b64b781c9d8e0ebf1100beebc50c1ef691316d961cd719ff3abbd",
+  "output_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "changed_texels": 1335271,
+  "alpha_and_non_surface_pixels_unchanged": true,
+  "surface_gain_min": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "surface_gain_max": [
+    1.16,
+    1.21,
+    1.25
+  ],
+  "clipped_surface_channel_values": 0,
+  "status": "Unaccepted real-pigment trial; fresh BSDF renders and saved scope audit required."
+}

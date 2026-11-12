@@ -1,0 +1,144 @@
+{
+  "config": "scripts/bishop/pigment-105.json",
+  "config_sha256": "a1dd80f112c832d7d0875df88b145e2d25e08a06b05c635b955882ac20a2c239",
+  "parameters": {
+    "source": "history/bishop-mission-012/bishop-boxwood-albedo.png",
+    "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+    "capture": "build/bishop-mission/099-atlas-surface",
+    "variant": "105-bounded-regional-boxwood-grade",
+    "amount": 1.0,
+    "height_gain_knots": [
+      [
+        0.0,
+        [
+          1.07,
+          1.11,
+          1.28
+        ]
+      ],
+      [
+        0.25,
+        [
+          1.07,
+          1.11,
+          1.28
+        ]
+      ],
+      [
+        0.44,
+        [
+          1.12,
+          1.18,
+          1.32
+        ]
+      ],
+      [
+        0.9,
+        [
+          1.12,
+          1.18,
+          1.32
+        ]
+      ],
+      [
+        1.08,
+        [
+          1.16,
+          1.21,
+          1.25
+        ]
+      ],
+      [
+        1.28,
+        [
+          1.16,
+          1.21,
+          1.25
+        ]
+      ],
+      [
+        1.52,
+        [
+          1.04,
+          1.06,
+          1.12
+        ]
+      ],
+      [
+        2.6,
+        [
+          1.04,
+          1.06,
+          1.12
+        ]
+      ],
+      [
+        2.82,
+        [
+          1.05,
+          1.07,
+          1.12
+        ]
+      ],
+      [
+        3.3,
+        [
+          1.05,
+          1.07,
+          1.12
+        ]
+      ],
+      [
+        3.5,
+        [
+          1.0,
+          1.02,
+          1.1
+        ]
+      ],
+      [
+        4.35,
+        [
+          1.0,
+          1.02,
+          1.1
+        ]
+      ],
+      [
+        4.45,
+        [
+          1.04,
+          1.08,
+          1.13
+        ]
+      ],
+      [
+        4.65,
+        [
+          1.04,
+          1.08,
+          1.13
+        ]
+      ]
+    ],
+    "hypothesis": "A modest, smooth height-dependent pigment lift reduces measured regional darkness and excessive brown without changing the grain layout, geometry, camera, relief or lamps. All azimuths receive the same height grade. This does not repair the existing side projection boundary."
+  },
+  "capture_source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "position_field_sha256": "a47c617d941feedaf5fea940c6e23ecdaeaa7475f4256a96f356cdc8726d1716",
+  "valid_mask_sha256": "c84f74c56d8b64b781c9d8e0ebf1100beebc50c1ef691316d961cd719ff3abbd",
+  "output_sha256": "3c8d8a443d0eef800c7af4077876331376cdeed06d983fbf621611cb7489fdc4",
+  "changed_texels": 3543802,
+  "alpha_and_non_surface_pixels_unchanged": true,
+  "surface_gain_min": [
+    1.0,
+    1.02,
+    1.1
+  ],
+  "surface_gain_max": [
+    1.16,
+    1.21,
+    1.32
+  ],
+  "clipped_surface_channel_values": 0,
+  "status": "Unaccepted real-pigment trial; fresh BSDF renders and saved scope audit required."
+}

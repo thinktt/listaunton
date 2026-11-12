@@ -8,6 +8,8 @@ from bishop_scene import editable_meshes,render_meshes
 from validate_render_receivers import check as check_receivers
 p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--out',required=True);p.add_argument('--samples',type=int,default=96)
 p.add_argument('--fixed-samples',action='store_true')
+p.add_argument('--atlas',default='assets/bishop/bishop-boxwood-albedo.png')
+p.add_argument('--pigment-checkpoint',help='Declared accepted atlas change, verified separately by validate_mission.')
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:]);source=ROOT/a.source;dest=ROOT/a.out
 assert dest.resolve().is_relative_to((ROOT/'build/bishop-mission').resolve())
 dest.mkdir(parents=True,exist_ok=True);source_hash=hashlib.sha256(source.read_bytes()).hexdigest()
@@ -15,6 +17,13 @@ bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
 camera=[float(x) for row in s.camera.matrix_world for x in row]+[s.camera.data.ortho_scale,s.camera.data.shift_x,s.camera.data.shift_y]
 s.cycles.samples=a.samples;s.render.resolution_percentage=100;s.render.use_border=False;s.render.use_crop_to_border=False
 if a.fixed_samples:s.cycles.use_adaptive_sampling=False
+if a.pigment_checkpoint:
+    declaration=json.loads((ROOT/a.pigment_checkpoint).read_text())
+    assert hashlib.sha256((ROOT/a.atlas).read_bytes()).hexdigest()==declaration['atlas_sha256']
+    assert hashlib.sha256((ROOT/declaration['source']).read_bytes()).hexdigest()==declaration['source_sha256']
+    s['bishop_pigment_checkpoint']=json.dumps(declaration,sort_keys=True)
+    s['bishop_albedo_texture']='assets/bishop/bishop-boxwood-albedo.png'
+    s['bishop_albedo_sha256']=declaration['atlas_sha256']
 s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGBA';s.render.image_settings.color_depth='8'
 s.render.filepath=str(dest/'wood.png');bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(dest/'bishop.blend'))
@@ -22,7 +31,7 @@ bpy.ops.wm.open_mainfile(filepath=str(dest/'bishop.blend'),load_ui=False);s=bpy.
 assert camera==[float(x) for row in s.camera.matrix_world for x in row]+[s.camera.data.ortho_scale,s.camera.data.shift_x,s.camera.data.shift_y]
 controls=editable_meshes(s);objects=render_meshes(s)
 receiver_report=check_receivers(s,json.loads(s['bishop_receiver_trial'])) if s.get('bishop_receiver_trial') else {'used':False}
-texture=ROOT/'assets/bishop/bishop-boxwood-albedo.png';checks={}
+texture=ROOT/a.atlas;checks={}
 disk=bpy.data.images.load(str(texture),check_existing=False);disk_pixels=np.array(disk.pixels[:],dtype=np.float32)
 for mat in {m for obj in objects for m in obj.data.materials if m}:
     assert mat.node_tree.nodes['Material Output'].inputs['Surface'].links[0].from_node.type=='BSDF_PRINCIPLED'

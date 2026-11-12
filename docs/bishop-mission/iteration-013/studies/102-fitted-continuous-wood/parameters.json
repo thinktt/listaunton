@@ -1,0 +1,13 @@
+{
+  "source": "build/bishop-mission/100-coherent-pigment/bishop.blend",
+  "source_sha256": "b4cb488cdfa7fd78be30831cd85b309d4faf4ad60fd682cea26c647b1d7b2a87",
+  "fit": "build/bishop-mission/102-fitted-continuous-wood/fit.json",
+  "disabled_diffuse_lights": [
+    "Broad diffuse key",
+    "Diffuse fill"
+  ],
+  "reopened_before_render": true,
+  "samples": 128,
+  "model_sha256": "847291a98e9e47c9fa083d145c985161743c89a75625ec95cab6fe3166347c4e",
+  "render_sha256": "7ed9c7cc44a07e0ca01cbe62325d069ec8c9ffc9a30eacbe1a2c2084dbc04960"
+}

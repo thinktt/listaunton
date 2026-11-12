@@ -1,0 +1,24 @@
+{
+  "source": "history/bishop-mission-012/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "capture": "build/bishop-mission/099-atlas-surface",
+  "variant": "105-bounded-regional-boxwood-grade",
+  "amount": 1.0,
+  "height_gain_knots": [
+    [0.00, [1.07, 1.11, 1.28]],
+    [0.25, [1.07, 1.11, 1.28]],
+    [0.44, [1.12, 1.18, 1.32]],
+    [0.90, [1.12, 1.18, 1.32]],
+    [1.08, [1.16, 1.21, 1.25]],
+    [1.28, [1.16, 1.21, 1.25]],
+    [1.52, [1.04, 1.06, 1.12]],
+    [2.60, [1.04, 1.06, 1.12]],
+    [2.82, [1.05, 1.07, 1.12]],
+    [3.30, [1.05, 1.07, 1.12]],
+    [3.50, [1.00, 1.02, 1.10]],
+    [4.35, [1.00, 1.02, 1.10]],
+    [4.45, [1.04, 1.08, 1.13]],
+    [4.65, [1.04, 1.08, 1.13]]
+  ],
+  "hypothesis": "A modest, smooth height-dependent pigment lift reduces measured regional darkness and excessive brown without changing the grain layout, geometry, camera, relief or lamps. All azimuths receive the same height grade. This does not repair the existing side projection boundary."
+}

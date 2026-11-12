@@ -1,0 +1,37 @@
+{
+  "trial": "102-fitted-continuous-wood",
+  "decision": "rejected",
+  "reason": "Measured global diffuse lights improve the flat-pigment control but cannot restore regional color and contrast. Actual render confirms the rejection.",
+  "scores_percent": {
+    "silhouette": 96.11093004651714,
+    "interior": 84,
+    "color": 73,
+    "texture": 69,
+    "lighting": 70
+  },
+  "mean_percent": 78.42218600930343,
+  "holistic_range_percent": [
+    65,
+    75
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "model_sha256": "847291a98e9e47c9fa083d145c985161743c89a75625ec95cab6fe3166347c4e",
+  "render_sha256": "7ed9c7cc44a07e0ca01cbe62325d069ec8c9ffc9a30eacbe1a2c2084dbc04960",
+  "fixed_camera_degrees": 54,
+  "samples": 128,
+  "source_geometry_unchanged": true,
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9611093004651714,
+      "legacy_raw_model_mask_iou": 0.9611093004651714
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778547732693308,
+      "legacy_raw_model_mask_iou": 0.9778547732693308
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666070992686169,
+      "legacy_raw_model_mask_iou": 0.9666070992686169
+    }
+  }
+}

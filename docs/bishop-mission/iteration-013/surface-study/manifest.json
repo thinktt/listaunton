@@ -1,0 +1,57 @@
+{
+  "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+  "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "source_unchanged": true,
+  "encode_min": [
+    -1.106145477294922,
+    -1.106145477294922,
+    -0.1
+  ],
+  "encode_extent": [
+    2.212290954589844,
+    2.212290954589844,
+    4.792006683349609
+  ],
+  "encode_scale": 0.8,
+  "encode_offset": 0.1,
+  "world_to_clip": [
+    [
+      0.4146730601787567,
+      0.0,
+      0.0,
+      -0.2157922238111496
+    ],
+    [
+      0.0,
+      0.3354775607585907,
+      0.24373871088027954,
+      -0.4402308464050293
+    ],
+    [
+      0.0,
+      0.011767472140491009,
+      -0.016196535900235176,
+      -0.7325082421302795
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "view_direction": [
+    0.0,
+    -0.5877852439880371,
+    0.80901700258255
+  ],
+  "image_size": [
+    1254,
+    1254
+  ],
+  "atlas_size": [
+    2048,
+    2048
+  ],
+  "note": "Unsaved emission measurements of actual evaluated surfaces; diagnostic only, not beauty renders."
+}

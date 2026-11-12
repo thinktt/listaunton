@@ -1,0 +1,22 @@
+{
+  "scores_percent": {
+    "silhouette": 96.10946013611408,
+    "interior": 84,
+    "color": 85,
+    "texture": 77,
+    "lighting": 77
+  },
+  "mean_percent": 83.82189202722282,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "original_white_iou": 0.9778635964437387,
+  "original_black_iou": 0.9666099115524281,
+  "silhouette_is_measured_other_scores_are_visual_estimates": true,
+  "starting_model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "accepted_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "render_sha256": "842e0dfe040928d5e53ca21f376df112eda60a700cdcf9b8960461cbee518d91",
+  "texture_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "status": "Accepted local middle-body wood color improvement; full reconstruction remains incomplete."
+}

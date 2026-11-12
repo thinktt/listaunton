@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+  "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "model": "build/bishop-mission/104-measured-hidden-continuation/bishop.blend",
+  "model_sha256": "2eac80e842dc06c17e372cd17a554b08f2433b67cac321cbae933aa0a665130b",
+  "atlas": "build/bishop-mission/104-measured-hidden-continuation/albedo.png",
+  "atlas_sha256": "7478658e19e2718f837458aedd7a3cf0686887dc8447d5776c5b5bdcc4ac3012",
+  "packed_pixel_max_error": 0.0,
+  "only_declared_atlas_changed": true,
+  "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 53514,
+        "vertices": 53998,
+        "normal_max_component_error": 2.562999725341797e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 4.336237907409668e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "reopened_audit": true
+}

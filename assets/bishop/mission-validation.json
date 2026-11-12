@@ -45,7 +45,7 @@
   "albedo_bakes_lighting": false,
   "texture_hash_matches": true,
   "finite_uvs_and_unit_normals": true,
-  "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
   "declared_slit_revision_validated": true,
   "declared_base_curvature_validated": true,
   "render_receivers": {
@@ -76,28 +76,104 @@
       }
     ],
     "all_faces_once": true,
-    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
-    "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
     "model": "models\\bishop\\bishop-rebuilt.blend",
-    "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
-    "only_declared_light_parameters_and_links_changed": true,
-    "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
-    "camera_world_display_render_path_preserved": true,
-    "reopened_audit": true,
-    "config": {
-      "arc_shadow_soft_size": 0.024,
-      "arc_spot_degrees": 2.0,
-      "exclude_from_socket": [
-        "collars reflection"
+    "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "prior_receiver_audit": {
+      "passed": true,
+      "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+      "evaluated_uv_error_below_1e_7": true,
+      "closed_editable_control_retained": true,
+      "regions": [
+        {
+          "region": "body-rest",
+          "faces": 53514,
+          "vertices": 53998,
+          "normal_max_component_error": 2.562999725341797e-05,
+          "uv_max_component_errors": {
+            "Pigment projection": 5.960464477539063e-08,
+            "Wood atlas": 5.960464477539063e-08
+          }
+        },
+        {
+          "region": "socket-lip",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 4.336237907409668e-05,
+          "uv_max_component_errors": {
+            "Pigment projection": 5.960464477539063e-08,
+            "Wood atlas": 5.960464477539063e-08
+          }
+        }
       ],
-      "samples": 256,
-      "socket_z_band": [
-        0.99,
-        1.38
-      ],
+      "all_faces_once": true,
       "source": "history/bishop-mission-010/bishop-rebuilt.blend",
       "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
-      "variant": "097-socket-receivers-persistent"
-    }
+      "model": "history\\bishop-mission-012\\bishop-rebuilt.blend",
+      "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+      "only_declared_light_parameters_and_links_changed": true,
+      "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
+      "camera_world_display_render_path_preserved": true,
+      "reopened_audit": true,
+      "config": {
+        "arc_shadow_soft_size": 0.024,
+        "arc_spot_degrees": 2.0,
+        "exclude_from_socket": [
+          "collars reflection"
+        ],
+        "samples": 256,
+        "socket_z_band": [
+          0.99,
+          1.38
+        ],
+        "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+        "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+        "variant": "097-socket-receivers-persistent"
+      }
+    },
+    "pigment_scope_audit": {
+      "passed": true,
+      "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+      "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+      "model": "models/bishop/bishop-rebuilt.blend",
+      "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+      "atlas": "assets/bishop/bishop-boxwood-albedo.png",
+      "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+      "packed_pixel_max_error": 0.0,
+      "only_declared_atlas_changed": true,
+      "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
+      "render_receivers": {
+        "passed": true,
+        "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+        "evaluated_uv_error_below_1e_7": true,
+        "closed_editable_control_retained": true,
+        "regions": [
+          {
+            "region": "body-rest",
+            "faces": 53514,
+            "vertices": 53998,
+            "normal_max_component_error": 2.562999725341797e-05,
+            "uv_max_component_errors": {
+              "Pigment projection": 5.960464477539063e-08,
+              "Wood atlas": 5.960464477539063e-08
+            }
+          },
+          {
+            "region": "socket-lip",
+            "faces": 7936,
+            "vertices": 8192,
+            "normal_max_component_error": 4.336237907409668e-05,
+            "uv_max_component_errors": {
+              "Pigment projection": 5.960464477539063e-08,
+              "Wood atlas": 5.960464477539063e-08
+            }
+          }
+        ],
+        "all_faces_once": true
+      },
+      "reopened_audit": true
+    },
+    "geometry_controls_cutter_uvs_and_modifiers_preserved": true,
+    "camera_world_display_render_path_preserved": true,
+    "reopened_audit": true
   }
 }

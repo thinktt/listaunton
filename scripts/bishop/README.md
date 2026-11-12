@@ -186,6 +186,27 @@ The 094/095 scripts are unsaved cropped diagnostics, not accepted substitutes
 for the reopened full render. See iteration 012 for the residual lower-tone
 tradeoff, side/rear texture defect and next work.
 
+Checkpoint 013 retains checkpoint 012's geometry, relief and lighting, with a
+bounded pigment lift only through the socket, stem and collars. Reproduce the
+atlas using `capture_atlas_surface.py`, `analyze_atlas_visibility.py`, then
+`grade_pigment_height.py --config scripts/bishop/pigment-106.json` from the
+archived checkpoint 012. The commands and hashes are recorded in
+`docs/bishop-mission/iteration-013/reproduction.json`. The old broad side/rear
+pigment discontinuity remains unresolved; the continuity studies are rejected.
+
+`apply_atlas_trial.py` and `validate_atlas_trial.py` save/reopen and independently
+check a packed-atlas-only change. `finalize_render.py` accepts an explicit
+`--atlas` and `--pigment-checkpoint` declaration for this revision. Finalize with
+512 fixed samples, then stage the model, render and atlas in an isolated copy.
+`validate_mission.py` keeps the earlier receiver/light audit strict on the
+archived source and follows it with the current scene's atlas-only audit. It
+also runs the existing geometry/anatomy chain and writes pigment-validation.json.
+Do not pass the material-edited model directly to the older light-only audit
+and weaken its comparisons to make it pass. Rebuild fixed/side/clay views and
+both bishop pages; preserve all gallery defaults and source references.
+The local `.gitattributes` preserves `pigment-106.json` bytes because the saved
+checkpoint records its hash; Git must not change that input's line endings.
+
 ## Original geometry construction
 
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.

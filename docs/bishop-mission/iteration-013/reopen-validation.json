@@ -1,0 +1,52 @@
+{
+  "source": "build/bishop-mission/106-middle-body-boxwood-grade/bishop.blend",
+  "source_sha256": "dd6a6f546ce155fbf137a4640c4b0d18a04d9b7bdcca82f80e69f38a8b04fced",
+  "saved_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "render_sha256": "842e0dfe040928d5e53ca21f376df112eda60a700cdcf9b8960461cbee518d91",
+  "texture_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "reopened_packed_pixel_max_errors": {
+    "Bishop \u2014 inferred boxwood pigment and varnish.001": 0.0
+  },
+  "camera_preserved": true,
+  "shader": "Principled BSDF",
+  "samples": 512,
+  "resolution": [
+    1254,
+    1254
+  ],
+  "display": "Standard",
+  "look": "None",
+  "source_unchanged": true,
+  "adaptive_sampling": false,
+  "glossy_bounces": 4,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 53514,
+        "vertices": 53998,
+        "normal_max_component_error": 2.562999725341797e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 4.336237907409668e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "editable_components": 2
+}

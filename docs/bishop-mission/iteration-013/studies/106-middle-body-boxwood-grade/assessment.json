@@ -1,0 +1,37 @@
+{
+  "trial": "106-middle-body-boxwood-grade",
+  "decision": "accepted after finalization",
+  "reason": "Restrict the grade to socket, stem and collars. Keep protected foot, lower-base, head and button atlas pixels exact. Accepted only after the full saved-file checks.",
+  "scores_percent": {
+    "silhouette": 96.11093004651714,
+    "interior": 84,
+    "color": 85,
+    "texture": 77,
+    "lighting": 77
+  },
+  "mean_percent": 83.82218600930342,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "model_sha256": "dd6a6f546ce155fbf137a4640c4b0d18a04d9b7bdcca82f80e69f38a8b04fced",
+  "render_sha256": "6d4df8f284733a73bdd16a78c55b0333f2f98497f97226e8152e9351acf49ca3",
+  "fixed_camera_degrees": 54,
+  "samples": 128,
+  "source_geometry_unchanged": true,
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9611093004651714,
+      "legacy_raw_model_mask_iou": 0.9611093004651714
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778547732693308,
+      "legacy_raw_model_mask_iou": 0.9778547732693308
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666070992686169,
+      "legacy_raw_model_mask_iou": 0.9666070992686169
+    }
+  }
+}

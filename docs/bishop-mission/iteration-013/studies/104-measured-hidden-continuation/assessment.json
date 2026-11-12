@@ -1,0 +1,37 @@
+{
+  "trial": "104-measured-hidden-continuation",
+  "decision": "rejected",
+  "reason": "Protecting measured visible texels preserves the front but leaves the conspicuous side/rear patch essentially unchanged; tiny error movement is not a visual improvement.",
+  "scores_percent": {
+    "silhouette": 96.11093004651714,
+    "interior": 84,
+    "color": 84,
+    "texture": 77,
+    "lighting": 77
+  },
+  "mean_percent": 83.62218600930342,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "model_sha256": "2eac80e842dc06c17e372cd17a554b08f2433b67cac321cbae933aa0a665130b",
+  "render_sha256": "6e60d228afe63a6e3efc528dbf20469df67b8c62c28bf3e4c1f33c96c75a361f",
+  "fixed_camera_degrees": 54,
+  "samples": 128,
+  "source_geometry_unchanged": true,
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9611093004651714,
+      "legacy_raw_model_mask_iou": 0.9611093004651714
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778547732693308,
+      "legacy_raw_model_mask_iou": 0.9778547732693308
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666070992686169,
+      "legacy_raw_model_mask_iou": 0.9666070992686169
+    }
+  }
+}

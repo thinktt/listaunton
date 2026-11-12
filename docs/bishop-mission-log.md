@@ -361,3 +361,33 @@ slit-edge finish and residual socket mismatch remain unresolved. Next inspect
 pigment continuity separately from illumination, consulting the previous
 rejected studies while preserving this accepted fixed-view result. The full
 mission remains active and incomplete. No quota monitoring was performed.
+
+## Iteration 013 — closer middle-body wood color
+
+The owner confirmed that no pause is requested. Work continues at the fixed
+54-degree camera. A conservative color grade lifts only the socket, stem and
+collars, preserving the accepted grain layout, relief, lamps and all geometry.
+Foot, lower-base, head and button atlas pixels remain exact. The saved/reopened
+512-sample render reduces foreground RGB error from 7.6908 to 7.1865 /255, with
+the clearest improvements in the socket and stem. This is a local color gain.
+
+The broader grade is rejected because it worsens the foot. Four other material
+and lighting studies are also rejected. Measured visibility shows that about
+88.65% of the old pigment transition is on visible surfaces: a hidden-only fill
+does not repair the side/rear patch. A continuous flat pigment plus fitted
+diffuse lights improves the rear but loses too much fixed-view fidelity.
+See [`iteration-013/assessment.md`](bishop-mission/iteration-013/assessment.md)
+for the complete evidence, tradeoffs and five-category trial ratings.
+
+Accepted scores are 96.11 / 84 / 85 / 77 / 77, working mean 83.82%, holistic
+fixed-view range 75–85%. Geometry, UV controls, camera and material/light scope
+pass independent reopened checks. Exported geometry is exact; evaluated UVs
+vary by at most one float32 ULP within the existing tolerance. Checkpoint 012
+is archived. The bishop fixed/side/clay views, exported mesh and both review
+pages are refreshed together before the next iteration; checkpoint.json records
+the canonical and preview verification.
+
+The mission remains active and incomplete. The side/rear pigment discontinuity,
+fine grain, collar/socket reflection shapes, base/button glints and slit-edge
+finish still need work. Next target the collar reflection and surface detail
+while preserving this color result. No quota monitoring or publishing occurred.

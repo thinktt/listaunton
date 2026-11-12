@@ -1,0 +1,130 @@
+{
+  "source": "build/bishop-mission/100-coherent-pigment/bishop.blend",
+  "source_sha256": "b4cb488cdfa7fd78be30831cd85b309d4faf4ad60fd682cea26c647b1d7b2a87",
+  "source_unchanged": true,
+  "basis": {
+    "directions": [
+      [
+        15,
+        0
+      ],
+      [
+        15,
+        45
+      ],
+      [
+        15,
+        90
+      ],
+      [
+        15,
+        135
+      ],
+      [
+        15,
+        180
+      ],
+      [
+        15,
+        225
+      ],
+      [
+        15,
+        270
+      ],
+      [
+        15,
+        315
+      ],
+      [
+        45,
+        0
+      ],
+      [
+        45,
+        45
+      ],
+      [
+        45,
+        90
+      ],
+      [
+        45,
+        135
+      ],
+      [
+        45,
+        180
+      ],
+      [
+        45,
+        225
+      ],
+      [
+        45,
+        270
+      ],
+      [
+        45,
+        315
+      ],
+      [
+        75,
+        0
+      ],
+      [
+        75,
+        45
+      ],
+      [
+        75,
+        90
+      ],
+      [
+        75,
+        135
+      ],
+      [
+        75,
+        180
+      ],
+      [
+        75,
+        225
+      ],
+      [
+        75,
+        270
+      ],
+      [
+        75,
+        315
+      ],
+      [
+        -20,
+        0
+      ],
+      [
+        -20,
+        90
+      ],
+      [
+        -20,
+        180
+      ],
+      [
+        -20,
+        270
+      ]
+    ],
+    "sun_angle_degrees": 30
+  },
+  "disabled_diffuse_lights": [
+    "Broad diffuse key",
+    "Diffuse fill"
+  ],
+  "samples": 32,
+  "size": 320,
+  "basis_energy": 1,
+  "note": "Actual real-material BSDF responses. Glossy lamp visibility and glossy environment are preserved; diffuse environment is fitted separately. These are unsaved diagnostic passes, not final renders."
+}

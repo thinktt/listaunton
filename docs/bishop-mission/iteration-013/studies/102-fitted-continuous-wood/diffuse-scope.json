@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "source": "build/bishop-mission/100-coherent-pigment/bishop.blend",
+  "source_sha256": "b4cb488cdfa7fd78be30831cd85b309d4faf4ad60fd682cea26c647b1d7b2a87",
+  "model": "build/bishop-mission/102-fitted-continuous-wood/bishop.blend",
+  "model_sha256": "847291a98e9e47c9fa083d145c985161743c89a75625ec95cab6fe3166347c4e",
+  "fit": "build/bishop-mission/102-fitted-continuous-wood/fit.json",
+  "new_diffuse_lights": 28,
+  "new_light_direction_max_errors": {
+    "Study diffuse 00": 2.9802322387695312e-08,
+    "Study diffuse 01": 1.228781230931777e-07,
+    "Study diffuse 02": 4.1542075378625524e-08,
+    "Study diffuse 03": 6.664001874625056e-08,
+    "Study diffuse 04": 1.1039830220775062e-07,
+    "Study diffuse 05": 6.664001874625056e-08,
+    "Study diffuse 06": 4.1542075378625524e-08,
+    "Study diffuse 07": 1.228781230931777e-07,
+    "Study diffuse 08": 8.429369702178807e-08,
+    "Study diffuse 09": 1.3328003749250113e-07,
+    "Study diffuse 10": 2.250040830404408e-07,
+    "Study diffuse 11": 1.4901161193847656e-07,
+    "Study diffuse 12": 1.0527030685112466e-07,
+    "Study diffuse 13": 1.4901161193847656e-07,
+    "Study diffuse 14": 2.250040830404408e-07,
+    "Study diffuse 15": 1.3328003749250113e-07,
+    "Study diffuse 16": 1.884864366154897e-07,
+    "Study diffuse 17": 6.143906154658885e-08,
+    "Study diffuse 18": 1.3328502629976743e-07,
+    "Study diffuse 19": 3.332000937312528e-08,
+    "Study diffuse 20": 1.8927185450149237e-07,
+    "Study diffuse 21": 3.332000937312528e-08,
+    "Study diffuse 22": 1.3328502629976743e-07,
+    "Study diffuse 23": 6.143906154658885e-08,
+    "Study diffuse 24": 2.9802322387695312e-08,
+    "Study diffuse 25": 1.3013610757118903e-07,
+    "Study diffuse 26": 2.3546471522809913e-08,
+    "Study diffuse 27": 1.3013610757118903e-07
+  },
+  "geometry_material_pixels_uvs_relief_camera_and_render_path_preserved": true,
+  "existing_light_data_and_glossy_visibility_preserved": true,
+  "only_old_diffuse_visibility_disabled": true,
+  "original_glossy_environment_preserved": true,
+  "diffuse_environment_disabled_by_explicit_ray_switch": true,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 53514,
+        "vertices": 53998,
+        "normal_max_component_error": 2.562999725341797e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 4.336237907409668e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "reopened_audit": true
+}

@@ -1,0 +1,18 @@
+{
+  "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+  "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "config": "scripts/bishop/pigment-106.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/capture_atlas_surface.py -- --source history/bishop-mission-012/bishop-rebuilt.blend --out build/bishop-mission/099-atlas-surface",
+    "python scripts/bishop/analyze_atlas_visibility.py --capture build/bishop-mission/099-atlas-surface --atlas history/bishop-mission-012/bishop-boxwood-albedo.png",
+    "python scripts/bishop/grade_pigment_height.py --config scripts/bishop/pigment-106.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/apply_atlas_trial.py -- --source history/bishop-mission-012/bishop-rebuilt.blend --atlas build/bishop-mission/106-middle-body-boxwood-grade/albedo.png --variant 106-middle-body-boxwood-grade --samples 128",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_atlas_trial.py -- --source history/bishop-mission-012/bishop-rebuilt.blend --model build/bishop-mission/106-middle-body-boxwood-grade/bishop.blend --atlas build/bishop-mission/106-middle-body-boxwood-grade/albedo.png --out build/bishop-mission/106-middle-body-boxwood-grade/atlas-scope.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/finalize_render.py -- --source build/bishop-mission/106-middle-body-boxwood-grade/bishop.blend --out build/bishop-mission/106-final --atlas build/bishop-mission/106-middle-body-boxwood-grade/albedo.png --pigment-checkpoint docs/bishop-mission/iteration-013/pigment-checkpoint.json --samples 512 --fixed-samples"
+  ],
+  "expected_atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "accepted_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "environment": "Blender 5.2.2 with Cycles/OPTIX; Python with NumPy/Pillow. Use an isolated copy and preserve archived source bytes.",
+  "follow_up": "Stage the checked model, beauty and atlas only in an isolated copy; run validate_checkpoint.py, render_diagnostics.py, render_clay.py, compare.py, mission_compare.py, refresh_review.py and bishop viewer/review checks before canonical synchronization.",
+  "limits": "No current geometry, relief or lighting edit. PNG grading is only the declared smooth height field. Source albedo contains residual shading; side/rear patch remains. Blender file hashes can vary on regeneration; validate actual geometry, packed pixels, camera and render as well."
+}

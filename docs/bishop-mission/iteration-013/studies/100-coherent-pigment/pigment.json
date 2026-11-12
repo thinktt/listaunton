@@ -1,0 +1,15 @@
+{
+  "source_atlas": "history/bishop-mission-012/bishop-boxwood-albedo.png",
+  "source_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "swatch": "assets/bishop/materials/inferred-boxwood-source-01.png",
+  "swatch_sha256": "42525214b313230d19ace941dff7dcc5ad34c42ddeaa38e9321bc9af9494a3a3",
+  "capture": "build/bishop-mission/099-atlas-surface",
+  "base_linear_rgb": [
+    0.22322799265384674,
+    0.08865559846162796,
+    0.016807375475764275
+  ],
+  "output_sha256": "d1b748c39ecc76953db8a2da37beac9a0b5e72faa6c79c9b4f687153ad320c77",
+  "method": "Constant robust boxwood base color plus bounded measured high-pass grain in trusted observed interiors and inferred periodic fine grain elsewhere. Broad old shading is removed everywhere. Geometry and references untouched.",
+  "status": "Unaccepted joint lighting/material study. Fixed, side and rear BSDF renders determine usefulness."
+}

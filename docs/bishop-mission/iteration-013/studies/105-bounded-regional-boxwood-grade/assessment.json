@@ -1,0 +1,37 @@
+{
+  "trial": "105-bounded-regional-boxwood-grade",
+  "decision": "rejected",
+  "reason": "Socket, stem and collar color improve, but foot error increases and base error does not improve; reject the broad grade.",
+  "scores_percent": {
+    "silhouette": 96.11093004651714,
+    "interior": 84,
+    "color": 84,
+    "texture": 77,
+    "lighting": 77
+  },
+  "mean_percent": 83.62218600930342,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "model_sha256": "d81670fe5c2e67c5aad9782e1865f0309a6d87d68a93d4d373450391c488e605",
+  "render_sha256": "9accaac84fffb66113d45e893eaf5f54f5159e630fdaad9112595788e94432ae",
+  "fixed_camera_degrees": 54,
+  "samples": 128,
+  "source_geometry_unchanged": true,
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9611093004651714,
+      "legacy_raw_model_mask_iou": 0.9611093004651714
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778547732693308,
+      "legacy_raw_model_mask_iou": 0.9778547732693308
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666070992686169,
+      "legacy_raw_model_mask_iou": 0.9666070992686169
+    }
+  }
+}

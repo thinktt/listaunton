@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "source_atlas_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "protected_height_intervals": [
+    [
+      -0.1,
+      0.96
+    ],
+    [
+      3.43,
+      4.7
+    ]
+  ],
+  "protected_texels": 2806787,
+  "protected_and_alpha_pixels_exact": true,
+  "max_channel_lift_8bit": 15,
+  "no_darkening": true,
+  "changed_texels": 1335271,
+  "note": "Checks actual saved PNG bytes independently of the grade implementation. The accepted wood pattern is multiplied by a bounded smooth height field, not repainted from a new reference."
+}
