@@ -374,3 +374,32 @@ reproduction, actual saved-model checks, alternate-angle inspection and
 remaining mismatches. The mission remains incomplete; next examine the
 stem/socket reflections and remaining collar residuals while preserving
 the clearer head and lower finish.
+
+## Checkpoint 013 · 2026-11-12
+
+Local finish and normal detail make the stem and socket grain closer while
+retaining geometry, pigment, camera and all 44 lights. A small reflector
+repositioning worsened the full patch and original color comparisons and
+was rejected. The head, collar and lower-base surface maps are preserved.
+
+| Metric | Checkpoint 012 | Checkpoint 013 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 94 | 94 |
+| Lighting | 92 | 92 |
+| Working mean | 93.36% | 93.36% |
+
+Stem pattern correlation improves from 0.402 to 0.735, and socket-lip
+correlation from 0.883 to 0.943. The overall visual scores stay unchanged:
+the enlarged stem highlight is still broader and rougher than the selected
+reference. Collar/stem RGB error falls from 2.44 to 2.32; native original
+RGB error changes from 16.60 to 16.61. Original black/white IoU remain
+98.499%/98.135%, and the holistic visual range remains 90–95%.
+
+See the [checkpoint evidence](pawn-mission/iteration-013/README.md) for
+isolation studies, accepted/rejected trials, reproduction and saved-model
+checks. The mission remains incomplete. Next isolate the older bump and
+fine-normal layers at the stem rim before another material or curvature
+change, preserving the accepted lighting and head/base improvements.

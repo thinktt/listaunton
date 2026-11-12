@@ -1,0 +1,77 @@
+{
+  "source_sha256": "d7481284a9616efe280f15580c8e80b1a5996877cdf556a0f84274f922c72e97",
+  "fixture_count": 44,
+  "groups": {
+    "socket": [
+      "Socket right",
+      "Socket lip core"
+    ],
+    "base": [
+      "Base upper"
+    ],
+    "collar": [
+      "Collar left ribbon",
+      "Collar tip of ribbon",
+      "Collar right flank",
+      "Lower collar glint"
+    ],
+    "head": [
+      "Left head glint",
+      "Upper head glint",
+      "Right head glint",
+      "Upper head glint core",
+      "Right head glint core",
+      "Left polish core",
+      "Upper polish core",
+      "Right polish core"
+    ],
+    "flare": [
+      "Flare left edge",
+      "Flare left taper",
+      "Flare left lip",
+      "Flare right inner",
+      "Flare right edge",
+      "Flare front lip",
+      "Flare lip taper",
+      "Flare left sweep",
+      "Flare left center",
+      "Flare right sweep",
+      "Flare right lip"
+    ],
+    "diffuse": [
+      "Right bounce",
+      "Back bounce",
+      "High left card",
+      "Lower front bounce",
+      "Lower right bounce",
+      "Upper face bounce",
+      "Front shadow key",
+      "Front shadow feather"
+    ],
+    "foot-left": [
+      "Foot edge outer left",
+      "Foot edge center left"
+    ],
+    "foot-right": [
+      "Foot right",
+      "Foot center-right",
+      "Foot lip core"
+    ],
+    "foot-front": [
+      "Foot front"
+    ],
+    "upper-stem": [
+      "Upper stem rim"
+    ],
+    "lower-stem": [
+      "Lower stem rim"
+    ],
+    "other-flare": [
+      "Outer flare line",
+      "Right flare core"
+    ]
+  },
+  "all_fixtures_tested": true,
+  "world_and_secondary_gloss_checks": true,
+  "conclusion": "Upper and lower stem rim reflectors create the left glint; changing the upper reflector landmark in trial 071 worsens the full patch fit. Preserve the rig and refine the local surface instead."
+}

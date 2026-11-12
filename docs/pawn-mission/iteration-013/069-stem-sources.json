@@ -1,0 +1,27 @@
+{
+  "source": "history/pawn-mission-012/pawn-rebuilt.blend",
+  "source_sha256": "d7481284a9616efe280f15580c8e80b1a5996877cdf556a0f84274f922c72e97",
+  "samples": 512,
+  "measurement": "stem-source-012",
+  "crop": [
+    356,
+    594,
+    610,
+    806
+  ],
+  "groups": {
+    "foot-left": [
+      "Foot edge outer left",
+      "Foot edge center left"
+    ],
+    "foot-right": [
+      "Foot right",
+      "Foot center-right",
+      "Foot lip core"
+    ],
+    "foot-front": [
+      "Foot front"
+    ]
+  },
+  "include_world": true
+}

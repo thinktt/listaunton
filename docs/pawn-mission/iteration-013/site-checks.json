@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "site",
+      "chunk_id": "de8ea8",
+      "wall_time_seconds": 1.6848534,
+      "exit_code": 0,
+      "original_token_count": 122,
+      "output": "PASS: eight pages, 57 local links, overlay images, parts sandbox/CSP, and model/viewer hash.\nPASS: all twelve original PNG reference hashes and gallery images.\nPASS: original-reference alignment metadata and source image hashes.\nPASS: candidate hashes, source provenance, five comparison pages and alignment data.\nPASS: white bishops used plain upscale prompts without mitre-specific instructions.\nPASS: bounded foot-detail registration, unchanged image scale and same-color references.\n"
+    },
+    {
+      "name": "models",
+      "chunk_id": "259ebb",
+      "wall_time_seconds": 6.8181708,
+      "exit_code": 0,
+      "original_token_count": 243,
+      "output": "PASS: king review opens its current mesh/camera/render; source images and registration are correct.\nPASS: rook review opens its current mesh/camera/render; source images and registration are correct.\nPASS: bishop review opens its current mesh/camera/render; source images and registration are correct.\nPASS: knight review opens its current mesh/camera/render; source images and registration are correct.\nPASS: pawn review opens its current mesh/camera/render; source images and registration are correct.\nPASS: 6 king projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\nPASS: 6 rook projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\nPASS: 7 queen projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\n"
+    },
+    {
+      "name": "candidates",
+      "chunk_id": "c8414f",
+      "wall_time_seconds": 0.6107934,
+      "exit_code": 0,
+      "original_token_count": 363,
+      "output": "PASS: king — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: rook — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: bishop — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: knight — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: pawn — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: king (model frame) — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\n"
+    },
+    {
+      "name": "pawn-viewer",
+      "chunk_id": "654185",
+      "wall_time_seconds": 2.0143527,
+      "exit_code": 0,
+      "original_token_count": 116,
+      "output": "{\n  \"passed\": true,\n  \"pigmentAtlasHashMatches\": true,\n  \"varnishAtlasChecked\": true,\n  \"slopeAtlasChecked\": true,\n  \"woodAndClayToggle\": true,\n  \"sideComparisonAndFootRegistration\": true,\n  \"sampledVertices\": 502,\n  \"maxCameraErrorPixels\": 0.00001069600246717183,\n  \"overlayEndpoints\": true,\n  \"tabOrbitPersistence\": true,\n  \"rotationPanZoom\": true,\n  \"cameraReset\": true,\n  \"sourceSha256\": \"ffaf0a40605a4d3866d33d1e94d229577a079aa377946b68447f8209f5fd7b27\"\n}\n"
+    }
+  ],
+  "native_browser_gpu_check": false,
+  "native_browser_gpu_reason": "Local file navigation was rejected by the browser policy; no alternate route was attempted. Node harnesses validate page data and controls, not GPU appearance. Actual Blender renders were inspected.",
+  "whole_set_sizing_check_rerun": false,
+  "whole_set_note": "Sizing and defaults were unchanged. The prior iteration-009 whole-set check found a separate Knight metadata/hash mismatch."
+}

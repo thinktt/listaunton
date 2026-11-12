@@ -1,0 +1,43 @@
+{
+  "accepted_trial": "074-finer-stem-grain",
+  "model_sha256": "ffaf0a40605a4d3866d33d1e94d229577a079aa377946b68447f8209f5fd7b27",
+  "selected_reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "scores": {
+    "silhouette": 96.81073086773473,
+    "interior_form": 91,
+    "wood_color": 93,
+    "grain": 94,
+    "lighting": 92
+  },
+  "working_mean": 93.36214617354695,
+  "holistic_range": [
+    90,
+    95
+  ],
+  "iou": {
+    "selected": 0.9681073086773474,
+    "original_black": 0.9849918568454038,
+    "original_white": 0.9813478233971914
+  },
+  "reproduction": {
+    "reopened": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 4.690309299841051e-05,
+      "max_error_255": 1,
+      "render_sha256": "77a7719bf25deea53bd0100a4d8f5661c5fa5e8890415f41f6e9d15e6031f131"
+    },
+    "reproduced": {
+      "alpha_identical": true,
+      "foreground_rgb_mae_255": 4.690309299841051e-05,
+      "max_error_255": 1,
+      "render_sha256": "92338edf7cc8edd0366b58ee53954fc4fa00f5c4a58e42e36f652a1b42487820"
+    }
+  },
+  "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+  "same_mesh_and_uvs_as_previous": true,
+  "native_browser_gpu_check": false,
+  "goal_complete": false,
+  "native_browser_gpu_check_reason": "Earlier local-file URL policy rejection; no alternate browser route attempted.",
+  "orbit_inspection": "orbit-check.json"
+}

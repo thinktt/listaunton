@@ -1,0 +1,33 @@
+{
+  "variant": "075-stem-finish-replay",
+  "source": "history/pawn-mission-012/pawn-rebuilt.blend",
+  "source_sha256": "d7481284a9616efe280f15580c8e80b1a5996877cdf556a0f84274f922c72e97",
+  "finish": {
+    "texture": "assets/pawn/pawn-varnish-v7.png",
+    "texture_sha256": "c75eabaf8a71cb58f5246370e923d84021cc0821b6178ee38dc91dd21b0465eb",
+    "range": [
+      0.3,
+      2.4
+    ],
+    "polish_range": [
+      0.38,
+      1.85
+    ]
+  },
+  "slopes": {
+    "texture": "assets/pawn/pawn-fine-slopes-v7.png",
+    "texture_sha256": "602e41c1f8644fea77fa03d141a767e659a0c57e4be9d72034325fc0b3ec3f31",
+    "max_slope": 0.135
+  },
+  "texture": "assets/pawn/pawn-walnut-v11.png",
+  "texture_sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+  "samples": 512,
+  "seed": 0,
+  "light_tree": false,
+  "uv_focus": [
+    0.422,
+    0.44,
+    0.646,
+    0.668
+  ]
+}

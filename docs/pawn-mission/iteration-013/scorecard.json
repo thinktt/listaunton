@@ -1,0 +1,78 @@
+[
+  {
+    "trial": "071-registered-stem-glint",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "64bd1fe0cfa1adcc8dd72d28dc029233124d3f714519e5528b38944c5b6b5770",
+    "render_sha256": "72cda7957df7d29c576cf2f19ea0d8360b3d48511118f5d8cc5fc5f4533d7e3d",
+    "decision": "Rejected: glint repositioning worsens whole-patch RGB fit and original color error."
+  },
+  {
+    "trial": "072-stem-finish",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "afdc2c16293cdafa7f46c5577153e793c57f3395efdb1a7b1b21e6b08d2e6e76",
+    "render_sha256": "17a2c8ff2e5a086791e1947da1fc51d9129dc056d14d3268fad0b2b19004fd05",
+    "decision": "Useful local finish change, superseded by normal refinements."
+  },
+  {
+    "trial": "073-stem-micrograin",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "fd550254d18173e9ce95462b68029b490bd074ebd72cef22e67207e7c0d39a82",
+    "render_sha256": "5056262993854ac0c2ff3a3a94f29cfdb7f2382704473bdbc596e9aad93a7c3a",
+    "decision": "Useful initial normal refinement, superseded by 074."
+  },
+  {
+    "trial": "074-finer-stem-grain",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "189b14a53888895d51198276db0fec7cb8605dcc2b773decad027d330da06085",
+    "render_sha256": "f83df4b72ba028fe9a3bd9f32d93be2fe65f4aafa67f993548afe37bb1cc9baa",
+    "decision": "Accepted after saved-model scope and independent replay checks. Local stem/socket grain improves; overall ratings remain unchanged because the broader highlight shape still differs."
+  }
+]
