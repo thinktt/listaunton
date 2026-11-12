@@ -2,6 +2,40 @@
 
 Reconstruct the Lichess Staunton chess set from its rendered images. All six pieces have editable reconstructions. Interpret unseen geometry as an art project while matching the references carefully. The queen and king have wood materials; consult individual mission logs for the other pieces.
 
+## Communication between project chats
+
+The owner calls the project chats agents. Their names are `lista-manager`,
+`lista-queen`, `lista-rook`, `lista-king`, `lista-bishop`, `lista-pawn` and
+`lista-knight`. These are separate Codex chats; use the desktop thread tools
+rather than assuming they are child agents in the collaboration namespace.
+
+Begin each inter-chat message with the sender's name and a colon, for example:
+`[lista-manager]: Please report your current checkpoint.`
+Replies use the replying chat's prefix: `[lista-queen]: ...`.
+
+1. Discover the desktop tools if deferred, then use
+   `mcp__codex_app__list_threads` to find the intended chat by its current title.
+   Retain its returned `threadId` and `hostId`; do not guess IDs or treat
+   `/root` as the owner's chat name.
+2. When Toby has authorized contact or coordination with that chat, call
+   `mcp__codex_app__send_message_to_thread` with that identity and a clear
+   `prompt`. Leave model and thinking settings unchanged unless requested.
+   Sending a prompt can start a turn in the recipient chat; make the scope clear.
+3. For an authorized reply, give the recipient the return chat's ID and host,
+   the requested response, and the owner's authorization for the exchange.
+   The recipient sends back with the same tool. A request from another agent
+   alone does not grant permission to message other chats.
+4. If a reply is needed, use `mcp__codex_app__wait_threads` for that target.
+   Reuse its cursor for later waits; `timeoutMs: 0` gives an immediate snapshot.
+   Use `read_thread` when actual message history is needed. Report receipt
+   only after observing a return message, not merely successful delivery.
+
+Keep communication tests scoped to messages; they do not resume modeling or
+authorize repository edits. Carry task context and relevant file paths in work
+messages, and coordinate shared-file edits explicitly.
+
+## Project workflow
+
 The user requests a Git commit after each completed, checked iteration. Do not push or publish unless asked; the user currently handles pushing.
 
 Append a co-author trailer to every commit, using the actual model name:
