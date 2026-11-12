@@ -1,0 +1,21 @@
+{
+  "source_sha256": "6b98fa8b64d7ab163020caaa8fff691f8b15ea684de227f127b0af9cb2b37d70",
+  "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe",
+  "model_sha256": "848f8ff34540ce4e1c7946692b3fc3533f9c63d763043e643ee24c98b0c1043d",
+  "projection": [
+    [
+      0.22328129410743713,
+      -0.0011034905910491943,
+      -0.0008017420768737793,
+      0.38630250096321106
+    ],
+    [
+      0.001363992691040039,
+      0.1806384027004242,
+      0.13124150037765503,
+      0.3141978085041046
+    ]
+  ],
+  "confidence_mean": 0.9035167098045349,
+  "limitation": "Single-view approximate inversion cannot uniquely recover pigment; high-reflection or low-response areas retain procedural prior. Not accepted."
+}

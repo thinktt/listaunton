@@ -28,3 +28,15 @@ direction. Apply [the shared mission standards](../MISSION-SET.md).
 ## Iteration 001 — 2026-11-12
 
 Activated the full rook mission at the owner's direction. Inspected the original, selected black candidate 8 and accepted neutral model. Completed and rejected an initial procedural wood study for promotion: smeared horizontal grain, cloudy floor, insufficient red/orange color, and misplaced broad reflections. Saved/reopened NVIDIA render succeeded. Accepted model and public assets remain unchanged. See [the full examination and scores](rook-mission/iteration-001/README.md). Next: reference-informed pigment with separated illumination and continuous unseen-surface wood. Accepted iterations must update the review, local preview, rotating viewer and side views before further iteration; this operational requirement is separate from the goal objective.
+
+## Iteration 002 — 2026-11-12
+
+Reference-informed pigment restores recognisable floor fibers and exterior grain. Broad softbox reflections still wash out the right cavity. Low-confidence strips revert to the unrelated procedural material, especially the shaft and right rear merlon. Some target glints may remain weakly represented in pigment despite the confidence mask; this cannot be counted as a recovered highlight. Side view exposes material transitions and stretched detail. Reject for promotion.
+
+Selected overlap 97.30350%; original 95.67335%; interior/color/grain/lighting 78/68/53/28 (subjective); working mean 64.86%. Saved geometry/camera/source/material validation passed. See [evidence and limitations](rook-mission/iteration-002/README.md). Goal remains active; accepted model and review remain unchanged.
+
+## Iteration 003 — 2026-11-12
+
+Making existing softboxes diffuse-only and adding three smaller real glossy sources removes the broad milky cavity reflection. Floor color and grain improve substantially; shaft coverage is more coherent. The small sources still create misplaced lower/central glints and fail to form the reference's bright thin rim, shoulder and foot crescents. Fallback grain transitions remain conspicuous in profile; rim-edge registration exposes the underlying shape mismatch. Keep as the best experimental starting point, not an accepted/public checkpoint.
+
+Selected overlap 97.30350%; original 95.67335%; interior/color/grain/lighting 78/76/64/41 (subjective); working mean 71.26%. Saved geometry/camera/source/material validation passed. See [evidence and limitations](rook-mission/iteration-003/README.md). Goal remains active; accepted model and review remain unchanged.
