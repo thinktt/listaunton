@@ -1,66 +1,23 @@
 {
   "passed": true,
-  "source_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
-  "model_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3",
-  "camera_controls_and_uvs_exactly_preserved": true,
-  "lights_world_and_materials_preserved": false,
-  "material_lighting_preservation_required": false,
-  "cutter_max_coordinate_error": 2.9560289438457232e-08,
-  "declared_floor_extension": 0.03417683765292168,
-  "bevel_factor": 1.0,
-  "geometry_scope": {
-    "Bishop - continuous turned body": {
-      "bidirectional_outside_cut_max_distance": [
-        0,
-        0
-      ],
-      "outside_cut_samples": [
-        59480,
-        59480
-      ],
-      "nonmanifold_edges": 0,
-      "positive_volume": 4.853280972960784,
-      "vertex_count": 61678
-    },
-    "Bishop - domed button finial": {
-      "bidirectional_outside_cut_max_distance": [
-        0,
-        0
-      ],
-      "outside_cut_samples": [
-        5890,
-        5890
-      ],
-      "nonmanifold_edges": 0,
-      "positive_volume": 0.03451065611360572,
-      "vertex_count": 5890
-    }
-  },
-  "slit_and_floor_probes": [
+  "model_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "cutter_unchanged_from_checkpoint_015": true,
+  "through_opening_probes": [
     {
-      "local_z": -0.7994046099483967,
-      "through_opening": true
+      "height_above_slot_bottom_original_units": 7,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
     },
     {
-      "local_z": -0.8575052339583635,
-      "through_opening": true
+      "height_above_slot_bottom_original_units": 12,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
     },
     {
-      "local_z": -0.8745936527848244,
-      "through_opening": false
+      "height_above_slot_bottom_original_units": 17,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
     }
   ],
-  "config": {
-    "source": "history/bishop-mission-005/bishop-rebuilt.blend",
-    "source_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
-    "variant": "044-round-floor-only",
-    "depth_factor": 1.0,
-    "bevel_factor": 1.0,
-    "segments": 32,
-    "samples": 96
-  },
-  "checked_model": "history/bishop-mission-007/bishop-rebuilt.blend",
-  "current_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
-  "inheritance_audit": "assets/bishop/base-validation.json",
-  "note": "Rounded cutter and upper geometry are validated on the preserved source, then inherited exactly through the independently audited two-ring base edit. The current anatomy check also probes the actual through slit and solid floor."
+  "solid_floor": true
 }

@@ -476,3 +476,44 @@ iteration and then pause because these pieces have plateaued. No further
 modeling or render batch is pending; the goal is to be paused after this checked
 record is committed. The full visual-match mission is incomplete. Resume only
 on the owner's direction. No quota monitoring, subagents, publication or push.
+
+## Iteration 017 — geometry phase: shoulder, stem and upper collar
+
+On November 12 the owner started a new goal focusing on geometry. This supersedes
+the earlier pause. The mission files remain unchanged. Work resumes from the
+archived accepted checkpoint 015, with neutral renders and actual mesh
+measurements separating shape from the inherited reference-derived pigment.
+
+The accepted profile narrows the rear base shoulder without changing its
+heights, retains a rounded lower turn, conservatively narrows the stem, and
+lowers the small upper collar. Stronger base, stem and collar trials are
+rejected: they respectively made the side angular, introduced a stem bulge,
+and mistook the photographic shadow trough for the physical collar rim.
+The remaining controls, button, slit, overall bounds and 54-degree camera stay
+fixed. Exact receivers are rebuilt; UVs, packed pigments and lights are retained.
+
+Original-white overlap improves from 97.786% to 98.590%; selected-white-3
+overlap improves from 96.109% to 96.814%. Regional shoulder half-width error
+falls from 9.559 to 2.167 native pixels. These measurements describe outline,
+not internal shape. The actual upper-collar boundary moves from y=505.929 to
+y=510.914; the larger trial's y=515.899 was too far into the reference shadow.
+
+Scores are 96.81 / 86 / 83 / 77 / 72, working mean 82.96%, holistic 75–85%.
+The mean declines because the retained pigment and lights fit the changed
+surfaces less well. This is explicitly a geometry checkpoint, not a claim of
+improved final finish. See [iteration-017/assessment.md](bishop-mission/iteration-017/assessment.md)
+for side, neutral and enlarged comparisons, rejected trials and limitations.
+
+Saved/reopened anatomy, independent geometry/material/light/camera scope,
+render receivers, exported mesh and both bishop review interaction checks pass.
+The current rotating mesh has 136,664 triangles. Fixed wood, neutral and side
+views are regenerated from the same model. The overlay adds a Neutral/Boxwood
+selector and opens neutral so shape can be judged without misleading pigment.
+Delivery hashes are in iteration-017/checkpoint.json; checkpoint 015 remains
+the rollback baseline. No native browser visual QA is claimed.
+
+The geometry goal remains active and incomplete. Next examine the socket lip,
+middle/lower collar cross-sections and slit edge/floor using actual projected
+surface positions, not just brightness. Retained finish issues remain a later
+phase. No mission, other piece, shared gallery setting or source is changed.
+No quota monitoring, subagents, publication or push.

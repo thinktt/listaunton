@@ -1,0 +1,37 @@
+{
+  "scores_percent": {
+    "silhouette": 96.81388324257657,
+    "interior": 86,
+    "color": 83,
+    "texture": 77,
+    "lighting": 72
+  },
+  "mean_percent": 82.96277664851532,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_subjective": true,
+  "phase": "geometry",
+  "model_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "render_sha256": "f013ae6fd1f1980fcf32d1f14e83bafbba9d996d05fae778050ebfdcab15ae08",
+  "neutral_sha256": "3f5ceb976de8bdde4705320078478c9ca6759f9e29acd3d62890008bd66f92a4",
+  "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "original_and_selected_ious": {
+    "selected": {
+      "silhouette_iou": 0.9681388324257656,
+      "legacy_raw_model_mask_iou": 0.9681388324257656
+    },
+    "original_white": {
+      "silhouette_iou": 0.9859044445390365,
+      "legacy_raw_model_mask_iou": 0.9859044445390365
+    },
+    "original_black": {
+      "silhouette_iou": 0.9768804462866886,
+      "legacy_raw_model_mask_iou": 0.9768804462866886
+    }
+  },
+  "shape_complete": false,
+  "full_mission_complete": false,
+  "tradeoff": "Shape improves while retained pigment and lighting no longer fit the changed surfaces as well. The full-image mean may fall; this is not claimed as a finished material checkpoint."
+}

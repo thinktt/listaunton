@@ -49,7 +49,17 @@ if base_curve:
  for index,point in curve_config['body_rings'].items():
   i=int(index);assert point[1]==expected_lower[i][1], 'Base curvature edit must preserve every ring height.'
   expected_lower[i]=point
-if changed:
+shape_refit=cfg.get('mission_shape_refit')
+if shape_refit:
+ source_profile=json.loads((root/shape_refit['profile']).read_text())
+ shape_config=json.loads((root/shape_refit['config']).read_text())
+ assert hashlib.sha256((root/shape_config['source']).read_bytes()).hexdigest()==shape_config['source_sha256']
+ assert shape_refit['body_rings']==shape_config['body_rings']
+ expected_profile=[list(pair) for pair in source_profile['profile']]
+ for key,pair in shape_config['body_rings'].items():expected_profile[int(key)]=pair
+ assert cfg['profile']==expected_profile,'Geometry refit has an undeclared profile change.'
+ assert cfg['finial']==source_profile['finial'] and cfg['slit']==source_profile['slit']
+elif changed:
  assert changed==set(range(1,11)), 'Only the documented lower foot rings may differ in this geometry checkpoint.'
  assert cfg['profile'][11:65]==expected_lower[11:65] and cfg['profile'][0]==expected_lower[0], 'Undeclared lower profile change.'
 else:assert cfg['profile'][:65]==expected_lower[:65], 'Undeclared lower profile change.'
@@ -111,5 +121,9 @@ if base_curve:
  result['declared_base_curvature_rings']=[17,18]
  result['all_other_lower_profile_points_preserved']=True
  result['base_curvature_config']=base_curve['config']
+if shape_refit:
+ result.update(declared_shape_refit=shape_refit,lower_65_profile_points_preserved=False,
+               flare_socket_stem_collars_preserved=False,all_other_lower_profile_points_preserved=False,
+               all_unlisted_profile_points_preserved=True)
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/139-constrained-stem-fit/wood.png",
+  "render_sha256": "2a512990667cfca09a475f9bbd5cc6d9b1f2ae7769ae80b5b954fcd925e3fd7e",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9697413284718294,
+      "legacy_raw_model_mask_iou": 0.9697413284718294
+    },
+    "original_white": {
+      "silhouette_iou": 0.9880331483311792,
+      "legacy_raw_model_mask_iou": 0.9880331483311792
+    },
+    "original_black": {
+      "silhouette_iou": 0.9771621024398421,
+      "legacy_raw_model_mask_iou": 0.9771621024398421
+    }
+  }
+}

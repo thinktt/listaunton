@@ -1,5 +1,37 @@
 # Bishop reconstruction
 
+## Geometry phase after checkpoint 015
+
+The owner started a new geometry-focused goal on November 12, 2026, without
+changing the mission statements. Read `docs/bishop-mission-log.md` for current
+acceptance. Checkpoint 015 remains the preserved wood baseline. Do not treat a
+high exterior overlap, a photographic shadow, or pigment copied from the
+reference as proof that an internal surface is correct.
+
+`profile_shape_trial.py CONFIG` edits only explicitly listed controls from a
+hashed preserved scene. It rebuilds both exact render receivers, restores their
+light links, saves/reopens the model, and renders wood and neutral comparisons.
+It does not rebake pigment or alter lamps. `validate_profile_shape.py` independently
+checks the actual changed controls, all untouched geometry, topology, cutter,
+UVs, packed pixels, lights and saved camera. Its audit replaces the obsolete
+unchanged-geometry assertion for a declared geometry phase; the existing
+closure, slit and head/button anatomy checks still run on the new model.
+
+Reproduce checkpoint 017 with `docs/bishop-mission/iteration-017/profile-fit.json`.
+The analytical fitter proposes profiles only. A fit that becomes angular in
+side view or mistakes a shadow trough for a rim is rejected even if it reduces
+outline error. The measured collar boundary comes from evaluated mesh positions,
+separately from the photographic edge interpretation.
+
+After acceptance, export and validate with `validate_checkpoint.py`, render
+the same saved model with `render_diagnostics.py`, retain its neutral fixed
+render, and rebuild via `refresh_review.py`. Run both bishop interaction checks.
+The overlay now has a Surface control: Neutral is the geometry-phase default;
+Boxwood preserves the unfinished material for comparison. Changing surfaces
+does not change image placement, opacity, reference choice or orbit. The static
+neutral overlay also works without WebGL. Browser verification is simulated;
+no native browser inspection is claimed.
+
 ## Current wood mission
 
 The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is

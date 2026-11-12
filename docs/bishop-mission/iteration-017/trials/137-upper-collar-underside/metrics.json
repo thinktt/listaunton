@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build\\bishop-mission\\137-upper-collar-underside\\wood.png",
+  "render_sha256": "bf295aac0470629e8e73f7d8133b509b997173d64615a1f8e7a7166ad6e0fcd2",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9689014744887432,
+      "legacy_raw_model_mask_iou": 0.9689014744887432
+    },
+    "original_white": {
+      "silhouette_iou": 0.9871353627159422,
+      "legacy_raw_model_mask_iou": 0.9871353627159422
+    },
+    "original_black": {
+      "silhouette_iou": 0.976196419873356,
+      "legacy_raw_model_mask_iou": 0.976196419873356
+    }
+  }
+}

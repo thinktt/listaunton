@@ -1,0 +1,135 @@
+{
+  "phase": "geometry",
+  "ratings_note": "Silhouette is measured; the other four scores are subjective visual estimates, with no reward for better overlap alone.",
+  "unrendered_proposals_not_scored": [
+    "141 radius-only optimizer proposal"
+  ],
+  "trials": [
+    {
+      "variant": "135-lower-shoulder-fit",
+      "model_sha256": "1b91c496df140f9f6fda3d0e04ea6c04bf9d51f3a981e4a8e9d72e5878af8b4a",
+      "render_sha256": "8640fda6325792e15e28ea62399ed9ac364334c0426cef813985c38cf38d46a0",
+      "config": "trials/135-lower-shoulder-fit/config.json",
+      "scores_percent": {
+        "silhouette": 96.34299189773564,
+        "interior": 84,
+        "color": 85,
+        "texture": 78,
+        "lighting": 75
+      },
+      "mean_percent": 83.66859837954713,
+      "decision": "Reject: the first radial scope leaves the upper shoulder too broad.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    },
+    {
+      "variant": "136-shoulder-height-fit",
+      "model_sha256": "fd6bfc9ce0d7643146904215d0b915bd99d601734fb6a705a50cb75e3a28d3ee",
+      "render_sha256": "c712bbbc9b259a374caa36f333410f5587a9c6beac78f7905f0593e681081aa1",
+      "config": "trials/136-shoulder-height-fit/config.json",
+      "scores_percent": {
+        "silhouette": 96.89014744887432,
+        "interior": 85,
+        "color": 83,
+        "texture": 77,
+        "lighting": 73
+      },
+      "mean_percent": 82.97802948977485,
+      "decision": "Reject: better outline but too angular a side profile.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    },
+    {
+      "variant": "137-upper-collar-underside",
+      "model_sha256": "6c483ae26a631909f641431ec2b0b9bd54cedbb4f75134c686602dc99ad91822",
+      "render_sha256": "bf295aac0470629e8e73f7d8133b509b997173d64615a1f8e7a7166ad6e0fcd2",
+      "config": "trials/137-upper-collar-underside/config.json",
+      "scores_percent": {
+        "silhouette": 96.89014744887432,
+        "interior": 83,
+        "color": 82,
+        "texture": 76,
+        "lighting": 71
+      },
+      "mean_percent": 81.77802948977487,
+      "decision": "Reject: actual collar rim moved into the photographic shadow; shadow location is not the rim.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    },
+    {
+      "variant": "138-stem-taper-fit",
+      "model_sha256": "341e22951747e243db44ac133b904e2696f614c44dc0abd1b48b216651859d41",
+      "render_sha256": "e8f0c19e88c5f7c8f3521d6cccd551cb9717f8411e0ad79326ef177665874af9",
+      "config": "trials/138-stem-taper-fit/config.json",
+      "scores_percent": {
+        "silhouette": 96.9631028671829,
+        "interior": 81,
+        "color": 80,
+        "texture": 75,
+        "lighting": 70
+      },
+      "mean_percent": 80.59262057343658,
+      "decision": "Reject: unconstrained stem fit bulges near the socket and retains earlier problems.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    },
+    {
+      "variant": "139-constrained-stem-fit",
+      "model_sha256": "08ed163f8bebfc1784726a704915c2e3ef983790aab3e0a4fe00faf77c7d18d7",
+      "render_sha256": "2a512990667cfca09a475f9bbd5cc6d9b1f2ae7769ae80b5b954fcd925e3fd7e",
+      "config": "trials/139-constrained-stem-fit/config.json",
+      "scores_percent": {
+        "silhouette": 96.97413284718294,
+        "interior": 84,
+        "color": 82,
+        "texture": 76,
+        "lighting": 71
+      },
+      "mean_percent": 81.99482656943658,
+      "decision": "Reject as a complete model: constrained stem is better, but base and collar corrections remain too strong.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    },
+    {
+      "variant": "142-rounded-shape-refinement",
+      "model_sha256": "5b2b2e31d452fe4be11da3b8f281f4278f212e2e88dd71e723d42d119e9e8487",
+      "render_sha256": "385f8824e5a31555a5e2c43f9b961b967ac8da84ac65ad7f023ebe5120d8695a",
+      "config": "trials/142-rounded-shape-refinement/config.json",
+      "scores_percent": {
+        "silhouette": 96.81390231854989,
+        "interior": 86,
+        "color": 83,
+        "texture": 77,
+        "lighting": 72
+      },
+      "mean_percent": 82.96278046370998,
+      "decision": "Accept geometry for final render: radius-only rounded base, half stem and collar corrections.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    },
+    {
+      "variant": "143-geometry-checkpoint",
+      "model_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+      "render_sha256": "f013ae6fd1f1980fcf32d1f14e83bafbba9d996d05fae778050ebfdcab15ae08",
+      "config": "trials/143-geometry-checkpoint/config.json",
+      "scores_percent": {
+        "silhouette": 96.81388324257657,
+        "interior": 86,
+        "color": 83,
+        "texture": 77,
+        "lighting": 72
+      },
+      "mean_percent": 82.96277664851532,
+      "decision": "Accept: same geometry as 142, saved/reopened final 512-sample render and current-model validation.",
+      "subjective_ratings_are_retrospective_comparisons": true,
+      "reopened_scope_check_passed": true,
+      "silhouette_masks": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping."
+    }
+  ]
+}

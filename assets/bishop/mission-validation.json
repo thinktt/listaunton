@@ -1,53 +1,41 @@
 {
   "passed": true,
-  "all_evaluated_geometry_preserved_within_5e_6": false,
-  "declared_geometry_changes_validated": true,
-  "baseline_model": "history\\bishop-mission-001\\bishop-rebuilt.blend",
-  "geometry_comparison": {
-    "Bishop - continuous turned body": {
-      "max_evaluated_coordinate_difference": null,
-      "triangle_indices_unchanged": false,
-      "control_vertices_exactly_unchanged": false,
-      "max_control_difference_from_declared_edit": 1.1920928955078125e-07,
-      "control_topology_and_non_cutter_modifiers_unchanged": true,
-      "cutter_unchanged_or_declared_revision_validated": true,
-      "evaluated_triangle_count_before": 121344,
-      "evaluated_triangle_count_after": 123352
-    },
-    "Bishop - domed button finial": {
-      "max_evaluated_coordinate_difference": 0.01907581090927124,
-      "triangle_indices_unchanged": true,
-      "control_vertices_exactly_unchanged": false,
-      "max_control_difference_from_declared_edit": 2.9802322387695312e-08,
-      "control_topology_and_non_cutter_modifiers_unchanged": true,
-      "cutter_unchanged_or_declared_revision_validated": true,
-      "evaluated_triangle_count_before": 11776,
-      "evaluated_triangle_count_after": 11776
-    }
-  },
-  "components": {
-    "Bishop - continuous turned body": {
-      "positions": "56c0edff066a0435a405ba3ba290fa772faa6741e9af9608169f5208eff66075",
-      "triangles": "c4b72c2a4568581a52ca867db7e752bb6ee90c5407844ae794965f7ea2945ac2",
-      "vertex_count": 61678,
-      "triangle_count": 123352
-    },
-    "Bishop - domed button finial": {
-      "positions": "6cee2cf4b947dec6d0d73b714d90d8a0ef7ee095d39fd2890c3b6454a9668707",
-      "triangles": "ff22ed56a88aa08718d1271347ea18cd4aa13840c43f23191f8fb5d9268cf546",
-      "vertex_count": 5890,
-      "triangle_count": 11776
-    }
-  },
-  "camera_exactly_unchanged": true,
+  "model_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "config_sha256": "556e9c255a650ee5146e441250d72487cf0f45b994dce60d059bf171f5169fed",
+  "changed_body_rings": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "max_control_error_from_declared_edit": 6.173085997929206e-08,
+  "unlisted_controls_exact": true,
+  "topology_modifiers_uvs_cutter_button_materials_packed_pixels_lights_and_camera_preserved": true,
   "reference_pixels_unchanged": true,
+  "camera_exactly_unchanged": true,
   "shader": "Principled BSDF",
   "albedo_bakes_lighting": false,
-  "texture_hash_matches": true,
-  "finite_uvs_and_unit_normals": true,
-  "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
-  "declared_slit_revision_validated": true,
-  "declared_base_curvature_validated": true,
   "render_receivers": {
     "passed": true,
     "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
@@ -56,9 +44,9 @@
     "regions": [
       {
         "region": "body-rest",
-        "faces": 53514,
-        "vertices": 53998,
-        "normal_max_component_error": 2.562999725341797e-05,
+        "faces": 54282,
+        "vertices": 54766,
+        "normal_max_component_error": 4.0650367736816406e-05,
         "uv_max_component_errors": {
           "Pigment projection": 5.960464477539063e-08,
           "Wood atlas": 5.960464477539063e-08
@@ -68,288 +56,21 @@
         "region": "socket-lip",
         "faces": 7936,
         "vertices": 8192,
-        "normal_max_component_error": 4.336237907409668e-05,
+        "normal_max_component_error": 5.456805229187012e-05,
         "uv_max_component_errors": {
           "Pigment projection": 5.960464477539063e-08,
           "Wood atlas": 5.960464477539063e-08
         }
       }
     ],
-    "all_faces_once": true,
-    "model": "models\\bishop\\bishop-rebuilt.blend",
-    "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
-    "prior_receiver_audit": {
-      "passed": true,
-      "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
-      "evaluated_uv_error_below_1e_7": true,
-      "closed_editable_control_retained": true,
-      "regions": [
-        {
-          "region": "body-rest",
-          "faces": 53514,
-          "vertices": 53998,
-          "normal_max_component_error": 2.562999725341797e-05,
-          "uv_max_component_errors": {
-            "Pigment projection": 5.960464477539063e-08,
-            "Wood atlas": 5.960464477539063e-08
-          }
-        },
-        {
-          "region": "socket-lip",
-          "faces": 7936,
-          "vertices": 8192,
-          "normal_max_component_error": 4.336237907409668e-05,
-          "uv_max_component_errors": {
-            "Pigment projection": 5.960464477539063e-08,
-            "Wood atlas": 5.960464477539063e-08
-          }
-        }
-      ],
-      "all_faces_once": true,
-      "source": "history/bishop-mission-010/bishop-rebuilt.blend",
-      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
-      "model": "history\\bishop-mission-012\\bishop-rebuilt.blend",
-      "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
-      "only_declared_light_parameters_and_links_changed": true,
-      "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
-      "camera_world_display_render_path_preserved": true,
-      "reopened_audit": true,
-      "config": {
-        "arc_shadow_soft_size": 0.024,
-        "arc_spot_degrees": 2.0,
-        "exclude_from_socket": [
-          "collars reflection"
-        ],
-        "samples": 256,
-        "socket_z_band": [
-          0.99,
-          1.38
-        ],
-        "source": "history/bishop-mission-010/bishop-rebuilt.blend",
-        "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
-        "variant": "097-socket-receivers-persistent"
-      }
-    },
-    "pigment_scope_audit": {
-      "passed": true,
-      "source": "history/bishop-mission-013/bishop-rebuilt.blend",
-      "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
-      "model": "models/bishop/bishop-rebuilt.blend",
-      "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
-      "atlas": "assets/bishop/bishop-boxwood-albedo.png",
-      "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-      "packed_pixel_max_error": 0.0,
-      "only_declared_atlas_changed": true,
-      "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
-      "render_receivers": {
-        "passed": true,
-        "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
-        "evaluated_uv_error_below_1e_7": true,
-        "closed_editable_control_retained": true,
-        "regions": [
-          {
-            "region": "body-rest",
-            "faces": 53514,
-            "vertices": 53998,
-            "normal_max_component_error": 2.562999725341797e-05,
-            "uv_max_component_errors": {
-              "Pigment projection": 5.960464477539063e-08,
-              "Wood atlas": 5.960464477539063e-08
-            }
-          },
-          {
-            "region": "socket-lip",
-            "faces": 7936,
-            "vertices": 8192,
-            "normal_max_component_error": 4.336237907409668e-05,
-            "uv_max_component_errors": {
-              "Pigment projection": 5.960464477539063e-08,
-              "Wood atlas": 5.960464477539063e-08
-            }
-          }
-        ],
-        "all_faces_once": true
-      },
-      "reopened_audit": true,
-      "declaration": {
-        "atlas": "assets/bishop/bishop-boxwood-albedo.png",
-        "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-        "config": "docs/bishop-mission/iteration-015/reproduction.json",
-        "config_sha256": "54d3cb1992d92c265b763922fad2536600b9e9e7e4187fd7ad52594e737bc4f0",
-        "description": "Measured visible-surface pigment on the turned lower body, with smooth inferred continuation. Upper head/button pixels, all geometry, relief, lamps and the 54-degree camera are preserved.",
-        "residual_limitation": "Pigment inversion is approximate under inferred lights. Actual visibility replaces the old projection mask; retained existing highlight pigment and inferred hidden wood can still contain illumination and discontinuities. No exact intrinsic-albedo claim.",
-        "source": "history/bishop-mission-013/bishop-rebuilt.blend",
-        "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb"
-      },
-      "checked_config": "docs/bishop-mission/iteration-015/reproduction.json",
-      "historical_atlas_resolved_by_hash": false
-    },
-    "pigment_history_audit": {
-      "root_receiver_audit": {
-        "passed": true,
-        "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
-        "evaluated_uv_error_below_1e_7": true,
-        "closed_editable_control_retained": true,
-        "regions": [
-          {
-            "region": "body-rest",
-            "faces": 53514,
-            "vertices": 53998,
-            "normal_max_component_error": 2.562999725341797e-05,
-            "uv_max_component_errors": {
-              "Pigment projection": 5.960464477539063e-08,
-              "Wood atlas": 5.960464477539063e-08
-            }
-          },
-          {
-            "region": "socket-lip",
-            "faces": 7936,
-            "vertices": 8192,
-            "normal_max_component_error": 4.336237907409668e-05,
-            "uv_max_component_errors": {
-              "Pigment projection": 5.960464477539063e-08,
-              "Wood atlas": 5.960464477539063e-08
-            }
-          }
-        ],
-        "all_faces_once": true,
-        "source": "history/bishop-mission-010/bishop-rebuilt.blend",
-        "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
-        "model": "history\\bishop-mission-012\\bishop-rebuilt.blend",
-        "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
-        "only_declared_light_parameters_and_links_changed": true,
-        "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
-        "camera_world_display_render_path_preserved": true,
-        "reopened_audit": true,
-        "config": {
-          "arc_shadow_soft_size": 0.024,
-          "arc_spot_degrees": 2.0,
-          "exclude_from_socket": [
-            "collars reflection"
-          ],
-          "samples": 256,
-          "socket_z_band": [
-            0.99,
-            1.38
-          ],
-          "source": "history/bishop-mission-010/bishop-rebuilt.blend",
-          "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
-          "variant": "097-socket-receivers-persistent"
-        }
-      },
-      "atlas_steps": [
-        {
-          "passed": true,
-          "source": "history/bishop-mission-012/bishop-rebuilt.blend",
-          "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
-          "model": "history/bishop-mission-013/bishop-rebuilt.blend",
-          "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
-          "atlas": "history/bishop-mission-013/bishop-boxwood-albedo.png",
-          "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
-          "packed_pixel_max_error": 0.0,
-          "only_declared_atlas_changed": true,
-          "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
-          "render_receivers": {
-            "passed": true,
-            "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
-            "evaluated_uv_error_below_1e_7": true,
-            "closed_editable_control_retained": true,
-            "regions": [
-              {
-                "region": "body-rest",
-                "faces": 53514,
-                "vertices": 53998,
-                "normal_max_component_error": 2.562999725341797e-05,
-                "uv_max_component_errors": {
-                  "Pigment projection": 5.960464477539063e-08,
-                  "Wood atlas": 5.960464477539063e-08
-                }
-              },
-              {
-                "region": "socket-lip",
-                "faces": 7936,
-                "vertices": 8192,
-                "normal_max_component_error": 4.336237907409668e-05,
-                "uv_max_component_errors": {
-                  "Pigment projection": 5.960464477539063e-08,
-                  "Wood atlas": 5.960464477539063e-08
-                }
-              }
-            ],
-            "all_faces_once": true
-          },
-          "reopened_audit": true,
-          "declaration": {
-            "atlas": "assets/bishop/bishop-boxwood-albedo.png",
-            "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
-            "config": "scripts/bishop/pigment-106.json",
-            "config_sha256": "7d5b3bab3d7c09f5b09b5327fc5368fcb5ceca6fcd71c34848be3a3cf5ab82ec",
-            "description": "Smooth bounded boxwood color lift on socket, stem and collars. Foot, lower base, head and button atlas pixels remain exact. Old relief, geometry, lamps and 54-degree camera are retained.",
-            "residual_limitation": "The inherited pigment retains broad illumination and a side/rear projection boundary. This local grade does not resolve intrinsic texture/lighting separation.",
-            "source": "history/bishop-mission-012/bishop-rebuilt.blend",
-            "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231"
-          },
-          "checked_config": "scripts/bishop/pigment-106.json",
-          "historical_atlas_resolved_by_hash": true
-        },
-        {
-          "passed": true,
-          "source": "history/bishop-mission-013/bishop-rebuilt.blend",
-          "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
-          "model": "models/bishop/bishop-rebuilt.blend",
-          "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
-          "atlas": "assets/bishop/bishop-boxwood-albedo.png",
-          "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-          "packed_pixel_max_error": 0.0,
-          "only_declared_atlas_changed": true,
-          "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
-          "render_receivers": {
-            "passed": true,
-            "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
-            "evaluated_uv_error_below_1e_7": true,
-            "closed_editable_control_retained": true,
-            "regions": [
-              {
-                "region": "body-rest",
-                "faces": 53514,
-                "vertices": 53998,
-                "normal_max_component_error": 2.562999725341797e-05,
-                "uv_max_component_errors": {
-                  "Pigment projection": 5.960464477539063e-08,
-                  "Wood atlas": 5.960464477539063e-08
-                }
-              },
-              {
-                "region": "socket-lip",
-                "faces": 7936,
-                "vertices": 8192,
-                "normal_max_component_error": 4.336237907409668e-05,
-                "uv_max_component_errors": {
-                  "Pigment projection": 5.960464477539063e-08,
-                  "Wood atlas": 5.960464477539063e-08
-                }
-              }
-            ],
-            "all_faces_once": true
-          },
-          "reopened_audit": true,
-          "declaration": {
-            "atlas": "assets/bishop/bishop-boxwood-albedo.png",
-            "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-            "config": "docs/bishop-mission/iteration-015/reproduction.json",
-            "config_sha256": "54d3cb1992d92c265b763922fad2536600b9e9e7e4187fd7ad52594e737bc4f0",
-            "description": "Measured visible-surface pigment on the turned lower body, with smooth inferred continuation. Upper head/button pixels, all geometry, relief, lamps and the 54-degree camera are preserved.",
-            "residual_limitation": "Pigment inversion is approximate under inferred lights. Actual visibility replaces the old projection mask; retained existing highlight pigment and inferred hidden wood can still contain illumination and discontinuities. No exact intrinsic-albedo claim.",
-            "source": "history/bishop-mission-013/bishop-rebuilt.blend",
-            "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb"
-          },
-          "checked_config": "docs/bishop-mission/iteration-015/reproduction.json",
-          "historical_atlas_resolved_by_hash": false
-        }
-      ]
-    },
-    "geometry_controls_cutter_uvs_and_modifiers_preserved": true,
-    "camera_world_display_render_path_preserved": true,
-    "reopened_audit": true
-  }
+    "all_faces_once": true
+  },
+  "saved_and_reopened": true,
+  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score.",
+  "declared_geometry_changes_validated": true,
+  "finite_uvs_and_unit_normals": true,
+  "texture_hash_matches": true,
+  "declared_slit_revision_validated": true,
+  "geometry_phase": true,
+  "prior_material_atlas_exact": true
 }

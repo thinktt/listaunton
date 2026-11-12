@@ -1,0 +1,42 @@
+{
+  "variant": "136-shoulder-height-fit",
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "profile": "history/bishop-mission-015/profile.json",
+  "samples": 128,
+  "body_rings": {
+    "15": [
+      59.20634,
+      192.5167375551628
+    ],
+    "16": [
+      58.03706,
+      191.1978652102249
+    ],
+    "17": [
+      56.31738,
+      189.7386570947537
+    ],
+    "18": [
+      51.94494,
+      185.69959267882876
+    ],
+    "19": [
+      47.65736,
+      181.5478428762634
+    ],
+    "20": [
+      43.76956,
+      177.88111543115787
+    ],
+    "21": [
+      39.47331,
+      176.25257773752122
+    ],
+    "22": [
+      35.13836,
+      175.00187383877912
+    ]
+  },
+  "interpretation": "Fit the raised rear shoulder to the original white outline using declared local profile controls. All unlisted controls, socket, stem, collars, head, button, slit, finish and 54-degree camera remain fixed. Analytical fit is a proposal, not acceptance."
+}

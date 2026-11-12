@@ -36,6 +36,13 @@ const context={console,Float32Array,Uint32Array,Uint8Array,Math,JSON,
 vm.runInNewContext(source,context,{filename:'bishop-model-runtime.js'});
 function flush(){let n=0;while(queue.length){assert(n++<20);queue.shift()();}}
 flush();assert(draws>0);assert(node('status').hidden);assert.equal(canvas.tabIndex,-1);assert.equal(node('model-image').style.opacity,.5);
+assert.equal(uniforms.uUseWood,0,'Geometry review starts with neutral material.');
+assert(node('model-image').hidden);assert(!node('model-neutral-image').hidden);
+const neutralSrc=html.match(/id="model-neutral-image" src="([^"]+)"/)[1];
+assert(Buffer.from(neutralSrc.split(',')[1],'base64').equals(fs.readFileSync(path.join(root,'assets/bishop/render-clay.png'))),'Neutral overlay must embed the current saved-model diagnostic.');
+node('comparison-surface').events.change({target:{value:'brown'}});flush();
+assert.equal(uniforms.uUseWood,1);assert(!node('model-image').hidden);assert(node('model-neutral-image').hidden);
+node('comparison-surface').events.change({target:{value:'neutral'}});flush();assert.equal(uniforms.uUseWood,0);
 assert.equal(uniforms.uDiffuseLightScale,Math.fround(meta.material.diffuseLightScale??1),'Preview light balance must come from the accepted scene.');
 assert.deepEqual(uniforms.uCutPigment,Array.from(meta.material.cutPigment??[.42,.20,.055],Math.fround),'Cut material must use the exported pigment balance.');
 assert.equal(uniforms.uStandardView,meta.material.displayView==='Standard'?1:0,'Preview display response must follow scene metadata.');
@@ -82,6 +89,7 @@ node('reset').onclick();flush();compare();
 node('compare-tab').onclick();flush();
 for(const [id,value] of [['reference-only',0],['model-only',1],['half-overlay',.5]]){node(id).onclick();assert.equal(node('model-image').style.opacity,value);}
 node('model-opacity').value='73';node('model-opacity').events.input();assert.equal(node('model-image').style.opacity,.73);
+assert.equal(node('model-neutral-image').style.opacity,.73);
 assert(html.includes('#model-image{opacity:.5;background:#000}'),'Model-only image must have an opaque backing.');
 assert(parentMessages.some(m=>m.channel==='listaunton-review'&&m.event==='viewer-ready'));
 node('neutral').onclick();flush();assert.equal(uniforms.uUseWood,0);
@@ -104,4 +112,8 @@ for(const mode of ['compare','rotate','compare']){
  assert.equal(node('stage').dataset.mode,mode);assert.equal(node('status').hidden,mode==='compare');
 }
 assert.match(node('status').textContent,/could not start 3D/);
+node('comparison-surface').events.change({target:{value:'brown'}});
+assert(!node('model-image').hidden);assert(node('model-neutral-image').hidden);
+node('comparison-surface').events.change({target:{value:'neutral'}});
+assert(node('model-image').hidden);assert(!node('model-neutral-image').hidden);
 console.log(JSON.stringify({passed:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));

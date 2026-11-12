@@ -7,6 +7,31 @@ sys.path.insert(0,str(Path(__file__).parent))
 from bishop_scene import editable_meshes
 from validate_render_receivers import audit as audit_receivers
 from validate_pigment_history import audit_chain
+current_profile=json.loads((ROOT/'scripts/bishop/profile.json').read_text())
+if current_profile.get('mission_shape_refit'):
+    # A geometry phase intentionally changes controls. Replace the old
+    # unchanged-geometry assertion with an independent, declared-delta audit;
+    # continue checking all material, lighting, UV, receiver and camera state.
+    from validate_profile_shape import audit as audit_shape
+    declaration=current_profile['mission_shape_refit']
+    report=audit_shape(ROOT/'models/bishop/bishop-rebuilt.blend',ROOT/declaration['config'],ROOT/'scripts/bishop/profile.json')
+    meta=json.loads((ROOT/'assets/bishop/mesh.json').read_text());raw=(ROOT/'assets/bishop/mesh.bin').read_bytes()
+    assert meta['sourceSha256']==report['model_sha256'] and len(raw)==meta['totalByteLength']
+    ar=np.frombuffer(raw,dtype='<f4',count=meta['vertexCount']*8).reshape(-1,8)
+    assert np.isfinite(ar).all() and np.max(np.abs(np.linalg.norm(ar[:,3:6],axis=1)-1))<1e-5
+    cut=(ar[:,6]==-1)&(ar[:,7]==-1);assert cut.any()
+    assert ar[~cut,6:].min()>-.01 and ar[~cut,6:].max()<1.01
+    assert meta['material']['textureSha256']==hashlib.sha256((ROOT/meta['material']['texture']).read_bytes()).hexdigest()
+    prior_dir=(ROOT/declaration['source']).parent
+    assert (ROOT/meta['material']['texture']).read_bytes()==(prior_dir/'bishop-boxwood-albedo.png').read_bytes()
+    assert meta['referenceCamera']==json.loads((prior_dir/'camera.json').read_text())
+    report.update(declared_geometry_changes_validated=True,finite_uvs_and_unit_normals=True,
+                  texture_hash_matches=True,declared_slit_revision_validated=True,
+                  geometry_phase=True,prior_material_atlas_exact=True)
+    (ROOT/'assets/bishop/mission-validation.json').write_text(json.dumps(report,indent=2)+'\n')
+    (ROOT/'assets/bishop/receiver-validation.json').write_text(json.dumps(report['render_receivers'],indent=2)+'\n')
+    print('BISHOP_CURRENT_SHAPE_MISSION_PASSED',json.dumps(report),flush=True)
+    raise SystemExit(0)
 buffers={};construction={}
 def geometry(path):
     bpy.ops.wm.open_mainfile(filepath=str(path),load_ui=False);bpy.context.view_layer.update();g=bpy.context.evaluated_depsgraph_get();res={}

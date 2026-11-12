@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/136-shoulder-height-fit/wood.png",
+  "render_sha256": "c712bbbc9b259a374caa36f333410f5587a9c6beac78f7905f0593e681081aa1",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9689014744887432,
+      "legacy_raw_model_mask_iou": 0.9689014744887432
+    },
+    "original_white": {
+      "silhouette_iou": 0.9871353627159422,
+      "legacy_raw_model_mask_iou": 0.9871353627159422
+    },
+    "original_black": {
+      "silhouette_iou": 0.976196419873356,
+      "legacy_raw_model_mask_iou": 0.976196419873356
+    }
+  }
+}

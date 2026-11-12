@@ -3,9 +3,9 @@
     {
       "name": "Bishop - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.8634066226092525,
-      "vertices": 61678,
-      "faces": 61450
+      "signed_volume": 4.72770050361779,
+      "vertices": 62446,
+      "faces": 62218
     },
     {
       "name": "Bishop - domed button finial",
@@ -76,6 +76,107 @@
     17,
     18
   ],
-  "all_other_lower_profile_points_preserved": true,
-  "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json"
+  "all_other_lower_profile_points_preserved": false,
+  "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json",
+  "declared_shape_refit": {
+    "config": "docs/bishop-mission/iteration-017/profile-fit.json",
+    "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+    "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+    "profile": "history/bishop-mission-015/profile.json",
+    "body_rings": {
+      "15": [
+        57.74234,
+        190.9
+      ],
+      "16": [
+        55.86965,
+        189.3
+      ],
+      "17": [
+        54.35338,
+        187.95744680851064
+      ],
+      "18": [
+        50.25526,
+        184.11489361702127
+      ],
+      "19": [
+        46.48492,
+        180.36170212765958
+      ],
+      "20": [
+        42.7997,
+        177.5
+      ],
+      "21": [
+        39.11864,
+        176.3
+      ],
+      "22": [
+        35.18145,
+        175.3
+      ],
+      "14": [
+        58.95,
+        192.7
+      ],
+      "32": [
+        24.25,
+        159.6875
+      ],
+      "33": [
+        22.501730000000002,
+        154.79166666666666
+      ],
+      "34": [
+        19.594929999999998,
+        147.72916666666666
+      ],
+      "35": [
+        17.356005,
+        140.125
+      ],
+      "36": [
+        16.319905,
+        131.97916666666666
+      ],
+      "37": [
+        16.178745,
+        124.91666666666667
+      ],
+      "57": [
+        30.5,
+        98.75
+      ],
+      "58": [
+        28.0,
+        98.25
+      ],
+      "59": [
+        27.5,
+        97.45
+      ],
+      "60": [
+        28.5,
+        96.55000000000001
+      ],
+      "61": [
+        30.5,
+        96.05000000000001
+      ],
+      "62": [
+        31.2,
+        94.94999999999999
+      ],
+      "63": [
+        31.1,
+        93.6
+      ],
+      "64": [
+        30.0,
+        92.30000000000001
+      ]
+    }
+  },
+  "all_unlisted_profile_points_preserved": true
 }

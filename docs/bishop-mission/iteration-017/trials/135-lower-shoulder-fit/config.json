@@ -1,0 +1,38 @@
+{
+  "variant": "135-lower-shoulder-fit",
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "profile": "history/bishop-mission-015/profile.json",
+  "samples": 128,
+  "body_rings": {
+    "17": [
+      54.18584,
+      187.95744680851064
+    ],
+    "18": [
+      50.95903,
+      184.11489361702127
+    ],
+    "19": [
+      48.06704,
+      180.36170212765958
+    ],
+    "20": [
+      44.55236,
+      177.5
+    ],
+    "21": [
+      40.1227,
+      176.3
+    ],
+    "22": [
+      35.24592,
+      175.3
+    ],
+    "23": [
+      32.34668,
+      174.8
+    ]
+  },
+  "interpretation": "Lower the apparent rear base shoulder by changing its radial profile only. Fit the registered original white outline; retain every height, socket, stem, collar, head, button, slit, finish and 54-degree camera. Analytical fit is a proposal, not acceptance."
+}

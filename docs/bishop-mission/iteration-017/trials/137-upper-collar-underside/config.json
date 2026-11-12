@@ -1,0 +1,74 @@
+{
+  "variant": "137-upper-collar-underside",
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "profile": "history/bishop-mission-015/profile.json",
+  "samples": 128,
+  "body_rings": {
+    "15": [
+      59.20634,
+      192.5167375551628
+    ],
+    "16": [
+      58.03706,
+      191.1978652102249
+    ],
+    "17": [
+      56.31738,
+      189.7386570947537
+    ],
+    "18": [
+      51.94494,
+      185.69959267882876
+    ],
+    "19": [
+      47.65736,
+      181.5478428762634
+    ],
+    "20": [
+      43.76956,
+      177.88111543115787
+    ],
+    "21": [
+      39.47331,
+      176.25257773752122
+    ],
+    "22": [
+      35.13836,
+      175.00187383877912
+    ],
+    "57": [
+      30.5,
+      99.2
+    ],
+    "58": [
+      28,
+      99.0
+    ],
+    "59": [
+      27.5,
+      98.5
+    ],
+    "60": [
+      28.5,
+      97.7
+    ],
+    "61": [
+      30.5,
+      97.2
+    ],
+    "62": [
+      31.2,
+      96.1
+    ],
+    "63": [
+      31.1,
+      94.6
+    ],
+    "64": [
+      30,
+      92.9
+    ]
+  },
+  "interpretation": "Keep the tested lower-shoulder correction and lower the upper collar by a tapered 0.9\u20132.3 original-image axis pixels. Its neutral recess is above the reference dark arc; broaden the underside toward the middle collar while keeping head, button, slit and lower collars fixed. Reflected intensity is not an exact geometric landmark; inspect the actual neutral/wood result and original before acceptance."
+}

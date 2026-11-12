@@ -1,0 +1,23 @@
+{
+  "source": "history\\bishop-mission-015\\bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "config": "docs\\bishop-mission\\iteration-017\\profile-fit.json",
+  "config_sha256": "556e9c255a650ee5146e441250d72487cf0f45b994dce60d059bf171f5169fed",
+  "environment": "Blender 5.2.2, Cycles/OPTIX; Python with NumPy and Pillow. Use an isolated checkout.",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/profile_shape_trial.py -- docs/bishop-mission/iteration-017/profile-fit.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_profile_shape.py -- --model build/bishop-mission/143-geometry-checkpoint/bishop.blend --config docs/bishop-mission/iteration-017/profile-fit.json --profile build/bishop-mission/143-geometry-checkpoint/profile.json --out build/bishop-mission/143-independent-scope.json"
+  ],
+  "promotion": "After visual acceptance, copy trial bishop.blend to models/bishop/bishop-rebuilt.blend, profile.json to scripts/bishop/profile.json, wood.png to assets/bishop/render.png, and neutral.png to assets/bishop/render-clay.png. Keep the atlas exact.",
+  "refresh": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_checkpoint.py",
+    "blender --background --python-exit-code 1 --python scripts/bishop/render_diagnostics.py",
+    "python scripts/bishop/compare.py",
+    "python scripts/bishop/mission_compare.py --render assets/bishop/render.png --previous history/bishop-mission-015/render.png --out docs/bishop-mission/iteration-017/comparison",
+    "python scripts/bishop/refresh_review.py",
+    "node scripts/bishop/check_viewer.cjs",
+    "node scripts/bishop/check_review.cjs"
+  ],
+  "preservation": "No reference, alignment, gallery, mission, camera, material, light, UV control, button or slit cutter change. Other pieces untouched.",
+  "limitations": "Fixed GPU renders can have noise/platform variation. Geometry and source hashes, exact config, scope and anatomy checks govern reproducibility; Blender container bytes need not repeat."
+}

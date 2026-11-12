@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "model_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "source": "history/bishop-mission-015/bishop-rebuilt.blend",
+  "source_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "config_sha256": "556e9c255a650ee5146e441250d72487cf0f45b994dce60d059bf171f5169fed",
+  "changed_body_rings": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "max_control_error_from_declared_edit": 6.173085997929206e-08,
+  "unlisted_controls_exact": true,
+  "topology_modifiers_uvs_cutter_button_materials_packed_pixels_lights_and_camera_preserved": true,
+  "reference_pixels_unchanged": true,
+  "camera_exactly_unchanged": true,
+  "shader": "Principled BSDF",
+  "albedo_bakes_lighting": false,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 54282,
+        "vertices": 54766,
+        "normal_max_component_error": 4.0650367736816406e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 5.456805229187012e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "saved_and_reopened": true,
+  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score.",
+  "declared_geometry_changes_validated": true,
+  "finite_uvs_and_unit_normals": true,
+  "texture_hash_matches": true,
+  "declared_slit_revision_validated": true,
+  "geometry_phase": true,
+  "prior_material_atlas_exact": true
+}

@@ -33,6 +33,7 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 .comparison-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
 .comparison-stage img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;user-select:none;pointer-events:none}
 #model-image{opacity:.5;background:#000}
+#model-neutral-image{opacity:.5;background:#000}
 .stage[data-mode="compare"] canvas,.stage[data-mode="compare"] .zoom,.stage[data-mode="compare"] .badge{visibility:hidden;pointer-events:none}
 .stage[data-mode="rotate"] .comparison-stage{visibility:hidden;pointer-events:none}
 .comparison-note{margin-left:auto;color:#969fa9;font-size:12px}
@@ -45,11 +46,11 @@ html[data-embedded=true] header,html[data-embedded=true] .mode-tabs{display:none
 <main>
 <header><div><h1>Bishop model</h1><p>54° reference camera · boxwood reconstruction</p></div><a class="download" href="models/bishop/bishop-rebuilt.blend" download>Blender file ↗</a></header>
 <nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button></nav>
-<div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original white</option><option value="selected">White candidate 3</option><option value="black">Original black</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
-<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Boxwood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
+<div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original white</option><option value="selected">White candidate 3</option><option value="black">Original black</option></select></label><label for="comparison-surface">Surface <select id="comparison-surface"><option value="neutral">Neutral</option><option value="brown">Boxwood</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
+<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Boxwood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Bishop model comparison">
-<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="__BLACK_IMAGE__" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: white bishop candidate 3" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess white bishop" draggable="false"><img id="black-image" src="__BLACK_IMAGE__" alt="Original Lichess black bishop" draggable="false" hidden><img id="model-image" src="__RENDER_IMAGE__" alt="Current model with its retained wood material" draggable="false" hidden><img id="model-neutral-image" src="__NEUTRAL_IMAGE__" alt="Current model in neutral material at its saved reference camera" draggable="false"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D bishop. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -83,11 +84,22 @@ fitComparison();
 function paintOverlay(){
  const value=Math.min(100,Math.max(0,Number(opacity.value)||0));
  document.getElementById('model-image').style.opacity=value/100;
+ document.getElementById('model-neutral-image').style.opacity=value/100;
  document.getElementById('opacity-value').textContent=value+'%';
 }
 opacity.addEventListener('input',paintOverlay);
 for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',100]])document.getElementById(id).onclick=()=>{opacity.value=value;paintOverlay();};
-let ready=false;
+let ready=false,material='neutral';
+function chooseSurface(name){
+ material=name==='brown'?'brown':'neutral';
+ document.getElementById('model-image').hidden=material!=='brown';
+ document.getElementById('model-neutral-image').hidden=material!=='neutral';
+ document.getElementById('comparison-surface').value=material;
+ for(const id of ['neutral','brown'])document.getElementById(id).setAttribute('aria-pressed',String(id===material));
+ if(ready&&gl){updateLabels();schedule();}
+}
+document.getElementById('comparison-surface').addEventListener('change',event=>chooseSurface(event.target.value));
+chooseSurface('neutral');
 function mode(name){
  const rotate=name==='rotate';stage.dataset.mode=name;
  compareTab.setAttribute('aria-pressed',String(!rotate));rotateTab.setAttribute('aria-pressed',String(rotate));
@@ -106,9 +118,9 @@ if(window.parent&&window.parent!==window)window.addEventListener('message',event
  if(event.source!==window.parent||!data||data.channel!=='listaunton-review'||data.action!=='activate')return;
  if(data.embedded===true)document.documentElement.dataset.embedded='true';
  if(data.mode==='compare'||data.mode==='rotate')mode(data.mode);
+ if(data.material==='neutral'||data.material==='brown')chooseSurface(data.material);
  if(!gl)return;
  if(autoFit)fit();
- if(data.material==='neutral'||data.material==='brown')document.getElementById(data.material).onclick();
  schedule();
 });
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
@@ -166,7 +178,7 @@ void main(){
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
 let program,vao,uniforms,meshBytes,woodTexture,lost=false,pending=false;
-let q=[0,0,0,1],pan=[0,0],distance=9,material='brown',autoFit=true;
+let q=[0,0,0,1],pan=[0,0],distance=9,autoFit=true;
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 const reference=meta.referenceCamera;
 const fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
@@ -307,7 +319,7 @@ document.getElementById('reset').onclick=()=>view('overlay');
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));
 document.getElementById('zoom-in').onclick=()=>zoom(.85);document.getElementById('zoom-out').onclick=()=>zoom(1/.85);
 for(const name of ['orthographic','perspective'])document.getElementById(name).onclick=()=>setProjection(name);
-for(const name of ['neutral','brown'])document.getElementById(name).onclick=()=>{material=name;for(const id of ['neutral','brown'])document.getElementById(id).setAttribute('aria-pressed',String(id===name));updateLabels();schedule();};
+for(const name of ['neutral','brown'])document.getElementById(name).onclick=()=>chooseSurface(name);
 new ResizeObserver(()=>{fitComparison();if(autoFit)fit();schedule();}).observe(canvas);
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;ready=false;status.hidden=stage.dataset.mode!=='rotate';status.textContent='3D graphics paused. Restoring the view…';});
 canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();}catch(e){fail(e);}});
