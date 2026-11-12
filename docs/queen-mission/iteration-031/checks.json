@@ -1,0 +1,16 @@
+{
+  "accepted_model_sha256": "f6cbac79d43ce1e894f498340da4ebb0700c87dd44d0845cf0bab56e13310442",
+  "scoped_shape_validation": "passed",
+  "delivered_model_validation": "passed",
+  "material_lights_camera_preservation": "passed",
+  "check_viewer_camera.cjs": "passed; simulated DOM/WebGL, max pixel error 0.00003865447181",
+  "check_review_reference.cjs": "passed",
+  "check_site.py": "passed; source hashes, references, links and parts sandbox/CSP",
+  "check_model_site.py": "passed; all model and projection review links",
+  "native_browser": "Observed current 3D viewer, Side/Neutral controls and rendered Side comparison with working opacity",
+  "local_http": "200; served viewer and side-registration metadata both identify the accepted model",
+  "source_images_changed": false,
+  "gallery_defaults_changed": false,
+  "watchers_started": false,
+  "subagents_started": false
+}

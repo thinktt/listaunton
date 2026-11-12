@@ -180,3 +180,13 @@ the same field through uRootHeight/uRootRadiusGain and vWoodPosition; preserve
 these when rebuilding, and retain or bake the procedural grade for other exports.
 The older bowl-floor changes and added contact lights are rejected, not public
 alternatives. Keep the saved/reopened comparison and synchronized current views.
+
+Queen checkpoint 31 raises only stem controls 48 and 49 to flatten the join
+under the accepted rounded bottom collar. The socket shelf/drop, base, all
+radii, crown, egg, materials, lights and 54-degree camera are unchanged from
+checkpoint 29. Reproduce with study_compact_turning.py and the commands in
+docs/queen-mission/iteration-031; checkpoint 29 is archived. Use the scoped
+side-shape and delivered-model validators, then regenerate all fixed/side and
+viewer assets. Coupled base-compression trials in iteration 31 are rejected:
+their close exterior outlines conceal a displaced socket lip. Constrain that
+interior arc before accepting further base changes. The shape goal is active.

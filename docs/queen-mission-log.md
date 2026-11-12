@@ -1398,3 +1398,28 @@ shelf/drop construction, but the current original Lichess sprite does not yet
 support it strongly enough to displace checkpoint 29.  See
 `docs/queen-mission/iteration-030/` for fixed-registration overlays, the neutral
 side sheet, dimensions, and full decision record.  The goal remains active.
+
+## Thirty-first iteration — flatten the lower-collar join, November 11, 2026
+
+The rounded bottom bead still sat on a funnel-like stem transition. Two
+production-subdivision drafts raised only controls 48 and 49. The accepted
+0.085-unit lift at control 49 (0.01275 at 48) makes the underside flatter
+without changing the bead, any radius, the socket/base, crown or egg. Both
+draft alpha masks match their elevated baseline exactly. Final 256-sample
+Cycles scores remain 97.8523% original and 97.9622% selected-high-res IoU.
+Interior/side form rises from 87 to 88 by visual judgment; color 85, grain 79,
+lighting 76 and holistic 80–85% are unchanged. The working mean is 85.1705%.
+
+Coupled 6/10/16% whole-base compression with radial refitting kept much closer
+exterior matches than the prior Z-only trials. The 10% case reached draft
+97.7773% original IoU, but its actual wood render moved the socket's front lip
+down and lost the source crescent. It is rejected despite its good silhouette.
+Next studies must constrain that interior arc, not just the outside mask.
+
+The accepted `f6cbac79d43ce1e894f498340da4ebb0700c87dd44d0845cf0bab56e13310442`
+model is closed with positive volume, six exact receiver/UV regions and 82
+verified light links. Packed material pixels, shader graph, 85 lights, camera
+and transform are preserved. The height/base ratio stays 2.102978. Checkpoint
+29 is archived; current fixed/side images and viewer are regenerated together.
+See [checkpoint 31](queen-mission/iteration-031/README.md). The base shape
+requirement remains unresolved, so the goal remains active.
