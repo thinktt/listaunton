@@ -1,0 +1,11 @@
+{
+  "checkpoint": 4,
+  "source_trial_sha256": "3f697fb6bcffc083edfdb12daf7880afe63ec7cf2de46a4ccb5ae1f86bb1d8bc",
+  "model_sha256": "9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c",
+  "source_trial": "build/rook-mission/004-continuous-atlas",
+  "unfinished": [
+    "highlight placement and edge crescents",
+    "inferred hidden pigment and residual projection artifacts",
+    "interior curvature vs original"
+  ]
+}

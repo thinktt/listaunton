@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "name": "Rook - continuous turned body and recessed floor",
+      "nonmanifold_edges": 0,
+      "signed_volume": 3.419159530519343,
+      "vertices": 31263,
+      "faces": 30832
+    },
+    {
+      "name": "Rook - thin curved merlon 1",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    },
+    {
+      "name": "Rook - thin curved merlon 2",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    },
+    {
+      "name": "Rook - thin curved merlon 3",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    },
+    {
+      "name": "Rook - thin curved merlon 4",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    }
+  ],
+  "source_hash_matches": true,
+  "mesh_binary_checked": true,
+  "normal_length_max_error": 1.7881393432617188e-07,
+  "visible_triangle_count": 62522,
+  "elevation_degrees": 54,
+  "equal_merlon_volumes": true,
+  "visible_wall_thickness_profile_px": 23,
+  "note": "Five closed editable objects: the evaluated union body and four equal hidden merlon construction objects. Boolean union preserves editable construction; this is a geometric study rather than a manufacturing certification."
+}

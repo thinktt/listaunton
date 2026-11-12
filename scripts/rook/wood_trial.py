@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'scripts/king'))
 from mission_trial import gpu, procedural_material
 
-source = ROOT/'models/rook/rook-rebuilt.blend'
+args = sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
+source = ROOT/(args[args.index('--source')+1] if '--source' in args else 'models/rook/rook-rebuilt.blend')
 source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
 assert source_hash == '23abce50f4a7bd6544f7844534e69a02e3a337a64ee7ce214e81acc353a26f2c'
 out = ROOT/'build/rook-mission/001-procedural-baseline'

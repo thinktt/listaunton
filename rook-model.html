@@ -38,17 +38,26 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 .comparison-note{margin-left:auto;color:#969fa9;font-size:12px}
 header .download{font-size:12px}
 @media(max-width:720px){.comparison-controls{padding:10px 14px;gap:8px}.mode-tabs{padding:8px 12px}.comparison-note{display:none}}
+
+.side-stage{position:absolute;inset:0;background:#000;overflow:hidden;visibility:hidden}
+.side-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
+.side-frame img{position:absolute;display:block;pointer-events:none;user-select:none}
+#side-model{opacity:.5}
+.stage[data-mode="side"] canvas,.stage[data-mode="side"] .zoom,.stage[data-mode="side"] .badge,.stage[data-mode="side"] .comparison-stage{visibility:hidden;pointer-events:none}
+.stage[data-mode="side"] .side-stage{visibility:visible}
 </style>
 </head>
 <body>
 <main>
-<header><div><h1>Rook model</h1><p>Original Lichess rook · geometry study</p></div><a class="download" href="models/rook/rook-rebuilt.blend" download>Blender file ↗</a></header>
-<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button></nav>
+<header><div><h1>Rook model</h1><p>54° reference camera · wood reconstruction</p></div><a class="download" href="assets/rook/profile.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/rook/rook-rebuilt.blend" download>Blender file ↗</a></header>
+<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 8</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
-<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="true">Neutral</button><button id="brown" aria-pressed="false">Brown</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
+<div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">Imagined side guide · base width and foot aligned</span></div>
+<div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Rook model comparison">
-<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe@" alt="Selected reference: black rook candidate 8" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4@" alt="Original Lichess black rook" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:f2ba2e30749f4f6fee9fdbb943f7453fe9d0768362e9a8fe3980e87cf07063ad@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="data:image/png;base64,@LISTAUNTON_ASSET:2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe@" alt="Selected reference: black rook candidate 8" draggable="false" hidden><img id="original-image" src="data:image/png;base64,@LISTAUNTON_ASSET:30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4@" alt="Original Lichess black rook" draggable="false"><img id="model-image" src="data:image/png;base64,@LISTAUNTON_ASSET:483d54707db22c2447ff23b610d48ca2a27d542ed872fcf496c9d7a97cb2b98f@" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
+<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="data:image/png;base64,@LISTAUNTON_ASSET:56f86bc0a017646140fec1f96e6966aadf4e728ed4a0a2d8f86c8c181b98cc2c@" alt="Imagined rook side guide"><img id="side-model" src="data:image/png;base64,@LISTAUNTON_ASSET:b09c47ecc22834c9a132ba3a2b6f1f881eee66aa384bbe7228055eb6682c2e52@" alt="Current rook side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D rook. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -57,8 +66,10 @@ header .download{font-size:12px}
 
 </main>
 <script id="original-alignment" type="application/json">{"scale":0.9842836257309941,"x":0.5307017543859666,"y":1.1789473684210439}</script>
-<script id="mesh-metadata" type="application/json">{"vertexCount":187566,"indexCount":187566,"triangleCount":62522,"vertexStrideBytes":24,"vertexByteLength":4501584,"indexByteOffset":4501584,"totalByteLength":5251848,"bounds":{"min":[-0.8907137513160706,-0.8907137513160706,-0.09721755236387253],"max":[0.8907137513160706,0.8907137513160706,2.7403109073638916],"size":[1.7814275026321411,1.7814275026321411,2.8375284671783447],"center":[0.0,0.0,1.3215466737747192]},"sourceSha256":"23abce50f4a7bd6544f7844534e69a02e3a337a64ee7ce214e81acc353a26f2c","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999813437461853,-0.0049420613795518875,-0.0035906173288822174,0.005083328112959862,0.00610872358083725,0.8090019226074219,0.587774395942688,-0.8321283459663391,-4.656613428188905e-10,-0.5877853631973267,0.80901700258255,-13.145347595214844,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.22966508567333221,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.11483253538608551,"shiftY":0}}</script>
-<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:c3ec65a09f68dcb058bcf49b943867b1d1e338bb5f66dbf4d22fc3f9c0004fd6@</script>
+<script id="side-registration" type="application/json">{"guide":"assets/rook/concepts/side-01-cutout.png","profile":"assets/rook/profile.png","guide_sha256":"56f86bc0a017646140fec1f96e6966aadf4e728ed4a0a2d8f86c8c181b98cc2c","profile_sha256":"b09c47ecc22834c9a132ba3a2b6f1f881eee66aa384bbe7228055eb6682c2e52","source_blend_sha256":"9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c","canvas":[1254,1414],"guide_top":160,"scale":1.89247311827957,"offset_x":59.258064516129025,"offset_y":-165.95698924731187,"guide_foot":{"width":704,"center":627.0,"floor":1118,"row":1034},"model_foot":{"width":372,"center":300.0,"floor":763,"row":706},"method":"Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth."}</script>
+<script id="wood-texture" type="application/octet-stream">@LISTAUNTON_ASSET:87522ddaeb30a6940fe58aac33d6a0e468300600ce12ace76e340218e28ce2ce@</script>
+<script id="mesh-metadata" type="application/json">{"vertexCount":36736,"indexCount":187566,"triangleCount":62522,"vertexStrideBytes":32,"vertexByteLength":1175552,"indexByteOffset":1175552,"totalByteLength":1925816,"bounds":{"min":[-0.8907137513160706,-0.8907137513160706,-0.09721755236387253],"max":[0.890713632106781,0.8907137513160706,2.7403109073638916],"size":[1.7814273834228516,1.7814275026321411,2.8375284671783447],"center":[-5.960464477539063e-08,0.0,1.3215466737747192]},"sourceSha256":"9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c","referenceCamera":{"type":"ORTHO","worldToCamera":[0.9999813437461853,-0.0049420613795518875,-0.0035906173288822174,0.005083328112959862,0.00610872358083725,0.8090019226074219,0.587774395942688,-0.8321283459663391,-4.656613428188905e-10,-0.5877853631973267,0.80901700258255,-13.145347595214844,-0.0,0.0,-0.0,1.0],"projectionMatrix":[0.4465709626674652,0.0,0.0,-0.22966508567333221,0.0,0.4465709626674652,0.0,-0.0,0.0,0.0,-0.0200200192630291,-1.0020020008087158,0.0,0.0,0.0,1.0],"width":1254,"height":1254,"orthoScale":4.47857141494751,"shiftX":0.11483253538608551,"shiftY":0.0,"elevationDegrees":53.999994989950146},"texture":"assets/rook/pigment.png","textureSha256":"87522ddaeb30a6940fe58aac33d6a0e468300600ce12ace76e340218e28ce2ce","uvLayer":"Pigment atlas"}</script>
+<script id="mesh-data" type="application/octet-stream">@LISTAUNTON_ASSET:1939f4895e938f0c1e103e3aea673cb247fc482f42cda205e5e6870f86f7edc8@</script>
 <script>
 'use strict';
 (() => {
@@ -66,11 +77,22 @@ const canvas=document.getElementById('viewer'), status=document.getElementById('
 const meta=JSON.parse(document.getElementById('mesh-metadata').textContent);
 const compareTab=document.getElementById('compare-tab'),rotateTab=document.getElementById('rotate-tab');
 const stage=document.getElementById('stage'),opacity=document.getElementById('model-opacity');
+let ready=false;
+const sideTab=document.getElementById('side-tab'),sideFrame=document.getElementById('side-frame');
+const sideRegistration=JSON.parse(document.getElementById('side-registration').textContent);
+const sideGuide=document.getElementById('side-guide'),sideModel=document.getElementById('side-model'),sideOpacity=document.getElementById('side-opacity');
+const [sideWidth,sideHeight]=sideRegistration.canvas;
+Object.assign(sideGuide.style,{width:'100%',height:(1254/sideHeight*100)+'%',left:'0%',top:(sideRegistration.guide_top/sideHeight*100)+'%'});
+Object.assign(sideModel.style,{width:(600*sideRegistration.scale/sideWidth*100)+'%',height:(900*sideRegistration.scale/sideHeight*100)+'%',left:(sideRegistration.offset_x/sideWidth*100)+'%',top:(sideRegistration.offset_y/sideHeight*100)+'%'});
+function paintSide(){const value=Math.min(100,Math.max(0,Number(sideOpacity.value)||0));sideModel.style.opacity=value/100;document.getElementById('side-opacity-value').textContent=value+'%';}
+sideOpacity.addEventListener('input',paintSide);
+for(const [id,value] of [['side-guide-only',0],['side-half',50],['side-model-only',100]])document.getElementById(id).onclick=()=>{sideOpacity.value=value;paintSide();};
+paintSide();
 const originalAlignment=JSON.parse(document.getElementById('original-alignment').textContent);
 const originalImage=document.getElementById('original-image'),frame=document.getElementById('comparison-frame');
 originalImage.style.width=(100/originalAlignment.scale)+'%';originalImage.style.height=(100/originalAlignment.scale)+'%';
 originalImage.style.left=(-originalAlignment.x/originalAlignment.scale)+'%';originalImage.style.top=(-originalAlignment.y/originalAlignment.scale)+'%';
-function fitComparison(){const side=Math.max(1,Math.min(stage.clientWidth,stage.clientHeight));frame.style.width=side+'px';frame.style.height=side+'px';}
+function fitComparison(){const side=Math.max(1,Math.min(stage.clientWidth,stage.clientHeight));frame.style.width=side+'px';frame.style.height=side+'px';const k=Math.min(stage.clientWidth/sideWidth,stage.clientHeight/sideHeight);sideFrame.style.width=sideWidth*k+'px';sideFrame.style.height=sideHeight*k+'px';}
 document.getElementById('reference-choice').addEventListener('change',event=>{
  const original=event.target.value==='original';originalImage.hidden=!original;document.getElementById('reference-image').hidden=original;
 });
@@ -84,14 +106,14 @@ opacity.addEventListener('input',paintOverlay);
 for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',100]])document.getElementById(id).onclick=()=>{opacity.value=value;paintOverlay();};
 function mode(name){
  const rotate=name==='rotate';stage.dataset.mode=name;
- compareTab.setAttribute('aria-pressed',String(!rotate));rotateTab.setAttribute('aria-pressed',String(rotate));
- document.getElementById('comparison-controls').hidden=rotate;
+ compareTab.setAttribute('aria-pressed',String(name==='compare'));sideTab.setAttribute('aria-pressed',String(name==='side'));rotateTab.setAttribute('aria-pressed',String(rotate));
+ document.getElementById('comparison-controls').hidden=name!=='compare';document.getElementById('side-controls').hidden=name!=='side';
  document.getElementById('rotation-controls').hidden=!rotate;document.getElementById('view-controls').hidden=!rotate;
  canvas.tabIndex=rotate?0:-1;
  status.hidden=!rotate||ready;
  fitComparison();if(rotate){if(autoFit)fit();schedule();}
 }
-compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');
+compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');sideTab.onclick=()=>mode('side');
 paintOverlay();canvas.tabIndex=-1;status.hidden=true;
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
 if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
@@ -99,6 +121,8 @@ const vs=`#version 300 es
 precision highp float;
 layout(location=0) in vec3 aPosition;
 layout(location=1) in vec3 aNormal;
+layout(location=2) in vec2 aUV;
+out vec2 vUV;
 uniform vec3 uCenter;
 uniform mat3 uRotation;
 uniform mat4 uProjection;
@@ -107,6 +131,7 @@ uniform float uDistance;
 out vec3 vNormal;
 out vec3 vPosition;
 void main(){
+ vUV=aUV;
  vec3 p=aPosition-uCenter;
  p=uRotation*vec3(p.x,p.z,-p.y);
  vPosition=p+vec3(uPan,-uDistance);
@@ -119,25 +144,34 @@ in vec3 vNormal;
 in vec3 vPosition;
 uniform vec3 uColor;
 uniform float uGloss;
+uniform sampler2D uWood;
+uniform bool uUseWood;
+in vec2 vUV;
+vec3 surfaceColor;
 uniform bool uOrthographic;
 out vec4 outColor;
 vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
  float diffuse=max(dot(n,l),0.0);
  vec3 h=normalize(l+v);
  float spec=pow(max(dot(n,h),0.0),uGloss)*step(0.001,diffuse);
- return strength*color*(uColor*diffuse+vec3(spec*0.25));
+ return strength*color*(surfaceColor*diffuse+vec3(spec*0.25));
 }
 void main(){
  vec3 n=normalize(vNormal),v=uOrthographic?vec3(0.0,0.0,1.0):normalize(-vPosition);
- vec3 c=uColor*(0.19+0.06*n.y);
+ surfaceColor=uUseWood?pow(texture(uWood,vUV).rgb,vec3(2.2)):uColor;
+ vec3 c=surfaceColor*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
  c+=light(n,v,normalize(vec3(0.85,0.2,0.9)),vec3(0.79,0.88,1.0),0.55);
  c+=light(n,v,normalize(vec3(0.45,0.75,-0.8)),vec3(0.9,0.95,1.0),0.8);
  c=clamp((c*(2.51*c+0.03))/(c*(2.43*c+0.59)+0.14),0.0,1.0);
  outColor=vec4(pow(c,vec3(1.0/2.2)),1.0);
 }`;
-let program,vao,uniforms,meshBytes,ready=false,lost=false,pending=false;
-let q=[0,0,0,1],pan=[0,0],distance=9,material='neutral',autoFit=true;
+let program,vao,uniforms,meshBytes,lost=false,pending=false;
+let q=[0,0,0,1],pan=[0,0],distance=9,material='brown',autoFit=true;
+let woodReady=false;const woodImage=new Image();
+woodImage.onload=()=>{woodReady=true;if(meshBytes&&!ready){try{initialize();}catch(e){fail(e);}}};
+woodImage.onerror=()=>fail(new Error('Pigment texture failed to load'));
+woodImage.src='data:image/png;base64,'+document.getElementById('wood-texture').textContent.trim();
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 const reference=meta.referenceCamera;
 const fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
@@ -188,7 +222,7 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'plain brown, wood grain to come':'neutral surface');
+ document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'wood pigment · approximate lighting':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
@@ -207,8 +241,12 @@ function initialize(){
  vao=gl.createVertexArray();gl.bindVertexArray(vao);
  const vb=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(meshBytes.buffer,0,meta.vertexByteLength/4),gl.STATIC_DRAW);
  for(let i=0;i<2;i++){gl.enableVertexAttribArray(i);gl.vertexAttribPointer(i,3,gl.FLOAT,false,meta.vertexStrideBytes,i*12);}
+ gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,meta.vertexStrideBytes,24);
+ const texture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);
+ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,woodImage);
+ gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.generateMipmap(gl.TEXTURE_2D);
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
@@ -227,6 +265,7 @@ function draw(){
  gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,meta.bounds.center);
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
+ gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
 }
@@ -287,7 +326,7 @@ if(window.parent&&window.parent!==window)window.addEventListener('message',event
 view('overlay');
 requestAnimationFrame(()=>setTimeout(()=>{try{
  const encoded=document.getElementById('mesh-data');const raw=atob(encoded.textContent.trim());meshBytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)meshBytes[i]=raw.charCodeAt(i);encoded.remove();
- if(meshBytes.byteLength!==meta.totalByteLength)throw new Error('Mesh size mismatch');initialize();
+ if(meshBytes.byteLength!==meta.totalByteLength)throw new Error('Mesh size mismatch');if(woodReady)initialize();
 }catch(e){fail(e);}},0));
 })();
 </script>

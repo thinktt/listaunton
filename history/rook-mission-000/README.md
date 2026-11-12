@@ -1,0 +1,1 @@
+Accepted neutral rook before first wood checkpoint. Model SHA 23abce50f4a7bd6544f7844534e69a02e3a337a64ee7ce214e81acc353a26f2c. Source references remain in assets/rook. Scripts at Git ebecac9 reproduce the original geometry.

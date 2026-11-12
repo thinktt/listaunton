@@ -1,10 +1,13 @@
 {
   "passed": true,
-  "sampledVertices": 501,
-  "maxCameraErrorPixels": 0.000037937137477643696,
+  "pigmentAtlasHashMatches": true,
+  "woodAndClayToggle": true,
+  "sideComparisonAndFootRegistration": true,
+  "sampledVertices": 504,
+  "maxCameraErrorPixels": 0.000036329797776581155,
   "overlayEndpoints": true,
   "tabOrbitPersistence": true,
   "rotationPanZoom": true,
   "cameraReset": true,
-  "sourceSha256": "23abce50f4a7bd6544f7844534e69a02e3a337a64ee7ce214e81acc353a26f2c"
+  "sourceSha256": "9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c"
 }

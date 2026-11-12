@@ -1,0 +1,416 @@
+{
+  "expected": {
+    "parts": {
+      "Rook - continuous turned body and recessed floor": {
+        "control_position_hash": "9db0734cd3a08b133fde6000b9274ca7c1eb94fd50e6d281f15f2a660663cc55",
+        "position_hash": "32b9308c73ab2b600000ffc5b493d19e69acc0143ed90a511de0a1913b46d204",
+        "triangle_hash": "75c6a50943aa8a090de9408c38dc5a66793d66071270708d35cf18d934f1e3ff",
+        "volume": 3.419159530519343,
+        "hidden_render": false,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 1": {
+        "control_position_hash": "62804776275a1d464e8c9b6935f39135d542d4f808456c0698e7bb0afc52e7a0",
+        "position_hash": "d2c9ceb9e9c0a6707b53a9c364a39e34193d97ea1a3919f05252c7acb0c27470",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 2": {
+        "control_position_hash": "632b8b215dfcd60e29a32ed811a76695f4a8009c8ca31ad1fa286e7e61b99771",
+        "position_hash": "da963d7146f0fa0b424ee77218823316cf9f702988a7138afe869e8cbffbe82c",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 3": {
+        "control_position_hash": "4a7fd8c1c2439007fc563c90c3b6ce53987bf28abe0eae6461208c07d84d8ceb",
+        "position_hash": "b271b1086c40b0d8bd6213452ce2711aa0c271ea1d6b9f9abcea210eebfd67b8",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 4": {
+        "control_position_hash": "cd22bf94f654db74182b3491fc0a7d9edb84da2c2ed123b51926776b84372504",
+        "position_hash": "a5cf6ad9c725f13d2ffc9a5e8a69dba12a4b20ac629b8cf829b16aff853b2dbd",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "camera": {
+      "matrix": [
+        [
+          0.9999813437461853,
+          0.0061087231151759624,
+          -6.316089873337205e-10,
+          0.0
+        ],
+        [
+          -0.0049420609138906,
+          0.8090018630027771,
+          -0.5877853035926819,
+          -7.053422927856445
+        ],
+        [
+          -0.0035906173288822174,
+          0.5877743363380432,
+          0.8090169429779053,
+          11.123929977416992
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "ORTHO",
+      "scale": 4.47857141494751,
+      "shift": [
+        0.11483253538608551,
+        0.0
+      ]
+    },
+    "resolution": [
+      1254,
+      1254
+    ]
+  },
+  "actual": {
+    "parts": {
+      "Rook - continuous turned body and recessed floor": {
+        "control_position_hash": "9db0734cd3a08b133fde6000b9274ca7c1eb94fd50e6d281f15f2a660663cc55",
+        "position_hash": "dbc40b8f5305b48f298511a276239ce7b2906b579402c0dbb7454d4f117e95a2",
+        "triangle_hash": "75c6a50943aa8a090de9408c38dc5a66793d66071270708d35cf18d934f1e3ff",
+        "volume": 3.419159527038089,
+        "hidden_render": false,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 1": {
+        "control_position_hash": "62804776275a1d464e8c9b6935f39135d542d4f808456c0698e7bb0afc52e7a0",
+        "position_hash": "d2c9ceb9e9c0a6707b53a9c364a39e34193d97ea1a3919f05252c7acb0c27470",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 2": {
+        "control_position_hash": "632b8b215dfcd60e29a32ed811a76695f4a8009c8ca31ad1fa286e7e61b99771",
+        "position_hash": "da963d7146f0fa0b424ee77218823316cf9f702988a7138afe869e8cbffbe82c",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 3": {
+        "control_position_hash": "4a7fd8c1c2439007fc563c90c3b6ce53987bf28abe0eae6461208c07d84d8ceb",
+        "position_hash": "b271b1086c40b0d8bd6213452ce2711aa0c271ea1d6b9f9abcea210eebfd67b8",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "Rook - thin curved merlon 4": {
+        "control_position_hash": "cd22bf94f654db74182b3491fc0a7d9edb84da2c2ed123b51926776b84372504",
+        "position_hash": "a5cf6ad9c725f13d2ffc9a5e8a69dba12a4b20ac629b8cf829b16aff853b2dbd",
+        "triangle_hash": "f182a8fbaaa69ec08ec22ac895082003f0b8684272793732a2bfa115dcc9826e",
+        "volume": 0.01866636485980153,
+        "hidden_render": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "camera": {
+      "matrix": [
+        [
+          0.9999813437461853,
+          0.0061087231151759624,
+          -6.316089873337205e-10,
+          0.0
+        ],
+        [
+          -0.0049420609138906,
+          0.8090018630027771,
+          -0.5877853035926819,
+          -7.053422927856445
+        ],
+        [
+          -0.0035906173288822174,
+          0.5877743363380432,
+          0.8090169429779053,
+          11.123929977416992
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "type": "ORTHO",
+      "scale": 4.47857141494751,
+      "shift": [
+        0.11483253538608551,
+        0.0
+      ]
+    },
+    "resolution": [
+      1254,
+      1254
+    ]
+  }
+}

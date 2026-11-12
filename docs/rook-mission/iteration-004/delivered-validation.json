@@ -1,0 +1,21 @@
+{
+  "components": [
+    {
+      "name": "Rook - continuous turned body and recessed floor",
+      "vertices": 31263,
+      "triangleCount": 62522,
+      "nonmanifold_edges": 0,
+      "signed_volume": 3.419159527038089
+    }
+  ],
+  "sourceSha256": "9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c",
+  "source_hash_matches": true,
+  "elevationDegrees": 53.999994989950146,
+  "cameraOrthographic": true,
+  "exactCornerPositionNormalUvRoundtrip": true,
+  "allAttributesFinite": true,
+  "allNormalsUnit": true,
+  "packedPigment": true,
+  "note": "Closed evaluated Boolean rook, retaining its editable lathe and four construction merlons in the saved file. Viewer lighting is approximate.",
+  "renderReceivers": null
+}
