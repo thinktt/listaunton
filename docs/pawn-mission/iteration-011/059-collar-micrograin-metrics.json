@@ -1,0 +1,95 @@
+{
+  "trial": "059-collar-micrograin",
+  "iou": {
+    "selected": 0.9681284138926105,
+    "original_black": 0.9850229345977426,
+    "original_white": 0.9813687330841603
+  },
+  "regions": {
+    "head": {
+      "mean_absolute_rgb_error_255": 2.9812572665677743,
+      "overlap_pixels": 49886
+    },
+    "collar-stem": {
+      "mean_absolute_rgb_error_255": 2.9032685761089354,
+      "overlap_pixels": 65115
+    },
+    "base-foot": {
+      "mean_absolute_rgb_error_255": 3.4609315230115496,
+      "overlap_pixels": 108489
+    }
+  },
+  "render_sha256": "c51682f0e35a3ff0e1597480770221d936b8a6c42beb609cc424e3eea9e0d261",
+  "model_sha256": "d567b20d2e78b8d281b9c002158c477d315e6b1f4daa3f669a79ba35d1819674",
+  "previous_render_sha256": "4f843e6920eda25554c6182ffbf06a79e1ff88aa45a211d8205e3f853f21d406",
+  "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "original_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+  "camera_assumption_above_board": 54,
+  "method": "Fixed registration. Foreground alpha >127 and reference max RGB >12. Largest component, filled holes. RGB errors only on common foreground.",
+  "largest_local_residuals": [
+    {
+      "xy": [
+        389,
+        606
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 18.305
+    },
+    {
+      "xy": [
+        437,
+        606
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 16.838
+    },
+    {
+      "xy": [
+        545,
+        930
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 15.299
+    },
+    {
+      "xy": [
+        389,
+        858
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 13.396
+    },
+    {
+      "xy": [
+        545,
+        882
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 13.121
+    },
+    {
+      "xy": [
+        569,
+        846
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 11.769
+    },
+    {
+      "xy": [
+        593,
+        906
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 10.592
+    },
+    {
+      "xy": [
+        521,
+        810
+      ],
+      "size": 32,
+      "mean_absolute_rgb_error_255": 10.589
+    }
+  ]
+}

@@ -60,10 +60,10 @@ def meridian_samples(obj):
         return np.vstack(([0,0,min(height),0,-1],result,[1,0,max(height),0,1]))
     finally:ev.to_mesh_clear()
 
-def capture(source,directory,with_beauty=False):
+def capture(source,directory,with_beauty=False,samples=96):
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False)
     scene=bpy.context.scene;body=control(scene)
-    fixed_camera(scene);setup(scene,96);add_lathe_uv(body)
+    fixed_camera(scene);setup(scene,samples);add_lathe_uv(body)
     directory.mkdir(parents=True,exist_ok=True)
     np.save(directory/"meridian.npy",meridian_samples(body))
     scene.render.image_settings.file_format="OPEN_EXR"
@@ -103,10 +103,12 @@ def capture(source,directory,with_beauty=False):
     view.setDirection(ocio.TRANSFORM_DIR_INVERSE)
     config.getProcessor(view).getDefaultCPUProcessor().applyRGB(pixels)
     np.save(directory/"target-linear.npy",pixels)
-    save_json(directory/"measurement.json",{"source_sha256":sha(source),"reference_sha256":sha(ASSETS/"reference.png"),"camera_above_board_degrees":54,"gray_linear_value":.1,"samples":96,"depth_samples":12,"method":"Scene-linear black and neutral 0.1 BSDF passes preserve actual reflections, geometry and lights. The separate depth pass measures visibility for UV projection. Diagnostics never enter the public beauty images."})
+    save_json(directory/"measurement.json",{"source_sha256":sha(source),"reference_sha256":sha(ASSETS/"reference.png"),"camera_above_board_degrees":54,"gray_linear_value":.1,"samples":samples,"depth_samples":12,"light_tree":scene.cycles.use_light_tree,"method":"Scene-linear black and neutral 0.1 BSDF passes preserve actual reflections, geometry and lights. The separate depth pass measures visibility for UV projection. Diagnostics never enter the public beauty images."})
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("source");p.add_argument("output")
     p.add_argument("--with-beauty",action="store_true")
+    p.add_argument("--samples",type=int,default=96)
     args=p.parse_args(sys.argv[sys.argv.index("--")+1:])
-    capture(BUILD/args.source/"pawn.blend",BUILD/args.output,args.with_beauty)
+    assert 1<=args.samples<=4096
+    capture(BUILD/args.source/"pawn.blend",BUILD/args.output,args.with_beauty,args.samples)

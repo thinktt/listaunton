@@ -1,0 +1,17 @@
+{
+  "measurement": "collar-polish-010",
+  "geometry_measurement": "pigment-055",
+  "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+  "roughness_source": "assets/pawn/pawn-varnish-v2.png",
+  "roughness_sha256": "438fbd14036469cd8cd5c6b4a87b88fdfb1f84d6c707ed0eee0a1daa3782f5c7",
+  "prior_rough_range": [0.3, 2.4],
+  "prior_polish_range": [0.38, 1.85],
+  "rough_range": [0.3, 2.4],
+  "polish_range": [0.38, 1.85],
+  "texture": "assets/pawn/pawn-varnish-v5.png",
+  "prior_255": 4,
+  "noise_prior": 0.6,
+  "update": 0.9,
+  "broad_fraction": 0.5,
+  "uv_focus": [0.672, 0.688, 0.736, 0.746]
+}

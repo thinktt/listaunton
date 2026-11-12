@@ -1,0 +1,28 @@
+{
+  "config": {
+    "measurement": "pigment-060",
+    "source_sha256": "fe8e89e3baf8912d97be6266017b58755be1b16c5c273a0aac49be75cba5ba8d",
+    "base_texture": "assets/pawn/pawn-walnut-v10.png",
+    "base_sha256": "8e68011377487b23810de4798a864f888ff8191d8678aee7e5552e46bc094c68",
+    "texture": "assets/pawn/pawn-walnut-v11.png",
+    "step": 0.8,
+    "relative_limit": 0.35,
+    "dark_limit": 0.002,
+    "fine_gain": 0.2
+  },
+  "measurement": {
+    "source_sha256": "fe8e89e3baf8912d97be6266017b58755be1b16c5c273a0aac49be75cba5ba8d",
+    "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+    "camera_above_board_degrees": 54,
+    "gray_linear_value": 0.1,
+    "samples": 512,
+    "depth_samples": 12,
+    "light_tree": false,
+    "method": "Scene-linear black and neutral 0.1 BSDF passes preserve actual reflections, geometry and lights. The separate depth pass measures visibility for UV projection. Diagnostics never enter the public beauty images."
+  },
+  "sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+  "trusted_pixels": 152022,
+  "mean_abs_linear_change": 0.0007534340838901699,
+  "q99_abs_linear_change": 0.011420130729675293,
+  "mean_abs_linear_hidden_change": 0.0036563584581017494
+}

@@ -11,15 +11,15 @@ def scalar(value):
     if isinstance(value,(str,bool,int,float)):return value
     return list(value)
 
-def graph(socket):
+def graph(socket,ignored_images=("Pawn walnut pigment","Pawn fine slope atlas")):
     node=socket.node
     attributes={k:scalar(getattr(node,k)) for k in ("operation","use_clamp","interpolation_type","clamp","data_type","blend_type","uv_map","space","interpolation","extension","projection","noise_dimensions","normalize","distribution","subsurface_method","invert","mute") if hasattr(node,k)}
     if node.type=="TEX_IMAGE":
         im=node.image
-        attributes["image"]=[im.colorspace_settings.name,list(im.size),node.name if node.name in ("Pawn walnut pigment","Pawn fine slope atlas") else hashlib.sha256(im.packed_file.data).hexdigest()]
+        attributes["image"]=[im.colorspace_settings.name,list(im.size),node.name if node.name in ignored_images else hashlib.sha256(im.packed_file.data).hexdigest()]
     inputs=[]
     for s in node.inputs:
-        inputs.append([s.identifier,graph(s.links[0].from_socket) if s.is_linked else scalar(s.default_value) if hasattr(s,"default_value") else None])
+        inputs.append([s.identifier,graph(s.links[0].from_socket,ignored_images) if s.is_linked else scalar(s.default_value) if hasattr(s,"default_value") else None])
     return [node.type,socket.identifier,attributes,inputs]
 
 def run(cfg,target,out):

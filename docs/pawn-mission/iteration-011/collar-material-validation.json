@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "source_sha256": "27570c1205a59a26d8417d6b88ef32764d14fb664941a5d49bb7d35a212cd87e",
+  "model_sha256": "023fb1b58cd883b63f75c5b640f16e5315950f968c5b8c74142a9b95e65e90b1",
+  "geometry_normals_uv_unchanged": true,
+  "lights_unchanged": 44,
+  "world_ray_depth_unchanged": true,
+  "camera_above_board": 54,
+  "prior_shader_and_matte_band_preserved": true,
+  "rejected_relief_change_absent": true,
+  "maps": {
+    "Pawn walnut pigment": {
+      "file": "assets/pawn/pawn-walnut-v11.png",
+      "sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400"
+    },
+    "Pawn fine slope atlas": {
+      "file": "assets/pawn/pawn-fine-slopes-v4.png",
+      "sha256": "e4bfe90283d54a3b97bc04e049dadd6a07efb36ab232e8dc0db4c271ffd9d23b",
+      "outside_collar_identical": true,
+      "changed_fraction": 0.0023403167724609375
+    },
+    "Pawn varnish roughness": {
+      "file": "assets/pawn/pawn-varnish-v5.png",
+      "sha256": "c2863f380825bf0de68dc818f3a3b25e4a4d25c7bc4162c9b027e608bcb2bcf2",
+      "outside_collar_identical": true,
+      "changed_fraction": 0.0018422603607177734
+    }
+  },
+  "samples": 512,
+  "seed": 0,
+  "light_tree": false
+}

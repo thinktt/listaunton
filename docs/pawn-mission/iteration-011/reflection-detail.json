@@ -1,0 +1,252 @@
+{
+  "selected": {
+    "head-left": {
+      "median": 132.74,
+      "p99": 244.18,
+      "ripple_rms": 18.264,
+      "ripple_correlation": 1.0
+    },
+    "head-upper": {
+      "median": 119.69,
+      "p99": 248.05,
+      "ripple_rms": 18.399,
+      "ripple_correlation": 1.0
+    },
+    "head-right": {
+      "median": 119.63,
+      "p99": 239.28,
+      "ripple_rms": 20.049,
+      "ripple_correlation": 1.0
+    },
+    "flare-left": {
+      "median": 186.39,
+      "p99": 251.41,
+      "ripple_rms": 29.384,
+      "ripple_correlation": 1.0
+    },
+    "flare-line": {
+      "median": 106.94,
+      "p99": 245.65,
+      "ripple_rms": 29.408,
+      "ripple_correlation": 1.0
+    },
+    "socket-lip": {
+      "median": 159.3,
+      "p99": 251.61,
+      "ripple_rms": 26.115,
+      "ripple_correlation": 1.0
+    },
+    "foot-line": {
+      "median": 80.81,
+      "p99": 224.66,
+      "ripple_rms": 30.448,
+      "ripple_correlation": 1.0
+    },
+    "stem-edge": {
+      "median": 59.91,
+      "p99": 227.87,
+      "ripple_rms": 24.52,
+      "ripple_correlation": 1.0
+    }
+  },
+  "checkpoint-007": {
+    "head-left": {
+      "median": 141.48,
+      "p99": 225.43,
+      "ripple_rms": 15.022,
+      "ripple_correlation": 0.6837
+    },
+    "head-upper": {
+      "median": 119.55,
+      "p99": 232.0,
+      "ripple_rms": 14.223,
+      "ripple_correlation": 0.7817
+    },
+    "head-right": {
+      "median": 121.99,
+      "p99": 225.81,
+      "ripple_rms": 13.764,
+      "ripple_correlation": 0.7994
+    },
+    "flare-left": {
+      "median": 203.73,
+      "p99": 232.99,
+      "ripple_rms": 11.383,
+      "ripple_correlation": 0.6012
+    },
+    "flare-line": {
+      "median": 147.47,
+      "p99": 199.05,
+      "ripple_rms": 19.827,
+      "ripple_correlation": -0.3469
+    },
+    "socket-lip": {
+      "median": 114.38,
+      "p99": 132.79,
+      "ripple_rms": 6.073,
+      "ripple_correlation": 0.2849
+    },
+    "foot-line": {
+      "median": 77.43,
+      "p99": 117.6,
+      "ripple_rms": 10.154,
+      "ripple_correlation": 0.7673
+    },
+    "stem-edge": {
+      "median": 17.14,
+      "p99": 39.63,
+      "ripple_rms": 1.917,
+      "ripple_correlation": -0.0374
+    }
+  },
+  "056-balanced-contact-wood": {
+    "head-left": {
+      "median": 134.26,
+      "p99": 234.15,
+      "ripple_rms": 17.333,
+      "ripple_correlation": 0.8416
+    },
+    "head-upper": {
+      "median": 117.02,
+      "p99": 240.31,
+      "ripple_rms": 19.826,
+      "ripple_correlation": 0.8255
+    },
+    "head-right": {
+      "median": 119.23,
+      "p99": 231.55,
+      "ripple_rms": 19.342,
+      "ripple_correlation": 0.8739
+    },
+    "flare-left": {
+      "median": 189.01,
+      "p99": 237.26,
+      "ripple_rms": 22.299,
+      "ripple_correlation": 0.8692
+    },
+    "flare-line": {
+      "median": 119.69,
+      "p99": 203.32,
+      "ripple_rms": 21.238,
+      "ripple_correlation": 0.7353
+    },
+    "socket-lip": {
+      "median": 141.72,
+      "p99": 228.42,
+      "ripple_rms": 20.621,
+      "ripple_correlation": 0.8884
+    },
+    "foot-line": {
+      "median": 83.83,
+      "p99": 195.95,
+      "ripple_rms": 22.944,
+      "ripple_correlation": 0.8979
+    },
+    "stem-edge": {
+      "median": 68.53,
+      "p99": 187.54,
+      "ripple_rms": 17.411,
+      "ripple_correlation": 0.4501
+    }
+  },
+  "060-stable-collar": {
+    "head-left": {
+      "median": 135.11,
+      "p99": 235.06,
+      "ripple_rms": 21.054,
+      "ripple_correlation": 0.8497
+    },
+    "head-upper": {
+      "median": 126.62,
+      "p99": 240.55,
+      "ripple_rms": 19.794,
+      "ripple_correlation": 0.8969
+    },
+    "head-right": {
+      "median": 124.91,
+      "p99": 231.31,
+      "ripple_rms": 21.028,
+      "ripple_correlation": 0.8861
+    },
+    "flare-left": {
+      "median": 189.36,
+      "p99": 237.26,
+      "ripple_rms": 24.025,
+      "ripple_correlation": 0.883
+    },
+    "flare-line": {
+      "median": 131.76,
+      "p99": 206.06,
+      "ripple_rms": 23.187,
+      "ripple_correlation": 0.651
+    },
+    "socket-lip": {
+      "median": 142.0,
+      "p99": 229.52,
+      "ripple_rms": 20.811,
+      "ripple_correlation": 0.8616
+    },
+    "foot-line": {
+      "median": 86.54,
+      "p99": 183.24,
+      "ripple_rms": 21.379,
+      "ripple_correlation": 0.8554
+    },
+    "stem-edge": {
+      "median": 67.51,
+      "p99": 184.12,
+      "ripple_rms": 17.15,
+      "ripple_correlation": 0.4019
+    }
+  },
+  "062-balanced-fine-collar": {
+    "head-left": {
+      "median": 135.08,
+      "p99": 235.06,
+      "ripple_rms": 20.6,
+      "ripple_correlation": 0.8575
+    },
+    "head-upper": {
+      "median": 123.89,
+      "p99": 240.55,
+      "ripple_rms": 19.771,
+      "ripple_correlation": 0.9042
+    },
+    "head-right": {
+      "median": 123.02,
+      "p99": 231.31,
+      "ripple_rms": 20.845,
+      "ripple_correlation": 0.8989
+    },
+    "flare-left": {
+      "median": 189.36,
+      "p99": 237.26,
+      "ripple_rms": 23.923,
+      "ripple_correlation": 0.884
+    },
+    "flare-line": {
+      "median": 130.22,
+      "p99": 205.59,
+      "ripple_rms": 22.861,
+      "ripple_correlation": 0.6634
+    },
+    "socket-lip": {
+      "median": 146.99,
+      "p99": 228.83,
+      "ripple_rms": 20.28,
+      "ripple_correlation": 0.8829
+    },
+    "foot-line": {
+      "median": 87.44,
+      "p99": 183.24,
+      "ripple_rms": 21.396,
+      "ripple_correlation": 0.8605
+    },
+    "stem-edge": {
+      "median": 67.51,
+      "p99": 184.12,
+      "ripple_rms": 17.156,
+      "ripple_correlation": 0.4017
+    }
+  }
+}

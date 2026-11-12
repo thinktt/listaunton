@@ -1,0 +1,46 @@
+{
+  "collar": {
+    "registered_xy": [
+      389,
+      575
+    ],
+    "crop_dimensions": [
+      190,
+      70
+    ],
+    "128_full_vs_crop_mae": 1.058,
+    "reference_fine_contrast": 13.747,
+    "checks": {
+      "128-clean-0": {
+        "mae_to_reference": 8.508,
+        "rms_fine_contrast": 12.851,
+        "fine_correlation_to_reference": 0.738,
+        "mae_to_768_other_seed": 3.4
+      },
+      "512-clean-0": {
+        "mae_to_reference": 8.307,
+        "rms_fine_contrast": 13.316,
+        "fine_correlation_to_reference": 0.7747,
+        "mae_to_768_other_seed": 2.653
+      },
+      "768-clean-0": {
+        "mae_to_reference": 8.291,
+        "rms_fine_contrast": 13.412,
+        "fine_correlation_to_reference": 0.7813,
+        "mae_to_768_other_seed": 2.524
+      },
+      "768-clean-31": {
+        "mae_to_reference": 8.406,
+        "rms_fine_contrast": 13.705,
+        "fine_correlation_to_reference": 0.7761,
+        "mae_to_768_other_seed": 0.0
+      },
+      "768-raw-0": {
+        "mae_to_reference": 9.17,
+        "rms_fine_contrast": 14.538,
+        "fine_correlation_to_reference": 0.7392,
+        "mae_to_768_other_seed": 3.75
+      }
+    }
+  }
+}

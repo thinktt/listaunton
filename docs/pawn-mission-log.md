@@ -314,3 +314,32 @@ clay, side and rotating assets share that saved model. Four-angle inspection
 checks the actual material away from the fitted camera. The mission remains
 incomplete; next refine the collar's fine reflection pattern while preserving
 this contact and illumination.
+
+## Checkpoint 011 · 2026-11-12
+
+The collar has finer reflected grain after local finish and normal-map
+calibration. Higher sampling and disabled light-tree selection make the
+highlights more stable. Pigment is measured again at that quality. The
+geometry, UVs, 54-degree camera, actual lights and contact setup stay fixed.
+
+| Metric | Checkpoint 010 | Checkpoint 011 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 92 | 93 |
+| Lighting | 92 | 92 |
+| Working mean | 92.96% | 93.16% |
+
+Left collar fine-pattern correlation improves from 0.657 to 0.815; the upper
+head improves from 0.826 to 0.904. Fine flare and foot correlations regress
+to 0.663 and 0.861. Native original RGB error changes from 16.50 to 16.60,
+and contact-profile error from 3.03 to 3.44. These tradeoffs remain visible
+in the [checkpoint evidence](pawn-mission/iteration-011/README.md).
+
+The four visual scores are estimates; the holistic range remains 90–95%.
+Original black and white silhouette IoU are 98.499% and 98.135%; tiny mask
+changes reflect sampling, with an identical exported mesh. Saved/reopened
+and independently rebuilt views agree within one RGB level. The mission
+remains incomplete. Next refine the thin flare/foot reflections under the
+more stable sampling while retaining the clearer collar and head grain.

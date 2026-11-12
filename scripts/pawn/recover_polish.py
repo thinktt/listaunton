@@ -60,10 +60,19 @@ def run(cfg):
     full[dst]=np.dstack((shift,confidence))
     prior=ROOT/cfg["roughness_source"]
     assert hashlib.sha256(prior.read_bytes()).hexdigest()==cfg["roughness_sha256"]
-    value=np.asarray(Image.open(prior).convert("RGB"),np.float32)[:,:,0]/255
+    prior_pixels=np.asarray(Image.open(prior).convert("RGB"))
+    value=prior_pixels[:,:,0].astype(np.float32)/255
     rlo,rhi=cfg["prior_rough_range"]
     rough=rlo+(rhi-rlo)*value
     polish=np.ones_like(rough)
+    if cfg.get("prior_polish_range"):
+        plo,phi=cfg["prior_polish_range"]
+        polish=plo+(phi-plo)*prior_pixels[:,:,1].astype(np.float32)/255
+    focus=None
+    if cfg.get("uv_focus"):
+        v=1-(np.arange(len(rough),dtype=np.float32)+.5)/len(rough)
+        a,b,c,d=cfg["uv_focus"]
+        focus=ramp(v,a,b)*(1-ramp(v,c,d))
     geom=ROOT/"build/pawn-mission"/cfg["geometry_measurement"]
     profile=np.load(geom/"meridian.npy");depth=np.load(geom/"depth.npy")[:,:,0]
     assert hashlib.sha256((ROOT/"assets/pawn/mesh.bin").read_bytes()).hexdigest()==cfg["mesh_sha256"]
@@ -71,12 +80,14 @@ def run(cfg):
     for rows,_,_,_,px,py,visibility in visible_tiles(profile,depth,camera,len(rough)):
         prop=sample(full,px,py)
         w=cfg["update"]*visibility*prop[:,:,2]
+        if focus is not None:w*=focus[rows,None]
         rough[rows]*=np.exp(w*prop[:,:,0])
         polish[rows]*=np.exp(w*prop[:,:,1])
     def encode(values,bounds):
         lo,hi=bounds
         return np.uint8(np.rint(255*np.clip((values-lo)/(hi-lo),0,1)))
     packed=np.dstack((encode(rough,cfg["rough_range"]),encode(polish,cfg["polish_range"]),np.full(rough.shape,255,np.uint8)))
+    if focus is not None:packed[focus==0]=prior_pixels[focus==0]
     out=ROOT/cfg["texture"]
     Image.fromarray(packed).save(out)
     report={"config":cfg,"calibration":record,"sha256":hashlib.sha256(out.read_bytes()).hexdigest(),"confident_pixels":int((confidence>.5).sum()),"polish_range_fitted":[float(polish.min()),float(polish.max())],"fraction_of_uv_with_polish_change_over_10pct":float(np.mean(np.abs(polish-1)>.10))}

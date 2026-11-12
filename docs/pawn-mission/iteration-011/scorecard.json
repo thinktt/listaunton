@@ -1,0 +1,97 @@
+[
+  {
+    "trial": "058-collar-polish",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 92
+    },
+    "working_mean": 92.96256827785221,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850229345977426,
+      "original_white": 0.9813687330841603
+    },
+    "source_sha256": "bf5723807e80555f0b551b68982c1624ec8b0b4698a9528213a443389eabb8b0",
+    "render_sha256": "bf5973f1b497a4ed707994b79db0402a9b52d4a6b33cb753526d73fdfcd556b5",
+    "decision": "Intermediate: measured collar-only finish improves texture slightly without changing the overall visual assessment."
+  },
+  {
+    "trial": "059-collar-micrograin",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 92
+    },
+    "working_mean": 92.96256827785221,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850229345977426,
+      "original_white": 0.9813687330841603
+    },
+    "source_sha256": "d567b20d2e78b8d281b9c002158c477d315e6b1f4daa3f669a79ba35d1819674",
+    "render_sha256": "c51682f0e35a3ff0e1597480770221d936b8a6c42beb609cc424e3eea9e0d261",
+    "decision": "Intermediate: a second measured collar normal pass improves fine-pattern correlation; sampling still limits detail."
+  },
+  {
+    "trial": "060-stable-collar",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 93,
+      "lighting": 92
+    },
+    "working_mean": 92.96214617354694,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "fe8e89e3baf8912d97be6266017b58755be1b16c5c273a0aac49be75cba5ba8d",
+    "render_sha256": "3bf6efc6bb708967ac08a59c14b857ce01cdfb27bd46193a57c0160c58866045",
+    "decision": "Intermediate: 512 samples and disabled light tree stabilize fine highlights, but broad wood color needs remeasurement at that quality."
+  },
+  {
+    "trial": "061-current-collar-relief",
+    "scores": {
+      "silhouette": 96.81124618024602,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 91,
+      "lighting": 91
+    },
+    "working_mean": 92.36224923604921,
+    "iou": {
+      "selected": 0.9681124618024601,
+      "original_black": 0.9849970107407179,
+      "original_white": 0.9813529787804426
+    },
+    "source_sha256": "84fbc209e42da071475925d95c9a02678abbc801575cb702c9ea7d683b229af2",
+    "render_sha256": "0b7d6633c9a94353c779856844cc5e23da418c649d207d6ef078ea01810c1543",
+    "decision": "Rejected: using the newer pigment as collar height shifts and over-brightens reflections; preserve the original relief source."
+  },
+  {
+    "trial": "062-balanced-fine-collar",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 92
+    },
+    "working_mean": 93.16214617354694,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "508e49c7c9675eb060cb088de61eaadc938aa785012802f10e5b7a16bc328f94",
+    "render_sha256": "72972c8cef8d6e6365fa234f080cb9e23635a7fff6425cf89cd87aba1f196723",
+    "decision": "Accepted after saved-file, material-scope, independent replay and multi-angle checks. Collar and head grain improve; native original RGB error trades 16.50 for 16.60, contact-profile error 3.03 for 3.44, and fine lower-reflection correlations regress."
+  }
+]

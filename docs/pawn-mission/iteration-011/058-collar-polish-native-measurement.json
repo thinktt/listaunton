@@ -1,0 +1,118 @@
+{
+  "Original black": {
+    "common_rgb_mae_255": 0.0,
+    "glints": {
+      "left": {
+        "native_center_xy": [
+          110.18511933520149,
+          109.09452120977873
+        ],
+        "native_90th_brightness": 135.57999999999998,
+        "center_error_original_pixels": 0.0
+      },
+      "upper": {
+        "native_center_xy": [
+          121.43035102119646,
+          104.8745014726474
+        ],
+        "native_90th_brightness": 160.59,
+        "center_error_original_pixels": 0.0
+      },
+      "right": {
+        "native_center_xy": [
+          122.70939472108343,
+          118.5450965037542
+        ],
+        "native_90th_brightness": 145.32,
+        "center_error_original_pixels": 0.0
+      }
+    }
+  },
+  "Selected black 2": {
+    "common_rgb_mae_255": 15.744034767150879,
+    "glints": {
+      "left": {
+        "native_center_xy": [
+          109.7418375429024,
+          109.69225776643493
+        ],
+        "native_90th_brightness": 196.85500000000002,
+        "center_error_original_pixels": 0.74416915990056
+      },
+      "upper": {
+        "native_center_xy": [
+          121.10850142496635,
+          105.28422396158129
+        ],
+        "native_90th_brightness": 220.11700000000002,
+        "center_error_original_pixels": 0.5210179272651467
+      },
+      "right": {
+        "native_center_xy": [
+          122.6259536920321,
+          119.5131149617317
+        ],
+        "native_90th_brightness": 208.436,
+        "center_error_original_pixels": 0.9716080178314174
+      }
+    }
+  },
+  "Before": {
+    "common_rgb_mae_255": 16.502201080322266,
+    "glints": {
+      "left": {
+        "native_center_xy": [
+          109.69719286259694,
+          109.7469959410039
+        ],
+        "native_90th_brightness": 202.42000000000002,
+        "center_error_original_pixels": 0.8147364712320674
+      },
+      "upper": {
+        "native_center_xy": [
+          121.04809882624504,
+          105.35956771801166
+        ],
+        "native_90th_brightness": 223.46,
+        "center_error_original_pixels": 0.6175807663269348
+      },
+      "right": {
+        "native_center_xy": [
+          122.56097386664129,
+          119.44973437835007
+        ],
+        "native_90th_brightness": 206.188,
+        "center_error_original_pixels": 0.9167324768909851
+      }
+    }
+  },
+  "Trial": {
+    "common_rgb_mae_255": 16.518129348754883,
+    "glints": {
+      "left": {
+        "native_center_xy": [
+          109.69719286259694,
+          109.7469959410039
+        ],
+        "native_90th_brightness": 202.42000000000002,
+        "center_error_original_pixels": 0.8147364712320674
+      },
+      "upper": {
+        "native_center_xy": [
+          121.04809882624504,
+          105.35956771801166
+        ],
+        "native_90th_brightness": 223.46,
+        "center_error_original_pixels": 0.6175807663269348
+      },
+      "right": {
+        "native_center_xy": [
+          122.56083524470526,
+          119.4501921301123
+        ],
+        "native_90th_brightness": 206.188,
+        "center_error_original_pixels": 0.917206634774479
+      }
+    }
+  }
+}

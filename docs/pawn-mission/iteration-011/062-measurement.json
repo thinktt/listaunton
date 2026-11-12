@@ -1,0 +1,10 @@
+{
+  "source_sha256": "fe8e89e3baf8912d97be6266017b58755be1b16c5c273a0aac49be75cba5ba8d",
+  "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "camera_above_board_degrees": 54,
+  "gray_linear_value": 0.1,
+  "samples": 512,
+  "depth_samples": 12,
+  "light_tree": false,
+  "method": "Scene-linear black and neutral 0.1 BSDF passes preserve actual reflections, geometry and lights. The separate depth pass measures visibility for UV projection. Diagnostics never enter the public beauty images."
+}
