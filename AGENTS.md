@@ -13,6 +13,13 @@ Begin each inter-chat message with the sender's name and a colon, for example:
 `[lista-manager]: Please report your current checkpoint.`
 Replies use the replying chat's prefix: `[lista-queen]: ...`.
 
+Identify the recipient by its assigned chat name in the message body as well
+as using the sender prefix. Workers should answer the request and comply
+within its authorized scope. Do not send unsolicited routine check-ins,
+periodic status messages, or acknowledgments of acknowledgments. Reply when
+requested or when a blocker requires attention. A quota-stop confirmation is
+a required reply; it does not start an ongoing conversation.
+
 1. Discover the desktop tools if deferred, then use
    `mcp__codex_app__list_threads` to find the intended chat by its current title.
    Retain its returned `threadId` and `hostId`; do not guess IDs or treat
@@ -33,6 +40,36 @@ Replies use the replying chat's prefix: `[lista-queen]: ...`.
 Keep communication tests scoped to messages; they do not resume modeling or
 authorize repository edits. Carry task context and relevant file paths in work
 messages, and coordinate shared-file edits explicitly.
+
+## Project manager quota-stop protocol
+
+Toby appoints `lista-manager` to coordinate a project-wide stop when the quota
+manager sends a stop-work alert. The quota-monitor chat is currently named
+`quota-watcher`; discover and verify its identity if its title changes.
+Toby authorizes the manager to relay that stop to the project workers and
+authorizes those workers to send their pause acknowledgments back.
+
+On receipt of that alert:
+
+1. Start no new modeling or render batches. Message every active project
+   worker, including `lista-bishop`, `lista-king` and `lista-pawn`, using
+   `[lista-manager]:`. Identify this as Toby's authorized quota stop.
+2. Ask each worker to preserve its best accepted result, save a concise
+   checkpoint of pending work/validation, pause its active goal, and stop.
+   A quota stop calls for a minimal safe checkpoint, not another iteration
+   or expensive finishing batch. Do not mark an unfinished goal complete.
+3. Require an explicit return message using `[lista-<piece>]:` confirming
+   the goal is paused and work has stopped. Include the manager's return
+   thread ID and host. Workers should report the actual goal-tool status;
+   if no goal is active, they should confirm that and that no work continues.
+4. Track each acknowledgment. Follow up with any worker that has not
+   confirmed, and report confirmed pauses and outstanding responses honestly.
+   Successful message delivery or an idle chat alone is not proof of a
+   paused goal. Do not claim all work stopped until all active workers confirm.
+
+The manager also checkpoints and pauses its own active goal, if any, after
+coordinating the stop. Keep this safety coordination brief. Resume modeling
+only on Toby's direction; a quota reset does not itself authorize resumption.
 
 ## Project workflow
 
