@@ -343,3 +343,34 @@ changes reflect sampling, with an identical exported mesh. Saved/reopened
 and independently rebuilt views agree within one RGB level. The mission
 remains incomplete. Next refine the thin flare/foot reflections under the
 more stable sampling while retaining the clearer collar and head grain.
+
+## Checkpoint 012 · 2026-11-12
+
+The lower finish now preserves more of the grain breaks inside the flare
+and foot reflections. Local roughness/polish and normal maps change; the
+geometry, pigment, contact setup, 44 lights and fixed 54-degree camera stay
+unchanged. The surface maps are identical outside the base's UV band.
+
+| Metric | Checkpoint 011 | Checkpoint 012 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 93 | 94 |
+| Lighting | 92 | 92 |
+| Working mean | 93.16% | 93.36% |
+
+Thin-flare pattern correlation improves from 0.663 to 0.869, and foot-line
+correlation from 0.861 to 0.929. Foot-line fine contrast rises from 21.4 to
+25.6 against 30.4 in the selected reference. Base/foot RGB error falls from
+3.14 to 2.76. Native original RGB error stays 16.60 at the reported precision;
+original black and white IoU remain 98.499% and 98.135%. Contact-profile error
+changes slightly from 3.44 to 3.48. A warmer-foot lighting test is rejected
+because its small selected-view gain worsens the original color comparison.
+
+The visual scores remain estimates, with a holistic range of 90–95%.
+See the [checkpoint evidence](pawn-mission/iteration-012/README.md) for
+reproduction, actual saved-model checks, alternate-angle inspection and
+remaining mismatches. The mission remains incomplete; next examine the
+stem/socket reflections and remaining collar residuals while preserving
+the clearer head and lower finish.

@@ -1,0 +1,32 @@
+{
+  "source": "build/pawn-mission/065-lower-micrograin/pawn.blend",
+  "source_sha256": "57a3849e5eeaece502989b19a2f5d1a77493f979e2524fcd76c66c60fde4c5bf",
+  "samples": 512,
+  "variant": "066-warm-foot",
+  "reflector_grades": [
+    {
+      "name": "Foot right",
+      "linear_rgb_gain": [
+        1.55,
+        1.18,
+        0.94
+      ]
+    },
+    {
+      "name": "Foot center-right",
+      "linear_rgb_gain": [
+        1.55,
+        1.18,
+        0.94
+      ]
+    },
+    {
+      "name": "Foot lip core",
+      "linear_rgb_gain": [
+        1.55,
+        1.18,
+        0.94
+      ]
+    }
+  ]
+}

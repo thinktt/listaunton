@@ -1,4 +1,4 @@
-"""Rebuild the finer collar finish from the preserved tenth pawn checkpoint."""
+"""Rebuild measured pawn surface maps from a preserved accepted checkpoint."""
 import argparse,json,sys
 from pathlib import Path
 import bpy

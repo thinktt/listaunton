@@ -1,6 +1,6 @@
 # Current pawn reconstruction
 
-The accepted model uses a fixed 54-degree camera, a seated round head, a flatter sole and packed walnut pigment. Its measured finish combines roughness, polish strength and fine normal slopes. See [the pawn mission log](../../docs/pawn-mission-log.md) for current scores and [checkpoint 009](../../docs/pawn-mission/iteration-009/README.md) for reproduction and scope validation. Open [the pawn review](../../pawn-review.html) for the fixed overlay, textured rotation and side comparison.
+The accepted model uses a fixed 54-degree camera, a seated round head, a flatter sole and packed walnut pigment. Its measured finish combines roughness, polish strength and fine normal slopes, with a local matte/varnish mix beneath the head. See [the pawn mission log](../../docs/pawn-mission-log.md) for current scores and [checkpoint 012](../../docs/pawn-mission/iteration-012/README.md) for reproduction and scope validation. Open [the pawn review](../../pawn-review.html) for the fixed overlay, textured rotation and side comparison.
 
 ## Historical clay pipeline
 

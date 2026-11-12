@@ -1,0 +1,59 @@
+[
+  {
+    "trial": "064-lower-finish",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 93,
+      "lighting": 92
+    },
+    "working_mean": 93.16214617354694,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "ef6d489124229c296b1d37b087fbcdbcb1b0574d47dedb6cbbcd5c3eecedcf29",
+    "render_sha256": "e35452cc67be2c6288c19d4c60f0f9860e714f6c99bec047d1d885ecd4c441c0",
+    "decision": "Useful local finish response, superseded by 065."
+  },
+  {
+    "trial": "065-lower-micrograin",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "57a3849e5eeaece502989b19a2f5d1a77493f979e2524fcd76c66c60fde4c5bf",
+    "render_sha256": "02519cb15fd3a5d373d1c234040edd33bd73112640c656dc93c39dee40be8845",
+    "decision": "Accepted: clearer lower reflection grain with protected shape, pigment, rig and camera; saved-model scope and independent replay pass."
+  },
+  {
+    "trial": "066-warm-foot",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "1dbce6036653093e0dbda90f4c4af6b615de2b2a65a73b3e383ee5cdd6cd4279",
+    "render_sha256": "10f8d94bf66d26739490fa9e72a54880b4b6d03bef6d5e3cff4290663f0ed439",
+    "decision": "Reject the extra lamp warming: minor selected hue gain with worse original color error and slightly reduced foot-pattern correlation."
+  }
+]
