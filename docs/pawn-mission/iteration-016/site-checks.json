@@ -1,0 +1,35 @@
+{
+  "checkpoint": "016",
+  "source_sha256": "aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa",
+  "status": "Pawn-specific checks passed. The full model-site check stops on an unrelated king model/page hash mismatch.",
+  "checks": [
+    {
+      "name": "site",
+      "exit_code": 0,
+      "output": "PASS: eight pages, 57 local links, overlay images, parts sandbox/CSP, and model/viewer hash.\nPASS: all twelve original PNG reference hashes and gallery images.\nPASS: original-reference alignment metadata and source image hashes.\nPASS: candidate hashes, source provenance, five comparison pages and alignment data.\nPASS: white bishops used plain upscale prompts without mitre-specific instructions.\nPASS: bounded foot-detail registration, unchanged image scale and same-color references.\n"
+    },
+    {
+      "name": "model-site",
+      "exit_code": 1,
+      "output": "Traceback (most recent call last):\n  File \"/home/toby/code/listaunton/scripts/check_model_site.py\", line 34, in <module>\n    assert meta['sourceSha256']==disk['sourceSha256']==sha(root/f'models/{piece}/{piece}-rebuilt.blend'),piece+' stale model'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: king stale model\n"
+    },
+    {
+      "name": "candidate-controls",
+      "exit_code": 0,
+      "output": "PASS: king — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: rook — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: bishop — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: knight — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: pawn — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: king (model frame) — model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\n"
+    },
+    {
+      "name": "pawn-viewer",
+      "exit_code": 0,
+      "output": "{\n  \"passed\": true,\n  \"pigmentAtlasHashMatches\": true,\n  \"varnishAtlasChecked\": true,\n  \"slopeAtlasChecked\": true,\n  \"woodAndClayToggle\": true,\n  \"sideComparisonAndFootRegistration\": true,\n  \"sampledVertices\": 502,\n  \"maxCameraErrorPixels\": 0.00001069600246717183,\n  \"overlayEndpoints\": true,\n  \"tabOrbitPersistence\": true,\n  \"rotationPanZoom\": true,\n  \"cameraReset\": true,\n  \"sourceSha256\": \"aef1935865d849b2f2bcf4b37242375beb75d3387aae7ee3d01d6feb3e27e9aa\"\n}\n"
+    },
+    {
+      "name": "pawn-model-site-scope",
+      "exit_code": 0,
+      "output": "PASS: pawn review opens its current mesh/camera/render; source images and registration are correct.\nSCOPE: pawn section only; shared checker SHA-256 4101480df08891b1d33d4d53f895defc38e569e25447b8c99f4aaf234227a921\n"
+    }
+  ],
+  "native_browser_gpu_check": false,
+  "native_browser_gpu_check_reason": "Earlier local-file URL policy rejection; no alternate browser route attempted. Node interaction harness uses a stub GPU; actual Blender fixed, clay, side and four-angle renders were inspected.",
+  "whole_set_sizing_check": "Not repeated: gallery sizes/defaults are unchanged."
+}

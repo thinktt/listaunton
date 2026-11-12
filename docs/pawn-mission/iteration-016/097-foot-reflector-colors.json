@@ -1,0 +1,17 @@
+{
+  "variant": "097-foot-reflector-colors",
+  "source": "history/pawn-mission-015/pawn-rebuilt.blend",
+  "source_sha256": "ed919f06d0ad0f6236469ee55eb5325adc4f9dbd5a2e33c60797f8867f031934",
+  "samples": 512,
+  "lights": ["Foot right", "Foot front", "Foot center-right", "Foot edge outer left", "Foot edge center left", "Foot lip core"],
+  "step": 0.18,
+  "limit": 0.45,
+  "ridge": 0.003,
+  "rates": [0.5, 1],
+  "crop": [300, 880, 668, 1005],
+  "regions": [
+    {"box": [510, 930, 610, 980], "weight": 2},
+    {"box": [370, 930, 450, 976], "weight": 2},
+    {"box": [310, 880, 665, 925], "weight": 3}
+  ]
+}

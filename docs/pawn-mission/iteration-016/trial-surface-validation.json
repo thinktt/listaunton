@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "source_sha256": "ed919f06d0ad0f6236469ee55eb5325adc4f9dbd5a2e33c60797f8867f031934",
+  "model_sha256": "bf3ef9906e1cc79699ee6a497551292d3d6ab14fd9ae25fe3900fb2b38911bec",
+  "camera_above_board": 54,
+  "mesh_normals_uv_unchanged": true,
+  "lights_total": 44,
+  "lights_unchanged": 39,
+  "changed_lamp_colors": {
+    "Foot right": {
+      "energy": 1.0469048023223877,
+      "color": [
+        1.0,
+        0.4139513671398163,
+        0.20957498252391815
+      ]
+    },
+    "Foot center-right": {
+      "energy": 0.2120899260044098,
+      "color": [
+        1.0,
+        0.42804592847824097,
+        0.18836508691310883
+      ]
+    },
+    "Foot edge outer left": {
+      "energy": 0.6605644822120667,
+      "color": [
+        1.0,
+        0.5379380583763123,
+        0.3674447238445282
+      ]
+    },
+    "Foot edge center left": {
+      "energy": 0.9123812913894653,
+      "color": [
+        1.0,
+        0.4877563714981079,
+        0.2873536944389343
+      ]
+    },
+    "Foot lip core": {
+      "energy": 0.0383736751973629,
+      "color": [
+        1.0,
+        0.3851064145565033,
+        0.17280861735343933
+      ]
+    }
+  },
+  "all_lamp_positions_shapes_and_visibility_preserved": true,
+  "world_ray_depth_unchanged": true,
+  "pigment_and_prior_relief_unchanged": {
+    "Earlier pigment | pawn-walnut-v2.png": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+    "Pawn walnut pigment": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400"
+  },
+  "full_shader_graph_and_matte_band_preserved": true,
+  "sampling": {
+    "samples": 512,
+    "seed": 0,
+    "light_tree": false,
+    "denoising": true,
+    "adaptive_sampling": true,
+    "adaptive_threshold": 0.009999999776482582,
+    "adaptive_min_samples": 0,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "animated_seed": false
+  },
+  "uv_focus": null,
+  "all_surface_maps_preserved": true,
+  "maps": {
+    "finish": {
+      "file": "assets/pawn/pawn-varnish-v9.png",
+      "sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+      "outside_focus_identical": true,
+      "changed_fraction": 0.0
+    },
+    "slopes": {
+      "file": "assets/pawn/pawn-fine-slopes-v10.png",
+      "sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+      "outside_focus_identical": true,
+      "changed_fraction": 0.0
+    }
+  }
+}

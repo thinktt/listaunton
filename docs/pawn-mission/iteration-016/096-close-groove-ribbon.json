@@ -1,0 +1,105 @@
+{
+  "variant": "096-close-groove-ribbon",
+  "source": "history/pawn-mission-015/pawn-rebuilt.blend",
+  "source_sha256": "ed919f06d0ad0f6236469ee55eb5325adc4f9dbd5a2e33c60797f8867f031934",
+  "samples": 512,
+  "response_samples": 512,
+  "response_percent": 100,
+  "keep_reflectors": [
+    "Left head glint",
+    "Upper head glint",
+    "Right head glint",
+    "Upper head glint core",
+    "Right head glint core",
+    "Base upper",
+    "Foot right",
+    "Foot front",
+    "Foot center-right",
+    "Foot edge outer left",
+    "Foot edge center left",
+    "Left polish core",
+    "Upper polish core",
+    "Right polish core",
+    "Flare left edge",
+    "Flare left taper",
+    "Flare left lip",
+    "Flare right inner",
+    "Flare right edge",
+    "Flare front lip",
+    "Flare lip taper",
+    "Right bounce",
+    "Back bounce",
+    "High left card",
+    "Lower front bounce",
+    "Lower right bounce",
+    "Upper face bounce",
+    "Front shadow key",
+    "Front shadow feather",
+    "Socket right",
+    "Flare left sweep",
+    "Flare left center",
+    "Flare right sweep",
+    "Flare right lip",
+    "Upper stem rim",
+    "Lower stem rim",
+    "Socket lip core",
+    "Right flare core",
+    "Outer flare line",
+    "Foot lip core",
+    "Collar left ribbon",
+    "Collar tip of ribbon",
+    "Collar right flank",
+    "Lower collar glint"
+  ],
+  "landmarks": [
+    {
+      "name": "Inner groove ribbon",
+      "pixel": [
+        559,
+        941.8
+      ],
+      "half_axes": [
+        45,
+        0.8
+      ],
+      "angle": -16,
+      "distance": 0.35,
+      "spread": 8,
+      "color": [
+        1,
+        0.85,
+        0.7
+      ]
+    }
+  ],
+  "dense_bounds": [
+    400,
+    915,
+    635,
+    989
+  ],
+  "protect_recesses": true,
+  "protect_quiet_head": true,
+  "glint_weight": 2,
+  "region_weights": [
+    {
+      "bounds": [
+        518,
+        927,
+        603,
+        955
+      ],
+      "weight": 5
+    }
+  ],
+  "groove_knots": [
+    {
+      "position": 0.18,
+      "gain": 0.8
+    },
+    {
+      "position": 0.19,
+      "gain": 0.6
+    }
+  ]
+}

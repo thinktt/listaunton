@@ -1,0 +1,55 @@
+{
+  "variant": "094-groove-ribbon-aim",
+  "source": "build/pawn-mission/093-inner-groove-reflector/pawn.blend",
+  "source_sha256": "fe79ab7730feec832da593c4d2484b57163da33fbd6e0abf25248e8da8f72bcc",
+  "samples": 512,
+  "light": "Inner groove ribbon",
+  "landmark": {
+    "name": "Inner groove ribbon",
+    "pixel": [
+      559,
+      941.8
+    ],
+    "half_axes": [
+      42,
+      1.2
+    ],
+    "angle": -16,
+    "distance": 1.2,
+    "spread": 22,
+    "color": [
+      1,
+      0.85,
+      0.7
+    ]
+  },
+  "crop": [
+    480,
+    909,
+    635,
+    990
+  ],
+  "bright_weight": 1,
+  "steps": [
+    1,
+    1,
+    0.15,
+    0.15,
+    0.15,
+    0.12
+  ],
+  "limits": [
+    5,
+    3,
+    0.8,
+    0.8,
+    0.7,
+    0.5
+  ],
+  "ridge": 0.001,
+  "rates": [
+    0.4,
+    0.7,
+    1
+  ]
+}

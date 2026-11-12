@@ -1,0 +1,30 @@
+{
+  "015": {
+    "samples": 512,
+    "seed": 0,
+    "use_light_tree": false,
+    "use_adaptive_sampling": true,
+    "adaptive_threshold": 0.009999999776482582,
+    "adaptive_min_samples": 0,
+    "use_denoising": true,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "use_animated_seed": false,
+    "diffuse_bounces": 4,
+    "glossy_bounces": 4
+  },
+  "096": {
+    "samples": 512,
+    "seed": 0,
+    "use_light_tree": false,
+    "use_adaptive_sampling": true,
+    "adaptive_threshold": 0.009999999776482582,
+    "adaptive_min_samples": 0,
+    "use_denoising": true,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "use_animated_seed": false,
+    "diffuse_bounces": 4,
+    "glossy_bounces": 4
+  }
+}

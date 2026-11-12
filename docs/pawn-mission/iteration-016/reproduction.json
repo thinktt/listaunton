@@ -1,0 +1,75 @@
+{
+  "variant": "101-front-preserved-replay",
+  "source": "history/pawn-mission-015/pawn-rebuilt.blend",
+  "source_sha256": "ed919f06d0ad0f6236469ee55eb5325adc4f9dbd5a2e33c60797f8867f031934",
+  "finish": {
+    "texture": "assets/pawn/pawn-varnish-v9.png",
+    "texture_sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+    "range": [
+      0.3,
+      2.4
+    ],
+    "polish_range": [
+      0.38,
+      1.85
+    ]
+  },
+  "slopes": {
+    "texture": "assets/pawn/pawn-fine-slopes-v10.png",
+    "texture_sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+    "max_slope": 0.135
+  },
+  "texture": "assets/pawn/pawn-walnut-v11.png",
+  "texture_sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+  "samples": 512,
+  "seed": 0,
+  "light_tree": false,
+  "lamp_colors": [
+    {
+      "name": "Foot right",
+      "energy": 1.0469048319877523,
+      "color": [
+        1.0,
+        0.4139513722749166,
+        0.2095749839377054
+      ]
+    },
+    {
+      "name": "Foot center-right",
+      "energy": 0.2120899299545035,
+      "color": [
+        1.0,
+        0.4280459301471993,
+        0.18836507961657875
+      ]
+    },
+    {
+      "name": "Foot edge outer left",
+      "energy": 0.6605644831084924,
+      "color": [
+        1.0,
+        0.5379380289585682,
+        0.3674447219200722
+      ]
+    },
+    {
+      "name": "Foot edge center left",
+      "energy": 0.9123812934952087,
+      "color": [
+        1.0,
+        0.4877563817467429,
+        0.28735368360437025
+      ]
+    },
+    {
+      "name": "Foot lip core",
+      "energy": 0.03837367642121239,
+      "color": [
+        1.0,
+        0.385106424634657,
+        0.17280861249295898
+      ]
+    }
+  ],
+  "maps_unchanged": true
+}

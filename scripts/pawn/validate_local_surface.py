@@ -20,7 +20,12 @@ def surface(body):
 
 def sampling(scene):
     return {'samples':scene.cycles.samples,'seed':scene.cycles.seed,
-            'light_tree':scene.cycles.use_light_tree,'denoising':scene.cycles.use_denoising}
+            'light_tree':scene.cycles.use_light_tree,'denoising':scene.cycles.use_denoising,
+            'adaptive_sampling':scene.cycles.use_adaptive_sampling,
+            'adaptive_threshold':scene.cycles.adaptive_threshold,
+            'adaptive_min_samples':scene.cycles.adaptive_min_samples,
+            'denoiser':scene.cycles.denoiser,'denoising_prefilter':scene.cycles.denoising_prefilter,
+            'animated_seed':scene.cycles.use_animated_seed}
 
 
 def run(cfg,target,out):
@@ -56,16 +61,20 @@ def run(cfg,target,out):
     assert graph(surface(body),tuple(MAPS.values()))==old_graph,'Full BSDF graph changed'
     assert validate(scene,body)==old_band
     assert sampling(scene)==old_sampling
-    assert old_sampling=={'samples':cfg['samples'],'seed':cfg['seed'],'light_tree':cfg['light_tree'],'denoising':True}
+    expected={'samples':cfg['samples'],'seed':cfg['seed'],'light_tree':cfg['light_tree'],'denoising':True}
+    assert all(old_sampling[key]==value for key,value in expected.items())
     checks={};n=body.data.materials[0].node_tree.nodes
     for key,name in MAPS.items():
         spec=cfg[key];im=n[name].image;path=ROOT/spec['texture']
         assert sha(path)==spec['texture_sha256'] and im.packed_file.data==path.read_bytes()
         assert im.colorspace_settings.name=='Non-Color'
         a=prior[key];b=pixels(im);assert a.shape==b.shape
-        v=(np.arange(len(a))+.5)/len(a);lo,_,_,hi=cfg['uv_focus']
-        outside=(v<=lo)|(v>=hi)
-        assert np.array_equal(a[outside],b[outside]),'Map escaped permitted surface band: '+name
+        if cfg.get('maps_unchanged'):
+            assert np.array_equal(a,b),'Surface map changed: '+name
+        else:
+            v=(np.arange(len(a))+.5)/len(a);lo,_,_,hi=cfg['uv_focus']
+            outside=(v<=lo)|(v>=hi)
+            assert np.array_equal(a[outside],b[outside]),'Map escaped permitted surface band: '+name
         checks[key]={'file':spec['texture'],'sha256':spec['texture_sha256'],
                      'outside_focus_identical':True,'changed_fraction':float(np.any(a!=b,axis=2).mean())}
     report={'passed':True,'source_sha256':sha(source),'model_sha256':sha(target),
@@ -75,7 +84,8 @@ def run(cfg,target,out):
             'world_ray_depth_unchanged':True,
             'pigment_and_prior_relief_unchanged':unchanged_images,
             'full_shader_graph_and_matte_band_preserved':True,
-            'sampling':old_sampling,'uv_focus':cfg['uv_focus'],'maps':checks}
+            'sampling':old_sampling,'uv_focus':cfg.get('uv_focus'),
+            'all_surface_maps_preserved':bool(cfg.get('maps_unchanged')),'maps':checks}
     save_json(out,report);print(json.dumps(report),flush=True)
 
 

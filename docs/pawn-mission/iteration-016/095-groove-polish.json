@@ -1,0 +1,59 @@
+{
+  "source": "build/pawn-mission/094-groove-ribbon-aim/pawn.blend",
+  "source_sha256": "9f4ced672ba2c8bb4dbb1e76720d1a160e956509043255fbc899a058292c1e4b",
+  "samples": 512,
+  "crop": [
+    300,
+    880,
+    668,
+    1005
+  ],
+  "measurement": "groove-polish-095",
+  "light": "Inner groove ribbon",
+  "poses": [
+    {
+      "name": "baseline"
+    },
+    {
+      "name": "raised-polish",
+      "knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ]
+    },
+    {
+      "name": "raised-polish-quarter-light",
+      "knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ],
+      "energy_gain": 0.25
+    },
+    {
+      "name": "raised-polish-no-low-light",
+      "knots": [
+        {
+          "position": 0.18,
+          "gain": 0.8
+        },
+        {
+          "position": 0.19,
+          "gain": 0.6
+        }
+      ],
+      "energy_gain": 0
+    }
+  ]
+}

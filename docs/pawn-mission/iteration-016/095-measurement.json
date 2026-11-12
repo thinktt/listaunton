@@ -1,0 +1,109 @@
+{
+  "config": {
+    "source": "build/pawn-mission/094-groove-ribbon-aim/pawn.blend",
+    "source_sha256": "9f4ced672ba2c8bb4dbb1e76720d1a160e956509043255fbc899a058292c1e4b",
+    "samples": 512,
+    "crop": [
+      300,
+      880,
+      668,
+      1005
+    ],
+    "measurement": "groove-polish-095",
+    "light": "Inner groove ribbon",
+    "poses": [
+      {
+        "name": "baseline"
+      },
+      {
+        "name": "raised-polish",
+        "knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ]
+      },
+      {
+        "name": "raised-polish-quarter-light",
+        "knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "energy_gain": 0.25
+      },
+      {
+        "name": "raised-polish-no-low-light",
+        "knots": [
+          {
+            "position": 0.18,
+            "gain": 0.8
+          },
+          {
+            "position": 0.19,
+            "gain": 0.6
+          }
+        ],
+        "energy_gain": 0
+      }
+    ]
+  },
+  "baseline_knots": [
+    {
+      "position": 0.0,
+      "gain": 1.0
+    },
+    {
+      "position": 0.15000000596046448,
+      "gain": 1.0
+    },
+    {
+      "position": 0.1679999977350235,
+      "gain": 0.7099999785423279
+    },
+    {
+      "position": 0.18000000715255737,
+      "gain": 0.2800000011920929
+    },
+    {
+      "position": 0.1899999976158142,
+      "gain": 0.10000000149011612
+    },
+    {
+      "position": 0.21299999952316284,
+      "gain": 0.10999999940395355
+    },
+    {
+      "position": 0.23499999940395355,
+      "gain": 0.20000000298023224
+    },
+    {
+      "position": 0.26100000739097595,
+      "gain": 0.5
+    },
+    {
+      "position": 0.289000004529953,
+      "gain": 0.8899999856948853
+    },
+    {
+      "position": 0.3100000023841858,
+      "gain": 1.0
+    }
+  ],
+  "renders": {
+    "baseline": "91e32feb5ec69af7e8ca11d52ca45801ea237209522a683ffd4655fb245a08b5",
+    "raised-polish": "44ea162d1942ad2645d32947d80fc294753d6fa626d40d8626abe8935fb170b2",
+    "raised-polish-quarter-light": "66bacf3099a5585ab9c29daa46607856754f54a56e5bff05cf40e91caa4784d6",
+    "raised-polish-no-low-light": "52b3d5315837616a3ab1a43b71c4b3ab009c94c7e2a425c0f0e07e3ded4d0d7e"
+  }
+}

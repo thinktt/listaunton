@@ -469,3 +469,41 @@ responses, color statistics, tradeoffs, scope checks and independent replay.
 The mission remains incomplete. Next examine the base-groove/foot residual
 at reference x=545-577, y=930-962, distinguishing profile, material and light
 effects while preserving the accepted collar, stem and head finish.
+
+
+## Checkpoint 016 - warmer foot reflections
+
+Trial 100 changes only the colors/powers of five existing foot reflectors.
+The original front source remains unchanged; its old hue was closer to the
+authoritative sprite than the complete six-source fit. Geometry, pigment,
+finish/normal maps, groove mask, all lamp positions/shapes and the fixed
+54-degree camera are preserved. No new low reflector is accepted.
+
+| Category | Previous | Current |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 94 | 94 |
+| Lighting | 92 | 92 |
+| Working mean | 93.36% | 93.36% |
+
+Base/foot RGB error falls from 2.724 to 2.640; right/left highlight patch
+errors fall from 8.790/7.579 to 7.011/6.642. Foot fine-pattern correlation
+is retained at 0.9295. Native original RGB error rises from 16.63 to 16.69;
+this small tradeoff is recorded alongside the closer reflected hue. The
+original front-light choice sacrifices a little selected-image accuracy.
+Head/contact profile error remains 3.45. Original black/white IoU remain
+98.499%/98.135%, with unchanged source pixels and registration.
+
+The visual scores are estimates, with a holistic range of 90-95%. The
+local color gain does not resolve the missing inner groove line or raise
+the whole-piece ratings. Low-reflector tests partly restore that line but
+create an unsupported second outer-foot glint; they remain rejected.
+
+See [checkpoint evidence](pawn-mission/iteration-016/README.md) for light
+isolation, relief/polish tests, color fits, independent replay and saved
+validation. The next step is to inspect groove/outer-foot meridian normals
+at both glints and compare the shape with the originals before attempting
+a bounded profile change. Preserve accepted dimensions, upper finish and
+camera. The mission remains incomplete.

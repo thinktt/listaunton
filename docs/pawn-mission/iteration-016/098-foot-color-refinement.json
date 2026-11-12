@@ -1,0 +1,56 @@
+{
+  "variant": "098-foot-color-refinement",
+  "source": "build/pawn-mission/097-foot-reflector-colors/pawn.blend",
+  "source_sha256": "184e9c4d03fcaa0d7754b4a42808fa9650191469e5a197aafd13ae809a95a5d9",
+  "samples": 512,
+  "lights": [
+    "Foot right",
+    "Foot front",
+    "Foot center-right",
+    "Foot edge outer left",
+    "Foot edge center left",
+    "Foot lip core"
+  ],
+  "step": 0.12,
+  "limit": 0.25,
+  "ridge": 0.003,
+  "rates": [
+    0.5,
+    1
+  ],
+  "crop": [
+    300,
+    880,
+    668,
+    1005
+  ],
+  "regions": [
+    {
+      "box": [
+        510,
+        930,
+        610,
+        980
+      ],
+      "weight": 2
+    },
+    {
+      "box": [
+        370,
+        930,
+        450,
+        976
+      ],
+      "weight": 2
+    },
+    {
+      "box": [
+        310,
+        880,
+        665,
+        925
+      ],
+      "weight": 3
+    }
+  ]
+}

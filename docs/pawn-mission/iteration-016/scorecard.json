@@ -1,0 +1,116 @@
+[
+  {
+    "trial": "093-inner-groove-reflector",
+    "scores": {
+      "silhouette": 96.81176149275728,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 91
+    },
+    "working_mean": 93.16235229855145,
+    "iou": {
+      "selected": 0.9681176149275729,
+      "original_black": 0.985002164636032,
+      "original_white": 0.9813581341636938
+    },
+    "source_sha256": "fe79ab7730feec832da593c4d2484b57163da33fbd6e0abf25248e8da8f72bcc",
+    "render_sha256": "77367fad80ee91d1215e19f5f9e67037d05430a2c702e1f75bb4d40cbc2d0f06",
+    "decision": "Rejected: additional outer-foot glare; base error rises from 2.724 to 2.948 and native original error from 16.63 to 16.71."
+  },
+  {
+    "trial": "094-groove-ribbon-aim",
+    "scores": {
+      "silhouette": 96.81176149275728,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 91
+    },
+    "working_mean": 93.16235229855145,
+    "iou": {
+      "selected": 0.9681176149275729,
+      "original_black": 0.985002164636032,
+      "original_white": 0.9813581341636938
+    },
+    "source_sha256": "9f4ced672ba2c8bb4dbb1e76720d1a160e956509043255fbc899a058292c1e4b",
+    "render_sha256": "77983b79a503efc0aa6da7c64d3c50bec365747cb326865a50fd2597bdd79511",
+    "decision": "Rejected: aiming reduces the added glare but leaves a double foot reflection; base error remains above the accepted model."
+  },
+  {
+    "trial": "096-close-groove-ribbon",
+    "scores": {
+      "silhouette": 96.81176149275728,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 91
+    },
+    "working_mean": 93.16235229855145,
+    "iou": {
+      "selected": 0.9681176149275729,
+      "original_black": 0.985002164636032,
+      "original_white": 0.9813581341636938
+    },
+    "source_sha256": "86f3f64e5e7908112cc270bec156f52c26838019a505a11a680cba53ae6d2dfe",
+    "render_sha256": "4e373bdffe0edcab9529fe1e4ccbfdd235d5f43b9ad8b6befe7a61ee40b42c8b",
+    "decision": "Rejected: closer low reflector and stronger inner polish partly recover the missing line, but add an unsupported second outer-foot glint."
+  },
+  {
+    "trial": "097-foot-reflector-colors",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "184e9c4d03fcaa0d7754b4a42808fa9650191469e5a197aafd13ae809a95a5d9",
+    "render_sha256": "9bf7230d8e4783e87ba58fad1d9ce5bf0ada19ac824f02a435fd4d72e841b64c",
+    "decision": "Useful warmer foot arcs with fine pattern retained; superseded by the smaller measured follow-up."
+  },
+  {
+    "trial": "098-foot-color-refinement",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "f7be36f15f4efa90768d79b377acbbeec74a04438adc571385d734a48224a3bf",
+    "render_sha256": "931c1358077eb26e474aab8dbe6d65fe47f406e5e5c5d4ed9ebabf78d521b761",
+    "decision": "Better selected-image foot color. The original front arc was already closer to the prior source; its dedicated lamp is retained in trial 100."
+  },
+  {
+    "trial": "100-original-front-preserved",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "bf3ef9906e1cc79699ee6a497551292d3d6ab14fd9ae25fe3900fb2b38911bec",
+    "render_sha256": "182331cf9e60d42d0973259246835c5fb906690fa80af1362dd69050f21019be",
+    "decision": "Accepted after saved-model scope and independent replay checks. Warmer left/right foot reflection color, with the original front source preserved and fine grain retained. Native original RGB error rises about 0.06; whole-piece ratings remain held. Extra low lamps and groove-polish changes are rejected."
+  }
+]

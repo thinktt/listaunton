@@ -93,6 +93,10 @@ def nonnegative_fit(base,responses,target,weight,processor,initial):
 
 def run(cfg):
     scene,body=open_source(cfg)
+    original_adaptive_sampling=scene.cycles.use_adaptive_sampling
+    if cfg.get('groove_knots'):
+        from study_groove_polish import apply_knots
+        apply_knots(body,cfg['groove_knots'])
     if "world_strength" in cfg:
         scene.world.node_tree.nodes["Background"].inputs["Strength"].default_value=cfg["world_strength"]
     if cfg.get("profiles"):
@@ -191,7 +195,7 @@ def run(cfg):
         ob.data.energy=row["energy"]
         if row["energy"]<=.00001:bpy.data.objects.remove(ob,do_unlink=True)
     save_json(directory/"fit.json",{"method":"Actual colored-BSDF isolated area responses, fixed diffuse rig, nonnegative real light energies through the AgX display transform. The independent full render determines the decision.","foreground_pixels":len(target),"loss":errors,"lights":rows,"fixed_light_powers":dict(zip([o.name for o in fixed_lights],fixed_powers))})
-    scene.cycles.use_adaptive_sampling=True
+    scene.cycles.use_adaptive_sampling=original_adaptive_sampling
     delivery=dict(cfg);delivery.pop("landmarks",None);delivery.pop("probe_lights",None);delivery["fitted_lights"]=rows
     save_json(directory/"reproduction.json",delivery)
     save_trial(scene,delivery)
