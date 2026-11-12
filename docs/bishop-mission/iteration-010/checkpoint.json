@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-12",
+  "model_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "render_sha256": "010891e67d4d06b51d75427e05e44a93788d8f32deb213c88fca880f9f3e97f9",
+  "starting_model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "reference_hashes": {
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "black-original.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585"
+  },
+  "camera_elevation_degrees": 54,
+  "camera_exactly_unchanged": true,
+  "all_piece_checks_passed": true,
+  "declared_light_scope_passed": true,
+  "geometry_uvs_material_pixels_world_preserved": true,
+  "existing_socket_light_disabled": true,
+  "added_local_spotlights": 17,
+  "glossy_bounces": 4,
+  "beauty_samples": 512,
+  "adaptive_sampling": false,
+  "beauty_resolution": [
+    1254,
+    1254
+  ],
+  "saved_and_reopened_before_render": true,
+  "packed_texture_pixel_error": 0,
+  "site_and_preview_checks": {
+    "bishop_viewer": "Passed in canonical and preview: source hash, mesh/camera, material, rotation, pan, zoom and reset.",
+    "bishop_review": "Passed in canonical and preview: tabs, source guards, retained state, wipe and candidate controls.",
+    "model_site_and_projection_studies": "Passed check_model_site.py.",
+    "all_candidate_pages": "Passed check_candidate_review.cjs.",
+    "set_comparison_and_gallery_defaults": {
+      "status": "Pre-existing knight metadata hash mismatch stops the complete set check.",
+      "actual_committed_knight_metadata_sha256": "530f25c4ac04325a1df21920d95ad41f0ea0800e724e7ca38627a1e2e6e8a87c",
+      "expected_by_committed_scale_json": "104c19170f0976a86c98d529887603d19ea227374a044894d8d87a3855942326",
+      "initial_comparison_and_side_image_checks": "Passed before the metadata assertion.",
+      "checks_after_that_assertion": "Not executed; no complete set-check pass claimed.",
+      "shared_gallery_files_unchanged_from_HEAD": {
+        "assets/side-views/defaults.json": "fa17c1db3fafd9bb470344cb84a25eada770d31c865293811ca8064e5b3eddbd",
+        "assets/side-views/scale.json": "27bb759f9f91f93f9514fd6a57e7a835d1a166255b2f076075ca69ccb202f4ec",
+        "set-comparison.html": "9c9da2eff32a5a5718be82ca684ba1a4ab1b914a88ab77209892501933be4aa2"
+      }
+    },
+    "python_syntax": "All bishop Python sources parsed.",
+    "canonical_preview_byte_equal_files": 42,
+    "preview_directory": "C:\\Users\\toby\\Documents\\Codex\\2026-10-01\\go-x20\\outputs\\queen-hires",
+    "native_browser_inspected": false,
+    "verified_at_utc": "2026-11-12T16:04:05.956297+00:00"
+  },
+  "render_provenance": {
+    "render-clay.png": "e97874cc768fab0e644a9b88367b0c53d522aa2d2763af00d0b9043e677575ed",
+    "head-side.png": "daff0a48dd59e86dcc97f188e9083a34a9e6723de0d58f587d68eeff8f37c082",
+    "side-profile.png": "06a0c9d777cdd9980d0144bcab5a7e7dafe51c6a4a71e7e027b963398a0ba18c",
+    "rear-oblique.png": "965ea7f0087874f71232902aaf091ae5e70658dc39f72c783f0dd5f11080569a"
+  }
+}

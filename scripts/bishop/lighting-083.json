@@ -1,0 +1,502 @@
+{
+  "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+  "variant": "083-no-secondary-socket-gloss",
+  "samples": 128,
+  "adaptive_sampling": false,
+  "hypothesis": "Test whether secondary glossy bounces create the false reflected crescent on the stem. This is an explicit rendering approximation; inspect every region.",
+  "lights": [
+    {
+      "name": "socket reflection",
+      "energy": 0
+    },
+    {
+      "name": "socket arc 1",
+      "type": "SPOT",
+      "energy": 9.000000357627869,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -4.991115045191648,
+        -3.6332219217512,
+        -2.7671612049837098
+      ],
+      "target": [
+        -0.2757626175880432,
+        -0.42446422576904297,
+        1.2910804748535156
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 2",
+      "type": "SPOT",
+      "energy": 4.499999899417162,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -4.562543685697508,
+        -4.581988929402687,
+        -2.3303751916537134
+      ],
+      "target": [
+        -0.2373010516166687,
+        -0.4450240135192871,
+        1.299748420715332
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 3",
+      "type": "SPOT",
+      "energy": 7.500000111758709,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -3.966387266681768,
+        -5.133782865846691,
+        -2.3057126135273847
+      ],
+      "target": [
+        -0.1988394856452942,
+        -0.4635963439941406,
+        1.2991371154785156
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 4",
+      "type": "SPOT",
+      "energy": 11.99999749660492,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -3.280611232755824,
+        -5.864460214944146,
+        -1.8954250397591044
+      ],
+      "target": [
+        -0.16037797927856445,
+        -0.47704505920410156,
+        1.3045597076416016
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 5",
+      "type": "SPOT",
+      "energy": 0.0,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -2.5136490710016424,
+        -6.134618913458643,
+        -2.075985625307147
+      ],
+      "target": [
+        -0.12191641330718994,
+        -0.4890146255493164,
+        1.3014049530029297
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 6",
+      "type": "SPOT",
+      "energy": 199.4998812675476,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -1.7374145491444701,
+        -6.513832266649504,
+        -1.865849188432417
+      ],
+      "target": [
+        -0.0834549069404602,
+        -0.49625587463378906,
+        1.3048276901245117
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 7",
+      "type": "SPOT",
+      "energy": 0.0,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -0.9349644957752619,
+        -6.668253097099864,
+        -1.884777148622169
+      ],
+      "target": [
+        -0.04499334096908569,
+        -0.5011563301086426,
+        1.3050298690795898
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 8",
+      "type": "SPOT",
+      "energy": 47.9999765753746,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -0.11116200096455942,
+        -6.810902531296274,
+        -1.7252590511667845
+      ],
+      "target": [
+        -0.006531834602355957,
+        -0.5026755332946777,
+        1.3071203231811523
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 9",
+      "type": "SPOT",
+      "energy": 79.50000464916229,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        0.7464741658628149,
+        -6.7316087838222955,
+        -1.8052572496972457
+      ],
+      "target": [
+        0.031929731369018555,
+        -0.5019259452819824,
+        1.3060894012451172
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 10",
+      "type": "SPOT",
+      "energy": 79.50001358985901,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        1.5670402552010185,
+        -6.755120484930308,
+        -1.4434247093081738
+      ],
+      "target": [
+        0.07039123773574829,
+        -0.49671173095703125,
+        1.3119993209838867
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 11",
+      "type": "SPOT",
+      "energy": 20.999997854232788,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        2.408940223452521,
+        -6.55251675784576,
+        -1.320596831155473
+      ],
+      "target": [
+        0.10885277390480042,
+        -0.4890456199645996,
+        1.3145341873168945
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 12",
+      "type": "SPOT",
+      "energy": 169.5000171661377,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        3.1882575774313433,
+        -6.148156939221683,
+        -1.445495595015057
+      ],
+      "target": [
+        0.14731431007385254,
+        -0.4790959358215332,
+        1.3139266967773438
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 13",
+      "type": "SPOT",
+      "energy": 169.49998140335083,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        3.8964637890596445,
+        -5.537000053676802,
+        -1.7759142322155097
+      ],
+      "target": [
+        0.18577587604522705,
+        -0.46652984619140625,
+        1.309718132019043
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 14",
+      "type": "SPOT",
+      "energy": 307.49988555908203,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        4.694319818405358,
+        -5.115452199160084,
+        -1.3723173247748508
+      ],
+      "target": [
+        0.2242373824119568,
+        -0.4473838806152344,
+        1.3160839080810547
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 15",
+      "type": "SPOT",
+      "energy": 521.9998955726624,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        5.328420900424916,
+        -4.4420009420466045,
+        -1.365698960466363
+      ],
+      "target": [
+        0.2626989185810089,
+        -0.42504310607910156,
+        1.3180503845214844
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 16",
+      "type": "SPOT",
+      "energy": 1021.5010643005371,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        6.009318760923686,
+        -3.7751227235225087,
+        -0.9118396515884508
+      ],
+      "target": [
+        0.30116045475006104,
+        -0.39598703384399414,
+        1.3238639831542969
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket arc 17",
+      "type": "SPOT",
+      "energy": 301.49989128112793,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        6.462653990598501,
+        -2.780130070143695,
+        -1.0559916230169275
+      ],
+      "target": [
+        0.33962202072143555,
+        -0.36319684982299805,
+        1.3245363235473633
+      ],
+      "spot_size": 0.008726646259971648,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.006,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/socket-010/dense-landmarks.json",
+    "normals": "build/bishop-mission/socket-010/dense-shading/manifest.json",
+    "beam_degrees": 0.5,
+    "radius": 0.006
+  },
+  "fit": {
+    "responses": "build/bishop-mission/socket-010/responses-081",
+    "box": [
+      350,
+      740,
+      640,
+      870
+    ],
+    "power_factors": [
+      0.06000000238418579,
+      0.029999999329447746,
+      0.05000000074505806,
+      0.07999998331069946,
+      0.0,
+      1.3299992084503174,
+      0.0,
+      0.3199998438358307,
+      0.5300000309944153,
+      0.5300000905990601,
+      0.13999998569488525,
+      1.130000114440918,
+      1.1299998760223389,
+      2.049999237060547,
+      3.479999303817749,
+      6.810007095336914,
+      2.0099992752075195
+    ],
+    "warm_white_color": [
+      1.0,
+      0.9700000286102295,
+      0.8799999952316284
+    ],
+    "max_factor": 12,
+    "reference_cream_core_weight": 4,
+    "lower_spill_weight": 2,
+    "upper_spill_weight": 3.0,
+    "predicted_weighted_rgb_error_before": 9.090814346138952,
+    "predicted_weighted_rgb_error_after": 7.601722469553351,
+    "note": "Bounded fit to real BSDF passes; inspect a fresh full render for acceptance."
+  },
+  "glossy_bounces": 0
+}

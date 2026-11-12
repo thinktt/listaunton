@@ -1,0 +1,141 @@
+{
+  "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+  "source_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "config": {
+    "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+    "variant": "077-four-socket-spots",
+    "samples": 128,
+    "adaptive_sampling": false,
+    "hypothesis": "Replace the broad socket reflection with four localized glossy spots following the measured lip normals.",
+    "lights": [
+      {
+        "name": "socket reflection",
+        "energy": 0
+      },
+      {
+        "name": "socket lip 1",
+        "type": "SPOT",
+        "energy": 150,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -2.512840077419496,
+          -6.1473387166142475,
+          -2.0552082974121357
+        ],
+        "target": [
+          -0.12191641330718994,
+          -0.4890146255493164,
+          1.3014049530029297
+        ],
+        "spot_size": 0.05235987755982989,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.07,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "socket lip 2",
+        "type": "SPOT",
+        "energy": 150,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          1.516171505077879,
+          -6.31036458703866,
+          -2.3293138851803254
+        ],
+        "target": [
+          0.07039123773574829,
+          -0.4999995231628418,
+          1.2968931198120117
+        ],
+        "spot_size": 0.05235987755982989,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.07,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "socket lip 3",
+        "type": "SPOT",
+        "energy": 150,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          4.599204492555448,
+          -5.0089289525750145,
+          -1.6993172508155912
+        ],
+        "target": [
+          0.2242373824119568,
+          -0.4488811492919922,
+          1.311600685119629
+        ],
+        "spot_size": 0.05235987755982989,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.07,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "socket lip 4",
+        "type": "SPOT",
+        "energy": 150,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          6.481482451555802,
+          -2.770700382054389,
+          -1.0167191495790657
+        ],
+        "target": [
+          0.33962202072143555,
+          -0.36319684982299805,
+          1.3245363235473633
+        ],
+        "spot_size": 0.05235987755982989,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.07,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      }
+    ],
+    "measurement": {
+      "landmarks": "build/bishop-mission/socket-010/landmarks.json",
+      "normals": "build/bishop-mission/socket-010/shading/manifest.json"
+    }
+  },
+  "samples": 128,
+  "adaptive_sampling": false,
+  "render_border_pixels": [
+    330,
+    710,
+    660,
+    885
+  ],
+  "basis_color": [
+    1,
+    1,
+    1
+  ],
+  "source_unchanged": true,
+  "camera_unchanged": true,
+  "note": "Actual BSDF response diagnostics, not accepted renders. Only the socket lamp is disabled."
+}

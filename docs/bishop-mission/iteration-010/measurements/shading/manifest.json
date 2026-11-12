@@ -1,0 +1,78 @@
+{
+  "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+  "source_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "points": {
+    "left lip": {
+      "pixel": [
+        460,
+        807
+      ],
+      "normal": [
+        -0.23163285851478577,
+        -0.9467915892601013,
+        0.22345444560050964
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "center lip": {
+      "pixel": [
+        510,
+        810
+      ],
+      "normal": [
+        0.14126725494861603,
+        -0.9697586894035339,
+        0.19902676343917847
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "right lip": {
+      "pixel": [
+        550,
+        797
+      ],
+      "normal": [
+        0.4344184100627899,
+        -0.8613508939743042,
+        0.26335397362709045
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "far right lip": {
+      "pixel": [
+        580,
+        777
+      ],
+      "normal": [
+        0.6428053975105286,
+        -0.6825907230377197,
+        0.34766530990600586
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    },
+    "lower stray": {
+      "pixel": [
+        550,
+        843
+      ],
+      "normal": [
+        0.39117196202278137,
+        -0.8399832844734192,
+        0.3760486841201782
+      ],
+      "alpha": 1.0,
+      "mean_radius": 3
+    }
+  },
+  "border_pixels": [
+    350,
+    720,
+    640,
+    870
+  ],
+  "note": "Unsaved BSDF-normal emission diagnostic, including shader bump. This is not a beauty render; source model unchanged."
+}

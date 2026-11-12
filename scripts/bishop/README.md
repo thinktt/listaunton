@@ -120,9 +120,33 @@ its old slit crop and single-pixel behavior remain the defaults.
 reopening while preserving camera, controls, UVs, materials, world and other
 light properties. It complements the existing added-light validator.
 
-The next supported geometry investigation is the base's normal distribution
-and curvature transition. Do not install any of the iteration 008 trials or
-assume a lower fitting loss establishes an improvement.
+Checkpoint 009 smooths the measured base-normal reversal using only two radial
+controls and repositions the confined base reflector. Its declaration remains
+in the saved model/profile; `validate_base_curvature.py` checks it before the
+older geometry safeguards. The rejected iteration 008 alternatives stay rejected.
+
+Checkpoint 010 preserves that geometry and the material. Reproduce its socket
+lighting from `history/bishop-mission-009` using the configuration and commands
+in `docs/bishop-mission/iteration-010/reproduction.json`. The old socket lamp is
+disabled, and 17 glossy-only spotlights follow measured lip normals. Run
+`validate_added_reflector.py` with `--disabled-existing "socket reflection"`;
+that permission allows only its energy to become zero, preserving every other
+existing-light property. The validator also checks render-path settings.
+
+`prepare_socket_lights.py`, `capture_socket_reflections.py` and
+`fit_socket_reflections.py` support measured lighting studies. Blender 5.2 clamps
+spot cones below one degree; keep that valid minimum and move an emitter closer
+to narrow its surface footprint. Preparation/capture reject a silently clamped
+cone. Response predictions guide fitting but cannot replace a fresh beauty
+render. The accepted scene retains four glossy bounces; the zero-bounce trial
+was rejected. Final verification uses 512 fixed samples after saving/reopening.
+
+`assess_socket_reflection.py` records fixed crops and reference-core statistics.
+`mission_compare.py` now explicitly applies largest-component/hole-fill cleanup
+to model alpha as required by `MISSION-SET.md`, and reports the legacy-mask
+comparison. The masks differ by zero pixels on checkpoints 009 and 010.
+Follow the normal geometry/export, side/neutral render, review and preview
+synchronization pipeline after any accepted lighting change.
 
 ## Original geometry construction
 

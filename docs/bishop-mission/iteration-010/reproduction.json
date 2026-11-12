@@ -1,0 +1,14 @@
+{
+  "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+  "source_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "lighting_config": "docs/bishop-mission/iteration-010/lighting-085.json",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/lighting_trial.py -- docs/bishop-mission/iteration-010/lighting-085.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/finalize_render.py -- --source build/bishop-mission/085-fitted-close-socket-arc/bishop.blend --out build/bishop-mission/086-final-socket-arc --samples 512 --fixed-samples",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_added_reflector.py -- --config docs/bishop-mission/iteration-010/lighting-085.json --model build/bishop-mission/086-final-socket-arc/bishop.blend --disabled-existing \"socket reflection\" --out build/bishop-mission/086-final-socket-arc/light-scope.json"
+  ],
+  "follow_up": "After visual inspection, stage the saved model/render in an isolated copy; retain the exact profile and atlas. Run validate_checkpoint.py, render_diagnostics.py, render_clay.py, compare.py, mission_compare.py, refresh_review.py and bishop viewer/review checks before canonical synchronization.",
+  "measurement_reproduction": "The archived measured points/normals and prepare_socket_lights.py reproduce the 3-unit, 1-degree spots. capture_socket_reflections.py and fit_socket_reflections.py guide powers; their predictions are not accepted beauty renders.",
+  "accepted_model_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "note": "No geometry or texture edits. Source references stay unchanged. Blender file serialization need not be byte-identical on another machine."
+}

@@ -1,0 +1,83 @@
+{
+  "config": {
+    "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+    "variant": "075-aligned-socket-reflection",
+    "samples": 96,
+    "adaptive_sampling": false,
+    "hypothesis": "Aim the existing socket reflection at the measured right lip and adjust its color. The initial trial retains its energy, shape, spread and receiver. Inspect the full rendered result for spill.",
+    "lights": [
+      {
+        "name": "socket reflection",
+        "position": [
+          4.599204492555448,
+          -5.0089289525750145,
+          -1.6993172508155912
+        ],
+        "target": [
+          0.2242373824119568,
+          -0.4488811492919922,
+          1.311600685119629
+        ],
+        "color": [
+          1.0,
+          0.96,
+          0.8
+        ]
+      }
+    ],
+    "measurement": {
+      "landmarks": "build/bishop-mission/socket-010/landmarks.json",
+      "normals": "build/bishop-mission/socket-010/shading/manifest.json",
+      "target_pixel": [
+        550,
+        797
+      ],
+      "mean_radius": 3,
+      "normal_difference_degrees": 0.5760851186642951
+    }
+  },
+  "source_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+  "saved_model_sha256": "152721a5abfb8333732aa6143e6a30052b3317d43723ddcbaf1ef17bda56fff1",
+  "render_sha256": "551f47fa4a99daed2306490c30f0e5a9a91c3d03c655d58120c9fbe2fcea3101",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "125ccd1bb6d741b9525a41547239ab52ae590df57a04e98ac47472da8ac44c41",
+      "Mitre saw cut - editable cutter": "cfb8406e703dd84260154b47cbb424ce66e4917287331a4a79bc601667c78250",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "15dc4cd2d10b91e774f060b4ffd569acfffefde999fb78002cea7ed4023d96ab",
+      "Bishop boxwood \u2014 interior cut.001": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  },
+  "effective_lights": {
+    "socket reflection": {
+      "type": "AREA",
+      "energy": 5.798434257507324,
+      "shadow_soft_size": 0.0
+    }
+  },
+  "adaptive_sampling": false
+}

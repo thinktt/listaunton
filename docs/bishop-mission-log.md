@@ -273,3 +273,31 @@ archived. At acceptance, the bishop review and existing preview are refreshed
 with the matching model, render, export and side views. The mission is still
 incomplete. The owner requested a pause after finishing this checkpoint; the
 socket crescent and unwanted lower glint are the next target on resumption.
+
+## Iteration 010 — a brighter socket lip with less reflection spill
+
+Work resumed at the owner's direction on November 12, 2026. The old socket
+reflector is disabled and replaced by localized glossy-only spots. Surface
+normal measurements and actual BSDF response passes guide their placement and
+power. Moving them closer narrows their footprint without requesting a cone
+smaller than Blender's one-degree minimum. Earlier wider, clamped-cone and
+zero-secondary-bounce trials are rejected.
+
+The saved/reopened 512-sample render improves the intended cream lip and reduces
+the lower streak without the false upper-stem arc seen in intermediate trials.
+Geometry, UVs, pigment, the 54-degree camera, other lights and four glossy bounces
+remain unchanged. The reflection is still too thin and speckled, and broader
+image color has a small recorded regression. This is a local improvement.
+
+Scores are 96.11 / 84 / 84 / 77 / 76; the working mean rises from 83.22 to 83.42,
+with a holistic fixed-view estimate of 75–85%. Checkpoint 009 is archived in
+`history/bishop-mission-009`. See
+[`iteration-010/assessment.md`](bishop-mission/iteration-010/assessment.md)
+for the trials, original-reference checks, quantitative tradeoffs and limitations.
+At acceptance the bishop review, exported mesh, fixed/side renders and existing
+Windows preview are synchronized from the same validated model.
+
+The mission remains incomplete. Next inspect socket roughness/normal response
+to broaden and smooth the crescent while preserving this result. Fine grain,
+collar/base reflections, slit-edge finish and the side/rear pigment boundary
+remain unresolved. No quota monitoring was performed.

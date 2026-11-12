@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/082-fitted-dense-socket-arc/wood.png",
+  "render_sha256": "0757b0fa9969d543817cfb23830422ea0155a94ed25102f0c0675f19bdb53c22",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9611093004651714,
+      "legacy_raw_model_mask_iou": 0.9611093004651714
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778547732693308,
+      "legacy_raw_model_mask_iou": 0.9778547732693308
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666070992686169,
+      "legacy_raw_model_mask_iou": 0.9666070992686169
+    }
+  }
+}

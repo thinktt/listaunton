@@ -1,0 +1,64 @@
+{
+  "note": "Fixed registered RGB measurements on actual renders, not fidelity scores. No image alignment or color adjustment.",
+  "core_pixels": 246,
+  "regions": {
+    "whole_socket": [
+      350,
+      735,
+      640,
+      870
+    ],
+    "lip": [
+      400,
+      775,
+      605,
+      825
+    ],
+    "lower_streak": [
+      510,
+      830,
+      600,
+      860
+    ]
+  },
+  "renders": {
+    "assets/bishop/render.png": {
+      "sha256": "739823eb5560c225291f8fc281ac7e1873af951391c963b14fd2479a5ce58a27",
+      "reference_cream_core_rgb_error": 82.08807373046875,
+      "whole_socket": {
+        "pixels": 39150,
+        "rgb_mae": 8.609527587890625,
+        "cream_pixels": 0
+      },
+      "lip": {
+        "pixels": 10250,
+        "rgb_mae": 15.562503814697266,
+        "cream_pixels": 0
+      },
+      "lower_streak": {
+        "pixels": 2700,
+        "rgb_mae": 9.70864200592041,
+        "cream_pixels": 0
+      }
+    },
+    "build/bishop-mission/086-final-socket-arc/wood.png": {
+      "sha256": "010891e67d4d06b51d75427e05e44a93788d8f32deb213c88fca880f9f3e97f9",
+      "reference_cream_core_rgb_error": 45.20460891723633,
+      "whole_socket": {
+        "pixels": 39150,
+        "rgb_mae": 8.115930557250977,
+        "cream_pixels": 140
+      },
+      "lip": {
+        "pixels": 10250,
+        "rgb_mae": 13.429235458374023,
+        "cream_pixels": 138
+      },
+      "lower_streak": {
+        "pixels": 2700,
+        "rgb_mae": 8.37827205657959,
+        "cream_pixels": 0
+      }
+    }
+  }
+}

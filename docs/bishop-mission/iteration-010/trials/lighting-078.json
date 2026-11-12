@@ -1,0 +1,145 @@
+{
+  "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+  "variant": "078-fitted-socket-spots",
+  "samples": 128,
+  "adaptive_sampling": false,
+  "hypothesis": "Measured localized socket reflections can fill the cream lip crescent while avoiding the old lower streak.",
+  "lights": [
+    {
+      "name": "socket reflection",
+      "energy": 0
+    },
+    {
+      "name": "socket lip 1",
+      "type": "SPOT",
+      "energy": 27.000010013580322,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        -2.512840077419496,
+        -6.1473387166142475,
+        -2.0552082974121357
+      ],
+      "target": [
+        -0.12191641330718994,
+        -0.4890146255493164,
+        1.3014049530029297
+      ],
+      "spot_size": 0.05235987755982989,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.07,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket lip 2",
+      "type": "SPOT",
+      "energy": 16.499996557831764,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        1.516171505077879,
+        -6.31036458703866,
+        -2.3293138851803254
+      ],
+      "target": [
+        0.07039123773574829,
+        -0.4999995231628418,
+        1.2968931198120117
+      ],
+      "spot_size": 0.05235987755982989,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.07,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket lip 3",
+      "type": "SPOT",
+      "energy": 645.0008869171143,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        4.599204492555448,
+        -5.0089289525750145,
+        -1.6993172508155912
+      ],
+      "target": [
+        0.2242373824119568,
+        -0.4488811492919922,
+        1.311600685119629
+      ],
+      "spot_size": 0.05235987755982989,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.07,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    },
+    {
+      "name": "socket lip 4",
+      "type": "SPOT",
+      "energy": 945.0008869171143,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.8799999952316284
+      ],
+      "position": [
+        6.481482451555802,
+        -2.770700382054389,
+        -1.0167191495790657
+      ],
+      "target": [
+        0.33962202072143555,
+        -0.36319684982299805,
+        1.3245363235473633
+      ],
+      "spot_size": 0.05235987755982989,
+      "spot_blend": 0.6,
+      "shadow_soft_size": 0.07,
+      "diffuse": false,
+      "glossy": true,
+      "receiver": "body"
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/socket-010/landmarks.json",
+    "normals": "build/bishop-mission/socket-010/shading/manifest.json"
+  },
+  "fit": {
+    "responses": "build/bishop-mission/socket-010/responses-077",
+    "box": [
+      350,
+      740,
+      640,
+      870
+    ],
+    "power_factors": [
+      0.18000006675720215,
+      0.10999997705221176,
+      4.300005912780762,
+      6.300005912780762
+    ],
+    "warm_white_color": [
+      1.0,
+      0.9700000286102295,
+      0.8799999952316284
+    ],
+    "max_factor": 12,
+    "predicted_weighted_rgb_error_before": 10.091159955835755,
+    "predicted_weighted_rgb_error_after": 9.000896215438843,
+    "note": "Bounded fit to real BSDF passes; inspect a fresh full render for acceptance."
+  }
+}

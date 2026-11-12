@@ -40,4 +40,5 @@ report={'source':a.source,'source_sha256':source_hash,'saved_model_sha256':hashl
     'resolution':[s.render.resolution_x,s.render.resolution_y],'display':s.view_settings.view_transform,'look':s.view_settings.look,
     'source_unchanged':True}
 report['adaptive_sampling']=s.cycles.use_adaptive_sampling
+report['glossy_bounces']=s.cycles.glossy_bounces
 (dest/'reopen-validation.json').write_text(json.dumps(report,indent=2)+'\n');print('BISHOP_FINAL_RENDER_COMPLETE',json.dumps(report),flush=True)

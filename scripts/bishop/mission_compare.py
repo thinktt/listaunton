@@ -13,8 +13,9 @@ def source(name,alignment):
     q=json.loads((ROOT/'assets/bishop'/alignment).read_text());s=q['scale']*300/W
     return Image.open(ROOT/'assets/bishop'/name).convert('RGBA').transform((W,W),Image.Transform.AFFINE,(s,0,q['x']*3,0,s,q['y']*3),Image.Resampling.BILINEAR)
 original=source('original.png','original-alignment.json');black=source('black-original.png','black-alignment.json')
-def mask(im):
-    ar=np.array(im);m=(ar[:,:,3]>127)&(ar[:,:,:3].max(2)>12)
+def mask(im,alpha_only=False):
+    ar=np.array(im);m=ar[:,:,3]>127
+    if not alpha_only:m &= ar[:,:,:3].max(2)>12
     # Run-length connected components, 4-connectivity, then fill enclosed holes.
     parent=[];sizes=[];rows=[];last=[]
     def find(i):
@@ -38,10 +39,11 @@ def mask(im):
         if find(idx)==largest:clean[yy,start:end]=True
     flood=Image.fromarray((clean*255).astype('uint8')).copy();ImageDraw.floodfill(flood,(0,0),128)
     return np.array(flood)!=128
-bm=np.array(ren)[:,:,3]>127
-report={'mask':'reference max RGB >12 and alpha >127; largest 4-connected component; holes filled. Model alpha >127. No alignment search or warping.','render':a.render,'render_sha256':hashlib.sha256((ROOT/a.render).read_bytes()).hexdigest(),'images':{}}
+raw_model_mask=np.array(ren)[:,:,3]>127
+bm=mask(ren,alpha_only=True)
+report={'mask':'reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.','render':a.render,'render_sha256':hashlib.sha256((ROOT/a.render).read_bytes()).hexdigest(),'legacy_raw_model_mask_different_pixels':int((bm!=raw_model_mask).sum()),'images':{}}
 for label,im in [('selected',ref),('original_white',original),('original_black',black)]:
-    m=mask(im);report['images'][label]={'silhouette_iou':float((m&bm).sum()/(m|bm).sum())}
+    m=mask(im);report['images'][label]={'silhouette_iou':float((m&bm).sum()/(m|bm).sum()),'legacy_raw_model_mask_iou':float((m&raw_model_mask).sum()/(m|raw_model_mask).sum())}
     canvas=np.array(im)[:,:,:3].copy()//2
     edge=m&~(np.roll(m,1,0)&np.roll(m,-1,0)&np.roll(m,1,1)&np.roll(m,-1,1));be=bm&~(np.roll(bm,1,0)&np.roll(bm,-1,0)&np.roll(bm,1,1)&np.roll(bm,-1,1))
     canvas[edge]=(50,225,255);canvas[be]=(255,75,185);Image.fromarray(canvas).save(out/(label+'-contours.png'))

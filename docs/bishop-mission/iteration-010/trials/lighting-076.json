@@ -1,0 +1,17 @@
+{
+  "source": "history/bishop-mission-009/bishop-rebuilt.blend",
+  "variant": "076-socket-off",
+  "samples": 128,
+  "adaptive_sampling": false,
+  "hypothesis": "Isolate the contribution of the existing socket reflection.",
+  "lights": [
+    {
+      "name": "socket reflection",
+      "energy": 0
+    }
+  ],
+  "measurement": {
+    "landmarks": "build/bishop-mission/socket-010/landmarks.json",
+    "normals": "build/bishop-mission/socket-010/shading/manifest.json"
+  }
+}
