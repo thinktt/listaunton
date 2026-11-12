@@ -1,0 +1,41 @@
+{
+  "accepted_checkpoint_33": {
+    "original_black_iou_percent": 97.77867463503553,
+    "selected_highres_iou_percent": 97.97702076194315,
+    "subjective": {
+      "interior_and_side_shape": 90,
+      "wood_color": 85,
+      "grain_texture": 79,
+      "lighting": 76
+    },
+    "working_mean_percent": 85.55573492700711,
+    "holistic_range_percent": [
+      80,
+      85
+    ],
+    "reason": "One continuous lower-flare turn replaces the extra inflection and shading band; the groove is slightly shallower. All heights and the socket shelf/drop remain exact. Material and lighting are unchanged.",
+    "full_visual_match_complete": false
+  },
+  "rejected_269": {
+    "silhouette_iou_percent": {
+      "original_black": 97.77979120896742,
+      "selected_highres": 97.97654305725021
+    },
+    "subjective": {
+      "interior_and_side_shape": 88.5,
+      "wood_color": 85,
+      "grain_texture": 79,
+      "lighting": 74
+    },
+    "working_mean_percent": 84.85595824179349,
+    "holistic_range_percent": [
+      78,
+      83
+    ],
+    "samples": 64,
+    "reason": "Flatter shelf reads too square in neutral side view and loses the rounded reference crescent in the unchanged wood/light rig. Exterior silhouette alone cannot arbitrate this change."
+  },
+  "accepted_model_unchanged": true,
+  "accepted_model_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "note": "Neutral trials have no invented wood/grain/light score. Small wood-vs-neutral IoU differences reflect sampling, not a separate fit."
+}

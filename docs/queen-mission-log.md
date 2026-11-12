@@ -1480,3 +1480,30 @@ model. See [checkpoint 33](queen-mission/iteration-033/README.md) for source
 comparisons, geometry scope, scores, reproduction and delivery checks.
 The socket crescent remains the next investigation; preserve its shelf/drop
 while separating geometry from the effects of the existing reflection rig.
+
+## 2026-11-12 — socket study and completion of the shape phase
+
+Two flatter socket shelves lower the inner seat by 0.032/0.050 units while
+preserving the projected front arcs, outer wall, base and all upper geometry.
+Their neutral masks are identical to checkpoint 33, but their interiors are
+not. The strong case looks square; the moderate actual wood trial loses the
+rounded lip/crescent. Both are rejected. Checkpoint 33 and all public model
+assets remain unchanged.
+
+A direct audit of checkpoint 22 versus current 33 confirms a 6% shallower
+base/socket, 6.2% narrower socket wall, 7.0% broader inner flare, lower collar
+curved on both faces and an upper ring 6.0% smaller in radius / 46.7% thinner.
+Fresh equal-scale profile and fixed-camera renders show the cumulative change.
+The actual Chavet and German Knight study photographs were inspected again;
+they support the rounded collars and continuous base slope without replacing
+the original Lichess reference. The original fit remains 97.7787% IoU and
+the selected-high-res fit 97.9770%. All five scores stay unchanged.
+
+The [completion audit](queen-mission/iteration-034/README.md) checks every
+current shape requirement, including moderate/strong trials, source conflicts,
+preserved socket shelf/drop, saved geometry/UVs/receivers and synchronized
+review assets. Direct before/after checks also prove unchanged packed material,
+all 85 lights, camera and transform. This completes the shape-focused mission
+at model `243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68`.
+Texture and lighting finishing remain deferred, with holistic match still
+estimated at 80–85%; no perfect reconstruction is claimed.

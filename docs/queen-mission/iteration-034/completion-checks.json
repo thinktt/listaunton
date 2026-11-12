@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-12T06:32:22.231473+00:00",
+  "accepted_model_commit": "3980e37f32d6ae3943a5e5b3d5133e2ad49a286f",
+  "accepted_model_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "model_and_public_review_unchanged_in_this_iteration": true,
+  "repository_staging_preview_hashes_equal": {
+    "assets/queen/comparison-base.png": "fbab4addd980f10cb64d48594f7047b3956c3bf2466dac0add5f523791e2f385",
+    "assets/queen/comparison-collars.png": "f7bb06d6499e87c4f6443175f6b2524bdd86cf19a83002394cdc0f729dc65ede",
+    "assets/queen/comparison-crown.png": "776abb4f36e003fa5a71fc4ab97c6191c8c9212f894f7ae5442b52f1a84f813b",
+    "assets/queen/comparison-full.png": "478ba75a146d60ad2e225eb89ef446a08d664bb67269c9abaefc357e1bee8c70",
+    "assets/queen/contour-overlay-labeled.png": "ccc09ace140021d99ce1ae5d909148edb6417ebedf8043331b8d0e7447686f63",
+    "assets/queen/contour-overlay.png": "7232679847185606ca56250563296b0297a4decf7e1c97b47434f091da446829",
+    "assets/queen/feature-curves.json": "19b431b6981cf6daf3afcfeda60ae6b3d7c9e86881387af858a8362da602843c",
+    "assets/queen/feature-curves.png": "9c9da1c6078c45e71d9f9e891e054b8eb6da6fcdb5a2981f5ae61886ef42a582",
+    "assets/queen/finish-comparison.json": "98452c4b39eeed7f634a03bb99a6de7843822fd99394e2bff60fa88668ebd5fa",
+    "assets/queen/finish-validation.json": "60b8a8b7da37572086639478bda729749cf38e4e2e652bf009b3efdf898461a4",
+    "assets/queen/model-validation.json": "60b8a8b7da37572086639478bda729749cf38e4e2e652bf009b3efdf898461a4",
+    "assets/queen/overlay-50-labeled.png": "9e59c068b9b389a3ef2ba04cacf71ac3312f48f1e11cace4f833e09363ba12fe",
+    "assets/queen/overlay-50.png": "f9b0b65574ddf201ef674473fec404a909f934765857939316a84801375ff41e",
+    "assets/queen/overlay-metrics.json": "a9f058031fbdd50e21f1357ea676471e095dc600ac9b964999376cc1c0d94bb0",
+    "assets/queen/profile-landmarks.json": "77aee481b1b5da9900c4ad11110830fcb393f376feaeed6d2a5d4d122250240a",
+    "assets/queen/queen-brown.png": "509cc46d3fd738604dd74e83740a9a8c707ba01bdbe58ee330226fe972112bad",
+    "assets/queen/queen-finished-profile.png": "2ab9e79c18c6d96231842f0fa8be1313d0e968bc9f858086274bc6129349dbbb",
+    "assets/queen/queen-matched.png": "f373e419977335264c5daf8fe71c537ddaba2e18c8d53ea7d08fd20b3714195f",
+    "assets/queen/queen-wood-profile.png": "fabb014c01aa3202e8e90260e005e29b4f16c8e6ee4c9c405de0155e7d71e1f2",
+    "assets/queen/side-aligned-neutral.png": "f2114dacc77594d9c1747863c03663a310702a5793f91a8d91f23a482cd26b1b",
+    "assets/queen/side-aligned-wood.png": "143da958f0dddd696c7b02f9dcddcdbf6b8875c24bfd50ecf96b632179da8ba9",
+    "assets/queen/side-registration.json": "35cc604eda8fa1af8d344ea95ddfaa1bb4fedff4d722b4f19b3e8e84d3798d2e",
+    "assets/queen/viewer-camera-check.json": "1644c28b739b9874711af20b27829a86a50d753a0a0088259d99e48c31f3e535",
+    "models/queen/queen-rebuilt.blend": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "review.html": "eb23bb30a35ed4e4fe424a39d668a3179f5526d18a6dd4fa3ecea9a353251af8"
+  },
+  "original_references_and_gallery_defaults": {
+    "references/lichess-staunton-3d/Black-Queen.png": "b214bd3b522122f9a6040c4fd6ed4e00b2fe9d16436bf4f52e5f155b4b190567",
+    "references/lichess-staunton-3d/White-Queen.png": "0d950cd3691a4435917ade7b496787511a2cad9aa23f3992ba8fdece99e9646d",
+    "assets/queen/reference.png": "bc510a8f5fff0a1e51fd913f1cf4f4707849d68c5d4dabc8ce6df16cc2e1423a",
+    "assets/queen/concepts/side-01.png": "64508964896844556c409e74c2ec04441efd47c373ab703c150ecc669695538d",
+    "assets/side-views/defaults.json": "fa17c1db3fafd9bb470344cb84a25eada770d31c865293811ca8064e5b3eddbd"
+  },
+  "current_model_reports": {
+    "assets/queen/finish-validation.json": {
+      "passed": true,
+      "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+      "report_sha256": "60b8a8b7da37572086639478bda729749cf38e4e2e652bf009b3efdf898461a4"
+    },
+    "assets/queen/model-validation.json": {
+      "passed": true,
+      "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+      "report_sha256": "60b8a8b7da37572086639478bda729749cf38e4e2e652bf009b3efdf898461a4"
+    },
+    "assets/queen/viewer-camera-check.json": {
+      "passed": true,
+      "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+      "report_sha256": "1644c28b739b9874711af20b27829a86a50d753a0a0088259d99e48c31f3e535"
+    },
+    "docs/queen-mission/iteration-034/current-side-shape-validation.json": {
+      "passed": true,
+      "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+      "report_sha256": "955bd277bfce2c0ccb6475de3a01eb9b92de1ab949adda740da97a6746cdda92"
+    }
+  },
+  "direct_phase_preservation": {
+    "passed": true,
+    "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "baseline_sha256": "f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4",
+    "unchanged": [
+      "material_nodes",
+      "material_links",
+      "lights",
+      "camera",
+      "object_matrix"
+    ],
+    "real_bsdf_material_preserved": true,
+    "all_packed_image_bytes_identical": true,
+    "light_count": 85
+  },
+  "current_http": {
+    "checked_at_utc": "2026-11-12T06:27:39.0526913Z",
+    "review_status": 200,
+    "embedded_model_hash_matches": true,
+    "side_status": 200,
+    "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "served_side_registration_matches": true
+  },
+  "commands_run_this_iteration": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/queen/audit_shape_phase.py",
+        "docs/queen-mission/iteration-034/finish_shape_audit.py",
+        "docs/queen-mission/iteration-034/measure_crescent.py",
+        "docs/queen-mission/iteration-034/inspect_socket.py",
+        "docs/queen-mission/iteration-034/propose_socket_shelf.py",
+        "docs/queen-mission/iteration-034/compare_shelves.py",
+        "docs/queen-mission/iteration-034/compare_shape_phase.py",
+        "docs/queen-mission/iteration-034/compare_socket_wood.py"
+      ],
+      "passed": true,
+      "output": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_site.py"
+      ],
+      "passed": true,
+      "output": "PASS: eight pages, 57 local links, overlay images, parts sandbox/CSP, and model/viewer hash.\nPASS: all twelve original PNG reference hashes and gallery images.\nPASS: original-reference alignment metadata and source image hashes.\nPASS: candidate hashes, source provenance, five comparison pages and alignment data.\nPASS: white bishops used plain upscale prompts without mitre-specific instructions.\nPASS: bounded foot-detail registration, unchanged image scale and same-color references."
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_model_site.py"
+      ],
+      "passed": true,
+      "output": "PASS: king review opens its current mesh/camera/render; source images and registration are correct.\nPASS: rook review opens its current mesh/camera/render; source images and registration are correct.\nPASS: bishop review opens its current mesh/camera/render; source images and registration are correct.\nPASS: knight review opens its current mesh/camera/render; source images and registration are correct.\nPASS: pawn review opens its current mesh/camera/render; source images and registration are correct.\nPASS: 6 king projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\nPASS: 6 rook projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\nPASS: 7 queen projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets."
+    },
+    {
+      "command": [
+        "/home/toby/.nvm/versions/node/v24.13.0/bin/node",
+        "scripts/queen/check_viewer_camera.cjs"
+      ],
+      "passed": true,
+      "output": "{\n  \"passed\": true,\n  \"blenderSampleCount\": 30,\n  \"viewportShapes\": 5,\n  \"maxPixelError\": 0.00003865447180991589,\n  \"projectionSwitch\": true,\n  \"dragRotation\": true,\n  \"panPixelAccuracy\": true,\n  \"resetRestoresCamera\": true,\n  \"manualViewSurvivesResize\": true,\n  \"sourceSha256\": \"243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68\"\n}\nPASS: embedded readiness, parent-only material sync, persistent orbit and native camera reset."
+    },
+    {
+      "command": [
+        "/home/toby/.nvm/versions/node/v24.13.0/bin/node",
+        "scripts/queen/check_review_reference.cjs"
+      ],
+      "passed": true,
+      "output": "PASS: source switching, uniform placement, stable zoom/pan, opacity, revisions/materials, hold/blink, direct source comparison, contour guard, and source hashes.\nPASS: tab-only switching, reference panning, embedded documents, readiness/source checks and persistent 3D frame.\nPASS: queen projection tab loads once, preserves overlay pan and retains current-model and parts frames.\nPASS: imagined side guide, aligned model material and opacity persist across tabs."
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "passed": true,
+      "output": ""
+    }
+  ],
+  "current_camera_regression": {
+    "passed": true,
+    "blenderSampleCount": 30,
+    "viewportShapes": 5,
+    "maxPixelError": 3.865447180991589e-05,
+    "projectionSwitch": true,
+    "dragRotation": true,
+    "panPixelAccuracy": true,
+    "resetRestoresCamera": true,
+    "manualViewSurvivesResize": true,
+    "sourceSha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"
+  },
+  "native_review_inspection": {
+    "performed_at": "checkpoint 33; no new native review test in iteration 34",
+    "valid_for_unchanged_review_sha256": "eb23bb30a35ed4e4fe424a39d668a3179f5526d18a6dd4fa3ecea9a353251af8",
+    "observations": {
+      "url": "http://localhost:8080/review.html?checkpoint=33",
+      "overlay_opened": true,
+      "current_model_visually_loaded": true,
+      "side_and_neutral_buttons_worked": true,
+      "free_drag_rotation_worked": true,
+      "side_comparison_neutral_and_opacity_worked": true
+    }
+  },
+  "native_study_inspection_this_iteration": [
+    "German Knight queens",
+    "Chavet lineup"
+  ],
+  "completion_scope": "The four shape priorities in MISSION-QUEEN.md; see README requirement audit.",
+  "shape_phase_visual_requirements_assessed_met": true,
+  "full_visual_match_complete": false,
+  "remaining": [
+    "Socket and crown reflections",
+    "Grain and relief",
+    "Regional color",
+    "Unmatched white finish",
+    "Browser lighting approximation",
+    "Inferred unseen geometry and historical camera"
+  ],
+  "rejected_trials": [
+    "267-flatter-socket-seat-032",
+    "268-flatter-socket-seat-050",
+    "269-flatter-socket-wood"
+  ],
+  "no_push_or_publication": true,
+  "no_watchers_or_subagents": true
+}

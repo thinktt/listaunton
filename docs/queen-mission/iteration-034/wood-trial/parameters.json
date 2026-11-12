@@ -1,0 +1,58 @@
+{
+  "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "changed_rings": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "join_lift": 0,
+  "base_profile": {
+    "variant": "267-flatter-socket-seat-032",
+    "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "angle": 54,
+    "floor": 860.223491056495,
+    "scope": "Controls 34-41 only. Outer socket wall, flare, foot, upper stem and all upper geometry exact.",
+    "hypothesis": "Broaden the shelf and lower the inner seat while retaining each edited front meridian projection at 54 degrees.",
+    "inner_seat_drop": 0.032,
+    "ring_radii": {
+      "34": 0.5171848964054027,
+      "35": 0.5129457922950704,
+      "36": 0.49433899911419077,
+      "37": 0.45746448987182714,
+      "38": 0.4225114554395065,
+      "39": 0.41078008899029256,
+      "40": 0.3889306680027982,
+      "41": 0.3637646006434522
+    },
+    "ring_z_offsets": {
+      "34": 0.0057599999999999995,
+      "35": 0.010400000000000001,
+      "36": -0.005389809608459473,
+      "37": -0.018315434455871582,
+      "38": -0.032,
+      "39": -0.02,
+      "40": -0.008960000000000001,
+      "41": -0.002
+    },
+    "front_arc_constraint_max_pixel_error": 1.3352642691428637e-05,
+    "shelf_top_height_span_35_to_38": 0.025423645973205566,
+    "shelf_radial_span_35_to_38": 0.09043431282043457
+  },
+  "receiver_partition": {
+    "lower_height": 0.9549604952335358,
+    "faces": 70656,
+    "atlas_hashes": {
+      "turned-body": "c37426b98d3418f49f17123572a12b92dfa1ec8f7fb6f43abb849dea57b8da5b",
+      "stem-socket": "2b349f4e5471bcd37888a71a1db1a8424cd0492b0f29435dbae72a191640b50a",
+      "finial": "3461aa976eb1a3757cf357c69ea191376ecc3adf70f8a7f6e52e0d42c696a207",
+      "lower-collar": "4474a8b8e6d654c52cc9c37cf9c3f3dae40a285c821cf14d84869b56b7ed6201",
+      "middle-collar": "96083658c1bc9de055e17a1b914f39ccc360492db6cd395b7fe60a9d89100740",
+      "upper-collar": "721f842f99c4b313db0c20cad039b8e68d87412382b201c5115e81bc8773c7a5"
+    }
+  }
+}

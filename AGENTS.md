@@ -212,3 +212,11 @@ lights, source pixels, gallery defaults and the 54-degree camera remain
 unchanged. record_base_turn_checkpoint.py records the scoped measurements.
 Keep fixed/side/viewer assets synchronized. The original outline tradeoff
 and rejected lower-round-over candidate are documented in iteration-033.
+
+The owner-directed Queen shape phase is completed by the audit in
+docs/queen-mission/iteration-034. Checkpoint 33 remains the accepted model.
+The final flatter-socket experiments preserve the exterior mask but worsen
+the lip/crescent and are rejected. The audit covers all four shape priorities,
+source preservation, current model validation and synchronized review assets.
+Color, grain and lighting finishing remain deferred; completion is not a
+claim of exact recovered geometry or a perfect full-image match.

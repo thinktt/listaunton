@@ -43,6 +43,13 @@ Do not invent a token budget or launch additional agents from this file.
 
 ## Accepted baseline and references
 
+**Shape-phase status, November 12, 2026:** completed at accepted checkpoint 33.
+The requirement-by-requirement audit is in
+`docs/queen-mission/iteration-034/README.md`. The final flatter-socket tests
+were rejected; the accepted model stays unchanged. This completes the four
+shape priorities and delivery requirements below, not the deferred work on
+texture, color and lighting. Resume further work only through owner direction.
+
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
 - Latest accepted working baseline SHA-256:
