@@ -1,0 +1,551 @@
+{
+  "iteration": "014",
+  "date": "2026-11-12",
+  "classification": "research; no accepted model change",
+  "goal": "active and incomplete; owner confirmed no pause requested",
+  "accepted_checkpoint": "013",
+  "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "render_sha256": "842e0dfe040928d5e53ca21f376df112eda60a700cdcf9b8960461cbee518d91",
+  "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "fixed_camera_degrees": 54,
+  "accepted_scores": [
+    96.10946013611408,
+    84,
+    85,
+    77,
+    77
+  ],
+  "accepted_mean": 83.82189202722282,
+  "accepted_holistic_range": [
+    75,
+    85
+  ],
+  "python_syntax_checked": [
+    "probe_collar_reflections.py",
+    "assess_collar_isolation.py",
+    "capture_collar_basis.py",
+    "fit_collar_basis.py",
+    "capture_collar_spots.py",
+    "fit_collar_spots.py",
+    "validate_collar_lights.py",
+    "prepare_fine_relief.py",
+    "fine_relief_trial.py",
+    "validate_fine_relief.py",
+    "compare_fine_relief_details.py",
+    "collect_surface_study.py"
+  ],
+  "source_and_model_preserved": true,
+  "note": "All observations are local renders and file audits. No new browser inspection, quota monitoring, push or publication.",
+  "files": [
+    {
+      "source": "build/bishop-mission/107-collar-isolation/comparison.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/comparison.png",
+      "sha256": "19feda7613c91bb6bdb769cdad3c66cac3b2e1b02886336736224852bee32be3"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/control.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/control.png",
+      "sha256": "99e7e42539550e069229dd6ebff9d2d049672fd7bb1b2736eefcce2ea096b083"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/diagnostic-metrics.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/diagnostic-metrics.json",
+      "sha256": "2d575bff7c7aa9c3ada39f720ce1df8ced89d29f297d8aa6abe28cd37603eceb"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/double-collar.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/double-collar.png",
+      "sha256": "7efe340b7332b64fde95b3805b91a182daf8c9d3d63c6a97729f835d62fa8b7a"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/manifest.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/manifest.json",
+      "sha256": "a4baa035d424d48d7c1ba50f4ccd1dd4738b87b19fb5096d5c4ec51a55f46bee"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/reference-grid.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/reference-grid.png",
+      "sha256": "cf34f1bfbe6c7ad574be14e32e7c5807ee3fc82518bd9ba570793359c8ce5b41"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/without-both.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/without-both.png",
+      "sha256": "66dfb5b15531ed21f13d714b94a53d6bd26c4b5c2fc278a39c98ccf25834a6c9"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/without-collar.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/without-collar.png",
+      "sha256": "f789c6c01bb6273a9d8f5f54ade27a3a06d2550e1e8f0ec85e91c210106c0df8"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/without-head.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/without-head.png",
+      "sha256": "71771e8a1c9072b882fa9dfc45947e85b4d2d8200beb33427fdb2bd1bd4ae401"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-isolation/without-relief.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-isolation/without-relief.png",
+      "sha256": "1b75375f666f6118e83b3bbd68c3902085b5695b5ae4adbed9466b32920e01b1"
+    },
+    {
+      "source": "build/bishop-mission/108-collar-normals/geometry.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/108-collar-normals/geometry.json",
+      "sha256": "1321603fbc768eba676292d08a52391f2b9035b9f9fb97e1dfdfd594a0468b48"
+    },
+    {
+      "source": "build/bishop-mission/108-collar-normals/manifest.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/108-collar-normals/manifest.json",
+      "sha256": "712c41048400ce76e419d217553fa9e6f4f68c5f0e86ecac5d27aa0477eef7e5"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/config-lower-left.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/config-lower-left.json",
+      "sha256": "7a00db9abfd0d8924d03f7a981cb995dd39f83be95eaf3c704c84e1b11e20227"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/config-old-placement.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/config-old-placement.json",
+      "sha256": "a1e27160b5e4b97e90b04fef716a347cceeca3f187a18f1ffddc97dca0ca27a2"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/config-right-arc.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/config-right-arc.json",
+      "sha256": "fa0d2fe2c0c3a2f359b88b41f3c59fa59398c3128c439df8b75a78cf3c8087ab"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/config-right-tall.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/config-right-tall.json",
+      "sha256": "0209d92a5329a15bdc0461a940cec0365b63305728edc3d10269eac654832bb8"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/config-right-wide.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/config-right-wide.json",
+      "sha256": "f7945972921f0b71438b653f4c78eb4fb9b45f0a63b30955de69ecefe245273c"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/fit.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/fit.json",
+      "sha256": "8e6ad01b8208f4ca7de5413aa8f4ea118672b19710265dcccf2995c334f63355"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/manifest.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/manifest.json",
+      "sha256": "99f4f6f3b936597ea442c6971332569546f1dd429eafb6e09058d50027b0bb31"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis/predictions.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/109-collar-basis/predictions.png",
+      "sha256": "51498c7a6c7e4f5991f68e27a0275f53d6b6440918013e9977064895d6cf48e0"
+    },
+    {
+      "source": "build/bishop-mission/111-collar-spots/fit-prediction.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/111-collar-spots/fit-prediction.png",
+      "sha256": "65c3d2433e464c912cd0a716768ec3c225630aecb9b0a4da5369a1f8cefb3489"
+    },
+    {
+      "source": "build/bishop-mission/111-collar-spots/fit.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/111-collar-spots/fit.json",
+      "sha256": "f24cad9ed4a99f94c5b9db0519cb0ab4e43aaff097e8d140f7949dd317fc2a7d"
+    },
+    {
+      "source": "build/bishop-mission/111-collar-spots/manifest.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/111-collar-spots/manifest.json",
+      "sha256": "38fdd4f64bde95275601aaf9b341ad951ac882b5efcfe56b778b6203691aace7"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/config-lower-left.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/config-lower-left.json",
+      "sha256": "83abbb16938188e4801634d9ac0b12553b4ac72022ea53d942d36aa0ef28c168"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/config-old-placement.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/config-old-placement.json",
+      "sha256": "2e4e5b5b41a1ac44c162ad913afd9b1d01d0bb2d91d022268bac6a0b7fdd297c"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/config-right-arc.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/config-right-arc.json",
+      "sha256": "015a2b08b92bb0edc4f6fb360cc51ffe05a0d9f1372c4e483f8f764f40c37516"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/config-right-tall.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/config-right-tall.json",
+      "sha256": "bb21979be20a4a144b27e9c6904cb14d58179969c612fc7bbee886c31fb266bd"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/config-right-wide.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/config-right-wide.json",
+      "sha256": "ab5edb147214b42531585ede64723d498e61eb95095404b825add3bb2f496132"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/fit.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/fit.json",
+      "sha256": "0fb51733de94a123463de0ac0fabc0e4ca445cfa933c4042ef32d48023e52f0f"
+    },
+    {
+      "source": "build/bishop-mission/113-cool-collar-fit/predictions.png",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/113-cool-collar-fit/predictions.png",
+      "sha256": "498354559a193872db8b05173cc2dc0a6f7629a9d2839eadda6ffb56c2f54273"
+    },
+    {
+      "source": "build/bishop-mission/107-collar-light-rig.json",
+      "archived": "docs/bishop-mission/iteration-014/diagnostics/107-collar-light-rig.json",
+      "sha256": "f2fe1cf4000b709cbc460e8b231f5b06a98fb16f32cfffc03ad3f6cb30b38aa5"
+    },
+    {
+      "source": "build/bishop-mission/114-115-detail-comparison.png",
+      "archived": "docs/bishop-mission/iteration-014/details.png",
+      "sha256": "a92739a629e370348441627d137b34b4aa84e2a0aa79581331a1a113684ac7ee"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/base.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/base.png",
+      "sha256": "3470a8c371f396d4f9d8a2ea9f9c2e2a8c6f4266857a3d96f5b819771c0b0ce9"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/comparison.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/comparison.png",
+      "sha256": "87b36d5590455a7460051f658c218c45787d71d727d7c9d36855df34fd0d7c29"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/head.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/head.png",
+      "sha256": "9ae4102e96eaf8a15c966f98a2c0bbd931b19b91b837cc15095109e845729abf"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/metrics.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/metrics.json",
+      "sha256": "3df496abea3cdd6f50f5534cf3940975e49933ef6dcfa1d38d211b802380ac14"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/original_black-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/original_black-contours.png",
+      "sha256": "218c76312a3333e8bc2fa96a101d36e860f286d96b009b0e673c2d1d51294ff1"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/original_white-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/original_white-contours.png",
+      "sha256": "ec84950424c16a26bcd32c27a387756d9ae9b1cbf1fb4a39ef599f603cd81813"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/overlay-original.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/overlay-original.png",
+      "sha256": "c6b133aec9e541878bcf69677f2612dfdba1210bb72e9467994144cefa5d3e3a"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/overlay-selected.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/overlay-selected.png",
+      "sha256": "85bca720ce5899406efb0f5016902e074a1f35e4d86a07706ebd4e706a5c684b"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/selected-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/selected-contours.png",
+      "sha256": "5d62218ca585498002fb282f3f8c041ff726bb4cca9acb58a1ecde49e22f4f1b"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/comparison/stem-socket.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/comparison/stem-socket.png",
+      "sha256": "345a422565b7956d9001321e8057cb44ebcfa20584664294dbc4cddf08ff2ed0"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/light-scope.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/light-scope.json",
+      "sha256": "d187576234fc5953bb340427c6ae7c4c2393035536fab9260a69fc515d5de1ba"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/parameters.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/parameters.json",
+      "sha256": "dbf0713b5078f40a6dd4bdc554bfa69161e77ec65b4df31e51115dc3680b82c0"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/statistics.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/statistics.json",
+      "sha256": "e072c0fc1e0b8d4bccf864004432fe8fedd84727003cae196555e700c4c0a923"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-spots/wood.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/112-collar-spots/wood.png",
+      "sha256": "2f6667701942766671e21a852aebd199469462072165d278026e7f8db57a5538"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/base.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/base.png",
+      "sha256": "9060ba0bc4f82b24cf9f5854b04ab0c49296bb90756c6282894cb09e28dd5061"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/comparison.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/comparison.png",
+      "sha256": "750ef71005c3447ec6fa273bc83198f25d8a2be0e583de22f050bb8fafb3db4a"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/head.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/head.png",
+      "sha256": "a590ad519b0f9ceaea31b563ab86b6a69c46fceba1df5f3f1c835f325e73ecbf"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/metrics.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/metrics.json",
+      "sha256": "c3a804cacac3ddea8e73caf1fc97990cb172789670aef7bde064d858e008a169"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/original_black-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/original_black-contours.png",
+      "sha256": "093d7b0c2dcf2f6d75fbf3344ca3e52c31d9b7aa2c7e077f1e0fa22dd717f260"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/original_white-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/original_white-contours.png",
+      "sha256": "1652f49ce1ee38855786bf02a7a9f63b4721a66e3676ea41c357484866861e4c"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/overlay-original.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/overlay-original.png",
+      "sha256": "f3873bcc5d502996926f57a03660e0abeaaceb9354cda3248da73bc9780561e5"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/overlay-selected.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/overlay-selected.png",
+      "sha256": "df58ec04e2779d5ecb36b09109e62d3fb4806d49c052d5adf63fccbcbf24db73"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/selected-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/selected-contours.png",
+      "sha256": "6ad54301343e87f5294701d1729d1f6da8d1b01cf1cde7ec4a20f425bc933512"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/comparison/stem-socket.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/comparison/stem-socket.png",
+      "sha256": "dd25ebb85b93e9eee27508d92bb6354145225181e49ea8cef03ef2d8812303e4"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/config.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/config.json",
+      "sha256": "dcbb7ec2ba3ccbc0542dd4a7d7d875f1bcf99f27334c5b588fb999c8e17ec256"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/fine-relief.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/fine-relief.png",
+      "sha256": "2bbe5ca7477eeb04a6dee7612a37ddea610c8e227244e43b65180e9d153f73c4"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/height-provenance.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/height-provenance.json",
+      "sha256": "f875bc8cb27ef0807fdb5e5e0023522517a58bb79874456697cd033faae03cc2"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/material-scope.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/material-scope.json",
+      "sha256": "e216dd6790669d946fc64aea6c4ef86d7edb5d3acc2aad3a77ff623afd7ecf3e"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/reopen-validation.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/reopen-validation.json",
+      "sha256": "160d834b71cd0116ca379b596c537dd3705456b35e543231724ba50a2eac4dcf"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/statistics.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/statistics.json",
+      "sha256": "232d63ddd3d435c78503cb25875073aefb889151af0b2d72ea062caa2f14ea58"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/views/diagnostic-cameras.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/views/diagnostic-cameras.json",
+      "sha256": "ae7e56568b15a392184b9e8bd53d32a3ef043756d4e95fdc727063071274a7cd"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/views/head-side.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/views/head-side.png",
+      "sha256": "2ad6704b99ddf773b9a98b618ff15289012065d19eea9e2fc020fbe41dcc9b4e"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/views/rear-oblique.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/views/rear-oblique.png",
+      "sha256": "0228929b215d243eec678303056199a9e6940bf8879214ef536c0715da77859c"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/views/side-profile.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/views/side-profile.png",
+      "sha256": "9431aad33b10bf055f5b832574080b776ba4e71bc4ccb1e05818f322354a15f5"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief/wood.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/114-fine-relief/wood.png",
+      "sha256": "809cc9aa28d511004c81184914723b0b66f42f49a21260d2a0721afa3dfa1d91"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/base.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/base.png",
+      "sha256": "2ee6f1a8f1712bac3b39b16a23b51b838f3374296858b12eb99b87eb1e705501"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/comparison.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/comparison.png",
+      "sha256": "3a58db4ff5d75f4b65cbdfc526078567a783678a7335b4363455fc55669dab59"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/head.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/head.png",
+      "sha256": "efba09a4dc6bad22a032ff31528d3a03c52b6de6468ef1ed373dd84306c62718"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/metrics.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/metrics.json",
+      "sha256": "59f1c7eb6fef98b564de6dd1d16e5caacc55d68e0ec2dda1283fe4664d25cf65"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/original_black-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/original_black-contours.png",
+      "sha256": "093d7b0c2dcf2f6d75fbf3344ca3e52c31d9b7aa2c7e077f1e0fa22dd717f260"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/original_white-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/original_white-contours.png",
+      "sha256": "1652f49ce1ee38855786bf02a7a9f63b4721a66e3676ea41c357484866861e4c"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/overlay-original.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/overlay-original.png",
+      "sha256": "51f6bf5e3b51402dea7f8b7c3be00e177bea42a952f13524ab8f8e7aa167232b"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/overlay-selected.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/overlay-selected.png",
+      "sha256": "99eec9191d8c0ebd5c2541eae0838defe2c2244298df5d2c4bb1b0a6876bfeb8"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/selected-contours.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/selected-contours.png",
+      "sha256": "6ad54301343e87f5294701d1729d1f6da8d1b01cf1cde7ec4a20f425bc933512"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/comparison/stem-socket.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/comparison/stem-socket.png",
+      "sha256": "366d5cef4aa2163e0cd718e20428f575313245df61f1d40f8fc0504615f1585d"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/config.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/config.json",
+      "sha256": "761800bd390f68886c8c56061c7bae40d674b263655c71a0641e77229fe15859"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/fine-relief.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/fine-relief.png",
+      "sha256": "3ae72cd1e705dfa6f104a472d542d23d2b9af82e4ff3d278ddd1892f94ce456e"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/height-provenance.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/height-provenance.json",
+      "sha256": "81ed69f3cc09bfb75d6a682a6d9029f452a9176c4c8c6c7186d493e7c5fc99a8"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/material-scope.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/material-scope.json",
+      "sha256": "5e97beff65370b9cc513c4dbacf24248116252ed0a2c754e2c7a24ad445b6fbb"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/reopen-validation.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/reopen-validation.json",
+      "sha256": "3ca713f0023863106c32126cbca889acc2994ba6a5334de0df853b61407f520e"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/statistics.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/statistics.json",
+      "sha256": "f78697d1fc4d8e8a956488e9fa3d846dfdb5c5307d934de5a4b9c00946bd0ac3"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/views/diagnostic-cameras.json",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/views/diagnostic-cameras.json",
+      "sha256": "ae7e56568b15a392184b9e8bd53d32a3ef043756d4e95fdc727063071274a7cd"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/views/head-side.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/views/head-side.png",
+      "sha256": "4ddfb3030bd7a55d99041165014b2ff9cc48780ec99c29589e40c114904a87fc"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/views/rear-oblique.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/views/rear-oblique.png",
+      "sha256": "fd77d57b8009ba1c6cf5c9ee8c4c6b97af58ddc5efe8562efd90a3d58808107e"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/views/side-profile.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/views/side-profile.png",
+      "sha256": "ae08d2331a5cc42e36c9eee04de8c7f959fbac4804f535022485d3564404e3b5"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief-stronger/wood.png",
+      "archived": "docs/bishop-mission/iteration-014/trials/115-fine-relief-stronger/wood.png",
+      "sha256": "1833b4d20711daa37d21f7ee5f2abf53d4e8a2e553cc0c9e5ea9a35362b1fc8f"
+    },
+    {
+      "source": "build/bishop-mission/107-light-rig.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/107-light-rig.log",
+      "sha256": "da7ee5849d53246702c46458d807fc018e77b20adfdf37622d20d7cb9bddade6"
+    },
+    {
+      "source": "build/bishop-mission/107-probe.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/107-probe.log",
+      "sha256": "86c285a526aaf6840dfe0eedd3ceb8237fd86a6f43675dc5d881836d61f9f0fb"
+    },
+    {
+      "source": "build/bishop-mission/108-landmarks.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/108-landmarks.log",
+      "sha256": "1392ace3aa0a2d612c92c5b9d700457c7504bb7405fad561e33329456eee9b47"
+    },
+    {
+      "source": "build/bishop-mission/108-normals.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/108-normals.log",
+      "sha256": "da1665644ea78422c9dae89854659983b6d351b182927e521aed6b3cdd958ffb"
+    },
+    {
+      "source": "build/bishop-mission/109-collar-basis.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/109-collar-basis.log",
+      "sha256": "268eb216393283679850cd4c601e7a1393cabb301d44f8dbba0fea01334beecc"
+    },
+    {
+      "source": "build/bishop-mission/111-collar-spots.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/111-collar-spots.log",
+      "sha256": "aac7ff80df13a380e23aebc0785890fb952b3ee2b202b3643d40248d5facffb5"
+    },
+    {
+      "source": "build/bishop-mission/112-collar-trial.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/112-collar-trial.log",
+      "sha256": "a5ae9dcded576410db6c15ca13738e6ca6dae5d3c4d74f52199ee4e45c1c106e"
+    },
+    {
+      "source": "build/bishop-mission/112-light-scope.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/112-light-scope.log",
+      "sha256": "5c19ea7cee39d80a19d22552d1be5991a07abf6df223f0f94ffdbb8943d6b049"
+    },
+    {
+      "source": "build/bishop-mission/114-fine-relief.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/114-fine-relief.log",
+      "sha256": "1c1f22018ed56e817a8f5e43501c0f1e7b384322b92b246343626331b7af7605"
+    },
+    {
+      "source": "build/bishop-mission/114-material-scope.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/114-material-scope.log",
+      "sha256": "423a07938475666a10378927443aba326836e292af354dceb5af0f98979b7bcc"
+    },
+    {
+      "source": "build/bishop-mission/114-views.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/114-views.log",
+      "sha256": "00034fb052cf9d7512a8436791c1f46902bef77fabd0fc057e633e59ef67988b"
+    },
+    {
+      "source": "build/bishop-mission/115-fine-relief.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/115-fine-relief.log",
+      "sha256": "81fdd9d44443a766200ca80b3f59918777d2f23228c86ff5963a3a51fd723197"
+    },
+    {
+      "source": "build/bishop-mission/115-material-scope.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/115-material-scope.log",
+      "sha256": "f7b1ad384481f254ed1bc89fb01bd64cacc9f10c2db24689bcb727382cdbd816"
+    },
+    {
+      "source": "build/bishop-mission/115-views.log",
+      "archived": "docs/bishop-mission/iteration-014/logs/115-views.log",
+      "sha256": "451bcdd9ec4e12e109110f2522ba8b0b48a7ef584278d18897febec6006bf1aa"
+    }
+  ]
+}

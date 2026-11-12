@@ -1,0 +1,31 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "variant": "110-collar-right-wide",
+  "samples": 128,
+  "adaptive_sampling": false,
+  "lights": [
+    {
+      "name": "collars reflection",
+      "position": [
+        2.064846038120339,
+        -7.333626265281994,
+        3.202178878653981
+      ],
+      "target": [
+        0.10885277390480042,
+        -0.6145434379577637,
+        3.0347981452941895
+      ],
+      "shape": "RECTANGLE",
+      "size": 6,
+      "size_y": 0.7,
+      "energy": 12,
+      "color": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "fitting_evidence": "build/bishop-mission/109-collar-basis/fit.json"
+}

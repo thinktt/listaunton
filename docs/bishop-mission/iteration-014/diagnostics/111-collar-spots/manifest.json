@@ -1,0 +1,336 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "config": {
+    "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+    "variant": "112-collar-spots",
+    "samples": 128,
+    "adaptive_sampling": false,
+    "lights": [
+      {
+        "name": "collar arc 1",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -3.184734209991655,
+          -2.6992319275600756,
+          -2.6056273477417315
+        ],
+        "target": [
+          -0.21807026863098145,
+          -0.4699287414550781,
+          3.329784393310547
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 2",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -1.3473824926271534,
+          -6.9154435625907995,
+          0.8358757058096558
+        ],
+        "target": [
+          -0.06422412395477295,
+          -0.5113930702209473,
+          3.354137420654297
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 3",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          2.8478327467953943,
+          -6.838155640244693,
+          2.182878466596544
+        ],
+        "target": [
+          0.12808355689048767,
+          -0.49637365341186523,
+          3.3596391677856445
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 4",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          5.101459912190417,
+          -5.180480428119799,
+          5.090394868451087
+        ],
+        "target": [
+          0.24346816539764404,
+          -0.4429502487182617,
+          3.3711729049682617
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 5",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -5.130720199164761,
+          -4.558857288857284,
+          0.024486568353820015
+        ],
+        "target": [
+          -0.31422412395477295,
+          -0.5295472145080566,
+          3.1173858642578125
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 6",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -1.8842699704755517,
+          -7.265384216810097,
+          1.9269028840499032
+        ],
+        "target": [
+          -0.10268563032150269,
+          -0.6031341552734375,
+          3.1270618438720703
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 7",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          2.0874874240798698,
+          -7.277015652059998,
+          3.8144094998340803
+        ],
+        "target": [
+          0.10885277390480042,
+          -0.5966582298278809,
+          3.1377782821655273
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 8",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          4.563425121901028,
+          -4.281886368367773,
+          7.21900045707077
+        ],
+        "target": [
+          0.28192970156669617,
+          -0.5192594528198242,
+          3.155573844909668
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 9",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -5.310636556901941,
+          -5.2801902097016065,
+          4.241437095009315
+        ],
+        "target": [
+          -0.31422412395477295,
+          -0.5532674789428711,
+          2.940643310546875
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 10",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -2.1140247236300636,
+          -6.434433441255091,
+          6.295001142431893
+        ],
+        "target": [
+          -0.12191641330718994,
+          -0.6170535087585449,
+          2.949915885925293
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 11",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          2.0317721214006896,
+          -7.354399724497782,
+          2.589055442770656
+        ],
+        "target": [
+          0.10885277390480042,
+          -0.6324286460876465,
+          2.9318180084228516
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 12",
+        "type": "SPOT",
+        "energy": 100,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          4.597936682880977,
+          -6.077450468839517,
+          3.0739010080414713
+        ],
+        "target": [
+          0.2626989185810089,
+          -0.5832071304321289,
+          2.936046600341797
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      }
+    ],
+    "hypothesis": "Localized warm-white collar reflections at measured BSDF normals; all accepted lamps unchanged."
+  },
+  "samples": 128,
+  "fixed_samples": true,
+  "border": [
+    280,
+    360,
+    700,
+    660
+  ],
+  "source_unchanged": true,
+  "normal_measurement": "build/bishop-mission/108-collar-normals/manifest.json",
+  "note": "Unsaved real-BSDF diagnostic passes. No public model or review change."
+}

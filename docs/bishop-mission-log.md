@@ -391,3 +391,29 @@ The mission remains active and incomplete. The side/rear pigment discontinuity,
 fine grain, collar/socket reflection shapes, base/button glints and slit-edge
 finish still need work. Next target the collar reflection and surface detail
 while preserving this color result. No quota monitoring or publishing occurred.
+
+## Iteration 014 — collar and fine-grain studies preserve checkpoint 013
+
+Work remains active; the owner explicitly confirmed no pause is requested.
+Six collar isolations, five measured area-light placements with warm/neutral
+and cooler spectral fits, and twelve localized reflector responses do not
+produce a convincing collar improvement. A full trial with three fitted
+additional lamps is rejected. Its reopened scope audit passes, but the added
+complexity does not recover the reference's cream arcs.
+
+Two saved/reopened fine-relief trials separate small pigment variations from
+broad shading in the bump input. The gentler version marginally improves the
+base glint while worsening other regions; the stronger version exaggerates
+finish detail. Both retain the broad side/rear pigment patch, so both are
+rejected. Independent audits prove the declared node/link and packed-height
+scope, with geometry, UVs, color pixels, lights and camera unchanged.
+See [`iteration-014/assessment.md`](bishop-mission/iteration-014/assessment.md)
+for all five scores, raw comparisons, decisions and the next hypothesis.
+
+The accepted score remains 96.11 / 84 / 85 / 77 / 77, mean 83.82%, holistic
+75–85%. Model, review, fixed/side/clay renders and export remain the checked
+checkpoint 013; no failed trial is promoted. That model is archived under
+`history/bishop-mission-013`. The next pass will investigate continuous
+height-dependent pigment around the turned body, preserving regional wood
+tone rather than repeating the rejected flat-color or hidden-only fills.
+The mission remains incomplete. No quota monitoring, publication or push.

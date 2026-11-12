@@ -1,0 +1,24 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "variant": "115-fine-relief-stronger",
+  "samples": 256,
+  "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+  "height": {
+    "source": "assets/bishop/bishop-boxwood-albedo.png",
+    "source_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+    "height_map": "build/bishop-mission/115-fine-relief-stronger/fine-relief.png",
+    "height_map_sha256": "3ae72cd1e705dfa6f104a472d542d23d2b9af82e4ff3d278ddd1892f94ce456e",
+    "width": 2048,
+    "height": 2048,
+    "gain": 4.0,
+    "inner_blur_radius": 1,
+    "outer_blur_radius": 8,
+    "range": [
+      0.20000000298023224,
+      0.800000011920929
+    ],
+    "standard_deviation": 0.03877974674105644,
+    "note": "Bounded linear-luminance band-pass, stored as 16-bit non-color height. Broad pigment/shading removed from this relief input only. Color atlas unchanged; hypothesis, not recovered surface measurement."
+  },
+  "note": "Replace only the pigment-derived portion of the bump with the fine height map. Existing noise, bump distance/strength, base color, coat and all lights preserved."
+}

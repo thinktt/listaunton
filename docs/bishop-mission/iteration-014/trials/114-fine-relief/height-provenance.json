@@ -1,0 +1,17 @@
+{
+  "source": "assets/bishop/bishop-boxwood-albedo.png",
+  "source_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "height_map": "build/bishop-mission/114-fine-relief/fine-relief.png",
+  "height_map_sha256": "2bbe5ca7477eeb04a6dee7612a37ddea610c8e227244e43b65180e9d153f73c4",
+  "width": 2048,
+  "height": 2048,
+  "gain": 2,
+  "inner_blur_radius": 1,
+  "outer_blur_radius": 8,
+  "range": [
+    0.27472659945487976,
+    0.800000011920929
+  ],
+  "standard_deviation": 0.019488051533699036,
+  "note": "Bounded linear-luminance band-pass, stored as 16-bit non-color height. Broad pigment/shading removed from this relief input only. Color atlas unchanged; hypothesis, not recovered surface measurement."
+}

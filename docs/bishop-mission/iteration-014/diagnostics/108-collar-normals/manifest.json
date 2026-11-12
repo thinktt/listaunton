@@ -1,0 +1,169 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "points": {
+    "upper left": {
+      "pixel": [
+        435,
+        493
+      ],
+      "normal": [
+        -0.4232952892780304,
+        -0.9051583409309387,
+        -0.038851797580718994
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "upper middle": {
+      "pixel": [
+        475,
+        498
+      ],
+      "normal": [
+        -0.11608777195215225,
+        -0.9516165256500244,
+        0.284516304731369
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "upper right": {
+      "pixel": [
+        525,
+        494
+      ],
+      "normal": [
+        0.23248419165611267,
+        -0.8938028216362,
+        0.38349395990371704
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "upper far right": {
+      "pixel": [
+        555,
+        481
+      ],
+      "normal": [
+        0.38838163018226624,
+        -0.707692563533783,
+        0.5901956558227539
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "middle left": {
+      "pixel": [
+        410,
+        538
+      ],
+      "normal": [
+        -0.4912586510181427,
+        -0.8306277990341187,
+        0.2621496319770813
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "middle middle": {
+      "pixel": [
+        465,
+        552
+      ],
+      "normal": [
+        -0.15098696947097778,
+        -0.9133153557777405,
+        0.37823009490966797
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "middle right": {
+      "pixel": [
+        520,
+        549
+      ],
+      "normal": [
+        0.15611468255519867,
+        -0.8517162203788757,
+        0.5002076029777527
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "middle far right": {
+      "pixel": [
+        565,
+        530
+      ],
+      "normal": [
+        0.3236636221408844,
+        -0.5954784750938416,
+        0.7352872490882874
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "lower left": {
+      "pixel": [
+        410,
+        570
+      ],
+      "normal": [
+        -0.40575549006462097,
+        -0.7180060744285583,
+        0.5655349493026733
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "lower middle": {
+      "pixel": [
+        460,
+        582
+      ],
+      "normal": [
+        -0.1469566822052002,
+        -0.7326688170433044,
+        0.6645300388336182
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "lower right": {
+      "pixel": [
+        520,
+        588
+      ],
+      "normal": [
+        0.15730337798595428,
+        -0.8864713907241821,
+        0.4352288842201233
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    },
+    "lower far right": {
+      "pixel": [
+        560,
+        577
+      ],
+      "normal": [
+        0.36030346155166626,
+        -0.7985864877700806,
+        0.48212137818336487
+      ],
+      "alpha": 1.0,
+      "mean_radius": 2
+    }
+  },
+  "border_pixels": [
+    390,
+    470,
+    590,
+    605
+  ],
+  "note": "Unsaved BSDF-normal emission diagnostic, including shader bump. This is not a beauty render; source model unchanged."
+}

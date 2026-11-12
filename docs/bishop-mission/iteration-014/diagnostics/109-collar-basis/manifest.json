@@ -1,0 +1,99 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "source_unchanged": true,
+  "basis_energy": 200,
+  "samples": 96,
+  "fixed_samples": true,
+  "border": [
+    290,
+    405,
+    690,
+    630
+  ],
+  "cases": {
+    "old-placement": {
+      "name": "collars reflection",
+      "position": [
+        3.552460193634033,
+        -6.309630870819092,
+        0.6013658046722412
+      ],
+      "target": [
+        0.20885324478149414,
+        -0.6127729415893555,
+        2.9178497791290283
+      ],
+      "shape": "RECTANGLE",
+      "size": 3.200000047683716,
+      "size_y": 0.699999988079071
+    },
+    "right-arc": {
+      "name": "collars reflection",
+      "position": [
+        2.064846038120339,
+        -7.333626265281994,
+        3.202178878653981
+      ],
+      "target": [
+        0.10885277390480042,
+        -0.6145434379577637,
+        3.0347981452941895
+      ],
+      "shape": "RECTANGLE",
+      "size": 3.2,
+      "size_y": 0.7
+    },
+    "right-wide": {
+      "name": "collars reflection",
+      "position": [
+        2.064846038120339,
+        -7.333626265281994,
+        3.202178878653981
+      ],
+      "target": [
+        0.10885277390480042,
+        -0.6145434379577637,
+        3.0347981452941895
+      ],
+      "shape": "RECTANGLE",
+      "size": 6,
+      "size_y": 0.7
+    },
+    "right-tall": {
+      "name": "collars reflection",
+      "position": [
+        2.064846038120339,
+        -7.333626265281994,
+        3.202178878653981
+      ],
+      "target": [
+        0.10885277390480042,
+        -0.6145434379577637,
+        3.0347981452941895
+      ],
+      "shape": "RECTANGLE",
+      "size": 3.2,
+      "size_y": 2
+    },
+    "lower-left": {
+      "name": "collars reflection",
+      "position": [
+        -3.8481676197383887,
+        -6.062263235778891,
+        5.358521976416477
+      ],
+      "target": [
+        -0.21807026863098145,
+        -0.585160493850708,
+        2.945279598236084
+      ],
+      "shape": "RECTANGLE",
+      "size": 3.2,
+      "size_y": 0.7
+    }
+  },
+  "landmarks": "scripts/bishop/collar-landmarks-108.json",
+  "normal_measurement": "build/bishop-mission/108-collar-normals/manifest.json",
+  "note": "Unsaved real-BSDF response passes; only the existing collar lamp changes."
+}

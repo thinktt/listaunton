@@ -1,0 +1,31 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "variant": "113-collar-old-placement",
+  "samples": 128,
+  "adaptive_sampling": false,
+  "lights": [
+    {
+      "name": "collars reflection",
+      "position": [
+        3.552460193634033,
+        -6.309630870819092,
+        0.6013658046722412
+      ],
+      "target": [
+        0.20885324478149414,
+        -0.6127729415893555,
+        2.9178497791290283
+      ],
+      "shape": "RECTANGLE",
+      "size": 3.200000047683716,
+      "size_y": 0.699999988079071,
+      "energy": 48,
+      "color": [
+        1,
+        0.9,
+        0.65
+      ]
+    }
+  ],
+  "fitting_evidence": "build/bishop-mission/113-cool-collar-fit/fit.json"
+}

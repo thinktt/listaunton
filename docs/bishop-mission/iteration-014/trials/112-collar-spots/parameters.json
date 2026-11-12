@@ -1,0 +1,186 @@
+{
+  "config": {
+    "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+    "variant": "112-collar-spots",
+    "samples": 128,
+    "adaptive_sampling": false,
+    "lights": [
+      {
+        "name": "collar arc 1",
+        "type": "SPOT",
+        "energy": 1.9999999552965164,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          -3.184734209991655,
+          -2.6992319275600756,
+          -2.6056273477417315
+        ],
+        "target": [
+          -0.21807026863098145,
+          -0.4699287414550781,
+          3.329784393310547
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 11",
+        "type": "SPOT",
+        "energy": 97.99999594688416,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          2.0317721214006896,
+          -7.354399724497782,
+          2.589055442770656
+        ],
+        "target": [
+          0.10885277390480042,
+          -0.6324286460876465,
+          2.9318180084228516
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      },
+      {
+        "name": "collar arc 12",
+        "type": "SPOT",
+        "energy": 142.99993515014648,
+        "color": [
+          1,
+          0.97,
+          0.88
+        ],
+        "position": [
+          4.597936682880977,
+          -6.077450468839517,
+          3.0739010080414713
+        ],
+        "target": [
+          0.2626989185810089,
+          -0.5832071304321289,
+          2.936046600341797
+        ],
+        "spot_size": 0.03490658503988659,
+        "spot_blend": 0.6,
+        "shadow_soft_size": 0.025,
+        "diffuse": false,
+        "glossy": true,
+        "receiver": "body"
+      }
+    ],
+    "hypothesis": "Localized warm-white collar reflections at measured BSDF normals; all accepted lamps unchanged.",
+    "fit": {
+      "responses": "build/bishop-mission/111-collar-spots",
+      "box": [
+        280,
+        360,
+        700,
+        660
+      ],
+      "power_factors": [
+        0.019999999552965164,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9799999594688416,
+        1.4299993515014648
+      ],
+      "weighted_error_before": 6.425218105316162,
+      "weighted_error_after": 6.397118091583252,
+      "before": {
+        "rgb_mae_8bit": 5.943193435668945,
+        "core_mae_8bit": 8.85234260559082
+      },
+      "prediction": {
+        "rgb_mae_8bit": 5.936117172241211,
+        "core_mae_8bit": 8.7183837890625
+      },
+      "note": "Prediction only. Fixed coordinates, bounded nonnegative lamp power, same color and placement. No reference edits."
+    }
+  },
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "saved_model_sha256": "8a3512240fc8d40993d910ac28c9656b879dccc1c1dde7addf2dcac38a0601dc",
+  "render_sha256": "2f6667701942766671e21a852aebd199469462072165d278026e7f8db57a5538",
+  "geometry_uvs_material_and_camera_unchanged": true,
+  "preserved_state": {
+    "camera": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.80901700258255,
+      -0.5877852439880371,
+      -7.053422927856445,
+      0.0,
+      0.5877852439880371,
+      0.80901700258255,
+      11.514362335205078,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      4.8230767250061035,
+      0.1078961193561554,
+      0.0
+    ],
+    "meshes_and_uvs": {
+      "Bishop - continuous turned body": "125ccd1bb6d741b9525a41547239ab52ae590df57a04e98ac47472da8ac44c41",
+      "Mitre saw cut - editable cutter": "cfb8406e703dd84260154b47cbb424ce66e4917287331a4a79bc601667c78250",
+      "Bishop - domed button finial": "cefbf047fbfa5533f9a35a2ecaa6a8779107f07ee30e3d837b2b62d56b833451",
+      "Bishop receiver body-rest": "c2bbe75aca610f933237852da7c509bdf6defa8459396e8d4200ecf5dab42f59",
+      "Bishop receiver socket-lip": "32df606e7a87d9b6446eaf1ca70dc13faf912e3031d46324bfbc11e6735a4422"
+    },
+    "material_inputs_links_and_packed_images": {
+      "Bishop \u2014 inferred boxwood pigment and varnish.001": "f4909acd820823e9de1980dbe4032ccd1f5d9c9b10fc84b9a945d2f849cf27c9",
+      "Bishop boxwood \u2014 interior cut.001": "b55fab64936dd05061cc0866a94dcfafebf792a383dc8d2c125b81a9484df4c0"
+    }
+  },
+  "effective_lights": {
+    "collar arc 1": {
+      "type": "SPOT",
+      "energy": 2.0,
+      "spot_size": 0.03490658476948738,
+      "spot_blend": 0.6000000238418579,
+      "shadow_soft_size": 0.02500000037252903
+    },
+    "collar arc 11": {
+      "type": "SPOT",
+      "energy": 97.99999237060547,
+      "spot_size": 0.03490658476948738,
+      "spot_blend": 0.6000000238418579,
+      "shadow_soft_size": 0.02500000037252903
+    },
+    "collar arc 12": {
+      "type": "SPOT",
+      "energy": 142.99993896484375,
+      "spot_size": 0.03490658476948738,
+      "spot_blend": 0.6000000238418579,
+      "shadow_soft_size": 0.02500000037252903
+    }
+  },
+  "adaptive_sampling": false,
+  "glossy_bounces": 4
+}

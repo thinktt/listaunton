@@ -1,0 +1,48 @@
+{
+  "crop": [
+    290,
+    405,
+    690,
+    630
+  ],
+  "scores": {
+    "control": {
+      "shared_pixels": 59618,
+      "mean_absolute_rgb_error_8bit": 5.8975982666015625,
+      "reference_core_pixels": 11350,
+      "reference_core_mae_8bit": 9.695241928100586
+    },
+    "without-collar": {
+      "shared_pixels": 59618,
+      "mean_absolute_rgb_error_8bit": 5.983517169952393,
+      "reference_core_pixels": 11350,
+      "reference_core_mae_8bit": 10.277297973632812
+    },
+    "without-head": {
+      "shared_pixels": 59618,
+      "mean_absolute_rgb_error_8bit": 5.8017377853393555,
+      "reference_core_pixels": 11350,
+      "reference_core_mae_8bit": 9.811219215393066
+    },
+    "without-both": {
+      "shared_pixels": 59618,
+      "mean_absolute_rgb_error_8bit": 5.899219512939453,
+      "reference_core_pixels": 11350,
+      "reference_core_mae_8bit": 10.408663749694824
+    },
+    "without-relief": {
+      "shared_pixels": 59618,
+      "mean_absolute_rgb_error_8bit": 5.955589294433594,
+      "reference_core_pixels": 11350,
+      "reference_core_mae_8bit": 9.855066299438477
+    },
+    "double-collar": {
+      "shared_pixels": 59618,
+      "mean_absolute_rgb_error_8bit": 5.949584484100342,
+      "reference_core_pixels": 11350,
+      "reference_core_mae_8bit": 9.65903091430664
+    }
+  },
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "note": "Unsaved cropped diagnostic comparisons only. Bright reference core is fixed at R>210, G>150, B>70; it is not a mission score or replacement outline mask."
+}

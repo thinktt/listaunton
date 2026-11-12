@@ -1,0 +1,119 @@
+{
+  "note": "Predictions from 96-sample linear response passes, not final renders or mission scores. Fixed crop, original pixel coordinates, same reference. Core weight 2. Light power 0..400 W; fixed spectral tints listed below.",
+  "spectral_tints": {
+    "neutral": [
+      1,
+      1,
+      1
+    ],
+    "warm-white": [
+      1,
+      0.95,
+      0.85
+    ],
+    "cream": [
+      1,
+      0.9,
+      0.65
+    ],
+    "accepted-gold": [
+      1,
+      0.87,
+      0.25
+    ],
+    "cool-white": [
+      0.65,
+      0.85,
+      1
+    ],
+    "blue-fill": [
+      0.35,
+      0.65,
+      1
+    ]
+  },
+  "response_folder": "build/bishop-mission/109-collar-basis",
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "border": [
+    290,
+    405,
+    690,
+    630
+  ],
+  "shared_pixels": 59647,
+  "core_pixels": 11350,
+  "cases": {
+    "old-placement": {
+      "energy": 48,
+      "color_name": "cream",
+      "color": [
+        1,
+        0.9,
+        0.65
+      ],
+      "rgb_mae_8bit": 5.904771750460948,
+      "core_mae_8bit": 9.62532930207665,
+      "weighted_mae_8bit": 6.499562068514362
+    },
+    "right-arc": {
+      "energy": 12,
+      "color_name": "warm-white",
+      "color": [
+        1,
+        0.95,
+        0.85
+      ],
+      "rgb_mae_8bit": 5.995975863859721,
+      "core_mae_8bit": 10.151624846752563,
+      "weighted_mae_8bit": 6.660322469432263
+    },
+    "right-wide": {
+      "energy": 12,
+      "color_name": "cool-white",
+      "color": [
+        0.65,
+        0.85,
+        1
+      ],
+      "rgb_mae_8bit": 6.000201852319129,
+      "core_mae_8bit": 10.139503562455168,
+      "weighted_mae_8bit": 6.661935086259213
+    },
+    "right-tall": {
+      "energy": 16,
+      "color_name": "cream",
+      "color": [
+        1,
+        0.9,
+        0.65
+      ],
+      "rgb_mae_8bit": 5.996824748274063,
+      "core_mae_8bit": 10.14230458481379,
+      "weighted_mae_8bit": 6.659545654012699
+    },
+    "lower-left": {
+      "energy": 0,
+      "color_name": "neutral",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "rgb_mae_8bit": 5.993205606581267,
+      "core_mae_8bit": 10.256374187398775,
+      "weighted_mae_8bit": 6.674740930500288
+    },
+    "accepted": {
+      "rgb_mae_8bit": 5.900681495666504,
+      "core_mae_8bit": 9.639837265014648,
+      "weighted_mae_8bit": 6.498444557189941
+    },
+    "off": {
+      "rgb_mae_8bit": 5.993206024169922,
+      "core_mae_8bit": 10.256377220153809,
+      "weighted_mae_8bit": 6.674742221832275
+    }
+  },
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
+}

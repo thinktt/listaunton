@@ -1,0 +1,81 @@
+{
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "source_unchanged": true,
+  "crop": [
+    290,
+    405,
+    690,
+    630
+  ],
+  "samples": 128,
+  "camera_unchanged": true,
+  "variants": [
+    {
+      "label": "control",
+      "light_changes": [],
+      "main_bump_strength": null,
+      "render_sha256": "99e7e42539550e069229dd6ebff9d2d049672fd7bb1b2736eefcce2ea096b083"
+    },
+    {
+      "label": "without-collar",
+      "light_changes": [
+        {
+          "light": "collars reflection",
+          "before": 70.0,
+          "factor": 0
+        }
+      ],
+      "main_bump_strength": null,
+      "render_sha256": "f789c6c01bb6273a9d8f5f54ade27a3a06d2550e1e8f0ec85e91c210106c0df8"
+    },
+    {
+      "label": "without-head",
+      "light_changes": [
+        {
+          "light": "head reflection",
+          "before": 120.0,
+          "factor": 0
+        }
+      ],
+      "main_bump_strength": null,
+      "render_sha256": "71771e8a1c9072b882fa9dfc45947e85b4d2d8200beb33427fdb2bd1bd4ae401"
+    },
+    {
+      "label": "without-both",
+      "light_changes": [
+        {
+          "light": "head reflection",
+          "before": 120.0,
+          "factor": 0
+        },
+        {
+          "light": "collars reflection",
+          "before": 70.0,
+          "factor": 0
+        }
+      ],
+      "main_bump_strength": null,
+      "render_sha256": "66dfb5b15531ed21f13d714b94a53d6bd26c4b5c2fc278a39c98ccf25834a6c9"
+    },
+    {
+      "label": "without-relief",
+      "light_changes": [],
+      "main_bump_strength": 0,
+      "render_sha256": "1b75375f666f6118e83b3bbd68c3902085b5695b5ae4adbed9466b32920e01b1"
+    },
+    {
+      "label": "double-collar",
+      "light_changes": [
+        {
+          "light": "collars reflection",
+          "before": 70.0,
+          "factor": 2
+        }
+      ],
+      "main_bump_strength": null,
+      "render_sha256": "7efe340b7332b64fde95b3805b91a182daf8c9d3d63c6a97729f835d62fa8b7a"
+    }
+  ],
+  "note": "Unsaved actual-BSDF crops for diagnosis only. Source geometry, materials and lights are not saved or promoted."
+}

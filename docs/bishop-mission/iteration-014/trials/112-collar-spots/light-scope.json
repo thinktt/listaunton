@@ -1,0 +1,568 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+  "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "model": "build/bishop-mission/112-collar-spots/bishop.blend",
+  "model_sha256": "8a3512240fc8d40993d910ac28c9656b879dccc1c1dde7addf2dcac38a0601dc",
+  "config": "scripts/bishop/lighting-112.json",
+  "config_sha256": "fecd8aceab57919fce22cf69c2823918d78b3ef73eca1844457d4bc4b1f01c7a",
+  "only_declared_collar_lights_added": true,
+  "new_lights": {
+    "collar arc 1": {
+      "matrix": [
+        [
+          0.6007421016693115,
+          -0.6778603792190552,
+          -0.4238092005252838,
+          -3.1847341060638428
+        ],
+        [
+          -0.7994428873062134,
+          -0.5093788504600525,
+          -0.3184717297554016,
+          -2.6992318630218506
+        ],
+        [
+          -7.19777517588227e-08,
+          0.5301306247711182,
+          -0.8479160070419312,
+          -2.6056272983551025
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hide_render": false,
+      "visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      },
+      "data": {
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "SPOT",
+        "use_temperature": false,
+        "color": [
+          1.0,
+          0.9700000286102295,
+          0.8799999952316284
+        ],
+        "temperature": 6500.0,
+        "specular_factor": 1.0,
+        "diffuse_factor": 1.0,
+        "transmission_factor": 1.0,
+        "volume_factor": 1.0,
+        "use_custom_distance": false,
+        "cutoff_distance": 40.0,
+        "use_shadow": true,
+        "exposure": 0.0,
+        "normalize": true,
+        "use_nodes": true,
+        "energy": 2.0,
+        "shadow_buffer_clip_start": 0.05000000074505806,
+        "shadow_soft_size": 0.02500000037252903,
+        "shadow_filter_radius": 1.0,
+        "shadow_maximum_resolution": 0.0010000000474974513,
+        "use_shadow_jitter": false,
+        "shadow_jitter_overblur": 10.0,
+        "use_absolute_resolution": false,
+        "use_square": false,
+        "spot_blend": 0.6000000238418579,
+        "spot_size": 0.03490658476948738,
+        "show_cone": false,
+        "use_soft_falloff": true
+      },
+      "receivers": [
+        "Bishop - continuous turned body",
+        "Bishop receiver body-rest",
+        "Bishop receiver socket-lip"
+      ],
+      "nodes": {
+        "nodes": {
+          "Emission": {
+            "type": "ShaderNodeEmission",
+            "properties": {
+              "location": [
+                -200.0,
+                100.0
+              ],
+              "location_absolute": [
+                -200.0,
+                100.0
+              ],
+              "warning_propagation": "ALL",
+              "use_custom_color": false,
+              "color": [
+                0.6079999804496765,
+                0.6079999804496765,
+                0.6079999804496765
+              ],
+              "mute": false,
+              "bl_idname": "ShaderNodeEmission",
+              "bl_label": "Emission",
+              "bl_description": "Lambertian emission shader",
+              "bl_icon": "NONE",
+              "bl_width_default": 140.0,
+              "bl_width_min": 100.0,
+              "bl_width_max": 700.0,
+              "bl_height_default": 100.0,
+              "bl_height_min": 30.0,
+              "bl_height_max": 3.4028234663852886e+38
+            },
+            "inputs": [
+              [
+                "Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Strength",
+                1.0
+              ],
+              [
+                "Weight",
+                0.0
+              ]
+            ]
+          },
+          "Light Output": {
+            "type": "ShaderNodeOutputLight",
+            "properties": {
+              "location": [
+                200.0,
+                100.0
+              ],
+              "location_absolute": [
+                200.0,
+                100.0
+              ],
+              "warning_propagation": "ALL",
+              "use_custom_color": false,
+              "color": [
+                0.6079999804496765,
+                0.6079999804496765,
+                0.6079999804496765
+              ],
+              "mute": false,
+              "bl_idname": "ShaderNodeOutputLight",
+              "bl_label": "Light Output",
+              "bl_description": "Output light information to a light object",
+              "bl_icon": "NONE",
+              "bl_width_default": 140.0,
+              "bl_width_min": 100.0,
+              "bl_width_max": 700.0,
+              "bl_height_default": 100.0,
+              "bl_height_min": 30.0,
+              "bl_height_max": 3.4028234663852886e+38,
+              "is_active_output": true,
+              "target": "ALL"
+            },
+            "inputs": []
+          }
+        },
+        "links": [
+          [
+            "Emission",
+            "Emission",
+            "Light Output",
+            "Surface"
+          ]
+        ]
+      }
+    },
+    "collar arc 11": {
+      "matrix": [
+        [
+          0.9614348411560059,
+          0.013467274606227875,
+          0.274702787399292,
+          2.0317721366882324
+        ],
+        [
+          0.27503272891044617,
+          -0.04707779362797737,
+          -0.9602815508842468,
+          -7.354399681091309
+        ],
+        [
+          2.683987432305912e-08,
+          0.9988004565238953,
+          -0.0489661730825901,
+          2.5890555381774902
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hide_render": false,
+      "visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      },
+      "data": {
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "SPOT",
+        "use_temperature": false,
+        "color": [
+          1.0,
+          0.9700000286102295,
+          0.8799999952316284
+        ],
+        "temperature": 6500.0,
+        "specular_factor": 1.0,
+        "diffuse_factor": 1.0,
+        "transmission_factor": 1.0,
+        "volume_factor": 1.0,
+        "use_custom_distance": false,
+        "cutoff_distance": 40.0,
+        "use_shadow": true,
+        "exposure": 0.0,
+        "normalize": true,
+        "use_nodes": true,
+        "energy": 97.99999237060547,
+        "shadow_buffer_clip_start": 0.05000000074505806,
+        "shadow_soft_size": 0.02500000037252903,
+        "shadow_filter_radius": 1.0,
+        "shadow_maximum_resolution": 0.0010000000474974513,
+        "use_shadow_jitter": false,
+        "shadow_jitter_overblur": 10.0,
+        "use_absolute_resolution": false,
+        "use_square": false,
+        "spot_blend": 0.6000000238418579,
+        "spot_size": 0.03490658476948738,
+        "show_cone": false,
+        "use_soft_falloff": true
+      },
+      "receivers": [
+        "Bishop - continuous turned body",
+        "Bishop receiver body-rest",
+        "Bishop receiver socket-lip"
+      ],
+      "nodes": {
+        "nodes": {
+          "Emission": {
+            "type": "ShaderNodeEmission",
+            "properties": {
+              "location": [
+                -200.0,
+                100.0
+              ],
+              "location_absolute": [
+                -200.0,
+                100.0
+              ],
+              "warning_propagation": "ALL",
+              "use_custom_color": false,
+              "color": [
+                0.6079999804496765,
+                0.6079999804496765,
+                0.6079999804496765
+              ],
+              "mute": false,
+              "bl_idname": "ShaderNodeEmission",
+              "bl_label": "Emission",
+              "bl_description": "Lambertian emission shader",
+              "bl_icon": "NONE",
+              "bl_width_default": 140.0,
+              "bl_width_min": 100.0,
+              "bl_width_max": 700.0,
+              "bl_height_default": 100.0,
+              "bl_height_min": 30.0,
+              "bl_height_max": 3.4028234663852886e+38
+            },
+            "inputs": [
+              [
+                "Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Strength",
+                1.0
+              ],
+              [
+                "Weight",
+                0.0
+              ]
+            ]
+          },
+          "Light Output": {
+            "type": "ShaderNodeOutputLight",
+            "properties": {
+              "location": [
+                200.0,
+                100.0
+              ],
+              "location_absolute": [
+                200.0,
+                100.0
+              ],
+              "warning_propagation": "ALL",
+              "use_custom_color": false,
+              "color": [
+                0.6079999804496765,
+                0.6079999804496765,
+                0.6079999804496765
+              ],
+              "mute": false,
+              "bl_idname": "ShaderNodeOutputLight",
+              "bl_label": "Light Output",
+              "bl_description": "Output light information to a light object",
+              "bl_icon": "NONE",
+              "bl_width_default": 140.0,
+              "bl_width_min": 100.0,
+              "bl_width_max": 700.0,
+              "bl_height_default": 100.0,
+              "bl_height_min": 30.0,
+              "bl_height_max": 3.4028234663852886e+38,
+              "is_active_output": true,
+              "target": "ALL"
+            },
+            "inputs": []
+          }
+        },
+        "links": [
+          [
+            "Emission",
+            "Emission",
+            "Light Output",
+            "Surface"
+          ]
+        ]
+      }
+    },
+    "collar arc 12": {
+      "matrix": [
+        [
+          0.7850441932678223,
+          -0.01219897624105215,
+          0.6193196773529053,
+          4.597936630249023
+        ],
+        [
+          0.6194397807121277,
+          0.015460222028195858,
+          -0.7848919034004211,
+          -6.077450275421143
+        ],
+        [
+          5.878930053881959e-08,
+          0.9998060464859009,
+          0.019693488255143166,
+          3.0739009380340576
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "hide_render": false,
+      "visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      },
+      "data": {
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "SPOT",
+        "use_temperature": false,
+        "color": [
+          1.0,
+          0.9700000286102295,
+          0.8799999952316284
+        ],
+        "temperature": 6500.0,
+        "specular_factor": 1.0,
+        "diffuse_factor": 1.0,
+        "transmission_factor": 1.0,
+        "volume_factor": 1.0,
+        "use_custom_distance": false,
+        "cutoff_distance": 40.0,
+        "use_shadow": true,
+        "exposure": 0.0,
+        "normalize": true,
+        "use_nodes": true,
+        "energy": 142.99993896484375,
+        "shadow_buffer_clip_start": 0.05000000074505806,
+        "shadow_soft_size": 0.02500000037252903,
+        "shadow_filter_radius": 1.0,
+        "shadow_maximum_resolution": 0.0010000000474974513,
+        "use_shadow_jitter": false,
+        "shadow_jitter_overblur": 10.0,
+        "use_absolute_resolution": false,
+        "use_square": false,
+        "spot_blend": 0.6000000238418579,
+        "spot_size": 0.03490658476948738,
+        "show_cone": false,
+        "use_soft_falloff": true
+      },
+      "receivers": [
+        "Bishop - continuous turned body",
+        "Bishop receiver body-rest",
+        "Bishop receiver socket-lip"
+      ],
+      "nodes": {
+        "nodes": {
+          "Emission": {
+            "type": "ShaderNodeEmission",
+            "properties": {
+              "location": [
+                -200.0,
+                100.0
+              ],
+              "location_absolute": [
+                -200.0,
+                100.0
+              ],
+              "warning_propagation": "ALL",
+              "use_custom_color": false,
+              "color": [
+                0.6079999804496765,
+                0.6079999804496765,
+                0.6079999804496765
+              ],
+              "mute": false,
+              "bl_idname": "ShaderNodeEmission",
+              "bl_label": "Emission",
+              "bl_description": "Lambertian emission shader",
+              "bl_icon": "NONE",
+              "bl_width_default": 140.0,
+              "bl_width_min": 100.0,
+              "bl_width_max": 700.0,
+              "bl_height_default": 100.0,
+              "bl_height_min": 30.0,
+              "bl_height_max": 3.4028234663852886e+38
+            },
+            "inputs": [
+              [
+                "Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Strength",
+                1.0
+              ],
+              [
+                "Weight",
+                0.0
+              ]
+            ]
+          },
+          "Light Output": {
+            "type": "ShaderNodeOutputLight",
+            "properties": {
+              "location": [
+                200.0,
+                100.0
+              ],
+              "location_absolute": [
+                200.0,
+                100.0
+              ],
+              "warning_propagation": "ALL",
+              "use_custom_color": false,
+              "color": [
+                0.6079999804496765,
+                0.6079999804496765,
+                0.6079999804496765
+              ],
+              "mute": false,
+              "bl_idname": "ShaderNodeOutputLight",
+              "bl_label": "Light Output",
+              "bl_description": "Output light information to a light object",
+              "bl_icon": "NONE",
+              "bl_width_default": 140.0,
+              "bl_width_min": 100.0,
+              "bl_width_max": 700.0,
+              "bl_height_default": 100.0,
+              "bl_height_min": 30.0,
+              "bl_height_max": 3.4028234663852886e+38,
+              "is_active_output": true,
+              "target": "ALL"
+            },
+            "inputs": []
+          }
+        },
+        "links": [
+          [
+            "Emission",
+            "Emission",
+            "Light Output",
+            "Surface"
+          ]
+        ]
+      }
+    }
+  },
+  "all_existing_objects_meshes_modifiers_uvs_materials_pixels_lights_camera_world_and_render_paths_preserved": true,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 53514,
+        "vertices": 53998,
+        "normal_max_component_error": 2.562999725341797e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 4.336237907409668e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "reopened_audit": true
+}
