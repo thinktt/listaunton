@@ -1,0 +1,159 @@
+{
+  "checkpoint": "012",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "135-middle-collar-clean-join",
+  "previous_checkpoint": "011",
+  "model_sha256": "5aea5f80285948a8f2e765f5b626f8a72069f8074a743b16c9b7fe07e9c4f281",
+  "render_sha256": "bc089ca17df43f2e393d8a24ba8a1edfa86f908d9f277bc32edca570b8d5f88c",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "scores": {
+    "silhouette_iou_percent": 97.82575356561574,
+    "interior_form": 85,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 67
+  },
+  "original_iou_percent": 96.84637858237302,
+  "equal_weight_mean": 82.16515071312315,
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "geometry_changed": true,
+  "material_changed": false,
+  "camera_elevation_degrees": 54.000000800055794,
+  "receiver_count": 9,
+  "modified_profile_rows": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "edited_lights": {
+    "Collar middle left": {
+      "type": "AREA",
+      "energy": 5.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.9560165405273438,
+        -0.11169100552797318,
+        -0.27121496200561523,
+        -0.3224009871482849,
+        -0.29331284761428833,
+        -0.3640426993370056,
+        -0.8839912414550781,
+        -1.280051350593567,
+        4.3257198711899036e-08,
+        0.9246610403060913,
+        -0.38079124689102173,
+        2.742197275161743,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.10000000149011612,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "middle-collar"
+      ]
+    },
+    "Collar middle right": {
+      "type": "AREA",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.6343474388122559,
+        0.045549556612968445,
+        0.7717049717903137,
+        0.9256187677383423,
+        0.7730481028556824,
+        -0.03737706318497658,
+        -0.6332452893257141,
+        -0.993514895439148,
+        2.189050718470753e-08,
+        0.9982625842094421,
+        -0.058922041207551956,
+        3.014535665512085,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.20000000298023224,
+      "size_y": 0.07999999821186066,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "middle-collar"
+      ]
+    }
+  },
+  "mission_complete": false,
+  "validation": {
+    "scope": "passed",
+    "receiver_regeneration": "passed",
+    "export": "passed",
+    "reproduction": {
+      "initial_session_vs_fresh": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 5.882293089545671e-06,
+        "alpha_exact": true
+      },
+      "independent_saved_reproduction": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 7.313121138354077e-06,
+        "alpha_exact": true
+      },
+      "repeat_saved_render": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 6.518216666793852e-06,
+        "alpha_exact": true
+      },
+      "alternate_entrypoint": {
+        "maximum_channel_error_255": 45,
+        "mean_channel_error_255": 0.0005349707093600319,
+        "alpha_exact": true
+      },
+      "canonical_render_entrypoint": "scripts/king/render_fixed_diagnostics.py -- SOURCE OUTPUT --beauty-only",
+      "remaining_limitation": "A different rendering entry point changes a tiny socket glint. Fixed samples and removing denoising did not resolve it. Scene data agree; precise execution-context cause remains unresolved. The failed checks are retained, not relabeled as passes.",
+      "reproduction_mesh_exact": true,
+      "camera_export_exact": true,
+      "physical_bounds_exact": true
+    },
+    "site": "passed king checks",
+    "canonical_model": "passed",
+    "site_model_candidates_and_historical_projections": "passed",
+    "whole_set": "known pre-existing knight sizing metadata mismatch",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "local_preview_verified_files": 34,
+    "live_in_app_browser": {
+      "url": "http://localhost:8080/king-review.html?checkpoint=012",
+      "result": "passed visual inspection",
+      "views": [
+        "Original black overlay",
+        "Black candidate 1 fixed render",
+        "Rotate model: wood/front preset",
+        "Side comparison"
+      ],
+      "scope": "All images and the full silhouette loaded; this is a page check, not a perfect-match claim."
+    }
+  }
+}

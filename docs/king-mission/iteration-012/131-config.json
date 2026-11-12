@@ -1,0 +1,20 @@
+{
+  "source": "build/king-mission/130-rounded-middle-collar/king.blend",
+  "bounds": [
+    370,
+    445,
+    650,
+    510
+  ],
+  "samples": 128,
+  "variant": "131-middle-collar-fitted",
+  "response_samples": 512,
+  "source_sha256": "9c83d19088690b2eacf9da4e573bf82d4c0f4b6a5efa77999f6e1e17cf1fbf54",
+  "maximum_gain": 12,
+  "profile": true,
+  "lights": [
+    "Collar middle left",
+    "Collar middle right"
+  ],
+  "neutral": true
+}

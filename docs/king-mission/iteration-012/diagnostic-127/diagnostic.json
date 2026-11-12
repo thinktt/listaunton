@@ -1,0 +1,45 @@
+{
+  "source": "history/king-mission-011/king-rebuilt.blend",
+  "source_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
+  "bounds": [
+    300,
+    350,
+    710,
+    570
+  ],
+  "inputs": {
+    "Roughness": {
+      "default": 0.2800000011920929,
+      "linked_from": "Mix (Legacy).001"
+    },
+    "Coat Weight": {
+      "default": 0.3499999940395355,
+      "linked_from": null
+    },
+    "Coat Roughness": {
+      "default": 0.2199999988079071,
+      "linked_from": "Mix (Legacy).002"
+    },
+    "Specular IOR Level": {
+      "default": 0.3499999940395355,
+      "linked_from": null
+    },
+    "Normal": {
+      "default": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linked_from": "Pigment microrelief"
+    },
+    "Coat Normal": {
+      "default": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linked_from": "Fine varnish relief"
+    }
+  },
+  "note": "All non-beauty images are diagnostic only; the source scene and reference images remain unchanged."
+}

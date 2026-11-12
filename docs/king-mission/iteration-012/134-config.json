@@ -1,0 +1,20 @@
+{
+  "source": "build/king-mission/133-middle-centered-glints/king.blend",
+  "bounds": [
+    370,
+    445,
+    650,
+    510
+  ],
+  "samples": 128,
+  "variant": "134-centered-glints-fitted",
+  "response_samples": 512,
+  "source_sha256": "83f9f9794ffd7074fffdd5f850b0e18648cb7fbc5b01641f39821068daa1848e",
+  "maximum_gain": 12,
+  "profile": true,
+  "lights": [
+    "Collar middle left",
+    "Collar middle right"
+  ],
+  "neutral": true
+}

@@ -1,0 +1,83 @@
+{
+  "method": "Composited foreground RGB squared error in fixed rectangles; not a perceptual match percentage.",
+  "regions": {
+    "head": {
+      "bounds": [
+        185,
+        0,
+        815,
+        350
+      ],
+      "foreground_pixels": 88619,
+      "previous_rgb_mse": 596.8662213144661,
+      "trial_rgb_mse": 596.952606100272,
+      "maximum_render_change_255": 52.0,
+      "mean_render_change_255": 0.05669965432544563
+    },
+    "collars": {
+      "bounds": [
+        300,
+        390,
+        710,
+        555
+      ],
+      "foreground_pixels": 49868,
+      "previous_rgb_mse": 484.7196197962621,
+      "trial_rgb_mse": 462.3041228844149,
+      "maximum_render_change_255": 153.0,
+      "mean_render_change_255": 3.786663458196305
+    },
+    "middle-collar": {
+      "bounds": [
+        370,
+        445,
+        650,
+        510
+      ],
+      "foreground_pixels": 18132,
+      "previous_rgb_mse": 734.0707956467387,
+      "trial_rgb_mse": 631.6585778366057,
+      "maximum_render_change_255": 153.0,
+      "mean_render_change_255": 8.633851753805427
+    },
+    "stem": {
+      "bounds": [
+        185,
+        560,
+        815,
+        720
+      ],
+      "foreground_pixels": 59967,
+      "previous_rgb_mse": 77.46238208792613,
+      "trial_rgb_mse": 77.4624098809901,
+      "maximum_render_change_255": 1.0,
+      "mean_render_change_255": 0.002807099460258698
+    },
+    "socket": {
+      "bounds": [
+        370,
+        720,
+        630,
+        810
+      ],
+      "foreground_pixels": 23400,
+      "previous_rgb_mse": 201.64612535612537,
+      "trial_rgb_mse": 200.8904700854701,
+      "maximum_render_change_255": 45.0,
+      "mean_render_change_255": 0.04226495726495726
+    },
+    "base-foot": {
+      "bounds": [
+        185,
+        840,
+        815,
+        1110
+      ],
+      "foreground_pixels": 114716,
+      "previous_rgb_mse": 292.2133529760452,
+      "trial_rgb_mse": 292.21788881527715,
+      "maximum_render_change_255": 1.0,
+      "mean_render_change_255": 0.0009094924276764648
+    }
+  }
+}

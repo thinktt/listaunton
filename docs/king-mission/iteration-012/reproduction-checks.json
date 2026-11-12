@@ -1,0 +1,27 @@
+{
+  "initial_session_vs_fresh": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 5.882293089545671e-06,
+    "alpha_exact": true
+  },
+  "independent_saved_reproduction": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 7.313121138354077e-06,
+    "alpha_exact": true
+  },
+  "repeat_saved_render": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 6.518216666793852e-06,
+    "alpha_exact": true
+  },
+  "alternate_entrypoint": {
+    "maximum_channel_error_255": 45,
+    "mean_channel_error_255": 0.0005349707093600319,
+    "alpha_exact": true
+  },
+  "canonical_render_entrypoint": "scripts/king/render_fixed_diagnostics.py -- SOURCE OUTPUT --beauty-only",
+  "remaining_limitation": "A different rendering entry point changes a tiny socket glint. Fixed samples and removing denoising did not resolve it. Scene data agree; precise execution-context cause remains unresolved. The failed checks are retained, not relabeled as passes.",
+  "reproduction_mesh_exact": true,
+  "camera_export_exact": true,
+  "physical_bounds_exact": true
+}

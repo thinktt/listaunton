@@ -1,0 +1,51 @@
+{
+  "scene_snapshot_exact": true,
+  "all_float_attributes_packed_images_and_lights_exact": true,
+  "samples": 256,
+  "adaptive": false,
+  "denoising": false,
+  "files": {
+    "before": {
+      "source": "build/king-mission/137-clean-collar-fixed-sampling/king.blend",
+      "source_sha256": "e2e04a360214a3cd899a3241f84ffac81c298bd7082486803e521052772c39ad",
+      "render_sha256": "52c69cc23f2752a52f10211422d3bf61b5c3546e24653f8b3bbb3783f438b649"
+    },
+    "after": {
+      "source": "build/king-mission/138-collar-fixed-reproduction/king.blend",
+      "source_sha256": "48e37d6d90f5f2007c084ce5eda84a977e4e20ee3a33d1af1e4b2331487a8a03",
+      "render_sha256": "d2f285d0e4e648f6f955412273f3a907c4a6c5de7816dc07fdb7fbebcd006bfc"
+    }
+  },
+  "before_saved_sampling": {
+    "samples": 256,
+    "seed": 0,
+    "use_animated_seed": false,
+    "use_adaptive_sampling": false,
+    "use_denoising": true,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "denoising_input_passes": "RGB_ALBEDO_NORMAL",
+    "denoising_use_gpu": false
+  },
+  "after_saved_sampling": {
+    "samples": 256,
+    "seed": 0,
+    "use_animated_seed": false,
+    "use_adaptive_sampling": false,
+    "use_denoising": true,
+    "denoiser": "OPENIMAGEDENOISE",
+    "denoising_prefilter": "ACCURATE",
+    "denoising_input_passes": "RGB_ALBEDO_NORMAL",
+    "denoising_use_gpu": false
+  },
+  "difference": {
+    "maximum_display_channel_255": 78.0,
+    "mean_display_channel_255": 5.5484339100075886e-05,
+    "maximum_at": [
+      481,
+      753,
+      2
+    ],
+    "alpha_exact": true
+  }
+}

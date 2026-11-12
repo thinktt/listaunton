@@ -1,0 +1,114 @@
+{
+  "source": "build/king-mission/131-middle-collar-fitted/prepared.blend",
+  "bounds": [
+    370,
+    445,
+    650,
+    510
+  ],
+  "samples": 128,
+  "variant": "131-middle-collar-fitted",
+  "response_samples": 512,
+  "source_sha256": "22c22243f6ed1173a7ce4c0c72868782744363a3ebb70087d106bf85304f9167",
+  "maximum_gain": 12,
+  "profile": true,
+  "neutral": true,
+  "original_source": "build/king-mission/130-rounded-middle-collar/king.blend",
+  "original_source_sha256": "9c83d19088690b2eacf9da4e573bf82d4c0f4b6a5efa77999f6e1e17cf1fbf54",
+  "light_fit": {
+    "source_sha256": "9c83d19088690b2eacf9da4e573bf82d4c0f4b6a5efa77999f6e1e17cf1fbf54",
+    "pixels": 18109,
+    "bounds": [
+      370,
+      445,
+      650,
+      510
+    ],
+    "original_powers": {
+      "Collar middle left": 2.0,
+      "Collar middle right": 1.6873542070388794
+    },
+    "fitted_powers": {
+      "Collar middle left": 21.60658784895815,
+      "Collar middle right": 2.234516206666732
+    },
+    "gain": [
+      10.803293924479075,
+      1.324272163689959
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.01118931995302313,
+        "after_mse": 0.01104536032668165
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.01104536032668165,
+        "after_mse": 0.010952323137815204
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.010952323137815204,
+        "after_mse": 0.010890366079284699
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.010890366079284699,
+        "after_mse": 0.010852775908186401
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.010852775908186401,
+        "after_mse": 0.010831828285232133
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.010831828285232133,
+        "after_mse": 0.010822183185598267
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.010822183185598267,
+        "after_mse": 0.010817794948262715
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.010817794948262715,
+        "after_mse": 0.010816176292689966
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.010816176292689966,
+        "after_mse": 0.010815719128694796
+      },
+      {
+        "iteration": 9,
+        "before_mse": 0.010815719128694796,
+        "after_mse": 0.010815569708251718
+      },
+      {
+        "iteration": 10,
+        "before_mse": 0.010815569708251718,
+        "after_mse": 0.010815517059794893
+      },
+      {
+        "iteration": 11,
+        "before_mse": 0.010815517059794893,
+        "after_mse": 0.01081550321671542
+      },
+      {
+        "iteration": 12,
+        "before_mse": 0.01081550321671542,
+        "after_mse": 0.010815499504511909
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Collar middle left",
+    "Collar middle right"
+  ],
+  "model_sha256": "68928861a87e0624f7da736c63f59835724206f26b04527788950c37d68e0e20",
+  "elevation_degrees": 54.000000800055794
+}

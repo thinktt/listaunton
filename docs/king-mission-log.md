@@ -474,3 +474,40 @@ Native browser screenshot inspection is not claimed.
 Next: separate collar pigment bands from local curvature mismatches at the
 missing left glints, preserving this best result. The goal remains active and
 incomplete. No watchers/subagents or push/publication were started.
+
+
+## 2026-11-12 — checkpoint 012: middle collar and continuous join
+
+Accepted trial 135 using standardized fresh render 140, repeat 141 and independent
+rebuild 136. Six controls round the middle edge and repair a crossing that was
+already present in checkpoint 011. Two existing middle-collar lights now produce
+better placed, gentler glints. Wood pigment, relief, finish, overall dimensions and
+the fixed 54-degree camera remain unchanged. See
+[iteration-012/README.md](king-mission/iteration-012/README.md).
+
+| Metric | Checkpoint 011 | Checkpoint 012 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.8174% | 97.8258% |
+| Interior form | 84% | 85% |
+| Wood color | 82% | 82% |
+| Grain / surface | 79% | 79% |
+| Lighting / reflections | 66% | 67% |
+| Equal-weight working mean | 81.7635% | 82.1652% |
+
+Original IoU is 96.8464%; only overlap is measured. Other
+scores are subjective, with a holistic range of 75–85%. The broad/orange and
+neutral-removal pigment experiments, stronger light fits and fixed-sampling
+experiment are rejected. Upper highlights, pigment bands, uneven finish, base and
+socket reflections, cross seating and inferred hidden wood remain unfinished.
+
+The canonical fresh-render path repeats and matches the independent rebuild within
+1/255 with exact alpha and mesh export. A different entry point still changes a
+tiny socket glint; raw rendering also shows the discrepancy. Failed checks and
+the unresolved context sensitivity are documented, not relabeled as passes.
+
+Full evaluated-section inspection finds no crossings; closed components, exact
+scope, receivers/regeneration and export pass. Review, side views, rotating viewer
+and all 34 Windows preview files are synchronized. King/candidate, site/model
+and historical-projection checks pass. The known whole-set knight metadata failure
+remains separate. The goal is active and incomplete; no watcher, subagent, push or
+publication was started.

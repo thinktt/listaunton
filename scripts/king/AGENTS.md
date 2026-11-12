@@ -75,3 +75,18 @@ transient socket-glint mismatch and a passing independent fresh reproduction.
 Keep the original failed checks as evidence. Do not promote rejected close-light
 or shadow-omission trials. Export closed controls and synchronize all review
 assets before another accepted iteration; consult the mission log for status.
+
+
+Checkpoint 012 changes only profile controls 45–50 and the two existing middle
+collar area lights. The full evaluated lathe section has no detected crossings;
+the previous hidden collar overlap is repaired. Reproduce with
+refine_collar_turning.py and iteration-012/reproduction.json from archived 011.
+Validate using check_collar_turning.py and diagnose_full_profile.py, preserving
+all nine receiver regions and current light routing. v6 pigment/material, all UVs
+and float attributes, physical bounds and the 54-degree camera remain unchanged.
+Use render_fixed_diagnostics.py --beauty-only for the canonical saved-file image;
+its repeat and independent rebuild agree within 1/255. Alternate renderer entry
+points can change a tiny socket glint; this remains a documented limitation.
+Fixed 256 samples and removing denoising did not fix it and are not accepted.
+Keep the accepted 128 adaptive/denoised settings and synchronize all king views.
+The rejected color repairs and over-bright light fits must not become current.

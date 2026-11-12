@@ -1,0 +1,17 @@
+{
+  "initial": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 5.882293089545671e-06,
+    "alpha_exact": true
+  },
+  "independent_rebuild": {
+    "maximum_channel_error_255": 1,
+    "mean_channel_error_255": 7.313121138354077e-06,
+    "alpha_exact": true
+  },
+  "alternate_entrypoint": {
+    "maximum_channel_error_255": 45,
+    "mean_channel_error_255": 0.0005349707093600319,
+    "alpha_exact": true
+  }
+}

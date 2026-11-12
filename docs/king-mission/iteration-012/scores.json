@@ -1,0 +1,153 @@
+{
+  "rubric": "Only silhouette IoU is measured; all other ratings are visual judgments using the unchanged rubric.",
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "trials": [
+    {
+      "variant": "128-collar-unlit-blend",
+      "decision": "rejected",
+      "reason": "Broad inferred wood blend is too orange and softens the source grain.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 79,
+        "grain_surface": 77,
+        "lighting_reflections": 65
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.56347321976217,
+      "model_sha256": "21bff5ecb0c2646216c2c6977fa2449f8db30579b042cec9459acebad8e4bb44",
+      "render_sha256": "196ef10fe485a0e6a92263f01c295139cbc1052d7735f7410a5773dc56b79271"
+    },
+    {
+      "variant": "129-collar-neutral-residual",
+      "decision": "rejected",
+      "reason": "Neutral-component pigment removal darkens the wood without improving the overall collar match.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 81,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.56347321976217,
+      "model_sha256": "ff5c65183c5c54a1d1ce614eaa94e2446f39652e1707ded93fa3b4b7050bb379",
+      "render_sha256": "31f669d77c036b4d8259e8f4077879a0c4362d1b12a0a99063b3990d17ede9b9"
+    },
+    {
+      "variant": "130-rounded-middle-collar",
+      "decision": "superseded",
+      "reason": "Curvature clears the previously obstructed glint path; later checks find a retained baseline join crossing.",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.84637858237302,
+      "equal_weight_mean": 81.96515071312315,
+      "model_sha256": "9c83d19088690b2eacf9da4e573bf82d4c0f4b6a5efa77999f6e1e17cf1fbf54",
+      "render_sha256": "345c4e1cdc82c30ab891f45dec6efe897bfa2d1be998b69827857359de73e363"
+    },
+    {
+      "variant": "131-middle-collar-fitted",
+      "decision": "rejected",
+      "reason": "Power fit produces an overly thin bright stripe; baseline join crossing remains.",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.84637858237302,
+      "equal_weight_mean": 81.96515071312315,
+      "model_sha256": "68928861a87e0624f7da736c63f59835724206f26b04527788950c37d68e0e20",
+      "render_sha256": "84ed5fa5a0d2535f1c7d8c34226665241f2fb8136c1d5817d8b5a25d09ee01e5"
+    },
+    {
+      "variant": "132-middle-broad-glint",
+      "decision": "superseded",
+      "reason": "Broader reflector still aims too far left; baseline join crossing remains.",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.84637858237302,
+      "equal_weight_mean": 81.96515071312315,
+      "model_sha256": "9f73d7cf9160ef6de839665c494f852f9ba01280a44416d98dfa984baf7e571c",
+      "render_sha256": "ba6ffb95ab4b67b99624c9afa073e4fe30e82aa6c6146154b508abd3324a88c1"
+    },
+    {
+      "variant": "133-middle-centered-glints",
+      "decision": "superseded",
+      "reason": "Better placement, but the existing collar join crossing must be repaired.",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 67
+      },
+      "original_iou_percent": 96.84637858237302,
+      "equal_weight_mean": 82.16515071312315,
+      "model_sha256": "83f9f9794ffd7074fffdd5f850b0e18648cb7fbc5b01641f39821068daa1848e",
+      "render_sha256": "4b1e17663a9b1a53cbc78dfb24e99f1e11fed630bce557c71621a3306c3ebb30"
+    },
+    {
+      "variant": "134-centered-glints-fitted",
+      "decision": "rejected",
+      "reason": "Automated fitting over-brightens the inner groove; baseline join crossing remains.",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "original_iou_percent": 96.84637858237302,
+      "equal_weight_mean": 81.96515071312315,
+      "model_sha256": "2404c4927c1471b4794b480516d239cc3dbc9c6d11dce1eeeccdbd6a9b9f7073",
+      "render_sha256": "82396385dd4c5240b7ab41f83bd6006ebe117dba35f23755b2fb0a8ed0b2bce5"
+    },
+    {
+      "variant": "135-middle-collar-clean-join",
+      "decision": "accepted",
+      "reason": "Continuous join, gentler centered glints and a rounder middle edge. Standardized fresh rendering repeats and agrees with an independent rebuild; alternate-entry-point glint variation remains documented.",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 67
+      },
+      "original_iou_percent": 96.84637858237302,
+      "equal_weight_mean": 82.16515071312315,
+      "model_sha256": "5aea5f80285948a8f2e765f5b626f8a72069f8074a743b16c9b7fe07e9c4f281",
+      "render_sha256": "bc089ca17df43f2e393d8a24ba8a1edfa86f908d9f277bc32edca570b8d5f88c"
+    },
+    {
+      "variant": "137-clean-collar-fixed-sampling",
+      "decision": "rejected",
+      "reason": "Fixed 256 samples do not resolve the tiny alternate-entry-point socket discrepancy; no worthwhile visible improvement.",
+      "scores": {
+        "silhouette_iou_percent": 97.8269527124132,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 67
+      },
+      "original_iou_percent": 96.8456162564695,
+      "equal_weight_mean": 82.16539054248264,
+      "model_sha256": "e2e04a360214a3cd899a3241f84ffac81c298bd7082486803e521052772c39ad",
+      "render_sha256": "2f8e8d0e112763224165d052af9db98a2040d07b626956d76322470b86f2880e"
+    }
+  ]
+}

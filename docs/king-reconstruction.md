@@ -1,8 +1,11 @@
-Current checkpoint: [mission iteration 006](king-mission/iteration-006/README.md). It completes inferred hidden wood while preserving geometry, proportions, relief, lighting and the 54-degree camera. Reproduce with complete_hidden_pigment.py and the iteration-006 reproduction config. The owner paused the mission after this checkpoint.
-
 # King reconstruction
 
-Current checkpoint, 5 November 2026: the accepted king uses the fixed **54-degree** camera and a packed wood material. See [the king mission log](king-mission-log.md) for scores, evidence, remaining defects and the current rebuild procedure. The historical 52-degree clay builder below is preserved for provenance, not the current pipeline.
+Current accepted state: [mission checkpoint 012](king-mission/iteration-012/README.md).
+The middle collar has a repaired continuous join and refined reflections. The v6
+wood material and fixed 54-degree camera are preserved. Follow the latest
+[mission log](king-mission-log.md) for active status, scores and remaining work.
+Use the documented standardized fresh-render path; alternate-entry-point behavior
+at one tiny socket glint remains unresolved. Earlier builders below are historical.
 
 ## Historical clay study
 

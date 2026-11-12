@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "section": "positive X at y=0, z in (2.7,3.4)",
+    "segment_count": 53,
+    "crossings": [
+      {
+        "edges": [
+          18,
+          23
+        ],
+        "radius_z": [
+          0.539167503804591,
+          2.954510756024642
+        ]
+      }
+    ]
+  },
+  "trial": {
+    "section": "positive X at y=0, z in (2.7,3.4)",
+    "segment_count": 53,
+    "crossings": [
+      {
+        "edges": [
+          18,
+          23
+        ],
+        "radius_z": [
+          0.5392847786094123,
+          2.9544828157142375
+        ]
+      }
+    ]
+  }
+}

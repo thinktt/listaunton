@@ -1,0 +1,48 @@
+{
+  "profile_offsets": {
+    "49": [
+      0,
+      -0.035
+    ],
+    "50": [
+      0,
+      -0.015
+    ],
+    "48": [
+      0.01,
+      0
+    ]
+  },
+  "source": "history/king-mission-011/king-rebuilt.blend",
+  "samples": 128,
+  "reaim": [
+    {
+      "size_y": 0.1,
+      "size": 0.24,
+      "distance": 0.8,
+      "pixel": [
+        476,
+        497
+      ],
+      "energy": 5,
+      "receiver": "middle-collar",
+      "name": "Collar middle left"
+    },
+    {
+      "size_y": 0.08,
+      "size": 0.2,
+      "distance": 0.8,
+      "pixel": [
+        592,
+        476
+      ],
+      "energy": 4,
+      "receiver": "middle-collar",
+      "name": "Collar middle right"
+    }
+  ],
+  "neutral": false,
+  "profile": false,
+  "source_sha256": "5b302559f1edaa6da18fb3124780e51740a378ac212121ff36f81cbc35ca2040",
+  "variant": "133-middle-centered-glints"
+}
