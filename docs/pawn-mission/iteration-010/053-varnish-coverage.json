@@ -1,0 +1,17 @@
+{
+  "variant": "053-varnish-coverage",
+  "source": "build/pawn-mission/052-measured-collar-grain/pawn.blend",
+  "source_sha256": "a7c02579b43ed20e1643d9cd84c2e1c4ab618f1fd450c6659ba74b32649fac80",
+  "matte_band": {
+    "rise": [
+      0.744,
+      0.757
+    ],
+    "fall": [
+      0.785,
+      0.818
+    ],
+    "fraction": 0.35
+  },
+  "samples": 128
+}

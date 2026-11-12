@@ -44,6 +44,11 @@ def measure(cfg):
     _,tilt=slope_nodes(body)
     out=BUILD/cfg["measurement"]
     out.mkdir(parents=True,exist_ok=True)
+    if cfg.get("crop"):
+        x0,y0,x1,y1=cfg["crop"]
+        scene.render.use_border=True;scene.render.use_crop_to_border=False
+        scene.render.border_min_x=x0/1254;scene.render.border_max_x=x1/1254
+        scene.render.border_min_y=1-y1/1254;scene.render.border_max_y=1-y0/1254
     step=cfg["step"]
     poses=[("flat",0.,0.)]
     if cfg.get("rings"):

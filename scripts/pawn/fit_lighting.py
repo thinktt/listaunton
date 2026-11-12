@@ -176,7 +176,13 @@ def run(cfg):
         edge=np.asarray(cfg["contact_edge"])
         offset=ys-np.interp(xs,edge[:,0],edge[:,1])
         underside=(xs>=edge[0,0])&(xs<=edge[-1,0])&(offset>=-8)&(offset<1)
-        weight+=100*underside
+        weight+=cfg.get("contact_weight",100)*underside
+    if cfg.get("region_weights"):
+        ys,xs=np.nonzero(mask)
+        xs=xs*stride+stride//2;ys=ys*stride+stride//2
+        for region in cfg["region_weights"]:
+            x0,y0,x1,y1=region["bounds"]
+            weight+=region["weight"]*((xs>=x0)&(xs<x1)&(ys>=y0)&(ys<y1))
     power,errors=nonnegative_fit(fixed,np.stack(responses,axis=-1),target,weight,processor,np.ones(len(rows)))
     for ob,energy in zip(fixed_lights,fixed_powers):ob.data.energy=energy
     bg.default_value=world_power

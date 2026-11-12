@@ -1,0 +1,37 @@
+{
+  "variant": "050-refit-collar-powers",
+  "source": "history/pawn-mission-009/pawn-rebuilt.blend",
+  "source_sha256": "ccf5c337af2717370244d9b4b70a5bdc0ceffeb70b3cde7237d3341d28780719",
+  "refit": [
+    "Collar left ribbon",
+    "Collar tip of ribbon",
+    "Collar right flank",
+    "Lower collar glint"
+  ],
+  "expanded_config": "docs/pawn-mission/iteration-010/050-measured-rig.json",
+  "edge_source": "docs/pawn-mission/iteration-007/contact-light-measurement.json",
+  "contact_weight": 20,
+  "region_weights": [
+    {
+      "bounds": [
+        380,
+        560,
+        585,
+        642
+      ],
+      "weight": 6
+    }
+  ],
+  "glint_weight": 3.8,
+  "dense_bounds": [
+    375,
+    540,
+    592,
+    650
+  ],
+  "protect_quiet_head": true,
+  "protect_recesses": true,
+  "response_percent": 100,
+  "response_samples": 128,
+  "samples": 128
+}

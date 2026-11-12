@@ -1,0 +1,17 @@
+{
+  "variant": "051-fine-collar-relief",
+  "source": "build/pawn-mission/050-refit-collar-powers/pawn.blend",
+  "source_sha256": "dbca41208294a48e1c314b46e20f47d2696ab287ed2fd265beb5e49e82e5b3a4",
+  "relief": {
+    "rise": [
+      0.672,
+      0.688
+    ],
+    "fall": [
+      0.736,
+      0.746
+    ],
+    "factor": 0.4
+  },
+  "samples": 128
+}

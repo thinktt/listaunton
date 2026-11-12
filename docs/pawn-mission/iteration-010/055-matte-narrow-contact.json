@@ -1,0 +1,21 @@
+{
+  "variant": "055-matte-narrow-contact",
+  "source": "build/pawn-mission/053-varnish-coverage/pawn.blend",
+  "source_sha256": "6d4537eaaf42b8334b5ffe527a1912c34180d4f79710fee02f2ffffafb92fca6",
+  "lights": [
+    "Front shadow key",
+    "Front shadow feather"
+  ],
+  "pivot": [
+    0,
+    -0.33,
+    1.975
+  ],
+  "aim": [
+    0,
+    0,
+    1.45
+  ],
+  "elevation_delta": -3,
+  "samples": 128
+}

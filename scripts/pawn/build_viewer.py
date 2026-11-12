@@ -31,6 +31,7 @@ fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes', 've
 public_meta = {key: meta[key] for key in fields}
 optional_maps={'varnish':'__VARNISH_TEXTURE__','slope':'__SLOPE_TEXTURE__'}
 public_meta.update({key:meta[key] for key in optional_maps if key in meta})
+if "matteBand" in meta:public_meta["matteBand"]=meta["matteBand"]
 mesh = (assets/'mesh.bin').read_bytes()
 assert len(mesh) == meta['totalByteLength'], 'Mesh binary length does not match metadata.'
 assert meta['vertexStrideBytes'] == 32, 'Expected interleaved position, normal and pigment UV.'

@@ -1,0 +1,20 @@
+{
+  "source": "assets/pawn/pawn-varnish-v2.png",
+  "source_sha256": "438fbd14036469cd8cd5c6b4a87b88fdfb1f84d6c707ed0eee0a1daa3782f5c7",
+  "rise": [
+    0.744,
+    0.757
+  ],
+  "fall": [
+    0.785,
+    0.818
+  ],
+  "range": [
+    0.38,
+    1.85
+  ],
+  "channel": 1,
+  "gain": -0.5,
+  "output": "assets/pawn/pawn-varnish-v4.png",
+  "record": "docs/pawn-mission/iteration-010/049-band-measurement.json"
+}

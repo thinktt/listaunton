@@ -1,0 +1,10 @@
+{
+  "variant": "054-lower-shadow-lights",
+  "source": "build/pawn-mission/052-measured-collar-grain/pawn.blend",
+  "source_sha256": "a7c02579b43ed20e1643d9cd84c2e1c4ab618f1fd450c6659ba74b32649fac80",
+  "lights": ["Front shadow key", "Front shadow feather"],
+  "pivot": [0, -0.33, 1.975],
+  "aim": [0, 0, 1.45],
+  "elevation_delta": -3,
+  "samples": 128
+}

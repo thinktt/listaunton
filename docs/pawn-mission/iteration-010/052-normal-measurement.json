@@ -1,0 +1,110 @@
+{
+  "config": {
+    "source": "build/pawn-mission/050-refit-collar-powers/pawn.blend",
+    "source_sha256": "dbca41208294a48e1c314b46e20f47d2696ab287ed2fd265beb5e49e82e5b3a4",
+    "measurement": "collar-slopes-050",
+    "crop": [
+      375,
+      548,
+      594,
+      646
+    ],
+    "step": 0.08,
+    "rings": [
+      0.025,
+      0.065
+    ],
+    "directions": 8,
+    "samples": 192
+  },
+  "pass_sha256": {
+    "flat": "d70e328227042a24e859fe435bea50c52a14864fda8f68c2a0165a08089fdf3b",
+    "ring-0-0": "340bcd1d2289a5db196dd974ec7fa2daef155a402f44864645d0d4339a58d42b",
+    "ring-0-1": "8f041d6abe57f1166d65338f0bc0750cc7c0ce133f791948a3a18b8ffb65fe50",
+    "ring-0-2": "7014df8e6c448cabf4ee95d1bee279c8b1d939143fc03c3b10c66269756c7d55",
+    "ring-0-3": "fc9fb7ea03e0fdee15cb8c0a576ae16e081a2fb5fb6d7e1c35a94e0464733de8",
+    "ring-0-4": "9f260d6a3c823b86f1c248434e03862841d942d152854c2dad9f8f8166669b6f",
+    "ring-0-5": "5e4d5363e4cc598d9e521eb95f0ef72ca7fe4cb234763697259d5eeaff3d25d4",
+    "ring-0-6": "0b0a0ee41b517be0f0bad14d6df464e699ad6c5241e2a1fcc3ecf79c2050aa5f",
+    "ring-0-7": "82570c8fbcb9eacae89e03dde662bbee95239e716fd1bcea42a2b11ebeca1c9a",
+    "ring-1-0": "4c03ab3e4cdb60cbc4be8fe5d7be6d7074a5d6db3006cad7e4e42849f93ea91d",
+    "ring-1-1": "36cbda39a9267bd500d8f2eef7d8507e6faf7a700b528592ff46d21b9aab05ef",
+    "ring-1-2": "e645eb2ed7936b95265e3d0f7907f1fbb99ef3f3136362906eefe2f112a413c0",
+    "ring-1-3": "10993629e03ee702c3185cd6544b141f11a60717a06f60bb576ebdf6fbb03307",
+    "ring-1-4": "847dccc5ee3bf9ec227ea09ec964d3eee8f70d9a374c6f69b9411e5ade70894d",
+    "ring-1-5": "7638a00d6067e09bba56c800b48df508b0ea0b8179d5990288509cafe0caf006",
+    "ring-1-6": "640d34954059bb723958071d2a5ea4042a713774d2a81aa47f5cb6b5147e1391",
+    "ring-1-7": "cab1fc58ec102f363361272c22a7bc287242c8168161d1838769df09bed47281"
+  },
+  "poses": {
+    "flat": [
+      0.0,
+      0.0
+    ],
+    "ring-0-0": [
+      0.025,
+      0.0
+    ],
+    "ring-0-1": [
+      0.01767766952966369,
+      0.01767766952966369
+    ],
+    "ring-0-2": [
+      1.5308084989341916e-18,
+      0.025
+    ],
+    "ring-0-3": [
+      -0.017677669529663688,
+      0.01767766952966369
+    ],
+    "ring-0-4": [
+      -0.025,
+      3.061616997868383e-18
+    ],
+    "ring-0-5": [
+      -0.01767766952966369,
+      -0.017677669529663688
+    ],
+    "ring-0-6": [
+      -4.592425496802574e-18,
+      -0.025
+    ],
+    "ring-0-7": [
+      0.017677669529663684,
+      -0.01767766952966369
+    ],
+    "ring-1-0": [
+      0.065,
+      0.0
+    ],
+    "ring-1-1": [
+      0.04596194077712559,
+      0.04596194077712559
+    ],
+    "ring-1-2": [
+      3.980102097228898e-18,
+      0.065
+    ],
+    "ring-1-3": [
+      -0.045961940777125586,
+      0.04596194077712559
+    ],
+    "ring-1-4": [
+      -0.065,
+      7.960204194457797e-18
+    ],
+    "ring-1-5": [
+      -0.0459619407771256,
+      -0.045961940777125586
+    ],
+    "ring-1-6": [
+      -1.1940306291686694e-17,
+      -0.065
+    ],
+    "ring-1-7": [
+      0.04596194077712558,
+      -0.0459619407771256
+    ]
+  },
+  "method": "Actual Cycles renders with slopes in the wood UV tangent frame. Hold all lights, pigment, roughness, existing grain, geometry and camera."
+}

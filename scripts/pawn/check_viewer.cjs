@@ -51,6 +51,12 @@ if(meta.slope){
  assert.equal(uniforms.uSlope,2);
  assert.equal(uniforms.uSlopeLimit,Math.fround(meta.slope.limit));
 }
+if(meta.matteBand){
+ assert.deepEqual(uniforms.uMatteRise,Array.from(meta.matteBand.rise,Math.fround));
+ assert.deepEqual(uniforms.uMatteFall,Array.from(meta.matteBand.fall,Math.fround));
+ assert.equal(uniforms.uMatteFraction,Math.fround(meta.matteBand.fraction));
+ assert(source.includes('polish*=1.0-matte;'));
+}
 assert(html.includes('<option value="original">Original black</option><option value="selected">Black candidate 2</option>'),'Original must be default reference.');
 const alignment=JSON.parse(text('original-alignment'));
 assert.equal(parseFloat(node('original-image').style.width),100/alignment.scale);

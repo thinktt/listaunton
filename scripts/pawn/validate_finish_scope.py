@@ -27,6 +27,10 @@ def fingerprint(scene,body):
     inputs={}
     for key in ("Specular IOR Level","Coat Weight"):
         s=bs.inputs[key]
+        if s.is_linked and n.get("Pawn polish strength"):
+            mult=s.links[0].from_node
+            if mult.type=="MATH" and mult.operation=="MULTIPLY" and mult.inputs[1].is_linked and mult.inputs[1].links[0].from_node==n["Pawn polish strength"]:
+                s=mult.inputs[0]
         inputs[key]=[s.links[0].from_node.name,s.links[0].from_socket.name] if s.is_linked else float(s.default_value)
     bg=scene.world.node_tree.nodes["Background"]
     return {"evaluated_mesh_normals_uv_sha256":h.hexdigest(),"lights":lamps,"other_packed_images":images,

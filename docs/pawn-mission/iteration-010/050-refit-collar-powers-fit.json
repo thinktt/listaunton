@@ -1,0 +1,143 @@
+{
+  "method": "Actual colored-BSDF isolated area responses, fixed diffuse rig, nonnegative real light energies through the AgX display transform. The independent full render determines the decision.",
+  "foreground_pixels": 32333,
+  "loss": [
+    0.03651737519765025,
+    0.032235702207985495,
+    0.031320630563996275,
+    0.0313007569188763,
+    0.031300748361692644
+  ],
+  "lights": [
+    {
+      "name": "Collar left ribbon",
+      "position": [
+        -0.30764833092689514,
+        -0.551421046257019,
+        2.0518178939819336
+      ],
+      "rotation": [
+        -1.0530849695205688,
+        -0.4384385049343109,
+        2.2258808612823486
+      ],
+      "size": 0.19171686470508575,
+      "size_y": 0.14883095026016235,
+      "spread": 5.500000010755836,
+      "color": [
+        1.0,
+        0.6200000047683716,
+        0.4300000071525574
+      ],
+      "energy": 0.048960401131567126
+    },
+    {
+      "name": "Collar tip of ribbon",
+      "position": [
+        -0.18779364228248596,
+        -0.622876763343811,
+        2.0224406719207764
+      ],
+      "rotation": [
+        -1.1958661079406738,
+        0.13581199944019318,
+        2.8079545497894287
+      ],
+      "size": 0.15184105932712555,
+      "size_y": 0.1206127405166626,
+      "spread": 5.500000010755836,
+      "color": [
+        1.0,
+        0.6499999761581421,
+        0.47999998927116394
+      ],
+      "energy": 0.055340583598274255
+    },
+    {
+      "name": "Collar right flank",
+      "position": [
+        0.38758063316345215,
+        -0.48217856884002686,
+        2.046473264694214
+      ],
+      "rotation": [
+        -1.112831473350525,
+        -0.11861360818147659,
+        -2.297562599182129
+      ],
+      "size": 0.2228919267654419,
+      "size_y": 0.1016911119222641,
+      "spread": 5.500000010755836,
+      "color": [
+        1.0,
+        0.699999988079071,
+        0.47999998927116394
+      ],
+      "energy": 0.019558232651636503
+    },
+    {
+      "name": "Lower collar glint",
+      "position": [
+        0.2895447313785553,
+        -0.5020566582679749,
+        1.614538311958313
+      ],
+      "rotation": [
+        0.48448750376701355,
+        -2.848740816116333,
+        1.3611797094345093
+      ],
+      "size": 0.2762296199798584,
+      "size_y": 0.12138612568378448,
+      "spread": 5.400000064891326,
+      "color": [
+        1.0,
+        0.7400000095367432,
+        0.5
+      ],
+      "energy": 0.09104478982038852
+    }
+  ],
+  "fixed_light_powers": {
+    "Left head glint": 2.3068480491638184,
+    "Upper head glint": 1.1351019144058228,
+    "Right head glint": 0.630704402923584,
+    "Upper head glint core": 2.3231687545776367,
+    "Right head glint core": 1.5328316688537598,
+    "Base upper": 0.38810569047927856,
+    "Foot right": 0.5878307223320007,
+    "Foot front": 0.04045619070529938,
+    "Foot center-right": 0.11972080916166306,
+    "Foot edge outer left": 0.5031619668006897,
+    "Foot edge center left": 0.6387251615524292,
+    "Left polish core": 0.17766346037387848,
+    "Upper polish core": 0.7186764478683472,
+    "Right polish core": 0.7280065417289734,
+    "Flare left edge": 0.020248202607035637,
+    "Flare left taper": 0.03094121813774109,
+    "Flare left lip": 0.018656767904758453,
+    "Flare right inner": 0.01145761739462614,
+    "Flare right edge": 0.07910601794719696,
+    "Flare front lip": 0.0025612679310142994,
+    "Flare lip taper": 0.012449936009943485,
+    "Right bounce": 88.7192153930664,
+    "Back bounce": 165.07427978515625,
+    "High left card": 95.73224639892578,
+    "Lower front bounce": 2.218817710876465,
+    "Lower right bounce": 2.041436195373535,
+    "Upper face bounce": 0.7638178467750549,
+    "Front shadow key": 23.973630905151367,
+    "Front shadow feather": 643.0450439453125,
+    "Socket right": 1.3917787075042725,
+    "Flare left sweep": 0.16110479831695557,
+    "Flare left center": 0.34790489077568054,
+    "Flare right sweep": 0.16274282336235046,
+    "Flare right lip": 0.0915931761264801,
+    "Upper stem rim": 0.0017277590231969953,
+    "Lower stem rim": 0.0003212390001863241,
+    "Socket lip core": 0.05734500288963318,
+    "Right flare core": 0.023406486958265305,
+    "Outer flare line": 0.0059013208374381065,
+    "Foot lip core": 0.02023303136229515
+  }
+}

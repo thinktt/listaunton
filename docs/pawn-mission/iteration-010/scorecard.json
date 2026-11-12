@@ -1,0 +1,211 @@
+[
+  {
+    "trial": "046-diffuse-head-fill",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 92,
+      "lighting": 90
+    },
+    "working_mean": 92.3625682778522,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850127041555216,
+      "original_white": 0.9813585185796181
+    },
+    "source_sha256": "a2515d5cf885cab267a7d28af17d845ea7d849c70aba8d3fa67803be03bb1aa8",
+    "render_sha256": "93b43fa0c1d2c5002f6a2b7fc557e107f2df6157d8d18e9d528d4f2170f63026",
+    "decision": "Rejected: two diffuse fill sources do not recover the warm underside lost by suppressing secondary gloss."
+  },
+  {
+    "trial": "047-filled-contact-wood",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 90
+    },
+    "working_mean": 92.56256827785221,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850127041555216,
+      "original_white": 0.9813585185796181
+    },
+    "source_sha256": "46b3dbda98ad5aaa52020b855316e4b5db5335f5dba5d14127c5cb6944c75425",
+    "render_sha256": "fd0cc216157eac64154ceab911af5656dd4f6150d5c9842a5d015e00f3c986b3",
+    "decision": "Rejected: global RGB fit improves but the lower ball retains a broad dark band."
+  },
+  {
+    "trial": "048-soft-head-varnish",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 92,
+      "grain": 91,
+      "lighting": 89
+    },
+    "working_mean": 91.96246521694322,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "096ff0193dd9146f9ab1fe945c820fee69b9bf14b728f969a6f6bd3f727f3855",
+    "render_sha256": "3ac0c816d559492fc378090656f7b7019ef1ec8725e948f29b5bc57c2ccfac15",
+    "decision": "Rejected: greater roughness broadens the pale lower-head reflection."
+  },
+  {
+    "trial": "049-subtle-head-varnish",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 91
+    },
+    "working_mean": 92.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "83659bfa3cd1d9d57f66e96f67bf874887f62fe36ef46d66cc559fce37ebf9ae",
+    "render_sha256": "d9dad6c257f392d33cd4734db94a4b100d1d81074cf1ca795491c8868f9dc982",
+    "decision": "Not adopted: lower local polish improves the contact modestly but leaves the pale line."
+  },
+  {
+    "trial": "050-refit-collar-powers",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 91
+    },
+    "working_mean": 92.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "dbca41208294a48e1c314b46e20f47d2696ab287ed2fd265beb5e49e82e5b3a4",
+    "render_sha256": "e21f3e03297bd82726c5fd221c91ead701bffce8ebaeb2cc1ceebbeec8da0e6c",
+    "decision": "Retained as an intermediate: four measured reflector powers reduce the overly bright lower collar stripe."
+  },
+  {
+    "trial": "051-fine-collar-relief",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 91
+    },
+    "working_mean": 92.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "176764bbe78de4da64084d182fb6a260fe502a5c051551addc9ce8490ec91a35",
+    "render_sha256": "79a950900d8bec5f7a58e3ba7e8fc17f184565c5fd8f8c6528c418446350998b",
+    "decision": "Rejected: weakening the old pigment-driven bump adds no visible gain; preserve that relief."
+  },
+  {
+    "trial": "052-measured-collar-grain",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 91
+    },
+    "working_mean": 92.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "a7c02579b43ed20e1643d9cd84c2e1c4ab618f1fd450c6659ba74b32649fac80",
+    "render_sha256": "ff5704f90ab1600d2927b256d6ec73fc8221a79e4b226328d1ccc11a17c23c88",
+    "decision": "Retained as an intermediate: collar-only normal-map refinement improves fine-pattern correlation."
+  },
+  {
+    "trial": "053-varnish-coverage",
+    "scores": {
+      "silhouette": 96.81232608471608,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 91
+    },
+    "working_mean": 92.76246521694321,
+    "iou": {
+      "selected": 0.9681232608471607,
+      "original_black": 0.9850177807555532,
+      "original_white": 0.9813635777806419
+    },
+    "source_sha256": "6d4537eaaf42b8334b5ffe527a1912c34180d4f79710fee02f2ffffafb92fca6",
+    "render_sha256": "cc468676f7142ce7b7f9200dc8023e4c81bec74aafa84166d96c5f099f95f4d8",
+    "decision": "Retained as an intermediate: 35 percent matte wood reduces the lower-head reflection without losing secondary light."
+  },
+  {
+    "trial": "054-lower-shadow-lights",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 92
+    },
+    "working_mean": 92.96256827785221,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850229345977426,
+      "original_white": 0.9813687330841603
+    },
+    "source_sha256": "83dfa5a8290a1a749a6c61e78497433cb35f2c24e0714fa4e03cd0b75ff4784d",
+    "render_sha256": "86cd1cacf4e23507ce50ea4cfa77b2d0423c51d1ce94fb6c869ad348bbf79aa0",
+    "decision": "Intermediate only: lower front lights narrow the shadow but the pale reflection persists."
+  },
+  {
+    "trial": "055-matte-narrow-contact",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 92
+    },
+    "working_mean": 92.96256827785221,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850229345977426,
+      "original_white": 0.9813687330841603
+    },
+    "source_sha256": "210220eaca2e98622e4f6c7779e17e310cf1d5b30786b4020b6ab62553302aee",
+    "render_sha256": "e852b53778e59322fa74c7c651f976a2f530ec57bb5265b26e56c07c07c62178",
+    "decision": "Intermediate only: combined local finish and lower lights improve the contact; rebalance pigment under this lighting."
+  },
+  {
+    "trial": "056-balanced-contact-wood",
+    "scores": {
+      "silhouette": 96.81284138926105,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 92,
+      "lighting": 92
+    },
+    "working_mean": 92.96256827785221,
+    "iou": {
+      "selected": 0.9681284138926105,
+      "original_black": 0.9850229345977426,
+      "original_white": 0.9813687330841603
+    },
+    "source_sha256": "6986289697d40a3227a7777721eec353bf6da6512a4fa307baa28bd57bf15dd1",
+    "render_sha256": "ea90563ac4e9407dbb0b572df65fc41bd4b65af52112ad8b494bd745727b0129",
+    "decision": "Accepted after saved-file, replay, multi-angle and page validation. Closer contact shadow and regional color; native-original RGB error increases from 16.40 to 16.50."
+  }
+]

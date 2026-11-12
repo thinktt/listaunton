@@ -1,0 +1,53 @@
+{
+  "variant": "046-diffuse-head-fill",
+  "source": "history/pawn-mission-009/pawn-rebuilt.blend",
+  "source_sha256": "ccf5c337af2717370244d9b4b70a5bdc0ceffeb70b3cde7237d3341d28780719",
+  "glossy_bounces": 0,
+  "edge": "docs/pawn-mission/iteration-007/contact-light-measurement.json",
+  "response_samples": 96,
+  "samples": 128,
+  "fitted_fill": [
+    {
+      "name": "Lower ball diffuse 1",
+      "position": [
+        -0.022105015814304352,
+        -1.2121000289916992,
+        2.0066094398498535
+      ],
+      "target": [
+        -0.007920920848846436,
+        -0.43433046340942383,
+        2.1933536529541016
+      ],
+      "size": 0.16,
+      "spread": 42,
+      "energy": 0.14133043402641604,
+      "color": [
+        1,
+        0.97,
+        0.93
+      ]
+    },
+    {
+      "name": "Lower ball diffuse 2",
+      "position": [
+        0.3383256793022156,
+        -1.0394988059997559,
+        2.198085069656372
+      ],
+      "target": [
+        0.13823291659355164,
+        -0.4247136116027832,
+        2.265181541442871
+      ],
+      "size": 0.11,
+      "spread": 55,
+      "energy": 0.014010016655792854,
+      "color": [
+        1,
+        0.97,
+        0.93
+      ]
+    }
+  ]
+}

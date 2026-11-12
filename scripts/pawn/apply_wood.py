@@ -51,6 +51,8 @@ def run(cfg):
     uv=nodes.new("ShaderNodeUVMap");uv.uv_map=UV_NAME
     links.new(uv.outputs["UV"],pigment.inputs["Vector"])
     links.new(pigment.outputs["Color"],bs.inputs["Base Color"])
+    if nodes.get("Matte walnut"):
+        links.new(pigment.outputs["Color"],nodes["Matte walnut"].inputs["Color"])
     if previous and not any(output.is_linked for output in previous.outputs):
         old_image=previous.image
         old_uv=previous.inputs["Vector"].links[0].from_node if previous.inputs["Vector"].is_linked else None

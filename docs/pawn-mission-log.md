@@ -285,3 +285,32 @@ collar. Disabling secondary glossy rays removed it but darkened the lower
 ball, including after a measured pigment correction. Both trials are rejected.
 The accepted scene retains its original ray depths. Next constrain that
 reflection while preserving the surrounding walnut and contact shadow.
+
+## Checkpoint 010 · 2026-11-12
+
+The ball now casts a narrower contact shadow. A smooth local mix of matte
+and varnished wood reduces the pale reflected line beneath it. Four existing
+collar reflectors, collar-only normal detail and measured pigment are refined;
+the geometry, proportions, UVs and 54-degree camera remain unchanged.
+
+| Metric | Checkpoint 009 | Checkpoint 010 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 92 | 92 |
+| Lighting | 91 | 92 |
+| Working mean | 92.76% | 92.96% |
+
+The contact brightness-profile error falls from 7.16 to 3.03 levels. Native
+original RGB error rises slightly from 16.40 to 16.50. Original black and
+white silhouette IoU remain 98.50% and 98.14%. The four visual ratings are
+estimates; the holistic range remains 90–95%. The collar highlight is still
+too coarse, and the pale lower-head reflection is reduced rather than gone.
+See the [checkpoint evidence](pawn-mission/iteration-010/README.md).
+
+The saved model and independent replay agree within one RGB level. The fixed,
+clay, side and rotating assets share that saved model. Four-angle inspection
+checks the actual material away from the fitted camera. The mission remains
+incomplete; next refine the collar's fine reflection pattern while preserving
+this contact and illumination.

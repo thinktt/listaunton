@@ -54,6 +54,9 @@ def export(scene,body,model):
         assert packed.colorspace_settings.name=="Non-Color" and packed.packed_file.data==path.read_bytes()
         assert sha(path)==scene["pawn_slope_sha256"]
         report["slope"]={"file":scene["pawn_slope_path"],"sha256":sha(path),"limit":scene["pawn_slope_limit"]}
+    from mix_varnish import validate as validate_coverage
+    coverage=validate_coverage(scene,body)
+    if coverage:report["matteBand"]=coverage
     save_json(ASSETS/"mesh.json",report);save_json(ASSETS/"camera.json",camera)
     return {"triangle_count":count//3,"closed_nonmanifold_edges":bad_edges,"signed_volume":volume,"euler_characteristic":euler,"height":float(bounds[2]),"diameter":float(bounds[0]),"height_to_diameter":float(bounds[2]/bounds[0]),"baseline_height_to_diameter":reference[2]/reference[0],"model_sha256":sha(model),"texture_sha256":sha(tex)}
 
@@ -90,7 +93,8 @@ def deliver(variant):
     assert Path(bpy.path.abspath(node.image.filepath)).resolve()==tex.resolve()
     bs=material.node_tree.nodes.get("Principled BSDF")
     assert bs.inputs["Base Color"].links[0].from_node==node
-    assert material.node_tree.nodes.get("Material Output").inputs["Surface"].links[0].from_node==bs
+    from mix_varnish import validate as validate_coverage
+    validate_coverage(scene,body)
     setup(scene,scene.cycles.samples)
     report=export(scene,body,model)
     render(scene,ASSETS/"render.png")

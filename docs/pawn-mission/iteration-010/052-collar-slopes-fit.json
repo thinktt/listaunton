@@ -1,0 +1,20 @@
+{
+  "measurement": "collar-slopes-050",
+  "geometry_measurement": "pigment-043",
+  "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+  "pigment": "assets/pawn/pawn-walnut-v7.png",
+  "prior_texture": "assets/pawn/pawn-fine-slopes-v2.png",
+  "prior_sha256": "3377741e7571413197e4c55e4356cc889e6f670bf9ad8968e4391bbe57de70b8",
+  "prior_slope_limit": 0.135,
+  "max_slope": 0.135,
+  "prior_255": 10,
+  "broad_scale_fraction": 0.35,
+  "delta_scale": 0.85,
+  "uv_focus": [
+    0.672,
+    0.688,
+    0.736,
+    0.746
+  ],
+  "texture": "assets/pawn/pawn-fine-slopes-v3.png"
+}

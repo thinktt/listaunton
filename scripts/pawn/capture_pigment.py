@@ -80,10 +80,14 @@ def capture(source,directory,with_beauty=False):
     bsdf=nodes.get("Principled BSDF")
     if with_beauty:
         read_pass("beauty")
-    for link in list(bsdf.inputs["Base Color"].links):links.remove(link)
-    bsdf.inputs["Base Color"].default_value=(0,0,0,1)
+    color_inputs=[bsdf.inputs["Base Color"]]
+    if nodes.get("Matte walnut"):
+        color_inputs.append(nodes["Matte walnut"].inputs["Color"])
+    for socket in color_inputs:
+        for link in list(socket.links):links.remove(link)
+        socket.default_value=(0,0,0,1)
     read_pass("black")
-    bsdf.inputs["Base Color"].default_value=(.1,.1,.1,1)
+    for socket in color_inputs:socket.default_value=(.1,.1,.1,1)
     read_pass("gray")
     output=next(node for node in nodes if node.type=="OUTPUT_MATERIAL")
     emitter=nodes.new("ShaderNodeEmission");cam=nodes.new("ShaderNodeCameraData")

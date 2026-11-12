@@ -151,6 +151,9 @@ uniform sampler2D uWood;
 uniform sampler2D uVarnish;
 uniform vec2 uVarnishRange;
 uniform vec2 uPolishRange;
+uniform vec2 uMatteRise;
+uniform vec2 uMatteFall;
+uniform float uMatteFraction;
 uniform sampler2D uSlope;
 uniform float uSlopeLimit;
 uniform bool uUseWood;
@@ -186,6 +189,8 @@ void main(){
  vec2 finish=texture(uVarnish,vUV).rg;
  float gain=uUseWood?mix(uVarnishRange.x,uVarnishRange.y,finish.r):1.0;
  polish=uUseWood?mix(uPolishRange.x,uPolishRange.y,finish.g):1.0;
+ float matte=uUseWood?uMatteFraction*smoothstep(uMatteRise.x,uMatteRise.y,vUV.y)*(1.0-smoothstep(uMatteFall.x,uMatteFall.y,vUV.y)):0.0;
+ polish*=1.0-matte;
  gloss=clamp(uGloss/(gain*gain),8.0,512.0);
  vec3 c=surfaceColor*(0.19+0.06*n.y);
  c+=light(n,v,normalize(vec3(-0.65,0.9,1.25)),vec3(1.0,0.94,0.86),1.45);
@@ -284,7 +289,7 @@ function initialize(){
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.generateMipmap(gl.TEXTURE_2D);
  }
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uVarnish','uVarnishRange','uPolishRange','uSlope','uSlopeLimit','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uVarnish','uVarnishRange','uPolishRange','uMatteRise','uMatteFall','uMatteFraction','uSlope','uSlopeLimit','uUseWood'])uniforms[name]=gl.getUniformLocation(program,name);
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
@@ -306,6 +311,9 @@ function draw(){
  gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
  gl.uniform1i(uniforms.uVarnish,1);gl.uniform2fv(uniforms.uVarnishRange,meta.varnish?meta.varnish.gain:[1,1]);
  gl.uniform2fv(uniforms.uPolishRange,meta.varnish?.polishGain||[1,1]);
+ gl.uniform2fv(uniforms.uMatteRise,meta.matteBand?.rise||[0,1]);
+ gl.uniform2fv(uniforms.uMatteFall,meta.matteBand?.fall||[0,1]);
+ gl.uniform1f(uniforms.uMatteFraction,meta.matteBand?.fraction||0);
  gl.uniform1i(uniforms.uSlope,2);gl.uniform1f(uniforms.uSlopeLimit,meta.slope?meta.slope.limit:0);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);

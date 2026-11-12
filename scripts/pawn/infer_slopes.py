@@ -114,11 +114,15 @@ def run(cfg):
     if "prior_texture" in cfg:
         prior=ROOT/cfg["prior_texture"]
         assert hashlib.sha256(prior.read_bytes()).hexdigest()==cfg["prior_sha256"]
-        atlas=(np.asarray(Image.open(prior).convert("RGB"),np.float32)[:,:,:2]-128)*(cfg["prior_slope_limit"]/127)
+        prior_pixels=np.asarray(Image.open(prior).convert("RGB"))
+        atlas=(prior_pixels[:,:,:2].astype(np.float32)-128)*(cfg["prior_slope_limit"]/127)
     else:
         atlas=np.clip(np.stack((-dx,dy),axis=-1)*cfg["grain_gain"],-.030,.030)
     for rows,_,_,_,px,py,visible in visible_tiles(profile,depth,camera,len(wood)):
         reliable=visible*sample(confidence,px,py)
+        if cfg.get("uv_focus"):
+            a,b,c,d=cfg["uv_focus"];v=1-(rows+.5)/len(wood)
+            reliable*= (ramp(v,a,b)*(1-ramp(v,c,d)))[:,None]
         measured=step*sample(slopes,px,py)
         if "prior_texture" in cfg:
             atlas[rows]+=cfg.get("delta_scale",1)*measured*reliable[:,:,None]
@@ -128,6 +132,11 @@ def run(cfg):
     atlas*=np.minimum(1,limit/np.maximum(amplitude,1e-6))[:,:,None]
     rg=np.uint8(np.rint(128+127*np.clip(atlas/limit,-1,1)))
     encoded=np.dstack((rg,np.full(wood.shape,255,np.uint8)))
+    if cfg.get("uv_focus"):
+        assert "prior_texture" in cfg and cfg["prior_slope_limit"]==limit
+        a,b,c,d=cfg["uv_focus"];v=1-(np.arange(len(encoded))+.5)/len(encoded)
+        outside=(v<=a)|(v>=d)
+        encoded[outside]=prior_pixels[outside]
     path=ROOT/cfg["texture"]
     Image.fromarray(encoded).save(path)
     angles=np.degrees(np.arctan(np.linalg.norm(atlas,axis=2)))

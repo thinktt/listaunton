@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "model_sha256": "27570c1205a59a26d8417d6b88ef32764d14fb664941a5d49bb7d35a212cd87e",
+  "source_sha256": "ccf5c337af2717370244d9b4b70a5bdc0ceffeb70b3cde7237d3341d28780719",
+  "camera_above_board": 54,
+  "geometry_normals_uv_unchanged": true,
+  "mesh_normals_uv_sha256": "050130e04a46ed0be05786029df26cf5e4e4845f08992c3335dc86cf7fc818cd",
+  "light_count": 44,
+  "changed_reflector_powers": {
+    "Collar left ribbon": 0.048960401131567126,
+    "Collar tip of ribbon": 0.055340583598274255,
+    "Collar right flank": 0.019558232651636503,
+    "Lower collar glint": 0.09104478982038852
+  },
+  "moved_diffuse_sources": [
+    "Front shadow feather",
+    "Front shadow key"
+  ],
+  "other_light_and_world_settings_unchanged": true,
+  "original_principled_graph_preserved": true,
+  "matte_wood_uses_live_pigment_and_normal": true,
+  "matte_band": {
+    "rise": [
+      0.744,
+      0.757
+    ],
+    "fall": [
+      0.785,
+      0.818
+    ],
+    "fraction": 0.35
+  },
+  "normal_map_changes_limited_to_collar_uv": true,
+  "pigment_sha256": "8e68011377487b23810de4798a864f888ff8191d8678aee7e5552e46bc094c68",
+  "slope_sha256": "ee67c389132b187df1d69c58cca214c9d22383ed071c9ce65f276ba52dee4f4f",
+  "secondary_ray_depth": [
+    4,
+    4
+  ]
+}
