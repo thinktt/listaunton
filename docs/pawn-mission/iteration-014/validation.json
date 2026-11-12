@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "name": "Pawn - continuous turned body",
+      "nonmanifold_edges": 0,
+      "signed_volume": 2.326214223402199,
+      "connected_components": 1,
+      "euler_characteristic": 2,
+      "vertices": 28994,
+      "faces": 28992
+    }
+  ],
+  "source_hash_matches": true,
+  "reference_camera_elevation": 54,
+  "packed_references": [
+    "original.png",
+    "pawn-fine-slopes-v8.png",
+    "pawn-varnish-v8.png",
+    "pawn-walnut-v11.png",
+    "pawn-walnut-v2.png",
+    "reference.png",
+    "white-original.png"
+  ],
+  "unchanged_reference_hashes": {
+    "original.png": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "white-original.png": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3",
+    "reference.png": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
+  },
+  "meridian_self_crossings": 0,
+  "note": "One connected closed editable lathe, including head, saucer collar and full base. Subdivision remains editable. Unseen underside inferred as closed flat base."
+}

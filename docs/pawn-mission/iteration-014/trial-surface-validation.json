@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "source_sha256": "ffaf0a40605a4d3866d33d1e94d229577a079aa377946b68447f8209f5fd7b27",
+  "model_sha256": "a6546d7baa949447440c735dd602cc310ac78e3e84283d62eab7fd168c3c8b3c",
+  "camera_above_board": 54,
+  "mesh_normals_uv_unchanged": true,
+  "lights_unchanged": 44,
+  "world_ray_depth_unchanged": true,
+  "pigment_and_prior_relief_unchanged": {
+    "Earlier pigment | pawn-walnut-v2.png": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+    "Pawn walnut pigment": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400"
+  },
+  "full_shader_graph_and_matte_band_preserved": true,
+  "sampling": {
+    "samples": 512,
+    "seed": 0,
+    "light_tree": false,
+    "denoising": true
+  },
+  "uv_focus": [
+    0.49,
+    0.515,
+    0.625,
+    0.65
+  ],
+  "maps": {
+    "finish": {
+      "file": "assets/pawn/pawn-varnish-v8.png",
+      "sha256": "c9d0b3e943348b483f80e54d8e45546352a6418beb7065113486128611751ab2",
+      "outside_focus_identical": true,
+      "changed_fraction": 0.002406597137451172
+    },
+    "slopes": {
+      "file": "assets/pawn/pawn-fine-slopes-v8.png",
+      "sha256": "a30e09c4b57e05deaf87299ffe99a8010191ef022f7a155abc8f6f62fd66ad8d",
+      "outside_focus_identical": true,
+      "changed_fraction": 0.0028586387634277344
+    }
+  }
+}

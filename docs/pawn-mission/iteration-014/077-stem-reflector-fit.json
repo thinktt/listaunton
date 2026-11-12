@@ -1,0 +1,49 @@
+{
+  "source": "history/pawn-mission-013/pawn-rebuilt.blend",
+  "source_sha256": "ffaf0a40605a4d3866d33d1e94d229577a079aa377946b68447f8209f5fd7b27",
+  "variant": "077-stem-reflector-fit",
+  "samples": 512,
+  "light": "Upper stem rim",
+  "crop": [
+    376,
+    600,
+    442,
+    692
+  ],
+  "landmark": {
+    "name": "Upper stem rim",
+    "pixel": [
+      408,
+      627
+    ],
+    "half_axes": [
+      8.5,
+      1.9
+    ],
+    "angle": -35,
+    "distance": 0.83
+  },
+  "steps": [
+    1,
+    1,
+    0.2,
+    0.25,
+    0.15,
+    0.15
+  ],
+  "limits": [
+    3,
+    3,
+    0.6,
+    0.7,
+    0.6,
+    0.4
+  ],
+  "ridge": 0.001,
+  "bright_weight": 2,
+  "rates": [
+    0.4,
+    0.7,
+    1
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "measurement": "stem-broad-finish-078",
+  "geometry_measurement": "pigment-060",
+  "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+  "roughness_source": "assets/pawn/pawn-varnish-v7.png",
+  "roughness_sha256": "c75eabaf8a71cb58f5246370e923d84021cc0821b6178ee38dc91dd21b0465eb",
+  "prior_rough_range": [
+    0.3,
+    2.4
+  ],
+  "prior_polish_range": [
+    0.38,
+    1.85
+  ],
+  "rough_range": [
+    0.3,
+    2.4
+  ],
+  "polish_range": [
+    0.38,
+    1.85
+  ],
+  "texture": "assets/pawn/pawn-varnish-v8.png",
+  "prior_255": 4,
+  "noise_prior": 0.8,
+  "update": 0.9,
+  "broad_fraction": 1,
+  "uv_focus": [
+    0.49,
+    0.515,
+    0.625,
+    0.65
+  ]
+}

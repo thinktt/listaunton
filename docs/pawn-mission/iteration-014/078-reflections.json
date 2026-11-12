@@ -1,0 +1,152 @@
+{
+  "selected": {
+    "head-left": {
+      "median": 132.7449951171875,
+      "p99": 244.18467712402344,
+      "ripple_rms": 18.264463424682617,
+      "ripple_correlation": 1.0
+    },
+    "head-upper": {
+      "median": 119.69499206542969,
+      "p99": 248.05218505859375,
+      "ripple_rms": 18.398710250854492,
+      "ripple_correlation": 0.9999999999999998
+    },
+    "head-right": {
+      "median": 119.62998962402344,
+      "p99": 239.28147888183594,
+      "ripple_rms": 20.048969268798828,
+      "ripple_correlation": 1.0
+    },
+    "flare-left": {
+      "median": 186.38998413085938,
+      "p99": 251.41000366210938,
+      "ripple_rms": 29.384449005126953,
+      "ripple_correlation": 0.9999999999999999
+    },
+    "flare-line": {
+      "median": 106.93999481201172,
+      "p99": 245.64720153808594,
+      "ripple_rms": 29.407651901245117,
+      "ripple_correlation": 0.9999999999999999
+    },
+    "socket-lip": {
+      "median": 159.30499267578125,
+      "p99": 251.60650634765625,
+      "ripple_rms": 26.114940643310547,
+      "ripple_correlation": 1.0
+    },
+    "foot-line": {
+      "median": 80.80999755859375,
+      "p99": 224.656494140625,
+      "ripple_rms": 30.447593688964844,
+      "ripple_correlation": 1.0
+    },
+    "stem-edge": {
+      "median": 59.91499328613281,
+      "p99": 227.86798095703125,
+      "ripple_rms": 24.519676208496094,
+      "ripple_correlation": 1.0
+    }
+  },
+  "accepted-baseline": {
+    "head-left": {
+      "median": 135.08499145507812,
+      "p99": 235.05996704101562,
+      "ripple_rms": 20.601377487182617,
+      "ripple_correlation": 0.857510110669089
+    },
+    "head-upper": {
+      "median": 123.88999938964844,
+      "p99": 240.54519653320312,
+      "ripple_rms": 19.77184295654297,
+      "ripple_correlation": 0.9042104857382461
+    },
+    "head-right": {
+      "median": 123.02499389648438,
+      "p99": 231.30999755859375,
+      "ripple_rms": 20.845306396484375,
+      "ripple_correlation": 0.898872288113522
+    },
+    "flare-left": {
+      "median": 190.125,
+      "p99": 238.489990234375,
+      "ripple_rms": 25.45979118347168,
+      "ripple_correlation": 0.9383703831917051
+    },
+    "flare-line": {
+      "median": 111.56499481201172,
+      "p99": 208.3022918701172,
+      "ripple_rms": 24.28666877746582,
+      "ripple_correlation": 0.8685620720975927
+    },
+    "socket-lip": {
+      "median": 148.6199951171875,
+      "p99": 231.17999267578125,
+      "ripple_rms": 21.644800186157227,
+      "ripple_correlation": 0.9425671441891512
+    },
+    "foot-line": {
+      "median": 83.72999572753906,
+      "p99": 198.31739807128906,
+      "ripple_rms": 25.63690948486328,
+      "ripple_correlation": 0.9293596752543188
+    },
+    "stem-edge": {
+      "median": 68.15499877929688,
+      "p99": 193.2740020751953,
+      "ripple_rms": 17.9158878326416,
+      "ripple_correlation": 0.7347669745915113
+    }
+  },
+  "078-stem-normal-field": {
+    "head-left": {
+      "median": 135.08499145507812,
+      "p99": 235.05996704101562,
+      "ripple_rms": 20.601428985595703,
+      "ripple_correlation": 0.8575107355950385
+    },
+    "head-upper": {
+      "median": 123.88999938964844,
+      "p99": 240.54519653320312,
+      "ripple_rms": 19.77184295654297,
+      "ripple_correlation": 0.9042104857382461
+    },
+    "head-right": {
+      "median": 123.02499389648438,
+      "p99": 231.30999755859375,
+      "ripple_rms": 20.845306396484375,
+      "ripple_correlation": 0.898872288113522
+    },
+    "flare-left": {
+      "median": 190.125,
+      "p99": 238.489990234375,
+      "ripple_rms": 25.45979118347168,
+      "ripple_correlation": 0.9383703831917051
+    },
+    "flare-line": {
+      "median": 111.56499481201172,
+      "p99": 208.3022918701172,
+      "ripple_rms": 24.28666877746582,
+      "ripple_correlation": 0.8685620720975927
+    },
+    "socket-lip": {
+      "median": 148.6199951171875,
+      "p99": 231.17999267578125,
+      "ripple_rms": 21.644800186157227,
+      "ripple_correlation": 0.9425671441891512
+    },
+    "foot-line": {
+      "median": 83.72999572753906,
+      "p99": 198.31739807128906,
+      "ripple_rms": 25.63690948486328,
+      "ripple_correlation": 0.9293596752543188
+    },
+    "stem-edge": {
+      "median": 66.52999877929688,
+      "p99": 198.21949768066406,
+      "ripple_rms": 19.072172164916992,
+      "ripple_correlation": 0.791772715569177
+    }
+  }
+}

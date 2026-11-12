@@ -1,0 +1,32 @@
+{
+  "Selected black 2": {
+    "mae": 0.0,
+    "fine_correlation": 1.0,
+    "luma_p99": 200.8768
+  },
+  "baseline": {
+    "mae": 10.828299319727892,
+    "fine_correlation": 0.7492200609802355,
+    "luma_p99": 180.54999999999998
+  },
+  "Fine varnish relief": {
+    "mae": 11.092517006802721,
+    "fine_correlation": 0.7302040888654349,
+    "luma_p99": 182.3676
+  },
+  "Walnut grain relief": {
+    "mae": 12.989115646258503,
+    "fine_correlation": 0.7348538009102221,
+    "luma_p99": 200.24479999999997
+  },
+  "Measured fine varnish slopes": {
+    "mae": 19.367891156462584,
+    "fine_correlation": 0.26445917751915765,
+    "luma_p99": 183.73239999999998
+  },
+  "all-relief-off": {
+    "mae": 22.634285714285713,
+    "fine_correlation": 0.30212351664307846,
+    "luma_p99": 214.29
+  }
+}

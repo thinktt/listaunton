@@ -1,0 +1,59 @@
+{
+  "config": {
+    "source": "history/pawn-mission-013/pawn-rebuilt.blend",
+    "source_sha256": "ffaf0a40605a4d3866d33d1e94d229577a079aa377946b68447f8209f5fd7b27",
+    "measurement": "076-stem-relief-isolation",
+    "samples": 512,
+    "crop": [
+      360,
+      595,
+      600,
+      805
+    ]
+  },
+  "layer_strengths": {
+    "Fine varnish relief": 0.1599999964237213,
+    "Walnut grain relief": 0.46000000834465027,
+    "Measured fine varnish slopes": 1.0
+  },
+  "poses": {
+    "baseline": {},
+    "Fine varnish relief": {
+      "Fine varnish relief": 0
+    },
+    "Walnut grain relief": {
+      "Walnut grain relief": 0
+    },
+    "Measured fine varnish slopes": {
+      "Measured fine varnish slopes": 0
+    },
+    "all-relief-off": {
+      "Fine varnish relief": 0,
+      "Walnut grain relief": 0,
+      "Measured fine varnish slopes": 0
+    }
+  },
+  "renders": {
+    "baseline": {
+      "file": "00.png",
+      "sha256": "c70f6c26ac0d69d584555837f7973d4042ab862908ef09a7c48604c6ae26269d"
+    },
+    "Fine varnish relief": {
+      "file": "01.png",
+      "sha256": "b0aed57a9782b8787a5dd46e674a2425d082d5f4f88e0a1af2ebfa941044d465"
+    },
+    "Walnut grain relief": {
+      "file": "02.png",
+      "sha256": "506517675dec739bbf5d79bfad3b6144224cd5f5eb2eefc186839cfb089ae5d9"
+    },
+    "Measured fine varnish slopes": {
+      "file": "03.png",
+      "sha256": "8561960896e356b7ad42a6029bb2291e98ee5eeee6f45f195ddf9427e8e243a5"
+    },
+    "all-relief-off": {
+      "file": "04.png",
+      "sha256": "e09d2e3dcebff47466616603accc266b6cf7d106d2bfc742bf44cc02a79c1383"
+    }
+  },
+  "full_diagnostic_record_sha256": "148e96cdf852301dc89c0d831dc3e8831afad88da9201f79b25a50c4cdc170cb"
+}

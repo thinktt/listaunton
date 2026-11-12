@@ -403,3 +403,35 @@ isolation studies, accepted/rejected trials, reproduction and saved-model
 checks. The mission remains incomplete. Next isolate the older bump and
 fine-normal layers at the stem rim before another material or curvature
 change, preserving the accepted lighting and head/base improvements.
+
+## Checkpoint 014 · 2026-11-12
+
+A broader local normal-field and finish fit improves the stem's reflected
+grain. The geometry, pigment, 54-degree camera, all 44 lights and the rest
+of the surface remain unchanged. Removing relief layers worsened the
+result; a six-parameter reflector adjustment produced too little benefit
+and was rejected.
+
+| Metric | Checkpoint 013 | Checkpoint 014 |
+| --- | ---: | ---: |
+| Selected silhouette IoU | 96.81% | 96.81% |
+| Interior form | 91 | 91 |
+| Wood color | 93 | 93 |
+| Grain and surface | 94 | 94 |
+| Lighting | 92 | 92 |
+| Working mean | 93.36% | 93.36% |
+
+Stem fine-pattern correlation improves from 0.735 to 0.830, with contrast
+20.00 against the selected reference's 24.52. Collar/stem RGB error falls
+from 2.325 to 2.303; native original RGB error stays 16.61 at the reported
+precision. Original black/white IoU remain 98.499%/98.135%. Only 0.241% of
+finish-map pixels and 0.286% of normal-map pixels change, within the stem
+UV band 0.49-0.65.
+
+The whole-piece visual scores remain estimates, with a holistic range of
+90-95%. The reflection still has an overly soft, fragmented core and excess
+light immediately under the collar. See the [checkpoint evidence](pawn-mission/iteration-014/README.md)
+for actual layer ablations, rejected lighting changes, reproduction and
+saved-model checks. The mission remains incomplete. Next examine the
+larger collar residual at reference x=437-469, y=606-638, while preserving
+the accepted stem, head and base refinements.

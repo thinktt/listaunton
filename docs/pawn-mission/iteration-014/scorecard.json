@@ -1,0 +1,59 @@
+[
+  {
+    "trial": "077-stem-reflector-fit",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "161940ef96cd5ecd7ece343e35b0f0007fc2beddb6d5a5e7c5767520e93821b2",
+    "render_sha256": "b6d9f90d92e8a67842cc8098c6dbd1583a4d7a6d08ccee0e2a8ff2282711b4a7",
+    "decision": "Rejected: only a 1.3% local squared-error gain; the visible mismatch remains and the new fixture settings are not needed for the stronger surface result."
+  },
+  {
+    "trial": "078-stem-normal-field",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "8d3799ed1d7c2c134651129c19ffa43ff0420e295602358635f66390e76b5386",
+    "render_sha256": "7c82ed50a5be5417500d3e78fe6c1ca59ca20361caec304a1cf43b2fdbaf1411",
+    "decision": "Useful broader normal-field correction; superseded by 079 finish refinement."
+  },
+  {
+    "trial": "079-stem-broad-finish",
+    "scores": {
+      "silhouette": 96.81073086773473,
+      "interior_form": 91,
+      "wood_color": 93,
+      "grain": 94,
+      "lighting": 92
+    },
+    "working_mean": 93.36214617354695,
+    "iou": {
+      "selected": 0.9681073086773474,
+      "original_black": 0.9849918568454038,
+      "original_white": 0.9813478233971914
+    },
+    "source_sha256": "a6546d7baa949447440c735dd602cc310ac78e3e84283d62eab7fd168c3c8b3c",
+    "render_sha256": "4e58b6f3565c7f08f34098304ab980329b6bb9c923f612d0a6cfc0259d7e2e21",
+    "decision": "Accepted after saved-model scope and independent replay checks. The stem normal/finish field improves fine reflection shape, with the whole-piece ratings held because visible residuals remain."
+  }
+]

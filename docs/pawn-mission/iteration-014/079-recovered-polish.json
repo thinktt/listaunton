@@ -1,0 +1,122 @@
+{
+  "config": {
+    "measurement": "stem-broad-finish-078",
+    "geometry_measurement": "pigment-060",
+    "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+    "roughness_source": "assets/pawn/pawn-varnish-v7.png",
+    "roughness_sha256": "c75eabaf8a71cb58f5246370e923d84021cc0821b6178ee38dc91dd21b0465eb",
+    "prior_rough_range": [
+      0.3,
+      2.4
+    ],
+    "prior_polish_range": [
+      0.38,
+      1.85
+    ],
+    "rough_range": [
+      0.3,
+      2.4
+    ],
+    "polish_range": [
+      0.38,
+      1.85
+    ],
+    "texture": "assets/pawn/pawn-varnish-v8.png",
+    "prior_255": 4,
+    "noise_prior": 0.8,
+    "update": 0.9,
+    "broad_fraction": 1,
+    "uv_focus": [
+      0.49,
+      0.515,
+      0.625,
+      0.65
+    ]
+  },
+  "calibration": {
+    "config": {
+      "source": "build/pawn-mission/078-stem-normal-field/pawn.blend",
+      "source_sha256": "8d3799ed1d7c2c134651129c19ffa43ff0420e295602358635f66390e76b5386",
+      "measurement": "stem-broad-finish-078",
+      "samples": 512,
+      "crop": [
+        376,
+        600,
+        442,
+        692
+      ],
+      "uv_focus": [
+        0.49,
+        0.515,
+        0.625,
+        0.65
+      ],
+      "rough_scales": [
+        0.35,
+        1,
+        2.4
+      ],
+      "polish_scales": [
+        0.38,
+        1,
+        1.85
+      ]
+    },
+    "poses": {
+      "response-0-0": {
+        "rough": 0.35,
+        "polish": 0.38,
+        "sha256": "c6ad0dc8c9bbb9f2606e23d6c52d04fd6fc6e2844c1a24f899ef3b3b94b20beb"
+      },
+      "response-0-1": {
+        "rough": 0.35,
+        "polish": 1,
+        "sha256": "936f635521603d5656632601a2821153fa064e66522af7cb7ec1f00fe89bb3b2"
+      },
+      "response-0-2": {
+        "rough": 0.35,
+        "polish": 1.85,
+        "sha256": "ea0586e819bfd19adfcbafce115ccc519b378e20be211bf097d0d45abff41347"
+      },
+      "response-1-0": {
+        "rough": 1,
+        "polish": 0.38,
+        "sha256": "d4fbbfe2ccbff8a616ca5c5930297fdc46cd947c961beee02648f56d213713e0"
+      },
+      "flat": {
+        "rough": 1,
+        "polish": 1,
+        "sha256": "ca3fd3595c5ef76cc05d3fc8a7ad052dfb3b140a2138fce9df40499c8d63869c"
+      },
+      "response-1-2": {
+        "rough": 1,
+        "polish": 1.85,
+        "sha256": "52f77ae9ae25bb28fc01ea02bd70843ecc8f6d874f2143205fa045a6c3c82e9a"
+      },
+      "response-2-0": {
+        "rough": 2.4,
+        "polish": 0.38,
+        "sha256": "0eee55e3f54cb607011679696a45bb90ae120c5843dfb7110ede0c6ef66cc2dd"
+      },
+      "response-2-1": {
+        "rough": 2.4,
+        "polish": 1,
+        "sha256": "167b56ab06976880a62ef02461d498cd72caae20e00f078f970aff4eb6c9d94f"
+      },
+      "response-2-2": {
+        "rough": 2.4,
+        "polish": 1.85,
+        "sha256": "606cacd6b42431d00822b80d5a1d67a5b3f5892f3335d1e74bef6ec85b82bf75"
+      }
+    },
+    "independent_sha256": "be52f69a545cdf0db0ece4615941ab4f569f80f7619af27decb797d3d7d15035",
+    "method": "Actual fixed-view Cycles responses for nine combinations of roughness and reflectance on wood and coat. A second seed measures where noise competes with the material signal."
+  },
+  "sha256": "c9d0b3e943348b483f80e54d8e45546352a6418beb7065113486128611751ab2",
+  "confident_pixels": 159,
+  "polish_range_fitted": [
+    0.22415539622306824,
+    2.1764297485351562
+  ],
+  "fraction_of_uv_with_polish_change_over_10pct": 0.015119791030883789
+}
