@@ -12,6 +12,7 @@ an accepted candidate remains an explicit separate operation.
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import sys
@@ -77,6 +78,44 @@ def apply_lip_roll(before: np.ndarray, peak_delta: float) -> np.ndarray:
     return after
 
 
+def compose_validation_config(
+    settings: dict, before: np.ndarray, after: np.ndarray, variant: str
+) -> dict:
+    """Extend the current recorded meridian without flattening its history."""
+    feature = settings.get("side_shape_study")
+    if not feature or "config" not in feature:
+        raise ValueError("This study needs a recorded side-shape baseline")
+    if not np.array_equal(before[10:], after[10:]):
+        raise ValueError("foot-lip study escaped its declared rings")
+    config = copy.deepcopy(feature["config"])
+    radii = config.setdefault("radii", {})
+    offsets = config.setdefault("z_offsets", {})
+    changed = []
+    for ring in range(len(after)):
+        before_radius = radius(before, ring)
+        after_radius = radius(after, ring)
+        if abs(after_radius - before_radius) > 1e-8:
+            radii[str(ring)] = after_radius
+            changed.append(ring)
+        z_delta = float(after[ring, 0, 2] - before[ring, 0, 2])
+        if abs(z_delta) > 1e-8:
+            offsets[str(ring)] = float(offsets.get(str(ring), 0.0)) + z_delta
+            changed.append(ring)
+    if sorted(set(changed)) != sorted(LIP_WEIGHTS):
+        raise ValueError(f"unexpected foot-lip control scope: {sorted(set(changed))}")
+    config["variant"] = variant
+    config["intent"] = {
+        **config.get("intent", {}),
+        "foot_lip_roll": {
+            "changed_rings": sorted(LIP_WEIGHTS),
+            "peak_delta": None,
+            "description": "Broaden only the lowest foot into a flatter supported rim; all rings 12+ are bit-identical.",
+            "composed_from_variant": feature["config"].get("variant"),
+        },
+    }
+    return config
+
+
 def render_views(scene: bpy.types.Scene, output: Path, samples: int) -> None:
     """Render a fixed-camera geometry diagnostic plus a shared-scale side view."""
     configure_cycles(scene, samples)
@@ -132,15 +171,8 @@ def main() -> None:
     after = apply_lip_roll(before, args.peak_delta)
 
     settings = json.loads(scene["mission_material_config"])
-    config = combined_validation_config(settings, before, after, args.variant)
-    config["intent"] = {
-        **config.get("intent", {}),
-        "foot_lip_roll": {
-            "changed_rings": sorted(LIP_WEIGHTS),
-            "peak_delta": args.peak_delta,
-            "description": "Broaden only the lowest foot into a flatter supported rim; all rings 12+ are bit-identical.",
-        },
-    }
+    config = compose_validation_config(settings, before, after, args.variant)
+    config["intent"]["foot_lip_roll"]["peak_delta"] = args.peak_delta
     print("FOOT_LIP_STAGE rebuild_receivers", flush=True)
     partition = replace_meridian(scene, control, settings, after, preserve_face_assignments=True)
     settings["side_shape_study"] = {
