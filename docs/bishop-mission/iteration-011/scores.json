@@ -1,0 +1,216 @@
+{
+  "status": "Research checkpoint; no model promoted; goal remains active.",
+  "accepted_checkpoint": 10,
+  "accepted_model_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "render_sha256": "010891e67d4d06b51d75427e05e44a93788d8f32deb213c88fca880f9f3e97f9",
+  "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+  "accepted_scores": {
+    "scores_percent": {
+      "silhouette": 96.10946013611408,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 76
+    },
+    "mean_percent": 83.42189202722281,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "original_white_iou": 0.9778635964437387,
+    "original_black_iou": 0.9666099115524281,
+    "silhouette_is_measured_other_scores_are_visual_estimates": true,
+    "accepted_model_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+    "render_sha256": "010891e67d4d06b51d75427e05e44a93788d8f32deb213c88fca880f9f3e97f9",
+    "texture_sha256": "8f46f0b3677b58372ac54425291721ca5ffe2577ca2d89f2880b7c9f561d938f",
+    "starting_model_sha256": "7308af7e5f82b8747d2db77c8c50d0cbae94b68585b687e74804867ce6ed12fa",
+    "status": "Accepted small socket-lighting improvement; full reconstruction remains incomplete."
+  },
+  "full_candidates": [
+    {
+      "trial": 89,
+      "variant": "089-coarser-pores",
+      "decision": "Rejected for promotion",
+      "reason": "Pore slopes weaken and the finish becomes smoother; no better match.",
+      "scores_percent": {
+        "interior": 84,
+        "color": 84,
+        "texture": 76,
+        "lighting": 75,
+        "silhouette": 96.10972184363037
+      },
+      "mean_percent": 83.02194436872608,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "measured_overlap": {
+        "selected": {
+          "silhouette_iou": 0.9610972184363037,
+          "legacy_raw_model_mask_iou": 0.9610972184363037
+        },
+        "original_white": {
+          "silhouette_iou": 0.9778604556036117,
+          "legacy_raw_model_mask_iou": 0.9778604556036117
+        },
+        "original_black": {
+          "silhouette_iou": 0.9666185498039664,
+          "legacy_raw_model_mask_iou": 0.9666185498039664
+        }
+      },
+      "material_scope_passed": true,
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "model_sha256": "86667e71ba61fd27a1f43bff63233cf61c2b7e4c261d8bcb112c0aab368746a1",
+      "render_sha256": "8508ae01de08bf6a5215ee0b93b1aa461b4acc0cd85539d19bb5cdff240f8d24"
+    },
+    {
+      "trial": 90,
+      "variant": "090-coarse-relief-normalized",
+      "decision": "Rejected for promotion",
+      "reason": "Coarse pebbled surface and extra glints worsen the reference finish.",
+      "scores_percent": {
+        "interior": 84,
+        "color": 83,
+        "texture": 76,
+        "lighting": 74,
+        "silhouette": 96.10972184363037
+      },
+      "mean_percent": 82.62194436872608,
+      "holistic_range_percent": [
+        74,
+        83
+      ],
+      "measured_overlap": {
+        "selected": {
+          "silhouette_iou": 0.9610972184363037,
+          "legacy_raw_model_mask_iou": 0.9610972184363037
+        },
+        "original_white": {
+          "silhouette_iou": 0.9778604556036117,
+          "legacy_raw_model_mask_iou": 0.9778604556036117
+        },
+        "original_black": {
+          "silhouette_iou": 0.9666185498039664,
+          "legacy_raw_model_mask_iou": 0.9666185498039664
+        }
+      },
+      "material_scope_passed": true,
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "model_sha256": "97af8beedf7a8ce447e44b841ce5a2ff9221bcfd5060ef351019d45978ec9b71",
+      "render_sha256": "aa0ffe39c928a3332dffb7fd00530b5c5e40746ba7e72a7e90eca120171729e6"
+    },
+    {
+      "trial": 91,
+      "variant": "091-registered-pigment-relief",
+      "decision": "Rejected for promotion",
+      "reason": "Relief uses the matching pigment atlas, but no convincing visual improvement is established.",
+      "scores_percent": {
+        "interior": 84,
+        "color": 84,
+        "texture": 77,
+        "lighting": 76,
+        "silhouette": 96.10972184363037
+      },
+      "mean_percent": 83.42194436872607,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "measured_overlap": {
+        "selected": {
+          "silhouette_iou": 0.9610972184363037,
+          "legacy_raw_model_mask_iou": 0.9610972184363037
+        },
+        "original_white": {
+          "silhouette_iou": 0.9778604556036117,
+          "legacy_raw_model_mask_iou": 0.9778604556036117
+        },
+        "original_black": {
+          "silhouette_iou": 0.9666185498039664,
+          "legacy_raw_model_mask_iou": 0.9666185498039664
+        }
+      },
+      "material_scope_passed": true,
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "model_sha256": "42357dc06929635a9f6180463d7db1c02b4aeb8c72af3234788f3c99c69adb3c",
+      "render_sha256": "2ae5bbd5b5d1fe773bdf6f8d893041b09ab9b1045476741f4bcfd75cdfb66754"
+    },
+    {
+      "trial": 92,
+      "variant": "092-registered-grain-relief",
+      "decision": "Rejected for promotion",
+      "reason": "The reference varnish pattern remains absent; foot and socket regress.",
+      "scores_percent": {
+        "interior": 84,
+        "color": 84,
+        "texture": 77,
+        "lighting": 75,
+        "silhouette": 96.10972184363037
+      },
+      "mean_percent": 83.22194436872607,
+      "holistic_range_percent": [
+        75,
+        85
+      ],
+      "measured_overlap": {
+        "selected": {
+          "silhouette_iou": 0.9610972184363037,
+          "legacy_raw_model_mask_iou": 0.9610972184363037
+        },
+        "original_white": {
+          "silhouette_iou": 0.9778604556036117,
+          "legacy_raw_model_mask_iou": 0.9778604556036117
+        },
+        "original_black": {
+          "silhouette_iou": 0.9666185498039664,
+          "legacy_raw_model_mask_iou": 0.9666185498039664
+        }
+      },
+      "material_scope_passed": true,
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "model_sha256": "470f1033f8e83c6acfaf578aa9a76fb9dc78365b7affc857109b7fb6344d009f",
+      "render_sha256": "b0590e4f793cc257ffea71c475c24eea9453e6315a316070474136fce5525126"
+    },
+    {
+      "trial": 93,
+      "variant": "093-strong-registered-grain",
+      "decision": "Rejected for promotion",
+      "reason": "Overemphasized pigment relief embosses the foot and worsens the socket.",
+      "scores_percent": {
+        "interior": 84,
+        "color": 83,
+        "texture": 76,
+        "lighting": 74,
+        "silhouette": 96.10972184363037
+      },
+      "mean_percent": 82.62194436872608,
+      "holistic_range_percent": [
+        74,
+        83
+      ],
+      "measured_overlap": {
+        "selected": {
+          "silhouette_iou": 0.9610972184363037,
+          "legacy_raw_model_mask_iou": 0.9610972184363037
+        },
+        "original_white": {
+          "silhouette_iou": 0.9778604556036117,
+          "legacy_raw_model_mask_iou": 0.9778604556036117
+        },
+        "original_black": {
+          "silhouette_iou": 0.9666185498039664,
+          "legacy_raw_model_mask_iou": 0.9666185498039664
+        }
+      },
+      "material_scope_passed": true,
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "model_sha256": "e8c50fa88354f7e114ad0ea26af7727c50771343deb07e75b02cbf0f75506eaf",
+      "render_sha256": "a90d80aa343bdf8552a7bd68fbffaa8594b61ddda6cab53b499d9081d184ea1c"
+    }
+  ],
+  "cropped_diagnostics": "Four finish isolations plus four emitter studies, with a control; no whole-model scores assigned.",
+  "score_convention": "Silhouette IoU is measured; interior/color/texture/lighting are subjective. Same registration and mission mask. Screening renders: 256 fixed samples; accepted beauty: 512. No rating gain is inferred from a small numerical change.",
+  "python_sources_parsed": true,
+  "model_replacement": false,
+  "quota_monitoring": false
+}

@@ -1,0 +1,31 @@
+{
+  "config": {
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "variant": "089-coarser-pores",
+    "samples": 256,
+    "hypothesis": "Larger pore features reduce the too-fine reflective speckle while preserving the accepted wood pigment and lights.",
+    "inputs": [
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Fine wood pores",
+        "input": "Scale",
+        "value": 60
+      }
+    ]
+  },
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "saved_model_sha256": "86667e71ba61fd27a1f43bff63233cf61c2b7e4c261d8bcb112c0aab368746a1",
+  "render_sha256": "8508ae01de08bf6a5215ee0b93b1aa461b4acc0cd85539d19bb5cdff240f8d24",
+  "reopened_before_render": true,
+  "changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Fine wood pores",
+      "input": "Scale",
+      "value": 60,
+      "before": 180.0,
+      "effective": 60.0
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "model": "build/bishop-mission/091-registered-pigment-relief/bishop.blend",
+  "model_sha256": "42357dc06929635a9f6180463d7db1c02b4aeb8c72af3234788f3c99c69adb3c",
+  "config": "scripts/bishop/material-091.json",
+  "config_sha256": "fa4f6a37749fe0ea271eb49ec20ccacb2a9695baf29ca436f676f5c18ec909ee",
+  "declared_changes": [],
+  "declared_link_changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "from_node": "Baked boxwood pigment",
+      "from_socket": "Color",
+      "to_node": "Pigment relief",
+      "to_socket": "Color",
+      "expected_from": [
+        "Visible and hidden wood",
+        "Color"
+      ]
+    }
+  ],
+  "only_declared_material_inputs_and_links_changed": true,
+  "geometry_uvs_camera_lights_world_image_pixels_and_undeclared_material_state_preserved": true,
+  "render_path_preserved": true,
+  "reopened_audit": true
+}

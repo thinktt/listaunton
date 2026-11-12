@@ -1,0 +1,65 @@
+{
+  "config": {
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "variant": "090-coarse-relief-normalized",
+    "samples": 256,
+    "hypothesis": "Enlarge the pore features threefold while maintaining their approximate normal amplitude and preserving the pigment-relief coefficient: 0.009*(1-0.27) = 0.01386*(1-0.525974025974026).",
+    "inputs": [
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Fine wood pores",
+        "input": "Scale",
+        "expected_before": 180,
+        "value": 60
+      },
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Wood micro relief",
+        "input": "Distance",
+        "expected_before": 0.009,
+        "value": 0.01386
+      },
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Subtle pigment and pores",
+        "input": "Fac",
+        "expected_before": 0.27,
+        "value": 0.525974025974026
+      }
+    ]
+  },
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "saved_model_sha256": "97af8beedf7a8ce447e44b841ce5a2ff9221bcfd5060ef351019d45978ec9b71",
+  "render_sha256": "aa0ffe39c928a3332dffb7fd00530b5c5e40746ba7e72a7e90eca120171729e6",
+  "reopened_before_render": true,
+  "changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Fine wood pores",
+      "input": "Scale",
+      "expected_before": 180,
+      "value": 60,
+      "before": 180.0,
+      "effective": 60.0
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Wood micro relief",
+      "input": "Distance",
+      "expected_before": 0.009,
+      "value": 0.01386,
+      "before": 0.008999999612569809,
+      "effective": 0.013860000297427177
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Subtle pigment and pores",
+      "input": "Fac",
+      "expected_before": 0.27,
+      "value": 0.525974025974026,
+      "before": 0.27000001072883606,
+      "effective": 0.5259740352630615
+    }
+  ]
+}

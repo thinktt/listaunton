@@ -1,0 +1,14 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "variant": "089-coarser-pores",
+  "samples": 256,
+  "hypothesis": "Larger pore features reduce the too-fine reflective speckle while preserving the accepted wood pigment and lights.",
+  "inputs": [
+    {
+      "material": "Bishop — inferred boxwood pigment and varnish.001",
+      "node": "Fine wood pores",
+      "input": "Scale",
+      "value": 60
+    }
+  ]
+}

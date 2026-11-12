@@ -1,0 +1,11 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "variant": "090-coarse-relief-normalized",
+  "samples": 256,
+  "hypothesis": "Enlarge the pore features threefold while maintaining their approximate normal amplitude and preserving the pigment-relief coefficient: 0.009*(1-0.27) = 0.01386*(1-0.525974025974026).",
+  "inputs": [
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Fine wood pores", "input": "Scale", "expected_before": 180, "value": 60},
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Wood micro relief", "input": "Distance", "expected_before": 0.009, "value": 0.01386},
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Subtle pigment and pores", "input": "Fac", "expected_before": 0.27, "value": 0.525974025974026}
+  ]
+}

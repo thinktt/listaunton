@@ -1,0 +1,35 @@
+{
+  "note": "Fixed crops, no realignment or grading. These are image diagnostics, not fidelity scores.",
+  "renders": {
+    "Reference": {
+      "path": "assets/bishop/reference.png",
+      "crop_rgb_mae": 0.0,
+      "pixels": 39150
+    },
+    "control": {
+      "path": "build/bishop-mission/087-socket-finish-probe/control.png",
+      "crop_rgb_mae": 8.189791400595999,
+      "pixels": 39150
+    },
+    "radius-012": {
+      "path": "build/bishop-mission/088-socket-emitter-probe/radius-012.png",
+      "crop_rgb_mae": 8.118271604938272,
+      "pixels": 39150
+    },
+    "radius-024": {
+      "path": "build/bishop-mission/088-socket-emitter-probe/radius-024.png",
+      "crop_rgb_mae": 8.128037462750106,
+      "pixels": 39150
+    },
+    "radius-012-cone14": {
+      "path": "build/bishop-mission/088-socket-emitter-probe/radius-012-cone14.png",
+      "crop_rgb_mae": 8.0085312899106,
+      "pixels": 39150
+    },
+    "radius-024-cone14": {
+      "path": "build/bishop-mission/088-socket-emitter-probe/radius-024-cone14.png",
+      "crop_rgb_mae": 8.121328224776502,
+      "pixels": 39150
+    }
+  }
+}

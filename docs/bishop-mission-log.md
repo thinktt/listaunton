@@ -301,3 +301,32 @@ The mission remains incomplete. Next inspect socket roughness/normal response
 to broaden and smooth the crescent while preserving this result. Fine grain,
 collar/base reflections, slit-edge finish and the side/rear pigment boundary
 remain unresolved. No quota monitoring was performed.
+
+## Iteration 011 — finish studies without replacing checkpoint 010
+
+The owner resumed work on November 12, 2026 and confirmed that no pause was
+requested. The goal is active. Four cropped material isolations and four emitter
+studies investigate the thin socket reflection; five saved/reopened full trials
+investigate pore scale and pigment-related relief. All thirteen experiments are
+rejected for promotion. The accepted model, review and preview remain checkpoint
+010, now preserved under `history/bishop-mission-010` as well.
+
+Removing or smoothing bump does not recover the broad socket band. Wider beams
+produce a false upper arc, despite slightly better crop error. Coarser pores
+either smooth the finish or make it pebbled. Driving relief from the refined
+color atlas makes little difference at modest strength; stronger settings turn
+pigment markings into exaggerated raised texture, particularly at the foot.
+The matching atlas is therefore a useful investigation path, not an accepted
+surface solution by itself.
+
+Accepted scores stay 96.11 / 84 / 84 / 77 / 76, mean 83.42%, holistic 75–85%.
+Every full trial has a five-category assessment, fixed original/reference
+comparisons and an independent reopened material-scope audit. See
+[`iteration-011/assessment.md`](bishop-mission/iteration-011/assessment.md).
+
+Next investigate confined socket illumination with the measured normal field,
+potentially using an exact derived socket light receiver with full preservation
+and exporter checks. Texture needs relief separated from broad pigment and
+illumination; simply multiplying color-derived bump is not sufficient. The
+side/rear material boundary remains unresolved. This is an incomplete research
+checkpoint, not a pause or a completed reconstruction.

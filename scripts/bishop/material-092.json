@@ -1,0 +1,13 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "variant": "092-registered-grain-relief",
+  "samples": 256,
+  "hypothesis": "Strengthen relief aligned to the refined pigment grain fourfold while retaining the accepted fine-pore height coefficient (0.009*0.27).",
+  "inputs": [
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Wood micro relief", "input": "Distance", "expected_before": 0.009, "value": 0.02871},
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Subtle pigment and pores", "input": "Fac", "expected_before": 0.27, "value": 0.084639498432602}
+  ],
+  "links": [
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "from_node": "Baked boxwood pigment", "from_socket": "Color", "to_node": "Pigment relief", "to_socket": "Color", "expected_from": ["Visible and hidden wood", "Color"]}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "variant": "091-registered-pigment-relief",
+  "samples": 256,
+  "hypothesis": "Use the accepted refined pigment atlas to drive pigment-related relief instead of the earlier projected material, so visible grain and its surface response share the same markings.",
+  "inputs": [],
+  "links": [
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "from_node": "Baked boxwood pigment", "from_socket": "Color", "to_node": "Pigment relief", "to_socket": "Color", "expected_from": ["Visible and hidden wood", "Color"]}
+  ]
+}

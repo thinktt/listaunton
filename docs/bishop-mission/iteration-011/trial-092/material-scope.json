@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "model": "build/bishop-mission/092-registered-grain-relief/bishop.blend",
+  "model_sha256": "470f1033f8e83c6acfaf578aa9a76fb9dc78365b7affc857109b7fb6344d009f",
+  "config": "scripts/bishop/material-092.json",
+  "config_sha256": "e9c3bf9aa5a3cbd59227fbd62d888210a65966a1b9f93e6f038b90f4d6e92078",
+  "declared_changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Wood micro relief",
+      "input": "Distance",
+      "expected_before": 0.009,
+      "value": 0.02871,
+      "before": 0.008999999612569809,
+      "expected_saved_value": 0.028710000216960907
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Subtle pigment and pores",
+      "input": "Fac",
+      "expected_before": 0.27,
+      "value": 0.084639498432602,
+      "before": 0.27000001072883606,
+      "expected_saved_value": 0.08463949710130692
+    }
+  ],
+  "declared_link_changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "from_node": "Baked boxwood pigment",
+      "from_socket": "Color",
+      "to_node": "Pigment relief",
+      "to_socket": "Color",
+      "expected_from": [
+        "Visible and hidden wood",
+        "Color"
+      ]
+    }
+  ],
+  "only_declared_material_inputs_and_links_changed": true,
+  "geometry_uvs_camera_lights_world_image_pixels_and_undeclared_material_state_preserved": true,
+  "render_path_preserved": true,
+  "reopened_audit": true
+}

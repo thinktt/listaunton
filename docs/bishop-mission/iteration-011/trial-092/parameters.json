@@ -1,0 +1,62 @@
+{
+  "config": {
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "variant": "092-registered-grain-relief",
+    "samples": 256,
+    "hypothesis": "Strengthen relief aligned to the refined pigment grain fourfold while retaining the accepted fine-pore height coefficient (0.009*0.27).",
+    "inputs": [
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Wood micro relief",
+        "input": "Distance",
+        "expected_before": 0.009,
+        "value": 0.02871
+      },
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Subtle pigment and pores",
+        "input": "Fac",
+        "expected_before": 0.27,
+        "value": 0.084639498432602
+      }
+    ],
+    "links": [
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "from_node": "Baked boxwood pigment",
+        "from_socket": "Color",
+        "to_node": "Pigment relief",
+        "to_socket": "Color",
+        "expected_from": [
+          "Visible and hidden wood",
+          "Color"
+        ]
+      }
+    ]
+  },
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "saved_model_sha256": "470f1033f8e83c6acfaf578aa9a76fb9dc78365b7affc857109b7fb6344d009f",
+  "render_sha256": "b0590e4f793cc257ffea71c475c24eea9453e6315a316070474136fce5525126",
+  "reopened_before_render": true,
+  "changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Wood micro relief",
+      "input": "Distance",
+      "expected_before": 0.009,
+      "value": 0.02871,
+      "before": 0.008999999612569809,
+      "effective": 0.028710000216960907
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Subtle pigment and pores",
+      "input": "Fac",
+      "expected_before": 0.27,
+      "value": 0.084639498432602,
+      "before": 0.27000001072883606,
+      "effective": 0.08463949710130692
+    }
+  ]
+}

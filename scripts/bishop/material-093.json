@@ -1,0 +1,13 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "variant": "093-strong-registered-grain",
+  "samples": 256,
+  "hypothesis": "Bracket the still-weak registered grain relief at sixteenfold pigment height, retaining the accepted pore coefficient. Test whether it broadens and breaks the too-small glints in a reference-like pattern.",
+  "inputs": [
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Wood micro relief", "input": "Distance", "expected_before": 0.009, "value": 0.10755},
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "node": "Subtle pigment and pores", "input": "Fac", "expected_before": 0.27, "value": 0.022594142259414}
+  ],
+  "links": [
+    {"material": "Bishop — inferred boxwood pigment and varnish.001", "from_node": "Baked boxwood pigment", "from_socket": "Color", "to_node": "Pigment relief", "to_socket": "Color", "expected_from": ["Visible and hidden wood", "Color"]}
+  ]
+}

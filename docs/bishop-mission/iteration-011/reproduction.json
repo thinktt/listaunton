@@ -1,0 +1,25 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "software": "Blender 5.2.2 LTS, Cycles/OptiX; Python with Pillow and NumPy.",
+  "probes": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/probe_socket_finish.py -- --source history/bishop-mission-010/bishop-rebuilt.blend --samples 256",
+    "blender --background --python-exit-code 1 --python scripts/bishop/probe_socket_emitters.py -- --samples 256"
+  ],
+  "probe_note": "The finish probe originally opened the byte-identical current checkpoint-010 model; use its archive for subsequent reproduction.",
+  "full_trials": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/material_input_trial.py -- scripts/bishop/material-089.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_material_input_trial.py -- --config scripts/bishop/material-089.json --model build/bishop-mission/089-coarser-pores/bishop.blend --out build/bishop-mission/089-coarser-pores/material-scope.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/material_input_trial.py -- scripts/bishop/material-090.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_material_input_trial.py -- --config scripts/bishop/material-090.json --model build/bishop-mission/090-coarse-relief-normalized/bishop.blend --out build/bishop-mission/090-coarse-relief-normalized/material-scope.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/material_input_trial.py -- scripts/bishop/material-091.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_material_input_trial.py -- --config scripts/bishop/material-091.json --model build/bishop-mission/091-registered-pigment-relief/bishop.blend --out build/bishop-mission/091-registered-pigment-relief/material-scope.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/material_input_trial.py -- scripts/bishop/material-092.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_material_input_trial.py -- --config scripts/bishop/material-092.json --model build/bishop-mission/092-registered-grain-relief/bishop.blend --out build/bishop-mission/092-registered-grain-relief/material-scope.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/material_input_trial.py -- scripts/bishop/material-093.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_material_input_trial.py -- --config scripts/bishop/material-093.json --model build/bishop-mission/093-strong-registered-grain/bishop.blend --out build/bishop-mission/093-strong-registered-grain/material-scope.json"
+  ],
+  "comparison": "Use mission_compare.py, material_statistics.py, compare_socket_study.py and compare_finish_details.py with the recorded trial paths. No image fitting, color grading or reference modification.",
+  "off_axis_diagnostic": "blender --background --python-exit-code 1 --python scripts/bishop/render_diagnostics.py -- --model build/bishop-mission/093-strong-registered-grain/bishop.blend --out build/bishop-mission/093-strong-registered-grain/views",
+  "promotion": "None. Preserve checkpoint 010. No viewer or accepted render is rebuilt from these rejected experiments."
+}

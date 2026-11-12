@@ -148,6 +148,16 @@ comparison. The masks differ by zero pixels on checkpoints 009 and 010.
 Follow the normal geometry/export, side/neutral render, review and preview
 synchronization pipeline after any accepted lighting change.
 
+Iteration 011 is a finish study; checkpoint 010 remains accepted. Its assessment
+records rejected socket beam/roughness and grain-relief experiments. Use
+`probe_socket_finish.py` and `probe_socket_emitters.py` only for unsaved cropped
+diagnostics. `material_input_trial.py` saves and reopens a declared scalar/link
+experiment in `build/bishop-mission`; `validate_material_input_trial.py` audits
+its saved scope against the archived source, including packed pixels, geometry,
+UVs, camera, lights and render-path preservation. The comparison helpers keep
+the original registration and show actual BSDF renders. Failed trials are not
+public model choices. See `docs/bishop-mission/iteration-011/reproduction.json`.
+
 ## Original geometry construction
 
 The original Lichess white bishop is the proportion reference. The original black bishop is available as a second overlay. White candidate 3 supplies readable detail; candidate 4 was not used. Reference images remain byte-for-byte copies.

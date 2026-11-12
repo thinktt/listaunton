@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "model": "build/bishop-mission/090-coarse-relief-normalized/bishop.blend",
+  "model_sha256": "97af8beedf7a8ce447e44b841ce5a2ff9221bcfd5060ef351019d45978ec9b71",
+  "config": "scripts/bishop/material-090.json",
+  "config_sha256": "c1ba28bd219fbf3239a9e3a9a957da60a58ebd1babb0cb8f964c3444a6cc82bf",
+  "declared_changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Fine wood pores",
+      "input": "Scale",
+      "expected_before": 180,
+      "value": 60,
+      "before": 180.0,
+      "expected_saved_value": 60.0
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Wood micro relief",
+      "input": "Distance",
+      "expected_before": 0.009,
+      "value": 0.01386,
+      "before": 0.008999999612569809,
+      "expected_saved_value": 0.013860000297427177
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Subtle pigment and pores",
+      "input": "Fac",
+      "expected_before": 0.27,
+      "value": 0.525974025974026,
+      "before": 0.27000001072883606,
+      "expected_saved_value": 0.5259740352630615
+    }
+  ],
+  "declared_link_changes": [],
+  "only_declared_material_inputs_and_links_changed": true,
+  "geometry_uvs_camera_lights_world_image_pixels_and_undeclared_material_state_preserved": true,
+  "render_path_preserved": true,
+  "reopened_audit": true
+}

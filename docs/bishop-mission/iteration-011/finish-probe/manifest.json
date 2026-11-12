@@ -1,0 +1,51 @@
+{
+  "source": "models/bishop/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "samples": 256,
+  "crop": [
+    330,
+    710,
+    660,
+    885
+  ],
+  "fixed_camera": true,
+  "diagnostics_only": true,
+  "note": "Unsaved global material isolations, viewed only at the socket; not acceptance candidates.",
+  "variants": [
+    {
+      "label": "control",
+      "change": {},
+      "render_sha256": "d0317cb68eb1c6f3a20a1b009a5ef3e36679f0eb969d9db3c1079eeafa22bb25"
+    },
+    {
+      "label": "no-coat-bump",
+      "change": {
+        "coat_geometric": true
+      },
+      "render_sha256": "7e5b6ed65bcff59b104822c29bab1707ee4d0e93ed446dccc5a272ffcb4732c1"
+    },
+    {
+      "label": "third-relief",
+      "change": {
+        "relief_distance": 0.003
+      },
+      "render_sha256": "49a5a3db22156e765050aa119a0558c45e44a7e67cd1cde80bf789852e2be80e"
+    },
+    {
+      "label": "smooth-coat-018",
+      "change": {
+        "coat_geometric": true,
+        "coat_roughness": 0.18
+      },
+      "render_sha256": "ee78baef4608f4055908f18cae78d1629f6ec7de81c821e4ba6ee01a88c68c0a"
+    },
+    {
+      "label": "no-relief",
+      "change": {
+        "relief_distance": 0
+      },
+      "render_sha256": "daafde7326835bab8e17d735295760d480c1bc83dfc205b7f7102925f0a3056b"
+    }
+  ]
+}

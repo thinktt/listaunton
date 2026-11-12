@@ -1,0 +1,62 @@
+{
+  "config": {
+    "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+    "variant": "093-strong-registered-grain",
+    "samples": 256,
+    "hypothesis": "Bracket the still-weak registered grain relief at sixteenfold pigment height, retaining the accepted pore coefficient. Test whether it broadens and breaks the too-small glints in a reference-like pattern.",
+    "inputs": [
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Wood micro relief",
+        "input": "Distance",
+        "expected_before": 0.009,
+        "value": 0.10755
+      },
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "node": "Subtle pigment and pores",
+        "input": "Fac",
+        "expected_before": 0.27,
+        "value": 0.022594142259414
+      }
+    ],
+    "links": [
+      {
+        "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+        "from_node": "Baked boxwood pigment",
+        "from_socket": "Color",
+        "to_node": "Pigment relief",
+        "to_socket": "Color",
+        "expected_from": [
+          "Visible and hidden wood",
+          "Color"
+        ]
+      }
+    ]
+  },
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "saved_model_sha256": "e8c50fa88354f7e114ad0ea26af7727c50771343deb07e75b02cbf0f75506eaf",
+  "render_sha256": "a90d80aa343bdf8552a7bd68fbffaa8594b61ddda6cab53b499d9081d184ea1c",
+  "reopened_before_render": true,
+  "changes": [
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Wood micro relief",
+      "input": "Distance",
+      "expected_before": 0.009,
+      "value": 0.10755,
+      "before": 0.008999999612569809,
+      "effective": 0.1075500026345253
+    },
+    {
+      "material": "Bishop \u2014 inferred boxwood pigment and varnish.001",
+      "node": "Subtle pigment and pores",
+      "input": "Fac",
+      "expected_before": 0.27,
+      "value": 0.022594142259414,
+      "before": 0.27000001072883606,
+      "effective": 0.022594142705202103
+    }
+  ]
+}

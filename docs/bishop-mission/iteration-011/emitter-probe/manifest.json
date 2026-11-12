@@ -1,0 +1,44 @@
+{
+  "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+  "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+  "source_unchanged": true,
+  "samples": 256,
+  "crop": [
+    330,
+    710,
+    660,
+    885
+  ],
+  "fixed_camera": true,
+  "diagnostics_only": true,
+  "variants": [
+    {
+      "label": "radius-012",
+      "radius": 0.012,
+      "cone_degrees": 1,
+      "power_factor": 1,
+      "render_sha256": "c81f81f0753ec03735497e6809478e9c35859046dc1253725b0501769764905f"
+    },
+    {
+      "label": "radius-024",
+      "radius": 0.024,
+      "cone_degrees": 1,
+      "power_factor": 1,
+      "render_sha256": "cfe4c2ccd0fc7d2b3249a350bf50d3a4d740e6d420716388fd29eb32d93ba417"
+    },
+    {
+      "label": "radius-012-cone14",
+      "radius": 0.012,
+      "cone_degrees": 1.4,
+      "power_factor": 1.96,
+      "render_sha256": "dc112a338d43cc5404df245f864228c80fabaf82d85fae7da1045ad21ec15332"
+    },
+    {
+      "label": "radius-024-cone14",
+      "radius": 0.024,
+      "cone_degrees": 1.4,
+      "power_factor": 1.96,
+      "render_sha256": "caac958734c35a71484933f02dbceea87cd5b8bcc32393d5b22922d8a7055402"
+    }
+  ]
+}
