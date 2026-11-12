@@ -1365,3 +1365,28 @@ The active `441f40d2ef07e5bf6c5f14380c2d7ba71c94172add6c1891da9eb399907ecea0` mo
 The fixed-camera row residuals suggested that the broad upper-base shoulder was a few pixels too wide while the accepted lower-foot support should remain intact. `242-upper-base-taper-008` therefore narrows only rings 13–21, with a 0.008-unit peak taper at ring 17; it leaves the foot, shelf/drop socket, stem, collars, crown, UVs, material, lighting, and camera untouched. Its selected-high-res outline IoU rose from 97.9622% to 98.1338%, but the authoritative original-black IoU fell from 97.8523% to 97.7936%.
 
 The trial is parked rather than promoted. Its neutral side profile is more tapered, but it does not clearly resolve the owner’s concern about the base’s side plausibility, and the original source must arbitrate that tradeoff. The active model remains checkpoint 29. The reusable constrained study script is retained at `scripts/queen/study_base_shoulder_taper.py`; the trial blend and renders remain isolated under ignored `build/queen-mission/242-upper-base-taper-008/` evidence.
+
+### Thirtieth profile bracket — preserve shelf/drop, November 11, 2026
+
+The owner re-emphasized that the raised socket must keep its distinct horizontal
+shelf and steep inward drop.  Three isolated drafts therefore avoid the earlier
+flare bulge: a 0.003-unit upper-collar narrowing, 3/4/6% Z-only lower-assembly
+compression, and 82%/70% socket-wall-height variants with the shelf radius and
+stem seat exact.  None changes the active model, receiver partitions, material,
+lighting, camera, source registration, or review page.
+
+The upper-collar micro edit is not visibly distinct at normal scale.  The 3%
+no-bulk compression improves the selected high-res Workbench-control IoU from
+97.8050% to 97.9788% but reduces original-black IoU from 97.8423% to 97.6846%; 4%
+and 6% worsen that original-source tradeoff.  Shortening the socket wall to 82%
+or 70% has no meaningful selected-image benefit (97.8156% / 97.8092%) and
+also lowers original fit (97.7974% / 97.7910%).  These are draft-render
+directions rather than acceptance metrics; checkpoint 29's full Cycles scores
+remain 97.8523% original and 97.9622% selected.
+
+The bracket is rejected/preserved as evidence, not promoted.  It shows that
+the desired compact side interpretation can be made while retaining the
+shelf/drop construction, but the current original Lichess sprite does not yet
+support it strongly enough to displace checkpoint 29.  See
+`docs/queen-mission/iteration-030/` for fixed-registration overlays, the neutral
+side sheet, dimensions, and full decision record.  The goal remains active.
