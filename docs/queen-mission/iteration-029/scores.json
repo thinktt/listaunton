@@ -1,0 +1,10 @@
+{
+  "outside_silhouette_percent": 97.8523,
+  "interior_shape_percent": 87,
+  "wood_color_percent": 85,
+  "grain_texture_percent": 79,
+  "lighting_reflections_percent": 76,
+  "working_mean_percent": 84.97046,
+  "holistic_visual_range_percent": [80, 85],
+  "note": "The accepted change narrows the exposed egg while retaining more height than checkpoint 28. Because the egg lies inside the crown outline, the outline IoUs remain unchanged; the 0.5-point interior-shape increase is a documented judgment from identical-pixel crown and neutral-profile comparison crops."
+}

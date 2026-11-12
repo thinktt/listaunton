@@ -1,0 +1,40 @@
+{
+  "checkpoint": 29,
+  "variant": "241-slender-seated-egg",
+  "date": "2026-11-11",
+  "starting_model_sha256": "dc29132cdf38208d09452185a16065bc94ee7d6be20b03f11efad193e81b8906",
+  "accepted_model_sha256": "441f40d2ef07e5bf6c5f14380c2d7ba71c94172add6c1891da9eb399907ecea0",
+  "source_archive_sha256": "f390b7d335ff020b47ec9eab661e21d69254db7c074832e89c3cf5b735cb27e4",
+  "camera": {
+    "type": "ORTHO",
+    "elevation_degrees": 54.00000066135015
+  },
+  "finial": {
+    "anchor_ring": 107,
+    "changed_rings": [108, 109, 110, 111, 112, 113, 114, 115, 116],
+    "height_factor": 0.96,
+    "radial_factor": 0.94,
+    "top_lowering_from_checkpoint_27": 0.013672828674316406
+  },
+  "physical_measurements": {
+    "height_checkpoint_27": 4.407298564910889,
+    "height_checkpoint_28": 4.373116493225098,
+    "height_checkpoint_29": 4.393649578094482,
+    "base_diameter": 2.0892510414123535,
+    "height_to_base_checkpoint_29": 2.1029782879152394
+  },
+  "silhouette_iou": {
+    "original_black": 0.9785231885955886,
+    "selected_highres": 0.9796221529171267
+  },
+  "validation": {
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "signed_volume": 4.543723074615977,
+    "receiver_regions": 6,
+    "receiver_triangles": 715776,
+    "light_receiver_links": 82,
+    "viewer_triangles": 44924,
+    "viewer_max_pixel_error": 0.00003865447180991589
+  }
+}
