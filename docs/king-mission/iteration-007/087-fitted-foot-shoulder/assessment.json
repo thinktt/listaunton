@@ -1,0 +1,16 @@
+{
+  "variant": "087-fitted-foot-shoulder",
+  "decision": "superseded",
+  "reason": "Useful broad fitted crescent, measured several pixels too high.",
+  "scores": {
+    "silhouette_iou_percent": 97.81486583746162,
+    "interior_form": 84,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 62
+  },
+  "original_iou_percent": 96.83709863345715,
+  "equal_weight_mean": 80.96297316749232,
+  "render_sha256": "b8a89ede50be5208d28734f33a6f11f013a53d1aa7fc170250868964a50c409a",
+  "model_sha256": "e2080f6a4f7df2bbba6c19983d06e8d8216b22ad95e78e516418a254cd980c90"
+}

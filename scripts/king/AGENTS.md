@@ -24,4 +24,15 @@ grazing surfaces; the central front and cross atlas are retained. Reproduce with
 complete_hidden_pigment.py and iteration-006/reproduction-config.json; validate
 scope with check_hidden_checkpoint.py. Temporary completion UVs/attributes are
 removed before saving. Viewer mesh bytes remain identical to 005. The owner
-paused after this checkpoint; do not restart the mission without a resume.
+paused after this checkpoint and resumed the king mission on 2026-11-12.
+
+
+Checkpoint 007 changes foot profile controls 4–11, adds a local `Foot shoulder
+satin` finish mask and a fitted area reflector. The camera, physical bounds,
+v6 pigment and earlier material remain checked by `check_foot_shoulder.py`.
+Reproduce from archived 006 with `rebuild_foot_checkpoint.py` and
+`docs/king-mission/iteration-007/reproduction.json`. Preserve the four receiver
+regions and regenerate after edits. The current source is the accepted seventh
+model. Its review and local preview are synchronized. The whole-set test has a
+documented pre-existing knight sizing metadata failure; keep that distinction
+when reporting validation. Read the mission log for active status and next work.

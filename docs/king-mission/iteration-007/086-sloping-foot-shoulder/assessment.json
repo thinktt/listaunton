@@ -1,0 +1,16 @@
+{
+  "variant": "086-sloping-foot-shoulder",
+  "decision": "superseded",
+  "reason": "Corrected shoulder normals produce a broad crescent; unfitted light is too bright.",
+  "scores": {
+    "silhouette_iou_percent": 97.81486043302121,
+    "interior_form": 84,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 60
+  },
+  "original_iou_percent": 96.83709084281024,
+  "equal_weight_mean": 80.56297208660423,
+  "render_sha256": "52ef1a34c9ab47ac413842330fa14a5bb709f85cf09958ccb27abb50be075981",
+  "model_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943"
+}

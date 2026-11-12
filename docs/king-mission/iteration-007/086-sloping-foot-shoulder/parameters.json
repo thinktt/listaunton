@@ -1,0 +1,33 @@
+{
+  "profile_offsets": {
+    "10": [
+      0,
+      0.026
+    ],
+    "11": [
+      0,
+      0.016
+    ],
+    "8": [
+      0,
+      0.062
+    ],
+    "9": [
+      0,
+      0.035
+    ],
+    "7": [
+      0,
+      0.027
+    ]
+  },
+  "samples": 128,
+  "profile": true,
+  "source": "build/king-mission/085-foot-satin-finish/king.blend",
+  "source_sha256": "07f4a0e547b46e4165a09cc0335f805d640e429229a841d59ed00630971aa131",
+  "variant": "086-sloping-foot-shoulder",
+  "hypothesis": "The inner foot shoulder turns down toward its groove, giving inward-facing normals and reflected paths obstructed by the flare. Raise the inner shoulder into a continuous upward bevel with outward/upward normals across the visible crescent, retaining the footprint and upper form.",
+  "neutral": true,
+  "model_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943",
+  "elevation_degrees": 54.000000800055794
+}

@@ -1,0 +1,62 @@
+{
+  "source_sha256": "188062d1358f46abad8bddc61e918d7cb1c52b0e53a1fe533c47672f24cd5a8e",
+  "samples": 128,
+  "neutral": true,
+  "variant": "091-resolved-foot-texture",
+  "profile": true,
+  "detail": {
+    "scale": 90,
+    "upper_fade": [
+      6,
+      8
+    ],
+    "distance": 0.006,
+    "strength": 0.42,
+    "lower_fade": [
+      3,
+      4
+    ]
+  },
+  "hypothesis": "The first pores were close to subpixel size and blurred the crescent. Test resolved three-to-four-pixel finish detail at the fixed camera, with stronger illumination and unchanged pigment.",
+  "source": "build/king-mission/091-resolved-foot-texture/prepared.blend",
+  "reflector": {
+    "name": "Foot broad crescent",
+    "pixel": [
+      400,
+      1034
+    ],
+    "distance": 6,
+    "energy": 1200
+  },
+  "reflector_probe": {
+    "pixel": [
+      400,
+      1034
+    ],
+    "point": [
+      -0.3617866039276123,
+      -0.9535446166992188,
+      0.30442047119140625
+    ],
+    "normal": [
+      -0.3073630630970001,
+      -0.809280276298523,
+      0.5005930066108704
+    ],
+    "position": [
+      -3.6100165843963623,
+      -5.979351997375488,
+      0.7406131029129028
+    ],
+    "rotation": [
+      1.4980335235595703,
+      -2.5298469097378984e-08,
+      -0.5737770199775696
+    ],
+    "clear_reflected_ray": true
+  },
+  "original_source": "build/king-mission/090-textured-foot-crescent/king.blend",
+  "original_source_sha256": "8dc61e153b64708a628cfcf1bc2825d5351683cdb7f9751599e1f3675d55903a",
+  "model_sha256": "8233cc0b05bdb025e793cc24ee66f48d0cc1d16013f305373a63b1880ad1f6d9",
+  "elevation_degrees": 54.000000800055794
+}

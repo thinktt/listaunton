@@ -1,0 +1,252 @@
+{
+  "before": "history/king-mission-006/king-rebuilt.blend",
+  "after": "build/king-mission/094-registered-foot-shoulder/king.blend",
+  "model_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "modified_profile_rows": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "all_other_controls_exact": true,
+  "all_original_uvs_topology_attributes_and_packed_images_exact": true,
+  "foot_finish": {
+    "attribute": "Foot shoulder satin",
+    "ring_fade": [
+      7,
+      8
+    ],
+    "lower_fade": [
+      2,
+      3
+    ],
+    "inputs": [
+      [
+        "Principled BSDF",
+        "Roughness",
+        0.32
+      ],
+      [
+        "Principled BSDF",
+        "Coat Roughness",
+        0.28
+      ],
+      [
+        "Fine varnish relief",
+        "Strength",
+        0.2
+      ]
+    ]
+  },
+  "remaining_material_graph_exact": true,
+  "old_lights_exact_except_disabled_foot": true,
+  "new_reflector": {
+    "type": "AREA",
+    "energy": 523.849365234375,
+    "color": [
+      1.0,
+      0.7799999713897705,
+      0.6200000047683716
+    ],
+    "matrix": [
+      0.8795166015625,
+      0.2600777745246887,
+      -0.3985098898410797,
+      -2.681307315826416,
+      -0.47586822509765625,
+      0.4806850254535675,
+      -0.7365401387214661,
+      -5.393004894256592,
+      2.8920657868525268e-08,
+      0.8374374508857727,
+      0.5465331673622131,
+      3.5880990028381348,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "diffuse": false,
+    "glossy": true,
+    "size": 4.0,
+    "size_y": 3.0,
+    "radius": 0.0,
+    "cone": null,
+    "receivers": [
+      "foot"
+    ]
+  },
+  "shadowing_enabled": true,
+  "camera_world_color_management_light_paths_exact": true,
+  "closed_profile_crossings": [],
+  "render_receivers": {
+    "used": true,
+    "receiverCount": 4,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ]
+    }
+  },
+  "profile": [
+    [
+      0,
+      3.5714286064224965e-05,
+      0.0
+    ],
+    [
+      1,
+      0.9571428568375481,
+      0.0
+    ],
+    [
+      2,
+      1.007142860344899,
+      0.030034592375159264
+    ],
+    [
+      3,
+      1.0285714281166671,
+      0.0700807198882103
+    ],
+    [
+      4,
+      1.0357142835154312,
+      0.1574999988079071
+    ],
+    [
+      5,
+      1.0321428564091553,
+      0.2750000059604645
+    ],
+    [
+      6,
+      1.0080000088978007,
+      0.29499998688697815
+    ],
+    [
+      7,
+      0.9749999960325587,
+      0.31700000166893005
+    ],
+    [
+      8,
+      0.9650000046424809,
+      0.3269999921321869
+    ],
+    [
+      9,
+      0.9710000039363708,
+      0.3580000102519989
+    ],
+    [
+      10,
+      0.9949999992419075,
+      0.36899998784065247
+    ],
+    [
+      11,
+      1.0198749978457446,
+      0.38600000739097595
+    ],
+    [
+      12,
+      1.0198749978457446,
+      0.3979039490222931
+    ],
+    [
+      13,
+      1.0092142789960077,
+      0.4512721598148346
+    ],
+    [
+      14,
+      0.9807857139200395,
+      0.5097544193267822
+    ],
+    [
+      15,
+      0.9168214265935158,
+      0.5738064050674438
+    ],
+    [
+      16,
+      0.8297946398322861,
+      0.6635085940361023
+    ]
+  ]
+}

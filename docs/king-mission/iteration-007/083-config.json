@@ -1,0 +1,36 @@
+{
+  "existing_light_power": {
+    "Foot left reflection": 0
+  },
+  "samples": 128,
+  "variant": "083-broad-foot-reflector",
+  "hypothesis": "Broad actual area source on the coordinated shoulder, aimed at the visible foot, to spread the reflection across the newly exposed round-over.",
+  "reflectors": [
+    {
+      "size": 4.0,
+      "size_y": 3.0,
+      "distance": 6,
+      "pixel": [
+        420,
+        1038
+      ],
+      "receivers": [
+        "foot"
+      ],
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "require_clear_path": true,
+      "name": "Foot broad crescent",
+      "type": "AREA",
+      "energy": 1500,
+      "minimum_normal_z": 0.55,
+      "seek_receiver_down": 15,
+      "shape": "RECTANGLE"
+    }
+  ],
+  "source_sha256": "bbf26b9cdf68aa2fddadb4d8495f9744f785846b782df07b6e6d89b40734a3f8",
+  "source": "build/king-mission/082-broader-foot-shoulder/king.blend"
+}

@@ -1,0 +1,138 @@
+{
+  "variant": "095-foot-checkpoint-reproduction",
+  "source": "history/king-mission-006/king-rebuilt.blend",
+  "source_sha256": "96f3d023c799f79fd12cc19baf5f2b3e535ec969eda7573c9bc7e464f4ea8ba5",
+  "geometry_first": {
+    "4": [
+      -1.5431211863869976e-11,
+      0.014844341278076184
+    ],
+    "5": [
+      -9.155343150268891e-12,
+      0.054780903458595265
+    ],
+    "6": [
+      -0.0027142777566655507,
+      0.06974632263183594
+    ],
+    "7": [
+      -0.0142857233133441,
+      0.07448861241340637
+    ],
+    "8": [
+      -0.020714278860580748,
+      0.06383406460285185
+    ],
+    "9": [
+      -0.01689285282091979,
+      0.06928514051437379
+    ],
+    "10": [
+      -0.01421427899600769,
+      0.06823787617683413
+    ],
+    "11": [
+      -4.574474132823525e-11,
+      0.0336669635772705
+    ]
+  },
+  "geometry_final": {
+    "10": [
+      0,
+      0.026
+    ],
+    "11": [
+      0,
+      0.016
+    ],
+    "8": [
+      0,
+      0.062
+    ],
+    "9": [
+      0,
+      0.035
+    ],
+    "7": [
+      0,
+      0.027
+    ]
+  },
+  "finish": {
+    "attribute": "Foot shoulder satin",
+    "ring_fade": [
+      7,
+      8
+    ],
+    "lower_fade": [
+      2,
+      3
+    ],
+    "inputs": [
+      [
+        "Principled BSDF",
+        "Roughness",
+        0.32
+      ],
+      [
+        "Principled BSDF",
+        "Coat Roughness",
+        0.28
+      ],
+      [
+        "Fine varnish relief",
+        "Strength",
+        0.2
+      ]
+    ]
+  },
+  "reflector": {
+    "size": 4.0,
+    "size_y": 3.0,
+    "distance": 6,
+    "pixel": [
+      420,
+      1038
+    ],
+    "receivers": [
+      "foot"
+    ],
+    "color": [
+      1,
+      0.78,
+      0.62
+    ],
+    "require_clear_path": true,
+    "name": "Foot broad crescent",
+    "type": "AREA",
+    "energy": 1500,
+    "minimum_normal_z": 0.55,
+    "seek_receiver_down": 15,
+    "shape": "RECTANGLE"
+  },
+  "fitted_energy": 523.8493714539778,
+  "samples": 128,
+  "hypothesis": "Independent reconstruction of the selected foot refinement from checkpoint 006, with the measured final reflector power.",
+  "geometry_registration": {
+    "6": [
+      0,
+      -0.025
+    ],
+    "4": [
+      0,
+      -0.0125
+    ],
+    "5": [
+      0,
+      -0.025
+    ],
+    "7": [
+      0,
+      -0.025
+    ],
+    "8": [
+      0,
+      -0.025
+    ]
+  }
+}

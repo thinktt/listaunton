@@ -1,0 +1,26 @@
+{
+  "task_start_commit": "f32177d9c8c2331e4071ed3df592bf65d09936d1",
+  "failure": "check_set.cjs rejects the knight height-source metadata hash. The same source mismatch exists at the task-start commit.",
+  "recorded_knight_metadata_sha256": "104c19170f0976a86c98d529887603d19ea227374a044894d8d87a3855942326",
+  "files": [
+    {
+      "file": "assets/knight/mesh.json",
+      "task_start_sha256": "530f25c4ac04325a1df21920d95ad41f0ea0800e724e7ca38627a1e2e6e8a87c",
+      "current_sha256": "530f25c4ac04325a1df21920d95ad41f0ea0800e724e7ca38627a1e2e6e8a87c",
+      "unchanged_since_task_start": true
+    },
+    {
+      "file": "assets/side-views/scale.json",
+      "task_start_sha256": "27bb759f9f91f93f9514fd6a57e7a835d1a166255b2f076075ca69ccb202f4ec",
+      "current_sha256": "27bb759f9f91f93f9514fd6a57e7a835d1a166255b2f076075ca69ccb202f4ec",
+      "unchanged_since_task_start": true
+    },
+    {
+      "file": "set-comparison.html",
+      "task_start_sha256": "9c9da2eff32a5a5718be82ca684ba1a4ab1b914a88ab77209892501933be4aa2",
+      "current_sha256": "9c9da2eff32a5a5718be82ca684ba1a4ab1b914a88ab77209892501933be4aa2",
+      "unchanged_since_task_start": true
+    }
+  ],
+  "scope": "King model, king pages and candidate checks passed. Whole-set tests after the failed source assertion remain unexecuted. No shared sizing file or knight model was changed by this king checkpoint."
+}

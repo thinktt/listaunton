@@ -307,3 +307,37 @@ model, candidate, set, projection and repository/local-preview interaction check
 pass. All 34 king preview files are hash-verified. Native UI inspection
 is not claimed. Owner requested pause after the completed checkpoint; do not
 begin another iteration until resumed.
+
+## 2026-11-12 — checkpoint 007: broader, aligned foot crescent
+
+The owner resumed the king mission after checkpoint 006. The accepted foot
+shoulder slopes upward into its groove and catches a broader reflection.
+The final height correction aligns the brighter crescent with the selected
+reference. Local varnish and one fitted area source support the new shoulder.
+See [iteration-007/README.md](king-mission/iteration-007/README.md).
+
+| Metric | Checkpoint 006 | Checkpoint 007 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.8197% | 97.8171% |
+| Interior form | 83% | 84% |
+| Wood color | 82% | 82% |
+| Grain and surface texture | 79% | 79% |
+| Lighting and reflections | 60% | 62% |
+| Equal-weight working mean | 80.3639% | 80.9634% |
+
+Original IoU is 96.8335%. IoU is measured; other category scores are subjective.
+The holistic range is 74–83%. Foot glints remain too smooth and the groove,
+base glints, cross seating, collars, cavity contrast and hidden finish need
+further work. Rejected pore/sharper-polish trials are retained as evidence.
+
+Scope, receiver regeneration, closed components, packed textures and exact
+export pass. Reopened and independently rebuilt renders have identical alpha
+and maximum channel difference 1/255; rebuilt mesh bytes match exactly.
+The king review and local preview are synchronized. King/candidate interaction,
+site/model and historical-projection checks pass. A pre-existing knight sizing
+metadata mismatch stops the whole-set check, documented against the task-start
+commit in iteration-007. Native browser inspection is not claimed.
+
+Next: isolate socket/collar glossy responses and improve their placement and
+warmth. Preserve the current foot placement for a later grain-relief study.
+The goal is active and incomplete. No watchers or subagents were started.

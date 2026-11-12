@@ -1,0 +1,16 @@
+{
+  "variant": "082-broader-foot-shoulder",
+  "decision": "rejected",
+  "reason": "Raised shoulder still produces a thin crescent.",
+  "scores": {
+    "silhouette_iou_percent": 97.8158065266105,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 60
+  },
+  "original_iou_percent": 96.83752894231243,
+  "equal_weight_mean": 80.36316130532211,
+  "render_sha256": "87e33b23ddaeb7a7581699c941e0a525d004100aea7af85400d594206c313b77",
+  "model_sha256": "bbf26b9cdf68aa2fddadb4d8495f9744f785846b782df07b6e6d89b40734a3f8"
+}

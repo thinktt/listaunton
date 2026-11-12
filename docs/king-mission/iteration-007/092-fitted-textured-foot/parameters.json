@@ -1,0 +1,71 @@
+{
+  "source_sha256": "c769b1a4dfb014e4665ae637ace0e1d8cd35d4527cfff15b1d2b7f4fe9a209df",
+  "maximum_gain": 4,
+  "neutral": true,
+  "bounds": [
+    270,
+    975,
+    650,
+    1085
+  ],
+  "samples": 128,
+  "hypothesis": "Measure and fit the retargeted textured foot reflector against the original unchanged reference crop; inspect all views for acceptance.",
+  "profile": true,
+  "response_samples": 512,
+  "source": "build/king-mission/092-fitted-textured-foot/prepared.blend",
+  "variant": "092-fitted-textured-foot",
+  "original_source": "build/king-mission/091-resolved-foot-texture/king.blend",
+  "original_source_sha256": "8233cc0b05bdb025e793cc24ee66f48d0cc1d16013f305373a63b1880ad1f6d9",
+  "light_fit": {
+    "source_sha256": "8233cc0b05bdb025e793cc24ee66f48d0cc1d16013f305373a63b1880ad1f6d9",
+    "pixels": 34768,
+    "bounds": [
+      270,
+      975,
+      650,
+      1085
+    ],
+    "original_powers": {
+      "Foot broad crescent": 1200.0
+    },
+    "fitted_powers": {
+      "Foot broad crescent": 532.194313960162
+    },
+    "gain": [
+      0.4434952616334684
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.005466289678334605,
+        "after_mse": 0.005097002555148331
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.005097002555148331,
+        "after_mse": 0.005081932182943594
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.005081932182943594,
+        "after_mse": 0.005081264541914651
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.005081264541914651,
+        "after_mse": 0.005081241802962831
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.005081241802962831,
+        "after_mse": 0.005081241056192573
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Foot broad crescent"
+  ],
+  "model_sha256": "e1c50eaf836e3b48117a7054433a843e247b50995b27bd8294fda4ec7ced56b9",
+  "elevation_degrees": 54.000000800055794
+}

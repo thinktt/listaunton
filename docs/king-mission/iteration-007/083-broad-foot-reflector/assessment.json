@@ -1,0 +1,16 @@
+{
+  "variant": "083-broad-foot-reflector",
+  "decision": "rejected",
+  "reason": "Broad source increases a smooth white hairline.",
+  "scores": {
+    "silhouette_iou_percent": 97.8158065266105,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 59
+  },
+  "original_iou_percent": 96.83752894231243,
+  "equal_weight_mean": 80.1631613053221,
+  "render_sha256": "596ed4b10297eed3257ffeaea1ffa1051d9ee90f6e98482d0b48ec3cdba24bd3",
+  "model_sha256": "45df889f6e49a67a4fdde5993d97bb2eb035ecf03e8caa24eadf2c94f3e9dbd5"
+}

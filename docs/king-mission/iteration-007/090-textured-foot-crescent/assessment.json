@@ -1,0 +1,16 @@
+{
+  "variant": "090-textured-foot-crescent",
+  "decision": "rejected",
+  "reason": "Very fine procedural pores fail to recover the reference glints.",
+  "scores": {
+    "silhouette_iou_percent": 97.75763582839191,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 78,
+    "lighting_reflections": 60
+  },
+  "original_iou_percent": 96.84418145956607,
+  "equal_weight_mean": 80.15152716567839,
+  "render_sha256": "71f975cc9a54889914bae0348e83bc06ecdb239b5fd3bd071e3cc889f2762f52",
+  "model_sha256": "8dc61e153b64708a628cfcf1bc2825d5351683cdb7f9751599e1f3675d55903a"
+}

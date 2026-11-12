@@ -1,0 +1,20 @@
+{
+  "lights": [
+    "Foot broad crescent"
+  ],
+  "source_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943",
+  "maximum_gain": 4,
+  "neutral": true,
+  "bounds": [
+    270,
+    975,
+    650,
+    1085
+  ],
+  "samples": 128,
+  "hypothesis": "Fit the recovered broad crescent strength using an isolated actual BSDF response through AgX; inspect full render and original before acceptance.",
+  "profile": true,
+  "response_samples": 512,
+  "source": "build/king-mission/086-sloping-foot-shoulder/king.blend",
+  "variant": "087-fitted-foot-shoulder"
+}

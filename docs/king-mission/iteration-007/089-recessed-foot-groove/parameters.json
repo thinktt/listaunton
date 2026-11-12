@@ -1,0 +1,33 @@
+{
+  "samples": 128,
+  "hypothesis": "Retain the upward foot bevel but deepen its inner groove and restore an overhanging flare underside. This tests the reference dark separation while keeping the exposed reflective shoulder.",
+  "profile_offsets": {
+    "9": [
+      -0.021,
+      0.037
+    ],
+    "12": [
+      0,
+      0.027
+    ],
+    "10": [
+      0,
+      0.021
+    ],
+    "8": [
+      -0.015,
+      -0.002
+    ],
+    "11": [
+      0,
+      0.019
+    ]
+  },
+  "source_sha256": "7514f08fd857c20194d1992817979c01e2204c6659b86137ad6416fd053112ae",
+  "variant": "089-recessed-foot-groove",
+  "neutral": true,
+  "profile": true,
+  "source": "build/king-mission/088-sloping-original-finish/king.blend",
+  "model_sha256": "0b30508c5f5e96f143070fdee3c2e8e7e8429de916fd4c5498d07f65e7840a08",
+  "elevation_degrees": 54.000000800055794
+}

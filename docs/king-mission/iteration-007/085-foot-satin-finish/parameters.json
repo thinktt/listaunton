@@ -1,0 +1,39 @@
+{
+  "lower_fade": [
+    2,
+    3
+  ],
+  "source_sha256": "d73e2267bb864a2ecfa5d553c111541b81b6f4d5e1736c017cfbaa6b6009e383",
+  "ring_fade": [
+    7,
+    8
+  ],
+  "samples": 128,
+  "profile": false,
+  "variant": "085-foot-satin-finish",
+  "neutral": false,
+  "source": "build/king-mission/085-foot-satin-finish/prepared.blend",
+  "hypothesis": "The accepted base coat roughness of .10 is too sharp for the foot crescent. Broaden the real BSDF only over the shoulder, with grain relief and smooth transitions, preserving the lower base finish.",
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Roughness",
+      0.32
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.28
+    ],
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.2
+    ]
+  ],
+  "attribute": "Foot shoulder satin",
+  "original_source": "build/king-mission/083-broad-foot-reflector/king.blend",
+  "original_source_sha256": "45df889f6e49a67a4fdde5993d97bb2eb035ecf03e8caa24eadf2c94f3e9dbd5",
+  "model_sha256": "07f4a0e547b46e4165a09cc0335f805d640e429229a841d59ed00630971aa131",
+  "elevation_degrees": 54.000000800055794
+}

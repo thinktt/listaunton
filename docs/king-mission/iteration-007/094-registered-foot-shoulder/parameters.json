@@ -1,0 +1,33 @@
+{
+  "profile": true,
+  "hypothesis": "Measured crescent peaks of 087 lie 3-5 pixels above the selected reference. Lower only the exposed shoulder by .025 model units, blending into the retained wall, to align the arc and open the dark groove while preserving its useful sloping normals.",
+  "variant": "094-registered-foot-shoulder",
+  "source": "build/king-mission/087-fitted-foot-shoulder/king.blend",
+  "profile_offsets": {
+    "6": [
+      0,
+      -0.025
+    ],
+    "4": [
+      0,
+      -0.0125
+    ],
+    "5": [
+      0,
+      -0.025
+    ],
+    "7": [
+      0,
+      -0.025
+    ],
+    "8": [
+      0,
+      -0.025
+    ]
+  },
+  "source_sha256": "e2080f6a4f7df2bbba6c19983d06e8d8216b22ad95e78e516418a254cd980c90",
+  "samples": 128,
+  "neutral": true,
+  "model_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "elevation_degrees": 54.000000800055794
+}

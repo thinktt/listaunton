@@ -1,0 +1,45 @@
+{
+  "variant": "082-broader-foot-shoulder",
+  "source": "history/king-mission-006/king-rebuilt.blend",
+  "source_sha256": "96f3d023c799f79fd12cc19baf5f2b3e535ec969eda7573c9bc7e464f4ea8ba5",
+  "samples": 128,
+  "neutral": true,
+  "profile": true,
+  "profile_offsets": {
+    "4": [
+      -1.5431211863869976e-11,
+      0.014844341278076184
+    ],
+    "5": [
+      -9.155343150268891e-12,
+      0.054780903458595265
+    ],
+    "6": [
+      -0.0027142777566655507,
+      0.06974632263183594
+    ],
+    "7": [
+      -0.0142857233133441,
+      0.07448861241340637
+    ],
+    "8": [
+      -0.020714278860580748,
+      0.06383406460285185
+    ],
+    "9": [
+      -0.01689285282091979,
+      0.06928514051437379
+    ],
+    "10": [
+      -0.01421427899600769,
+      0.06823787617683413
+    ],
+    "11": [
+      -4.574474132823525e-11,
+      0.0336669635772705
+    ]
+  },
+  "hypothesis": "The accepted foot shoulder is hidden below the flared underside and too sharp in cross-section. Broaden and raise rings 4-7, recess the groove in rings 8-10, and join ring 11 smoothly to the retained upper flare. Preserve all other controls, fixed camera, material and lights. This coordinated non-crossing profile differs from the earlier two-ring lift.",
+  "model_sha256": "bbf26b9cdf68aa2fddadb4d8495f9744f785846b782df07b6e6d89b40734a3f8",
+  "elevation_degrees": 54.000000800055794
+}

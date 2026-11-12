@@ -1,0 +1,181 @@
+{
+  "rubric": "Only silhouette IoU is measured. The other four ratings are subjective. The equal mean is a working indicator. Diagnostic partial renders are excluded from whole-model scoring.",
+  "trials": [
+    {
+      "variant": "082-broader-foot-shoulder",
+      "decision": "rejected",
+      "reason": "Raised shoulder still produces a thin crescent.",
+      "scores": {
+        "silhouette_iou_percent": 97.8158065266105,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.83752894231243,
+      "equal_weight_mean": 80.36316130532211,
+      "render_sha256": "87e33b23ddaeb7a7581699c941e0a525d004100aea7af85400d594206c313b77",
+      "model_sha256": "bbf26b9cdf68aa2fddadb4d8495f9744f785846b782df07b6e6d89b40734a3f8"
+    },
+    {
+      "variant": "083-broad-foot-reflector",
+      "decision": "rejected",
+      "reason": "Broad source increases a smooth white hairline.",
+      "scores": {
+        "silhouette_iou_percent": 97.8158065266105,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 59
+      },
+      "original_iou_percent": 96.83752894231243,
+      "equal_weight_mean": 80.1631613053221,
+      "render_sha256": "596ed4b10297eed3257ffeaea1ffa1051d9ee90f6e98482d0b48ec3cdba24bd3",
+      "model_sha256": "45df889f6e49a67a4fdde5993d97bb2eb035ecf03e8caa24eadf2c94f3e9dbd5"
+    },
+    {
+      "variant": "085-foot-satin-finish",
+      "decision": "superseded",
+      "reason": "Satin finish softens the line, but the inner shoulder still turns inward.",
+      "scores": {
+        "silhouette_iou_percent": 97.8158065266105,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.83752894231243,
+      "equal_weight_mean": 80.36316130532211,
+      "render_sha256": "d395a2be0a6f9569a016232f6a39f7401b32cefd8aeb5a61df9ffb20ec9e8270",
+      "model_sha256": "07f4a0e547b46e4165a09cc0335f805d640e429229a841d59ed00630971aa131"
+    },
+    {
+      "variant": "086-sloping-foot-shoulder",
+      "decision": "superseded",
+      "reason": "Corrected shoulder normals produce a broad crescent; unfitted light is too bright.",
+      "scores": {
+        "silhouette_iou_percent": 97.81486043302121,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.83709084281024,
+      "equal_weight_mean": 80.56297208660423,
+      "render_sha256": "52ef1a34c9ab47ac413842330fa14a5bb709f85cf09958ccb27abb50be075981",
+      "model_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943"
+    },
+    {
+      "variant": "087-fitted-foot-shoulder",
+      "decision": "superseded",
+      "reason": "Useful broad fitted crescent, measured several pixels too high.",
+      "scores": {
+        "silhouette_iou_percent": 97.81486583746162,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 62
+      },
+      "original_iou_percent": 96.83709863345715,
+      "equal_weight_mean": 80.96297316749232,
+      "render_sha256": "b8a89ede50be5208d28734f33a6f11f013a53d1aa7fc170250868964a50c409a",
+      "model_sha256": "e2080f6a4f7df2bbba6c19983d06e8d8216b22ad95e78e516418a254cd980c90"
+    },
+    {
+      "variant": "088-sloping-original-finish",
+      "decision": "rejected",
+      "reason": "Original sharper coat creates a bright smooth stripe.",
+      "scores": {
+        "silhouette_iou_percent": 97.81486043302121,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.83709084281024,
+      "equal_weight_mean": 80.36297208660423,
+      "render_sha256": "e558d5db768ea7e34ee6fc4683be049216d179e3b179362e113e45521e80b0bb",
+      "model_sha256": "7514f08fd857c20194d1992817979c01e2204c6659b86137ad6416fd053112ae"
+    },
+    {
+      "variant": "089-recessed-foot-groove",
+      "decision": "rejected",
+      "reason": "Deeper groove and altered lower flare do not improve the overall match.",
+      "scores": {
+        "silhouette_iou_percent": 97.75763582839191,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.84418145956607,
+      "equal_weight_mean": 80.15152716567839,
+      "render_sha256": "ea7dc5569f0ee7f2cdd31ff64b0a08b076b867aa4d09be2d2bf7ebe11b472577",
+      "model_sha256": "0b30508c5f5e96f143070fdee3c2e8e7e8429de916fd4c5498d07f65e7840a08"
+    },
+    {
+      "variant": "090-textured-foot-crescent",
+      "decision": "rejected",
+      "reason": "Very fine procedural pores fail to recover the reference glints.",
+      "scores": {
+        "silhouette_iou_percent": 97.75763582839191,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.84418145956607,
+      "equal_weight_mean": 80.15152716567839,
+      "render_sha256": "71f975cc9a54889914bae0348e83bc06ecdb239b5fd3bd071e3cc889f2762f52",
+      "model_sha256": "8dc61e153b64708a628cfcf1bc2825d5351683cdb7f9751599e1f3675d55903a"
+    },
+    {
+      "variant": "091-resolved-foot-texture",
+      "decision": "rejected",
+      "reason": "Resolved procedural detail still gives the wrong reflection pattern.",
+      "scores": {
+        "silhouette_iou_percent": 97.75763582839191,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.84418145956607,
+      "equal_weight_mean": 80.15152716567839,
+      "render_sha256": "f0ddd77858cbea7b4c45ef2550234abfbc37a974270d5599c17e6b33cb3c60e7",
+      "model_sha256": "8233cc0b05bdb025e793cc24ee66f48d0cc1d16013f305373a63b1880ad1f6d9"
+    },
+    {
+      "variant": "092-fitted-textured-foot",
+      "decision": "rejected",
+      "reason": "Intensity fit cannot repair the wrong reflection shape.",
+      "scores": {
+        "silhouette_iou_percent": 97.75763582839191,
+        "interior_form": 83,
+        "wood_color": 82,
+        "grain_surface": 78,
+        "lighting_reflections": 61
+      },
+      "original_iou_percent": 96.84418145956607,
+      "equal_weight_mean": 80.35152716567839,
+      "render_sha256": "605e20324107d0c4fd1f7aa3b102b7a0b6006ad42a5aef52ca4271d7f076b344",
+      "model_sha256": "e1c50eaf836e3b48117a7054433a843e247b50995b27bd8294fda4ec7ced56b9"
+    },
+    {
+      "variant": "094-registered-foot-shoulder",
+      "decision": "accepted",
+      "reason": "Lowered broad shoulder improves crescent placement and tone; grain breakup and dark separation remain imperfect.",
+      "scores": {
+        "silhouette_iou_percent": 97.81712417363087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 62
+      },
+      "original_iou_percent": 96.83354433185717,
+      "equal_weight_mean": 80.96342483472617,
+      "render_sha256": "14f0cc0aa43ecf833e8cffd0c8527a37415b1d07617873ce6bbdbb13ddcd4d52",
+      "model_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8"
+    }
+  ]
+}

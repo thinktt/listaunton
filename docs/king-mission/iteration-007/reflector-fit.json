@@ -1,0 +1,52 @@
+{
+  "source_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943",
+  "pixels": 34768,
+  "bounds": [
+    270,
+    975,
+    650,
+    1085
+  ],
+  "original_powers": {
+    "Foot broad crescent": 1500.0
+  },
+  "fitted_powers": {
+    "Foot broad crescent": 523.8493714539778
+  },
+  "gain": [
+    0.3492329143026519
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.0061348455308340285,
+      "after_mse": 0.004791784589903328
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.004791784589903328,
+      "after_mse": 0.00453157899556489
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.00453157899556489,
+      "after_mse": 0.004513088175275622
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.004513088175275622,
+      "after_mse": 0.004512253178990641
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.004512253178990641,
+      "after_mse": 0.004512223688667222
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.004512223688667222,
+      "after_mse": 0.00451222250591266
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

@@ -1,0 +1,31 @@
+{
+  "source_sha256": "0b30508c5f5e96f143070fdee3c2e8e7e8429de916fd4c5498d07f65e7840a08",
+  "samples": 128,
+  "neutral": true,
+  "variant": "090-textured-foot-crescent",
+  "profile": true,
+  "detail": {
+    "scale": 250,
+    "upper_fade": [
+      6,
+      8
+    ],
+    "distance": 0.004,
+    "strength": 0.3,
+    "lower_fade": [
+      3,
+      4
+    ]
+  },
+  "hypothesis": "Retarget the area to the observed bright arc and break its reflection with shallow object-space coat microtexture confined to the shoulder. Keep the existing pigment and macro-grain.",
+  "source": "build/king-mission/089-recessed-foot-groove/king.blend",
+  "reflector": {
+    "name": "Foot broad crescent",
+    "pixel": [
+      400,
+      1034
+    ],
+    "distance": 6,
+    "energy": 800
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variant": "091-resolved-foot-texture",
+  "decision": "rejected",
+  "reason": "Resolved procedural detail still gives the wrong reflection pattern.",
+  "scores": {
+    "silhouette_iou_percent": 97.75763582839191,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 78,
+    "lighting_reflections": 60
+  },
+  "original_iou_percent": 96.84418145956607,
+  "equal_weight_mean": 80.15152716567839,
+  "render_sha256": "f0ddd77858cbea7b4c45ef2550234abfbc37a974270d5599c17e6b33cb3c60e7",
+  "model_sha256": "8233cc0b05bdb025e793cc24ee66f48d0cc1d16013f305373a63b1880ad1f6d9"
+}

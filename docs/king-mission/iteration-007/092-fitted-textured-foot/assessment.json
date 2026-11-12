@@ -1,0 +1,16 @@
+{
+  "variant": "092-fitted-textured-foot",
+  "decision": "rejected",
+  "reason": "Intensity fit cannot repair the wrong reflection shape.",
+  "scores": {
+    "silhouette_iou_percent": 97.75763582839191,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 78,
+    "lighting_reflections": 61
+  },
+  "original_iou_percent": 96.84418145956607,
+  "equal_weight_mean": 80.35152716567839,
+  "render_sha256": "605e20324107d0c4fd1f7aa3b102b7a0b6006ad42a5aef52ca4271d7f076b344",
+  "model_sha256": "e1c50eaf836e3b48117a7054433a843e247b50995b27bd8294fda4ec7ced56b9"
+}

@@ -1,0 +1,1216 @@
+{
+  "links": [
+    [
+      "Texture Coordinate",
+      "Object",
+      "Vector Math",
+      "Vector"
+    ],
+    [
+      "Vector Math",
+      "Vector",
+      "Noise Texture",
+      "Vector"
+    ],
+    [
+      "Noise Texture",
+      "Factor",
+      "Walnut pigment",
+      "Factor"
+    ],
+    [
+      "Texture Coordinate",
+      "Object",
+      "Noise Texture.001",
+      "Vector"
+    ],
+    [
+      "Noise Texture.001",
+      "Factor",
+      "Bump",
+      "Height"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Derived king pigment",
+      "Vector"
+    ],
+    [
+      "Attribute",
+      "Factor",
+      "Math",
+      "Value"
+    ],
+    [
+      "Derived king pigment",
+      "Alpha",
+      "Math",
+      "Value"
+    ],
+    [
+      "Math",
+      "Value",
+      "Continuous pigment",
+      "Factor"
+    ],
+    [
+      "Walnut pigment",
+      "Color",
+      "Continuous pigment",
+      "Color1"
+    ],
+    [
+      "Derived king pigment",
+      "Color",
+      "RGB to BW",
+      "Color"
+    ],
+    [
+      "Pigment microrelief",
+      "Normal",
+      "Principled BSDF",
+      "Normal"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.001",
+      "Vector"
+    ],
+    [
+      "Vector Math.001",
+      "Vector",
+      "Image Texture",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.002",
+      "Vector"
+    ],
+    [
+      "Vector Math.002",
+      "Vector",
+      "Image Texture.001",
+      "Vector"
+    ],
+    [
+      "Image Texture",
+      "Color",
+      "Vector Math.003",
+      "Vector"
+    ],
+    [
+      "Image Texture.001",
+      "Color",
+      "Vector Math.003",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.004",
+      "Vector"
+    ],
+    [
+      "Vector Math.004",
+      "Vector",
+      "Image Texture.002",
+      "Vector"
+    ],
+    [
+      "Vector Math.003",
+      "Vector",
+      "Vector Math.005",
+      "Vector"
+    ],
+    [
+      "Image Texture.002",
+      "Color",
+      "Vector Math.005",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.006",
+      "Vector"
+    ],
+    [
+      "Vector Math.006",
+      "Vector",
+      "Image Texture.003",
+      "Vector"
+    ],
+    [
+      "Vector Math.005",
+      "Vector",
+      "Vector Math.007",
+      "Vector"
+    ],
+    [
+      "Image Texture.003",
+      "Color",
+      "Vector Math.007",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.008",
+      "Vector"
+    ],
+    [
+      "Vector Math.008",
+      "Vector",
+      "Image Texture.004",
+      "Vector"
+    ],
+    [
+      "Vector Math.007",
+      "Vector",
+      "Vector Math.009",
+      "Vector"
+    ],
+    [
+      "Image Texture.004",
+      "Color",
+      "Vector Math.009",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.010",
+      "Vector"
+    ],
+    [
+      "Vector Math.010",
+      "Vector",
+      "Image Texture.005",
+      "Vector"
+    ],
+    [
+      "Vector Math.009",
+      "Vector",
+      "Vector Math.011",
+      "Vector"
+    ],
+    [
+      "Image Texture.005",
+      "Color",
+      "Vector Math.011",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.012",
+      "Vector"
+    ],
+    [
+      "Vector Math.012",
+      "Vector",
+      "Image Texture.006",
+      "Vector"
+    ],
+    [
+      "Vector Math.011",
+      "Vector",
+      "Vector Math.013",
+      "Vector"
+    ],
+    [
+      "Image Texture.006",
+      "Color",
+      "Vector Math.013",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.014",
+      "Vector"
+    ],
+    [
+      "Vector Math.014",
+      "Vector",
+      "Image Texture.007",
+      "Vector"
+    ],
+    [
+      "Vector Math.013",
+      "Vector",
+      "Vector Math.015",
+      "Vector"
+    ],
+    [
+      "Image Texture.007",
+      "Color",
+      "Vector Math.015",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.016",
+      "Vector"
+    ],
+    [
+      "Vector Math.016",
+      "Vector",
+      "Image Texture.008",
+      "Vector"
+    ],
+    [
+      "Vector Math.015",
+      "Vector",
+      "Vector Math.017",
+      "Vector"
+    ],
+    [
+      "Image Texture.008",
+      "Color",
+      "Vector Math.017",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.018",
+      "Vector"
+    ],
+    [
+      "Vector Math.018",
+      "Vector",
+      "Image Texture.009",
+      "Vector"
+    ],
+    [
+      "Vector Math.017",
+      "Vector",
+      "Vector Math.019",
+      "Vector"
+    ],
+    [
+      "Image Texture.009",
+      "Color",
+      "Vector Math.019",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.020",
+      "Vector"
+    ],
+    [
+      "Vector Math.020",
+      "Vector",
+      "Image Texture.010",
+      "Vector"
+    ],
+    [
+      "Vector Math.019",
+      "Vector",
+      "Vector Math.021",
+      "Vector"
+    ],
+    [
+      "Image Texture.010",
+      "Color",
+      "Vector Math.021",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.022",
+      "Vector"
+    ],
+    [
+      "Vector Math.022",
+      "Vector",
+      "Image Texture.011",
+      "Vector"
+    ],
+    [
+      "Vector Math.021",
+      "Vector",
+      "Vector Math.023",
+      "Vector"
+    ],
+    [
+      "Image Texture.011",
+      "Color",
+      "Vector Math.023",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.024",
+      "Vector"
+    ],
+    [
+      "Vector Math.024",
+      "Vector",
+      "Image Texture.012",
+      "Vector"
+    ],
+    [
+      "Vector Math.023",
+      "Vector",
+      "Vector Math.025",
+      "Vector"
+    ],
+    [
+      "Image Texture.012",
+      "Color",
+      "Vector Math.025",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.026",
+      "Vector"
+    ],
+    [
+      "Vector Math.026",
+      "Vector",
+      "Image Texture.013",
+      "Vector"
+    ],
+    [
+      "Vector Math.025",
+      "Vector",
+      "Vector Math.027",
+      "Vector"
+    ],
+    [
+      "Image Texture.013",
+      "Color",
+      "Vector Math.027",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.028",
+      "Vector"
+    ],
+    [
+      "Vector Math.028",
+      "Vector",
+      "Image Texture.014",
+      "Vector"
+    ],
+    [
+      "Vector Math.027",
+      "Vector",
+      "Vector Math.029",
+      "Vector"
+    ],
+    [
+      "Image Texture.014",
+      "Color",
+      "Vector Math.029",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.030",
+      "Vector"
+    ],
+    [
+      "Vector Math.030",
+      "Vector",
+      "Image Texture.015",
+      "Vector"
+    ],
+    [
+      "Vector Math.029",
+      "Vector",
+      "Vector Math.031",
+      "Vector"
+    ],
+    [
+      "Image Texture.015",
+      "Color",
+      "Vector Math.031",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.032",
+      "Vector"
+    ],
+    [
+      "Vector Math.032",
+      "Vector",
+      "Image Texture.016",
+      "Vector"
+    ],
+    [
+      "Vector Math.031",
+      "Vector",
+      "Vector Math.033",
+      "Vector"
+    ],
+    [
+      "Image Texture.016",
+      "Color",
+      "Vector Math.033",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.034",
+      "Vector"
+    ],
+    [
+      "Vector Math.034",
+      "Vector",
+      "Image Texture.017",
+      "Vector"
+    ],
+    [
+      "Vector Math.033",
+      "Vector",
+      "Vector Math.035",
+      "Vector"
+    ],
+    [
+      "Image Texture.017",
+      "Color",
+      "Vector Math.035",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.036",
+      "Vector"
+    ],
+    [
+      "Vector Math.036",
+      "Vector",
+      "Image Texture.018",
+      "Vector"
+    ],
+    [
+      "Vector Math.035",
+      "Vector",
+      "Vector Math.037",
+      "Vector"
+    ],
+    [
+      "Image Texture.018",
+      "Color",
+      "Vector Math.037",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.038",
+      "Vector"
+    ],
+    [
+      "Vector Math.038",
+      "Vector",
+      "Image Texture.019",
+      "Vector"
+    ],
+    [
+      "Vector Math.037",
+      "Vector",
+      "Vector Math.039",
+      "Vector"
+    ],
+    [
+      "Image Texture.019",
+      "Color",
+      "Vector Math.039",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.040",
+      "Vector"
+    ],
+    [
+      "Vector Math.040",
+      "Vector",
+      "Image Texture.020",
+      "Vector"
+    ],
+    [
+      "Vector Math.039",
+      "Vector",
+      "Vector Math.041",
+      "Vector"
+    ],
+    [
+      "Image Texture.020",
+      "Color",
+      "Vector Math.041",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.042",
+      "Vector"
+    ],
+    [
+      "Vector Math.042",
+      "Vector",
+      "Image Texture.021",
+      "Vector"
+    ],
+    [
+      "Vector Math.041",
+      "Vector",
+      "Vector Math.043",
+      "Vector"
+    ],
+    [
+      "Image Texture.021",
+      "Color",
+      "Vector Math.043",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.044",
+      "Vector"
+    ],
+    [
+      "Vector Math.044",
+      "Vector",
+      "Image Texture.022",
+      "Vector"
+    ],
+    [
+      "Vector Math.043",
+      "Vector",
+      "Vector Math.045",
+      "Vector"
+    ],
+    [
+      "Image Texture.022",
+      "Color",
+      "Vector Math.045",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.046",
+      "Vector"
+    ],
+    [
+      "Vector Math.046",
+      "Vector",
+      "Image Texture.023",
+      "Vector"
+    ],
+    [
+      "Vector Math.045",
+      "Vector",
+      "Vector Math.047",
+      "Vector"
+    ],
+    [
+      "Image Texture.023",
+      "Color",
+      "Vector Math.047",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.048",
+      "Vector"
+    ],
+    [
+      "Vector Math.048",
+      "Vector",
+      "Image Texture.024",
+      "Vector"
+    ],
+    [
+      "Vector Math.047",
+      "Vector",
+      "Vector Math.049",
+      "Vector"
+    ],
+    [
+      "Image Texture.024",
+      "Color",
+      "Vector Math.049",
+      "Vector"
+    ],
+    [
+      "Vector Math.049",
+      "Vector",
+      "Vector Math.050",
+      "Vector"
+    ],
+    [
+      "Vector Math.050",
+      "Vector",
+      "Pigment grade",
+      "Color"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Image Texture.025",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.051",
+      "Vector"
+    ],
+    [
+      "Vector Math.051",
+      "Vector",
+      "Image Texture.026",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.052",
+      "Vector"
+    ],
+    [
+      "Vector Math.052",
+      "Vector",
+      "Image Texture.027",
+      "Vector"
+    ],
+    [
+      "Image Texture.026",
+      "Color",
+      "Vector Math.053",
+      "Vector"
+    ],
+    [
+      "Image Texture.027",
+      "Color",
+      "Vector Math.053",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.054",
+      "Vector"
+    ],
+    [
+      "Vector Math.054",
+      "Vector",
+      "Image Texture.028",
+      "Vector"
+    ],
+    [
+      "Vector Math.053",
+      "Vector",
+      "Vector Math.055",
+      "Vector"
+    ],
+    [
+      "Image Texture.028",
+      "Color",
+      "Vector Math.055",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.056",
+      "Vector"
+    ],
+    [
+      "Vector Math.056",
+      "Vector",
+      "Image Texture.029",
+      "Vector"
+    ],
+    [
+      "Vector Math.055",
+      "Vector",
+      "Vector Math.057",
+      "Vector"
+    ],
+    [
+      "Image Texture.029",
+      "Color",
+      "Vector Math.057",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.058",
+      "Vector"
+    ],
+    [
+      "Vector Math.058",
+      "Vector",
+      "Image Texture.030",
+      "Vector"
+    ],
+    [
+      "Vector Math.057",
+      "Vector",
+      "Vector Math.059",
+      "Vector"
+    ],
+    [
+      "Image Texture.030",
+      "Color",
+      "Vector Math.059",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.060",
+      "Vector"
+    ],
+    [
+      "Vector Math.060",
+      "Vector",
+      "Image Texture.031",
+      "Vector"
+    ],
+    [
+      "Vector Math.059",
+      "Vector",
+      "Vector Math.061",
+      "Vector"
+    ],
+    [
+      "Image Texture.031",
+      "Color",
+      "Vector Math.061",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.062",
+      "Vector"
+    ],
+    [
+      "Vector Math.062",
+      "Vector",
+      "Image Texture.032",
+      "Vector"
+    ],
+    [
+      "Vector Math.061",
+      "Vector",
+      "Vector Math.063",
+      "Vector"
+    ],
+    [
+      "Image Texture.032",
+      "Color",
+      "Vector Math.063",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.064",
+      "Vector"
+    ],
+    [
+      "Vector Math.064",
+      "Vector",
+      "Image Texture.033",
+      "Vector"
+    ],
+    [
+      "Vector Math.063",
+      "Vector",
+      "Vector Math.065",
+      "Vector"
+    ],
+    [
+      "Image Texture.033",
+      "Color",
+      "Vector Math.065",
+      "Vector"
+    ],
+    [
+      "UV Map",
+      "UV",
+      "Vector Math.066",
+      "Vector"
+    ],
+    [
+      "Vector Math.066",
+      "Vector",
+      "Image Texture.034",
+      "Vector"
+    ],
+    [
+      "Vector Math.065",
+      "Vector",
+      "Vector Math.067",
+      "Vector"
+    ],
+    [
+      "Image Texture.034",
+      "Color",
+      "Vector Math.067",
+      "Vector"
+    ],
+    [
+      "Vector Math.067",
+      "Vector",
+      "Vector Math.068",
+      "Vector"
+    ],
+    [
+      "Vector Math.068",
+      "Vector",
+      "RGB to BW.001",
+      "Color"
+    ],
+    [
+      "RGB to BW.001",
+      "Val",
+      "Math.001",
+      "Value"
+    ],
+    [
+      "Image Texture.025",
+      "Color",
+      "RGB to BW.002",
+      "Color"
+    ],
+    [
+      "RGB to BW.002",
+      "Val",
+      "Math.002",
+      "Value"
+    ],
+    [
+      "Math.001",
+      "Value",
+      "Math.002",
+      "Value"
+    ],
+    [
+      "Math.002",
+      "Value",
+      "Math.003",
+      "Value"
+    ],
+    [
+      "Math.003",
+      "Value",
+      "Math.004",
+      "Value"
+    ],
+    [
+      "Math.004",
+      "Value",
+      "Math.005",
+      "Value"
+    ],
+    [
+      "Pigment grade",
+      "Color",
+      "Vector Math.069",
+      "Vector"
+    ],
+    [
+      "Math.005",
+      "Value",
+      "Vector Math.069",
+      "Scale"
+    ],
+    [
+      "Vector Math.069",
+      "Vector",
+      "Continuous pigment",
+      "Color2"
+    ],
+    [
+      "Math.005",
+      "Value",
+      "Pigment microrelief",
+      "Height"
+    ],
+    [
+      "UV Map.001",
+      "UV",
+      "Baked pigment only",
+      "Vector"
+    ],
+    [
+      "UV Map.002",
+      "UV",
+      "Estimated diffuse pigment",
+      "Vector"
+    ],
+    [
+      "UV Map.002",
+      "UV",
+      "Pigment estimation confidence",
+      "Vector"
+    ],
+    [
+      "Pigment estimation confidence",
+      "Color",
+      "Math.006",
+      "Value"
+    ],
+    [
+      "Attribute.001",
+      "Factor",
+      "Math.006",
+      "Value"
+    ],
+    [
+      "Math.006",
+      "Value",
+      "Measured pigment with bounded confidence",
+      "Factor"
+    ],
+    [
+      "Baked pigment only",
+      "Color",
+      "Measured pigment with bounded confidence",
+      "Color1"
+    ],
+    [
+      "Estimated diffuse pigment",
+      "Color",
+      "Measured pigment with bounded confidence",
+      "Color2"
+    ],
+    [
+      "Math.005",
+      "Value",
+      "Fine varnish relief",
+      "Height"
+    ],
+    [
+      "Fine varnish relief",
+      "Normal",
+      "Principled BSDF",
+      "Coat Normal"
+    ],
+    [
+      "UV Map.003",
+      "UV",
+      "Baked pigment only.001",
+      "Vector"
+    ],
+    [
+      "UV Map.004",
+      "UV",
+      "Estimated diffuse pigment.001",
+      "Vector"
+    ],
+    [
+      "UV Map.004",
+      "UV",
+      "Pigment estimation confidence.001",
+      "Vector"
+    ],
+    [
+      "Pigment estimation confidence.001",
+      "Color",
+      "Math.007",
+      "Value"
+    ],
+    [
+      "Attribute.002",
+      "Factor",
+      "Math.007",
+      "Value"
+    ],
+    [
+      "Math.007",
+      "Value",
+      "Math.008",
+      "Value"
+    ],
+    [
+      "Attribute.003",
+      "Factor",
+      "Math.008",
+      "Value"
+    ],
+    [
+      "Math.008",
+      "Value",
+      "Measured pigment with bounded confidence.001",
+      "Factor"
+    ],
+    [
+      "Baked pigment only.001",
+      "Color",
+      "Measured pigment with bounded confidence.001",
+      "Color1"
+    ],
+    [
+      "Estimated diffuse pigment.001",
+      "Color",
+      "Measured pigment with bounded confidence.001",
+      "Color2"
+    ],
+    [
+      "UV Map.005",
+      "UV",
+      "Baked pigment only.002",
+      "Vector"
+    ],
+    [
+      "UV Map.006",
+      "UV",
+      "Estimated diffuse pigment.002",
+      "Vector"
+    ],
+    [
+      "UV Map.006",
+      "UV",
+      "Pigment estimation confidence.002",
+      "Vector"
+    ],
+    [
+      "Pigment estimation confidence.002",
+      "Color",
+      "Math.009",
+      "Value"
+    ],
+    [
+      "Attribute.004",
+      "Factor",
+      "Math.009",
+      "Value"
+    ],
+    [
+      "Math.009",
+      "Value",
+      "Math.010",
+      "Value"
+    ],
+    [
+      "Attribute.005",
+      "Factor",
+      "Math.010",
+      "Value"
+    ],
+    [
+      "Math.010",
+      "Value",
+      "Measured pigment with bounded confidence.002",
+      "Factor"
+    ],
+    [
+      "Baked pigment only.002",
+      "Color",
+      "Measured pigment with bounded confidence.002",
+      "Color1"
+    ],
+    [
+      "Estimated diffuse pigment.002",
+      "Color",
+      "Measured pigment with bounded confidence.002",
+      "Color2"
+    ],
+    [
+      "Attribute.006",
+      "Factor",
+      "Map Range",
+      "Value"
+    ],
+    [
+      "Map Range",
+      "Result",
+      "Principled BSDF",
+      "Roughness"
+    ],
+    [
+      "Attribute.006",
+      "Factor",
+      "Map Range.001",
+      "Value"
+    ],
+    [
+      "Map Range.001",
+      "Result",
+      "Principled BSDF",
+      "Coat Roughness"
+    ],
+    [
+      "Attribute.006",
+      "Factor",
+      "Map Range.002",
+      "Value"
+    ],
+    [
+      "UV Map.007",
+      "UV",
+      "Baked base pigment correction",
+      "Vector"
+    ],
+    [
+      "Attribute.007",
+      "Factor",
+      "Mix (Legacy)",
+      "Factor"
+    ],
+    [
+      "Map Range.002",
+      "Result",
+      "Mix (Legacy)",
+      "Color1"
+    ],
+    [
+      "Mix (Legacy)",
+      "Color",
+      "Fine varnish relief",
+      "Strength"
+    ],
+    [
+      "Principled BSDF",
+      "BSDF",
+      "Material Output",
+      "Surface"
+    ],
+    [
+      "UV Map.008",
+      "UV",
+      "Completed king pigment atlas",
+      "Vector"
+    ],
+    [
+      "Completed king pigment atlas",
+      "Color",
+      "Principled BSDF",
+      "Base Color"
+    ]
+  ]
+}

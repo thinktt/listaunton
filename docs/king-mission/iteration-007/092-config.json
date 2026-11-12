@@ -1,0 +1,20 @@
+{
+  "lights": [
+    "Foot broad crescent"
+  ],
+  "source_sha256": "8233cc0b05bdb025e793cc24ee66f48d0cc1d16013f305373a63b1880ad1f6d9",
+  "maximum_gain": 4,
+  "neutral": true,
+  "bounds": [
+    270,
+    975,
+    650,
+    1085
+  ],
+  "samples": 128,
+  "hypothesis": "Measure and fit the retargeted textured foot reflector against the original unchanged reference crop; inspect all views for acceptance.",
+  "profile": true,
+  "response_samples": 512,
+  "source": "build/king-mission/091-resolved-foot-texture/king.blend",
+  "variant": "092-fitted-textured-foot"
+}

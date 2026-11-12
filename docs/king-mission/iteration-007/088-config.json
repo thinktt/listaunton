@@ -1,0 +1,31 @@
+{
+  "profile_offsets": {
+    "10": [
+      0,
+      0.026
+    ],
+    "11": [
+      0,
+      0.016
+    ],
+    "8": [
+      0,
+      0.062
+    ],
+    "9": [
+      0,
+      0.035
+    ],
+    "7": [
+      0,
+      0.027
+    ]
+  },
+  "samples": 128,
+  "profile": true,
+  "source": "build/king-mission/083-broad-foot-reflector/king.blend",
+  "source_sha256": "45df889f6e49a67a4fdde5993d97bb2eb035ecf03e8caa24eadf2c94f3e9dbd5",
+  "variant": "088-sloping-original-finish",
+  "hypothesis": "With the shoulder normals corrected, test the accepted original sharper coat and grain relief. The earlier satin mask blurred the reflection and may no longer be necessary.",
+  "neutral": true
+}

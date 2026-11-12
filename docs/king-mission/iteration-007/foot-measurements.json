@@ -1,0 +1,180 @@
+{
+  "method": "Luminance peaks of seven-pixel-wide columns in a fixed curved foot band. The brighter reference columns (luminance above 100/255, interior maximum) support a limited location diagnostic. Dimmer columns can pick adjacent features. Whole RGB crop MSE also reported. These diagnose placement and tone; they do not measure perceived fidelity or grain agreement.",
+  "crop_xyxy": [
+    270,
+    975,
+    650,
+    1085
+  ],
+  "curve": {
+    "apex_y": 1047,
+    "axis_x": 493,
+    "quadratic": -0.00175,
+    "half_width": 10
+  },
+  "columns": {
+    "reference": [
+      {
+        "x": 320,
+        "peak_y": 997,
+        "peak_luminance_255": 64.28634285714286,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 360,
+        "peak_y": 1016,
+        "peak_luminance_255": 101.13542857142856,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 400,
+        "peak_y": 1034,
+        "peak_luminance_255": 157.69091428571429,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 440,
+        "peak_y": 1043,
+        "peak_luminance_255": 148.75937142857143,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 480,
+        "peak_y": 1046,
+        "peak_luminance_255": 75.36471428571429,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 520,
+        "peak_y": 1049,
+        "peak_luminance_255": 61.57302857142857,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 560,
+        "peak_y": 1042,
+        "peak_luminance_255": 53.4572,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 600,
+        "peak_y": 1037,
+        "peak_luminance_255": 78.78714285714285,
+        "peak_on_search_boundary": true
+      }
+    ],
+    "previous": [
+      {
+        "x": 320,
+        "peak_y": 992,
+        "peak_luminance_255": 40.088342857142855,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 360,
+        "peak_y": 1013,
+        "peak_luminance_255": 60.940628571428576,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 400,
+        "peak_y": 1042,
+        "peak_luminance_255": 75.20654285714285,
+        "peak_on_search_boundary": true
+      },
+      {
+        "x": 440,
+        "peak_y": 1052,
+        "peak_luminance_255": 137.90457142857142,
+        "peak_on_search_boundary": true
+      },
+      {
+        "x": 480,
+        "peak_y": 1057,
+        "peak_luminance_255": 82.8696,
+        "peak_on_search_boundary": true
+      },
+      {
+        "x": 520,
+        "peak_y": 1047,
+        "peak_luminance_255": 47.367885714285705,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 560,
+        "peak_y": 1041,
+        "peak_luminance_255": 48.1376,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 600,
+        "peak_y": 1029,
+        "peak_luminance_255": 51.33551428571429,
+        "peak_on_search_boundary": false
+      }
+    ],
+    "trial": [
+      {
+        "x": 320,
+        "peak_y": 985,
+        "peak_luminance_255": 65.5196,
+        "peak_on_search_boundary": true
+      },
+      {
+        "x": 360,
+        "peak_y": 1018,
+        "peak_luminance_255": 108.40448571428571,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 400,
+        "peak_y": 1034,
+        "peak_luminance_255": 147.83628571428568,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 440,
+        "peak_y": 1044,
+        "peak_luminance_255": 150.72174285714283,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 480,
+        "peak_y": 1049,
+        "peak_luminance_255": 117.79291428571428,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 520,
+        "peak_y": 1050,
+        "peak_luminance_255": 59.05445714285714,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 560,
+        "peak_y": 1046,
+        "peak_luminance_255": 45.877628571428566,
+        "peak_on_search_boundary": false
+      },
+      {
+        "x": 600,
+        "peak_y": 1028,
+        "peak_luminance_255": 35.88282857142857,
+        "peak_on_search_boundary": false
+      }
+    ]
+  },
+  "bright_columns": [
+    360,
+    400,
+    440
+  ],
+  "rgb_mse_255": {
+    "previous": 403.86425837320576,
+    "trial": 234.69281499202552
+  },
+  "bright_arc_mean_absolute_peak_y_error": {
+    "previous": 6.666666666666667,
+    "trial": 1.0
+  }
+}

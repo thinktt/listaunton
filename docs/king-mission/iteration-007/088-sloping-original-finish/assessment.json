@@ -1,0 +1,16 @@
+{
+  "variant": "088-sloping-original-finish",
+  "decision": "rejected",
+  "reason": "Original sharper coat creates a bright smooth stripe.",
+  "scores": {
+    "silhouette_iou_percent": 97.81486043302121,
+    "interior_form": 84,
+    "wood_color": 82,
+    "grain_surface": 78,
+    "lighting_reflections": 60
+  },
+  "original_iou_percent": 96.83709084281024,
+  "equal_weight_mean": 80.36297208660423,
+  "render_sha256": "e558d5db768ea7e34ee6fc4683be049216d179e3b179362e113e45521e80b0bb",
+  "model_sha256": "7514f08fd857c20194d1992817979c01e2204c6659b86137ad6416fd053112ae"
+}

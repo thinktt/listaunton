@@ -1,0 +1,16 @@
+{
+  "variant": "085-foot-satin-finish",
+  "decision": "superseded",
+  "reason": "Satin finish softens the line, but the inner shoulder still turns inward.",
+  "scores": {
+    "silhouette_iou_percent": 97.8158065266105,
+    "interior_form": 83,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 60
+  },
+  "original_iou_percent": 96.83752894231243,
+  "equal_weight_mean": 80.36316130532211,
+  "render_sha256": "d395a2be0a6f9569a016232f6a39f7401b32cefd8aeb5a61df9ffb20ec9e8270",
+  "model_sha256": "07f4a0e547b46e4165a09cc0335f805d640e429229a841d59ed00630971aa131"
+}

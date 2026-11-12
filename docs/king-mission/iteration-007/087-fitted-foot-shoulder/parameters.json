@@ -1,0 +1,76 @@
+{
+  "source_sha256": "8bec33174390e8954f09e3398b3791216a5d3ef4f9afa81a76c669a9f8251035",
+  "maximum_gain": 4,
+  "neutral": true,
+  "bounds": [
+    270,
+    975,
+    650,
+    1085
+  ],
+  "samples": 128,
+  "hypothesis": "Fit the recovered broad crescent strength using an isolated actual BSDF response through AgX; inspect full render and original before acceptance.",
+  "profile": true,
+  "response_samples": 512,
+  "source": "build/king-mission/087-fitted-foot-shoulder/prepared.blend",
+  "variant": "087-fitted-foot-shoulder",
+  "original_source": "build/king-mission/086-sloping-foot-shoulder/king.blend",
+  "original_source_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943",
+  "light_fit": {
+    "source_sha256": "43e224f2d9e2eac7ed46206e307c50a74b7098b3b3a43c1fa1c4d76a990c4943",
+    "pixels": 34768,
+    "bounds": [
+      270,
+      975,
+      650,
+      1085
+    ],
+    "original_powers": {
+      "Foot broad crescent": 1500.0
+    },
+    "fitted_powers": {
+      "Foot broad crescent": 523.8493714539778
+    },
+    "gain": [
+      0.3492329143026519
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.0061348455308340285,
+        "after_mse": 0.004791784589903328
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.004791784589903328,
+        "after_mse": 0.00453157899556489
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.00453157899556489,
+        "after_mse": 0.004513088175275622
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.004513088175275622,
+        "after_mse": 0.004512253178990641
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.004512253178990641,
+        "after_mse": 0.004512223688667222
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.004512223688667222,
+        "after_mse": 0.00451222250591266
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Foot broad crescent"
+  ],
+  "model_sha256": "e2080f6a4f7df2bbba6c19983d06e8d8216b22ad95e78e516418a254cd980c90",
+  "elevation_degrees": 54.000000800055794
+}
