@@ -90,3 +90,15 @@ points can change a tiny socket glint; this remains a documented limitation.
 Fixed 256 samples and removing denoising did not fix it and are not accepted.
 Keep the accepted 128 adaptive/denoised settings and synchronize all king views.
 The rejected color repairs and over-bright light fits must not become current.
+
+
+Checkpoint 013 changes only heights of controls 58–60 by +.010, +.007 and
++.003, plus the two existing upper-collar area lights. Every radius, the 012
+middle join, other controls, material/packed pixels, UVs and attributes,
+physical bounds and 54-degree camera are preserved. Reproduce with
+refine_collar_turning.py and iteration-013/reproduction.json from archived 012.
+verify_collar_candidate.py runs scoped checks, receiver regeneration, saved
+views, export and independent reconstruction before publication. Preserve all
+nine receivers and routes; never promote the rejected brighter or larger-curve
+tests. Use the canonical fresh renderer and synchronize fixed, side and viewer
+assets. Read the mission log for current limitations and next work.

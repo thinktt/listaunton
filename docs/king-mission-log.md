@@ -511,3 +511,28 @@ and all 34 Windows preview files are synchronized. King/candidate, site/model
 and historical-projection checks pass. The known whole-set knight metadata failure
 remains separate. The goal is active and incomplete; no watcher, subagent, push or
 publication was started.
+
+
+## 2026-11-12 — checkpoint 013: upper collar curve and reflections
+
+Accepted trial 151, independently reproduced as 152 from the archived checkpoint
+012. Three upper-collar control heights and two existing local lights improve
+the left patch and right glint placement. All radii, other geometry, wood
+material, overall dimensions and the fixed 54-degree camera are preserved.
+The brighter/doubled light studies and the obstructed larger curve are rejected.
+See [iteration-013/README.md](king-mission/iteration-013/README.md) for evidence.
+
+High-res IoU is 97.8258%; original IoU is
+96.8464%, both unchanged. Subjective scores: interior 85,
+color 82, grain 79, lighting 69; working mean 82.5652% and
+holistic range 75–85%. The full mission remains active and incomplete.
+
+Scope, receivers/regeneration, closed components, saved-file reproduction and
+exact mesh export pass. Review and all 34
+Windows preview files are synchronized, with canonical-model, king/candidate
+interaction and site/model checks passed. The alternate entry point differs by at most 45/255 in this check. The earlier execution-context sensitivity remains documented; this result does not establish its cause or a universal fix.
+The existing shared knight metadata failure is not rerun or reported as a pass.
+
+Next: improve the remaining pigment bands and varnish/grain variation while
+preserving the accepted collar shape; then revisit the broad base and upper-rim
+reflections. No watcher, subagent, push or publication was started.

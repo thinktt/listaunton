@@ -1,0 +1,137 @@
+{
+  "rubric": "Only silhouette IoU is measured; the other ratings are visual judgments with the unchanged mission rubric.",
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "trials": [
+    {
+      "variant": "143-upper-glint-placement",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 67
+      },
+      "equal_weight_mean": 82.16515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Weak improvement to the left; the split reflection remains and right placement worsens.",
+      "model_sha256": "c86518f4ca1d8ad9ab5c0a9a5f897a81bdd2bc89f26a1789ae8032935fac565c",
+      "render_sha256": "1ba3383e1db16998f98d0ce506e7e22257ba2e476e26bf39ed75712e48892683"
+    },
+    {
+      "variant": "144-upper-glint-power",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "equal_weight_mean": 81.96515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "More energy makes the misplaced double stripe conspicuous.",
+      "model_sha256": "cf99acd88e93db642ad51a97bc3aedae57bc0a31a2bc1b4e93c4b9df6a0295f4",
+      "render_sha256": "86702152649a5e821cd1001c0b389f97fac7a8fc5ba4c2f78f11296e69460be5"
+    },
+    {
+      "variant": "145-upper-glint-breadth",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 65
+      },
+      "equal_weight_mean": 81.76515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Broader/brighter lights exaggerate the double stripe.",
+      "model_sha256": "d3262f5def5b4914f3e2817fb5a6dd4a63ffab800cc74e686d1b3dfafaff7407",
+      "render_sha256": "2fb3a3329bb3554532635a1590b24ab9290d0ce381cb01c36e5f618f16c3e704"
+    },
+    {
+      "variant": "146-upper-wide-source",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 63
+      },
+      "equal_weight_mean": 81.36515071312314,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Over-bright white streaks wash across the wrong part of the collar.",
+      "model_sha256": "1d810cb1610d66a30568f485656ce9cfbbe15fc3bbf818693824982e6414ecc8",
+      "render_sha256": "bb1b79f4a8b9f44288c2225903d6a5995be9c578347320f67b1deff4a1db72f7"
+    },
+    {
+      "variant": "147-upper-collar-curve",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 66
+      },
+      "equal_weight_mean": 81.96515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "The larger upper-curve adjustment blocks the intended left reflected ray.",
+      "model_sha256": "d229fc5dc7b3db5b65e15bde3ed051d0fbae33cdc53bc593f7f86e063a48afc0",
+      "render_sha256": "f500a1926b3daa509cbed39920236b48400b98ced61fbd1cab65c3d5cdbd2476"
+    },
+    {
+      "variant": "149-upper-collar-gentle-curve",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.36515071312314,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "superseded",
+      "reason": "Gentler curve and a near-crest aim reduce the left double band; right highlight is still displaced.",
+      "model_sha256": "1496aa0e348ab5e395cce3eb00eb56565c246049f78d219065e0d17162831e58",
+      "render_sha256": "50c6b717bb9cd0fc8669a25dcf83295a04342f1ac0182a40b64f78625a0032eb"
+    },
+    {
+      "variant": "150-upper-collar-centered-reflections",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.36515071312314,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "rejected",
+      "reason": "Increasing the gentler candidate lights adds brightness but worsens the right patch.",
+      "model_sha256": "c029ab49243b2fbf0e0755b7dcef6693033e11643bea3c5787ce960294cb8287",
+      "render_sha256": "b24ab0e6ea4c8cc5f74606d4323d2549eba9f26536c4246af570ef3afa687122"
+    },
+    {
+      "variant": "151-upper-right-placement",
+      "scores": {
+        "silhouette_iou_percent": 97.82575356561574,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.56515071312315,
+      "original_iou_percent": 96.84637858237302,
+      "decision": "accepted",
+      "reason": "Gentler upper curve, less split left patch, and a corrected right aim. Remaining texture bands and imperfect highlight breadth are visible.",
+      "model_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+      "render_sha256": "cae9b5ac1430eb21af69548538ea5e4a69f714a231b95a8b05721ebb7b2ef7d9"
+    }
+  ]
+}

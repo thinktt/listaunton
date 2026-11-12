@@ -1,11 +1,12 @@
 # King reconstruction
 
-Current accepted state: [mission checkpoint 012](king-mission/iteration-012/README.md).
-The middle collar has a repaired continuous join and refined reflections. The v6
-wood material and fixed 54-degree camera are preserved. Follow the latest
-[mission log](king-mission-log.md) for active status, scores and remaining work.
-Use the documented standardized fresh-render path; alternate-entry-point behavior
-at one tiny socket glint remains unresolved. Earlier builders below are historical.
+Current accepted state: [mission checkpoint 013](king-mission/iteration-013/README.md).
+The upper collar has a gentler upper curve and better placed reflections, following
+checkpoint 012's middle-collar repair. The v6 wood material, overall dimensions and
+54-degree camera are preserved. Read the [mission log](king-mission-log.md) for
+current scores and remaining work. Use the documented canonical fresh renderer;
+earlier alternate-entry-point variation remains documented. Older builders below
+are historical.
 
 ## Historical clay study
 

@@ -1,0 +1,373 @@
+{
+  "method": "Composited RGB squared error on common foreground; not a perceptual-match percentage.",
+  "trials": {
+    "143-upper-glint-placement": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 612.8630278526505
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 1891.743339831059
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 1324.5295283392786
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 452.74639047084304
+      }
+    },
+    "144-upper-glint-power": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 708.1662174303684
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 2339.0959497509207
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 1709.6767736821243
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 481.65910002406355
+      }
+    },
+    "145-upper-glint-breadth": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 833.3550763701708
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 2929.93610569634
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 2154.7419738406657
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 520.2405483810593
+      }
+    },
+    "146-upper-wide-source": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 1077.3514375561545
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 4342.298462204895
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 2623.097106619104
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 599.6679567391246
+      }
+    },
+    "147-upper-collar-curve": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 681.1988993710692
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 1723.602988953866
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 1826.9169639318272
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 474.234479024625
+      }
+    },
+    "149-upper-collar-gentle-curve": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 513.7037286612758
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 584.762833008447
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 1570.5614347998414
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 423.5693631186332
+      }
+    },
+    "150-upper-collar-centered-reflections": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 571.7711141060198
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 664.2003465453757
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 1827.4137931034484
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 443.59366059731025
+      }
+    },
+    "151-upper-right-placement": {
+      "upper-collar": {
+        "bounds": [
+          370,
+          400,
+          650,
+          453
+        ],
+        "foreground_pixels": 14840,
+        "previous_rgb_mse": 644.8318733153639,
+        "trial_rgb_mse": 468.39299191374664
+      },
+      "left-glint": {
+        "bounds": [
+          448,
+          415,
+          505,
+          442
+        ],
+        "foreground_pixels": 1539,
+        "previous_rgb_mse": 2309.9696772796187,
+        "trial_rgb_mse": 584.1860515486246
+      },
+      "right-glint": {
+        "bounds": [
+          530,
+          411,
+          588,
+          440
+        ],
+        "foreground_pixels": 1682,
+        "previous_rgb_mse": 1226.2021403091558,
+        "trial_rgb_mse": 1171.1482362267143
+      },
+      "collars": {
+        "bounds": [
+          300,
+          390,
+          710,
+          555
+        ],
+        "foreground_pixels": 49868,
+        "previous_rgb_mse": 462.3041228844149,
+        "trial_rgb_mse": 410.1534918852437
+      }
+    }
+  }
+}

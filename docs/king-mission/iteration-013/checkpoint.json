@@ -1,0 +1,154 @@
+{
+  "checkpoint": "013",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "151-upper-right-placement",
+  "previous_checkpoint": "012",
+  "model_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+  "render_sha256": "cae9b5ac1430eb21af69548538ea5e4a69f714a231b95a8b05721ebb7b2ef7d9",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "scores": {
+    "silhouette_iou_percent": 97.82575356561574,
+    "interior_form": 85,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 69
+  },
+  "original_iou_percent": 96.84637858237302,
+  "equal_weight_mean": 82.56515071312315,
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "geometry_changed": true,
+  "material_changed": false,
+  "camera_elevation_degrees": 54.000000800055794,
+  "receiver_count": 9,
+  "modified_profile_rows": [
+    58,
+    59,
+    60
+  ],
+  "edited_lights": {
+    "Collar upper left": {
+      "type": "AREA",
+      "energy": 12.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.8770681023597717,
+        0.4007317125797272,
+        -0.2648879885673523,
+        -0.32638946175575256,
+        -0.4803660809993744,
+        0.7316690683364868,
+        -0.4836411476135254,
+        -0.8500820398330688,
+        1.3263866449619854e-08,
+        0.5514294505119324,
+        0.8342215418815613,
+        3.9762980937957764,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.10000000149011612,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "upper-collar"
+      ]
+    },
+    "Collar upper right": {
+      "type": "AREA",
+      "energy": 8.0,
+      "color": [
+        1.0,
+        0.7300000190734863,
+        0.5
+      ],
+      "matrix": [
+        0.8060725331306458,
+        0.03572311997413635,
+        0.5907376408576965,
+        0.6652724742889404,
+        0.591816782951355,
+        -0.048655975610017776,
+        -0.8046026825904846,
+        -1.096914529800415,
+        -8.194511735837295e-10,
+        0.9981765747070312,
+        -0.06036178767681122,
+        3.2449827194213867,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.23999999463558197,
+      "size_y": 0.10000000149011612,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "upper-collar"
+      ]
+    }
+  },
+  "mission_complete": false,
+  "validation": {
+    "scope": "passed",
+    "receiver_regeneration": "passed",
+    "export": "passed",
+    "reproduction": {
+      "initial_session_vs_fresh": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 7.790063821290212e-06,
+        "alpha_exact": true
+      },
+      "independent_saved_reproduction": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 8.108025609914303e-06,
+        "alpha_exact": true
+      },
+      "repeat_saved_render": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 7.790063821290212e-06,
+        "alpha_exact": true
+      },
+      "alternate_entrypoint": {
+        "maximum_channel_error_255": 45,
+        "mean_channel_error_255": 0.0005365605183031524,
+        "alpha_exact": true
+      },
+      "reproduction_mesh_exact": true,
+      "camera_export_exact": true,
+      "physical_bounds_exact": true,
+      "canonical_render_entrypoint": "scripts/king/render_fixed_diagnostics.py -- SOURCE OUTPUT --beauty-only"
+    },
+    "site": "passed king checks",
+    "canonical_model": "passed",
+    "site_model_candidates": "passed",
+    "historical_projections": "unchanged; not rerun this lighting/curve checkpoint",
+    "whole_set": "not rerun; known knight sizing metadata mismatch documented at checkpoint 012",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "local_preview_verified_files": 34,
+    "live_in_app_browser": {
+      "result": "passed visual inspection after reload",
+      "views": [
+        "Original black overlay initial state",
+        "Black candidate 1 fixed model, full silhouette"
+      ],
+      "served_model_sha256": "5f0671fa5484a1e52a75b3d93a4e9d93538b1294e4f33db44e68de1199a2398d",
+      "served_render_sha256": "cae9b5ac1430eb21af69548538ea5e4a69f714a231b95a8b05721ebb7b2ef7d9"
+    }
+  }
+}
