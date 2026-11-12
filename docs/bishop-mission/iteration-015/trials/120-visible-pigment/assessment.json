@@ -1,0 +1,37 @@
+{
+  "trial": "120-visible-pigment",
+  "decision": "rejected",
+  "reason": "Actual visibility and measured pigment improve the base, but uncertain reflective areas are replaced with inappropriate inferred detail.",
+  "scores_percent": {
+    "silhouette": 96.10972184363037,
+    "interior": 84,
+    "color": 83,
+    "texture": 76,
+    "lighting": 75
+  },
+  "mean_percent": 82.82194436872608,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "samples": 256,
+  "fixed_camera_degrees": 54,
+  "model_sha256": "34aed952aa808025b47b99055687f1622f7c4d767e39315e6d58e87cf4ef41d9",
+  "render_sha256": "e8cce06cbf128698478b7a22b5395f6067fbaf3a2bd9ef3046e24acbe7213d98",
+  "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9610972184363037,
+      "legacy_raw_model_mask_iou": 0.9610972184363037
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778604556036117,
+      "legacy_raw_model_mask_iou": 0.9778604556036117
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666185498039664,
+      "legacy_raw_model_mask_iou": 0.9666185498039664
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "trial": "118-harmonic-pigment",
+  "decision": "rejected",
+  "reason": "Smooth angular color further improves the rear but washes out collar and foot details. Retained only as an inferred fallback, not a public model.",
+  "scores_percent": {
+    "silhouette": 96.10972184363037,
+    "interior": 84,
+    "color": 73,
+    "texture": 73,
+    "lighting": 71
+  },
+  "mean_percent": 79.42194436872607,
+  "holistic_range_percent": [
+    70,
+    80
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "samples": 256,
+  "fixed_camera_degrees": 54,
+  "model_sha256": "87e244706bf575287d984a124b390e006cace9116b34269cfe740a11eeeb931e",
+  "render_sha256": "6be6183dc0d48d8f52d56b042d12c585464a2fb7d12ac053d4f634bc9d7c20d9",
+  "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9610972184363037,
+      "legacy_raw_model_mask_iou": 0.9610972184363037
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778604556036117,
+      "legacy_raw_model_mask_iou": 0.9778604556036117
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666185498039664,
+      "legacy_raw_model_mask_iou": 0.9666185498039664
+    }
+  }
+}

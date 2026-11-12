@@ -1,0 +1,37 @@
+{
+  "trial": "122-visible-feedback",
+  "decision": "rejected",
+  "reason": "A second response iteration improves base loss but cannot repair the missing contrast at collars and foot.",
+  "scores_percent": {
+    "silhouette": 96.10972184363037,
+    "interior": 84,
+    "color": 83,
+    "texture": 76,
+    "lighting": 75
+  },
+  "mean_percent": 82.82194436872608,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "samples": 256,
+  "fixed_camera_degrees": 54,
+  "model_sha256": "830e25d1d0a4581cefcdc99c9c380e749f669bf5a4deaafccb2a65572b954d8b",
+  "render_sha256": "12394724ca7d8c20c9a5f8da4cfbefb5b728e7fc0113015562a9988ae5e2bfa8",
+  "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9610972184363037,
+      "legacy_raw_model_mask_iou": 0.9610972184363037
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778604556036117,
+      "legacy_raw_model_mask_iou": 0.9778604556036117
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666185498039664,
+      "legacy_raw_model_mask_iou": 0.9666185498039664
+    }
+  }
+}

@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(Path(__file__).parent))
 from bishop_scene import editable_meshes
 from validate_render_receivers import audit as audit_receivers
-from validate_atlas_trial import audit as audit_atlas
+from validate_pigment_history import audit_chain
 buffers={};construction={}
 def geometry(path):
     bpy.ops.wm.open_mainfile(filepath=str(path),load_ui=False);bpy.context.view_layer.update();g=bpy.context.evaluated_depsgraph_get();res={}
@@ -42,18 +42,15 @@ bpy.ops.wm.open_mainfile(filepath=str(current_path),load_ui=False)
 receiver_cfg=json.loads(bpy.context.scene['bishop_receiver_trial']) if bpy.context.scene.get('bishop_receiver_trial') else None
 pigment_change=json.loads(bpy.context.scene['bishop_pigment_checkpoint']) if bpy.context.scene.get('bishop_pigment_checkpoint') else None
 if pigment_change:
-    declared_source=ROOT/pigment_change['source'];atlas=ROOT/pigment_change['atlas']
-    assert hashlib.sha256(declared_source.read_bytes()).hexdigest()==pigment_change['source_sha256']
-    assert hashlib.sha256(atlas.read_bytes()).hexdigest()==pigment_change['atlas_sha256']
-    config=ROOT/pigment_change['config']
-    assert hashlib.sha256(config.read_bytes()).hexdigest()==pigment_change['config_sha256']
-    # Preserve the earlier strict receiver/light audit on the archived source,
-    # then prove the current scene differs only in the declared packed atlas.
-    prior_receiver=audit_receivers(declared_source,receiver_cfg)
-    pigment_report=audit_atlas(declared_source,current_path,atlas)
+    # Reopen and scope-check every actual predecessor; do not skip earlier
+    # material edits when preserving the strict original receiver/light audit.
+    pigment_history=audit_chain(current_path)
+    prior_receiver=pigment_history['root_receiver_audit']
+    pigment_report=pigment_history['atlas_steps'][-1]
     receiver_report=dict(pigment_report['render_receivers'],model=str(current_path.relative_to(ROOT)),
         model_sha256=pigment_report['model_sha256'],prior_receiver_audit=prior_receiver,
-        pigment_scope_audit=pigment_report,geometry_controls_cutter_uvs_and_modifiers_preserved=True,
+        pigment_scope_audit=pigment_report,pigment_history_audit=pigment_history,
+        geometry_controls_cutter_uvs_and_modifiers_preserved=True,
         camera_world_display_render_path_preserved=True,reopened_audit=True)
     (ROOT/'assets/bishop/pigment-validation.json').write_text(json.dumps(pigment_report,indent=2)+'\n')
 else:

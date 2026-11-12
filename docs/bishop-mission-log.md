@@ -417,3 +417,39 @@ checkpoint 013; no failed trial is promoted. That model is archived under
 height-dependent pigment around the turned body, preserving regional wood
 tone rather than repeating the rejected flat-color or hidden-only fills.
 The mission remains incomplete. No quota monitoring, publication or push.
+
+## Iteration 015 — measured lower-body pigment and smoother continuation
+
+The goal remains active; no pause is requested. Eight full material candidates
+separate broad wood color, visible pigment, inferred continuation and fine
+contrast. Height-only and angular-average fields lose too much reference
+detail. Measured visibility and BSDF response improve the base, but early
+versions replace uncertain highlights and flatten the rings. Preserving that
+pigment and removing a log-detail clamp restores the lower-body contrast.
+The clamp had affected about 17% of reliably observed texels.
+
+The accepted version applies the improved pigment only below the upper head.
+Head/button pixels above the smooth transition remain exact from checkpoint
+013. Geometry, relief, lights, receivers and the 54-degree camera are unchanged.
+The saved/reopened 512-sample render reduces shared foreground RGB error from
+7.1865 to 5.9816 /255. Collars, stem, socket, base and foot all improve in that
+diagnostic, supported by the fixed-view comparisons. The lower-body rear patch
+is less abrupt, although grain direction and inherited tonal boundaries remain
+visible. See [`iteration-015/assessment.md`](bishop-mission/iteration-015/assessment.md).
+
+Scores are 96.11 / 84 / 86 / 78 / 77, mean 84.22%, holistic 75–85%.
+Silhouette overlap is measured; the other ratings are visual estimates.
+Original-white and original-black overlaps stay 97.786% and 96.661%.
+The preserved upper head still needs texture continuity work. Fine grain is
+soft, base/button glints are too concentrated, and the collar/socket and
+slit-edge reflections remain imperfect. The full reconstruction is incomplete.
+
+The new history audit verifies both successive atlas changes back to the strict
+receiver/light source. Actual geometry, packed pixels, source registration and
+camera remain checked. Export positions, normals, topology and dimensions are
+exact; evaluated Boolean UV differences stay within the established one-ULP
+tolerance. The bishop review and local preview are refreshed from the same
+validated model; delivery hashes and checks are in iteration-015/checkpoint.json.
+Checkpoint 013 remains archived. Next investigate fine grain and spatial
+polish variation while preserving this color result. No quota monitoring,
+subagents, publication or push occurred.

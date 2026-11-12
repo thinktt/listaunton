@@ -1,0 +1,37 @@
+{
+  "trial": "124-visible-range",
+  "decision": "rejected",
+  "reason": "Removing the detail truncation restores the rings and improves the lower body; reject the whole-body version because the upper head regresses.",
+  "scores_percent": {
+    "silhouette": 96.10972184363037,
+    "interior": 84,
+    "color": 85,
+    "texture": 78,
+    "lighting": 77
+  },
+  "mean_percent": 84.02194436872608,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "samples": 256,
+  "fixed_camera_degrees": 54,
+  "model_sha256": "d637f00b180367cc3331c9e5e7dcbb0cd2e60ab734a1aef9d6bf0cacfb31eb38",
+  "render_sha256": "f06f33f58885af210e71e2320c457053a3ad9e6abd44dd56882613a52451bab7",
+  "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9610972184363037,
+      "legacy_raw_model_mask_iou": 0.9610972184363037
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778604556036117,
+      "legacy_raw_model_mask_iou": 0.9778604556036117
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666185498039664,
+      "legacy_raw_model_mask_iou": 0.9666185498039664
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "response": "build/bishop-mission/119-current-response",
+  "response_source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+  "geometry_inheritance_audits": [],
+  "preserve_uncertain_visible_pigment": true,
+  "projection_confidence_kind": "Actual visible surface, preserving uncertain current pigment",
+  "fallback": "build/bishop-mission/118-harmonic-pigment/albedo.png",
+  "fallback_sha256": "3ff40231d0abb8d0b0484bbe2292d8573c0055afc81cd5336aeaddc9cf80b825",
+  "capture": "build/bishop-mission/099-atlas-surface",
+  "actual_visibility_sha256": "9453608d37fc1624e90f9d9968302c09418d855342e16735bbf94c87735abaf4",
+  "swatch": "assets/bishop/materials/inferred-boxwood-source-01.png",
+  "swatch_sha256": "42525214b313230d19ace941dff7dcc5ad34c42ddeaa38e9321bc9af9494a3a3",
+  "output_sha256": "90990db3a453fb7e412141be7ff6080f7bc8d12c4a806073a2d2201d276ca6a1",
+  "correction_bounds": [
+    0.67,
+    1.5
+  ],
+  "inferred_linear_bounds": [
+    0.0001,
+    0.85
+  ],
+  "confidence_texels_above_half": 844233,
+  "reliable_texels_with_legacy_below_98_percent": 261037,
+  "continuation": {
+    "grid": [
+      192,
+      135
+    ],
+    "screen": 50,
+    "anchor": 0.001,
+    "iterations": 967,
+    "max_final_update": 4.720687684311997e-06
+  },
+  "body_rectangle": [
+    20,
+    614,
+    2028,
+    2028
+  ],
+  "body_padding_filled": true,
+  "alpha_button_and_cap_islands_preserved": true,
+  "method": "Bounded local pigment feedback after subtracting measured black-BSDF response. Clipping, reflections, weak responses, inverse errors, geometry edges and cuts are downweighted. Actual atlas visibility projects observations onto the surface. Strongly screened periodic broad-color continuation and bounded observed/inferred fine grain replace the old projection-confidence boundary.",
+  "limits": "An approximate inverse under inferred lighting. Interreflections, uncertain geometry and missing original material information can leave residual shading. Actual BSDF views and scope audits decide acceptance; this is not an emission beauty or reference composite."
+}

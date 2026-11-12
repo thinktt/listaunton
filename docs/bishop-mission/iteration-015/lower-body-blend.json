@@ -1,0 +1,28 @@
+{
+  "config": "scripts/bishop/pigment-125.json",
+  "config_sha256": "bdf916b7a3f968ee994b419d009b3d61bf75dcf9fe5270fc5bab8f1f8e42eaf7",
+  "parameters": {
+    "source": "history/bishop-mission-013/bishop-boxwood-albedo.png",
+    "source_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+    "candidate": "build/bishop-mission/124-visible-range/albedo.png",
+    "candidate_sha256": "1aeed1813dd07998f72e53def9b61bea372f0b6133e15a702514f7c6d1a50998",
+    "capture": "build/bishop-mission/099-atlas-surface",
+    "variant": "125-turned-body-pigment",
+    "heights": [
+      0.0,
+      0.025,
+      3.3,
+      3.43
+    ],
+    "hypothesis": "Retain measured visible-surface pigment and its continuous continuation on the turned lower body. Preserve the accepted upper head and button, which fit better in checkpoint 013. Smooth height blending limits changes without a new angular projection boundary. Geometry, relief, lighting and the 54-degree camera stay unchanged."
+  },
+  "source_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "candidate_sha256": "1aeed1813dd07998f72e53def9b61bea372f0b6133e15a702514f7c6d1a50998",
+  "output_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "capture_source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+  "position_sha256": "a47c617d941feedaf5fea940c6e23ecdaeaa7475f4256a96f356cdc8726d1716",
+  "protected_texels": 1888557,
+  "changed_texels": 1855001,
+  "protected_and_alpha_pixels_exact": true,
+  "note": "Smooth all-azimuth pigment blend, no geometry, lighting or relief edit. Candidate remains unaccepted until saved BSDF views and scope audits pass."
+}

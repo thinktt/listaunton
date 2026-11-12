@@ -1,0 +1,10 @@
+{
+  "source": "history/bishop-mission-013/bishop-boxwood-albedo.png",
+  "source_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "candidate": "build/bishop-mission/124-visible-range/albedo.png",
+  "candidate_sha256": "1aeed1813dd07998f72e53def9b61bea372f0b6133e15a702514f7c6d1a50998",
+  "capture": "build/bishop-mission/099-atlas-surface",
+  "variant": "125-turned-body-pigment",
+  "heights": [0.0, 0.025, 3.3, 3.43],
+  "hypothesis": "Retain measured visible-surface pigment and its continuous continuation on the turned lower body. Preserve the accepted upper head and button, which fit better in checkpoint 013. Smooth height blending limits changes without a new angular projection boundary. Geometry, relief, lighting and the 54-degree camera stay unchanged."
+}

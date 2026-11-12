@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/116-height-pigment/wood.png",
+  "render_sha256": "e2414f9236be6671157ac124b739f8227ef35d118b132341f1efda9d4bdd8381",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9610972184363037,
+      "legacy_raw_model_mask_iou": 0.9610972184363037
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778604556036117,
+      "legacy_raw_model_mask_iou": 0.9778604556036117
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666185498039664,
+      "legacy_raw_model_mask_iou": 0.9666185498039664
+    }
+  }
+}

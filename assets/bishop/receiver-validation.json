@@ -27,7 +27,7 @@
   ],
   "all_faces_once": true,
   "model": "models\\bishop\\bishop-rebuilt.blend",
-  "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
   "prior_receiver_audit": {
     "passed": true,
     "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
@@ -82,12 +82,12 @@
   },
   "pigment_scope_audit": {
     "passed": true,
-    "source": "history/bishop-mission-012/bishop-rebuilt.blend",
-    "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+    "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+    "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
     "model": "models/bishop/bishop-rebuilt.blend",
-    "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
     "atlas": "assets/bishop/bishop-boxwood-albedo.png",
-    "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+    "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
     "packed_pixel_max_error": 0.0,
     "only_declared_atlas_changed": true,
     "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
@@ -120,7 +120,183 @@
       ],
       "all_faces_once": true
     },
-    "reopened_audit": true
+    "reopened_audit": true,
+    "declaration": {
+      "atlas": "assets/bishop/bishop-boxwood-albedo.png",
+      "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+      "config": "docs/bishop-mission/iteration-015/reproduction.json",
+      "config_sha256": "54d3cb1992d92c265b763922fad2536600b9e9e7e4187fd7ad52594e737bc4f0",
+      "description": "Measured visible-surface pigment on the turned lower body, with smooth inferred continuation. Upper head/button pixels, all geometry, relief, lamps and the 54-degree camera are preserved.",
+      "residual_limitation": "Pigment inversion is approximate under inferred lights. Actual visibility replaces the old projection mask; retained existing highlight pigment and inferred hidden wood can still contain illumination and discontinuities. No exact intrinsic-albedo claim.",
+      "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+      "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb"
+    },
+    "checked_config": "docs/bishop-mission/iteration-015/reproduction.json",
+    "historical_atlas_resolved_by_hash": false
+  },
+  "pigment_history_audit": {
+    "root_receiver_audit": {
+      "passed": true,
+      "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+      "evaluated_uv_error_below_1e_7": true,
+      "closed_editable_control_retained": true,
+      "regions": [
+        {
+          "region": "body-rest",
+          "faces": 53514,
+          "vertices": 53998,
+          "normal_max_component_error": 2.562999725341797e-05,
+          "uv_max_component_errors": {
+            "Pigment projection": 5.960464477539063e-08,
+            "Wood atlas": 5.960464477539063e-08
+          }
+        },
+        {
+          "region": "socket-lip",
+          "faces": 7936,
+          "vertices": 8192,
+          "normal_max_component_error": 4.336237907409668e-05,
+          "uv_max_component_errors": {
+            "Pigment projection": 5.960464477539063e-08,
+            "Wood atlas": 5.960464477539063e-08
+          }
+        }
+      ],
+      "all_faces_once": true,
+      "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+      "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+      "model": "history\\bishop-mission-012\\bishop-rebuilt.blend",
+      "model_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+      "only_declared_light_parameters_and_links_changed": true,
+      "geometry_controls_cutter_uvs_modifiers_and_material_pixels_preserved": true,
+      "camera_world_display_render_path_preserved": true,
+      "reopened_audit": true,
+      "config": {
+        "arc_shadow_soft_size": 0.024,
+        "arc_spot_degrees": 2.0,
+        "exclude_from_socket": [
+          "collars reflection"
+        ],
+        "samples": 256,
+        "socket_z_band": [
+          0.99,
+          1.38
+        ],
+        "source": "history/bishop-mission-010/bishop-rebuilt.blend",
+        "source_sha256": "3abfaa8a0980478e095599bcfa3681d51b32fbe742100409ca3586840df33260",
+        "variant": "097-socket-receivers-persistent"
+      }
+    },
+    "atlas_steps": [
+      {
+        "passed": true,
+        "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+        "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231",
+        "model": "history/bishop-mission-013/bishop-rebuilt.blend",
+        "model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+        "atlas": "history/bishop-mission-013/bishop-boxwood-albedo.png",
+        "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+        "packed_pixel_max_error": 0.0,
+        "only_declared_atlas_changed": true,
+        "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
+        "render_receivers": {
+          "passed": true,
+          "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+          "evaluated_uv_error_below_1e_7": true,
+          "closed_editable_control_retained": true,
+          "regions": [
+            {
+              "region": "body-rest",
+              "faces": 53514,
+              "vertices": 53998,
+              "normal_max_component_error": 2.562999725341797e-05,
+              "uv_max_component_errors": {
+                "Pigment projection": 5.960464477539063e-08,
+                "Wood atlas": 5.960464477539063e-08
+              }
+            },
+            {
+              "region": "socket-lip",
+              "faces": 7936,
+              "vertices": 8192,
+              "normal_max_component_error": 4.336237907409668e-05,
+              "uv_max_component_errors": {
+                "Pigment projection": 5.960464477539063e-08,
+                "Wood atlas": 5.960464477539063e-08
+              }
+            }
+          ],
+          "all_faces_once": true
+        },
+        "reopened_audit": true,
+        "declaration": {
+          "atlas": "assets/bishop/bishop-boxwood-albedo.png",
+          "atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+          "config": "scripts/bishop/pigment-106.json",
+          "config_sha256": "7d5b3bab3d7c09f5b09b5327fc5368fcb5ceca6fcd71c34848be3a3cf5ab82ec",
+          "description": "Smooth bounded boxwood color lift on socket, stem and collars. Foot, lower base, head and button atlas pixels remain exact. Old relief, geometry, lamps and 54-degree camera are retained.",
+          "residual_limitation": "The inherited pigment retains broad illumination and a side/rear projection boundary. This local grade does not resolve intrinsic texture/lighting separation.",
+          "source": "history/bishop-mission-012/bishop-rebuilt.blend",
+          "source_sha256": "89ff709b7cb2bd3f931ee6acd083e0cb8f993e86d424c9784ec2006830b3b231"
+        },
+        "checked_config": "scripts/bishop/pigment-106.json",
+        "historical_atlas_resolved_by_hash": true
+      },
+      {
+        "passed": true,
+        "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+        "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+        "model": "models/bishop/bishop-rebuilt.blend",
+        "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+        "atlas": "assets/bishop/bishop-boxwood-albedo.png",
+        "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+        "packed_pixel_max_error": 0.0,
+        "only_declared_atlas_changed": true,
+        "geometry_uvs_material_graph_relief_camera_lights_world_and_render_path_preserved": true,
+        "render_receivers": {
+          "passed": true,
+          "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+          "evaluated_uv_error_below_1e_7": true,
+          "closed_editable_control_retained": true,
+          "regions": [
+            {
+              "region": "body-rest",
+              "faces": 53514,
+              "vertices": 53998,
+              "normal_max_component_error": 2.562999725341797e-05,
+              "uv_max_component_errors": {
+                "Pigment projection": 5.960464477539063e-08,
+                "Wood atlas": 5.960464477539063e-08
+              }
+            },
+            {
+              "region": "socket-lip",
+              "faces": 7936,
+              "vertices": 8192,
+              "normal_max_component_error": 4.336237907409668e-05,
+              "uv_max_component_errors": {
+                "Pigment projection": 5.960464477539063e-08,
+                "Wood atlas": 5.960464477539063e-08
+              }
+            }
+          ],
+          "all_faces_once": true
+        },
+        "reopened_audit": true,
+        "declaration": {
+          "atlas": "assets/bishop/bishop-boxwood-albedo.png",
+          "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+          "config": "docs/bishop-mission/iteration-015/reproduction.json",
+          "config_sha256": "54d3cb1992d92c265b763922fad2536600b9e9e7e4187fd7ad52594e737bc4f0",
+          "description": "Measured visible-surface pigment on the turned lower body, with smooth inferred continuation. Upper head/button pixels, all geometry, relief, lamps and the 54-degree camera are preserved.",
+          "residual_limitation": "Pigment inversion is approximate under inferred lights. Actual visibility replaces the old projection mask; retained existing highlight pigment and inferred hidden wood can still contain illumination and discontinuities. No exact intrinsic-albedo claim.",
+          "source": "history/bishop-mission-013/bishop-rebuilt.blend",
+          "source_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb"
+        },
+        "checked_config": "docs/bishop-mission/iteration-015/reproduction.json",
+        "historical_atlas_resolved_by_hash": false
+      }
+    ]
   },
   "geometry_controls_cutter_uvs_and_modifiers_preserved": true,
   "camera_world_display_render_path_preserved": true,

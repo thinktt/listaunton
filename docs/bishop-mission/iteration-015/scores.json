@@ -1,0 +1,40 @@
+{
+  "trial": "125-final",
+  "decision": "accepted",
+  "reason": "Accept the lower-body material after restoring the better upper head/button. Fixed-view tone and rear continuity improve; unresolved side seams and finish remain.",
+  "scores_percent": {
+    "silhouette": 96.10946013611408,
+    "interior": 84,
+    "color": 86,
+    "texture": 78,
+    "lighting": 77
+  },
+  "mean_percent": 84.22189202722282,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "samples": 512,
+  "fixed_camera_degrees": 54,
+  "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "render_sha256": "ae483c1aa9dc0e442417a6094a5c22540b4140520f4982fa8c7253f35a937988",
+  "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9610946013611408,
+      "legacy_raw_model_mask_iou": 0.9610946013611408
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778635964437387,
+      "legacy_raw_model_mask_iou": 0.9778635964437387
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666099115524281,
+      "legacy_raw_model_mask_iou": 0.9666099115524281
+    }
+  },
+  "status": "Accepted lower-body pigment improvement; full reconstruction remains incomplete.",
+  "accepted_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "texture_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a"
+}

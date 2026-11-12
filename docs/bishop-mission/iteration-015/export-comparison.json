@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "baseline": "history/bishop-mission-013",
+  "current": "assets/bishop",
+  "strict_binary_equal": false,
+  "positions_normals_indices_parts_bounds_camera_exact": true,
+  "evaluated_uv_max_error": 5.960464477539063e-08,
+  "evaluated_uv_max_float32_ulps": 1,
+  "evaluated_uv_changed_components": 868,
+  "existing_uv_tolerance": 1e-07,
+  "triangles": 135128,
+  "mesh_binary_sha256": "03187c67941ddfe6435965e92a7637d124507f9c2a0bbcb50717ad5485b3f6fa",
+  "source_model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+  "texture_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "note": "Reevaluating the unchanged Boolean rounds some evaluated UV components by one float32 ULP. Positions, normals and topology remain exact; the independent scene audit checks exact control UVs."
+}

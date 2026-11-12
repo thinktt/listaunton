@@ -1,0 +1,298 @@
+[
+  {
+    "trial": "116-height-pigment",
+    "decision": "rejected",
+    "reason": "Height-dependent mean color improves rear continuity but loses too much fixed-view contrast.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 77,
+      "texture": 75,
+      "lighting": 73
+    },
+    "mean_percent": 81.02194436872608,
+    "holistic_range_percent": [
+      70,
+      80
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "8d0b2011139f1cf7b315d294c1e0db778b4caa1cf2cbc2747f776462a6a8cc28",
+    "render_sha256": "e2414f9236be6671157ac124b739f8227ef35d118b132341f1efda9d4bdd8381",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "117-height-pigment-half",
+    "decision": "rejected",
+    "reason": "Half blending reduces the regression while retaining a visible side patch; no overall improvement.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 82,
+      "texture": 76,
+      "lighting": 75
+    },
+    "mean_percent": 82.62194436872608,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "2bd553655513cc3ce795d0eb45d834e28f9fc5b8b5c0415cd5201c30e8284ae5",
+    "render_sha256": "aa33be6958c7eae73fd117c14faeae1668c07c788f47471a5959c5648e1f97d8",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "118-harmonic-pigment",
+    "decision": "rejected",
+    "reason": "Smooth angular color further improves the rear but washes out collar and foot details. Retained only as an inferred fallback, not a public model.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 73,
+      "texture": 73,
+      "lighting": 71
+    },
+    "mean_percent": 79.42194436872607,
+    "holistic_range_percent": [
+      70,
+      80
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "87e244706bf575287d984a124b390e006cace9116b34269cfe740a11eeeb931e",
+    "render_sha256": "6be6183dc0d48d8f52d56b042d12c585464a2fb7d12ac053d4f634bc9d7c20d9",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "120-visible-pigment",
+    "decision": "rejected",
+    "reason": "Actual visibility and measured pigment improve the base, but uncertain reflective areas are replaced with inappropriate inferred detail.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 83,
+      "texture": 76,
+      "lighting": 75
+    },
+    "mean_percent": 82.82194436872608,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "34aed952aa808025b47b99055687f1622f7c4d767e39315e6d58e87cf4ef41d9",
+    "render_sha256": "e8cce06cbf128698478b7a22b5395f6067fbaf3a2bd9ef3046e24acbe7213d98",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "122-visible-feedback",
+    "decision": "rejected",
+    "reason": "A second response iteration improves base loss but cannot repair the missing contrast at collars and foot.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 83,
+      "texture": 76,
+      "lighting": 75
+    },
+    "mean_percent": 82.82194436872608,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "830e25d1d0a4581cefcdc99c9c380e749f669bf5a4deaafccb2a65572b954d8b",
+    "render_sha256": "12394724ca7d8c20c9a5f8da4cfbefb5b728e7fc0113015562a9988ae5e2bfa8",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "123-preserved-visible",
+    "decision": "rejected",
+    "reason": "Preserving uncertain visible pigment restores some grain. The narrow log-detail bounds still flatten the rings.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 84,
+      "texture": 77,
+      "lighting": 76
+    },
+    "mean_percent": 83.42194436872607,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "6a323c0b1c2bbfe124dfbf774feb28a1a147a6e8aae99a9344cd2109f61dc34c",
+    "render_sha256": "e3f2449bd376c610d18424e0607ceebbc3193e90d6655d13db236d449de21a97",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "124-visible-range",
+    "decision": "rejected",
+    "reason": "Removing the detail truncation restores the rings and improves the lower body; reject the whole-body version because the upper head regresses.",
+    "scores_percent": {
+      "silhouette": 96.10972184363037,
+      "interior": 84,
+      "color": 85,
+      "texture": 78,
+      "lighting": 77
+    },
+    "mean_percent": 84.02194436872608,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 256,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "d637f00b180367cc3331c9e5e7dcbb0cd2e60ab734a1aef9d6bf0cacfb31eb38",
+    "render_sha256": "f06f33f58885af210e71e2320c457053a3ad9e6abd44dd56882613a52451bab7",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610972184363037,
+        "legacy_raw_model_mask_iou": 0.9610972184363037
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778604556036117,
+        "legacy_raw_model_mask_iou": 0.9778604556036117
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666185498039664,
+        "legacy_raw_model_mask_iou": 0.9666185498039664
+      }
+    }
+  },
+  {
+    "trial": "125-final",
+    "decision": "accepted",
+    "reason": "Accept the lower-body material after restoring the better upper head/button. Fixed-view tone and rear continuity improve; unresolved side seams and finish remain.",
+    "scores_percent": {
+      "silhouette": 96.10946013611408,
+      "interior": 84,
+      "color": 86,
+      "texture": 78,
+      "lighting": 77
+    },
+    "mean_percent": 84.22189202722282,
+    "holistic_range_percent": [
+      75,
+      85
+    ],
+    "silhouette_measured_other_scores_visual_estimates": true,
+    "samples": 512,
+    "fixed_camera_degrees": 54,
+    "model_sha256": "dc3a11db2800b79bf45baee458d5b6a53a7602b3531137afe5db9b914a45cf07",
+    "render_sha256": "ae483c1aa9dc0e442417a6094a5c22540b4140520f4982fa8c7253f35a937988",
+    "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+    "metrics": {
+      "selected": {
+        "silhouette_iou": 0.9610946013611408,
+        "legacy_raw_model_mask_iou": 0.9610946013611408
+      },
+      "original_white": {
+        "silhouette_iou": 0.9778635964437387,
+        "legacy_raw_model_mask_iou": 0.9778635964437387
+      },
+      "original_black": {
+        "silhouette_iou": 0.9666099115524281,
+        "legacy_raw_model_mask_iou": 0.9666099115524281
+      }
+    }
+  }
+]

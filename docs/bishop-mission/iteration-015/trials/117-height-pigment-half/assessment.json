@@ -1,0 +1,37 @@
+{
+  "trial": "117-height-pigment-half",
+  "decision": "rejected",
+  "reason": "Half blending reduces the regression while retaining a visible side patch; no overall improvement.",
+  "scores_percent": {
+    "silhouette": 96.10972184363037,
+    "interior": 84,
+    "color": 82,
+    "texture": 76,
+    "lighting": 75
+  },
+  "mean_percent": 82.62194436872608,
+  "holistic_range_percent": [
+    75,
+    85
+  ],
+  "silhouette_measured_other_scores_visual_estimates": true,
+  "samples": 256,
+  "fixed_camera_degrees": 54,
+  "model_sha256": "2bd553655513cc3ce795d0eb45d834e28f9fc5b8b5c0415cd5201c30e8284ae5",
+  "render_sha256": "aa33be6958c7eae73fd117c14faeae1668c07c788f47471a5959c5648e1f97d8",
+  "source_model_sha256": "df30b53e02c46d75342d6adc88c3fd4ca5889c8f9d7e336bb28a0ca2f40552fb",
+  "metrics": {
+    "selected": {
+      "silhouette_iou": 0.9610972184363037,
+      "legacy_raw_model_mask_iou": 0.9610972184363037
+    },
+    "original_white": {
+      "silhouette_iou": 0.9778604556036117,
+      "legacy_raw_model_mask_iou": 0.9778604556036117
+    },
+    "original_black": {
+      "silhouette_iou": 0.9666185498039664,
+      "legacy_raw_model_mask_iou": 0.9666185498039664
+    }
+  }
+}

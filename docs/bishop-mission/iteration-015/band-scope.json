@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "source_atlas_sha256": "a45fa3d46c6715465cd91827c591c4a4858e6a77e951491ce49e415373b3da78",
+  "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "protected_and_alpha_pixels_exact": true,
+  "protected_height_intervals": [
+    [
+      -0.1,
+      0
+    ],
+    [
+      3.43,
+      4.7
+    ]
+  ],
+  "protected_texels": 1888557,
+  "changed_texels": 1855001,
+  "note": "Direct saved-PNG comparison protects the upper head, button, caps, alpha and unused atlas regions. The independent saved-scene atlas audit checks all geometry, relief, lights and camera."
+}
