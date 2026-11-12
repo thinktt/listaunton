@@ -1,0 +1,184 @@
+{
+  "reference": "assets/queen/reference.png",
+  "render": "assets/queen/queen-matched.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "registration": "No shifts or scaling applied",
+  "mask_method": "Reference max-channel >12; model alpha >127; largest 8-connected component, holes filled",
+  "reference_bbox": [
+    210,
+    60,
+    757,
+    1083
+  ],
+  "model_bbox": [
+    207,
+    61,
+    759,
+    1079
+  ],
+  "silhouette_iou": 0.9799749989918949,
+  "reference_area_px": 367154,
+  "model_area_px": 369367,
+  "missing_reference_px": 2618,
+  "excess_model_px": 4831,
+  "row_extents": [
+    {
+      "y": 100,
+      "reference": [
+        396,
+        570
+      ],
+      "model": [
+        399,
+        567
+      ]
+    },
+    {
+      "y": 160,
+      "reference": [
+        314,
+        653
+      ],
+      "model": [
+        313,
+        653
+      ]
+    },
+    {
+      "y": 260,
+      "reference": [
+        317,
+        652
+      ],
+      "model": [
+        312,
+        654
+      ]
+    },
+    {
+      "y": 340,
+      "reference": [
+        336,
+        630
+      ],
+      "model": [
+        330,
+        636
+      ]
+    },
+    {
+      "y": 420,
+      "reference": [
+        306,
+        660
+      ],
+      "model": [
+        306,
+        661
+      ]
+    },
+    {
+      "y": 500,
+      "reference": [
+        339,
+        629
+      ],
+      "model": [
+        337,
+        629
+      ]
+    },
+    {
+      "y": 560,
+      "reference": [
+        448,
+        562
+      ],
+      "model": [
+        406,
+        560
+      ]
+    },
+    {
+      "y": 600,
+      "reference": [
+        363,
+        601
+      ],
+      "model": [
+        357,
+        609
+      ]
+    },
+    {
+      "y": 700,
+      "reference": [
+        243,
+        724
+      ],
+      "model": [
+        241,
+        726
+      ]
+    },
+    {
+      "y": 800,
+      "reference": [
+        212,
+        754
+      ],
+      "model": [
+        211,
+        755
+      ]
+    },
+    {
+      "y": 840,
+      "reference": [
+        211,
+        756
+      ],
+      "model": [
+        207,
+        759
+      ]
+    },
+    {
+      "y": 940,
+      "reference": [
+        229,
+        741
+      ],
+      "model": [
+        228,
+        738
+      ]
+    },
+    {
+      "y": 1000,
+      "reference": [
+        277,
+        702
+      ],
+      "model": [
+        273,
+        693
+      ]
+    },
+    {
+      "y": 1060,
+      "reference": [
+        374,
+        607
+      ],
+      "model": [
+        372,
+        594
+      ]
+    }
+  ],
+  "caution": "Silhouette overlap does not assess internal geometry, shading, material, or unseen surfaces."
+}

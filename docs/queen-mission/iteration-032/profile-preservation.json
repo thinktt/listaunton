@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "source_sha256": "7cedabd2e3242b1282f114b8b193c26498a3ab40a1afeeadb9ff504128a90d6a",
+  "baseline_sha256": "f6cbac79d43ce1e894f498340da4ebb0700c87dd44d0845cf0bab56e13310442",
+  "unchanged": [
+    "material_nodes",
+    "material_links",
+    "lights",
+    "camera",
+    "object_matrix"
+  ],
+  "real_bsdf_material_preserved": true,
+  "all_packed_image_bytes_identical": true,
+  "light_count": 85
+}

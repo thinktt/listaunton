@@ -1,0 +1,50 @@
+[
+  {
+    "variant": "baseline-031",
+    "angle": 54,
+    "IoU": {
+      "original": 97.85241643238159,
+      "selected": 97.95752270389183
+    }
+  },
+  {
+    "variant": "256-anchor-base-94",
+    "angle": 54,
+    "IoU": {
+      "original": 97.78109870368044,
+      "selected": 97.98163361865026
+    }
+  },
+  {
+    "variant": "257-anchor-base-90",
+    "angle": 54,
+    "IoU": {
+      "original": 97.77615008514199,
+      "selected": 97.98941884284723
+    }
+  },
+  {
+    "variant": "258-camera-52",
+    "angle": 52,
+    "IoU": {
+      "original": 97.55878364462609,
+      "selected": 97.43319155335008
+    }
+  },
+  {
+    "variant": "259-camera-50",
+    "angle": 50,
+    "IoU": {
+      "original": 96.73188320762969,
+      "selected": 96.56499788524651
+    }
+  },
+  {
+    "variant": "260-camera-48",
+    "angle": 48,
+    "IoU": {
+      "original": 95.5232270060898,
+      "selected": 95.61356066528869
+    }
+  }
+]

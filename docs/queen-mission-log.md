@@ -1423,3 +1423,34 @@ and transform are preserved. The height/base ratio stays 2.102978. Checkpoint
 29 is archived; current fixed/side images and viewer are regenerated together.
 See [checkpoint 31](queen-mission/iteration-031/README.md). The base shape
 requirement remains unresolved, so the goal remains active.
+
+## 2026-11-11 — checkpoint 32: compact base with the stem retained
+
+Accepted a 6% shallower foot/flare/socket assembly, with a 6.2% narrower
+socket wall and a broader inner flare. The shelf and steep drop remain
+distinct. A first fitted proposal made the lower stem too straight; the
+accepted variant restores every stem radius from ring 38 and leaves every
+control from 48 upward exact. The improved collar join, collars, crown and
+egg are retained. The piece stays grounded and its total height/base ratio
+remains 2.102978. Camera and reference registration stay at the accepted 54°.
+
+Final scores: original outline 97.7916%, selected high-res outline 97.9975%,
+interior/side form 89, wood color 85, grain 79, lighting 76. The working mean
+is 85.3583%, holistic 80–85%. The original outline loses 0.0607 percentage
+points for a visibly more compact base; the high-res score gains 0.0353.
+The socket crescent and base rounding still need work. These percentages
+do not establish a perfect reconstruction.
+
+A neutral 54/52/50/48-degree bracket tests round 3D geometry with unchanged
+source pixels and explicit socket-arc constraints. Lower-angle fits shorten
+the profile but worsen the crown/collars and source outline; none replaces
+54°. The more aggressive compression and straight-stem wood trial are also
+rejected. Evidence and exact proposals are in
+[checkpoint 32](queen-mission/iteration-032/README.md).
+
+The saved accepted model is
+`d58316454daad02fafaacbe7ff50215f042911cbd2e1609fbc8431f1c52ab0b4`.
+Checkpoint 31 is archived. Mesh, receiver UV/normal/link checks, all 85
+lights and packed-material preservation pass; fixed/side renders and the
+interactive viewer are regenerated together. The Queen goal stays active,
+without watchers or subagents.

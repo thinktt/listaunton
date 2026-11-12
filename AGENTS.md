@@ -190,3 +190,15 @@ side-shape and delivered-model validators, then regenerate all fixed/side and
 viewer assets. Coupled base-compression trials in iteration 31 are rejected:
 their close exterior outlines conceal a displaced socket lip. Constrain that
 interior arc before accepting further base changes. The shape goal is active.
+
+Queen checkpoint 32 accepts 6% compression of the whole foot/base/socket,
+a 6.2% narrower socket wall and a broader inner flare. The shelf and steep
+drop remain distinct. Stem radii from control 38 and all controls from 48
+upward are unchanged from checkpoint 31; keep the accepted rounded collars,
+crown and egg. The camera remains orthographic 54 degrees. Reproduce with
+study_compact_turning.py and iteration-032/base-input.json from the archived
+checkpoint 31. Validate the composed profile, shader/light preservation and
+saved model, then rebuild fixed/side renders and the viewer together. The
+original silhouette tradeoff and rejected camera/straight-stem fits are in
+iteration-032. Do not promote those rejected alternatives or alter gallery
+defaults. The shape goal remains active; socket reflections need refinement.

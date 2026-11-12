@@ -46,9 +46,9 @@ Do not invent a token budget or launch additional agents from this file.
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
 - Latest accepted working baseline SHA-256:
-  `f6cbac79d43ce1e894f498340da4ebb0700c87dd44d0845cf0bab56e13310442`
-  (checkpoint 31, retaining the restored shelf-and-drop base/socket, compact collar
-  refinements with a flatter stem join, lower-foot support, and a narrower seated egg; the checkpoint-22
+  `d58316454daad02fafaacbe7ff50215f042911cbd2e1609fbc8431f1c52ab0b4`
+  (checkpoint 32, with a 6% shallower whole base, narrower shelf-and-drop socket,
+  preserved stem radii and collar join, lower-foot support, and a narrower seated egg; the checkpoint-22
   source archive remains recorded below).
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
@@ -153,7 +153,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current working-baseline scores: 97.8523 / 88 / 85 / 79 / 76; working mean 85.1705%, holistic 80-85%. Original Lichess IoU: 97.8523%; selected high-res IoU: 97.9622%. Latest accepted model and validation: docs/queen-mission/iteration-031 (a flatter join under the rounded bottom collar, retaining the restored shelf/drop socket, seated egg and lower-foot support). Coupled base compression remains rejected because its good exterior fit displaced the visible socket lip; constrain that interior arc in the next study. Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current working-baseline scores: 97.7916 / 89 / 85 / 79 / 76; working mean 85.3583%, holistic 80-85%. Original Lichess IoU: 97.7916%; selected high-res IoU: 97.9975%. Latest accepted model and validation: docs/queen-mission/iteration-032 (6% whole-base compression, a narrower shelf/drop socket and broader inner flare, with accepted stem radii and controls 48 onward preserved). The original outline tradeoff is -0.0607 percentage points. The earlier 10% compression, straight-stem fit and 52-48-degree camera fits remain rejected. Refine the socket crescent and the flare's turn into the foot without losing the shelf/drop. Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 

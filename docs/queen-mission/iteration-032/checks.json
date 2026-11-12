@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "active_model_sha256": "d58316454daad02fafaacbe7ff50215f042911cbd2e1609fbc8431f1c52ab0b4",
+  "reports": {
+    "side-shape-validation.json": true,
+    "profile-preservation.json": true,
+    "finish-validation.json": true,
+    "model-validation.json": true,
+    "viewer-camera-check.json": true
+  },
+  "commands_passed": [
+    "python3 scripts/check_site.py",
+    "python3 scripts/check_model_site.py",
+    "node scripts/queen/check_viewer_camera.cjs",
+    "node scripts/queen/check_review_reference.cjs",
+    "python -m py_compile scripts/queen/render_neutral_shape_studies.py scripts/queen/record_compact_base_checkpoint.py",
+    "git diff --check"
+  ],
+  "native_browser": {
+    "url": "http://localhost:8080/review.html?checkpoint=32",
+    "overlay_opened": true,
+    "orbit_view_opened": true,
+    "side_and_neutral_controls_worked": true,
+    "wheel_zoom_worked": true,
+    "side_comparison_material_and_opacity_worked": true,
+    "current_model_visually_loaded": true
+  },
+  "http": {
+    "review_status": 200,
+    "embedded_model_hash_matches": true,
+    "served_side_registration_hash_matches": true
+  },
+  "neutral_renderer_reproduction": {
+    "fixed-neutral.png": {
+      "rgba_equal": false,
+      "alpha_equal": true,
+      "max_channel_error_8bit": 1.0,
+      "mean_channel_error_8bit": 7.631082926978168e-06
+    },
+    "side-neutral.png": {
+      "rgba_equal": false,
+      "alpha_equal": true,
+      "max_channel_error_8bit": 1.0,
+      "mean_channel_error_8bit": 4.166666666666667e-06
+    }
+  },
+  "references_and_gallery_defaults_unchanged": true,
+  "previous_checkpoint_archived": true,
+  "goal_complete": false
+}
