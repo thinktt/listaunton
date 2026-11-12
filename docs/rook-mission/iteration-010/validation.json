@@ -1,0 +1,40 @@
+{
+  "geometry_camera_identical": true,
+  "closed_positive_components": 5,
+  "model_sha256": "da8a86da03de5ffd0cf1d99fa1170ef80bd033fe851c01c6770b7a47e9c65298",
+  "accepted_sha256": "9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c",
+  "packed_images": 4,
+  "packed_float_images": 3,
+  "real_principled_surface": true,
+  "atlas_uvs_checked": true,
+  "source_references": {
+    "ref.png": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe",
+    "original.png": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+    "original-white.png": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+  },
+  "scope": "Geometry, evaluated topology, component visibility, object transforms, saved reference camera and dimensions, packed texture finiteness, and actual BSDF surface. Not a visual-match certificate.",
+  "control_and_camera_exact": true,
+  "evaluated_surface_precision": {
+    "Rook - continuous turned body and recessed floor": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 1": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 2": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 3": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 4": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    }
+  },
+  "precision_note": "UV layers alter subdivision floating-point evaluation slightly; controls and evaluated triangle indices stay byte-exact. Position tolerance 1e-6 model units, normal component 2e-5, volume 1e-7. Actual deltas reported above."
+}
