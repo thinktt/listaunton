@@ -1384,6 +1384,14 @@ also lowers original fit (97.7974% / 97.7910%).  These are draft-render
 directions rather than acceptance metrics; checkpoint 29's full Cycles scores
 remain 97.8523% original and 97.9622% selected.
 
+A read-only source-mask audit confirms that the selected high-res image is an
+excellent but not pixel-identical scale-up: its collar crop has a +3-pixel
+local vertical preference relative to the registered original, while the base
+has no vertical preference.  This explains why some collar adjustments can
+appear attractive in the high-res reference without establishing geometry, but
+does not explain the remaining base-compression conflict.  The audit is stored
+with the iteration-030 evidence and does not alter source pixels or registration.
+
 The bracket is rejected/preserved as evidence, not promoted.  It shows that
 the desired compact side interpretation can be made while retaining the
 shelf/drop construction, but the current original Lichess sprite does not yet

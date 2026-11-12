@@ -70,6 +70,12 @@ fixed-source tradeoff is genuine rather than an artifact of a changed crop.
 `base-overlay-selected.png` and `base-overlay-original.png` show the exact same
 neutral drafts over the two unmodified registered references.
 
+`reference-mask-alignment.md` records a source-to-source audit: the two
+references agree strongly overall but contain small local differences, notably
+a +3-pixel vertical preference in the collar crop of the selected image.  The
+base crop has no corresponding vertical shift, so its remaining disagreement
+is treated as genuine shape ambiguity rather than registration drift.
+
 The original Lichess sprite remains the deciding source.  The high-resolution
 image is useful for interpreting curvature, but it is a later selected
 reconstruction and cannot by itself justify moving the active geometry away
