@@ -1,0 +1,194 @@
+{
+  "before": "history/king-mission-009/king-rebuilt.blend",
+  "after": "build/king-mission/113-socket-fitted-seam/king.blend",
+  "source_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "model_sha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+  "all_control_geometry_uvs_float_attributes_material_packed_images_world_camera_exact": true,
+  "all_existing_light_settings_exact": true,
+  "existing_socket_coverage_preserved": true,
+  "source_files_unchanged": true,
+  "baseline_split_only": false,
+  "seam_profile_interval": [
+    26.55,
+    27.25
+  ],
+  "seam_interval_upper_exclusive": true,
+  "added_lights": {
+    "Socket seam left": {
+      "type": "AREA",
+      "energy": 0.6773523688316345,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.8876427412033081,
+        0.011682823300361633,
+        -0.46038442850112915,
+        -0.2665807008743286,
+        -0.46053263545036316,
+        0.02251778542995453,
+        -0.8873571157455444,
+        -0.6885983347892761,
+        1.7098642501878203e-09,
+        0.9996781945228577,
+        0.025368070229887962,
+        1.3456860780715942,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.20000000298023224,
+      "size_y": 0.012000000104308128,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "socket-seam"
+      ]
+    },
+    "Socket seam right": {
+      "type": "AREA",
+      "energy": 0.5790320634841919,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.8323876261711121,
+        0.050451770424842834,
+        0.5518925786018372,
+        0.3203067481517792,
+        0.5541938543319702,
+        -0.07577744871377945,
+        -0.8289312124252319,
+        -0.657973051071167,
+        -3.550623262071895e-08,
+        0.9958475828170776,
+        -0.09103626757860184,
+        1.3218170404434204,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.20000000298023224,
+      "size_y": 0.012000000104308128,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "socket-seam"
+      ]
+    }
+  },
+  "added_lights_cast_shadows": true,
+  "render_receivers": {
+    "used": true,
+    "receiverCount": 6,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "socket",
+        "socket-seam",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket left inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right inner": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket right outer": [
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
+      ]
+    }
+  }
+}

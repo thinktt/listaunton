@@ -1,0 +1,49 @@
+{
+  "source_sha256": "95341f2d470a02b5b6def807d1de021247949c63c7c886e6fae0f0ea7788c0f3",
+  "attribute": "Socket pigment correction",
+  "pixels": 6332,
+  "bounds": [
+    390,
+    735,
+    620,
+    800
+  ],
+  "fitted_linear_multiplier": [
+    1.142435333050315,
+    1.1436567048860866,
+    1.0924163356435168
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.00309714428003117,
+      "after_mse": 0.0023250402259937237
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.0023250402259937237,
+      "after_mse": 0.00227743086919015
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.00227743086919015,
+      "after_mse": 0.002275644354231222
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.002275644354231222,
+      "after_mse": 0.0022755383690431182
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.0022755383690431182,
+      "after_mse": 0.002275521947700749
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.002275521947700749,
+      "after_mse": 0.002275521156190716
+    }
+  ],
+  "method": "Three local material RGB multipliers fitted through AgX from real response renders; high-reflection reference pixels excluded; all lights fixed. Full rendering governs acceptance."
+}

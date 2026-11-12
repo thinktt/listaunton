@@ -1,0 +1,36 @@
+{
+  "source": "build/king-mission/109-socket-inner-seam-area/king.blend",
+  "source_sha256": "994f9754eed6af93ff3a12223c0c1fa37e899aa848ba18f7298f7cd0f18795d5",
+  "variant": "110-socket-polished-seam",
+  "attribute": "Socket inner polish",
+  "lower_fade": [
+    26,
+    27
+  ],
+  "ring_fade": [
+    27,
+    28
+  ],
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Roughness",
+      0.06
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.02
+    ],
+    [
+      "Fine varnish relief",
+      "Strength",
+      0.04
+    ]
+  ],
+  "existing_light_power": {
+    "Socket seam left": 0.12,
+    "Socket seam right": 0.1
+  },
+  "samples": 128
+}

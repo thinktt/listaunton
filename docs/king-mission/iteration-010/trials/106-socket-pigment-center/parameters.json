@@ -1,0 +1,51 @@
+{
+  "source": "build/king-mission/106-socket-pigment-center/prepared.blend",
+  "source_sha256": "04bc267296a611c6d5231e50f957557fca25b6669754a01fadb6ed84a055561a",
+  "variant": "106-socket-pigment-center",
+  "attribute": "Socket pigment correction",
+  "lower_fade": [
+    23,
+    24.5
+  ],
+  "upper_fade": [
+    26,
+    27.5
+  ],
+  "angular_fade": [
+    10,
+    50
+  ],
+  "linear_multiplier": [
+    1.2,
+    1.7,
+    2.5
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "original_source": "history/king-mission-009/king-rebuilt.blend",
+  "original_source_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "pigment_grade": {
+    "attribute": "Socket pigment correction",
+    "linear_multiplier": [
+      1.2,
+      1.7,
+      2.5
+    ],
+    "lower_fade": [
+      23,
+      24.5
+    ],
+    "upper_fade": [
+      26,
+      27.5
+    ],
+    "angular_fade": [
+      10,
+      50
+    ],
+    "geometry_lights_and_reference_pixels_unchanged": true
+  },
+  "model_sha256": "95341f2d470a02b5b6def807d1de021247949c63c7c886e6fae0f0ea7788c0f3",
+  "elevation_degrees": 54.000000800055794
+}

@@ -1,0 +1,133 @@
+{
+  "checkpoint": "010",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "113-socket-fitted-seam",
+  "previous_checkpoint": "009",
+  "model_sha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+  "render_sha256": "82b4248530b438da43528e25e87a104b72293c092d2a6f6ab363b455317ab56b",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "scores": {
+    "silhouette_iou_percent": 97.81736609881087,
+    "interior_form": 84,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 64
+  },
+  "original_iou_percent": 96.83378283518675,
+  "equal_weight_mean": 81.36347321976217,
+  "holistic_visual_range_percent": [
+    74,
+    83
+  ],
+  "geometry_changed": false,
+  "material_changed": false,
+  "camera_elevation_degrees": 54.000000800055794,
+  "receiver_count": 6,
+  "added_lights": {
+    "Socket seam left": {
+      "type": "AREA",
+      "energy": 0.6773523688316345,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.8876427412033081,
+        0.011682823300361633,
+        -0.46038442850112915,
+        -0.2665807008743286,
+        -0.46053263545036316,
+        0.02251778542995453,
+        -0.8873571157455444,
+        -0.6885983347892761,
+        1.7098642501878203e-09,
+        0.9996781945228577,
+        0.025368070229887962,
+        1.3456860780715942,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.20000000298023224,
+      "size_y": 0.012000000104308128,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "socket-seam"
+      ]
+    },
+    "Socket seam right": {
+      "type": "AREA",
+      "energy": 0.5790320634841919,
+      "color": [
+        1.0,
+        0.7799999713897705,
+        0.6200000047683716
+      ],
+      "matrix": [
+        0.8323876261711121,
+        0.050451770424842834,
+        0.5518925786018372,
+        0.3203067481517792,
+        0.5541938543319702,
+        -0.07577744871377945,
+        -0.8289312124252319,
+        -0.657973051071167,
+        -3.550623262071895e-08,
+        0.9958475828170776,
+        -0.09103626757860184,
+        1.3218170404434204,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": 0.20000000298023224,
+      "size_y": 0.012000000104308128,
+      "radius": 0.0,
+      "cone": null,
+      "receivers": [
+        "socket-seam"
+      ]
+    }
+  },
+  "mission_complete": false,
+  "validation": {
+    "reproduction": {
+      "saved_reopened": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 8.108025609914303e-06,
+        "alpha_exact": true
+      },
+      "full_reproduction": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 6.677197561105896e-06,
+        "alpha_exact": true
+      },
+      "reproduction_mesh_exact": true,
+      "accepted_geometry_export_byte_identical_to_009": true,
+      "camera_export_byte_identical_to_009": true,
+      "physical_bounds_exact": true,
+      "preserving_seam_split": {
+        "maximum_channel_error_255": 1,
+        "alpha_exact": true
+      }
+    },
+    "scope": "passed",
+    "receiver_regeneration": "passed",
+    "export": "passed",
+    "site": "passed king checks",
+    "canonical_model": "passed",
+    "site_model_candidates_and_historical_projections": "passed",
+    "whole_set": "known pre-existing knight sizing metadata mismatch",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "local_preview_verified_files": 34
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "method": "Composited RGB error in fixed rectangles, excluding background. Not a perceptual match percentage.",
+  "regions": {
+    "head": {
+      "bounds": [
+        185,
+        0,
+        815,
+        350
+      ],
+      "foreground_pixels": 88634,
+      "previous_rgb_mse": 597.4477739919218,
+      "trial_rgb_mse": 597.4508879211138,
+      "maximum_render_change_255": 1.0,
+      "mean_render_change_255": 0.00033847056434325426
+    },
+    "collars": {
+      "bounds": [
+        185,
+        350,
+        815,
+        560
+      ],
+      "foreground_pixels": 64815,
+      "previous_rgb_mse": 721.3293682018051,
+      "trial_rgb_mse": 721.3230373627504,
+      "maximum_render_change_255": 1.0,
+      "mean_render_change_255": 0.0008382833191905166
+    },
+    "stem": {
+      "bounds": [
+        185,
+        560,
+        815,
+        720
+      ],
+      "foreground_pixels": 59967,
+      "previous_rgb_mse": 77.4638273272522,
+      "trial_rgb_mse": 77.45893018938193,
+      "maximum_render_change_255": 2.0,
+      "mean_render_change_255": 0.008921573532109327
+    },
+    "socket": {
+      "bounds": [
+        370,
+        720,
+        630,
+        810
+      ],
+      "foreground_pixels": 23400,
+      "previous_rgb_mse": 251.46934472934473,
+      "trial_rgb_mse": 201.00599715099716,
+      "maximum_render_change_255": 130.0,
+      "mean_render_change_255": 1.19508547008547
+    },
+    "inner-seam": {
+      "bounds": [
+        425,
+        730,
+        590,
+        758
+      ],
+      "foreground_pixels": 4620,
+      "previous_rgb_mse": 600.2886002886003,
+      "trial_rgb_mse": 346.039898989899,
+      "maximum_render_change_255": 130.0,
+      "mean_render_change_255": 5.77034632034632
+    },
+    "quiet-center": {
+      "bounds": [
+        485,
+        760,
+        520,
+        783
+      ],
+      "foreground_pixels": 805,
+      "previous_rgb_mse": 505.0853002070393,
+      "trial_rgb_mse": 505.0265010351967,
+      "maximum_render_change_255": 2.0,
+      "mean_render_change_255": 0.08695652173913043
+    },
+    "base-foot": {
+      "bounds": [
+        185,
+        840,
+        815,
+        1110
+      ],
+      "foreground_pixels": 114716,
+      "previous_rgb_mse": 292.2421894068831,
+      "trial_rgb_mse": 292.24281704383,
+      "maximum_render_change_255": 1.0,
+      "mean_render_change_255": 0.00033125283308344086
+    }
+  }
+}

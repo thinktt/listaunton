@@ -7,6 +7,7 @@ from mission_trial import ROOT,run
 from render_regions import controls,regenerate
 def main(cfg):
     source=ROOT/cfg['source'];digest=hashlib.sha256(source.read_bytes()).hexdigest();assert digest==cfg['source_sha256'];bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene;objects=controls(s)
+    for light,power in cfg.get('existing_light_power',{}).items():bpy.data.objects[light].data.energy=power
     name=cfg['attribute'];start,end=cfg['ring_fade']
     for ob in objects:
         values=np.zeros(len(ob.data.vertices),dtype=np.float32)

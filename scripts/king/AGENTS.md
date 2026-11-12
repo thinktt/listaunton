@@ -1,7 +1,7 @@
 # King reconstruction pipeline
 
 Read the root AGENTS.md, MISSION-KING.md and latest docs/king-mission-log.md.
-The current accepted scene has two closed editable controls and five exact
+The current accepted scene has two closed editable controls and six exact
 derived body light receivers. Select editable meshes with
 `render_regions.controls(scene)`, not by visibility. The body is intentionally
 hidden from final rendering. Export the closed controls; do not export the
@@ -48,3 +48,15 @@ with socket_reflection_trial.py and iteration-009/reproduction.json from
 archived 007. Check scope using check_socket_checkpoint.py; keep the exact
 surface/UV/attribute/normal and light-route validators. The earlier four-region
 pipeline remains supported. Read the mission log for remaining defects.
+
+
+Checkpoint 010 retains 009 geometry, UVs, all float attributes, v6 material,
+camera and old light settings. A sixth exact receiver isolates mean profile
+ring [26.55, 27.25) for two new `Socket seam ` glossy area lights. Preserve
+`king_split_socket_seam` and `king_socket_seam_lights_confined` during
+regeneration. The four earlier `Socket ` lights cover socket plus socket-seam;
+the two seam sources cover only socket-seam. Export the closed controls.
+Reproduce with socket_seam_trial.py and iteration-010/reproduction.json from
+archived 009; verify scope with check_socket_seam_checkpoint.py. The rejected
+pigment and local-polish trials are not part of the accepted material. Keep
+fixed/side/viewer assets synchronized and read the log for remaining defects.

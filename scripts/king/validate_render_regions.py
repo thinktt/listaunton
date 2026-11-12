@@ -20,13 +20,20 @@ def check(scene):
     if not parts:return {'used':False}
     split=bool(scene.get('king_split_flare',False))
     socket=bool(scene.get('king_split_socket',False))
+    seam=bool(scene.get('king_split_socket_seam',False));assert not seam or socket
     expected_regions=({'foot','lower-flare','upper-flare','upper-body'} if split else {'foot','flare','upper-body'})
     if socket:expected_regions.add('socket')
+    if seam:expected_regions.add('socket-seam')
     assert {o['king_render_region'] for o in parts}==expected_regions
     body=next(o for o in controls(scene) if 'body' in o.name);assert body.hide_render and body.get('king_editable_control')
     for part in parts:
         assert not part.hide_render and not part.modifiers and part.matrix_world==body.matrix_world
         assert part.data.materials[0]==body.data.materials[0]
+        if seam and part['king_render_region'] in ('socket','socket-seam'):
+            me=part.data;rings=np.array([a.value for a in me.attributes['King profile ring'].data],dtype=np.float32)
+            loops=np.array([l.vertex_index for l in me.loops]);starts=np.array([p.loop_start for p in me.polygons]);counts=np.array([p.loop_total for p in me.polygons])
+            mean=np.add.reduceat(rings[loops],starts)/counts;inside=(mean>=26.55)&(mean<27.25)
+            assert inside.all() if part['king_render_region']=='socket-seam' else not inside.any()
     levels=[(m,m.levels) for m in body.modifiers if m.type=='SUBSURF']
     for m,_ in levels:m.levels=m.render_levels
     bpy.context.view_layer.update();ev=body.evaluated_get(bpy.context.evaluated_depsgraph_get());me=ev.to_mesh();original=records(me);received=[records(o.data) for o in parts]
@@ -41,6 +48,7 @@ def check(scene):
         names={o.get('king_render_region') or o.name for o in light.light_linking.receiver_collection.objects};routes[light.name]=sorted(names)
         if light.name in ('Upper varnish','Front varnish'):
             expected={'upper-body','socket'} if socket and not scene.get('king_socket_broad_excluded',False) else {'upper-body'}
+            if seam and 'socket' in expected:expected.add('socket-seam')
             assert names==expected,(light.name,names,expected)
         if light.name.startswith('Base '):
             expected={'flare'}
@@ -48,7 +56,10 @@ def check(scene):
                 expected=({'upper-flare'} if light.name=='Base upper focused' else ({'lower-flare'} if light.name.startswith('Base lower shaped ') else {'lower-flare','upper-flare'}))
             assert names==expected,(light.name,names,expected)
         if light.name.startswith('Foot '):assert names=={'foot'}
-        if light.name.startswith('Socket '):assert socket and names=={'socket'}
+        if light.name.startswith('Socket '):
+            expected={'socket','socket-seam'} if seam else {'socket'}
+            if seam and light.name.startswith('Socket seam ') and scene.get('king_socket_seam_lights_confined',False):expected={'socket-seam'}
+            assert socket and names==expected,(light.name,names,expected)
         if light.name.startswith('Cross '):assert not any(o.get('king_render_region') for o in light.light_linking.receiver_collection.objects)
     ev.to_mesh_clear()
     for m,level in levels:m.levels=level

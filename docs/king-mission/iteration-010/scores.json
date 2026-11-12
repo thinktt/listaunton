@@ -1,0 +1,177 @@
+{
+  "rubric": "IoU alone is measured; other ratings are visual judgments. Tiny alpha-threshold variation is not shape improvement. Diagnostic emission/diffuse crops are not final render candidates.",
+  "trials": [
+    {
+      "variant": "106-socket-pigment-center",
+      "decision": "rejected",
+      "reason": "Broad manual grade changes neighboring colors that were already close.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 81,
+        "grain_surface": 79,
+        "lighting_reflections": 63
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.96347321976216,
+      "render_sha256": "d68617134fec130e73a7c9d2303e0b4dd8d4bcfe367ba47cccdf1c74e05d0bb4",
+      "model_sha256": "95341f2d470a02b5b6def807d1de021247949c63c7c886e6fae0f0ea7788c0f3",
+      "regional_rgb_mse": {
+        "socket": 236.26636752136753,
+        "quiet_center": 330.80289855072465,
+        "inner_seam": 506.97352092352094
+      }
+    },
+    {
+      "variant": "107-socket-fitted-pigment",
+      "decision": "not accepted",
+      "reason": "Non-highlight fit favors a mild lift; insufficient clear visual improvement to replace the finish.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 63
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.16347321976217,
+      "render_sha256": "270f8a9390d4ac6d20788b5a363ddc101da7ac1c8c0c8ce9495d7bc4afc466e5",
+      "model_sha256": "efa9e85cd4cb38e1e3617bd13f085d5f484b551022a42bad19150a6db4f4c172",
+      "regional_rgb_mse": {
+        "socket": 240.4066524216524,
+        "quiet_center": 393.3138716356108,
+        "inner_seam": 579.0710678210678
+      }
+    },
+    {
+      "variant": "108-socket-narrow-pigment",
+      "decision": "deferred",
+      "reason": "Central patch error improves, but this is not a complete socket-color correction; preserve for focused follow-up.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 63
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.16347321976217,
+      "render_sha256": "d580e5221057292dc375669fd56c4f721761473a917a97870c75b1a8f237b5b1",
+      "model_sha256": "88d4ba060bbbcc901682ff20c91b38d33440462bdb818ee9950973bf3fb1e64b",
+      "regional_rgb_mse": {
+        "socket": 243.7352279202279,
+        "quiet_center": 304.1590062111801,
+        "inner_seam": 597.7886002886003
+      }
+    },
+    {
+      "variant": "109-socket-inner-seam-area",
+      "decision": "rejected",
+      "reason": "Unconfined lights create broad bright patches on the neighboring stem.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 58
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.16347321976217,
+      "render_sha256": "92f43e68243f9becc1182611c84ab6f0f4af86a58b1898eab1eb97bb52fe71a1",
+      "model_sha256": "994f9754eed6af93ff3a12223c0c1fa37e899aa848ba18f7298f7cd0f18795d5",
+      "regional_rgb_mse": {
+        "socket": 964.7241737891737,
+        "quiet_center": 472.51055900621117,
+        "inner_seam": 3024.1731601731603
+      }
+    },
+    {
+      "variant": "110-socket-polished-seam",
+      "decision": "rejected",
+      "reason": "Local polish gives a fine line but does not remove adjacent stem spill.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 62
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.96347321976216,
+      "render_sha256": "b90c8f018f867d07cf2ebcf7031cb48a6631e6572136eb4fc945fa2c4cac5459",
+      "model_sha256": "79dabd6fd8c80ae9e062354486a84bb6a596b2007380c92e26efdf4588dfece0",
+      "regional_rgb_mse": {
+        "socket": 259.2172364672365,
+        "quiet_center": 500.3792960662526,
+        "inner_seam": 571.1621933621933
+      }
+    },
+    {
+      "variant": "111-socket-seam-receiver",
+      "decision": "superseded",
+      "reason": "Exact fillet receiver confines the glints without changing the accepted material.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 64
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.36347321976217,
+      "render_sha256": "f27a2c443819ca1b361bfcfbf84a94c56a61cf998df96b4244f1caceb90d6ffd",
+      "model_sha256": "97f9a21c8ee842c682604d82b5d06240069c951e91b648a424bd78e290835a51",
+      "regional_rgb_mse": {
+        "socket": 202.45457264957264,
+        "quiet_center": 505.0207039337474,
+        "inner_seam": 353.28008658008656
+      }
+    },
+    {
+      "variant": "112-seam-partition-baseline",
+      "decision": "diagnostic",
+      "reason": "Partition-only preservation render; no improvement claimed.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 63
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.16347321976217,
+      "render_sha256": "cdbce13fa4f34d4b767fa4ce5f425370ab3c4120932195937385d204c759d033",
+      "model_sha256": "703bb969a630fa619f55746ad8d304a1f87ed63d4bdae75a130f31891c966c01",
+      "regional_rgb_mse": {
+        "socket": 251.46823361823363,
+        "quiet_center": 505.0853002070393,
+        "inner_seam": 600.2952380952381
+      }
+    },
+    {
+      "variant": "113-socket-fitted-seam",
+      "decision": "accepted",
+      "reason": "Fitted real reflections improve the inner line while retaining the outer glints, color, grain and geometry.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 64
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.36347321976217,
+      "render_sha256": "82b4248530b438da43528e25e87a104b72293c092d2a6f6ab363b455317ab56b",
+      "model_sha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
+      "regional_rgb_mse": {
+        "socket": 201.00599715099716,
+        "quiet_center": 505.0265010351967,
+        "inner_seam": 346.039898989899
+      }
+    }
+  ],
+  "holistic_visual_range_percent": [
+    74,
+    83
+  ]
+}

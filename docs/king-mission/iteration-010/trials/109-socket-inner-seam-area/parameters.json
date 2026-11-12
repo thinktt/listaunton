@@ -1,0 +1,138 @@
+{
+  "source": "history/king-mission-009/king-rebuilt.blend",
+  "source_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "variant": "109-socket-inner-seam-area",
+  "samples": 128,
+  "reflectors": [
+    {
+      "name": "Socket seam left",
+      "pixel": [
+        465,
+        748
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.2,
+      "size_y": 0.012,
+      "distance": 0.28,
+      "energy": 1,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "socket"
+      ]
+    },
+    {
+      "name": "Socket seam right",
+      "pixel": [
+        550,
+        744
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.2,
+      "size_y": 0.012,
+      "distance": 0.28,
+      "energy": 1,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "socket"
+      ]
+    }
+  ],
+  "original_source_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Socket seam left",
+      "pixel": [
+        465,
+        748
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.2,
+      "size_y": 0.012,
+      "distance": 0.28,
+      "energy": 1,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "actual_target_pixel": [
+        465,
+        748
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        -0.13767307996749878,
+        -0.4401383399963379,
+        1.338582992553711
+      ],
+      "normal": [
+        -0.26215025782585144,
+        -0.8399827480316162,
+        0.47508561611175537
+      ],
+      "position": [
+        -0.2665790915489197,
+        -0.6885996460914612,
+        1.3456701040267944
+      ]
+    },
+    {
+      "name": "Socket seam right",
+      "pixel": [
+        550,
+        744
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.2,
+      "size_y": 0.012,
+      "distance": 0.28,
+      "energy": 1,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "actual_target_pixel": [
+        550,
+        744
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        0.1657768040895462,
+        -0.4258723258972168,
+        1.3473072052001953
+      ],
+      "normal": [
+        0.3282311260700226,
+        -0.8425661325454712,
+        0.42702072858810425
+      ],
+      "position": [
+        0.3203081488609314,
+        -0.6579729318618774,
+        1.3218239545822144
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "994f9754eed6af93ff3a12223c0c1fa37e899aa848ba18f7298f7cd0f18795d5"
+}

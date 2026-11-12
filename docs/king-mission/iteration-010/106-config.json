@@ -1,0 +1,26 @@
+{
+  "source": "history/king-mission-009/king-rebuilt.blend",
+  "source_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "variant": "106-socket-pigment-center",
+  "attribute": "Socket pigment correction",
+  "lower_fade": [
+    23,
+    24.5
+  ],
+  "upper_fade": [
+    26,
+    27.5
+  ],
+  "angular_fade": [
+    10,
+    50
+  ],
+  "linear_multiplier": [
+    1.2,
+    1.7,
+    2.5
+  ],
+  "samples": 128,
+  "neutral": false,
+  "profile": false
+}

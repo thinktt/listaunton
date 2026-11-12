@@ -397,3 +397,39 @@ files are unchanged. Native browser screenshot inspection is not claimed.
 Next: the inner socket seam and residual pigment band, then collar reflections.
 Preserve the accepted outer glints and foot. The goal is active and incomplete;
 no watchers or subagents were started.
+
+
+## 2026-11-12 — checkpoint 010: inner socket reflection
+
+Accepted trial 113 restores more of the inner socket line with two narrow,
+warm area reflections confined to an exact sixth receiver. Closed geometry,
+UVs, float attributes, v6 pigment, material and the 54-degree camera remain
+exact from 009. Old lights retain their settings and coverage. Broad pigment
+and unrestricted reflection experiments were rejected; a small center pigment
+correction is deferred. See [iteration-010/README.md](king-mission/iteration-010/README.md).
+
+| Metric | Checkpoint 009 | Checkpoint 010 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.8174% | 97.8174% |
+| Interior form | 84% | 84% |
+| Wood color | 82% | 82% |
+| Grain and surface | 79% | 79% |
+| Lighting / reflections | 63% | 64% |
+| Equal-weight working mean | 81.1635% | 81.3635% |
+
+Only IoU is measured; the other scores are subjective. Original IoU is
+96.8338%, and the holistic range remains 74–83%. The inner-seam crop error
+falls about 42%, with essentially unchanged color in its center. The full
+image still has pale collar bands, patchy socket glints, imperfect base/foot
+reflections and unresolved form/finish differences.
+
+Saved/reopened and independently rebuilt renders agree within 1/255 with exact
+alpha. Mesh and camera exports match 009 byte-for-byte. Scope, receiver and
+regeneration checks pass. The king review and all 34 local preview files are
+synchronized; king/candidate, site/model and historical projection checks pass.
+The whole-set test retains its documented pre-existing knight sizing failure;
+native browser screenshot inspection is not claimed.
+
+Next: isolate the collar reflection sources. Preserve the accepted foot/socket
+and the unchanged source art. The goal remains active and incomplete; no
+watchers or subagents were started.

@@ -1,0 +1,50 @@
+{
+  "source": "history/king-mission-009/king-rebuilt.blend",
+  "source_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "variant": "109-socket-inner-seam-area",
+  "samples": 128,
+  "reflectors": [
+    {
+      "name": "Socket seam left",
+      "pixel": [
+        465,
+        748
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.2,
+      "size_y": 0.012,
+      "distance": 0.28,
+      "energy": 1,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "socket"
+      ]
+    },
+    {
+      "name": "Socket seam right",
+      "pixel": [
+        550,
+        744
+      ],
+      "type": "AREA",
+      "shape": "RECTANGLE",
+      "size": 0.2,
+      "size_y": 0.012,
+      "distance": 0.28,
+      "energy": 1,
+      "color": [
+        1,
+        0.78,
+        0.62
+      ],
+      "receivers": [
+        "socket"
+      ]
+    }
+  ]
+}

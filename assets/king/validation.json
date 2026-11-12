@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "sourceSha256": "fb18fbd21757f8d3b4202b4e36a24c48c47d753f7f9b498c4670f4acc3a94150",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -26,7 +26,7 @@
   "note": "Body and cross remain separate closed intersecting components. Viewer lighting is approximate.",
   "renderReceivers": {
     "used": true,
-    "receiverCount": 5,
+    "receiverCount": 6,
     "exactSurfaceFacesUvsFloatAttributes": true,
     "triangles": 67200,
     "normalMaxError": 6.699562072753906e-05,
@@ -43,6 +43,7 @@
         "foot",
         "lower-flare",
         "socket",
+        "socket-seam",
         "upper-body",
         "upper-flare"
       ],
@@ -103,16 +104,26 @@
         "foot"
       ],
       "Socket left outer": [
-        "socket"
+        "socket",
+        "socket-seam"
       ],
       "Socket left inner": [
-        "socket"
+        "socket",
+        "socket-seam"
       ],
       "Socket right inner": [
-        "socket"
+        "socket",
+        "socket-seam"
       ],
       "Socket right outer": [
-        "socket"
+        "socket",
+        "socket-seam"
+      ],
+      "Socket seam left": [
+        "socket-seam"
+      ],
+      "Socket seam right": [
+        "socket-seam"
       ]
     }
   },
