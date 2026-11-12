@@ -1,0 +1,20 @@
+{
+  "source": "build/king-mission/166-upper-source-width/prepared.blend",
+  "source_sha256": "e78d7203bb296374af746af1fe15717b9fc5e5487c9b39e1ee090653aba59835",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "166-upper-source-width",
+  "edits": [
+    {
+      "name": "Base upper focused",
+      "degrees": 12,
+      "radius": 0.5
+    }
+  ],
+  "original_source": "history/king-mission-014/king-rebuilt.blend",
+  "original_source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "model_sha256": "2c49c27cc369bf67f1cc5e44301ef9c19e05ae5e63c7f33732caf8ae8e3dea4e",
+  "elevation_degrees": 54.000000800055794
+}

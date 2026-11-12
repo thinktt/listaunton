@@ -1,0 +1,22 @@
+{
+  "source": "build/king-mission/171-upper-shaped-reflections/king.blend",
+  "source_sha256": "aac9289fa155eb3e3b1b0d8b276132da43b58d45a9189a065801b0909cff1ff2",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "172-upper-shaped-fitted",
+  "lights": [
+    "Base upper shaped 015 01",
+    "Base upper shaped 015 02",
+    "Base upper shaped 015 03"
+  ],
+  "bounds": [
+    510,
+    815,
+    635,
+    920
+  ],
+  "response_samples": 512,
+  "maximum_gain": 8
+}

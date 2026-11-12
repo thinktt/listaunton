@@ -1,0 +1,29 @@
+{
+  "source": "build/king-mission/170-upper-coat-and-beam/prepared.blend",
+  "source_sha256": "70f38aa556bf36bbcf3bd79892db7d9f210e7293ea0ff250ec0f9e2f470b516e",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "170-upper-coat-and-beam",
+  "attribute": "Upper base varnish 015",
+  "lower_fade": [
+    16,
+    17
+  ],
+  "ring_fade": [
+    19.5,
+    21
+  ],
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.22
+    ]
+  ],
+  "original_source": "build/king-mission/167-upper-source-aim/king.blend",
+  "original_source_sha256": "320c68aa8389534bad1beff77ba927988befe1a1568bcd8af8b17c64e5957a6e",
+  "model_sha256": "ff392d6f9085d7be7f6cda2518c4e579ff7578a0840c4ad5898d2032784d4491",
+  "elevation_degrees": 54.000000800055794
+}

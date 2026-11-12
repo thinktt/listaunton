@@ -1,0 +1,65 @@
+{
+  "source_sha256": "4190f939f8f051b69f2483a16f9fe2fed51f57bc14bb04304adc5c1472f8c842",
+  "pixels": 13125,
+  "bounds": [
+    510,
+    815,
+    635,
+    920
+  ],
+  "original_powers": {
+    "Base upper shaped 015 01": 244.7261962890625,
+    "Base upper shaped 015 02": 1519.121337890625
+  },
+  "fitted_powers": {
+    "Base upper shaped 015 01": 985.248903828937,
+    "Base upper shaped 015 02": 854.951317933992
+  },
+  "gain": [
+    4.0259233329691995,
+    0.5627933046619792
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.01569780630405731,
+      "after_mse": 0.014584708696519578
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.014584708696519578,
+      "after_mse": 0.014492740125770228
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.014492740125770228,
+      "after_mse": 0.014469700682963917
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.014469700682963917,
+      "after_mse": 0.014464820312491144
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.014464820312491144,
+      "after_mse": 0.014463927992741125
+    },
+    {
+      "iteration": 5,
+      "before_mse": 0.014463927992741125,
+      "after_mse": 0.014463784697793042
+    },
+    {
+      "iteration": 6,
+      "before_mse": 0.014463784697793042,
+      "after_mse": 0.014463750413207853
+    },
+    {
+      "iteration": 7,
+      "before_mse": 0.014463750413207853,
+      "after_mse": 0.014463744640381998
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

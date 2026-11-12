@@ -1,0 +1,30 @@
+{
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "source": "build/king-mission/174-upper-pair-fitted/king.blend",
+  "source_sha256": "fb5a198f813b7770bfd33fa9845f1f50244845ab30a00a9e8ae146b93bbd75d3",
+  "variant": "175-upper-two-layer-finish",
+  "attribute": "Upper base finish 015",
+  "lower_fade": [
+    16.5,
+    17.5
+  ],
+  "ring_fade": [
+    20,
+    22
+  ],
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Roughness",
+      0.32
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.24
+    ]
+  ]
+}

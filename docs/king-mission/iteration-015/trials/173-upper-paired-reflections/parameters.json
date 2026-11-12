@@ -1,0 +1,120 @@
+{
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "source": "build/king-mission/173-upper-paired-reflections/prepared.blend",
+  "variant": "173-upper-paired-reflections",
+  "existing_light_power": {
+    "Base upper focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base upper shaped 015 01",
+      "pixel": [
+        553,
+        840
+      ],
+      "energy": 300,
+      "radius": 0.18,
+      "degrees": 6,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    },
+    {
+      "name": "Base upper shaped 015 02",
+      "pixel": [
+        568,
+        852
+      ],
+      "energy": 300,
+      "radius": 0.18,
+      "degrees": 6,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    }
+  ],
+  "original_source": "history/king-mission-014/king-rebuilt.blend",
+  "original_source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "reflector_probes": [
+    {
+      "name": "Base upper shaped 015 01",
+      "pixel": [
+        553,
+        840
+      ],
+      "energy": 300,
+      "radius": 0.18,
+      "degrees": 6,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ],
+      "point": [
+        0.17918352782726288,
+        -0.5285792350769043,
+        0.9055299758911133
+      ],
+      "normal": [
+        0.310112327337265,
+        -0.9146877527236938,
+        0.2591845989227295
+      ],
+      "position": [
+        2.9602386951446533,
+        -5.20469331741333,
+        -1.6242313385009766
+      ],
+      "receiver": "King receiver upper-flare",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Base upper shaped 015 02",
+      "pixel": [
+        568,
+        852
+      ],
+      "energy": 300,
+      "radius": 0.18,
+      "degrees": 6,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ],
+      "point": [
+        0.23308990895748138,
+        -0.5425796508789062,
+        0.852604866027832
+      ],
+      "normal": [
+        0.2646685540676117,
+        -0.6146898865699768,
+        0.7430388927459717
+      ],
+      "position": [
+        3.289811611175537,
+        -4.115070343017578,
+        4.580039024353027
+      ],
+      "receiver": "King receiver upper-flare",
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "source_sha256": "b56fb7cbc473a7837098565bc501ea8ebc129f134072973b62be2b5acf04125e",
+  "model_sha256": "971f334a3f2180a1ab8ec64df47dbf4130c2aebfc147a387ce721d6754e4ee3d",
+  "elevation_degrees": 54.000000800055794
+}

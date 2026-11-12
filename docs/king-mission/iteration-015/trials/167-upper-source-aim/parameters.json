@@ -1,0 +1,26 @@
+{
+  "source": "build/king-mission/167-upper-source-aim/prepared.blend",
+  "source_sha256": "b19e1aae3ef621601b9ae71921cb7f290673402e2166da36222f22217576485f",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "167-upper-source-aim",
+  "edits": [
+    {
+      "name": "Base upper focused",
+      "degrees": 12,
+      "radius": 0.5,
+      "pixel": [
+        568,
+        854
+      ],
+      "distance": 6,
+      "receiver": "upper-flare"
+    }
+  ],
+  "original_source": "history/king-mission-014/king-rebuilt.blend",
+  "original_source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "model_sha256": "320c68aa8389534bad1beff77ba927988befe1a1568bcd8af8b17c64e5957a6e",
+  "elevation_degrees": 54.000000800055794
+}

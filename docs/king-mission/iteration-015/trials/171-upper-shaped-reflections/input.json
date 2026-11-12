@@ -1,0 +1,62 @@
+{
+  "source": "history/king-mission-014/king-rebuilt.blend",
+  "source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "171-upper-shaped-reflections",
+  "existing_light_power": {
+    "Base upper focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base upper shaped 015 01",
+      "pixel": [
+        553,
+        840
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    },
+    {
+      "name": "Base upper shaped 015 02",
+      "pixel": [
+        568,
+        852
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    },
+    {
+      "name": "Base upper shaped 015 03",
+      "pixel": [
+        577,
+        870
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    }
+  ]
+}

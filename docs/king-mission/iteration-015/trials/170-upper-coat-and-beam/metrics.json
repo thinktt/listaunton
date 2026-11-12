@@ -1,0 +1,30 @@
+{
+  "mask_convention": "max RGB >12 and alpha >127, largest component and holes filled; model alpha >127",
+  "highres_iou": 0.978259955426601,
+  "original_iou": 0.9684661715256992,
+  "previous_highres_iou": 0.978259955426601,
+  "previous_original_iou": 0.9684661715256992,
+  "regional_iou": {
+    "head": {
+      "previous": 0.961869925758694,
+      "trial": 0.961869925758694
+    },
+    "collars": {
+      "previous": 0.978708946772367,
+      "trial": 0.978708946772367
+    },
+    "stem-socket": {
+      "previous": 0.981319646737874,
+      "trial": 0.981319646737874
+    },
+    "base-foot": {
+      "previous": 0.9875858744124383,
+      "trial": 0.9875858744124383
+    }
+  },
+  "render_sha256": "d25bcdd217423b22179515940ec8c5f9f3215f30753baee563cf672e81bd6054",
+  "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+  "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+  "previous_sha256": "02df7625a18d6ca5112e5f0619210f306c558063cad8b95d84ce18e9d4079ea9",
+  "model_sha256": "ff392d6f9085d7be7f6cda2518c4e579ff7578a0840c4ad5898d2032784d4491"
+}

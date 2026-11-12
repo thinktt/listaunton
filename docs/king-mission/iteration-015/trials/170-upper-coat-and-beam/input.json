@@ -1,0 +1,25 @@
+{
+  "source": "build/king-mission/167-upper-source-aim/king.blend",
+  "source_sha256": "320c68aa8389534bad1beff77ba927988befe1a1568bcd8af8b17c64e5957a6e",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "170-upper-coat-and-beam",
+  "attribute": "Upper base varnish 015",
+  "lower_fade": [
+    16,
+    17
+  ],
+  "ring_fade": [
+    19.5,
+    21
+  ],
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.22
+    ]
+  ]
+}

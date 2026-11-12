@@ -1,0 +1,44 @@
+{
+  "study": "015",
+  "status": "closed; all trial models rejected; owner requested pause",
+  "accepted_checkpoint": "014",
+  "accepted_model_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "accepted_render_sha256": "02df7625a18d6ca5112e5f0619210f306c558063cad8b95d84ce18e9d4079ea9",
+  "accepted_scores": {
+    "silhouette_iou_percent": 97.82599554266011,
+    "interior_form": 85,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "accepted_equal_weight_mean": 82.76519910853202,
+  "original_iou_percent": 96.84661715256992,
+  "camera_elevation_degrees": 54.000000800055794,
+  "mission_complete": false,
+  "new_model_promoted": false,
+  "rejected_variants": [
+    "165-upper-beam-aperture",
+    "166-upper-source-width",
+    "167-upper-source-aim",
+    "169-upper-coat-roughness",
+    "170-upper-coat-and-beam",
+    "171-upper-shaped-reflections",
+    "172-upper-shaped-fitted",
+    "173-upper-paired-reflections",
+    "174-upper-pair-fitted",
+    "175-upper-two-layer-finish",
+    "176-upper-finish-fitted"
+  ],
+  "validation": {
+    "accepted_archive_and_assets_exact": true,
+    "reference_pixels_and_gallery_defaults_exact": true,
+    "preview_files_verified": 34,
+    "current_review_harnesses": "passed",
+    "site_model_checks": "passed",
+    "http_hashes": "passed",
+    "python_compilation": "passed",
+    "new_browser_screenshot": false,
+    "rejected_trial_reproduction": "not required for promotion; no trial promoted",
+    "whole_set": "unchanged; known knight sizing metadata limitation not re-tested"
+  }
+}

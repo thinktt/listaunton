@@ -1,0 +1,29 @@
+{
+  "source": "build/king-mission/169-upper-coat-roughness/prepared.blend",
+  "source_sha256": "a798401fa9d69d5eafad8cbe3053f86abd4c5a8dc86e935d7313c4baf1932c7c",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "169-upper-coat-roughness",
+  "attribute": "Upper base varnish 015",
+  "lower_fade": [
+    16,
+    17
+  ],
+  "ring_fade": [
+    19.5,
+    21
+  ],
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.22
+    ]
+  ],
+  "original_source": "history/king-mission-014/king-rebuilt.blend",
+  "original_source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "model_sha256": "9366c33a9577a711b0bc06ec4bafe58d20b0c187f35f762b358e49d18b45ef9f",
+  "elevation_degrees": 54.000000800055794
+}

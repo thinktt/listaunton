@@ -1,0 +1,95 @@
+{
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "source": "build/king-mission/174-upper-pair-fitted/prepared.blend",
+  "source_sha256": "7863f892fa6df8a0003f6403adbc8140bd1fa732e571296206d15c0289a56c5e",
+  "variant": "174-upper-pair-fitted",
+  "bounds": [
+    510,
+    815,
+    635,
+    920
+  ],
+  "response_samples": 512,
+  "maximum_gain": 64,
+  "original_source": "build/king-mission/173-upper-paired-reflections/king.blend",
+  "original_source_sha256": "971f334a3f2180a1ab8ec64df47dbf4130c2aebfc147a387ce721d6754e4ee3d",
+  "light_fit": {
+    "source_sha256": "971f334a3f2180a1ab8ec64df47dbf4130c2aebfc147a387ce721d6754e4ee3d",
+    "pixels": 13125,
+    "bounds": [
+      510,
+      815,
+      635,
+      920
+    ],
+    "original_powers": {
+      "Base upper shaped 015 01": 300.0,
+      "Base upper shaped 015 02": 300.0
+    },
+    "fitted_powers": {
+      "Base upper shaped 015 01": 244.72619924834748,
+      "Base upper shaped 015 02": 1519.121326710937
+    },
+    "gain": [
+      0.8157539974944916,
+      5.063737755703123
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.01870976705184373,
+        "after_mse": 0.01745822935388629
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.01745822935388629,
+        "after_mse": 0.017006812479000162
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.017006812479000162,
+        "after_mse": 0.01688231344377049
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.01688231344377049,
+        "after_mse": 0.01685473110989492
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.01685473110989492,
+        "after_mse": 0.016849610094336873
+      },
+      {
+        "iteration": 5,
+        "before_mse": 0.016849610094336873,
+        "after_mse": 0.016848673117398207
+      },
+      {
+        "iteration": 6,
+        "before_mse": 0.016848673117398207,
+        "after_mse": 0.016848535543843492
+      },
+      {
+        "iteration": 7,
+        "before_mse": 0.016848535543843492,
+        "after_mse": 0.016848514504672226
+      },
+      {
+        "iteration": 8,
+        "before_mse": 0.016848514504672226,
+        "after_mse": 0.016848511391644592
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Base upper shaped 015 01",
+    "Base upper shaped 015 02"
+  ],
+  "model_sha256": "fb5a198f813b7770bfd33fa9845f1f50244845ab30a00a9e8ae146b93bbd75d3",
+  "elevation_degrees": 54.000000800055794
+}

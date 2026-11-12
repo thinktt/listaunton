@@ -1,0 +1,170 @@
+{
+  "source": "build/king-mission/171-upper-shaped-reflections/prepared.blend",
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "variant": "171-upper-shaped-reflections",
+  "existing_light_power": {
+    "Base upper focused": 0
+  },
+  "reflectors": [
+    {
+      "name": "Base upper shaped 015 01",
+      "pixel": [
+        553,
+        840
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    },
+    {
+      "name": "Base upper shaped 015 02",
+      "pixel": [
+        568,
+        852
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    },
+    {
+      "name": "Base upper shaped 015 03",
+      "pixel": [
+        577,
+        870
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ]
+    }
+  ],
+  "original_source": "history/king-mission-014/king-rebuilt.blend",
+  "original_source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "reflector_probes": [
+    {
+      "name": "Base upper shaped 015 01",
+      "pixel": [
+        553,
+        840
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ],
+      "point": [
+        0.17918352782726288,
+        -0.5285792350769043,
+        0.9055299758911133
+      ],
+      "normal": [
+        0.310112327337265,
+        -0.9146877527236938,
+        0.2591845989227295
+      ],
+      "position": [
+        2.9602386951446533,
+        -5.20469331741333,
+        -1.6242313385009766
+      ],
+      "receiver": "King receiver upper-flare",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Base upper shaped 015 02",
+      "pixel": [
+        568,
+        852
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ],
+      "point": [
+        0.23308990895748138,
+        -0.5425796508789062,
+        0.852604866027832
+      ],
+      "normal": [
+        0.2646685540676117,
+        -0.6146898865699768,
+        0.7430388927459717
+      ],
+      "position": [
+        3.289811611175537,
+        -4.115070343017578,
+        4.580039024353027
+      ],
+      "receiver": "King receiver upper-flare",
+      "diffuse": false,
+      "glossy": true
+    },
+    {
+      "name": "Base upper shaped 015 03",
+      "pixel": [
+        577,
+        870
+      ],
+      "energy": 300,
+      "radius": 0.08,
+      "degrees": 3,
+      "distance": 6,
+      "color": [
+        1,
+        0.84,
+        0.7
+      ],
+      "point": [
+        0.2657366394996643,
+        -0.592628002166748,
+        0.8125543594360352
+      ],
+      "normal": [
+        0.22882328927516937,
+        -0.5103122591972351,
+        0.8289881348609924
+      ],
+      "position": [
+        2.9309401512145996,
+        -3.009744882583618,
+        5.614036560058594
+      ],
+      "receiver": "King receiver upper-flare",
+      "diffuse": false,
+      "glossy": true
+    }
+  ],
+  "source_sha256": "3c6858bf2b8c2e3de10009b38e3907a8f5b60eb35dc6515ed0ab540a4c944bca",
+  "model_sha256": "aac9289fa155eb3e3b1b0d8b276132da43b58d45a9189a065801b0909cff1ff2",
+  "elevation_degrees": 54.000000800055794
+}

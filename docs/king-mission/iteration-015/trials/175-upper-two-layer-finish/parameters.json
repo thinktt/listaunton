@@ -1,0 +1,34 @@
+{
+  "samples": 128,
+  "neutral": false,
+  "profile": false,
+  "use_light_tree": false,
+  "source": "build/king-mission/175-upper-two-layer-finish/prepared.blend",
+  "source_sha256": "fade6f8bc8e4d320bff6fa8c905766204dd1766ebe5c76966e978e95b341dde5",
+  "variant": "175-upper-two-layer-finish",
+  "attribute": "Upper base finish 015",
+  "lower_fade": [
+    16.5,
+    17.5
+  ],
+  "ring_fade": [
+    20,
+    22
+  ],
+  "inputs": [
+    [
+      "Principled BSDF",
+      "Roughness",
+      0.32
+    ],
+    [
+      "Principled BSDF",
+      "Coat Roughness",
+      0.24
+    ]
+  ],
+  "original_source": "build/king-mission/174-upper-pair-fitted/king.blend",
+  "original_source_sha256": "fb5a198f813b7770bfd33fa9845f1f50244845ab30a00a9e8ae146b93bbd75d3",
+  "model_sha256": "4190f939f8f051b69f2483a16f9fe2fed51f57bc14bb04304adc5c1472f8c842",
+  "elevation_degrees": 54.000000800055794
+}

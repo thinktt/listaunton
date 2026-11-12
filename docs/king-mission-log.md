@@ -565,3 +565,30 @@ metadata and unchanged historical projections were not re-tested here.
 
 Next: broader base and upper-platter reflections, then remaining pigment bands.
 The goal remains active. No watcher, subagent, push or publication was started.
+
+
+## 2026-11-12 — study 015: base reflection experiments rejected
+
+Finished the in-progress study at the owner's request to pause after the current
+iteration. Checkpoint 014 remains the accepted model. Eleven isolated trials
+tested beam width, emitter size/aim, roughness in one or both layers, and shaped
+glint sources. The final fit lowers a pixel error diagnostic but still produces
+flat, separated bands instead of the reference's grain-broken upper-base patch.
+No trial provides a convincing overall improvement. See
+[iteration-015/README.md](king-mission/iteration-015/README.md).
+
+Accepted scores are unchanged: high-res IoU 97.8260%, original IoU 96.8466%;
+subjective interior 85, color 82, grain 80, lighting 69; working mean 82.7652%
+and holistic range 75–85%. The full mission remains incomplete.
+
+Accepted model, render, mesh/camera and side assets are byte-identical to the
+archived checkpoint 014. Source pixels and gallery defaults are preserved.
+All 34 Windows preview files match; viewer/candidate/site/model harnesses and
+HTTP hashes confirm the review still serves the accepted model. The unchanged
+model's prior validation remains valid; no new native-browser inspection or
+rejected-model independent reproduction is claimed. Known whole-set knight
+metadata limitations are unchanged and were not re-tested.
+
+The owner requested a goal pause after this checkpoint; no further trial is
+scheduled. A nearer-source reflection study is recorded only as an untested
+future hypothesis. No watcher, subagent, push or publication was started.

@@ -1,0 +1,205 @@
+{
+  "accepted_checkpoint": "014",
+  "accepted_scores": {
+    "silhouette_iou_percent": 97.82599554266011,
+    "interior_form": 85,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "accepted_equal_weight_mean": 82.76519910853202,
+  "holistic_visual_range_percent": [
+    75,
+    85
+  ],
+  "rubric": "Only silhouette IoU is measured. Other percentages are subjective; fitting loss and effort do not earn acceptance.",
+  "trials": [
+    {
+      "variant": "165-upper-beam-aperture",
+      "decision": "rejected",
+      "reason": "A wider beam adds an unwanted lower stripe instead of filling the upper patch.",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.56519910853203,
+      "original_iou_percent": 96.84661715256992,
+      "model_sha256": "89902cd205ae00b4bebb055a78fabf3422c4016b0fa00bcf9815a3fabd1d6779",
+      "render_sha256": "06ef97b77b445ebedb877f18da3d4114b2b63ae0842e6b841266f1a897a73855",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "166-upper-source-width",
+      "decision": "rejected",
+      "reason": "The larger emitter does not remove the doubled bands.",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.56519910853203,
+      "original_iou_percent": 96.84661715256992,
+      "model_sha256": "2c49c27cc369bf67f1cc5e44301ef9c19e05ae5e63c7f33732caf8ae8e3dea4e",
+      "render_sha256": "96fa515f1ea72be4862930bcce1ffb75e489982ce50d3a7e73df041bf3d77d02",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "167-upper-source-aim",
+      "decision": "rejected",
+      "reason": "Re-aiming at the desired patch makes the lower streak more conspicuous.",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 67
+      },
+      "equal_weight_mean": 82.36519910853202,
+      "original_iou_percent": 96.84661715256992,
+      "model_sha256": "320c68aa8389534bad1beff77ba927988befe1a1568bcd8af8b17c64e5957a6e",
+      "render_sha256": "10ef08c6d013d65b7416fdff7af1bd09ed130f5cfdba66be6f39df81ad553101",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "169-upper-coat-roughness",
+      "decision": "rejected",
+      "reason": "Clear-coat roughness alone gives negligible useful change.",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.76519910853202,
+      "original_iou_percent": 96.84661715256992,
+      "model_sha256": "9366c33a9577a711b0bc06ec4bafe58d20b0c187f35f762b358e49d18b45ef9f",
+      "render_sha256": "3d92921eb507dd212466ab47c98ec3ae3e52fea851e58012b83a7691082f00a6",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "170-upper-coat-and-beam",
+      "decision": "rejected",
+      "reason": "Combined coat and broader beam produce a bright, low band.",
+      "scores": {
+        "silhouette_iou_percent": 97.82599554266011,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 67
+      },
+      "equal_weight_mean": 82.16519910853202,
+      "original_iou_percent": 96.84661715256992,
+      "model_sha256": "ff392d6f9085d7be7f6cda2518c4e579ff7578a0840c4ad5898d2032784d4491",
+      "render_sha256": "d25bcdd217423b22179515940ec8c5f9f3215f30753baee563cf672e81bd6054",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "171-upper-shaped-reflections",
+      "decision": "rejected",
+      "reason": "Three smaller sources enlarge the shine, but its dominant patch is too low and separated.",
+      "scores": {
+        "silhouette_iou_percent": 97.82623752090156,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.76524750418031,
+      "original_iou_percent": 96.8463708137802,
+      "model_sha256": "aac9289fa155eb3e3b1b0d8b276132da43b58d45a9189a065801b0909cff1ff2",
+      "render_sha256": "c388c4b848b93bd05f741c7db628c25e7e5030f923f3d43d16ed875af88c3c45",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "172-upper-shaped-fitted",
+      "decision": "rejected",
+      "reason": "Fitting prefers a narrow upper band and almost removes the third source; the desired continuous patch is still absent.",
+      "scores": {
+        "silhouette_iou_percent": 97.82623752090156,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.5652475041803,
+      "original_iou_percent": 96.8463708137802,
+      "model_sha256": "fb54570947aa4cfc5570ccac6d381a48b8f6048eb02aeeeeb1f60376c9dfa03f",
+      "render_sha256": "16e077aaf186bf151d063c54d86685666a0376960971e12153b935eafe4756f3",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "173-upper-paired-reflections",
+      "decision": "rejected",
+      "reason": "A broader pair is a diagnostic intermediate, with split highlights and insufficient match.",
+      "scores": {
+        "silhouette_iou_percent": 97.8257481875051,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.56514963750102,
+      "original_iou_percent": 96.8463708137802,
+      "model_sha256": "971f334a3f2180a1ab8ec64df47dbf4130c2aebfc147a387ce721d6754e4ee3d",
+      "render_sha256": "07c1b91b5ec6058add76d621210712283829a14e023125dadb1f9cbea843e61b",
+      "render_entrypoint": "initial trial render; rejected intermediate, not independently reproduced"
+    },
+    {
+      "variant": "174-upper-pair-fitted",
+      "decision": "rejected",
+      "reason": "Fitting the broader pair retains two flat bright bands.",
+      "scores": {
+        "silhouette_iou_percent": 97.8257481875051,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 80,
+        "lighting_reflections": 68
+      },
+      "equal_weight_mean": 82.56514963750102,
+      "original_iou_percent": 96.8463708137802,
+      "model_sha256": "fb5a198f813b7770bfd33fa9845f1f50244845ab30a00a9e8ae146b93bbd75d3",
+      "render_sha256": "fa390ff83633eab30595c436230829f3569233b0e54db439ea053675811b8076",
+      "render_entrypoint": "canonical saved-file render"
+    },
+    {
+      "variant": "175-upper-two-layer-finish",
+      "decision": "rejected",
+      "reason": "Roughening both layers spreads the lower band and softens useful grain contrast.",
+      "scores": {
+        "silhouette_iou_percent": 97.8257481875051,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 67
+      },
+      "equal_weight_mean": 82.16514963750102,
+      "original_iou_percent": 96.8463708137802,
+      "model_sha256": "4190f939f8f051b69f2483a16f9fe2fed51f57bc14bb04304adc5c1472f8c842",
+      "render_sha256": "aa458a90ad24db86296cc09245c95ef30253d8d8d0b8c277244b608661322263",
+      "render_entrypoint": "initial trial render; rejected intermediate, not independently reproduced"
+    },
+    {
+      "variant": "176-upper-finish-fitted",
+      "decision": "rejected",
+      "reason": "The final fit softens the bands but does not recover the reference patch; no clear overall improvement over 014.",
+      "scores": {
+        "silhouette_iou_percent": 97.8257481875051,
+        "interior_form": 85,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 69
+      },
+      "equal_weight_mean": 82.56514963750102,
+      "original_iou_percent": 96.8463708137802,
+      "model_sha256": "5f664e68d223c84434c0036bc8993424ef69a0b899a8fee48862c41a070c3aa0",
+      "render_sha256": "5f490dfc7bacee016c141e3dff75f061e30d12ee06e0ddaaa945eb1b3f3902d4",
+      "render_entrypoint": "canonical saved-file render"
+    }
+  ]
+}
