@@ -1295,3 +1295,26 @@ camera all pass. Fixed/side renders, overlay evidence and the embedded viewer
 are synchronized. See [checkpoint 25](queen-mission/iteration-025/README.md)
 for profile measurements, comparison reports and validation. The active model
 is `cae7d51be3faf3743a7a1180daa719477b01ba892c216de6e1e4cf8cdd03d5a3`.
+
+
+## Twenty-sixth iteration — restore the shelf-and-drop baseline, November 11, 2026
+
+The owner found the checkpoint-25 base/socket interpretation less convincing
+while retaining the compact collar treatment. The active queen therefore
+returns to the fully validated checkpoint-24 base, flare, raised socket, foot
+and stem. Its explicit horizontal socket shelf and steep drop are restored
+unchanged; the rounded lower collar and finer upper collar remain.
+
+At the fixed 54-degree orthographic camera, the restored model measures
+97.7567% outline IoU against the master original-black sprite and 97.9356%
+against the selected high-resolution detail reference. That is +0.2360 and
+-0.1351 points respectively versus checkpoint 25. A fully rebuilt 2% outer
+shoulder draft scored 97.4066% / 98.0125%; it is rejected because the master
+source regressed and the side benefit was too small.
+
+The stored source blend was freshly validated for manifoldness, positive volume,
+unchanged declared controls, six exact receiver/atlas-UV regions and 82
+receiver-light links. The active blend, fixed and side renders, and embedded
+viewer were regenerated together. The publisher now reads scoped validation
+evidence so it verifies the actual staged model hash rather than an unrelated
+repacked active file. See [checkpoint 26](queen-mission/iteration-026/README.md).

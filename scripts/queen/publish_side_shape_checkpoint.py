@@ -32,7 +32,14 @@ def main():
     if Path(variant).name != variant or variant in ('', '.', '..'):
         raise ValueError('Expected a simple trial directory name')
     trial = ROOT / 'build' / 'queen-mission' / variant / 'queen.blend'
-    validation = json.loads((args.evidence / 'finish-validation.json').read_text())
+    # Geometry checkpoints are validated by the scoped side-shape validator.
+    # It records the candidate blend digest as ``model_sha256``.  Older finish
+    # reports instead describe the subsequently saved active blend, whose
+    # compressed-file digest legitimately differs from the staged trial.
+    validation_path = args.evidence / 'side-shape-validation.json'
+    if not validation_path.is_file():
+        validation_path = args.evidence / 'finish-validation.json'
+    validation = json.loads(validation_path.read_text())
     assert validation['passed']
     # The general finish validator calls the active file ``source_sha256``;
     # the scoped geometry validator calls it ``model_sha256``.

@@ -1,0 +1,20 @@
+{
+  "camera_assumption_degrees_above_board": 54,
+  "method": "Actual rendered alpha and reference max RGB >12; largest component with holes filled. Original sprite uses the preserved registration. No source image shifts, scaling, recoloring, or warping.",
+  "silhouette_iou": {
+    "original_black": 0.9775674315512202,
+    "selected_highres": 0.9793556374989907
+  },
+  "checkpoint_25_comparison": {
+    "original_black": 0.9752072313357885,
+    "selected_highres": 0.9807065019439191,
+    "original_black_delta": 0.002360200215431655,
+    "selected_highres_delta": -0.001350864444928391
+  },
+  "rejected_full_receiver_shoulder_study": {
+    "variant": "232-shoulder-bulk02-full",
+    "original_black": 0.9740661566156615,
+    "selected_highres": 0.980124602519044,
+    "reason": "The master original-image silhouette regressed and the visual side change was not compelling enough to justify it."
+  }
+}

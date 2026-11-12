@@ -45,10 +45,11 @@ Do not invent a token budget or launch additional agents from this file.
 
 - Repository: `/home/toby/code/listaunton` in Ubuntu-24.04 WSL.
 - Model: `models/queen/queen-rebuilt.blend`.
-- Latest accepted working model SHA-256: `cae7d51be3faf3743a7a1180daa719477b01ba892c216de6e1e4cf8cdd03d5a3`
-  (checkpoint 25; its reproducible pre-publication candidate is
-  `feca27a170ddf692d516c594a6bff2b9684c0d6a302387471f57319068a033f5`,
-  while the checkpoint-22 source archive remains recorded below).
+- Latest owner-approved working baseline SHA-256:
+  `450314c8fad35964022e3797ccf4bcbbcda3c9e26cf372a5228940ebb03f6929`
+  (checkpoint 26, an owner-directed restoration of checkpoint 24's
+  shelf-and-drop base/socket with its accepted collar refinements; the
+  checkpoint-22 source archive remains recorded below).
 - Primary original: `references/lichess-staunton-3d/Black-Queen.png`; consult the opposite color too.
 - Selected detail reference: `assets/queen/reference.png` — existing selected image.
 - Review page: `review.html`.
@@ -152,7 +153,7 @@ quietly changing thresholds between trials. Use
 openings; hole-filled silhouette metrics do not assess the bishop slit or rook
 interior, which need separate detailed inspection.
 
-Current accepted scores: 97.5207 / 86 / 85 / 79 / 76; working mean 84.7041%, holistic 80-85%. Original Lichess IoU: 97.5207%; selected high-res IoU: 98.0707%. Latest accepted model and validation: docs/queen-mission/iteration-025 (restrained 4% foot-through-socket compression and a fuller flare; original fit regresses by 0.2360 points while the selected-detail fit rises by 0.1351 points). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
+Current working-baseline scores: 97.7567 / 86 / 85 / 79 / 76; working mean 84.7513%, holistic 80-85%. Original Lichess IoU: 97.7567%; selected high-res IoU: 97.9356%. Latest accepted model and validation: docs/queen-mission/iteration-026 (owner-directed restoration of checkpoint 24's shelf/drop base and accepted collar refinements; it recovers 0.2360 original-IoU points versus checkpoint 25 while yielding 0.1351 selected-detail points). Preserve the existing queen mission history and never revive rejected reconstruction 2cb3cfd. Re-examine before changing these scores.
 
 ## Historical baseline and detailed inspection checklist
 
