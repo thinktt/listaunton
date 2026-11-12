@@ -1,0 +1,128 @@
+{
+  "rubric": "Only silhouette IoU is measured. The other four scores are visual judgments; no gain is awarded for tiny sampling-related alpha differences on unchanged geometry.",
+  "trials": [
+    {
+      "variant": "097-socket-partition-baseline",
+      "decision": "diagnostic",
+      "reason": "Exact receiver migration; no visual improvement claimed.",
+      "scores": {
+        "silhouette_iou_percent": 97.81712417363087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 62
+      },
+      "original_iou_percent": 96.83354433185717,
+      "equal_weight_mean": 80.96342483472617,
+      "render_sha256": "7db8f685be54748b694a11ef11fb77fde99924e58913245f2bf926945b0de3c8",
+      "model_sha256": "5d119dcda8e55af73aa5996ac32055c908d68ac02e417919e91794795c9db67a",
+      "socket_crop_rgb_mse": 657.7887891737892
+    },
+    {
+      "variant": "098-socket-separated-warm",
+      "decision": "rejected",
+      "reason": "Area lights introduce duplicate reflections on the inner socket slope.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 61
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.76347321976218,
+      "render_sha256": "5eb15a96a43b77eed8eaa35c1e5995526e55830def12147686e3299c8e6d758b",
+      "model_sha256": "f60ff401ba661f069c53b9b07fd85d61e3982706b36e3e3e7b06bf2f86d751ba",
+      "socket_crop_rgb_mse": 461.56166666666667
+    },
+    {
+      "variant": "099-socket-confined-spots",
+      "decision": "rejected",
+      "reason": "Narrow distant spots leave the desired outer glints too weak, despite lower crop error.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.56347321976217,
+      "render_sha256": "e858cfb134dd764c1efced64e40a5e41b5f36155898fd954c92504cb32989fa8",
+      "model_sha256": "35bcd76be8887dd04dc7b14b9263c98267e5482ef8faf7d428a99e2350c2629c",
+      "socket_crop_rgb_mse": 363.2161823361823
+    },
+    {
+      "variant": "100-socket-small-sources",
+      "decision": "rejected",
+      "reason": "Brighter small distant sources restore intrusive inner-slope glints.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 60
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.56347321976217,
+      "render_sha256": "a8a23c85347ff6622a2f9d04e635f83753c564cdf71f9ad23b612966fae63285",
+      "model_sha256": "d1751e56bf103e69b4d4e5106c75b51a7cbf9668c1363701ab5288c917d08394",
+      "socket_crop_rgb_mse": 633.1864387464387
+    },
+    {
+      "variant": "101-socket-local-sources",
+      "decision": "superseded",
+      "reason": "Closer sources separate the glints, but their footprints are small and too bright.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 62
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.96347321976216,
+      "render_sha256": "795fd02513ac96a8792b9a1c90a82d6adc5500eede247a404dfe5013112aca6b",
+      "model_sha256": "2d09485e875176aa1737623239d61542ac4641f6aeca3bca409bb44d89014b7e",
+      "socket_crop_rgb_mse": 322.171452991453
+    },
+    {
+      "variant": "102-socket-shaped-glints",
+      "decision": "superseded",
+      "reason": "Paired small sources give curved footprints; right glints remain too bright.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 62
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 80.96347321976216,
+      "render_sha256": "c0a09a782debeed4cad51e5671ff9c482a13e7d45cccbf9224858872f699f251",
+      "model_sha256": "ab7b76f3a87350eb9e45080f222f6a1923cdbb4053978cafe4928a5b5a038f69",
+      "socket_crop_rgb_mse": 296.33112535612537
+    },
+    {
+      "variant": "103-socket-fitted-glints",
+      "decision": "accepted",
+      "reason": "Improved glint separation, warmth and brightness balance; the inner seam and patchy grain still differ.",
+      "scores": {
+        "silhouette_iou_percent": 97.81736609881087,
+        "interior_form": 84,
+        "wood_color": 82,
+        "grain_surface": 79,
+        "lighting_reflections": 63
+      },
+      "original_iou_percent": 96.83378283518675,
+      "equal_weight_mean": 81.16347321976217,
+      "render_sha256": "e4b7c2b249634950efbb4c4ac8aabe5b993d7d2c5200e54df2ebbcd45a5383ec",
+      "model_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+      "socket_crop_rgb_mse": 251.46934472934473
+    }
+  ],
+  "holistic_visual_range_percent": [
+    74,
+    83
+  ]
+}

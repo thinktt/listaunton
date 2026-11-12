@@ -1,0 +1,80 @@
+{
+  "source": "build/king-mission/103-socket-fitted-glints/prepared.blend",
+  "source_sha256": "46801e0fb941dc63bb7e2d20e552997796b7ef17cc99db48193f593e528f40ed",
+  "variant": "103-socket-fitted-glints",
+  "bounds": [
+    420,
+    738,
+    610,
+    795
+  ],
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 4,
+  "original_source": "build/king-mission/102-socket-shaped-glints/king.blend",
+  "original_source_sha256": "ab7b76f3a87350eb9e45080f222f6a1923cdbb4053978cafe4928a5b5a038f69",
+  "light_fit": {
+    "source_sha256": "ab7b76f3a87350eb9e45080f222f6a1923cdbb4053978cafe4928a5b5a038f69",
+    "pixels": 10830,
+    "bounds": [
+      420,
+      738,
+      610,
+      795
+    ],
+    "original_powers": {
+      "Socket left outer": 40.0,
+      "Socket left inner": 40.0,
+      "Socket right inner": 40.0,
+      "Socket right outer": 40.0
+    },
+    "fitted_powers": {
+      "Socket left outer": 33.79656631040373,
+      "Socket left inner": 37.88007685901855,
+      "Socket right inner": 21.24717199712569,
+      "Socket right outer": 12.235065010504236
+    },
+    "gain": [
+      0.8449141577600934,
+      0.9470019214754638,
+      0.5311792999281423,
+      0.3058766252626059
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "before_mse": 0.009058262598466002,
+        "after_mse": 0.008510222559927524
+      },
+      {
+        "iteration": 1,
+        "before_mse": 0.008510222559927524,
+        "after_mse": 0.008402549975187223
+      },
+      {
+        "iteration": 2,
+        "before_mse": 0.008402549975187223,
+        "after_mse": 0.008399657940433554
+      },
+      {
+        "iteration": 3,
+        "before_mse": 0.008399657940433554,
+        "after_mse": 0.008399643861046972
+      },
+      {
+        "iteration": 4,
+        "before_mse": 0.008399643861046972,
+        "after_mse": 0.008399643730584857
+      }
+    ],
+    "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+  },
+  "fitted_lights": [
+    "Socket left outer",
+    "Socket left inner",
+    "Socket right inner",
+    "Socket right outer"
+  ],
+  "model_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "elevation_degrees": 54.000000800055794
+}

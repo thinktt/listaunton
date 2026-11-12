@@ -1,0 +1,20 @@
+{
+  "source": "build/king-mission/102-socket-shaped-glints/king.blend",
+  "source_sha256": "ab7b76f3a87350eb9e45080f222f6a1923cdbb4053978cafe4928a5b5a038f69",
+  "variant": "103-socket-fitted-glints",
+  "lights": [
+    "Socket left outer",
+    "Socket left inner",
+    "Socket right inner",
+    "Socket right outer"
+  ],
+  "bounds": [
+    420,
+    738,
+    610,
+    795
+  ],
+  "samples": 128,
+  "response_samples": 512,
+  "maximum_gain": 4
+}

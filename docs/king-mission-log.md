@@ -360,3 +360,40 @@ batches or model trials will begin until the owner resumes the mission.
 
 The owner has requested the active goal be paused. The mission remains
 incomplete; no watchers or subagents were started.
+
+
+## 2026-11-12 — checkpoint 009: separated socket reflections
+
+The owner resumed the king mission. Trial 103 replaces the broad pale socket
+streak with four local real reflectors forming warmer, separated left/right
+glints. All closed geometry, UVs, float attributes, pigment/relief, physical
+bounds and the 54-degree camera remain exact from checkpoint 007. The socket
+is now a fifth exact receiver; regeneration preserves its routing.
+
+| Metric | Checkpoint 007 | Checkpoint 009 |
+| --- | ---: | ---: |
+| High-res silhouette IoU | 97.8171% | 97.8174% |
+| Interior form | 84% | 84% |
+| Wood color | 82% | 82% |
+| Grain and surface | 79% | 79% |
+| Lighting / reflections | 62% | 63% |
+| Equal-weight working mean | 80.9634% | 81.1635% |
+
+Only IoU is measured; tiny outline changes are sampling, not geometry gains.
+Original IoU is 96.8338%; the holistic estimate remains 74–83%. Socket crop
+RGB MSE drops about 62%, but the inner seam, gray pigment band and patchy
+glint shape remain. The upper collars and other previously listed defects
+are unfinished. See [iteration-009/README.md](king-mission/iteration-009/README.md)
+for trial decisions, all five scores, regional tradeoffs and reproduction.
+
+Reopened and independently rebuilt renders agree within 1/255 with identical
+alpha. Exported geometry and camera bytes match 007; scope, receiver
+regeneration and closed-component checks pass. King review, side comparison,
+viewer and all 34 local preview files are synchronized. King/candidate,
+site/model and historical projection checks pass. The shared whole-set check
+still has the documented pre-existing knight sizing mismatch; those shared
+files are unchanged. Native browser screenshot inspection is not claimed.
+
+Next: the inner socket seam and residual pigment band, then collar reflections.
+Preserve the accepted outer glints and foot. The goal is active and incomplete;
+no watchers or subagents were started.

@@ -1,0 +1,205 @@
+{
+  "checkpoint": "009",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "103-socket-fitted-glints",
+  "previous_checkpoint": "007",
+  "model_sha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "render_sha256": "e4b7c2b249634950efbb4c4ac8aabe5b993d7d2c5200e54df2ebbcd45a5383ec",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "scores": {
+    "silhouette_iou_percent": 97.81736609881087,
+    "interior_form": 84,
+    "wood_color": 82,
+    "grain_surface": 79,
+    "lighting_reflections": 63
+  },
+  "original_iou_percent": 96.83378283518675,
+  "equal_weight_mean": 81.16347321976217,
+  "holistic_visual_range_percent": [
+    74,
+    83
+  ],
+  "geometry_changed": false,
+  "material_changed": false,
+  "camera_elevation_degrees": 54.000000800055794,
+  "receiver_count": 5,
+  "added_lights": {
+    "Socket left inner": {
+      "type": "SPOT",
+      "energy": 37.88007736206055,
+      "color": [
+        1.0,
+        0.7200000286102295,
+        0.47999998927116394
+      ],
+      "matrix": [
+        0.9565081000328064,
+        0.053184665739536285,
+        -0.2868163585662842,
+        -0.3235970437526703,
+        -0.2917057275772095,
+        0.17439350485801697,
+        -0.9404757618904114,
+        -1.2540571689605713,
+        2.026114565012449e-08,
+        0.983238697052002,
+        0.18232306838035583,
+        1.423892617225647,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.012000000104308128,
+      "cone": 0.13962633907794952,
+      "receivers": [
+        "socket"
+      ]
+    },
+    "Socket left outer": {
+      "type": "SPOT",
+      "energy": 33.796566009521484,
+      "color": [
+        1.0,
+        0.7200000286102295,
+        0.47999998927116394
+      ],
+      "matrix": [
+        0.836098313331604,
+        0.061751704663038254,
+        -0.5450929999351501,
+        -0.6196416020393372,
+        -0.5485796332359314,
+        0.09411689639091492,
+        -0.8307842016220093,
+        -1.1427528858184814,
+        1.1975345159953577e-07,
+        0.9936441779136658,
+        0.11256670951843262,
+        1.3648602962493896,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.012000000104308128,
+      "cone": 0.13962633907794952,
+      "receivers": [
+        "socket"
+      ]
+    },
+    "Socket right inner": {
+      "type": "SPOT",
+      "energy": 21.24717140197754,
+      "color": [
+        1.0,
+        0.7200000286102295,
+        0.47999998927116394
+      ],
+      "matrix": [
+        0.8910105228424072,
+        0.025155654177069664,
+        0.45328521728515625,
+        0.5149612426757812,
+        0.45398271083831787,
+        -0.049371909350156784,
+        -0.8896415829658508,
+        -1.2079544067382812,
+        4.031888067856926e-08,
+        0.9984636306762695,
+        -0.05541112273931503,
+        1.2173659801483154,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.012000000104308128,
+      "cone": 0.13962633907794952,
+      "receivers": [
+        "socket"
+      ]
+    },
+    "Socket right outer": {
+      "type": "SPOT",
+      "energy": 12.235065460205078,
+      "color": [
+        1.0,
+        0.7200000286102295,
+        0.47999998927116394
+      ],
+      "matrix": [
+        0.7571133375167847,
+        0.12206427752971649,
+        0.6417785286903381,
+        0.7406414151191711,
+        0.6532835364341736,
+        -0.14146460592746735,
+        -0.7437797784805298,
+        -1.0663402080535889,
+        8.650417271383049e-09,
+        0.982388973236084,
+        -0.18684732913970947,
+        1.1032172441482544,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "size": null,
+      "size_y": null,
+      "radius": 0.012000000104308128,
+      "cone": 0.13962633907794952,
+      "receivers": [
+        "socket"
+      ]
+    }
+  },
+  "mission_complete": false,
+  "validation": {
+    "reproduction": {
+      "saved_reopened": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 6.995159349729987e-06,
+        "alpha_exact": true
+      },
+      "full_reproduction": {
+        "maximum_channel_error_255": 1,
+        "mean_channel_error_255": 8.267006504226349e-06,
+        "alpha_exact": true
+      },
+      "reproduction_mesh_exact": true,
+      "accepted_geometry_export_byte_identical_to_007": true,
+      "camera_export_byte_identical_to_007": true,
+      "physical_bounds_size_exact": true,
+      "preserving_socket_split": {
+        "maximum_channel_error_255": 1,
+        "alpha_exact": true
+      }
+    },
+    "scope": "passed",
+    "receiver_regeneration": "passed",
+    "export": "passed",
+    "site": "passed king checks",
+    "canonical_model": "passed",
+    "site_model_candidates_and_historical_projections": "passed",
+    "whole_set": "known pre-existing knight sizing metadata mismatch",
+    "repository_and_local_preview_interactions": "passed actual-page DOM/WebGL harness",
+    "native_browser_screenshot_inspection": false,
+    "local_preview_verified_files": 34
+  }
+}

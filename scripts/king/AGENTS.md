@@ -1,7 +1,7 @@
 # King reconstruction pipeline
 
 Read the root AGENTS.md, MISSION-KING.md and latest docs/king-mission-log.md.
-The current accepted scene has two closed editable controls and four exact
+The current accepted scene has two closed editable controls and five exact
 derived body light receivers. Select editable meshes with
 `render_regions.controls(scene)`, not by visibility. The body is intentionally
 hidden from final rendering. Export the closed controls; do not export the
@@ -36,3 +36,15 @@ regions and regenerate after edits. The current source is the accepted seventh
 model. Its review and local preview are synchronized. The whole-set test has a
 documented pre-existing knight sizing metadata failure; keep that distinction
 when reporting validation. Read the mission log for active status and next work.
+
+
+Checkpoint 009 retains 007 geometry, material, packed images and fixed camera.
+It splits socket from upper-body at interpolated profile ring 28, for five exact
+receivers. `regenerate` preserves `king_split_socket` and existing routes.
+`king_socket_broad_excluded` records that Front/Upper varnish omit the socket;
+four `Socket ` glossy spotlights supply its local glints with shadows enabled.
+Export the unchanged closed controls, never the open receivers. Reproduce
+with socket_reflection_trial.py and iteration-009/reproduction.json from
+archived 007. Check scope using check_socket_checkpoint.py; keep the exact
+surface/UV/attribute/normal and light-route validators. The earlier four-region
+pipeline remains supported. Read the mission log for remaining defects.

@@ -1,0 +1,46 @@
+{
+  "source": "history/king-mission-007/king-rebuilt.blend",
+  "source_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "samples": 128,
+  "variant": "099-socket-confined-spots",
+  "reflectors": [
+    {
+      "name": "Socket left lip",
+      "pixel": [
+        465,
+        769
+      ],
+      "type": "SPOT",
+      "energy": 700,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 1.8,
+      "radius": 0.22
+    },
+    {
+      "name": "Socket right lip",
+      "pixel": [
+        555,
+        772
+      ],
+      "type": "SPOT",
+      "energy": 700,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 1.8,
+      "radius": 0.22
+    }
+  ]
+}

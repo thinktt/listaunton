@@ -1,0 +1,56 @@
+{
+  "source_sha256": "ab7b76f3a87350eb9e45080f222f6a1923cdbb4053978cafe4928a5b5a038f69",
+  "pixels": 10830,
+  "bounds": [
+    420,
+    738,
+    610,
+    795
+  ],
+  "original_powers": {
+    "Socket left outer": 40.0,
+    "Socket left inner": 40.0,
+    "Socket right inner": 40.0,
+    "Socket right outer": 40.0
+  },
+  "fitted_powers": {
+    "Socket left outer": 33.79656631040373,
+    "Socket left inner": 37.88007685901855,
+    "Socket right inner": 21.24717199712569,
+    "Socket right outer": 12.235065010504236
+  },
+  "gain": [
+    0.8449141577600934,
+    0.9470019214754638,
+    0.5311792999281423,
+    0.3058766252626059
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "before_mse": 0.009058262598466002,
+      "after_mse": 0.008510222559927524
+    },
+    {
+      "iteration": 1,
+      "before_mse": 0.008510222559927524,
+      "after_mse": 0.008402549975187223
+    },
+    {
+      "iteration": 2,
+      "before_mse": 0.008402549975187223,
+      "after_mse": 0.008399657940433554
+    },
+    {
+      "iteration": 3,
+      "before_mse": 0.008399657940433554,
+      "after_mse": 0.008399643861046972
+    },
+    {
+      "iteration": 4,
+      "before_mse": 0.008399643861046972,
+      "after_mse": 0.008399643730584857
+    }
+  ],
+  "method": "Isolated real colored-BSDF light responses fitted through AgX, with all other lights fixed. Full render, not fitted loss, governs acceptance."
+}

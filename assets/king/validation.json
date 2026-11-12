@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "sourceSha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -26,7 +26,7 @@
   "note": "Body and cross remain separate closed intersecting components. Viewer lighting is approximate.",
   "renderReceivers": {
     "used": true,
-    "receiverCount": 4,
+    "receiverCount": 5,
     "exactSurfaceFacesUvsFloatAttributes": true,
     "triangles": 67200,
     "normalMaxError": 6.699562072753906e-05,
@@ -42,6 +42,7 @@
       "Platter front-right glint": [
         "foot",
         "lower-flare",
+        "socket",
         "upper-body",
         "upper-flare"
       ],
@@ -100,6 +101,18 @@
       ],
       "Foot broad crescent": [
         "foot"
+      ],
+      "Socket left outer": [
+        "socket"
+      ],
+      "Socket left inner": [
+        "socket"
+      ],
+      "Socket right inner": [
+        "socket"
+      ],
+      "Socket right outer": [
+        "socket"
       ]
     }
   },

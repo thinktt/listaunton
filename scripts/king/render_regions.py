@@ -10,7 +10,7 @@ from mathutils import Vector
 def controls(scene):
     return [o for o in scene.objects if o.type=='MESH' and not o.get('king_render_region') and (not o.hide_render or o.get('king_editable_control'))]
 
-def partition(scene,body,profile_sections=False,split_flare=False):
+def partition(scene,body,profile_sections=False,split_flare=False,split_socket=False):
     assert not any(o.get('king_render_region') for o in scene.objects),'Start from an unpartitioned source.'
     if profile_sections:
         attr=body.data.attributes.get('King profile ring') or body.data.attributes.new('King profile ring','FLOAT','POINT')
@@ -19,11 +19,13 @@ def partition(scene,body,profile_sections=False,split_flare=False):
     for m,_ in levels:m.levels=m.render_levels
     bpy.context.view_layer.update();graph=bpy.context.evaluated_depsgraph_get();ev=body.evaluated_get(graph);mesh=ev.to_mesh()
     co=np.array([v.co[:] for v in mesh.vertices],dtype=np.float32);lv=np.array([l.vertex_index for l in mesh.loops]);starts=np.array([p.loop_start for p in mesh.polygons]);counts=np.array([p.loop_total for p in mesh.polygons]);centers=np.add.reduceat(co[lv],starts,axis=0)/counts[:,None]
-    names=['foot','lower-flare','upper-flare','upper-body'] if split_flare else ['foot','flare','upper-body']
-    assert not split_flare or profile_sections
+    names=['foot','lower-flare','upper-flare'] if split_flare else ['foot','flare']
+    names+=['socket','upper-body'] if split_socket else ['upper-body']
+    assert not (split_flare or split_socket) or profile_sections
     if profile_sections:
         ring=np.array([v.value for v in mesh.attributes['King profile ring'].data],dtype=np.float32)
-        face_ring=np.add.reduceat(ring[lv],starts)/counts;labels=np.digitize(face_ring,[8,17,19.8] if split_flare else [8,19.8])
+        bins=([8,17,19.8] if split_flare else [8,19.8])+([28] if split_socket else [])
+        face_ring=np.add.reduceat(ring[lv],starts)/counts;labels=np.digitize(face_ring,bins)
     else:labels=np.digitize(centers[:,2],[.24,.88])
     normals=np.array([n.vector[:] for n in mesh.corner_normals],dtype=np.float32)
     uvs={layer.name:np.array([v.uv[:] for v in layer.data],dtype=np.float32) for layer in mesh.uv_layers}
@@ -50,7 +52,8 @@ def partition(scene,body,profile_sections=False,split_flare=False):
         for part in parts:receiver.objects.link(part)
     body['king_editable_control']=True;body.hide_render=True;scene['king_render_regions']=True
     scene['king_split_flare']=split_flare
-    scene['king_partition_spec']=('Interpolated profile-ring bins 8, 17 and 19.8' if split_flare else ('Interpolated profile-ring bins 8 and 19.8' if profile_sections else 'Face-center Z bins 0.24 and 0.88'))+': '+', '.join(names)+'; exact evaluated control surface.'
+    scene['king_split_socket']=split_socket
+    scene['king_partition_spec']=('Interpolated profile-ring bins '+', '.join(str(x) for x in bins) if profile_sections else 'Face-center Z bins 0.24 and 0.88')+': '+', '.join(names)+'; exact evaluated control surface.'
     bpy.context.view_layer.update();return parts,report
 
 def link(light,parts,name):
@@ -75,7 +78,7 @@ def assign_material(scene,control,material):
     for ob in scene.objects:
         if ob.get('king_render_region') and ob.get('king_control_source')==control.name:ob.data.materials[0]=material
 
-def regenerate(scene,split_flare=None):
+def regenerate(scene,split_flare=None,split_socket=None):
     """Rebuild derived surfaces after changing control positions, UVs or attributes."""
     if not scene.get('king_render_regions'):return
     old=[o for o in scene.objects if o.get('king_render_region')]
@@ -87,14 +90,18 @@ def regenerate(scene,split_flare=None):
         if any(o in old for o in members):routing.append((light,[(o.get('king_render_region'),o.name) for o in members]))
     by_profile='profile-ring' in scene.get('king_partition_spec','')
     if split_flare is None:split_flare=bool(scene.get('king_split_flare',False))
+    old_split_socket=bool(scene.get('king_split_socket',False))
+    if split_socket is None:split_socket=old_split_socket
     for ob in old:bpy.data.objects.remove(ob,do_unlink=True)
     body.hide_render=False;scene['king_render_regions']=False
-    parts,report=partition(scene,body,profile_sections=by_profile,split_flare=split_flare);mapping={o['king_render_region']:o for o in parts}
+    parts,report=partition(scene,body,profile_sections=by_profile,split_flare=split_flare,split_socket=split_socket);mapping={o['king_render_region']:o for o in parts}
     for light,members in routing:
         receivers=[]
         for region,name in members:
             if region=='flare' and split_flare:receivers.extend([mapping['lower-flare'],mapping['upper-flare']])
             elif region in ('lower-flare','upper-flare') and not split_flare:receivers.append(mapping['flare'])
+            elif region=='upper-body' and split_socket and not old_split_socket:receivers.extend([mapping['socket'],mapping['upper-body']])
+            elif region=='socket' and not split_socket:receivers.append(mapping['upper-body'])
             else:receivers.append(mapping[region] if region else bpy.data.objects[name])
         receivers=list(dict.fromkeys(receivers))
         link(light,receivers,light.name+' regenerated')

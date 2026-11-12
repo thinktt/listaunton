@@ -1,0 +1,123 @@
+{
+  "components": [
+    {
+      "name": "King - continuous turned body",
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.4953732515391565,
+      "vertices": 33602,
+      "faces": 33600
+    },
+    {
+      "name": "King - beveled cross",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.07536784391920683,
+      "vertices": 1584,
+      "faces": 1508
+    }
+  ],
+  "sourceSha256": "dcb14f37a90feb2fef375d692115c9f6d0df2a20effa2ded86f58f84b32662fb",
+  "source_hash_matches": true,
+  "elevationDegrees": 54.000000800055794,
+  "cameraOrthographic": true,
+  "exactCornerPositionNormalUvRoundtrip": true,
+  "allAttributesFinite": true,
+  "allNormalsUnit": true,
+  "packedPigment": true,
+  "note": "Body and cross remain separate closed intersecting components. Viewer lighting is approximate.",
+  "renderReceivers": {
+    "used": true,
+    "receiverCount": 5,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "socket",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ],
+      "Socket left outer": [
+        "socket"
+      ],
+      "Socket left inner": [
+        "socket"
+      ],
+      "Socket right inner": [
+        "socket"
+      ],
+      "Socket right outer": [
+        "socket"
+      ]
+    }
+  },
+  "cameraMatchesExport": true,
+  "packedPigmentPngHashMatches": true,
+  "realPrincipledBeautyMaterial": true,
+  "sourceUnchanged": true
+}

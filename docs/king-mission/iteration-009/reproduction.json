@@ -1,0 +1,88 @@
+{
+  "source": "history/king-mission-007/king-rebuilt.blend",
+  "source_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "samples": 128,
+  "variant": "104-socket-checkpoint-reproduction",
+  "reflectors": [
+    {
+      "name": "Socket left outer",
+      "pixel": [
+        452,
+        767
+      ],
+      "type": "SPOT",
+      "energy": 33.79656631040373,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    },
+    {
+      "name": "Socket left inner",
+      "pixel": [
+        477,
+        772
+      ],
+      "type": "SPOT",
+      "energy": 37.88007685901855,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    },
+    {
+      "name": "Socket right inner",
+      "pixel": [
+        546,
+        774
+      ],
+      "type": "SPOT",
+      "energy": 21.24717199712569,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    },
+    {
+      "name": "Socket right outer",
+      "pixel": [
+        567,
+        770
+      ],
+      "type": "SPOT",
+      "energy": 12.235065010504236,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    }
+  ]
+}

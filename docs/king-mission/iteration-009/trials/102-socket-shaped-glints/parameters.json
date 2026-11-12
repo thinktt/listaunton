@@ -1,0 +1,415 @@
+{
+  "source": "build/king-mission/102-socket-shaped-glints/socket-prepared.blend",
+  "source_sha256": "9173033b1d2baa871928beef6fc7792068c94349c776ffa1051876164ca37d8c",
+  "samples": 128,
+  "variant": "102-socket-shaped-glints",
+  "reflectors": [
+    {
+      "name": "Socket left outer",
+      "pixel": [
+        452,
+        767
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    },
+    {
+      "name": "Socket left inner",
+      "pixel": [
+        477,
+        772
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    },
+    {
+      "name": "Socket right inner",
+      "pixel": [
+        546,
+        774
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    },
+    {
+      "name": "Socket right outer",
+      "pixel": [
+        567,
+        770
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8
+    }
+  ],
+  "socket_original_source": "history/king-mission-007/king-rebuilt.blend",
+  "socket_original_source_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "socket_partition_before": {
+    "used": true,
+    "receiverCount": 4,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ]
+    }
+  },
+  "socket_partition_after": {
+    "used": true,
+    "receiverCount": 5,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "socket",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ]
+    }
+  },
+  "original_source_sha256": "9173033b1d2baa871928beef6fc7792068c94349c776ffa1051876164ca37d8c",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Socket left outer",
+      "pixel": [
+        452,
+        767
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8,
+      "actual_target_pixel": [
+        452,
+        767
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        -0.18356727063655853,
+        -0.47812557220458984,
+        1.2748069763183594
+      ],
+      "normal": [
+        -0.3066978454589844,
+        -0.798161506652832,
+        0.5185312628746033
+      ],
+      "position": [
+        -0.6196416020393372,
+        -1.1427528858184814,
+        1.3648602962493896
+      ]
+    },
+    {
+      "name": "Socket left inner",
+      "pixel": [
+        477,
+        772
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8,
+      "actual_target_pixel": [
+        477,
+        772
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        -0.0941440537571907,
+        -0.5016765594482422,
+        1.2780342102050781
+      ],
+      "normal": [
+        -0.15553422272205353,
+        -0.8287428021430969,
+        0.5375820994377136
+      ],
+      "position": [
+        -0.3235970437526703,
+        -1.2540571689605713,
+        1.423892617225647
+      ]
+    },
+    {
+      "name": "Socket right inner",
+      "pixel": [
+        546,
+        774
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8,
+      "actual_target_pixel": [
+        546,
+        774
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        0.15233300626277924,
+        -0.49624109268188477,
+        1.2616949081420898
+      ],
+      "normal": [
+        0.26363685727119446,
+        -0.8592916131019592,
+        0.4383074939250946
+      ],
+      "position": [
+        0.5149612426757812,
+        -1.2079544067382812,
+        1.2173659801483154
+      ]
+    },
+    {
+      "name": "Socket right outer",
+      "pixel": [
+        567,
+        770
+      ],
+      "type": "SPOT",
+      "energy": 40,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 8,
+      "radius": 0.012,
+      "distance": 0.8,
+      "actual_target_pixel": [
+        567,
+        770
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        0.22721849381923676,
+        -0.4713163375854492,
+        1.252695083618164
+      ],
+      "normal": [
+        0.40017169713974,
+        -0.8302779197692871,
+        0.3879448473453522
+      ],
+      "position": [
+        0.7406414151191711,
+        -1.0663402080535889,
+        1.1032172441482544
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "ab7b76f3a87350eb9e45080f222f6a1923cdbb4053978cafe4928a5b5a038f69"
+}

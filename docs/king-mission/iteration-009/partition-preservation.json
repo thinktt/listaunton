@@ -1,0 +1,95 @@
+{
+  "before": "history/king-mission-007/king-rebuilt.blend",
+  "after": "build/king-mission/097-socket-partition-baseline/king.blend",
+  "source_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "model_sha256": "5d119dcda8e55af73aa5996ac32055c908d68ac02e417919e91794795c9db67a",
+  "control_geometry_uvs_all_float_attributes_material_images_camera_world_exact": true,
+  "existing_light_settings_exact": true,
+  "source_files_unchanged": true,
+  "baseline_split_only": true,
+  "socket_boundary_profile_ring": 28,
+  "added_lights": {},
+  "added_lights_cast_shadows": true,
+  "render_receivers": {
+    "used": true,
+    "receiverCount": 5,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "socket",
+        "upper-body"
+      ],
+      "Front varnish": [
+        "socket",
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "socket",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ]
+    }
+  }
+}

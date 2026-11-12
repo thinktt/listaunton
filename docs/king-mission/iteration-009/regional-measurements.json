@@ -1,0 +1,70 @@
+{
+  "method": "RGB error in fixed rectangles, excluding background with common reference/model foreground. Not a perceptual score.",
+  "regions": {
+    "head": {
+      "bounds": [
+        185,
+        0,
+        815,
+        350
+      ],
+      "foreground_pixels": 88634,
+      "previous_rgb_mse": 596.0118088619115,
+      "trial_rgb_mse": 597.4477739919218,
+      "maximum_render_change_255": 49.0,
+      "mean_render_change_255": 0.7334130619551564
+    },
+    "collars": {
+      "bounds": [
+        185,
+        350,
+        815,
+        560
+      ],
+      "foreground_pixels": 64815,
+      "previous_rgb_mse": 722.2500809997686,
+      "trial_rgb_mse": 721.3293682018051,
+      "maximum_render_change_255": 21.0,
+      "mean_render_change_255": 0.6574198359433259
+    },
+    "stem": {
+      "bounds": [
+        185,
+        560,
+        815,
+        720
+      ],
+      "foreground_pixels": 59967,
+      "previous_rgb_mse": 77.51588373605483,
+      "trial_rgb_mse": 77.4638273272522,
+      "maximum_render_change_255": 7.0,
+      "mean_render_change_255": 0.34870845631764136
+    },
+    "socket": {
+      "bounds": [
+        370,
+        720,
+        630,
+        810
+      ],
+      "foreground_pixels": 23400,
+      "previous_rgb_mse": 657.7945299145299,
+      "trial_rgb_mse": 251.46934472934473,
+      "maximum_render_change_255": 177.0,
+      "mean_render_change_255": 9.581566951566952
+    },
+    "base-foot": {
+      "bounds": [
+        185,
+        840,
+        815,
+        1110
+      ],
+      "foreground_pixels": 114716,
+      "previous_rgb_mse": 291.23299859362834,
+      "trial_rgb_mse": 292.2421894068831,
+      "maximum_render_change_255": 29.0,
+      "mean_render_change_255": 0.3393394702279252
+    }
+  }
+}

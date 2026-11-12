@@ -1,0 +1,291 @@
+{
+  "source": "build/king-mission/099-socket-confined-spots/socket-prepared.blend",
+  "source_sha256": "580bb438f664951c533079732953ddd207a4b0d06a4d68a333f2ab5193466e8e",
+  "samples": 128,
+  "variant": "099-socket-confined-spots",
+  "reflectors": [
+    {
+      "name": "Socket left lip",
+      "pixel": [
+        465,
+        769
+      ],
+      "type": "SPOT",
+      "energy": 700,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 1.8,
+      "radius": 0.22
+    },
+    {
+      "name": "Socket right lip",
+      "pixel": [
+        555,
+        772
+      ],
+      "type": "SPOT",
+      "energy": 700,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 1.8,
+      "radius": 0.22
+    }
+  ],
+  "socket_original_source": "history/king-mission-007/king-rebuilt.blend",
+  "socket_original_source_sha256": "878baa5afe91996a3ea22cadd41226cbbab4e4adc24c7195ad9c385764dd6ba8",
+  "socket_partition_before": {
+    "used": true,
+    "receiverCount": 4,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ]
+    }
+  },
+  "socket_partition_after": {
+    "used": true,
+    "receiverCount": 5,
+    "exactSurfaceFacesUvsFloatAttributes": true,
+    "triangles": 67200,
+    "normalMaxError": 6.699562072753906e-05,
+    "materialsShared": true,
+    "closedControlRetained": true,
+    "lightRoutes": {
+      "Upper varnish": [
+        "upper-body"
+      ],
+      "Front varnish": [
+        "upper-body"
+      ],
+      "Platter front-right glint": [
+        "foot",
+        "lower-flare",
+        "socket",
+        "upper-body",
+        "upper-flare"
+      ],
+      "Cross arm glint": [
+        "King - beveled cross"
+      ],
+      "Cross left arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross right arm reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap center reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap left reflection": [
+        "King - beveled cross"
+      ],
+      "Cross cap right reflection": [
+        "King - beveled cross"
+      ],
+      "Base upper reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower reflection": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Foot left reflection": [
+        "foot"
+      ],
+      "Base upper focused": [
+        "upper-flare"
+      ],
+      "Base lower left focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower center focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower right focused": [
+        "lower-flare",
+        "upper-flare"
+      ],
+      "Base lower shaped 03": [
+        "lower-flare"
+      ],
+      "Base lower shaped 04": [
+        "lower-flare"
+      ],
+      "Base lower shaped 05": [
+        "lower-flare"
+      ],
+      "Foot broad crescent": [
+        "foot"
+      ]
+    }
+  },
+  "original_source_sha256": "580bb438f664951c533079732953ddd207a4b0d06a4d68a333f2ab5193466e8e",
+  "receiver_partitions": [],
+  "reflector_probes": [
+    {
+      "name": "Socket left lip",
+      "pixel": [
+        465,
+        769
+      ],
+      "type": "SPOT",
+      "energy": 700,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 1.8,
+      "radius": 0.22,
+      "actual_target_pixel": [
+        465,
+        769
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        -0.13708403706550598,
+        -0.4902658462524414,
+        1.279984474182129
+      ],
+      "normal": [
+        -0.22492879629135132,
+        -0.804233729839325,
+        0.5501047372817993
+      ],
+      "position": [
+        -2.614253520965576,
+        -5.820684432983398,
+        2.484257221221924
+      ]
+    },
+    {
+      "name": "Socket right lip",
+      "pixel": [
+        555,
+        772
+      ],
+      "type": "SPOT",
+      "energy": 700,
+      "color": [
+        1,
+        0.72,
+        0.48
+      ],
+      "receivers": [
+        "socket"
+      ],
+      "degrees": 1.8,
+      "radius": 0.22,
+      "actual_target_pixel": [
+        555,
+        772
+      ],
+      "receiver_hit": "King receiver socket",
+      "point": [
+        0.18441879749298096,
+        -0.4860520362854004,
+        1.2602519989013672
+      ],
+      "normal": [
+        0.32028883695602417,
+        -0.8444858193397522,
+        0.42925387620925903
+      ],
+      "position": [
+        3.4269585609436035,
+        -5.508745193481445,
+        0.7518303990364075
+      ]
+    }
+  ],
+  "elevation_degrees": 54.000000800055794,
+  "model_sha256": "35bcd76be8887dd04dc7b14b9263c98267e5482ef8faf7d428a99e2350c2629c"
+}

@@ -19,7 +19,10 @@ def check(scene):
     parts=[o for o in scene.objects if o.get('king_render_region')]
     if not parts:return {'used':False}
     split=bool(scene.get('king_split_flare',False))
-    assert {o['king_render_region'] for o in parts}==({'foot','lower-flare','upper-flare','upper-body'} if split else {'foot','flare','upper-body'})
+    socket=bool(scene.get('king_split_socket',False))
+    expected_regions=({'foot','lower-flare','upper-flare','upper-body'} if split else {'foot','flare','upper-body'})
+    if socket:expected_regions.add('socket')
+    assert {o['king_render_region'] for o in parts}==expected_regions
     body=next(o for o in controls(scene) if 'body' in o.name);assert body.hide_render and body.get('king_editable_control')
     for part in parts:
         assert not part.hide_render and not part.modifiers and part.matrix_world==body.matrix_world
@@ -36,13 +39,16 @@ def check(scene):
     for light in scene.objects:
         if light.type!='LIGHT' or not light.light_linking.receiver_collection:continue
         names={o.get('king_render_region') or o.name for o in light.light_linking.receiver_collection.objects};routes[light.name]=sorted(names)
-        if light.name in ('Upper varnish','Front varnish'):assert names=={'upper-body'}
+        if light.name in ('Upper varnish','Front varnish'):
+            expected={'upper-body','socket'} if socket and not scene.get('king_socket_broad_excluded',False) else {'upper-body'}
+            assert names==expected,(light.name,names,expected)
         if light.name.startswith('Base '):
             expected={'flare'}
             if split:
                 expected=({'upper-flare'} if light.name=='Base upper focused' else ({'lower-flare'} if light.name.startswith('Base lower shaped ') else {'lower-flare','upper-flare'}))
             assert names==expected,(light.name,names,expected)
         if light.name.startswith('Foot '):assert names=={'foot'}
+        if light.name.startswith('Socket '):assert socket and names=={'socket'}
         if light.name.startswith('Cross '):assert not any(o.get('king_render_region') for o in light.light_linking.receiver_collection.objects)
     ev.to_mesh_clear()
     for m,level in levels:m.levels=level
