@@ -1341,3 +1341,13 @@ and source registration are unchanged.
 The active model is `8aa9492357a703f656189ad479294c5882da3c129cfb99a120b5ee1b7a85e3b3`.
 Fixed and side renders, the registered side comparison, embedded viewer mesh
 and review page are synchronized. See [checkpoint 27](queen-mission/iteration-027/README.md).
+
+## Twenty-eighth iteration — further seat the queen egg, November 11, 2026
+
+The owner returned attention to the distinctive inverted crown and observed that the finial still read too large and exposed. Starting from checkpoint 27, the accepted trial changes only cap rings 108–116, anchored at ring 107: it compacts their height to 90% of the previous exposed cap and radius to 97%. The maximum height falls 0.034182 units, seating the egg farther into the shallow bowl while retaining an egg-like curve rather than a button. Crown bowl, rim, eight tips, collars, stem, shelf-and-drop socket, flare, foot, material, lighting, UVs and the 54-degree orthographic camera remain fixed.
+
+A stronger 84% height / 94% radial bracket was rejected because the normal-size crown and side crops made the egg too button-like. The accepted midpoint is visibly closer to the compact, submerged egg in both the authoritative original and selected high-res reference. The stronger 0.012 lower-foot bracket and two too-subtle upper-collar brackets are also recorded as rejected; none enters the public review controls.
+
+Both outline IoUs remain 97.8523% against original black and 97.9622% against selected high-res, as expected because the cap sits inside the crown's hole-filled silhouette. Interior-shape judgment rises from 86 to 86.5; color 85, grain 79 and lighting 76 are unchanged regression ratings. The equal-weight working mean is 84.8705%, with holistic range still 80–85%. The result improves a documented interior/crown relationship; it does not claim that the entire queen is finished.
+
+The staged and delivered validators pass: zero boundary/non-manifold edges, positive volume, all undeclared controls identical to the composed source profile, six exact receiver/atlas-UV regions, 715,776 receiver triangles and 82 light links. The saved camera remains orthographic at 54 degrees. Fixed wood/clay, registered side images, comparison crops, the closed-control viewer export, and the embedded review frame are rebuilt from the active `dc29132cdf38208d09452185a16065bc94ee7d6be20b03f11efad193e81b8906` model. The viewer camera and reference interaction harnesses, plus static model/site checks, pass. See [checkpoint 28](queen-mission/iteration-028/README.md).
