@@ -1,0 +1,26 @@
+[
+  {
+    "name": "moderate",
+    "decision": "Not accepted. Compressing all collar rolls makes the lip too sharp without resolving the observed swollen interior forms.",
+    "trial_model_sha256": "6abc46b477b50022afd427bd9f610deceda4199ca3f544bb0784afd83a93870d",
+    "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2"
+  },
+  {
+    "name": "flatter",
+    "decision": "Rejected. Stronger compression makes a thin knife edge unlike the reference rolled lip.",
+    "trial_model_sha256": "189a5d29b338ebd1e14a8b1f159455549b9c0e6f3a8f8b78b14ff24f9a80b04a",
+    "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2"
+  },
+  {
+    "name": "shelf",
+    "decision": "Not accepted. Flatter inner deck changes the level profile but fixed-view improvement is not convincing.",
+    "trial_model_sha256": "eaf6f6358b24fc0ff66176572567068e9f93f6ba2daa00aea22b14face2ee76d",
+    "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2"
+  },
+  {
+    "name": "foot",
+    "decision": "Accepted after final rebuild and checks. A small, straighter-foot-wall correction only; broader shape mismatch remains.",
+    "trial_model_sha256": "78ff3678c795344d7b06015bcc9ab8a547adb15c5bf7409009cd19ce2ef17a8e",
+    "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2"
+  }
+]

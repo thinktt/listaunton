@@ -1,0 +1,133 @@
+{
+  "source": "models/bishop/bishop-rebuilt.blend",
+  "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
+  "source_unchanged": true,
+  "saved_camera": {
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.80901700258255,
+        -0.5877852439880371,
+        -7.053422927856445
+      ],
+      [
+        0.0,
+        0.5877852439880371,
+        0.80901700258255,
+        11.514362335205078
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ortho_scale": 4.8230767250061035,
+    "shift_x": 0.1078961193561554,
+    "shift_y": 0.0
+  },
+  "lights": [
+    {
+      "name": "Key",
+      "location": [
+        -4,
+        -6,
+        8
+      ],
+      "power": 850,
+      "size": 5
+    },
+    {
+      "name": "Fill",
+      "location": [
+        5,
+        -1,
+        5
+      ],
+      "power": 500,
+      "size": 4
+    },
+    {
+      "name": "Rim",
+      "location": [
+        0,
+        4,
+        6
+      ],
+      "power": 700,
+      "size": 4
+    }
+  ],
+  "views": {
+    "fixed": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.80901700258255,
+          -0.5877852439880371,
+          -7.053422927856445
+        ],
+        [
+          0.0,
+          0.5877852439880371,
+          0.80901700258255,
+          11.514362335205078
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 4.8230767250061035,
+      "shift_x": 0.1078961193561554,
+      "shift_y": 0.0
+    },
+    "side": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          2.319999933242798
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 4.980000019073486,
+      "shift_x": 0.0,
+      "shift_y": 0.0
+    }
+  },
+  "note": "Diagnostic only. Unfitted broad white lights and neutral BSDF remove image-derived pigment, relief and localized reflector cues. The saved model, material, lights and camera are not changed."
+}

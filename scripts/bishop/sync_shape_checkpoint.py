@@ -49,7 +49,9 @@ for relative in public:
 scripts=['README.md','profile.json','inspect_profile_landmarks.py','fit_profile_outline.py','profile_shape_trial.py',
     'validate_profile_shape.py','measure_collar_geometry.py','collect_shape_checkpoint.py','sync_shape_checkpoint.py',
     'record_shape_trials.py','record_collar_checkpoint.py','capture_slit_boundary.py','compare_slit_boundary.py','analyze_geometry_rows.py',
-    'fit_upper_collar_shape.py','capture_turning_edges.py','validate.py','validate_mission.py','validate_checkpoint.py','compare.py',
+    'fit_upper_collar_shape.py','capture_turning_edges.py','render_geometry_studio.py',
+    'prepare_collar_section_trials.py','prepare_collar_shelf_trial.py','prepare_foot_section_trial.py',
+    'record_foot_checkpoint.py','validate.py','validate_mission.py','validate_checkpoint.py','compare.py',
     'viewer-template.html','build_viewer.py','check_viewer.cjs']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]

@@ -1,0 +1,22 @@
+{
+  "variant": "151-collar-shelf",
+  "source": "history/bishop-mission-018/bishop-rebuilt.blend",
+  "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
+  "profile": "history/bishop-mission-018/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "56": [
+      32.6175,
+      99.94
+    ],
+    "57": [
+      30.5,
+      99.9
+    ],
+    "58": [
+      28.0,
+      99.3
+    ]
+  },
+  "interpretation": "Unaccepted inner-deck-only geometry hypothesis. Lower the rising middle-collar deck into a shallower shelf while retaining its complete rounded outer lip and both neighbouring collars. No camera, reference, UV, pigment or lighting change."
+}

@@ -555,3 +555,47 @@ lip-to-stem transition, lower-collar underside and residual button/foot edges,
 separating source sampling from a real shape mismatch. Mission files, other
 pieces, source images and shared sizing remain unchanged. No quota monitoring,
 subagents, publication or push.
+
+## Iteration 019 — recording audit; straighter foot wall
+
+The owner supplied a blink recording showing the model still appearing swollen
+against white candidate 3. It exposes the limitation of the earlier interior
+assessment. The overall outlines are close and the selected reference's base
+is slightly wider, so a global shrink is not supported. Ring-placement tracing
+also tempers the first impression that the entire head descends too far: the
+front junction positions are close, while perceived curvature and volume remain
+unresolved. Outline agreement does not settle those internal forms.
+
+Two collar-roll compression tests and a flatter inner-deck test are not
+accepted. They sharpen the rims or change the level view without a convincing
+improvement at the reference angle. Broad white studio diagnostics remove the
+inherited pigment, relief and fitted reflectors without changing the saved
+scene. See [iteration-019/assessment.md](bishop-mission/iteration-019/assessment.md)
+for the owner's artwork-only recording crops, trials and remaining concerns.
+
+The accepted local correction tightens the foot's upper rollover and extends
+its straight wall, changing only controls 6-9 from checkpoint 018. All upper
+anatomy, the groove, foot underside, camera, UVs, pigment and lights remain
+unchanged. Evaluated diameter increases by approximately 0.036%, with height
+unchanged; this is documented, not hidden by a camera or gallery scale change.
+Original-white overlap is about 98.726% and selected-white overlap 96.928%.
+The small improvement is not a solution to the broader appearance complaint.
+
+Interior form is reassessed downward to approximately 80%, rather than raising
+the old 87% simply because another iteration was completed. Scores are about
+96.93 / 80 / 83 / 77 / 72, mean 81.79%, with overall resemblance roughly 70-80%.
+Only silhouette is measured; other ratings are subjective and uncertain. The
+wood and lighting remain unfinished. Remaining geometry concerns include
+collar faces/undersides, apparent head fullness, socket/flare transitions and
+the button's front rim. Examine actual surfaces separately from image shading.
+
+The saved/reopened final model and exact receiver surfaces are checked, along
+with closed anatomy, cut opening, direct button contact, UVs, unchanged packed
+pigment/lights/camera and synchronized exported mesh. Fixed wood/neutral and
+side/head/rear views, viewer and review are regenerated together. Native browser
+QA is not claimed; Node interaction checks and the owner's recording are the
+available page evidence. Checkpoint 018 remains the rollback source.
+
+The geometry goal remains active and incomplete. No mission file, original,
+source registration, other piece or shared gallery default is changed. No quota
+monitoring, subagent, push or external publication.

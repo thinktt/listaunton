@@ -8,7 +8,12 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--checkpoint',default='017');p.add_argument('--baseline',default='015')
 p.add_argument('--trial',default='143-geometry-checkpoint');p.add_argument('--log-prefix',default='143')
 p.add_argument('--interior-score',type=float,default=86)
+p.add_argument('--holistic-range',type=float,nargs=2,default=[75,85])
+p.add_argument('--bounds-relative-tolerance',type=float,default=0,
+               help='Explicitly declared allowance for a local evaluated diameter change; default preserves exact prior bounds.')
 a=p.parse_args();assert a.checkpoint.isdigit() and a.baseline.isdigit() and a.log_prefix.isdigit()
+assert 0<=a.bounds_relative_tolerance<=.001
+assert 0<=a.holistic_range[0]<=a.holistic_range[1]<=100
 out=ROOT/f'docs/bishop-mission/iteration-{a.checkpoint}';assets=ROOT/'assets/bishop'
 (out/'validation').mkdir(parents=True,exist_ok=True)
 trial=ROOT/'build/bishop-mission'/a.trial
@@ -32,7 +37,12 @@ assert 'PASS: bishop' in (ROOT/f'build/bishop-mission/{a.log_prefix}-review-chec
 meta=json.loads((assets/'mesh.json').read_text());prior=ROOT/f'history/bishop-mission-{a.baseline}'
 old_meta=json.loads((prior/'mesh.json').read_text())
 assert meta['sourceSha256']==model_hash and meta['referenceCamera']==old_meta['referenceCamera']
-assert np.allclose(meta['bounds']['size'],old_meta['bounds']['size'],atol=1e-6,rtol=0)
+old_size=np.array(old_meta['bounds']['size']);new_size=np.array(meta['bounds']['size'])
+assert np.allclose(new_size,old_size,atol=1e-6,rtol=a.bounds_relative_tolerance)
+assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
+(out/'bounds-comparison.json').write_text(json.dumps({'previous':old_size.tolist(),'current':new_size.tolist(),
+    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':a.bounds_relative_tolerance,
+    'height_preserved':True,'note':'Measured evaluated bounds, not an image or gallery scale adjustment.'},indent=2)+'\n')
 assert sha(assets/'bishop-boxwood-albedo.png')==sha(prior/'bishop-boxwood-albedo.png')
 # Replace obsolete current-state reports with explicit current provenance.
 reports={
@@ -85,7 +95,7 @@ canvas.save(out/'side-comparison.png')
 metrics=json.loads((out/'comparison/metrics.json').read_text())
 assert metrics['render_sha256']==sha(assets/'render.png')
 scores={'silhouette':100*metrics['images']['selected']['silhouette_iou'],'interior':a.interior_score,'color':83,'texture':77,'lighting':72}
-record={'scores_percent':scores,'mean_percent':sum(scores.values())/5,'holistic_range_percent':[75,85],
+record={'scores_percent':scores,'mean_percent':sum(scores.values())/5,'holistic_range_percent':a.holistic_range,
         'silhouette_measured_other_scores_subjective':True,'phase':'geometry',
         'model_sha256':model_hash,'render_sha256':sha(assets/'render.png'),'neutral_sha256':sha(assets/'render-clay.png'),
         'atlas_sha256':sha(assets/'bishop-boxwood-albedo.png'),'original_and_selected_ious':metrics['images'],

@@ -1,0 +1,26 @@
+{
+  "variant": "153-foot-wall-checkpoint",
+  "source": "history/bishop-mission-018/bishop-rebuilt.blend",
+  "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
+  "profile": "history/bishop-mission-018/profile.json",
+  "samples": 512,
+  "body_rings": {
+    "6": [
+      60.4,
+      202.1
+    ],
+    "7": [
+      60.35,
+      201.25
+    ],
+    "8": [
+      59.8,
+      200.15
+    ],
+    "9": [
+      58.3,
+      199.3
+    ]
+  },
+  "interpretation": "Tighten the upper foot rollover and extend its straight wall. Change only controls 6-9 from accepted 018; preserve all upper anatomy, camera, references, UVs, pigment and lighting. This small foot correction does not resolve the wider internal-form mismatch noted by the owner."
+}

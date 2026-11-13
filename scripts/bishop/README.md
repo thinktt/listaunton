@@ -44,6 +44,20 @@ log-prefix arguments; they still guard bishop-only delivery and unchanged
 missions, sources and shared settings. Do not rerun an old delivery command
 against a newer public checkpoint.
 
+Checkpoint 019 is a small foot-wall correction, not a resolution of the owner's
+reported swollen appearance. Its `profile-fit.json` changes only rings 6-9
+from `history/bishop-mission-018`. Collar compression and deck experiments are
+recorded but unaccepted. `render_geometry_studio.py` makes unsaved neutral
+views with broad, unfitted white lights; it helps separate geometry from the
+inherited localized reflector rig. It does not change the saved scene.
+
+`record_foot_checkpoint.py` records the 019 trials and crops only the artwork
+from the owner's blink recording. The full recording and unrelated browser
+chrome stay out of the repository. Collection explicitly permits at most
+0.1% diameter drift from the local evaluated bevel change and records the
+actual delta; model height, camera and gallery sizing stay unchanged. The
+default collection bound tolerance remains exact for other checkpoints.
+
 ## Current wood mission
 
 The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is

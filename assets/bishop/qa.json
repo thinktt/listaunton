@@ -2,16 +2,16 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9868982606101563,
-      "mean_boundary_error_px": 2.1418776371308015,
+      "silhouette_iou": 0.9872118013065211,
+      "mean_boundary_error_px": 2.0875527426160336,
       "p95_boundary_error_px": 5.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.4941323506295571
+      "mean_boundary_error_original_300px_units": 0.4815995675429173
     },
     "selected": {
-      "silhouette_iou": 0.9683987312768997,
-      "mean_boundary_error_px": 5.712025316455696,
-      "p95_boundary_error_px": 11.0,
+      "silhouette_iou": 0.968707226270595,
+      "mean_boundary_error_px": 5.657700421940929,
+      "p95_boundary_error_px": 10.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
@@ -19,8 +19,8 @@
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
     "finial": "Rounded convex button sits directly on the head. No cylindrical seat, pedestal, neck ring or gap is exposed.",
-    "collars": "The middle collar is narrowed and lowered to remove its rear bulge behind the head while holding the front rim in place. Upper and lower collars retain the prior checkpoint. Actual evaluated surface rays distinguish these edges from photographic shadows.",
-    "lower_body": "The rear base shoulder is narrowed with a rounded lower turn, and the stem has a conservative taper correction. Socket and foot controls are retained. The geometry-phase scope audit checks all changed and unchanged controls.",
+    "collars": "All collar controls retain checkpoint 018. Thinner-roll and flattened-deck trials were not accepted; their swollen appearance and remaining curvature differences are unresolved.",
+    "lower_body": "The foot upper rollover is tighter and the outer wall straighter. Only controls 6-9 change from checkpoint 018; stem, socket, flare and foot underside remain exact. This is a small local correction, not a resolution of the overall interior-form mismatch.",
     "limits": "The accepted side guide is art direction, not a recovered source camera. Boxwood pigment, surface relief and reflections are an unfinished reconstruction. Single-view evidence cannot determine hidden geometry uniquely. The retained pigment and lights have not been refitted to this geometry; neutral comparison is required."
   }
 }

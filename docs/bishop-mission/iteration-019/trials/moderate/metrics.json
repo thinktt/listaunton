@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/150-collars-moderate/wood.png",
+  "render_sha256": "f162e98be23538857571b736135db43f5ae8a4b431a68d6831a37587a788d7c2",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9685865286900112,
+      "legacy_raw_model_mask_iou": 0.9685865286900112
+    },
+    "original_white": {
+      "silhouette_iou": 0.9866743810712872,
+      "legacy_raw_model_mask_iou": 0.9866743810712872
+    },
+    "original_black": {
+      "silhouette_iou": 0.9775542434026643,
+      "legacy_raw_model_mask_iou": 0.9775542434026643
+    }
+  }
+}

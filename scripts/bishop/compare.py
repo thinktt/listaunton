@@ -19,6 +19,9 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
  report['internal_features']['limits']+=' The retained pigment and lights have not been refitted to this geometry; neutral comparison is required.'
  if set(map(int,json.loads((root/'scripts/bishop/profile.json').read_text())['mission_shape_refit']['body_rings']))==set(range(49,57)):
   report['internal_features']['collars']='The middle collar is narrowed and lowered to remove its rear bulge behind the head while holding the front rim in place. Upper and lower collars retain the prior checkpoint. Actual evaluated surface rays distinguish these edges from photographic shadows.'
+ if set(map(int,json.loads((root/'scripts/bishop/profile.json').read_text())['mission_shape_refit']['body_rings']))=={6,7,8,9}:
+  report['internal_features']['collars']='All collar controls retain checkpoint 018. Thinner-roll and flattened-deck trials were not accepted; their swollen appearance and remaining curvature differences are unresolved.'
+  report['internal_features']['lower_body']='The foot upper rollover is tighter and the outer wall straighter. Only controls 6-9 change from checkpoint 018; stem, socket, flare and foot underside remain exact. This is a small local correction, not a resolution of the overall interior-form mismatch.'
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

@@ -29,20 +29,20 @@
       206.8
     ],
     [
+      60.4,
+      202.1
+    ],
+    [
       60.35,
-      203.4
+      201.25
     ],
     [
-      60.05,
-      201.5
+      59.8,
+      200.15
     ],
     [
-      59.0,
-      200.3
-    ],
-    [
-      57.8,
-      199.0
+      58.3,
+      199.3
     ],
     [
       57.5,
@@ -520,7 +520,7 @@
     "start_profile_index": 65,
     "note": "Accepted side guide: continuous convex taper enters the button underside directly, without an exposed seat or neck."
   },
-  "revision": "147-middle-collar-checkpoint",
+  "revision": "153-foot-wall-checkpoint",
   "head_button_join": {
     "head_cap_axis_y": 55.4,
     "button_bottom_axis_y": 56.5,
@@ -616,42 +616,26 @@
     "baseline_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
   },
   "mission_shape_refit": {
-    "config": "docs/bishop-mission/iteration-018/profile-fit.json",
-    "source": "history/bishop-mission-017/bishop-rebuilt.blend",
-    "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
-    "profile": "history/bishop-mission-017/profile.json",
+    "config": "docs/bishop-mission/iteration-019/profile-fit.json",
+    "source": "history/bishop-mission-018/bishop-rebuilt.blend",
+    "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
+    "profile": "history/bishop-mission-018/profile.json",
     "body_rings": {
-      "49": [
-        34.6175,
-        106.10944900034842
+      "6": [
+        60.4,
+        202.1
       ],
-      "50": [
-        33.9075,
-        105.22204766747964
+      "7": [
+        60.35,
+        201.25
       ],
-      "51": [
-        34.725,
-        104.93149666782806
+      "8": [
+        59.8,
+        200.15
       ],
-      "52": [
-        35.725,
-        103.83149666782805
-      ],
-      "53": [
-        36.025,
-        102.73149666782805
-      ],
-      "54": [
-        35.425000000000004,
-        101.33149666782805
-      ],
-      "55": [
-        34.1075,
-        100.02204766747964
-      ],
-      "56": [
-        32.6175,
-        99.20944900034843
+      "9": [
+        58.3,
+        199.3
       ]
     }
   }
