@@ -5,6 +5,10 @@ let order=data.defaultOrder.slice();
 // These profiles are rendered from the accepted models. Their alpha bounds are
 // measured by the page builder for the Blender renders and offline fallback.
 const profiles=JSON.parse(byId('model-profile-data').textContent);
+const board=JSON.parse(byId('board-data').textContent);
+// Use the physical model heights implied by the board's independent image fits.
+const matchedHeights=Object.fromEntries(board.pieces.map(item=>[item.piece,
+ (item.targetBottom-item.targetTop)/(item.renderBottom-item.renderTop)*item.pixelsPerUnit*item.modelHeight]));
 const stage=byId('models-stage'),fallback=byId('models-fallback'),canvas=byId('models-canvas');
 const panel=byId('panel-models'),status=byId('models-status');
 const rows=Object.fromEntries(data.pieces.map(item=>[item.piece,item]));
@@ -16,8 +20,10 @@ for(const piece of order){
 let models=null,gl=null,program=null,uniforms=null,started=false,lost=false;
 let showBlender=window.location.hash==='#blender',loadMessage='Loading current 3D models…';
 let yaw=0,pitch=0,wood=true,pending=false,drag=null;
+let matchedSizing=byId('board-height-matched').getAttribute('aria-pressed')==='true';
 const referencePitch=54*Math.PI/180;
-const ratio=piece=>rows[piece].height*Number(byId('side-scale-'+piece).value)/(rows.king.height*Number(byId('side-scale-king').value));
+const ratio=piece=>matchedSizing?matchedHeights[piece]/matchedHeights.king:
+ rows[piece].height*Number(byId('side-scale-'+piece).value)/(rows.king.height*Number(byId('side-scale-king').value));
 function ratios(){return Object.fromEntries(order.map(piece=>[piece,ratio(piece)]));}
 function measure(currentStage=stage){
  const width=currentStage.clientWidth,height=currentStage.clientHeight,cell=width/order.length,relative=ratios();
@@ -44,6 +50,14 @@ function layout(){
   img.style.top=(m.ground-p.bottom*k)+'px';
  });
  schedule();
+}
+function setHeightSizing(matched){
+ matchedSizing=matched;
+ byId('models-height-matched').setAttribute('aria-pressed',String(matched));
+ byId('models-height-note').textContent=matched?
+  'Models at the matched board-image heights. Scaling is uniform; feet share a baseline.':
+  'Models at your chosen side-view heights. Scaling is uniform; feet share a baseline.';
+ layout();
 }
 function selectButtons(){
  byId('models-side').setAttribute('aria-pressed',String(!showBlender&&yaw===0&&pitch===0));
@@ -76,6 +90,9 @@ for(const piece of order){
 byId('models-side').addEventListener('click',()=>{yaw=0;pitch=0;selectButtons();schedule();});
 byId('models-threequarter').addEventListener('click',()=>{yaw=-.43;pitch=.35;selectButtons();schedule();});
 byId('models-reference').addEventListener('click',()=>{yaw=0;pitch=referencePitch;selectButtons();schedule();});
+byId('board-height-matched').addEventListener('click',()=>setHeightSizing(true));
+byId('board-height-chosen').addEventListener('click',()=>setHeightSizing(false));
+byId('models-height-matched').addEventListener('click',()=>byId(matchedSizing?'board-height-chosen':'board-height-matched').click());
 byId('models-wood').addEventListener('click',()=>{wood=true;changeDisplay(false);});
 byId('models-neutral').addEventListener('click',()=>{wood=false;changeDisplay(false);});
 byId('models-blender').addEventListener('click',()=>changeDisplay(!showBlender));
@@ -220,5 +237,5 @@ window.addEventListener('hashchange',()=>{
  if(!panel.hidden)start();
 });
 new ResizeObserver(()=>{if(!panel.hidden)layout();}).observe(stage);
-paintDisplay();if(!panel.hidden)start();
+setHeightSizing(matchedSizing);paintDisplay();if(!panel.hidden)start();
 })();

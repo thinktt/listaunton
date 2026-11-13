@@ -81,8 +81,8 @@
 <img id="side-picture-pawn" src="assets/pawn/concepts/side-01-cutout.png" alt="Generated pawn side view based on the black reference" width="1254" height="1254" style="width:264.452510px;left:calc(50% + -132.226255px);top:423.683787px;transform-origin:132.226255px 246.316213px;transform:scale(1.11)" loading="eager" decoding="auto" draggable="false"></button>
 <div class="side-scale-controls"><div class="side-scale-label"><label for="side-scale-pawn">Scale</label><output id="side-scale-value-pawn" for="side-scale-pawn">111%</output><button id="side-reset-pawn" type="button" aria-label="Reset pawn scale to chosen default">Reset</button></div><input id="side-scale-pawn" type="range" min="50" max="150" step="1" value="111" aria-label="Pawn scale" aria-valuetext="111% of model estimate"></div>
 <div class="side-links"><a href="pawn-review.html">Review pawn</a><a href="assets/pawn/concepts/side-01-cutout.png" target="_blank" rel="noopener">Full-size cutout</a><a href="assets/pawn/concepts/side-01.png" target="_blank" rel="noopener">Before removal</a><a href="assets/pawn/concepts/side-01-cutout-generation.json" target="_blank" rel="noopener">Prompt &amp; sources</a></div></article></div></div></section><section id="panel-models" role="tabpanel" aria-labelledby="tab-models" hidden>
-<p class="models-note">Current models at the heights and order chosen in GPT-generated side views. Scaling is uniform and their feet share a baseline.</p>
-<div class="models-controls" aria-label="3D model view"><button id="models-side" type="button" aria-pressed="true" disabled>Side view</button><button id="models-threequarter" type="button" aria-pressed="false" disabled>3/4 view</button><button id="models-reference" type="button" aria-pressed="false" title="Camera 54° above the board" disabled>54°</button><button id="models-wood" type="button" aria-pressed="true" disabled>Wood</button><button id="models-neutral" type="button" aria-pressed="false" disabled>Neutral</button><button id="models-blender" type="button" aria-pressed="false">Blender renders</button></div>
+<p id="models-height-note" class="models-note">Models at the matched board-image heights. Scaling is uniform; feet share a baseline.</p>
+<div class="models-controls" aria-label="3D model view"><button id="models-side" type="button" aria-pressed="true" disabled>Side view</button><button id="models-threequarter" type="button" aria-pressed="false" disabled>3/4 view</button><button id="models-reference" type="button" aria-pressed="false" title="Camera 54° above the board" disabled>54°</button><button id="models-height-matched" type="button" aria-pressed="true" title="Toggle between the original-image height fit and your chosen heights">Matched heights</button><button id="models-wood" type="button" aria-pressed="true" disabled>Wood</button><button id="models-neutral" type="button" aria-pressed="false" disabled>Neutral</button><button id="models-blender" type="button" aria-pressed="false">Blender renders</button></div>
 <div class="models-scroll" role="region" tabindex="0" aria-label="Six models at a common scale"><div class="models-lineup"><div id="models-headings" class="models-headings"><div id="models-heading-king" class="models-heading"><a href="king-review.html">King</a><small id="models-ratio-king">—</small></div><div id="models-heading-queen" class="models-heading"><a href="review.html">Queen</a><small id="models-ratio-queen">—</small></div><div id="models-heading-bishop" class="models-heading"><a href="bishop-review.html">Bishop</a><small id="models-ratio-bishop">—</small></div><div id="models-heading-knight" class="models-heading"><a href="knight-review.html">Knight</a><small id="models-ratio-knight">—</small></div><div id="models-heading-rook" class="models-heading"><a href="rook-review.html">Rook</a><small id="models-ratio-rook">—</small></div><div id="models-heading-pawn" class="models-heading"><a href="pawn-review.html">Pawn</a><small id="models-ratio-pawn">—</small></div></div><div id="models-stage" class="models-stage"><div id="models-fallback" class="models-fallback"></div><canvas id="models-canvas" class="models-canvas" tabindex="0" aria-label="3D models: drag or use arrow keys to rotate them together" hidden></canvas></div></div></div>
 <p id="models-status" class="models-status" role="status" aria-live="polite">Loading model profiles…</p></section><section id="panel-board" role="tabpanel" aria-labelledby="tab-board" hidden>
 <p class="board-note">Original lineup and 54° Blender renders</p>
@@ -270,6 +270,7 @@ byId('side-reset-order').addEventListener('click',()=>{finish(true);commit([...d
 paint();
 })();
 </script>
+<script id="board-data" type="application/json">{"width":659,"height":202,"original":"assets/board-comparison/original-lineup.png","empty":"assets/board-comparison/empty-board.png","kingHeight":5.127651214599609,"kingPixelsPerUnit":41.61864684473301,"groundY":151.0,"kingBasePixels":86.0,"pieces":[{"piece":"king","file":"assets/king/render.png","version":"02df7625a18d6ca5","width":1254,"height":1254,"footX":502.6000771137735,"footY":868.9007412867184,"pixelsPerUnit":279.9999935925007,"modelHeight":5.127651214599609,"baseWidth":2.0663814544677734,"centerX":55.5,"sourceSha256":"47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5","renderTop":8,"renderBottom":1090,"targetTop":28,"targetBottom":187},{"piece":"queen","file":"assets/queen/queen-brown.png","version":"509cc46d3fd73860","width":1254,"height":1254,"footX":483.62499314546585,"footY":860.2234728349108,"pixelsPerUnit":264.6112602353096,"modelHeight":4.393647193908691,"baseWidth":2.091421365737915,"centerX":164.0,"sourceSha256":"243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68","renderTop":60,"renderBottom":1079,"targetTop":37,"targetBottom":189},{"piece":"bishop","file":"assets/bishop/render.png","version":"081a2fc027613d35","width":1254,"height":1254,"footX":491.6982756704092,"footY":903.0247418599915,"pixelsPerUnit":260.00000873208046,"modelHeight":4.592006683349609,"baseWidth":2.0130202770233154,"centerX":274.5,"sourceSha256":"2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425","renderTop":160,"renderBottom":1109,"targetTop":52,"targetBottom":189},{"piece":"knight","file":"assets/knight/render.png","version":"0c9b60d1bf9a8f47","width":1254,"height":1254,"footX":488.94512307365704,"footY":845.1434784533316,"pixelsPerUnit":172.926593542099,"modelHeight":5.102221965789795,"baseWidth":2.9886550903320312,"centerX":385.5,"sourceSha256":"c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c","renderTop":293,"renderBottom":1047,"targetTop":73,"targetBottom":186},{"piece":"rook","file":"assets/rook/render.png","version":"f0f5c9481bbd4086","width":1254,"height":1254,"footX":484.52106300753434,"footY":875.9956878449724,"pixelsPerUnit":279.9999935925007,"modelHeight":2.8375284671783447,"baseWidth":1.7814273834228516,"centerX":493.5,"sourceSha256":"bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914","renderTop":269,"renderBottom":1066,"targetTop":70,"targetBottom":187},{"piece":"pawn","file":"assets/pawn/render.png","version":"461a968dcf868622","width":1254,"height":1254,"footX":484.5594360977411,"footY":825.5818872080324,"pixelsPerUnit":260.00000873208046,"modelHeight":2.7748525142669678,"baseWidth":1.6535700559616089,"centerX":604.0,"sourceSha256":"0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6","renderTop":353,"renderBottom":998,"targetTop":82,"targetBottom":179}]}</script>
 <script id="model-lineup-runtime">(()=>{'use strict';
 const byId=id=>document.getElementById(id);
 const data=JSON.parse(byId('side-scale-data').textContent);
@@ -277,6 +278,10 @@ let order=data.defaultOrder.slice();
 // These profiles are rendered from the accepted models. Their alpha bounds are
 // measured by the page builder for the Blender renders and offline fallback.
 const profiles=JSON.parse(byId('model-profile-data').textContent);
+const board=JSON.parse(byId('board-data').textContent);
+// Use the physical model heights implied by the board's independent image fits.
+const matchedHeights=Object.fromEntries(board.pieces.map(item=>[item.piece,
+ (item.targetBottom-item.targetTop)/(item.renderBottom-item.renderTop)*item.pixelsPerUnit*item.modelHeight]));
 const stage=byId('models-stage'),fallback=byId('models-fallback'),canvas=byId('models-canvas');
 const panel=byId('panel-models'),status=byId('models-status');
 const rows=Object.fromEntries(data.pieces.map(item=>[item.piece,item]));
@@ -288,8 +293,10 @@ for(const piece of order){
 let models=null,gl=null,program=null,uniforms=null,started=false,lost=false;
 let showBlender=window.location.hash==='#blender',loadMessage='Loading current 3D models…';
 let yaw=0,pitch=0,wood=true,pending=false,drag=null;
+let matchedSizing=byId('board-height-matched').getAttribute('aria-pressed')==='true';
 const referencePitch=54*Math.PI/180;
-const ratio=piece=>rows[piece].height*Number(byId('side-scale-'+piece).value)/(rows.king.height*Number(byId('side-scale-king').value));
+const ratio=piece=>matchedSizing?matchedHeights[piece]/matchedHeights.king:
+ rows[piece].height*Number(byId('side-scale-'+piece).value)/(rows.king.height*Number(byId('side-scale-king').value));
 function ratios(){return Object.fromEntries(order.map(piece=>[piece,ratio(piece)]));}
 function measure(currentStage=stage){
  const width=currentStage.clientWidth,height=currentStage.clientHeight,cell=width/order.length,relative=ratios();
@@ -316,6 +323,14 @@ function layout(){
   img.style.top=(m.ground-p.bottom*k)+'px';
  });
  schedule();
+}
+function setHeightSizing(matched){
+ matchedSizing=matched;
+ byId('models-height-matched').setAttribute('aria-pressed',String(matched));
+ byId('models-height-note').textContent=matched?
+  'Models at the matched board-image heights. Scaling is uniform; feet share a baseline.':
+  'Models at your chosen side-view heights. Scaling is uniform; feet share a baseline.';
+ layout();
 }
 function selectButtons(){
  byId('models-side').setAttribute('aria-pressed',String(!showBlender&&yaw===0&&pitch===0));
@@ -348,6 +363,9 @@ for(const piece of order){
 byId('models-side').addEventListener('click',()=>{yaw=0;pitch=0;selectButtons();schedule();});
 byId('models-threequarter').addEventListener('click',()=>{yaw=-.43;pitch=.35;selectButtons();schedule();});
 byId('models-reference').addEventListener('click',()=>{yaw=0;pitch=referencePitch;selectButtons();schedule();});
+byId('board-height-matched').addEventListener('click',()=>setHeightSizing(true));
+byId('board-height-chosen').addEventListener('click',()=>setHeightSizing(false));
+byId('models-height-matched').addEventListener('click',()=>byId(matchedSizing?'board-height-chosen':'board-height-matched').click());
 byId('models-wood').addEventListener('click',()=>{wood=true;changeDisplay(false);});
 byId('models-neutral').addEventListener('click',()=>{wood=false;changeDisplay(false);});
 byId('models-blender').addEventListener('click',()=>changeDisplay(!showBlender));
@@ -492,10 +510,9 @@ window.addEventListener('hashchange',()=>{
  if(!panel.hidden)start();
 });
 new ResizeObserver(()=>{if(!panel.hidden)layout();}).observe(stage);
-paintDisplay();if(!panel.hidden)start();
+setHeightSizing(matchedSizing);paintDisplay();if(!panel.hidden)start();
 })();
 </script>
-<script id="board-data" type="application/json">{"width":659,"height":202,"original":"assets/board-comparison/original-lineup.png","empty":"assets/board-comparison/empty-board.png","kingHeight":5.127651214599609,"kingPixelsPerUnit":41.61864684473301,"groundY":151.0,"kingBasePixels":86.0,"pieces":[{"piece":"king","file":"assets/king/render.png","version":"02df7625a18d6ca5","width":1254,"height":1254,"footX":502.6000771137735,"footY":868.9007412867184,"pixelsPerUnit":279.9999935925007,"modelHeight":5.127651214599609,"baseWidth":2.0663814544677734,"centerX":55.5,"sourceSha256":"47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5","renderTop":8,"renderBottom":1090,"targetTop":28,"targetBottom":187},{"piece":"queen","file":"assets/queen/queen-brown.png","version":"509cc46d3fd73860","width":1254,"height":1254,"footX":483.62499314546585,"footY":860.2234728349108,"pixelsPerUnit":264.6112602353096,"modelHeight":4.393647193908691,"baseWidth":2.091421365737915,"centerX":164.0,"sourceSha256":"243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68","renderTop":60,"renderBottom":1079,"targetTop":37,"targetBottom":189},{"piece":"bishop","file":"assets/bishop/render.png","version":"081a2fc027613d35","width":1254,"height":1254,"footX":491.6982756704092,"footY":903.0247418599915,"pixelsPerUnit":260.00000873208046,"modelHeight":4.592006683349609,"baseWidth":2.0130202770233154,"centerX":274.5,"sourceSha256":"2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425","renderTop":160,"renderBottom":1109,"targetTop":52,"targetBottom":189},{"piece":"knight","file":"assets/knight/render.png","version":"0c9b60d1bf9a8f47","width":1254,"height":1254,"footX":488.94512307365704,"footY":845.1434784533316,"pixelsPerUnit":172.926593542099,"modelHeight":5.102221965789795,"baseWidth":2.9886550903320312,"centerX":385.5,"sourceSha256":"c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c","renderTop":293,"renderBottom":1047,"targetTop":73,"targetBottom":186},{"piece":"rook","file":"assets/rook/render.png","version":"f0f5c9481bbd4086","width":1254,"height":1254,"footX":484.52106300753434,"footY":875.9956878449724,"pixelsPerUnit":279.9999935925007,"modelHeight":2.8375284671783447,"baseWidth":1.7814273834228516,"centerX":493.5,"sourceSha256":"bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914","renderTop":269,"renderBottom":1066,"targetTop":70,"targetBottom":187},{"piece":"pawn","file":"assets/pawn/render.png","version":"461a968dcf868622","width":1254,"height":1254,"footX":484.5594360977411,"footY":825.5818872080324,"pixelsPerUnit":260.00000873208046,"modelHeight":2.7748525142669678,"baseWidth":1.6535700559616089,"centerX":604.0,"sourceSha256":"0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6","renderTop":353,"renderBottom":998,"targetTop":82,"targetBottom":179}]}</script>
 <script id="board-comparison-runtime">(()=>{'use strict';
 const byId=id=>document.getElementById(id);
 const board=JSON.parse(byId('board-data').textContent);
