@@ -1,0 +1,6 @@
+"""Broaden only the shoulder reflector; preserve the accepted model and material."""
+from pathlib import Path
+import bpy,json,hashlib
+ROOT=Path(__file__).resolve().parents[2];source=ROOT/'history/rook-mission-072/models/rook/rook-rebuilt.blend';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert sha(source)=='ea195e8973c460c777b92b80f4b609f298ab61367494ef27b5229db52affabc1'
+for n,height,power in [(73,.14,600),(74,.28,1200),(75,.14,900)]:
+ bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene;light=s.objects['Rook shoulder strip'];before={'size_y':light.data.size_y,'energy':light.data.energy};light.data.size_y=height;light.data.energy=power;out=ROOT/f'build/rook-mission/{n:03d}-shoulder-width';out.mkdir(parents=True,exist_ok=True);s.render.filepath=str(out/'wood.png');bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'rook.blend'));(out/'parameters.json').write_text(json.dumps({'source_sha256':sha(source),'model_sha256':sha(out/'rook.blend'),'light':'Rook shoulder strip','before':before,'size_y':height,'energy':power,'method':'Change only rectangular light height and energy; direction, position, receiver, material and geometry unchanged.'},indent=2)+'\n')

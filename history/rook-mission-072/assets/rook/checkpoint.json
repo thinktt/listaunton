@@ -1,0 +1,12 @@
+{
+  "checkpoint": 72,
+  "model_sha256": "ea195e8973c460c777b92b80f4b609f298ab61367494ef27b5229db52affabc1",
+  "source_trial_sha256": "824cc1004cead5deb44cac31028331da8a99ee2b05fa4e01a0ecac183897822f",
+  "change": "Neck seam removal with fitted inferred wood; all geometry, UVs and lights preserved",
+  "unfinished": [
+    "turret and shoulder reflections",
+    "baked lighting contamination",
+    "side neck pigment transitions",
+    "inferred hidden form"
+  ]
+}

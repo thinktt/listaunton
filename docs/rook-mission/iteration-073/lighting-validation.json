@@ -1,0 +1,19 @@
+{
+  "material_and_packed_images_exact": true,
+  "world_exact": true,
+  "all_lights_preserved_except_shoulder_height_and_power": true,
+  "source_sha256": "ea195e8973c460c777b92b80f4b609f298ab61367494ef27b5229db52affabc1",
+  "model_sha256": "75440ca9c8afc2a7140393d4e9138828f327d3f77723508c26b09129b69203fe",
+  "changed_light": {
+    "source_sha256": "ea195e8973c460c777b92b80f4b609f298ab61367494ef27b5229db52affabc1",
+    "model_sha256": "75440ca9c8afc2a7140393d4e9138828f327d3f77723508c26b09129b69203fe",
+    "light": "Rook shoulder strip",
+    "before": {
+      "size_y": 0.07000000029802322,
+      "energy": 300.0
+    },
+    "size_y": 0.14,
+    "energy": 600,
+    "method": "Change only rectangular light height and energy; direction, position, receiver, material and geometry unchanged."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "shader_and_packed_images_exact": true,
+  "world_exact": true,
+  "old_lights_exact_except_disabled_shoulder_strip": true,
+  "two_new_glossy_shadowed_shoulder_area_lights": true,
+  "new_lights": {
+    "Rook shoulder flank left": {
+      "type": "AREA",
+      "energy": 400.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "matrix": [
+        [
+          0.712786853313446,
+          -0.36355409026145935,
+          -0.5998027324676514,
+          -2.699422836303711
+        ],
+        [
+          -0.701380729675293,
+          -0.3694663941860199,
+          -0.6095569133758545,
+          -3.0374841690063477
+        ],
+        [
+          -5.8477283459978935e-08,
+          0.8551742434501648,
+          -0.5183405876159668,
+          -1.382176160812378
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "shadow": true,
+      "size": 0.75,
+      "size_y": 0.14000000059604645,
+      "shape": "RECTANGLE",
+      "receivers": [
+        "Rook receiver shoulder.001"
+      ],
+      "radius": 0.0,
+      "spot_size": null
+    },
+    "Rook shoulder flank right": {
+      "type": "AREA",
+      "energy": 400.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "matrix": [
+        [
+          0.783039391040802,
+          -0.23577113449573517,
+          0.5755529999732971,
+          2.573287010192871
+        ],
+        [
+          0.6219720840454102,
+          0.29682713747024536,
+          -0.7245994806289673,
+          -3.518979787826538
+        ],
+        [
+          -9.984990612110778e-08,
+          0.9253678321838379,
+          0.3790704011917114,
+          2.194425582885742
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "shadow": true,
+      "size": 0.75,
+      "size_y": 0.14000000059604645,
+      "shape": "RECTANGLE",
+      "receivers": [
+        "Rook receiver shoulder.001"
+      ],
+      "radius": 0.0,
+      "spot_size": null
+    }
+  },
+  "source_sha256": "ea195e8973c460c777b92b80f4b609f298ab61367494ef27b5229db52affabc1",
+  "model_sha256": "1f092feeed4ed3ccc41cc14e1de2f2eb20d522723bfd84cd869aec5d8ff4a247"
+}

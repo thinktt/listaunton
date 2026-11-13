@@ -1,0 +1,67 @@
+{
+  "source_sha256": "ea195e8973c460c777b92b80f4b609f298ab61367494ef27b5229db52affabc1",
+  "model_sha256": "867131f7426f5b61a100cf9d6035826dad8cd1567a7a0cb59415e488f1a3c4be",
+  "power_each": 650,
+  "reflectors": [
+    {
+      "name": "Rook shoulder flank left",
+      "reference_pixel": [
+        400,
+        882
+      ],
+      "target_pixel": [
+        400,
+        882
+      ],
+      "position": [
+        -2.699422836303711,
+        -3.0374841690063477,
+        -1.382176160812378
+      ],
+      "point": [
+        -0.30021145939826965,
+        -0.5992560386657715,
+        0.6911859512329102
+      ],
+      "normal": [
+        -0.43769749999046326,
+        -0.8737433552742004,
+        0.21211688220500946
+      ],
+      "receiver": "Rook receiver shoulder.001"
+    },
+    {
+      "name": "Rook shoulder flank right",
+      "reference_pixel": [
+        560,
+        888
+      ],
+      "target_pixel": [
+        560,
+        888
+      ],
+      "position": [
+        2.573287010192871,
+        -3.518979787826538,
+        2.194425582885742
+      ],
+      "point": [
+        0.2710755169391632,
+        -0.6205816268920898,
+        0.6781435012817383
+      ],
+      "normal": [
+        0.3091883659362793,
+        -0.7050162553787231,
+        0.6382434368133545
+      ],
+      "receiver": "Rook receiver shoulder.001"
+    }
+  ],
+  "old_shoulder_power": 0,
+  "size": [
+    0.75,
+    0.14
+  ],
+  "method": "Two real glossy-only shadowed area lights, same shoulder receiver. Existing broad shoulder strip disabled; material, geometry and other lights unchanged."
+}
