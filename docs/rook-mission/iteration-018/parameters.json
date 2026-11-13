@@ -1,0 +1,46 @@
+{
+  "source_sha256": "9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c",
+  "model_sha256": "172df697894cfe55f609f2e75b07155f41842f173d039944e0195edb0706faac",
+  "bands": [
+    {
+      "name": "foot",
+      "destination_v": [
+        0.23103641821448226,
+        0.3011583129897894
+      ],
+      "source_v": [
+        0.3011583129897894,
+        0.3688103101780258
+      ],
+      "control_rows": [
+        6,
+        15
+      ],
+      "donor_rows": [
+        15,
+        18
+      ]
+    },
+    {
+      "name": "shoulder",
+      "destination_v": [
+        0.3688103101780258,
+        0.4488061210369174
+      ],
+      "source_v": [
+        0.45847306543632255,
+        0.49444197679841356
+      ],
+      "control_rows": [
+        18,
+        29
+      ],
+      "donor_rows": [
+        30,
+        33
+      ]
+    }
+  ],
+  "strip": true,
+  "method": "Real Principled material. UV-space resampling of adjacent existing pigment; source atlas and references unchanged."
+}
