@@ -18,6 +18,8 @@ All six GPT-generated side elevations live in the [Side views tab](set-compariso
 
 The same page has a **3D models** button for the current six reconstructions at the side-view slider heights and order, with a **Blender renders** control beside Wood and Neutral showing saved Blender renders at those same sizes. Drag to rotate them together, choose side, 3/4, or the assumed 54° reference view, and switch between wood and neutral material. Each model is scaled uniformly; these are display sizes and do not change the Blender files. The browser lighting is approximate. The interactive view works via the local server or a hosted site; opening the HTML directly shows saved model profile renders. Rebuild with `python3 scripts/build_set_comparison.py` after updating a model profile.
 
+The **Board comparison** button places the current 54° Blender renders on the supplied empty board, scaled to the chosen heights with the king base matched to the original screenshot. Drag the divider or use the wipe slider to compare them with the original lineup. The contact shadows are approximated.
+
 See [the continuing provenance investigation](PROVENANCE.md) for the original set’s sources, per-piece metadata, known history and unresolved authorship.
 
 [The shared camera study](camera-study.html) compares circular features across all six original pieces. Its working estimate is about 54° above the board, with substantial uncertainty; existing models and review pages remain unchanged.

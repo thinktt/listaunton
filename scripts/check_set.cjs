@@ -14,7 +14,7 @@ ids.white.events.click();assert(cards()[1].children[1].disabled);ids.black.event
 console.log('PASS: six pairs, both colors, all candidate options, retained selections, missing white queen, finite placement.');
 
 // Exercise the actual tab code with the already-populated comparison DOM.
-for(const id of ['tab-comparison','tab-side-views','tab-models','panel-comparison','panel-side-views','panel-models','comparison-tools','view-note'])ids[id]=new E(id);
+for(const id of ['tab-comparison','tab-side-views','tab-models','tab-board','panel-comparison','panel-side-views','panel-models','panel-board','comparison-tools','view-note'])ids[id]=new E(id);
 for(const el of Object.values(ids))el.focus=function(){this.focused=true;};
 const events={},window={location:{hash:'#side-views'},addEventListener:(name,fn)=>events[name]=fn};
 const comparisonCards=ids.grid.children;
@@ -40,6 +40,8 @@ ids['tab-side-views'].events.keydown({key:'ArrowRight',preventDefault(){}});
 assert.equal(ids['panel-models'].hidden,false);assert(ids['tab-models'].focused);
 assert.equal(ids['panel-side-views'].hidden,true);
 ids['tab-models'].events.keydown({key:'ArrowRight',preventDefault(){}});
+assert.equal(ids['panel-board'].hidden,false);assert(ids['tab-board'].focused);
+ids['tab-board'].events.keydown({key:'ArrowRight',preventDefault(){}});
 assert.equal(ids['panel-comparison'].hidden,false);assert(ids['tab-comparison'].focused);
 ids['tab-side-views'].events.keydown({key:'Home',preventDefault(){}});
 assert.equal(ids.grid.children,whiteCards);assert.equal(cards()[1],queenCard);
@@ -47,6 +49,7 @@ assert.equal(ids.white.attrs['aria-pressed'],'true');
 assert.equal(cards()[3].children[1].value,savedWhiteBishop);
 window.location.hash='#side-views';events.hashchange();assert.equal(ids['panel-side-views'].hidden,false);
 window.location.hash='#models';events.hashchange();assert.equal(ids['panel-models'].hidden,false);
+window.location.hash='#board';events.hashchange();assert.equal(ids['panel-board'].hidden,false);
 window.location.hash='#blender';events.hashchange();assert.equal(ids['panel-models'].hidden,false);
 window.location.hash='#unknown';events.hashchange();assert.equal(ids['panel-comparison'].hidden,false);
 assert.equal(ids.grid.children,whiteCards);
