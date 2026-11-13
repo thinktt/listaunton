@@ -3,7 +3,7 @@ from pathlib import Path
 import bpy,numpy as np,json,hashlib
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
-ROOT=Path(__file__).resolve().parents[2];p=ROOT/'models/rook/rook-rebuilt.blend';assert hashlib.sha256(p.read_bytes()).hexdigest()=='4e1557a8dbfd4e93c6c837403ffaed7b7f08e1565f063f576eb6e5c338856cf7'
+ROOT=Path(__file__).resolve().parents[2];p=ROOT/'history/rook-mission-066/models/rook/rook-rebuilt.blend';assert hashlib.sha256(p.read_bytes()).hexdigest()=='4e1557a8dbfd4e93c6c837403ffaed7b7f08e1565f063f576eb6e5c338856cf7'
 bpy.ops.wm.open_mainfile(filepath=str(p),load_ui=False);s=bpy.context.scene;ob=next(o for o in s.objects if o.get('rook_editable_control'));ev=ob.evaluated_get(bpy.context.evaluated_depsgraph_get());me=ev.to_mesh();me.calc_loop_triangles();verts=[ob.matrix_world@v.co for v in me.vertices];tree=BVHTree.FromPolygons(verts,[t.vertices[:] for t in me.loop_triangles],all_triangles=True);view=(s.camera.matrix_world.to_3x3()@Vector((0,0,1))).normalized();W=3072;box=[int(.01*W),int((1-.78)*W),int(.75*W),int((1-.59)*W)];x0,y0,x1,y1=box;covered=np.zeros((y1-y0,x1-x0),bool);protected=covered.copy();uv=me.uv_layers['Pigment atlas'];count=[0,0]
 for t in me.loop_triangles:
  a=np.array([[uv.data[i].uv.x*W,(1-uv.data[i].uv.y)*W] for i in t.loops]);lo=np.maximum(np.floor(a.min(0)).astype(int),[x0,y0]);hi=np.minimum(np.ceil(a.max(0)).astype(int),[x1,y1])

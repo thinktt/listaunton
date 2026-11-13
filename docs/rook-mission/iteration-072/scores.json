@@ -1,0 +1,12 @@
+{
+  "decision": "accepted with documented fixed-view tradeoff",
+  "silhouette_selected_percent": 97.3035014588003,
+  "silhouette_original_percent": 95.6733489199561,
+  "interior_subjective": 80,
+  "color_subjective": 78,
+  "grain_subjective": 72,
+  "lighting_subjective": 61,
+  "working_mean": 77.66070029176005,
+  "holistic_range": "60-70%",
+  "tradeoff": "Side-view baked neck stripe removed; neck RGB MAE against selected enlargement increases 2.3662 to 2.7962/255 while original sprite error decreases 13.8333 to 13.4822. Neither loss is calibrated fidelity proof."
+}
