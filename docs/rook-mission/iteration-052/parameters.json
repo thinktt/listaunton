@@ -1,0 +1,15 @@
+{
+  "source_sha256": "77221a063a8dbdd5f01545312c98e5bf31d4f86f3d6cbe0ea169ff198060a33e",
+  "model_sha256": "8ef4d1c0ea20ef8a3c15f6c7b3c972af5f208dfecd8bc74fa96ebc9886b2fc40",
+  "hue_floor_linear_rgb_hsv": 0.018,
+  "saturation_ceiling": 0.88,
+  "destination_v": [
+    0.3011583089828491,
+    0.47937121987342834
+  ],
+  "control_rows": [
+    15,
+    32
+  ],
+  "method": "Smooth local hue floor only; value and grain sample coordinates, geometry, UVs and lighting unchanged."
+}

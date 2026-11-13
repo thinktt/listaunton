@@ -1,0 +1,30 @@
+{
+  "mask_convention": "max RGB >12 and alpha >127, largest component and holes filled; model alpha >127",
+  "highres_iou": 0.973035014588003,
+  "original_iou": 0.956733489199561,
+  "previous_highres_iou": 0.973035014588003,
+  "previous_original_iou": 0.956733489199561,
+  "regional_iou": {
+    "turret": {
+      "previous": 0.9676212613725098,
+      "trial": 0.9676212613725098
+    },
+    "shaft": {
+      "previous": 0.9649494206830109,
+      "trial": 0.9649494206830109
+    },
+    "shoulder": {
+      "previous": 0.9908671796939366,
+      "trial": 0.9908671796939366
+    },
+    "base-foot": {
+      "previous": 0.9773952216233609,
+      "trial": 0.9773952216233609
+    }
+  },
+  "render_sha256": "6af0a4218ae3938775b54c229061555d6e54d6cb03126fe1d619b60632471302",
+  "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe",
+  "original_sha256": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+  "previous_sha256": "1f037d570c22c653dbf4e09765a0e8b948c99d3784563f2569bb39190a850f58",
+  "model_sha256": "cacdcbc467300652389ce9bfa72d8b905252b07b37afc6e3e71711021dbb7951"
+}
