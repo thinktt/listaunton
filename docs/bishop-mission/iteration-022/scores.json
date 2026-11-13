@@ -1,0 +1,37 @@
+{
+  "scores_percent": {
+    "silhouette": 97.00478228039266,
+    "interior": 82.0,
+    "color": 83,
+    "texture": 77,
+    "lighting": 72
+  },
+  "mean_percent": 82.20095645607853,
+  "holistic_range_percent": [
+    70.0,
+    80.0
+  ],
+  "silhouette_measured_other_scores_subjective": true,
+  "phase": "geometry",
+  "model_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "render_sha256": "b499a37c3a7ae2e47da0fa8433cb4d46239cb87df96fd9dcb04df339d551ff62",
+  "neutral_sha256": "acedd8bb47eaa51bf9df41511ae44718432b9d0b9948773c1dbfc9d9272bfada",
+  "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "original_and_selected_ious": {
+    "selected": {
+      "silhouette_iou": 0.9700478228039265,
+      "legacy_raw_model_mask_iou": 0.9700478228039265
+    },
+    "original_white": {
+      "silhouette_iou": 0.9874246559503923,
+      "legacy_raw_model_mask_iou": 0.9874246559503923
+    },
+    "original_black": {
+      "silhouette_iou": 0.9778495207696979,
+      "legacy_raw_model_mask_iou": 0.9778495207696979
+    }
+  },
+  "shape_complete": false,
+  "full_mission_complete": false,
+  "tradeoff": "Geometry is evaluated independently of the retained pigment and lights. Those still have visible mismatches and are not newly fitted or claimed complete."
+}

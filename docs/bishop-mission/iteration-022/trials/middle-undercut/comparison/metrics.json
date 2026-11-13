@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/170-middle-undercut/wood.png",
+  "render_sha256": "52afbf73fb9aefb96b66fc8bf99859d5c8b4774d066cac7318c452dea38795f3",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9700511781767625,
+      "legacy_raw_model_mask_iou": 0.9700511781767625
+    },
+    "original_white": {
+      "silhouette_iou": 0.9874278516291763,
+      "legacy_raw_model_mask_iou": 0.9874278516291763
+    },
+    "original_black": {
+      "silhouette_iou": 0.9778287018531007,
+      "legacy_raw_model_mask_iou": 0.9778287018531007
+    }
+  }
+}

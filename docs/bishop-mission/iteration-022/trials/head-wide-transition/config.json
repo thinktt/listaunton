@@ -1,0 +1,72 @@
+{
+  "variant": "168-head-turn-convex",
+  "source": "history/bishop-mission-021/bishop-rebuilt.blend",
+  "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
+  "profile": "history/bishop-mission-021/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "65": [
+      29.75,
+      90.28872875703131
+    ],
+    "66": [
+      30.899910937499996,
+      89.05644148887113
+    ],
+    "67": [
+      31.8487375,
+      87.90250158742404
+    ],
+    "68": [
+      32.583270312500005,
+      86.84054062133464
+    ],
+    "69": [
+      33.1173,
+      85.86234670039931
+    ],
+    "70": [
+      33.4826171875,
+      84.94514562851565
+    ],
+    "71": [
+      33.720012499999996,
+      84.05888205663202
+    ],
+    "72": [
+      33.870276562499996,
+      83.17350063569664
+    ],
+    "73": [
+      33.96520000000001,
+      82.26622716960728
+    ],
+    "74": [
+      34.0185734375,
+      81.32884976816021
+    ]
+  },
+  "interpretation": "Unaccepted lower-head turn hypothesis: reduce the inward tuck into the upper collar using a fuller lower meridian. Coupled radius/height edits pin each front control projection at the saved 54-degree camera. Unlisted controls, cutter, button, collars, lower body, UVs, pigment and lights stay fixed. This is a depth interpretation, not an alignment change.",
+  "radial_amplitude": 1.25,
+  "transition_width_controls": 10,
+  "projection_constraint": "axis_y + radius * sin(54 degrees), preserved per edited control",
+  "lower_head_control_polygon_curvature_cross_products": [
+    0.2682973426360409,
+    0.27222535964252015,
+    0.2575717040647679,
+    0.22535704876973883,
+    0.1803857445649481,
+    0.13102035828100472,
+    0.08895621085299496,
+    0.06899591540327665,
+    0.0888239153227762,
+    0.1453041979268081,
+    0.15464965872713296,
+    0.14551520121372874,
+    0.13633775725802355,
+    0.12711732685982213,
+    0.11785391001935341,
+    0.10854750673646263,
+    0.0991981170112225
+  ]
+}

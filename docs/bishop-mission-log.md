@@ -671,3 +671,42 @@ The geometry goal remains active and incomplete. Mission files, references,
 registration, other pieces and gallery settings are untouched. Native browser
 inspection is not claimed; page-code interaction checks are used. No watcher,
 subagent, push or external publication.
+
+## Iteration 022 — a distinct middle-collar underside
+
+The middle rim barely overhung its neck at the reference view: evaluated
+front-meridian rays measured only 0.197 comparison pixels. Narrowing only neck
+controls 49 and 50 increases this to 2.435 pixels while moving the foremost
+edge up just 0.352 pixels. Every height, the outer rim and upper-deck controls,
+other collar crests and all remaining controls stay exact. The inner joining
+surface toward the lower collar follows the changed controls through subdivision.
+The rounded lip now separates more clearly in fixed and true-level views.
+See [iteration-022/assessment.md](bishop-mission/iteration-022/assessment.md).
+
+Three fuller lower-head interpretations are rejected. They preserve the front
+projection and nearly identical outline scores, but introduce an unsupported
+band or ridge in level views. Even a convex control polygon does not guarantee
+that the evaluated surface has the right curvature. The accepted head, shallow
+button and slit remain unchanged. The white-source slit boundary remains close;
+diagnostic opposite-color rotations do not establish a different source pose.
+The dark black-source bands are not treated as reliable cut edges.
+
+Final outline overlaps are 98.7425% original white, 97.0048% selected white and
+97.7850% original black, unchanged from checkpoint 021. The interior-form
+working estimate rises modestly to 82% for the distinct middle lip. Scores are
+about 97.00 / 82 / 83 / 77 / 72, mean 82.20%, holistic 70-80%. Only outline overlap
+is measured; the other ratings remain subjective and uncertain. Pigment, grain
+and lighting are inherited and unfinished. The wider apparent-volume concern
+is not declared solved by this local correction.
+
+Saved/reopened scope, actual anatomy, direct button contact, deep slit,
+historical neck regression, exact render receivers, UVs, packed pixels, fixed
+camera and export are checked. Bounds are unchanged. Current wood/neutral,
+head/side/rear, rotating mesh and review are rebuilt from the same model; an
+unfitted neutral level comparison supplements the fixed view. Checkpoint 021
+is archived, and the trial evidence records both accepted and rejected findings.
+
+The geometry goal remains active and incomplete. Mission files, source images,
+registration, candidate choices, other pieces and shared gallery settings are
+untouched. Native browser inspection is not claimed; Node page-code checks are
+used. No quota watcher, subagent, push or external publication.

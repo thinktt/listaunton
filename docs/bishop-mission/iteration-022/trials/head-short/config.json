@@ -1,0 +1,36 @@
+{
+  "variant": "165-head-turn-gentle",
+  "source": "history/bishop-mission-021/bishop-rebuilt.blend",
+  "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
+  "profile": "history/bishop-mission-021/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "65": [
+      29.75,
+      90.28872875703131
+    ],
+    "66": [
+      30.86624365354938,
+      89.08367889374162
+    ],
+    "67": [
+      31.658791820987652,
+      88.05617086975312
+    ],
+    "68": [
+      32.16212031250001,
+      87.18125812851565
+    ],
+    "69": [
+      32.52644567901235,
+      86.34035788727819
+    ],
+    "70": [
+      32.90198447145062,
+      85.41488736328968
+    ]
+  },
+  "interpretation": "Unaccepted lower-head turn hypothesis: reduce the inward tuck into the upper collar using a fuller lower meridian. Coupled radius/height edits pin each front control projection at the saved 54-degree camera. All controls outside 65-70, cutter, button, collars, lower body, UVs, pigment and lights stay fixed. This is a depth interpretation, not an alignment change.",
+  "radial_amplitude": 1.25,
+  "projection_constraint": "axis_y + radius * sin(54 degrees), preserved per edited control"
+}

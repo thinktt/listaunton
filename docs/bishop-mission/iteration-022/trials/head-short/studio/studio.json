@@ -1,0 +1,102 @@
+{
+  "source": "build/bishop-mission/165-head-turn-gentle/bishop.blend",
+  "source_sha256": "6fafa648aaa457e8c696f2d1c95903703791d6b2067a55f23e2f026b4b035316",
+  "source_unchanged": true,
+  "saved_camera": {
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.80901700258255,
+        -0.5877852439880371,
+        -7.053422927856445
+      ],
+      [
+        0.0,
+        0.5877852439880371,
+        0.80901700258255,
+        11.514362335205078
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ortho_scale": 4.8230767250061035,
+    "shift_x": 0.1078961193561554,
+    "shift_y": 0.0
+  },
+  "lights": [
+    {
+      "name": "Key",
+      "location": [
+        -4,
+        -6,
+        8
+      ],
+      "power": 850,
+      "size": 5
+    },
+    {
+      "name": "Fill",
+      "location": [
+        5,
+        -1,
+        5
+      ],
+      "power": 500,
+      "size": 4
+    },
+    {
+      "name": "Rim",
+      "location": [
+        0,
+        4,
+        6
+      ],
+      "power": 700,
+      "size": 4
+    }
+  ],
+  "views": {
+    "head": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -10.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          3.9000000953674316
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 1.75,
+      "shift_x": 0.0,
+      "shift_y": 0.0
+    }
+  },
+  "note": "Diagnostic only. Unfitted broad white lights and neutral BSDF remove image-derived pigment, relief and localized reflector cues. The saved model, material, lights and camera are not changed."
+}

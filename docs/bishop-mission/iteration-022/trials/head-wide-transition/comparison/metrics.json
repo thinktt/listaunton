@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/168-head-turn-convex/wood.png",
+  "render_sha256": "b5cc503d61246ec4056d33d7bd9017f882b439b7a9bd5b8cbdf6291ad4c43ce8",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9701770261524079,
+      "legacy_raw_model_mask_iou": 0.9701770261524079
+    },
+    "original_white": {
+      "silhouette_iou": 0.9875556421014839,
+      "legacy_raw_model_mask_iou": 0.9875556421014839
+    },
+    "original_black": {
+      "silhouette_iou": 0.977884436416229,
+      "legacy_raw_model_mask_iou": 0.977884436416229
+    }
+  }
+}

@@ -30,6 +30,10 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
   report['internal_features']['finial']='The preceding shallow button and continuous direct head contact are retained exactly, including the deep open mitre slit.'
   report['internal_features']['collars']='All three collars retain the preceding accepted controls. The shallower lower-underside experiment was rejected against the original.'
   report['internal_features']['lower_body']='Only three socket-top heights change to remove a small inward trough. All radii, the stem seating control, outer socket wall, flare and foot remain exact. Actual evaluated surface rays verify the continuous outward descent; photographic shape interpretation remains uncertain.'
+ if set(map(int,json.loads((root/'scripts/bishop/profile.json').read_text())['mission_shape_refit']['body_rings']))=={49,50}:
+  report['internal_features']['finial']='The head, shallow button and full-depth slit retain the preceding accepted geometry. Fuller lower-head experiments were rejected after level-view examination.'
+  report['internal_features']['collars']='Only two middle-collar neck radii are narrowed, producing a real small overhang below the rounded rim while preserving every height and the other collar crests. Actual evaluated front projections and neutral/level views are checked; photographic shadows alone are not fitted as edges.'
+  report['internal_features']['lower_body']='The corrected socket, stem, flare, groove and straight foot wall retain the preceding accepted geometry. No global scale, camera or source registration change accompanies the collar undercut.'
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

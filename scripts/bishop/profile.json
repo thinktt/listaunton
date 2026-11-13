@@ -201,11 +201,11 @@
       106.1
     ],
     [
-      34.6175,
+      34.2175,
       106.10944900034842
     ],
     [
-      33.9075,
+      32.707499999999996,
       105.22204766747964
     ],
     [
@@ -520,7 +520,7 @@
     "start_profile_index": 65,
     "note": "Accepted side guide: continuous convex taper enters the button underside directly, without an exposed seat or neck."
   },
-  "revision": "163-socket-checkpoint",
+  "revision": "171-middle-undercut-checkpoint",
   "head_button_join": {
     "head_cap_axis_y": 52.5,
     "button_bottom_axis_y": 53.7,
@@ -616,22 +616,18 @@
     "baseline_sha256": "46e8b302ab6340bfddebdc765cd14658eb1fb29185aedab683524e7c008d59d3"
   },
   "mission_shape_refit": {
-    "config": "docs/bishop-mission/iteration-021/profile-fit.json",
-    "source": "history/bishop-mission-020/bishop-rebuilt.blend",
-    "source_sha256": "0542cb45a37058479eaade041711a74f7e32dd0eb46f95889cb72f1da46f84fa",
-    "profile": "history/bishop-mission-020/profile.json",
+    "config": "docs/bishop-mission/iteration-022/profile-fit.json",
+    "source": "history/bishop-mission-021/bishop-rebuilt.blend",
+    "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
+    "profile": "history/bishop-mission-021/profile.json",
     "body_rings": {
-      "28": [
-        29,
-        163.8
+      "49": [
+        34.2175,
+        106.10944900034842
       ],
-      "29": [
-        27.5,
-        163.6
-      ],
-      "30": [
-        26.2,
-        163.55
+      "50": [
+        32.707499999999996,
+        105.22204766747964
       ]
     }
   }

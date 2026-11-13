@@ -1,0 +1,36 @@
+{
+  "variant": "165-head-turn-fuller",
+  "source": "history/bishop-mission-021/bishop-rebuilt.blend",
+  "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
+  "profile": "history/bishop-mission-021/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "65": [
+      31.0,
+      89.27745751406263
+    ],
+    "66": [
+      32.07187636959876,
+      88.10830153748324
+    ],
+    "67": [
+      32.646446141975304,
+      87.25714173950625
+    ],
+    "68": [
+      32.78712031250001,
+      86.6756225070313
+    ],
+    "69": [
+      32.78879135802469,
+      86.12811577455636
+    ],
+    "70": [
+      32.94635175540123,
+      85.37899347657938
+    ]
+  },
+  "interpretation": "Unaccepted lower-head turn hypothesis: reduce the inward tuck into the upper collar using a fuller lower meridian. Coupled radius/height edits pin each front control projection at the saved 54-degree camera. All controls outside 65-70, cutter, button, collars, lower body, UVs, pigment and lights stay fixed. This is a depth interpretation, not an alignment change.",
+  "radial_amplitude": 2.5,
+  "projection_constraint": "axis_y + radius * sin(54 degrees), preserved per edited control"
+}

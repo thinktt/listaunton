@@ -1,0 +1,24 @@
+{
+  "source": "models/bishop/bishop-rebuilt.blend",
+  "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
+  "angles_degrees": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+  ],
+  "border": [
+    320,
+    200,
+    675,
+    500
+  ],
+  "camera_degrees": 54,
+  "method": "Unsaved world-Z rotation of evaluated body/button triangles, then first-hit labels at the exact standard camera. No pigment, lighting, alignment change, or image fitting.",
+  "source_unchanged": true,
+  "note": "These rotations are diagnostic only, not alternative public models or evidence of recovered historical camera metadata."
+}

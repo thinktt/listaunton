@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "model_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "source": "history/bishop-mission-021/bishop-rebuilt.blend",
+  "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
+  "config_sha256": "4e7d75f1dbd53c1ff6cdc0caeea2bf4d44e7b80fb5ac121c70586136bd75a89c",
+  "changed_body_rings": [
+    49,
+    50
+  ],
+  "changed_finial_rings": [],
+  "max_control_error_from_declared_edit": 2.912334895466273e-08,
+  "unlisted_controls_exact": true,
+  "control_errors_by_component": {
+    "Bishop - continuous turned body": 2.912334895466273e-08,
+    "Bishop - domed button finial": 0.0
+  },
+  "topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved": true,
+  "button_controls_preserved": true,
+  "reference_pixels_unchanged": true,
+  "camera_exactly_unchanged": true,
+  "shader": "Principled BSDF",
+  "saved_scene_albedo_bakes_lighting_flag": false,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 55852,
+        "vertices": 56335,
+        "normal_max_component_error": 4.9680471420288086e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 5632,
+        "vertices": 5888,
+        "normal_max_component_error": 3.7670135498046875e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "saved_and_reopened": true,
+  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score. The preserved albedo metadata flag is not proof that pigment is illumination-free; the inherited atlas still contains photographic shading.",
+  "declared_geometry_changes_validated": true,
+  "finite_uvs_and_unit_normals": true,
+  "texture_hash_matches": true,
+  "declared_slit_revision_validated": true,
+  "geometry_phase": true,
+  "prior_material_atlas_exact": true
+}

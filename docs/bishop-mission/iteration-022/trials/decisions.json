@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "165-head-turn-gentle",
+    "decision": "Rejected: adds an unsupported flattened band above the collar despite preserving the outline."
+  },
+  {
+    "variant": "165-head-turn-fuller",
+    "decision": "Rejected: more obvious extra ridge/cuff in the true level view."
+  },
+  {
+    "variant": "168-head-turn-convex",
+    "decision": "Rejected: a convex control polygon still produces an unwanted band in the evaluated surface; no convincing reference improvement."
+  },
+  {
+    "variant": "170-middle-undercut",
+    "decision": "Chosen: real middle-lip overhang, almost unchanged front-edge position, retained rounded crest and better-separated plates."
+  }
+]

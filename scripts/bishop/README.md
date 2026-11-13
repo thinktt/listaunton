@@ -82,6 +82,25 @@ crease. `record_socket_checkpoint.py` retains the trials, source crops and
 unfitted neutral level views. Preserve the current material/lighting mismatch
 in the assessment and keep the geometry goal separate from full completion.
 
+Checkpoint 022 narrows only neck controls 49 and 50 below the middle collar.
+Reproduce with `profile_shape_trial.py` and
+`docs/bishop-mission/iteration-022/profile-fit.json` from archived checkpoint
+021. Every height and all other controls remain exact. Actual front-meridian
+rays in `measure_collar_occlusion.py` distinguish an occluding rim from a
+painted band or glint: the middle overhang increases from about 0.20 to 2.43
+comparison pixels with less than half a pixel of front-edge displacement.
+Check full fixed/side renders as well; the center measurement alone cannot
+establish the entire edge's fidelity.
+
+Three fuller lower-head hypotheses are rejected after true-level examination.
+`measure_head_turn.py` records actual surface curvature; a convex control
+polygon and an unchanged image outline do not guarantee a faithful surface.
+`probe_opposite_slit_pose.py` tests unsaved rotations of evaluated triangles
+only. The black-source investigation does not establish a new source angle;
+do not adopt those rotations or fit dark grain bands as slit boundaries.
+`record_collar_occlusion_checkpoint.py` preserves these decisions alongside
+the accepted collar evidence. Final pipeline and review checks remain required.
+
 ## Current wood mission
 
 The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is
