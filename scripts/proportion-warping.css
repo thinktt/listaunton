@@ -1,0 +1,17 @@
+.warp-note{color:#b1b4a9;font-size:13px;margin:0 0 12px;line-height:1.5}
+.warp-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.warp-toolbar button{padding:6px 10px}.warp-toolbar label{display:flex;align-items:center;gap:5px;margin-left:12px;font-size:13px}
+.warp-toolbar input,.warp-control-row input[type=number]{width:60px;padding:4px 5px;font:inherit;color:inherit;background:#20231f;border:1px solid #626654;border-radius:4px}
+.warp-scroll{overflow-x:auto;overscroll-behavior-x:contain;margin-bottom:16px}.warp-lineup{min-width:1320px}
+.warp-headings,.warp-piece-controls{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.warp-heading{text-align:center;font-size:15px;padding:8px 4px}.warp-heading strong,.warp-heading small{display:block}.warp-heading small{font-size:12px;color:#b1b4a9;margin-top:4px}
+.warp-model-stage{height:420px;position:relative;background:#20231f}.warp-model-stage canvas{width:100%;height:100%;display:block;cursor:grab;touch-action:none}.warp-model-stage canvas:active{cursor:grabbing}
+.warp-model-stage p{position:absolute;inset:0;display:grid;place-items:center;text-align:center;margin:0;padding:20px;color:#b1b4a9}
+.warp-piece-control{border-right:1px solid #363a31;padding:12px 14px;min-width:0}.warp-piece-control:last-child{border:0}
+.warp-control-row{display:flex;align-items:center;justify-content:space-between;font-size:13px}.warp-control-row span{display:flex;align-items:center;gap:4px}
+.warp-piece-control input[type=range]{display:block;width:100%;accent-color:#d7ad77;margin:7px 0 12px;cursor:ew-resize}
+.warp-piece-control button{padding:3px 8px;font-size:12px}.warp-gap{font-size:12px;color:#b1b4a9;margin:6px 0 10px;min-height:1.4em}
+.warp-board-stage{position:relative;width:100%;max-width:1318px;aspect-ratio:659/202;overflow:hidden;background:#20231f;margin-bottom:8px}
+.warp-board-stage img,.warp-board-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.warp-board-stage img{user-select:none;pointer-events:none}
+.warp-overlay-toolbar{margin-top:8px}.warp-overlay-toolbar strong{font-size:14px;margin-right:8px}
+#panel-warping button:disabled{opacity:.45;cursor:default}#panel-warping :focus-visible{outline:3px solid #f1c37f;outline-offset:2px}

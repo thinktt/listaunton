@@ -178,6 +178,14 @@ async function loadPiece(piece){
  result.image=await image(result.texture+'?v='+encodeURIComponent(textureVersion));
  return result;
 }
+// The proportion lab reuses these exact meshes and textures. GPU resources are
+// kept per canvas; this cache only shares immutable source data and images.
+const sourceLoads=new Map();
+function sharedLoadPiece(piece){
+ if(!sourceLoads.has(piece))sourceLoads.set(piece,loadPiece(piece).catch(error=>{sourceLoads.delete(piece);throw error;}));
+ return sourceLoads.get(piece);
+}
+window.ListauntonModelSource={loadPiece:sharedLoadPiece,fragmentShader:fragment};
 function initialize(){
  const vs=shader(gl.VERTEX_SHADER,vertex),fs=shader(gl.FRAGMENT_SHADER,fragment);program=gl.createProgram();gl.attachShader(program,vs);gl.attachShader(program,fs);gl.linkProgram(program);
  if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));
@@ -224,7 +232,7 @@ async function start(){
  if(!gl){loadMessage='Showing model profile renders because 3D graphics are unavailable.';paintDisplay();return;}
  try{
   loadMessage='Loading current 3D models…';paintDisplay();
-  const loaded=await Promise.all(order.map(async piece=>[piece,await loadPiece(piece)]));
+  const loaded=await Promise.all(order.map(async piece=>[piece,await sharedLoadPiece(piece)]));
   models=Object.fromEntries(loaded);initialize();paintDisplay();layout();
  }catch(error){console.error(error);models=null;loadMessage='Could not load all 3D models; showing the saved model profiles.';paintDisplay();}
 }

@@ -57,6 +57,8 @@ output=output.replace('__SIDE_ORDER_RUNTIME__',(root/'scripts/side-order-runtime
 output=output.replace('__MODEL_LINEUP_RUNTIME__',(root/'scripts/model-lineup-runtime.js').read_text(encoding='utf-8'))
 output=output.replace('__BOARD_DATA__',json.dumps(build_board_data(root),separators=(',',':')))
 output=output.replace('__BOARD_RUNTIME__',(root/'scripts/board-comparison-runtime.js').read_text(encoding='utf-8'))
-assert all(token not in output for token in ['__SIDE_CARDS__','__DATA__','__SIDE_SCALE_DATA__','__MODEL_PROFILE_DATA__','__SIDE_ORDER_RUNTIME__','__MODEL_LINEUP_RUNTIME__','__BOARD_DATA__','__BOARD_RUNTIME__'])
+for token,filename in [('__WARP_CSS__','proportion-warping.css'),('__WARP_PANEL__','proportion-warping-panel.html'),('__WARP_MATH__','proportion-warping-math.js'),('__WARP_RUNTIME__','proportion-warping-runtime.js')]:
+    output=output.replace(token,(root/'scripts'/filename).read_text(encoding='utf-8'))
+assert all(token not in output for token in ['__SIDE_CARDS__','__DATA__','__SIDE_SCALE_DATA__','__MODEL_PROFILE_DATA__','__SIDE_ORDER_RUNTIME__','__MODEL_LINEUP_RUNTIME__','__BOARD_DATA__','__BOARD_RUNTIME__','__WARP_CSS__','__WARP_PANEL__','__WARP_MATH__','__WARP_RUNTIME__'])
 (root/'set-comparison.html').write_text(output,encoding='utf-8')
 print('Built the whole-set reference, side-view, model and board comparisons.')

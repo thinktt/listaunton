@@ -1,0 +1,38 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),crypto=require('crypto');
+const root=path.resolve(process.argv[2]||path.join(__dirname,'..')),html=fs.readFileSync(path.join(root,'set-comparison.html'),'utf8');
+function script(text,id){const m=text.match(new RegExp('<script id="'+id+'"[^>]*>([\\s\\S]*?)</script>'));assert(m,'Missing '+id);return m[1];}
+const board=JSON.parse(script(html,'board-data')),scales=JSON.parse(script(html,'side-scale-data'));
+const context={window:{}};vm.runInNewContext(script(html,'warp-math-runtime'),context);const math=context.window.ListauntonWarpMath;
+const records=math.registrations(board),guide=math.guide(scales),squashed=math.preset('bishop',records,guide),chavet=math.preset('chavet',records,guide);
+assert.equal(squashed.bishop.height,88);assert.equal(squashed.bishop.width,100);
+for(const [piece,r] of Object.entries(records)){
+ assert.equal(squashed[piece].width,100);if(piece!=='bishop')assert.equal(squashed[piece].height,100);
+ assert(Math.abs(r.ratio*chavet[piece].height/100-guide[piece])<.0006,piece+' Chavet height');
+ let meta,buffer;
+ if(piece==='queen'){
+  const viewer=JSON.parse(script(fs.readFileSync(path.join(root,'review.html'),'utf8'),'viewer-document'));
+  meta=JSON.parse(script(viewer,'mesh-metadata'));buffer=Buffer.from(script(viewer,'mesh-data').trim(),'base64');
+ }else{meta=JSON.parse(fs.readFileSync(path.join(root,'assets',piece,'mesh.json'),'utf8'));buffer=fs.readFileSync(path.join(root,'assets',piece,'mesh.bin'));}
+ assert.equal(meta.sourceSha256,r.sourceSha256);
+ const data=buffer.buffer.slice(buffer.byteOffset,buffer.byteOffset+buffer.byteLength),model={meta,buffer:data};
+ const digest=()=>crypto.createHash('sha256').update(Buffer.from(data)).digest('hex'),before=digest();
+ const original=math.projectedBounds(model,{height:100,width:100},54,r);
+ const changed=math.projectedBounds(model,squashed[piece],54,r);
+ // Alpha sampling and the low-res mesh export can shift the measured edge by
+ // a pixel or two, but the same saved camera must reproduce its registration.
+ assert(Math.abs(original.top-r.targetTop)<2,piece+' camera/top registration: '+(original.top-r.targetTop));
+ assert(Math.abs(original.bottom-r.targetBottom)<2,piece+' camera/foot registration: '+(original.bottom-r.targetBottom));
+ if(piece==='bishop'){
+  assert(changed.top-original.top>9,'Squash should visibly lower the bishop top');
+  assert(Math.abs(changed.bottom-original.bottom)<.1,'Foot must stay anchored');
+  assert(Math.abs((changed.right-changed.left)-(original.right-original.left))<.1,'Squash must preserve base width');
+  console.log('Bishop −12%: top moves down '+(changed.top-original.top).toFixed(2)+' original pixels; foot moves '+(changed.bottom-original.bottom).toFixed(3)+' px.');
+ }else for(const key of ['top','bottom','left','right'])assert.equal(changed[key],original[key],piece+' changed unexpectedly');
+ assert.equal(digest(),before,'Source vertices must not be mutated');
+ console.log(piece+': original registration top Δ '+(original.top-r.targetTop).toFixed(2)+'px, foot Δ '+(original.bottom-r.targetBottom).toFixed(2)+'px');
+}
+const restored=math.restore({angle:999,pieces:{bishop:{height:-20,width:999},king:{height:null,width:'bad'}}},records,guide);
+assert.equal(restored.angle,70);assert.equal(restored.pieces.bishop.height,50);assert.equal(restored.pieces.bishop.width,130);assert.equal(restored.pieces.king.height,100);assert.equal(restored.pieces.king.width,100);
+assert.equal(math.restore(null,records,guide).pieces.bishop.height,88);
+assert.equal(math.restore({angle:49.5,pieces:{bishop:{height:80,width:101}}},records,guide).pieces.bishop.height,80);
+console.log('PASS: exact saved cameras, fixed foot/width under compression, Chavet preset, source preservation, and bounded saved settings.');

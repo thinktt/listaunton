@@ -1,0 +1,24 @@
+<section id="panel-warping" role="tabpanel" aria-labelledby="tab-warping" hidden>
+<p class="warp-note">Squash or stretch the geometry from the foot. Chavet heights are a guide; the original Lichess view is the fit check. Experiments stay separate from the accepted models.</p>
+<div class="warp-toolbar" aria-label="Warping presets">
+ <span>Try</span><button id="warp-bishop-preset" type="button">Bishop −12%</button><button id="warp-chavet-preset" type="button">Chavet heights</button><button id="warp-reset" type="button">Unwarped</button>
+ <button id="warp-before" type="button" aria-pressed="false">Show before</button><button id="warp-export" type="button">Save settings</button>
+</div>
+<div class="warp-toolbar" aria-label="Warped model view">
+ <button id="warp-side" type="button" aria-pressed="true">Side view</button><button id="warp-reference" type="button" aria-pressed="false">54° view</button>
+ <button id="warp-wood" type="button" aria-pressed="true">Wood</button><button id="warp-neutral" type="button" aria-pressed="false">Neutral</button>
+ <label>Reference angle <input id="warp-angle" type="number" min="35" max="70" step="0.5" value="54">°</label><button id="warp-angle-reset" type="button">54°</button>
+</div>
+<div class="warp-scroll"><div class="warp-lineup">
+ <div id="warp-headings" class="warp-headings"></div>
+ <div id="warp-model-stage" class="warp-model-stage"><canvas id="warp-model-canvas" tabindex="0" aria-label="Warped models: drag or use arrow keys to rotate together"></canvas><p id="warp-load-message">Loading current models…</p></div>
+ <div id="warp-piece-controls" class="warp-piece-controls"></div>
+</div></div>
+<div class="warp-toolbar warp-overlay-toolbar" aria-label="Original-reference comparison">
+ <strong id="warp-reference-title">Original view · 54°</strong>
+ <button id="warp-original" type="button" aria-pressed="false">Original</button><button id="warp-overlay" type="button" aria-pressed="true">Overlay</button><button id="warp-model-only" type="button" aria-pressed="false">Models</button>
+</div>
+<div id="warp-board-stage" class="warp-board-stage"><img id="warp-board-background" src="assets/board-comparison/original-lineup.png" alt="Original Lichess pieces on the board"><canvas id="warp-board-canvas" aria-label="Warped models at the original board registration"></canvas></div>
+<p class="warp-note">The overlay keeps the starting scale and foot positions fixed. A positive top gap means the model stops below the original. Browser lighting is approximate.</p>
+<p id="warp-status" class="warp-note" role="status" aria-live="polite"></p>
+</section>
