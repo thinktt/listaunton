@@ -69,12 +69,11 @@ surface.fire('pointerup',pointer(1100));assert.deepEqual(f.order(),['king','quee
 assert.equal(rookImage.style.transform,'scale(1.37)');assert.equal(f.focus(),surface);
 let restored=fixture(f.saved);assert.deepEqual(restored.order(),f.order());assert.equal(restored.els['side-scale-rook'].value,'137');
 
-for(const cancel of ['escape','pointercancel','lostpointercapture','tab','models-tab','blender-tab','blur']){
+for(const cancel of ['escape','pointercancel','lostpointercapture','tab','models-tab','blur']){
  const before=f.order();const s=drag(f,'rook',260);
  if(cancel==='escape')f.emitDoc('keydown',{key:'Escape'});
  else if(cancel==='tab')f.els['tab-comparison'].fire('click');
  else if(cancel==='models-tab')f.els['tab-models'].fire('click');
- else if(cancel==='blender-tab')f.els['tab-blender'].fire('click');
  else if(cancel==='blur')f.emitWindow('blur');
  else s.fire(cancel,{pointerId:1});
  assert.deepEqual(f.order(),before,cancel+' must abandon reorder');noDrag(f);

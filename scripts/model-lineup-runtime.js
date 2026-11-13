@@ -3,17 +3,18 @@ const byId=id=>document.getElementById(id);
 const data=JSON.parse(byId('side-scale-data').textContent);
 let order=data.defaultOrder.slice();
 // These profiles are rendered from the accepted models. Their alpha bounds are
-// measured by the page builder for the Blender view and the offline fallback.
+// measured by the page builder for the Blender renders and offline fallback.
 const profiles=JSON.parse(byId('model-profile-data').textContent);
 const stage=byId('models-stage'),fallback=byId('models-fallback'),canvas=byId('models-canvas');
-const panel=byId('panel-models'),status=byId('models-status'),blenderPanel=byId('panel-blender');
+const panel=byId('panel-models'),status=byId('models-status');
 const rows=Object.fromEntries(data.pieces.map(item=>[item.piece,item]));
-const galleries={models:{stage,container:fallback,images:{}},blender:{stage:byId('blender-stage'),container:byId('blender-fallback'),images:{}}};
-for(const gallery of Object.values(galleries))for(const piece of order){
+const images={};
+for(const piece of order){
  const img=document.createElement('img');img.src=profiles[piece].file+'?v='+profiles[piece].version;img.alt='';img.draggable=false;
- gallery.container.append(img);gallery.images[piece]=img;
+ fallback.append(img);images[piece]=img;
 }
 let models=null,gl=null,program=null,uniforms=null,started=false,lost=false;
+let showBlender=window.location.hash==='#blender',loadMessage='Loading current 3D models…';
 let yaw=0,pitch=0,wood=true,pending=false,drag=null;
 const ratio=piece=>rows[piece].height*Number(byId('side-scale-'+piece).value)/(rows.king.height*Number(byId('side-scale-king').value));
 function ratios(){return Object.fromEntries(order.map(piece=>[piece,ratio(piece)]));}
@@ -31,35 +32,49 @@ function layout(){
  const selected=[...byId('side-lineup').children].map(card=>card.getAttribute('data-side-piece'));
  if(selected.length===order.length&&new Set(selected).size===order.length&&selected.every(piece=>rows[piece])){
   order=selected;
-  for(const prefix of ['models','blender'])for(const piece of order)byId(prefix+'-headings').append(byId(prefix+'-heading-'+piece));
+  for(const piece of order)byId('models-headings').append(byId('models-heading-'+piece));
  }
- for(const [prefix,gallery] of Object.entries(galleries)){
-  const m=measure(gallery.stage);
-  order.forEach((piece,index)=>{
-   byId(prefix+'-ratio-'+piece).textContent=(m.relative[piece]*100).toFixed(1)+'% of king';
-   if(!m.width||!m.height)return;
-   const p=profiles[piece],k=m.pixels*m.relative[piece]/(p.bottom-p.top),img=gallery.images[piece];
-   img.style.width=(p.width*k)+'px';img.style.left=((index+.5)*m.cell-p.center*k)+'px';
-   img.style.top=(m.ground-p.bottom*k)+'px';
-  });
- }
+ const m=measure();
+ order.forEach((piece,index)=>{
+  byId('models-ratio-'+piece).textContent=(m.relative[piece]*100).toFixed(1)+'% of king';
+  if(!m.width||!m.height)return;
+  const p=profiles[piece],k=m.pixels*m.relative[piece]/(p.bottom-p.top),img=images[piece];
+  img.style.width=(p.width*k)+'px';img.style.left=((index+.5)*m.cell-p.center*k)+'px';
+  img.style.top=(m.ground-p.bottom*k)+'px';
+ });
  schedule();
 }
 function selectButtons(){
- byId('models-side').setAttribute('aria-pressed',String(yaw===0&&pitch===0));
- byId('models-threequarter').setAttribute('aria-pressed',String(Math.abs(yaw+.43)<1e-6&&Math.abs(pitch-.35)<1e-6));
- byId('models-wood').setAttribute('aria-pressed',String(wood));
- byId('models-neutral').setAttribute('aria-pressed',String(!wood));
+ byId('models-side').setAttribute('aria-pressed',String(!showBlender&&yaw===0&&pitch===0));
+ byId('models-threequarter').setAttribute('aria-pressed',String(!showBlender&&Math.abs(yaw+.43)<1e-6&&Math.abs(pitch-.35)<1e-6));
+ byId('models-wood').setAttribute('aria-pressed',String(!showBlender&&wood));
+ byId('models-neutral').setAttribute('aria-pressed',String(!showBlender&&!wood));
+ byId('models-blender').setAttribute('aria-pressed',String(showBlender));
 }
-function schedule(){if(!models||!gl||lost||panel.hidden||pending)return;pending=true;requestAnimationFrame(()=>{pending=false;draw();});}
+function schedule(){if(!models||!gl||lost||showBlender||panel.hidden||pending)return;pending=true;requestAnimationFrame(()=>{pending=false;draw();});}
+function paintDisplay(){
+ const ready=Boolean(models&&gl&&!lost),showImages=showBlender||!ready;
+ fallback.hidden=!showImages;canvas.hidden=showImages;
+ for(const id of ['models-wood','models-neutral'])byId(id).disabled=!ready;
+ for(const id of ['models-side','models-threequarter'])byId(id).disabled=!ready||showBlender;
+ status.textContent=showBlender?'Saved Blender side renders. The knight is viewed slightly above level; lighting varies between pieces.':ready?'Drag to rotate all pieces together. Lighting in this view is approximate.':loadMessage;
+ selectButtons();if(!showImages)schedule();
+}
+function changeDisplay(blender){
+ showBlender=blender;
+ const hash=blender?'#blender':'#models';
+ if(window.location.hash!==hash)window.location.hash=hash;
+ paintDisplay();
+}
 for(const piece of order){
  byId('side-scale-'+piece).addEventListener('input',layout);
  byId('side-reset-'+piece).addEventListener('click',layout);
 }
 byId('models-side').addEventListener('click',()=>{yaw=0;pitch=0;selectButtons();schedule();});
 byId('models-threequarter').addEventListener('click',()=>{yaw=-.43;pitch=.35;selectButtons();schedule();});
-byId('models-wood').addEventListener('click',()=>{wood=true;selectButtons();schedule();});
-byId('models-neutral').addEventListener('click',()=>{wood=false;selectButtons();schedule();});
+byId('models-wood').addEventListener('click',()=>{wood=true;changeDisplay(false);});
+byId('models-neutral').addEventListener('click',()=>{wood=false;changeDisplay(false);});
+byId('models-blender').addEventListener('click',()=>changeDisplay(!showBlender));
 canvas.addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY};canvas.setPointerCapture(event.pointerId);});
 canvas.addEventListener('pointermove',event=>{if(!drag)return;yaw+=(event.clientX-drag.x)*.008;pitch=Math.max(-1.3,Math.min(1.3,pitch+(event.clientY-drag.y)*.008));drag={x:event.clientX,y:event.clientY};selectButtons();schedule();});
 for(const type of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(type,()=>{drag=null;});
@@ -174,25 +189,24 @@ function draw(){
  });
 }
 async function start(){
- layout();if(started||panel.hidden)return;started=true;
- if(location.protocol==='file:'){status.textContent='Showing model profile renders. Open the local server for the rotatable 3D models.';return;}
+ layout();paintDisplay();if(started||panel.hidden)return;started=true;
+ if(location.protocol==='file:'){loadMessage='Showing model profile renders. Open the local server for the rotatable 3D models.';paintDisplay();return;}
  gl=canvas.getContext('webgl2',{antialias:true,alpha:false});
- if(!gl){status.textContent='Showing model profile renders because 3D graphics are unavailable.';return;}
+ if(!gl){loadMessage='Showing model profile renders because 3D graphics are unavailable.';paintDisplay();return;}
  try{
-  status.textContent='Loading current 3D models…';
+  loadMessage='Loading current 3D models…';paintDisplay();
   const loaded=await Promise.all(order.map(async piece=>[piece,await loadPiece(piece)]));
-  models=Object.fromEntries(loaded);initialize();fallback.hidden=true;canvas.hidden=false;
-  for(const id of ['models-side','models-threequarter','models-wood','models-neutral'])byId(id).disabled=false;
-  status.textContent='Drag to rotate all pieces together. Lighting in this view is approximate.';
-  selectButtons();layout();
- }catch(error){console.error(error);models=null;status.textContent='Could not load all 3D models; showing the saved model profiles.';}
+  models=Object.fromEntries(loaded);initialize();paintDisplay();layout();
+ }catch(error){console.error(error);models=null;loadMessage='Could not load all 3D models; showing the saved model profiles.';paintDisplay();}
 }
-canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();lost=true;fallback.hidden=false;canvas.hidden=true;status.textContent='3D graphics paused; showing model profiles.';});
-canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();fallback.hidden=true;canvas.hidden=false;status.textContent='Drag to rotate all pieces together. Lighting in this view is approximate.';layout();}catch(error){console.error(error);}});
+canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();lost=true;loadMessage='3D graphics paused; showing model profiles.';paintDisplay();});
+canvas.addEventListener('webglcontextrestored',()=>{lost=false;try{initialize();paintDisplay();layout();}catch(error){console.error(error);models=null;loadMessage='Could not restore 3D graphics; showing model profiles.';paintDisplay();}});
 byId('tab-models').addEventListener('click',start);
-byId('tab-blender').addEventListener('click',layout);
-window.addEventListener('hashchange',()=>{if(!panel.hidden)start();else if(!blenderPanel.hidden)layout();});
-const observer=new ResizeObserver(()=>{if(!panel.hidden||!blenderPanel.hidden)layout();});
-observer.observe(stage);observer.observe(galleries.blender.stage);
-selectButtons();if(!panel.hidden)start();else if(!blenderPanel.hidden)layout();
+window.addEventListener('hashchange',()=>{
+ if(window.location.hash==='#blender')showBlender=true;
+ else if(window.location.hash==='#models')showBlender=false;
+ if(!panel.hidden)start();
+});
+new ResizeObserver(()=>{if(!panel.hidden)layout();}).observe(stage);
+paintDisplay();if(!panel.hidden)start();
 })();
