@@ -635,3 +635,39 @@ checks are used; native browser inspection is not claimed.
 The geometry goal stays active and incomplete. Mission files, source images,
 registration, shared gallery defaults and other pieces are unchanged. No quota
 watcher, subagent, push or external publication.
+
+## Iteration 021 — a continuous stem/socket join
+
+Actual surface rays expose a small outward height reversal at the socket top:
+the profile dips from the stem, then rises into an extra inner ridge. The
+accepted correction lowers three crest controls (28-30), removing that trough
+while preserving the stem seating control, every radius and all other anatomy.
+The measured reversal decreases from about 0.567 original profile units to zero.
+The originals and selected white 3 support a simpler rolled join, but their
+cross-section is not precisely recoverable. See
+[iteration-021/assessment.md](bishop-mission/iteration-021/assessment.md).
+
+A raised-root test is rejected because it moves the seating point. Lifting
+the lower-collar underside also fails the comparison: its original-white
+row-edge error increases from about 2.90 to 4.74 comparison pixels. Neither
+experiment replaces current geometry. The collar stack, head, shallow button,
+slit, stem, outer socket wall, flare and foot retain checkpoint 020 controls.
+
+Final outline overlaps are about 98.7425% original white, 97.0048% selected white
+and 97.7850% original black, essentially unchanged. This acceptance concerns
+the internal socket curvature. Scores remain about 97.00 / 81 / 83 / 77 / 72,
+mean 82.00%, holistic 70-80%. The uncertain interior rating is not increased
+for a small local correction. Apparent head fullness, collar faces/undersides
+and socket/flare relationships remain under investigation; inherited wood and
+lighting remain unfinished.
+
+Saved/reopened scope, anatomy, direct button contact, historical neck regression,
+receiver surfaces, UVs, pigment, lights, unchanged bounds and 54-degree camera
+are checked before delivery. Fixed/neutral, side/head/rear, rotating mesh and
+review are synchronized. Broad unfitted neutral side views and measured socket
+meridians accompany the ordinary fixed-view evidence. Checkpoint 020 is archived.
+
+The geometry goal remains active and incomplete. Mission files, references,
+registration, other pieces and gallery settings are untouched. Native browser
+inspection is not claimed; page-code interaction checks are used. No watcher,
+subagent, push or external publication.

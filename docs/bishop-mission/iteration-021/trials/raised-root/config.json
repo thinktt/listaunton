@@ -1,0 +1,22 @@
+{
+  "source": "history/bishop-mission-020/bishop-rebuilt.blend",
+  "source_sha256": "0542cb45a37058479eaade041711a74f7e32dd0eb46f95889cb72f1da46f84fa",
+  "profile": "history/bishop-mission-020/profile.json",
+  "samples": 64,
+  "variant": "160-socket-full",
+  "body_rings": {
+    "29": [
+      27.5,
+      162.8
+    ],
+    "30": [
+      26.2,
+      162.6
+    ],
+    "31": [
+      25,
+      161.6
+    ]
+  },
+  "interpretation": "Unaccepted socket-join hypothesis: remove the small inward height reversal between stem and socket crest; preserve outer wall, all radii, collar/head controls, bounds, camera, UVs, pigment and lights."
+}

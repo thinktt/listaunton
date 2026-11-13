@@ -26,6 +26,10 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
   report['internal_features']['finial']='Shallower rounded button with a thin underside; its front rim is fitted independently of shading. The head tip enters directly with measured broad contact and no exposed neck. Physical height and radii are preserved.'
   report['internal_features']['collars']='All collar controls retain the preceding accepted checkpoint; collar face and underside curvature remain under examination.'
   report['internal_features']['lower_body']='The lower body and current straight-foot-wall correction are unchanged. No socket, stem, flare or foot edits are part of the button refit.'
+ if set(map(int,json.loads((root/'scripts/bishop/profile.json').read_text())['mission_shape_refit']['body_rings']))=={28,29,30}:
+  report['internal_features']['finial']='The preceding shallow button and continuous direct head contact are retained exactly, including the deep open mitre slit.'
+  report['internal_features']['collars']='All three collars retain the preceding accepted controls. The shallower lower-underside experiment was rejected against the original.'
+  report['internal_features']['lower_body']='Only three socket-top heights change to remove a small inward trough. All radii, the stem seating control, outer socket wall, flare and foot remain exact. Actual evaluated surface rays verify the continuous outward descent; photographic shape interpretation remains uncertain.'
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

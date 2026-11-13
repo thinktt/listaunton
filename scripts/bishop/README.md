@@ -69,6 +69,19 @@ their contact, taper or neck criteria. `validate_shape_trial.py` runs these
 scope/anatomy checks on isolated candidates. See iteration-020 for the rejected
 cup underside, localized-tip choice and first-hit boundary evidence.
 
+Checkpoint 021 removes a small socket-top height reversal using only rings
+28-30. Reproduce from `history/bishop-mission-020` with the ordinary trial
+builder and `docs/bishop-mission/iteration-021/profile-fit.json`. The stem's
+seating control, all radii and all surrounding anatomy remain exact. The
+raised-root and shallower lower-collar tests are rejected. The latter worsens
+the original outline; do not revive it as a general collar compression.
+`measure_socket_join.py` samples the evaluated socket top with vertical rays
+below the collars. It verifies the physical trough independently of pigment
+or reflections; it does not prove that an unclear photographic boundary is a
+crease. `record_socket_checkpoint.py` retains the trials, source crops and
+unfitted neutral level views. Preserve the current material/lighting mismatch
+in the assessment and keep the geometry goal separate from full completion.
+
 ## Current wood mission
 
 The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is

@@ -1,0 +1,22 @@
+{
+  "source": "history/bishop-mission-020/bishop-rebuilt.blend",
+  "source_sha256": "0542cb45a37058479eaade041711a74f7e32dd0eb46f95889cb72f1da46f84fa",
+  "profile": "history/bishop-mission-020/profile.json",
+  "samples": 512,
+  "variant": "163-socket-checkpoint",
+  "body_rings": {
+    "28": [
+      29,
+      163.8
+    ],
+    "29": [
+      27.5,
+      163.6
+    ],
+    "30": [
+      26.2,
+      163.55
+    ]
+  },
+  "interpretation": "Socket-join refinement for final verification: remove the small inward height reversal at the socket crest using controls 28-30 only. Preserve the stem seating control, all radii, outer wall, collars, head/button/slit, base/foot, fixed camera, source registration, UVs, pigment and lighting."
+}

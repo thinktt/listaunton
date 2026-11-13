@@ -3,9 +3,9 @@
     {
       "name": "Bishop - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.73819298104573,
-      "vertices": 64015,
-      "faces": 63788
+      "signed_volume": 4.73604365599534,
+      "vertices": 61711,
+      "faces": 61484
     },
     {
       "name": "Bishop - domed button finial",
@@ -38,7 +38,7 @@
   "saved_camera_matches_export": true,
   "head_surface_probe_count": 100,
   "head_surface_max_normal_step_degrees": 2.2810469009276586,
-  "lower_65_profile_points_preserved": true,
+  "lower_65_profile_points_preserved": false,
   "declared_changed_foot_rings": [
     1,
     2,
@@ -51,7 +51,7 @@
     9,
     10
   ],
-  "flare_socket_stem_collars_preserved": true,
+  "flare_socket_stem_collars_preserved": false,
   "slit_parameters_preserved": true,
   "button_height_to_width": 0.258768672218618,
   "head_button_join": {
@@ -79,165 +79,31 @@
   "all_other_lower_profile_points_preserved": true,
   "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json",
   "declared_shape_refit": {
-    "config": "docs/bishop-mission/iteration-020/profile-fit.json",
-    "source": "history/bishop-mission-019/bishop-rebuilt.blend",
-    "source_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
-    "profile": "history/bishop-mission-019/profile.json",
+    "config": "docs/bishop-mission/iteration-021/profile-fit.json",
+    "source": "history/bishop-mission-020/bishop-rebuilt.blend",
+    "source_sha256": "0542cb45a37058479eaade041711a74f7e32dd0eb46f95889cb72f1da46f84fa",
+    "profile": "history/bishop-mission-020/profile.json",
     "body_rings": {
-      "86": [
-        28.724142187499996,
-        70.98331875
+      "28": [
+        29,
+        163.8
       ],
-      "87": [
-        27.8965125,
-        70.1958
+      "29": [
+        27.5,
+        163.6
       ],
-      "88": [
-        27.0351515625,
-        69.40873125
-      ],
-      "89": [
-        26.145599999999998,
-        68.61840000000001
-      ],
-      "90": [
-        25.2333984375,
-        67.82109375
-      ],
-      "91": [
-        24.304087499999998,
-        67.0131
-      ],
-      "92": [
-        23.3632078125,
-        66.19070625
-      ],
-      "93": [
-        22.4163,
-        65.3502
-      ],
-      "94": [
-        21.468904687500004,
-        64.48786875
-      ],
-      "95": [
-        20.5265625,
-        63.60000000000001
-      ],
-      "96": [
-        19.5948140625,
-        62.68288125
-      ],
-      "97": [
-        18.679199999999998,
-        61.732800000000005
-      ],
-      "98": [
-        17.785260937500002,
-        60.74604375
-      ],
-      "99": [
-        16.9185375,
-        59.7189
-      ],
-      "100": [
-        16.0845703125,
-        58.64765625
-      ],
-      "101": [
-        15.2889,
-        57.5286
-      ],
-      "102": [
-        14.537067187499998,
-        56.35801875
-      ],
-      "103": [
-        13.834612500000002,
-        55.132200000000005
-      ],
-      "104": [
-        13.1870765625,
-        53.84743125
-      ],
-      "105": [
-        12.6,
-        52.5
-      ],
-      "106": [
-        0.01,
-        52.5
+      "30": [
+        26.2,
+        163.55
       ]
-    },
-    "finial_rings": {
-      "0": [
-        0.0108,
-        53.7
-      ],
-      "1": [
-        11.124000000000002,
-        53.7
-      ],
-      "2": [
-        12.636,
-        53.65
-      ],
-      "3": [
-        14.148,
-        53.45
-      ],
-      "4": [
-        15.174000000000001,
-        53.05
-      ],
-      "5": [
-        15.552000000000001,
-        52.3
-      ],
-      "6": [
-        15.336,
-        51.98
-      ],
-      "7": [
-        14.472000000000001,
-        51.33
-      ]
-    },
-    "head_cap_axis_y": 52.5
+    }
   },
-  "preservation_baseline": "history/bishop-mission-019/bishop-rebuilt.blend",
+  "preservation_baseline": "history/bishop-mission-020/bishop-rebuilt.blend",
   "declared_changed_body_rings": [
-    86,
-    87,
-    88,
-    89,
-    90,
-    91,
-    92,
-    93,
-    94,
-    95,
-    96,
-    97,
-    98,
-    99,
-    100,
-    101,
-    102,
-    103,
-    104,
-    105,
-    106
+    28,
+    29,
+    30
   ],
-  "declared_changed_finial_rings": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7
-  ],
+  "declared_changed_finial_rings": [],
   "all_unlisted_profile_points_preserved": true
 }
