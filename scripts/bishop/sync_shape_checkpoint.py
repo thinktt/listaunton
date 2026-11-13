@@ -1,21 +1,24 @@
-"""Deliver checked bishop geometry 017 without touching other pieces or missions."""
+"""Deliver a checked bishop geometry checkpoint without touching other pieces."""
 import argparse,hashlib,json,shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--canonical',type=Path,required=True);p.add_argument('--preview',type=Path,required=True)
+p.add_argument('--checkpoint',default='017');p.add_argument('--previous',default='016');p.add_argument('--log-prefix',default='143')
+p.add_argument('--archive',help='Optional already-created bishop checkpoint archive to preserve in the repository.')
 a=p.parse_args();canonical=a.canonical.resolve();preview=a.preview.resolve()
+assert a.checkpoint.isdigit() and a.previous.isdigit() and a.log_prefix.isdigit()
 assert canonical==Path('/home/toby/code/listaunton')
 assert preview==Path('/mnt/c/Users/toby/Documents/Codex/2026-10-01/go-x20/outputs/queen-hires')
 assert canonical!=ROOT and preview!=ROOT
 sha=lambda path:hashlib.sha256(path.read_bytes()).hexdigest()
-prior=json.loads((ROOT/'docs/bishop-mission/iteration-016/checkpoint.json').read_text())
+prior=json.loads((ROOT/f'docs/bishop-mission/iteration-{a.previous}/checkpoint.json').read_text())
 public=prior['public_stage_canonical_preview_identical_files']
 for relative,digest in public.items():
     assert sha(canonical/relative) in (digest,sha(ROOT/relative)),('Concurrent bishop work',relative)
 old_log=(canonical/'docs/bishop-mission-log.md').read_text()
 assert (ROOT/'docs/bishop-mission-log.md').read_text().startswith(old_log.rstrip()+'\n')
-out=ROOT/'docs/bishop-mission/iteration-017'
+out=ROOT/f'docs/bishop-mission/iteration-{a.checkpoint}'
 scores=json.loads((out/'scores.json').read_text());model_hash=scores['model_sha256']
 assert sha(ROOT/'models/bishop/bishop-rebuilt.blend')==model_hash
 for name in ['mission-validation.json','receiver-validation.json','pigment-validation.json','base-validation.json','slit-validation.json']:
@@ -45,16 +48,25 @@ for relative in public:
     copy(relative,canonical);copy(relative,preview)
 scripts=['README.md','profile.json','inspect_profile_landmarks.py','fit_profile_outline.py','profile_shape_trial.py',
     'validate_profile_shape.py','measure_collar_geometry.py','collect_shape_checkpoint.py','sync_shape_checkpoint.py',
-    'record_shape_trials.py','validate.py','validate_mission.py','validate_checkpoint.py','compare.py',
+    'record_shape_trials.py','record_collar_checkpoint.py','capture_slit_boundary.py','compare_slit_boundary.py','analyze_geometry_rows.py',
+    'fit_upper_collar_shape.py','capture_turning_edges.py','validate.py','validate_mission.py','validate_checkpoint.py','compare.py',
     'viewer-template.html','build_viewer.py','check_viewer.cjs']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]
+if a.archive:
+    assert a.archive.isdigit()
+    archive=ROOT/f'history/bishop-mission-{a.archive}'
+    for path in archive.rglob('*'):
+        if path.is_file():
+            relative=path.relative_to(ROOT).as_posix()
+            if (canonical/relative).exists():assert sha(canonical/relative)==sha(path),('Archive differs',relative)
+            copied.append(relative)
 for relative in copied:copy(relative,canonical)
 delivered={relative:sha(ROOT/relative) for relative in public}
 for relative,digest in delivered.items():
     assert sha(canonical/relative)==digest and sha(preview/relative)==digest,relative
 for relative,digest in protected_hashes.items():assert sha(canonical/relative)==digest,relative
-checkpoint={'classification':'Accepted geometry checkpoint; inherited finish remains unfinished','accepted_checkpoint':'017',
+checkpoint={'classification':'Accepted geometry checkpoint; inherited finish remains unfinished','accepted_checkpoint':a.checkpoint,
     'accepted_model_sha256':model_hash,'accepted_render_sha256':scores['render_sha256'],
     'accepted_atlas_sha256':scores['atlas_sha256'],'public_stage_canonical_preview_identical_files':delivered,
     'canonical_protected_file_hashes':protected_hashes,'all_saved_model_checks_passed':True,
@@ -62,8 +74,8 @@ checkpoint={'classification':'Accepted geometry checkpoint; inherited finish rem
     'scores_percent':scores['scores_percent'],'mean_percent':scores['mean_percent'],
     'geometry_phase_complete':False,'mission_complete':False,'goal_status':'active','no_quota_monitoring':True,'no_push':True,
     'note':'Only bishop files copied. Neutral is the review default. The old material/lights are retained without hiding their mismatch. Other pieces and shared gallery settings are untouched.'}
-relative='docs/bishop-mission/iteration-017/checkpoint.json'
+relative=f'docs/bishop-mission/iteration-{a.checkpoint}/checkpoint.json'
 (ROOT/relative).write_text(json.dumps(checkpoint,indent=2)+'\n',newline='\n');copy(relative,canonical)
 manifest=sorted(set(list(public)+copied+[relative]))
-(ROOT/'build/bishop-mission/143-delivered-files.json').write_text(json.dumps({r:sha(ROOT/r) for r in manifest},indent=2)+'\n')
+(ROOT/f'build/bishop-mission/{a.log_prefix}-delivered-files.json').write_text(json.dumps({r:sha(ROOT/r) for r in manifest},indent=2)+'\n')
 print(json.dumps({'synchronized':True,'public_files':len(public),'evidence_and_script_files':len(copied)+1,'model_sha256':model_hash},indent=2))

@@ -1,11 +1,18 @@
-"""Record geometry checkpoint 017 after saved-model and public-stage checks."""
+"""Record an accepted geometry checkpoint after saved-model and stage checks."""
 from pathlib import Path
-import hashlib,json,shutil
+import argparse,hashlib,json,shutil
 import numpy as np
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[2]
-out=ROOT/'docs/bishop-mission/iteration-017';assets=ROOT/'assets/bishop'
-trial=ROOT/'build/bishop-mission/143-geometry-checkpoint'
+p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--checkpoint',default='017');p.add_argument('--baseline',default='015')
+p.add_argument('--trial',default='143-geometry-checkpoint');p.add_argument('--log-prefix',default='143')
+p.add_argument('--interior-score',type=float,default=86)
+a=p.parse_args();assert a.checkpoint.isdigit() and a.baseline.isdigit() and a.log_prefix.isdigit()
+out=ROOT/f'docs/bishop-mission/iteration-{a.checkpoint}';assets=ROOT/'assets/bishop'
+(out/'validation').mkdir(parents=True,exist_ok=True)
+trial=ROOT/'build/bishop-mission'/a.trial
+assert trial.resolve().is_relative_to((ROOT/'build/bishop-mission').resolve())
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 model=ROOT/'models/bishop/bishop-rebuilt.blend';model_hash=sha(model)
 scope=json.loads((assets/'mission-validation.json').read_text())
@@ -15,14 +22,14 @@ assert anatomy['source_hash_matches'] and anatomy['head_button_join']['gap_free'
 assert all(p['nonmanifold_edges']==0 and p['signed_volume']>0 for p in anatomy['components'])
 assert sha(trial/'bishop.blend')==model_hash
 for name,other in [('render.png','wood.png'),('render-clay.png','neutral.png')]:assert sha(assets/name)==sha(trial/other)
-log=(ROOT/'build/bishop-mission/143-checkpoint-validation.log').read_text(encoding='utf-8-sig')
+log=(ROOT/f'build/bishop-mission/{a.log_prefix}-checkpoint-validation.log').read_text(encoding='utf-8-sig')
 for script in ['export_mission.py','validate.py','validate_mission.py','check_join_regression.py']:
     assert 'BISHOP_CHECKPOINT_CHECK_PASSED '+script in log,script
-viewer=json.loads((ROOT/'build/bishop-mission/143-viewer-check.log').read_text(encoding='utf-8-sig'))
+viewer=json.loads((ROOT/f'build/bishop-mission/{a.log_prefix}-viewer-check.log').read_text(encoding='utf-8-sig'))
 assert viewer['passed'] and viewer['sourceSha256']==model_hash
 (assets/'viewer-validation.json').write_text(json.dumps(viewer,indent=2)+'\n')
-assert 'PASS: bishop' in (ROOT/'build/bishop-mission/143-review-check.log').read_text(encoding='utf-8-sig')
-meta=json.loads((assets/'mesh.json').read_text());prior=ROOT/'history/bishop-mission-015'
+assert 'PASS: bishop' in (ROOT/f'build/bishop-mission/{a.log_prefix}-review-check.log').read_text(encoding='utf-8-sig')
+meta=json.loads((assets/'mesh.json').read_text());prior=ROOT/f'history/bishop-mission-{a.baseline}'
 old_meta=json.loads((prior/'mesh.json').read_text())
 assert meta['sourceSha256']==model_hash and meta['referenceCamera']==old_meta['referenceCamera']
 assert np.allclose(meta['bounds']['size'],old_meta['bounds']['size'],atol=1e-6,rtol=0)
@@ -31,7 +38,7 @@ assert sha(assets/'bishop-boxwood-albedo.png')==sha(prior/'bishop-boxwood-albedo
 reports={
  'base-validation.json':{'passed':True,'model_sha256':model_hash,'declared_shape_rings':scope['changed_body_rings'],
     'independent_scope_audit':'mission-validation.json','previous_two_ring_scope_superseded':True},
- 'slit-validation.json':{'passed':True,'model_sha256':model_hash,'cutter_unchanged_from_checkpoint_015':True,
+ 'slit-validation.json':{'passed':True,'model_sha256':model_hash,'cutter_unchanged_from_source':True,'source_checkpoint':a.baseline,
     'through_opening_probes':anatomy['slit_ray_probes'],'solid_floor':anatomy['solid_slot_floor']},
  'pigment-validation.json':{'passed':True,'model_sha256':model_hash,'source':scope['source'],
     'source_sha256':scope['source_sha256'],'packed_pixels_material_graph_control_uvs_and_lights_preserved':True,
@@ -45,8 +52,8 @@ for name in validation_names:shutil.copy2(assets/name,out/'validation'/name)
 for name in ['render.png','render-clay.png','side-profile.png','head-side.png','rear-oblique.png','camera.json','diagnostic-cameras.json']:
     (out/'views').mkdir(exist_ok=True);shutil.copy2(assets/name,out/'views'/name)
 shutil.copy2(ROOT/'scripts/bishop/profile.json',out/'profile.json')
-shutil.copy2(ROOT/'build/bishop-mission/143-viewer-check.log',out/'validation/viewer.json')
-shutil.copy2(ROOT/'build/bishop-mission/143-review-check.log',out/'validation/review.txt')
+shutil.copy2(ROOT/f'build/bishop-mission/{a.log_prefix}-viewer-check.log',out/'validation/viewer.json')
+shutil.copy2(ROOT/f'build/bishop-mission/{a.log_prefix}-review-check.log',out/'validation/review.txt')
 al=json.loads((assets/'original-alignment.json').read_text());scale=al['scale']*300/1254
 original=Image.open(assets/'original.png').convert('RGBA').transform((1254,1254),Image.Transform.AFFINE,
     (scale,0,al['x']*3,0,scale,al['y']*3),Image.Resampling.BILINEAR)
@@ -56,7 +63,8 @@ for name,path in [('before',prior/'render.png'),('after',assets/'render.png')]:
     m=np.array(Image.open(path).convert('RGBA'))[:,:,3]>127
     errors=[]
     for y in range(610,795,2):
-        a=np.flatnonzero(mask[y]);b=np.flatnonzero(m[y]);errors.append(abs((a[-1]-a[0])-(b[-1]-b[0]))/2)
+        reference_x=np.flatnonzero(mask[y]);model_x=np.flatnonzero(m[y])
+        errors.append(abs((reference_x[-1]-reference_x[0])-(model_x[-1]-model_x[0]))/2)
     regional[name]={'mean_half_width_error_native_px':float(np.mean(errors)),
                     'max_half_width_error_native_px':float(np.max(errors))}
 (out/'regional-geometry.json').write_text(json.dumps({'rows':[610,795,2],'source':'Registered original white, unchanged threshold; half-width diagnostic only, not interior-shape accuracy.','results':regional},indent=2)+'\n')
@@ -76,12 +84,12 @@ for i,(label,path) in enumerate([('Previous side',prior/'side-profile.png'),('Cu
 canvas.save(out/'side-comparison.png')
 metrics=json.loads((out/'comparison/metrics.json').read_text())
 assert metrics['render_sha256']==sha(assets/'render.png')
-scores={'silhouette':100*metrics['images']['selected']['silhouette_iou'],'interior':86,'color':83,'texture':77,'lighting':72}
+scores={'silhouette':100*metrics['images']['selected']['silhouette_iou'],'interior':a.interior_score,'color':83,'texture':77,'lighting':72}
 record={'scores_percent':scores,'mean_percent':sum(scores.values())/5,'holistic_range_percent':[75,85],
         'silhouette_measured_other_scores_subjective':True,'phase':'geometry',
         'model_sha256':model_hash,'render_sha256':sha(assets/'render.png'),'neutral_sha256':sha(assets/'render-clay.png'),
         'atlas_sha256':sha(assets/'bishop-boxwood-albedo.png'),'original_and_selected_ious':metrics['images'],
         'shape_complete':False,'full_mission_complete':False,
-        'tradeoff':'Shape improves while retained pigment and lighting no longer fit the changed surfaces as well. The full-image mean may fall; this is not claimed as a finished material checkpoint.'}
+        'tradeoff':'Geometry is evaluated independently of the retained pigment and lights. Those still have visible mismatches and are not newly fitted or claimed complete.'}
 (out/'scores.json').write_text(json.dumps(record,indent=2)+'\n')
 print(json.dumps({'collected':True,'model_sha256':model_hash,'regional_geometry':regional,'scores':scores},indent=2))

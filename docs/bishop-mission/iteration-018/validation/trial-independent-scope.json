@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "model_sha256": "c8a3cd32bf9c1da8877153ce6e0ef4b6cda5e76d02d77c96d34fee6c2c5f7c90",
+  "source": "history/bishop-mission-017/bishop-rebuilt.blend",
+  "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "config_sha256": "f43cdb0dfa9372bb5e70f42b3908aaec8b1051d46a165672b3b7943d546c148a",
+  "changed_body_rings": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "max_control_error_from_declared_edit": 9.701116132632137e-08,
+  "unlisted_controls_exact": true,
+  "topology_modifiers_uvs_cutter_button_materials_packed_pixels_lights_and_camera_preserved": true,
+  "reference_pixels_unchanged": true,
+  "camera_exactly_unchanged": true,
+  "shader": "Principled BSDF",
+  "albedo_bakes_lighting": false,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 55818,
+        "vertices": 56302,
+        "normal_max_component_error": 4.0650367736816406e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 5.456805229187012e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "saved_and_reopened": true,
+  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score."
+}

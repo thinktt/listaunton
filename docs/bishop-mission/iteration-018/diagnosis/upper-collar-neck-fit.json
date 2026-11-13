@@ -1,0 +1,42 @@
+{
+  "variant": "145-upper-collar-neck",
+  "source": "history/bishop-mission-017/bishop-rebuilt.blend",
+  "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "profile": "history/bishop-mission-017/profile.json",
+  "samples": 128,
+  "body_rings": {
+    "58": [
+      28.0,
+      98.25
+    ],
+    "59": [
+      27.5,
+      97.45
+    ],
+    "60": [
+      28.5,
+      96.55000000000001
+    ],
+    "61": [
+      30.5,
+      96.05000000000001
+    ],
+    "62": [
+      31.2,
+      94.94999999999999
+    ],
+    "63": [
+      31.1,
+      93.6
+    ],
+    "64": [
+      30.0,
+      92.30000000000001
+    ],
+    "65": [
+      28.5,
+      91.3
+    ]
+  },
+  "interpretation": "Narrow and lower the upper collar with a weighted single parameter while pinning its front-meridian y+r*sin(54). Correct the side/back neck bulge against the original; preserve all other controls, material, lights and reference camera."
+}

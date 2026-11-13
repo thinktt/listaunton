@@ -17,6 +17,8 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
  report['internal_features']['collars']='The upper collar has a small declared downward refinement; the other two collars are retained. Compare actual rim position separately from the photographic shadow trough.'
  report['internal_features']['lower_body']='The rear base shoulder is narrowed with a rounded lower turn, and the stem has a conservative taper correction. Socket and foot controls are retained. The geometry-phase scope audit checks all changed and unchanged controls.'
  report['internal_features']['limits']+=' The retained pigment and lights have not been refitted to this geometry; neutral comparison is required.'
+ if set(map(int,json.loads((root/'scripts/bishop/profile.json').read_text())['mission_shape_refit']['body_rings']))==set(range(49,57)):
+  report['internal_features']['collars']='The middle collar is narrowed and lowered to remove its rear bulge behind the head while holding the front rim in place. Upper and lower collars retain the prior checkpoint. Actual evaluated surface rays distinguish these edges from photographic shadows.'
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

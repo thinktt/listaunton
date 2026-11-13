@@ -63,9 +63,9 @@ def audit(model,config,profile_path):
         'max_control_error_from_declared_edit':max_error,'unlisted_controls_exact':True,
         'topology_modifiers_uvs_cutter_button_materials_packed_pixels_lights_and_camera_preserved':True,
         'reference_pixels_unchanged':True,'camera_exactly_unchanged':True,
-        'shader':'Principled BSDF','albedo_bakes_lighting':False,
+        'shader':'Principled BSDF','saved_scene_albedo_bakes_lighting_flag':False,
         'render_receivers':receivers,'saved_and_reopened':True,
-        'note':'The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score.'}
+        'note':'The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score. The preserved albedo metadata flag is not proof that pigment is illumination-free; the inherited atlas still contains photographic shading.'}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)

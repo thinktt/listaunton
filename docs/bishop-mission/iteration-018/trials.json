@@ -1,0 +1,173 @@
+{
+  "note": "Outline overlap measured; other ratings are subjective. The no-op shares the baseline geometry score. No finish improvement is claimed.",
+  "trials": [
+    {
+      "variant": "145-upper-collar-neck",
+      "model_sha256": "0fabd6a2f53a757221af77dedd2c8e17958eaa04407cca9cf3ba316a12cf1617",
+      "render_sha256": "e6f0f1bc0ee7d1cf9e388846697534d1a503b520f1bacc793735aeb727a872e6",
+      "config": {
+        "variant": "145-upper-collar-neck",
+        "source": "history/bishop-mission-017/bishop-rebuilt.blend",
+        "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+        "profile": "history/bishop-mission-017/profile.json",
+        "samples": 128,
+        "body_rings": {
+          "58": [
+            28.0,
+            98.25
+          ],
+          "59": [
+            27.5,
+            97.45
+          ],
+          "60": [
+            28.5,
+            96.55000000000001
+          ],
+          "61": [
+            30.5,
+            96.05000000000001
+          ],
+          "62": [
+            31.2,
+            94.94999999999999
+          ],
+          "63": [
+            31.1,
+            93.6
+          ],
+          "64": [
+            30.0,
+            92.30000000000001
+          ],
+          "65": [
+            28.5,
+            91.3
+          ]
+        },
+        "interpretation": "Narrow and lower the upper collar with a weighted single parameter while pinning its front-meridian y+r*sin(54). Correct the side/back neck bulge against the original; preserve all other controls, material, lights and reference camera."
+      },
+      "scores_percent": {
+        "silhouette": 96.81388324257657,
+        "interior": 86,
+        "color": 83,
+        "texture": 77,
+        "lighting": 72
+      },
+      "mean_percent": 82.96277664851532,
+      "decision": "No-op control: the optimizer selected zero displacement; no geometry improvement or public promotion."
+    },
+    {
+      "variant": "146-middle-collar-neck",
+      "model_sha256": "c8a3cd32bf9c1da8877153ce6e0ef4b6cda5e76d02d77c96d34fee6c2c5f7c90",
+      "render_sha256": "463a1d4921ddb2880364b6260c9016337828e96639d21e2654e6619c6dab990e",
+      "config": {
+        "variant": "146-middle-collar-neck",
+        "source": "history/bishop-mission-017/bishop-rebuilt.blend",
+        "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+        "profile": "history/bishop-mission-017/profile.json",
+        "samples": 128,
+        "body_rings": {
+          "49": [
+            34.6175,
+            106.10944900034842
+          ],
+          "50": [
+            33.9075,
+            105.22204766747964
+          ],
+          "51": [
+            34.725,
+            104.93149666782806
+          ],
+          "52": [
+            35.725,
+            103.83149666782805
+          ],
+          "53": [
+            36.025,
+            102.73149666782805
+          ],
+          "54": [
+            35.425000000000004,
+            101.33149666782805
+          ],
+          "55": [
+            34.1075,
+            100.02204766747964
+          ],
+          "56": [
+            32.6175,
+            99.20944900034843
+          ]
+        },
+        "interpretation": "Narrow and lower the middle collar with a weighted single parameter while pinning its front-meridian y+r*sin(54). Correct the side/back neck bulge against the original; preserve all other controls, material, lights and reference camera."
+      },
+      "scores_percent": {
+        "silhouette": 96.89658582486507,
+        "interior": 87,
+        "color": 83,
+        "texture": 77,
+        "lighting": 72
+      },
+      "mean_percent": 83.17931716497301,
+      "decision": "Accepted shape for final rendering: coupled middle-collar radius and height correction."
+    },
+    {
+      "variant": "147-middle-collar-checkpoint",
+      "model_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
+      "render_sha256": "d97959ac7d47b139c33c7342cc203aa20d2daacce029e548f81478c898e2b607",
+      "config": {
+        "variant": "147-middle-collar-checkpoint",
+        "source": "history/bishop-mission-017/bishop-rebuilt.blend",
+        "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+        "profile": "history/bishop-mission-017/profile.json",
+        "samples": 512,
+        "body_rings": {
+          "49": [
+            34.6175,
+            106.10944900034842
+          ],
+          "50": [
+            33.9075,
+            105.22204766747964
+          ],
+          "51": [
+            34.725,
+            104.93149666782806
+          ],
+          "52": [
+            35.725,
+            103.83149666782805
+          ],
+          "53": [
+            36.025,
+            102.73149666782805
+          ],
+          "54": [
+            35.425000000000004,
+            101.33149666782805
+          ],
+          "55": [
+            34.1075,
+            100.02204766747964
+          ],
+          "56": [
+            32.6175,
+            99.20944900034843
+          ]
+        },
+        "interpretation": "Narrow and lower the middle collar with a weighted single parameter while pinning its front-meridian y+r*sin(54). Correct the side/back neck bulge against the original; preserve all other controls, material, lights and reference camera."
+      },
+      "scores_percent": {
+        "silhouette": 96.89686689941414,
+        "interior": 87,
+        "color": 83,
+        "texture": 77,
+        "lighting": 72
+      },
+      "mean_percent": 83.17937337988283,
+      "decision": "Accepted saved/reopened 512-sample checkpoint; same physical geometry as 146."
+    }
+  ]
+}

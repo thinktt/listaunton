@@ -1,0 +1,22 @@
+{
+  "source": "history/bishop-mission-017/bishop-rebuilt.blend",
+  "source_sha256": "32e26f3fce9e0c8903fe2fc58c0c03e0d3a9873de5cc34c3a1e170c15010d9a9",
+  "config": "docs/bishop-mission/iteration-018/profile-fit.json",
+  "config_sha256": "27dd7c51b417ef85bb3a3fb082b1a8d9a870bfaea62f7fe3bfd07197f72a80c9",
+  "commands": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/profile_shape_trial.py -- docs/bishop-mission/iteration-018/profile-fit.json",
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_profile_shape.py -- --model build/bishop-mission/147-middle-collar-checkpoint/bishop.blend --config docs/bishop-mission/iteration-018/profile-fit.json --profile build/bishop-mission/147-middle-collar-checkpoint/profile.json --out build/bishop-mission/147-middle-collar-checkpoint/independent-scope.json"
+  ],
+  "promotion": "After inspecting the saved/reopened trial, copy bishop.blend/profile.json/wood.png/neutral.png to the current model, profile, render.png and render-clay.png. Preserve the atlas.",
+  "refresh": [
+    "blender --background --python-exit-code 1 --python scripts/bishop/validate_checkpoint.py",
+    "blender --background --python-exit-code 1 --python scripts/bishop/render_diagnostics.py",
+    "python scripts/bishop/compare.py",
+    "python scripts/bishop/mission_compare.py --render assets/bishop/render.png --previous history/bishop-mission-017/render.png --out docs/bishop-mission/iteration-018/comparison",
+    "python scripts/bishop/refresh_review.py",
+    "node scripts/bishop/check_viewer.cjs",
+    "node scripts/bishop/check_review.cjs"
+  ],
+  "environment": "Blender 5.2.2 Cycles/OPTIX; Python with NumPy/Pillow. Use an isolated working copy.",
+  "limits": "Blender saved-file bytes and evaluated Boolean UV hashes can vary; geometry, shader, camera and light snapshots match. Exact receiver checks retain the existing 1e-7 UV tolerance. No source pixel, alignment or mission change."
+}

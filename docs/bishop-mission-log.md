@@ -517,3 +517,41 @@ middle/lower collar cross-sections and slit edge/floor using actual projected
 surface positions, not just brightness. Retained finish issues remain a later
 phase. No mission, other piece, shared gallery setting or source is changed.
 No quota monitoring, subagents, publication or push.
+
+## Iteration 018 — correct the middle collar behind the head
+
+The geometry goal continues from accepted 017. The apparent head-to-collar
+bulge is identified by actual surface rays as the middle collar behind the
+head, near control ring 54. An upper-collar-only proposal selected zero
+displacement and is not accepted as an improvement. The middle collar is
+narrowed and lowered together, changing only controls 49–56 while preserving
+its projected front meridian. The measured front extent changes by less than
+0.05 pixel. In the affected image region, original-white mean edge discrepancy
+falls from 2.992 to about 1.585 pixels, with maximum error reduced from 12 to 5.
+
+The saved/reopened final render overlaps the original white by 98.694% and
+selected white 3 by 96.897%. The actual slit-interior boundary is separately
+ray-projected: it already follows the white sources more closely than its
+shading suggested, so the head, slit and button remain unchanged. The level
+side view keeps a smooth collar form. Overall bounds, 54-degree camera,
+references, registration and gallery proportions are preserved. See
+[iteration-018/assessment.md](bishop-mission/iteration-018/assessment.md).
+
+Scores are 96.90 / 87 / 83 / 77 / 72, mean 83.18%, holistic 75–85%.
+Silhouette is measured; other ratings are subjective. The retained material
+and lights are not refitted and remain unfinished. In particular, a saved
+metadata flag claiming that albedo excludes lighting is not proof that the
+inherited pigment is illumination-free; the scope report now says this clearly.
+
+Independent geometry and receiver scope, actual closed-component/slit/button
+anatomy, saved camera and export checks pass. Both bishop interaction harnesses
+pass. The exported current mesh has 139,736 triangles. Wood/neutral fixed
+renders, rotating mesh and side/rear views are rebuilt from the same saved
+model. Checkpoint 017 is archived and the delivery hashes are recorded in
+iteration-018/checkpoint.json. No native browser visual QA is claimed.
+
+The geometry goal remains active and incomplete. Next examine the socket
+lip-to-stem transition, lower-collar underside and residual button/foot edges,
+separating source sampling from a real shape mismatch. Mission files, other
+pieces, source images and shared sizing remain unchanged. No quota monitoring,
+subagents, publication or push.

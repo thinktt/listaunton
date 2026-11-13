@@ -32,6 +32,18 @@ does not change image placement, opacity, reference choice or orbit. The static
 neutral overlay also works without WebGL. Browser verification is simulated;
 no native browser inspection is claimed.
 
+Checkpoint 018 corrects the middle collar behind the head with a coupled
+radius/height edit. Use its tracked `profile-fit.json` with the same trial
+builder, starting from `history/bishop-mission-017`. `capture_turning_edges.py`
+identifies the actual surface behind outline pixels and measures front rim
+extents; `capture_slit_boundary.py` projects visible cut faces independently
+of shader brightness. These diagnostics do not fit photographic shadows as
+if they were physical edges. See iteration-018 for reproduction and findings.
+The collection/sync helpers accept checkpoint, prior/source checkpoint and
+log-prefix arguments; they still guard bishop-only delivery and unchanged
+missions, sources and shared settings. Do not rerun an old delivery command
+against a newer public checkpoint.
+
 ## Current wood mission
 
 The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is

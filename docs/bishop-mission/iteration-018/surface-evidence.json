@@ -1,0 +1,23 @@
+{
+  "source_checkpoint": "017",
+  "current_model_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
+  "middle_collar_front_extent_before": 565.0140913724899,
+  "middle_collar_front_extent_after": 564.9671519994736,
+  "front_extent_displacement_px": -0.04693937301635742,
+  "lower_head_image_rows_before": {
+    "mean_absolute_edge_error_px": 2.991869918699187,
+    "maximum_absolute_edge_error_px": 12,
+    "mean_left_signed_error_px": -2.097560975609756,
+    "mean_right_signed_error_px": 2.894308943089431
+  },
+  "lower_head_image_rows_after": {
+    "mean_absolute_edge_error_px": 1.5853658536585367,
+    "maximum_absolute_edge_error_px": 5,
+    "mean_left_signed_error_px": -0.44715447154471544,
+    "mean_right_signed_error_px": 1.2276422764227641
+  },
+  "outline_surface_identity": "First-hit surface rays locate the former bulge on middle-collar control ring 54, behind the head.",
+  "first_hypothesis_rejected": "An upper-collar-only fit selected zero displacement. Do not infer which 3D part causes an image-space outline just from its image position.",
+  "cut_result": "The ray-projected interior boundary closely follows selected white 3 and the blurred white original. Its broader-looking lower end is largely shading; cutter/head/button unchanged.",
+  "remaining": "This does not prove every other internal shape correct. Socket lip, lower-collar underside and button/foot edge residuals need separate examination."
+}
