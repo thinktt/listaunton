@@ -90,3 +90,7 @@ Tested three hue floors followed by three saturation ceilings in the lower-body 
 ## Iterations 054–058 — 2026-11-12 — local pigment repair diagnostics
 
 Traced lower-body pixels to real UVs, confirming nearly clipped blue pigment and baked dark/red bands. Four localized difference-of-Gaussian repairs tested two neighborhood radii and strengths without UV warping. Upper patch improves slightly, but lower brightness overshoots and strong corrections create blobs/muddy grain; all rejected. Fixed saved renders, per-scene receiver audits and representative full validation (055) completed. Unmasked atlas pixels remain exact. Current accepted checkpoint 047 and public assets unchanged. Next distinguish upper brightness from lower chroma defects rather than applying one correction to all three patches. Goal active and full match incomplete.
+
+## Iterations 059–060 — 2026-11-12 — upper-patch pigment lift
+
+Isolated the upper patch with a compact UV/excess-red mask. Two additive color lifts improve brown hue without changing lower bands, but the patch remains flat and lacks grain. Rejected for promotion despite a small color score gain. Saved NVIDIA renders, per-scene receiver checks, representative material/geometry/camera validation (059) and fixed comparisons recorded. Accepted checkpoint 047 remains unchanged. Next restore missing local grain through reference-to-surface correspondence rather than further grading a detail-poor patch. Goal active.

@@ -1,0 +1,22 @@
+{
+  "source_atlas_sha256": "37de531d5e4bef1eb0bd370c1aa2c85171297032677552aac26d659c9352b9b6",
+  "strength": 0.8,
+  "center_uv": [
+    0.5645,
+    0.4727
+  ],
+  "radii_uv": [
+    0.022,
+    0.012
+  ],
+  "additive_srgb_delta": [
+    20,
+    32,
+    16
+  ],
+  "excess_red_gate": "smoothstep of clamp((.40-G/R)/.22)",
+  "unmasked_pixels_exact": true,
+  "method": "Upper patch only, color-gated pigment lift; no resampling; inferred artistic correction, not recovered albedo.",
+  "source_model_sha256": "77221a063a8dbdd5f01545312c98e5bf31d4f86f3d6cbe0ea169ff198060a33e",
+  "model_sha256": "c5ab5753d4f7cb7fa4dedaea0ab95808eee76620b2303d4c2adc45ce9dc8f0df"
+}

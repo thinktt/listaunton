@@ -1,0 +1,7 @@
+# Upper pigment patch trial 059
+
+Rejected for promotion. A compact UV mask and excess-red gate add a small RGB lift only to the upper patch. Color is closer; missing grain and the patch outline remain. Lower-body patches are untouched, avoiding the earlier brightness overshoot. This experiment does not complete the repair or improve the other four categories.
+
+Reproduce from pinned checkpoint 047 with scripts/rook/repair_upper_pigment.py, apply_upper_pigment.py, render_saved_trial.py -- 059-local-pigment, and audit_mission.py 059-local-pigment. Each builder creates 059 and 060. The saved scene is reopened for NVIDIA OptiX rendering; all geometry, UV sampling, lights and the standard camera are unchanged by the builder. Unmasked atlas pixels stay byte-identical. Per-scene receiver checks and fixed-frame metrics are included; full material/geometry/camera validation is representative in iteration-059. No new side or viewer assets promoted. Existing side seams remain unresolved.
+
+The five-category scores distinguish measured silhouette overlap from subjective judgments. The one-point color gain does not establish that a visibly flat patch is acceptable. Accepted checkpoint 047 remains the synchronized public model. Next recover missing local grain from the selected reference using the measured surface-to-UV correspondence, then test under the actual BSDF lighting. Do not replace final shading with emission or a composited reference.
