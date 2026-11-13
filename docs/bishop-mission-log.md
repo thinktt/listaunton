@@ -734,3 +734,32 @@ the owner's apparent-fullness concern is not dismissed by high outline scores.
 Original source registration, mission statements, other pieces and side-gallery
 choices are preserved. Rejected trial evidence and reproduction scripts are
 recorded, without publishing those alternatives or claiming native browser QA.
+
+## Checkpoint 024 — a narrower stem with the root and base preserved
+
+Actual contour rays distinguish the stem from the rear base behind it. This
+explains why fitting the entire exposed region as stem in study 023 produced
+an unwanted lower swelling. The accepted change narrows only radii 34–36;
+all heights and other controls remain exact from checkpoint 022. A subpixel
+rear-shoulder proposal is omitted. See the [024 assessment](bishop-mission/iteration-024/assessment.md).
+
+Average original-white edge error in the exposed-stem rows falls from 3.646
+to 1.229 comparison pixels. The stem/base crossover worsens slightly, 2.375
+to 2.625 pixels; the rear-base region is unchanged. Plain level views show a
+slimmer taper without the rejected lower-stem bulge. The base becomes visible
+two sampled rows earlier because the stem is narrower, not because it moved.
+
+Final outline overlaps are 98.7742% original white, 97.0347% selected white 3
+and 97.8272% original black. Working scores are approximately
+97.03 / 82 / 83 / 77 / 72, mean 82.21, holistic 70–80%. Only outline is measured.
+The local improvement does not justify increasing the broad interior-form
+estimate or claiming the whole-image fullness concern is solved. Material,
+grain and lighting remain inherited and unfinished.
+
+The final saved/reopened model passes scoped control, actual anatomy, slit,
+button contact, receiver, UV, packed-pixel, camera and export checks. Its fixed
+wood/neutral, head/side/rear, rotating mesh and bishop review are synchronized;
+Node viewer/review checks pass. Bounds are unchanged. Rollback checkpoint 022,
+mission statements, originals, registration, other pieces and gallery settings
+are preserved. No native browser QA, quota watcher, workers, push or publication
+is claimed. The geometry goal remains active and incomplete.

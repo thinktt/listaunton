@@ -34,6 +34,10 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
   report['internal_features']['finial']='The head, shallow button and full-depth slit retain the preceding accepted geometry. Fuller lower-head experiments were rejected after level-view examination.'
   report['internal_features']['collars']='Only two middle-collar neck radii are narrowed, producing a real small overhang below the rounded rim while preserving every height and the other collar crests. Actual evaluated front projections and neutral/level views are checked; photographic shadows alone are not fitted as edges.'
   report['internal_features']['lower_body']='The corrected socket, stem, flare, groove and straight foot wall retain the preceding accepted geometry. No global scale, camera or source registration change accompanies the collar undercut.'
+ if set(map(int,json.loads((root/'scripts/bishop/profile.json').read_text())['mission_shape_refit']['body_rings']))=={34,35,36}:
+  report['internal_features']['finial']='The shallow button, direct head contact and full-depth mitre slit remain exact from checkpoint 022.'
+  report['internal_features']['collars']='The accepted collar rims, heights and middle-lip overhang remain exact from checkpoint 022.'
+  report['internal_features']['lower_body']='Only mid-stem radii 34-36 are narrowed. Every height, the lower-stem controls at the root, socket, flare, groove and foot are retained. Actual contour rays separate the stem boundary from the rear base; the unsupported subpixel shoulder adjustment is omitted. Level views check that the earlier lower-stem bulge has not been reintroduced.'
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

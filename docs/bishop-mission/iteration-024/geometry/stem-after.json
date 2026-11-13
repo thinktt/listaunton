@@ -1,0 +1,5063 @@
+{
+  "source": "build/bishop-mission/181-stem-checkpoint/bishop.blend",
+  "source_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "profile": "build/bishop-mission/181-stem-checkpoint/profile.json",
+  "method": "First-hit horizontal rays on actual evaluated side meridian. Cubic fits over +/-0.8 original-axis units suppress facet noise. No shader or camera fitting.",
+  "radius_monotone_over_full_sampled_range": false,
+  "waist_axis_y": 128.5,
+  "minimum_radius": 16.230228923379425,
+  "radius_monotone_after_measured_waist": true,
+  "maximum_tangent_angle_degrees": 16.576455843589503,
+  "steepest_tangent_at_axis_y": 153.9,
+  "rows": [
+    {
+      "axis_y": 126.0,
+      "radius": 16.34649489367589,
+      "slope": -0.04730568759958339,
+      "second_derivative": -1.684568328666664e-05,
+      "tangent_angle_from_vertical_degrees": -1.5927323078420175
+    },
+    {
+      "axis_y": 126.05,
+      "radius": 16.344135252212308,
+      "slope": -0.04731104760016128,
+      "second_derivative": -2.2131985572536654e-05,
+      "tangent_angle_from_vertical_degrees": -1.5929126804027267
+    },
+    {
+      "axis_y": 126.1,
+      "radius": 16.341775610748726,
+      "slope": -0.047319164864086515,
+      "second_derivative": -9.832522248031804e-06,
+      "tangent_angle_from_vertical_degrees": -1.593185839208696
+    },
+    {
+      "axis_y": 126.15,
+      "radius": 16.33940166842779,
+      "slope": -0.04732234070808707,
+      "second_derivative": -1.802629078803181e-05,
+      "tangent_angle_from_vertical_degrees": -1.593292711376842
+    },
+    {
+      "axis_y": 126.2,
+      "radius": 16.33704202696421,
+      "slope": -0.04732256456005802,
+      "second_derivative": -2.5585703040992752e-05,
+      "tangent_angle_from_vertical_degrees": -1.5933002443489106
+    },
+    {
+      "axis_y": 126.25,
+      "radius": 16.334682385500628,
+      "slope": -0.04732264450731284,
+      "second_derivative": -2.186767045897284e-05,
+      "tangent_angle_from_vertical_degrees": -1.5933029347001815
+    },
+    {
+      "axis_y": 126.3,
+      "radius": 16.33230844317969,
+      "slope": -0.04732535140414481,
+      "second_derivative": -1.7092377416465876e-05,
+      "tangent_angle_from_vertical_degrees": -1.5933940260455546
+    },
+    {
+      "axis_y": 126.35,
+      "radius": 16.329934500858755,
+      "slope": -0.04732252116025447,
+      "second_derivative": -1.0995508781593774e-05,
+      "tangent_angle_from_vertical_degrees": -1.5932987838770387
+    },
+    {
+      "axis_y": 126.4,
+      "radius": 16.32758916025253,
+      "slope": -0.04731683154900843,
+      "second_derivative": 7.171750097247151e-06,
+      "tangent_angle_from_vertical_degrees": -1.5931073194628393
+    },
+    {
+      "axis_y": 126.45,
+      "radius": 16.325215217931593,
+      "slope": -0.047315925404914284,
+      "second_derivative": 1.6810441254465468e-05,
+      "tangent_angle_from_vertical_degrees": -1.593076826278093
+    },
+    {
+      "axis_y": 126.5,
+      "radius": 16.3228269747533,
+      "slope": -0.047318742057808845,
+      "second_derivative": 5.955900561423296e-06,
+      "tangent_angle_from_vertical_degrees": -1.5931716111086227
+    },
+    {
+      "axis_y": 126.55,
+      "radius": 16.32049593500443,
+      "slope": -0.04732256650178996,
+      "second_derivative": 2.6255300864064324e-06,
+      "tangent_angle_from_vertical_degrees": -1.5933003096912541
+    },
+    {
+      "axis_y": 126.6,
+      "radius": 16.318121992683494,
+      "slope": -0.04733083977689107,
+      "second_derivative": -3.5065805213364173e-06,
+      "tangent_angle_from_vertical_degrees": -1.593578718415253
+    },
+    {
+      "axis_y": 126.65,
+      "radius": 16.315733749505203,
+      "slope": -0.04733106568474649,
+      "second_derivative": -1.7973427840362785e-06,
+      "tangent_angle_from_vertical_degrees": -1.5935863205689667
+    },
+    {
+      "axis_y": 126.7,
+      "radius": 16.31337410804162,
+      "slope": -0.04732940027101803,
+      "second_derivative": 9.762038203310875e-06,
+      "tangent_angle_from_vertical_degrees": -1.5935302767831718
+    },
+    {
+      "axis_y": 126.75,
+      "radius": 16.311000165720685,
+      "slope": -0.047322681739852934,
+      "second_derivative": 3.5770645422107536e-06,
+      "tangent_angle_from_vertical_degrees": -1.5933041876339011
+    },
+    {
+      "axis_y": 126.8,
+      "radius": 16.3086405242571,
+      "slope": -0.047323611068594354,
+      "second_derivative": 7.770864305472919e-06,
+      "tangent_angle_from_vertical_degrees": -1.593335461011854
+    },
+    {
+      "axis_y": 126.85,
+      "radius": 16.30628088279352,
+      "slope": -0.04731612070450511,
+      "second_derivative": 3.383233431938375e-06,
+      "tangent_angle_from_vertical_degrees": -1.5930833984188943
+    },
+    {
+      "axis_y": 126.9,
+      "radius": 16.303935542187293,
+      "slope": -0.04731283716026983,
+      "second_derivative": 1.0572604307900931e-06,
+      "tangent_angle_from_vertical_degrees": -1.5929729019450456
+    },
+    {
+      "axis_y": 126.95,
+      "radius": 16.301547299009002,
+      "slope": -0.047313537040494034,
+      "second_derivative": -7.929453302306611e-07,
+      "tangent_angle_from_vertical_degrees": -1.5929964540261545
+    },
+    {
+      "axis_y": 127.0,
+      "radius": 16.299173356688065,
+      "slope": -0.04731016795287996,
+      "second_derivative": -2.0087948857677355e-06,
+      "tangent_angle_from_vertical_degrees": -1.5928830788721418
+    },
+    {
+      "axis_y": 127.05,
+      "radius": 16.296813715224484,
+      "slope": -0.047307471563520886,
+      "second_derivative": -1.1171718900089139e-05,
+      "tangent_angle_from_vertical_degrees": -1.592792341074801
+    },
+    {
+      "axis_y": 127.1,
+      "radius": 16.294454073760903,
+      "slope": -0.04731325825339752,
+      "second_derivative": -1.0748814666293299e-05,
+      "tangent_angle_from_vertical_degrees": -1.592987072397646
+    },
+    {
+      "axis_y": 127.15,
+      "radius": 16.292080131439967,
+      "slope": -0.04731469673130227,
+      "second_derivative": -1.1065992791721227e-05,
+      "tangent_angle_from_vertical_degrees": -1.5930354794625121
+    },
+    {
+      "axis_y": 127.2,
+      "radius": 16.289720489976386,
+      "slope": -0.047311749764531466,
+      "second_derivative": -1.0220184429213748e-05,
+      "tangent_angle_from_vertical_degrees": -1.5929363093503561
+    },
+    {
+      "axis_y": 127.25,
+      "radius": 16.287360848512805,
+      "slope": -0.047320261510836015,
+      "second_derivative": -9.797280277990788e-06,
+      "tangent_angle_from_vertical_degrees": -1.5932227431056663
+    },
+    {
+      "axis_y": 127.3,
+      "radius": 16.284986906191868,
+      "slope": -0.047324536742484206,
+      "second_derivative": -1.1383170899375454e-05,
+      "tangent_angle_from_vertical_degrees": -1.5933666113973426
+    },
+    {
+      "axis_y": 127.35,
+      "radius": 16.282627264728287,
+      "slope": -0.04731974071211386,
+      "second_derivative": -2.590288153661551e-06,
+      "tangent_angle_from_vertical_degrees": -1.5932052174054234
+    },
+    {
+      "axis_y": 127.4,
+      "radius": 16.280267623264706,
+      "slope": -0.04732664540605641,
+      "second_derivative": -1.2863335653910865e-05,
+      "tangent_angle_from_vertical_degrees": -1.5934375712468147
+    },
+    {
+      "axis_y": 127.45,
+      "radius": 16.27789368094377,
+      "slope": -0.047334483426051926,
+      "second_derivative": -1.59293908901851e-05,
+      "tangent_angle_from_vertical_degrees": -1.593701332918416
+    },
+    {
+      "axis_y": 127.5,
+      "radius": 16.27553403948019,
+      "slope": -0.0473367098403124,
+      "second_derivative": -1.1453655086858192e-06,
+      "tangent_angle_from_vertical_degrees": -1.5937762552394585
+    },
+    {
+      "axis_y": 127.55,
+      "radius": 16.273145796301897,
+      "slope": -0.04733646782885525,
+      "second_derivative": 3.894242623442932e-06,
+      "tangent_angle_from_vertical_degrees": -1.5937681111757853
+    },
+    {
+      "axis_y": 127.6,
+      "radius": 16.270800455695667,
+      "slope": -0.04733375739154583,
+      "second_derivative": 1.8678268016038734e-05,
+      "tangent_angle_from_vertical_degrees": -1.5936769007208935
+    },
+    {
+      "axis_y": 127.65,
+      "radius": 16.268412212517376,
+      "slope": -0.04733161001074047,
+      "second_derivative": 3.309225224810015e-05,
+      "tangent_angle_from_vertical_degrees": -1.5936046379923112
+    },
+    {
+      "axis_y": 127.7,
+      "radius": 16.266052571053795,
+      "slope": -0.047762438197308264,
+      "second_derivative": 0.0012693645250804269,
+      "tangent_angle_from_vertical_degrees": -1.6081025796225836
+    },
+    {
+      "axis_y": 127.75,
+      "radius": 16.263692929590214,
+      "slope": -0.04871451081573862,
+      "second_derivative": 0.004368952626439537,
+      "tangent_angle_from_vertical_degrees": -1.6401403566369903
+    },
+    {
+      "axis_y": 127.8,
+      "radius": 16.261318987269277,
+      "slope": -0.0498143966038519,
+      "second_derivative": 0.008962467373897791,
+      "tangent_angle_from_vertical_degrees": -1.677150851189095
+    },
+    {
+      "axis_y": 127.85,
+      "radius": 16.25894504494834,
+      "slope": -0.05077671250981792,
+      "second_derivative": 0.014690264002204627,
+      "tangent_angle_from_vertical_degrees": -1.709531054834544
+    },
+    {
+      "axis_y": 127.9,
+      "radius": 16.256599704342115,
+      "slope": -0.051380649834060446,
+      "second_derivative": 0.021225067536931208,
+      "tangent_angle_from_vertical_degrees": -1.7298519056588064
+    },
+    {
+      "axis_y": 127.95,
+      "radius": 16.25422576202118,
+      "slope": -0.05145299151022811,
+      "second_derivative": 0.028263232774910937,
+      "tangent_angle_from_vertical_degrees": -1.7322859775065262
+    },
+    {
+      "axis_y": 128.0,
+      "radius": 16.251851819700242,
+      "slope": -0.05086673153191857,
+      "second_derivative": 0.03553697326365261,
+      "tangent_angle_from_vertical_degrees": -1.7125599778672413
+    },
+    {
+      "axis_y": 128.05,
+      "radius": 16.249506479094016,
+      "slope": -0.04954633239193881,
+      "second_derivative": 0.0427760179884752,
+      "tangent_angle_from_vertical_degrees": -1.6681307796973222
+    },
+    {
+      "axis_y": 128.1,
+      "radius": 16.24713253677308,
+      "slope": -0.04746016984752646,
+      "second_derivative": 0.049754588978812186,
+      "tangent_angle_from_vertical_degrees": -1.5979308689812595
+    },
+    {
+      "axis_y": 128.15,
+      "radius": 16.244758594452144,
+      "slope": -0.044609129142111834,
+      "second_derivative": 0.056282661288496655,
+      "tangent_angle_from_vertical_degrees": -1.501984890355316
+    },
+    {
+      "axis_y": 128.2,
+      "radius": 16.242398952988562,
+      "slope": -0.0410411430548897,
+      "second_derivative": 0.06219383974299541,
+      "tangent_angle_from_vertical_degrees": -1.3818997646710174
+    },
+    {
+      "axis_y": 128.25,
+      "radius": 16.24003931152498,
+      "slope": -0.03682022413805048,
+      "second_derivative": 0.06733498016488886,
+      "tangent_angle_from_vertical_degrees": -1.2398237532080196
+    },
+    {
+      "axis_y": 128.3,
+      "radius": 16.2376796700614,
+      "slope": -0.03202391177559411,
+      "second_derivative": 0.07157142281419014,
+      "tangent_angle_from_vertical_degrees": -1.0783615996115943
+    },
+    {
+      "axis_y": 128.35,
+      "radius": 16.23530572774046,
+      "slope": -0.026770306431038827,
+      "second_derivative": 0.0748043667011374,
+      "tangent_angle_from_vertical_degrees": -0.9014856558628375
+    },
+    {
+      "axis_y": 128.4,
+      "radius": 16.23294608627688,
+      "slope": -0.021171741293675994,
+      "second_derivative": 0.07697086958665844,
+      "tangent_angle_from_vertical_degrees": -0.7129769322729116
+    },
+    {
+      "axis_y": 128.45,
+      "radius": 16.230586444813298,
+      "slope": -0.015376879257307477,
+      "second_derivative": 0.0779950201698703,
+      "tangent_angle_from_vertical_degrees": -0.5178425067767914
+    },
+    {
+      "axis_y": 128.5,
+      "radius": 16.230228923379425,
+      "slope": -0.009522767463924033,
+      "second_derivative": 0.0779012235463597,
+      "tangent_angle_from_vertical_degrees": -0.320700739739974
+    },
+    {
+      "axis_y": 128.55,
+      "radius": 16.231315788538407,
+      "slope": -0.003751290315722863,
+      "second_derivative": 0.07665393814379046,
+      "tangent_angle_from_vertical_degrees": -0.12633430332872178
+    },
+    {
+      "axis_y": 128.6,
+      "radius": 16.232374051982678,
+      "slope": 0.0017883625558714278,
+      "second_derivative": 0.07429881999285262,
+      "tangent_angle_from_vertical_degrees": 0.060227762052494555
+    },
+    {
+      "axis_y": 128.65,
+      "radius": 16.233432315426953,
+      "slope": 0.006974829071469613,
+      "second_derivative": 0.07087904056223296,
+      "tangent_angle_from_vertical_degrees": 0.2348942867006712
+    },
+    {
+      "axis_y": 128.7,
+      "radius": 16.23450487972858,
+      "slope": 0.011685606876671686,
+      "second_derivative": 0.06647537455076506,
+      "tangent_angle_from_vertical_degrees": 0.39353717158372054
+    },
+    {
+      "axis_y": 128.75,
+      "radius": 16.23557744403021,
+      "slope": 0.01580152124652813,
+      "second_derivative": 0.061181741928958366,
+      "tangent_angle_from_vertical_degrees": 0.5321422351555699
+    },
+    {
+      "axis_y": 128.8,
+      "radius": 16.236650008331836,
+      "slope": 0.019241541390199936,
+      "second_derivative": 0.05515403575124967,
+      "tangent_angle_from_vertical_degrees": 0.6479815802346421
+    },
+    {
+      "axis_y": 128.85,
+      "radius": 16.237708271776107,
+      "slope": 0.021954435680119788,
+      "second_derivative": 0.04852829019625936,
+      "tangent_angle_from_vertical_degrees": 0.7393319776752219
+    },
+    {
+      "axis_y": 128.9,
+      "radius": 16.238766535220382,
+      "slope": 0.0238987679580165,
+      "second_derivative": 0.041465913693799226,
+      "tangent_angle_from_vertical_degrees": 0.8048005537999912
+    },
+    {
+      "axis_y": 128.95,
+      "radius": 16.239824798664653,
+      "slope": 0.025076857947910706,
+      "second_derivative": 0.0342094065504397,
+      "tangent_angle_from_vertical_degrees": 0.8444675943885598
+    },
+    {
+      "axis_y": 129.0,
+      "radius": 16.24091166382364,
+      "slope": 0.025539249160683914,
+      "second_derivative": 0.02697092569791878,
+      "tangent_angle_from_vertical_degrees": 0.8600363820115839
+    },
+    {
+      "axis_y": 129.05,
+      "radius": 16.24199852898262,
+      "slope": 0.025364705199828745,
+      "second_derivative": 0.019998486818243236,
+      "tangent_angle_from_vertical_degrees": 0.8541594731530525
+    },
+    {
+      "axis_y": 129.1,
+      "radius": 16.24305679242689,
+      "slope": 0.024676336589157397,
+      "second_derivative": 0.013591594177755736,
+      "tangent_angle_from_vertical_degrees": 0.8309818739694462
+    },
+    {
+      "axis_y": 129.15,
+      "radius": 16.24412935672852,
+      "slope": 0.023661670823287847,
+      "second_derivative": 0.008045523001044826,
+      "tangent_angle_from_vertical_degrees": 0.7968172477164607
+    },
+    {
+      "axis_y": 129.2,
+      "radius": 16.245187620172793,
+      "slope": 0.0225673949276655,
+      "second_derivative": 0.0036931517426818873,
+      "tangent_angle_from_vertical_degrees": 0.7599714488840176
+    },
+    {
+      "axis_y": 129.25,
+      "radius": 16.246245883617068,
+      "slope": 0.02168822121717429,
+      "second_derivative": 0.0008839930887064364,
+      "tangent_angle_from_vertical_degrees": 0.7303679844033966
+    },
+    {
+      "axis_y": 129.3,
+      "radius": 16.24733274877605,
+      "slope": 0.02138108054459087,
+      "second_derivative": 1.9048309243240615e-05,
+      "tangent_angle_from_vertical_degrees": 0.7200258763485293
+    },
+    {
+      "axis_y": 129.35,
+      "radius": 16.248391012220324,
+      "slope": 0.02138843956680447,
+      "second_derivative": 9.779659205127331e-06,
+      "tangent_angle_from_vertical_degrees": 0.7202736715090005
+    },
+    {
+      "axis_y": 129.4,
+      "radius": 16.249477877379306,
+      "slope": 0.021386874772396806,
+      "second_derivative": -8.387599585051879e-06,
+      "tangent_angle_from_vertical_degrees": 0.720220981293711
+    },
+    {
+      "axis_y": 129.45,
+      "radius": 16.250536140823577,
+      "slope": 0.021381276757754836,
+      "second_derivative": -8.651914748947958e-06,
+      "tangent_angle_from_vertical_degrees": 0.7200324832962478
+    },
+    {
+      "axis_y": 129.5,
+      "radius": 16.251594404267852,
+      "slope": 0.02137828353592354,
+      "second_derivative": -7.048403150594973e-07,
+      "tangent_angle_from_vertical_degrees": 0.7199316946429392
+    },
+    {
+      "axis_y": 129.55,
+      "radius": 16.25266696856948,
+      "slope": 0.021380814891579863,
+      "second_derivative": -1.1612244005657837e-05,
+      "tangent_angle_from_vertical_degrees": 0.720016931201703
+    },
+    {
+      "axis_y": 129.6,
+      "radius": 16.253753833728464,
+      "slope": 0.02137910824801557,
+      "second_derivative": -2.1462387269535866e-05,
+      "tangent_angle_from_vertical_degrees": 0.7199594645935607
+    },
+    {
+      "axis_y": 129.65,
+      "radius": 16.254812097172735,
+      "slope": 0.021370169355600512,
+      "second_derivative": -2.2572510716713007e-05,
+      "tangent_angle_from_vertical_degrees": 0.7196584715339843
+    },
+    {
+      "axis_y": 129.7,
+      "radius": 16.255870360617006,
+      "slope": 0.021369823755429937,
+      "second_derivative": -3.3374188441069365e-05,
+      "tangent_angle_from_vertical_degrees": 0.7196468343808526
+    },
+    {
+      "axis_y": 129.75,
+      "radius": 16.25695722577599,
+      "slope": 0.021370316915222926,
+      "second_derivative": -3.221120192529677e-05,
+      "tangent_angle_from_vertical_degrees": 0.719663440206057
+    },
+    {
+      "axis_y": 129.8,
+      "radius": 16.258015489220263,
+      "slope": 0.021370979106181586,
+      "second_derivative": -9.550586128128668e-06,
+      "tangent_angle_from_vertical_degrees": 0.7196857376994332
+    },
+    {
+      "axis_y": 129.85,
+      "radius": 16.259073752664538,
+      "slope": 0.021369058090008393,
+      "second_derivative": 4.158557776099297e-06,
+      "tangent_angle_from_vertical_degrees": 0.7196210526637417
+    },
+    {
+      "axis_y": 129.9,
+      "radius": 16.26016061782352,
+      "slope": 0.021368683252025594,
+      "second_derivative": -1.1154097823012721e-05,
+      "tangent_angle_from_vertical_degrees": 0.7196084310059726
+    },
+    {
+      "axis_y": 129.95,
+      "radius": 16.261233182125146,
+      "slope": 0.02136485229813598,
+      "second_derivative": -7.718001347788317e-06,
+      "tangent_angle_from_vertical_degrees": 0.7194794339655348
+    },
+    {
+      "axis_y": 130.0,
+      "radius": 16.26229144556942,
+      "slope": 0.021359331261189936,
+      "second_derivative": -5.709206472457414e-06,
+      "tangent_angle_from_vertical_degrees": 0.7192935279233678
+    },
+    {
+      "axis_y": 130.05,
+      "radius": 16.263349709013692,
+      "slope": 0.021359893289773633,
+      "second_derivative": -4.3347678636576215e-06,
+      "tangent_angle_from_vertical_degrees": 0.7193124527221735
+    },
+    {
+      "axis_y": 130.1,
+      "radius": 16.264436574172677,
+      "slope": 0.021366650081429562,
+      "second_derivative": -1.0572604765120206e-06,
+      "tangent_angle_from_vertical_degrees": 0.7195399694703679
+    },
+    {
+      "axis_y": 130.15,
+      "radius": 16.265480536759593,
+      "slope": 0.02136394364151142,
+      "second_derivative": 3.17178137503063e-06,
+      "tangent_angle_from_vertical_degrees": 0.7194488374032111
+    },
+    {
+      "axis_y": 130.2,
+      "radius": 16.266553101061223,
+      "slope": 0.021367767057527298,
+      "second_derivative": 7.400823156734481e-06,
+      "tangent_angle_from_vertical_degrees": 0.7195775806278141
+    },
+    {
+      "axis_y": 130.25,
+      "radius": 16.267639966220205,
+      "slope": 0.021368301904057908,
+      "second_derivative": -6.801708947952267e-06,
+      "tangent_angle_from_vertical_degrees": 0.7195955901419545
+    },
+    {
+      "axis_y": 130.3,
+      "radius": 16.26871253052183,
+      "slope": 0.02136558541364541,
+      "second_derivative": -2.1497629390502164e-06,
+      "tangent_angle_from_vertical_degrees": 0.7195041196537217
+    },
+    {
+      "axis_y": 130.35,
+      "radius": 16.26975649310875,
+      "slope": 0.021369510476747112,
+      "second_derivative": 2.9250872252876815e-06,
+      "tangent_angle_from_vertical_degrees": 0.719636285566549
+    },
+    {
+      "axis_y": 130.4,
+      "radius": 16.270829057410378,
+      "slope": 0.02137226671234273,
+      "second_derivative": 9.215786979557431e-06,
+      "tangent_angle_from_vertical_degrees": 0.719729094361225
+    },
+    {
+      "axis_y": 130.45,
+      "radius": 16.271915922569363,
+      "slope": 0.021375138186064218,
+      "second_derivative": -1.2193737296786227e-05,
+      "tangent_angle_from_vertical_degrees": 0.7198257834847478
+    },
+    {
+      "axis_y": 130.5,
+      "radius": 16.27295988515628,
+      "slope": 0.021373345999070672,
+      "second_derivative": -1.3638659877837035e-05,
+      "tangent_angle_from_vertical_degrees": 0.7197654364277933
+    },
+    {
+      "axis_y": 130.55,
+      "radius": 16.27403244945791,
+      "slope": 0.021373881873503305,
+      "second_derivative": -4.916261129270124e-06,
+      "tangent_angle_from_vertical_degrees": 0.7197834805522753
+    },
+    {
+      "axis_y": 130.6,
+      "radius": 16.27511931461689,
+      "slope": 0.02137189244540522,
+      "second_derivative": -1.494261445083461e-05,
+      "tangent_angle_from_vertical_degrees": 0.7197164919324626
+    },
+    {
+      "axis_y": 130.65,
+      "radius": 16.276191878918517,
+      "slope": 0.02136735909857618,
+      "second_derivative": -6.431667764199066e-06,
+      "tangent_angle_from_vertical_degrees": 0.719563843710531
+    },
+    {
+      "axis_y": 130.7,
+      "radius": 16.277235841505437,
+      "slope": 0.02137320620574261,
+      "second_derivative": -6.5550148420156085e-06,
+      "tangent_angle_from_vertical_degrees": 0.7197607292649352
+    },
+    {
+      "axis_y": 130.75,
+      "radius": 16.27832270666442,
+      "slope": 0.021368736245584715,
+      "second_derivative": -5.885416543744385e-06,
+      "tangent_angle_from_vertical_degrees": 0.7196102154211051
+    },
+    {
+      "axis_y": 130.8,
+      "radius": 16.27939527096605,
+      "slope": 0.021367971493869004,
+      "second_derivative": -2.4704652674399246e-05,
+      "tangent_angle_from_vertical_degrees": 0.7195844644701596
+    },
+    {
+      "axis_y": 130.85,
+      "radius": 16.28045353441032,
+      "slope": 0.021362952639294417,
+      "second_derivative": -2.408791742325337e-05,
+      "tangent_angle_from_vertical_degrees": 0.7194154680745769
+    },
+    {
+      "axis_y": 130.9,
+      "radius": 16.28151179785459,
+      "slope": 0.02136057832273583,
+      "second_derivative": -1.3832490978197227e-05,
+      "tangent_angle_from_vertical_degrees": 0.7193355193619169
+    },
+    {
+      "axis_y": 130.95,
+      "radius": 16.282598663013577,
+      "slope": 0.021355902098899718,
+      "second_derivative": -2.285444688209967e-05,
+      "tangent_angle_from_vertical_degrees": 0.7191780601158431
+    },
+    {
+      "axis_y": 131.0,
+      "radius": 16.283656926457848,
+      "slope": 0.02135383318049984,
+      "second_derivative": -3.3832334740276545e-06,
+      "tangent_angle_from_vertical_degrees": 0.71910839485621
+    },
+    {
+      "axis_y": 131.05,
+      "radius": 16.284715189902123,
+      "slope": 0.021359411094156393,
+      "second_derivative": -1.709237740662518e-06,
+      "tangent_angle_from_vertical_degrees": 0.7192962160835031
+    },
+    {
+      "axis_y": 131.1,
+      "radius": 16.285802055061104,
+      "slope": 0.021358038515533567,
+      "second_derivative": -8.40522064600002e-06,
+      "tangent_angle_from_vertical_degrees": 0.7192499981946344
+    },
+    {
+      "axis_y": 131.15,
+      "radius": 16.28686031850538,
+      "slope": 0.021349678212160793,
+      "second_derivative": -7.154129110326889e-06,
+      "tangent_angle_from_vertical_degrees": 0.718968487472037
+    },
+    {
+      "axis_y": 131.2,
+      "radius": 16.287932882807006,
+      "slope": 0.021351940374281026,
+      "second_derivative": 2.73125615091243e-06,
+      "tangent_angle_from_vertical_degrees": 0.7190446596984922
+    },
+    {
+      "axis_y": 131.25,
+      "radius": 16.288976845393922,
+      "slope": 0.02135383420839177,
+      "second_derivative": 1.3303860738240093e-05,
+      "tangent_angle_from_vertical_degrees": 0.7191084294677053
+    },
+    {
+      "axis_y": 131.3,
+      "radius": 16.290063710552907,
+      "slope": 0.02135655069883436,
+      "second_derivative": -4.352388883828037e-06,
+      "tangent_angle_from_vertical_degrees": 0.7191998999728144
+    },
+    {
+      "axis_y": 131.35,
+      "radius": 16.291136274854534,
+      "slope": 0.021357151444639327,
+      "second_derivative": 1.6651852135703976e-05,
+      "tangent_angle_from_vertical_degrees": 0.7192201284705909
+    },
+    {
+      "axis_y": 131.4,
+      "radius": 16.29219453829881,
+      "slope": 0.020973549989516213,
+      "second_derivative": 0.0011295242087265322,
+      "tangent_angle_from_vertical_degrees": 0.7063033458442717
+    },
+    {
+      "axis_y": 131.45,
+      "radius": 16.29328140345779,
+      "slope": 0.020315471532006156,
+      "second_derivative": 0.0033715507327873244,
+      "tangent_angle_from_vertical_degrees": 0.6841440965880295
+    },
+    {
+      "axis_y": 131.5,
+      "radius": 16.294325366044706,
+      "slope": 0.01959925972251002,
+      "second_derivative": 0.006520107614357036,
+      "tangent_angle_from_vertical_degrees": 0.6600271106176611
+    },
+    {
+      "axis_y": 131.55,
+      "radius": 16.29541223120369,
+      "slope": 0.01900900432751116,
+      "second_derivative": 0.010379443079807751,
+      "tangent_angle_from_vertical_degrees": 0.6401512762938328
+    },
+    {
+      "axis_y": 131.6,
+      "radius": 16.296456193790608,
+      "slope": 0.01867774462334934,
+      "second_derivative": 0.014702352013376522,
+      "tangent_angle_from_vertical_degrees": 0.628996608201551
+    },
+    {
+      "axis_y": 131.65,
+      "radius": 16.297543058949593,
+      "slope": 0.018709063011232385,
+      "second_derivative": 0.019313840188625912,
+      "tangent_angle_from_vertical_degrees": 0.6300512094648245
+    },
+    {
+      "axis_y": 131.7,
+      "radius": 16.29861562325122,
+      "slope": 0.019183837697098707,
+      "second_derivative": 0.024037926602411656,
+      "tangent_angle_from_vertical_degrees": 0.6460385053208131
+    },
+    {
+      "axis_y": 131.75,
+      "radius": 16.299673886695494,
+      "slope": 0.02013943644231939,
+      "second_derivative": 0.02873434803434342,
+      "tangent_angle_from_vertical_degrees": 0.6782164926674172
+    },
+    {
+      "axis_y": 131.8,
+      "radius": 16.300760751854476,
+      "slope": 0.021592482546542106,
+      "second_derivative": 0.03322012794129684,
+      "tangent_angle_from_vertical_degrees": 0.7271442559733412
+    },
+    {
+      "axis_y": 131.85,
+      "radius": 16.301804714441392,
+      "slope": 0.023544846316506645,
+      "second_derivative": 0.03737924960914225,
+      "tangent_angle_from_vertical_degrees": 0.7928836341820245
+    },
+    {
+      "axis_y": 131.9,
+      "radius": 16.302877278743022,
+      "slope": 0.025957723226183043,
+      "second_derivative": 0.04113130838029627,
+      "tangent_angle_from_vertical_degrees": 0.8741263626901248
+    },
+    {
+      "axis_y": 131.95,
+      "radius": 16.303964143902004,
+      "slope": 0.028788366326321722,
+      "second_derivative": 0.0443339617551614,
+      "tangent_angle_from_vertical_degrees": 0.969430975427043
+    },
+    {
+      "axis_y": 132.0,
+      "radius": 16.30502240734628,
+      "slope": 0.03197089709789453,
+      "second_derivative": 0.0469571659158788,
+      "tangent_angle_from_vertical_degrees": 1.0765768230700712
+    },
+    {
+      "axis_y": 132.05,
+      "radius": 16.306094971647905,
+      "slope": 0.035440130506401615,
+      "second_derivative": 0.04890194366258559,
+      "tangent_angle_from_vertical_degrees": 1.1933664471358298
+    },
+    {
+      "axis_y": 132.1,
+      "radius": 16.307138934234825,
+      "slope": 0.03911694341449001,
+      "second_derivative": 0.050155502143881224,
+      "tangent_angle_from_vertical_degrees": 1.3171332620724636
+    },
+    {
+      "axis_y": 132.15,
+      "radius": 16.30824010025116,
+      "slope": 0.042897193676744265,
+      "second_derivative": 0.05067096947947541,
+      "tangent_angle_from_vertical_degrees": 1.444369099425184
+    },
+    {
+      "axis_y": 132.2,
+      "radius": 16.311100271722168,
+      "slope": 0.046695090562326035,
+      "second_derivative": 0.050435341365707737,
+      "tangent_angle_from_vertical_degrees": 1.5721845387260276
+    },
+    {
+      "axis_y": 132.25,
+      "radius": 16.314375168056472,
+      "slope": 0.05041504147548944,
+      "second_derivative": 0.04948171005495094,
+      "tangent_angle_from_vertical_degrees": 1.6973616004465262
+    },
+    {
+      "axis_y": 132.3,
+      "radius": 16.31766436524813,
+      "slope": 0.053966607557320766,
+      "second_derivative": 0.04779171445724621,
+      "tangent_angle_from_vertical_degrees": 1.8168573747205412
+    },
+    {
+      "axis_y": 132.35,
+      "radius": 16.320967863297145,
+      "slope": 0.05727242873384585,
+      "second_derivative": 0.04544191785058099,
+      "tangent_angle_from_vertical_degrees": 1.928070646651432
+    },
+    {
+      "axis_y": 132.4,
+      "radius": 16.324257060488804,
+      "slope": 0.060247417466756825,
+      "second_derivative": 0.04244869015114987,
+      "tangent_angle_from_vertical_degrees": 2.0281417704375895
+    },
+    {
+      "axis_y": 132.45,
+      "radius": 16.32756055853782,
+      "slope": 0.06283656885076423,
+      "second_derivative": 0.03891284114332625,
+      "tangent_angle_from_vertical_degrees": 2.115224245983825
+    },
+    {
+      "axis_y": 132.5,
+      "radius": 16.330849755729478,
+      "slope": 0.06497206107969862,
+      "second_derivative": 0.034902846062866574,
+      "tangent_angle_from_vertical_degrees": 2.1870411931740104
+    },
+    {
+      "axis_y": 132.55,
+      "radius": 16.334167554635847,
+      "slope": 0.06662782144175909,
+      "second_derivative": 0.03051230770205218,
+      "tangent_angle_from_vertical_degrees": 2.24271996036525
+    },
+    {
+      "axis_y": 132.6,
+      "radius": 16.337456751827506,
+      "slope": 0.0677835626587311,
+      "second_derivative": 0.02589130418268846,
+      "tangent_angle_from_vertical_degrees": 2.2815819236205566
+    },
+    {
+      "axis_y": 132.65,
+      "radius": 16.34073164816181,
+      "slope": 0.06844165345095701,
+      "second_derivative": 0.021147094578218128,
+      "tangent_angle_from_vertical_degrees": 2.3037093842062744
+    },
+    {
+      "axis_y": 132.7,
+      "radius": 16.34404944706818,
+      "slope": 0.06863974801902278,
+      "second_derivative": 0.016480117850009753,
+      "tangent_angle_from_vertical_degrees": 2.3103699261842987
+    },
+    {
+      "axis_y": 132.75,
+      "radius": 16.347324343402484,
+      "slope": 0.06843779017556902,
+      "second_derivative": 0.01203072532379256,
+      "tangent_angle_from_vertical_degrees": 2.3035794885158283
+    },
+    {
+      "axis_y": 132.8,
+      "radius": 16.350642142308853,
+      "slope": 0.06792912040474469,
+      "second_derivative": 0.007955761588252742,
+      "tangent_angle_from_vertical_degrees": 2.2864761754104244
+    },
+    {
+      "axis_y": 132.85,
+      "radius": 16.353917038643157,
+      "slope": 0.06723826440937498,
+      "second_derivative": 0.004496405374479867,
+      "tangent_angle_from_vertical_degrees": 2.263246451739244
+    },
+    {
+      "axis_y": 132.9,
+      "radius": 16.357206235834816,
+      "slope": 0.06653192687412855,
+      "second_derivative": 0.0018440208252613194,
+      "tangent_angle_from_vertical_degrees": 2.239495398600078
+    },
+    {
+      "axis_y": 132.95,
+      "radius": 16.360509733883827,
+      "slope": 0.06601408522198464,
+      "second_derivative": 0.00027441195146397305,
+      "tangent_angle_from_vertical_degrees": 2.2220821508565485
+    },
+    {
+      "axis_y": 133.0,
+      "radius": 16.363798931075486,
+      "slope": 0.06591576460057708,
+      "second_derivative": -2.9955712770513235e-07,
+      "tangent_angle_from_vertical_degrees": 2.2187759173653694
+    },
+    {
+      "axis_y": 133.05,
+      "radius": 16.367116729981856,
+      "slope": 0.06590461985169631,
+      "second_derivative": 2.3964570360444348e-06,
+      "tangent_angle_from_vertical_degrees": 2.218401151286478
+    },
+    {
+      "axis_y": 133.1,
+      "radius": 16.370405927173515,
+      "slope": 0.06590221880991365,
+      "second_derivative": 1.140079190142247e-05,
+      "tangent_angle_from_vertical_degrees": 2.2183204110830967
+    },
+    {
+      "axis_y": 133.15,
+      "radius": 16.37370942522253,
+      "slope": 0.06590519490021102,
+      "second_derivative": 1.9665044514600416e-05,
+      "tangent_angle_from_vertical_degrees": 2.218420488530514
+    },
+    {
+      "axis_y": 133.2,
+      "radius": 16.376998622414188,
+      "slope": 0.06590854582849354,
+      "second_derivative": 1.8396331901127558e-05,
+      "tangent_angle_from_vertical_degrees": 2.218533170696458
+    },
+    {
+      "axis_y": 133.25,
+      "radius": 16.380287819605847,
+      "slope": 0.06591535892582565,
+      "second_derivative": 1.7920564753238652e-05,
+      "tangent_angle_from_vertical_degrees": 2.218762275685292
+    },
+    {
+      "axis_y": 133.3,
+      "radius": 16.38359131765486,
+      "slope": 0.06591780519485275,
+      "second_derivative": 1.8079153810960836e-05,
+      "tangent_angle_from_vertical_degrees": 2.218844536702979
+    },
+    {
+      "axis_y": 133.35,
+      "radius": 16.386866213989165,
+      "slope": 0.06592393702810842,
+      "second_derivative": 1.8713510051451333e-05,
+      "tangent_angle_from_vertical_degrees": 2.2190507326446003
+    },
+    {
+      "axis_y": 133.4,
+      "radius": 16.39016971203818,
+      "slope": 0.06592084866916229,
+      "second_derivative": 9.180545007624614e-06,
+      "tangent_angle_from_vertical_degrees": 2.218946880010268
+    },
+    {
+      "axis_y": 133.45,
+      "radius": 16.39345890922984,
+      "slope": 0.06591930751626192,
+      "second_derivative": -2.044036910624162e-06,
+      "tangent_angle_from_vertical_degrees": 2.218895055462586
+    },
+    {
+      "axis_y": 133.5,
+      "radius": 16.39677670813621,
+      "slope": 0.06592725426438142,
+      "second_derivative": -1.1735591063618007e-05,
+      "tangent_angle_from_vertical_degrees": 2.2191622817493117
+    },
+    {
+      "axis_y": 133.55,
+      "radius": 16.400080206185223,
+      "slope": 0.06592415893861928,
+      "second_derivative": -2.8898452480164045e-05,
+      "tangent_angle_from_vertical_degrees": 2.2190581948566703
+    },
+    {
+      "axis_y": 133.6,
+      "radius": 16.403355102519527,
+      "slope": 0.06592627525424075,
+      "second_derivative": -3.4678142966397424e-05,
+      "tangent_angle_from_vertical_degrees": 2.2191293604588456
+    },
+    {
+      "axis_y": 133.65,
+      "radius": 16.40665860056854,
+      "slope": 0.06591489511806431,
+      "second_derivative": -3.982347714145894e-05,
+      "tangent_angle_from_vertical_degrees": 2.2187466791582704
+    },
+    {
+      "axis_y": 133.7,
+      "radius": 16.409933496902845,
+      "slope": 0.06591088359778416,
+      "second_derivative": -3.5858750491736486e-05,
+      "tangent_angle_from_vertical_degrees": 2.21861178320346
+    },
+    {
+      "axis_y": 133.75,
+      "radius": 16.41323699495186,
+      "slope": 0.06590827081025108,
+      "second_derivative": -2.119807215563017e-05,
+      "tangent_angle_from_vertical_degrees": 2.218523922617581
+    },
+    {
+      "axis_y": 133.8,
+      "radius": 16.416540493000873,
+      "slope": 0.06591033024921024,
+      "second_derivative": -2.3858844311502248e-05,
+      "tangent_angle_from_vertical_degrees": 2.218593175671463
+    },
+    {
+      "axis_y": 133.85,
+      "radius": 16.41985829190724,
+      "slope": 0.06591250641099802,
+      "second_derivative": -1.4396363206040506e-05,
+      "tangent_angle_from_vertical_degrees": 2.218666353773859
+    },
+    {
+      "axis_y": 133.9,
+      "radius": 16.4231474890989,
+      "slope": 0.06591020655950788,
+      "second_derivative": -2.2678236768993634e-05,
+      "tangent_angle_from_vertical_degrees": 2.218589016340007
+    },
+    {
+      "axis_y": 133.95,
+      "radius": 16.426436686290558,
+      "slope": 0.06590967982191354,
+      "second_derivative": -2.984998690601701e-05,
+      "tangent_angle_from_vertical_degrees": 2.2185713036587087
+    },
+    {
+      "axis_y": 134.0,
+      "radius": 16.429725883482217,
+      "slope": 0.06590313443337338,
+      "second_derivative": -3.6281654669508404e-05,
+      "tangent_angle_from_vertical_degrees": 2.2183512008958313
+    },
+    {
+      "axis_y": 134.05,
+      "radius": 16.433015080673876,
+      "slope": 0.06589862278649747,
+      "second_derivative": -4.234328126989026e-05,
+      "tangent_angle_from_vertical_degrees": 2.2181994870310167
+    },
+    {
+      "axis_y": 134.1,
+      "radius": 16.43631857872289,
+      "slope": 0.06589633104390707,
+      "second_derivative": -4.66604281620404e-05,
+      "tangent_angle_from_vertical_degrees": 2.2181224222276557
+    },
+    {
+      "axis_y": 134.15,
+      "radius": 16.43960777591455,
+      "slope": 0.06588857913845828,
+      "second_derivative": -4.96031363636684e-05,
+      "tangent_angle_from_vertical_degrees": 2.2178617475742364
+    },
+    {
+      "axis_y": 134.2,
+      "radius": 16.442911273963563,
+      "slope": 0.06588546473956973,
+      "second_derivative": -3.2316927979246865e-05,
+      "tangent_angle_from_vertical_degrees": 2.21775701912305
+    },
+    {
+      "axis_y": 134.25,
+      "radius": 16.446200471155223,
+      "slope": 0.06588112966170803,
+      "second_derivative": -1.418491111852157e-05,
+      "tangent_angle_from_vertical_degrees": 2.2176112426559533
+    },
+    {
+      "axis_y": 134.3,
+      "radius": 16.449475367489526,
+      "slope": 0.06588366352998694,
+      "second_derivative": 4.634324985878032e-06,
+      "tangent_angle_from_vertical_degrees": 2.2176964495179043
+    },
+    {
+      "axis_y": 134.35,
+      "radius": 16.45277886553854,
+      "slope": 0.06588019782039393,
+      "second_derivative": 1.3497691798855912e-05,
+      "tangent_angle_from_vertical_degrees": 2.2175799074515443
+    },
+    {
+      "axis_y": 134.4,
+      "radius": 16.4560680627302,
+      "slope": 0.06587651625349221,
+      "second_derivative": 1.039639451534126e-05,
+      "tangent_angle_from_vertical_degrees": 2.217456106690878
+    },
+    {
+      "axis_y": 134.45,
+      "radius": 16.45938586163657,
+      "slope": 0.0658802802801873,
+      "second_derivative": 1.5929390839662036e-05,
+      "tangent_angle_from_vertical_degrees": 2.2175826803426917
+    },
+    {
+      "axis_y": 134.5,
+      "radius": 16.46267505882823,
+      "slope": 0.06587731869460192,
+      "second_derivative": 2.983236588218992e-05,
+      "tangent_angle_from_vertical_degrees": 2.217483090534693
+    },
+    {
+      "axis_y": 134.55,
+      "radius": 16.465978556877243,
+      "slope": 0.06589141634912596,
+      "second_derivative": 3.446669089856003e-05,
+      "tangent_angle_from_vertical_degrees": 2.2179571549543944
+    },
+    {
+      "axis_y": 134.6,
+      "radius": 16.469253453211547,
+      "slope": 0.06589890008891831,
+      "second_derivative": 5.0537049799779244e-05,
+      "tangent_angle_from_vertical_degrees": 2.218208811924386
+    },
+    {
+      "axis_y": 134.65,
+      "radius": 16.47255695126056,
+      "slope": 0.06590787815546352,
+      "second_derivative": 5.691585460641293e-05,
+      "tangent_angle_from_vertical_degrees": 2.218510718757105
+    },
+    {
+      "axis_y": 134.7,
+      "radius": 16.47584614845222,
+      "slope": 0.06591135882656608,
+      "second_derivative": 4.285429048791226e-05,
+      "tangent_angle_from_vertical_degrees": 2.218627763789614
+    },
+    {
+      "axis_y": 134.75,
+      "radius": 16.47913534564388,
+      "slope": 0.06591510720647013,
+      "second_derivative": 2.71011097263969e-05,
+      "tangent_angle_from_vertical_degrees": 2.2187538110841394
+    },
+    {
+      "axis_y": 134.8,
+      "radius": 16.48243884369289,
+      "slope": 0.06591584980142705,
+      "second_derivative": 1.966504449685856e-05,
+      "tangent_angle_from_vertical_degrees": 2.2187787824259146
+    },
+    {
+      "axis_y": 134.85,
+      "radius": 16.48572804088455,
+      "slope": 0.06591525956290485,
+      "second_derivative": 2.0176053669667334e-05,
+      "tangent_angle_from_vertical_degrees": 2.218758934394793
+    },
+    {
+      "axis_y": 134.9,
+      "radius": 16.489017238076208,
+      "slope": 0.06591804092475538,
+      "second_derivative": 1.962980249801082e-05,
+      "tangent_angle_from_vertical_degrees": 2.2188524636236457
+    },
+    {
+      "axis_y": 134.95,
+      "radius": 16.492320736125222,
+      "slope": 0.06591294246567941,
+      "second_derivative": 2.65019954173478e-05,
+      "tangent_angle_from_vertical_degrees": 2.2186810170458675
+    },
+    {
+      "axis_y": 135.0,
+      "radius": 16.495624234174237,
+      "slope": 0.06591856058132632,
+      "second_derivative": 1.2669504458903424e-05,
+      "tangent_angle_from_vertical_degrees": 2.2188699381837034
+    },
+    {
+      "axis_y": 135.05,
+      "radius": 16.49892773222325,
+      "slope": 0.06592000008714027,
+      "second_derivative": -1.0008732304843907e-05,
+      "tangent_angle_from_vertical_degrees": 2.218918344633435
+    },
+    {
+      "axis_y": 135.1,
+      "radius": 16.50221692941491,
+      "slope": 0.06591426673334012,
+      "second_derivative": -1.4043943070572856e-05,
+      "tangent_angle_from_vertical_degrees": 2.218725548378686
+    },
+    {
+      "axis_y": 135.15,
+      "radius": 16.505520427463924,
+      "slope": 0.06591614400696738,
+      "second_derivative": -8.440462653742517e-06,
+      "tangent_angle_from_vertical_degrees": 2.2187886757154645
+    },
+    {
+      "axis_y": 135.2,
+      "radius": 16.508809624655584,
+      "slope": 0.06591473419583858,
+      "second_derivative": -2.0968999293243288e-06,
+      "tangent_angle_from_vertical_degrees": 2.218741267804501
+    },
+    {
+      "axis_y": 135.25,
+      "radius": 16.512098821847243,
+      "slope": 0.06592119563985857,
+      "second_derivative": -3.911863693818427e-06,
+      "tangent_angle_from_vertical_degrees": 2.218958547638196
+    },
+    {
+      "axis_y": 135.3,
+      "radius": 16.515416620753612,
+      "slope": 0.06552891443533464,
+      "second_derivative": 0.0010870928223869908,
+      "tangent_angle_from_vertical_degrees": 2.205767140119351
+    },
+    {
+      "axis_y": 135.35,
+      "radius": 16.51867721623056,
+      "slope": 0.06480377721018526,
+      "second_derivative": 0.003501065138684047,
+      "tangent_angle_from_vertical_degrees": 2.1813820261737904
+    },
+    {
+      "axis_y": 135.4,
+      "radius": 16.52199501513693,
+      "slope": 0.06399811548819678,
+      "second_derivative": 0.006937954567791874,
+      "tangent_angle_from_vertical_degrees": 2.1542880854579733
+    },
+    {
+      "axis_y": 135.45,
+      "radius": 16.52528421232859,
+      "slope": 0.06332134732528398,
+      "second_derivative": 0.011166573489641517,
+      "tangent_angle_from_vertical_degrees": 2.131528015606759
+    },
+    {
+      "axis_y": 135.5,
+      "radius": 16.52857340952025,
+      "slope": 0.06292450844713532,
+      "second_derivative": 0.015935681577952634,
+      "tangent_angle_from_vertical_degrees": 2.118181801584744
+    },
+    {
+      "axis_y": 135.55,
+      "radius": 16.531862606711908,
+      "slope": 0.06293027058189588,
+      "second_derivative": 0.02104018792505981,
+      "tangent_angle_from_vertical_degrees": 2.1183755914130438
+    },
+    {
+      "axis_y": 135.6,
+      "radius": 16.535166104760922,
+      "slope": 0.06341908970027331,
+      "second_derivative": 0.026293292229303263,
+      "tangent_angle_from_vertical_degrees": 2.1348151849206882
+    },
+    {
+      "axis_y": 135.65,
+      "radius": 16.538469602809936,
+      "slope": 0.06443830343190746,
+      "second_derivative": 0.031505621521996256,
+      "tangent_angle_from_vertical_degrees": 2.1690914732672457
+    },
+    {
+      "axis_y": 135.7,
+      "radius": 16.541758800001592,
+      "slope": 0.06601316206066961,
+      "second_derivative": 0.036525317959435026,
+      "tangent_angle_from_vertical_degrees": 2.222051107723914
+    },
+    {
+      "axis_y": 135.75,
+      "radius": 16.54507659890796,
+      "slope": 0.06814225737437168,
+      "second_derivative": 0.04120143999059882,
+      "tangent_angle_from_vertical_degrees": 2.293642659183205
+    },
+    {
+      "axis_y": 135.8,
+      "radius": 16.54833719438491,
+      "slope": 0.07079410526608966,
+      "second_derivative": 0.04539259665032362,
+      "tangent_angle_from_vertical_degrees": 2.382801897858385
+    },
+    {
+      "axis_y": 135.85,
+      "radius": 16.55162639157657,
+      "slope": 0.07390919398047559,
+      "second_derivative": 0.049012180686201445,
+      "tangent_angle_from_vertical_degrees": 2.487521233007682
+    },
+    {
+      "axis_y": 135.9,
+      "radius": 16.55494419048294,
+      "slope": 0.07742072183722891,
+      "second_derivative": 0.05197090645280918,
+      "tangent_angle_from_vertical_degrees": 2.6055476153610644
+    },
+    {
+      "axis_y": 135.95,
+      "radius": 16.558233387674598,
+      "slope": 0.08125588426601037,
+      "second_derivative": 0.05419952339005616,
+      "tangent_angle_from_vertical_degrees": 2.734426406812246
+    },
+    {
+      "axis_y": 136.0,
+      "radius": 16.561536885723612,
+      "slope": 0.08531538403371193,
+      "second_derivative": 0.05564707154413093,
+      "tangent_angle_from_vertical_degrees": 2.8708137574243677
+    },
+    {
+      "axis_y": 136.05,
+      "radius": 16.564811782057916,
+      "slope": 0.08950538315640104,
+      "second_derivative": 0.056289621586587325,
+      "tangent_angle_from_vertical_degrees": 3.0115513484677483
+    },
+    {
+      "axis_y": 136.1,
+      "radius": 16.569917188133665,
+      "slope": 0.0937309981696321,
+      "second_derivative": 0.05609542046169515,
+      "tangent_angle_from_vertical_degrees": 3.1534484044966766
+    },
+    {
+      "axis_y": 136.15,
+      "radius": 16.575709035362458,
+      "slope": 0.09786770211428178,
+      "second_derivative": 0.05507712005302945,
+      "tangent_angle_from_vertical_degrees": 3.2923223215417554
+    },
+    {
+      "axis_y": 136.2,
+      "radius": 16.581472280876536,
+      "slope": 0.10184292866255788,
+      "second_derivative": 0.05326740732959595,
+      "tangent_angle_from_vertical_degrees": 3.4257387980621794
+    },
+    {
+      "axis_y": 136.25,
+      "radius": 16.587235526390618,
+      "slope": 0.1055371988334417,
+      "second_derivative": 0.050689401053414324,
+      "tangent_angle_from_vertical_degrees": 3.549692517642625
+    },
+    {
+      "axis_y": 136.3,
+      "radius": 16.5929987719047,
+      "slope": 0.10887160192066388,
+      "second_derivative": 0.047419364945443916,
+      "tangent_angle_from_vertical_degrees": 3.6615431026831287
+    },
+    {
+      "axis_y": 136.35,
+      "radius": 16.598762017418778,
+      "slope": 0.11177919747836546,
+      "second_derivative": 0.04351699897939799,
+      "tangent_angle_from_vertical_degrees": 3.7590539067654745
+    },
+    {
+      "axis_y": 136.4,
+      "radius": 16.604539563790215,
+      "slope": 0.11419263378977193,
+      "second_derivative": 0.0390986370475914,
+      "tangent_angle_from_vertical_degrees": 3.839975766113685
+    },
+    {
+      "axis_y": 136.45,
+      "radius": 16.61031711016165,
+      "slope": 0.11606799153757592,
+      "second_derivative": 0.034267555875554856,
+      "tangent_angle_from_vertical_degrees": 3.902845423892363
+    },
+    {
+      "axis_y": 136.5,
+      "radius": 16.616094656533086,
+      "slope": 0.11738886031003411,
+      "second_derivative": 0.029145322794808002,
+      "tangent_angle_from_vertical_degrees": 3.9471207046312315
+    },
+    {
+      "axis_y": 136.55,
+      "radius": 16.621857902047168,
+      "slope": 0.11816368241348268,
+      "second_derivative": 0.023892659015725817,
+      "tangent_angle_from_vertical_degrees": 3.9730904069009267
+    },
+    {
+      "axis_y": 136.6,
+      "radius": 16.62760684670389,
+      "slope": 0.11841614219524249,
+      "second_derivative": 0.01865886733578372,
+      "tangent_angle_from_vertical_degrees": 3.981551745448076
+    },
+    {
+      "axis_y": 136.65,
+      "radius": 16.63338439307533,
+      "slope": 0.11822405382921206,
+      "second_derivative": 0.013679487763721007,
+      "tangent_angle_from_vertical_degrees": 3.975113806325539
+    },
+    {
+      "axis_y": 136.7,
+      "radius": 16.639161939446765,
+      "slope": 0.11768605886751135,
+      "second_derivative": 0.009133514494794746,
+      "tangent_angle_from_vertical_degrees": 3.957082097403361
+    },
+    {
+      "axis_y": 136.75,
+      "radius": 16.644925184960844,
+      "slope": 0.11692996244570832,
+      "second_derivative": 0.00522522787024287,
+      "tangent_angle_from_vertical_degrees": 3.9317390642911576
+    },
+    {
+      "axis_y": 136.8,
+      "radius": 16.65070273133228,
+      "slope": 0.11613425083356378,
+      "second_derivative": 0.002232916463181358,
+      "tangent_angle_from_vertical_degrees": 3.9050665350914433
+    },
+    {
+      "axis_y": 136.85,
+      "radius": 16.656480277703718,
+      "slope": 0.11552629113901937,
+      "second_derivative": 0.0003869573270684326,
+      "tangent_angle_from_vertical_degrees": 3.8846863722191904
+    },
+    {
+      "axis_y": 136.9,
+      "radius": 16.66222922236044,
+      "slope": 0.11538393482012889,
+      "second_derivative": -1.34095867632164e-05,
+      "tangent_angle_from_vertical_degrees": 3.879914128937821
+    },
+    {
+      "axis_y": 136.95,
+      "radius": 16.668021069589233,
+      "slope": 0.11538741412071017,
+      "second_derivative": -1.0043974356058798e-05,
+      "tangent_angle_from_vertical_degrees": 3.8800307669662097
+    },
+    {
+      "axis_y": 137.0,
+      "radius": 16.67377001424596,
+      "slope": 0.11538201083452004,
+      "second_derivative": -1.5735559796064722e-05,
+      "tangent_angle_from_vertical_degrees": 3.879849630360898
+    },
+    {
+      "axis_y": 137.05,
+      "radius": 16.679547560617394,
+      "slope": 0.11537867852252089,
+      "second_derivative": -2.2114364548010267e-05,
+      "tangent_angle_from_vertical_degrees": 3.8797379198441195
+    },
+    {
+      "axis_y": 137.1,
+      "radius": 16.68532510698883,
+      "slope": 0.11537124252254767,
+      "second_derivative": -1.0325910462130908e-05,
+      "tangent_angle_from_vertical_degrees": 3.87948863953816
+    },
+    {
+      "axis_y": 137.15,
+      "radius": 16.691074051645558,
+      "slope": 0.11536939094623529,
+      "second_derivative": 2.466941194656858e-07,
+      "tangent_angle_from_vertical_degrees": 3.879426568306125
+    },
+    {
+      "axis_y": 137.2,
+      "radius": 16.69685159801699,
+      "slope": 0.11537304932846758,
+      "second_derivative": 1.1189339830405485e-05,
+      "tangent_angle_from_vertical_degrees": 3.879549209903241
+    },
+    {
+      "axis_y": 137.25,
+      "radius": 16.70262914438843,
+      "slope": 0.11538048886894078,
+      "second_derivative": 4.8633981280336025e-06,
+      "tangent_angle_from_vertical_degrees": 3.879798608863149
+    },
+    {
+      "axis_y": 137.3,
+      "radius": 16.708392389902507,
+      "slope": 0.11538213315369893,
+      "second_derivative": 1.2334708319792045e-07,
+      "tangent_angle_from_vertical_degrees": 3.8798537309183536
+    },
+    {
+      "axis_y": 137.35,
+      "radius": 16.71415563541659,
+      "slope": 0.11537807526403406,
+      "second_derivative": -5.145334252547141e-06,
+      "tangent_angle_from_vertical_degrees": 3.8797176965493456
+    },
+    {
+      "axis_y": 137.4,
+      "radius": 16.71991888093067,
+      "slope": 0.11537614419739903,
+      "second_derivative": -1.1312686887785443e-05,
+      "tangent_angle_from_vertical_degrees": 3.8796529605620886
+    },
+    {
+      "axis_y": 137.45,
+      "radius": 16.725696427302104,
+      "slope": 0.11537823630048082,
+      "second_derivative": 2.2202469497261413e-06,
+      "tangent_angle_from_vertical_degrees": 3.8797230950437895
+    },
+    {
+      "axis_y": 137.5,
+      "radius": 16.731459672816186,
+      "slope": 0.11538148763743897,
+      "second_derivative": 7.330339161932412e-06,
+      "tangent_angle_from_vertical_degrees": 3.8798320910038977
+    },
+    {
+      "axis_y": 137.55,
+      "radius": 16.737222918330268,
+      "slope": 0.11538415079170136,
+      "second_derivative": 3.7532746264941406e-06,
+      "tangent_angle_from_vertical_degrees": 3.879921369042858
+    },
+    {
+      "axis_y": 137.6,
+      "radius": 16.743014765559057,
+      "slope": 0.11538635607709252,
+      "second_derivative": 1.0343531464940982e-05,
+      "tangent_angle_from_vertical_degrees": 3.8799952977370444
+    },
+    {
+      "axis_y": 137.65,
+      "radius": 16.74877801107314,
+      "slope": 0.11538817795876004,
+      "second_derivative": 7.612275305078123e-06,
+      "tangent_angle_from_vertical_degrees": 3.880056373419882
+    },
+    {
+      "axis_y": 137.7,
+      "radius": 16.75454125658722,
+      "slope": 0.11538770147366126,
+      "second_derivative": -4.810535080049813e-06,
+      "tangent_angle_from_vertical_degrees": 3.8800404000162656
+    },
+    {
+      "axis_y": 137.75,
+      "radius": 16.7603045021013,
+      "slope": 0.11538989168333254,
+      "second_derivative": 2.3083519896580303e-06,
+      "tangent_angle_from_vertical_degrees": 3.880113823300212
+    },
+    {
+      "axis_y": 137.8,
+      "radius": 16.766082048472736,
+      "slope": 0.11538682650907069,
+      "second_derivative": -9.744417235603037e-06,
+      "tangent_angle_from_vertical_degrees": 3.8800110682211257
+    },
+    {
+      "axis_y": 137.85,
+      "radius": 16.771845293986818,
+      "slope": 0.1153895153605928,
+      "second_derivative": -1.1735591086606209e-05,
+      "tangent_angle_from_vertical_degrees": 3.880101207681832
+    },
+    {
+      "axis_y": 137.9,
+      "radius": 16.777637141215607,
+      "slope": 0.11539020370568287,
+      "second_derivative": -2.1515250309133626e-05,
+      "tangent_angle_from_vertical_degrees": 3.880124283350522
+    },
+    {
+      "axis_y": 137.95,
+      "radius": 16.78340038672969,
+      "slope": 0.11538106254693155,
+      "second_derivative": -2.2079122557397597e-05,
+      "tangent_angle_from_vertical_degrees": 3.8798178405145176
+    },
+    {
+      "axis_y": 138.0,
+      "radius": 16.78916363224377,
+      "slope": 0.11537674505744562,
+      "second_derivative": -5.057229178085302e-06,
+      "tangent_angle_from_vertical_degrees": 3.879673103456004
+    },
+    {
+      "axis_y": 138.05,
+      "radius": 16.794912576900494,
+      "slope": 0.1153771023070704,
+      "second_derivative": -7.312718169805672e-06,
+      "tangent_angle_from_vertical_degrees": 3.8796850796908364
+    },
+    {
+      "axis_y": 138.1,
+      "radius": 16.80069012327193,
+      "slope": 0.11537220417271611,
+      "second_derivative": -9.99111134820088e-06,
+      "tangent_angle_from_vertical_degrees": 3.879520877369072
+    },
+    {
+      "axis_y": 138.15,
+      "radius": 16.806467669643368,
+      "slope": 0.11536681093702897,
+      "second_derivative": -4.722430055506924e-06,
+      "tangent_angle_from_vertical_degrees": 3.8793400774727806
+    },
+    {
+      "axis_y": 138.2,
+      "radius": 16.812230915157446,
+      "slope": 0.11537180169586138,
+      "second_derivative": -1.7991048792681668e-05,
+      "tangent_angle_from_vertical_degrees": 3.879507384956834
+    },
+    {
+      "axis_y": 138.25,
+      "radius": 16.818008461528883,
+      "slope": 0.11536841250715389,
+      "second_derivative": -1.3391965823297757e-06,
+      "tangent_angle_from_vertical_degrees": 3.8793937676455914
+    },
+    {
+      "axis_y": 138.3,
+      "radius": 16.82377170704296,
+      "slope": 0.11536655487770157,
+      "second_derivative": 4.881019117298826e-06,
+      "tangent_angle_from_vertical_degrees": 3.879331493477402
+    },
+    {
+      "axis_y": 138.35,
+      "radius": 16.829534952557044,
+      "slope": 0.1153691485921033,
+      "second_derivative": 1.0889782683750217e-05,
+      "tangent_angle_from_vertical_degrees": 3.879418443758024
+    },
+    {
+      "axis_y": 138.4,
+      "radius": 16.83531249892848,
+      "slope": 0.11537319940070799,
+      "second_derivative": 2.690727861914523e-05,
+      "tangent_angle_from_vertical_degrees": 3.879554240841863
+    },
+    {
+      "axis_y": 138.45,
+      "radius": 16.84107574444256,
+      "slope": 0.11537374224194903,
+      "second_derivative": 2.306589890496239e-05,
+      "tangent_angle_from_vertical_degrees": 3.8795724387503
+    },
+    {
+      "axis_y": 138.5,
+      "radius": 16.84683898995664,
+      "slope": 0.1153766539176805,
+      "second_derivative": 1.8220121875061616e-05,
+      "tangent_angle_from_vertical_degrees": 3.879670048137892
+    },
+    {
+      "axis_y": 138.55,
+      "radius": 16.852616536328078,
+      "slope": 0.11537570391696568,
+      "second_derivative": 3.122442545975498e-05,
+      "tangent_angle_from_vertical_degrees": 3.8796382008481114
+    },
+    {
+      "axis_y": 138.6,
+      "radius": 16.858379781842157,
+      "slope": 0.11538361183358106,
+      "second_derivative": 3.395568168530729e-05,
+      "tangent_angle_from_vertical_degrees": 3.879903301324932
+    },
+    {
+      "axis_y": 138.65,
+      "radius": 16.86414302735624,
+      "slope": 0.11539050339334422,
+      "second_derivative": 2.7894055072080303e-05,
+      "tangent_angle_from_vertical_degrees": 3.8801343298998665
+    },
+    {
+      "axis_y": 138.7,
+      "radius": 16.86990627287032,
+      "slope": 0.11539957762489485,
+      "second_derivative": 2.3154004006768332e-05,
+      "tangent_angle_from_vertical_degrees": 3.880438528880583
+    },
+    {
+      "axis_y": 138.75,
+      "radius": 16.87569812009911,
+      "slope": 0.11539805908562131,
+      "second_derivative": 8.880987839539155e-06,
+      "tangent_angle_from_vertical_degrees": 3.8803876223153178
+    },
+    {
+      "axis_y": 138.8,
+      "radius": 16.881475666470546,
+      "slope": 0.11539372092408383,
+      "second_derivative": 2.0792788868016786e-06,
+      "tangent_angle_from_vertical_degrees": 3.880242192454777
+    },
+    {
+      "axis_y": 138.85,
+      "radius": 16.887224611127273,
+      "slope": 0.11539426182372835,
+      "second_derivative": -1.5101203554238864e-05,
+      "tangent_angle_from_vertical_degrees": 3.88026032524468
+    },
+    {
+      "axis_y": 138.9,
+      "radius": 16.893002157498707,
+      "slope": 0.1153936374363842,
+      "second_derivative": -2.9427082586373308e-06,
+      "tangent_angle_from_vertical_degrees": 3.880239393663967
+    },
+    {
+      "axis_y": 138.95,
+      "radius": 16.898779703870144,
+      "slope": 0.11539385580635103,
+      "second_derivative": -5.286304302372268e-08,
+      "tangent_angle_from_vertical_degrees": 3.8802467141657404
+    },
+    {
+      "axis_y": 139.0,
+      "radius": 16.904514347669515,
+      "slope": 0.1153868459247944,
+      "second_derivative": 1.0784056647748833e-05,
+      "tangent_angle_from_vertical_degrees": 3.880011719102379
+    },
+    {
+      "axis_y": 139.05,
+      "radius": 16.91032049575566,
+      "slope": 0.11538820993763553,
+      "second_derivative": 1.0184942364994506e-05,
+      "tangent_angle_from_vertical_degrees": 3.8800574454607
+    },
+    {
+      "axis_y": 139.1,
+      "radius": 16.91608374126974,
+      "slope": 0.11538478146057737,
+      "second_derivative": 8.369978600150618e-06,
+      "tangent_angle_from_vertical_degrees": 3.8799425112177293
+    },
+    {
+      "axis_y": 139.15,
+      "radius": 16.92184698678382,
+      "slope": 0.11538736512451014,
+      "second_derivative": -3.6651695929849218e-06,
+      "tangent_angle_from_vertical_degrees": 3.8800291244466125
+    },
+    {
+      "axis_y": 139.2,
+      "radius": 16.927624533155257,
+      "slope": 0.11538802023441884,
+      "second_derivative": -5.321544319756348e-06,
+      "tangent_angle_from_vertical_degrees": 3.8800510859627573
+    },
+    {
+      "axis_y": 139.25,
+      "radius": 16.93338777866934,
+      "slope": 0.11514295933425593,
+      "second_derivative": 0.0006743735821778245,
+      "tangent_angle_from_vertical_degrees": 3.8718357300270676
+    },
+    {
+      "axis_y": 139.3,
+      "radius": 16.939151024183417,
+      "slope": 0.11425352646104506,
+      "second_derivative": 0.0034193565264287514,
+      "tangent_angle_from_vertical_degrees": 3.842017283666316
+    },
+    {
+      "axis_y": 139.35,
+      "radius": 16.94494287141221,
+      "slope": 0.1130992626676073,
+      "second_derivative": 0.007854246963378506,
+      "tangent_angle_from_vertical_degrees": 3.8033172128898856
+    },
+    {
+      "axis_y": 139.4,
+      "radius": 16.950691816068936,
+      "slope": 0.11200974168668087,
+      "second_derivative": 0.013562360926164854,
+      "tangent_angle_from_vertical_degrees": 3.7667846449444005
+    },
+    {
+      "axis_y": 139.45,
+      "radius": 16.956455061583014,
+      "slope": 0.11123435527048445,
+      "second_derivative": 0.020230344036339616,
+      "tangent_angle_from_vertical_degrees": 3.74078340689437
+    },
+    {
+      "axis_y": 139.5,
+      "radius": 16.962218307097096,
+      "slope": 0.11098384402950674,
+      "second_derivative": 0.027505282753641218,
+      "tangent_angle_from_vertical_degrees": 3.732382616799889
+    },
+    {
+      "axis_y": 139.55,
+      "radius": 16.967995853468533,
+      "slope": 0.11139344475928266,
+      "second_derivative": 0.03510973431321806,
+      "tangent_angle_from_vertical_degrees": 3.7461183230206414
+    },
+    {
+      "axis_y": 139.6,
+      "radius": 16.973773399839967,
+      "slope": 0.1125512921271876,
+      "second_derivative": 0.04274232662188465,
+      "tangent_angle_from_vertical_degrees": 3.784943678451467
+    },
+    {
+      "axis_y": 139.65,
+      "radius": 16.979522344496694,
+      "slope": 0.1145058808267692,
+      "second_derivative": 0.05016656813667297,
+      "tangent_angle_from_vertical_degrees": 3.8504777356583912
+    },
+    {
+      "axis_y": 139.7,
+      "radius": 16.985314191725486,
+      "slope": 0.11726872861750004,
+      "second_derivative": 0.05719347355082923,
+      "tangent_angle_from_vertical_degrees": 3.943094106546118
+    },
+    {
+      "axis_y": 139.75,
+      "radius": 16.991077437239564,
+      "slope": 0.12080740870119183,
+      "second_derivative": 0.06360323841556885,
+      "tangent_angle_from_vertical_degrees": 4.0616877758865995
+    },
+    {
+      "axis_y": 139.8,
+      "radius": 16.996869284468357,
+      "slope": 0.12505611782334825,
+      "second_derivative": 0.06923930007816416,
+      "tangent_angle_from_vertical_degrees": 4.204030896383944
+    },
+    {
+      "axis_y": 139.85,
+      "radius": 17.002618229125083,
+      "slope": 0.1299482429788567,
+      "second_derivative": 0.07397522780911928,
+      "tangent_angle_from_vertical_degrees": 4.367865697070145
+    },
+    {
+      "axis_y": 139.9,
+      "radius": 17.008395775496517,
+      "slope": 0.13534266919993587,
+      "second_derivative": 0.07767988606978382,
+      "tangent_angle_from_vertical_degrees": 4.54843927318402
+    },
+    {
+      "axis_y": 139.95,
+      "radius": 17.014144720153244,
+      "slope": 0.14113142064611292,
+      "second_derivative": 0.08027489661828026,
+      "tangent_angle_from_vertical_degrees": 4.742111771798089
+    },
+    {
+      "axis_y": 140.0,
+      "radius": 17.019922266524677,
+      "slope": 0.14717175051370665,
+      "second_derivative": 0.08171201313585191,
+      "tangent_angle_from_vertical_degrees": 4.9440854546858715
+    },
+    {
+      "axis_y": 140.05,
+      "radius": 17.026815279769806,
+      "slope": 0.1533191002820708,
+      "second_derivative": 0.08193128895451965,
+      "tangent_angle_from_vertical_degrees": 5.149511193155475
+    },
+    {
+      "axis_y": 140.1,
+      "radius": 17.036168040480003,
+      "slope": 0.15941780596994498,
+      "second_derivative": 0.08095688247572858,
+      "tangent_angle_from_vertical_degrees": 5.353180315315143
+    },
+    {
+      "axis_y": 140.15,
+      "radius": 17.045563703762262,
+      "slope": 0.1653236230206984,
+      "second_derivative": 0.0788012517519722,
+      "tangent_angle_from_vertical_degrees": 5.550278658113037
+    },
+    {
+      "axis_y": 140.2,
+      "radius": 17.05491646447246,
+      "slope": 0.17088362952659608,
+      "second_derivative": 0.0754930132994656,
+      "tangent_angle_from_vertical_degrees": 5.735715796443647
+    },
+    {
+      "axis_y": 140.25,
+      "radius": 17.06431212775472,
+      "slope": 0.17597349736847415,
+      "second_derivative": 0.07114488870400582,
+      "tangent_angle_from_vertical_degrees": 5.905367345081981
+    },
+    {
+      "axis_y": 140.3,
+      "radius": 17.073664888464915,
+      "slope": 0.1804784731279552,
+      "second_derivative": 0.06584052488860709,
+      "tangent_angle_from_vertical_degrees": 6.055437175717335
+    },
+    {
+      "axis_y": 140.35,
+      "radius": 17.083046250889822,
+      "slope": 0.1842992417550681,
+      "second_derivative": 0.05971817627898375,
+      "tangent_angle_from_vertical_degrees": 6.182649443998155
+    },
+    {
+      "axis_y": 140.4,
+      "radius": 17.09241331245737,
+      "slope": 0.18736751558015266,
+      "second_derivative": 0.05290439695181429,
+      "tangent_angle_from_vertical_degrees": 6.284763218018981
+    },
+    {
+      "axis_y": 140.45,
+      "radius": 17.101780374024923,
+      "slope": 0.18962554499757295,
+      "second_derivative": 0.04561684159307195,
+      "tangent_angle_from_vertical_degrees": 6.359886070157538
+    },
+    {
+      "axis_y": 140.5,
+      "radius": 17.111161736449827,
+      "slope": 0.19109135969179863,
+      "second_derivative": 0.03804409022624103,
+      "tangent_angle_from_vertical_degrees": 6.408640831269457
+    },
+    {
+      "axis_y": 140.55,
+      "radius": 17.12052879801738,
+      "slope": 0.19177843841206996,
+      "second_derivative": 0.030403110317911364,
+      "tangent_angle_from_vertical_degrees": 6.431490693229691
+    },
+    {
+      "axis_y": 140.6,
+      "radius": 17.129910160442286,
+      "slope": 0.1917647987405725,
+      "second_derivative": 0.0229827454248021,
+      "tangent_angle_from_vertical_degrees": 6.4310371048910655
+    },
+    {
+      "axis_y": 140.65,
+      "radius": 17.13926292115248,
+      "slope": 0.19116555328695906,
+      "second_derivative": 0.01604965425516964,
+      "tangent_angle_from_vertical_degrees": 6.411108352368526
+    },
+    {
+      "axis_y": 140.7,
+      "radius": 17.14865858443474,
+      "slope": 0.19017250694742124,
+      "second_derivative": 0.009937226272808469,
+      "tangent_angle_from_vertical_degrees": 6.378079768437641
+    },
+    {
+      "axis_y": 140.75,
+      "radius": 17.15802564600229,
+      "slope": 0.18901142742985888,
+      "second_derivative": 0.004968895072551673,
+      "tangent_angle_from_vertical_degrees": 6.339457027247327
+    },
+    {
+      "axis_y": 140.8,
+      "radius": 17.167407008427197,
+      "slope": 0.18798357609242297,
+      "second_derivative": 0.0015418205447506504,
+      "tangent_angle_from_vertical_degrees": 6.305261227032401
+    },
+    {
+      "axis_y": 140.85,
+      "radius": 17.17675976913739,
+      "slope": 0.18744947832652387,
+      "second_derivative": 2.2343437618053648e-05,
+      "tangent_angle_from_vertical_degrees": 6.287490434812871
+    },
+    {
+      "axis_y": 140.9,
+      "radius": 17.186141131562298,
+      "slope": 0.18745403531489238,
+      "second_derivative": 4.7752930505194445e-06,
+      "tangent_angle_from_vertical_degrees": 6.287642062557999
+    },
+    {
+      "axis_y": 140.95,
+      "radius": 17.195508193129847,
+      "slope": 0.1874571316685625,
+      "second_derivative": 1.670471522482325e-05,
+      "tangent_angle_from_vertical_degrees": 6.287745089569972
+    },
+    {
+      "axis_y": 141.0,
+      "radius": 17.2048752546974,
+      "slope": 0.18745886046889032,
+      "second_derivative": 1.938311103995539e-07,
+      "tangent_angle_from_vertical_degrees": 6.287802613062458
+    },
+    {
+      "axis_y": 141.05,
+      "radius": 17.214256617122306,
+      "slope": 0.1874592403321453,
+      "second_derivative": 1.233470533661126e-05,
+      "tangent_angle_from_vertical_degrees": 6.287815252496748
+    },
+    {
+      "axis_y": 141.1,
+      "radius": 17.223623678689854,
+      "slope": 0.1874520407473553,
+      "second_derivative": 1.2669504483608586e-05,
+      "tangent_angle_from_vertical_degrees": 6.287575695978998
+    },
+    {
+      "axis_y": 141.15,
+      "radius": 17.23300504111476,
+      "slope": 0.1874558394939719,
+      "second_derivative": 1.1312686922824082e-05,
+      "tangent_angle_from_vertical_degrees": 6.287702094199988
+    },
+    {
+      "axis_y": 141.2,
+      "radius": 17.242357801824955,
+      "slope": 0.18745146307199603,
+      "second_derivative": 1.8378710935009487e-05,
+      "tangent_angle_from_vertical_degrees": 6.287556474597438
+    },
+    {
+      "axis_y": 141.25,
+      "radius": 17.251767765964573,
+      "slope": 0.18745458809244162,
+      "second_derivative": 1.4378742241003413e-05,
+      "tangent_angle_from_vertical_degrees": 6.2876604554919195
+    },
+    {
+      "axis_y": 141.3,
+      "radius": 17.261120526674766,
+      "slope": 0.18746021226124723,
+      "second_derivative": 1.117171887605175e-05,
+      "tangent_angle_from_vertical_degrees": 6.287847592115797
+    },
+    {
+      "axis_y": 141.35,
+      "radius": 17.270487588242318,
+      "slope": 0.18746048796472048,
+      "second_derivative": 8.387599604741241e-06,
+      "tangent_angle_from_vertical_degrees": 6.287856765773181
+    },
+    {
+      "axis_y": 141.4,
+      "radius": 17.279868950667222,
+      "slope": 0.18746341174673564,
+      "second_derivative": 5.656343489137715e-06,
+      "tangent_angle_from_vertical_degrees": 6.287954050615725
+    },
+    {
+      "axis_y": 141.45,
+      "radius": 17.28925031309213,
+      "slope": 0.18746100567972337,
+      "second_derivative": 2.607909152656182e-06,
+      "tangent_angle_from_vertical_degrees": 6.287873992033563
+    },
+    {
+      "axis_y": 141.5,
+      "radius": 17.29861737465968,
+      "slope": 0.18746615690393495,
+      "second_derivative": 9.356755068729031e-06,
+      "tangent_angle_from_vertical_degrees": 6.288045391929005
+    },
+    {
+      "axis_y": 141.55,
+      "radius": 17.30798443622723,
+      "slope": 0.18746296541315663,
+      "second_derivative": 6.4140468301229195e-06,
+      "tangent_angle_from_vertical_degrees": 6.287939199479474
+    },
+    {
+      "axis_y": 141.6,
+      "radius": 17.317365798652137,
+      "slope": 0.1874622730706846,
+      "second_derivative": 2.149762941601802e-06,
+      "tangent_angle_from_vertical_degrees": 6.287916162733829
+    },
+    {
+      "axis_y": 141.65,
+      "radius": 17.326732860219686,
+      "slope": 0.18746203459972322,
+      "second_derivative": -2.12861771551501e-05,
+      "tangent_angle_from_vertical_degrees": 6.287908227939372
+    },
+    {
+      "axis_y": 141.7,
+      "radius": 17.336085620929882,
+      "slope": 0.18745927436677393,
+      "second_derivative": -1.5541728718732586e-05,
+      "tangent_angle_from_vertical_degrees": 6.287816384952796
+    },
+    {
+      "axis_y": 141.75,
+      "radius": 17.34548128421214,
+      "slope": 0.18745287585260126,
+      "second_derivative": -1.0590225549177205e-05,
+      "tangent_angle_from_vertical_degrees": 6.287603482996165
+    },
+    {
+      "axis_y": 141.8,
+      "radius": 17.354834044922338,
+      "slope": 0.18745063082203947,
+      "second_derivative": -6.6959828588048035e-06,
+      "tangent_angle_from_vertical_degrees": 6.28752878258123
+    },
+    {
+      "axis_y": 141.85,
+      "radius": 17.364229708204597,
+      "slope": 0.18745557075728664,
+      "second_derivative": -1.1118855775033022e-05,
+      "tangent_angle_from_vertical_degrees": 6.287693152347664
+    },
+    {
+      "axis_y": 141.9,
+      "radius": 17.373611070629504,
+      "slope": 0.1874550691459408,
+      "second_derivative": -1.374438592197808e-05,
+      "tangent_angle_from_vertical_degrees": 6.287676461902908
+    },
+    {
+      "axis_y": 141.95,
+      "radius": 17.3829638313397,
+      "slope": 0.18745736454323816,
+      "second_derivative": -1.4942614447933294e-05,
+      "tangent_angle_from_vertical_degrees": 6.287752838160553
+    },
+    {
+      "axis_y": 142.0,
+      "radius": 17.39235949462196,
+      "slope": 0.1874547210331521,
+      "second_derivative": -1.5083582489618269e-05,
+      "tangent_angle_from_vertical_degrees": 6.287664878916134
+    },
+    {
+      "axis_y": 142.05,
+      "radius": 17.401712255332157,
+      "slope": 0.18746026776741376,
+      "second_derivative": -4.052831727363875e-06,
+      "tangent_angle_from_vertical_degrees": 6.2878494390078785
+    },
+    {
+      "axis_y": 142.1,
+      "radius": 17.411079316899706,
+      "slope": 0.18745641317197076,
+      "second_derivative": -2.0563715865443387e-05,
+      "tangent_angle_from_vertical_degrees": 6.2877211825639945
+    },
+    {
+      "axis_y": 142.15,
+      "radius": 17.420460679324613,
+      "slope": 0.187454222505471,
+      "second_derivative": -1.800866972961144e-05,
+      "tangent_angle_from_vertical_degrees": 6.287648291074387
+    },
+    {
+      "axis_y": 142.2,
+      "radius": 17.42982774089216,
+      "slope": 0.1874557224284809,
+      "second_derivative": -1.4237774151370824e-05,
+      "tangent_angle_from_vertical_degrees": 6.2876981990030165
+    },
+    {
+      "axis_y": 142.25,
+      "radius": 17.43920910331707,
+      "slope": 0.18745313979245637,
+      "second_derivative": -9.621070130211798e-06,
+      "tangent_angle_from_vertical_degrees": 6.287612265243437
+    },
+    {
+      "axis_y": 142.3,
+      "radius": 17.44857616488462,
+      "slope": 0.1874464373648591,
+      "second_derivative": -6.2730786805875206e-06,
+      "tangent_angle_from_vertical_degrees": 6.28738925079678
+    },
+    {
+      "axis_y": 142.35,
+      "radius": 17.457957527309524,
+      "slope": 0.18744640116018252,
+      "second_derivative": -1.3303860756466926e-05,
+      "tangent_angle_from_vertical_degrees": 6.287388046133352
+    },
+    {
+      "axis_y": 142.4,
+      "radius": 17.467324588877077,
+      "slope": 0.1874450532510013,
+      "second_derivative": -1.0220184380280468e-05,
+      "tangent_angle_from_vertical_degrees": 6.287343196208149
+    },
+    {
+      "axis_y": 142.45,
+      "radius": 17.47667734958727,
+      "slope": 0.18743936215501752,
+      "second_derivative": -7.876590417306517e-06,
+      "tangent_angle_from_vertical_degrees": 6.287153832304615
+    },
+    {
+      "axis_y": 142.5,
+      "radius": 17.486073012869532,
+      "slope": 0.1874371196370644,
+      "second_derivative": -6.6431198733944806e-06,
+      "tangent_angle_from_vertical_degrees": 6.287079215364379
+    },
+    {
+      "axis_y": 142.55,
+      "radius": 17.495454375294436,
+      "slope": 0.18744635947346783,
+      "second_derivative": -3.400854463523385e-06,
+      "tangent_angle_from_vertical_degrees": 6.287386659062247
+    },
+    {
+      "axis_y": 142.6,
+      "radius": 17.504821436861988,
+      "slope": 0.18744353882327414,
+      "second_derivative": 1.4801646075447844e-06,
+      "tangent_angle_from_vertical_degrees": 6.287292805585637
+    },
+    {
+      "axis_y": 142.65,
+      "radius": 17.51417419757218,
+      "slope": 0.18744969030072486,
+      "second_derivative": 1.6369916086219888e-05,
+      "tangent_angle_from_vertical_degrees": 6.287497487975281
+    },
+    {
+      "axis_y": 142.7,
+      "radius": 17.52355555999709,
+      "slope": 0.18744895113208682,
+      "second_derivative": 2.1779565374113932e-05,
+      "tangent_angle_from_vertical_degrees": 6.287472893111363
+    },
+    {
+      "axis_y": 142.75,
+      "radius": 17.53292262156464,
+      "slope": 0.1874471795029359,
+      "second_derivative": 1.5594591749038008e-05,
+      "tangent_angle_from_vertical_degrees": 6.287413944472803
+    },
+    {
+      "axis_y": 142.8,
+      "radius": 17.542303983989544,
+      "slope": 0.18744900538197037,
+      "second_derivative": 2.7048246696250527e-05,
+      "tangent_angle_from_vertical_degrees": 6.287474698204941
+    },
+    {
+      "axis_y": 142.85,
+      "radius": 17.551671045557097,
+      "slope": 0.1874492589286563,
+      "second_derivative": 8.687156699315465e-06,
+      "tangent_angle_from_vertical_degrees": 6.287483134637531
+    },
+    {
+      "axis_y": 142.9,
+      "radius": 17.561038107124645,
+      "slope": 0.1874508040789283,
+      "second_derivative": 8.863366822421149e-06,
+      "tangent_angle_from_vertical_degrees": 6.287534547475224
+    },
+    {
+      "axis_y": 142.95,
+      "radius": 17.570419469549552,
+      "slope": 0.18745248708094683,
+      "second_derivative": 1.8466815942700757e-05,
+      "tangent_angle_from_vertical_degrees": 6.287590547136428
+    },
+    {
+      "axis_y": 143.0,
+      "radius": 17.5797865311171,
+      "slope": 0.1874511647548562,
+      "second_derivative": 2.6748689536177406e-05,
+      "tangent_angle_from_vertical_degrees": 6.287546548489634
+    },
+    {
+      "axis_y": 143.05,
+      "radius": 17.589167893542008,
+      "slope": 0.1874576231152103,
+      "second_derivative": 2.4704652648954902e-05,
+      "tangent_angle_from_vertical_degrees": 6.2877614417937275
+    },
+    {
+      "axis_y": 143.1,
+      "radius": 17.598549255966912,
+      "slope": 0.18746196927144151,
+      "second_derivative": 1.3709143880365428e-05,
+      "tangent_angle_from_vertical_degrees": 6.2879060542302785
+    },
+    {
+      "axis_y": 143.15,
+      "radius": 17.60790201667711,
+      "slope": 0.18630344121052259,
+      "second_derivative": 0.003298758350426254,
+      "tangent_angle_from_vertical_degrees": 6.249354767526259
+    },
+    {
+      "axis_y": 143.2,
+      "radius": 17.617283379102016,
+      "slope": 0.18447357602595787,
+      "second_derivative": 0.009593687108468581,
+      "tangent_angle_from_vertical_degrees": 6.188452443467291
+    },
+    {
+      "axis_y": 143.25,
+      "radius": 17.62666474152692,
+      "slope": 0.18255702458815418,
+      "second_derivative": 0.018249055561866404,
+      "tangent_angle_from_vertical_degrees": 6.124649938663252
+    },
+    {
+      "axis_y": 143.3,
+      "radius": 17.636031803094472,
+      "slope": 0.1810158081829281,
+      "second_derivative": 0.028699387955267282,
+      "tangent_angle_from_vertical_degrees": 6.073331365740313
+    },
+    {
+      "axis_y": 143.35,
+      "radius": 17.645384563804665,
+      "slope": 0.18020909572673882,
+      "second_derivative": 0.04034465373761227,
+      "tangent_angle_from_vertical_degrees": 6.0464659942321735
+    },
+    {
+      "axis_y": 143.4,
+      "radius": 17.654780227086928,
+      "slope": 0.18040370037268091,
+      "second_derivative": 0.052694795066376914,
+      "tangent_angle_from_vertical_degrees": 6.052947019117065
+    },
+    {
+      "axis_y": 143.45,
+      "radius": 17.664147288654476,
+      "slope": 0.18178756876680027,
+      "second_derivative": 0.06529478466197094,
+      "tangent_angle_from_vertical_degrees": 6.099030251410065
+    },
+    {
+      "axis_y": 143.5,
+      "radius": 17.673528651079383,
+      "slope": 0.18447278374957438,
+      "second_derivative": 0.0777352160336887,
+      "tangent_angle_from_vertical_degrees": 6.188426071548768
+    },
+    {
+      "axis_y": 143.55,
+      "radius": 17.682895712646935,
+      "slope": 0.18848854385272681,
+      "second_derivative": 0.08962095570690622,
+      "tangent_angle_from_vertical_degrees": 6.322061669749588
+    },
+    {
+      "axis_y": 143.6,
+      "radius": 17.69227707507184,
+      "slope": 0.19381259943777798,
+      "second_derivative": 0.10062860532891436,
+      "tangent_angle_from_vertical_degrees": 6.49912778319694
+    },
+    {
+      "axis_y": 143.65,
+      "radius": 17.701629835782036,
+      "slope": 0.2003661471561662,
+      "second_derivative": 0.11044193829731556,
+      "tangent_angle_from_vertical_degrees": 6.716912631449872
+    },
+    {
+      "axis_y": 143.7,
+      "radius": 17.71101119820694,
+      "slope": 0.2080125729511198,
+      "second_derivative": 0.11885470071783838,
+      "tangent_angle_from_vertical_degrees": 6.970768888540179
+    },
+    {
+      "axis_y": 143.75,
+      "radius": 17.720392560631847,
+      "slope": 0.2165908031594602,
+      "second_derivative": 0.12565568719352824,
+      "tangent_angle_from_vertical_degrees": 7.255232976989317
+    },
+    {
+      "axis_y": 143.8,
+      "radius": 17.72977392305675,
+      "slope": 0.22590132951884434,
+      "second_derivative": 0.13066882861614887,
+      "tangent_angle_from_vertical_degrees": 7.563573988185316
+    },
+    {
+      "axis_y": 143.85,
+      "radius": 17.739126683766948,
+      "slope": 0.2357208707923491,
+      "second_derivative": 0.1338001697732182,
+      "tangent_angle_from_vertical_degrees": 7.888295175750102
+    },
+    {
+      "axis_y": 143.9,
+      "radius": 17.748493745334496,
+      "slope": 0.2458100799037133,
+      "second_derivative": 0.13496118272258043,
+      "tangent_angle_from_vertical_degrees": 8.221403456838113
+    },
+    {
+      "axis_y": 143.95,
+      "radius": 17.7632522301249,
+      "slope": 0.2559131428307249,
+      "second_derivative": 0.13414370893757507,
+      "tangent_angle_from_vertical_degrees": 8.554409299218682
+    },
+    {
+      "axis_y": 144.0,
+      "radius": 17.778568448352146,
+      "slope": 0.2657961506173786,
+      "second_derivative": 0.13137472618095747,
+      "tangent_angle_from_vertical_degrees": 8.879599685016341
+    },
+    {
+      "axis_y": 144.05,
+      "radius": 17.79385606486468,
+      "slope": 0.27521134757300286,
+      "second_derivative": 0.12669722971122485,
+      "tangent_angle_from_vertical_degrees": 9.188862067552863
+    },
+    {
+      "axis_y": 144.1,
+      "radius": 17.80917228309193,
+      "slope": 0.283934742073034,
+      "second_derivative": 0.1202067253896092,
+      "tangent_angle_from_vertical_degrees": 9.474919917605021
+    },
+    {
+      "axis_y": 144.15,
+      "radius": 17.824459899604467,
+      "slope": 0.2917617622302484,
+      "second_derivative": 0.11207209295320189,
+      "tangent_angle_from_vertical_degrees": 9.731179138952902
+    },
+    {
+      "axis_y": 144.2,
+      "radius": 17.839761816974356,
+      "slope": 0.29852500485021166,
+      "second_derivative": 0.10249734842782214,
+      "tangent_angle_from_vertical_degrees": 9.952294161161374
+    },
+    {
+      "axis_y": 144.25,
+      "radius": 17.85506373434425,
+      "slope": 0.3040833477698354,
+      "second_derivative": 0.0916728163168621,
+      "tangent_angle_from_vertical_degrees": 10.13379300541985
+    },
+    {
+      "axis_y": 144.3,
+      "radius": 17.870365651714142,
+      "slope": 0.30833822858464327,
+      "second_derivative": 0.07993539266470269,
+      "tangent_angle_from_vertical_degrees": 10.27259081789933
+    },
+    {
+      "axis_y": 144.35,
+      "radius": 17.88566756908403,
+      "slope": 0.3112619748400256,
+      "second_derivative": 0.0675699386803108,
+      "tangent_angle_from_vertical_degrees": 10.367895398187962
+    },
+    {
+      "axis_y": 144.4,
+      "radius": 17.900969486453924,
+      "slope": 0.31288103956794794,
+      "second_derivative": 0.054955658447613784,
+      "tangent_angle_from_vertical_degrees": 10.420646711607766
+    },
+    {
+      "axis_y": 144.45,
+      "radius": 17.916242802109107,
+      "slope": 0.31327976519917944,
+      "second_derivative": 0.04250504213342888,
+      "tangent_angle_from_vertical_degrees": 10.433634993349278
+    },
+    {
+      "axis_y": 144.5,
+      "radius": 17.93155902033635,
+      "slope": 0.3126368219961538,
+      "second_derivative": 0.03069357500731196,
+      "tangent_angle_from_vertical_degrees": 10.412690915287353
+    },
+    {
+      "axis_y": 144.55,
+      "radius": 17.946860937706244,
+      "slope": 0.311202268927344,
+      "second_derivative": 0.019993535315092494,
+      "tangent_angle_from_vertical_degrees": 10.365949758626469
+    },
+    {
+      "axis_y": 144.6,
+      "radius": 17.962148554218782,
+      "slope": 0.309313071183298,
+      "second_derivative": 0.010966310738145116,
+      "tangent_angle_from_vertical_degrees": 10.30437391608439
+    },
+    {
+      "axis_y": 144.65,
+      "radius": 17.97745047158867,
+      "slope": 0.30742143036816383,
+      "second_derivative": 0.004178716228363786,
+      "tangent_angle_from_vertical_degrees": 10.24269432615297
+    },
+    {
+      "axis_y": 144.7,
+      "radius": 17.99273808810121,
+      "slope": 0.3060838021574782,
+      "second_derivative": 0.0002919096120172782,
+      "tangent_angle_from_vertical_degrees": 10.199064593913523
+    },
+    {
+      "axis_y": 144.75,
+      "radius": 18.008054306328457,
+      "slope": 0.30596583257890286,
+      "second_derivative": -2.7418287850775575e-05,
+      "tangent_angle_from_vertical_degrees": 10.195216178107067
+    },
+    {
+      "axis_y": 144.8,
+      "radius": 18.023356223698347,
+      "slope": 0.305966164702282,
+      "second_derivative": -1.2616641461697095e-05,
+      "tangent_angle_from_vertical_degrees": 10.195227012800855
+    },
+    {
+      "axis_y": 144.85,
+      "radius": 18.03865814106824,
+      "slope": 0.30596584422833345,
+      "second_derivative": -1.566507581318609e-05,
+      "tangent_angle_from_vertical_degrees": 10.195216558140588
+    },
+    {
+      "axis_y": 144.9,
+      "radius": 18.053945757580777,
+      "slope": 0.3059650387035607,
+      "second_derivative": 1.0396394934151556e-06,
+      "tangent_angle_from_vertical_degrees": 10.195190279908475
+    },
+    {
+      "axis_y": 144.95,
+      "radius": 18.069247674950667,
+      "slope": 0.3059637853604478,
+      "second_derivative": -1.585890706310431e-06,
+      "tangent_angle_from_vertical_degrees": 10.195149392713827
+    },
+    {
+      "axis_y": 145.0,
+      "radius": 18.08454959232056,
+      "slope": 0.30596507844872933,
+      "second_derivative": 5.3215443002974695e-06,
+      "tangent_angle_from_vertical_degrees": 10.195191576495352
+    },
+    {
+      "axis_y": 145.05,
+      "radius": 18.099822907975742,
+      "slope": 0.3059689924334816,
+      "second_derivative": 3.541822552011428e-06,
+      "tangent_angle_from_vertical_degrees": 10.195319260422284
+    },
+    {
+      "axis_y": 145.1,
+      "radius": 18.115153427060346,
+      "slope": 0.3059707484158049,
+      "second_derivative": 2.713635121314645e-06,
+      "tangent_angle_from_vertical_degrees": 10.195376544904134
+    },
+    {
+      "axis_y": 145.15,
+      "radius": 18.13044104357288,
+      "slope": 0.30597352680818724,
+      "second_derivative": -6.748845903100336e-06,
+      "tangent_angle_from_vertical_degrees": 10.195467182886064
+    },
+    {
+      "axis_y": 145.2,
+      "radius": 18.145728660085418,
+      "slope": 0.3059694613806773,
+      "second_derivative": -6.572635883266439e-06,
+      "tangent_angle_from_vertical_degrees": 10.195334558640443
+    },
+    {
+      "axis_y": 145.25,
+      "radius": 18.16103057745531,
+      "slope": 0.3059633496484049,
+      "second_derivative": -8.088042509403884e-06,
+      "tangent_angle_from_vertical_degrees": 10.195135178692135
+    },
+    {
+      "axis_y": 145.3,
+      "radius": 18.1763324948252,
+      "slope": 0.3059679484377205,
+      "second_derivative": 8.81050338907591e-08,
+      "tangent_angle_from_vertical_degrees": 10.195285202691421
+    },
+    {
+      "axis_y": 145.35,
+      "radius": 18.191620111337738,
+      "slope": 0.305967450823701,
+      "second_derivative": -2.643151561061691e-07,
+      "tangent_angle_from_vertical_degrees": 10.195268969285445
+    },
+    {
+      "axis_y": 145.4,
+      "radius": 18.206936329564986,
+      "slope": 0.3059649069049439,
+      "second_derivative": -1.251091550028798e-06,
+      "tangent_angle_from_vertical_degrees": 10.195185980307652
+    },
+    {
+      "axis_y": 145.45,
+      "radius": 18.22222394607752,
+      "slope": 0.3059620640979937,
+      "second_derivative": 1.5506486649648622e-05,
+      "tangent_angle_from_vertical_degrees": 10.195093240800022
+    },
+    {
+      "axis_y": 145.5,
+      "radius": 18.237525863447413,
+      "slope": 0.30596362683664424,
+      "second_derivative": 2.1409524239047417e-05,
+      "tangent_angle_from_vertical_degrees": 10.195144221269166
+    },
+    {
+      "axis_y": 145.55,
+      "radius": 18.252827780817306,
+      "slope": 0.3059725521380585,
+      "second_derivative": 2.7946918075741243e-05,
+      "tangent_angle_from_vertical_degrees": 10.195435386759009
+    },
+    {
+      "axis_y": 145.6,
+      "radius": 18.268129698187195,
+      "slope": 0.3059760645595876,
+      "second_derivative": 2.5638566056831302e-05,
+      "tangent_angle_from_vertical_degrees": 10.195549970523194
+    },
+    {
+      "axis_y": 145.65,
+      "radius": 18.283417314699733,
+      "slope": 0.30597407101995394,
+      "second_derivative": 3.111869944957155e-05,
+      "tangent_angle_from_vertical_degrees": 10.19548493640418
+    },
+    {
+      "axis_y": 145.7,
+      "radius": 18.29873353292698,
+      "slope": 0.30597413988872946,
+      "second_derivative": 2.4422716547016188e-05,
+      "tangent_angle_from_vertical_degrees": 10.19548718307184
+    },
+    {
+      "axis_y": 145.75,
+      "radius": 18.314021149439515,
+      "slope": 0.30597898617161373,
+      "second_derivative": 1.6933788319476268e-05,
+      "tangent_angle_from_vertical_degrees": 10.19564528057642
+    },
+    {
+      "axis_y": 145.8,
+      "radius": 18.32932306680941,
+      "slope": 0.30598059470856837,
+      "second_derivative": 9.550586147587512e-06,
+      "tangent_angle_from_vertical_degrees": 10.195697754919442
+    },
+    {
+      "axis_y": 145.85,
+      "radius": 18.344610683321946,
+      "slope": 0.30597890965073854,
+      "second_derivative": 1.4273015649026077e-06,
+      "tangent_angle_from_vertical_degrees": 10.195642784281054
+    },
+    {
+      "axis_y": 145.9,
+      "radius": 18.359912600691835,
+      "slope": 0.3059806807088544,
+      "second_derivative": 2.1427145286625656e-05,
+      "tangent_angle_from_vertical_degrees": 10.195700560455066
+    },
+    {
+      "axis_y": 145.95,
+      "radius": 18.375200217204373,
+      "slope": 0.3059777810252112,
+      "second_derivative": 1.1347928860020336e-05,
+      "tangent_angle_from_vertical_degrees": 10.19560596579179
+    },
+    {
+      "axis_y": 146.0,
+      "radius": 18.39051643543162,
+      "slope": 0.3059759384715057,
+      "second_derivative": 8.7928827950287e-06,
+      "tangent_angle_from_vertical_degrees": 10.195545857223605
+    },
+    {
+      "axis_y": 146.05,
+      "radius": 18.40581835280151,
+      "slope": 0.3059829820451088,
+      "second_derivative": -2.713635126020383e-06,
+      "tangent_angle_from_vertical_degrees": 10.195775635545635
+    },
+    {
+      "axis_y": 146.1,
+      "radius": 18.42110596931405,
+      "slope": 0.30598319790241435,
+      "second_derivative": -3.048434361917936e-06,
+      "tangent_angle_from_vertical_degrees": 10.195782677325187
+    },
+    {
+      "axis_y": 146.15,
+      "radius": 18.43640788668394,
+      "slope": 0.30598166280266664,
+      "second_derivative": -3.4360964374752114e-06,
+      "tangent_angle_from_vertical_degrees": 10.195732598707503
+    },
+    {
+      "axis_y": 146.2,
+      "radius": 18.451709804053834,
+      "slope": 0.3059833231910558,
+      "second_derivative": 5.867795520314968e-06,
+      "tangent_angle_from_vertical_degrees": 10.195786764539013
+    },
+    {
+      "axis_y": 146.25,
+      "radius": 18.46702602228108,
+      "slope": 0.30598635718594114,
+      "second_derivative": -1.247567337244588e-05,
+      "tangent_angle_from_vertical_degrees": 10.19588574064474
+    },
+    {
+      "axis_y": 146.3,
+      "radius": 18.482313638793617,
+      "slope": 0.30598911045207994,
+      "second_derivative": -1.9224519248965268e-05,
+      "tangent_angle_from_vertical_degrees": 10.195975558660017
+    },
+    {
+      "axis_y": 146.35,
+      "radius": 18.497601255306154,
+      "slope": 0.30598583650147343,
+      "second_derivative": -1.5224550581921845e-05,
+      "tangent_angle_from_vertical_degrees": 10.19586875468741
+    },
+    {
+      "axis_y": 146.4,
+      "radius": 18.512903172676044,
+      "slope": 0.305981537628251,
+      "second_derivative": -1.170034902852349e-05,
+      "tangent_angle_from_vertical_degrees": 10.195728515218608
+    },
+    {
+      "axis_y": 146.45,
+      "radius": 18.528219390903292,
+      "slope": 0.30597915223328825,
+      "second_derivative": -1.813201686908742e-05,
+      "tangent_angle_from_vertical_degrees": 10.19565069790832
+    },
+    {
+      "axis_y": 146.5,
+      "radius": 18.54350700741583,
+      "slope": 0.3059756116018217,
+      "second_derivative": -5.656343421476869e-06,
+      "tangent_angle_from_vertical_degrees": 10.195535193939817
+    },
+    {
+      "axis_y": 146.55,
+      "radius": 18.558794623928364,
+      "slope": 0.30597080403621946,
+      "second_derivative": -1.335672376756799e-05,
+      "tangent_angle_from_vertical_degrees": 10.195378359379138
+    },
+    {
+      "axis_y": 146.6,
+      "radius": 18.574096541298257,
+      "slope": 0.3059675748560182,
+      "second_derivative": -1.2369947372627885e-05,
+      "tangent_angle_from_vertical_degrees": 10.195273015528029
+    },
+    {
+      "axis_y": 146.65,
+      "radius": 18.58939845866815,
+      "slope": 0.305962762265168,
+      "second_derivative": -1.2176116258540052e-05,
+      "tangent_angle_from_vertical_degrees": 10.195116016772975
+    },
+    {
+      "axis_y": 146.7,
+      "radius": 18.604714676895394,
+      "slope": 0.3059611823949903,
+      "second_derivative": -3.0308133472799415e-06,
+      "tangent_angle_from_vertical_degrees": 10.19506447742107
+    },
+    {
+      "axis_y": 146.75,
+      "radius": 18.620002293407932,
+      "slope": 0.30595972929817883,
+      "second_derivative": 5.691585451770322e-06,
+      "tangent_angle_from_vertical_degrees": 10.195017073721553
+    },
+    {
+      "axis_y": 146.8,
+      "radius": 18.635304210777825,
+      "slope": 0.3059694682333178,
+      "second_derivative": 6.361183790914657e-06,
+      "tangent_angle_from_vertical_degrees": 10.195334782190523
+    },
+    {
+      "axis_y": 146.85,
+      "radius": 18.650577526433004,
+      "slope": 0.30562405091427275,
+      "second_derivative": 0.000987604613438544,
+      "tangent_angle_from_vertical_degrees": 10.18406601647036
+    },
+    {
+      "axis_y": 146.9,
+      "radius": 18.665893744660252,
+      "slope": 0.3039013905368506,
+      "second_derivative": 0.00619822466838718,
+      "tangent_angle_from_vertical_degrees": 10.127854713783476
+    },
+    {
+      "axis_y": 146.95,
+      "radius": 18.681195662030145,
+      "slope": 0.30159797865486604,
+      "second_derivative": 0.014840976480228425,
+      "tangent_angle_from_vertical_degrees": 10.052662409997547
+    },
+    {
+      "axis_y": 147.0,
+      "radius": 18.696497579400035,
+      "slope": 0.2993712619148137,
+      "second_derivative": 0.026133769247431746,
+      "tangent_angle_from_vertical_degrees": 9.979940456801042
+    },
+    {
+      "axis_y": 147.05,
+      "radius": 18.711770895055217,
+      "slope": 0.29774404097723384,
+      "second_derivative": 0.03937586836032295,
+      "tangent_angle_from_vertical_degrees": 9.92677676834507
+    },
+    {
+      "axis_y": 147.1,
+      "radius": 18.72707281242511,
+      "slope": 0.2971185947821037,
+      "second_derivative": 0.05389906758932581,
+      "tangent_angle_from_vertical_degrees": 9.906337926459123
+    },
+    {
+      "axis_y": 147.15,
+      "radius": 18.742389030652355,
+      "slope": 0.2977989130559564,
+      "second_derivative": 0.0691182613769495,
+      "tangent_angle_from_vertical_degrees": 9.928569801290754
+    },
+    {
+      "axis_y": 147.2,
+      "radius": 18.757690948022248,
+      "slope": 0.2999845139973828,
+      "second_derivative": 0.08447572721121081,
+      "tangent_angle_from_vertical_degrees": 9.999971801149375
+    },
+    {
+      "axis_y": 147.25,
+      "radius": 18.772978564534785,
+      "slope": 0.3037732260959105,
+      "second_derivative": 0.09946723995947512,
+      "tangent_angle_from_vertical_degrees": 10.123671852611453
+    },
+    {
+      "axis_y": 147.3,
+      "radius": 18.78829478276203,
+      "slope": 0.30917531239741763,
+      "second_derivative": 0.11364896168206165,
+      "tangent_angle_from_vertical_degrees": 10.29988291177181
+    },
+    {
+      "axis_y": 147.35,
+      "radius": 18.803582399274568,
+      "slope": 0.31614851568615576,
+      "second_derivative": 0.1266409305919053,
+      "tangent_angle_from_vertical_degrees": 10.527051024249113
+    },
+    {
+      "axis_y": 147.4,
+      "radius": 18.81888431664446,
+      "slope": 0.3245728702171321,
+      "second_derivative": 0.13811842676086836,
+      "tangent_angle_from_vertical_degrees": 10.801047307364495
+    },
+    {
+      "axis_y": 147.45,
+      "radius": 18.83418623401435,
+      "slope": 0.3342802812529619,
+      "second_derivative": 0.14777188432716856,
+      "tangent_angle_from_vertical_degrees": 11.116154582033214
+    },
+    {
+      "axis_y": 147.5,
+      "radius": 18.849488151384243,
+      "slope": 0.3450418516111416,
+      "second_derivative": 0.15540095243438443,
+      "tangent_angle_from_vertical_degrees": 11.464685441198503
+    },
+    {
+      "axis_y": 147.55,
+      "radius": 18.864790068754136,
+      "slope": 0.35660880364782926,
+      "second_derivative": 0.16079946529341513,
+      "tangent_angle_from_vertical_degrees": 11.838342726307477
+    },
+    {
+      "axis_y": 147.6,
+      "radius": 18.88006338440932,
+      "slope": 0.368709067798132,
+      "second_derivative": 0.16386522106013984,
+      "tangent_angle_from_vertical_degrees": 12.228137302019242
+    },
+    {
+      "axis_y": 147.65,
+      "radius": 18.89698129866033,
+      "slope": 0.3810399278940339,
+      "second_derivative": 0.16453029075038186,
+      "tangent_angle_from_vertical_degrees": 12.624181033096438
+    },
+    {
+      "axis_y": 147.7,
+      "radius": 18.919505148994514,
+      "slope": 0.3933123469555615,
+      "second_derivative": 0.1627907272581859,
+      "tangent_angle_from_vertical_degrees": 13.01713402003836
+    },
+    {
+      "axis_y": 147.75,
+      "radius": 18.942043300186057,
+      "slope": 0.4052138221396219,
+      "second_derivative": 0.15865773754463203,
+      "tangent_angle_from_vertical_degrees": 13.397023608228293
+    },
+    {
+      "axis_y": 147.8,
+      "radius": 18.964567150520242,
+      "slope": 0.4164543276340899,
+      "second_derivative": 0.15224125907599745,
+      "tangent_angle_from_vertical_degrees": 13.754717558793725
+    },
+    {
+      "axis_y": 147.85,
+      "radius": 18.987105301711786,
+      "slope": 0.42676336654899855,
+      "second_derivative": 0.1436942421984228,
+      "tangent_angle_from_vertical_degrees": 14.081812882399504
+    },
+    {
+      "axis_y": 147.9,
+      "radius": 19.009643452903326,
+      "slope": 0.43592148403305686,
+      "second_derivative": 0.13321624482311223,
+      "tangent_angle_from_vertical_degrees": 14.371607641067369
+    },
+    {
+      "axis_y": 147.95,
+      "radius": 19.032181604094866,
+      "slope": 0.44372035136745297,
+      "second_derivative": 0.12105168794645532,
+      "tangent_angle_from_vertical_degrees": 14.617800804816637
+    },
+    {
+      "axis_y": 148.0,
+      "radius": 19.054705454429055,
+      "slope": 0.4500098812283247,
+      "second_derivative": 0.10748626096504148,
+      "tangent_angle_from_vertical_degrees": 14.815946776954231
+    },
+    {
+      "axis_y": 148.05,
+      "radius": 19.07722930476324,
+      "slope": 0.4547014542399906,
+      "second_derivative": 0.09288864822085241,
+      "tangent_angle_from_vertical_degrees": 14.963515138711951
+    },
+    {
+      "axis_y": 148.1,
+      "radius": 19.099767455954783,
+      "slope": 0.45777337696781917,
+      "second_derivative": 0.0776914102087674,
+      "tangent_angle_from_vertical_degrees": 15.060029334721063
+    },
+    {
+      "axis_y": 148.15,
+      "radius": 19.122291306288968,
+      "slope": 0.45927025992949966,
+      "second_derivative": 0.06234925703009289,
+      "tangent_angle_from_vertical_degrees": 15.107027013113024
+    },
+    {
+      "axis_y": 148.2,
+      "radius": 19.14482945748051,
+      "slope": 0.4593532201880529,
+      "second_derivative": 0.04737214064502315,
+      "tangent_angle_from_vertical_degrees": 15.109631110784946
+    },
+    {
+      "axis_y": 148.25,
+      "radius": 19.16733900695734,
+      "slope": 0.458250982696984,
+      "second_derivative": 0.03333563364616118,
+      "tangent_angle_from_vertical_degrees": 15.07502699285828
+    },
+    {
+      "axis_y": 148.3,
+      "radius": 19.189891459006237,
+      "slope": 0.45630303372362674,
+      "second_derivative": 0.02087569581905357,
+      "tangent_angle_from_vertical_degrees": 15.013844718130299
+    },
+    {
+      "axis_y": 148.35,
+      "radius": 19.212415309340425,
+      "slope": 0.453971811535291,
+      "second_derivative": 0.010662559808992386,
+      "tangent_angle_from_vertical_degrees": 14.940578299322626
+    },
+    {
+      "axis_y": 148.4,
+      "radius": 19.23493915967461,
+      "slope": 0.4518331202776987,
+      "second_derivative": 0.003447814453765306,
+      "tangent_angle_from_vertical_degrees": 14.873318795543911
+    },
+    {
+      "axis_y": 148.45,
+      "radius": 19.257477310866154,
+      "slope": 0.45062238934541676,
+      "second_derivative": 1.9171656255033795e-05,
+      "tangent_angle_from_vertical_degrees": 14.835224018330457
+    },
+    {
+      "axis_y": 148.5,
+      "radius": 19.28000116120034,
+      "slope": 0.4506254610296809,
+      "second_derivative": 1.5717938787785823e-05,
+      "tangent_angle_from_vertical_degrees": 14.835320683659013
+    },
+    {
+      "axis_y": 148.55,
+      "radius": 19.302525011534524,
+      "slope": 0.45062901422429863,
+      "second_derivative": 2.190291246106372e-05,
+      "tangent_angle_from_vertical_degrees": 14.835432501920456
+    },
+    {
+      "axis_y": 148.6,
+      "radius": 19.325063162726067,
+      "slope": 0.4506330675454856,
+      "second_derivative": 1.866064698709283e-05,
+      "tangent_angle_from_vertical_degrees": 14.835560058915046
+    },
+    {
+      "axis_y": 148.65,
+      "radius": 19.347615614774963,
+      "slope": 0.45063765822587726,
+      "second_derivative": 2.5268524916296098e-05,
+      "tangent_angle_from_vertical_degrees": 14.835704526286492
+    },
+    {
+      "axis_y": 148.7,
+      "radius": 19.37013946510915,
+      "slope": 0.4506428421142121,
+      "second_derivative": 2.2660615772415513e-05,
+      "tangent_angle_from_vertical_degrees": 14.835867661506704
+    },
+    {
+      "axis_y": 148.75,
+      "radius": 19.39267761630069,
+      "slope": 0.45064058543419316,
+      "second_derivative": 2.8369822237806232e-05,
+      "tangent_angle_from_vertical_degrees": 14.835796644576691
+    },
+    {
+      "axis_y": 148.8,
+      "radius": 19.415201466634876,
+      "slope": 0.4506415625027656,
+      "second_derivative": 1.2845714540706837e-05,
+      "tangent_angle_from_vertical_degrees": 14.835827392588266
+    },
+    {
+      "axis_y": 148.85,
+      "radius": 19.437725316969065,
+      "slope": 0.45064054763059413,
+      "second_derivative": 5.744448453205561e-06,
+      "tangent_angle_from_vertical_degrees": 14.83579545491027
+    },
+    {
+      "axis_y": 148.9,
+      "radius": 19.460263468160605,
+      "slope": 0.45063926961807804,
+      "second_derivative": 7.1188870885307825e-06,
+      "tangent_angle_from_vertical_degrees": 14.835755236282766
+    },
+    {
+      "axis_y": 148.95,
+      "radius": 19.482815920209504,
+      "slope": 0.450637542302488,
+      "second_derivative": -2.096899932154128e-06,
+      "tangent_angle_from_vertical_degrees": 14.835700878213656
+    },
+    {
+      "axis_y": 149.0,
+      "radius": 19.505325469686333,
+      "slope": 0.4506351981374393,
+      "second_derivative": -2.6255301016682564e-06,
+      "tangent_angle_from_vertical_degrees": 14.835627108045692
+    },
+    {
+      "axis_y": 149.05,
+      "radius": 19.527849320020522,
+      "slope": 0.4506320881927616,
+      "second_derivative": -1.3532933865746005e-05,
+      "tangent_angle_from_vertical_degrees": 14.835529238945822
+    },
+    {
+      "axis_y": 149.1,
+      "radius": 19.550387471212062,
+      "slope": 0.4506331030648734,
+      "second_derivative": -5.057229220754884e-06,
+      "tangent_angle_from_vertical_degrees": 14.835561176700551
+    },
+    {
+      "axis_y": 149.15,
+      "radius": 19.572911321546247,
+      "slope": 0.4506303392914222,
+      "second_derivative": -1.5383139617895795e-05,
+      "tangent_angle_from_vertical_degrees": 14.835474201464905
+    },
+    {
+      "axis_y": 149.2,
+      "radius": 19.595463773595146,
+      "slope": 0.4506268097383363,
+      "second_derivative": -1.6493263122042542e-05,
+      "tangent_angle_from_vertical_degrees": 14.835363127240534
+    },
+    {
+      "axis_y": 149.25,
+      "radius": 19.61798762392933,
+      "slope": 0.4506243921360957,
+      "second_derivative": -8.229010544602672e-06,
+      "tangent_angle_from_vertical_degrees": 14.835287045787858
+    },
+    {
+      "axis_y": 149.3,
+      "radius": 19.64051147426352,
+      "slope": 0.45062306786844497,
+      "second_derivative": -9.55058613079949e-06,
+      "tangent_angle_from_vertical_degrees": 14.83524537133052
+    },
+    {
+      "axis_y": 149.35,
+      "radius": 19.66304962545506,
+      "slope": 0.45062594288264435,
+      "second_derivative": -9.814901291484196e-06,
+      "tangent_angle_from_vertical_degrees": 14.8353358474737
+    },
+    {
+      "axis_y": 149.4,
+      "radius": 19.685573475789248,
+      "slope": 0.4506302835568226,
+      "second_derivative": 1.6211327354592444e-06,
+      "tangent_angle_from_vertical_degrees": 14.835472447510753
+    },
+    {
+      "axis_y": 149.45,
+      "radius": 19.708111626980788,
+      "slope": 0.45063339350151416,
+      "second_derivative": 1.4537331285371467e-05,
+      "tangent_angle_from_vertical_degrees": 14.83557031666245
+    },
+    {
+      "axis_y": 149.5,
+      "radius": 19.730635477314973,
+      "slope": 0.45063346945132665,
+      "second_derivative": 8.229010557575236e-06,
+      "tangent_angle_from_vertical_degrees": 14.835572706782216
+    },
+    {
+      "axis_y": 149.55,
+      "radius": 19.75318792936387,
+      "slope": 0.4506334498071792,
+      "second_derivative": 1.071357260598493e-05,
+      "tangent_angle_from_vertical_degrees": 14.835572088586291
+    },
+    {
+      "axis_y": 149.6,
+      "radius": 19.7756974788407,
+      "slope": 0.45063320425514247,
+      "second_derivative": 2.925087228037992e-06,
+      "tangent_angle_from_vertical_degrees": 14.835564361130817
+    },
+    {
+      "axis_y": 149.65,
+      "radius": 19.798235630032245,
+      "slope": 0.45063262109769425,
+      "second_derivative": 4.140936810092512e-06,
+      "tangent_angle_from_vertical_degrees": 14.83554600932312
+    },
+    {
+      "axis_y": 149.7,
+      "radius": 19.820773781223785,
+      "slope": 0.45063662816377514,
+      "second_derivative": 5.779690467728457e-06,
+      "tangent_angle_from_vertical_degrees": 14.835672110549709
+    },
+    {
+      "axis_y": 149.75,
+      "radius": 19.84329763155797,
+      "slope": 0.4506373592234945,
+      "second_derivative": 7.999937453637823e-06,
+      "tangent_angle_from_vertical_degrees": 14.835695116774689
+    },
+    {
+      "axis_y": 149.8,
+      "radius": 19.865835782749514,
+      "slope": 0.4506297561339859,
+      "second_derivative": -1.268712533252847e-06,
+      "tangent_angle_from_vertical_degrees": 14.835455849642285
+    },
+    {
+      "axis_y": 149.85,
+      "radius": 19.8883596330837,
+      "slope": 0.4506324897559211,
+      "second_derivative": -1.1488896990859963e-05,
+      "tangent_angle_from_vertical_degrees": 14.835541876032492
+    },
+    {
+      "axis_y": 149.9,
+      "radius": 19.910897784275242,
+      "slope": 0.45063466237721533,
+      "second_derivative": -1.0378773485187058e-05,
+      "tangent_angle_from_vertical_degrees": 14.835610247825764
+    },
+    {
+      "axis_y": 149.95,
+      "radius": 19.933421634609427,
+      "slope": 0.45063659047439963,
+      "second_derivative": -1.7004272350048335e-05,
+      "tangent_angle_from_vertical_degrees": 14.835670924476496
+    },
+    {
+      "axis_y": 150.0,
+      "radius": 19.955959785800967,
+      "slope": 0.4506416964713631,
+      "second_derivative": -2.082803097983376e-05,
+      "tangent_angle_from_vertical_degrees": 14.835831608533224
+    },
+    {
+      "axis_y": 150.05,
+      "radius": 19.97849793699251,
+      "slope": 0.4506344154547139,
+      "second_derivative": -2.3541666169572454e-05,
+      "tangent_angle_from_vertical_degrees": 14.835602477244883
+    },
+    {
+      "axis_y": 150.1,
+      "radius": 20.001021787326696,
+      "slope": 0.45062761594837464,
+      "second_derivative": -1.809677482289619e-05,
+      "tangent_angle_from_vertical_degrees": 14.83538849849519
+    },
+    {
+      "axis_y": 150.15,
+      "radius": 20.023545637660884,
+      "slope": 0.450626076851262,
+      "second_derivative": -1.3074787619207832e-05,
+      "tangent_angle_from_vertical_degrees": 14.835340063438448
+    },
+    {
+      "axis_y": 150.2,
+      "radius": 20.046083788852425,
+      "slope": 0.45062178300329064,
+      "second_derivative": -8.31711560443861e-06,
+      "tangent_angle_from_vertical_degrees": 14.83520493684709
+    },
+    {
+      "axis_y": 150.25,
+      "radius": 20.06862194004397,
+      "slope": 0.4506226564831691,
+      "second_derivative": -3.665169568375189e-06,
+      "tangent_angle_from_vertical_degrees": 14.835232425108929
+    },
+    {
+      "axis_y": 150.3,
+      "radius": 20.091145790378153,
+      "slope": 0.45062073797966373,
+      "second_derivative": 1.0396394501732802e-06,
+      "tangent_angle_from_vertical_degrees": 14.835172050123754
+    },
+    {
+      "axis_y": 150.35,
+      "radius": 20.113683941569693,
+      "slope": 0.4506240054202271,
+      "second_derivative": 5.955900569849103e-06,
+      "tangent_angle_from_vertical_degrees": 14.83527487591287
+    },
+    {
+      "axis_y": 150.4,
+      "radius": 20.13620779190388,
+      "slope": 0.45061953443218805,
+      "second_derivative": 7.577033584091273e-07,
+      "tangent_angle_from_vertical_degrees": 14.83513417466833
+    },
+    {
+      "axis_y": 150.45,
+      "radius": 20.158745943095422,
+      "slope": 0.45011374093189244,
+      "second_derivative": 0.0014468256927072896,
+      "tangent_angle_from_vertical_degrees": 14.81921575669344
+    },
+    {
+      "axis_y": 150.5,
+      "radius": 20.18126979342961,
+      "slope": 0.4493223423550316,
+      "second_derivative": 0.004187544353167849,
+      "tangent_angle_from_vertical_degrees": 14.79430403244818
+    },
+    {
+      "axis_y": 150.55,
+      "radius": 20.20380794462115,
+      "slope": 0.44848584524025464,
+      "second_derivative": 0.007962915717358816,
+      "tangent_angle_from_vertical_degrees": 14.767966471006659
+    },
+    {
+      "axis_y": 150.6,
+      "radius": 20.22634609581269,
+      "slope": 0.44781820555872176,
+      "second_derivative": 0.0125041136931917,
+      "tangent_angle_from_vertical_degrees": 14.746940894782272
+    },
+    {
+      "axis_y": 150.65,
+      "radius": 20.248855645289524,
+      "slope": 0.44747172300085497,
+      "second_derivative": 0.01756308735665436,
+      "tangent_angle_from_vertical_degrees": 14.736027725757184
+    },
+    {
+      "axis_y": 150.7,
+      "radius": 20.271393796481064,
+      "slope": 0.447563246400168,
+      "second_derivative": 0.022938675284759256,
+      "tangent_angle_from_vertical_degrees": 14.73891054665669
+    },
+    {
+      "axis_y": 150.75,
+      "radius": 20.293917646815252,
+      "slope": 0.4481725037513702,
+      "second_derivative": 0.028410403430467943,
+      "tangent_angle_from_vertical_degrees": 14.758099101555976
+    },
+    {
+      "axis_y": 150.8,
+      "radius": 20.316441497149437,
+      "slope": 0.44934545313863283,
+      "second_derivative": 0.03381517174725344,
+      "tangent_angle_from_vertical_degrees": 14.795031597178763
+    },
+    {
+      "axis_y": 150.85,
+      "radius": 20.338993949198336,
+      "slope": 0.4510945463327003,
+      "second_derivative": 0.038979307584056475,
+      "tangent_angle_from_vertical_degrees": 14.850081696041324
+    },
+    {
+      "axis_y": 150.9,
+      "radius": 20.361532100389876,
+      "slope": 0.45341413118337387,
+      "second_derivative": 0.043739428958466615,
+      "tangent_angle_from_vertical_degrees": 14.92304391422852
+    },
+    {
+      "axis_y": 150.95,
+      "radius": 20.38405595072406,
+      "slope": 0.4562639407024356,
+      "second_derivative": 0.047999906662079386,
+      "tangent_angle_from_vertical_degrees": 15.012616503289575
+    },
+    {
+      "axis_y": 151.0,
+      "radius": 20.406594101915605,
+      "slope": 0.45959027757762044,
+      "second_derivative": 0.05165453888215994,
+      "tangent_angle_from_vertical_degrees": 15.117071918987177
+    },
+    {
+      "axis_y": 151.05,
+      "radius": 20.42911795224979,
+      "slope": 0.46331740831719354,
+      "second_derivative": 0.05460577572051449,
+      "tangent_angle_from_vertical_degrees": 15.233991144500035
+    },
+    {
+      "axis_y": 151.1,
+      "radius": 20.451656103441334,
+      "slope": 0.4673648992213215,
+      "second_derivative": 0.05676635794736943,
+      "tangent_angle_from_vertical_degrees": 15.360812948476733
+    },
+    {
+      "axis_y": 151.15,
+      "radius": 20.47417995377552,
+      "slope": 0.4716311054656168,
+      "second_derivative": 0.0581167791075402,
+      "tangent_angle_from_vertical_degrees": 15.494321083463616
+    },
+    {
+      "axis_y": 151.2,
+      "radius": 20.496718104967062,
+      "slope": 0.4760124220352487,
+      "second_derivative": 0.058607735621501816,
+      "tangent_angle_from_vertical_degrees": 15.63125221668612
+    },
+    {
+      "axis_y": 151.25,
+      "radius": 20.521601596764828,
+      "slope": 0.4804047010742581,
+      "second_derivative": 0.058238557891126856,
+      "tangent_angle_from_vertical_degrees": 15.76834239609673
+    },
+    {
+      "axis_y": 151.3,
+      "radius": 20.546699601422922,
+      "slope": 0.4846926177704508,
+      "second_derivative": 0.05701712250669151,
+      "tangent_angle_from_vertical_degrees": 15.901996812611122
+    },
+    {
+      "axis_y": 151.35,
+      "radius": 20.571826207795727,
+      "slope": 0.4887767316710075,
+      "second_derivative": 0.05497907676662455,
+      "tangent_angle_from_vertical_degrees": 16.029133746273715
+    },
+    {
+      "axis_y": 151.4,
+      "radius": 20.596924212453818,
+      "slope": 0.4925620913565273,
+      "second_derivative": 0.05214249982488397,
+      "tangent_angle_from_vertical_degrees": 16.14682603206712
+    },
+    {
+      "axis_y": 151.45,
+      "radius": 20.622022217111912,
+      "slope": 0.4959476003257848,
+      "second_derivative": 0.04860021914929729,
+      "tangent_angle_from_vertical_degrees": 16.251967959923512
+    },
+    {
+      "axis_y": 151.5,
+      "radius": 20.64713452262736,
+      "slope": 0.4988790201384428,
+      "second_derivative": 0.044427494063581305,
+      "tangent_angle_from_vertical_degrees": 16.342916731885428
+    },
+    {
+      "axis_y": 151.55,
+      "radius": 20.672232527285455,
+      "slope": 0.5012851334038273,
+      "second_derivative": 0.039720359059051906,
+      "tangent_angle_from_vertical_degrees": 16.41750441020831
+    },
+    {
+      "axis_y": 151.6,
+      "radius": 20.697344832800905,
+      "slope": 0.5031307469233869,
+      "second_derivative": 0.034611253628927294,
+      "tangent_angle_from_vertical_degrees": 16.474678284622765
+    },
+    {
+      "axis_y": 151.65,
+      "radius": 20.72245713831635,
+      "slope": 0.5043979493345505,
+      "second_derivative": 0.029251647954755898,
+      "tangent_angle_from_vertical_degrees": 16.513914474087954
+    },
+    {
+      "axis_y": 151.7,
+      "radius": 20.74754084211709,
+      "slope": 0.5050841432681155,
+      "second_derivative": 0.02379817517290391,
+      "tangent_angle_from_vertical_degrees": 16.5351543441442
+    },
+    {
+      "axis_y": 151.75,
+      "radius": 20.77265314763254,
+      "slope": 0.5052489685090872,
+      "second_derivative": 0.018398640295455855,
+      "tangent_angle_from_vertical_degrees": 16.54025551002222
+    },
+    {
+      "axis_y": 151.8,
+      "radius": 20.79776545314799,
+      "slope": 0.5049643553484162,
+      "second_derivative": 0.013272090067816487,
+      "tangent_angle_from_vertical_degrees": 16.531446866232173
+    },
+    {
+      "axis_y": 151.85,
+      "radius": 20.822877758663434,
+      "slope": 0.5043329196259602,
+      "second_derivative": 0.00863563292479479,
+      "tangent_angle_from_vertical_degrees": 16.511901356853446
+    },
+    {
+      "axis_y": 151.9,
+      "radius": 20.847961462464173,
+      "slope": 0.5035161777980608,
+      "second_derivative": 0.004716667969645703,
+      "tangent_angle_from_vertical_degrees": 16.486614004010335
+    },
+    {
+      "axis_y": 151.95,
+      "radius": 20.873073767979623,
+      "slope": 0.5026951815247116,
+      "second_derivative": 0.001780743786868128,
+      "tangent_angle_from_vertical_degrees": 16.46118826864253
+    },
+    {
+      "axis_y": 152.0,
+      "radius": 20.898171772637717,
+      "slope": 0.5021154125708068,
+      "second_derivative": 0.00011069516979068997,
+      "tangent_angle_from_vertical_degrees": 16.443229172458818
+    },
+    {
+      "axis_y": 152.05,
+      "radius": 20.92326977729581,
+      "slope": 0.5020703665696065,
+      "second_derivative": -2.821123318504444e-05,
+      "tangent_angle_from_vertical_degrees": 16.44183367490705
+    },
+    {
+      "axis_y": 152.1,
+      "radius": 20.948382082811257,
+      "slope": 0.5020705769448225,
+      "second_derivative": -2.4158401488967297e-05,
+      "tangent_angle_from_vertical_degrees": 16.44184019224913
+    },
+    {
+      "axis_y": 152.15,
+      "radius": 20.973494388326706,
+      "slope": 0.5020720396352987,
+      "second_derivative": -8.510946659005258e-06,
+      "tangent_angle_from_vertical_degrees": 16.441885505817094
+    },
+    {
+      "axis_y": 152.2,
+      "radius": 20.998578092127445,
+      "slope": 0.5020731561545523,
+      "second_derivative": -1.987649661391544e-05,
+      "tangent_angle_from_vertical_degrees": 16.441920095124324
+    },
+    {
+      "axis_y": 152.25,
+      "radius": 21.02370469850025,
+      "slope": 0.5020722721673491,
+      "second_derivative": -2.0281779751040742e-05,
+      "tangent_angle_from_vertical_degrees": 16.441892709565384
+    },
+    {
+      "axis_y": 152.3,
+      "radius": 21.04878840230099,
+      "slope": 0.5020715260319036,
+      "second_derivative": -1.0096837344076309e-05,
+      "tangent_angle_from_vertical_degrees": 16.441869594591033
+    },
+    {
+      "axis_y": 152.35,
+      "radius": 21.07388640695908,
+      "slope": 0.5020710666783051,
+      "second_derivative": -8.810503872621826e-06,
+      "tangent_angle_from_vertical_degrees": 16.441855363999583
+    },
+    {
+      "axis_y": 152.4,
+      "radius": 21.098984411617174,
+      "slope": 0.502074074519053,
+      "second_derivative": -6.3083206982899476e-06,
+      "tangent_angle_from_vertical_degrees": 16.441948545669575
+    },
+    {
+      "axis_y": 152.45,
+      "radius": 21.124096717132623,
+      "slope": 0.5020696890744708,
+      "second_derivative": 5.779690467474093e-06,
+      "tangent_angle_from_vertical_degrees": 16.4418126863692
+    },
+    {
+      "axis_y": 152.5,
+      "radius": 21.149237624362783,
+      "slope": 0.5020656834931393,
+      "second_derivative": 6.2202157078954e-06,
+      "tangent_angle_from_vertical_degrees": 16.441688594912623
+    },
+    {
+      "axis_y": 152.55,
+      "radius": 21.17432132816352,
+      "slope": 0.5020666877437463,
+      "second_derivative": 2.435223253539435e-05,
+      "tangent_angle_from_vertical_degrees": 16.44171970624702
+    },
+    {
+      "axis_y": 152.6,
+      "radius": 21.199419332821613,
+      "slope": 0.5020694841813049,
+      "second_derivative": 3.205261286037317e-05,
+      "tangent_angle_from_vertical_degrees": 16.441806338857095
+    },
+    {
+      "axis_y": 152.65,
+      "radius": 21.224531638337062,
+      "slope": 0.5020750590112754,
+      "second_derivative": 2.0317021796596133e-05,
+      "tangent_angle_from_vertical_degrees": 16.441979044814516
+    },
+    {
+      "axis_y": 152.7,
+      "radius": 21.2496153421378,
+      "slope": 0.5020765322090975,
+      "second_derivative": -8.458083716964049e-07,
+      "tangent_angle_from_vertical_degrees": 16.442024683830518
+    },
+    {
+      "axis_y": 152.75,
+      "radius": 21.27472764765325,
+      "slope": 0.502078906068833,
+      "second_derivative": -2.308351977067013e-06,
+      "tangent_angle_from_vertical_degrees": 16.442098224908513
+    },
+    {
+      "axis_y": 152.8,
+      "radius": 21.299839953168696,
+      "slope": 0.502073123376249,
+      "second_derivative": 5.074850222293146e-06,
+      "tangent_angle_from_vertical_degrees": 16.441919079666146
+    },
+    {
+      "axis_y": 152.85,
+      "radius": 21.324923656969435,
+      "slope": 0.5020749352073693,
+      "second_derivative": 1.8149637277067294e-06,
+      "tangent_angle_from_vertical_degrees": 16.441975209423372
+    },
+    {
+      "axis_y": 152.9,
+      "radius": 21.350035962484885,
+      "slope": 0.5020794137333069,
+      "second_derivative": -2.2907307722919485e-07,
+      "tangent_angle_from_vertical_degrees": 16.442113952112166
+    },
+    {
+      "axis_y": 152.95,
+      "radius": 21.375148268000334,
+      "slope": 0.5020787858054364,
+      "second_derivative": -1.427301648333996e-06,
+      "tangent_angle_from_vertical_degrees": 16.442094499205382
+    },
+    {
+      "axis_y": 153.0,
+      "radius": 21.400231971801073,
+      "slope": 0.5020761015223054,
+      "second_derivative": -1.263426245255198e-05,
+      "tangent_angle_from_vertical_degrees": 16.44201134134668
+    },
+    {
+      "axis_y": 153.05,
+      "radius": 21.42534427731652,
+      "slope": 0.5020793574276872,
+      "second_derivative": -1.3356723734373491e-05,
+      "tangent_angle_from_vertical_degrees": 16.442112207791002
+    },
+    {
+      "axis_y": 153.1,
+      "radius": 21.45045658283197,
+      "slope": 0.5020727652129134,
+      "second_derivative": -2.3189246060208875e-05,
+      "tangent_angle_from_vertical_degrees": 16.441907983914557
+    },
+    {
+      "axis_y": 153.15,
+      "radius": 21.475554587490063,
+      "slope": 0.5020661060709911,
+      "second_derivative": -5.903037548700683e-06,
+      "tangent_angle_from_vertical_degrees": 16.44170168622866
+    },
+    {
+      "axis_y": 153.2,
+      "radius": 21.500652592148157,
+      "slope": 0.5020721926770191,
+      "second_derivative": -7.1012661037805625e-06,
+      "tangent_angle_from_vertical_degrees": 16.44189024698737
+    },
+    {
+      "axis_y": 153.25,
+      "radius": 21.52577919852096,
+      "slope": 0.5020784543673403,
+      "second_derivative": 4.299525854714817e-06,
+      "tangent_angle_from_vertical_degrees": 16.442084231409225
+    },
+    {
+      "axis_y": 153.3,
+      "radius": 21.550877203179052,
+      "slope": 0.5020823064501484,
+      "second_derivative": 1.7550523561544606e-05,
+      "tangent_angle_from_vertical_degrees": 16.442203567053788
+    },
+    {
+      "axis_y": 153.35,
+      "radius": 21.5759895086945,
+      "slope": 0.502076943365919,
+      "second_derivative": 9.339133475921746e-07,
+      "tangent_angle_from_vertical_degrees": 16.442037421282897
+    },
+    {
+      "axis_y": 153.4,
+      "radius": 21.601087513352596,
+      "slope": 0.5020730208154188,
+      "second_derivative": 1.0572604519658965e-06,
+      "tangent_angle_from_vertical_degrees": 16.44191590237429
+    },
+    {
+      "axis_y": 153.45,
+      "radius": 21.626171217153335,
+      "slope": 0.5020721559013174,
+      "second_derivative": 7.048396418295806e-08,
+      "tangent_angle_from_vertical_degrees": 16.441889107691107
+    },
+    {
+      "axis_y": 153.5,
+      "radius": 21.65126922181143,
+      "slope": 0.5020692532482169,
+      "second_derivative": -1.1136476825536288e-05,
+      "tangent_angle_from_vertical_degrees": 16.441799184637645
+    },
+    {
+      "axis_y": 153.55,
+      "radius": 21.676381527326875,
+      "slope": 0.5020691848363025,
+      "second_derivative": -3.3303704340960654e-06,
+      "tangent_angle_from_vertical_degrees": 16.44179706526239
+    },
+    {
+      "axis_y": 153.6,
+      "radius": 21.70150813369968,
+      "slope": 0.5020658690847405,
+      "second_derivative": 3.999968697312709e-06,
+      "tangent_angle_from_vertical_degrees": 16.441694344476605
+    },
+    {
+      "axis_y": 153.65,
+      "radius": 21.72659183750042,
+      "slope": 0.5023677784717722,
+      "second_derivative": -0.0008651562315769424,
+      "tangent_angle_from_vertical_degrees": 16.45104694255717
+    },
+    {
+      "axis_y": 153.7,
+      "radius": 21.751689842158513,
+      "slope": 0.5032838682421513,
+      "second_derivative": -0.0037389663625180406,
+      "tangent_angle_from_vertical_degrees": 16.47942020100903
+    },
+    {
+      "axis_y": 153.75,
+      "radius": 21.77680214767396,
+      "slope": 0.5044266232986563,
+      "second_derivative": -0.008237591983957413,
+      "tangent_angle_from_vertical_degrees": 16.51480211738459
+    },
+    {
+      "axis_y": 153.8,
+      "radius": 21.801900152332053,
+      "slope": 0.5054854234396823,
+      "second_derivative": -0.013998886147625886,
+      "tangent_angle_from_vertical_degrees": 16.54757306753522
+    },
+    {
+      "axis_y": 153.85,
+      "radius": 21.826998156990147,
+      "slope": 0.5062117714074619,
+      "second_derivative": -0.02063830560456539,
+      "tangent_angle_from_vertical_degrees": 16.57004784383749
+    },
+    {
+      "axis_y": 153.9,
+      "radius": 21.852110462505596,
+      "slope": 0.5064188985203513,
+      "second_derivative": -0.02788305953577109,
+      "tangent_angle_from_vertical_degrees": 16.576455843589503
+    },
+    {
+      "axis_y": 153.95,
+      "radius": 21.8772370688784,
+      "slope": 0.5059592770199828,
+      "second_derivative": -0.035420586508452055,
+      "tangent_angle_from_vertical_degrees": 16.562235716137543
+    },
+    {
+      "axis_y": 154.0,
+      "radius": 21.90230647182178,
+      "slope": 0.5047525458443255,
+      "second_derivative": -0.04298398112026919,
+      "tangent_angle_from_vertical_degrees": 16.524890939641818
+    },
+    {
+      "axis_y": 154.05,
+      "radius": 21.92741877733723,
+      "slope": 0.5027552125939859,
+      "second_derivative": -0.05033102500070435,
+      "tangent_angle_from_vertical_degrees": 16.463047618988607
+    },
+    {
+      "axis_y": 154.1,
+      "radius": 21.95253108285268,
+      "slope": 0.4999478912236983,
+      "second_derivative": -0.05724942025004426,
+      "tangent_angle_from_vertical_degrees": 16.37605796738526
+    },
+    {
+      "axis_y": 154.15,
+      "radius": 21.977629087510774,
+      "slope": 0.49637806875011886,
+      "second_derivative": -0.06355330047997837,
+      "tangent_angle_from_vertical_degrees": 16.26532874454622
+    },
+    {
+      "axis_y": 154.2,
+      "radius": 22.002741393026223,
+      "slope": 0.49209992216845827,
+      "second_derivative": -0.0690814863340427,
+      "tangent_angle_from_vertical_degrees": 16.13246400471721
+    },
+    {
+      "axis_y": 154.25,
+      "radius": 22.027839397684314,
+      "slope": 0.487206503924658,
+      "second_derivative": -0.07369048994714951,
+      "tangent_angle_from_vertical_degrees": 15.980272250341713
+    },
+    {
+      "axis_y": 154.3,
+      "radius": 22.05293740234241,
+      "slope": 0.4818203834144802,
+      "second_derivative": -0.07727888479960465,
+      "tangent_angle_from_vertical_degrees": 15.812488782004039
+    },
+    {
+      "axis_y": 154.35,
+      "radius": 22.078049707857858,
+      "slope": 0.4760574907643097,
+      "second_derivative": -0.07975245136373994,
+      "tangent_angle_from_vertical_degrees": 15.632659820434295
+    },
+    {
+      "axis_y": 154.4,
+      "radius": 22.103162013373307,
+      "slope": 0.4700539835326482,
+      "second_derivative": -0.08106600937585748,
+      "tangent_angle_from_vertical_degrees": 15.444986094073453
+    },
+    {
+      "axis_y": 154.45,
+      "radius": 22.12684423315325,
+      "slope": 0.4639512529618682,
+      "second_derivative": -0.08120255456386309,
+      "tangent_angle_from_vertical_degrees": 15.25386180996958
+    },
+    {
+      "axis_y": 154.5,
+      "radius": 22.14838132432994,
+      "slope": 0.45791412440716506,
+      "second_derivative": -0.0801401663941098,
+      "tangent_angle_from_vertical_degrees": 15.064449270998571
+    },
+    {
+      "axis_y": 154.55,
+      "radius": 22.16991841550663,
+      "slope": 0.4520868907361716,
+      "second_derivative": -0.0779094701779148,
+      "tangent_angle_from_vertical_degrees": 14.881301796370042
+    },
+    {
+      "axis_y": 154.6,
+      "radius": 22.191441205825964,
+      "slope": 0.4466026433050895,
+      "second_derivative": -0.0745605271978981,
+      "tangent_angle_from_vertical_degrees": 14.708649492647776
+    },
+    {
+      "axis_y": 154.65,
+      "radius": 22.212992597860005,
+      "slope": 0.4415961536170288,
+      "second_derivative": -0.07016109022820433,
+      "tangent_angle_from_vertical_degrees": 14.550798787550457
+    },
+    {
+      "axis_y": 154.7,
+      "radius": 22.234501087321984,
+      "slope": 0.4371894939105707,
+      "second_derivative": -0.06483145788793734,
+      "tangent_angle_from_vertical_degrees": 14.411673115613516
+    },
+    {
+      "axis_y": 154.75,
+      "radius": 22.256038178498674,
+      "slope": 0.4334636727055777,
+      "second_derivative": -0.05869050149425659,
+      "tangent_angle_from_vertical_degrees": 14.29390698176931
+    },
+    {
+      "axis_y": 154.8,
+      "radius": 22.27756096881801,
+      "slope": 0.43048239555717355,
+      "second_derivative": -0.05190623735484257,
+      "tangent_angle_from_vertical_degrees": 14.199585505578344
+    },
+    {
+      "axis_y": 154.85,
+      "radius": 22.29908375913734,
+      "slope": 0.4283021572430693,
+      "second_derivative": -0.04462254099679895,
+      "tangent_angle_from_vertical_degrees": 14.130557440418904
+    },
+    {
+      "axis_y": 154.9,
+      "radius": 22.320635151171384,
+      "slope": 0.4269213392901106,
+      "second_derivative": -0.03708455587793356,
+      "tangent_angle_from_vertical_degrees": 14.08681797386289
+    },
+    {
+      "axis_y": 154.95,
+      "radius": 22.34215794149072,
+      "slope": 0.4263035259933992,
+      "second_derivative": -0.029527258134774168,
+      "tangent_angle_from_vertical_degrees": 14.067242386035172
+    },
+    {
+      "axis_y": 155.0,
+      "radius": 22.363695032667408,
+      "slope": 0.4263705242295972,
+      "second_derivative": -0.0221929366217887,
+      "tangent_angle_from_vertical_degrees": 14.06936540609193
+    },
+    {
+      "axis_y": 155.05,
+      "radius": 22.385232123844094,
+      "slope": 0.4269926884794121,
+      "second_derivative": -0.015379914997941785,
+      "tangent_angle_from_vertical_degrees": 14.08907847686579
+    },
+    {
+      "axis_y": 155.1,
+      "radius": 22.406740613306074,
+      "slope": 0.42799825180377554,
+      "second_derivative": -0.009402463933961427,
+      "tangent_angle_from_vertical_degrees": 14.120932223620201
+    },
+    {
+      "axis_y": 155.15,
+      "radius": 22.428277704482763,
+      "slope": 0.42914689496891983,
+      "second_derivative": -0.004590801112275162,
+      "tangent_angle_from_vertical_degrees": 14.157307484061914
+    },
+    {
+      "axis_y": 155.2,
+      "radius": 22.449814795659453,
+      "slope": 0.43013907742225166,
+      "second_derivative": -0.0013311790198162307,
+      "tangent_angle_from_vertical_degrees": 14.188718568502201
+    },
+    {
+      "axis_y": 155.25,
+      "radius": 22.471351886836143,
+      "slope": 0.43060327498409773,
+      "second_derivative": -8.422841630710465e-06,
+      "tangent_angle_from_vertical_degrees": 14.203411414482275
+    },
+    {
+      "axis_y": 155.3,
+      "radius": 22.492874677155474,
+      "slope": 0.43060622948866245,
+      "second_derivative": -4.563840981060428e-06,
+      "tangent_angle_from_vertical_degrees": 14.203504924767007
+    },
+    {
+      "axis_y": 155.35,
+      "radius": 22.514397467474808,
+      "slope": 0.4306063361609943,
+      "second_derivative": 2.9955712153680724e-07,
+      "tangent_angle_from_vertical_degrees": 14.20350830095264
+    },
+    {
+      "axis_y": 155.4,
+      "radius": 22.535934558651498,
+      "slope": 0.4306067195647572,
+      "second_derivative": -4.1585577622841535e-06,
+      "tangent_angle_from_vertical_degrees": 14.203520435703645
+    },
+    {
+      "axis_y": 155.45,
+      "radius": 22.557471649828187,
+      "slope": 0.43060743554871406,
+      "second_derivative": 1.3391965246527512e-06,
+      "tangent_angle_from_vertical_degrees": 14.203543096633311
+    },
+    {
+      "axis_y": 155.5,
+      "radius": 22.578980139290167,
+      "slope": 0.4306035376676291,
+      "second_derivative": -1.2757609514955645e-05,
+      "tangent_angle_from_vertical_degrees": 14.203419728438309
+    },
+    {
+      "axis_y": 155.55,
+      "radius": 22.600517230466853,
+      "slope": 0.43060291076767016,
+      "second_derivative": -8.05280049233741e-06,
+      "tangent_angle_from_vertical_degrees": 14.203399887000455
+    },
+    {
+      "axis_y": 155.6,
+      "radius": 22.622054321643542,
+      "slope": 0.43060256059905744,
+      "second_derivative": -1.2352326361042254e-05,
+      "tangent_angle_from_vertical_degrees": 14.2033888041321
+    },
+    {
+      "axis_y": 155.65,
+      "radius": 22.643591412820232,
+      "slope": 0.4306056861905544,
+      "second_derivative": -1.5118824511136239e-05,
+      "tangent_angle_from_vertical_degrees": 14.2034877293481
+    },
+    {
+      "axis_y": 155.7,
+      "radius": 22.665114203139566,
+      "slope": 0.43060962838522765,
+      "second_derivative": -5.814932525238857e-06,
+      "tangent_angle_from_vertical_degrees": 14.203612499995376
+    },
+    {
+      "axis_y": 155.75,
+      "radius": 22.686636993458897,
+      "slope": 0.4306067257321198,
+      "second_derivative": -5.251060263875141e-06,
+      "tangent_angle_from_vertical_degrees": 14.203520630901009
+    },
+    {
+      "axis_y": 155.8,
+      "radius": 22.708174084635587,
+      "slope": 0.4306049375424957,
+      "second_derivative": 4.10569478971926e-06,
+      "tangent_angle_from_vertical_degrees": 14.203464034586204
+    },
+    {
+      "axis_y": 155.85,
+      "radius": 22.729711175812277,
+      "slope": 0.4306041335024101,
+      "second_derivative": 3.189402373969602e-06,
+      "tangent_angle_from_vertical_degrees": 14.203438586657374
+    },
+    {
+      "axis_y": 155.9,
+      "radius": 22.75123396613161,
+      "slope": 0.4305991810040182,
+      "second_derivative": 7.929453630118186e-07,
+      "tangent_angle_from_vertical_degrees": 14.203281839586781
+    },
+    {
+      "axis_y": 155.95,
+      "radius": 22.772771057308297,
+      "slope": 0.430602799641094,
+      "second_derivative": 7.453686195084266e-06,
+      "tangent_angle_from_vertical_degrees": 14.203396369834357
+    },
+    {
+      "axis_y": 156.0,
+      "radius": 22.794293847627632,
+      "slope": 0.4306040172364088,
+      "second_derivative": 1.4590194312370165e-05,
+      "tangent_angle_from_vertical_degrees": 14.203434906829262
+    },
+    {
+      "axis_y": 156.05,
+      "radius": 22.81583093880432,
+      "slope": 0.43060586527222816,
+      "second_derivative": 1.1876559131788801e-05,
+      "tangent_angle_from_vertical_degrees": 14.2034933972945
+    },
+    {
+      "axis_y": 156.1,
+      "radius": 22.837353729123656,
+      "slope": 0.430606372936688,
+      "second_derivative": -6.343562993121943e-07,
+      "tangent_angle_from_vertical_degrees": 14.203509464905501
+    },
+    {
+      "axis_y": 156.15,
+      "radius": 22.858890820300346,
+      "slope": 0.43060550299734657,
+      "second_derivative": -3.7708956032954913e-06,
+      "tangent_angle_from_vertical_degrees": 14.203481931271092
+    },
+    {
+      "axis_y": 156.2,
+      "radius": 22.880413610619676,
+      "slope": 0.43060515180087344,
+      "second_derivative": 2.519804060388889e-06,
+      "tangent_angle_from_vertical_degrees": 14.203470815878918
+    },
+    {
+      "axis_y": 156.25,
+      "radius": 22.901950701796366,
+      "slope": 0.4306053007310279,
+      "second_derivative": -8.281873470110235e-07,
+      "tangent_angle_from_vertical_degrees": 14.20347552952853
+    },
+    {
+      "axis_y": 156.3,
+      "radius": 22.9234734921157,
+      "slope": 0.43060710353959586,
+      "second_derivative": -2.2502026690656046e-05,
+      "tangent_angle_from_vertical_degrees": 14.203532588527924
+    },
+    {
+      "axis_y": 156.35,
+      "radius": 22.94501058329239,
+      "slope": 0.43060468342468455,
+      "second_derivative": -4.986745193489659e-06,
+      "tangent_angle_from_vertical_degrees": 14.203455991739098
+    },
+    {
+      "axis_y": 156.4,
+      "radius": 22.96653337361172,
+      "slope": 0.43120393710145594,
+      "second_derivative": -0.0016925154018174132,
+      "tangent_angle_from_vertical_degrees": 14.222420824995748
+    },
+    {
+      "axis_y": 156.45,
+      "radius": 22.988056163931056,
+      "slope": 0.4325518257311989,
+      "second_derivative": -0.006086754174228539,
+      "tangent_angle_from_vertical_degrees": 14.265066392406826
+    },
+    {
+      "axis_y": 156.5,
+      "radius": 23.009593255107745,
+      "slope": 0.43413632187638834,
+      "second_derivative": -0.012642791023088363,
+      "tangent_angle_from_vertical_degrees": 14.315177301768651
+    },
+    {
+      "axis_y": 156.55,
+      "radius": 23.031130346284435,
+      "slope": 0.43553697197974384,
+      "second_derivative": -0.020824330581852603,
+      "tangent_angle_from_vertical_degrees": 14.35945532380034
+    },
+    {
+      "axis_y": 156.6,
+      "radius": 23.052667437461125,
+      "slope": 0.43643245879483605,
+      "second_derivative": -0.030178530575961753,
+      "tangent_angle_from_vertical_degrees": 14.387754707168842
+    },
+    {
+      "axis_y": 156.65,
+      "radius": 23.074190227780456,
+      "slope": 0.43656661984416384,
+      "second_derivative": -0.04027853971705742,
+      "tangent_angle_from_vertical_degrees": 14.391993878714095
+    },
+    {
+      "axis_y": 156.7,
+      "radius": 23.095727318957145,
+      "slope": 0.43575368372968365,
+      "second_derivative": -0.05070786786945782,
+      "tangent_angle_from_vertical_degrees": 14.366304556091915
+    },
+    {
+      "axis_y": 156.75,
+      "radius": 23.11725010927648,
+      "slope": 0.43389555790786277,
+      "second_derivative": -0.06111435919588911,
+      "tangent_angle_from_vertical_degrees": 14.30756439505141
+    },
+    {
+      "axis_y": 156.8,
+      "radius": 23.13878720045317,
+      "slope": 0.43093694943523186,
+      "second_derivative": -0.07118058886544067,
+      "tangent_angle_from_vertical_degrees": 14.213971746752993
+    },
+    {
+      "axis_y": 156.85,
+      "radius": 23.1603099907725,
+      "slope": 0.42688179685164934,
+      "second_derivative": -0.08059774871977751,
+      "tangent_angle_from_vertical_degrees": 14.085565161081048
+    },
+    {
+      "axis_y": 156.9,
+      "radius": 23.181832781091835,
+      "slope": 0.4217818266577158,
+      "second_derivative": -0.08913184939869567,
+      "tangent_angle_from_vertical_degrees": 13.923869257482405
+    },
+    {
+      "axis_y": 156.95,
+      "radius": 23.203369872268524,
+      "slope": 0.41573321803286706,
+      "second_derivative": -0.09655577373532827,
+      "tangent_angle_from_vertical_degrees": 13.73180297455889
+    },
+    {
+      "axis_y": 157.0,
+      "radius": 23.224906963445214,
+      "slope": 0.40885619517994654,
+      "second_derivative": -0.10268936454772953,
+      "tangent_angle_from_vertical_degrees": 13.51304871122108
+    },
+    {
+      "axis_y": 157.05,
+      "radius": 23.24642975376455,
+      "slope": 0.4013154024308938,
+      "second_derivative": -0.10738894014002706,
+      "tangent_angle_from_vertical_degrees": 13.272718228932156
+    },
+    {
+      "axis_y": 157.1,
+      "radius": 23.267938243226524,
+      "slope": 0.3932816630055296,
+      "second_derivative": -0.11054729430180028,
+      "tangent_angle_from_vertical_degrees": 13.016153080678523
+    },
+    {
+      "axis_y": 157.15,
+      "radius": 23.289503936117924,
+      "slope": 0.38495737502784466,
+      "second_derivative": -0.11209369630843777,
+      "tangent_angle_from_vertical_degrees": 12.749747616692158
+    },
+    {
+      "axis_y": 157.2,
+      "radius": 23.30825236011038,
+      "slope": 0.37654135761556784,
+      "second_derivative": -0.11200263094120555,
+      "tangent_angle_from_vertical_degrees": 12.479835475280058
+    },
+    {
+      "axis_y": 157.25,
+      "radius": 23.324841354642228,
+      "slope": 0.36824026185335496,
+      "second_derivative": -0.11025719965350064,
+      "tangent_angle_from_vertical_degrees": 12.213056457898745
+    },
+    {
+      "axis_y": 157.3,
+      "radius": 23.341430349174072,
+      "slope": 0.36025906084906284,
+      "second_derivative": -0.10689609817819966,
+      "tangent_angle_from_vertical_degrees": 11.956049973343351
+    },
+    {
+      "axis_y": 157.35,
+      "radius": 23.358047945420626,
+      "slope": 0.35279077857890734,
+      "second_derivative": -0.10201361652698848,
+      "tangent_angle_from_vertical_degrees": 11.715117039671403
+    },
+    {
+      "axis_y": 157.4,
+      "radius": 23.374636939952474,
+      "slope": 0.3460069799441065,
+      "second_derivative": -0.09571266138417087,
+      "tangent_angle_from_vertical_degrees": 11.49590110049018
+    },
+    {
+      "axis_y": 157.45,
+      "radius": 23.391225934484318,
+      "slope": 0.34006416083316005,
+      "second_derivative": -0.08815183943957212,
+      "tangent_angle_from_vertical_degrees": 11.303580135831538
+    },
+    {
+      "axis_y": 157.5,
+      "radius": 23.407843530730872,
+      "slope": 0.33508951512848173,
+      "second_derivative": -0.07950536959499524,
+      "tangent_angle_from_vertical_degrees": 11.142392253192694
+    },
+    {
+      "axis_y": 157.55,
+      "radius": 23.424432525262716,
+      "slope": 0.3311636143815591,
+      "second_derivative": -0.06999443073822367,
+      "tangent_angle_from_vertical_degrees": 11.015059317938611
+    },
+    {
+      "axis_y": 157.6,
+      "radius": 23.441021519794564,
+      "slope": 0.3283376955877276,
+      "second_derivative": -0.059867937222700125,
+      "tangent_angle_from_vertical_degrees": 10.923334959377822
+    },
+    {
+      "axis_y": 157.65,
+      "radius": 23.457624815183763,
+      "slope": 0.32660940498837887,
+      "second_derivative": -0.049439137700545255,
+      "tangent_angle_from_vertical_degrees": 10.867209707759837
+    },
+    {
+      "axis_y": 157.7,
+      "radius": 23.474213809715607,
+      "slope": 0.3259213963683992,
+      "second_derivative": -0.039019412997430614,
+      "tangent_angle_from_vertical_degrees": 10.844861138366886
+    },
+    {
+      "axis_y": 157.75,
+      "radius": 23.490802804247455,
+      "slope": 0.3261630166852637,
+      "second_derivative": -0.028993218257110088,
+      "tangent_angle_from_vertical_degrees": 10.852710066866923
+    },
+    {
+      "axis_y": 157.8,
+      "radius": 23.507406099636654,
+      "slope": 0.3271320648277101,
+      "second_derivative": -0.019744885276771096,
+      "tangent_angle_from_vertical_degrees": 10.8841850198047
+    },
+    {
+      "axis_y": 157.85,
+      "radius": 23.523995094168498,
+      "slope": 0.3285757897777977,
+      "second_derivative": -0.011735309131278168,
+      "tangent_angle_from_vertical_degrees": 10.931065272109223
+    },
+    {
+      "axis_y": 157.9,
+      "radius": 23.5405983895577,
+      "slope": 0.3301588240319996,
+      "second_derivative": -0.005439252628601081,
+      "tangent_angle_from_vertical_degrees": 10.982452112535363
+    },
+    {
+      "axis_y": 157.95,
+      "radius": 23.557187384089545,
+      "slope": 0.3314469409639276,
+      "second_derivative": -0.00132961075016284,
+      "tangent_angle_from_vertical_degrees": 11.02425245676428
+    },
+    {
+      "axis_y": 158.0,
+      "radius": 23.57377637862139,
+      "slope": 0.33191045223646165,
+      "second_derivative": -1.5048340531691369e-05,
+      "tangent_angle_from_vertical_degrees": 11.039290835100347
+    },
+    {
+      "axis_y": 158.05,
+      "radius": 23.59037967401059,
+      "slope": 0.3319074439389145,
+      "second_derivative": -1.0907403669835875e-05,
+      "tangent_angle_from_vertical_degrees": 11.039193237438774
+    },
+    {
+      "axis_y": 158.1,
+      "radius": 23.60698296939979,
+      "slope": 0.33190906812262316,
+      "second_derivative": -6.237836740974817e-06,
+      "tangent_angle_from_vertical_degrees": 11.039245930549638
+    },
+    {
+      "axis_y": 158.15,
+      "radius": 23.623571963931635,
+      "slope": 0.33191556679918693,
+      "second_derivative": 6.519773074639116e-07,
+      "tangent_angle_from_vertical_degrees": 11.039456765799097
+    },
+    {
+      "axis_y": 158.2,
+      "radius": 23.640175259320838,
+      "slope": 0.33191435068861047,
+      "second_derivative": -7.753243370546238e-07,
+      "tangent_angle_from_vertical_degrees": 11.039417311792635
+    },
+    {
+      "axis_y": 158.25,
+      "radius": 23.656764253852682,
+      "slope": 0.33191343495096376,
+      "second_derivative": 6.80170896621878e-06,
+      "tangent_angle_from_vertical_degrees": 11.039387602711704
+    },
+    {
+      "axis_y": 158.3,
+      "radius": 23.673353248384526,
+      "slope": 0.33191772879895814,
+      "second_derivative": 1.4590194304484975e-05,
+      "tangent_angle_from_vertical_degrees": 11.039526907053322
+    },
+    {
+      "axis_y": 158.35,
+      "radius": 23.68995654377373,
+      "slope": 0.3319204639056162,
+      "second_derivative": -5.4272703762975625e-06,
+      "tangent_angle_from_vertical_degrees": 11.039615641432578
+    },
+    {
+      "axis_y": 158.4,
+      "radius": 23.706559839162928,
+      "slope": 0.33191985562191406,
+      "second_derivative": -1.517168750748417e-05,
+      "tangent_angle_from_vertical_degrees": 11.039595907041644
+    },
+    {
+      "axis_y": 158.45,
+      "radius": 23.723148833694772,
+      "slope": 0.3319179306084142,
+      "second_derivative": -1.4907372445238333e-05,
+      "tangent_angle_from_vertical_degrees": 11.039533454308716
+    },
+    {
+      "axis_y": 158.5,
+      "radius": 23.739752129083975,
+      "slope": 0.33191474471393495,
+      "second_derivative": -2.4017433331928046e-05,
+      "tangent_angle_from_vertical_degrees": 11.039430095070252
+    },
+    {
+      "axis_y": 158.55,
+      "radius": 23.756326822758464,
+      "slope": 0.3319103165547358,
+      "second_derivative": -2.3541666143500147e-05,
+      "tangent_angle_from_vertical_degrees": 11.039286433203674
+    },
+    {
+      "axis_y": 158.6,
+      "radius": 23.772944419005018,
+      "slope": 0.3319065610937668,
+      "second_derivative": -1.3638659904227365e-05,
+      "tangent_angle_from_vertical_degrees": 11.03916459543856
+    },
+    {
+      "axis_y": 158.65,
+      "radius": 23.789533413536866,
+      "slope": 0.33190344109858183,
+      "second_derivative": -1.3585796878627575e-05,
+      "tangent_angle_from_vertical_degrees": 11.039063373902147
+    },
+    {
+      "axis_y": 158.7,
+      "radius": 23.806108107211355,
+      "slope": 0.3319039880514027,
+      "second_derivative": -1.30571666727394e-05,
+      "tangent_angle_from_vertical_degrees": 11.039081118615625
+    },
+    {
+      "axis_y": 158.75,
+      "radius": 23.82272570345791,
+      "slope": 0.3325054339936128,
+      "second_derivative": -0.0017252552339795427,
+      "tangent_angle_from_vertical_degrees": 11.058592446518908
+    },
+    {
+      "axis_y": 158.8,
+      "radius": 23.839314697989757,
+      "slope": 0.33349396914312307,
+      "second_derivative": -0.005108823493973912,
+      "tangent_angle_from_vertical_degrees": 11.090655576151619
+    },
+    {
+      "axis_y": 158.85,
+      "radius": 23.855917993378956,
+      "slope": 0.3345484616166775,
+      "second_derivative": -0.00980052249581442,
+      "tangent_angle_from_vertical_degrees": 11.124850278262723
+    },
+    {
+      "axis_y": 158.9,
+      "radius": 23.8725069879108,
+      "slope": 0.335407779763699,
+      "second_derivative": -0.015482081600073052,
+      "tangent_angle_from_vertical_degrees": 11.152710004742932
+    },
+    {
+      "axis_y": 158.95,
+      "radius": 23.889095982442647,
+      "slope": 0.3358693371275459,
+      "second_derivative": -0.02185059568599373,
+      "tangent_angle_from_vertical_degrees": 11.167671830216337
+    },
+    {
+      "axis_y": 159.0,
+      "radius": 23.905699277831847,
+      "slope": 0.3357929561779761,
+      "second_derivative": -0.028634260711129386,
+      "tangent_angle_from_vertical_degrees": 11.165195974799431
+    },
+    {
+      "axis_y": 159.05,
+      "radius": 23.922302573221046,
+      "slope": 0.33506201570243915,
+      "second_derivative": -0.03556625937833281,
+      "tangent_angle_from_vertical_degrees": 11.141500720955623
+    },
+    {
+      "axis_y": 159.1,
+      "radius": 23.938891567752894,
+      "slope": 0.33362075026966864,
+      "second_derivative": -0.04240562440855889,
+      "tangent_angle_from_vertical_degrees": 11.094767212520374
+    },
+    {
+      "axis_y": 159.15,
+      "radius": 23.955466261427382,
+      "slope": 0.3314490848042351,
+      "second_derivative": -0.048944128354817824,
+      "tangent_angle_from_vertical_degrees": 11.024322016072336
+    },
+    {
+      "axis_y": 159.2,
+      "radius": 23.97206955681658,
+      "slope": 0.328559562445065,
+      "second_derivative": -0.05501676810199346,
+      "tangent_angle_from_vertical_degrees": 10.930538424680861
+    },
+    {
+      "axis_y": 159.25,
+      "radius": 23.988672852205784,
+      "slope": 0.324990012705521,
+      "second_derivative": -0.060454787260106856,
+      "tangent_angle_from_vertical_degrees": 10.814601701867366
+    },
+    {
+      "axis_y": 159.3,
+      "radius": 24.00526184673763,
+      "slope": 0.3208140532185692,
+      "second_derivative": -0.06511353497768589,
+      "tangent_angle_from_vertical_degrees": 10.678855386782455
+    },
+    {
+      "axis_y": 159.35,
+      "radius": 24.021865142126828,
+      "slope": 0.31612209897312055,
+      "second_derivative": -0.06890032475481858,
+      "tangent_angle_from_vertical_degrees": 10.526191065839813
+    },
+    {
+      "axis_y": 159.4,
+      "radius": 24.03846843751603,
+      "slope": 0.31102407229473983,
+      "second_derivative": -0.07168900779792173,
+      "tangent_angle_from_vertical_degrees": 10.360142712341732
+    },
+    {
+      "axis_y": 159.45,
+      "radius": 24.055057432047874,
+      "slope": 0.3056382224628076,
+      "second_derivative": -0.07346460625067204,
+      "tangent_angle_from_vertical_degrees": 10.18452835945244
+    },
+    {
+      "axis_y": 159.5,
+      "radius": 24.07164642657972,
+      "slope": 0.3001008662448302,
+      "second_derivative": -0.07416830118950209,
+      "tangent_angle_from_vertical_degrees": 10.00377206725002
+    },
+    {
+      "axis_y": 159.55,
+      "radius": 24.085446753927332,
+      "slope": 0.2945492360317607,
+      "second_derivative": -0.0737636347497664,
+      "tangent_angle_from_vertical_degrees": 9.822347650142069
+    },
+    {
+      "axis_y": 159.6,
+      "radius": 24.098775152982228,
+      "slope": 0.2891052785450991,
+      "second_derivative": -0.07227998115118346,
+      "tangent_angle_from_vertical_degrees": 9.644248521014196
+    },
+    {
+      "axis_y": 159.65,
+      "radius": 24.11211785289448,
+      "slope": 0.2839169161396359,
+      "second_derivative": -0.06975159563234805,
+      "tangent_angle_from_vertical_degrees": 9.474335849808273
+    },
+    {
+      "axis_y": 159.7,
+      "radius": 24.125460552806732,
+      "slope": 0.27910020685719245,
+      "second_derivative": -0.06623509449105819,
+      "tangent_angle_from_vertical_degrees": 9.3164436280663
+    },
+    {
+      "axis_y": 159.75,
+      "radius": 24.138803252718983,
+      "slope": 0.2747750267878136,
+      "second_derivative": -0.06181119956279369,
+      "tangent_angle_from_vertical_degrees": 9.174541958869575
+    },
+    {
+      "axis_y": 159.8,
+      "radius": 24.152117350916523,
+      "slope": 0.2710309405110831,
+      "second_derivative": -0.056565513702683076,
+      "tangent_angle_from_vertical_degrees": 9.051613171065346
+    },
+    {
+      "axis_y": 159.85,
+      "radius": 24.165460050828777,
+      "slope": 0.26795092667333636,
+      "second_derivative": -0.050665207409993744,
+      "tangent_angle_from_vertical_degrees": 8.950424644625116
+    },
+    {
+      "axis_y": 159.9,
+      "radius": 24.178802750741028,
+      "slope": 0.2655722275189845,
+      "second_derivative": -0.044235354596560826,
+      "tangent_angle_from_vertical_degrees": 8.872238022473018
+    },
+    {
+      "axis_y": 159.95,
+      "radius": 24.19214545065328,
+      "slope": 0.2639317565952424,
+      "second_derivative": -0.037472218045347574,
+      "tangent_angle_from_vertical_degrees": 8.818297151887533
+    },
+    {
+      "axis_y": 160.0,
+      "radius": 24.205473849708174,
+      "slope": 0.26301134613748245,
+      "second_derivative": -0.030536853765658893,
+      "tangent_angle_from_vertical_degrees": 8.788025921368396
+    },
+    {
+      "axis_y": 160.05,
+      "radius": 24.218816549620428,
+      "slope": 0.26276649355680104,
+      "second_derivative": -0.0237014887041777,
+      "tangent_angle_from_vertical_degrees": 8.779972170989847
+    },
+    {
+      "axis_y": 160.1,
+      "radius": 24.23215924953268,
+      "slope": 0.2630961751038857,
+      "second_derivative": -0.017196253220310664,
+      "tangent_angle_from_vertical_degrees": 8.790816054653774
+    },
+    {
+      "axis_y": 160.15,
+      "radius": 24.245487648587574,
+      "slope": 0.2638680938689622,
+      "second_derivative": -0.011285867711146105,
+      "tangent_angle_from_vertical_degrees": 8.816203518328077
+    },
+    {
+      "axis_y": 160.2,
+      "radius": 24.25884464935718,
+      "slope": 0.26489158077651104,
+      "second_derivative": -0.006278276905968627,
+      "tangent_angle_from_vertical_degrees": 8.849859369076611
+    },
+    {
+      "axis_y": 160.25,
+      "radius": 24.27217304841208,
+      "slope": 0.26592424778851037,
+      "second_derivative": -0.0024967910520632343,
+      "tangent_angle_from_vertical_degrees": 8.883810855725134
+    },
+    {
+      "axis_y": 160.3,
+      "radius": 24.285501447466974,
+      "slope": 0.26666967697442906,
+      "second_derivative": -0.00027834143615545066,
+      "tangent_angle_from_vertical_degrees": 8.90831478062919
+    },
+    {
+      "axis_y": 160.35,
+      "radius": 24.298844147379224,
+      "slope": 0.26676538423721474,
+      "second_derivative": 7.400823177242566e-06,
+      "tangent_angle_from_vertical_degrees": 8.911460654686078
+    },
+    {
+      "axis_y": 160.4,
+      "radius": 24.31220114814883,
+      "slope": 0.266763845596943,
+      "second_derivative": 2.5021831048905116e-06,
+      "tangent_angle_from_vertical_degrees": 8.911410080389249
+    },
+    {
+      "axis_y": 160.45,
+      "radius": 24.32552954720373,
+      "slope": 0.2667667568158242,
+      "second_derivative": -2.2907310266559343e-06,
+      "tangent_angle_from_vertical_degrees": 8.911505770611555
+    },
+    {
+      "axis_y": 160.5,
+      "radius": 24.33887224711598,
+      "slope": 0.26676623304769514,
+      "second_derivative": -6.3964257365048634e-06,
+      "tangent_angle_from_vertical_degrees": 8.911488554634335
+    },
+    {
+      "axis_y": 160.55,
+      "radius": 24.352200646170875,
+      "slope": 0.2667622929088379,
+      "second_derivative": -1.097788775000881e-05,
+      "tangent_angle_from_vertical_degrees": 8.911359044333333
+    },
+    {
+      "axis_y": 160.6,
+      "radius": 24.36555764694048,
+      "slope": 0.26675475023649614,
+      "second_derivative": -1.7198103445949117e-05,
+      "tangent_angle_from_vertical_degrees": 8.911111120387057
+    },
+    {
+      "axis_y": 160.65,
+      "radius": 24.378871745138024,
+      "slope": 0.2667532559098001,
+      "second_derivative": -5.251060286895106e-06,
+      "tangent_angle_from_vertical_degrees": 8.911062002560392
+    },
+    {
+      "axis_y": 160.7,
+      "radius": 24.39222874590763,
+      "slope": 0.2666497905741602,
+      "second_derivative": 0.00029485232030586686,
+      "tangent_angle_from_vertical_degrees": 8.90766111277565
+    },
+    {
+      "axis_y": 160.75,
+      "radius": 24.40554284410517,
+      "slope": 0.2658714744370327,
+      "second_derivative": 0.0026023056456851022,
+      "tangent_angle_from_vertical_degrees": 8.882075953314505
+    },
+    {
+      "axis_y": 160.8,
+      "radius": 24.41889984487478,
+      "slope": 0.2647979115953452,
+      "second_derivative": 0.00652416044609809,
+      "tangent_angle_from_vertical_degrees": 8.846779452370692
+    },
+    {
+      "axis_y": 160.85,
+      "radius": 24.43221394307232,
+      "slope": 0.263743549207168,
+      "second_derivative": 0.011713282871706499,
+      "tangent_angle_from_vertical_degrees": 8.812107632597904
+    },
+    {
+      "axis_y": 160.9,
+      "radius": 24.44555664298457,
+      "slope": 0.26295426055017923,
+      "second_derivative": 0.017828265900198682,
+      "tangent_angle_from_vertical_degrees": 8.786148279684292
+    },
+    {
+      "axis_y": 160.95,
+      "radius": 24.45889934289682,
+      "slope": 0.2626164428943808,
+      "second_derivative": 0.024578768188970538,
+      "tangent_angle_from_vertical_degrees": 8.775036495423047
+    },
+    {
+      "axis_y": 161.0,
+      "radius": 24.472242042809075,
+      "slope": 0.26288512132894154,
+      "second_derivative": 0.03167154092958441,
+      "tangent_angle_from_vertical_degrees": 8.783874148088858
+    },
+    {
+      "axis_y": 161.05,
+      "radius": 24.485584742721326,
+      "slope": 0.2638448646493874,
+      "second_derivative": 0.03882954664039243,
+      "tangent_angle_from_vertical_degrees": 8.815439588588962
+    },
+    {
+      "axis_y": 161.1,
+      "radius": 24.498927442633576,
+      "slope": 0.26554675863668087,
+      "second_derivative": 0.04585641681253688,
+      "tangent_angle_from_vertical_degrees": 8.87140069257048
+    },
+    {
+      "axis_y": 161.15,
+      "radius": 24.512270142545827,
+      "slope": 0.26801588682789135,
+      "second_derivative": 0.052516276638259606,
+      "tangent_angle_from_vertical_degrees": 8.952559381603672
+    },
+    {
+      "axis_y": 161.2,
+      "radius": 24.525598541600726,
+      "slope": 0.27122035464445654,
+      "second_derivative": 0.05862780594912502,
+      "tangent_angle_from_vertical_degrees": 9.057834193267894
+    },
+    {
+      "axis_y": 161.25,
+      "radius": 24.53892694065562,
+      "slope": 0.27509822085098334,
+      "second_derivative": 0.06403104123829319,
+      "tangent_angle_from_vertical_degrees": 9.185149343962738
+    },
+    {
+      "axis_y": 161.3,
+      "radius": 24.55226964056787,
+      "slope": 0.2795794081033562,
+      "second_derivative": 0.06861008913847433,
+      "tangent_angle_from_vertical_degrees": 9.33215833073516
+    },
+    {
+      "axis_y": 161.35,
+      "radius": 24.565612340480122,
+      "slope": 0.28456445242144596,
+      "second_derivative": 0.07223740879671901,
+      "tangent_angle_from_vertical_degrees": 9.495551139734701
+    },
+    {
+      "axis_y": 161.4,
+      "radius": 24.578955040392376,
+      "slope": 0.28993700486999774,
+      "second_derivative": 0.0748487540193442,
+      "tangent_angle_from_vertical_degrees": 9.671470724939134
+    },
+    {
+      "axis_y": 161.45,
+      "radius": 24.592297740304627,
+      "slope": 0.2955632040872949,
+      "second_derivative": 0.07635600214709636,
+      "tangent_angle_from_vertical_degrees": 9.855498565712486
+    },
+    {
+      "axis_y": 161.5,
+      "radius": 24.606112368509596,
+      "slope": 0.30131081597911324,
+      "second_derivative": 0.07677266849306387,
+      "tangent_angle_from_vertical_degrees": 10.043285847044528
+    },
+    {
+      "axis_y": 161.55,
+      "radius": 24.622830070757633,
+      "slope": 0.3070388809035356,
+      "second_derivative": 0.07603267427857156,
+      "tangent_angle_from_vertical_degrees": 10.230217844335787
+    },
+    {
+      "axis_y": 161.6,
+      "radius": 24.63953347214832,
+      "slope": 0.3126102153514916,
+      "second_derivative": 0.0742011819896484,
+      "tangent_angle_from_vertical_degrees": 10.41182413475494
+    },
+    {
+      "axis_y": 161.65,
+      "radius": 24.656236873539005,
+      "slope": 0.31788182034324025,
+      "second_derivative": 0.07128113433487009,
+      "tangent_angle_from_vertical_degrees": 10.583465785085293
+    },
+    {
+      "axis_y": 161.7,
+      "radius": 24.67294027492969,
+      "slope": 0.3227360725855442,
+      "second_derivative": 0.06737711199408014,
+      "tangent_angle_from_vertical_degrees": 10.741348895592697
+    },
+    {
+      "axis_y": 161.75,
+      "radius": 24.689672278035086,
+      "slope": 0.32705832019296077,
+      "second_derivative": 0.06255244486884744,
+      "tangent_angle_from_vertical_degrees": 10.881790007068345
+    },
+    {
+      "axis_y": 161.8,
+      "radius": 24.706375679425772,
+      "slope": 0.33075024025986305,
+      "second_derivative": 0.05693201303994731,
+      "tangent_angle_from_vertical_degrees": 11.001645477636568
+    },
+    {
+      "axis_y": 161.85,
+      "radius": 24.723079080816458,
+      "slope": 0.3337439576438194,
+      "second_derivative": 0.050646423415832205,
+      "tangent_angle_from_vertical_degrees": 11.098762837721752
+    },
+    {
+      "axis_y": 161.9,
+      "radius": 24.739811083921854,
+      "slope": 0.3359936071137131,
+      "second_derivative": 0.04386161302521713,
+      "tangent_angle_from_vertical_degrees": 11.171699897750223
+    },
+    {
+      "axis_y": 161.95,
+      "radius": 24.756500184455184,
+      "slope": 0.3374816417516848,
+      "second_derivative": 0.036777104537151696,
+      "tangent_angle_from_vertical_degrees": 11.219924117132171
+    },
+    {
+      "axis_y": 162.0,
+      "radius": 24.77320358584587,
+      "slope": 0.33823410548857047,
+      "second_derivative": 0.02959814744834927,
+      "tangent_angle_from_vertical_degrees": 11.244303833832468
+    }
+  ],
+  "source_unchanged": true,
+  "limitation": "The full sampled range includes the approach to the waist, so monotonicity over that entire range is not a pass criterion. Slope statistics characterize taper changes; they do not certify visual fidelity or establish a unique recovered profile."
+}

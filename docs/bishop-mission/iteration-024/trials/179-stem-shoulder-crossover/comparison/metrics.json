@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/179-stem-shoulder-crossover/wood.png",
+  "render_sha256": "79a368cb8e3765ed6714d203d401b180d61d9dda6c3485ff5bfe6ae05bea226e",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9703055171731644,
+      "legacy_raw_model_mask_iou": 0.9703055171731644
+    },
+    "original_white": {
+      "silhouette_iou": 0.9876795714633553,
+      "legacy_raw_model_mask_iou": 0.9876795714633553
+    },
+    "original_black": {
+      "silhouette_iou": 0.9781083168250344,
+      "legacy_raw_model_mask_iou": 0.9781083168250344
+    }
+  }
+}

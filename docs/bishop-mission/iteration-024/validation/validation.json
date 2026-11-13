@@ -1,0 +1,109 @@
+{
+  "components": [
+    {
+      "name": "Bishop - continuous turned body",
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.723129277553059,
+      "vertices": 61711,
+      "faces": 61484
+    },
+    {
+      "name": "Bishop - domed button finial",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.02016383255749896,
+      "vertices": 5890,
+      "faces": 5888
+    }
+  ],
+  "slit_ray_probes": [
+    {
+      "height_above_slot_bottom_original_units": 7,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 12,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 17,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    }
+  ],
+  "solid_slot_floor": true,
+  "source_hash_matches": true,
+  "reference_camera_elevation": 54,
+  "saved_camera_matches_export": true,
+  "head_surface_probe_count": 100,
+  "head_surface_max_normal_step_degrees": 2.2810469009276586,
+  "lower_65_profile_points_preserved": false,
+  "declared_changed_foot_rings": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "flare_socket_stem_collars_preserved": false,
+  "slit_parameters_preserved": true,
+  "button_height_to_width": 0.258768672218618,
+  "head_button_join": {
+    "level_section_samples": 222,
+    "visible_component_transitions": 1,
+    "contact_axis_y": 53.583031674208144,
+    "contact_width_to_button_width": 0.8514645101993439,
+    "minimum_exposed_head_radius_slope": 0.28511489287266395,
+    "head_cap_concealed": true,
+    "gap_free": true,
+    "no_exposed_cylindrical_neck": true
+  },
+  "note": "Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.",
+  "slit_angle_width_and_original_floor_anchor_preserved": true,
+  "declared_rounded_floor": {
+    "config": "docs/bishop-mission/iteration-006/slit-044.json",
+    "baseline_model": "history/bishop-mission-005/bishop-rebuilt.blend",
+    "baseline_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+    "description": "Rounded semicircular floor; parallel full-depth opening, width, angle and original bevel retained."
+  },
+  "declared_base_curvature_rings": [
+    17,
+    18
+  ],
+  "all_other_lower_profile_points_preserved": true,
+  "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json",
+  "declared_shape_refit": {
+    "config": "docs/bishop-mission/iteration-024/profile-fit.json",
+    "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+    "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+    "profile": "history/bishop-mission-022/profile.json",
+    "body_rings": {
+      "34": [
+        18.507253643602226,
+        147.72916666666666
+      ],
+      "35": [
+        16.866550639621003,
+        140.125
+      ],
+      "36": [
+        16.211137364360223,
+        131.97916666666666
+      ]
+    }
+  },
+  "preservation_baseline": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "declared_changed_body_rings": [
+    34,
+    35,
+    36
+  ],
+  "declared_changed_finial_rings": [],
+  "all_unlisted_profile_points_preserved": true
+}

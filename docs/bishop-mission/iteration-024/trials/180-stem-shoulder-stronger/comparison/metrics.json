@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/180-stem-shoulder-stronger/wood.png",
+  "render_sha256": "9bb5481c616d6dee891aa619c3cd2f95b5e5b7fc588603769b9a98f7b5efc7b1",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9703241857885823,
+      "legacy_raw_model_mask_iou": 0.9703241857885823
+    },
+    "original_white": {
+      "silhouette_iou": 0.9877483060701436,
+      "legacy_raw_model_mask_iou": 0.9877483060701436
+    },
+    "original_black": {
+      "silhouette_iou": 0.9782064510614396,
+      "legacy_raw_model_mask_iou": 0.9782064510614396
+    }
+  }
+}

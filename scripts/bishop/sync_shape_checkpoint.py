@@ -56,6 +56,8 @@ scripts=['README.md','profile.json','inspect_profile_landmarks.py','fit_profile_
     'prepare_local_curvature_trials.py','measure_socket_join.py','record_socket_checkpoint.py',
     'prepare_head_turn_trials.py','probe_opposite_slit_pose.py','measure_head_turn.py',
     'prepare_collar_neck_trial.py','measure_collar_occlusion.py','record_collar_occlusion_checkpoint.py',
+    'capture_contour_meridians.py','fit_stem_shoulder.py','infer_contour_sections.py','measure_stem_profile.py',
+    'prepare_stem_checkpoint.py','record_stem_checkpoint.py','compare_stem_trial.py',
     'viewer-template.html','build_viewer.py','check_viewer.cjs']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]

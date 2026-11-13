@@ -1,0 +1,2486 @@
+{
+  "camera_degrees": 54,
+  "model_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "formula": "v = y + sin(e)^2 * x * dx/dy; r = x*sqrt(1+sin(e)^2*(dx/dy)^2), then convert pixels to profile coordinates.",
+  "derivation": "Differentiate the envelope x^2 = r(v)^2 - ((y-v)/sin(e))^2 at a tangent circle.",
+  "model_validation": [
+    {
+      "pixel_y": 598.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 18.62795024978479,
+        "profile_axis_y": 144.25624699970004
+      },
+      "measured": {
+        "profile_radius": 18.5956162781977,
+        "profile_axis_y": 144.18606368783497
+      },
+      "radius_error": 0.032333971587089394,
+      "axis_y_error": 0.07018331186506543
+    },
+    {
+      "pixel_y": 600.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 18.822850782805194,
+        "profile_axis_y": 144.90134504776515
+      },
+      "measured": {
+        "profile_radius": 18.752940393551654,
+        "profile_axis_y": 144.6792507244525
+      },
+      "radius_error": 0.06991038925353976,
+      "axis_y_error": 0.22209432331266044
+    },
+    {
+      "pixel_y": 602.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 19.00526900759792,
+        "profile_axis_y": 145.49159758059812
+      },
+      "measured": {
+        "profile_radius": 18.91023457212287,
+        "profile_axis_y": 145.1723032677412
+      },
+      "radius_error": 0.09503443547504986,
+      "axis_y_error": 0.31929431285692544
+    },
+    {
+      "pixel_y": 604.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 19.193706286089263,
+        "profile_axis_y": 146.08355198178435
+      },
+      "measured": {
+        "profile_radius": 19.067276632917533,
+        "profile_axis_y": 145.66461609772168
+      },
+      "radius_error": 0.12642965317172994,
+      "axis_y_error": 0.4189358840626767
+    },
+    {
+      "pixel_y": 606.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 19.387810936909315,
+        "profile_axis_y": 146.67203515386578
+      },
+      "measured": {
+        "profile_radius": 19.224569445891458,
+        "profile_axis_y": 146.15763501767822
+      },
+      "radius_error": 0.1632414910178568,
+      "axis_y_error": 0.514400136187561
+    },
+    {
+      "pixel_y": 608.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 19.602750439940877,
+        "profile_axis_y": 147.30774502994342
+      },
+      "measured": {
+        "profile_radius": 19.381606715604114,
+        "profile_axis_y": 146.6499142243265
+      },
+      "radius_error": 0.22114372433676266,
+      "axis_y_error": 0.6578308056169249
+    },
+    {
+      "pixel_y": 610.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 19.844238784691804,
+        "profile_axis_y": 148.0047815758809
+      },
+      "measured": {
+        "profile_radius": 19.790284373727154,
+        "profile_axis_y": 147.8890685089939
+      },
+      "radius_error": 0.053954410964649924,
+      "axis_y_error": 0.1157130668870252
+    },
+    {
+      "pixel_y": 612.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 20.08263791803355,
+        "profile_axis_y": 148.67268795984563
+      },
+      "measured": {
+        "profile_radius": 19.979456982027706,
+        "profile_axis_y": 148.39570487848889
+      },
+      "radius_error": 0.10318093600584533,
+      "axis_y_error": 0.27698308135674665
+    },
+    {
+      "pixel_y": 614.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 20.308815004103437,
+        "profile_axis_y": 149.2904258071878
+      },
+      "measured": {
+        "profile_radius": 20.168112251686043,
+        "profile_axis_y": 148.90092906803173
+      },
+      "radius_error": 0.14070275241739338,
+      "axis_y_error": 0.38949673915607264
+    },
+    {
+      "pixel_y": 616.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 20.52940554981739,
+        "profile_axis_y": 149.8773513962932
+      },
+      "measured": {
+        "profile_radius": 20.357219819681497,
+        "profile_axis_y": 149.40733007420135
+      },
+      "radius_error": 0.17218573013589378,
+      "axis_y_error": 0.47002132209183856
+    },
+    {
+      "pixel_y": 618.5,
+      "region": "stem",
+      "inferred": {
+        "profile_radius": 20.72486074342148,
+        "profile_axis_y": 150.39359558870507
+      },
+      "measured": {
+        "profile_radius": 20.5462031014847,
+        "profile_axis_y": 149.91342847038123
+      },
+      "radius_error": 0.17865764193678046,
+      "axis_y_error": 0.4801671183238341
+    },
+    {
+      "pixel_y": 632.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 48.75109252322293,
+        "profile_axis_y": 182.6338309368748
+      },
+      "measured": {
+        "profile_radius": 47.877201761936,
+        "profile_axis_y": 181.81228720255086
+      },
+      "radius_error": 0.8738907612869298,
+      "axis_y_error": 0.8215437343239387
+    },
+    {
+      "pixel_y": 634.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 50.97653764878273,
+        "profile_axis_y": 184.71148973488974
+      },
+      "measured": {
+        "profile_radius": 48.20879659198845,
+        "profile_axis_y": 182.12202533871942
+      },
+      "radius_error": 2.7677410567942786,
+      "axis_y_error": 2.589464396170314
+    },
+    {
+      "pixel_y": 636.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 53.093243814008275,
+        "profile_axis_y": 186.68246676086983
+      },
+      "measured": {
+        "profile_radius": 56.69271018388698,
+        "profile_axis_y": 190.03884064372423
+      },
+      "radius_error": -3.599466369878705,
+      "axis_y_error": -3.356373882854399
+    },
+    {
+      "pixel_y": 638.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 55.22618555464721,
+        "profile_axis_y": 188.67402201517706
+      },
+      "measured": {
+        "profile_radius": 56.7118675305388,
+        "profile_axis_y": 190.0560894131396
+      },
+      "radius_error": -1.4856819758915876,
+      "axis_y_error": -1.382067397962544
+    },
+    {
+      "pixel_y": 640.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 56.68829946278347,
+        "profile_axis_y": 190.04338141653747
+      },
+      "measured": {
+        "profile_radius": 56.723472740909834,
+        "profile_axis_y": 190.06600829613674
+      },
+      "radius_error": -0.03517327812636495,
+      "axis_y_error": -0.022626879599272343
+    },
+    {
+      "pixel_y": 642.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.320517308097074,
+        "profile_axis_y": 190.6394279991072
+      },
+      "measured": {
+        "profile_radius": 56.7327276196319,
+        "profile_axis_y": 190.0727329625755
+      },
+      "radius_error": 0.5877896884651719,
+      "axis_y_error": 0.566695036531712
+    },
+    {
+      "pixel_y": 644.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.13989148388319,
+        "profile_axis_y": 190.46634487363144
+      },
+      "measured": {
+        "profile_radius": 56.73422604871487,
+        "profile_axis_y": 190.07290107923646
+      },
+      "radius_error": 0.40566543516831644,
+      "axis_y_error": 0.3934437943949831
+    },
+    {
+      "pixel_y": 646.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 56.796767451853476,
+        "profile_axis_y": 190.13154784450504
+      },
+      "measured": {
+        "profile_radius": 56.73687367867949,
+        "profile_axis_y": 190.07760834574358
+      },
+      "radius_error": 0.05989377317398947,
+      "axis_y_error": 0.05393949876145143
+    },
+    {
+      "pixel_y": 648.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 56.937539841806455,
+        "profile_axis_y": 190.26790200656288
+      },
+      "measured": {
+        "profile_radius": 56.74046692267021,
+        "profile_axis_y": 190.0812060422883
+      },
+      "radius_error": 0.19707291913624658,
+      "axis_y_error": 0.1866959642745769
+    },
+    {
+      "pixel_y": 650.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.11918247342409,
+        "profile_axis_y": 190.44659159766383
+      },
+      "measured": {
+        "profile_radius": 56.76286772364514,
+        "profile_axis_y": 190.099026408351
+      },
+      "radius_error": 0.35631474977895294,
+      "axis_y_error": 0.34756518931283154
+    },
+    {
+      "pixel_y": 652.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.363031436260535,
+        "profile_axis_y": 190.68918816293632
+      },
+      "measured": {
+        "profile_radius": 57.15515288599802,
+        "profile_axis_y": 190.4883173484899
+      },
+      "radius_error": 0.20787855026251378,
+      "axis_y_error": 0.20087081444643218
+    },
+    {
+      "pixel_y": 654.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.545684968542666,
+        "profile_axis_y": 190.87330582732602
+      },
+      "measured": {
+        "profile_radius": 57.468135610405376,
+        "profile_axis_y": 190.7967441747029
+      },
+      "radius_error": 0.07754935813728991,
+      "axis_y_error": 0.07656165262312697
+    },
+    {
+      "pixel_y": 656.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.6108205572395,
+        "profile_axis_y": 190.93986901141346
+      },
+      "measured": {
+        "profile_radius": 57.46787193188055,
+        "profile_axis_y": 190.79654243470972
+      },
+      "radius_error": 0.14294862535894737,
+      "axis_y_error": 0.1433265767037426
+    },
+    {
+      "pixel_y": 658.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.64429004565885,
+        "profile_axis_y": 190.97404072969607
+      },
+      "measured": {
+        "profile_radius": 57.52179825609318,
+        "profile_axis_y": 190.85178556950402
+      },
+      "radius_error": 0.12249178956567164,
+      "axis_y_error": 0.12225516019205429
+    },
+    {
+      "pixel_y": 660.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.62106827581399,
+        "profile_axis_y": 190.9499321951393
+      },
+      "measured": {
+        "profile_radius": 57.54770977339184,
+        "profile_axis_y": 190.87461581206355
+      },
+      "radius_error": 0.07335850242215258,
+      "axis_y_error": 0.0753163830757444
+    },
+    {
+      "pixel_y": 662.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.60223011857024,
+        "profile_axis_y": 190.9294757649314
+      },
+      "measured": {
+        "profile_radius": 57.545872789723795,
+        "profile_axis_y": 190.8749184220533
+      },
+      "radius_error": 0.0563573288464454,
+      "axis_y_error": 0.054557342878098325
+    },
+    {
+      "pixel_y": 664.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.617189649592625,
+        "profile_axis_y": 190.9457875875936
+      },
+      "measured": {
+        "profile_radius": 57.558282306432574,
+        "profile_axis_y": 190.88745992496155
+      },
+      "radius_error": 0.058907343160051084,
+      "axis_y_error": 0.05832766263205258
+    },
+    {
+      "pixel_y": 666.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.59903043873477,
+        "profile_axis_y": 190.92605180347243
+      },
+      "measured": {
+        "profile_radius": 57.56080267258957,
+        "profile_axis_y": 190.8872245616362
+      },
+      "radius_error": 0.03822776614520507,
+      "axis_y_error": 0.03882724183623054
+    },
+    {
+      "pixel_y": 668.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.59878955741508,
+        "profile_axis_y": 190.92561128111217
+      },
+      "measured": {
+        "profile_radius": 57.56578152424974,
+        "profile_axis_y": 190.89539503135927
+      },
+      "radius_error": 0.033008033165337736,
+      "axis_y_error": 0.03021624975289683
+    },
+    {
+      "pixel_y": 670.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.60296439352585,
+        "profile_axis_y": 190.93076915688803
+      },
+      "measured": {
+        "profile_radius": 57.57392122184743,
+        "profile_axis_y": 190.90094288117123
+      },
+      "radius_error": 0.029043171678424073,
+      "axis_y_error": 0.02982627571680041
+    },
+    {
+      "pixel_y": 672.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.60113100231202,
+        "profile_axis_y": 190.92816127443257
+      },
+      "measured": {
+        "profile_radius": 57.57196867632701,
+        "profile_axis_y": 190.90094288117123
+      },
+      "radius_error": 0.02916232598501267,
+      "axis_y_error": 0.027218393261335905
+    },
+    {
+      "pixel_y": 674.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.58753485688216,
+        "profile_axis_y": 190.91287944533312
+      },
+      "measured": {
+        "profile_radius": 57.57648325974948,
+        "profile_axis_y": 190.90507855103107
+      },
+      "radius_error": 0.01105159713267767,
+      "axis_y_error": 0.007800894302050665
+    },
+    {
+      "pixel_y": 676.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.62718478592492,
+        "profile_axis_y": 190.95870059637122
+      },
+      "measured": {
+        "profile_radius": 57.57721355490796,
+        "profile_axis_y": 190.9049440577023
+      },
+      "radius_error": 0.049971231016961326,
+      "axis_y_error": 0.05375653866892094
+    },
+    {
+      "pixel_y": 678.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.6023140408829,
+        "profile_axis_y": 190.9295317584823
+      },
+      "measured": {
+        "profile_radius": 57.57880923950984,
+        "profile_axis_y": 190.9080710275963
+      },
+      "radius_error": 0.023504801373064765,
+      "axis_y_error": 0.02146073088601952
+    },
+    {
+      "pixel_y": 680.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.620073236307384,
+        "profile_axis_y": 190.9510338466661
+      },
+      "measured": {
+        "profile_radius": 57.58178887333059,
+        "profile_axis_y": 190.9081382742607
+      },
+      "radius_error": 0.03828436297679616,
+      "axis_y_error": 0.04289557240539921
+    },
+    {
+      "pixel_y": 682.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.59821509778394,
+        "profile_axis_y": 190.9245929850396
+      },
+      "measured": {
+        "profile_radius": 57.58113399189393,
+        "profile_axis_y": 190.91062640084303
+      },
+      "radius_error": 0.017081105890014214,
+      "axis_y_error": 0.0139665841965666
+    },
+    {
+      "pixel_y": 684.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.58064061834081,
+        "profile_axis_y": 190.9035296002636
+      },
+      "measured": {
+        "profile_radius": 57.58631661560417,
+        "profile_axis_y": 190.91156785414444
+      },
+      "radius_error": -0.005675997263359989,
+      "axis_y_error": -0.008038253880840784
+    },
+    {
+      "pixel_y": 686.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.66370757613667,
+        "profile_axis_y": 191.0063030238777
+      },
+      "measured": {
+        "profile_radius": 57.583182124838196,
+        "profile_axis_y": 190.91267742410685
+      },
+      "radius_error": 0.08052545129847744,
+      "axis_y_error": 0.09362559977085994
+    },
+    {
+      "pixel_y": 688.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.76463311716341,
+        "profile_axis_y": 191.13339940079788
+      },
+      "measured": {
+        "profile_radius": 57.58985097362898,
+        "profile_axis_y": 190.91590526399744
+      },
+      "radius_error": 0.17478214353443633,
+      "axis_y_error": 0.21749413680043972
+    },
+    {
+      "pixel_y": 690.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 57.95892570641096,
+        "profile_axis_y": 191.38136607948502
+      },
+      "measured": {
+        "profile_radius": 57.604210075286424,
+        "profile_axis_y": 190.93345664340256
+      },
+      "radius_error": 0.3547156311245345,
+      "axis_y_error": 0.4479094360824547
+    },
+    {
+      "pixel_y": 692.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.094776621829894,
+        "profile_axis_y": 191.55738603437126
+      },
+      "measured": {
+        "profile_radius": 57.68793186300842,
+        "profile_axis_y": 191.03587331326463
+      },
+      "radius_error": 0.406844758821471,
+      "axis_y_error": 0.5215127211066317
+    },
+    {
+      "pixel_y": 694.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.25946521379113,
+        "profile_axis_y": 191.7735969545124
+      },
+      "measured": {
+        "profile_radius": 58.16208611183565,
+        "profile_axis_y": 191.64734723253966
+      },
+      "radius_error": 0.09737910195548238,
+      "axis_y_error": 0.12624972197275497
+    },
+    {
+      "pixel_y": 696.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.294866048898456,
+        "profile_axis_y": 191.82101448519634
+      },
+      "measured": {
+        "profile_radius": 58.16264377597846,
+        "profile_axis_y": 191.65131478573852
+      },
+      "radius_error": 0.13222227291999644,
+      "axis_y_error": 0.16969969945782282
+    },
+    {
+      "pixel_y": 698.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.33283720400469,
+        "profile_axis_y": 191.87222962542955
+      },
+      "measured": {
+        "profile_radius": 58.219192886038854,
+        "profile_axis_y": 191.7198727600815
+      },
+      "radius_error": 0.11364431796583574,
+      "axis_y_error": 0.15235686534805382
+    },
+    {
+      "pixel_y": 700.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.28774445618051,
+        "profile_axis_y": 191.8101412131004
+      },
+      "measured": {
+        "profile_radius": 58.21665182255342,
+        "profile_axis_y": 191.7209487067117
+      },
+      "radius_error": 0.07109263362708873,
+      "axis_y_error": 0.08919250638868448
+    },
+    {
+      "pixel_y": 702.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.27649875247934,
+        "profile_axis_y": 191.7937769653525
+      },
+      "measured": {
+        "profile_radius": 58.23495041918894,
+        "profile_axis_y": 191.73954240941484
+      },
+      "radius_error": 0.04154833329040031,
+      "axis_y_error": 0.05423455593765425
+    },
+    {
+      "pixel_y": 704.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.285236731046766,
+        "profile_axis_y": 191.80678793835398
+      },
+      "measured": {
+        "profile_radius": 58.2372157053885,
+        "profile_axis_y": 191.74747751581256
+      },
+      "radius_error": 0.04802102565826516,
+      "axis_y_error": 0.059310422541415164
+    },
+    {
+      "pixel_y": 706.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.27153445969365,
+        "profile_axis_y": 191.78645035308145
+      },
+      "measured": {
+        "profile_radius": 58.241453437366815,
+        "profile_axis_y": 191.74747751581256
+      },
+      "radius_error": 0.03008102232683285,
+      "axis_y_error": 0.03897283726888645
+    },
+    {
+      "pixel_y": 708.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.28612024263672,
+        "profile_axis_y": 191.80838807972182
+      },
+      "measured": {
+        "profile_radius": 58.24828093413746,
+        "profile_axis_y": 191.7616329386661
+      },
+      "radius_error": 0.037839308499258095,
+      "axis_y_error": 0.0467551410557121
+    },
+    {
+      "pixel_y": 710.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.26898279128985,
+        "profile_axis_y": 191.7823289279275
+      },
+      "measured": {
+        "profile_radius": 58.25156709601015,
+        "profile_axis_y": 191.7616665619983
+      },
+      "radius_error": 0.017415695279701993,
+      "axis_y_error": 0.02066236592918358
+    },
+    {
+      "pixel_y": 712.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.28861226156776,
+        "profile_axis_y": 191.81256252626756
+      },
+      "measured": {
+        "profile_radius": 58.255020424003,
+        "profile_axis_y": 191.77010601837893
+      },
+      "radius_error": 0.033591837564763694,
+      "axis_y_error": 0.04245650788863031
+    },
+    {
+      "pixel_y": 714.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.26876503567645,
+        "profile_axis_y": 191.78153987858738
+      },
+      "measured": {
+        "profile_radius": 58.25737852080375,
+        "profile_axis_y": 191.77037500503647
+      },
+      "radius_error": 0.011386514872704367,
+      "axis_y_error": 0.01116487355091067
+    },
+    {
+      "pixel_y": 716.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.29339727016013,
+        "profile_axis_y": 191.82058093508084
+      },
+      "measured": {
+        "profile_radius": 58.26004189652589,
+        "profile_axis_y": 191.7761245948416
+      },
+      "radius_error": 0.033355373634236685,
+      "axis_y_error": 0.04445634023923617
+    },
+    {
+      "pixel_y": 718.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.27206865052085,
+        "profile_axis_y": 191.78624542999864
+      },
+      "measured": {
+        "profile_radius": 58.26104996942886,
+        "profile_axis_y": 191.77622546483818
+      },
+      "radius_error": 0.01101868109198989,
+      "axis_y_error": 0.010019965160466882
+    },
+    {
+      "pixel_y": 720.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.30068321319192,
+        "profile_axis_y": 191.83305878114703
+      },
+      "measured": {
+        "profile_radius": 58.263948745479205,
+        "profile_axis_y": 191.7803275113658
+      },
+      "radius_error": 0.03673446771271216,
+      "axis_y_error": 0.052731269781219225
+    },
+    {
+      "pixel_y": 722.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.286118722324815,
+        "profile_axis_y": 191.8087492182522
+      },
+      "measured": {
+        "profile_radius": 58.26357742782441,
+        "profile_axis_y": 191.78049562802678
+      },
+      "radius_error": 0.02254129450040665,
+      "axis_y_error": 0.02825359022540397
+    },
+    {
+      "pixel_y": 724.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.29969385255381,
+        "profile_axis_y": 191.83200896807136
+      },
+      "measured": {
+        "profile_radius": 58.26757436662137,
+        "profile_axis_y": 191.78368984458518
+      },
+      "radius_error": 0.03211948593244074,
+      "axis_y_error": 0.048319123486180615
+    },
+    {
+      "pixel_y": 726.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.289153970950544,
+        "profile_axis_y": 191.81371461550606
+      },
+      "measured": {
+        "profile_radius": 58.265543791337336,
+        "profile_axis_y": 191.783656221253
+      },
+      "radius_error": 0.02361017961320755,
+      "axis_y_error": 0.030058394253046572
+    },
+    {
+      "pixel_y": 728.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.27018166482245,
+        "profile_axis_y": 191.7806426341132
+      },
+      "measured": {
+        "profile_radius": 58.27097529003905,
+        "profile_axis_y": 191.78617797116752
+      },
+      "radius_error": -0.0007936252165947622,
+      "axis_y_error": -0.00553533705431164
+    },
+    {
+      "pixel_y": 730.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.254776426061206,
+        "profile_axis_y": 191.75308462978637
+      },
+      "measured": {
+        "profile_radius": 58.26737953080826,
+        "profile_axis_y": 191.78621159449972
+      },
+      "radius_error": -0.012603104747057614,
+      "axis_y_error": -0.03312696471334675
+    },
+    {
+      "pixel_y": 732.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.30898352629371,
+        "profile_axis_y": 191.8525515656001
+      },
+      "measured": {
+        "profile_radius": 58.2707100582909,
+        "profile_axis_y": 191.7863124644963
+      },
+      "radius_error": 0.03827346800280651,
+      "axis_y_error": 0.06623910110380393
+    },
+    {
+      "pixel_y": 734.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.4043374709111,
+        "profile_axis_y": 192.03248464475232
+      },
+      "measured": {
+        "profile_radius": 58.2717833066654,
+        "profile_axis_y": 191.79149045765413
+      },
+      "radius_error": 0.132554164245704,
+      "axis_y_error": 0.2409941870981811
+    },
+    {
+      "pixel_y": 736.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.518780312519496,
+        "profile_axis_y": 192.25180306523347
+      },
+      "measured": {
+        "profile_radius": 58.275533014923596,
+        "profile_axis_y": 191.79465105088033
+      },
+      "radius_error": 0.24324729759590014,
+      "axis_y_error": 0.45715201435314157
+    },
+    {
+      "pixel_y": 738.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.65147688099195,
+        "profile_axis_y": 192.51149425278288
+      },
+      "measured": {
+        "profile_radius": 58.367370955508164,
+        "profile_axis_y": 191.96347380182502
+      },
+      "radius_error": 0.2841059254837859,
+      "axis_y_error": 0.5480204509578641
+    },
+    {
+      "pixel_y": 740.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.723530642573884,
+        "profile_axis_y": 192.6551035466066
+      },
+      "measured": {
+        "profile_radius": 58.63598813979944,
+        "profile_axis_y": 192.4841311008448
+      },
+      "radius_error": 0.08754250277444697,
+      "axis_y_error": 0.17097244576180515
+    },
+    {
+      "pixel_y": 742.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.79024145492224,
+        "profile_axis_y": 192.79047746971065
+      },
+      "measured": {
+        "profile_radius": 58.66953626978981,
+        "profile_axis_y": 192.5536305284892
+      },
+      "radius_error": 0.12070518513242945,
+      "axis_y_error": 0.23684694122144379
+    },
+    {
+      "pixel_y": 744.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.78002673798292,
+        "profile_axis_y": 192.76949193124287
+      },
+      "measured": {
+        "profile_radius": 58.672738069546035,
+        "profile_axis_y": 192.55309255517412
+      },
+      "radius_error": 0.10728866843688678,
+      "axis_y_error": 0.21639937606875037
+    },
+    {
+      "pixel_y": 746.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.771131646341956,
+        "profile_axis_y": 192.74926335188576
+      },
+      "measured": {
+        "profile_radius": 58.71486119496547,
+        "profile_axis_y": 192.64004249222708
+      },
+      "radius_error": 0.05627045137648423,
+      "axis_y_error": 0.10922085965867723
+    },
+    {
+      "pixel_y": 748.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.7638659610448,
+        "profile_axis_y": 192.7332242009347
+      },
+      "measured": {
+        "profile_radius": 58.71492563907958,
+        "profile_axis_y": 192.63967263557294
+      },
+      "radius_error": 0.048940321965218914,
+      "axis_y_error": 0.09355156536176423
+    },
+    {
+      "pixel_y": 750.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.770725016590205,
+        "profile_axis_y": 192.74939908140735
+      },
+      "measured": {
+        "profile_radius": 58.73204213662935,
+        "profile_axis_y": 192.67000088121168
+      },
+      "radius_error": 0.03868287996085229,
+      "axis_y_error": 0.07939820019566923
+    },
+    {
+      "pixel_y": 752.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76476205976331,
+        "profile_axis_y": 192.73502344421917
+      },
+      "measured": {
+        "profile_radius": 58.72970742886578,
+        "profile_axis_y": 192.67000088121168
+      },
+      "radius_error": 0.035054630897526806,
+      "axis_y_error": 0.06502256300748854
+    },
+    {
+      "pixel_y": 754.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.75565544851461,
+        "profile_axis_y": 192.7143728342528
+      },
+      "measured": {
+        "profile_radius": 58.73383115371104,
+        "profile_axis_y": 192.67033711453362
+      },
+      "radius_error": 0.021824294803572286,
+      "axis_y_error": 0.04403571971917586
+    },
+    {
+      "pixel_y": 756.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76555553584257,
+        "profile_axis_y": 192.73731367368669
+      },
+      "measured": {
+        "profile_radius": 58.737920764496714,
+        "profile_axis_y": 192.68553486068518
+      },
+      "radius_error": 0.02763477134585912,
+      "axis_y_error": 0.051778813001504886
+    },
+    {
+      "pixel_y": 758.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.762742944916106,
+        "profile_axis_y": 192.73035532390577
+      },
+      "measured": {
+        "profile_radius": 58.73930980600574,
+        "profile_axis_y": 192.68560210734955
+      },
+      "radius_error": 0.023433138910363027,
+      "axis_y_error": 0.04475321655621656
+    },
+    {
+      "pixel_y": 760.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.77078323951796,
+        "profile_axis_y": 192.7515759296875
+      },
+      "measured": {
+        "profile_radius": 58.743934156177914,
+        "profile_axis_y": 192.69474765370626
+      },
+      "radius_error": 0.02684908334004632,
+      "axis_y_error": 0.05682827598124618
+    },
+    {
+      "pixel_y": 762.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76559723024921,
+        "profile_axis_y": 192.7373210685167
+      },
+      "measured": {
+        "profile_radius": 58.742740828772384,
+        "profile_axis_y": 192.69481490037066
+      },
+      "radius_error": 0.022856401476829546,
+      "axis_y_error": 0.042506168146047685
+    },
+    {
+      "pixel_y": 764.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76354928571223,
+        "profile_axis_y": 192.7331107773991
+      },
+      "measured": {
+        "profile_radius": 58.74950691052889,
+        "profile_axis_y": 192.70100159349428
+      },
+      "radius_error": 0.01404237518333673,
+      "axis_y_error": 0.0321091839048222
+    },
+    {
+      "pixel_y": 766.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76312040186136,
+        "profile_axis_y": 192.73044497175127
+      },
+      "measured": {
+        "profile_radius": 58.74576570376688,
+        "profile_axis_y": 192.70110246349088
+      },
+      "radius_error": 0.017354698094479204,
+      "axis_y_error": 0.029342508260384648
+    },
+    {
+      "pixel_y": 768.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.759586137631445,
+        "profile_axis_y": 192.72048416488906
+      },
+      "measured": {
+        "profile_radius": 58.74793326733685,
+        "profile_axis_y": 192.70100159349428
+      },
+      "radius_error": 0.01165287029459705,
+      "axis_y_error": 0.01948257139477505
+    },
+    {
+      "pixel_y": 770.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.762350976967944,
+        "profile_axis_y": 192.72864139415162
+      },
+      "measured": {
+        "profile_radius": 58.749050459056804,
+        "profile_axis_y": 192.7056752366692
+      },
+      "radius_error": 0.01330051791114073,
+      "axis_y_error": 0.02296615748241493
+    },
+    {
+      "pixel_y": 772.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76151522579726,
+        "profile_axis_y": 192.72574239004655
+      },
+      "measured": {
+        "profile_radius": 58.74859672227879,
+        "profile_axis_y": 192.70564161333704
+      },
+      "radius_error": 0.012918503518470459,
+      "axis_y_error": 0.020100776709512047
+    },
+    {
+      "pixel_y": 774.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.762252330446394,
+        "profile_axis_y": 192.7303823111016
+      },
+      "measured": {
+        "profile_radius": 58.75287436492557,
+        "profile_axis_y": 192.708936699892
+      },
+      "radius_error": 0.009377965520826592,
+      "axis_y_error": 0.0214456112096002
+    },
+    {
+      "pixel_y": 776.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.74803903827274,
+        "profile_axis_y": 192.68179716620511
+      },
+      "measured": {
+        "profile_radius": 58.74978465814989,
+        "profile_axis_y": 192.7089703232242
+      },
+      "radius_error": -0.0017456198771483855,
+      "axis_y_error": -0.027173157019092287
+    },
+    {
+      "pixel_y": 778.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.76131967349835,
+        "profile_axis_y": 192.72927471441227
+      },
+      "measured": {
+        "profile_radius": 58.752488590419546,
+        "profile_axis_y": 192.708936699892
+      },
+      "radius_error": 0.008831083078803204,
+      "axis_y_error": 0.02033801452026296
+    },
+    {
+      "pixel_y": 780.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.805880613168455,
+        "profile_axis_y": 192.8904993215797
+      },
+      "measured": {
+        "profile_radius": 58.753157767739275,
+        "profile_axis_y": 192.71401382305325
+      },
+      "radius_error": 0.052722845429180154,
+      "axis_y_error": 0.17648549852646056
+    },
+    {
+      "pixel_y": 782.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.860421558219,
+        "profile_axis_y": 193.0965608171068
+      },
+      "measured": {
+        "profile_radius": 58.75482591514263,
+        "profile_axis_y": 192.71744340293702
+      },
+      "radius_error": 0.10559564307637004,
+      "axis_y_error": 0.3791174141697695
+    },
+    {
+      "pixel_y": 784.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.93120783603557,
+        "profile_axis_y": 193.37245482584703
+      },
+      "measured": {
+        "profile_radius": 58.763924547562844,
+        "profile_axis_y": 192.7305228791604
+      },
+      "radius_error": 0.16728328847272422,
+      "axis_y_error": 0.6419319466866398
+    },
+    {
+      "pixel_y": 786.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 58.98009266466069,
+        "profile_axis_y": 193.56828616364592
+      },
+      "measured": {
+        "profile_radius": 58.87455441575349,
+        "profile_axis_y": 193.15901862463716
+      },
+      "radius_error": 0.10553824890720165,
+      "axis_y_error": 0.40926753900876633
+    },
+    {
+      "pixel_y": 788.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.01208051361631,
+        "profile_axis_y": 193.7038914860663
+      },
+      "measured": {
+        "profile_radius": 58.96383230028529,
+        "profile_axis_y": 193.50987809607864
+      },
+      "radius_error": 0.04824821333102136,
+      "axis_y_error": 0.19401338998767415
+    },
+    {
+      "pixel_y": 790.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.024573493229035,
+        "profile_axis_y": 193.75706171076547
+      },
+      "measured": {
+        "profile_radius": 58.96317151311163,
+        "profile_axis_y": 193.5106178093869
+      },
+      "radius_error": 0.06140198011740239,
+      "axis_y_error": 0.2464439013785693
+    },
+    {
+      "pixel_y": 792.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.01460289832916,
+        "profile_axis_y": 193.71126774932483
+      },
+      "measured": {
+        "profile_radius": 58.97289336734261,
+        "profile_axis_y": 193.53388515526495
+      },
+      "radius_error": 0.04170953098655161,
+      "axis_y_error": 0.17738259405987833
+    },
+    {
+      "pixel_y": 794.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.01037785690583,
+        "profile_axis_y": 193.68865569279924
+      },
+      "measured": {
+        "profile_radius": 58.985528791343086,
+        "profile_axis_y": 193.5974332531111
+      },
+      "radius_error": 0.024849065562747796,
+      "axis_y_error": 0.09122243968815269
+    },
+    {
+      "pixel_y": 796.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.0110626579833,
+        "profile_axis_y": 193.69198464553213
+      },
+      "measured": {
+        "profile_radius": 58.9865241851041,
+        "profile_axis_y": 193.59763499310424
+      },
+      "radius_error": 0.024538472879200413,
+      "axis_y_error": 0.09434965242789417
+    },
+    {
+      "pixel_y": 798.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.00985375364615,
+        "profile_axis_y": 193.68764906850495
+      },
+      "measured": {
+        "profile_radius": 58.995376888521854,
+        "profile_axis_y": 193.6278623687464
+      },
+      "radius_error": 0.014476865124294136,
+      "axis_y_error": 0.059786699758547
+    },
+    {
+      "pixel_y": 800.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.01085260001364,
+        "profile_axis_y": 193.6907017173423
+      },
+      "measured": {
+        "profile_radius": 58.99305361781782,
+        "profile_axis_y": 193.62776149874983
+      },
+      "radius_error": 0.017798982195820656,
+      "axis_y_error": 0.06294021859247323
+    },
+    {
+      "pixel_y": 802.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.011250557966655,
+        "profile_axis_y": 193.6953665404619
+      },
+      "measured": {
+        "profile_radius": 58.99633458953762,
+        "profile_axis_y": 193.62755975875666
+      },
+      "radius_error": 0.014915968429036752,
+      "axis_y_error": 0.06780678170522947
+    },
+    {
+      "pixel_y": 804.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.01039543352488,
+        "profile_axis_y": 193.68795971611434
+      },
+      "measured": {
+        "profile_radius": 58.99761062726185,
+        "profile_axis_y": 193.64322823155894
+      },
+      "radius_error": 0.012784806263027804,
+      "axis_y_error": 0.04473148455539899
+    },
+    {
+      "pixel_y": 806.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.01108432831472,
+        "profile_axis_y": 193.69271630498756
+      },
+      "measured": {
+        "profile_radius": 58.99779269076702,
+        "profile_axis_y": 193.64306011489796
+      },
+      "radius_error": 0.01329163754770235,
+      "axis_y_error": 0.049656190089592656
+    },
+    {
+      "pixel_y": 808.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.012974158346566,
+        "profile_axis_y": 193.70920676367976
+      },
+      "measured": {
+        "profile_radius": 59.002240506128466,
+        "profile_axis_y": 193.6525418945766
+      },
+      "radius_error": 0.010733652218100076,
+      "axis_y_error": 0.05666486910317303
+    },
+    {
+      "pixel_y": 810.5,
+      "region": "base",
+      "inferred": {
+        "profile_radius": 59.009295719615686,
+        "profile_axis_y": 193.67643049506705
+      },
+      "measured": {
+        "profile_radius": 58.99941640889925,
+        "profile_axis_y": 193.65247464791221
+      },
+      "radius_error": 0.009879310716435441,
+      "axis_y_error": 0.023955847154837784
+    }
+  ],
+  "model_median_absolute_radius_error": 0.04170953098655161,
+  "model_median_absolute_axis_y_error": 0.06780678170522947,
+  "source_estimates": {
+    "original_white": [
+      {
+        "pixel_y": 601.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 74.68881118881117,
+            "slope": 0.4611846486846471,
+            "profile_radius": 18.391016711580658,
+            "profile_axis_y": 146.53918465311787
+          },
+          {
+            "half_window": 10,
+            "half_width": 74.75269695979078,
+            "slope": 0.4504061812414196,
+            "profile_radius": 18.35472044572191,
+            "profile_axis_y": 146.4219734565174
+          },
+          {
+            "half_window": 14,
+            "half_width": 74.85638363613893,
+            "slope": 0.22036634394114915,
+            "profile_radius": 17.541705923414103,
+            "profile_axis_y": 143.8288906094526
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 605.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 76.91258741258743,
+            "slope": 0.5357350982350996,
+            "profile_radius": 19.338696303220534,
+            "profile_axis_y": 148.48263159454015
+          },
+          {
+            "half_window": 10,
+            "half_width": 76.5096436744034,
+            "slope": 0.4719108652174995,
+            "profile_radius": 18.89345748403224,
+            "profile_axis_y": 147.7126995842974
+          },
+          {
+            "half_window": 14,
+            "half_width": 75.60839204053887,
+            "slope": 0.3914194416488631,
+            "profile_radius": 18.29656628932169,
+            "profile_axis_y": 146.7295473048616
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 609.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 78.17482517482517,
+            "slope": 0.046932234432235875,
+            "profile_radius": 18.04797054308463,
+            "profile_axis_y": 143.73768994895664
+          },
+          {
+            "half_window": 10,
+            "half_width": 77.71085322000651,
+            "slope": 0.20466419122025267,
+            "profile_radius": 18.172028252143285,
+            "profile_axis_y": 145.5852266959515
+          },
+          {
+            "half_window": 14,
+            "half_width": 77.38734396242738,
+            "slope": 0.40490763999523577,
+            "profile_radius": 18.786788910064857,
+            "profile_axis_y": 147.91510159079633
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 613.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 78.84965034965036,
+            "slope": 0.5644563769563768,
+            "profile_radius": 19.99759503081475,
+            "profile_axis_y": 150.82688576717612
+          },
+          {
+            "half_window": 10,
+            "half_width": 79.43609022556389,
+            "slope": 0.5783613898602433,
+            "profile_radius": 20.232830669269784,
+            "profile_axis_y": 151.0436517828335
+          },
+          {
+            "half_window": 14,
+            "half_width": 79.9399950562353,
+            "slope": 0.6849458064697197,
+            "profile_radius": 21.084389722674295,
+            "profile_axis_y": 152.37419319456873
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 617.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 82.8986013986014,
+            "slope": 1.533008658008659,
+            "profile_radius": 30.46886236959038,
+            "profile_axis_y": 164.2184539062854
+          },
+          {
+            "half_window": 10,
+            "half_width": 83.07960117685516,
+            "slope": 1.3188835065265254,
+            "profile_radius": 28.028274682000003,
+            "profile_axis_y": 161.57422756943615
+          },
+          {
+            "half_window": 14,
+            "half_width": 83.57761710542579,
+            "slope": 1.139606430832793,
+            "profile_radius": 26.22562773843066,
+            "profile_axis_y": 159.41095686310732
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 621.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 89.08741258741257,
+            "slope": 1.4632659007658966,
+            "profile_radius": 31.849097982794024,
+            "profile_axis_y": 165.63566048074506
+          },
+          {
+            "half_window": 10,
+            "half_width": 88.68519123896696,
+            "slope": 1.502650868497549,
+            "profile_radius": 32.20605827337381,
+            "profile_axis_y": 166.07419762490372
+          },
+          {
+            "half_window": 14,
+            "half_width": 88.12909405512298,
+            "slope": 1.3623073680429068,
+            "profile_radius": 30.256899416542357,
+            "profile_axis_y": 164.08045864260905
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 629.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 99.14335664335663,
+            "slope": 1.163961038961037,
+            "profile_radius": 31.417187892464703,
+            "profile_axis_y": 165.22243778004673
+          },
+          {
+            "half_window": 10,
+            "half_width": 99.57355344883946,
+            "slope": 1.4183375104427718,
+            "profile_radius": 34.964234291870135,
+            "profile_axis_y": 169.12263591783184
+          },
+          {
+            "half_window": 14,
+            "half_width": 99.82808058336423,
+            "slope": 1.5123998740517068,
+            "profile_radius": 36.39306585527608,
+            "profile_axis_y": 170.595003413395
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 637.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 115.23426573426573,
+            "slope": 2.3488386613386596,
+            "profile_radius": 57.08546593912272,
+            "profile_axis_y": 190.51276075205783
+          },
+          {
+            "half_window": 10,
+            "half_width": 115.14220333442299,
+            "slope": 2.367545868403989,
+            "profile_radius": 57.39593156399641,
+            "profile_axis_y": 190.80535212228568
+          },
+          {
+            "half_window": 14,
+            "half_width": 115.10326288468667,
+            "slope": 2.265928531362344,
+            "profile_radius": 55.450552535016385,
+            "profile_axis_y": 189.02531478116936
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 645.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 133.15734265734264,
+            "slope": 1.9676573426573436,
+            "profile_radius": 57.749703047984795,
+            "profile_axis_y": 191.05094438095685
+          },
+          {
+            "half_window": 10,
+            "half_width": 133.1418764302059,
+            "slope": 2.0668143514253323,
+            "profile_radius": 59.84383696497943,
+            "profile_axis_y": 193.0397839385164
+          },
+          {
+            "half_window": 14,
+            "half_width": 132.97645532072673,
+            "slope": 2.0506164454648865,
+            "profile_radius": 59.42482378187095,
+            "profile_axis_y": 192.6629241816004
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 661.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 161.52447552447552,
+            "slope": 1.4453671328671287,
+            "profile_radius": 57.334480234700955,
+            "profile_axis_y": 190.4318583888208
+          },
+          {
+            "half_window": 10,
+            "half_width": 161.4122262177182,
+            "slope": 1.5340560998455712,
+            "profile_radius": 59.350622202591886,
+            "profile_axis_y": 192.5689338494896
+          },
+          {
+            "half_window": 14,
+            "half_width": 161.1957730812013,
+            "slope": 1.5176181461289884,
+            "profile_radius": 58.88675712380277,
+            "profile_axis_y": 192.11869858790155
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 685.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 191.76223776223776,
+            "slope": 1.2057317682317674,
+            "profile_radius": 61.801344755166234,
+            "profile_axis_y": 195.62918153620151
+          },
+          {
+            "half_window": 10,
+            "half_width": 191.5864661654135,
+            "slope": 1.170263163398173,
+            "profile_radius": 60.86586881117357,
+            "profile_axis_y": 194.57112032658134
+          },
+          {
+            "half_window": 14,
+            "half_width": 191.715609936967,
+            "slope": 1.1141884150435286,
+            "profile_radius": 59.5452572589843,
+            "profile_axis_y": 192.97067820274725
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 713.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 217.30769230769226,
+            "slope": 0.8294830169830151,
+            "profile_radius": 60.374987571165306,
+            "profile_axis_y": 194.39394971994594
+          },
+          {
+            "half_window": 10,
+            "half_width": 217.33867276887864,
+            "slope": 0.7652485132462203,
+            "profile_radius": 58.97137604010937,
+            "profile_axis_y": 192.28983628676605
+          },
+          {
+            "half_window": 14,
+            "half_width": 217.37226548016312,
+            "slope": 0.7623474144608683,
+            "profile_radius": 58.918620718029445,
+            "profile_axis_y": 192.19849736843858
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 745.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 238.2447552447553,
+            "slope": 0.8989552114552184,
+            "profile_radius": 67.96175804922089,
+            "profile_axis_y": 206.89788066187566
+          },
+          {
+            "half_window": 10,
+            "half_width": 238.1709709055246,
+            "slope": 0.7173187965521961,
+            "profile_radius": 63.52820714983408,
+            "profile_axis_y": 200.35572253175468
+          },
+          {
+            "half_window": 14,
+            "half_width": 238.2376096897787,
+            "slope": 0.5854061521122057,
+            "profile_radius": 60.81391073359238,
+            "profile_axis_y": 195.6176731234305
+          }
+        ],
+        "near_current_surface_switch": false
+      }
+    ],
+    "original_black": [
+      {
+        "pixel_y": 601.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 68.53846153846153,
+            "slope": -1.5465992340992305,
+            "profile_radius": 25.326456067261326,
+            "profile_axis_y": 125.33234410870759
+          },
+          {
+            "half_window": 10,
+            "half_width": 66.63991500490356,
+            "slope": -1.8704642039882329,
+            "profile_radius": 27.88518759291049,
+            "profile_axis_y": 122.51687599908378
+          },
+          {
+            "half_window": 14,
+            "half_width": 67.1127796316895,
+            "slope": -1.4263119594738076,
+            "profile_radius": 23.64136084485195,
+            "profile_axis_y": 126.8842411154869
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 605.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 61.27622377622378,
+            "slope": -1.8666749916749883,
+            "profile_radius": 25.60463045583905,
+            "profile_axis_y": 124.98961365205535
+          },
+          {
+            "half_window": 10,
+            "half_width": 63.45554102647922,
+            "slope": -0.4257740310371903,
+            "profile_radius": 15.48337414288912,
+            "profile_axis_y": 138.18134398342406
+          },
+          {
+            "half_window": 14,
+            "half_width": 65.10042021999752,
+            "slope": 0.01212494222088098,
+            "profile_radius": 15.019425349852813,
+            "profile_axis_y": 142.38008414934654
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 609.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 64.57342657342657,
+            "slope": 2.8903804528804535,
+            "profile_radius": 37.88664248614392,
+            "profile_axis_y": 171.3657616879321
+          },
+          {
+            "half_window": 10,
+            "half_width": 65.96551160509969,
+            "slope": 1.6522134002111102,
+            "profile_radius": 25.404425090851344,
+            "profile_axis_y": 159.64056056675523
+          },
+          {
+            "half_window": 14,
+            "half_width": 66.69126189593376,
+            "slope": 0.9326883887854416,
+            "profile_radius": 19.274322607684123,
+            "profile_axis_y": 152.57594504406714
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 613.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 74.37762237762237,
+            "slope": 1.3718989343989338,
+            "profile_radius": 25.63444344685463,
+            "profile_axis_y": 159.51386552747255
+          },
+          {
+            "half_window": 10,
+            "half_width": 71.42677345537756,
+            "slope": 1.5769809900244651,
+            "profile_radius": 26.711338250947602,
+            "profile_axis_y": 161.11443005588876
+          },
+          {
+            "half_window": 14,
+            "half_width": 69.41472005932516,
+            "slope": 1.199784513883512,
+            "profile_radius": 22.317318668564827,
+            "profile_axis_y": 156.68181339375525
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 617.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 75.25874125874124,
+            "slope": 0.10959873459873573,
+            "profile_radius": 17.430349332323974,
+            "profile_axis_y": 146.2747544963348
+          },
+          {
+            "half_window": 10,
+            "half_width": 75.85158548545274,
+            "slope": 0.2869965867677527,
+            "profile_radius": 17.96449620113335,
+            "profile_axis_y": 148.31634663979384
+          },
+          {
+            "half_window": 14,
+            "half_width": 75.10814485230503,
+            "slope": 1.2597431947404119,
+            "profile_radius": 24.740562907401223,
+            "profile_axis_y": 159.31603875768766
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 621.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 77.95104895104895,
+            "slope": 1.885489510489511,
+            "profile_radius": 32.80088084325104,
+            "profile_axis_y": 168.1447993451122
+          },
+          {
+            "half_window": 10,
+            "half_width": 79.42513893429222,
+            "slope": 1.654166707942448,
+            "profile_radius": 30.611143691889964,
+            "profile_axis_y": 165.79025682693847
+          },
+          {
+            "half_window": 14,
+            "half_width": 81.37461376838463,
+            "slope": 1.245220277652145,
+            "profile_radius": 26.64774063182645,
+            "profile_axis_y": 161.2523746246432
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 629.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 95.24825174825175,
+            "slope": 0.9123792873792922,
+            "profile_radius": 27.31158426969218,
+            "profile_axis_y": 160.91959952124233
+          },
+          {
+            "half_window": 10,
+            "half_width": 94.13501144164755,
+            "slope": 1.4284176074793895,
+            "profile_radius": 33.18826426525064,
+            "profile_axis_y": 168.10118204669334
+          },
+          {
+            "half_window": 14,
+            "half_width": 93.05833642318623,
+            "slope": 1.8073954894032742,
+            "profile_radius": 38.0307724767108,
+            "profile_axis_y": 173.1941248424777
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 637.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 108.05944055944053,
+            "slope": 2.67694805194805,
+            "profile_radius": 59.46708954192052,
+            "profile_axis_y": 193.3217008715945
+          },
+          {
+            "half_window": 10,
+            "half_width": 108.49542334096105,
+            "slope": 2.3948737401254534,
+            "profile_radius": 54.573802624517235,
+            "profile_axis_y": 188.87689723486164
+          },
+          {
+            "half_window": 14,
+            "half_width": 109.21375602521317,
+            "slope": 2.1129069183504643,
+            "profile_radius": 49.89743347670702,
+            "profile_axis_y": 184.48680363890517
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 645.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 127.24475524475523,
+            "slope": 1.8491300366300418,
+            "profile_radius": 52.82305655782807,
+            "profile_axis_y": 187.0169608462805
+          },
+          {
+            "half_window": 10,
+            "half_width": 127.4798953906505,
+            "slope": 1.965971142172511,
+            "profile_radius": 55.25345286521874,
+            "profile_axis_y": 189.3316756044634
+          },
+          {
+            "half_window": 14,
+            "half_width": 127.00543814114444,
+            "slope": 2.2009700185798593,
+            "profile_radius": 59.83716530271124,
+            "profile_axis_y": 193.69746291616053
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 661.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 156.65384615384616,
+            "slope": 1.511509324009323,
+            "profile_radius": 57.089160755179066,
+            "profile_axis_y": 190.93340207977218
+          },
+          {
+            "half_window": 10,
+            "half_width": 156.644982020268,
+            "slope": 1.4673852505660228,
+            "profile_radius": 56.09324939479541,
+            "profile_axis_y": 189.88772629574893
+          },
+          {
+            "half_window": 14,
+            "half_width": 156.58188110245948,
+            "slope": 1.4953775432432233,
+            "profile_radius": 56.698769059110475,
+            "profile_axis_y": 190.53557122890504
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 685.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 188.27272727272728,
+            "slope": 1.2165959040959073,
+            "profile_radius": 60.94392402438829,
+            "profile_axis_y": 195.30273036050235
+          },
+          {
+            "half_window": 10,
+            "half_width": 188.18731611637784,
+            "slope": 1.1418196072086155,
+            "profile_radius": 59.103582767135556,
+            "profile_axis_y": 193.16223948178188
+          },
+          {
+            "half_window": 14,
+            "half_width": 188.11222345816338,
+            "slope": 1.0968633805118753,
+            "profile_radius": 58.02057406394554,
+            "profile_axis_y": 191.8723519099153
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 713.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 215.18531468531467,
+            "slope": 0.8162046287046291,
+            "profile_radius": 59.48980779077305,
+            "profile_axis_y": 193.69668429143402
+          },
+          {
+            "half_window": 10,
+            "half_width": 215.25858123569787,
+            "slope": 0.6699252523051086,
+            "profile_radius": 56.4850039755259,
+            "profile_axis_y": 188.95118496536057
+          },
+          {
+            "half_window": 14,
+            "half_width": 215.06068471140776,
+            "slope": 0.6523230148091069,
+            "profile_radius": 56.09985117629764,
+            "profile_axis_y": 188.35956581709524
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 745.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 237.1258741258741,
+            "slope": 0.4590409590409583,
+            "profile_radius": 58.35564735071845,
+            "profile_axis_y": 190.99490545660282
+          },
+          {
+            "half_window": 10,
+            "half_width": 237.4022556390977,
+            "slope": 0.4911975260945479,
+            "profile_radius": 58.93483906682905,
+            "profile_axis_y": 192.16676801594872
+          },
+          {
+            "half_window": 14,
+            "half_width": 237.2721542454579,
+            "slope": 0.510576351510718,
+            "profile_radius": 59.224835892244954,
+            "profile_axis_y": 192.85140415564422
+          }
+        ],
+        "near_current_surface_switch": false
+      }
+    ],
+    "selected_white_3": [
+      {
+        "pixel_y": 601.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 76.49300699300699,
+            "slope": 0.20573176823177067,
+            "profile_radius": 17.889741230557814,
+            "profile_axis_y": 143.71431736066953
+          },
+          {
+            "half_window": 10,
+            "half_width": 75.89326577312846,
+            "slope": 0.2995237875100552,
+            "profile_radius": 18.01532935535276,
+            "profile_axis_y": 144.77050000041152
+          },
+          {
+            "half_window": 14,
+            "half_width": 75.81720430107526,
+            "slope": 0.1193484552772636,
+            "profile_radius": 17.57241499375134,
+            "profile_axis_y": 142.70440297287655
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 605.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 77.25524475524475,
+            "slope": 0.17243173493173775,
+            "profile_radius": 17.995410778538165,
+            "profile_axis_y": 144.272346864685
+          },
+          {
+            "half_window": 10,
+            "half_width": 77.22866949983651,
+            "slope": 0.2168856759817834,
+            "profile_radius": 18.088884879168795,
+            "profile_axis_y": 144.79004031806306
+          },
+          {
+            "half_window": 14,
+            "half_width": 76.63465579038437,
+            "slope": 0.3413784671432049,
+            "profile_radius": 18.341534086999427,
+            "profile_axis_y": 146.2111536901988
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 609.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 78.16783216783215,
+            "slope": 0.26188394938394804,
+            "profile_radius": 18.433662427879224,
+            "profile_axis_y": 146.27471303802758
+          },
+          {
+            "half_window": 10,
+            "half_width": 78.17358613926119,
+            "slope": 0.23559378793932464,
+            "profile_radius": 18.359350309956316,
+            "profile_axis_y": 145.96461525113077
+          },
+          {
+            "half_window": 14,
+            "half_width": 77.85749598319119,
+            "slope": 0.1940550296014681,
+            "profile_radius": 18.181772203409174,
+            "profile_axis_y": 145.4650357755729
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 613.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 79.28671328671328,
+            "slope": 0.24315268065267956,
+            "profile_radius": 18.642039028632354,
+            "profile_axis_y": 147.01750995779457
+          },
+          {
+            "half_window": 10,
+            "half_width": 79.01095129127164,
+            "slope": 0.25354737854737547,
+            "profile_radius": 18.607396016286188,
+            "profile_axis_y": 147.13139718947662
+          },
+          {
+            "half_window": 14,
+            "half_width": 79.0100111234705,
+            "slope": 0.3407689993132136,
+            "profile_radius": 18.907654674873672,
+            "profile_axis_y": 148.17192854846223
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 617.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 80.59090909090908,
+            "slope": 0.5165251415251422,
+            "profile_radius": 20.150401161367316,
+            "profile_axis_y": 151.3148274715033
+          },
+          {
+            "half_window": 10,
+            "half_width": 80.96011768551813,
+            "slope": 0.6547119610620747,
+            "profile_radius": 21.13579763910289,
+            "profile_axis_y": 153.03290326760293
+          },
+          {
+            "half_window": 14,
+            "half_width": 81.39129897416883,
+            "slope": 0.7459422053762983,
+            "profile_radius": 21.931267191104183,
+            "profile_axis_y": 154.19672315142017
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 621.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 84.58391608391608,
+            "slope": 1.4530053280053272,
+            "profile_radius": 30.115520572785034,
+            "profile_axis_y": 164.50958272183436
+          },
+          {
+            "half_window": 10,
+            "half_width": 84.8685845047401,
+            "slope": 1.3017471764611344,
+            "profile_radius": 28.434370413661224,
+            "profile_axis_y": 162.63369947692405
+          },
+          {
+            "half_window": 14,
+            "half_width": 85.23408725744655,
+            "slope": 1.18005994823987,
+            "profile_radius": 27.185740784725656,
+            "profile_axis_y": 161.13943204288665
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 629.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 96.41258741258738,
+            "slope": 1.294330669330671,
+            "profile_radius": 32.205426446820915,
+            "profile_axis_y": 166.64040067076587
+          },
+          {
+            "half_window": 10,
+            "half_width": 95.98545276234061,
+            "slope": 1.29100281445819,
+            "profile_radius": 32.01965851405417,
+            "profile_axis_y": 166.5086904721934
+          },
+          {
+            "half_window": 14,
+            "half_width": 95.7536151279199,
+            "slope": 1.5225138369952043,
+            "profile_radius": 35.04783140881853,
+            "profile_axis_y": 169.81076728550445
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 637.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 110.3251748251748,
+            "slope": 2.734910922410921,
+            "profile_radius": 61.79957519359809,
+            "profile_axis_y": 195.20310696638876
+          },
+          {
+            "half_window": 10,
+            "half_width": 110.55720823798623,
+            "slope": 2.420847766099479,
+            "profile_radius": 56.0876956350297,
+            "profile_axis_y": 190.0560707410863
+          },
+          {
+            "half_window": 14,
+            "half_width": 110.96910147076998,
+            "slope": 2.255020105548468,
+            "profile_radius": 53.26070870151249,
+            "profile_axis_y": 187.42805260264768
+          }
+        ],
+        "near_current_surface_switch": true
+      },
+      {
+        "pixel_y": 645.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 129.77272727272725,
+            "slope": 2.1592157842157844,
+            "profile_radius": 60.26119339846093,
+            "profile_axis_y": 193.79895596277242
+          },
+          {
+            "half_window": 10,
+            "half_width": 129.81219352729644,
+            "slope": 2.1172741361528495,
+            "profile_radius": 59.399773611547204,
+            "profile_axis_y": 192.98972273870675
+          },
+          {
+            "half_window": 14,
+            "half_width": 129.38060808305522,
+            "slope": 2.2353766768394103,
+            "profile_radius": 61.68195997570788,
+            "profile_axis_y": 195.15898313905143
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 661.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 159.28321678321674,
+            "slope": 1.5707209457209492,
+            "profile_radius": 59.42048958234955,
+            "profile_axis_y": 192.95760746832389
+          },
+          {
+            "half_window": 10,
+            "half_width": 159.25171624713954,
+            "slope": 1.593773905558798,
+            "profile_radius": 59.948699332445024,
+            "profile_axis_y": 193.50447453963739
+          },
+          {
+            "half_window": 14,
+            "half_width": 159.1712396489927,
+            "slope": 1.5920641202204,
+            "profile_radius": 59.878275369059594,
+            "profile_axis_y": 193.44401441992247
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 685.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 190.96853146853144,
+            "slope": 1.013153513153518,
+            "profile_radius": 56.96495831904748,
+            "profile_axis_y": 189.93161153594315
+          },
+          {
+            "half_window": 10,
+            "half_width": 191.03988231448182,
+            "slope": 1.0535718413292734,
+            "profile_radius": 57.91054387011913,
+            "profile_axis_y": 191.1084403410442
+          },
+          {
+            "half_window": 14,
+            "half_width": 191.1166728463725,
+            "slope": 1.0954507489893983,
+            "profile_radius": 58.91382162897032,
+            "profile_axis_y": 192.32918766133807
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 713.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 218.1958041958041,
+            "slope": 0.7337662337662325,
+            "profile_radius": 58.53922041961671,
+            "profile_axis_y": 191.35164363481658
+          },
+          {
+            "half_window": 10,
+            "half_width": 218.12945406995743,
+            "slope": 0.7464932093078458,
+            "profile_radius": 58.78759791787918,
+            "profile_axis_y": 191.76347513617281
+          },
+          {
+            "half_window": 14,
+            "half_width": 218.0162526263749,
+            "slope": 0.8064653785941264,
+            "profile_radius": 60.05498362473964,
+            "profile_axis_y": 193.7249672286975
+          }
+        ],
+        "near_current_surface_switch": false
+      },
+      {
+        "pixel_y": 745.5,
+        "estimates": [
+          {
+            "half_window": 6,
+            "half_width": 239.7902097902098,
+            "slope": 0.5442057942057982,
+            "profile_radius": 60.44397214961417,
+            "profile_axis_y": 194.2631620896694
+          },
+          {
+            "half_window": 10,
+            "half_width": 239.80271330500156,
+            "slope": 0.5762726975541587,
+            "profile_radius": 61.03957507181136,
+            "profile_axis_y": 195.42530400278014
+          },
+          {
+            "half_window": 14,
+            "half_width": 239.8180076628352,
+            "slope": 0.5875346278572033,
+            "profile_radius": 61.25817094426712,
+            "profile_axis_y": 195.834445469038
+          }
+        ],
+        "near_current_surface_switch": false
+      }
+    ]
+  },
+  "limitation": "Valid only for a smooth rotational silhouette generated by one surface. Original edges are blurred and quantized; collar/stem/base occlusion switches break the local assumption. Window variation is a sensitivity check, not a confidence interval. Do not fit hidden surfaces or change registration from these estimates."
+}

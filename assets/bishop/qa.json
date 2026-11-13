@@ -2,15 +2,15 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9873663455511401,
-      "mean_boundary_error_px": 2.077449947312961,
+      "silhouette_iou": 0.9876834094368341,
+      "mean_boundary_error_px": 2.0216016859852477,
       "p95_boundary_error_px": 5.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.47926884710189166
+      "mean_boundary_error_original_300px_units": 0.4663846224524367
     },
     "selected": {
-      "silhouette_iou": 0.96946846072527,
-      "mean_boundary_error_px": 5.535300316122234,
+      "silhouette_iou": 0.9697667869084285,
+      "mean_boundary_error_px": 5.480505795574289,
       "p95_boundary_error_px": 10.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
@@ -18,9 +18,9 @@
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "The head, shallow button and full-depth slit retain the preceding accepted geometry. Fuller lower-head experiments were rejected after level-view examination.",
-    "collars": "Only two middle-collar neck radii are narrowed, producing a real small overhang below the rounded rim while preserving every height and the other collar crests. Actual evaluated front projections and neutral/level views are checked; photographic shadows alone are not fitted as edges.",
-    "lower_body": "The corrected socket, stem, flare, groove and straight foot wall retain the preceding accepted geometry. No global scale, camera or source registration change accompanies the collar undercut.",
+    "finial": "The shallow button, direct head contact and full-depth mitre slit remain exact from checkpoint 022.",
+    "collars": "The accepted collar rims, heights and middle-lip overhang remain exact from checkpoint 022.",
+    "lower_body": "Only mid-stem radii 34-36 are narrowed. Every height, the lower-stem controls at the root, socket, flare, groove and foot are retained. Actual contour rays separate the stem boundary from the rear base; the unsupported subpixel shoulder adjustment is omitted. Level views check that the earlier lower-stem bulge has not been reintroduced.",
     "limits": "The accepted side guide is art direction, not a recovered source camera. Boxwood pigment, surface relief and reflections are an unfinished reconstruction. Single-view evidence cannot determine hidden geometry uniquely. The retained pigment and lights have not been refitted to this geometry; neutral comparison is required."
   }
 }

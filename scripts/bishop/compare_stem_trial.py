@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[2]
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--trial', default='176-narrower-upper-stem')
+p.add_argument('--studio', help='Explicit root-relative common-camera side image for a finalized checkpoint.')
 a = p.parse_args()
 trial = ROOT / 'build/bishop-mission' / a.trial
 out = ROOT / 'build/bishop-mission/176-neck-audit'
@@ -30,7 +31,7 @@ for kind, current, prior in [('neutral', 'neutral.png', 'render-clay.png'), ('wo
             draw.text((i * w * zoom + 10, 8), name, fill='white')
         canvas.save(out / (a.trial + '-' + kind + '-' + region + '.png'))
 paths = [('Accepted 022', ROOT / 'build/bishop-mission/171-studio/side.png'),
-         (a.trial, trial / 'studio/side.png')]
+         (a.trial, ROOT / a.studio if a.studio else trial / 'studio/side.png')]
 if all(path.exists() for _, path in paths):
     canvas = Image.new('RGB', (1000, 1030), '#14181c')
     draw = ImageDraw.Draw(canvas)

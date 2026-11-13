@@ -1,18 +1,19 @@
 {
   "passed": true,
-  "model_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
-  "source": "history/bishop-mission-021/bishop-rebuilt.blend",
-  "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
-  "config_sha256": "4e7d75f1dbd53c1ff6cdc0caeea2bf4d44e7b80fb5ac121c70586136bd75a89c",
+  "model_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "config_sha256": "27678b1b20ffb302788ba3f28d984e3a8cfddc0a3dfdf27cb494ed5e1528d6a8",
   "changed_body_rings": [
-    49,
-    50
+    34,
+    35,
+    36
   ],
   "changed_finial_rings": [],
-  "max_control_error_from_declared_edit": 2.912334895466273e-08,
+  "max_control_error_from_declared_edit": 1.3392830400249522e-08,
   "unlisted_controls_exact": true,
   "control_errors_by_component": {
-    "Bishop - continuous turned body": 2.912334895466273e-08,
+    "Bishop - continuous turned body": 1.3392830400249522e-08,
     "Bishop - domed button finial": 0.0
   },
   "topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved": true,

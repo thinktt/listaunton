@@ -3,7 +3,7 @@
     {
       "name": "Bishop - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.734546770771419,
+      "signed_volume": 4.723129277553059,
       "vertices": 61711,
       "faces": 61484
     },
@@ -79,25 +79,30 @@
   "all_other_lower_profile_points_preserved": true,
   "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json",
   "declared_shape_refit": {
-    "config": "docs/bishop-mission/iteration-022/profile-fit.json",
-    "source": "history/bishop-mission-021/bishop-rebuilt.blend",
-    "source_sha256": "e8f00a9272d9af257f6461142c56a6be8575492ab09f5e8f198c67d6f16d4b10",
-    "profile": "history/bishop-mission-021/profile.json",
+    "config": "docs/bishop-mission/iteration-024/profile-fit.json",
+    "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+    "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+    "profile": "history/bishop-mission-022/profile.json",
     "body_rings": {
-      "49": [
-        34.2175,
-        106.10944900034842
+      "34": [
+        18.507253643602226,
+        147.72916666666666
       ],
-      "50": [
-        32.707499999999996,
-        105.22204766747964
+      "35": [
+        16.866550639621003,
+        140.125
+      ],
+      "36": [
+        16.211137364360223,
+        131.97916666666666
       ]
     }
   },
-  "preservation_baseline": "history/bishop-mission-021/bishop-rebuilt.blend",
+  "preservation_baseline": "history/bishop-mission-022/bishop-rebuilt.blend",
   "declared_changed_body_rings": [
-    49,
-    50
+    34,
+    35,
+    36
   ],
   "declared_changed_finial_rings": [],
   "all_unlisted_profile_points_preserved": true

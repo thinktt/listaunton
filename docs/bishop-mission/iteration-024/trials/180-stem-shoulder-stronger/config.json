@@ -1,0 +1,43 @@
+{
+  "variant": "180-stem-shoulder-stronger",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "profile": "history/bishop-mission-022/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "18": [
+      50.27828725287657,
+      184.09626417811035
+    ],
+    "19": [
+      46.542488132191416,
+      180.3151285303823
+    ],
+    "20": [
+      42.83999769253399,
+      177.46739848190592
+    ],
+    "21": [
+      39.13015362643828,
+      176.29068528054455
+    ],
+    "34": [
+      18.507253643602226,
+      147.72916666666666
+    ],
+    "35": [
+      16.866550639621003,
+      140.125
+    ],
+    "36": [
+      16.211137364360223,
+      131.97916666666666
+    ]
+  },
+  "interpretation": "Unaccepted two-surface fit. Narrow stem controls 34-36 conservatively, retaining lower stem 33 and root. Adjust rear-shoulder controls 18-21 with y + r*sin(54) pinned per control. Actual contour probes identify the branch switch; camera/reference registration, collar/socket/foot/head and unlisted controls remain exact.",
+  "parameters": {
+    "stem_narrowing": 1.0876763563977725,
+    "rear_shoulder_radial_amplitude": 0.05756813219141206
+  },
+  "front_meridian_constraint": "axis_y + radius*sin(54 degrees), exact at changed base controls"
+}

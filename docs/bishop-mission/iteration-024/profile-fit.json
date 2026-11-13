@@ -1,0 +1,22 @@
+{
+  "variant": "181-stem-checkpoint",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "profile": "history/bishop-mission-022/profile.json",
+  "samples": 512,
+  "body_rings": {
+    "34": [
+      18.507253643602226,
+      147.72916666666666
+    ],
+    "35": [
+      16.866550639621003,
+      140.125
+    ],
+    "36": [
+      16.211137364360223,
+      131.97916666666666
+    ]
+  },
+  "interpretation": "Final verification of a narrower mid-stem against the authoritative original, supported by evaluated contour provenance and selected-white detail. Only radii 34-36 change. Every height, lower stem 31-33, upper stem from 37, socket/base/foot, collars/head/button/slit, camera, material, UVs, source registration and lights stay exact from 022. The tiny rear-shoulder proposal is deliberately omitted as unsupported subpixel fitting."
+}

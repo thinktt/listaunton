@@ -1,0 +1,18 @@
+{
+  "rows": [
+    610,
+    795,
+    2
+  ],
+  "source": "Registered original white, unchanged threshold; half-width diagnostic only, not interior-shape accuracy.",
+  "results": {
+    "before": {
+      "mean_half_width_error_native_px": 2.182795698924731,
+      "max_half_width_error_native_px": 5.5
+    },
+    "after": {
+      "mean_half_width_error_native_px": 2.10752688172043,
+      "max_half_width_error_native_px": 6.0
+    }
+  }
+}

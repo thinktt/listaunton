@@ -1,5 +1,27 @@
 # Bishop reconstruction
 
+## Current stem checkpoint 024
+
+Checkpoint 024 narrows only radial controls 34–36 from archived checkpoint 022.
+Every height and all other controls, including the stem root, socket, base,
+collars and head, remain exact. Reproduce it using `profile_shape_trial.py`
+with `docs/bishop-mission/iteration-024/profile-fit.json`, then the validation,
+diagnostic/render, comparison and review workflow below. The full geometry
+goal and material/lighting mission remain incomplete.
+
+`capture_contour_meridians.py` uses first-hit rays to identify the actual
+stem-to-rear-base switch in the elevated outline. `fit_stem_shoulder.py`
+fits these two surfaces separately; the subpixel shoulder adjustment is
+omitted from the final model. `prepare_stem_checkpoint.py` records that final
+scope. Do not restore the rejected study-023 lower-stem bulge.
+
+`infer_contour_sections.py` tests a rotational-envelope inversion against
+actual tangent probes before examining source slopes. Blur and branch switches
+make some reference estimates unstable; they are diagnostics, not precise
+recovered dimensions. `measure_stem_profile.py` measures the evaluated taper.
+`record_stem_checkpoint.py` collects these reports, identical-camera side views
+and the local fixed-view comparison after the normal checkpoint checks pass.
+
 ## Geometry phase after checkpoint 015
 
 The owner started a new geometry-focused goal on November 12, 2026, without
