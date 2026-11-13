@@ -1,0 +1,102 @@
+{
+  "shader_and_packed_images_exact": true,
+  "world_exact": true,
+  "old_lights_exact_except_disabled_foot_strip": true,
+  "two_new_glossy_shadowed_foot_area_lights": true,
+  "new_lights": {
+    "Rook foot flank left": {
+      "type": "AREA",
+      "energy": 10.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "matrix": [
+        [
+          0.7910729050636292,
+          -0.4622408449649811,
+          -0.4006707966327667,
+          -1.9057961702346802
+        ],
+        [
+          -0.6117218732833862,
+          -0.5977655053138733,
+          -0.5181435346603394,
+          -2.9092302322387695
+        ],
+        [
+          -6.308489730599831e-08,
+          0.6549884080886841,
+          -0.7556389570236206,
+          -2.812720537185669
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "shadow": true,
+      "size": 0.75,
+      "size_y": 0.14000000059604645,
+      "shape": "RECTANGLE",
+      "receivers": [
+        "Rook receiver foot.001"
+      ],
+      "radius": 0.0,
+      "spot_size": null
+    },
+    "Rook foot flank right": {
+      "type": "AREA",
+      "energy": 400.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "matrix": [
+        [
+          0.7350525856018066,
+          0.5160291194915771,
+          0.439785897731781,
+          2.0989627838134766
+        ],
+        [
+          0.678010106086731,
+          -0.5594439506530762,
+          -0.4767858684062958,
+          -2.7297332286834717
+        ],
+        [
+          1.674596745715462e-07,
+          0.6486420035362244,
+          -0.7610936760902405,
+          -2.8362767696380615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "diffuse": false,
+      "glossy": true,
+      "shadow": true,
+      "size": 0.75,
+      "size_y": 0.14000000059604645,
+      "shape": "RECTANGLE",
+      "receivers": [
+        "Rook receiver foot.001"
+      ],
+      "radius": 0.0,
+      "spot_size": null
+    }
+  },
+  "source_sha256": "bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914",
+  "model_sha256": "53e69c58d24339eb28fea503e0140f0420d6a52543494eecbd17972ce84962df"
+}

@@ -1,0 +1,55 @@
+{
+  "geometry_camera_identical": true,
+  "closed_positive_components": 5,
+  "model_sha256": "5b7339614e7f953f91d07b4f455908b48fad53dd2fbd12e88bd1195e5afbb789",
+  "accepted_sha256": "bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914",
+  "packed_images": 7,
+  "packed_float_images": 3,
+  "real_principled_surface": true,
+  "atlas_uvs_checked": true,
+  "source_references": {
+    "ref.png": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe",
+    "original.png": "30c0d7daf1d313febf45a8f23d0a42a8b48380e128275251b378e09f47ecdfb4",
+    "original-white.png": "ecc73dc1684b961337e833dc74bfb07069f9122a419f6b4c6e172ab717b7f397"
+  },
+  "scope": "Geometry, evaluated topology, component visibility, object transforms, saved reference camera and dimensions, packed texture finiteness, and actual BSDF surface. Not a visual-match certificate.",
+  "render_receivers": {
+    "parts": 6,
+    "faces": 31000,
+    "all_faces_once": true,
+    "positions_exact": true,
+    "maximum_uv_error": 5.960464477539063e-08,
+    "uv_tolerance": 2e-07,
+    "same_material": true,
+    "maximum_normal_component_error": 0.00047266483306884766,
+    "normal_tolerance": 0.001,
+    "closed_control_retained": true,
+    "foot_light_receiver_only": true,
+    "shoulder_light_receiver_only": true,
+    "floor_light_receiver_only": true
+  },
+  "control_and_camera_exact": true,
+  "evaluated_surface_precision": {
+    "Rook - continuous turned body and recessed floor": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 1": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 2": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 3": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    },
+    "Rook - thin curved merlon 4": {
+      "max_position_delta": 0.0,
+      "max_normal_component_delta": 0.0
+    }
+  },
+  "precision_note": "UV layers alter subdivision floating-point evaluation slightly; controls and evaluated triangle indices stay byte-exact. Position tolerance 1e-6 model units, normal component 2e-5, volume 1e-7. Actual deltas reported above."
+}

@@ -1,0 +1,68 @@
+{
+  "source_sha256": "bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914",
+  "model_sha256": "161edbeb918dbd1d3f4c8b8ebaa0f05511f947d07fa44d4bb7799f228583fbf7",
+  "left_power": 3,
+  "right_power": 115,
+  "reflectors": [
+    {
+      "name": "Rook foot flank left",
+      "reference_pixel": [
+        400,
+        1015
+      ],
+      "target_pixel": [
+        400,
+        1015
+      ],
+      "position": [
+        -1.9057961702346802,
+        -2.9092302322387695,
+        -2.812720537185669
+      ],
+      "point": [
+        -0.30311310291290283,
+        -0.8366556167602539,
+        0.20983505249023438
+      ],
+      "normal": [
+        -0.34027743339538574,
+        -0.9392316937446594,
+        0.04533242806792259
+      ],
+      "receiver": "Rook receiver foot.001"
+    },
+    {
+      "name": "Rook foot flank right",
+      "reference_pixel": [
+        580,
+        1011
+      ],
+      "target_pixel": [
+        580,
+        1011
+      ],
+      "position": [
+        2.0989627838134766,
+        -2.7297332286834717,
+        -2.8362767696380615
+      ],
+      "point": [
+        0.3398193120956421,
+        -0.8225889205932617,
+        0.2080974578857422
+      ],
+      "normal": [
+        0.38148316740989685,
+        -0.9234405755996704,
+        0.041570160537958145
+      ],
+      "receiver": "Rook receiver foot.001"
+    }
+  ],
+  "old_foot_power": 0,
+  "size": [
+    0.75,
+    0.04
+  ],
+  "method": "Two real glossy-only shadowed area lights, same foot receiver. Existing broad foot strip disabled; material, geometry and other lights unchanged."
+}
