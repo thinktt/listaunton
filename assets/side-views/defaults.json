@@ -1,9 +1,30 @@
 {
-  "revision": "2026-10-05-picked",
-  "source": "User-selected sizes and order from the screenshot supplied on 2026-10-05.",
+  "revision": "2026-11-13-chavet-guide",
+  "source": "Owner-selected sizes from the screenshot supplied on 2026-11-13, using the Chavet set as a visual height guide.",
   "scale_basis": "Slider percentages of the model-estimated starting sizes in scale.json; image proportions are preserved.",
-  "order": ["king", "queen", "bishop", "knight", "rook", "pawn"],
-  "scales": {"king": 99, "queen": 108, "bishop": 93, "knight": 106, "rook": 107, "pawn": 97},
-  "shown_height_percent_of_king": {"king": 100.0, "queen": 83.4, "bishop": 75.3, "knight": 66.2, "rook": 58.9, "pawn": 49.2},
-  "note": "The king slider was partly cropped in the screenshot; 99% reproduces all five visible relative-height labels. Reset restores these chosen values and this order. These are display defaults, not changes to model geometry."
+  "order": [
+    "king",
+    "queen",
+    "bishop",
+    "knight",
+    "rook",
+    "pawn"
+  ],
+  "scales": {
+    "king": 105,
+    "queen": 117,
+    "bishop": 97,
+    "knight": 120,
+    "rook": 115,
+    "pawn": 105
+  },
+  "shown_height_percent_of_king": {
+    "king": 100,
+    "queen": 85.2,
+    "bishop": 74,
+    "knight": 70.7,
+    "rook": 59.7,
+    "pawn": 50.2
+  },
+  "note": "Reset restores these selected slider values and the king/queen/bishop/knight/rook/pawn order. The new revision gives saved browser settings a fresh namespace. These are display defaults, not changes to model geometry."
 }

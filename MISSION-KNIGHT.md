@@ -44,8 +44,9 @@ reference comparison. This is a working assumption, not recovered historical
 metadata. Keep framing, scale and registration fixed within each comparison.
 Keep the standard camera fixed during refinement; a different acceptance camera requires owner direction.
 
-The approved side-gallery relationship is **66.2% of king**. Preserve gallery
-defaults, order, uniform scaling and the shared foot baseline. These are display
+The approved side-gallery relationships are recorded in
+`assets/side-views/defaults.json`. Preserve gallery defaults, order, uniform
+scaling and the shared foot baseline. These are display
 conventions, not independently measured physical dimensions; use the documented
 normalization rather than applying slider percentages directly to mesh scale.
 Keep side comparisons at a shared physical scale. Follow the whole-set height

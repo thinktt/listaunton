@@ -44,8 +44,9 @@ reference comparison. This is a working assumption, not recovered historical
 metadata. Keep framing, scale and registration fixed within each comparison.
 Documented exploratory camera and proportion studies are authorized. Also assess candidates in the standard 54-degree view; report changed dimensions and fit tradeoffs. Validate authorized edits directly instead of silently widening old preservation tolerances.
 
-The approved side-gallery relationship is **83.4% of king**. Preserve gallery
-defaults, order, uniform scaling and the shared foot baseline. These are display
+The approved side-gallery relationships are recorded in
+`assets/side-views/defaults.json`. Preserve gallery defaults, order, uniform
+scaling and the shared foot baseline. These are display
 conventions, not independently measured physical dimensions; use the documented
 normalization rather than applying slider percentages directly to mesh scale.
 Keep side comparisons at a shared physical scale. Follow the whole-set height

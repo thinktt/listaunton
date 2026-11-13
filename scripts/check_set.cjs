@@ -1,5 +1,6 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const html=fs.readFileSync(process.argv[2],'utf8');
+const presentationOnly=process.argv.includes('--presentation-only');
 class E{constructor(tag){this.tag=tag;this.children=[];this.style={};this.attrs={};this.events={};this.value='';}append(...els){this.children.push(...els)}replaceChildren(){this.children=[]}setAttribute(k,v){this.attrs[k]=v}addEventListener(k,f){this.events[k]=f}}
 const ids=Object.fromEntries(['set-data','grid','black','white','background'].map(k=>[k,new E(k)]));ids['set-data'].textContent=html.match(/id="set-data"[^>]*>(.*?)<\/script>/s)[1];
 const doc={getElementById:id=>ids[id],createElement:t=>new E(t),documentElement:{style:{setProperty(){}}}};
@@ -56,6 +57,7 @@ console.log('PASS: side-view deep link, keyboard tabs, retained comparison/color
 // Validate the page's actual placements against source measurements, not card size.
 const sizing=JSON.parse(fs.readFileSync(path.join(root,manifest.scale),'utf8'));
 const sliderData=JSON.parse(html.match(/<script id="side-scale-data"[^>]*>(.*?)<\/script>/s)[1]);
+const chosen=JSON.parse(fs.readFileSync(path.join(root,'assets/side-views/defaults.json'),'utf8'));
 const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
 const textSha=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n')).digest('hex');
 const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<.001,`${label}: ${actual} != ${expected}`);
@@ -75,9 +77,11 @@ for(const row of sizing.pieces){
  near(row.base_ratio_to_king,row.original.base_width_px/king.original.base_width_px,'Original ratio');
  const check=row.height_check,model=row.model,correction=check.uniform_correction_factor;
  assert.equal(model.assumed_elevation_degrees,54);
+ if(!presentationOnly){
  assert.equal(textSha(model.file),model.sha256,'Height-check model metadata changed');
  assert.equal(sha(model.binary),model.binary_sha256,'Height-check geometry changed');
  assert.equal(textSha(model.camera_file),model.camera_sha256,'Height-check camera assumption changed');
+ }
  near(model.height_to_base,model.height/model.base_diameter,'Model dimensions');
  if(row.piece==='knight'){
   const meta=JSON.parse(fs.readFileSync(path.join(root,model.file),'utf8'));
@@ -108,7 +112,7 @@ for(const row of sizing.pieces){
  }
  assert(card.includes('href="'+item.source_file+'"'),'Untouched side view must remain accessible');
 }
-console.log('PASS: six 54-degree model height estimates, true knight base, uniform image scale, shared ground, bounds and source hashes.');
+console.log(presentationOnly ? 'PASS: recorded sizing, uniform image scale, shared ground and bounds (current model hashes explicitly excluded for presentation-only check).' : 'PASS: six 54-degree model height estimates, true knight base, uniform image scale, shared ground, bounds and source hashes.');
 
 // Exercise the actual controls, including refresh persistence and unavailable storage.
 const scaleRuntime=html.match(/<script id="side-scales-runtime">([\s\S]*?)<\/script>/)[1];
@@ -126,23 +130,22 @@ function move(piece,value){const input=controls['side-scale-'+piece];input.value
 move('rook',137);assert.equal(controls['side-picture-rook'].style.transform,'scale(1.37)');
 assert.equal(controls['side-scale-value-rook'].textContent,'137%');
 assert.equal(controls['side-scale-rook'].attrs['aria-valuetext'],'137% of model estimate');
-assert.equal(controls['side-picture-pawn'].style.transform,'scale(0.97)');
+assert.equal(controls['side-picture-pawn'].style.transform,'scale('+(chosen.scales.pawn/100)+')');
 move('king',120);const rookHeight=sliderData.pieces.find(item=>item.piece==='rook').height;
 assert.equal(controls['side-ratio-rook'].textContent,'Height: '+(rookHeight*1.37/(430*1.2)*100).toFixed(1)+'% of king');
 controls=scaleContext(storage);assert.equal(controls['side-scale-rook'].value,'137');assert.equal(controls['side-scale-king'].value,'120');
-controls['side-reset-rook'].events.click();assert.equal(controls['side-scale-rook'].value,'107');assert.equal(controls['side-scale-king'].value,'120');
+controls['side-reset-rook'].events.click();assert.equal(controls['side-scale-rook'].value,String(chosen.scales.rook));assert.equal(controls['side-scale-king'].value,'120');
 move('pawn',10);assert.equal(controls['side-scale-pawn'].value,'50');
 move('pawn',999);assert.equal(controls['side-scale-pawn'].value,'150');
-stored='not json';controls=scaleContext(storage);assert.equal(controls['side-scale-king'].value,'99');
+stored='not json';controls=scaleContext(storage);assert.equal(controls['side-scale-king'].value,String(chosen.scales.king));
 stored=JSON.stringify({king:130,pawn:'90',bishop:400});controls=scaleContext(storage);
-assert.equal(controls['side-scale-king'].value,'130');assert.equal(controls['side-scale-pawn'].value,'97');assert.equal(controls['side-scale-bishop'].value,'150');
+assert.equal(controls['side-scale-king'].value,'130');assert.equal(controls['side-scale-pawn'].value,String(chosen.scales.pawn));assert.equal(controls['side-scale-bishop'].value,'150');
 controls=scaleContext({getItem(){throw new Error('Storage disabled');},setItem(){throw new Error('Storage disabled');}});
 move('knight',113);assert.equal(controls['side-picture-knight'].style.transform,'scale(1.13)');
 console.log('PASS: fixed foot anchors and unclipped extremes, independent sliders, live king-relative labels, per-piece reset and safe storage restoration.');
 
-const chosen=JSON.parse(fs.readFileSync(path.join(root,'assets/side-views/defaults.json'),'utf8'));
 assert.deepEqual(chosen.order,['king','queen','bishop','knight','rook','pawn']);
-assert.deepEqual(chosen.scales,{king:99,queen:108,bishop:93,knight:106,rook:107,pawn:97});
+assert.deepEqual(chosen.scales,{king:105,queen:117,bishop:97,knight:120,rook:115,pawn:105});
 assert.deepEqual(sliderData.defaultOrder,chosen.order);
 assert.deepEqual([...html.matchAll(/data-side-piece="([^"]+)"/g)].map(match=>match[1]),chosen.order,'Static HTML should start in the chosen order');
 for(const item of sliderData.pieces){
