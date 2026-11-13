@@ -5,7 +5,8 @@ import bpy,bmesh
 import numpy as np
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[2]
-p=argparse.ArgumentParser();p.add_argument('source');p.add_argument('output');args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
+p=argparse.ArgumentParser();p.add_argument('source');p.add_argument('output');p.add_argument('--asset-root');args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
+texture_root=Path(args.asset_root) if args.asset_root else ROOT
 source=ROOT/args.source;out=ROOT/args.output;out.mkdir(parents=True,exist_ok=True);sha=lambda path:hashlib.sha256(path.read_bytes()).hexdigest();before=sha(source)
 bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
 sys.path.insert(0,str(Path(__file__).resolve().parent))
@@ -36,7 +37,7 @@ cam=s.camera;axis=cam.matrix_world.to_3x3()@Vector((0,0,1));elevation=math.degre
 W=s.render.resolution_x;H=s.render.resolution_y;P=cam.calc_matrix_camera(graph,x=W,y=H)
 camera={'type':'ORTHO','worldToCamera':[float(v) for row in cam.matrix_world.inverted() for v in row],'projectionMatrix':[float(v) for row in P for v in row],'width':W,'height':H,'orthoScale':cam.data.ortho_scale,'shiftX':cam.data.shift_x,'shiftY':cam.data.shift_y,'elevationDegrees':elevation}
 lo=vertices[:,:3].min(0);hi=vertices[:,:3].max(0)
-meta={'vertexCount':len(vertices),'indexCount':len(indices),'triangleCount':len(indices)//3,'vertexStrideBytes':32,'uvOffsetBytes':24,'uvLayer':'Pigment atlas','vertexByteLength':vertices.nbytes,'indexByteOffset':vertices.nbytes,'totalByteLength':len(raw),'bounds':{'min':lo.tolist(),'max':hi.tolist(),'size':(hi-lo).tolist(),'center':((hi+lo)/2).tolist()},'parts':parts,'sourceSha256':before,'referenceCamera':camera,'texture':s['rook_pigment_atlas'],'textureSha256':sha(ROOT/s['rook_pigment_atlas'])}
+meta={'vertexCount':len(vertices),'indexCount':len(indices),'triangleCount':len(indices)//3,'vertexStrideBytes':32,'uvOffsetBytes':24,'uvLayer':'Pigment atlas','vertexByteLength':vertices.nbytes,'indexByteOffset':vertices.nbytes,'totalByteLength':len(raw),'bounds':{'min':lo.tolist(),'max':hi.tolist(),'size':(hi-lo).tolist(),'center':((hi+lo)/2).tolist()},'parts':parts,'sourceSha256':before,'referenceCamera':camera,'texture':s['rook_pigment_atlas'],'textureSha256':sha(texture_root/s['rook_pigment_atlas'])}
 assert sha(source)==before
 validation={'components':parts,'sourceSha256':before,'source_hash_matches':True,'elevationDegrees':elevation,'cameraOrthographic':True,'exactCornerPositionNormalUvRoundtrip':True,'allAttributesFinite':True,'allNormalsUnit':True,'packedPigment':bool(bpy.data.images[s.get('rook_pigment_image','Rook pigment atlas')].packed_file),'note':'Closed evaluated Boolean rook, retaining its editable lathe and four construction merlons in the saved file. Viewer lighting is approximate.'}
 validation['renderReceivers']=receiver_validation

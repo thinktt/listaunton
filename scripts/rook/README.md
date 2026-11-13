@@ -2,9 +2,9 @@
 
 Read the root AGENTS.md, MISSION-ROOK.md and latest docs/rook-mission-log.md before work. The original black/white Lichess sprites determine proportions; selected black candidate 8 supplies detail. Preserve their bytes and registration.
 
-The current accepted model is lighting checkpoint 037. It retains the continuous subdivided lathe, shallow recessed floor and four equal thin curved merlons, joined through editable exact Boolean modifiers. Hidden merlon construction objects remain editable. A packed 3072-square pigment atlas on `Pigment atlas` UVs supplies color; live Principled BSDF, relief, coat and lights supply shading. The first wood finish is incomplete. See docs/rook-mission/iteration-037 for current scores, validation and reproduction. The wood itself remains checkpoint 004. Five derived receivers support foot/shoulder-only glossy strips, turret-restricted reflectors and upper-bevel-only strips; render_regions.py checks exact surface coverage and bounded normal/UV rounding. Export the closed editable control, not the receiver subsets. Regenerate receiver copies after any geometry edit.
+The current accepted model is floor/finish checkpoint 047. It retains the continuous subdivided lathe, shallow recessed floor and four equal thin curved merlons, joined through editable exact Boolean modifiers. Hidden merlon construction objects remain editable. A packed 3072-square pigment atlas on `Pigment atlas` UVs supplies color; live Principled BSDF, relief, coat and lights supply shading. The reconstruction remains incomplete. See docs/rook-mission/iteration-047 for current scores, validation and reproduction. Pigment atlas v2 contains a local floor correction; other source-derived pigment retains illumination artifacts. Six derived receivers support foot/shoulder-only glossy strips, turret-restricted reflectors, upper-bevel-only strips and a floor-edge strip; render_regions.py checks exact surface coverage and bounded normal/UV rounding. Export the closed editable control, not the receiver subsets. Regenerate receiver copies after any geometry edit.
 
-The saved camera is orthographic, 54 degrees elevation with -0.35-degree roll. Export the evaluated visible union, not the hidden construction objects. The textured mesh has 62,522 triangles and 32-byte position/normal/UV vertices. Keep the same saved model in the overlay, rotating viewer and side comparison.
+The saved camera is orthographic, 54 degrees elevation with -0.35-degree roll. Export the evaluated visible union, not the hidden construction objects. The textured mesh has 62,866 triangles and 32-byte position/normal/UV vertices. Keep the same saved model in the overlay, rotating viewer and side comparison.
 
 ## Update current accepted views
 
@@ -30,4 +30,8 @@ For a new material candidate, isolate outputs under build/rook-mission, reopen a
 
 ## Checkpoint 037
 
-Current accepted lighting adds two 1500W strips linked to upper rim bevels, with five exact-position render partitions. Original controls, shader/pigment, camera and old lights are preserved. See docs/rook-mission/iteration-037. Reproduce via upper_bevel_rim.py, rim_strength.py, rim_bevel_only.py and stage_rim_checkpoint.py. Remaining texture contamination and floor-edge glint prevent mission completion.
+Historical checkpoint 037 added two 1500W strips linked to upper rim bevels, with five exact-position render partitions. Original controls, shader/pigment, camera and old lights are preserved. See docs/rook-mission/iteration-037. Reproduce via upper_bevel_rim.py, rim_strength.py, rim_bevel_only.py and stage_rim_checkpoint.py. Remaining texture contamination and floor-edge glint prevent mission completion.
+
+## Checkpoint 047
+
+Floor control rows 53–58 are lower by six profile pixels at fixed 54 degrees. Local pigment repair and perimeter registration are baked into atlas v2; a warm 1000W strip is linked to floor_edge only. Rebuild receivers after geometry edits; the helper now preserves existing floor partitions by default. Export a staged new atlas with --asset-root pointing at that stage. Current public model remains physically shaded; pigment still includes inherited illumination. See iteration-047 for saved/baked/side/viewer checks and measured UV rounding bound.

@@ -1,0 +1,36 @@
+{
+  "camera_exact": true,
+  "only_control_rows_53_to_58_lowered": true,
+  "control_position_max_errors": {
+    "Rook - continuous turned body and recessed floor": 1.1670324662205189e-07,
+    "Rook - thin curved merlon 1": 0.0,
+    "Rook - thin curved merlon 2": 0.0,
+    "Rook - thin curved merlon 3": 0.0,
+    "Rook - thin curved merlon 4": 0.0
+  },
+  "control_uvs_exact": true,
+  "closed_positive_components": 5,
+  "volumes": {
+    "Rook - continuous turned body and recessed floor": 3.3845161411563205,
+    "Rook - thin curved merlon 1": 0.01866636485980153,
+    "Rook - thin curved merlon 2": 0.01866636485980153,
+    "Rook - thin curved merlon 3": 0.01866636485980153,
+    "Rook - thin curved merlon 4": 0.01866636485980153
+  },
+  "receivers": {
+    "parts": 6,
+    "faces": 31000,
+    "all_faces_once": true,
+    "positions_exact": true,
+    "maximum_uv_error": 5.960464477539063e-08,
+    "uv_tolerance": 2e-07,
+    "same_material": true,
+    "maximum_normal_component_error": 0.00047266483306884766,
+    "normal_tolerance": 0.001,
+    "closed_control_retained": true,
+    "foot_light_receiver_only": true,
+    "shoulder_light_receiver_only": true
+  },
+  "source_sha256": "a667b97122b3c188d93040279660ef947d91ba12b442442a71b4ba97a133e484",
+  "trial_sha256": "45442a931edd4832df9b16001912bfe284c13c7acacfb490d75b5881ae2a92e2"
+}

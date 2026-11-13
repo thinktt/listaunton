@@ -1,0 +1,25 @@
+{
+  "source_sha256": "a667b97122b3c188d93040279660ef947d91ba12b442442a71b4ba97a133e484",
+  "model_sha256": "93ded52b302cde5bcecce480b7b997208e85a5d11143e65af0ad638e3269a945",
+  "lowered_control_rows": [
+    53,
+    58
+  ],
+  "depth_profile_pixels": 6,
+  "delta_z": -0.03645646321508742,
+  "receiver_validation": {
+    "parts": 5,
+    "faces": 31000,
+    "all_faces_once": true,
+    "positions_exact": true,
+    "maximum_uv_error": 0,
+    "uv_tolerance": 1e-07,
+    "same_material": true,
+    "maximum_normal_component_error": 0.00047266483306884766,
+    "normal_tolerance": 0.001,
+    "closed_control_retained": true,
+    "foot_light_receiver_only": true,
+    "shoulder_light_receiver_only": true
+  },
+  "unchanged": "outer control rows 0-52, merlons, camera, material, UV controls, lights"
+}

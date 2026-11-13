@@ -40,7 +40,9 @@ def validate(scene):
     assert actual.keys()==expected.keys()
     # Blender custom-normal encoding is quantized; report it rather than claim exactness.
     assert maximum<.001
-    assert uv_error<=1e-7 # Boolean interpolation roundoff on re-evaluation, measured separately.
+    # Reopened depth-edited Boolean surfaces show up to 1.1920929e-7 UV roundoff.
+    # Bound stays below 0.000615 texel at 3072px; geometry coverage stays exact.
+    assert uv_error<=2e-7, ("receiver UV roundoff",uv_error)
     foot=bpy.data.objects.get('Rook foot strip')
     if foot:
         linked=foot.light_linking.receiver_collection
@@ -51,4 +53,9 @@ def validate(scene):
         assert shoulder.light_linking.receiver_collection
         assert {o.get('rook_render_receiver') for o in shoulder.light_linking.receiver_collection.objects}=={'shoulder'}
         assert shoulder.visible_glossy and not shoulder.visible_diffuse
-    return {'parts':len(parts),'faces':len(expected),'all_faces_once':True,'positions_exact':True,'maximum_uv_error':uv_error,'uv_tolerance':1e-7,'same_material':True,'maximum_normal_component_error':maximum,'normal_tolerance':.001,'closed_control_retained':True,'foot_light_receiver_only':bool(foot),'shoulder_light_receiver_only':bool(shoulder)}
+    floor=bpy.data.objects.get('Rook floor-edge strip')
+    if floor:
+        linked=floor.light_linking.receiver_collection
+        assert linked and {o.get('rook_render_receiver') for o in linked.objects}=={'floor_edge'}
+        assert floor.visible_glossy and not floor.visible_diffuse
+    return {'parts':len(parts),'faces':len(expected),'all_faces_once':True,'positions_exact':True,'maximum_uv_error':uv_error,'uv_tolerance':2e-7,'same_material':True,'maximum_normal_component_error':maximum,'normal_tolerance':.001,'closed_control_retained':True,'foot_light_receiver_only':bool(foot),'shoulder_light_receiver_only':bool(shoulder),'floor_light_receiver_only':bool(floor)}
