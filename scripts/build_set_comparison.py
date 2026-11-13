@@ -1,7 +1,8 @@
-"""Build whole-set reference comparison and the side-view gallery."""
+"""Build whole-set reference, generated side-view and current-model comparisons."""
 from pathlib import Path
 from html import escape
 import hashlib,json
+from png_profile_bounds import profile_bounds
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assets/candidates/alignment.json').read_text(encoding='utf-8'))['pieces']
 q=json.loads((root/'assets/queen/original-reference-alignment.json').read_text(encoding='utf-8'))
@@ -43,9 +44,16 @@ for item in sides:
 <div class="side-scale-controls"><div class="side-scale-label"><label for="side-scale-{item['piece']}">Scale</label><output id="side-scale-value-{item['piece']}" for="side-scale-{item['piece']}">{default_scale}%</output><button id="side-reset-{item['piece']}" type="button" aria-label="Reset {name.lower()} scale to chosen default">Reset</button></div><input id="side-scale-{item['piece']}" type="range" min="50" max="150" step="1" value="{default_scale}" aria-label="{name} scale" aria-valuetext="{default_scale}% of model estimate"></div>
 <div class="side-links"><a href="{escape(item["review"],quote=True)}">Review {name.lower()}</a><a href="{image}" target="_blank" rel="noopener">Full-size cutout</a><a href="{escape(item["source_file"],quote=True)}" target="_blank" rel="noopener">Before removal</a><a href="{escape(item["generation"],quote=True)}" target="_blank" rel="noopener">Prompt &amp; sources</a></div></article>'''
 template=(root/'scripts/set-comparison-template.html').read_text(encoding='utf-8')
+profile_files={'king':'assets/king/profile.png','queen':'assets/queen/queen-wood-profile.png',
+               'bishop':'assets/bishop/side-profile.png','knight':'assets/knight/guide-render.png',
+               'rook':'assets/rook/profile.png','pawn':'assets/pawn/profile.png'}
+profiles={piece:{'file':file,'version':hashlib.sha256((root/file).read_bytes()).hexdigest()[:16],
+                 **profile_bounds(root/file)} for piece,file in profile_files.items()}
 output=template.replace('__DATA__',json.dumps(data,separators=(',',':')).replace('<','\\u003c')).replace('__SIDE_CARDS__','\n'.join(cards[piece] for piece in defaults['order']))
 output=output.replace('__SIDE_SCALE_DATA__',json.dumps(slider_data,separators=(',',':')))
+output=output.replace('__MODEL_PROFILE_DATA__',json.dumps(profiles,separators=(',',':')))
 output=output.replace('__SIDE_ORDER_RUNTIME__',(root/'scripts/side-order-runtime.js').read_text(encoding='utf-8'))
-assert all(token not in output for token in ['__SIDE_CARDS__','__DATA__','__SIDE_SCALE_DATA__','__SIDE_ORDER_RUNTIME__'])
+output=output.replace('__MODEL_LINEUP_RUNTIME__',(root/'scripts/model-lineup-runtime.js').read_text(encoding='utf-8'))
+assert all(token not in output for token in ['__SIDE_CARDS__','__DATA__','__SIDE_SCALE_DATA__','__MODEL_PROFILE_DATA__','__SIDE_ORDER_RUNTIME__','__MODEL_LINEUP_RUNTIME__'])
 (root/'set-comparison.html').write_text(output,encoding='utf-8')
-print('Built whole-set comparison and six side views at one king-relative scale.')
+print('Built the whole-set reference, generated side-view and model comparisons.')

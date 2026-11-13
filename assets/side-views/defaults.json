@@ -1,6 +1,6 @@
 {
-  "revision": "2026-11-13-chavet-guide",
-  "source": "Owner-selected sizes from the screenshot supplied on 2026-11-13, using the Chavet set as a visual height guide.",
+  "revision": "2026-11-13-chavet-measured",
+  "source": "Owner requested matching the supplied Chavet photograph's measured relative heights; sliders use the nearest available whole percent.",
   "scale_basis": "Slider percentages of the model-estimated starting sizes in scale.json; image proportions are preserved.",
   "order": [
     "king",
@@ -13,18 +13,18 @@
   "scales": {
     "king": 105,
     "queen": 117,
-    "bishop": 97,
-    "knight": 120,
+    "bishop": 94,
+    "knight": 116,
     "rook": 115,
-    "pawn": 105
+    "pawn": 111
   },
   "shown_height_percent_of_king": {
     "king": 100,
     "queen": 85.2,
-    "bishop": 74,
-    "knight": 70.7,
+    "bishop": 71.8,
+    "knight": 68.4,
     "rook": 59.7,
-    "pawn": 50.2
+    "pawn": 53.1
   },
-  "note": "Reset restores these selected slider values and the king/queen/bishop/knight/rook/pawn order. The new revision gives saved browser settings a fresh namespace. These are display defaults, not changes to model geometry."
+  "note": "Approximate Chavet photo heights relative to its king: queen 85.1%, bishop 72.0%, knight 68.3%, rook 59.9%, pawn 53.1%. Slider steps are whole percentages. Reset restores this preset; the revision gives saved browser settings a fresh namespace. These are display defaults, not changes to model geometry."
 }

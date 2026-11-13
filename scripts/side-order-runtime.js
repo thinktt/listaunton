@@ -112,7 +112,7 @@ for(const piece of defaults){
  surface.addEventListener('dragstart',event=>event.preventDefault());
 }
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&drag){event.preventDefault();finish(true);}});
-for(const id of ['tab-comparison','tab-side-views'])byId(id).addEventListener('click',()=>finish(true));
+for(const id of ['tab-comparison','tab-side-views','tab-models','tab-blender'])byId(id).addEventListener('click',()=>finish(true));
 window.addEventListener('hashchange',()=>finish(true));
 window.addEventListener('blur',()=>finish(true));
 byId('side-reset-order').addEventListener('click',()=>{finish(true);commit([...defaults]);byId('side-order-status').textContent='Chosen default order restored.';});

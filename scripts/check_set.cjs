@@ -13,7 +13,7 @@ ids.white.events.click();assert(cards()[1].children[1].disabled);ids.black.event
 console.log('PASS: six pairs, both colors, all candidate options, retained selections, missing white queen, finite placement.');
 
 // Exercise the actual tab code with the already-populated comparison DOM.
-for(const id of ['tab-comparison','tab-side-views','panel-comparison','panel-side-views','comparison-tools','view-note'])ids[id]=new E(id);
+for(const id of ['tab-comparison','tab-side-views','tab-models','tab-blender','panel-comparison','panel-side-views','panel-models','panel-blender','comparison-tools','view-note'])ids[id]=new E(id);
 for(const el of Object.values(ids))el.focus=function(){this.focused=true;};
 const events={},window={location:{hash:'#side-views'},addEventListener:(name,fn)=>events[name]=fn};
 const comparisonCards=ids.grid.children;
@@ -35,11 +35,20 @@ const whiteCards=ids.grid.children,savedWhiteBishop=cards()[3].children[1].value
 const queenCard=whiteCards[1];assert(queenCard.children[1].disabled);
 ids['tab-comparison'].events.keydown({key:'ArrowRight',preventDefault(){}});
 assert.equal(ids['panel-side-views'].hidden,false);assert(ids['tab-side-views'].focused);
+ids['tab-side-views'].events.keydown({key:'ArrowRight',preventDefault(){}});
+assert.equal(ids['panel-models'].hidden,false);assert(ids['tab-models'].focused);
+assert.equal(ids['panel-side-views'].hidden,true);
+ids['tab-models'].events.keydown({key:'ArrowRight',preventDefault(){}});
+assert.equal(ids['panel-blender'].hidden,false);assert(ids['tab-blender'].focused);
+ids['tab-blender'].events.keydown({key:'ArrowRight',preventDefault(){}});
+assert.equal(ids['panel-comparison'].hidden,false);assert(ids['tab-comparison'].focused);
 ids['tab-side-views'].events.keydown({key:'Home',preventDefault(){}});
 assert.equal(ids.grid.children,whiteCards);assert.equal(cards()[1],queenCard);
 assert.equal(ids.white.attrs['aria-pressed'],'true');
 assert.equal(cards()[3].children[1].value,savedWhiteBishop);
 window.location.hash='#side-views';events.hashchange();assert.equal(ids['panel-side-views'].hidden,false);
+window.location.hash='#models';events.hashchange();assert.equal(ids['panel-models'].hidden,false);
+window.location.hash='#blender';events.hashchange();assert.equal(ids['panel-blender'].hidden,false);
 window.location.hash='#unknown';events.hashchange();assert.equal(ids['panel-comparison'].hidden,false);
 assert.equal(ids.grid.children,whiteCards);
 const path=require('path'),crypto=require('crypto'),root=path.dirname(path.resolve(process.argv[2]));
@@ -145,13 +154,13 @@ move('knight',113);assert.equal(controls['side-picture-knight'].style.transform,
 console.log('PASS: fixed foot anchors and unclipped extremes, independent sliders, live king-relative labels, per-piece reset and safe storage restoration.');
 
 assert.deepEqual(chosen.order,['king','queen','bishop','knight','rook','pawn']);
-assert.deepEqual(chosen.scales,{king:105,queen:117,bishop:97,knight:120,rook:115,pawn:105});
+assert.deepEqual(chosen.scales,{king:105,queen:117,bishop:94,knight:116,rook:115,pawn:111});
 assert.deepEqual(sliderData.defaultOrder,chosen.order);
 assert.deepEqual([...html.matchAll(/data-side-piece="([^"]+)"/g)].map(match=>match[1]),chosen.order,'Static HTML should start in the chosen order');
 for(const item of sliderData.pieces){
  assert.equal(item.defaultScale,chosen.scales[item.piece]);
  const height=Number((item.height*item.defaultScale/(430*chosen.scales.king)*100).toFixed(1));
- assert.equal(height,chosen.shown_height_percent_of_king[item.piece],'Picked heights must reproduce the screenshot');
+ assert.equal(height,chosen.shown_height_percent_of_king[item.piece],'Chosen heights must match the saved guide');
  assert(html.includes('Height: '+height.toFixed(1)+'% of king'));
 }
-console.log('PASS: approved screenshot sizes/order, static defaults, default resets and matching displayed height ratios.');
+console.log('PASS: Chavet-based sizes/order, static defaults, default resets and matching displayed height ratios.');

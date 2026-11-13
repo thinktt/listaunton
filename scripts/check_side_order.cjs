@@ -69,10 +69,12 @@ surface.fire('pointerup',pointer(1100));assert.deepEqual(f.order(),['king','quee
 assert.equal(rookImage.style.transform,'scale(1.37)');assert.equal(f.focus(),surface);
 let restored=fixture(f.saved);assert.deepEqual(restored.order(),f.order());assert.equal(restored.els['side-scale-rook'].value,'137');
 
-for(const cancel of ['escape','pointercancel','lostpointercapture','tab','blur']){
+for(const cancel of ['escape','pointercancel','lostpointercapture','tab','models-tab','blender-tab','blur']){
  const before=f.order();const s=drag(f,'rook',260);
  if(cancel==='escape')f.emitDoc('keydown',{key:'Escape'});
  else if(cancel==='tab')f.els['tab-comparison'].fire('click');
+ else if(cancel==='models-tab')f.els['tab-models'].fire('click');
+ else if(cancel==='blender-tab')f.els['tab-blender'].fire('click');
  else if(cancel==='blur')f.emitWindow('blur');
  else s.fire(cancel,{pointerId:1});
  assert.deepEqual(f.order(),before,cancel+' must abandon reorder');noDrag(f);
@@ -95,6 +97,6 @@ f=fixture(new Map(),true);f.els['side-right-king'].fire('click');assert.equal(f.
 console.log('PASS: drag insertion, arrows/keyboard, horizontal-only motion, saved order, scale/DOM preservation, cancellation, edge scrolling and invalid/blocked storage.');
 
 const legacy=new Map([['listaunton.side-view-order.v1',JSON.stringify([...defaults].reverse())],['listaunton.side-view-scales.v1',JSON.stringify({king:150,pawn:50})]]);
-const upgraded=fixture(legacy);assert.deepEqual(upgraded.order(),defaults);assert.equal(upgraded.els['side-scale-king'].value,'99');assert.equal(upgraded.els['side-scale-pawn'].value,'97');
+const upgraded=fixture(legacy);assert.deepEqual(upgraded.order(),defaults);assert.equal(upgraded.els['side-scale-king'].value,String(data.pieces.find(x=>x.piece==='king').defaultScale));assert.equal(upgraded.els['side-scale-pawn'].value,String(data.pieces.find(x=>x.piece==='pawn').defaultScale));
 assert(legacy.has('listaunton.side-view-order.v1'),'Old preferences need not be deleted to apply a new default revision');
 console.log('PASS: new default revision applies the chosen arrangement without stale settings overriding it.');
