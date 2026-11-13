@@ -1,0 +1,19 @@
+{
+  "source_sha256": "53e69c58d24339eb28fea503e0140f0420d6a52543494eecbd17972ce84962df",
+  "model_sha256": "f1a2a3532b73454cd63469d94063e7461bb941542b08f5c24322b9181e220059",
+  "roughness": 0.08,
+  "coat_roughness": 0.03,
+  "coat_bump": false,
+  "height_mask": [
+    0.15,
+    0.18,
+    0.24,
+    0.27
+  ],
+  "geometry_pigment": "unchanged from isolated 082; accepted 078 is not overwritten",
+  "foot_lights": {
+    "left_power": 3,
+    "right_power": 300,
+    "size_y": 0.015
+  }
+}

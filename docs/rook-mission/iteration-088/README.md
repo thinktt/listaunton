@@ -1,0 +1,13 @@
+# Thin foot reflector tests 087-088
+
+Checkpoint 078 remains accepted and synchronized; no public model or page changed. Previous turn was progress: it produced checked finish studies and narrowed the next hypothesis. This turn tests that hypothesis rather than repeating the same settings.
+
+Starting from isolated 082, both trials use 086's local roughness .08 / coat .03 with no coat bump and reduce reflector height from .04 to .015. Left power remains 3 W; right is 200 W in 087 and 300 W in 088. Geometry, packed pigment and orthographic 54-degree camera are unchanged. The scripts rebuild these diagnostics independently and do not promote rejected 082.
+
+At x560/x600, reference peaks are 232/235.3 with three pixels above mean RGB160 at both columns. 087 produces 217.7/180.7 with widths 5/3; 088 produces 226/193.3 with widths 5/4. Brightening the emitter does not fix the uneven response along the arc. The inner-right peak remains two pixels high, and the outer-right sample is dim. The reference's broken fine glint is still missing. Both trials are rejected for public promotion; neither improves enough on provisional086 to justify acceptance. Full reference/current/trial and enlarged foot crops were inspected.
+
+Scope checks cover both saved trials: original shader nodes, defaults, packed image data, original links, world and all other lights remain exact; new shader outputs are limited to roughness/coat roughness. Declared foot-light changes alone are permitted. Representative088 receives full saved geometry/camera/material/receiver validation; both receive saved receiver checks. Audit reports preserve the fixed masks and original registration. These are preservation checks, not visual-match certificates. No new side or neutral render is claimed: these emitter-only changes from086 did not pass the fixed-view gate, so its side investigation remains the nearest evidence rather than a verified side result for these variants.
+
+Reproduce with scripts/rook/foot_finish_thin.py, render_saved_trial.py for each variant, validate_foot_finish.py, validate_material_trial.py for088, audit_mission.py, then compare_foot_thin.py. Exact source082 hash is guarded in the builder. Dependencies and base generation are documented in iteration086.
+
+Next: examine the actual reflected directions across the right foot arc, including x560 and x600, and adjust emitter direction/extent rather than continuing to raise its power. Retain086 only as an intermediate diagnostic. All geometry, color, grain and other lighting mismatches remain part of the mission; a better local glint will not establish completion.
