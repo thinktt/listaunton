@@ -1,0 +1,12 @@
+{
+  "decision": "rejected: misplaced old-light patch remains",
+  "selected_iou": 97.3035014588003,
+  "original_iou": 95.6733489199561,
+  "interior_subjective": 78,
+  "color_subjective": 74,
+  "grain_subjective": 66,
+  "lighting_subjective": 46,
+  "working_mean": 72.26070029176006,
+  "holistic_range": "60-70%",
+  "mask_evidence": "022-024 alpha arrays are byte-identical to checkpoint 021; 026 independently audited"
+}

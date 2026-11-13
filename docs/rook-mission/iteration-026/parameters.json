@@ -1,0 +1,27 @@
+{
+  "source_sha256": "882959fbcbb777315897739058e401cf2ccde187f607e41ff61de82a18bcba43",
+  "model_sha256": "42f3dbd730a07478f4669af336cc20666f1e2680c97c07b3a20bad273ff7f2bc",
+  "bands": [
+    {
+      "name": "lower-shoulder",
+      "destination_v": [
+        0.3011583129897894,
+        0.3940007249878735
+      ],
+      "source_v": [
+        0.2811784055500177,
+        0.34836034173752883
+      ],
+      "control_rows": [
+        15,
+        21
+      ],
+      "donor_rows": [
+        14,
+        17
+      ]
+    }
+  ],
+  "strip": false,
+  "method": "Real Principled material. UV-space resampling of adjacent existing pigment; source atlas and references unchanged."
+}

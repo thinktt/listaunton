@@ -46,4 +46,9 @@ def validate(scene):
         linked=foot.light_linking.receiver_collection
         assert linked and {o.get('rook_render_receiver') for o in linked.objects}=={'foot'}
         assert foot.visible_glossy and not foot.visible_diffuse
-    return {'parts':len(parts),'faces':len(expected),'all_faces_once':True,'positions_exact':True,'maximum_uv_error':uv_error,'uv_tolerance':1e-7,'same_material':True,'maximum_normal_component_error':maximum,'normal_tolerance':.001,'closed_control_retained':True,'foot_light_receiver_only':bool(foot)}
+    shoulder=bpy.data.objects.get('Rook shoulder strip')
+    if shoulder:
+        assert shoulder.light_linking.receiver_collection
+        assert {o.get('rook_render_receiver') for o in shoulder.light_linking.receiver_collection.objects}=={'shoulder'}
+        assert shoulder.visible_glossy and not shoulder.visible_diffuse
+    return {'parts':len(parts),'faces':len(expected),'all_faces_once':True,'positions_exact':True,'maximum_uv_error':uv_error,'uv_tolerance':1e-7,'same_material':True,'maximum_normal_component_error':maximum,'normal_tolerance':.001,'closed_control_retained':True,'foot_light_receiver_only':bool(foot),'shoulder_light_receiver_only':bool(shoulder)}

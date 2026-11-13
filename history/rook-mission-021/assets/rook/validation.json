@@ -1,0 +1,60 @@
+{
+  "components": [
+    {
+      "name": "Rook - continuous turned body and recessed floor",
+      "nonmanifold_edges": 0,
+      "signed_volume": 3.419159527038089,
+      "vertices": 31263,
+      "faces": 30832
+    },
+    {
+      "name": "Rook - thin curved merlon 1",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    },
+    {
+      "name": "Rook - thin curved merlon 2",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    },
+    {
+      "name": "Rook - thin curved merlon 3",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    },
+    {
+      "name": "Rook - thin curved merlon 4",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.01866636485980153,
+      "vertices": 1030,
+      "faces": 1026
+    }
+  ],
+  "source_hash_matches": true,
+  "mesh_binary_checked": true,
+  "normal_length_max_error": 1.1920928955078125e-07,
+  "visible_triangle_count": 62522,
+  "elevation_degrees": 54,
+  "equal_merlon_volumes": true,
+  "visible_wall_thickness_profile_px": 23,
+  "note": "Five closed editable objects: the evaluated union body and four equal hidden merlon construction objects. Boolean union preserves editable construction; packed wood material is present; unseen geometry and finish remain inferred.",
+  "render_receivers": {
+    "parts": 4,
+    "faces": 30832,
+    "all_faces_once": true,
+    "positions_exact": true,
+    "maximum_uv_error": 5.960464477539063e-08,
+    "uv_tolerance": 1e-07,
+    "same_material": true,
+    "maximum_normal_component_error": 0.00047266483306884766,
+    "normal_tolerance": 0.001,
+    "closed_control_retained": true,
+    "foot_light_receiver_only": true
+  }
+}
