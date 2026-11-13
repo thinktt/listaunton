@@ -35,6 +35,7 @@
 .models-status{color:#b1b4a9;font-size:13px;margin:8px 0}
 
 .board-note{margin:0 0 10px;color:#b1b4a9;font-size:13px}
+.board-sizing{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 8px}.board-sizing button{padding:6px 10px}.board-sizing output{color:#b1b4a9;font-size:12px}
 .board-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
 .board-controls button{padding:6px 10px}.board-controls label{display:flex;gap:9px;align-items:center}
 .board-controls input{accent-color:#d7ad77;width:min(280px,42vw)}
@@ -84,7 +85,9 @@
 <div class="models-controls" aria-label="3D model view"><button id="models-side" type="button" aria-pressed="true" disabled>Side view</button><button id="models-threequarter" type="button" aria-pressed="false" disabled>3/4 view</button><button id="models-reference" type="button" aria-pressed="false" title="Camera 54° above the board" disabled>54°</button><button id="models-wood" type="button" aria-pressed="true" disabled>Wood</button><button id="models-neutral" type="button" aria-pressed="false" disabled>Neutral</button><button id="models-blender" type="button" aria-pressed="false">Blender renders</button></div>
 <div class="models-scroll" role="region" tabindex="0" aria-label="Six models at a common scale"><div class="models-lineup"><div id="models-headings" class="models-headings"><div id="models-heading-king" class="models-heading"><a href="king-review.html">King</a><small id="models-ratio-king">—</small></div><div id="models-heading-queen" class="models-heading"><a href="review.html">Queen</a><small id="models-ratio-queen">—</small></div><div id="models-heading-bishop" class="models-heading"><a href="bishop-review.html">Bishop</a><small id="models-ratio-bishop">—</small></div><div id="models-heading-knight" class="models-heading"><a href="knight-review.html">Knight</a><small id="models-ratio-knight">—</small></div><div id="models-heading-rook" class="models-heading"><a href="rook-review.html">Rook</a><small id="models-ratio-rook">—</small></div><div id="models-heading-pawn" class="models-heading"><a href="pawn-review.html">Pawn</a><small id="models-ratio-pawn">—</small></div></div><div id="models-stage" class="models-stage"><div id="models-fallback" class="models-fallback"></div><canvas id="models-canvas" class="models-canvas" tabindex="0" aria-label="3D models: drag or use arrow keys to rotate them together" hidden></canvas></div></div></div>
 <p id="models-status" class="models-status" role="status" aria-live="polite">Loading model profiles…</p></section><section id="panel-board" role="tabpanel" aria-labelledby="tab-board" hidden>
-<p class="board-note">Original lineup and 54° Blender renders · chosen heights, king base aligned to the original · soft shadows approximated</p>
+<p class="board-note">Original lineup and 54° Blender renders</p>
+<div class="board-sizing" aria-label="Model height comparison"><span>Model heights</span><button id="board-height-matched" type="button" aria-pressed="true">Matched to original</button><button id="board-height-chosen" type="button" aria-pressed="false">Your chosen heights</button><output id="board-height-summary"></output></div>
+<p id="board-fit-note" class="board-note">Matched to each visible top and foot. The original king's cross is clipped. Shadows approximated.</p>
 <div class="board-controls" aria-label="Board comparison controls"><button id="board-original" type="button" aria-pressed="false">Original</button><button id="board-half" type="button" aria-pressed="true">50 / 50</button><button id="board-models" type="button" aria-pressed="false">Models</button><label for="board-wipe">Wipe <input id="board-wipe" type="range" min="0" max="100" value="50" aria-label="Wipe between original and reconstructed models"></label></div>
 <div id="board-stage" class="board-stage" role="region" aria-label="Drag to compare the original and reconstructed pieces on the board">
 <img src="assets/board-comparison/original-lineup.png" alt="Original Lichess pieces on the board"><div id="board-model-layer" class="board-layer" aria-hidden="true"><img src="assets/board-comparison/empty-board.png" alt=""><div id="board-shadows" class="board-shadows"></div><div id="board-pieces" class="board-pieces"></div></div><div id="board-divider" class="board-divider"><span>↔</span></div></div>
@@ -492,7 +495,7 @@ new ResizeObserver(()=>{if(!panel.hidden)layout();}).observe(stage);
 paintDisplay();if(!panel.hidden)start();
 })();
 </script>
-<script id="board-data" type="application/json">{"width":659,"height":202,"original":"assets/board-comparison/original-lineup.png","empty":"assets/board-comparison/empty-board.png","kingHeight":5.127651214599609,"kingPixelsPerUnit":41.61864684473301,"groundY":151.0,"kingBasePixels":86.0,"pieces":[{"piece":"king","file":"assets/king/render.png","version":"02df7625a18d6ca5","width":1254,"height":1254,"footX":502.6000771137735,"footY":868.9007412867184,"pixelsPerUnit":279.9999935925007,"modelHeight":5.127651214599609,"baseWidth":2.0663814544677734,"centerX":55.5,"sourceSha256":"47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5"},{"piece":"queen","file":"assets/queen/queen-brown.png","version":"509cc46d3fd73860","width":1254,"height":1254,"footX":483.62499314546585,"footY":860.2234728349108,"pixelsPerUnit":264.6112602353096,"modelHeight":4.393647193908691,"baseWidth":2.091421365737915,"centerX":164.0,"sourceSha256":"243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"},{"piece":"bishop","file":"assets/bishop/render.png","version":"081a2fc027613d35","width":1254,"height":1254,"footX":491.6982756704092,"footY":903.0247418599915,"pixelsPerUnit":260.00000873208046,"modelHeight":4.592006683349609,"baseWidth":2.0130202770233154,"centerX":274.5,"sourceSha256":"2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425"},{"piece":"knight","file":"assets/knight/render.png","version":"0c9b60d1bf9a8f47","width":1254,"height":1254,"footX":488.94512307365704,"footY":845.1434784533316,"pixelsPerUnit":172.926593542099,"modelHeight":5.102221965789795,"baseWidth":2.9886550903320312,"centerX":385.5,"sourceSha256":"c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c"},{"piece":"rook","file":"assets/rook/render.png","version":"f0f5c9481bbd4086","width":1254,"height":1254,"footX":484.52106300753434,"footY":875.9956878449724,"pixelsPerUnit":279.9999935925007,"modelHeight":2.8375284671783447,"baseWidth":1.7814273834228516,"centerX":493.5,"sourceSha256":"bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914"},{"piece":"pawn","file":"assets/pawn/render.png","version":"461a968dcf868622","width":1254,"height":1254,"footX":484.5594360977411,"footY":825.5818872080324,"pixelsPerUnit":260.00000873208046,"modelHeight":2.7748525142669678,"baseWidth":1.6535700559616089,"centerX":604.0,"sourceSha256":"0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6"}]}</script>
+<script id="board-data" type="application/json">{"width":659,"height":202,"original":"assets/board-comparison/original-lineup.png","empty":"assets/board-comparison/empty-board.png","kingHeight":5.127651214599609,"kingPixelsPerUnit":41.61864684473301,"groundY":151.0,"kingBasePixels":86.0,"pieces":[{"piece":"king","file":"assets/king/render.png","version":"02df7625a18d6ca5","width":1254,"height":1254,"footX":502.6000771137735,"footY":868.9007412867184,"pixelsPerUnit":279.9999935925007,"modelHeight":5.127651214599609,"baseWidth":2.0663814544677734,"centerX":55.5,"sourceSha256":"47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5","renderTop":8,"renderBottom":1090,"targetTop":28,"targetBottom":187},{"piece":"queen","file":"assets/queen/queen-brown.png","version":"509cc46d3fd73860","width":1254,"height":1254,"footX":483.62499314546585,"footY":860.2234728349108,"pixelsPerUnit":264.6112602353096,"modelHeight":4.393647193908691,"baseWidth":2.091421365737915,"centerX":164.0,"sourceSha256":"243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68","renderTop":60,"renderBottom":1079,"targetTop":37,"targetBottom":189},{"piece":"bishop","file":"assets/bishop/render.png","version":"081a2fc027613d35","width":1254,"height":1254,"footX":491.6982756704092,"footY":903.0247418599915,"pixelsPerUnit":260.00000873208046,"modelHeight":4.592006683349609,"baseWidth":2.0130202770233154,"centerX":274.5,"sourceSha256":"2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425","renderTop":160,"renderBottom":1109,"targetTop":52,"targetBottom":189},{"piece":"knight","file":"assets/knight/render.png","version":"0c9b60d1bf9a8f47","width":1254,"height":1254,"footX":488.94512307365704,"footY":845.1434784533316,"pixelsPerUnit":172.926593542099,"modelHeight":5.102221965789795,"baseWidth":2.9886550903320312,"centerX":385.5,"sourceSha256":"c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c","renderTop":293,"renderBottom":1047,"targetTop":73,"targetBottom":186},{"piece":"rook","file":"assets/rook/render.png","version":"f0f5c9481bbd4086","width":1254,"height":1254,"footX":484.52106300753434,"footY":875.9956878449724,"pixelsPerUnit":279.9999935925007,"modelHeight":2.8375284671783447,"baseWidth":1.7814273834228516,"centerX":493.5,"sourceSha256":"bfc8e7c5aca140363d67c379532f57412e0bac8206c0bd617591e0e993d94914","renderTop":269,"renderBottom":1066,"targetTop":70,"targetBottom":187},{"piece":"pawn","file":"assets/pawn/render.png","version":"461a968dcf868622","width":1254,"height":1254,"footX":484.5594360977411,"footY":825.5818872080324,"pixelsPerUnit":260.00000873208046,"modelHeight":2.7748525142669678,"baseWidth":1.6535700559616089,"centerX":604.0,"sourceSha256":"0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6","renderTop":353,"renderBottom":998,"targetTop":82,"targetBottom":179}]}</script>
 <script id="board-comparison-runtime">(()=>{'use strict';
 const byId=id=>document.getElementById(id);
 const board=JSON.parse(byId('board-data').textContent);
@@ -500,7 +503,7 @@ const scaleData=JSON.parse(byId('side-scale-data').textContent);
 const rows=Object.fromEntries(scaleData.pieces.map(item=>[item.piece,item]));
 const layer=byId('board-model-layer'),pieces=byId('board-pieces'),shadows=byId('board-shadows');
 const stage=byId('board-stage'),wipe=byId('board-wipe'),divider=byId('board-divider');
-const elements={};let drag=null;
+const elements={};let drag=null,heightMode='matched';
 for(const item of board.pieces){
  const shadow=document.createElement('div');shadow.className='board-shadow';shadows.append(shadow);
  const img=document.createElement('img');img.src=item.file+'?v='+item.version;img.alt='';img.draggable=false;pieces.append(img);
@@ -508,22 +511,41 @@ for(const item of board.pieces){
 }
 function layout(){
  const king=rows.king.height*Number(byId('side-scale-king').value);
+ const modelHeights={};
  for(const item of board.pieces){
   const ratio=rows[item.piece].height*Number(byId('side-scale-'+item.piece).value)/king;
-  // One uniform scale per model: its requested height relative to the king,
-  // calibrated once from the king's base width in the original screenshot.
-  const modelScale=board.kingHeight*ratio/item.modelHeight;
-  const pixelsPerUnit=board.kingPixelsPerUnit*modelScale;
-  const imageScale=pixelsPerUnit/item.pixelsPerUnit;
+  let imageScale,groundY,top;
+  if(heightMode==='matched'){
+   // Fit the visible top and bottom of each render to the original screenshot.
+   imageScale=(item.targetBottom-item.targetTop)/(item.renderBottom-item.renderTop);
+   top=item.targetTop-item.renderTop*imageScale;
+   groundY=top+item.footY*imageScale;
+  }else{
+   // Keep the owner's chosen relative heights and the common king-base scale.
+   const modelScale=board.kingHeight*ratio/item.modelHeight;
+   imageScale=board.kingPixelsPerUnit*modelScale/item.pixelsPerUnit;
+   groundY=board.groundY;top=groundY-item.footY*imageScale;
+  }
+  const pixelsPerUnit=imageScale*item.pixelsPerUnit;
+  modelHeights[item.piece]=pixelsPerUnit*item.modelHeight;
   const {img,shadow}=elements[item.piece];
   img.style.width=(item.width*imageScale/board.width*100)+'%';
   img.style.left=((item.centerX-item.footX*imageScale)/board.width*100)+'%';
-  img.style.top=((board.groundY-item.footY*imageScale)/board.height*100)+'%';
+  img.style.top=(top/board.height*100)+'%';
   const width=item.baseWidth*pixelsPerUnit*1.20,height=width*.72;
   shadow.style.width=(width/board.width*100)+'%';shadow.style.height=(height/board.height*100)+'%';
   shadow.style.left=((item.centerX-width/2-2)/board.width*100)+'%';
-  shadow.style.top=((board.groundY-height/2+3)/board.height*100)+'%';
+  shadow.style.top=((groundY-height/2+3)/board.height*100)+'%';
  }
+ const labels={king:'K',queen:'Q',bishop:'B',knight:'N',rook:'R',pawn:'P'};
+ byId('board-height-summary').textContent='Approx. model heights vs king: '+board.pieces.map(item=>labels[item.piece]+' '+(100*modelHeights[item.piece]/modelHeights.king).toFixed(1)+'%').join(' · ');
+}
+function setHeightMode(mode){
+ heightMode=mode;
+ byId('board-height-matched').setAttribute('aria-pressed',String(mode==='matched'));
+ byId('board-height-chosen').setAttribute('aria-pressed',String(mode==='chosen'));
+ byId('board-fit-note').textContent=mode==='matched'?"Matched to each visible top and foot. The original king's cross is clipped. Shadows approximated.":'Chosen side-view heights; king base aligned to the original. Shadows approximated.';
+ layout();
 }
 function paint(){
  const value=Math.max(0,Math.min(100,Number(wipe.value)||0));
@@ -546,7 +568,9 @@ for(const item of board.pieces){
  byId('side-scale-'+item.piece).addEventListener('input',layout);
  byId('side-reset-'+item.piece).addEventListener('click',layout);
 }
-layout();paint();
+byId('board-height-matched').addEventListener('click',()=>setHeightMode('matched'));
+byId('board-height-chosen').addEventListener('click',()=>setHeightMode('chosen'));
+setHeightMode('matched');paint();
 })();
 </script>
 </body></html>

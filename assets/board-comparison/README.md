@@ -10,11 +10,18 @@ Their SHA-256 hashes are `8a32cd5aacfa0ec7bfa3eacd4ce3a38efe14a2281d924a5ddd62dd
 and `8c1beb81c5fe4cbd59385046551519c2469d054fca87db8c21278446e6aaab8f`, respectively.
 
 The comparison composites the six current saved Blender renders, each from its
-54° reference camera. The king's base is calibrated to approximately 86 pixels
-wide in the original screenshot. Other pieces are uniformly scaled to the
-current chosen side-view heights relative to the king, then centered on the same
-projected foot line. Their widths and silhouettes are not individually fitted
-to the screenshot. The soft contact shadows are a browser approximation.
+54° reference camera. **Matched to original** uniformly scales and positions
+each render so its visible top and bottom align with the original screenshot.
+The measured pixel coordinates, threshold method, and source hashes are stored
+in `height-fit.json`; the original king sprite clips the top of the cross.
+Run `python3 scripts/measure_board_height_fit.py --check` to reproduce and
+verify those measurements against the supplied screenshots.
+
+**Your chosen heights** retains the previous version: the king's base is
+calibrated to approximately 86 pixels wide, and the other pieces are uniformly
+scaled to the chosen side-view heights and centered on a common projected foot
+line. Neither mode changes the Blender models or the side-view slider settings.
+The soft contact shadows are a browser approximation.
 
 The screenshot and camera angle leave room for interpretation; matching this
 view does not establish the hidden shape or true physical dimensions of the

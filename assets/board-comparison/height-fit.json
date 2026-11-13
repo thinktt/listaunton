@@ -1,0 +1,15 @@
+{
+  "source": "Original lineup screenshot supplied by the owner on 2026-11-13",
+  "original_sha256": "8a32cd5aacfa0ec7bfa3eacd4ce3a38efe14a2281d924a5ddd62dd0ae6497227",
+  "empty_board_sha256": "8c1beb81c5fe4cbd59385046551519c2469d054fca87db8c21278446e6aaab8f",
+  "method": "For each piece's board column, measure the first and last rows containing at least three wood-colored pixels whose total RGB difference from the empty-board screenshot is at least 30; red must be at least 1.12 times blue and 1.03 times green. Coordinates refer to pixel centers. Nearby thresholds change the top or bottom by approximately one pixel.",
+  "limitation": "These are projected image extents, not measurements of the original 3D pieces. The original king image clips the top of its cross.",
+  "targets": {
+    "king": {"top": 28, "bottom": 187},
+    "queen": {"top": 37, "bottom": 189},
+    "bishop": {"top": 52, "bottom": 189},
+    "knight": {"top": 73, "bottom": 186},
+    "rook": {"top": 70, "bottom": 187},
+    "pawn": {"top": 82, "bottom": 179}
+  }
+}
