@@ -1,0 +1,43 @@
+{
+  "variant": "175-smooth-flare-refit",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "profile": "history/bishop-mission-022/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "15": [
+      57.87264452908589,
+      191.36195896814405
+    ],
+    "16": [
+      56.72662957063714,
+      190.06839941135735
+    ],
+    "17": [
+      55.62822194599593,
+      188.9073163764822
+    ],
+    "18": [
+      51.79455271959398,
+      185.20255734173517
+    ],
+    "19": [
+      47.062909634017366,
+      181.03794978924594
+    ]
+  },
+  "interpretation": "Unaccepted smooth flare with locally lowered profile controls to refit the original-white outline. Only radii/heights 15-19 change; fixed endpoints, socket, groove, foot, other controls, camera, materials and source registration remain exact. Actual render and physical surface determine acceptance.",
+  "radius_curve": {
+    "formula": "r0 + (r1-r0)*t + bow*t*(1-t)",
+    "top_ring": 20,
+    "bottom_ring": 14,
+    "bow": 8.0
+  },
+  "height_fit": {
+    "family": "smooth",
+    "coupling": 4.425,
+    "formula": "new_y = old_y + coupling * t*(1-t)",
+    "source": "authoritative original white",
+    "proxy_only": true
+  }
+}

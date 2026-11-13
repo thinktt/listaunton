@@ -1,0 +1,24 @@
+{
+  "public_assets_unchanged": true,
+  "accepted_checkpoint": "022",
+  "accepted_model_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "protected_file_hashes": {
+    "AGENTS.md": "4b10de62d9d9f5e33229a0218f6a18c1c1467a94111947b059ebb467cf7599ec",
+    "assets/side-views/scale.json": "27bb759f9f91f93f9514fd6a57e7a835d1a166255b2f076075ca69ccb202f4ec",
+    "assets/side-views/defaults.json": "fa17c1db3fafd9bb470344cb84a25eada770d31c865293811ca8064e5b3eddbd",
+    "assets/candidates/alignment.json": "26e91c3a6164df3f9231bc55476da1181de9e31950f4548359675c59d41e91e8",
+    "references/lichess-staunton-3d/White-Bishop.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "references/lichess-staunton-3d/Black-Bishop.png": "b8ffc92fa3857f836514694d5399486c683b8ec563e324408a2e29baa48fa585",
+    "assets/candidates/bishop/white-candidate-3.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176",
+    "MISSION-BISHOP.md": "fc480766b14319a2e6ab22d651cc681a57b985d258aef6f667d1d958305413a6",
+    "MISSION-ROOK.md": "9e03848fffb9793ff6b2a33e51d08ae1d653bf9f2ce443bc98f6684b08c0d9b0",
+    "MISSION-PAWN.md": "22a3715cadae3dfe1dfe3c328de98b6e78672b450a4dad2d4b2a472b0a1c2e7f",
+    "MISSION-KING.md": "a3e27645e791810cea3f339e01fe73ae5908f9fab252dac155d662f6d992966d",
+    "MISSION-SET.md": "ef76a0b30ad268731b06cce590e81d5e982787d2ff872916914babd8327cd8be",
+    "MISSION-QUEEN.md": "0337ade649e3abbe26448b3c75313c17a0bfd71c410ca1440ba361e8d531fc6a",
+    "MISSION-KNIGHT.md": "49ba2f68c5d06ba6310af1436803ff195e3a4ec02e8ae7ea75eb81281bb2d62f"
+  },
+  "scripts_compile": true,
+  "goal_status": "active",
+  "native_browser_inspection": false
+}

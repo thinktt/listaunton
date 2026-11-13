@@ -333,3 +333,27 @@ The historical clay revision was `09-continuous-button-join`. The preceding shal
 The validator checks both closed components for positive volume, probes the deep slit and solid floor, compares saved and exported cameras, and verifies exact lower-profile preservation. It samples 100 evaluated head normals and 161 external junction sections. A single transition from tapering head to rounded button, broad contact, concealed cap and continuously present surface are required. `check_join_regression.py` also measures the rejected model's exposed cylinder and verifies its absence in the current model. The viewer test exercises actual page code, original/selected/black overlays, rotation, pan, zoom and camera reset.
 
 The clay revision's original-white silhouette IoU was 0.96576 and selected-white IoU 0.94822 under its older mask convention. For current scores and the explicit mask definition, read `docs/bishop-mission-log.md` and its iteration records. Outline scores do not assess the formerly hidden neck. Hidden surfaces remain interpretations, and the two closed intersecting components are not boolean-fused for manufacture.
+
+## Rejected base/stem study 023
+
+Checkpoint 022 remains accepted. `prepare_flare_curve_trials.py` preserves that
+source and proposes two rounded flare meridians. `fit_flare_curve_height.py`
+adds a bounded height fit (`--family coupled` or `--family smooth`). Their
+actual evaluated curves are measured by `measure_flare_curve.py`; all four
+proposals are rejected for projection or physical-shape tradeoffs. Do not
+promote them merely because a curvature statistic or silhouette score improves.
+
+`fit_upper_stem.py` proposes radial controls 33–36 using an analytical outline
+proxy corrected by the actual baseline render. Despite better outline overlap,
+the resulting lower-stem bulge is rejected. Controls 38–40 alone do not affect
+the relevant elevated contour. Future fits need an explicitly smooth meridian
+and actual contour-surface probes. The existing per-ring regularization is not
+adequate to certify the shape.
+
+Use `profile_shape_trial.py` for saved/reopened diagnostic trials,
+`render_geometry_studio.py` for the common unfitted level view,
+`mission_compare.py` for unchanged-registration outlines, and
+`compare_flare_trials.py` / `compare_stem_trial.py` for fixed crops.
+`record_flare_stem_study.py` preserves the exact trial configurations, source
+hashes, outputs and rejection decisions and verifies that public stage assets
+remain unchanged. It does not activate a goal or publish a candidate.

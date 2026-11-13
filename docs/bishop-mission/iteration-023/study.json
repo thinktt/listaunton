@@ -1,0 +1,98 @@
+{
+  "classification": "Completed rejected geometry study; no accepted model change",
+  "accepted_checkpoint": "022",
+  "accepted_model_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "accepted_render_sha256": "b499a37c3a7ae2e47da0fa8433cb4d46239cb87df96fd9dcb04df339d551ff62",
+  "source_camera_degrees": 54,
+  "public_assets_changed": false,
+  "mission_statements_changed": false,
+  "native_browser_inspection": false,
+  "decisions": [
+    {
+      "variant": "173-flare-gentle",
+      "accepted": false,
+      "reason": "A smoother base meridian, but the original-white outline worsens and fixed-view improvement is too small to justify replacing the accepted shape.",
+      "model_sha256": "3b8463cf65216661b7cd7aa7f60f44f2634031d4c284795b838e72310ef0e0c0",
+      "outline_iou": {
+        "selected": 0.9693706105212716,
+        "original_white": 0.9868431857373564,
+        "original_black": 0.9773610458696568
+      },
+      "curvature": {
+        "maximum_second_derivative": 7.188179101492476e-05,
+        "positive_curvature_fraction_above_0p01": 0.0,
+        "nearly_straight_fraction_abs_below_0p01": 0.3397312859884837
+      }
+    },
+    {
+      "variant": "173-flare-round",
+      "accepted": false,
+      "reason": "Clearer rounding in profile, but the rear shoulder grows beyond the original and fixed-view highlights become more conspicuous. No convincing overall fit improvement.",
+      "model_sha256": "27d7d074c21bdcc2663113f43c8ed9cc55173d2a5db543ea6460e37b20aac844",
+      "outline_iou": {
+        "selected": 0.9681220592719251,
+        "original_white": 0.9860603373938812,
+        "original_black": 0.9753584992939572
+      },
+      "curvature": {
+        "maximum_second_derivative": 9.83382834974086e-05,
+        "positive_curvature_fraction_above_0p01": 0.0,
+        "nearly_straight_fraction_abs_below_0p01": 0.32437619961612285
+      }
+    },
+    {
+      "variant": "174-rounded-flare-refit",
+      "accepted": false,
+      "reason": "A slightly better outline hides renewed inward curvature and a nearly straight band. Reject the physical shape despite the higher overlap.",
+      "model_sha256": "ebc557b64d1c29e8d48980d7fc21d063f1876b7e468a44fb1d9bab4065271ead",
+      "outline_iou": {
+        "selected": 0.9701053817504097,
+        "original_white": 0.9875673965166802,
+        "original_black": 0.9778415834937799
+      },
+      "curvature": {
+        "maximum_second_derivative": 0.1365917331356316,
+        "positive_curvature_fraction_above_0p01": 0.2476007677543186,
+        "nearly_straight_fraction_abs_below_0p01": 0.4491362763915547
+      }
+    },
+    {
+      "variant": "175-smooth-flare-refit",
+      "accepted": false,
+      "reason": "Avoids the inward bend but remains nearly straight through much of the sampled flare. Slightly worse original outline and no convincing fixed-view gain.",
+      "model_sha256": "9c50b930340691bb3e29de5c7075aacda8d72ee1ebc22d10729411981bf6c3b0",
+      "outline_iou": {
+        "selected": 0.9698042881626098,
+        "original_white": 0.987037048304564,
+        "original_black": 0.9778423360604461
+      },
+      "curvature": {
+        "maximum_second_derivative": 5.961624725865718e-05,
+        "positive_curvature_fraction_above_0p01": 0.0,
+        "nearly_straight_fraction_abs_below_0p01": 0.42034548944337813
+      }
+    },
+    {
+      "variant": "176-narrower-upper-stem",
+      "accepted": false,
+      "reason": "Reduces the exposed-neck outline error, but the lower stem develops a visible bulge and abrupt bend. Reject despite higher overlap against all three images.",
+      "model_sha256": "f630b8c4a566fd66423495be38885305bd7751ece0df352d9a4219618447002e",
+      "outline_iou": {
+        "selected": 0.9701669249422252,
+        "original_white": 0.9877328625350055,
+        "original_black": 0.9781907878669467
+      }
+    }
+  ],
+  "geometry_phase_complete": false,
+  "goal_status": "active",
+  "scores_retained_from_accepted_checkpoint": {
+    "silhouette": 97.00478228039266,
+    "interior": 82.0,
+    "color": 83,
+    "texture": 77,
+    "lighting": 72
+  },
+  "assessment": "The owner recording still supports the apparent-fullness concern. Rejected fits are evidence, not improvements. Only outline IoU is measured; inherited subjective ratings and finish remain uncertain and incomplete.",
+  "next_action": "Constrain the stem as a smooth meridian and measure the actual surfaces that generate the elevated outline. Avoid independent radius fitting that creates an S-shaped lower bulge. Continue internal feature comparisons without fitting reference grain bands as geometry."
+}

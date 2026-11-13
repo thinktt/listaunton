@@ -1,0 +1,235 @@
+{
+  "method": "Outermost eligible pixel in each row. Reference threshold max RGB >12 and alpha >127; model alpha >127. No alignment adjustment. This diagnoses exterior only; regions are image rows, not semantic surface segmentation.",
+  "render": "build/bishop-mission/173-flare-round/wood.png",
+  "render_sha256": "4964235be6f847f54f8ec73bfc3fb42319b2811acbe24695bc0abe2e5c00f02b",
+  "regions": {
+    "button": [
+      130,
+      240
+    ],
+    "upper_head": [
+      240,
+      325
+    ],
+    "lower_head": [
+      325,
+      448
+    ],
+    "upper_collar": [
+      448,
+      515
+    ],
+    "middle_collar": [
+      515,
+      566
+    ],
+    "lower_collar": [
+      566,
+      609
+    ],
+    "visible_stem": [
+      609,
+      629
+    ],
+    "rear_base_shoulder": [
+      629,
+      795
+    ],
+    "base_sides": [
+      795,
+      1020
+    ],
+    "foot": [
+      1020,
+      1140
+    ]
+  },
+  "results": {
+    "selected": {
+      "button": {
+        "mean_absolute_edge_error_px": 4.613924050632911,
+        "maximum_absolute_edge_error_px": 14,
+        "mean_left_signed_error_px": -4.215189873417722,
+        "mean_right_signed_error_px": 0.43037974683544306
+      },
+      "upper_head": {
+        "mean_absolute_edge_error_px": 3.588235294117647,
+        "maximum_absolute_edge_error_px": 11,
+        "mean_left_signed_error_px": -4.705882352941177,
+        "mean_right_signed_error_px": 0.8470588235294118
+      },
+      "lower_head": {
+        "mean_absolute_edge_error_px": 3.5040650406504064,
+        "maximum_absolute_edge_error_px": 12,
+        "mean_left_signed_error_px": -2.926829268292683,
+        "mean_right_signed_error_px": -0.8617886178861789
+      },
+      "upper_collar": {
+        "mean_absolute_edge_error_px": 4.223880597014926,
+        "maximum_absolute_edge_error_px": 7,
+        "mean_left_signed_error_px": 2.746268656716418,
+        "mean_right_signed_error_px": -5.522388059701493
+      },
+      "middle_collar": {
+        "mean_absolute_edge_error_px": 5.6568627450980395,
+        "maximum_absolute_edge_error_px": 8,
+        "mean_left_signed_error_px": 4.588235294117647,
+        "mean_right_signed_error_px": -6.7254901960784315
+      },
+      "lower_collar": {
+        "mean_absolute_edge_error_px": 3.9186046511627906,
+        "maximum_absolute_edge_error_px": 6,
+        "mean_left_signed_error_px": 1.6511627906976745,
+        "mean_right_signed_error_px": -2.4651162790697674
+      },
+      "visible_stem": {
+        "mean_absolute_edge_error_px": 6.4,
+        "maximum_absolute_edge_error_px": 14,
+        "mean_left_signed_error_px": -6.5,
+        "mean_right_signed_error_px": 6.3
+      },
+      "rear_base_shoulder": {
+        "mean_absolute_edge_error_px": 5.509036144578313,
+        "maximum_absolute_edge_error_px": 19,
+        "mean_left_signed_error_px": -1.9216867469879517,
+        "mean_right_signed_error_px": -1.6024096385542168
+      },
+      "base_sides": {
+        "mean_absolute_edge_error_px": 7.897777777777778,
+        "maximum_absolute_edge_error_px": 10,
+        "mean_left_signed_error_px": 7.6755555555555555,
+        "mean_right_signed_error_px": -8.12
+      },
+      "foot": {
+        "mean_absolute_edge_error_px": 10.372222222222222,
+        "maximum_absolute_edge_error_px": 42,
+        "mean_left_signed_error_px": 11.866666666666667,
+        "mean_right_signed_error_px": -8.877777777777778
+      }
+    },
+    "white": {
+      "button": {
+        "mean_absolute_edge_error_px": 2.670886075949367,
+        "maximum_absolute_edge_error_px": 5,
+        "mean_left_signed_error_px": -1.7088607594936709,
+        "mean_right_signed_error_px": 2.9240506329113924
+      },
+      "upper_head": {
+        "mean_absolute_edge_error_px": 2.0647058823529414,
+        "maximum_absolute_edge_error_px": 5,
+        "mean_left_signed_error_px": -1.1176470588235294,
+        "mean_right_signed_error_px": 3.011764705882353
+      },
+      "lower_head": {
+        "mean_absolute_edge_error_px": 1.589430894308943,
+        "maximum_absolute_edge_error_px": 5,
+        "mean_left_signed_error_px": -0.4634146341463415,
+        "mean_right_signed_error_px": 1.2357723577235773
+      },
+      "upper_collar": {
+        "mean_absolute_edge_error_px": 0.9477611940298507,
+        "maximum_absolute_edge_error_px": 3,
+        "mean_left_signed_error_px": 1.2985074626865671,
+        "mean_right_signed_error_px": 0.5970149253731343
+      },
+      "middle_collar": {
+        "mean_absolute_edge_error_px": 1.4509803921568627,
+        "maximum_absolute_edge_error_px": 4,
+        "mean_left_signed_error_px": 2.588235294117647,
+        "mean_right_signed_error_px": 0.27450980392156865
+      },
+      "lower_collar": {
+        "mean_absolute_edge_error_px": 2.895348837209302,
+        "maximum_absolute_edge_error_px": 7,
+        "mean_left_signed_error_px": 1.255813953488372,
+        "mean_right_signed_error_px": 0.3953488372093023
+      },
+      "visible_stem": {
+        "mean_absolute_edge_error_px": 4.425,
+        "maximum_absolute_edge_error_px": 11,
+        "mean_left_signed_error_px": -5.0,
+        "mean_right_signed_error_px": 3.45
+      },
+      "rear_base_shoulder": {
+        "mean_absolute_edge_error_px": 3.3313253012048194,
+        "maximum_absolute_edge_error_px": 15,
+        "mean_left_signed_error_px": -0.6385542168674698,
+        "mean_right_signed_error_px": 0.3132530120481928
+      },
+      "base_sides": {
+        "mean_absolute_edge_error_px": 1.751111111111111,
+        "maximum_absolute_edge_error_px": 6,
+        "mean_left_signed_error_px": 1.2666666666666666,
+        "mean_right_signed_error_px": -2.04
+      },
+      "foot": {
+        "mean_absolute_edge_error_px": 3.4611111111111112,
+        "maximum_absolute_edge_error_px": 27,
+        "mean_left_signed_error_px": 3.1777777777777776,
+        "mean_right_signed_error_px": -3.7
+      }
+    },
+    "black": {
+      "button": {
+        "mean_absolute_edge_error_px": 2.892405063291139,
+        "maximum_absolute_edge_error_px": 9,
+        "mean_left_signed_error_px": -3.278481012658228,
+        "mean_right_signed_error_px": 2.3037974683544302
+      },
+      "upper_head": {
+        "mean_absolute_edge_error_px": 2.447058823529412,
+        "maximum_absolute_edge_error_px": 9,
+        "mean_left_signed_error_px": -3.611764705882353,
+        "mean_right_signed_error_px": 1.2117647058823529
+      },
+      "lower_head": {
+        "mean_absolute_edge_error_px": 2.313008130081301,
+        "maximum_absolute_edge_error_px": 8,
+        "mean_left_signed_error_px": -2.032520325203252,
+        "mean_right_signed_error_px": 0.4146341463414634
+      },
+      "upper_collar": {
+        "mean_absolute_edge_error_px": 1.0298507462686568,
+        "maximum_absolute_edge_error_px": 3,
+        "mean_left_signed_error_px": 1.0298507462686568,
+        "mean_right_signed_error_px": -0.7611940298507462
+      },
+      "middle_collar": {
+        "mean_absolute_edge_error_px": 2.049019607843137,
+        "maximum_absolute_edge_error_px": 4,
+        "mean_left_signed_error_px": 1.6862745098039216,
+        "mean_right_signed_error_px": -2.411764705882353
+      },
+      "lower_collar": {
+        "mean_absolute_edge_error_px": 7.151162790697675,
+        "maximum_absolute_edge_error_px": 38,
+        "mean_left_signed_error_px": -3.1627906976744184,
+        "mean_right_signed_error_px": -2.0697674418604652
+      },
+      "visible_stem": {
+        "mean_absolute_edge_error_px": 12.075,
+        "maximum_absolute_edge_error_px": 44,
+        "mean_left_signed_error_px": -16.7,
+        "mean_right_signed_error_px": 7.45
+      },
+      "rear_base_shoulder": {
+        "mean_absolute_edge_error_px": 4.963855421686747,
+        "maximum_absolute_edge_error_px": 25,
+        "mean_left_signed_error_px": -4.421686746987952,
+        "mean_right_signed_error_px": 1.963855421686747
+      },
+      "base_sides": {
+        "mean_absolute_edge_error_px": 5.713333333333333,
+        "maximum_absolute_edge_error_px": 22,
+        "mean_left_signed_error_px": -0.1688888888888889,
+        "mean_right_signed_error_px": 8.022222222222222
+      },
+      "foot": {
+        "mean_absolute_edge_error_px": 3.066666666666667,
+        "maximum_absolute_edge_error_px": 26,
+        "mean_left_signed_error_px": 3.3666666666666667,
+        "mean_right_signed_error_px": 1.8333333333333333
+      }
+    }
+  }
+}

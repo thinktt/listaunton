@@ -1,0 +1,36 @@
+{
+  "variant": "173-flare-gentle",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "profile": "history/bishop-mission-022/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "15": [
+      57.50725325484766,
+      190.9
+    ],
+    "16": [
+      56.118856024930764,
+      189.3
+    ],
+    "17": [
+      54.876912683193545,
+      187.95744680851064
+    ],
+    "18": [
+      50.93425372829485,
+      184.11489361702127
+    ],
+    "19": [
+      46.528024477960365,
+      180.36170212765958
+    ]
+  },
+  "interpretation": "Unaccepted rounded middle-flare hypothesis. Replace the nearly conical band with a concave-down radius-versus-axis meridian between unchanged controls 20 and 14. All heights and unlisted radii, socket, groove, foot, head and collars stay exact. Save/reopen and inspect the fixed view, authoritative original outline and level view before deciding.",
+  "radius_curve": {
+    "formula": "r0 + (r1-r0)*t + bow*t*(1-t)",
+    "top_ring": 20,
+    "bottom_ring": 14,
+    "bow": 4.5
+  }
+}

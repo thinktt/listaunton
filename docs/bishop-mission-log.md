@@ -710,3 +710,27 @@ The geometry goal remains active and incomplete. Mission files, source images,
 registration, candidate choices, other pieces and shared gallery settings are
 untouched. Native browser inspection is not claimed; Node page-code checks are
 used. No quota watcher, subagent, push or external publication.
+
+## Study 023 — reject base and stem fits that worsen the physical form
+
+Checkpoint 022 remains public and accepted. Five saved/reopened geometry trials
+are rejected; see [study 023](bishop-mission/iteration-023/assessment.md). Two
+rounded base profiles remove a measured inward flex but worsen the original
+outline. A height-refitted version improves original-white overlap to 98.7567%
+while introducing a worse bend. A smoother height family offers no convincing
+fixed-view gain. None justifies replacing the accepted base.
+
+A local stem fit improves all three outline overlaps, including 98.7733% for
+the original white. Its true-level and fixed-view crops reveal an unwanted
+lower-stem bulge, so it is also rejected. An earlier proxy-only check confirmed
+that the physically uppermost stem controls do not generate this particular
+elevated contour. The next fit must constrain a smooth meridian and identify
+the actual contour-generating surface, rather than optimizing isolated radii.
+
+The public model, render, neutral view, mesh, pages and 54-degree camera remain
+byte-identical to checkpoint 022. Its working scores remain unchanged at
+approximately 97.00 / 82 / 83 / 77 / 72. Geometry and finish remain incomplete;
+the owner's apparent-fullness concern is not dismissed by high outline scores.
+Original source registration, mission statements, other pieces and side-gallery
+choices are preserved. Rejected trial evidence and reproduction scripts are
+recorded, without publishing those alternatives or claiming native browser QA.

@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/176-narrower-upper-stem/wood.png",
+  "render_sha256": "343d0a1337022fad0b2d1f6dd6bc2cc8149f9c77a765acecd0a637b1a142281e",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9701669249422252,
+      "legacy_raw_model_mask_iou": 0.9701669249422252
+    },
+    "original_white": {
+      "silhouette_iou": 0.9877328625350055,
+      "legacy_raw_model_mask_iou": 0.9877328625350055
+    },
+    "original_black": {
+      "silhouette_iou": 0.9781907878669467,
+      "legacy_raw_model_mask_iou": 0.9781907878669467
+    }
+  }
+}

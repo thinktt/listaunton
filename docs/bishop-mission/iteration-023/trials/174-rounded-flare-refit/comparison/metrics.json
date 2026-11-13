@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/174-rounded-flare-refit/wood.png",
+  "render_sha256": "a4be324b2d0c73f3b6a0d54a658f0c18ce36623441591acdb9c58cfe9e075c8e",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9701053817504097,
+      "legacy_raw_model_mask_iou": 0.9701053817504097
+    },
+    "original_white": {
+      "silhouette_iou": 0.9875673965166802,
+      "legacy_raw_model_mask_iou": 0.9875673965166802
+    },
+    "original_black": {
+      "silhouette_iou": 0.9778415834937799,
+      "legacy_raw_model_mask_iou": 0.9778415834937799
+    }
+  }
+}

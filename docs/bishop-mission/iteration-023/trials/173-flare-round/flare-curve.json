@@ -1,0 +1,3150 @@
+{
+  "source": "build/bishop-mission/173-flare-round/bishop.blend",
+  "source_sha256": "27d7d074c21bdcc2663113f43c8ed9cc55173d2a5db543ea6460e37b20aac844",
+  "profile": "build/bishop-mission/173-flare-round/profile.json",
+  "sample_axis_y_range": [
+    178,
+    192
+  ],
+  "evaluated_axis_y_range": [
+    178.5,
+    191.5
+  ],
+  "sample_spacing": 0.025,
+  "cubic_fit_half_window": 0.5,
+  "minimum_second_derivative": -0.4940777074675798,
+  "maximum_second_derivative": 9.83382834974086e-05,
+  "positive_curvature_fraction_above_0p01": 0.0,
+  "nearly_straight_fraction_abs_below_0p01": 0.32437619961612285,
+  "samples": [
+    {
+      "axis_y": 178.5,
+      "radius": 44.11085150304437,
+      "radius_slope": 1.704232864136782,
+      "radius_second_derivative": -0.005634519791730958
+    },
+    {
+      "axis_y": 178.525,
+      "radius": 44.15342515539032,
+      "radius_slope": 1.7069446898254639,
+      "radius_second_derivative": -0.019153145663003593
+    },
+    {
+      "axis_y": 178.55,
+      "radius": 44.195998807736274,
+      "radius_slope": 1.7103591728260712,
+      "radius_second_derivative": -0.039311638041765656
+    },
+    {
+      "axis_y": 178.575,
+      "radius": 44.238572460082224,
+      "radius_slope": 1.713813239415972,
+      "radius_second_derivative": -0.0648859384529011
+    },
+    {
+      "axis_y": 178.6,
+      "radius": 44.281146112428175,
+      "radius_slope": 1.716767055596037,
+      "radius_second_derivative": -0.09476209307091073
+    },
+    {
+      "axis_y": 178.625,
+      "radius": 44.323705463916774,
+      "radius_slope": 1.7187693639054384,
+      "radius_second_derivative": -0.1279120068755772
+    },
+    {
+      "axis_y": 178.65,
+      "radius": 44.366279116262724,
+      "radius_slope": 1.71945976890502,
+      "radius_second_derivative": -0.16329517668027793
+    },
+    {
+      "axis_y": 178.675,
+      "radius": 44.408881370323385,
+      "radius_slope": 1.718560622316577,
+      "radius_second_derivative": -0.19995988186755356
+    },
+    {
+      "axis_y": 178.7,
+      "radius": 44.451455022669336,
+      "radius_slope": 1.7158876438057593,
+      "radius_second_derivative": -0.23708012364231837
+    },
+    {
+      "axis_y": 178.725,
+      "radius": 44.494014374157935,
+      "radius_slope": 1.7113071157984832,
+      "radius_second_derivative": -0.27385735806164824
+    },
+    {
+      "axis_y": 178.75,
+      "radius": 44.536588026503885,
+      "radius_slope": 1.7047750603483875,
+      "radius_second_derivative": -0.30952049603211185
+    },
+    {
+      "axis_y": 178.775,
+      "radius": 44.579161678849836,
+      "radius_slope": 1.6962882299010547,
+      "radius_second_derivative": -0.34344563498535186
+    },
+    {
+      "axis_y": 178.8,
+      "radius": 44.62173533119579,
+      "radius_slope": 1.6859192811708783,
+      "radius_second_derivative": -0.37499632156358625
+    },
+    {
+      "axis_y": 178.825,
+      "radius": 44.66432328439909,
+      "radius_slope": 1.6737759777166612,
+      "radius_second_derivative": -0.40366182423193137
+    },
+    {
+      "axis_y": 178.85,
+      "radius": 44.706896936745046,
+      "radius_slope": 1.6600180147770989,
+      "radius_second_derivative": -0.42899872932379185
+    },
+    {
+      "axis_y": 178.875,
+      "radius": 44.74945628823364,
+      "radius_slope": 1.6448283668365749,
+      "radius_second_derivative": -0.4505725370843899
+    },
+    {
+      "axis_y": 178.9,
+      "radius": 44.79202994057959,
+      "radius_slope": 1.628436053398238,
+      "radius_second_derivative": -0.4681173989859766
+    },
+    {
+      "axis_y": 178.925,
+      "radius": 44.8346178937829,
+      "radius_slope": 1.6110896750817332,
+      "radius_second_derivative": -0.48133359363157047
+    },
+    {
+      "axis_y": 178.95,
+      "radius": 44.87719154612885,
+      "radius_slope": 1.5930596991059347,
+      "radius_second_derivative": -0.4900287231324888
+    },
+    {
+      "axis_y": 178.975,
+      "radius": 44.9197651984748,
+      "radius_slope": 1.5746305377298198,
+      "radius_second_derivative": -0.4940777074675798
+    },
+    {
+      "axis_y": 179.0,
+      "radius": 44.958019991899526,
+      "radius_slope": 1.5560926266927435,
+      "radius_second_derivative": -0.493462790122614
+    },
+    {
+      "axis_y": 179.025,
+      "radius": 44.9938436395739,
+      "radius_slope": 1.5377405144059388,
+      "radius_second_derivative": -0.488113800778443
+    },
+    {
+      "axis_y": 179.05,
+      "radius": 45.02965298639092,
+      "radius_slope": 1.5198669481528315,
+      "radius_second_derivative": -0.47814761865644684
+    },
+    {
+      "axis_y": 179.075,
+      "radius": 45.06549093492265,
+      "radius_slope": 1.5027529572985545,
+      "radius_second_derivative": -0.46370843520589383
+    },
+    {
+      "axis_y": 179.1,
+      "radius": 45.10131458259702,
+      "radius_slope": 1.4866681435424067,
+      "radius_second_derivative": -0.44502630068311183
+    },
+    {
+      "axis_y": 179.125,
+      "radius": 45.13712392941404,
+      "radius_slope": 1.4718462247757165,
+      "radius_second_derivative": -0.42234017925566997
+    },
+    {
+      "axis_y": 179.15,
+      "radius": 45.17294757708841,
+      "radius_slope": 1.4585202089586402,
+      "radius_second_derivative": -0.39601475691565585
+    },
+    {
+      "axis_y": 179.175,
+      "radius": 45.20878552562014,
+      "radius_slope": 1.446867443946325,
+      "radius_second_derivative": -0.3664791137577232
+    },
+    {
+      "axis_y": 179.2,
+      "radius": 45.244594872437155,
+      "radius_slope": 1.4370054483352221,
+      "radius_second_derivative": -0.3341985560181059
+    },
+    {
+      "axis_y": 179.225,
+      "radius": 45.28041852011153,
+      "radius_slope": 1.429057509558637,
+      "radius_second_derivative": -0.29974571344078016
+    },
+    {
+      "axis_y": 179.25,
+      "radius": 45.3162421677859,
+      "radius_slope": 1.4230710493712586,
+      "radius_second_derivative": -0.26369335839168967
+    },
+    {
+      "axis_y": 179.275,
+      "radius": 45.35206581546027,
+      "radius_slope": 1.4190325107371522,
+      "radius_second_derivative": -0.22674290882332185
+    },
+    {
+      "axis_y": 179.3,
+      "radius": 45.38788946313465,
+      "radius_slope": 1.4168737823211295,
+      "radius_second_derivative": -0.1896631005557187
+    },
+    {
+      "axis_y": 179.325,
+      "radius": 45.42371311080902,
+      "radius_slope": 1.4164477423461141,
+      "radius_second_derivative": -0.15325012425971485
+    },
+    {
+      "axis_y": 179.35,
+      "radius": 45.459522457626036,
+      "radius_slope": 1.417528285731906,
+      "radius_second_derivative": -0.11839187693839649
+    },
+    {
+      "axis_y": 179.375,
+      "radius": 45.495360406157765,
+      "radius_slope": 1.4198330898679765,
+      "radius_second_derivative": -0.08606211440164621
+    },
+    {
+      "axis_y": 179.4,
+      "radius": 45.53116975297478,
+      "radius_slope": 1.4229788714827707,
+      "radius_second_derivative": -0.05723765884408964
+    },
+    {
+      "axis_y": 179.425,
+      "radius": 45.56699340064915,
+      "radius_slope": 1.4264858731875052,
+      "radius_second_derivative": -0.03302397804781352
+    },
+    {
+      "axis_y": 179.45,
+      "radius": 45.60281704832353,
+      "radius_slope": 1.4297738876238308,
+      "radius_second_derivative": -0.014596781424610905
+    },
+    {
+      "axis_y": 179.475,
+      "radius": 45.6386406959979,
+      "radius_slope": 1.432172684946147,
+      "radius_second_derivative": -0.003177774176032358
+    },
+    {
+      "axis_y": 179.5,
+      "radius": 45.67445004281492,
+      "radius_slope": 1.4328832106282123,
+      "radius_second_derivative": -1.6116353723353528e-05
+    },
+    {
+      "axis_y": 179.525,
+      "radius": 45.71028799134665,
+      "radius_slope": 1.4328843752457545,
+      "radius_second_derivative": -2.581469081322544e-05
+    },
+    {
+      "axis_y": 179.55,
+      "radius": 45.746111639021024,
+      "radius_slope": 1.432883494716152,
+      "radius_second_derivative": -3.4158113167259e-05
+    },
+    {
+      "axis_y": 179.575,
+      "radius": 45.78193528669539,
+      "radius_slope": 1.432886860795848,
+      "radius_second_derivative": -2.039503174457526e-05
+    },
+    {
+      "axis_y": 179.6,
+      "radius": 45.81774463351241,
+      "radius_slope": 1.4328885576053152,
+      "radius_second_derivative": -4.364251606398519e-05
+    },
+    {
+      "axis_y": 179.625,
+      "radius": 45.85358258204414,
+      "radius_slope": 1.4328868029108497,
+      "radius_second_derivative": -6.475066059617634e-05
+    },
+    {
+      "axis_y": 179.65,
+      "radius": 45.88939192886116,
+      "radius_slope": 1.4328837548232451,
+      "radius_second_derivative": -4.456956282843137e-05
+    },
+    {
+      "axis_y": 179.675,
+      "radius": 45.92520127567818,
+      "radius_slope": 1.432881508807358,
+      "radius_second_derivative": -2.3675351729327114e-05
+    },
+    {
+      "axis_y": 179.7,
+      "radius": 45.96105352506726,
+      "radius_slope": 1.4328780946907351,
+      "radius_second_derivative": -4.264415754050962e-05
+    },
+    {
+      "axis_y": 179.725,
+      "radius": 45.996862871884275,
+      "radius_slope": 1.4328776837067938,
+      "radius_second_derivative": -4.086137510987987e-05
+    },
+    {
+      "axis_y": 179.75,
+      "radius": 46.032686519558645,
+      "radius_slope": 1.432876242443662,
+      "radius_second_derivative": -3.758105516295374e-05
+    },
+    {
+      "axis_y": 179.775,
+      "radius": 46.06851016723302,
+      "radius_slope": 1.4328780674271226,
+      "radius_second_derivative": -5.205724938980179e-05
+    },
+    {
+      "axis_y": 179.8,
+      "radius": 46.10431951405004,
+      "radius_slope": 1.4328730464860808,
+      "radius_second_derivative": -4.514005326349123e-05
+    },
+    {
+      "axis_y": 179.825,
+      "radius": 46.14014316172441,
+      "radius_slope": 1.4328715423764213,
+      "radius_second_derivative": -5.7548219391226484e-05
+    },
+    {
+      "axis_y": 179.85,
+      "radius": 46.17598111025614,
+      "radius_slope": 1.432867501397046,
+      "radius_second_derivative": -6.867278246650189e-05
+    },
+    {
+      "axis_y": 179.875,
+      "radius": 46.21179045707316,
+      "radius_slope": 1.4328713990671045,
+      "radius_second_derivative": -7.64457140592295e-05
+    },
+    {
+      "axis_y": 179.9,
+      "radius": 46.24761410474753,
+      "radius_slope": 1.4328587521059515,
+      "radius_second_derivative": -6.318181229249725e-05
+    },
+    {
+      "axis_y": 179.925,
+      "radius": 46.283437752421904,
+      "radius_slope": 1.43285623949299,
+      "radius_second_derivative": -5.105889125522109e-05
+    },
+    {
+      "axis_y": 179.95,
+      "radius": 46.31926140009627,
+      "radius_slope": 1.432849389884823,
+      "radius_second_derivative": -1.932536230960185e-05
+    },
+    {
+      "axis_y": 179.975,
+      "radius": 46.35507074691329,
+      "radius_slope": 1.432852611978472,
+      "radius_second_derivative": -2.7098294496901295e-05
+    },
+    {
+      "axis_y": 180.0,
+      "radius": 46.39090869544502,
+      "radius_slope": 1.4328495644922432,
+      "radius_second_derivative": -1.376308093095046e-05
+    },
+    {
+      "axis_y": 180.025,
+      "radius": 46.42671804226204,
+      "radius_slope": 1.4334190922865928,
+      "radius_second_derivative": -0.002483059485775322
+    },
+    {
+      "axis_y": 180.05,
+      "radius": 46.46254168993641,
+      "radius_slope": 1.4346955767377942,
+      "radius_second_derivative": -0.008787335012799413
+    },
+    {
+      "axis_y": 180.075,
+      "radius": 46.498365337610785,
+      "radius_slope": 1.4363222508991977,
+      "radius_second_derivative": -0.01831801902209392
+    },
+    {
+      "axis_y": 180.1,
+      "radius": 46.5341746844278,
+      "radius_slope": 1.4379926370965357,
+      "radius_second_derivative": -0.030533074318911273
+    },
+    {
+      "axis_y": 180.125,
+      "radius": 46.56999833210217,
+      "radius_slope": 1.4394314187930068,
+      "radius_second_derivative": -0.044803107364224035
+    },
+    {
+      "axis_y": 180.15,
+      "radius": 46.6058362806339,
+      "radius_slope": 1.4404202760254372,
+      "radius_second_derivative": -0.060693761026277326
+    },
+    {
+      "axis_y": 180.175,
+      "radius": 46.64165992830827,
+      "radius_slope": 1.4407930335075487,
+      "radius_second_derivative": -0.07768039806694646
+    },
+    {
+      "axis_y": 180.2,
+      "radius": 46.67746927512529,
+      "radius_slope": 1.4404165324950164,
+      "radius_second_derivative": -0.095307838454374
+    },
+    {
+      "axis_y": 180.225,
+      "radius": 46.71329292279967,
+      "radius_slope": 1.439173370785375,
+      "radius_second_derivative": -0.11319913065386206
+    },
+    {
+      "axis_y": 180.25,
+      "radius": 46.74911657047404,
+      "radius_slope": 1.4370182321852298,
+      "radius_second_derivative": -0.1309114314886952
+    },
+    {
+      "axis_y": 180.275,
+      "radius": 46.784925917291055,
+      "radius_slope": 1.433928001230401,
+      "radius_second_derivative": -0.1481482998832123
+    },
+    {
+      "axis_y": 180.3,
+      "radius": 46.820763865822784,
+      "radius_slope": 1.4298887692902196,
+      "radius_second_derivative": -0.164528862180237
+    },
+    {
+      "axis_y": 180.325,
+      "radius": 46.8565732126398,
+      "radius_slope": 1.4249462230965435,
+      "radius_second_derivative": -0.17978448871062183
+    },
+    {
+      "axis_y": 180.35,
+      "radius": 46.89239686031417,
+      "radius_slope": 1.4191433638896098,
+      "radius_second_derivative": -0.19365746043445223
+    },
+    {
+      "axis_y": 180.375,
+      "radius": 46.92820620713119,
+      "radius_slope": 1.4125483506137746,
+      "radius_second_derivative": -0.2059468221063292
+    },
+    {
+      "axis_y": 180.4,
+      "radius": 46.96405845652028,
+      "radius_slope": 1.4052679970627744,
+      "radius_second_derivative": -0.21644120703171013
+    },
+    {
+      "axis_y": 180.425,
+      "radius": 46.999867803337295,
+      "radius_slope": 1.3974040906513123,
+      "radius_second_derivative": -0.2249987057226034
+    },
+    {
+      "axis_y": 180.45,
+      "radius": 47.035705751869024,
+      "radius_slope": 1.3890752821436811,
+      "radius_second_derivative": -0.23149138570552022
+    },
+    {
+      "axis_y": 180.475,
+      "radius": 47.07150079782868,
+      "radius_slope": 1.3804100326962105,
+      "radius_second_derivative": -0.2358238324600466
+    },
+    {
+      "axis_y": 180.5,
+      "radius": 47.10733874636041,
+      "radius_slope": 1.3715415686594776,
+      "radius_second_derivative": -0.2378746028418194
+    },
+    {
+      "axis_y": 180.525,
+      "radius": 47.14123177829185,
+      "radius_slope": 1.3626111716808715,
+      "radius_second_derivative": -0.23769582541144843
+    },
+    {
+      "axis_y": 180.55,
+      "radius": 47.17382343220399,
+      "radius_slope": 1.3537653345678153,
+      "radius_second_derivative": -0.2352308076849758
+    },
+    {
+      "axis_y": 180.575,
+      "radius": 47.206400785258765,
+      "radius_slope": 1.3451405788599617,
+      "radius_second_derivative": -0.23053510116510922
+    },
+    {
+      "axis_y": 180.6,
+      "radius": 47.23894953659884,
+      "radius_slope": 1.336877145275716,
+      "radius_second_derivative": -0.2236966326856588
+    },
+    {
+      "axis_y": 180.625,
+      "radius": 47.27154119051097,
+      "radius_slope": 1.3291080075763229,
+      "radius_second_derivative": -0.21479291763049776
+    },
+    {
+      "axis_y": 180.65,
+      "radius": 47.30410424270839,
+      "radius_slope": 1.3219416823786507,
+      "radius_second_derivative": -0.20395531141545617
+    },
+    {
+      "axis_y": 180.675,
+      "radius": 47.336667294905816,
+      "radius_slope": 1.3154818605391185,
+      "radius_second_derivative": -0.19139047418920582
+    },
+    {
+      "axis_y": 180.7,
+      "radius": 47.36923034710324,
+      "radius_slope": 1.30982035419553,
+      "radius_second_derivative": -0.17727625633574276
+    },
+    {
+      "axis_y": 180.725,
+      "radius": 47.401807700158024,
+      "radius_slope": 1.3050281058626803,
+      "radius_second_derivative": -0.1618015614897926
+    },
+    {
+      "axis_y": 180.75,
+      "radius": 47.4343850532128,
+      "radius_slope": 1.301154532827398,
+      "radius_second_derivative": -0.1452675372737821
+    },
+    {
+      "axis_y": 180.775,
+      "radius": 47.466933804552866,
+      "radius_slope": 1.2982184789601428,
+      "radius_second_derivative": -0.12794930268594723
+    },
+    {
+      "axis_y": 180.8,
+      "radius": 47.499525458465,
+      "radius_slope": 1.2962237196200699,
+      "radius_second_derivative": -0.1101543520536294
+    },
+    {
+      "axis_y": 180.825,
+      "radius": 47.532088510662426,
+      "radius_slope": 1.2951273681326407,
+      "radius_second_derivative": -0.09228388275393498
+    },
+    {
+      "axis_y": 180.85,
+      "radius": 47.5646658637172,
+      "radius_slope": 1.2948781193295658,
+      "radius_second_derivative": -0.07471013977566854
+    },
+    {
+      "axis_y": 180.875,
+      "radius": 47.597243216771986,
+      "radius_slope": 1.295368372028648,
+      "radius_second_derivative": -0.057874825314831485
+    },
+    {
+      "axis_y": 180.9,
+      "radius": 47.62980626896941,
+      "radius_slope": 1.296458126522709,
+      "radius_second_derivative": -0.042193612942466284
+    },
+    {
+      "axis_y": 180.925,
+      "radius": 47.662369321166835,
+      "radius_slope": 1.2979535282872847,
+      "radius_second_derivative": -0.028237349619816887
+    },
+    {
+      "axis_y": 180.95,
+      "radius": 47.69493237336425,
+      "radius_slope": 1.2996367064069687,
+      "radius_second_derivative": -0.01644966294709959
+    },
+    {
+      "axis_y": 180.975,
+      "radius": 47.72749542556168,
+      "radius_slope": 1.3012280332854356,
+      "radius_second_derivative": -0.007444971090316717
+    },
+    {
+      "axis_y": 181.0,
+      "radius": 47.76008707947381,
+      "radius_slope": 1.3024184147178575,
+      "radius_second_derivative": -0.001747412108823143
+    },
+    {
+      "axis_y": 181.025,
+      "radius": 47.79265013167124,
+      "radius_slope": 1.3028110120272824,
+      "radius_second_derivative": -1.4832750153154578e-05
+    },
+    {
+      "axis_y": 181.05,
+      "radius": 47.825227484726014,
+      "radius_slope": 1.3028153118357564,
+      "radius_second_derivative": 1.57597975251751e-05
+    },
+    {
+      "axis_y": 181.075,
+      "radius": 47.8578048377808,
+      "radius_slope": 1.3028155782324273,
+      "radius_second_derivative": 7.416375387456772e-06
+    },
+    {
+      "axis_y": 181.1,
+      "radius": 47.89036788997822,
+      "radius_slope": 1.302813962161398,
+      "radius_second_derivative": -2.139339010256346e-05
+    },
+    {
+      "axis_y": 181.125,
+      "radius": 47.92293094217564,
+      "radius_slope": 1.302816617557634,
+      "radius_second_derivative": -9.413091320914866e-06
+    },
+    {
+      "axis_y": 181.15,
+      "radius": 47.95550829523042,
+      "radius_slope": 1.3028091482532644,
+      "radius_second_derivative": -1.80417589533544e-05
+    },
+    {
+      "axis_y": 181.175,
+      "radius": 47.98807134742785,
+      "radius_slope": 1.3028058376531988,
+      "radius_second_derivative": -2.8809765403730317e-05
+    },
+    {
+      "axis_y": 181.2,
+      "radius": 48.02063439962527,
+      "radius_slope": 1.3028066231111144,
+      "radius_second_derivative": -3.886465879461895e-05
+    },
+    {
+      "axis_y": 181.225,
+      "radius": 48.05321175268005,
+      "radius_slope": 1.3028032999818095,
+      "radius_second_derivative": -8.272110743943223e-06
+    },
+    {
+      "axis_y": 181.25,
+      "radius": 48.085774804877474,
+      "radius_slope": 1.3028062059627057,
+      "radius_second_derivative": -1.6829466807664037e-05
+    },
+    {
+      "axis_y": 181.275,
+      "radius": 48.11835215793225,
+      "radius_slope": 1.3028031334179986,
+      "radius_second_derivative": -2.4602398665170933e-05
+    },
+    {
+      "axis_y": 181.3,
+      "radius": 48.150929510987034,
+      "radius_slope": 1.3028064278053773,
+      "radius_second_derivative": 8.343422192092696e-06
+    },
+    {
+      "axis_y": 181.325,
+      "radius": 48.18350686404181,
+      "radius_slope": 1.3028016929568487,
+      "radius_second_derivative": 2.0751588447489512e-05
+    },
+    {
+      "axis_y": 181.35,
+      "radius": 48.216069916239235,
+      "radius_slope": 1.302803224806367,
+      "radius_second_derivative": 3.123434968683698e-05
+    },
+    {
+      "axis_y": 181.375,
+      "radius": 48.24863296843666,
+      "radius_slope": 1.3028005854223854,
+      "radius_second_derivative": 3.986301722944073e-05
+    },
+    {
+      "axis_y": 181.4,
+      "radius": 48.281210321491436,
+      "radius_slope": 1.3028018792163014,
+      "radius_second_derivative": 6.703262353974536e-06
+    },
+    {
+      "axis_y": 181.425,
+      "radius": 48.31377337368886,
+      "radius_slope": 1.30280506084054,
+      "radius_second_derivative": -2.552944562701952e-05
+    },
+    {
+      "axis_y": 181.45,
+      "radius": 48.34635072674364,
+      "radius_slope": 1.302806134470905,
+      "radius_second_derivative": -3.55843388973389e-05
+    },
+    {
+      "axis_y": 181.475,
+      "radius": 48.37891377894106,
+      "radius_slope": 1.3028072958058825,
+      "radius_second_derivative": -2.3532729091897493e-05
+    },
+    {
+      "axis_y": 181.5,
+      "radius": 48.411476831138486,
+      "radius_slope": 1.3028149368358386,
+      "radius_second_derivative": -7.844242868297447e-06
+    },
+    {
+      "axis_y": 181.525,
+      "radius": 48.44405418419326,
+      "radius_slope": 1.3028171005096212,
+      "radius_second_derivative": -2.8453208886398355e-05
+    },
+    {
+      "axis_y": 181.55,
+      "radius": 48.476631537248046,
+      "radius_slope": 1.3028139747659162,
+      "radius_second_derivative": -8.486044635666048e-06
+    },
+    {
+      "axis_y": 181.575,
+      "radius": 48.50919458944547,
+      "radius_slope": 1.3028116884810494,
+      "radius_second_derivative": -9.341780157639645e-06
+    },
+    {
+      "axis_y": 181.6,
+      "radius": 48.541757641642896,
+      "radius_slope": 1.3028081587195526,
+      "radius_second_derivative": -3.1091726925291775e-05
+    },
+    {
+      "axis_y": 181.625,
+      "radius": 48.57433499469767,
+      "radius_slope": 1.3028032977767177,
+      "radius_second_derivative": -3.394417878853124e-05
+    },
+    {
+      "axis_y": 181.65,
+      "radius": 48.60691234775245,
+      "radius_slope": 1.3027990131787432,
+      "radius_second_derivative": -1.7970447569035645e-05
+    },
+    {
+      "axis_y": 181.675,
+      "radius": 48.63947539994987,
+      "radius_slope": 1.302795204691873,
+      "radius_second_derivative": -2.3104861411290024e-05
+    },
+    {
+      "axis_y": 181.7,
+      "radius": 48.6720384521473,
+      "radius_slope": 1.302791772082097,
+      "radius_second_derivative": -9.413091642432774e-06
+    },
+    {
+      "axis_y": 181.725,
+      "radius": 48.70463010605943,
+      "radius_slope": 1.3027948191673897,
+      "radius_second_derivative": 4.635234808061831e-06
+    },
+    {
+      "axis_y": 181.75,
+      "radius": 48.7371788573995,
+      "radius_slope": 1.3027983047758316,
+      "radius_second_derivative": 5.704907246628069e-07
+    },
+    {
+      "axis_y": 181.775,
+      "radius": 48.76975621045428,
+      "radius_slope": 1.3033479097310174,
+      "radius_second_derivative": -0.002391994954670961
+    },
+    {
+      "axis_y": 181.8,
+      "radius": 48.80233356350906,
+      "radius_slope": 1.3045049082666653,
+      "radius_second_derivative": -0.008130771868226685
+    },
+    {
+      "axis_y": 181.825,
+      "radius": 48.834910916563835,
+      "radius_slope": 1.3059487248367971,
+      "radius_second_derivative": -0.01668092549488435
+    },
+    {
+      "axis_y": 181.85,
+      "radius": 48.86747396876126,
+      "radius_slope": 1.307400319315942,
+      "radius_second_derivative": -0.027517604663060614
+    },
+    {
+      "axis_y": 181.875,
+      "radius": 48.90005132181604,
+      "radius_slope": 1.3086402312546996,
+      "radius_second_derivative": -0.04016288103601832
+    },
+    {
+      "axis_y": 181.9,
+      "radius": 48.93260007315611,
+      "radius_slope": 1.309483791813156,
+      "radius_second_derivative": -0.054182825350409
+    },
+    {
+      "axis_y": 181.925,
+      "radius": 48.965163125353534,
+      "radius_slope": 1.309768480683524,
+      "radius_second_derivative": -0.0691534919242394
+    },
+    {
+      "axis_y": 181.95,
+      "radius": 48.99774047840831,
+      "radius_slope": 1.3093841153353907,
+      "radius_second_derivative": -0.08466091865682294
+    },
+    {
+      "axis_y": 181.975,
+      "radius": 49.030317831463094,
+      "radius_slope": 1.308239407251289,
+      "radius_second_derivative": -0.10034099004838706
+    },
+    {
+      "axis_y": 182.0,
+      "radius": 49.06288088366051,
+      "radius_slope": 1.3062943522330728,
+      "radius_second_derivative": -0.11585797249534543
+    },
+    {
+      "axis_y": 182.025,
+      "radius": 49.095443935857936,
+      "radius_slope": 1.3035270497516211,
+      "radius_second_derivative": -0.1309015905292347
+    },
+    {
+      "axis_y": 182.05,
+      "radius": 49.12803558977007,
+      "radius_slope": 1.2999312096286149,
+      "radius_second_derivative": -0.14519287434245232
+    },
+    {
+      "axis_y": 182.075,
+      "radius": 49.160598641967496,
+      "radius_slope": 1.2955423382907592,
+      "radius_second_derivative": -0.15852124166373352
+    },
+    {
+      "axis_y": 182.1,
+      "radius": 49.19316169416492,
+      "radius_slope": 1.2904023570584795,
+      "radius_second_derivative": -0.17060330138531168
+    },
+    {
+      "axis_y": 182.125,
+      "radius": 49.2257390472197,
+      "radius_slope": 1.284588046745097,
+      "radius_second_derivative": -0.18128245389004993
+    },
+    {
+      "axis_y": 182.15,
+      "radius": 49.25831640027448,
+      "radius_slope": 1.2781654589025115,
+      "radius_second_derivative": -0.19037207750605692
+    },
+    {
+      "axis_y": 182.175,
+      "radius": 49.290879452471906,
+      "radius_slope": 1.2712344511176374,
+      "radius_second_derivative": -0.1977568618589539
+    },
+    {
+      "axis_y": 182.2,
+      "radius": 49.32345680552668,
+      "radius_slope": 1.263909839882801,
+      "radius_second_derivative": -0.20332563263150602
+    },
+    {
+      "axis_y": 182.225,
+      "radius": 49.35601985772411,
+      "radius_slope": 1.2562964192283694,
+      "radius_second_derivative": -0.2069557343868246
+    },
+    {
+      "axis_y": 182.25,
+      "radius": 49.38858290992153,
+      "radius_slope": 1.2485089429252656,
+      "radius_second_derivative": -0.2086571507070531
+    },
+    {
+      "axis_y": 182.275,
+      "radius": 49.41930115152015,
+      "radius_slope": 1.2406859724487491,
+      "radius_second_derivative": -0.2083455916349519
+    },
+    {
+      "axis_y": 182.3,
+      "radius": 49.44901833310392,
+      "radius_slope": 1.2329423502768626,
+      "radius_second_derivative": -0.20606355870560733
+    },
+    {
+      "axis_y": 182.325,
+      "radius": 49.47873551468769,
+      "radius_slope": 1.225399582436526,
+      "radius_second_derivative": -0.20184499609793932
+    },
+    {
+      "axis_y": 182.35,
+      "radius": 49.50846699712882,
+      "radius_slope": 1.2181791363647716,
+      "radius_second_derivative": -0.19577091344935746
+    },
+    {
+      "axis_y": 182.375,
+      "radius": 49.53818417871259,
+      "radius_slope": 1.2113875967704515,
+      "radius_second_derivative": -0.1878709762607708
+    },
+    {
+      "axis_y": 182.4,
+      "radius": 49.56788705943901,
+      "radius_slope": 1.2051285058380443,
+      "radius_second_derivative": -0.1783045652898133
+    },
+    {
+      "axis_y": 182.425,
+      "radius": 49.59760424102278,
+      "radius_slope": 1.1994998699095862,
+      "radius_second_derivative": -0.16715810983190443
+    },
+    {
+      "axis_y": 182.45,
+      "radius": 49.62732142260655,
+      "radius_slope": 1.1945815289365544,
+      "radius_second_derivative": -0.15464468805336548
+    },
+    {
+      "axis_y": 182.475,
+      "radius": 49.65705290504768,
+      "radius_slope": 1.1904286601713008,
+      "radius_second_derivative": -0.1409872190797475
+    },
+    {
+      "axis_y": 182.5,
+      "radius": 49.68677008663145,
+      "radius_slope": 1.1870814298389372,
+      "radius_second_derivative": -0.12641860561883464
+    },
+    {
+      "axis_y": 182.525,
+      "radius": 49.71648726821522,
+      "radius_slope": 1.184564495049956,
+      "radius_second_derivative": -0.11117881019744515
+    },
+    {
+      "axis_y": 182.55,
+      "radius": 49.74621875065635,
+      "radius_slope": 1.1828743607234207,
+      "radius_second_derivative": -0.09555471817697914
+    },
+    {
+      "axis_y": 182.575,
+      "radius": 49.775921631382765,
+      "radius_slope": 1.181968674456526,
+      "radius_second_derivative": -0.07990452622022373
+    },
+    {
+      "axis_y": 182.6,
+      "radius": 49.80565311382389,
+      "radius_slope": 1.181796415770283,
+      "radius_second_derivative": -0.06453508685419801
+    },
+    {
+      "axis_y": 182.625,
+      "radius": 49.835355994550305,
+      "radius_slope": 1.1822667106896743,
+      "radius_second_derivative": -0.049818716378342065
+    },
+    {
+      "axis_y": 182.65,
+      "radius": 49.86508747699143,
+      "radius_slope": 1.1832443306657336,
+      "radius_second_derivative": -0.03615903675457495
+    },
+    {
+      "axis_y": 182.675,
+      "radius": 49.894804658575204,
+      "radius_slope": 1.1845758788300331,
+      "radius_second_derivative": -0.024028057481145608
+    },
+    {
+      "axis_y": 182.7,
+      "radius": 49.924507539301615,
+      "radius_slope": 1.1860586045744825,
+      "radius_second_derivative": -0.013843520156682675
+    },
+    {
+      "axis_y": 182.725,
+      "radius": 49.954239021742744,
+      "radius_slope": 1.1874399054645273,
+      "radius_second_derivative": -0.006094477680369296
+    },
+    {
+      "axis_y": 182.75,
+      "radius": 49.983956203326514,
+      "radius_slope": 1.1884435134935005,
+      "radius_second_derivative": -0.0012983648491011986
+    },
+    {
+      "axis_y": 182.775,
+      "radius": 50.013673384910284,
+      "radius_slope": 1.1887363144322296,
+      "radius_second_derivative": 1.9254052465496316e-06
+    },
+    {
+      "axis_y": 182.8,
+      "radius": 50.043390566494054,
+      "radius_slope": 1.1887407738381037,
+      "radius_second_derivative": -1.447619412400956e-05
+    },
+    {
+      "axis_y": 182.825,
+      "radius": 50.07310774807783,
+      "radius_slope": 1.1887404823830898,
+      "radius_second_derivative": -9.270469090110686e-06
+    },
+    {
+      "axis_y": 182.85,
+      "radius": 50.10281062880424,
+      "radius_slope": 1.1887416817066934,
+      "radius_second_derivative": -3.351630980175697e-06
+    },
+    {
+      "axis_y": 182.875,
+      "radius": 50.13254211124537,
+      "radius_slope": 1.1887382554616555,
+      "radius_second_derivative": -1.7613890920495803e-05
+    },
+    {
+      "axis_y": 182.9,
+      "radius": 50.16225929282914,
+      "radius_slope": 1.1887300783556582,
+      "radius_second_derivative": -1.4547505255369406e-05
+    },
+    {
+      "axis_y": 182.925,
+      "radius": 50.19199077527027,
+      "radius_slope": 1.1887334164951262,
+      "radius_second_derivative": -1.2122921004178254e-05
+    },
+    {
+      "axis_y": 182.95,
+      "radius": 50.22170795685404,
+      "radius_slope": 1.1887380950624273,
+      "radius_second_derivative": -6.845884828281178e-06
+    },
+    {
+      "axis_y": 182.975,
+      "radius": 50.25142513843781,
+      "radius_slope": 1.188744389700722,
+      "radius_second_derivative": 1.854093891782163e-06
+    },
+    {
+      "axis_y": 183.0,
+      "radius": 50.28114232002158,
+      "radius_slope": 1.1887464221182382,
+      "radius_second_derivative": -6.917195790607624e-06
+    },
+    {
+      "axis_y": 183.025,
+      "radius": 50.31085950160535,
+      "radius_slope": 1.1887443050781283,
+      "radius_second_derivative": 4.349989472917612e-06
+    },
+    {
+      "axis_y": 183.05,
+      "radius": 50.34057668318912,
+      "radius_slope": 1.1887441423985778,
+      "radius_second_derivative": 1.476143926293323e-05
+    },
+    {
+      "axis_y": 183.075,
+      "radius": 50.3702938647729,
+      "radius_slope": 1.1887396799106091,
+      "radius_second_derivative": 3.4229423526739123e-06
+    },
+    {
+      "axis_y": 183.1,
+      "radius": 50.40001104635667,
+      "radius_slope": 1.188745251135854,
+      "radius_second_derivative": -7.772931533624836e-06
+    },
+    {
+      "axis_y": 183.125,
+      "radius": 50.42972822794044,
+      "radius_slope": 1.1887361472673066,
+      "radius_second_derivative": 1.4262288920676184e-07
+    },
+    {
+      "axis_y": 183.15,
+      "radius": 50.459459710381566,
+      "radius_slope": 1.1887389345211614,
+      "radius_second_derivative": 6.2753945563441396e-06
+    },
+    {
+      "axis_y": 183.175,
+      "radius": 50.48916259110798,
+      "radius_slope": 1.1887329375024214,
+      "radius_second_derivative": 1.1195874171173097e-05
+    },
+    {
+      "axis_y": 183.2,
+      "radius": 50.51887977269175,
+      "radius_slope": 1.188728218265346,
+      "radius_second_derivative": 1.2550788942472773e-05
+    },
+    {
+      "axis_y": 183.225,
+      "radius": 50.548611255132876,
+      "radius_slope": 1.1887348889811726,
+      "radius_second_derivative": 1.3834392496123058e-05
+    },
+    {
+      "axis_y": 183.25,
+      "radius": 50.578328436716646,
+      "radius_slope": 1.1887324246056137,
+      "radius_second_derivative": 1.5617175161981402e-05
+    },
+    {
+      "axis_y": 183.275,
+      "radius": 50.608045618300416,
+      "radius_slope": 1.1887352338357198,
+      "radius_second_derivative": -2.9950746472435562e-06
+    },
+    {
+      "axis_y": 183.3,
+      "radius": 50.637748499026834,
+      "radius_slope": 1.1887372253829762,
+      "radius_second_derivative": -2.0109786637566978e-05
+    },
+    {
+      "axis_y": 183.325,
+      "radius": 50.66747998146796,
+      "radius_slope": 1.1887343533061985,
+      "radius_second_derivative": -1.675815551318103e-05
+    },
+    {
+      "axis_y": 183.35,
+      "radius": 50.69719716305173,
+      "radius_slope": 1.1887369553028833,
+      "radius_second_derivative": -3.237533043402401e-05
+    },
+    {
+      "axis_y": 183.375,
+      "radius": 50.7269143446355,
+      "radius_slope": 1.1887410731366423,
+      "radius_second_derivative": -5.06310201348445e-06
+    },
+    {
+      "axis_y": 183.4,
+      "radius": 50.75664582707663,
+      "radius_slope": 1.1887427986880497,
+      "radius_second_derivative": 4.421300694113263e-06
+    },
+    {
+      "axis_y": 183.425,
+      "radius": 50.78634870780304,
+      "radius_slope": 1.1887422196619617,
+      "radius_second_derivative": 3.373024515567729e-05
+    },
+    {
+      "axis_y": 183.45,
+      "radius": 50.81606588938681,
+      "radius_slope": 1.188743419586977,
+      "radius_second_derivative": 2.2106503294440485e-05
+    },
+    {
+      "axis_y": 183.475,
+      "radius": 50.84578307097059,
+      "radius_slope": 1.1887443280568561,
+      "radius_second_derivative": 9.983582238252038e-06
+    },
+    {
+      "axis_y": 183.5,
+      "radius": 50.87550025255436,
+      "radius_slope": 1.1887407237212244,
+      "radius_second_derivative": 1.6330288246291908e-05
+    },
+    {
+      "axis_y": 183.525,
+      "radius": 50.90523173499548,
+      "radius_slope": 1.1887427688684,
+      "radius_second_derivative": 1.7114715853267802e-06
+    },
+    {
+      "axis_y": 183.55,
+      "radius": 50.93494891657926,
+      "radius_slope": 1.1887443220928413,
+      "radius_second_derivative": -1.1980298265092031e-05
+    },
+    {
+      "axis_y": 183.575,
+      "radius": 50.96466609816303,
+      "radius_slope": 1.1887454836282985,
+      "radius_second_derivative": -2.4317153475418868e-05
+    },
+    {
+      "axis_y": 183.6,
+      "radius": 50.99436897888944,
+      "radius_slope": 1.1887463912963532,
+      "radius_second_derivative": -3.487122580357225e-05
+    },
+    {
+      "axis_y": 183.625,
+      "radius": 51.02411476218792,
+      "radius_slope": 1.188747220506272,
+      "radius_second_derivative": -4.32146477497984e-05
+    },
+    {
+      "axis_y": 183.65,
+      "radius": 51.05381764291434,
+      "radius_slope": 1.1894405724140278,
+      "radius_second_derivative": -0.003108174346302584
+    },
+    {
+      "axis_y": 183.675,
+      "radius": 51.08354912535547,
+      "radius_slope": 1.1906900187235454,
+      "radius_second_derivative": -0.009496454585316222
+    },
+    {
+      "axis_y": 183.7,
+      "radius": 51.11326630693924,
+      "radius_slope": 1.1921927537038421,
+      "radius_second_derivative": -0.0186452665804442
+    },
+    {
+      "axis_y": 183.725,
+      "radius": 51.142969187665656,
+      "radius_slope": 1.193667771342118,
+      "radius_second_derivative": -0.03003931487368446
+    },
+    {
+      "axis_y": 183.75,
+      "radius": 51.17270067010678,
+      "radius_slope": 1.1948945903569435,
+      "radius_second_derivative": -0.04327226767475384
+    },
+    {
+      "axis_y": 183.775,
+      "radius": 51.202403550833196,
+      "radius_slope": 1.1956694172567341,
+      "radius_second_derivative": -0.05778875257521313
+    },
+    {
+      "axis_y": 183.8,
+      "radius": 51.232120732416966,
+      "radius_slope": 1.1958558230416776,
+      "radius_second_derivative": -0.07320368855134242
+    },
+    {
+      "axis_y": 183.825,
+      "radius": 51.261852214858095,
+      "radius_slope": 1.1953391043319552,
+      "radius_second_derivative": -0.08905961360982531
+    },
+    {
+      "axis_y": 183.85,
+      "radius": 51.291555095584506,
+      "radius_slope": 1.194050674859826,
+      "radius_second_derivative": -0.10510629639768912
+    },
+    {
+      "axis_y": 183.875,
+      "radius": 51.321286578025635,
+      "radius_slope": 1.191934822172687,
+      "radius_second_derivative": -0.12094154117882557
+    },
+    {
+      "axis_y": 183.9,
+      "radius": 51.351003759609405,
+      "radius_slope": 1.188968503701309,
+      "radius_second_derivative": -0.13623517663282567
+    },
+    {
+      "axis_y": 183.925,
+      "radius": 51.380735242050534,
+      "radius_slope": 1.1851545246911726,
+      "radius_second_derivative": -0.15072891322819615
+    },
+    {
+      "axis_y": 183.95,
+      "radius": 51.41043812277695,
+      "radius_slope": 1.1805437286322964,
+      "radius_second_derivative": -0.16416916797993006
+    },
+    {
+      "axis_y": 183.975,
+      "radius": 51.44015530436072,
+      "radius_slope": 1.1751772706821755,
+      "radius_second_derivative": -0.17632852915106817
+    },
+    {
+      "axis_y": 184.0,
+      "radius": 51.469886786801844,
+      "radius_slope": 1.1691209530860571,
+      "radius_second_derivative": -0.18699306283948708
+    },
+    {
+      "axis_y": 184.025,
+      "radius": 51.49958966752826,
+      "radius_slope": 1.1624666149198972,
+      "radius_second_derivative": -0.1960177931719035
+    },
+    {
+      "axis_y": 184.05,
+      "radius": 51.52930684911203,
+      "radius_slope": 1.155311227084566,
+      "radius_second_derivative": -0.20330538022207856
+    },
+    {
+      "axis_y": 184.075,
+      "radius": 51.5590240306958,
+      "radius_slope": 1.147754143039992,
+      "radius_second_derivative": -0.20867077116571928
+    },
+    {
+      "axis_y": 184.1,
+      "radius": 51.58874121227957,
+      "radius_slope": 1.1399252301741405,
+      "radius_second_derivative": -0.21207773986158185
+    },
+    {
+      "axis_y": 184.125,
+      "radius": 51.61845839386335,
+      "radius_slope": 1.1319580238588687,
+      "radius_second_derivative": -0.2134733020135721
+    },
+    {
+      "axis_y": 184.15,
+      "radius": 51.645815933983535,
+      "radius_slope": 1.1239522878616728,
+      "radius_second_derivative": -0.2128579568012029
+    },
+    {
+      "axis_y": 184.175,
+      "radius": 51.672630041524236,
+      "radius_slope": 1.1160553783798461,
+      "radius_second_derivative": -0.21020289445845466
+    },
+    {
+      "axis_y": 184.2,
+      "radius": 51.69942984820758,
+      "radius_slope": 1.1083775127236042,
+      "radius_second_derivative": -0.20556680418591414
+    },
+    {
+      "axis_y": 184.225,
+      "radius": 51.726243955748274,
+      "radius_slope": 1.101048843371034,
+      "radius_second_derivative": -0.19901892925644132
+    },
+    {
+      "axis_y": 184.25,
+      "radius": 51.753015160716906,
+      "radius_slope": 1.0941882224314066,
+      "radius_second_derivative": -0.19063321948846457
+    },
+    {
+      "axis_y": 184.275,
+      "radius": 51.77984356911496,
+      "radius_slope": 1.087884304399441,
+      "radius_second_derivative": -0.18055550649232446
+    },
+    {
+      "axis_y": 184.3,
+      "radius": 51.8066433757983,
+      "radius_slope": 1.0822442276262554,
+      "radius_second_derivative": -0.16892071124831648
+    },
+    {
+      "axis_y": 184.325,
+      "radius": 51.83347178419636,
+      "radius_slope": 1.0773440297408186,
+      "radius_second_derivative": -0.15594832993931337
+    },
+    {
+      "axis_y": 184.35,
+      "radius": 51.860242989164995,
+      "radius_slope": 1.073226091685931,
+      "radius_second_derivative": -0.14183147356749568
+    },
+    {
+      "axis_y": 184.375,
+      "radius": 51.88704279584834,
+      "radius_slope": 1.0699456181281757,
+      "radius_second_derivative": -0.1267923481453415
+    },
+    {
+      "axis_y": 184.4,
+      "radius": 51.91385690338903,
+      "radius_slope": 1.067504448484004,
+      "radius_second_derivative": -0.11112211771340332
+    },
+    {
+      "axis_y": 184.425,
+      "radius": 51.940671010929734,
+      "radius_slope": 1.065908130974692,
+      "radius_second_derivative": -0.09514104132220606
+    },
+    {
+      "axis_y": 184.45,
+      "radius": 51.96745651675572,
+      "radius_slope": 1.065107932934385,
+      "radius_second_derivative": -0.0791771509545285
+    },
+    {
+      "axis_y": 184.475,
+      "radius": 51.99425632343906,
+      "radius_slope": 1.0650433755134845,
+      "radius_second_derivative": -0.0635291696482542
+    },
+    {
+      "axis_y": 184.5,
+      "radius": 52.02107043097976,
+      "radius_slope": 1.0656171323806942,
+      "radius_second_derivative": -0.04862318242416658
+    },
+    {
+      "axis_y": 184.525,
+      "radius": 52.047870237663105,
+      "radius_slope": 1.0666842744764822,
+      "radius_second_derivative": -0.03487728743811782
+    },
+    {
+      "axis_y": 184.55,
+      "radius": 52.07465574348909,
+      "radius_slope": 1.0680928094848925,
+      "radius_second_derivative": -0.022735754092401708
+    },
+    {
+      "axis_y": 184.575,
+      "radius": 52.10148415188714,
+      "radius_slope": 1.0696155549122988,
+      "radius_second_derivative": -0.01265048209801623
+    },
+    {
+      "axis_y": 184.6,
+      "radius": 52.12828395857049,
+      "radius_slope": 1.0710072121423486,
+      "radius_second_derivative": -0.005163793896590206
+    },
+    {
+      "axis_y": 184.625,
+      "radius": 52.155069464396476,
+      "radius_slope": 1.0719565265037003,
+      "radius_second_derivative": -0.0007672382825818773
+    },
+    {
+      "axis_y": 184.65,
+      "radius": 52.18188357193718,
+      "radius_slope": 1.0721164263984237,
+      "radius_second_derivative": -2.4245841982351556e-05
+    },
+    {
+      "axis_y": 184.675,
+      "radius": 52.20868337862052,
+      "radius_slope": 1.0721211329059184,
+      "radius_second_derivative": -2.260568234636397e-05
+    },
+    {
+      "axis_y": 184.7,
+      "radius": 52.235497486161215,
+      "radius_slope": 1.0721222315947503,
+      "radius_second_derivative": -3.793761186113941e-05
+    },
+    {
+      "axis_y": 184.725,
+      "radius": 52.26229729284456,
+      "radius_slope": 1.0721199104034222,
+      "radius_second_derivative": -3.201877385286106e-05
+    },
+    {
+      "axis_y": 184.75,
+      "radius": 52.2890970995279,
+      "radius_slope": 1.0721142069195846,
+      "radius_second_derivative": -4.6494967619891295e-05
+    },
+    {
+      "axis_y": 184.775,
+      "radius": 52.3159112070686,
+      "radius_slope": 1.0721216127757636,
+      "radius_second_derivative": -1.875487188872642e-05
+    },
+    {
+      "axis_y": 184.8,
+      "radius": 52.342711013751945,
+      "radius_slope": 1.072117644691457,
+      "radius_second_derivative": -8.842601241652078e-06
+    },
+    {
+      "axis_y": 184.825,
+      "radius": 52.36949651957793,
+      "radius_slope": 1.0721209577724673,
+      "radius_second_derivative": -1.8398315503783878e-05
+    },
+    {
+      "axis_y": 184.85,
+      "radius": 52.39631062711863,
+      "radius_slope": 1.0721047728056095,
+      "radius_second_derivative": -3.066385923759217e-05
+    },
+    {
+      "axis_y": 184.875,
+      "radius": 52.42311043380197,
+      "radius_slope": 1.0721099895285582,
+      "radius_second_derivative": -4.449825148312043e-05
+    },
+    {
+      "axis_y": 184.9,
+      "radius": 52.449924541342675,
+      "radius_slope": 1.072112036956141,
+      "radius_second_derivative": -3.437204676110517e-05
+    },
+    {
+      "axis_y": 184.925,
+      "radius": 52.47671004716866,
+      "radius_slope": 1.0721069944397026,
+      "radius_second_derivative": -2.3390106592767546e-05
+    },
+    {
+      "axis_y": 184.95,
+      "radius": 52.503509853852,
+      "radius_slope": 1.0720989329787254,
+      "radius_second_derivative": -3.4657292128164524e-05
+    },
+    {
+      "axis_y": 184.975,
+      "radius": 52.5303239613927,
+      "radius_slope": 1.0720979772737036,
+      "radius_second_derivative": -2.7026982730779913e-05
+    },
+    {
+      "axis_y": 185.0,
+      "radius": 52.557123768076046,
+      "radius_slope": 1.0720958224454609,
+      "radius_second_derivative": 7.844245667395348e-07
+    },
+    {
+      "axis_y": 185.025,
+      "radius": 52.58393787561674,
+      "radius_slope": 1.072092418377119,
+      "radius_second_derivative": 7.273752698016766e-06
+    },
+    {
+      "axis_y": 185.05,
+      "radius": 52.61072338144273,
+      "radius_slope": 1.0720917734221604,
+      "radius_second_derivative": 1.2265543498579821e-05
+    },
+    {
+      "axis_y": 185.075,
+      "radius": 52.637537488983426,
+      "radius_slope": 1.072095820165082,
+      "radius_second_derivative": 5.7049040327482485e-05
+    },
+    {
+      "axis_y": 185.1,
+      "radius": 52.66432299480942,
+      "radius_slope": 1.0720942083790506,
+      "radius_second_derivative": 6.025804921515454e-05
+    },
+    {
+      "axis_y": 185.125,
+      "radius": 52.69113710235011,
+      "radius_slope": 1.0720949923583096,
+      "radius_second_derivative": 6.025804915605212e-05
+    },
+    {
+      "axis_y": 185.15,
+      "radius": 52.71795120989081,
+      "radius_slope": 1.0720999543367167,
+      "radius_second_derivative": 9.83382834974086e-05
+    },
+    {
+      "axis_y": 185.175,
+      "radius": 52.744736715716805,
+      "radius_slope": 1.0721089940805388,
+      "radius_second_derivative": 9.605632172052353e-05
+    },
+    {
+      "axis_y": 185.2,
+      "radius": 52.77153652240015,
+      "radius_slope": 1.0721201288880744,
+      "radius_second_derivative": 9.470140716790337e-05
+    },
+    {
+      "axis_y": 185.225,
+      "radius": 52.79835062994084,
+      "radius_slope": 1.072123096237206,
+      "radius_second_derivative": 9.263337969882471e-05
+    },
+    {
+      "axis_y": 185.25,
+      "radius": 52.825150436624185,
+      "radius_slope": 1.0721280333576215,
+      "radius_second_derivative": 8.821207908036296e-05
+    },
+    {
+      "axis_y": 185.275,
+      "radius": 52.85195024330753,
+      "radius_slope": 1.0721347898985336,
+      "radius_second_derivative": 8.272110889808374e-05
+    },
+    {
+      "axis_y": 185.3,
+      "radius": 52.87876435084823,
+      "radius_slope": 1.0721371242205615,
+      "radius_second_derivative": 5.597937092206036e-05
+    },
+    {
+      "axis_y": 185.325,
+      "radius": 52.90554985667421,
+      "radius_slope": 1.0721348483849946,
+      "radius_second_derivative": 4.620972285094928e-05
+    },
+    {
+      "axis_y": 185.35,
+      "radius": 52.932378265072266,
+      "radius_slope": 1.0721400322061976,
+      "radius_second_derivative": 5.4695767688746534e-05
+    },
+    {
+      "axis_y": 185.375,
+      "radius": 52.9591494700409,
+      "radius_slope": 1.072142312928054,
+      "radius_second_derivative": 4.285809185067916e-05
+    },
+    {
+      "axis_y": 185.4,
+      "radius": 52.9859635775816,
+      "radius_slope": 1.072145786608593,
+      "radius_second_derivative": 3.052123657297519e-05
+    },
+    {
+      "axis_y": 185.425,
+      "radius": 53.0127776851223,
+      "radius_slope": 1.072140065433525,
+      "radius_second_derivative": 1.6045042425324372e-05
+    },
+    {
+      "axis_y": 185.45,
+      "radius": 53.039577491805645,
+      "radius_slope": 1.072141365391986,
+      "radius_second_derivative": 1.9254051173513908e-05
+    },
+    {
+      "axis_y": 185.475,
+      "radius": 53.06637729848899,
+      "radius_slope": 1.0721454776627983,
+      "radius_second_derivative": 2.3033550238558653e-05
+    },
+    {
+      "axis_y": 185.5,
+      "radius": 53.09319140602968,
+      "radius_slope": 1.072490406890708,
+      "radius_second_derivative": -0.0015130118637998059
+    },
+    {
+      "axis_y": 185.525,
+      "radius": 53.119991212713025,
+      "radius_slope": 1.0733131912002585,
+      "radius_second_derivative": -0.005564706028550352
+    },
+    {
+      "axis_y": 185.55,
+      "radius": 53.14679101939637,
+      "radius_slope": 1.074358780270204,
+      "radius_second_derivative": -0.01171523439119757
+    },
+    {
+      "axis_y": 185.575,
+      "radius": 53.17360512693707,
+      "radius_slope": 1.0754430821567655,
+      "radius_second_derivative": -0.01958728886087822
+    },
+    {
+      "axis_y": 185.6,
+      "radius": 53.20040493362041,
+      "radius_slope": 1.0763731424357954,
+      "radius_second_derivative": -0.028824526868509226
+    },
+    {
+      "axis_y": 185.625,
+      "radius": 53.227204740303755,
+      "radius_slope": 1.077027477757302,
+      "radius_second_derivative": -0.03909157136770918
+    },
+    {
+      "axis_y": 185.65,
+      "radius": 53.25401884784445,
+      "radius_slope": 1.0772762549873545,
+      "radius_second_derivative": -0.05009255177248739
+    },
+    {
+      "axis_y": 185.675,
+      "radius": 53.28080435367044,
+      "radius_slope": 1.0770306743162028,
+      "radius_second_derivative": -0.061537088466771805
+    },
+    {
+      "axis_y": 185.7,
+      "radius": 53.30760416035378,
+      "radius_slope": 1.0762347301072823,
+      "radius_second_derivative": -0.07309443963858818
+    },
+    {
+      "axis_y": 185.725,
+      "radius": 53.334418267894485,
+      "radius_slope": 1.0748554204019767,
+      "radius_second_derivative": -0.08457163690832005
+    },
+    {
+      "axis_y": 185.75,
+      "radius": 53.36121807457783,
+      "radius_slope": 1.072862556080013,
+      "radius_second_derivative": -0.09573827346426284
+    },
+    {
+      "axis_y": 185.775,
+      "radius": 53.38801788126117,
+      "radius_slope": 1.0702616093852773,
+      "radius_second_derivative": -0.10636650970099963
+    },
+    {
+      "axis_y": 185.8,
+      "radius": 53.41481768794451,
+      "radius_slope": 1.0670713220252968,
+      "radius_second_derivative": -0.11626801247363536
+    },
+    {
+      "axis_y": 185.825,
+      "radius": 53.44163179548521,
+      "radius_slope": 1.06331985561301,
+      "radius_second_derivative": -0.12529687886102284
+    },
+    {
+      "axis_y": 185.85,
+      "radius": 53.46843160216855,
+      "radius_slope": 1.0590696914948867,
+      "radius_second_derivative": -0.13328538468471982
+    },
+    {
+      "axis_y": 185.875,
+      "radius": 53.49523140885189,
+      "radius_slope": 1.0543541511740884,
+      "radius_second_derivative": -0.14012970069031278
+    },
+    {
+      "axis_y": 185.9,
+      "radius": 53.522031215535236,
+      "radius_slope": 1.0492698748551146,
+      "radius_second_derivative": -0.14566709449094223
+    },
+    {
+      "axis_y": 185.925,
+      "radius": 53.54884532307594,
+      "radius_slope": 1.0438806593037904,
+      "radius_second_derivative": -0.14987260713060177
+    },
+    {
+      "axis_y": 185.95,
+      "radius": 53.57564512975928,
+      "radius_slope": 1.0382690420162601,
+      "radius_second_derivative": -0.15268676498512707
+    },
+    {
+      "axis_y": 185.975,
+      "radius": 53.60244493644262,
+      "radius_slope": 1.0325238657768014,
+      "radius_second_derivative": -0.1540311969347532
+    },
+    {
+      "axis_y": 186.0,
+      "radius": 53.62807207282285,
+      "radius_slope": 1.0267510257356338,
+      "radius_second_derivative": -0.15394398321397743
+    },
+    {
+      "axis_y": 186.025,
+      "radius": 53.65275535261765,
+      "radius_slope": 1.0210203901758916,
+      "radius_second_derivative": -0.15238590260795468
+    },
+    {
+      "axis_y": 186.05,
+      "radius": 53.67746723412716,
+      "radius_slope": 1.0154335326638078,
+      "radius_second_derivative": -0.14938162882667658
+    },
+    {
+      "axis_y": 186.075,
+      "radius": 53.70215051392196,
+      "radius_slope": 1.0100745985222608,
+      "radius_second_derivative": -0.14495533640026312
+    },
+    {
+      "axis_y": 186.1,
+      "radius": 53.72686239543146,
+      "radius_slope": 1.0050312016680405,
+      "radius_second_derivative": -0.13923203403916912
+    },
+    {
+      "axis_y": 186.125,
+      "radius": 53.75154567522626,
+      "radius_slope": 1.0003782367632605,
+      "radius_second_derivative": -0.13225650524001487
+    },
+    {
+      "axis_y": 186.15,
+      "radius": 53.77624325587841,
+      "radius_slope": 0.9961842367003239,
+      "radius_second_derivative": -0.12413450466217232
+    },
+    {
+      "axis_y": 186.175,
+      "radius": 53.800940836530565,
+      "radius_slope": 0.9925013189922257,
+      "radius_second_derivative": -0.11501421718719948
+    },
+    {
+      "axis_y": 186.2,
+      "radius": 53.825652718040075,
+      "radius_slope": 0.9893816930161625,
+      "radius_second_derivative": -0.10498492456412023
+    },
+    {
+      "axis_y": 186.225,
+      "radius": 53.85033599783487,
+      "radius_slope": 0.9868594769345814,
+      "radius_second_derivative": -0.09425514103508756
+    },
+    {
+      "axis_y": 186.25,
+      "radius": 53.87503357848702,
+      "radius_slope": 0.9849490491982944,
+      "radius_second_derivative": -0.08305434636626638
+    },
+    {
+      "axis_y": 186.275,
+      "radius": 53.89973115913917,
+      "radius_slope": 0.9836430134478594,
+      "radius_second_derivative": -0.07153471887264963
+    },
+    {
+      "axis_y": 186.3,
+      "radius": 53.924428739791324,
+      "radius_slope": 0.9829350905813331,
+      "radius_second_derivative": -0.05998635292488262
+    },
+    {
+      "axis_y": 186.325,
+      "radius": 53.94912632044348,
+      "radius_slope": 0.9827670395206067,
+      "radius_second_derivative": -0.04860057674240603
+    },
+    {
+      "axis_y": 186.35,
+      "radius": 53.973809600238276,
+      "radius_slope": 0.9830738440284675,
+      "radius_second_derivative": -0.03769394118815809
+    },
+    {
+      "axis_y": 186.375,
+      "radius": 53.99852148174779,
+      "radius_slope": 0.9837694628067704,
+      "radius_second_derivative": -0.027542634929483296
+    },
+    {
+      "axis_y": 186.4,
+      "radius": 54.02321906239994,
+      "radius_slope": 0.9847326494083174,
+      "radius_second_derivative": -0.018443812156037128
+    },
+    {
+      "axis_y": 186.425,
+      "radius": 54.04791664305209,
+      "radius_slope": 0.9858236527814528,
+      "radius_second_derivative": -0.010755455596984582
+    },
+    {
+      "axis_y": 186.45,
+      "radius": 54.07261422370424,
+      "radius_slope": 0.9868640264306184,
+      "radius_second_derivative": -0.004875054440583364
+    },
+    {
+      "axis_y": 186.475,
+      "radius": 54.097326105213746,
+      "radius_slope": 0.9876429859014003,
+      "radius_second_derivative": -0.0011413373655351138
+    },
+    {
+      "axis_y": 186.5,
+      "radius": 54.121995084151195,
+      "radius_slope": 0.9879175622136714,
+      "radius_second_derivative": 4.599578905851917e-05
+    },
+    {
+      "axis_y": 186.525,
+      "radius": 54.1467069656607,
+      "radius_slope": 0.9879174845573516,
+      "radius_second_derivative": 2.6385181346986936e-05
+    },
+    {
+      "axis_y": 186.55,
+      "radius": 54.17140454631285,
+      "radius_slope": 0.9879215530760789,
+      "radius_second_derivative": 2.631386978004103e-05
+    },
+    {
+      "axis_y": 186.575,
+      "radius": 54.19611642782236,
+      "radius_slope": 0.9879194551306464,
+      "radius_second_derivative": 5.776215336569298e-06
+    },
+    {
+      "axis_y": 186.6,
+      "radius": 54.220799707617154,
+      "radius_slope": 0.9879214156554739,
+      "radius_second_derivative": 4.635234462311773e-06
+    },
+    {
+      "axis_y": 186.625,
+      "radius": 54.245497288269306,
+      "radius_slope": 0.9879213057740156,
+      "radius_second_derivative": -3.5655650206006715e-05
+    },
+    {
+      "axis_y": 186.65,
+      "radius": 54.27019486892146,
+      "radius_slope": 0.9879191881325295,
+      "radius_second_derivative": -3.537040539155608e-05
+    },
+    {
+      "axis_y": 186.675,
+      "radius": 54.29489244957362,
+      "radius_slope": 0.9879171206081669,
+      "radius_second_derivative": -3.451466984003094e-05
+    },
+    {
+      "axis_y": 186.7,
+      "radius": 54.31960433108312,
+      "radius_slope": 0.987915153317663,
+      "radius_second_derivative": -3.3088443470461185e-05
+    },
+    {
+      "axis_y": 186.725,
+      "radius": 54.34430191173527,
+      "radius_slope": 0.9879071323261318,
+      "radius_second_derivative": -5.255642850851119e-05
+    },
+    {
+      "axis_y": 186.75,
+      "radius": 54.36898519153007,
+      "radius_slope": 0.9879074412720447,
+      "radius_second_derivative": -7.15965455095653e-05
+    },
+    {
+      "axis_y": 186.775,
+      "radius": 54.393697073039576,
+      "radius_slope": 0.9879017716923284,
+      "radius_second_derivative": -6.888671626661579e-05
+    },
+    {
+      "axis_y": 186.8,
+      "radius": 54.41836605197702,
+      "radius_slope": 0.9878963526974471,
+      "radius_second_derivative": -6.589164196453078e-05
+    },
+    {
+      "axis_y": 186.825,
+      "radius": 54.44307793348653,
+      "radius_slope": 0.9878912093457995,
+      "radius_second_derivative": -6.261132172504683e-05
+    },
+    {
+      "axis_y": 186.85,
+      "radius": 54.46777551413868,
+      "radius_slope": 0.987886366695792,
+      "radius_second_derivative": -5.904575676449485e-05
+    },
+    {
+      "axis_y": 186.875,
+      "radius": 54.49247309479083,
+      "radius_slope": 0.9878880538576904,
+      "radius_second_derivative": -3.373024487080322e-05
+    },
+    {
+      "axis_y": 186.9,
+      "radius": 54.51718497630034,
+      "radius_slope": 0.9878861586603,
+      "radius_second_derivative": -2.6527803564788456e-05
+    },
+    {
+      "axis_y": 186.925,
+      "radius": 54.541882556952494,
+      "radius_slope": 0.9878807186914212,
+      "radius_second_derivative": -3.5655654215524977e-07
+    },
+    {
+      "axis_y": 186.95,
+      "radius": 54.56656583674729,
+      "radius_slope": 0.9878819212977231,
+      "radius_second_derivative": 4.920480084694465e-06
+    },
+    {
+      "axis_y": 186.975,
+      "radius": 54.59126341739944,
+      "radius_slope": 0.9878836125442116,
+      "radius_second_derivative": 1.0768006611726155e-05
+    },
+    {
+      "axis_y": 187.0,
+      "radius": 54.6159609980516,
+      "radius_slope": 0.9878796384958766,
+      "radius_second_derivative": -4.278677673698799e-06
+    },
+    {
+      "axis_y": 187.025,
+      "radius": 54.64065857870375,
+      "radius_slope": 0.9878821942595548,
+      "radius_second_derivative": 3.9649083540439566e-05
+    },
+    {
+      "axis_y": 187.05,
+      "radius": 54.6653561593559,
+      "radius_slope": 0.9880927519621829,
+      "radius_second_derivative": -0.0008642216513806741
+    },
+    {
+      "axis_y": 187.075,
+      "radius": 54.690053740008054,
+      "radius_slope": 0.9887799497105383,
+      "radius_second_derivative": -0.0041155890895250725
+    },
+    {
+      "axis_y": 187.1,
+      "radius": 54.714751320660206,
+      "radius_slope": 0.9897180456229899,
+      "radius_second_derivative": -0.009388774521274713
+    },
+    {
+      "axis_y": 187.125,
+      "radius": 54.739434600455,
+      "radius_slope": 0.9907187748434818,
+      "radius_second_derivative": -0.016276019929917958
+    },
+    {
+      "axis_y": 187.15,
+      "radius": 54.76414648196451,
+      "radius_slope": 0.9916153245731699,
+      "radius_second_derivative": -0.024468547384663343
+    },
+    {
+      "axis_y": 187.175,
+      "radius": 54.78884406261666,
+      "radius_slope": 0.9922729934436161,
+      "radius_second_derivative": -0.03365814944398302
+    },
+    {
+      "axis_y": 187.2,
+      "radius": 54.81354164326881,
+      "radius_slope": 0.9925875125987401,
+      "radius_second_derivative": -0.04357427103296076
+    },
+    {
+      "axis_y": 187.225,
+      "radius": 54.838239223920965,
+      "radius_slope": 0.9924628166748123,
+      "radius_second_derivative": -0.053947070190924644
+    },
+    {
+      "axis_y": 187.25,
+      "radius": 54.862922503715765,
+      "radius_slope": 0.9918378511539893,
+      "radius_second_derivative": -0.06448887713112618
+    },
+    {
+      "axis_y": 187.275,
+      "radius": 54.88763438522527,
+      "radius_slope": 0.9906890897388562,
+      "radius_second_derivative": -0.0749866136877406
+    },
+    {
+      "axis_y": 187.3,
+      "radius": 54.91233196587742,
+      "radius_slope": 0.9889756227684815,
+      "radius_second_derivative": -0.0852277721851223
+    },
+    {
+      "axis_y": 187.325,
+      "radius": 54.93702954652958,
+      "radius_slope": 0.986721661413124,
+      "radius_second_derivative": -0.0949974916743345
+    },
+    {
+      "axis_y": 187.35,
+      "radius": 54.96172712718173,
+      "radius_slope": 0.9839247347062778,
+      "radius_second_derivative": -0.10417696752840296
+    },
+    {
+      "axis_y": 187.375,
+      "radius": 54.98642470783388,
+      "radius_slope": 0.9806072432931593,
+      "radius_second_derivative": -0.11255262240272305
+    },
+    {
+      "axis_y": 187.4,
+      "radius": 55.011122288486035,
+      "radius_slope": 0.9768165251590494,
+      "radius_second_derivative": -0.12000985903702092
+    },
+    {
+      "axis_y": 187.425,
+      "radius": 55.03583416999554,
+      "radius_slope": 0.9725944273264009,
+      "radius_second_derivative": -0.126434650661806
+    },
+    {
+      "axis_y": 187.45,
+      "radius": 55.06051744979034,
+      "radius_slope": 0.9680251071965738,
+      "radius_second_derivative": -0.1317877047501046
+    },
+    {
+      "axis_y": 187.475,
+      "radius": 55.08521503044249,
+      "radius_slope": 0.9631616359075752,
+      "radius_second_derivative": -0.13588632175020274
+    },
+    {
+      "axis_y": 187.5,
+      "radius": 55.10991261109464,
+      "radius_slope": 0.9580817483740695,
+      "radius_second_derivative": -0.13871103367704415
+    },
+    {
+      "axis_y": 187.525,
+      "radius": 55.13462449260415,
+      "radius_slope": 0.9528655569836642,
+      "radius_second_derivative": -0.14022147833451348
+    },
+    {
+      "axis_y": 187.55,
+      "radius": 55.15860703038855,
+      "radius_slope": 0.947595880438971,
+      "radius_second_derivative": -0.140396404954846
+    },
+    {
+      "axis_y": 187.575,
+      "radius": 55.18138829615513,
+      "radius_slope": 0.9423607611316046,
+      "radius_second_derivative": -0.13925221513735309
+    },
+    {
+      "axis_y": 187.6,
+      "radius": 55.20415526106435,
+      "radius_slope": 0.9372332438820946,
+      "radius_second_derivative": -0.13676601795398738
+    },
+    {
+      "axis_y": 187.625,
+      "radius": 55.226936526830926,
+      "radius_slope": 0.9323045806464654,
+      "radius_second_derivative": -0.13301390256321344
+    },
+    {
+      "axis_y": 187.65,
+      "radius": 55.24971779259751,
+      "radius_slope": 0.9276476679745359,
+      "radius_second_derivative": -0.1279897361931395
+    },
+    {
+      "axis_y": 187.675,
+      "radius": 55.27249905836408,
+      "radius_slope": 0.9233339104346251,
+      "radius_second_derivative": -0.12184769387548572
+    },
+    {
+      "axis_y": 187.7,
+      "radius": 55.29526602327331,
+      "radius_slope": 0.9194253376439602,
+      "radius_second_derivative": -0.11464133039659348
+    },
+    {
+      "axis_y": 187.725,
+      "radius": 55.31804728903988,
+      "radius_slope": 0.9159811246338264,
+      "radius_second_derivative": -0.10650185854960319
+    },
+    {
+      "axis_y": 187.75,
+      "radius": 55.340842855663816,
+      "radius_slope": 0.91303955912101,
+      "radius_second_derivative": -0.09753973953915748
+    },
+    {
+      "axis_y": 187.775,
+      "radius": 55.36360982057304,
+      "radius_slope": 0.9106347116318704,
+      "radius_second_derivative": -0.08786600506085329
+    },
+    {
+      "axis_y": 187.8,
+      "radius": 55.386405387196966,
+      "radius_slope": 0.9087845495420914,
+      "radius_second_derivative": -0.07773052991127176
+    },
+    {
+      "axis_y": 187.825,
+      "radius": 55.40917235210619,
+      "radius_slope": 0.9074934544504775,
+      "radius_second_derivative": -0.06730110958056741
+    },
+    {
+      "axis_y": 187.85,
+      "radius": 55.43193931701541,
+      "radius_slope": 0.9067402002014275,
+      "radius_second_derivative": -0.05676479361031301
+    },
+    {
+      "axis_y": 187.875,
+      "radius": 55.45473488363935,
+      "radius_slope": 0.906486411197096,
+      "radius_second_derivative": -0.04633066673359718
+    },
+    {
+      "axis_y": 187.9,
+      "radius": 55.47751614940592,
+      "radius_slope": 0.9066872217707843,
+      "radius_second_derivative": -0.03628532906785718
+    },
+    {
+      "axis_y": 187.925,
+      "radius": 55.500311716029856,
+      "radius_slope": 0.907254713644641,
+      "radius_second_derivative": -0.026854623501916263
+    },
+    {
+      "axis_y": 187.95,
+      "radius": 55.52305007922437,
+      "radius_slope": 0.9080953169281614,
+      "radius_second_derivative": -0.018403378648835855
+    },
+    {
+      "axis_y": 187.975,
+      "radius": 55.545845645848296,
+      "radius_slope": 0.9090752428069933,
+      "radius_second_derivative": -0.011134475159297406
+    },
+    {
+      "axis_y": 188.0,
+      "radius": 55.56862691161488,
+      "radius_slope": 0.9100455462506966,
+      "radius_second_derivative": -0.0054296424251602
+    },
+    {
+      "axis_y": 188.025,
+      "radius": 55.59140817738145,
+      "radius_slope": 0.9108158940018617,
+      "radius_second_derivative": -0.0016098526102371862
+    },
+    {
+      "axis_y": 188.05,
+      "radius": 55.61418944314803,
+      "radius_slope": 0.9111692269397054,
+      "radius_second_derivative": -7.665964805319907e-05
+    },
+    {
+      "axis_y": 188.075,
+      "radius": 55.63695640805725,
+      "radius_slope": 0.911166074934768,
+      "radius_second_derivative": -9.776779298965152e-05
+    },
+    {
+      "axis_y": 188.1,
+      "radius": 55.659751974681186,
+      "radius_slope": 0.9117130625577664,
+      "radius_second_derivative": -0.002564283057122239
+    },
+    {
+      "axis_y": 188.125,
+      "radius": 55.68251893959041,
+      "radius_slope": 0.9128111717777955,
+      "radius_second_derivative": -0.00808998180387117
+    },
+    {
+      "axis_y": 188.15,
+      "radius": 55.705314506214336,
+      "radius_slope": 0.9141610831989412,
+      "radius_second_derivative": -0.016195937339501996
+    },
+    {
+      "axis_y": 188.175,
+      "radius": 55.72808147112356,
+      "radius_slope": 0.9155018178907974,
+      "radius_second_derivative": -0.026374127958625808
+    },
+    {
+      "axis_y": 188.2,
+      "radius": 55.75086273689014,
+      "radius_slope": 0.916628706468115,
+      "radius_second_derivative": -0.038204244854879596
+    },
+    {
+      "axis_y": 188.225,
+      "radius": 55.77362970179936,
+      "radius_slope": 0.9173747299006086,
+      "radius_second_derivative": -0.05124943500178421
+    },
+    {
+      "axis_y": 188.25,
+      "radius": 55.79641096756594,
+      "radius_slope": 0.9175980643746731,
+      "radius_second_derivative": -0.06513909356963768
+    },
+    {
+      "axis_y": 188.275,
+      "radius": 55.81920653418987,
+      "radius_slope": 0.9171921016753658,
+      "radius_second_derivative": -0.07955046561284466
+    },
+    {
+      "axis_y": 188.3,
+      "radius": 55.84197349909909,
+      "radius_slope": 0.9160829379768779,
+      "radius_second_derivative": -0.09406744969222644
+    },
+    {
+      "axis_y": 188.325,
+      "radius": 55.864740464008314,
+      "radius_slope": 0.9142166555894565,
+      "radius_second_derivative": -0.10842298498699282
+    },
+    {
+      "axis_y": 188.35,
+      "radius": 55.88752172977489,
+      "radius_slope": 0.911585697152963,
+      "radius_second_derivative": -0.12229638457872492
+    },
+    {
+      "axis_y": 188.375,
+      "radius": 55.91031729639882,
+      "radius_slope": 0.9082104695604157,
+      "radius_second_derivative": -0.13548576617508237
+    },
+    {
+      "axis_y": 188.4,
+      "radius": 55.933084261308046,
+      "radius_slope": 0.9040941937269278,
+      "radius_second_derivative": -0.14775722871082403
+    },
+    {
+      "axis_y": 188.425,
+      "radius": 55.95587982793198,
+      "radius_slope": 0.8992775717531277,
+      "radius_second_derivative": -0.15885069987255676
+    },
+    {
+      "axis_y": 188.45,
+      "radius": 55.978632491983845,
+      "radius_slope": 0.8938280066196359,
+      "radius_second_derivative": -0.16865222420154333
+    },
+    {
+      "axis_y": 188.475,
+      "radius": 56.00142805860778,
+      "radius_slope": 0.8878479477361485,
+      "radius_second_derivative": -0.17694558583504347
+    },
+    {
+      "axis_y": 188.5,
+      "radius": 56.024195023517,
+      "radius_slope": 0.8813968648461721,
+      "radius_second_derivative": -0.1836421448258686
+    },
+    {
+      "axis_y": 188.525,
+      "radius": 56.04697628928358,
+      "radius_slope": 0.8745831931769473,
+      "radius_second_derivative": -0.1886454882965047
+    },
+    {
+      "axis_y": 188.55,
+      "radius": 56.0697432541928,
+      "radius_slope": 0.8675125352708178,
+      "radius_second_derivative": -0.1918826647859753
+    },
+    {
+      "axis_y": 188.575,
+      "radius": 56.092524519959376,
+      "radius_slope": 0.8602957434198927,
+      "radius_second_derivative": -0.19330710801477197
+    },
+    {
+      "axis_y": 188.6,
+      "radius": 56.113418072555085,
+      "radius_slope": 0.8530528058094471,
+      "radius_second_derivative": -0.1928771721835822
+    },
+    {
+      "axis_y": 188.625,
+      "radius": 56.13353937885363,
+      "radius_slope": 0.8458879832756374,
+      "radius_second_derivative": -0.1906389243926095
+    },
+    {
+      "axis_y": 188.65,
+      "radius": 56.15366068515217,
+      "radius_slope": 0.8389243827815528,
+      "radius_second_derivative": -0.18658494826657449
+    },
+    {
+      "axis_y": 188.675,
+      "radius": 56.17381059316542,
+      "radius_slope": 0.8322605518317727,
+      "radius_second_derivative": -0.18081408126836176
+    },
+    {
+      "axis_y": 188.7,
+      "radius": 56.193946200321314,
+      "radius_slope": 0.8260092482399941,
+      "radius_second_derivative": -0.1733716773844136
+    },
+    {
+      "axis_y": 188.725,
+      "radius": 56.21408180747721,
+      "radius_slope": 0.8202602385959088,
+      "radius_second_derivative": -0.16438787973867958
+    },
+    {
+      "axis_y": 188.75,
+      "radius": 56.2342174146331,
+      "radius_slope": 0.8151027267512528,
+      "radius_second_derivative": -0.15397921099634798
+    },
+    {
+      "axis_y": 188.775,
+      "radius": 56.25433872093164,
+      "radius_slope": 0.8106024983377069,
+      "radius_second_derivative": -0.14232844202119999
+    },
+    {
+      "axis_y": 188.8,
+      "radius": 56.274488628944894,
+      "radius_slope": 0.8068035485651691,
+      "radius_second_derivative": -0.1296291116821782
+    },
+    {
+      "axis_y": 188.825,
+      "radius": 56.29463853695814,
+      "radius_slope": 0.8037584594053078,
+      "radius_second_derivative": -0.1160796793289343
+    },
+    {
+      "axis_y": 188.85,
+      "radius": 56.31478844497139,
+      "radius_slope": 0.8016321273363854,
+      "radius_second_derivative": -0.1025693968796962
+    },
+    {
+      "axis_y": 188.875,
+      "radius": 56.334895450412574,
+      "radius_slope": 0.8007092937908615,
+      "radius_second_derivative": -0.09086493049469146
+    },
+    {
+      "axis_y": 188.9,
+      "radius": 56.355031057568475,
+      "radius_slope": 0.8007543430216632,
+      "radius_second_derivative": -0.08097341130451453
+    },
+    {
+      "axis_y": 188.925,
+      "radius": 56.37519526643908,
+      "radius_slope": 0.8015472206684824,
+      "radius_second_derivative": -0.07288136147263179
+    },
+    {
+      "axis_y": 188.95,
+      "radius": 56.39533087359497,
+      "radius_slope": 0.8028303701360245,
+      "radius_second_derivative": -0.06664041038071018
+    },
+    {
+      "axis_y": 188.975,
+      "radius": 56.415452179893514,
+      "radius_slope": 0.804387074000427,
+      "radius_second_derivative": -0.06232436522516945
+    },
+    {
+      "axis_y": 189.0,
+      "radius": 56.435602087906766,
+      "radius_slope": 0.8059391034289106,
+      "radius_second_derivative": -0.06009053873468602
+    },
+    {
+      "axis_y": 189.025,
+      "radius": 56.45573769506266,
+      "radius_slope": 0.8072352093449656,
+      "radius_second_derivative": -0.06010280427861649
+    },
+    {
+      "axis_y": 189.05,
+      "radius": 56.47587330221855,
+      "radius_slope": 0.807989859524187,
+      "radius_second_derivative": -0.06262415793283838
+    },
+    {
+      "axis_y": 189.075,
+      "radius": 56.496008909374446,
+      "radius_slope": 0.8078918127512938,
+      "radius_second_derivative": -0.06786282869489686
+    },
+    {
+      "axis_y": 189.1,
+      "radius": 56.51614451653034,
+      "radius_slope": 0.8066104346332875,
+      "radius_second_derivative": -0.07617187881432022
+    },
+    {
+      "axis_y": 189.125,
+      "radius": 56.53628012368624,
+      "radius_slope": 0.8046025992174239,
+      "radius_second_derivative": -0.08507466682273175
+    },
+    {
+      "axis_y": 189.15,
+      "radius": 56.55641573084213,
+      "radius_slope": 0.8021077672750665,
+      "radius_second_derivative": -0.09340767753965859
+    },
+    {
+      "axis_y": 189.175,
+      "radius": 56.576551337998026,
+      "radius_slope": 0.7991523063332346,
+      "radius_second_derivative": -0.1010257211565434
+    },
+    {
+      "axis_y": 189.2,
+      "radius": 56.59668694515392,
+      "radius_slope": 0.7957621788231632,
+      "radius_second_derivative": -0.10784365198119146
+    },
+    {
+      "axis_y": 189.225,
+      "radius": 56.61682255230982,
+      "radius_slope": 0.7919879170840168,
+      "radius_second_derivative": -0.11373517770001866
+    },
+    {
+      "axis_y": 189.25,
+      "radius": 56.63695815946571,
+      "radius_slope": 0.7878845649821574,
+      "radius_second_derivative": -0.11860980427300687
+    },
+    {
+      "axis_y": 189.275,
+      "radius": 56.65709376662161,
+      "radius_slope": 0.7835101618739235,
+      "radius_second_derivative": -0.1223757540561511
+    },
+    {
+      "axis_y": 189.3,
+      "radius": 56.67724367463486,
+      "radius_slope": 0.778948972962538,
+      "radius_second_derivative": -0.12499544599391545
+    },
+    {
+      "axis_y": 189.325,
+      "radius": 56.69737928179075,
+      "radius_slope": 0.7742567405940282,
+      "radius_second_derivative": -0.1264485563655192
+    },
+    {
+      "axis_y": 189.35,
+      "radius": 56.717014358939224,
+      "radius_slope": 0.7695103931261338,
+      "radius_second_derivative": -0.12673508517106227
+    },
+    {
+      "axis_y": 189.375,
+      "radius": 56.73543386321251,
+      "radius_slope": 0.764773377382986,
+      "radius_second_derivative": -0.12581402841280168
+    },
+    {
+      "axis_y": 189.4,
+      "radius": 56.753839066628444,
+      "radius_slope": 0.7601476258685013,
+      "radius_second_derivative": -0.12367725660271368
+    },
+    {
+      "axis_y": 189.425,
+      "radius": 56.77222996918702,
+      "radius_slope": 0.7556881207300664,
+      "radius_second_derivative": -0.12035229590260406
+    },
+    {
+      "axis_y": 189.45,
+      "radius": 56.79064947346032,
+      "radius_slope": 0.7514587493949649,
+      "radius_second_derivative": -0.11595110505404008
+    },
+    {
+      "axis_y": 189.475,
+      "radius": 56.8090403760189,
+      "radius_slope": 0.7475283368872575,
+      "radius_second_derivative": -0.11048316846031078
+    },
+    {
+      "axis_y": 189.5,
+      "radius": 56.82745988029219,
+      "radius_slope": 0.7439713881348216,
+      "radius_second_derivative": -0.10404924898910899
+    },
+    {
+      "axis_y": 189.525,
+      "radius": 56.84586508370812,
+      "radius_slope": 0.7408217318496326,
+      "radius_second_derivative": -0.09676736684298784
+    },
+    {
+      "axis_y": 189.55,
+      "radius": 56.864255986266706,
+      "radius_slope": 0.7381242371562824,
+      "radius_second_derivative": -0.08873586030555304
+    },
+    {
+      "axis_y": 189.575,
+      "radius": 56.882675490539995,
+      "radius_slope": 0.7359127474509858,
+      "radius_second_derivative": -0.0801074068704148
+    },
+    {
+      "axis_y": 189.6,
+      "radius": 56.901080693955926,
+      "radius_slope": 0.7341942183137352,
+      "radius_second_derivative": -0.07099353741275952
+    },
+    {
+      "axis_y": 189.625,
+      "radius": 56.919485897371864,
+      "radius_slope": 0.7332296663153535,
+      "radius_second_derivative": -0.0626968241477794
+    },
+    {
+      "axis_y": 189.65,
+      "radius": 56.9378911007878,
+      "radius_slope": 0.7330437960290446,
+      "radius_second_derivative": -0.05586669909093118
+    },
+    {
+      "axis_y": 189.675,
+      "radius": 56.95629630420373,
+      "radius_slope": 0.7334602838881518,
+      "radius_second_derivative": -0.05047199920307671
+    },
+    {
+      "axis_y": 189.7,
+      "radius": 56.97470150761967,
+      "radius_slope": 0.7342956761125906,
+      "radius_second_derivative": -0.046472362287915764
+    },
+    {
+      "axis_y": 189.725,
+      "radius": 56.9931067110356,
+      "radius_slope": 0.7353772324969873,
+      "radius_second_derivative": -0.043898095648938595
+    },
+    {
+      "axis_y": 189.75,
+      "radius": 57.01151191445154,
+      "radius_slope": 0.7365238788139775,
+      "radius_second_derivative": -0.042788848368407906
+    },
+    {
+      "axis_y": 189.775,
+      "radius": 57.02993141872483,
+      "radius_slope": 0.7375455082592027,
+      "radius_second_derivative": -0.043196535073936615
+    },
+    {
+      "axis_y": 189.8,
+      "radius": 57.04832232128341,
+      "radius_slope": 0.7382546211871924,
+      "radius_second_derivative": -0.04524373989051983
+    },
+    {
+      "axis_y": 189.825,
+      "radius": 57.066727524699346,
+      "radius_slope": 0.7384410734624044,
+      "radius_second_derivative": -0.04908385342616477
+    },
+    {
+      "axis_y": 189.85,
+      "radius": 57.085118427257925,
+      "radius_slope": 0.7378919154780288,
+      "radius_second_derivative": -0.05486120975283109
+    },
+    {
+      "axis_y": 189.875,
+      "radius": 57.103537931531214,
+      "radius_slope": 0.7365914816056556,
+      "radius_second_derivative": -0.06201822581165944
+    },
+    {
+      "axis_y": 189.9,
+      "radius": 57.12192883408979,
+      "radius_slope": 0.7348954215387983,
+      "radius_second_derivative": -0.06884756644437323
+    },
+    {
+      "axis_y": 189.925,
+      "radius": 57.14034833836309,
+      "radius_slope": 0.7328156459452937,
+      "radius_second_derivative": -0.07519156236585646
+    },
+    {
+      "axis_y": 189.95,
+      "radius": 57.15875354177902,
+      "radius_slope": 0.7303904176340063,
+      "radius_second_derivative": -0.08096157362833425
+    },
+    {
+      "axis_y": 189.975,
+      "radius": 57.17717304605231,
+      "radius_slope": 0.7276299286119254,
+      "radius_second_derivative": -0.0860639684954119
+    },
+    {
+      "axis_y": 190.0,
+      "radius": 57.19556394861089,
+      "radius_slope": 0.7245888925752708,
+      "radius_second_derivative": -0.09040012343759919
+    },
+    {
+      "axis_y": 190.025,
+      "radius": 57.21396915202683,
+      "radius_slope": 0.7213059179143433,
+      "radius_second_derivative": -0.09396190896747277
+    },
+    {
+      "axis_y": 190.05,
+      "radius": 57.232374355442765,
+      "radius_slope": 0.7178248627695579,
+      "radius_second_derivative": -0.09663793683246749
+    },
+    {
+      "axis_y": 190.075,
+      "radius": 57.250765258001344,
+      "radius_slope": 0.7142119937951649,
+      "radius_second_derivative": -0.09838877188383598
+    },
+    {
+      "axis_y": 190.1,
+      "radius": 57.269184762274634,
+      "radius_slope": 0.7105139015071539,
+      "radius_second_derivative": -0.09922839113708885
+    },
+    {
+      "axis_y": 190.125,
+      "radius": 57.286731914249266,
+      "radius_slope": 0.7067932013900492,
+      "radius_second_derivative": -0.09912591679782728
+    },
+    {
+      "axis_y": 190.15,
+      "radius": 57.30379283707383,
+      "radius_slope": 0.7031088012768282,
+      "radius_second_derivative": -0.09808256115935475
+    },
+    {
+      "axis_y": 190.175,
+      "radius": 57.32083945904103,
+      "radius_slope": 0.6995189073633047,
+      "radius_second_derivative": -0.09611308566035086
+    },
+    {
+      "axis_y": 190.2,
+      "radius": 57.337900381865595,
+      "radius_slope": 0.6960756376384921,
+      "radius_second_derivative": -0.09322725994883238
+    },
+    {
+      "axis_y": 190.225,
+      "radius": 57.354947003832805,
+      "radius_slope": 0.6928381776583767,
+      "radius_second_derivative": -0.08948826583755155
+    },
+    {
+      "axis_y": 190.25,
+      "radius": 57.37199362580001,
+      "radius_slope": 0.6898552489866978,
+      "radius_second_derivative": -0.0849513695839431
+    },
+    {
+      "axis_y": 190.275,
+      "radius": 57.38905454862457,
+      "radius_slope": 0.6871659266777203,
+      "radius_second_derivative": -0.07966684565547391
+    },
+    {
+      "axis_y": 190.3,
+      "radius": 57.406101170591775,
+      "radius_slope": 0.6848107872895202,
+      "radius_second_derivative": -0.07377838632242674
+    },
+    {
+      "axis_y": 190.325,
+      "radius": 57.423147792558986,
+      "radius_slope": 0.6828225766072328,
+      "radius_second_derivative": -0.06732057756562201
+    },
+    {
+      "axis_y": 190.35,
+      "radius": 57.44019441452619,
+      "radius_slope": 0.6812126810751029,
+      "radius_second_derivative": -0.060402882231201396
+    },
+    {
+      "axis_y": 190.375,
+      "radius": 57.4572410364934,
+      "radius_slope": 0.6800028259125057,
+      "radius_second_derivative": -0.05314816969052096
+    },
+    {
+      "axis_y": 190.4,
+      "radius": 57.474287658460604,
+      "radius_slope": 0.6791808019296253,
+      "radius_second_derivative": -0.0457327214788405
+    },
+    {
+      "axis_y": 190.425,
+      "radius": 57.491348581285166,
+      "radius_slope": 0.6787423706863798,
+      "radius_second_derivative": -0.03826649962051167
+    },
+    {
+      "axis_y": 190.45,
+      "radius": 57.50838090239502,
+      "radius_slope": 0.679014063930957,
+      "radius_second_derivative": -0.03256594556417822
+    },
+    {
+      "axis_y": 190.475,
+      "radius": 57.52544182521958,
+      "radius_slope": 0.6799884847550955,
+      "radius_second_derivative": -0.029363426367014302
+    },
+    {
+      "axis_y": 190.5,
+      "radius": 57.542488447186784,
+      "radius_slope": 0.6813862477024132,
+      "radius_second_derivative": -0.028500559629945178
+    },
+    {
+      "axis_y": 190.525,
+      "radius": 57.559520768296636,
+      "radius_slope": 0.6829672131198635,
+      "radius_second_derivative": -0.029829730961504073
+    },
+    {
+      "axis_y": 190.55,
+      "radius": 57.5765816911212,
+      "radius_slope": 0.6844806269361261,
+      "radius_second_derivative": -0.03327249793031646
+    },
+    {
+      "axis_y": 190.575,
+      "radius": 57.5936283130884,
+      "radius_slope": 0.6856828391565504,
+      "radius_second_derivative": -0.038745568937499926
+    },
+    {
+      "axis_y": 190.6,
+      "radius": 57.61067493505561,
+      "radius_slope": 0.6863508260670189,
+      "radius_second_derivative": -0.04621628340760991
+    },
+    {
+      "axis_y": 190.625,
+      "radius": 57.62772155702282,
+      "radius_slope": 0.686240472011305,
+      "radius_second_derivative": -0.055724076489717805
+    },
+    {
+      "axis_y": 190.65,
+      "radius": 57.64476817899002,
+      "radius_slope": 0.6854928722805559,
+      "radius_second_derivative": -0.06599432999748664
+    },
+    {
+      "axis_y": 190.675,
+      "radius": 57.66181480095723,
+      "radius_slope": 0.6842114668478672,
+      "radius_second_derivative": -0.07615875753548468
+    },
+    {
+      "axis_y": 190.7,
+      "radius": 57.67887572378179,
+      "radius_slope": 0.6823918186091621,
+      "radius_second_derivative": -0.08601668910329792
+    },
+    {
+      "axis_y": 190.725,
+      "radius": 57.695922345749,
+      "radius_slope": 0.6800257545927084,
+      "radius_second_derivative": -0.09538613826209226
+    },
+    {
+      "axis_y": 190.75,
+      "radius": 57.71296896771621,
+      "radius_slope": 0.6771450085973043,
+      "radius_second_derivative": -0.10412234307204264
+    },
+    {
+      "axis_y": 190.775,
+      "radius": 57.73002989054076,
+      "radius_slope": 0.6737703501872004,
+      "radius_second_derivative": -0.11203789743513191
+    },
+    {
+      "axis_y": 190.8,
+      "radius": 57.747062211650615,
+      "radius_slope": 0.6699448269864098,
+      "radius_second_derivative": -0.11904687123428996
+    },
+    {
+      "axis_y": 190.825,
+      "radius": 57.764108833617826,
+      "radius_slope": 0.6657217230047529,
+      "radius_second_derivative": -0.12500214925581551
+    },
+    {
+      "axis_y": 190.85,
+      "radius": 57.78116975644239,
+      "radius_slope": 0.6611691213600398,
+      "radius_second_derivative": -0.1298337038031234
+    },
+    {
+      "axis_y": 190.875,
+      "radius": 57.79821637840959,
+      "radius_slope": 0.6563519216664999,
+      "radius_second_derivative": -0.13345018510018627
+    },
+    {
+      "axis_y": 190.9,
+      "radius": 57.8152630003768,
+      "radius_slope": 0.6513507488075836,
+      "radius_second_derivative": -0.13581878994860752
+    },
+    {
+      "axis_y": 190.925,
+      "radius": 57.832309622344006,
+      "radius_slope": 0.646243970324459,
+      "radius_second_derivative": -0.1369039340096275
+    },
+    {
+      "axis_y": 190.95,
+      "radius": 57.848112069721324,
+      "radius_slope": 0.6411018587936462,
+      "radius_second_derivative": -0.13669164026789152
+    },
+    {
+      "axis_y": 190.975,
+      "radius": 57.86328527937502,
+      "radius_slope": 0.6360218418820393,
+      "radius_second_derivative": -0.1351651505677865
+    },
+    {
+      "axis_y": 191.0,
+      "radius": 57.87847278988607,
+      "radius_slope": 0.6310736283505657,
+      "radius_second_derivative": -0.13238479426956154
+    },
+    {
+      "axis_y": 191.025,
+      "radius": 57.89364599953977,
+      "radius_slope": 0.626338654400916,
+      "radius_second_derivative": -0.12837118033969103
+    },
+    {
+      "axis_y": 191.05,
+      "radius": 57.90881920919347,
+      "radius_slope": 0.6218961040544853,
+      "radius_second_derivative": -0.12316067754156289
+    },
+    {
+      "axis_y": 191.075,
+      "radius": 57.924006719704515,
+      "radius_slope": 0.6177945261966953,
+      "radius_second_derivative": -0.1168325840402524
+    },
+    {
+      "axis_y": 191.1,
+      "radius": 57.93917992935821,
+      "radius_slope": 0.6141095726817338,
+      "radius_second_derivative": -0.10950620364260376
+    },
+    {
+      "axis_y": 191.125,
+      "radius": 57.95435313901191,
+      "radius_slope": 0.6108953283882806,
+      "radius_second_derivative": -0.10131367618775751
+    },
+    {
+      "axis_y": 191.15,
+      "radius": 57.9695263486656,
+      "radius_slope": 0.6081807319426342,
+      "radius_second_derivative": -0.09234742112252682
+    },
+    {
+      "axis_y": 191.175,
+      "radius": 57.98471385917666,
+      "radius_slope": 0.6059944254292964,
+      "radius_second_derivative": -0.08276132823244793
+    },
+    {
+      "axis_y": 191.2,
+      "radius": 57.999887068830354,
+      "radius_slope": 0.604354913778106,
+      "radius_second_derivative": -0.07274636918070573
+    },
+    {
+      "axis_y": 191.225,
+      "radius": 58.0150745793414,
+      "radius_slope": 0.6032483858610059,
+      "radius_second_derivative": -0.0624936582525645
+    },
+    {
+      "axis_y": 191.25,
+      "radius": 58.030233488137746,
+      "radius_slope": 0.6026681608383095,
+      "radius_second_derivative": -0.052231534233078886
+    },
+    {
+      "axis_y": 191.275,
+      "radius": 58.045420998648794,
+      "radius_slope": 0.6025638171537544,
+      "radius_second_derivative": -0.04214569174855602
+    },
+    {
+      "axis_y": 191.3,
+      "radius": 58.0605942083025,
+      "radius_slope": 0.6028744348286574,
+      "radius_second_derivative": -0.03252330140652186
+    },
+    {
+      "axis_y": 191.325,
+      "radius": 58.075781718813545,
+      "radius_slope": 0.6042738940851385,
+      "radius_second_derivative": -0.026887711945295115
+    },
+    {
+      "axis_y": 191.35,
+      "radius": 58.09095492846724,
+      "radius_slope": 0.6067199561905837,
+      "radius_second_derivative": -0.026731254951764757
+    },
+    {
+      "axis_y": 191.375,
+      "radius": 58.106142438978296,
+      "radius_slope": 0.6096434233771766,
+      "radius_second_derivative": -0.03165294698281537
+    },
+    {
+      "axis_y": 191.4,
+      "radius": 58.12131564863199,
+      "radius_slope": 0.6125198408574932,
+      "radius_second_derivative": -0.04126899061940678
+    },
+    {
+      "axis_y": 191.425,
+      "radius": 58.13648885828569,
+      "radius_slope": 0.6148459427875076,
+      "radius_second_derivative": -0.05525263748175817
+    },
+    {
+      "axis_y": 191.45,
+      "radius": 58.151676368796736,
+      "radius_slope": 0.6161489866222093,
+      "radius_second_derivative": -0.07335551030979186
+    },
+    {
+      "axis_y": 191.475,
+      "radius": 58.16684957845043,
+      "radius_slope": 0.6165194987039538,
+      "radius_second_derivative": -0.09353725017224532
+    },
+    {
+      "axis_y": 191.5,
+      "radius": 58.18202278810413,
+      "radius_slope": 0.6159829683372212,
+      "radius_second_derivative": -0.1144307481256703
+    }
+  ],
+  "source_unchanged": true,
+  "method": "First-hit rays on the actual evaluated side meridian. A local cubic fit suppresses polygon noise. No camera adjustment, texture or light is involved.",
+  "limitation": "Curvature measures the hypothesis, not fidelity to an unknowable original cross-section. Use original and selected images, actual fixed renders and level views to judge acceptance."
+}

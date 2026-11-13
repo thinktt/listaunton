@@ -1,0 +1,36 @@
+{
+  "variant": "176-narrower-upper-stem",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "profile": "history/bishop-mission-022/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "33": [
+      23.368757415834157,
+      154.79166666666666
+    ],
+    "34": [
+      18.094929999999998,
+      147.72916666666666
+    ],
+    "35": [
+      16.265803624262855,
+      140.125
+    ],
+    "36": [
+      16.221184676459245,
+      131.97916666666666
+    ]
+  },
+  "interpretation": "Unaccepted local stem taper fit. The low part of the taper forms the elevated outline below the collar; controls 38-40 do not affect this boundary. Change radii 33-36 only, regularized for a smooth concave taper. All heights, collar rims, socket/base and head remain exact. Original white is the fitting target; actual neutral and level views govern acceptance.",
+  "proposal": {
+    "radii": [
+      23.368757415834157,
+      18.094929999999998,
+      16.265803624262855,
+      16.221184676459245
+    ],
+    "mean_absolute_half_width_error": 1.9659667358334347,
+    "loss": 4.163895896341389
+  }
+}
