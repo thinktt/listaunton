@@ -2,7 +2,7 @@
 
 Read the root AGENTS.md, MISSION-ROOK.md and latest docs/rook-mission-log.md before work. The original black/white Lichess sprites determine proportions; selected black candidate 8 supplies detail. Preserve their bytes and registration.
 
-The current accepted model is pigment-detail checkpoint 063. It retains the continuous subdivided lathe, shallow recessed floor and four equal thin curved merlons, joined through editable exact Boolean modifiers. Hidden merlon construction objects remain editable. A packed 3072-square pigment atlas on `Pigment atlas` UVs supplies color; live Principled BSDF, relief, coat and lights supply shading. The reconstruction remains incomplete. See docs/rook-mission/iteration-063 for current scores, validation and reproduction. Pigment atlas v2 contains a local floor correction; other source-derived pigment retains illumination artifacts. Six derived receivers support foot/shoulder-only glossy strips, turret-restricted reflectors, upper-bevel-only strips and a floor-edge strip; render_regions.py checks exact surface coverage and bounded normal/UV rounding. Export the closed editable control, not the receiver subsets. Regenerate receiver copies after any geometry edit.
+The current accepted model is pigment-detail checkpoint 066. It retains the continuous subdivided lathe, shallow recessed floor and four equal thin curved merlons, joined through editable exact Boolean modifiers. Hidden merlon construction objects remain editable. A packed 3072-square pigment atlas on `Pigment atlas` UVs supplies color; live Principled BSDF, relief, coat and lights supply shading. The reconstruction remains incomplete. See docs/rook-mission/iteration-066 for current scores, validation and reproduction. Pigment atlas v2 contains a local floor correction; other source-derived pigment retains illumination artifacts. Six derived receivers support foot/shoulder-only glossy strips, turret-restricted reflectors, upper-bevel-only strips and a floor-edge strip; render_regions.py checks exact surface coverage and bounded normal/UV rounding. Export the closed editable control, not the receiver subsets. Regenerate receiver copies after any geometry edit.
 
 The saved camera is orthographic, 54 degrees elevation with -0.35-degree roll. Export the evaluated visible union, not the hidden construction objects. The textured mesh has 62,866 triangles and 32-byte position/normal/UV vertices. Keep the same saved model in the overlay, rotating viewer and side comparison.
 
@@ -39,3 +39,7 @@ Floor control rows 53–58 are lower by six profile pixels at fixed 54 degrees. 
 ## Checkpoint 063
 
 Small upper-body pigment repair restores local grain using actual UV/camera correspondence. Geometry, UVs, shader settings and lights remain checkpoint 047. Atlas outside the repair mask is byte-identical. Source reproduction uses history/rook-mission-047; see iteration-063. Lower bands, side seams and reflections remain unfinished.
+
+## Checkpoint 066
+
+Small lower-body pigment repair restores local grain using actual UV/camera correspondence. Geometry, UVs, shader settings and lights remain checkpoint 063. Atlas outside the repair mask is byte-identical. Source reproduction uses history/rook-mission-063; see iteration-066. Residual contrast, side seams and reflections remain unfinished.

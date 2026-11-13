@@ -1,0 +1,11 @@
+# Rook lower detail checkpoint 065
+
+Intermediate, not promoted: reference-informed local pigment residual restores grain through the lower red bands. Gain .7, existing real Principled shader and lights unchanged. Geometry, control and receiver UVs, shader defaults/links, light transforms/parameters/receiver memberships stay exact. The patch uses the measured surface-to-camera map; all atlas pixels outside its mask stay byte-identical. This approximate display-RGB correction may inherit illumination and is not recovered physical albedo.
+
+The standard 54-degree camera, registration and original/selected source bytes are preserved. Scores distinguish measured silhouette overlap from subjective interior/color/grain/lighting. The modest local improvement reduces lower reddish bands but does not resolve residual contrast errors, hard reflections or severe side-neck texture seams. The full mission remains incomplete.
+
+Reproduce: map_lower_bands.py in Blender; fit_lower_bands.py with NumPy/Pillow; apply_lower_detail.py in Blender; render_saved_trial.py -- 065-local-pigment; audit_mission.py 065-local-pigment. Source is archived checkpoint 063. Full geometry/material check is validate_material_trial.py; exact shader/rig/UV scope is validate_pigment_scope.py, recorded for 066. Stage via stage_lower_detail.py, export_mission.py with --asset-root pointing at the staged atlas, validate.py, build_side_comparison.py, build_viewer.py and check_viewer.cjs. Reopen the saved model for rendering.
+
+Saved fixed/profile/rear and neutral views were examined. Existing side defects remain. Viewer tests exercise camera and interactions with mock GL; they do not constitute native-browser GPU visual QA. The delivered fixed render has identical alpha and only sparse one-code-value RGB rounding differences from trial 066 (measured difference recorded in delivered-render-check.json). No source photo is composited over the model; final shading remains the real material.
+
+After promotion, use an absolute --baseline path to history/rook-mission-063/models/rook/rook-rebuilt.blend with both material and pigment-scope validators. The current-source builders are pinned to that archive. Public review/candidate/viewer regressions passed, and preview-sync.json verifies synchronized outputs. No push or publication.
