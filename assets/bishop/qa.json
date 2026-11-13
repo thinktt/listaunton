@@ -2,15 +2,15 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9872118013065211,
-      "mean_boundary_error_px": 2.0875527426160336,
+      "silhouette_iou": 0.987381559489542,
+      "mean_boundary_error_px": 2.0748155953635408,
       "p95_boundary_error_px": 5.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.4815995675429173
+      "mean_boundary_error_original_300px_units": 0.47866110065616263
     },
     "selected": {
-      "silhouette_iou": 0.968707226270595,
-      "mean_boundary_error_px": 5.657700421940929,
+      "silhouette_iou": 0.9694716383314517,
+      "mean_boundary_error_px": 5.53477344573235,
       "p95_boundary_error_px": 10.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
@@ -18,9 +18,9 @@
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "Rounded convex button sits directly on the head. No cylindrical seat, pedestal, neck ring or gap is exposed.",
-    "collars": "All collar controls retain checkpoint 018. Thinner-roll and flattened-deck trials were not accepted; their swollen appearance and remaining curvature differences are unresolved.",
-    "lower_body": "The foot upper rollover is tighter and the outer wall straighter. Only controls 6-9 change from checkpoint 018; stem, socket, flare and foot underside remain exact. This is a small local correction, not a resolution of the overall interior-form mismatch.",
+    "finial": "Shallower rounded button with a thin underside; its front rim is fitted independently of shading. The head tip enters directly with measured broad contact and no exposed neck. Physical height and radii are preserved.",
+    "collars": "All collar controls retain the preceding accepted checkpoint; collar face and underside curvature remain under examination.",
+    "lower_body": "The lower body and current straight-foot-wall correction are unchanged. No socket, stem, flare or foot edits are part of the button refit.",
     "limits": "The accepted side guide is art direction, not a recovered source camera. Boxwood pigment, surface relief and reflections are an unfinished reconstruction. Single-view evidence cannot determine hidden geometry uniquely. The retained pigment and lights have not been refitted to this geometry; neutral comparison is required."
   }
 }

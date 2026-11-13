@@ -599,3 +599,39 @@ available page evidence. Checkpoint 018 remains the rollback source.
 The geometry goal remains active and incomplete. No mission file, original,
 source registration, other piece or shared gallery default is changed. No quota
 monitoring, subagent, push or external publication.
+
+## Iteration 020 — fit the button rim and preserve direct contact
+
+First-hit surface labels reveal that the button's front boundary was at row
+278, below the approximately 270 edge in white candidate 3. The original white
+also supports the shallower boundary. The accepted shallow lens reaches row
+270 without changing the button radii, overall height, camera or registration.
+Only the upper half of the head meridian extends smoothly into its underside;
+all body controls through ring 85, including the widest head and lower anatomy,
+remain exact. See [iteration-020/assessment.md](bishop-mission/iteration-020/assessment.md).
+
+The first rim lift is rejected: its cup underside contacts too narrowly and
+fails the unchanged broad-contact criterion. A full head-tip extension passes
+anatomy but perturbs the outline unnecessarily. The chosen localized extension
+retains the original-head outline while seating the shallow button directly.
+Actual contact width is about 85.15% of button width, with one gap-free external
+transition and no cylindrical neck. Button height/width is about 0.259, down
+from 0.413. The deep slit, solid floor and original cutter are preserved.
+
+The final render overlaps original white by 98.744%, selected white by 97.005%
+and original black by 97.785%. Internal front-arc landmarks are separately
+checked against the reference, with a stated interpretation uncertainty of
+about +/-3 comparison pixels. Scores are approximately 97.01 / 81 / 83 / 77 / 72,
+mean 82.00%, overall 70-80%. This is a local button improvement; the larger
+swollen-form concerns and inherited material/lighting defects remain unresolved.
+
+Saved/reopened controls, actual anatomy, combined-surface neck regression,
+render receivers, UVs, packed pixels, fixed camera and export are checked.
+The junction checks now extend to its actual height and still detect the
+historical bad seat. Current fixed/neutral and head/side/rear renders, rotating
+mesh and review are rebuilt together. Checkpoint 019 is archived. Node page
+checks are used; native browser inspection is not claimed.
+
+The geometry goal stays active and incomplete. Mission files, source images,
+registration, shared gallery defaults and other pieces are unchanged. No quota
+watcher, subagent, push or external publication.

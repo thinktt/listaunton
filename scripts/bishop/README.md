@@ -58,6 +58,17 @@ chrome stay out of the repository. Collection explicitly permits at most
 actual delta; model height, camera and gallery sizing stay unchanged. The
 default collection bound tolerance remains exact for other checkpoints.
 
+Checkpoint 020 fits the button's visible boundary with a shallower lens and a
+localized continuous head-tip extension. `profile_shape_trial.py` and the
+independent scope auditor now support declared `finial_rings` plus
+`head_cap_axis_y`; unlisted controls in both components remain exact. The
+explicit `profile` arrays and `mission_shape_refit` are authoritative after
+these edits; `head_curve` retains the earlier construction seed. The anatomy
+probe and rejected-neck regression cover the higher join without relaxing
+their contact, taper or neck criteria. `validate_shape_trial.py` runs these
+scope/anatomy checks on isolated candidates. See iteration-020 for the rejected
+cup underside, localized-tip choice and first-hit boundary evidence.
+
 ## Current wood mission
 
 The bishop refinement mission is `MISSION-BISHOP.md`; its score/evidence log is

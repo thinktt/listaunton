@@ -1,0 +1,209 @@
+{
+  "components": [
+    {
+      "name": "Bishop - continuous turned body",
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.73819298104573,
+      "vertices": 64015,
+      "faces": 63788
+    },
+    {
+      "name": "Bishop - domed button finial",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.02016383255749896,
+      "vertices": 5890,
+      "faces": 5888
+    }
+  ],
+  "slit_ray_probes": [
+    {
+      "height_above_slot_bottom_original_units": 7,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 12,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 17,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    }
+  ],
+  "solid_slot_floor": true,
+  "source_hash_matches": null,
+  "reference_camera_elevation": 54,
+  "saved_camera_matches_export": true,
+  "head_surface_probe_count": 100,
+  "head_surface_max_normal_step_degrees": 2.2810469009276586,
+  "lower_65_profile_points_preserved": false,
+  "declared_changed_foot_rings": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "flare_socket_stem_collars_preserved": false,
+  "slit_parameters_preserved": false,
+  "button_height_to_width": 0.258768672218618,
+  "head_button_join": {
+    "level_section_samples": 222,
+    "visible_component_transitions": 1,
+    "contact_axis_y": 53.583031674208144,
+    "contact_width_to_button_width": 0.8514645101993439,
+    "minimum_exposed_head_radius_slope": 0.28511489287266395,
+    "head_cap_concealed": true,
+    "gap_free": true,
+    "no_exposed_cylindrical_neck": true
+  },
+  "note": "Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.",
+  "slit_angle_width_and_original_floor_anchor_preserved": true,
+  "declared_rounded_floor": {
+    "config": "docs/bishop-mission/iteration-006/slit-044.json",
+    "baseline_model": "history/bishop-mission-005/bishop-rebuilt.blend",
+    "baseline_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+    "description": "Rounded semicircular floor; parallel full-depth opening, width, angle and original bevel retained."
+  },
+  "declared_base_curvature_rings": [
+    17,
+    18
+  ],
+  "all_other_lower_profile_points_preserved": false,
+  "base_curvature_config": "docs/bishop-mission/iteration-009/geometry-067.json",
+  "declared_shape_refit": {
+    "config": "build/bishop-mission/154-button-audit/lens-local.json",
+    "source": "history/bishop-mission-019/bishop-rebuilt.blend",
+    "source_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
+    "profile": "history/bishop-mission-019/profile.json",
+    "body_rings": {
+      "86": [
+        28.724142187499996,
+        70.98331875
+      ],
+      "87": [
+        27.8965125,
+        70.1958
+      ],
+      "88": [
+        27.0351515625,
+        69.40873125
+      ],
+      "89": [
+        26.145599999999998,
+        68.61840000000001
+      ],
+      "90": [
+        25.2333984375,
+        67.82109375
+      ],
+      "91": [
+        24.304087499999998,
+        67.0131
+      ],
+      "92": [
+        23.3632078125,
+        66.19070625
+      ],
+      "93": [
+        22.4163,
+        65.3502
+      ],
+      "94": [
+        21.468904687500004,
+        64.48786875
+      ],
+      "95": [
+        20.5265625,
+        63.60000000000001
+      ],
+      "96": [
+        19.5948140625,
+        62.68288125
+      ],
+      "97": [
+        18.679199999999998,
+        61.732800000000005
+      ],
+      "98": [
+        17.785260937500002,
+        60.74604375
+      ],
+      "99": [
+        16.9185375,
+        59.7189
+      ],
+      "100": [
+        16.0845703125,
+        58.64765625
+      ],
+      "101": [
+        15.2889,
+        57.5286
+      ],
+      "102": [
+        14.537067187499998,
+        56.35801875
+      ],
+      "103": [
+        13.834612500000002,
+        55.132200000000005
+      ],
+      "104": [
+        13.1870765625,
+        53.84743125
+      ],
+      "105": [
+        12.6,
+        52.5
+      ],
+      "106": [
+        0.01,
+        52.5
+      ]
+    },
+    "finial_rings": {
+      "0": [
+        0.0108,
+        53.7
+      ],
+      "1": [
+        11.124000000000002,
+        53.7
+      ],
+      "2": [
+        12.636,
+        53.65
+      ],
+      "3": [
+        14.148,
+        53.45
+      ],
+      "4": [
+        15.174000000000001,
+        53.05
+      ],
+      "5": [
+        15.552000000000001,
+        52.3
+      ],
+      "6": [
+        15.336,
+        51.98
+      ],
+      "7": [
+        14.472000000000001,
+        51.33
+      ]
+    },
+    "head_cap_axis_y": 52.5
+  },
+  "all_unlisted_profile_points_preserved": true
+}

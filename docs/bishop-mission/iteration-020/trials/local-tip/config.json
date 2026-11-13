@@ -1,0 +1,131 @@
+{
+  "variant": "157-button-lens-local",
+  "source": "history/bishop-mission-019/bishop-rebuilt.blend",
+  "source_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
+  "profile": "history/bishop-mission-019/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "86": [
+      28.724142187499996,
+      70.98331875
+    ],
+    "87": [
+      27.8965125,
+      70.1958
+    ],
+    "88": [
+      27.0351515625,
+      69.40873125
+    ],
+    "89": [
+      26.145599999999998,
+      68.61840000000001
+    ],
+    "90": [
+      25.2333984375,
+      67.82109375
+    ],
+    "91": [
+      24.304087499999998,
+      67.0131
+    ],
+    "92": [
+      23.3632078125,
+      66.19070625
+    ],
+    "93": [
+      22.4163,
+      65.3502
+    ],
+    "94": [
+      21.468904687500004,
+      64.48786875
+    ],
+    "95": [
+      20.5265625,
+      63.60000000000001
+    ],
+    "96": [
+      19.5948140625,
+      62.68288125
+    ],
+    "97": [
+      18.679199999999998,
+      61.732800000000005
+    ],
+    "98": [
+      17.785260937500002,
+      60.74604375
+    ],
+    "99": [
+      16.9185375,
+      59.7189
+    ],
+    "100": [
+      16.0845703125,
+      58.64765625
+    ],
+    "101": [
+      15.2889,
+      57.5286
+    ],
+    "102": [
+      14.537067187499998,
+      56.35801875
+    ],
+    "103": [
+      13.834612500000002,
+      55.132200000000005
+    ],
+    "104": [
+      13.1870765625,
+      53.84743125
+    ],
+    "105": [
+      12.6,
+      52.5
+    ],
+    "106": [
+      0.01,
+      52.5
+    ]
+  },
+  "finial_rings": {
+    "0": [
+      0.0108,
+      53.7
+    ],
+    "1": [
+      11.124000000000002,
+      53.7
+    ],
+    "2": [
+      12.636,
+      53.65
+    ],
+    "3": [
+      14.148,
+      53.45
+    ],
+    "4": [
+      15.174000000000001,
+      53.05
+    ],
+    "5": [
+      15.552000000000001,
+      52.3
+    ],
+    "6": [
+      15.336,
+      51.98
+    ],
+    "7": [
+      14.472000000000001,
+      51.33
+    ]
+  },
+  "head_cap_axis_y": 52.5,
+  "interpretation": "Unaccepted shallow button-lens trial. Keep the fitted front rim while flattening the cup-like underside. Extend the continuous head endpoint smoothly inside the lens for broad direct contact. All radial controls, lower 66 body rings, physical highest point, slit cutter, source registration, UVs, pigment, lights and fixed camera are preserved.",
+  "head_tip_extension_basis": "delta_axis_y * (max(0,t-start)/(1-start))^3; C2 at the start of the edit",
+  "head_tip_extension_start_fraction": 0.5
+}

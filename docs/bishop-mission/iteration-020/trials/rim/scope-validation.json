@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "model_sha256": "86659a83d07d241cab4d157214b1e2bd66336cdf2ff87bd5683cf5793326098d",
+  "source": "history/bishop-mission-019/bishop-rebuilt.blend",
+  "source_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
+  "config_sha256": "3d1a77e013bcfbdb58a7d9729d02b467226f0347c22a4d2d8964e7c3027e1921",
+  "changed_body_rings": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "changed_finial_rings": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "max_control_error_from_declared_edit": 2.3477363875201718e-07,
+  "unlisted_controls_exact": true,
+  "control_errors_by_component": {
+    "Bishop - continuous turned body": 1.4313214613537184e-07,
+    "Bishop - domed button finial": 2.3477363875201718e-07
+  },
+  "topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved": true,
+  "button_controls_preserved": false,
+  "reference_pixels_unchanged": true,
+  "camera_exactly_unchanged": true,
+  "shader": "Principled BSDF",
+  "saved_scene_albedo_bakes_lighting_flag": false,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 55818,
+        "vertices": 56302,
+        "normal_max_component_error": 4.0650367736816406e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 7936,
+        "vertices": 8192,
+        "normal_max_component_error": 5.456805229187012e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "saved_and_reopened": true,
+  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score. The preserved albedo metadata flag is not proof that pigment is illumination-free; the inherited atlas still contains photographic shading."
+}

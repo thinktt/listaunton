@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(Path(__file__).parent))
 from render_regions import partition_socket, BODY
 from validate_render_receivers import snapshot, check
+BUTTON='Bishop - domed button finial'
 
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('config');p.add_argument('--no-render',action='store_true')
@@ -46,6 +47,20 @@ for key,(radius,axis_y) in cfg.get('body_rings',{}).items():
         v.co.z+=(old_y-axis_y)*factor/co
     profile['profile'][i]=[radius,axis_y]
 body.data.update();bpy.context.view_layer.update()
+if cfg.get('finial_rings'):
+    button=bpy.data.objects[BUTTON]
+    assert len(button.data.vertices)==128*len(profile['finial']['profile'])
+    for key,(radius,axis_y) in cfg['finial_rings'].items():
+        i=int(key);old_radius,old_y=profile['finial']['profile'][i]
+        for v in button.data.vertices[i*128:(i+1)*128]:
+            v.co.x*=radius/old_radius;v.co.y*=radius/old_radius
+            v.co.z+=(old_y-axis_y)*factor/co
+        profile['finial']['profile'][i]=[radius,axis_y]
+    button.data.update();bpy.context.view_layer.update()
+    profile['head_button_join']['button_bottom_axis_y']=profile['finial']['profile'][0][1]
+if 'head_cap_axis_y' in cfg:
+    assert profile['profile'][-1][1]==profile['profile'][-2][1]==cfg['head_cap_axis_y']
+    profile['head_button_join']['head_cap_axis_y']=cfg['head_cap_axis_y']
 parts,partition=partition_socket(s,*band)
 for name,names in memberships.items():
     collection=bpy.data.collections.get(name)
@@ -60,7 +75,7 @@ for key in ['lights','materials','camera','world','color_management','render_pat
 for name,row in before['meshes'].items():
     if name in part_names:continue
     new=after['meshes'][name]
-    if name==BODY:
+    if name==BODY or (name==BUTTON and cfg.get('finial_rings')):
         for k in row:
             if k!='mesh':assert row[k]==new[k],(name,k)
         for k in row['mesh']:
@@ -72,6 +87,8 @@ profile['revision']=cfg['variant']
 profile['mission_shape_refit']={'config':str(config_path.relative_to(ROOT)).replace('\\','/'),
                               'source':cfg['source'],'source_sha256':cfg['source_sha256'],
                               'profile':cfg['profile'],'body_rings':cfg['body_rings']}
+for key in ['finial_rings','head_cap_axis_y']:
+    if key in cfg:profile['mission_shape_refit'][key]=cfg[key]
 s['bishop_shape_refit']=json.dumps(profile['mission_shape_refit'],sort_keys=True)
 s.cycles.samples=cfg.get('samples',128);s.cycles.use_adaptive_sampling=False
 s.render.resolution_percentage=100;s.render.use_border=False;s.render.use_crop_to_border=False
@@ -102,7 +119,8 @@ if not a.no_render:
     bpy.ops.render.render(write_still=True)
 report={'config':cfg,'model_sha256':sha(out/'bishop.blend'),'source_unchanged':sha(source)==cfg['source_sha256'],
         'source_state':before,'reopened_state':reopened,'receiver_check':receiver_check,
-        'materials_lighting_camera_uvs_topology_button_and_cutter_preserved':True,
+        'materials_lighting_camera_uvs_topology_and_cutter_preserved':True,
+        'button_controls_preserved':not bool(cfg.get('finial_rings')),
         'saved_and_reopened':True,'partition':partition}
 (out/'trial-audit.json').write_text(json.dumps(report,indent=2)+'\n')
 print('BISHOP_PROFILE_SHAPE_TRIAL_COMPLETE',cfg['variant'],flush=True)

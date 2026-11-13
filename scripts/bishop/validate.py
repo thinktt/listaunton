@@ -58,7 +58,10 @@ if shape_refit:
  expected_profile=[list(pair) for pair in source_profile['profile']]
  for key,pair in shape_config['body_rings'].items():expected_profile[int(key)]=pair
  assert cfg['profile']==expected_profile,'Geometry refit has an undeclared profile change.'
- assert cfg['finial']==source_profile['finial'] and cfg['slit']==source_profile['slit']
+ expected_finial=json.loads(json.dumps(source_profile['finial']))
+ assert shape_refit.get('finial_rings',{})==shape_config.get('finial_rings',{})
+ for key,pair in shape_config.get('finial_rings',{}).items():expected_finial['profile'][int(key)]=pair
+ assert cfg['finial']==expected_finial and cfg['slit']==source_profile['slit']
 elif changed:
  assert changed==set(range(1,11)), 'Only the documented lower foot rings may differ in this geometry checkpoint.'
  assert cfg['profile'][11:65]==expected_lower[11:65] and cfg['profile'][0]==expected_lower[0], 'Undeclared lower profile change.'
@@ -91,8 +94,11 @@ def section(ob,axis_y):
  hit,loc,normal,face=ob.ray_cast(Vector((-4,0,zz)),Vector((1,0,0)),distance=8)
  return (-loc.x/factor,normal) if hit else (None,None)
 join=[]
-for i in range(161):
- axis_y=59.0-i*(59.0-54.0)/160
+join_start=59.0
+join_end=min(54.0,cfg['head_button_join']['head_cap_axis_y']-.4)
+join_steps=max(160,math.ceil((join_start-join_end)/.03125))
+for i in range(join_steps+1):
+ axis_y=join_start-i*(join_start-join_end)/join_steps
  br,bn=section(body,axis_y);fr,fn=section(button,axis_y)
  assert br is not None or fr is not None,('Visible gap under button',axis_y)
  owner='head' if br is not None and (fr is None or br>=fr) else 'button'
@@ -122,8 +128,14 @@ if base_curve:
  result['all_other_lower_profile_points_preserved']=True
  result['base_curvature_config']=base_curve['config']
 if shape_refit:
- result.update(declared_shape_refit=shape_refit,lower_65_profile_points_preserved=False,
-               flare_socket_stem_collars_preserved=False,all_other_lower_profile_points_preserved=False,
+ touched=set(map(int,shape_config['body_rings']))
+ result.update(declared_shape_refit=shape_refit,preservation_baseline=shape_refit['source'],
+               lower_65_profile_points_preserved=cfg['profile'][:65]==source_profile['profile'][:65],
+               flare_socket_stem_collars_preserved=cfg['profile'][11:65]==source_profile['profile'][11:65],
+               slit_parameters_preserved=cfg['slit']==source_profile['slit'],
+               all_other_lower_profile_points_preserved=all(cfg['profile'][i]==source_profile['profile'][i] for i in range(65) if i not in touched),
+               declared_changed_body_rings=sorted(touched),
+               declared_changed_finial_rings=sorted(map(int,shape_config.get('finial_rings',{}))),
                all_unlisted_profile_points_preserved=True)
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

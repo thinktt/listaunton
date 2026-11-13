@@ -1,0 +1,81 @@
+{
+  "variant": "155-button-rim-1p8",
+  "source": "history/bishop-mission-019/bishop-rebuilt.blend",
+  "source_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
+  "profile": "history/bishop-mission-019/profile.json",
+  "samples": 64,
+  "body_rings": {
+    "101": [
+      15.2889,
+      59.0014
+    ],
+    "102": [
+      14.537067187499998,
+      58.09898125
+    ],
+    "103": [
+      13.834612500000002,
+      57.146300000000004
+    ],
+    "104": [
+      13.1870765625,
+      56.11381875
+    ],
+    "105": [
+      12.6,
+      55.0
+    ],
+    "106": [
+      0.01,
+      55.0
+    ]
+  },
+  "finial_rings": {
+    "0": [
+      0.0108,
+      55.78
+    ],
+    "1": [
+      11.124000000000002,
+      55.78
+    ],
+    "2": [
+      12.636,
+      55.309999999999995
+    ],
+    "3": [
+      14.148,
+      53.900000000000006
+    ],
+    "4": [
+      15.174000000000001,
+      52.900000000000006
+    ],
+    "5": [
+      15.552000000000001,
+      52.3
+    ],
+    "6": [
+      15.336,
+      51.980000000000004
+    ],
+    "7": [
+      14.472000000000001,
+      51.33
+    ]
+  },
+  "head_cap_axis_y": 55.0,
+  "interpretation": "Unaccepted button-rim hypothesis from first-hit surface boundaries. Raise and soften the front/outer roll while preserving every radius and the physical highest point. Extend only the concealed head tip for direct broad contact. Keep all lower anatomy, slit, UVs, pigment, lights and fixed reference camera unchanged.",
+  "rim_lift_original_axis_units": 1.8,
+  "observations": {
+    "baseline_first_hit_button_bounds": [
+      425,
+      162,
+      558,
+      278
+    ],
+    "selected_front_rim_center_y_estimate": 270,
+    "estimated_uncertainty_px": 3,
+    "note": "The lower photographic boundary is manually interpreted, supported by the blurred original; not an exact segmentation or a fit to highlights."
+  }
+}

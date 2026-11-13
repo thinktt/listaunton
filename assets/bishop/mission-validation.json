@@ -1,18 +1,50 @@
 {
   "passed": true,
-  "model_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
-  "source": "history/bishop-mission-018/bishop-rebuilt.blend",
-  "source_sha256": "d0947ffe59e17c9aaa2de35bca7f896ada2b7238024a26b13bd132fb1a438dc2",
-  "config_sha256": "d7d69eb3141455b49c3deb84422d10de516476b921a466053c906ea22fb2eb01",
+  "model_sha256": "0542cb45a37058479eaade041711a74f7e32dd0eb46f95889cb72f1da46f84fa",
+  "source": "history/bishop-mission-019/bishop-rebuilt.blend",
+  "source_sha256": "e714df78e938e6706ee2b9f197fca4de2faa22fb7350e7f9bea798c45a5ace3c",
+  "config_sha256": "5b12f22c54e4cdaddd489b0120527581016cbe024a50339b384577a74c9deaf8",
   "changed_body_rings": [
-    6,
-    7,
-    8,
-    9
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
   ],
-  "max_control_error_from_declared_edit": 5.637874789243824e-08,
+  "changed_finial_rings": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "max_control_error_from_declared_edit": 2.2892118156647712e-07,
   "unlisted_controls_exact": true,
-  "topology_modifiers_uvs_cutter_button_materials_packed_pixels_lights_and_camera_preserved": true,
+  "control_errors_by_component": {
+    "Bishop - continuous turned body": 2.2892118156647712e-07,
+    "Bishop - domed button finial": 1.9219283942106813e-07
+  },
+  "topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved": true,
+  "button_controls_preserved": false,
   "reference_pixels_unchanged": true,
   "camera_exactly_unchanged": true,
   "shader": "Principled BSDF",
@@ -25,9 +57,9 @@
     "regions": [
       {
         "region": "body-rest",
-        "faces": 55818,
-        "vertices": 56302,
-        "normal_max_component_error": 4.0650367736816406e-05,
+        "faces": 55852,
+        "vertices": 56335,
+        "normal_max_component_error": 4.029273986816406e-05,
         "uv_max_component_errors": {
           "Pigment projection": 5.960464477539063e-08,
           "Wood atlas": 5.960464477539063e-08
@@ -37,7 +69,7 @@
         "region": "socket-lip",
         "faces": 7936,
         "vertices": 8192,
-        "normal_max_component_error": 5.456805229187012e-05,
+        "normal_max_component_error": 5.412101745605469e-05,
         "uv_max_component_errors": {
           "Pigment projection": 5.960464477539063e-08,
           "Wood atlas": 5.960464477539063e-08

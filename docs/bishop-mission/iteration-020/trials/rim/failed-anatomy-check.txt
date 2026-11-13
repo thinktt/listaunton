@@ -1,0 +1,19 @@
+00:02.656  blend            | Read blend: "C:\Users\toby\Documents\Codex\2026-10-01\go-x20\work\bishop-mission-run\history\bishop-mission-019\bishop-rebuilt.blend"
+00:17.734  blend            | Read blend: "C:\Users\toby\Documents\Codex\2026-10-01\go-x20\work\bishop-mission-run\build\bishop-mission\155-button-rim-1p8\bishop.blend"
+00:32.328  blend            | Read blend: "C:\Users\toby\Documents\Codex\2026-10-01\go-x20\work\bishop-mission-run\build\bishop-mission\155-button-rim-1p8\bishop.blend"
+Traceback (most recent call last):
+  File "C:\Users\toby\Documents\Codex\2026-10-01\go-x20\work\bishop-mission-run\scripts\bishop\validate_shape_trial.py", line 22, in <module>
+    runpy.run_path(str(path),run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\toby\Documents\Codex\2026-10-01\go-x20\work\bishop-mission-run\scripts\bishop\validate.py", line 108, in <module>
+    assert .8<contact_ratio<.99,('Direct broad contact rather than narrow pedestal',contact_ratio)
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Direct broad contact rather than narrow pedestal', 0.7745164184984087)
+
+Error: script failed, file: 'scripts\bishop\validate_shape_trial.py', exiting.
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
