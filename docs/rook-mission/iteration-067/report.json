@@ -1,0 +1,10 @@
+{
+  "source_sha256": "4e1557a8dbfd4e93c6c837403ffaed7b7f08e1565f063f576eb6e5c338856cf7",
+  "neck_triangles_hidden_visible": [
+    8224,
+    3040
+  ],
+  "covered_texels": 1327432,
+  "protected_texels": 414444,
+  "method": "Seven interior samples per evaluated triangle, BVH occlusion from fixed orthographic camera. Any visible sample protects entire UV triangle. Approximate conservative classification, verified afterward by fixed renders."
+}
