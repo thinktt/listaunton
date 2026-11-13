@@ -1,0 +1,12 @@
+{
+  "source_atlas_sha256": "37de531d5e4bef1eb0bd370c1aa2c85171297032677552aac26d659c9352b9b6",
+  "strength": 1,
+  "blur_radii_px": [
+    8,
+    100
+  ],
+  "method": "Local difference-of-Gaussian pigment correction; no UV resampling; original high-frequency detail retained before clipping. Not physical albedo recovery.",
+  "unmasked_pixels_exact": true,
+  "source_model_sha256": "77221a063a8dbdd5f01545312c98e5bf31d4f86f3d6cbe0ea169ff198060a33e",
+  "model_sha256": "259c01f57cf48e2f5c704c37ec1e9e1d69febf912eb705610d2102b348785c8b"
+}
