@@ -1,11 +1,12 @@
 {
-  "checkpoint": 4,
-  "source_trial_sha256": "3f697fb6bcffc083edfdb12daf7880afe63ec7cf2de46a4ccb5ae1f86bb1d8bc",
-  "model_sha256": "9eaaaaadfd2195591508cda798d56c27aa263ee3baa9424ded8acf76d6e4349c",
-  "source_trial": "build/rook-mission/004-continuous-atlas",
+  "checkpoint": 21,
+  "model_sha256": "3f09283860474bec2297ff8cdd5ff2bec9a10833d02e4e53fd0290f361babb05",
+  "source_trial_sha256": "2d952fd8d9b3269fda0f271ea2dd0444b599816b179586ffe16c9390d3a7516b",
+  "change": "40W foot-linked glossy strip; original geometry, pigment and lights retained",
   "unfinished": [
-    "highlight placement and edge crescents",
-    "inferred hidden pigment and residual projection artifacts",
-    "interior curvature vs original"
+    "turret and shoulder reflections",
+    "baked lighting contamination",
+    "side neck pigment transitions",
+    "inferred hidden form"
   ]
 }

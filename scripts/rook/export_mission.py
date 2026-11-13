@@ -11,8 +11,9 @@ bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);s=bpy.context.scene
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 
 
-receiver_validation=None
-objects=sorted([ob for ob in s.objects if ob.type=='MESH' and not ob.hide_render],key=lambda ob:ob.name);assert len(objects)==1
+from render_regions import closed_body, validate as validate_receivers
+receiver_validation=validate_receivers(s)
+objects=[closed_body(s)]
 for ob in objects:
     for modifier in ob.modifiers:
         if modifier.type=='SUBSURF':modifier.levels=modifier.render_levels

@@ -4,6 +4,8 @@ import sys,json,hashlib,math
 import bpy,bmesh,numpy as np
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from render_regions import closed_body,validate as validate_receivers
 args=sys.argv[sys.argv.index('--')+1:]
 variant=args[0];out=ROOT/'build/rook-mission'/variant
 out.mkdir(parents=True,exist_ok=True)
@@ -13,7 +15,7 @@ def snapshot(path):
     bpy.ops.wm.open_mainfile(filepath=str(path),load_ui=False)
     s=bpy.context.scene;dg=bpy.context.evaluated_depsgraph_get();parts={};arrays={}
     for ob in s.objects:
-        if ob.type!='MESH':continue
+        if ob.type!='MESH' or ob.get('rook_render_receiver'):continue
         ev=ob.evaluated_get(dg);me=ev.to_mesh();me.calc_loop_triangles()
         positions=np.array([v.co[:] for v in me.vertices],np.float32)
         faces=np.array([t.vertices[:] for t in me.loop_triangles],np.int32)
@@ -45,7 +47,8 @@ for name,before in expected['parts'].items():
     assert abs(before['volume']-after['volume'])<1e-7
     precision[name]={'max_position_delta':dp,'max_normal_component_delta':dn}
 s=bpy.context.scene
-body=next(o for o in s.objects if o.type=='MESH' and not o.hide_render)
+body=closed_body(s)
+receiver_report=validate_receivers(s)
 mat=body.data.materials[0]
 surface=mat.node_tree.nodes.get('Material Output').inputs['Surface'].links[0].from_node
 assert surface.type=='BSDF_PRINCIPLED'
@@ -57,11 +60,12 @@ for im in images:
     a=np.empty(len(im.pixels),np.float32);im.pixels.foreach_get(a);assert np.isfinite(a).all()
 if s.get('rook_pigment_uv'):
     for ob in s.objects:
-        if ob.type!='MESH':continue
+        if ob.type!='MESH' or ob.get('rook_render_receiver'):continue
         uv=ob.data.uv_layers.get(s['rook_pigment_uv']);assert uv
         values=np.array([row.uv[:] for row in uv.data]);assert np.isfinite(values).all()
         assert values.min()>=0 and values.max()<=1
 report={'geometry_camera_identical':True,'closed_positive_components':len(actual['parts']),'model_sha256':digest(trial),'accepted_sha256':digest(baseline),'packed_images':len(images),'packed_float_images':sum(im.is_float for im in images),'real_principled_surface':True,'atlas_uvs_checked':bool(s.get('rook_pigment_uv')),'source_references':{name:digest(ROOT/'assets/rook'/name) for name in ['ref.png','original.png','original-white.png']},'scope':'Geometry, evaluated topology, component visibility, object transforms, saved reference camera and dimensions, packed texture finiteness, and actual BSDF surface. Not a visual-match certificate.'}
+report['render_receivers']=receiver_report
 report['geometry_camera_identical']=actual==expected
 report['control_and_camera_exact']=True
 report['evaluated_surface_precision']=precision

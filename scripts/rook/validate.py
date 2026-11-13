@@ -3,8 +3,11 @@ import bpy,bmesh,json,sys,hashlib,math
 import numpy as np
 from pathlib import Path
 args=sys.argv[sys.argv.index('--')+1:];root=Path(args[0]);model=root/'models/rook/rook-rebuilt.blend';bpy.ops.wm.open_mainfile(filepath=str(model));graph=bpy.context.evaluated_depsgraph_get();report=[]
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from render_regions import validate as validate_receivers
+receiver_report=validate_receivers(bpy.context.scene)
 for ob in bpy.context.scene.objects:
- if ob.type!='MESH':continue
+ if ob.type!='MESH' or ob.get('rook_render_receiver'):continue
  ev=ob.evaluated_get(graph);me=ev.to_mesh();bm=bmesh.new();bm.from_mesh(me)
  nonmanifold=sum(not e.is_manifold for e in bm.edges);volume=bm.calc_volume(signed=True)
  assert nonmanifold==0,(ob.name,nonmanifold)
@@ -30,4 +33,5 @@ for side,actual in [('min',vertices[:,:3].min(0)),('max',vertices[:,:3].max(0))]
 camera=json.loads((root/'assets/rook/camera.json').read_text());assert camera==meta['referenceCamera']
 assert bpy.context.scene.camera.data.type=='ORTHO'
 summary={'components':report,'source_hash_matches':True,'mesh_binary_checked':True,'normal_length_max_error':normal_error,'visible_triangle_count':meta['triangleCount'],'elevation_degrees':54,'equal_merlon_volumes':True,'visible_wall_thickness_profile_px':23,'note':'Five closed editable objects: the evaluated union body and four equal hidden merlon construction objects. Boolean union preserves editable construction; packed wood material is present; unseen geometry and finish remain inferred.'}
+summary['render_receivers']=receiver_report
 (root/'assets/rook/validation.json').write_text(json.dumps(summary,indent=2));print('PASS',summary)
