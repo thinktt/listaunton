@@ -1,0 +1,28 @@
+{
+  "guide": "assets/rook/concepts/side-01-cutout.png",
+  "profile": "assets/rook/profile.png",
+  "guide_sha256": "56f86bc0a017646140fec1f96e6966aadf4e728ed4a0a2d8f86c8c181b98cc2c",
+  "profile_sha256": "fc6bd11517526d0807fee5a5cf5059794970dc5cea45b1dec469e410ae33da94",
+  "source_blend_sha256": "77221a063a8dbdd5f01545312c98e5bf31d4f86f3d6cbe0ea169ff198060a33e",
+  "canvas": [
+    1254,
+    1414
+  ],
+  "guide_top": 160,
+  "scale": 1.89247311827957,
+  "offset_x": 59.258064516129025,
+  "offset_y": -165.95698924731187,
+  "guide_foot": {
+    "width": 704,
+    "center": 627.0,
+    "floor": 1118,
+    "row": 1034
+  },
+  "model_foot": {
+    "width": 372,
+    "center": 300.0,
+    "floor": 763,
+    "row": 706
+  },
+  "method": "Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth."
+}

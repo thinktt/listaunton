@@ -1,0 +1,12 @@
+{
+  "checkpoint": 47,
+  "model_sha256": "77221a063a8dbdd5f01545312c98e5bf31d4f86f3d6cbe0ea169ff198060a33e",
+  "source_trial_sha256": "820288ac2bcde3bf989828e261575bb8d6406d2de162aa263dbc53b008d9b6b6",
+  "change": "Floor lowered six profile pixels, repaired pigment atlas and warm floor-edge strip; outer geometry preserved",
+  "unfinished": [
+    "turret and shoulder reflections",
+    "baked lighting contamination",
+    "side neck pigment transitions",
+    "inferred hidden form"
+  ]
+}

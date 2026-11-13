@@ -1,0 +1,11 @@
+{
+  "gain": 1.0,
+  "source_atlas_sha256": "37de531d5e4bef1eb0bd370c1aa2c85171297032677552aac26d659c9352b9b6",
+  "reference_sha256": "2868e5fe919f675c80be81359b609cdc353b73a46649e5be3d008e8093849dbe",
+  "baseline_render_sha256": "1f037d570c22c653dbf4e09765a0e8b948c99d3784563f2569bb39190a850f58",
+  "unmasked_pixels_exact": true,
+  "max_probe_reprojection_error_pixels": 0.27932679653167725,
+  "method": "Approximate display-RGB residual added to local pigment using measured UV-to-camera correspondence. Preserves real BSDF; not physical albedo recovery. Includes reference detail and may inherit illumination.",
+  "source_model_sha256": "77221a063a8dbdd5f01545312c98e5bf31d4f86f3d6cbe0ea169ff198060a33e",
+  "model_sha256": "d53ba032aa3c70278ebb077a6a2a1bb26bf9ca77f40d1b709eb238c9444fec61"
+}
