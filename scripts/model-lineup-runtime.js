@@ -16,6 +16,7 @@ for(const piece of order){
 let models=null,gl=null,program=null,uniforms=null,started=false,lost=false;
 let showBlender=window.location.hash==='#blender',loadMessage='Loading current 3D models…';
 let yaw=0,pitch=0,wood=true,pending=false,drag=null;
+const referencePitch=54*Math.PI/180;
 const ratio=piece=>rows[piece].height*Number(byId('side-scale-'+piece).value)/(rows.king.height*Number(byId('side-scale-king').value));
 function ratios(){return Object.fromEntries(order.map(piece=>[piece,ratio(piece)]));}
 function measure(currentStage=stage){
@@ -47,16 +48,18 @@ function layout(){
 function selectButtons(){
  byId('models-side').setAttribute('aria-pressed',String(!showBlender&&yaw===0&&pitch===0));
  byId('models-threequarter').setAttribute('aria-pressed',String(!showBlender&&Math.abs(yaw+.43)<1e-6&&Math.abs(pitch-.35)<1e-6));
+ byId('models-reference').setAttribute('aria-pressed',String(!showBlender&&Math.abs(yaw)<1e-6&&Math.abs(pitch-referencePitch)<1e-6));
  byId('models-wood').setAttribute('aria-pressed',String(!showBlender&&wood));
  byId('models-neutral').setAttribute('aria-pressed',String(!showBlender&&!wood));
  byId('models-blender').setAttribute('aria-pressed',String(showBlender));
+ stage.classList.toggle('is-angled',Boolean(models&&gl&&!lost&&!showBlender&&Math.abs(pitch)>1e-6));
 }
 function schedule(){if(!models||!gl||lost||showBlender||panel.hidden||pending)return;pending=true;requestAnimationFrame(()=>{pending=false;draw();});}
 function paintDisplay(){
  const ready=Boolean(models&&gl&&!lost),showImages=showBlender||!ready;
  fallback.hidden=!showImages;canvas.hidden=showImages;
  for(const id of ['models-wood','models-neutral'])byId(id).disabled=!ready;
- for(const id of ['models-side','models-threequarter'])byId(id).disabled=!ready||showBlender;
+ for(const id of ['models-side','models-threequarter','models-reference'])byId(id).disabled=!ready||showBlender;
  status.textContent=showBlender?'Saved Blender side renders. The knight is viewed slightly above level; lighting varies between pieces.':ready?'Drag to rotate all pieces together. Lighting in this view is approximate.':loadMessage;
  selectButtons();if(!showImages)schedule();
 }
@@ -72,6 +75,7 @@ for(const piece of order){
 }
 byId('models-side').addEventListener('click',()=>{yaw=0;pitch=0;selectButtons();schedule();});
 byId('models-threequarter').addEventListener('click',()=>{yaw=-.43;pitch=.35;selectButtons();schedule();});
+byId('models-reference').addEventListener('click',()=>{yaw=0;pitch=referencePitch;selectButtons();schedule();});
 byId('models-wood').addEventListener('click',()=>{wood=true;changeDisplay(false);});
 byId('models-neutral').addEventListener('click',()=>{wood=false;changeDisplay(false);});
 byId('models-blender').addEventListener('click',()=>changeDisplay(!showBlender));
@@ -152,6 +156,7 @@ async function loadPiece(piece){
  for(let i=0;i<vertices.length;i+=8)if(vertices[i+2]<=limit){xmin=Math.min(xmin,vertices[i]);xmax=Math.max(xmax,vertices[i]);ymin=Math.min(ymin,vertices[i+1]);ymax=Math.max(ymax,vertices[i+1]);}
  if(!Number.isFinite(xmin)||!Number.isFinite(ymin))throw Error('Invalid '+piece+' base');
  result.base=[(xmin+xmax)/2,(ymin+ymax)/2,min[2]];
+ result.baseRadius=Math.max(xmax-xmin,ymax-ymin)/2;
  const textureVersion=meta.textureSha256||(meta.material&&meta.material.textureSha256)||meta.sourceSha256;
  result.image=await image(result.texture+'?v='+encodeURIComponent(textureVersion));
  return result;
@@ -173,8 +178,15 @@ function initialize(){
  gl.bindVertexArray(null);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);
 }
 function draw(){
- if(!models||!gl||panel.hidden)return;
+ if(!models||!gl||showBlender||panel.hidden)return;
  const m=measure(),dpr=Math.min(window.devicePixelRatio||1,1.5);
+ // A raised camera projects the front of each round foot below its center.
+ // Leave room for that ellipse so the 54° view never clips the bases.
+ const projection=Math.abs(Math.sin(pitch));
+ const below=Math.max(...order.map(piece=>{
+  const model=models[piece];return model.baseRadius*m.relative[piece]/model.meta.bounds.size[2]*projection*m.pixels;
+ }));
+ m.ground=Math.min(m.ground,m.height-below-15);
  const width=Math.max(1,Math.round(m.width*dpr)),height=Math.max(1,Math.round(m.height*dpr));
  if(canvas.width!==width||canvas.height!==height){canvas.width=width;canvas.height=height;}
  gl.viewport(0,0,width,height);gl.clearColor(.125,.137,.122,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(program);
