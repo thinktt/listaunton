@@ -66,6 +66,9 @@ if (out/'turning.json').is_file():
     scripts+=['shared_turning.py','inspect_shared_turning.py','fit_shared_upper.py',
               'validate_shared_turning.py','compare_shared_turning.py','refresh_set_entry.py',
               'check_served_checkpoint.py']
+if (out/'side-refit.json').is_file():
+    scripts+=['shared_turning.py','side_refit.py','side_refit_profile.py','fit_side_refit.py','compare_side_refit.py',
+              'validate_side_refit.py','render_diagnostics.py','review-template.html','build_review.py','check_served_checkpoint.py']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]
 if a.archive:
@@ -90,6 +93,14 @@ checkpoint={'classification':'Accepted geometry checkpoint; inherited finish rem
     'geometry_phase_complete':False,'mission_complete':False,'goal_status':'active','no_quota_monitoring':True,'no_push':True,
     'note':'Only bishop files copied. Neutral is the review default. The old material/lights are retained without hiding their mismatch. Other pieces and shared gallery settings are untouched.'}
 relative=f'docs/bishop-mission/iteration-{a.checkpoint}/checkpoint.json'
+if (out/'side-refit.json').is_file():
+    fit=json.loads((out/'side-refit.json').read_text())
+    measured=json.loads((out/'measurements.json').read_text())
+    row=measured[fit['accepted']]
+    checkpoint.update(side_refit_complete=True,goal_status='accepted regional refit',
+        frozen_king_percent=measured['side_calibration']['target_bishop_percent_on_fixed_king_ruler'],
+        screenshot_side_iou=row['side_fit']['outline_iou'],registered_original_iou=row['registered']['original_white'],
+        note='Owner-directed physical sizing on the 025 ruler. The unchanged 54-degree view records the reference-fit cost. Material and lighting work remains open.')
 (ROOT/relative).write_text(json.dumps(checkpoint,indent=2)+'\n',newline='\n');copy(relative,canonical)
 manifest=sorted(set(list(public)+copied+[relative]))
 (ROOT/f'build/bishop-mission/{a.log_prefix}-delivered-files.json').write_text(json.dumps({r:sha(ROOT/r) for r in manifest},indent=2)+'\n')

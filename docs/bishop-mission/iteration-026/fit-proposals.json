@@ -1,0 +1,55 @@
+{
+  "method": "Cubic control-ring envelope, sampled side and orthographic ring projection. Predictions only. Each proposed model is compared again after subdivision, Boolean and rendering.",
+  "error_units": [
+    "screenshot_px",
+    "registered_outline_px",
+    "front_collar_rows_px"
+  ],
+  "balanced": [
+    0.488314815198947,
+    25.472063731435266,
+    34.06595595332541
+  ],
+  "proposals": {
+    "side-first": {
+      "parameters": {
+        "stem_radius": 0.97077,
+        "collar_radius": 0.954345,
+        "collar_height": 0.92124,
+        "head_radius": 0.9588,
+        "head_height": 0.909,
+        "waist_height": -0.055
+      },
+      "predicted_errors": [
+        0.40213413784632496,
+        25.25803817171225,
+        35.54589900000193
+      ],
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "compromise": {
+      "parameters": {
+        "stem_radius": 0.97301,
+        "collar_radius": 0.934,
+        "collar_height": 0.89064,
+        "head_radius": 0.96528,
+        "head_height": 0.909,
+        "waist_height": -0.055
+      },
+      "predicted_errors": [
+        0.5465424234981666,
+        24.748547049866314,
+        31.73798981987947
+      ],
+      "weights": [
+        1.0,
+        0.12,
+        0.035
+      ]
+    }
+  }
+}

@@ -2,25 +2,25 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9738696480321232,
-      "mean_boundary_error_px": 4.3707805907173,
-      "p95_boundary_error_px": 17.0,
+      "silhouette_iou": 0.8562982129470655,
+      "mean_boundary_error_px": 22.21485714285714,
+      "p95_boundary_error_px": 60.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 1.0083414896988774
+      "mean_boundary_error_original_300px_units": 5.124979778772232
     },
     "selected": {
-      "silhouette_iou": 0.9679409912746244,
-      "mean_boundary_error_px": 5.295263157894737,
-      "p95_boundary_error_px": 17.0,
+      "silhouette_iou": 0.8471615068558598,
+      "mean_boundary_error_px": 24.406285714285715,
+      "p95_boundary_error_px": 57.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "The low button seats directly on the shortened mitre. The diagonal cutter moves with the head.",
-    "collars": "The upper profile fit uses the original-white silhouette and three front collar arcs in the saved camera.",
-    "lower_body": "The sole, foot, groove, flare, socket and first stem support use all 40 queen/king rows at a common scale. The stem blends into this support.",
-    "limits": "The thinner shared turning moves the groove and rear flare in the original overlay. The saved wood retains photographic shading. See iteration 025 for the measured tradeoffs."
+    "finial": "The seated button and live diagonal saw follow the same transformation as the mitre.",
+    "collars": "The collar stack was fitted against the owner\u2019s level screenshot and the original three arcs at the saved 54-degree registration.",
+    "lower_body": "The 40 rows from the sole through the first stem support retain the queen and king profile at a uniform scale. The stem above them was refitted separately.",
+    "limits": "The owner\u2019s narrower, shorter side target lowers the head and collars in the registered reference view. Iteration 026 records both fits and the actual model dimensions."
   }
 }

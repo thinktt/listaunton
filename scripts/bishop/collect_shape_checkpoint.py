@@ -8,12 +8,14 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--checkpoint',default='017');p.add_argument('--baseline',default='015')
 p.add_argument('--trial',default='143-geometry-checkpoint');p.add_argument('--log-prefix',default='143')
 p.add_argument('--interior-score',type=float,default=86)
+p.add_argument('--finish-scores',type=float,nargs=3,metavar=('COLOR','GRAIN','LIGHTING'),default=[83,77,72])
 p.add_argument('--holistic-range',type=float,nargs=2,default=[75,85])
 p.add_argument('--bounds-relative-tolerance',type=float,default=0,
                help='Explicitly declared allowance for a local evaluated diameter change; default preserves exact prior bounds.')
 a=p.parse_args();assert a.checkpoint.isdigit() and a.baseline.isdigit() and a.log_prefix.isdigit()
 assert 0<=a.bounds_relative_tolerance<=.001
 assert 0<=a.holistic_range[0]<=a.holistic_range[1]<=100
+assert all(0<=s<=100 for s in a.finish_scores)
 out=ROOT/f'docs/bishop-mission/iteration-{a.checkpoint}';assets=ROOT/'assets/bishop'
 (out/'validation').mkdir(parents=True,exist_ok=True)
 trial=ROOT/'build/bishop-mission'/a.trial
@@ -46,7 +48,11 @@ if shared:
     section=json.loads((out/'measurements.json').read_text())[key]
     assert section['source_sha256']==model_hash
     assert np.allclose(new_size,[section['foot_diameter']]*2+[section['height']],rtol=0,atol=5e-5)
-    assert new_size[0]>old_size[0] and new_size[2]<old_size[2] and abs(meta['bounds']['min'][2])<1e-6
+    if 'target_size' in scope:
+        assert np.allclose(new_size,scope['target_size'],rtol=0,atol=1e-5)
+    else:
+        assert new_size[0]>old_size[0] and new_size[2]<old_size[2]
+    assert abs(meta['bounds']['min'][2])<1e-6
 else:
     assert np.allclose(new_size,old_size,atol=1e-6,rtol=a.bounds_relative_tolerance)
     assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
@@ -76,6 +82,11 @@ if shared:
     pigment.pop('packed_pixels_material_graph_control_uvs_and_lights_preserved')
     pigment.update(packed_pixels_material_graphs_and_lights_preserved=True,original_upper_uvs_exact=True,
                    new_base_uv_interpolation_error=scope['lower_uv_interpolation_max_error'])
+    if 'target_size' in scope:
+        slit.update(cutter_shape_and_rotation_preserved=False,cutter_follows_mitre_affine=True,
+                    radial_scale=scope['head_radius_factor'],vertical_scale=scope['head_height_factor'])
+        pigment['all_control_uvs_exact']=scope['all_control_uvs_exact']
+        reports['base-validation.json']['foot_factor_from_previous']=scope['foot_ratio']
 for name,row in reports.items():(assets/name).write_text(json.dumps(row,indent=2)+'\n')
 validation_names=['validation.json','mission-validation.json','base-validation.json','slit-validation.json','viewer-validation.json',
                   'pigment-validation.json','receiver-validation.json','join-regression.json']
@@ -112,10 +123,11 @@ canvas=Image.new('RGB',(1000,535),'#14181c');draw=ImageDraw.Draw(canvas)
 for i,(label,path) in enumerate([('Previous side',prior/'side-profile.png'),('Current side',assets/'side-profile.png')]):
     im=Image.open(path).convert('RGBA').resize((500,500),Image.Resampling.LANCZOS)
     canvas.paste(im,(500*i,35),im);draw.text((500*i+10,10),label,fill='white')
-canvas.save(out/'side-comparison.png')
+canvas.save(out/('wood-side-comparison.png' if 'target_size' in scope else 'side-comparison.png'))
 metrics=json.loads((out/'comparison/metrics.json').read_text())
 assert metrics['render_sha256']==sha(assets/'render.png')
-scores={'silhouette':100*metrics['images']['selected']['silhouette_iou'],'interior':a.interior_score,'color':83,'texture':77,'lighting':72}
+scores={'silhouette':100*metrics['images']['selected']['silhouette_iou'],'interior':a.interior_score,
+        **dict(zip(('color','texture','lighting'),a.finish_scores))}
 record={'scores_percent':scores,'mean_percent':sum(scores.values())/5,'holistic_range_percent':a.holistic_range,
         'silhouette_measured_other_scores_subjective':True,'phase':'geometry',
         'model_sha256':model_hash,'render_sha256':sha(assets/'render.png'),'neutral_sha256':sha(assets/'render-clay.png'),

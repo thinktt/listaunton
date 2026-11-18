@@ -9,7 +9,10 @@ from validate_render_receivers import audit as audit_receivers
 from validate_pigment_history import audit_chain
 current_profile=json.loads((ROOT/'scripts/bishop/profile.json').read_text())
 if current_profile.get('shared_turning'):
-    from validate_shared_turning import audit as audit_shared
+    if current_profile.get('side_refit'):
+        from validate_side_refit import audit as audit_shared
+    else:
+        from validate_shared_turning import audit as audit_shared
     result=audit_shared(ROOT/'models/bishop/bishop-rebuilt.blend',current_profile)
     (ROOT/'assets/bishop/mission-validation.json').write_text(json.dumps(result,indent=2)+'\n')
     receivers=dict(result['render_receivers'],model_sha256=result['model_sha256'])

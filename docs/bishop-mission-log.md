@@ -776,3 +776,19 @@ Original-white silhouette overlap falls from 98.77% to 97.39%. The
 equal-diameter side profiles, fixed comparisons, trial measurements and
 reproduction settings are in [iteration 025](bishop-mission/iteration-025/assessment.md).
 The wood and lighting remain unfinished. Bishop 024 is archived for rollback.
+
+## 026 · Bishop height in the owner's lineup
+
+On checkpoint 025's board ruler the bishop moved from 81.94% to 74.48%
+of the king's height. The queen measures 83.29% on that same ruler.
+The new foot measures 1.93652 model units and the total height is 4.13599.
+All 40 base rows preserve the queen and king turning at one uniform scale.
+Most of the remaining height reduction comes from the exposed stem.
+
+Five saved variants were compared with the owner’s side screenshot and
+both registered white references. The accepted version matches the side
+outline at 98.16%, with a 0.48-pixel mean edge error. At the fixed 54°
+camera its original-white overlap is 85.63%, down from 97.39%. The head
+and front collar rims sit lower. The open slit, flush button, UVs, saved
+camera and mesh export passed verification. Wood and lighting are inherited.
+Bishop 025 is archived. [Lineup, measured tradeoffs and checkpoint](bishop-mission/iteration-026/assessment.md).

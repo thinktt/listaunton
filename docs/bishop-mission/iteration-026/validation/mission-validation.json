@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "model_sha256": "f18de9f1c93a49a32cee8a37eb66f49fa2022e0150e8f04a52b8c699c3e59dcb",
+  "source": "history/bishop-mission-025/bishop-rebuilt.blend",
+  "source_sha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+  "configuration": {
+    "config": "docs/bishop-mission/iteration-026/side-refit.json",
+    "case": "compromise",
+    "height_factor": 0.909,
+    "base_factor": 0.948,
+    "head_radius": 0.96528,
+    "head_height": 0.909,
+    "head_z_translation": 0.0,
+    "axis_slope": 0.909,
+    "axis_offset": 19.83286533666265
+  },
+  "donor_rings": 40,
+  "donor_sha256": {
+    "queen": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "king": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146"
+  },
+  "scale": 0.927144,
+  "max_base_radius_or_height_error": 5.340576159085231e-08,
+  "upper_controls_match_specification": true,
+  "cutter_translation_z": 0.0,
+  "head_radius_factor": 0.96528,
+  "head_height_factor": 0.909,
+  "cutter_and_button_transform_matches_mitre": true,
+  "all_control_uvs_exact": true,
+  "original_upper_uvs_exact": true,
+  "lower_uv_interpolation_max_error": 0.0,
+  "packed_images_and_material_graphs_preserved": true,
+  "lights_exact": true,
+  "reference_pixels_unchanged": true,
+  "camera_exactly_unchanged": true,
+  "geometry_phase": true,
+  "saved_and_reopened": true,
+  "render_receivers": {
+    "passed": true,
+    "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+    "evaluated_uv_error_below_1e_7": true,
+    "closed_editable_control_retained": true,
+    "regions": [
+      {
+        "region": "body-rest",
+        "faces": 59180,
+        "vertices": 59663,
+        "normal_max_component_error": 6.705522537231445e-06,
+        "uv_max_component_errors": {
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
+        }
+      },
+      {
+        "region": "socket-lip",
+        "faces": 5888,
+        "vertices": 6144,
+        "normal_max_component_error": 2.8908252716064453e-05,
+        "uv_max_component_errors": {
+          "Pigment projection": 0.0,
+          "Wood atlas": 0.0
+        }
+      }
+    ],
+    "all_faces_once": true
+  },
+  "finite_uvs_and_unit_normals": true,
+  "exported_triangles": 142362,
+  "bounds": {
+    "min": [
+      -0.9682577252388,
+      -0.9682578444480896,
+      0.0
+    ],
+    "max": [
+      0.9682577252388,
+      0.9682577252388,
+      4.135986328125
+    ],
+    "size": [
+      1.9365154504776,
+      1.9365155696868896,
+      4.135986328125
+    ],
+    "center": [
+      0.0,
+      -5.960464477539063e-08,
+      2.0679931640625
+    ]
+  },
+  "old_size": [
+    2.0427379608154297,
+    2.0427379608154297,
+    4.550049304962158
+  ],
+  "target_size": [
+    1.9365155868530273,
+    1.9365155868530273,
+    4.135994818210602
+  ],
+  "height_ratio": 0.9089981340673402,
+  "foot_ratio": 0.947999933238903,
+  "physical_sections": {
+    "sole_to_first_stem_support": {
+      "old": 1.2771539688110352,
+      "new": 1.2107419624328613,
+      "change": -0.0664120063781739
+    },
+    "stem": {
+      "old": 1.4724478721618652,
+      "new": 1.3000783135128018,
+      "change": -0.17236955864906345
+    },
+    "collar_stack": {
+      "old": 0.622668981552124,
+      "new": 0.5545739017295839,
+      "change": -0.06809507982254015
+    },
+    "mitre_and_button": {
+      "old": 1.1777784824371338,
+      "new": 1.070592150449753,
+      "change": -0.1071863319873807
+    }
+  }
+}

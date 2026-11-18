@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build\\bishop-mission\\side-refit-compromise\\wood.png",
+  "render_sha256": "a8a6585ac6db48c8202f75837fdffd385b366b8ecf3efb2ac1b46c9c72f7c5a7",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.8476617001634256,
+      "legacy_raw_model_mask_iou": 0.8476617001634256
+    },
+    "original_white": {
+      "silhouette_iou": 0.8562559694364852,
+      "legacy_raw_model_mask_iou": 0.8562559694364852
+    },
+    "original_black": {
+      "silhouette_iou": 0.8643332200889428,
+      "legacy_raw_model_mask_iou": 0.8643332200889428
+    }
+  }
+}

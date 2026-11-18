@@ -1,0 +1,47 @@
+{
+  "source": "history/bishop-mission-025/bishop-rebuilt.blend",
+  "source_sha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+  "source_profile": "history/bishop-mission-025/profile.json",
+  "height_factor": 0.909,
+  "base_factor": 0.948,
+  "cases": {
+    "stem-led": {
+      "stem_radius": 0.946,
+      "collar_radius": 0.955,
+      "collar_height": 0.967,
+      "head_radius": 0.957,
+      "head_height": 0.965
+    },
+    "stack-led": {
+      "stem_radius": 0.949,
+      "collar_radius": 0.95,
+      "collar_height": 0.84,
+      "head_radius": 0.941,
+      "head_height": 0.855
+    },
+    "balanced": {
+      "stem_radius": 0.948,
+      "collar_radius": 0.948,
+      "collar_height": 0.909,
+      "head_radius": 0.948,
+      "head_height": 0.909
+    },
+    "side-first": {
+      "stem_radius": 0.97077,
+      "collar_radius": 0.954345,
+      "collar_height": 0.92124,
+      "head_radius": 0.9588,
+      "head_height": 0.909,
+      "waist_height": -0.055
+    },
+    "compromise": {
+      "stem_radius": 0.97301,
+      "collar_radius": 0.934,
+      "collar_height": 0.89064,
+      "head_radius": 0.96528,
+      "head_height": 0.909,
+      "waist_height": -0.055
+    }
+  },
+  "accepted": "compromise"
+}

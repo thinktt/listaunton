@@ -44,6 +44,12 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('shared_turn
   collars='The upper profile fit uses the original-white silhouette and three front collar arcs in the saved camera.',
   finial='The low button seats directly on the shortened mitre. The diagonal cutter moves with the head.',
   limits='The thinner shared turning moves the groove and rear flare in the original overlay. The saved wood retains photographic shading. See iteration 025 for the measured tradeoffs.')
+if json.loads((root/'scripts/bishop/profile.json').read_text()).get('side_refit'):
+ report['internal_features'].update(
+  lower_body='The 40 rows from the sole through the first stem support retain the queen and king profile at a uniform scale. The stem above them was refitted separately.',
+  collars='The collar stack was fitted against the owner’s level screenshot and the original three arcs at the saved 54-degree registration.',
+  finial='The seated button and live diagonal saw follow the same transformation as the mitre.',
+  limits='The owner’s narrower, shorter side target lowers the head and collars in the registered reference view. Iteration 026 records both fits and the actual model dimensions.')
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

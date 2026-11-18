@@ -22,15 +22,18 @@ assert len(report)==2
 cfg=json.loads((root/args.profile).read_text());alignment=json.loads((root/'assets/bishop/original-alignment.json').read_text())
 factor=1254/300/alignment['scale']/cfg['scale'];sl=cfg['slit'];angle=math.radians(sl['angle'])
 bottom=(cfg['y0']-sl['bottom_center_y'])*factor/math.cos(math.radians(cfg['elevation']))
+side_refit=cfg.get('side_refit',{})
+radial=side_refit.get('head_radius',1.)
+axial=side_refit.get('head_height',1.)
 body=bpy.data.objects['Bishop - continuous turned body'].evaluated_get(graph)
 probes=[]
 for dz in [7,12,17]:
- x=(sl['x']+dz*math.tan(angle))*factor;z=bottom+dz*factor
+ x=(sl['x']+dz*axial*math.tan(angle))*factor;z=bottom+dz*axial*factor
  clear=not body.ray_cast(Vector((x,-4,z)),Vector((0,1,0)),distance=8)[0]
- near=body.ray_cast(Vector((x-6*factor,-4,z)),Vector((0,1,0)),distance=8)[0]
+ near=body.ray_cast(Vector((x-6*radial*factor,-4,z)),Vector((0,1,0)),distance=8)[0]
  assert clear and near,('Slit must pass through thickness with material beside it',dz,clear,near)
  probes.append({'height_above_slot_bottom_original_units':dz,'through_slot_clear':clear,'adjacent_material_hit':near})
-assert body.ray_cast(Vector((sl['x']*factor,-4,bottom-3*factor)),Vector((0,1,0)),distance=8)[0], 'Slot requires a solid floor.'
+assert body.ray_cast(Vector((sl['x']*factor,-4,bottom-3*axial*factor)),Vector((0,1,0)),distance=8)[0], 'Slot requires a solid floor.'
 meta=json.loads((root/'assets/bishop/mesh.json').read_text())
 if not args.skip_export:assert meta['sourceSha256']==hashlib.sha256(model.read_bytes()).hexdigest()
 assert meta['referenceCamera']['elevationDegrees']==54
@@ -52,6 +55,10 @@ if base_curve:
 shape_refit=cfg.get('mission_shape_refit')
 shared=cfg.get('shared_turning')
 head_offset=shared['upper_axis_offset'] if shared else 0.
+def head_axis(original):
+ return original*side_refit.get('axis_slope',1.)+side_refit.get('axis_offset',head_offset)
+if side_refit:
+ assert json.loads(bpy.context.scene['bishop_side_refit'])==side_refit
 if shared:
  transfer=json.loads((root/shared['config']).read_text())
  previous=json.loads((root/transfer['profile']).read_text())
@@ -77,6 +84,12 @@ else:assert cfg['profile'][:65]==expected_lower[:65], 'Undeclared lower profile 
 button_baseline=json.loads((root/'history/bishop/07-before-continuous-button-join/profile.json').read_text())
 for key,value in button_baseline['slit'].items():
  expected=value+(head_offset if key=='bottom_center_y' else 0.)
+ if side_refit:
+  nominal=math.radians(button_baseline['slit']['angle'])
+  new_angle=math.atan(math.tan(nominal)*radial/axial)
+  expected={'bottom_center_y':head_axis(button_baseline['slit']['bottom_center_y']),
+            'angle':math.degrees(new_angle),'x':button_baseline['slit']['x']*radial,
+            'width':button_baseline['slit']['width']*radial*math.cos(new_angle)/math.cos(nominal)}[key]
  assert abs(cfg['slit'][key]-expected)<1e-7, ('Slit differs from its local head coordinates',key)
 button=bpy.data.objects['Bishop - domed button finial'].evaluated_get(graph);button_mesh=button.to_mesh()
 points=[v.co for v in button_mesh.vertices];width=max(v.x for v in points)-min(v.x for v in points);height=max(v.z for v in points)-min(v.z for v in points)
@@ -89,7 +102,7 @@ button.to_mesh_clear()
 # normal transition; the continuous head must rotate its surface normal smoothly.
 head_normals=[]
 for i in range(100):
- axis_y=89.5+head_offset-i*(89.5-56.8)/99
+ axis_y=head_axis(89.5-i*(89.5-56.8)/99)
  zz=(cfg['y0']-axis_y)*factor/math.cos(math.radians(cfg['elevation']))
  hit,loc,normal,face=body.ray_cast(Vector((-4,0,zz)),Vector((1,0,0)),distance=8)
  assert hit,('Continuous head side missing',axis_y)
@@ -104,8 +117,8 @@ def section(ob,axis_y):
  hit,loc,normal,face=ob.ray_cast(Vector((-4,0,zz)),Vector((1,0,0)),distance=8)
  return (-loc.x/factor,normal) if hit else (None,None)
 join=[]
-join_start=59.0+head_offset
-join_end=min(54.0+head_offset,cfg['head_button_join']['head_cap_axis_y']-.4)
+join_start=head_axis(59.0)
+join_end=min(head_axis(54.0),cfg['head_button_join']['head_cap_axis_y']-.4*axial)
 join_steps=max(160,math.ceil((join_start-join_end)/.03125))
 for i in range(join_steps+1):
  axis_y=join_start-i*(join_start-join_end)/join_steps
@@ -151,5 +164,8 @@ if shared:
  result.update(lower_65_profile_points_preserved=False,flare_socket_stem_collars_preserved=False,
                slit_parameters_preserved=False,slit_angle_width_and_original_floor_anchor_preserved=False,
                slit_dimensions_and_floor_relative_to_head_preserved=True,shared_turning=shared)
+if side_refit:
+ result.update(side_refit=side_refit,slit_dimensions_and_floor_relative_to_head_preserved=False,
+               slit_and_button_mapped_with_mitre=True)
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

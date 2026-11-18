@@ -12,9 +12,19 @@ for label,path in [('rejected_neck','history/bishop/07-before-continuous-button-
  objects=[bpy.data.objects[name].evaluated_get(graph) for name in ['Bishop - continuous turned body','Bishop - domed button finial']]
  radius=[];step=.01
  shift=cfg.get('shared_turning',{}).get('upper_axis_offset',0.)
- sample_shift=shift if label=='current' else 0.
- start=59+sample_shift
- end=min(54.0,cfg['head_button_join']['head_cap_axis_y']-shift-.4)+sample_shift
+ if label=='current':
+  refit=cfg.get('side_refit',{})
+  scale=refit.get('axis_slope',1.)
+  offset=refit.get('axis_offset',shift)
+  start=59*scale+offset
+  end=min(54*scale+offset,cfg['head_button_join']['head_cap_axis_y']-.4*scale)
+ else:
+  benchmark=cfg
+  if cfg.get('side_refit'):
+   spec=json.loads((root/cfg['side_refit']['config']).read_text())
+   benchmark=json.loads((root/spec['source_profile']).read_text())
+  source_shift=benchmark.get('shared_turning',{}).get('upper_axis_offset',0.)
+  start,end=59.,min(54.,benchmark['head_button_join']['head_cap_axis_y']-source_shift-.4)
  count=math.ceil((start-end)/step)+1
  for i in range(count):
   axis_y=start-i*step;z=(cfg['y0']-axis_y)*factor/co;r=[]

@@ -17,6 +17,9 @@ cfg=json.loads((root/'scripts/bishop/profile.json').read_text(encoding='utf-8'))
 A=json.loads((root/'assets/bishop/original-alignment.json').read_text(encoding='utf-8'))
 factor=1254/300/A['scale']/cfg['scale'];co=math.cos(math.radians(cfg['elevation']))
 head_z=(cfg['y0']-72)*factor/co
+if 'side_refit' in cfg:
+ refit=cfg['side_refit']
+ head_z=(cfg['y0']-(72*refit['axis_slope']+refit['axis_offset']))*factor/co
 try:
  prefs=bpy.context.preferences.addons['cycles'].preferences;prefs.compute_device_type='CUDA';prefs.get_devices()
  for dev in prefs.devices:dev.use=dev.type=='CUDA'

@@ -389,3 +389,10 @@ UV, material, saw and camera checks for the current profile.
 `refresh_set_entry.py` refreshes the bishop records in the existing set
 page using the canonical sources. `check_served_checkpoint.py` checks
 the model, images and lineup against the local HTTP server.
+
+Checkpoint 026 uses the owner's measured side silhouette and the 025 board
+registration as a fixed physical ruler. Its dimensions, side and fixed views,
+and five regional trials are in [the 026 assessment](../../docs/bishop-mission/iteration-026/assessment.md).
+To rebuild a case, run Blender with `--python scripts/bishop/side_refit.py -- compromise --samples 384`.
+The other case names are in `side-refit.json`. The archived 025 mesh supplies
+the editable control rings, Boolean saw, direct button seat and UVs.

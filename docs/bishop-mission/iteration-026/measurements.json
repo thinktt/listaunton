@@ -1,0 +1,483 @@
+{
+  "025": {
+    "foot_diameter": 2.042736053466797,
+    "groove": {
+      "radius": 0.9827296733856201,
+      "height": 0.229
+    },
+    "flare": {
+      "radius": 1.009325385093689,
+      "height": 0.3315
+    },
+    "socket_diameter_at_scaled_z1": 1.0351585089183357,
+    "front_collar_rim_rows": {
+      "upper": 512.3796569108963,
+      "middle": 566.088091135025,
+      "lower": 609.4099184274673
+    },
+    "front_groove_row": 1074.7397303581238,
+    "floor": 0.0,
+    "height": 4.550049304962158,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+    "side_fit": {
+      "outline_iou": 0.8010159010600707,
+      "edge_mae_screenshot_px": 4.712669683257919,
+      "top_and_bottom": [
+        6,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 6.8106060606060606,
+        "collars": 11.931818181818182,
+        "stem": 1.6578947368421053,
+        "socket_and_base": 3.5701754385964914
+      },
+      "threshold_iou_range": [
+        0.8007358351729212,
+        0.8025082995204722
+      ]
+    },
+    "registered": {
+      "selected": 0.968372391614769,
+      "original_white": 0.9738682816048448,
+      "original_black": 0.9647121357085364
+    },
+    "render_xyxy": [
+      226,
+      164,
+      756,
+      1113
+    ]
+  },
+  "stem-led": {
+    "foot_diameter": 1.9365143775939941,
+    "groove": {
+      "radius": 0.9316308498382568,
+      "height": 0.2175
+    },
+    "flare": {
+      "radius": 0.9568386077880859,
+      "height": 0.314
+    },
+    "socket_diameter_at_scaled_z1": 0.9813297048676815,
+    "front_collar_rim_rows": {
+      "upper": 564.0312795639038,
+      "middle": 615.7033821344376,
+      "lower": 657.4703800678253
+    },
+    "front_groove_row": 1065.7488410174847,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "c196f5e5ade0be7a8dafc59f37b85fcba2d42c45de839601e19de79e48555aff",
+    "side_fit": {
+      "outline_iou": 0.959524217011809,
+      "edge_mae_screenshot_px": 1.0701357466063348,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 0.6363636363636364,
+        "collars": 2.2954545454545454,
+        "stem": 1.4276315789473684,
+        "socket_and_base": 0.6228070175438597
+      },
+      "threshold_iou_range": [
+        0.9601232243710422,
+        0.9571208490243067
+      ]
+    },
+    "registered": {
+      "selected": 0.8372501250669737,
+      "original_white": 0.8453844058094243,
+      "original_black": 0.8524734714655386
+    },
+    "render_xyxy": [
+      240,
+      229,
+      742,
+      1102
+    ]
+  },
+  "stack-led": {
+    "foot_diameter": 1.9365143775939941,
+    "groove": {
+      "radius": 0.9316308498382568,
+      "height": 0.2175
+    },
+    "flare": {
+      "radius": 0.9568386077880859,
+      "height": 0.314
+    },
+    "socket_diameter_at_scaled_z1": 0.9813297048676815,
+    "front_collar_rim_rows": {
+      "upper": 540.9669309854507,
+      "middle": 588.2333099842072,
+      "lower": 625.7716534137726
+    },
+    "front_groove_row": 1065.7488410174847,
+    "floor": 0.0,
+    "height": 4.135986804962158,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "abb7764891eef0022743f8e30b34f40107c339427010c7cd2adbe437c9b39413",
+    "side_fit": {
+      "outline_iou": 0.9499483115093039,
+      "edge_mae_screenshot_px": 1.3144796380090498,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 1.0606060606060606,
+        "collars": 6.7272727272727275,
+        "stem": 0.4868421052631579,
+        "socket_and_base": 0.6228070175438597
+      },
+      "threshold_iou_range": [
+        0.949711530181693,
+        0.9518998272884284
+      ]
+    },
+    "registered": {
+      "selected": 0.8530379344087119,
+      "original_white": 0.8617414119819251,
+      "original_black": 0.8705826978037698
+    },
+    "render_xyxy": [
+      240,
+      229,
+      742,
+      1102
+    ]
+  },
+  "balanced": {
+    "foot_diameter": 1.9365143775939941,
+    "groove": {
+      "radius": 0.9316308498382568,
+      "height": 0.2175
+    },
+    "flare": {
+      "radius": 0.9568386077880859,
+      "height": 0.314
+    },
+    "socket_diameter_at_scaled_z1": 0.9813297048676815,
+    "front_collar_rim_rows": {
+      "upper": 552.0495561361313,
+      "middle": 601.5410706996918,
+      "lower": 641.3275709152222
+    },
+    "front_groove_row": 1065.7488410174847,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "cfff73771f54c32c3eb554071506ba8ecd0df4e6655a981ef12fac8e90ebfece",
+    "side_fit": {
+      "outline_iou": 0.9833565702335308,
+      "edge_mae_screenshot_px": 0.4321266968325792,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 0.24242424242424243,
+        "collars": 0.6818181818181818,
+        "stem": 0.3815789473684211,
+        "socket_and_base": 0.6228070175438597
+      },
+      "threshold_iou_range": [
+        0.9827571192197161,
+        0.9859327217125382
+      ]
+    },
+    "registered": {
+      "selected": 0.8442352927147027,
+      "original_white": 0.8523185377487916,
+      "original_black": 0.8601163127928808
+    },
+    "render_xyxy": [
+      240,
+      229,
+      742,
+      1102
+    ]
+  },
+  "side-first": {
+    "foot_diameter": 1.9365143775939941,
+    "groove": {
+      "radius": 0.9316308498382568,
+      "height": 0.2175
+    },
+    "flare": {
+      "radius": 0.9568386077880859,
+      "height": 0.314
+    },
+    "socket_diameter_at_scaled_z1": 0.9813297048676815,
+    "front_collar_rim_rows": {
+      "upper": 553.082072854042,
+      "middle": 603.0007506608963,
+      "lower": 643.2560466527939
+    },
+    "front_groove_row": 1065.7488410174847,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "7f0fc510063cbcb26e5be75f64789d51a819878616cf506c92e642fff7d6a2b6",
+    "side_fit": {
+      "outline_iou": 0.9880724360090545,
+      "edge_mae_screenshot_px": 0.30995475113122173,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 0.17424242424242425,
+        "collars": 0.18181818181818182,
+        "stem": 0.23026315789473684,
+        "socket_and_base": 0.6228070175438597
+      },
+      "threshold_iou_range": [
+        0.9878165520842398,
+        0.9866701515943544
+      ]
+    },
+    "registered": {
+      "selected": 0.8457596636553658,
+      "original_white": 0.8538054312541029,
+      "original_black": 0.86148677487409
+    },
+    "render_xyxy": [
+      240,
+      228,
+      742,
+      1102
+    ]
+  },
+  "compromise": {
+    "foot_diameter": 1.9365143775939941,
+    "groove": {
+      "radius": 0.9316308498382568,
+      "height": 0.2175
+    },
+    "flare": {
+      "radius": 0.9568386077880859,
+      "height": 0.314
+    },
+    "socket_diameter_at_scaled_z1": 0.9813297048676815,
+    "front_collar_rim_rows": {
+      "upper": 551.3082429170609,
+      "middle": 598.8007979393005,
+      "lower": 637.8373893499374
+    },
+    "front_groove_row": 1065.7488410174847,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "f18de9f1c93a49a32cee8a37eb66f49fa2022e0150e8f04a52b8c699c3e59dcb",
+    "side_fit": {
+      "outline_iou": 0.9816489824317273,
+      "edge_mae_screenshot_px": 0.47737556561085975,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 0.2727272727272727,
+        "collars": 1.25,
+        "stem": 0.3223684210526316,
+        "socket_and_base": 0.6228070175438597
+      },
+      "threshold_iou_range": [
+        0.9812239221140473,
+        0.9843886272457701
+      ]
+    },
+    "registered": {
+      "selected": 0.8476617001634256,
+      "original_white": 0.8562559694364852,
+      "original_black": 0.8643332200889428
+    },
+    "render_xyxy": [
+      240,
+      228,
+      742,
+      1102
+    ]
+  },
+  "original_registered_box": [
+    226,
+    156,
+    756,
+    1111
+  ],
+  "side_calibration": {
+    "source": "Owner side lineup, centered on bishop; full screenshot is not needed to reproduce the comparison.",
+    "source_sha256": "16bfa1f0c2f4ca5ac725f694790a904e760a48c08127df842d021c8ed3a463b4",
+    "crop_xyxy": [
+      696,
+      150,
+      828,
+      406
+    ],
+    "crop_sha256": "08bcc12f1166c3a8787e605971f608ac8ccf61153ef82100cb18ff199fcbf3c2",
+    "pixel_bounds_inclusive": [
+      14,
+      28,
+      117,
+      248
+    ],
+    "side_camera_elevation": 0,
+    "registered_camera_elevation": 54,
+    "old_width": 2.0427379608154297,
+    "old_height": 4.550049304962158,
+    "height_multiplier": 0.909,
+    "width_multiplier": 0.948,
+    "target_width": 1.9365155868530273,
+    "target_height": 4.135994818210602,
+    "scale_control": 1,
+    "screenshot_king_percent": 100,
+    "screenshot_queen_percent": 83.3,
+    "screenshot_bishop_percent": 74.5,
+    "x_center": 66.0,
+    "floor_y": 249,
+    "pixels_per_unit": 53.433335802778764,
+    "width_based_pixels_per_unit": 53.704705867618266,
+    "board_page_at_screenshot": "0d841f3",
+    "baseline_board_records": {
+      "king": {
+        "piece": "king",
+        "file": "assets/king/render.png",
+        "version": "5a7a5c9da3613f6d",
+        "width": 1254,
+        "height": 1254,
+        "footX": 502.600077111455,
+        "footY": 868.9007415819193,
+        "pixelsPerUnit": 279.9999935925007,
+        "modelHeight": 5.083622932434082,
+        "baseWidth": 2.0880367755889893,
+        "centerX": 55.5,
+        "sourceSha256": "df3164833519d169641ac22f3a6f52ad2cb87f4f1739f8ac7e206f64404d79b5",
+        "renderTop": 13,
+        "renderBottom": 1100,
+        "targetTop": 28,
+        "targetBottom": 187,
+        "archived_side_profile": {
+          "file": "assets/king/profile.png",
+          "version": "ae5bd0c2bae5cc67",
+          "width": 600,
+          "height": 900,
+          "top": 85,
+          "bottom": 847,
+          "left": 143,
+          "right": 456,
+          "center": 299.5
+        },
+        "frozen_board_pixels_per_native_unit": 40.95676079227931,
+        "height_in_board_pixels": 208.2087284018482
+      },
+      "queen": {
+        "piece": "queen",
+        "file": "assets/queen/queen-brown.png",
+        "version": "509cc46d3fd73860",
+        "width": 1254,
+        "height": 1254,
+        "footX": 483.62499314546585,
+        "footY": 860.2234728349108,
+        "pixelsPerUnit": 264.6112602353096,
+        "modelHeight": 4.393647193908691,
+        "baseWidth": 2.091421365737915,
+        "centerX": 164.0,
+        "sourceSha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+        "renderTop": 60,
+        "renderBottom": 1079,
+        "targetTop": 37,
+        "targetBottom": 189,
+        "archived_side_profile": {
+          "file": "assets/queen/queen-wood-profile.png",
+          "version": "fabb014c01aa3202",
+          "width": 600,
+          "height": 900,
+          "top": 198,
+          "bottom": 797,
+          "left": 157,
+          "right": 442,
+          "center": 299.5
+        },
+        "frozen_board_pixels_per_native_unit": 39.47096325394216,
+        "height_in_board_pixels": 173.42148694155603
+      },
+      "bishop": {
+        "piece": "bishop",
+        "file": "assets/bishop/render.png",
+        "version": "9ac1510f19a98149",
+        "width": 1254,
+        "height": 1254,
+        "footX": 491.6982756704092,
+        "footY": 903.0247418599915,
+        "pixelsPerUnit": 260.00000873208046,
+        "modelHeight": 4.550049304962158,
+        "baseWidth": 2.0427379608154297,
+        "centerX": 274.5,
+        "sourceSha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+        "renderTop": 163,
+        "renderBottom": 1113,
+        "targetTop": 52,
+        "targetBottom": 189,
+        "frozen_board_pixels_per_native_unit": 37.49473810136318,
+        "height_in_board_pixels": 170.6029070378457
+      }
+    },
+    "bishop_025_percent_on_fixed_king_ruler": 81.93840303782929,
+    "target_bishop_percent_on_fixed_king_ruler": 74.48200836138682,
+    "queen_percent_on_fixed_king_ruler": 83.2921310613108
+  }
+}

@@ -8,6 +8,13 @@ data=json.loads((root/'assets/candidates/alignment.json').read_text(encoding='ut
 parser=argparse.ArgumentParser(description=__doc__)
 args=parser.parse_args()
 template=(root/'scripts/bishop/review-template.html').read_text(encoding='utf-8')
+profile=json.loads((root/'scripts/bishop/profile.json').read_text(encoding='utf-8'))
+side_link=''
+if profile.get('side_refit'):
+    lineup=Path(profile['side_refit']['config']).parent/'frozen-lineup.png'
+    if (root/lineup).is_file():
+        side_link=f' · <a href="{lineup.as_posix()}" target="_blank" rel="noopener">Side height comparison</a>'
+template=template.replace('__SIDE_PROPORTIONS__',side_link)
 # Model pages activate automatically when their checked standalone viewer exists.
 for piece,images in data['pieces'].items():
     if piece != 'bishop':

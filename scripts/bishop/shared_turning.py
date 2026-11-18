@@ -165,7 +165,13 @@ def restore_receivers(scene, memberships, old, sections):
     # Move the socket-specific lighting region to the corresponding height on
     # the new socket. Membership still exactly partitions the evaluated mesh.
     ba, da = BISHOP_ANCHORS[3:], DONOR_ANCHORS[3:]
-    cfg['socket_z_band'] = np.interp(cfg['socket_z_band'], old[ba, 1], sections[da, 1]).tolist()
+    band = np.interp(cfg['socket_z_band'], old[ba, 1], sections[da, 1]).tolist()
+    restore_receiver_band(scene, memberships, band)
+
+
+def restore_receiver_band(scene, memberships, band):
+    cfg = json.loads(scene['bishop_receiver_trial'])
+    cfg['socket_z_band'] = band
     scene['bishop_receiver_trial'] = json.dumps(cfg, sort_keys=True)
     partition_socket(scene, *cfg['socket_z_band'])
     for name, names in memberships.items():

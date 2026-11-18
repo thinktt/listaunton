@@ -43,6 +43,12 @@ def main(root,url):
     assert sha(get(side['file']))[:16]==side['version']
     for path in ['assets/bishop/head-side.png','assets/bishop/rear-oblique.png','assets/bishop/camera.json']:
         get(path)
+    profile=json.loads((root/'scripts/bishop/profile.json').read_text())
+    if profile.get('side_refit'):
+        figures=Path(profile['side_refit']['config']).parent
+        assert (figures/'frozen-lineup.png').as_posix().encode() in review
+        for name in ['frozen-lineup.png','side-comparison.png','fixed-comparison.png','measurements.json']:
+            get((figures/name).as_posix())
     for path,digest in received.items():
         if path!='set-comparison.html':
             assert sha((root/path).read_bytes())==digest,('Local server returned a different file',path)
