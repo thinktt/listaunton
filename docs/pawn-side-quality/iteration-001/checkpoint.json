@@ -1,0 +1,59 @@
+{
+  "accepted": "Side lighting and profile resolution only. All geometry/material experiments rejected.",
+  "source_model_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "model_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+  "render_sha256": "443c3288b2f5ba929e43e6ca9f8a7139506f3937b9c9051bdaf489317eb1671e",
+  "side_sha256": "86dcd50cbdcdcbb7bbf93bd16496b938279ff76c4b7b296b2e734820b9f2a3a3",
+  "mesh_sha256": "de2c64be763f50a70b5fdf2fa6758ede0def6ffd55a260429c8896bc121a70e5",
+  "reference_rgb_mean_absolute_change_255": 3.3005880258140725e-05,
+  "reference_rgb_maximum_change_255": 1,
+  "reference_alpha_identical": true,
+  "side_quality": {
+    "weights": [
+      0.3,
+      0.15,
+      0.2,
+      0.15,
+      0.15,
+      0.05
+    ],
+    "criteria": [
+      "Profile and proportions",
+      "Turned details",
+      "Wood continuity",
+      "Surface finish",
+      "Lighting and form",
+      "Seating and presentation"
+    ],
+    "before": [
+      68,
+      60,
+      48,
+      62,
+      52,
+      75
+    ],
+    "after": [
+      68,
+      60,
+      48,
+      62,
+      82,
+      85
+    ],
+    "weighted_before": 59.85,
+    "weighted_after": 64.85,
+    "note": "Subjective aesthetic rubric; no shape/material credit for better illumination. Side target remains unmet."
+  },
+  "reference_match": {
+    "selected": 0.9681073086773474,
+    "original_black": 0.9849918568454038,
+    "original_white": 0.9813580380572353
+  },
+  "protected_sources": {
+    "original_black": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "original_white": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3",
+    "selected": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+    "gallery_defaults": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578"
+  }
+}

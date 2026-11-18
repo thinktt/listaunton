@@ -77,6 +77,7 @@ assert registration['source_blend_sha256']==meta['sourceSha256']
 for key in ('guide','profile'):
     assert hashlib.sha256((root/registration[key]).read_bytes()).hexdigest()==registration[key+'_sha256']
 html=html.replace('__SIDE_GUIDE__',data_uri(root/registration['guide'])).replace('__SIDE_MODEL__',data_uri(root/registration['profile'])).replace('__SIDE_REGISTRATION__',json.dumps(registration,separators=(',',':')))
+html=html.replace('__SIDE_LIGHTING_NOTE__','Side studio · base width and foot aligned' if registration.get('presentation_scene') else 'Imagined side guide · base width and foot aligned')
 html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',',':')))
 out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

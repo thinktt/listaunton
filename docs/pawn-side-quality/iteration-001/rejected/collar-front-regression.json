@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "luma_mae_255": 2.9618070818070823,
+    "fine_correlation": 0.8897557868857517
+  },
+  "thin-collar": {
+    "luma_mae_255": 15.260372405372406,
+    "fine_correlation": -0.20327718825498828
+  },
+  "local-fit": {
+    "luma_mae_255": 15.611709401709403,
+    "fine_correlation": -0.2056590622784522
+  },
+  "ray-refit": {
+    "luma_mae_255": 28.40765567765568,
+    "fine_correlation": 0.33077957993484464
+  },
+  "accepted": {
+    "luma_mae_255": 2.9618070818070823,
+    "fine_correlation": 0.8897557868857517
+  }
+}

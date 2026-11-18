@@ -570,3 +570,29 @@ scope check and public/preview preservation check accompany the
 [rejection evidence](pawn-mission/iteration-018/README.md). This is a research
 and stopping record, not a new accepted visual checkpoint. Resume only on
 the owner's direction.
+
+## Side-quality checkpoint 001 — new owner-directed goal, 2026-11-18
+
+The owner resumed work and requested a specific side-view quality goal and
+an explicit aesthetic rubric. See [side-quality mission and rubric](pawn-side-quality/README.md)
+and [checkpoint evidence](pawn-side-quality/iteration-001/README.md).
+
+Accepted: a separately saved side studio and higher-resolution profile render,
+using the same editable pawn and wood as the reference scene. Geometry, UVs,
+normals, material, original 47-light reference rig and fixed 54-degree camera
+remain unchanged from checkpoint 017. The fresh reference alpha is identical;
+foreground RGB change averages 0.000033/255. All three silhouette overlaps and
+the native original comparison are retained. Gallery defaults are unchanged.
+
+The side-quality rubric starts at 59.85/100 and now scores 64.85/100, rounded
+to 65. Improvements are lighting and presentation only. Profile, turned detail,
+wood continuity and surface finish remain unresolved. This new side score is
+separate from checkpoint 017's fixed-reference match assessment.
+
+Thinner-collar, base/socket and material-completion trials were rejected after
+reference/detail inspection. In particular, the thin collar breaks the accepted
+front glint despite a small whole-image error. The saved current model is
+`ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536`.
+Both scenes share its actual object and material; live browser lighting remains
+approximate. The goal is active and incomplete. Next separate residual broad
+illumination from the front pigment before another coordinated form/material fit.

@@ -1,0 +1,49 @@
+{
+  "source": "models/pawn/pawn-rebuilt.blend",
+  "source_sha256": "9efbc54a9a7edc0b3e3e36a7f17b7918eeadc637bdbaa4f139566f72b0eef48c",
+  "variant": "125-thin-collar-reflector",
+  "samples": 512,
+  "light": "Lower collar glint",
+  "crop": [
+    489,
+    611,
+    568,
+    648
+  ],
+  "landmark": {
+    "name": "Lower collar glint",
+    "pixel": [
+      521,
+      626.4
+    ],
+    "half_axes": [
+      18,
+      1.5
+    ],
+    "angle": -16,
+    "distance": 0.3
+  },
+  "steps": [
+    1.2,
+    1.2,
+    0.15,
+    0.2,
+    0.2,
+    0.1
+  ],
+  "limits": [
+    7,
+    7,
+    0.5,
+    0.6,
+    0.8,
+    0.3
+  ],
+  "ridge": 0.001,
+  "bright_weight": 3,
+  "rates": [
+    0.3,
+    0.6,
+    1
+  ]
+}

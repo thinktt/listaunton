@@ -104,9 +104,24 @@ def deliver(variant):
         cb=clay.node_tree.nodes.get("Principled BSDF")
         cb.inputs["Base Color"].default_value=(.28,.30,.34,1);cb.inputs["Roughness"].default_value=.30
     body.data.materials[0]=clay;render(scene,ASSETS/"neutral.png")
-    side_camera(scene)
-    render(scene,ASSETS/"side-seating.png")
-    body.data.materials[0]=material;render(scene,ASSETS/"profile.png")
+    side=scene
+    if scene.get("pawn_side_scene"):
+        side=bpy.data.scenes[scene["pawn_side_scene"]]
+        assert control(side) is body, 'Side presentation must share the actual editable pawn.'
+        bpy.context.window.scene=side;setup(side,scene.cycles.samples)
+    else:
+        side_camera(side)
+    render(side,ASSETS/"side-seating.png")
+    body.data.materials[0]=material;render(side,ASSETS/"profile.png")
+    if side is not scene:
+        from validate_finish_scope import fingerprint
+        snapshot=fingerprint(side,body)
+        save_json(ASSETS/"side-presentation.json",{"scene":side.name,"model_sha256":sha(model),
+            "profile_sha256":sha(ASSETS/"profile.png"),"same_editable_object_and_material":True,
+            "camera_elevation":0,"resolution":side.render.resolution_x,"lighting_preset":"balanced",
+            "reference_lights_preserved":sum(o.type=='LIGHT' for o in scene.objects),
+            "studio_lights":snapshot['lights'],"studio_world":snapshot['world'],"note":side['pawn_presentation']})
+        bpy.context.window.scene=scene
     report.update(variant=variant,texture_packed_after_reopen=True,reference_camera_above_board=54,source_trial_sha256=sha(source),render_sha256=sha(ASSETS/"render.png"),side_sha256=sha(ASSETS/"profile.png"))
     save_json(ASSETS/"mission-validation.json",report);print("PAWN_DELIVERY_CHECKED",report,flush=True)
 

@@ -1,0 +1,24 @@
+{
+  "study": "005-matched-hidden-grain",
+  "source": "build/pawn-side-quality/003-side-profile/thin-collar/pawn.blend",
+  "source_sha256": "eb1225c7c16545e7fee455a9dd023e592552883fc44cf4f9da9640edc5ee9b62",
+  "samples": 192,
+  "variants": [
+    {
+      "name": "color-only",
+      "studio": "warm",
+      "pigment": "build/pawn-side-quality/005-matched-hidden-grain/wood-completed.png",
+      "pigment_sha256": "588dc98337cc8b8e6a42688b7e8805e2caac757a68459ed88f1f72b16f1e7c8b",
+      "diagnostics": true
+    },
+    {
+      "name": "color-and-relief",
+      "studio": "warm",
+      "pigment": "build/pawn-side-quality/005-matched-hidden-grain/wood-completed.png",
+      "pigment_sha256": "588dc98337cc8b8e6a42688b7e8805e2caac757a68459ed88f1f72b16f1e7c8b",
+      "bump": "build/pawn-side-quality/005-matched-hidden-grain/bump-completed.png",
+      "bump_sha256": "5b457a279321a34681a34b10cc88544dc98abd01062f3c565ddb6f3bea30ef9b",
+      "bump_source_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7"
+    }
+  ]
+}

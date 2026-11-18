@@ -1,0 +1,21 @@
+{
+  "source": "assets/pawn/pawn-walnut-v11.png",
+  "source_sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+  "measurement": "build/pawn-mission/pigment-060",
+  "output": "build/pawn-side-quality/005-matched-hidden-grain/wood-completed.png",
+  "screen": 0.04,
+  "blend_pixels": 18,
+  "grain_strength": 1.1,
+  "iterations": 1600,
+  "protect_depth": 0.025,
+  "protect_facing": 0.3,
+  "grain_patch": [
+    758,
+    112,
+    1310,
+    369
+  ],
+  "grain_frequency": 1.4,
+  "bump_source": "assets/pawn/pawn-walnut-v2.png",
+  "bump_source_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7"
+}

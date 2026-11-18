@@ -14,4 +14,11 @@ guide=ROOT/'assets/pawn/concepts/side-01-cutout.png';profile=out/'profile.png';g
 record={'guide':'assets/pawn/concepts/side-01-cutout.png','profile':'assets/pawn/profile.png','guide_sha256':sha(guide),'profile_sha256':sha(profile),'source_blend_sha256':sha(ROOT/'models/pawn/pawn-rebuilt.blend'),'canvas':[1254,1414],'guide_top':padding,'scale':scale,'offset_x':g['center']-scale*m['center'],'offset_y':g['floor']+padding-scale*m['floor'],'guide_foot':g,'model_foot':m,'method':'Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth.'}
 record['profile_dimensions']=list(Image.open(profile).size)
 record['guide_dimensions']=list(Image.open(guide).size)
+presentation=out/'side-presentation.json'
+if presentation.exists():
+    lighting=json.loads(presentation.read_text(encoding='utf8'))
+    assert lighting['model_sha256']==record['source_blend_sha256'] and lighting['profile_sha256']==record['profile_sha256']
+    assert lighting['same_editable_object_and_material']
+    record['presentation_scene']=lighting['scene']
+    record['lighting_preset']=lighting['lighting_preset']
 (out/'side-registration.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8');print(json.dumps(record,indent=2))

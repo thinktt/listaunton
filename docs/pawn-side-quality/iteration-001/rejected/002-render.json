@@ -1,0 +1,23 @@
+{
+  "study": "002-hidden-wood",
+  "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+  "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "samples": 192,
+  "variants": [
+    {
+      "name": "completed-broad",
+      "pigment": "build/pawn-side-quality/002-hidden-wood/wood-completed.png",
+      "pigment_sha256": "33a256e992a40ef823583f87fb936cf2ba7477ff89cddaf63356bcc52feb2aa4"
+    },
+    {
+      "name": "completed-rounded",
+      "pigment": "build/pawn-side-quality/002-hidden-wood/wood-completed.png",
+      "pigment_sha256": "33a256e992a40ef823583f87fb936cf2ba7477ff89cddaf63356bcc52feb2aa4",
+      "studio": "rounded"
+    },
+    {
+      "name": "baseline-rounded",
+      "studio": "rounded"
+    }
+  ]
+}

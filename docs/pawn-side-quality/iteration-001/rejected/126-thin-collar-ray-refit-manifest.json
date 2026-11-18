@@ -1,0 +1,32 @@
+{
+  "config": {
+    "source": "models/pawn/pawn-rebuilt.blend",
+    "source_sha256": "9efbc54a9a7edc0b3e3e36a7f17b7918eeadc637bdbaa4f139566f72b0eef48c",
+    "variant": "126-thin-collar-ray-refit",
+    "samples": 512,
+    "reflectors": [
+      {
+        "name": "Lower collar glint",
+        "pixel": [
+          521,
+          626.4
+        ],
+        "half_axes": [
+          18,
+          1.5
+        ],
+        "angle": -16,
+        "distance": 0.3,
+        "spread": 5.4,
+        "color": [
+          1,
+          0.4460281431674957,
+          0.2098516821861267
+        ],
+        "energy_gain": 1
+      }
+    ]
+  },
+  "model_sha256": "cdb6fdfd0dde4abff2bb819714aac0671c57c4a62c647be09b08a97ca62a37ba",
+  "render_sha256": "b88de0bbaa2f08804f41b6e6b1e82bb449a0198a195da99dc01fd27b513d5697"
+}

@@ -1,0 +1,1066 @@
+[
+  {
+    "config": {
+      "study": "001-profile-and-lighting",
+      "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+      "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+      "samples": 192,
+      "variants": [
+        {
+          "name": "baseline",
+          "profile_rz": {}
+        },
+        {
+          "name": "shallow-foot",
+          "profile_rz": {
+            "8": [
+              0.8,
+              null
+            ],
+            "9": [
+              0.791,
+              null
+            ],
+            "10": [
+              0.788,
+              null
+            ],
+            "11": [
+              0.8099,
+              null
+            ]
+          }
+        },
+        {
+          "name": "flowing-base",
+          "profile_rz": {
+            "8": [
+              0.8,
+              null
+            ],
+            "9": [
+              0.791,
+              null
+            ],
+            "10": [
+              0.788,
+              null
+            ],
+            "11": [
+              0.8099,
+              null
+            ],
+            "20": [
+              0.487,
+              0.798
+            ],
+            "21": [
+              0.468,
+              0.83
+            ],
+            "22": [
+              0.461,
+              0.86
+            ],
+            "23": [
+              0.454,
+              0.9
+            ],
+            "24": [
+              0.454,
+              0.942
+            ],
+            "25": [
+              0.458,
+              0.984
+            ],
+            "26": [
+              0.451,
+              1.037
+            ],
+            "27": [
+              0.422,
+              1.09
+            ],
+            "28": [
+              0.375,
+              1.153
+            ]
+          }
+        }
+      ]
+    },
+    "variants": {
+      "baseline": {
+        "edits": {},
+        "model_sha256": "131a88c54db8827590975469717e980f3d8e68111018eb47823b91f38959eed8",
+        "renders": {
+          "fixed": "e878532d262a8dd8ad06844156aa7c6d6cdf77c90fd58c2a18e9bfd7953b8d1a",
+          "side-original-rig": "e25c1237f173063b5bcbb598520e038fb8a364a8a9f2ee5e7514366acf1e7846",
+          "side-studio": "57e95e8524a557ef9a2483d804fded577d74243292a1321b6946b38c68906fef",
+          "side-clay": "d406178ffac41c5d56c818b92654c6fd2c34229fdf442688a629dfb37b42de5d"
+        }
+      },
+      "shallow-foot": {
+        "edits": {
+          "8": {
+            "before": [
+              0.7843831777572632,
+              0.0,
+              0.14917881786823273
+            ],
+            "after": [
+              0.8000000715255737,
+              0.0,
+              0.14917881786823273
+            ]
+          },
+          "9": {
+            "before": [
+              0.753294825553894,
+              0.0,
+              0.17901459336280823
+            ],
+            "after": [
+              0.7910000085830688,
+              0.0,
+              0.17901459336280823
+            ]
+          },
+          "10": {
+            "before": [
+              0.7389463782310486,
+              0.0,
+              0.22241206467151642
+            ],
+            "after": [
+              0.7879999279975891,
+              0.0,
+              0.22241206467151642
+            ]
+          },
+          "11": {
+            "before": [
+              0.8098915815353394,
+              0.0,
+              0.28072741627693176
+            ],
+            "after": [
+              0.8098999857902527,
+              0.0,
+              0.28072741627693176
+            ]
+          }
+        },
+        "model_sha256": "048cba4189810996a4c178f9c7391fcf2f2d34ec9e3757fa47e6d3847fadf23a",
+        "renders": {
+          "fixed": "42ed1de783c76db606fc344499c5df38c0b14634b3165080ab2e9d1eca726753",
+          "side-original-rig": "1b659ee7b7938b7a508e1e51b9699f2de62b933ae7af5c39a3979a65bd8a8059",
+          "side-studio": "2f503f0cac77e28f48e73f589c0d9d78a672ef1f009c15579d324915f9b02fa5",
+          "side-clay": "c9c1d0a84142a97c686f2e5a20884681c3b7975570513eda2b03a586a8318df1"
+        }
+      },
+      "flowing-base": {
+        "edits": {
+          "8": {
+            "before": [
+              0.7843831777572632,
+              0.0,
+              0.14917881786823273
+            ],
+            "after": [
+              0.8000000715255737,
+              0.0,
+              0.14917881786823273
+            ]
+          },
+          "9": {
+            "before": [
+              0.753294825553894,
+              0.0,
+              0.17901459336280823
+            ],
+            "after": [
+              0.7910000085830688,
+              0.0,
+              0.17901459336280823
+            ]
+          },
+          "10": {
+            "before": [
+              0.7389463782310486,
+              0.0,
+              0.22241206467151642
+            ],
+            "after": [
+              0.7879999279975891,
+              0.0,
+              0.22241206467151642
+            ]
+          },
+          "11": {
+            "before": [
+              0.8098915815353394,
+              0.0,
+              0.28072741627693176
+            ],
+            "after": [
+              0.8098999857902527,
+              0.0,
+              0.28072741627693176
+            ]
+          },
+          "20": {
+            "before": [
+              0.476977676153183,
+              0.0,
+              0.8026973605155945
+            ],
+            "after": [
+              0.4869999587535858,
+              0.0,
+              0.7979999780654907
+            ]
+          },
+          "21": {
+            "before": [
+              0.45436832308769226,
+              0.0,
+              0.8462507724761963
+            ],
+            "after": [
+              0.46800002455711365,
+              0.0,
+              0.8299999833106995
+            ]
+          },
+          "22": {
+            "before": [
+              0.4527740478515625,
+              0.0,
+              0.8733742237091064
+            ],
+            "after": [
+              0.4609999656677246,
+              0.0,
+              0.8600000143051147
+            ]
+          },
+          "23": {
+            "before": [
+              0.45117977261543274,
+              0.0,
+              0.9221963882446289
+            ],
+            "after": [
+              0.45399996638298035,
+              0.0,
+              0.8999999761581421
+            ]
+          },
+          "24": {
+            "before": [
+              0.45436832308769226,
+              0.0,
+              0.9764432311058044
+            ],
+            "after": [
+              0.45399999618530273,
+              0.0,
+              0.9419999718666077
+            ]
+          },
+          "25": {
+            "before": [
+              0.4623396694660187,
+              0.0,
+              1.017128348350525
+            ],
+            "after": [
+              0.4580000042915344,
+              0.0,
+              0.984000027179718
+            ]
+          },
+          "26": {
+            "before": [
+              0.45915114879608154,
+              0.0,
+              1.0578135251998901
+            ],
+            "after": [
+              0.45100000500679016,
+              0.0,
+              1.0369999408721924
+            ]
+          },
+          "27": {
+            "before": [
+              0.43045419454574585,
+              0.0,
+              1.112060308456421
+            ],
+            "after": [
+              0.421999990940094,
+              0.0,
+              1.090000033378601
+            ]
+          },
+          "28": {
+            "before": [
+              0.382625937461853,
+              0.0,
+              1.1663072109222412
+            ],
+            "after": [
+              0.375,
+              0.0,
+              1.152999997138977
+            ]
+          }
+        },
+        "model_sha256": "fca9a96ab1f77a24138c338aecd4f5e2213d3927d9fc68dbebced6f83d91e872",
+        "renders": {
+          "fixed": "4f207ac42ca5d6a3857425c14756bdbc78f6dfd25d6296cac5153141a16a43ef",
+          "side-original-rig": "8c8cfa986180bb1d5244462d5f0fe2848fd95c55bb5652f0ed851c90f2e0cac6",
+          "side-studio": "23d2488e9512608d2d9f63d7a1c3b1e8bb40d4d163c975602fa18d18a6d0e73c",
+          "side-clay": "9fe3ccbbf371da067cace298abea137143e3db60c2018c995ef21f7f7dc484a4"
+        }
+      }
+    }
+  },
+  {
+    "config": {
+      "study": "002-hidden-wood",
+      "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+      "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+      "samples": 192,
+      "variants": [
+        {
+          "name": "completed-broad",
+          "pigment": "build/pawn-side-quality/002-hidden-wood/wood-completed.png",
+          "pigment_sha256": "33a256e992a40ef823583f87fb936cf2ba7477ff89cddaf63356bcc52feb2aa4"
+        },
+        {
+          "name": "completed-rounded",
+          "pigment": "build/pawn-side-quality/002-hidden-wood/wood-completed.png",
+          "pigment_sha256": "33a256e992a40ef823583f87fb936cf2ba7477ff89cddaf63356bcc52feb2aa4",
+          "studio": "rounded"
+        },
+        {
+          "name": "baseline-rounded",
+          "studio": "rounded"
+        }
+      ]
+    },
+    "variants": {
+      "completed-broad": {
+        "edits": {},
+        "model_sha256": "aa069c6480baa913714689d1bf98f80eb8123751552488246498f0665ecdb98c",
+        "renders": {
+          "fixed": "34f980e88440ce69a7d7b1f751a1e532729e6cebe5897577dbc0ca27bf8b9b09",
+          "side-original-rig": "500991e12257701ec2f8f1a73a6cb942d42c3a99bedad62bcf400d1dc89427d1",
+          "side-studio": "e3ce69568e2ccfd2750ab6eed5618e29cc7bba51330e69d3e149926e966827d7",
+          "side-clay": "bb66b194568170b1cc7b3977341601483eccf57f0b5b7cfb088e13a805bad39f"
+        }
+      },
+      "completed-rounded": {
+        "edits": {},
+        "model_sha256": "fea4ec3448bf80f8fe3f0b8a9724b3c2121165a4d553819c2fe7e6ee0cc906d6",
+        "renders": {
+          "fixed": "819dc87371fa59d3197da2994be2eb53cb2f4423ad9d551b920aa5406c0ab322",
+          "side-original-rig": "3f6f176c5d3db0897b3ecaad917246cf061b329b2ebd0419b9bdc95843612af6",
+          "side-studio": "989557ab9f2299524a026789d2bd827681696d3aeae6cbe81d3de237f3249b23",
+          "side-clay": "f69cb0d567bd73fefd96fb16e3ef4f7ad780ebfc6cf49458647194d3a7e88085"
+        }
+      },
+      "baseline-rounded": {
+        "edits": {},
+        "model_sha256": "5fedd8afe14badc9c721fe7d547be0f3e037e053346a8bd871ef3f678465bf83",
+        "renders": {
+          "fixed": "5084b919f03acabebc8c20c34ce898cc2d2b3351757a76f2d4bd898537904659",
+          "side-original-rig": "3b1d7cb25a400d56dbadba00b7314eb446528cec281ab8ab66c2f4e3e058a031",
+          "side-studio": "a416357d55d7556a63982e7e02cc485281c493e3f7ae1302942514fa8b4bc4d3",
+          "side-clay": "3655a8f2b3bcd81f7f54d5017fcc020a9c46733bddce8dd33de7d0e0b9b52922"
+        }
+      }
+    }
+  },
+  {
+    "config": {
+      "study": "003-side-profile",
+      "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+      "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+      "samples": 192,
+      "variants": [
+        {
+          "name": "thin-collar",
+          "studio": "rounded",
+          "profile_rz": {
+            "33": [
+              null,
+              1.817
+            ],
+            "34": [
+              null,
+              1.824
+            ],
+            "35": [
+              null,
+              1.839
+            ],
+            "36": [
+              null,
+              1.858
+            ]
+          }
+        },
+        {
+          "name": "lower-base",
+          "studio": "rounded",
+          "profile_rz": {
+            "13": [
+              null,
+              0.387
+            ],
+            "14": [
+              null,
+              0.43
+            ],
+            "15": [
+              null,
+              0.47
+            ],
+            "16": [
+              null,
+              0.503
+            ],
+            "17": [
+              null,
+              0.57
+            ],
+            "18": [
+              null,
+              0.647
+            ],
+            "19": [
+              null,
+              0.716
+            ],
+            "20": [
+              0.479,
+              0.755
+            ],
+            "21": [
+              0.456,
+              0.787
+            ],
+            "22": [
+              null,
+              0.82
+            ],
+            "23": [
+              null,
+              0.868
+            ],
+            "24": [
+              null,
+              0.918
+            ],
+            "25": [
+              null,
+              0.962
+            ],
+            "26": [
+              0.451,
+              1.004
+            ],
+            "27": [
+              0.421,
+              1.045
+            ],
+            "28": [
+              null,
+              1.11
+            ],
+            "29": [
+              null,
+              1.21
+            ],
+            "30": [
+              null,
+              1.37
+            ]
+          }
+        }
+      ]
+    },
+    "variants": {
+      "thin-collar": {
+        "edits": {
+          "33": {
+            "before": [
+              0.28696945309638977,
+              0.0,
+              1.7901458740234375
+            ],
+            "after": [
+              0.28696945309638977,
+              0.0,
+              1.8170000314712524
+            ]
+          },
+          "34": {
+            "before": [
+              0.3507404625415802,
+              0.0,
+              1.7901458740234375
+            ],
+            "after": [
+              0.3507404625415802,
+              0.0,
+              1.8240000009536743
+            ]
+          },
+          "35": {
+            "before": [
+              0.41451144218444824,
+              0.0,
+              1.8037075996398926
+            ],
+            "after": [
+              0.41451144218444824,
+              0.0,
+              1.8389999866485596
+            ]
+          },
+          "36": {
+            "before": [
+              0.43523702025413513,
+              0.0,
+              1.8308310508728027
+            ],
+            "after": [
+              0.43523702025413513,
+              0.0,
+              1.8580000400543213
+            ]
+          }
+        },
+        "model_sha256": "eb1225c7c16545e7fee455a9dd023e592552883fc44cf4f9da9640edc5ee9b62",
+        "renders": {
+          "fixed": "a0614245114098cbc0a7081ed0e6a1b28d1a67c65cafe6163b3d7e9ced4a4c72",
+          "side-original-rig": "72b93f3e37e55926a9c0c0e59a08551d7b4eceeea7614b9fcf33575abbd33be6",
+          "side-studio": "1efdfdf0f747e6afa845646c325d1e55fdd9d2bd32c26e995fffd5e6f878fd65",
+          "side-clay": "deee0ca3730c516061371d9dc99387a6a6edc2f1d5a8941f0c58a8b3bff71f97"
+        }
+      },
+      "lower-base": {
+        "edits": {
+          "13": {
+            "before": [
+              0.8148432374000549,
+              0.0,
+              0.40476012229919434
+            ],
+            "after": [
+              0.8148432374000549,
+              0.0,
+              0.3869999945163727
+            ]
+          },
+          "14": {
+            "before": [
+              0.7961216568946838,
+              0.0,
+              0.4521810710430145
+            ],
+            "after": [
+              0.7961216568946838,
+              0.0,
+              0.4300000071525574
+            ]
+          },
+          "15": {
+            "before": [
+              0.7765315175056458,
+              0.0,
+              0.49485787749290466
+            ],
+            "after": [
+              0.7765315175056458,
+              0.0,
+              0.4699999988079071
+            ]
+          },
+          "16": {
+            "before": [
+              0.7546305060386658,
+              0.0,
+              0.5331843495368958
+            ],
+            "after": [
+              0.7546305060386658,
+              0.0,
+              0.503000020980835
+            ]
+          },
+          "17": {
+            "before": [
+              0.6941342949867249,
+              0.0,
+              0.6128667593002319
+            ],
+            "after": [
+              0.6941342949867249,
+              0.0,
+              0.5699999928474426
+            ]
+          },
+          "18": {
+            "before": [
+              0.6325199007987976,
+              0.0,
+              0.7012869119644165
+            ],
+            "after": [
+              0.6325199007987976,
+              0.0,
+              0.6470000147819519
+            ]
+          },
+          "19": {
+            "before": [
+              0.5548264384269714,
+              0.0,
+              0.7603514194488525
+            ],
+            "after": [
+              0.5548264384269714,
+              0.0,
+              0.7160000205039978
+            ]
+          },
+          "20": {
+            "before": [
+              0.476977676153183,
+              0.0,
+              0.8026973605155945
+            ],
+            "after": [
+              0.4790000319480896,
+              0.0,
+              0.7549999952316284
+            ]
+          },
+          "21": {
+            "before": [
+              0.45436832308769226,
+              0.0,
+              0.8462507724761963
+            ],
+            "after": [
+              0.4560000002384186,
+              0.0,
+              0.7870000004768372
+            ]
+          },
+          "22": {
+            "before": [
+              0.4527740478515625,
+              0.0,
+              0.8733742237091064
+            ],
+            "after": [
+              0.4527740478515625,
+              0.0,
+              0.8199999928474426
+            ]
+          },
+          "23": {
+            "before": [
+              0.45117977261543274,
+              0.0,
+              0.9221963882446289
+            ],
+            "after": [
+              0.45117977261543274,
+              0.0,
+              0.8679999709129333
+            ]
+          },
+          "24": {
+            "before": [
+              0.45436832308769226,
+              0.0,
+              0.9764432311058044
+            ],
+            "after": [
+              0.45436832308769226,
+              0.0,
+              0.9179999828338623
+            ]
+          },
+          "25": {
+            "before": [
+              0.4623396694660187,
+              0.0,
+              1.017128348350525
+            ],
+            "after": [
+              0.4623396694660187,
+              0.0,
+              0.9620000123977661
+            ]
+          },
+          "26": {
+            "before": [
+              0.45915114879608154,
+              0.0,
+              1.0578135251998901
+            ],
+            "after": [
+              0.45100000500679016,
+              0.0,
+              1.003999948501587
+            ]
+          },
+          "27": {
+            "before": [
+              0.43045419454574585,
+              0.0,
+              1.112060308456421
+            ],
+            "after": [
+              0.42100000381469727,
+              0.0,
+              1.0449999570846558
+            ]
+          },
+          "28": {
+            "before": [
+              0.382625937461853,
+              0.0,
+              1.1663072109222412
+            ],
+            "after": [
+              0.382625937461853,
+              0.0,
+              1.1100000143051147
+            ]
+          },
+          "29": {
+            "before": [
+              0.3507404625415802,
+              0.0,
+              1.2476774454116821
+            ],
+            "after": [
+              0.3507404625415802,
+              0.0,
+              1.2100000381469727
+            ]
+          },
+          "30": {
+            "before": [
+              0.318854957818985,
+              0.0,
+              1.3832945823669434
+            ],
+            "after": [
+              0.318854957818985,
+              0.0,
+              1.3700000047683716
+            ]
+          }
+        },
+        "model_sha256": "f3e9ab92dc3f299ee37ba69355b2a13b4a5849f8a49a4c02fe83e4f5f57f01ca",
+        "renders": {
+          "fixed": "a96f2d765c02288f8735696d6c72330e9dbc03c53523c2ecb6747dd2ea175ded",
+          "side-original-rig": "b0aa7904902f2eb8269e61376acc185a71f532f5bd6570fa28514fffeec17cc0",
+          "side-studio": "5a8b184b921b316f21f7a265f11a384745aa35df49ef5dbf55612e33ea7f9858",
+          "side-clay": "13672ec52687c6f9f689224cf72103f4c6d364e5023c02c60a56e8e1ae90cc86"
+        }
+      }
+    }
+  },
+  {
+    "config": {
+      "study": "004-grazing-wood",
+      "source": "build/pawn-side-quality/003-side-profile/thin-collar/pawn.blend",
+      "source_sha256": "eb1225c7c16545e7fee455a9dd023e592552883fc44cf4f9da9640edc5ee9b62",
+      "samples": 192,
+      "variants": [
+        {
+          "name": "thin-collar-warm",
+          "studio": "warm"
+        },
+        {
+          "name": "grazing-completion",
+          "studio": "warm",
+          "pigment": "build/pawn-side-quality/004-grazing-wood/wood-completed.png",
+          "pigment_sha256": "6a1b698ee48ccce174cd0dae7a41e689594c3a0cc7272de5a821709696459c0d"
+        }
+      ]
+    },
+    "variants": {
+      "thin-collar-warm": {
+        "edits": {},
+        "model_sha256": "c3c22833819cf1f3712794e812866a159be9cd936ed5c50fdb97c36b7b53dd23",
+        "renders": {
+          "fixed": "7fe3da6ac67f5d7b38f7d68d136ac2533e3c137d366cc04ae14cad25294cc7b4",
+          "side-original-rig": "ddaef820e820c51902265c70b5b48cb4757b9d7daeeec470ac9965fea9280dec",
+          "side-studio": "a552155913d63e8739b45bb0957e4400c0bc1b41ce9a042c092cdd7484063a3a",
+          "side-clay": "7e39cd8ab708acda953c094f3182b6207bdf5094e5c7efef98eeca7b6f3288f2"
+        }
+      },
+      "grazing-completion": {
+        "edits": {},
+        "model_sha256": "d7086139fa801a90e64ab8702de41f50f9c37c9f2e66a78f3e758d5b3b12eca2",
+        "renders": {
+          "fixed": "2d323d5f4e7a36e50d1ceddc443b82afdea00daa7dae77b76bf16d8a1bb02fd7",
+          "side-original-rig": "567fb949fb2066758c164af0e7017b8e904b4be49244e19484e3967daf6dc369",
+          "side-studio": "c371deb3ff26277c7262e1d713bb9588d861b691cc729ca2331cdf0a2465a157",
+          "side-clay": "be5d0cbba398d2c78f1b141693a084cf13689def41e03f744e26af127b281091"
+        }
+      }
+    }
+  },
+  {
+    "config": {
+      "study": "005-matched-hidden-grain",
+      "source": "build/pawn-side-quality/003-side-profile/thin-collar/pawn.blend",
+      "source_sha256": "eb1225c7c16545e7fee455a9dd023e592552883fc44cf4f9da9640edc5ee9b62",
+      "samples": 192,
+      "variants": [
+        {
+          "name": "color-only",
+          "studio": "warm",
+          "pigment": "build/pawn-side-quality/005-matched-hidden-grain/wood-completed.png",
+          "pigment_sha256": "588dc98337cc8b8e6a42688b7e8805e2caac757a68459ed88f1f72b16f1e7c8b",
+          "diagnostics": true
+        },
+        {
+          "name": "color-and-relief",
+          "studio": "warm",
+          "pigment": "build/pawn-side-quality/005-matched-hidden-grain/wood-completed.png",
+          "pigment_sha256": "588dc98337cc8b8e6a42688b7e8805e2caac757a68459ed88f1f72b16f1e7c8b",
+          "bump": "build/pawn-side-quality/005-matched-hidden-grain/bump-completed.png",
+          "bump_sha256": "5b457a279321a34681a34b10cc88544dc98abd01062f3c565ddb6f3bea30ef9b",
+          "bump_source_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7"
+        }
+      ]
+    },
+    "variants": {
+      "color-only": {
+        "edits": {},
+        "model_sha256": "f012c0d27c4d91f3e2029003015dd5746900864923138311f3765acb452aae5a",
+        "renders": {
+          "fixed": "41cd59e36f22c5cc7016bfdecd531baf86b9088dedcf3b8a1473d134206f7ba1",
+          "side-original-rig": "ebaa39e68cd7a56fbd84179ad2704025ff1ba0da9a80ab139d473ae54cd18864",
+          "side-studio": "4cc73084f4a92ca7d4dc2341f836f86519ed06f4d28c04fc057e9c0c50747dc0",
+          "side-clay": "c36320353cddb154eebd0f4847cf2f09c9366301ec14d1942dd7345148892d0e"
+        }
+      },
+      "color-and-relief": {
+        "edits": {},
+        "model_sha256": "169fa7421ff01a69caf70a2e94100729a5113489b630825098507a9ac17b8bff",
+        "renders": {
+          "fixed": "f690ddec8ee3d2d84aff0751ddc71d9eb22404b85667da77a5ffd23268305bb0",
+          "side-original-rig": "cafb25bdb51b6e722350622e944786afec42f08125e804678291cea69cbf4fb8",
+          "side-studio": "6cc9234a7f45330206ae3ddfd3c9ebb6fb7fb49eba497e9e3c565670a6648bae",
+          "side-clay": "ba0c0f16ed54f84a9b8f3a2cdb38b84a0d02988d010f9de3d6186f4be33c9f06"
+        }
+      }
+    }
+  },
+  {
+    "config": {
+      "study": "006-refined-turning",
+      "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+      "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+      "samples": 192,
+      "variants": [
+        {
+          "name": "refined-turning",
+          "studio": "warm",
+          "profile_rz": {
+            "9": [
+              0.7615,
+              null
+            ],
+            "10": [
+              0.749,
+              null
+            ],
+            "25": [
+              0.45,
+              null
+            ],
+            "26": [
+              0.438,
+              null
+            ],
+            "27": [
+              0.417,
+              null
+            ],
+            "28": [
+              0.373,
+              null
+            ],
+            "33": [
+              null,
+              1.817
+            ],
+            "34": [
+              null,
+              1.824
+            ],
+            "35": [
+              null,
+              1.839
+            ],
+            "36": [
+              null,
+              1.858
+            ]
+          }
+        }
+      ]
+    },
+    "variants": {
+      "refined-turning": {
+        "edits": {
+          "9": {
+            "before": [
+              0.753294825553894,
+              0.0,
+              0.17901459336280823
+            ],
+            "after": [
+              0.7615000009536743,
+              0.0,
+              0.17901459336280823
+            ]
+          },
+          "10": {
+            "before": [
+              0.7389463782310486,
+              0.0,
+              0.22241206467151642
+            ],
+            "after": [
+              0.7490000128746033,
+              0.0,
+              0.22241206467151642
+            ]
+          },
+          "25": {
+            "before": [
+              0.4623396694660187,
+              0.0,
+              1.017128348350525
+            ],
+            "after": [
+              0.44999998807907104,
+              0.0,
+              1.017128348350525
+            ]
+          },
+          "26": {
+            "before": [
+              0.45915114879608154,
+              0.0,
+              1.0578135251998901
+            ],
+            "after": [
+              0.43799999356269836,
+              0.0,
+              1.0578135251998901
+            ]
+          },
+          "27": {
+            "before": [
+              0.43045419454574585,
+              0.0,
+              1.112060308456421
+            ],
+            "after": [
+              0.4169999957084656,
+              0.0,
+              1.112060308456421
+            ]
+          },
+          "28": {
+            "before": [
+              0.382625937461853,
+              0.0,
+              1.1663072109222412
+            ],
+            "after": [
+              0.37299999594688416,
+              0.0,
+              1.1663072109222412
+            ]
+          },
+          "33": {
+            "before": [
+              0.28696945309638977,
+              0.0,
+              1.7901458740234375
+            ],
+            "after": [
+              0.28696945309638977,
+              0.0,
+              1.8170000314712524
+            ]
+          },
+          "34": {
+            "before": [
+              0.3507404625415802,
+              0.0,
+              1.7901458740234375
+            ],
+            "after": [
+              0.3507404625415802,
+              0.0,
+              1.8240000009536743
+            ]
+          },
+          "35": {
+            "before": [
+              0.41451144218444824,
+              0.0,
+              1.8037075996398926
+            ],
+            "after": [
+              0.41451144218444824,
+              0.0,
+              1.8389999866485596
+            ]
+          },
+          "36": {
+            "before": [
+              0.43523702025413513,
+              0.0,
+              1.8308310508728027
+            ],
+            "after": [
+              0.43523702025413513,
+              0.0,
+              1.8580000400543213
+            ]
+          }
+        },
+        "model_sha256": "e94bba9f492b8ed5a3f0c81ffeebf4d11895c22ae0175ec4788d3d0635ce25be",
+        "renders": {
+          "fixed": "78b82f2e34c7a71786fa3adb9d1952a27cd59184270c2921245862707bf92113",
+          "side-original-rig": "f14e90e9a8b74cb3d3a68aecc3971f6e98887ad24b607c0a4541bd4f2b533663",
+          "side-studio": "f077c33a25a21b6d163f9a4a74805f9c10cb74cb492bf37fc3d95925252b929e",
+          "side-clay": "349a6bbde6db84485f746dff08579497ec9425bb635ea7b7dbfe56932240911f"
+        }
+      }
+    }
+  }
+]

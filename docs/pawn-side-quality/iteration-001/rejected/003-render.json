@@ -1,0 +1,108 @@
+{
+  "study": "003-side-profile",
+  "source": "history/pawn-mission-017/pawn-rebuilt.blend",
+  "source_sha256": "0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6",
+  "samples": 192,
+  "variants": [
+    {
+      "name": "thin-collar",
+      "studio": "rounded",
+      "profile_rz": {
+        "33": [
+          null,
+          1.817
+        ],
+        "34": [
+          null,
+          1.824
+        ],
+        "35": [
+          null,
+          1.839
+        ],
+        "36": [
+          null,
+          1.858
+        ]
+      }
+    },
+    {
+      "name": "lower-base",
+      "studio": "rounded",
+      "profile_rz": {
+        "13": [
+          null,
+          0.387
+        ],
+        "14": [
+          null,
+          0.43
+        ],
+        "15": [
+          null,
+          0.47
+        ],
+        "16": [
+          null,
+          0.503
+        ],
+        "17": [
+          null,
+          0.57
+        ],
+        "18": [
+          null,
+          0.647
+        ],
+        "19": [
+          null,
+          0.716
+        ],
+        "20": [
+          0.479,
+          0.755
+        ],
+        "21": [
+          0.456,
+          0.787
+        ],
+        "22": [
+          null,
+          0.82
+        ],
+        "23": [
+          null,
+          0.868
+        ],
+        "24": [
+          null,
+          0.918
+        ],
+        "25": [
+          null,
+          0.962
+        ],
+        "26": [
+          0.451,
+          1.004
+        ],
+        "27": [
+          0.421,
+          1.045
+        ],
+        "28": [
+          null,
+          1.11
+        ],
+        "29": [
+          null,
+          1.21
+        ],
+        "30": [
+          null,
+          1.37
+        ]
+      }
+    }
+  ]
+}
