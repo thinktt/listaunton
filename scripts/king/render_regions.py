@@ -47,7 +47,14 @@ def partition(scene,body,profile_sections=False,split_flare=False,split_socket=F
         for uv_name,values in uvs.items():data.uv_layers.new(name=uv_name).data.foreach_set('uv',values[loop_ids].reshape(-1))
         data.uv_layers.active=data.uv_layers['Pigment atlas'];data.uv_layers.active.active_render=True
         for attr_name,(domain,values) in attrs.items():data.attributes.new(attr_name,'FLOAT',domain).data.foreach_set('value',values[vertex_ids if domain=='POINT' else loop_ids])
-        data.normals_split_custom_set(normals[loop_ids].tolist());data.materials.append(body.data.materials[0])
+        if scene.get('king_free_receiver_normals'):
+            # A partition has different neighboring faces at its edges. Keep the
+            # control's exact corner vectors across those seams in Blender 5.2.
+            layer = data.attributes.new('custom_normal', 'FLOAT_VECTOR', 'CORNER')
+            layer.data.foreach_set('vector', normals[loop_ids].ravel())
+        else:
+            data.normals_split_custom_set(normals[loop_ids].tolist())
+        data.materials.append(body.data.materials[0])
         part=bpy.data.objects.new('King receiver '+name,data);collection.objects.link(part);part.matrix_world=body.matrix_world.copy();part['king_render_region']=name;part['king_control_source']=body.name;parts.append(part)
         report.append(dict(name=name,faces=len(face_ids),triangles=int((counts[face_ids]-2).sum()),vertices=len(vertex_ids),custom_normals=data.has_custom_normals))
     assert sum(row['faces'] for row in report)==len(mesh.polygons)

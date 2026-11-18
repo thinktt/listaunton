@@ -1,12 +1,10 @@
 # King reconstruction
 
-Current accepted state: [mission checkpoint 014](king-mission/iteration-014/README.md).
-The collars retain checkpoint 013 geometry and have a localized varnish-grain
-adjustment. All v6 pigment pixels and lights remain unchanged. Light-tree sampling
-is now explicitly disabled; canonical repeat and independent render checks pass
-at the existing tolerance. Use 128 adaptive/denoised samples and the fixed
-54-degree camera. Read the [mission log](king-mission-log.md) for remaining work.
-Older builders below are historical.
+The current king uses the queen’s compact socket, base turning and thin stacked
+collars. Its Chavet-style head flares into the rim and carries one low seat
+beneath the cross. The working camera is fixed at 54°. The side and registered
+comparisons, source hashes and build recipe are in [checkpoint 016](king-mission/iteration-016/README.md).
+The [king review](../king-review.html) opens the current reconstruction.
 
 ## Historical clay study
 

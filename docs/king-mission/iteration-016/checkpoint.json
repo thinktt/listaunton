@@ -1,0 +1,86 @@
+{
+  "model_sha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb",
+  "render_sha256": "a8b1ec78b3f0bcdd5c0ffb371b1ea8b5984285c80f7cff8265ba37178e70d9bb",
+  "mesh_sha256": "93be653f8195317952931f09886f6c4dbf407ff8bd22fd1693607f7a7e990e3f",
+  "source_hashes": {
+    "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+    "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/Black-King.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/White-King.png": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48",
+    "assets/king/materials/king-pigment-atlas-v6.png": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+    "assets/side-views/defaults.json": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578",
+    "models/queen/queen-rebuilt.blend": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"
+  },
+  "camera_elevation_degrees": 54.000000800055794,
+  "closed_components": [
+    {
+      "name": "King - beveled cross",
+      "vertices": 1584,
+      "triangleCount": 3164,
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.07536784391920683
+    },
+    {
+      "name": "King - continuous turned body",
+      "vertices": 33602,
+      "triangleCount": 67200,
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.5038251780794525
+    }
+  ],
+  "exact_mesh_roundtrip": true,
+  "exact_receiver_count": 9,
+  "maximum_receiver_normal_error": 0.0,
+  "regenerated_receiver_normal_error": 0.0,
+  "preserved_light_routes": true,
+  "checked_profile_segments": 174,
+  "profile_crossings": [],
+  "independent_render": {
+    "maximum_rgb_error_255": 1,
+    "alpha_exact": true,
+    "changed_pixels": 44,
+    "reopened_sha256": "a8b1ec78b3f0bcdd5c0ffb371b1ea8b5984285c80f7cff8265ba37178e70d9bb",
+    "independent_reopen_sha256": "98726b4846cd39bb4d3d92c9736fe0f617846f0e59e96dcd7b4b1493cc537bd1"
+  },
+  "silhouettes": {
+    "original_iou": 0.9688629413400056,
+    "previous_original_iou": 0.9684661715256992,
+    "highres_iou": 0.9756150502942671,
+    "previous_highres_iou": 0.978259955426601,
+    "regional_iou": {
+      "head": {
+        "previous": 0.961869925758694,
+        "trial": 0.9583351332670957
+      },
+      "collars": {
+        "previous": 0.978708946772367,
+        "trial": 0.9773116309799093
+      },
+      "stem-socket": {
+        "previous": 0.981319646737874,
+        "trial": 0.9773861246296268
+      },
+      "base-foot": {
+        "previous": 0.9875858744124383,
+        "trial": 0.9864505890673244
+      }
+    }
+  },
+  "checkpoint": "016",
+  "previous_checkpoint": "014",
+  "status": "accepted, validated and synchronized",
+  "accepted_variant": "180-queen-turning-chavet",
+  "scores": {
+    "silhouette_iou_percent": 97.56150502942671,
+    "interior_form": 86,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "original_iou_percent": 96.88629413400056,
+  "equal_weight_mean": 82.91230100588534,
+  "geometry_changed": true,
+  "material_changed": false,
+  "lights_changed": false,
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4"
+}

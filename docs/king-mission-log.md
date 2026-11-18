@@ -592,3 +592,18 @@ metadata limitations are unchanged and were not re-tested.
 The owner requested a goal pause after this checkpoint; no further trial is
 scheduled. A nearer-source reflection study is recorded only as an untested
 future hypothesis. No watcher, subagent, push or publication was started.
+
+## 016 · Queen-style socket and collars, Chavet-style head
+
+Accepted on 18 November 2026. The king now shares the queen’s lower turning.
+The socket is 26.1% shorter at essentially the same diameter. The outer collar
+crests are 21.3% closer and the upper collar is 48.1% thinner. The head
+flares continuously to the rim and ends in one low seat beneath the cross.
+The fixed 54° outline overlaps the original sprite by 96.89% (previously
+96.85%) and black candidate 1 by 97.56% (previously 97.83%).
+
+Visual scores are 86 for interior form, 82 for color, 80 for grain and 69 for
+lighting. The upper-face reflection is broad and the lower flare glint remains
+too concentrated. Source images, camera registration and chosen set heights
+are preserved. The editable mesh, review and whole-set views are synchronized.
+[Side and fixed comparisons, reproduction and validation](king-mission/iteration-016/README.md)

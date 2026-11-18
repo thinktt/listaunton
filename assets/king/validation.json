@@ -3,7 +3,7 @@
     {
       "name": "King - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.491041800282902,
+      "signed_volume": 4.5038251780794525,
       "vertices": 33602,
       "faces": 33600
     },
@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "sourceSha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -29,7 +29,7 @@
     "receiverCount": 9,
     "exactSurfaceFacesUvsFloatAttributes": true,
     "triangles": 67200,
-    "normalMaxError": 6.699562072753906e-05,
+    "normalMaxError": 0.0,
     "materialsShared": true,
     "closedControlRetained": true,
     "lightRoutes": {

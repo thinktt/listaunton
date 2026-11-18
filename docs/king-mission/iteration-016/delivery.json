@@ -1,0 +1,33 @@
+{
+  "http": {
+    "king-review.html": "74652e7f308087ba64c5ec63e6a650ca4a8970f843ab181cab17ac584bf2e824",
+    "king-model.html": "aea2cceded1c39700998c2b7e695805b03d2364a8d8407fec4fe93587c0a4433",
+    "set-comparison.html": "f7ae00a623476ca6f0bb2e709e2bc29edef280abc09b2708b3396cc1cffbc4f2",
+    "assets/king/render.png": "a8b1ec78b3f0bcdd5c0ffb371b1ea8b5984285c80f7cff8265ba37178e70d9bb",
+    "assets/king/profile.png": "c485019156df5524ba3bab54caee88acd9fa51c667770be93ea3afa1de808212",
+    "assets/king/mesh.json": "96ffe65e39b73f91ba6f4697cb2e09f5f09219ce76839c8c9f3822a4aa64d596",
+    "assets/king/mesh.bin": "93be653f8195317952931f09886f6c4dbf407ff8bd22fd1693607f7a7e990e3f",
+    "docs/king-mission/iteration-016/profile-comparison.png": "3de373a9f04869d25a895481c4dcc1ba780f0f21067b16a07f6d10729e557af2",
+    "docs/king-mission/iteration-016/fixed-comparison.png": "0f528cddacb0da6d5d6ca81f298691609c8b35e131f0596abef5e240102a1799"
+  },
+  "historical_measurement_differences": [
+    [
+      "knight",
+      "assets/knight/mesh.json",
+      "104c19170f0976a86c98d529887603d19ea227374a044894d8d87a3855942326",
+      "7960f981e72c90c9a79b7fe786cbb41da1e2839fdf7b509bedf6373a00763e61"
+    ],
+    [
+      "knight",
+      "assets/knight/mesh.bin",
+      "50b30e70d614bd0e8f5157b0a94827c2ab49f8b79a3dd045878ef40afb9478ca",
+      "40a8ba6a8b6a9995c95b93a0edd8b0bc98f06c52282eccd25ff75521f471fe9e"
+    ],
+    [
+      "knight",
+      "assets/knight/reconstruction.json",
+      "072c5faa9ee1844230b10d3ff8830a64b23d90b67ee8820b393b55bdd784814b",
+      "1c90781ba772b2dfc3883b6d295cec8ade43c1b3e7cfa5492b2acb50a6254647"
+    ]
+  ]
+}

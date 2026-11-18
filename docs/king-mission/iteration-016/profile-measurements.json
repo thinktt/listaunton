@@ -1,0 +1,70 @@
+{
+  "source_sha256": "47538b56ad400f77113af6a79a4fb89fc9b4532964622ca4ffcf7f3599f22ad5",
+  "queen_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "model_sha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb",
+  "previous": {
+    "socket_height_rings_20_to_27": 0.4348980188369751,
+    "socket_diameter_at_22": 1.092835545539856,
+    "head_radius_at_neck_61": 0.45871633291244507,
+    "head_radius_at_64": 0.48874175548553467,
+    "head_radius_at_rim": 0.605786144733429,
+    "lower_to_upper_collar_crest_height": 0.40858983993530273,
+    "upper_collar_height_rings_54_to_61": 0.19933390617370605,
+    "collar_crests": [
+      {
+        "ring": 39.5,
+        "radius": 0.6609286665916443,
+        "z": 2.839823007583618
+      },
+      {
+        "ring": 49.0,
+        "radius": 0.5861141085624695,
+        "z": 3.030294179916382
+      },
+      {
+        "ring": 57.0,
+        "radius": 0.5008496046066284,
+        "z": 3.248412847518921
+      }
+    ],
+    "cross_seat_crests": [
+      77.0,
+      81.5
+    ]
+  },
+  "revised": {
+    "socket_height_rings_20_to_27": 0.32131850719451904,
+    "socket_diameter_at_22": 1.0959956645965576,
+    "head_radius_at_neck_61": 0.41680777072906494,
+    "head_radius_at_64": 0.5227187275886536,
+    "head_radius_at_rim": 0.6066245436668396,
+    "lower_to_upper_collar_crest_height": 0.3216218948364258,
+    "upper_collar_height_rings_54_to_61": 0.10340595245361328,
+    "collar_crests": [
+      {
+        "ring": 39.5,
+        "radius": 0.6707352995872498,
+        "z": 2.8458287715911865
+      },
+      {
+        "ring": 48.5,
+        "radius": 0.5912079215049744,
+        "z": 2.992204189300537
+      },
+      {
+        "ring": 57.0,
+        "radius": 0.46997836232185364,
+        "z": 3.1674506664276123
+      }
+    ],
+    "cross_seat_crests": [
+      78.0
+    ]
+  },
+  "exact_receiver_count": 9,
+  "receiver_normal_max_error": 0.0,
+  "control_vertices_exact": true,
+  "cross_topology_uv_attributes_packed_images_lights_camera_world_preserved": true,
+  "source_queen_unchanged": true,
+  "section": "Evaluated positive-X body meridian in model units"
+}

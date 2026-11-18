@@ -117,3 +117,12 @@ use_light_tree=False now restores the tested repeat/independent agreement within
 fixed 54-degree camera. The failed tree-enabled checks remain in iteration-014;
 do not promote rejected pigment, roughness or stronger-relief experiments.
 Synchronize fixed, side and viewer assets, and consult the mission log before work.
+
+Checkpoint 016 fits the king's lower turning to the accepted queen and uses
+a continuously flared Chavet-style head with one cross seat. Reproduce using
+turn_chavet_profile.py and docs/king-mission/iteration-016/reproduction.json.
+Preserve king_free_receiver_normals during regeneration. On Blender 5.2 it
+stores the evaluated control's exact corner vectors in the receiver meshes.
+The archived earlier checkpoints use their original encoding. Validate with
+validate_chavet_profile.py, the receiver regeneration check and the full profile
+intersection check before updating fixed, side, rotating and set views.
