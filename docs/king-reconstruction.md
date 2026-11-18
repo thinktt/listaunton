@@ -1,11 +1,12 @@
 # King reconstruction
 
-The king and queen now share the full base turning, with a straight-walled
-foot, one low groove, a rounded flare and a short socket. The king retains
-its close collars and Chavet-style head. The working camera is fixed at 54°.
-The true-scale side comparison, fixed-reference fit and Blender recipe are in
-[checkpoint 017](king-mission/iteration-017/README.md). The [king review](../king-review.html)
-opens the current reconstruction.
+The cross sits on two turned rings above the flared Chavet-style head. The
+upper ring is about 85% of the lower ring’s width. The king and queen share
+the same broad foot, single groove and stout socket. The working camera is
+fixed at 54°. [Open the king review](../king-review.html)
+
+The crown detail and side comparison are in [checkpoint 018](king-mission/iteration-018/README.md).
+The true-scale queen and king base comparison is in [checkpoint 017](king-mission/iteration-017/README.md).
 
 ## Historical clay study
 

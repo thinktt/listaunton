@@ -135,3 +135,11 @@ attribute to locate anatomical features. Regeneration preserves it when
 king_mapped_profile_rings is set. Keep the Queen base varnish 017 field and
 the four lower-region reflector routes. Validate the donor match and scope
 with validate_queen_base.py as well as the standard export and receiver checks.
+
+Checkpoint 018 turns logical rows 74–87 into two distinct concentric beads
+between the Chavet shoulder and the cross. The fixed camera, existing wood
+and queen-derived base come from 017. Use turn_crown_seat.py with the pinned
+iteration-018 configuration and its --validate mode. The archived single-seat
+assertion in validate_chavet_profile.py applies to checkpoint 016. Use
+compare_crown_seat.py for the fixed and level comparisons. Keep both beads
+in the exported mesh and synchronize the king review and set lineup.

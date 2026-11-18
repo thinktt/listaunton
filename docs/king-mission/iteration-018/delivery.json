@@ -1,0 +1,33 @@
+{
+  "http_files_sha256": {
+    "king-review.html": "74652e7f308087ba64c5ec63e6a650ca4a8970f843ab181cab17ac584bf2e824",
+    "king-model.html": "64c39a5a7c230ca25005093902eef74d1a0161787c53d907c14923339b6fb062",
+    "assets/king/render.png": "7253aedfe2e129ca4ac6b90086e5b36e7c416eab809e7947eae82266989ab1d0",
+    "assets/king/profile.png": "3d5bafa6be1e68fdef15b780d3bfaf16dbd0a01adb66a6e1eedeb40f4fe4a42e",
+    "assets/king/mesh.json": "3bb66ad22c206b8e2d1a5ee6716edf139306ccb57390938e380af66f2d01241f",
+    "assets/king/mesh.bin": "ab5593e2c98c721fed5d8b12dd47eb2e720c96d00f521068fb93fe067e4b6ae4",
+    "docs/king-mission/iteration-018/crown-seat-comparison.png": "016887af5c11c0a2b8e55da180a45f9c60879e6c7255bcd6772f1ee101eb15b4"
+  },
+  "shared_set_king": {
+    "board_source_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+    "side_profile_version": "3d5bafa6be1e68fd"
+  },
+  "source_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+  "synchronized_windows_preview": true,
+  "saved_model_validation": true,
+  "king_viewer_repository_and_windows": true,
+  "whole_set_lineup_and_height_controls": true,
+  "browser": {
+    "source_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+    "side": {
+      "size": [
+        600,
+        900
+      ],
+      "opacity": "1"
+    },
+    "webgl2": true,
+    "render_changed_on_drag": true,
+    "returned_to_overlay": true
+  }
+}

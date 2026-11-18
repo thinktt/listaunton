@@ -1,0 +1,131 @@
+{
+  "description": "Darkest mean luma below each front bead, x=497..513 on the registered 1254px fixed image after 1.6px Gaussian blur. A minimum on a window boundary is not a resolved trough.",
+  "measurements": {
+    "original": {
+      "upper": {
+        "y": 228,
+        "luma": 44.41,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 259,
+        "luma": 26.88,
+        "interior_to_window": true
+      }
+    },
+    "selected": {
+      "upper": {
+        "y": 231,
+        "luma": 24.41,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 263,
+        "luma": 11.94,
+        "interior_to_window": true
+      }
+    },
+    "previous": {
+      "upper": {
+        "y": 239,
+        "luma": 58.94,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 264,
+        "luma": 58.71,
+        "interior_to_window": true
+      }
+    },
+    "revised": {
+      "upper": {
+        "y": 231,
+        "luma": 63.0,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 257,
+        "luma": 56.53,
+        "interior_to_window": true
+      }
+    }
+  },
+  "highlight_rows": {
+    "original": {
+      "upper": {
+        "y": 215,
+        "luma": 84.47,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 243,
+        "luma": 82.59,
+        "interior_to_window": true
+      }
+    },
+    "selected": {
+      "upper": {
+        "y": 222,
+        "luma": 130.29,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 249,
+        "luma": 134.0,
+        "interior_to_window": true
+      }
+    },
+    "previous": {
+      "upper": {
+        "y": 228,
+        "luma": 113.82,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 256,
+        "luma": 100.65,
+        "interior_to_window": false
+      }
+    },
+    "revised": {
+      "upper": {
+        "y": 223,
+        "luma": 113.76,
+        "interior_to_window": true
+      },
+      "lower": {
+        "y": 250,
+        "luma": 116.76,
+        "interior_to_window": true
+      }
+    }
+  },
+  "front_patch_xyxy": [
+    420,
+    183,
+    591,
+    271
+  ],
+  "front_patch_comparison": {
+    "original": {
+      "previous": {
+        "absolute_luma_error": 23.258306751727805,
+        "correlation": 0.574824914503127
+      },
+      "revised": {
+        "absolute_luma_error": 21.056552365762894,
+        "correlation": 0.6703851873218435
+      }
+    },
+    "selected": {
+      "previous": {
+        "absolute_luma_error": 27.982456140350877,
+        "correlation": 0.5537557116299382
+      },
+      "revised": {
+        "absolute_luma_error": 22.471026049973418,
+        "correlation": 0.7389616153778563
+      }
+    }
+  }
+}

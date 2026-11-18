@@ -1,0 +1,59 @@
+{
+  "model_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+  "source_sha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
+  "previous": {
+    "beads": [
+      {
+        "ring": 78.0,
+        "radius": 0.34325486421585083,
+        "height": 4.1650004386901855
+      }
+    ]
+  },
+  "revised": {
+    "beads": [
+      {
+        "ring": 77.0,
+        "radius": 0.3542470335960388,
+        "height": 4.211833477020264
+      },
+      {
+        "ring": 82.5,
+        "radius": 0.2999733090400696,
+        "height": 4.324313163757324
+      }
+    ],
+    "groove": {
+      "ring": 80.0,
+      "radius": 0.26347851753234863,
+      "height": 4.271500110626221
+    },
+    "separation": 0.11247968673706055,
+    "upper_to_lower_diameter": 0.8467913082996776,
+    "upper_bead_proud_of_groove": 0.03649479150772095
+  },
+  "edited_logical_rows": [
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87
+  ],
+  "control_rows_preserved": 85,
+  "fixed_camera_degrees": 54,
+  "body_below_seat_exact": true,
+  "cross_material_uv_packed_textures_lights_camera_exact": true,
+  "cross_floor": 4.167631149291992,
+  "seat_center_height": 4.361999988555908,
+  "receiver_count": 9,
+  "receiver_normal_error": 0.0
+}

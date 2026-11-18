@@ -622,3 +622,14 @@ to 95.21%, and overlap with black candidate 1 changes from 97.56% to 96.45%.
 The lower flanks project wider. Interior form is estimated at 87, color 82,
 grain 80 and lighting 69. The side and fixed comparisons document the tradeoff.
 [Images, measurements and reconstruction recipe](king-mission/iteration-017/README.md)
+
+## 018 · Two rings on the crown seat
+
+The king’s cross now sits on two concentric beads. The upper bead is 84.7%
+of the lower bead’s width. Both front highlights are within one working-image
+pixel of the selected candidate. The tighter undercuts improve the local fit
+to both the black original and black candidate 1. Their shadows remain
+lighter in the render. The whole-piece overlap is 95.21% with the original
+and 96.45% with the candidate at 54°. Interior form is assessed at 89, wood
+color at 82, grain and surface at 80, and lighting at 69.
+[Comparison, geometry and reproduction](king-mission/iteration-018/README.md)

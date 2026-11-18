@@ -1,0 +1,145 @@
+{
+  "checkpoint": "018",
+  "previous_checkpoint": "017",
+  "accepted_variant": "190-two-close-crown-seat-rings",
+  "model_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+  "render_sha256": "7253aedfe2e129ca4ac6b90086e5b36e7c416eab809e7947eae82266989ab1d0",
+  "mesh_sha256": "ab5593e2c98c721fed5d8b12dd47eb2e720c96d00f521068fb93fe067e4b6ae4",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "source_hashes": {
+    "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+    "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/Black-King.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/White-King.png": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48",
+    "assets/king/materials/king-pigment-atlas-v6.png": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+    "assets/side-views/defaults.json": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578",
+    "models/queen/queen-rebuilt.blend": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"
+  },
+  "camera_elevation_degrees": 54.000000800055794,
+  "scores": {
+    "silhouette_iou_percent": 96.45310480854248,
+    "interior_form": 89,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "equal_weight_mean": 83.2906209617085,
+  "original_iou_percent": 95.21345470006185,
+  "silhouettes": {
+    "original_iou": 0.9521345470006184,
+    "previous_original_iou": 0.9521345470006184,
+    "highres_iou": 0.9645310480854248,
+    "previous_highres_iou": 0.9645310480854248,
+    "regional_iou": {
+      "head": {
+        "previous": 0.9583558329913385,
+        "trial": 0.9583558329913385
+      },
+      "collars": {
+        "previous": 0.9773263059897593,
+        "trial": 0.9773263059897593
+      },
+      "stem-socket": {
+        "previous": 0.981566074798752,
+        "trial": 0.981566074798752
+      },
+      "base-foot": {
+        "previous": 0.944219827515936,
+        "trial": 0.944219827515936
+      }
+    }
+  },
+  "trials": {
+    "188": {
+      "original": {
+        "absolute_luma_error": 24.221158958001062,
+        "correlation": 0.5472241039239948
+      },
+      "selected": {
+        "absolute_luma_error": 29.05974215842637,
+        "correlation": 0.5259781215419784
+      },
+      "highlights": {
+        "upper": {
+          "y": 229,
+          "luma": 87.59,
+          "interior_to_window": false
+        },
+        "lower": {
+          "y": 252,
+          "luma": 97.24,
+          "interior_to_window": true
+        }
+      }
+    },
+    "189": {
+      "original": {
+        "absolute_luma_error": 22.534290271132377,
+        "correlation": 0.6104770752037675
+      },
+      "selected": {
+        "absolute_luma_error": 25.364766081871345,
+        "correlation": 0.5686871562585684
+      },
+      "highlights": {
+        "upper": {
+          "y": 223,
+          "luma": 113.82,
+          "interior_to_window": true
+        },
+        "lower": {
+          "y": 250,
+          "luma": 117.71,
+          "interior_to_window": true
+        }
+      }
+    },
+    "190": {
+      "original": {
+        "absolute_luma_error": 21.056552365762894,
+        "correlation": 0.6703851873218435
+      },
+      "selected": {
+        "absolute_luma_error": 22.471026049973418,
+        "correlation": 0.7389616153778563
+      },
+      "highlights": {
+        "upper": {
+          "y": 223,
+          "luma": 113.76,
+          "interior_to_window": true
+        },
+        "lower": {
+          "y": 250,
+          "luma": 116.76,
+          "interior_to_window": true
+        }
+      }
+    }
+  },
+  "independent_render": {
+    "alpha_exact": true,
+    "maximum_rgb_error_255": 1,
+    "changed_pixels": 42
+  },
+  "checked_profile_segments": 196,
+  "profile_crossings": [],
+  "closed_components": [
+    {
+      "name": "King - beveled cross",
+      "vertices": 1584,
+      "triangleCount": 3164,
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.07536784391920683
+    },
+    {
+      "name": "King - continuous turned body",
+      "vertices": 37826,
+      "triangleCount": 75648,
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.491368730372861
+    }
+  ],
+  "receiver_count": 9,
+  "receiver_normal_error": 0
+}
