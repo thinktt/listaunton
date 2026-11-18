@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import base64
 import hashlib
+from io import BytesIO
 import json
 import struct
 
@@ -68,5 +69,24 @@ for key in ('guide','profile'):
     assert hashlib.sha256((root/registration[key]).read_bytes()).hexdigest()==registration[key+'_sha256']
 html=html.replace('__SIDE_GUIDE__',data_uri(root/registration['guide'])).replace('__SIDE_MODEL__',data_uri(root/registration['profile'])).replace('__SIDE_REGISTRATION__',json.dumps(registration,separators=(',',':')))
 html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',',':')))
+from compare_crown_seat import crown_crops, image as load_image, registered_original
+ref = load_image(assets/'reference.png')
+seat_crops = crown_crops(assets, registered_original(assets,ref), ref, load_image(assets/'render.png'),
+                        load_image(root/'history/king-mission-017/profile.png'), load_image(assets/'profile.png'))
+labels = ('Lichess original','Black candidate 1','Current king · 54°',
+          'Imagined side guide','Single-ring king · side','Current king · side')
+descriptions = ('Two concentric edges below the cross in the black sprite.',
+                'Rounded inner and outer rings in the selected enlargement.',
+                'The two turned rings seen from the saved reference camera.',
+                'A smaller bead resting on a wider bead in the imagined side profile.',
+                'One rounded bead under the cross in the earlier model.',
+                'The two beads and their separating groove seen at eye level.')
+cards = []
+for label, description, crop in zip(labels, descriptions, seat_crops):
+    buffer = BytesIO()
+    crop.save(buffer, format='PNG')
+    encoded = base64.b64encode(buffer.getvalue()).decode('ascii')
+    cards.append(f'<figure><figcaption>{label}</figcaption><img alt="{description}" width="{crop.width}" height="{crop.height}" src="data:image/png;base64,{encoded}"></figure>')
+html = html.replace('__CROWN_CARDS__','\n'.join(cards))
 out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

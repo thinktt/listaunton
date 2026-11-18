@@ -5,6 +5,10 @@ root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
 template=(root/'scripts/candidate-template.html').read_text(encoding='utf-8')
 parser=argparse.ArgumentParser();parser.add_argument('--piece',choices=list(data['pieces']));args=parser.parse_args()
+def content_revision(path):
+    normalized = path.read_bytes().replace(b'\r\n',b'\n')
+    return hashlib.sha256(normalized).hexdigest()[:16]
+
 # Model pages activate automatically when their checked standalone viewer exists.
 for piece,images in data['pieces'].items():
     if args.piece and piece!=args.piece:continue
@@ -17,6 +21,11 @@ for piece,images in data['pieces'].items():
     if piece == 'pawn' and model:
         revision = hashlib.sha256((root/model_page).read_bytes()).hexdigest()[:12]
         model['page'] = f'{model_page}?v={revision}'
+    if piece=='king' and model:
+        model['revision']=content_revision(root/model_page)
+        runtime='assets/comparison/candidate-review.js'
+        runtime_revision=content_revision(root/runtime)
+        page=page.replace(f'src="{runtime}"',f'src="{runtime}?v={runtime_revision}"')
     projection_page=f'{piece}-projections.html'
     projections={'page':projection_page} if (root/projection_page).is_file() else None
     extra_tab='<button id="tab-projections" type="button" role="tab" aria-selected="false" aria-controls="panel-projections" tabindex="-1">Projection variants</button>' if projections else ''

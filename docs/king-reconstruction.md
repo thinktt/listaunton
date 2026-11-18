@@ -5,7 +5,9 @@ upper ring is about 85% of the lower ring’s width. The king and queen share
 the same broad foot, single groove and stout socket. The working camera is
 fixed at 54°. [Open the king review](../king-review.html)
 
-The crown detail and side comparison are in [checkpoint 018](king-mission/iteration-018/README.md).
+Open [Crown seat](../king-review.html#crown-seat) for the registered details from both references,
+the earlier single-ring king and the current model. **Rotate close-up** centers the live mesh on
+the two rings. The crown measurements are in [checkpoint 018](king-mission/iteration-018/README.md).
 The true-scale queen and king base comparison is in [checkpoint 017](king-mission/iteration-017/README.md).
 
 ## Historical clay study

@@ -45,17 +45,26 @@ header .download{font-size:12px}
 #side-model{opacity:.5}
 .stage[data-mode="side"] canvas,.stage[data-mode="side"] .zoom,.stage[data-mode="side"] .badge,.stage[data-mode="side"] .comparison-stage{visibility:hidden;pointer-events:none}
 .stage[data-mode="side"] .side-stage{visibility:visible}
+.mode-tabs{flex-wrap:wrap}
+.stage[data-mode="crown"] .comparison-stage,.stage[data-mode="crown"] canvas,.stage[data-mode="crown"] .zoom,.stage[data-mode="crown"] .badge{visibility:hidden;pointer-events:none}
+.crown-stage{position:absolute;inset:0;overflow:auto;background:#181b1d;padding:14px}
+.crown-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px;max-width:1150px;margin:0 auto}
+.crown-grid figure{margin:0}.crown-grid figcaption{color:#eee6da;font-size:14px;margin:0 0 6px}
+.crown-grid img{display:block;width:100%;height:auto}
+@media(max-width:680px){.crown-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.crown-stage{padding:10px}}
 </style>
 </head>
 <body>
 <main>
-<header><div><h1>King model</h1><p>54° reference camera · wood reconstruction</p></div><a class="download" href="assets/king/profile.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/king/king-rebuilt.blend" download>Blender file ↗</a></header>
-<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button></nav>
+<header><div><h1>King model</h1><p>54° reference camera · wood reconstruction</p></div><a id="side-render" class="download" href="assets/king/profile.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/king/king-rebuilt.blend" download>Blender file ↗</a></header>
+<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button><button id="crown-tab" aria-pressed="false">Crown seat</button></nav>
+<div class="comparison-controls" id="crown-controls" hidden><button class="reset" id="rotate-crown">Rotate close-up</button></div>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 1</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
 <div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">Imagined side guide · base width and foot aligned</span></div>
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="King model comparison">
+<div class="crown-stage" id="crown-stage" role="region" aria-label="Crown seat close-ups" hidden><div class="crown-grid">__CROWN_CARDS__</div></div>
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: black king candidate 1" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess black king, including its clipped cross" draggable="false"><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
 <div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined king side guide"><img id="side-model" src="__SIDE_MODEL__" alt="Current king side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D king. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
@@ -107,6 +116,9 @@ for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',
 function mode(name){
  const rotate=name==='rotate';stage.dataset.mode=name;
  compareTab.setAttribute('aria-pressed',String(name==='compare'));sideTab.setAttribute('aria-pressed',String(name==='side'));rotateTab.setAttribute('aria-pressed',String(rotate));
+ const crown=name==='crown';
+ document.getElementById('crown-tab').setAttribute('aria-pressed',String(crown));
+ document.getElementById('crown-stage').hidden=!crown;document.getElementById('crown-controls').hidden=!crown;
  document.getElementById('comparison-controls').hidden=name!=='compare';document.getElementById('side-controls').hidden=name!=='side';
  document.getElementById('rotation-controls').hidden=!rotate;document.getElementById('view-controls').hidden=!rotate;
  canvas.tabIndex=rotate?0:-1;
@@ -114,9 +126,20 @@ function mode(name){
  fitComparison();if(rotate){if(autoFit)fit();schedule();}
 }
 compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');sideTab.onclick=()=>mode('side');
+document.getElementById('crown-tab').onclick=()=>mode('crown');
+if(window.parent!==window){
+ const sideRender=document.getElementById('side-render');
+ sideRender.textContent='Side render';
+ sideRender.onclick=event=>{event.preventDefault();mode('side');sideOpacity.value=100;paintSide();};
+}
 paintOverlay();canvas.tabIndex=-1;status.hidden=true;
+if(window.location?.hash==='#crown-seat')mode('crown');
+window.addEventListener('hashchange',()=>{if(window.location.hash==='#crown-seat')mode('crown');});
+window.addEventListener('message',event=>{
+ if(event.source===window.parent&&event.data?.channel==='listaunton-review'&&event.data.action==='crown-seat')mode('crown');
+});
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
-if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
+if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;document.getElementById('rotate-crown').disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
 const vs=`#version 300 es
 precision highp float;
 layout(location=0) in vec3 aPosition;
@@ -173,6 +196,9 @@ woodImage.onload=()=>{woodReady=true;if(meshBytes&&!ready){try{initialize();}cat
 woodImage.onerror=()=>fail(new Error('Pigment texture failed to load'));
 woodImage.src='data:image/png;base64,'+document.getElementById('wood-texture').textContent.trim();
 let projection='orthographic',orthoHeight=6,activeView='overlay';
+let orbitCenter=meta.bounds.center;
+// Midpoint of the two crown-seat crests in Blender coordinates.
+const crownCenter=[0,0,4.268];
 const reference=meta.referenceCamera;
 const fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
 const size=meta.bounds.size,radius=Math.hypot(...size)/2;
@@ -204,6 +230,7 @@ function rotation(){const [x,y,z,w]=q;return new Float32Array([
 ]);}
 function fit(){
  const m=rotation(),aspect=Math.max(.01,canvas.clientWidth/canvas.clientHeight);let d=0,maxX=0,maxY=0;
+ if(activeView==='crown'){orthoHeight=Math.max(1.15,1.5/aspect);distance=radius*5;pan=[0,0];return;}
  if(activeView==='overlay'){
   const r=reference.worldToCamera.flat(),p=reference.projectionMatrix.flat(),c=meta.bounds.center;
   const center=r.slice(0,12).reduce((rows,_,i)=>{if(i%4===0)rows.push(r[i]*c[0]+r[i+1]*c[1]+r[i+2]*c[2]+r[i+3]);return rows;},[]);
@@ -222,13 +249,15 @@ function fit(){
 }
 function updateLabels(){
  for(const name of ['orthographic','perspective'])document.getElementById(name).setAttribute('aria-pressed',String(projection===name));
- document.getElementById('surface-note').textContent=(activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view')+' · '+(material==='brown'?'wood pigment · approximate lighting':'neutral surface');
+ const label=activeView==='crown'?'Crown seat':activeView==='overlay'?'Overlay camera':projection==='orthographic'?'Orthographic view':'Perspective view';
+ document.getElementById('surface-note').textContent=label+' · '+(material==='brown'?'wood pigment · approximate lighting':'neutral surface');
 }
 function unselectViews(){activeView='';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));updateLabels();}
 function view(name){
  const views={overlay:referenceQuaternion(),threequarter:mul(axis(1,0,0,25*Math.PI/180),axis(0,1,0,-25*Math.PI/180)),front:[0,0,0,1],side:axis(0,1,0,Math.PI/2),top:axis(1,0,0,Math.PI/2),bottom:axis(1,0,0,-Math.PI/2)};
- activeView=name;if(name==='overlay')projection='orthographic';
- q=views[name]||views.overlay;autoFit=true;fit();updateLabels();
+ activeView=name;orbitCenter=name==='crown'?crownCenter:meta.bounds.center;
+ if(name==='overlay'||name==='crown')projection='orthographic';
+ q=name==='crown'?views.front:(views[name]||views.overlay);autoFit=true;fit();updateLabels();
  document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));
  schedule();
 }
@@ -262,7 +291,7 @@ function draw(){
   [2/(orthoHeight*w/h),0,0,0,0,2/orthoHeight,0,0,0,0,-2/(far-n),0,0,0,-(far+n)/(far-n),1]:
   [f/(w/h),0,0,0,0,f,0,0,0,0,(far+n)/(n-far),-1,0,0,2*far*n/(n-far),0];
  gl.uniformMatrix4fv(uniforms.uProjection,false,new Float32Array(cameraMatrix));
- gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,meta.bounds.center);
+ gl.uniformMatrix3fv(uniforms.uRotation,false,rotation());gl.uniform3fv(uniforms.uCenter,orbitCenter);
  gl.uniform2fv(uniforms.uPan,pan);gl.uniform1f(uniforms.uDistance,distance);
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
  gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
@@ -307,6 +336,7 @@ canvas.addEventListener('keydown',e=>{
  else{const angle=Math.PI/24;const d=e.key==='ArrowLeft'?axis(0,1,0,-angle):e.key==='ArrowRight'?axis(0,1,0,angle):e.key==='ArrowUp'?axis(1,0,0,-angle):axis(1,0,0,angle);autoFit=false;q=normalize(mul(d,q));unselectViews();schedule();}
 });
 document.getElementById('reset').onclick=()=>view('overlay');
+document.getElementById('rotate-crown').onclick=()=>{mode('rotate');view('crown');canvas.focus({preventScroll:true});};
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));
 document.getElementById('zoom-in').onclick=()=>zoom(.85);document.getElementById('zoom-out').onclick=()=>zoom(1/.85);
 for(const name of ['orthographic','perspective'])document.getElementById(name).onclick=()=>setProjection(name);

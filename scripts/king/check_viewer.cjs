@@ -88,4 +88,14 @@ for(const [id,amount] of [['side-guide-only',0],['side-model-only',1],['side-hal
 const sr=JSON.parse(text('side-registration'));assert.equal(sr.source_blend_sha256,meta.sourceSha256);
 assert.equal(parseFloat(node('side-model').style.width),600*sr.scale/sr.canvas[0]*100);
 node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),beforeSide,'Side comparison changed orbit');
+node('crown-tab').onclick();flush();
+assert.equal(node('stage').dataset.mode,'crown');assert.equal(node('crown-stage').hidden,false);
+node('side-render').onclick({preventDefault(){}});flush();
+assert.equal(node('stage').dataset.mode,'side');assert.equal(node('side-model').style.opacity,1);
+node('crown-tab').onclick();flush();
+node('rotate-crown').onclick();flush();
+assert.equal(node('stage').dataset.mode,'rotate');assert(Math.abs(uniforms.uCenter[2]-4.268)<1e-5);
+assert.deepEqual(uniforms.uPan,[0,0]);assert(uniforms.uProjection[5]>1,'Crown should fill the inspection view');
+listeners.keydown({key:'ArrowRight',preventDefault(){}});flush();assert(Math.abs(uniforms.uCenter[2]-4.268)<1e-5,'Orbit should stay centered on the rings');
+node('reset').onclick();flush();compare();
 console.log(JSON.stringify({passed:true,pigmentAtlasHashMatches:true,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));

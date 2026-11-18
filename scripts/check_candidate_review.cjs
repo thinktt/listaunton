@@ -26,7 +26,18 @@ async function check(piece,modelOverride){
  else assert(!html.includes('id="tab-projections"'));
  const doc={getElementById:node,querySelectorAll:()=>zooms,documentElement:{style:{setProperty(){}}}};
  class FakeImage{set src(value){queueMicrotask(()=>failed.has(value)?this.onerror():this.onload());}}
- vm.runInNewContext(source,{document:doc,window:{addEventListener(){}},ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
+ let validations=0;
+ const revalidateKing=piece==='king'&&Boolean(data.model?.revision);
+ if(revalidateKing){
+   const contents=fs.readFileSync(path.join(root,data.model.page),'utf8').replace(/\r\n/g,'\n');
+   const hash=require('node:crypto').createHash('sha256').update(contents).digest('hex');
+   assert.equal(data.model.revision,hash.slice(0,16),'Cached wrapper fallback must identify the built viewer');
+ }
+ const fetch=async(url,options)=>{
+   assert.equal(url,data.model.page);assert.equal(options.method,'HEAD');assert.equal(options.cache,'no-cache');
+   validations++;return {ok:true,headers:{get:k=>k==='etag'?'"newer-viewer"':null}};
+ };
+ vm.runInNewContext(source,{document:doc,window:{location:{protocol:'http:',hash:'#crown-seat'},addEventListener(){}},fetch,ResizeObserver:class{observe(){}},Image:FakeImage,console:{error(){errors++;}},Map,Promise,JSON,Number,String,Math});
  await settle();
  if(data.initialTab==='model'){assert.equal(node('panel-model').hidden,false);assert.equal(frameLoads,1);node('tab-candidates').fire('click');}
  assert.equal(node('stage').style.visibility,'visible');assert.equal(node('loading').hidden,true);
@@ -74,7 +85,9 @@ async function check(piece,modelOverride){
  assert.equal(node('panel-candidates').hidden,true);assert.equal(node('panel-model').hidden,false);
  assert.equal(node('tab-model').attrs['aria-selected'],'true');assert.equal(node('tab-candidates').tabIndex,-1);
  if(data.model?.page){
-   assert.equal(frame.hidden,false);assert.equal(node('model-empty').hidden,true);assert.equal(frame.src,data.model.page);assert.equal(frameLoads,1);
+   const modelUrl=revalidateKing?data.model.page+'?v='+encodeURIComponent(data.model.revision+'-"newer-viewer"')+'#crown-seat':data.model.page;
+   assert.equal(validations,revalidateKing?1:0,'Revalidate the king once per review');
+   assert.equal(frame.hidden,false);assert.equal(node('model-empty').hidden,true);assert.equal(frame.src,modelUrl);assert.equal(frameLoads,1);
  }else{
    assert.equal(frame.hidden,true);assert.equal(node('model-empty').hidden,false);assert.equal(frameLoads,0);
  }

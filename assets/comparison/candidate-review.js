@@ -9,6 +9,20 @@
   const cache=new Map();
   const tabNames=['candidates','model',...(data.projections?.page?['projections']:[])];
   let activeTab='candidates',modelLoaded=false,projectionsLoaded=false;
+  async function loadModel(frame,model){
+    if(data.piece!=='King'||!model.revision){frame.src=model.page;return;}
+    let version=model.revision;
+    if(/^https?:$/.test(window.location?.protocol)){
+      // The outer review can itself be cached. Revalidate before reusing its embedded model.
+      try{
+        const response=await fetch(model.page,{method:'HEAD',cache:'no-cache',signal:globalThis.AbortSignal?.timeout?.(3000)});
+        const validator=response.headers.get('etag')||response.headers.get('last-modified');
+        if(response.ok&&validator)version+='-'+validator;
+      }catch{/* The build revision also works in file previews and on offline hosts. */}
+    }
+    const detail=window.location?.hash==='#crown-seat'?'#crown-seat':'';
+    frame.src=model.page+'?v='+encodeURIComponent(version)+detail;
+  }
   function showTab(name,focus=false){
     if(!tabNames.includes(name))return;
     activeTab=name;drag=null;wipeDrag=null;
@@ -20,12 +34,18 @@
     if(name==='model'){
       const page=data.model?.page;
       $('model-empty').hidden=Boolean(page);$('model-frame').hidden=!page;
-      if(page&&!modelLoaded){$('model-frame').src=page;modelLoaded=true;}
+      if(page&&!modelLoaded){modelLoaded=true;loadModel($('model-frame'),data.model);}
     }else if(name==='projections'){
       if(!projectionsLoaded){$('projections-frame').src=data.projections.page;projectionsLoaded=true;}
     }else if(zoom==='fit')resize('fit',false);
     if(focus)$('tab-'+name).focus();
   }
+  window.addEventListener('hashchange',()=>{
+    if(data.piece==='King'&&window.location.hash==='#crown-seat'){
+      showTab('model');
+      $('model-frame').contentWindow?.postMessage({channel:'listaunton-review',action:'crown-seat'},'*');
+    }
+  });
   for(const name of tabNames){
     const tab=$('tab-'+name);
     tab.addEventListener('click',()=>showTab(name));
