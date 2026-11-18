@@ -116,11 +116,15 @@ def deliver(variant):
     if side is not scene:
         from validate_finish_scope import fingerprint
         snapshot=fingerprint(side,body)
-        save_json(ASSETS/"side-presentation.json",{"scene":side.name,"model_sha256":sha(model),
+        presentation={"scene":side.name,"model_sha256":sha(model),
             "profile_sha256":sha(ASSETS/"profile.png"),"same_editable_object_and_material":True,
-            "camera_elevation":0,"resolution":side.render.resolution_x,"lighting_preset":"balanced",
+            "camera_elevation":0,"resolution":side.render.resolution_x,"lighting_preset":side.get("pawn_lighting_preset","balanced"),
             "reference_lights_preserved":sum(o.type=='LIGHT' for o in scene.objects),
-            "studio_lights":snapshot['lights'],"studio_world":snapshot['world'],"note":side['pawn_presentation']})
+            "studio_lights":snapshot['lights'],"studio_world":snapshot['world'],"note":side['pawn_presentation']}
+        if side.get("pawn_portrait_camera"):
+            from side_lighting import render_portrait
+            presentation["portrait"]=render_portrait(side)
+        save_json(ASSETS/"side-presentation.json",presentation)
         bpy.context.window.scene=scene
     report.update(variant=variant,texture_packed_after_reopen=True,reference_camera_above_board=54,source_trial_sha256=sha(source),render_sha256=sha(ASSETS/"render.png"),side_sha256=sha(ASSETS/"profile.png"))
     save_json(ASSETS/"mission-validation.json",report);print("PAWN_DELIVERY_CHECKED",report,flush=True)

@@ -52,12 +52,12 @@ header .download{font-size:12px}
 <header><div><h1>Pawn model</h1><p>54° reference camera · wood reconstruction</p></div><a class="download" href="assets/pawn/profile.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/pawn/pawn-rebuilt.blend" download>Blender file ↗</a></header>
 <nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 2</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
-<div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">__SIDE_LIGHTING_NOTE__</span></div>
+<div class="comparison-controls" id="side-controls" hidden>__ANGLE_CONTROL__<label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">__SIDE_LIGHTING_NOTE__</span></div>
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Pawn model comparison">
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: black pawn candidate 2" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess black pawn" draggable="false"><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
-<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined pawn side guide"><img id="side-model" src="__SIDE_MODEL__" alt="Current pawn side render, uniformly registered at the foot"></div></div>
+<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined pawn side guide"><img id="side-model" src="__SIDE_MODEL__" __PORTRAIT_ATTRIBUTE__ alt="Current pawn side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D pawn. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -84,10 +84,29 @@ const sideTab=document.getElementById('side-tab'),sideFrame=document.getElementB
 const sideRegistration=JSON.parse(document.getElementById('side-registration').textContent);
 const sideGuide=document.getElementById('side-guide'),sideModel=document.getElementById('side-model'),sideOpacity=document.getElementById('side-opacity');
 const [sideWidth,sideHeight]=sideRegistration.canvas;
-const [profileWidth,profileHeight]=sideRegistration.profile_dimensions;
 Object.assign(sideGuide.style,{width:'100%',height:(sideRegistration.guide_dimensions[1]/sideHeight*100)+'%',left:'0%',top:(sideRegistration.guide_top/sideHeight*100)+'%'});
-Object.assign(sideModel.style,{width:(profileWidth*sideRegistration.scale/sideWidth*100)+'%',height:(profileHeight*sideRegistration.scale/sideHeight*100)+'%',left:(sideRegistration.offset_x/sideWidth*100)+'%',top:(sideRegistration.offset_y/sideHeight*100)+'%'});
-function paintSide(){const value=Math.min(100,Math.max(0,Number(sideOpacity.value)||0));sideModel.style.opacity=value/100;document.getElementById('side-opacity-value').textContent=value+'%';}
+const levelImage = sideModel.src;
+const angleChoice = document.getElementById('side-angle');
+function setSideAngle() {
+ const usePortrait = sideRegistration.portrait && angleChoice.value === 'portrait';
+ const registration = usePortrait ? sideRegistration.portrait : sideRegistration;
+ const [width, height] = registration.profile_dimensions;
+ sideModel.src = usePortrait ? sideModel.dataset.portrait : levelImage;
+ Object.assign(sideModel.style, {
+  width: (width * registration.scale / sideWidth * 100) + '%',
+  height: (height * registration.scale / sideHeight * 100) + '%',
+  left: (registration.offset_x / sideWidth * 100) + '%',
+  top: (registration.offset_y / sideHeight * 100) + '%'
+ });
+}
+if (sideRegistration.portrait) angleChoice.addEventListener('change', setSideAngle);
+setSideAngle();
+function paintSide(){
+ const value=Math.min(100,Math.max(0,Number(sideOpacity.value)||0));
+ sideModel.style.opacity=value/100;
+ sideGuide.style.visibility=value===100?'hidden':'visible';
+ document.getElementById('side-opacity-value').textContent=value+'%';
+}
 sideOpacity.addEventListener('input',paintSide);
 for(const [id,value] of [['side-guide-only',0],['side-half',50],['side-model-only',100]])document.getElementById(id).onclick=()=>{sideOpacity.value=value;paintSide();};
 paintSide();
@@ -118,6 +137,7 @@ function mode(name){
 }
 compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');sideTab.onclick=()=>mode('side');
 paintOverlay();canvas.tabIndex=-1;status.hidden=true;
+if (window.location && window.location.hash === '#side') mode('side');
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
 if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
 const vs=`#version 300 es

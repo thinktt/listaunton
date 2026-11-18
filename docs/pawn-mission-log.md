@@ -618,3 +618,18 @@ All review assets are rebuilt from it. See [scope, comparisons and reproduction]
 The goal stays active; the heavy collar, broad socket and remaining front
 grain boundaries prevent a finished-quality rating. No watchers or subagents
 were started.
+
+## Side-quality checkpoint 003 — stem, studio and guide camera
+
+The lowest point of the stem's inward curve moved 37 pixels lower in the level
+profile. The waist narrowed six pixels. Three feathered highlights now describe
+the ball. The side comparison includes the true level view and a portrait at
+11.5°, estimated independently from the sole and groove in the imagined guide.
+Both use the same wood and editable model as the 54° reconstruction.
+
+The side assessment rises from 71.65 to **76.10/100**. The original black
+silhouette overlap is 98.50%. Native RGB error moves from 16.67 to 16.81.
+The broader shoulder trial lost a foot reflection. The accepted model retains
+the previous base. The pigment still shows a pale band on the front shoulder.
+The saved model hash is a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756.
+[Renders, scores and reproduction](pawn-side-quality/iteration-003/README.md)

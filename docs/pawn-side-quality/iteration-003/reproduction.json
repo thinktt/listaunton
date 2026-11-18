@@ -1,0 +1,281 @@
+{
+  "source": "history/pawn-side-quality-002/pawn-rebuilt.blend",
+  "source_sha256": "4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468",
+  "samples": 512,
+  "side_resolution": 1254,
+  "checkpoint": "side-quality-003",
+  "profile_rz": {
+    "28": [
+      0.3825,
+      null
+    ],
+    "29": [
+      0.34,
+      null
+    ],
+    "30": [
+      0.295,
+      null
+    ],
+    "31": [
+      0.263,
+      1.555
+    ],
+    "32": [
+      0.271,
+      1.701
+    ],
+    "33": [
+      0.293,
+      1.759
+    ],
+    "34": [
+      0.353,
+      1.79
+    ]
+  },
+  "studio": {
+    "world_strength": 0.14,
+    "world_color": [
+      0.86,
+      0.83,
+      0.79
+    ],
+    "name": "polished-walnut",
+    "description": "Soft pools of light define the ball. A tall, warm card follows the curve of the turning.",
+    "cards": [
+      {
+        "name": "Large warm key",
+        "location": [
+          -2.5,
+          -4,
+          4.1
+        ],
+        "target": [
+          0,
+          0,
+          1.4
+        ],
+        "power": 480,
+        "width": 3.4,
+        "height": 4.6,
+        "color": [
+          1,
+          0.92,
+          0.82
+        ],
+        "glossy": false
+      },
+      {
+        "name": "Soft front fill",
+        "location": [
+          2,
+          -4.2,
+          2.6
+        ],
+        "target": [
+          0,
+          0,
+          1.15
+        ],
+        "power": 185,
+        "width": 4,
+        "height": 4.5,
+        "color": [
+          1,
+          0.95,
+          0.87
+        ],
+        "glossy": false
+      },
+      {
+        "name": "Edge separation",
+        "location": [
+          1.6,
+          2.8,
+          3.9
+        ],
+        "target": [
+          0,
+          0,
+          1.65
+        ],
+        "power": 95,
+        "width": 2.4,
+        "height": 3.4,
+        "color": [
+          1,
+          0.95,
+          0.87
+        ],
+        "glossy": false
+      },
+      {
+        "name": "Body softbox",
+        "location": [
+          2.4,
+          -3.4,
+          1.85
+        ],
+        "target": [
+          0,
+          -0.2,
+          0.73
+        ],
+        "power": 12,
+        "width": 1.2,
+        "height": 2.1,
+        "spread": 45,
+        "color": [
+          1,
+          0.9,
+          0.78
+        ],
+        "diffuse": false,
+        "glossy": true
+      },
+      {
+        "name": "Left bounce",
+        "location": [
+          -2.6,
+          -3,
+          1.7
+        ],
+        "target": [
+          0,
+          -0.27,
+          0.62
+        ],
+        "power": 2.8,
+        "width": 1.9,
+        "height": 1.1,
+        "spread": 52,
+        "color": [
+          1,
+          0.86,
+          0.72
+        ],
+        "diffuse": false,
+        "glossy": true
+      }
+    ],
+    "reflections": [
+      {
+        "name": "Oval key outer",
+        "pixel": [
+          601,
+          226
+        ],
+        "half_axes": [
+          16.5,
+          16.5
+        ],
+        "power": 1.0700800000000001,
+        "color": [
+          1,
+          0.81,
+          0.65
+        ],
+        "spread": 24,
+        "distance": 2.15
+      },
+      {
+        "name": "Oval key center",
+        "pixel": [
+          601,
+          226
+        ],
+        "half_axes": [
+          6.2,
+          6.2
+        ],
+        "power": 0.77824,
+        "color": [
+          1,
+          0.81,
+          0.65
+        ],
+        "spread": 24,
+        "distance": 2.14
+      },
+      {
+        "name": "Oval upper fill outer",
+        "pixel": [
+          670,
+          195
+        ],
+        "half_axes": [
+          21.45,
+          19.799999999999997
+        ],
+        "power": 1.5048,
+        "color": [
+          1,
+          0.86,
+          0.7
+        ],
+        "spread": 24,
+        "distance": 2.15
+      },
+      {
+        "name": "Oval upper fill center",
+        "pixel": [
+          670,
+          195
+        ],
+        "half_axes": [
+          8.06,
+          7.4399999999999995
+        ],
+        "power": 1.0944,
+        "color": [
+          1,
+          0.86,
+          0.7
+        ],
+        "spread": 24,
+        "distance": 2.14
+      },
+      {
+        "name": "Low face reflection outer",
+        "pixel": [
+          681,
+          274
+        ],
+        "half_axes": [
+          14.85,
+          18.15
+        ],
+        "power": 0.8527199999999999,
+        "color": [
+          1,
+          0.81,
+          0.65
+        ],
+        "spread": 24,
+        "distance": 2.15
+      },
+      {
+        "name": "Low face reflection center",
+        "pixel": [
+          681,
+          274
+        ],
+        "half_axes": [
+          5.58,
+          6.82
+        ],
+        "power": 0.6201599999999999,
+        "color": [
+          1,
+          0.81,
+          0.65
+        ],
+        "spread": 24,
+        "distance": 2.14
+      }
+    ]
+  },
+  "portrait_degrees": 11.5,
+  "evidence": "docs/pawn-side-quality/iteration-003"
+}

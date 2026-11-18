@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "source_sha256": "4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468",
+  "model_sha256": "a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756",
+  "changed_controls": {
+    "28": {
+      "before": [
+        0.382625937461853,
+        0.0,
+        1.1663072109222412
+      ],
+      "after": [
+        0.3824999928474426,
+        0.0,
+        1.1663072109222412
+      ]
+    },
+    "29": {
+      "before": [
+        0.3507404625415802,
+        0.0,
+        1.2476774454116821
+      ],
+      "after": [
+        0.3400000035762787,
+        0.0,
+        1.2476774454116821
+      ]
+    },
+    "30": {
+      "before": [
+        0.318854957818985,
+        0.0,
+        1.3832945823669434
+      ],
+      "after": [
+        0.29499998688697815,
+        0.0,
+        1.3832945823669434
+      ]
+    },
+    "31": {
+      "before": [
+        0.28696945309638977,
+        0.0,
+        1.5731585025787354
+      ],
+      "after": [
+        0.2630000114440918,
+        0.0,
+        1.5549999475479126
+      ]
+    },
+    "32": {
+      "before": [
+        0.27102670073509216,
+        0.0,
+        1.7223373651504517
+      ],
+      "after": [
+        0.2709999978542328,
+        0.0,
+        1.7009999752044678
+      ]
+    },
+    "33": {
+      "before": [
+        0.28696945309638977,
+        0.0,
+        1.7901458740234375
+      ],
+      "after": [
+        0.2930000126361847,
+        0.0,
+        1.7589999437332153
+      ]
+    },
+    "34": {
+      "before": [
+        0.3507404625415802,
+        0.0,
+        1.7901458740234375
+      ],
+      "after": [
+        0.3529999852180481,
+        0.0,
+        1.7899999618530273
+      ]
+    }
+  },
+  "all_other_control_coordinates_exact": true,
+  "uv_coordinates_exact": true,
+  "mesh_normals_uv_sha256": "5a6145f106a6bd6d2324d3f3de46657de7222fbd5b5756a924309a8e6ef51d08",
+  "reference_lights_preserved": 47,
+  "side_lights": 11,
+  "side_lighting_changed": true,
+  "side_world_changed": true,
+  "verified_shader_image_changes": [],
+  "same_shader_ramps": true,
+  "packed_maps_match_external_files": [],
+  "shared_editable_object": true,
+  "reference_camera_54_degrees": true,
+  "originals": {
+    "original.png": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "white-original.png": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3",
+    "reference.png": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
+  }
+}

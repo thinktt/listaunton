@@ -1,0 +1,54 @@
+{
+  "source_sha256": "2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37",
+  "assumption": "Circular horizontal turnings in an approximately orthographic image.",
+  "fits": [
+    {
+      "feature": "bottom silhouette",
+      "horizontal_radius_px": 331.0,
+      "fitted_fraction": 0.68,
+      "semi_minor_px": 66.14980245772345,
+      "angle_degrees": 11.528090850406938,
+      "residual_rms_px": 0.42722573724269597
+    },
+    {
+      "feature": "bottom silhouette",
+      "horizontal_radius_px": 331.0,
+      "fitted_fraction": 0.78,
+      "semi_minor_px": 66.96847584001226,
+      "angle_degrees": 11.67275745243799,
+      "residual_rms_px": 0.4658735268305453
+    },
+    {
+      "feature": "bottom silhouette",
+      "horizontal_radius_px": 331.0,
+      "fitted_fraction": 0.88,
+      "semi_minor_px": 68.57067929230358,
+      "angle_degrees": 11.956099968916662,
+      "residual_rms_px": 0.5276384785800694
+    },
+    {
+      "feature": "dark turned groove",
+      "horizontal_radius_px": 318.0,
+      "fitted_fraction": 0.68,
+      "semi_minor_px": 64.94519210200671,
+      "angle_degrees": 11.784437291189414,
+      "residual_rms_px": 0.8089255491704354
+    },
+    {
+      "feature": "dark turned groove",
+      "horizontal_radius_px": 318.0,
+      "fitted_fraction": 0.78,
+      "semi_minor_px": 61.500581662614586,
+      "angle_degrees": 11.151157629703757,
+      "residual_rms_px": 1.1863396634660548
+    },
+    {
+      "feature": "dark turned groove",
+      "horizontal_radius_px": 318.0,
+      "fitted_fraction": 0.88,
+      "semi_minor_px": 61.3619039850107,
+      "angle_degrees": 11.125691627810548,
+      "residual_rms_px": 1.33769659284391
+    }
+  ]
+}

@@ -78,6 +78,17 @@ for key in ('guide','profile'):
     assert hashlib.sha256((root/registration[key]).read_bytes()).hexdigest()==registration[key+'_sha256']
 html=html.replace('__SIDE_GUIDE__',data_uri(root/registration['guide'])).replace('__SIDE_MODEL__',data_uri(root/registration['profile'])).replace('__SIDE_REGISTRATION__',json.dumps(registration,separators=(',',':')))
 html=html.replace('__SIDE_LIGHTING_NOTE__','Side studio · base width and foot aligned' if registration.get('presentation_scene') else 'Imagined side guide · base width and foot aligned')
+portrait = registration.get('portrait')
+angle_control, portrait_attribute = '', ''
+if portrait:
+    photo = root / portrait['profile']
+    assert hashlib.sha256(photo.read_bytes()).hexdigest() == portrait['profile_sha256']
+    angle = float(portrait['elevation'])
+    angle_control = (f'<label for="side-angle">Camera <select id="side-angle">'
+                     f'<option value="portrait">Guide estimate · {angle:g}°</option>'
+                     '<option value="level">Level · 0°</option></select></label>')
+    portrait_attribute = 'data-portrait="' + data_uri(photo) + '"'
+html = html.replace('__ANGLE_CONTROL__', angle_control).replace('__PORTRAIT_ATTRIBUTE__', portrait_attribute)
 html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',',':')))
 out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

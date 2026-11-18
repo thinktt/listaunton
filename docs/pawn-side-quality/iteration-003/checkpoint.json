@@ -1,0 +1,82 @@
+{
+  "checkpoint": "side-quality-003",
+  "model_sha256": "a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756",
+  "fixed_sha256": "2dfd65ad2a49f0e5e53a2a76fbdc80e6132156add884134facf3e6d7343b4ab0",
+  "profile_sha256": "aa39b71f309c2e4b6e1b117619742c91ef0fc051298cbb6b80c1d93fc2bde9e7",
+  "portrait": {
+    "file": "assets/pawn/guide-angle.png",
+    "sha256": "a9a61cca6ec4f88450ba55400bb98189f263f0b91319d63d3c2831a6e43c9968",
+    "camera": "Pawn guide-angle camera",
+    "elevation": 11.5
+  },
+  "scores_subjective": {
+    "profile_and_proportions": 79,
+    "turned_details": 69,
+    "wood_continuity": 70,
+    "surface_finish": 71,
+    "lighting_and_form": 87,
+    "seating_and_presentation": 87
+  },
+  "weights": [
+    0.3,
+    0.15,
+    0.2,
+    0.15,
+    0.15,
+    0.05
+  ],
+  "weighted_side_quality": 76.1,
+  "previous_side_quality": 71.65,
+  "geometry_changed_rings": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "reference_camera_degrees": 54,
+  "iou": {
+    "selected": 0.9681177792206453,
+    "original_black": 0.985002241932907,
+    "original_white": 0.9813684449301961
+  },
+  "reference_regions": {
+    "head": {
+      "mean_absolute_rgb_error_255": 3.197157405180018,
+      "overlap_pixels": 49884
+    },
+    "collar-stem": {
+      "mean_absolute_rgb_error_255": 4.419727870262301,
+      "overlap_pixels": 65116
+    },
+    "base-foot": {
+      "mean_absolute_rgb_error_255": 3.557009902876228,
+      "overlap_pixels": 108487
+    }
+  },
+  "native_original_rgb_mae_255": 16.80965232849121,
+  "previous_native_original_rgb_mae_255": 16.669240951538086,
+  "original_head_glint_errors_px": [
+    0.7366795114540706,
+    0.5848237932553967,
+    0.9128927374583844
+  ],
+  "level_waist_before": {
+    "width_px": 198,
+    "center_row_px": 500.0
+  },
+  "level_waist_after": {
+    "width_px": 192,
+    "center_row_px": 537.0
+  },
+  "side_lighting": "polished-walnut",
+  "protected_sources": {
+    "original_black": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "original_white": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3",
+    "selected": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+    "gallery_defaults": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578"
+  },
+  "goal_complete": false
+}

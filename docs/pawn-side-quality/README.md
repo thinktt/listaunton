@@ -5,6 +5,9 @@ Staunton pawns, make this pawn look convincing and finely finished from the
 side, and preserve its already successful reference-view match. This is a
 separate aesthetic assessment from the original fixed-view match score.
 
+The current [side study](iteration-003/README.md) scores **76.10/100**. It
+includes the level side render and a camera matched to the guide's foot ellipse.
+
 The starting accepted model is checkpoint 017, SHA-256
 `0d0f9c2649fbd209eaf5817c4d51256ca1b49f4587adc278cee29744bab6a4a6`.
 Checkpoint 018's rejected collar experiments are not the starting model.

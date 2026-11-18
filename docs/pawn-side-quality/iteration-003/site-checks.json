@@ -1,0 +1,50 @@
+{
+  "Pawn viewer": {
+    "passed": true,
+    "message": "{\n  \"passed\": true,\n  \"pigmentAtlasHashMatches\": true,\n  \"varnishAtlasChecked\": true,\n  \"slopeAtlasChecked\": true,\n  \"woodAndClayToggle\": true,\n  \"sideComparisonAndFootRegistration\": true,\n  \"sampledVertices\": 502,\n  \"maxCameraErrorPixels\": 0.00001069600246717183,\n  \"overlayEndpoints\": true,\n  \"tabOrbitPersistence\": true,\n  \"rotationPanZoom\": true,\n  \"cameraReset\": true,\n  \"sourceSha256\": \"a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756\"\n}\n"
+  },
+  "Candidate controls": {
+    "passed": true,
+    "message": "PASS: king \u2014 model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: rook \u2014 model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: bishop \u2014 model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: knight \u2014 model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: pawn \u2014 model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\nPASS: king (model frame) \u2014 model tabs, placeholders, lazy frame, retained state, keyboard navigation, all source pairs, default wipe, draggable/keyboard divider, loading, blend/wipe endpoints, swap, alignment, downloads, pan/zoom and rapid switching.\n"
+  },
+  "Model assets": {
+    "passed": true,
+    "message": "PASS: king review opens its current mesh/camera/render; source images and registration are correct.\nPASS: rook review opens its current mesh/camera/render; source images and registration are correct.\nPASS: bishop review opens its current mesh/camera/render; source images and registration are correct.\nPASS: knight review opens its current mesh/camera/render; source images and registration are correct.\nPASS: pawn review opens its current mesh/camera/render; source images and registration are correct.\nPASS: 6 king projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\nPASS: 6 rook projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\nPASS: 7 queen projections are linked from review/home/set; downloads, embedded meshes/renders/cameras and shared physical profile scale match their assets.\n"
+  },
+  "Set presentation": {
+    "passed": true,
+    "message": "PASS: six pairs, both colors, all candidate options, retained selections, missing white queen, finite placement.\nPASS: side-view deep link, keyboard tabs, retained comparison/color state, six images, dimensions, hashes and prompt records.\nPASS: recorded sizing, uniform image scale, shared ground and bounds (current model hashes explicitly excluded for presentation-only check).\nPASS: fixed foot anchors and unclipped extremes, independent sliders, live king-relative labels, per-piece reset and safe storage restoration.\nPASS: Chavet-based sizes/order, static defaults, default resets and matching displayed height ratios.\n"
+  },
+  "Lineup": {
+    "passed": true,
+    "message": "king: current Blender mesh, texture, profile, and 100.0% height verified\nqueen: current Blender mesh, texture, profile, and 85.2% height verified\nbishop: current Blender mesh, texture, profile, and 71.8% height verified\nknight: current Blender mesh, texture, profile, and 68.4% height verified\nrook: current Blender mesh, texture, profile, and 59.7% height verified\npawn: current Blender mesh, texture, profile, and 53.1% height verified\n"
+  },
+  "Height modes": {
+    "passed": true,
+    "message": "PASS: matched and chosen heights stay synchronized in both directions, including saved profiles and chosen slider values.\n"
+  },
+  "Board": {
+    "passed": true,
+    "message": "PASS: original image height fits, chosen sizes, 54-degree render placement, wipe and live sizing.\n"
+  },
+  "Proportions": {
+    "passed": true,
+    "message": "king: original registration top \u0394 0.01px, foot \u0394 0.15px\nqueen: original registration top \u0394 -0.25px, foot \u0394 0.17px\nBishop \u221212%: top moves down 11.94 original pixels; foot moves 0.039 px.\nbishop: original registration top \u0394 0.08px, foot \u0394 0.16px\nknight: original registration top \u0394 0.08px, foot \u0394 0.04px\nrook: original registration top \u0394 0.07px, foot \u0394 0.17px\npawn: original registration top \u0394 0.06px, foot \u0394 0.08px\nPASS: exact saved cameras, fixed foot/width under compression, Chavet preset, source preservation, independent tilts, and migration of saved experiments.\n"
+  },
+  "Full set": {
+    "passed": false,
+    "message": "node:assert:152\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: Height-check model metadata changed\n    at Object.<anonymous> (\\\\wsl.localhost\\Ubuntu-24.04\\home\\toby\\code\\listaunton\\scripts\\check_set.cjs:95:9)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: '7960f981e72c90c9a79b7fe786cbb41da1e2839fdf7b509bedf6373a00763e61',\n  expected: '104c19170f0976a86c98d529887603d19ea227374a044894d8d87a3855942326',\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+  },
+  "HTTP delivery": {
+    "passed": true,
+    "served_sha256": {
+      "pawn-review.html": "27057d2f8b0b7dc25b79c750a4d9c7f5b25f1de5e1e5e4bb5a62931802d6a70c",
+      "pawn-model.html?v=4392d42961e7": "4392d42961e72d1b8e9a8ddbc99a2564a826cd03be791a83176111a345a7c17f",
+      "assets/pawn/profile.png": "aa39b71f309c2e4b6e1b117619742c91ef0fc051298cbb6b80c1d93fc2bde9e7",
+      "assets/pawn/guide-angle.png": "a9a61cca6ec4f88450ba55400bb98189f263f0b91319d63d3c2831a6e43c9968"
+    }
+  },
+  "Browser tests": {
+    "mode": "Node control simulation and exact embedded asset checks. Native GPU presentation was not exercised."
+  }
+}

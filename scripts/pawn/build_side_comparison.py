@@ -21,4 +21,19 @@ if presentation.exists():
     assert lighting['same_editable_object_and_material']
     record['presentation_scene']=lighting['scene']
     record['lighting_preset']=lighting['lighting_preset']
+    if 'portrait' in lighting:
+        camera = lighting['portrait']
+        path = ROOT / camera['file']
+        assert sha(path) == camera['sha256']
+        measured = foot(path)
+        portrait_scale = g['width'] / measured['width']
+        with Image.open(path) as image:
+            dimensions = list(image.size)
+        record['portrait'] = {
+            'profile': camera['file'], 'profile_sha256': camera['sha256'],
+            'profile_dimensions': dimensions, 'elevation': camera['elevation'],
+            'model_foot': measured, 'scale': portrait_scale,
+            'offset_x': g['center'] - portrait_scale * measured['center'],
+            'offset_y': g['floor'] + padding - portrait_scale * measured['floor'],
+        }
 (out/'side-registration.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8');print(json.dumps(record,indent=2))

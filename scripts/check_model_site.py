@@ -26,7 +26,10 @@ for piece,(color,chosen) in selection.items():
   assert config['model'] is None,piece
   print(f'PASS: {piece} has an explicit placeholder.')
   continue
- assert config['model']['page']==page.name,piece+' model unavailable through review tab'
+ expected_page = page.name
+ if piece == 'pawn':
+  expected_page += '?v=' + sha(page)[:12]
+ assert config['model']['page']==expected_page,piece+' unavailable or stale model URL in review tab'
  html=page.read_text(encoding='utf-8');LocalLinks().feed(html)
  assert 'file:///' not in html,page
  assert not re.search(r'__[A-Z][A-Z_]+__',html),page

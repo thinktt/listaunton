@@ -1,0 +1,307 @@
+{
+  "scene": "Pawn side studio",
+  "model_sha256": "4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468",
+  "profile_sha256": "918399ee07014f0ff9027bc308a0c867ecfb394c7546bc19be8709e62473ee12",
+  "same_editable_object_and_material": true,
+  "camera_elevation": 0,
+  "resolution": 1254,
+  "lighting_preset": "balanced",
+  "reference_lights_preserved": 47,
+  "studio_lights": {
+    "Studio key": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 240.0,
+      "color": [
+        1.0,
+        0.9300000071525574,
+        0.8299999833106995
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": true,
+      "settings": {
+        "shape": "DISK",
+        "size": 1.7000000476837158,
+        "size_y": 0.25,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Studio fill": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 140.0,
+      "color": [
+        1.0,
+        0.9599999785423279,
+        0.8999999761581421
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": true,
+      "settings": {
+        "shape": "DISK",
+        "size": 2.5999999046325684,
+        "size_y": 0.25,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Studio rim": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 90.0,
+      "color": [
+        1.0,
+        0.9700000286102295,
+        0.9200000166893005
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": true,
+      "settings": {
+        "shape": "DISK",
+        "size": 2.0,
+        "size_y": 0.25,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Studio diffuse card": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 230.0,
+      "color": [
+        1.0,
+        0.9100000262260437,
+        0.800000011920929
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": false,
+      "settings": {
+        "shape": "DISK",
+        "size": 5.0,
+        "size_y": 0.25,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Studio lower bounce": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 65.0,
+      "color": [
+        1.0,
+        0.8999999761581421,
+        0.7799999713897705
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": false,
+      "settings": {
+        "shape": "DISK",
+        "size": 2.5,
+        "size_y": 0.25,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    }
+  },
+  "studio_world": [
+    [
+      0.7799999713897705,
+      0.8199999928474426,
+      0.8799999952316284,
+      1.0
+    ],
+    0.07999999821186066
+  ],
+  "note": "Same pawn object and wood; separate photographic side studio. Two broad fill cards are diffuse-only artistic lights."
+}

@@ -1,32 +1,32 @@
 {
   "scene": "Pawn side studio",
-  "model_sha256": "4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468",
-  "profile_sha256": "918399ee07014f0ff9027bc308a0c867ecfb394c7546bc19be8709e62473ee12",
+  "model_sha256": "a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756",
+  "profile_sha256": "aa39b71f309c2e4b6e1b117619742c91ef0fc051298cbb6b80c1d93fc2bde9e7",
   "same_editable_object_and_material": true,
   "camera_elevation": 0,
   "resolution": 1254,
-  "lighting_preset": "balanced",
+  "lighting_preset": "polished-walnut",
   "reference_lights_preserved": 47,
   "studio_lights": {
-    "Studio key": {
+    "Large warm key": {
       "matrix": [
         [
-          1.0,
-          0.0,
-          0.0,
-          0.0
+          0.847998321056366,
+          0.2632894217967987,
+          -0.45997557044029236,
+          -2.5
         ],
         [
-          0.0,
-          1.0,
-          0.0,
-          0.0
+          -0.5299988985061646,
+          0.42126309871673584,
+          -0.7359609603881836,
+          -4.0
         ],
         [
-          0.0,
-          0.0,
-          1.0,
-          0.0
+          -4.195342739876651e-09,
+          0.8678802251815796,
+          0.49677351117134094,
+          4.099999904632568
         ],
         [
           0.0,
@@ -35,190 +35,19 @@
           1.0
         ]
       ],
-      "energy": 240.0,
+      "energy": 480.0,
       "color": [
         1.0,
-        0.9300000071525574,
-        0.8299999833106995
-      ],
-      "type": "AREA",
-      "diffuse": true,
-      "glossy": true,
-      "settings": {
-        "shape": "DISK",
-        "size": 1.7000000476837158,
-        "size_y": 0.25,
-        "spread": 3.1415927410125732,
-        "shadow_soft_size": 0.0,
-        "normalize": true,
-        "use_shadow": true,
-        "use_nodes": true,
-        "diffuse_factor": 1.0,
-        "specular_factor": 1.0,
-        "volume_factor": 1.0,
-        "transmission_factor": 1.0
-      },
-      "visibility": {
-        "visible_camera": false,
-        "visible_shadow": true,
-        "visible_transmission": true,
-        "visible_volume_scatter": true
-      }
-    },
-    "Studio fill": {
-      "matrix": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          1.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "energy": 140.0,
-      "color": [
-        1.0,
-        0.9599999785423279,
-        0.8999999761581421
-      ],
-      "type": "AREA",
-      "diffuse": true,
-      "glossy": true,
-      "settings": {
-        "shape": "DISK",
-        "size": 2.5999999046325684,
-        "size_y": 0.25,
-        "spread": 3.1415927410125732,
-        "shadow_soft_size": 0.0,
-        "normalize": true,
-        "use_shadow": true,
-        "use_nodes": true,
-        "diffuse_factor": 1.0,
-        "specular_factor": 1.0,
-        "volume_factor": 1.0,
-        "transmission_factor": 1.0
-      },
-      "visibility": {
-        "visible_camera": false,
-        "visible_shadow": true,
-        "visible_transmission": true,
-        "visible_volume_scatter": true
-      }
-    },
-    "Studio rim": {
-      "matrix": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          1.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "energy": 90.0,
-      "color": [
-        1.0,
-        0.9700000286102295,
-        0.9200000166893005
-      ],
-      "type": "AREA",
-      "diffuse": true,
-      "glossy": true,
-      "settings": {
-        "shape": "DISK",
-        "size": 2.0,
-        "size_y": 0.25,
-        "spread": 3.1415927410125732,
-        "shadow_soft_size": 0.0,
-        "normalize": true,
-        "use_shadow": true,
-        "use_nodes": true,
-        "diffuse_factor": 1.0,
-        "specular_factor": 1.0,
-        "volume_factor": 1.0,
-        "transmission_factor": 1.0
-      },
-      "visibility": {
-        "visible_camera": false,
-        "visible_shadow": true,
-        "visible_transmission": true,
-        "visible_volume_scatter": true
-      }
-    },
-    "Studio diffuse card": {
-      "matrix": [
-        [
-          1.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          1.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "energy": 230.0,
-      "color": [
-        1.0,
-        0.9100000262260437,
-        0.800000011920929
+        0.9200000166893005,
+        0.8199999928474426
       ],
       "type": "AREA",
       "diffuse": true,
       "glossy": false,
       "settings": {
-        "shape": "DISK",
-        "size": 5.0,
-        "size_y": 0.25,
+        "shape": "RECTANGLE",
+        "size": 3.4000000953674316,
+        "size_y": 4.599999904632568,
         "spread": 3.1415927410125732,
         "shadow_soft_size": 0.0,
         "normalize": true,
@@ -236,25 +65,25 @@
         "visible_volume_scatter": true
       }
     },
-    "Studio lower bounce": {
+    "Soft front fill": {
       "matrix": [
         [
-          1.0,
-          0.0,
-          0.0,
-          0.0
+          0.9028605222702026,
+          -0.12794001400470734,
+          0.41045618057250977,
+          2.0
         ],
         [
-          0.0,
-          1.0,
-          0.0,
-          0.0
+          0.4299336373806,
+          0.2686738967895508,
+          -0.8619579076766968,
+          -4.199999809265137
         ],
         [
-          0.0,
-          0.0,
-          1.0,
-          0.0
+          4.52881145918127e-08,
+          0.9546966552734375,
+          0.297580748796463,
+          2.5999999046325684
         ],
         [
           0.0,
@@ -263,20 +92,533 @@
           1.0
         ]
       ],
-      "energy": 65.0,
+      "energy": 185.0,
+      "color": [
+        1.0,
+        0.949999988079071,
+        0.8700000047683716
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": false,
+      "settings": {
+        "shape": "RECTANGLE",
+        "size": 4.0,
+        "size_y": 4.5,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Edge separation": {
+      "matrix": [
+        [
+          -0.8682431578636169,
+          -0.28388723731040955,
+          0.4068929851055145,
+          1.600000023841858
+        ],
+        [
+          0.49613893032073975,
+          -0.4968026876449585,
+          0.712062656879425,
+          2.799999952316284
+        ],
+        [
+          3.479920707150086e-08,
+          0.8201189637184143,
+          0.5721930265426636,
+          3.9000000953674316
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 95.0,
+      "color": [
+        1.0,
+        0.949999988079071,
+        0.8700000047683716
+      ],
+      "type": "AREA",
+      "diffuse": true,
+      "glossy": false,
+      "settings": {
+        "shape": "RECTANGLE",
+        "size": 2.4000000953674316,
+        "size_y": 3.4000000953674316,
+        "spread": 3.1415927410125732,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Body softbox": {
+      "matrix": [
+        [
+          0.800000011920929,
+          -0.16177788376808167,
+          0.5777784585952759,
+          2.4000000953674316
+        ],
+        [
+          0.6000000238418579,
+          0.21570394933223724,
+          -0.7703711986541748,
+          -3.4000000953674316
+        ],
+        [
+          -6.783380257502358e-08,
+          0.9629640579223633,
+          0.26962989568710327,
+          1.850000023841858
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 12.0,
       "color": [
         1.0,
         0.8999999761581421,
         0.7799999713897705
       ],
       "type": "AREA",
-      "diffuse": true,
-      "glossy": false,
+      "diffuse": false,
+      "glossy": true,
       "settings": {
-        "shape": "DISK",
-        "size": 2.5,
-        "size_y": 0.25,
-        "spread": 3.1415927410125732,
+        "shape": "RECTANGLE",
+        "size": 1.2000000476837158,
+        "size_y": 2.0999999046325684,
+        "spread": 0.7853981852531433,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Left bounce": {
+      "matrix": [
+        [
+          0.7241379618644714,
+          0.18992742896080017,
+          -0.6629869937896729,
+          -2.5999999046325684
+        ],
+        [
+          -0.6896551251411438,
+          0.199423685669899,
+          -0.696136474609375,
+          -3.0
+        ],
+        [
+          -1.0619704937653296e-07,
+          0.9613312482833862,
+          0.2753946781158447,
+          1.7000000476837158
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 2.799999952316284,
+      "color": [
+        1.0,
+        0.8600000143051147,
+        0.7200000286102295
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "RECTANGLE",
+        "size": 1.899999976158142,
+        "size_y": 1.100000023841858,
+        "spread": 0.9075711965560913,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Oval key outer": {
+      "matrix": [
+        [
+          0.3181997239589691,
+          0.9013113379478455,
+          -0.293916255235672,
+          -0.7030914425849915
+        ],
+        [
+          -0.6902259588241577,
+          0.0077285366132855415,
+          -0.7235526442527771,
+          -1.9729970693588257
+        ],
+        [
+          -0.6498746871948242,
+          0.43310287594795227,
+          0.6245676875114441,
+          3.81064510345459
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 1.070080041885376,
+      "color": [
+        1.0,
+        0.8100000023841858,
+        0.6499999761581421
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 1.0391669273376465,
+        "size_y": 0.9097407460212708,
+        "spread": 0.41887903213500977,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Oval key center": {
+      "matrix": [
+        [
+          0.31820613145828247,
+          0.9013088345527649,
+          -0.29391711950302124,
+          -0.7001522779464722
+        ],
+        [
+          -0.690226674079895,
+          0.007733268663287163,
+          -0.7235519289970398,
+          -1.9657615423202515
+        ],
+        [
+          -0.649870753288269,
+          0.4331080913543701,
+          0.6245681643486023,
+          3.8043994903564453
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.7782400250434875,
+      "color": [
+        1.0,
+        0.8100000023841858,
+        0.6499999761581421
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.3888190984725952,
+        "size_y": 0.34041306376457214,
+        "spread": 0.41887903213500977,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Oval upper fill outer": {
+      "matrix": [
+        [
+          -0.21645228564739227,
+          0.8741798996925354,
+          0.434692919254303,
+          1.056002140045166
+        ],
+        [
+          -0.9512630105018616,
+          -0.0886693224310875,
+          -0.29535818099975586,
+          -0.9968122839927673
+        ],
+        [
+          -0.21965225040912628,
+          -0.4774382412433624,
+          0.8507676720619202,
+          4.3834991455078125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 1.5047999620437622,
+      "color": [
+        1.0,
+        0.8600000143051147,
+        0.699999988079071
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 1.4487760066986084,
+        "size_y": 1.0207648277282715,
+        "spread": 0.41887903213500977,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Oval upper fill center": {
+      "matrix": [
+        [
+          -0.2164905071258545,
+          0.8741707801818848,
+          0.43469223380088806,
+          1.0516551733016968
+        ],
+        [
+          -0.9512585401535034,
+          -0.08870984613895416,
+          -0.2953604459762573,
+          -0.9938586950302124
+        ],
+        [
+          -0.21963398158550262,
+          -0.47744742035865784,
+          0.8507672548294067,
+          4.374991416931152
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 1.0944000482559204,
+      "color": [
+        1.0,
+        0.8600000143051147,
+        0.699999988079071
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.542053759098053,
+        "size_y": 0.3819807171821594,
+        "spread": 0.41887903213500977,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Low face reflection outer": {
+      "matrix": [
+        [
+          -0.03964255377650261,
+          0.7703636884689331,
+          0.6363711953163147,
+          1.5203121900558472
+        ],
+        [
+          -0.11981157958507538,
+          0.628612220287323,
+          -0.7684346437454224,
+          -2.07484769821167
+        ],
+        [
+          -0.9920048713684082,
+          -0.10670734941959381,
+          0.0673786923289299,
+          2.4787180423736572
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.8527200222015381,
+      "color": [
+        1.0,
+        0.8100000023841858,
+        0.6499999761581421
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 1.0741539001464844,
+        "size_y": 0.923515796661377,
+        "spread": 0.41887903213500977,
+        "shadow_soft_size": 0.0,
+        "normalize": true,
+        "use_shadow": true,
+        "use_nodes": true,
+        "diffuse_factor": 1.0,
+        "specular_factor": 1.0,
+        "volume_factor": 1.0,
+        "transmission_factor": 1.0
+      },
+      "visibility": {
+        "visible_camera": false,
+        "visible_shadow": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true
+      }
+    },
+    "Low face reflection center": {
+      "matrix": [
+        [
+          -0.03961428627371788,
+          0.770365834236145,
+          0.6363703012466431,
+          1.5139485597610474
+        ],
+        [
+          -0.11978829652070999,
+          0.6286157965660095,
+          -0.7684354186058044,
+          -2.0671634674072266
+        ],
+        [
+          -0.9920088052749634,
+          -0.10667073726654053,
+          0.06737864762544632,
+          2.478044271469116
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "energy": 0.6201599836349487,
+      "color": [
+        1.0,
+        0.8100000023841858,
+        0.6499999761581421
+      ],
+      "type": "AREA",
+      "diffuse": false,
+      "glossy": true,
+      "settings": {
+        "shape": "ELLIPSE",
+        "size": 0.40192142128944397,
+        "size_y": 0.3455493152141571,
+        "spread": 0.41887903213500977,
         "shadow_soft_size": 0.0,
         "normalize": true,
         "use_shadow": true,
@@ -296,12 +638,18 @@
   },
   "studio_world": [
     [
-      0.7799999713897705,
-      0.8199999928474426,
-      0.8799999952316284,
+      0.8600000143051147,
+      0.8299999833106995,
+      0.7900000214576721,
       1.0
     ],
-    0.07999999821186066
+    0.14000000059604645
   ],
-  "note": "Same pawn object and wood; separate photographic side studio. Two broad fill cards are diffuse-only artistic lights."
+  "note": "Soft pools of light define the ball. A tall, warm card follows the curve of the turning.",
+  "portrait": {
+    "file": "assets/pawn/guide-angle.png",
+    "sha256": "a9a61cca6ec4f88450ba55400bb98189f263f0b91319d63d3c2831a6e43c9968",
+    "camera": "Pawn guide-angle camera",
+    "elevation": 11.5
+  }
 }

@@ -16,18 +16,43 @@ from deliver_mission import export
 def coordinates(body):
     return np.array([v.co[:] for v in body.data.vertices],np.float32).reshape(-1,96,3)
 
+def snapshot(scene, body):
+    window = bpy.context.window
+    previous = window.scene
+    window.scene = scene
+    bpy.context.view_layer.update()
+    result = fingerprint(scene, body)
+    window.scene = previous
+    return result
+
 def run(cfg):
     scene,body=open_source(cfg);side=bpy.data.scenes[scene['pawn_side_scene']]
     assert control(side) is body
-    original=fingerprint(scene,body);studio_before=fingerprint(side,body)
+    original=snapshot(scene,body);studio_before=snapshot(side,body)
     before=coordinates(body)
     uv_before=np.array([d.uv[:] for d in body.data.uv_layers['Pawn pigment'].data],np.float32)
     nodes=body.data.materials[0].node_tree.nodes
-    replacements={s.get('old_sha256') for s in cfg['material']['maps'] if not s.get('node')}
+    material = cfg.get('material', {})
+    specs = list(material.get('maps', []))
+    if material.get('pigment'):
+        specs.append({'path':material['pigment'],'sha256':material['pigment_sha256'],
+                      'node':'Pawn walnut pigment','encoding':'sRGB'})
+    replacements={s['old_sha256'] for s in specs if not s.get('node')}
+    named_inputs = {spec['node'] for spec in specs if spec.get('node')}
     ignored=tuple(n.name for n in nodes if n.type=='TEX_IMAGE' and n.image and n.image.packed_file and
-        (n.name in ('Pawn walnut pigment','Pawn varnish roughness','Pawn fine slope atlas') or hashlib.sha256(n.image.packed_file.data).hexdigest() in replacements))
+        (n.name in named_inputs or hashlib.sha256(n.image.packed_file.data).hexdigest() in replacements))
     before_graph=graph(surface(body),ignored);before_ramps=ramps(body)
-    edits=profile_edit(body,cfg['profile_rz']);attach(scene,body,cfg['material'])
+    edits=profile_edit(body,cfg['profile_rz']);attach(scene,body,material)
+    if 'studio' in cfg:
+        from side_lighting import set_side_lighting
+        bpy.context.window.scene = side
+        set_side_lighting(side, body, cfg['studio'])
+    if 'portrait_degrees' in cfg:
+        from side_lighting import portrait_camera
+        bpy.context.window.scene = side
+        portrait_camera(side, cfg['portrait_degrees'])
+    studio_expected = snapshot(side,body)
+    bpy.context.window.scene = scene
     scene['pawn_accepted_trial']=cfg['checkpoint']
     scene['pawn_side_checkpoint']=json.dumps(cfg,sort_keys=True)
     known={sha(path):path for path in ASSETS.glob('pawn-*.png')}
@@ -54,13 +79,14 @@ def run(cfg):
         else:assert np.allclose(after[i,:,2],z,atol=1e-7,rtol=0)
     uv_after=np.array([d.uv[:] for d in body.data.uv_layers['Pawn pigment'].data],np.float32)
     assert np.array_equal(uv_before,uv_after)
-    current=fingerprint(scene,body);studio_after=fingerprint(side,body)
+    current=snapshot(scene,body);studio_after=snapshot(side,body)
     for key in ('lights','world','ray_depth','prior_finish_inputs'):
         assert current[key]==original[key],key
-        assert studio_after[key]==studio_before[key],('side',key)
+        assert studio_after[key]==studio_expected[key],('side',key)
+    for key in ('ray_depth','prior_finish_inputs'):
+        assert studio_after[key]==studio_before[key],key
     assert graph(surface(body),ignored)==before_graph and ramps(body)==before_ramps
     nodes=body.data.materials[0].node_tree.nodes
-    specs=[{'path':cfg['material']['pigment'],'sha256':cfg['material']['pigment_sha256'],'node':'Pawn walnut pigment','encoding':'sRGB'}]+cfg['material']['maps']
     expected={s['sha256'] for s in specs};actual=set()
     for node in nodes:
         if node.name in ignored:
@@ -70,6 +96,9 @@ def run(cfg):
             assert node.image.colorspace_settings.name==spec['encoding']
             assert Path(bpy.path.abspath(node.image.filepath)).resolve()==path.resolve()
             actual.add(digest)
+        elif node.type == 'TEX_IMAGE' and node.image and node.image.packed_file:
+            packed = node.image.packed_file.data
+            assert packed == Path(bpy.path.abspath(node.image.filepath)).read_bytes(),node.name
     assert actual==expected
     setup(scene,cfg['samples']);report=export(scene,body,model)
     render(scene,ASSETS/'render.png')
@@ -81,8 +110,11 @@ def run(cfg):
     body.data.materials[0]=clay;render(side,ASSETS/'side-seating.png');body.data.materials[0]=wood
     presentation={'scene':side.name,'model_sha256':sha(model),'profile_sha256':sha(ASSETS/'profile.png'),
         'same_editable_object_and_material':True,'camera_elevation':0,'resolution':cfg['side_resolution'],
-        'lighting_preset':'balanced','reference_lights_preserved':len(original['lights']),
+        'lighting_preset':side.get('pawn_lighting_preset','balanced'),'reference_lights_preserved':len(original['lights']),
         'studio_lights':studio_after['lights'],'studio_world':studio_after['world'],'note':side['pawn_presentation']}
+    if side.get('pawn_portrait_camera'):
+        from side_lighting import render_portrait
+        presentation['portrait'] = render_portrait(side)
     save_json(ASSETS/'side-presentation.json',presentation)
     report.update(variant=cfg['checkpoint'],reference_camera_above_board=54,source_trial_sha256=cfg['source_sha256'],
         texture_packed_after_reopen=True,render_sha256=sha(ASSETS/'render.png'),side_sha256=sha(ASSETS/'profile.png'),
@@ -92,8 +124,10 @@ def run(cfg):
     save_json(out/'scope-validation.json',{'passed':True,'source_sha256':cfg['source_sha256'],'model_sha256':sha(model),
         'changed_controls':edits,'all_other_control_coordinates_exact':True,'uv_coordinates_exact':True,
         'mesh_normals_uv_sha256':current['evaluated_mesh_normals_uv_sha256'],
-        'reference_lights_preserved':len(original['lights']),'side_lights_preserved':len(studio_after['lights']),
-        'both_worlds_unchanged':True,'same_shader_graph_except_four_image_inputs':True,'same_shader_ramps':True,
+        'reference_lights_preserved':len(original['lights']),'side_lights':len(studio_after['lights']),
+        'side_lighting_changed':studio_before['lights']!=studio_after['lights'],
+        'side_world_changed':studio_before['world']!=studio_after['world'],
+        'verified_shader_image_changes':list(ignored),'same_shader_ramps':True,
         'packed_maps_match_external_files':specs,'shared_editable_object':True,'reference_camera_54_degrees':True,
         'originals':{name:sha(ASSETS/name) for name in ('original.png','white-original.png','reference.png')}})
     side.render.resolution_x=side.render.resolution_y=640;side.cycles.samples=128

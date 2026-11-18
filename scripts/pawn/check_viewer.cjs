@@ -12,6 +12,12 @@ const node=id=>{if(!nodes.has(id))nodes.set(id,{id,attrs:{},hidden:false,style:{
 const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node('view-'+m[1]),{dataset:{view:m[1]}}));
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');node('original-alignment').textContent=text('original-alignment');
 node('side-registration').textContent=text('side-registration');node('side-opacity').value='50';
+const embeddedSide = html.match(/<img id="side-model" src="([^"]+)"(?: data-portrait="([^"]+)")?/);
+node('side-model').src = embeddedSide[1];
+if (embeddedSide[2]) {
+ node('side-model').dataset.portrait = embeddedSide[2];
+ node('side-angle').value = 'portrait';
+}
 node('wood-texture').textContent=text('wood-texture');
 assert.equal(require('node:crypto').createHash('sha256').update(Buffer.from(text('wood-texture'),'base64')).digest('hex'),meta.textureSha256);
 for(const key of ['varnish','slope']){
@@ -106,8 +112,28 @@ windowListeners.message({source:{},data:{channel:'listaunton-review',action:'act
 node('brown').onclick();flush();assert.equal(uniforms.uUseWood,1);
 const beforeSide=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
 node('side-tab').onclick();flush();assert.equal(node('stage').dataset.mode,'side');assert(!node('side-controls').hidden);assert(node('comparison-controls').hidden);
-for(const [id,amount] of [['side-guide-only',0],['side-model-only',1],['side-half',.5]]){node(id).onclick();assert.equal(node('side-model').style.opacity,amount);}
+for(const [id,amount] of [['side-guide-only',0],['side-model-only',1],['side-half',.5]]){
+ node(id).onclick();
+ assert.equal(node('side-model').style.opacity,amount);
+ assert.equal(node('side-guide').style.visibility,amount===1?'hidden':'visible');
+}
 const sr=JSON.parse(text('side-registration'));assert.equal(sr.source_blend_sha256,meta.sourceSha256);
+if(sr.portrait){
+ const photo=sr.portrait;
+ const checkPortrait=()=>{
+  assert.deepEqual(Buffer.from(node('side-model').src.split(',')[1],'base64'),fs.readFileSync(path.join(root,photo.profile)));
+  assert(Math.abs(photo.scale*photo.model_foot.floor+photo.offset_y-(sr.guide_foot.floor+sr.guide_top))<1e-6);
+  assert.equal(parseFloat(node('side-model').style.top),photo.offset_y/sr.canvas[1]*100);
+ };
+ checkPortrait();
+ for(const angle of ['level','portrait','level']){
+  node('side-angle').value=angle;
+  node('side-angle').events.change();
+  if(angle==='portrait')checkPortrait();
+  else assert.equal(node('side-model').src,embeddedSide[1]);
+  assert.equal(node('side-model').style.opacity,.5);
+ }
+}
 const sidePng=fs.readFileSync(path.join(root,sr.profile));
 assert.deepEqual(sr.profile_dimensions,[sidePng.readUInt32BE(16),sidePng.readUInt32BE(20)]);
 assert.equal(parseFloat(node('side-model').style.width),sr.profile_dimensions[0]*sr.scale/sr.canvas[0]*100);

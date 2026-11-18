@@ -1,6 +1,6 @@
 """Build five reference/model review pages; never writes the queen review."""
 from pathlib import Path
-import json,argparse,subprocess,sys
+import json,argparse,subprocess,sys,hashlib
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
 template=(root/'scripts/candidate-template.html').read_text(encoding='utf-8')
@@ -14,6 +14,9 @@ for piece,images in data['pieces'].items():
     page=template
     model_page=f'{piece}-model.html'
     model={'page':model_page} if model_page and (root/model_page).is_file() else None
+    if piece == 'pawn' and model:
+        revision = hashlib.sha256((root/model_page).read_bytes()).hexdigest()[:12]
+        model['page'] = f'{model_page}?v={revision}'
     projection_page=f'{piece}-projections.html'
     projections={'page':projection_page} if (root/projection_page).is_file() else None
     extra_tab='<button id="tab-projections" type="button" role="tab" aria-selected="false" aria-controls="panel-projections" tabindex="-1">Projection variants</button>' if projections else ''
