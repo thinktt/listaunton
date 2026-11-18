@@ -48,6 +48,11 @@ const context={Image:class{set src(value){this._src=value;queue.push(()=>this.on
 vm.runInNewContext(source,context,{filename:'pawn-model-runtime.js'});
 function flush(){let n=0;while(queue.length){assert(n++<20);queue.shift()();}}
 flush();assert(draws>0);assert(node('status').hidden);assert.equal(canvas.tabIndex,-1);assert.equal(node('model-image').style.opacity,.5);
+function checkPanels(active){
+ assert.equal(node('comparison-stage').hidden,active!=='compare','Reference panel in '+active);
+ assert.equal(node('side-stage').hidden,active!=='side','Side guide panel in '+active);
+}
+checkPanels('compare');
 if(meta.varnish){
  assert.equal(uniforms.uVarnish,1);
  assert.deepEqual(uniforms.uVarnishRange,Array.from(meta.varnish.gain,Math.fround));
@@ -90,6 +95,7 @@ function compare(){
 }
 compare();for(const [w,h] of [[1600,850],[390,700],[1254,1254]]){canvas.clientWidth=w;canvas.clientHeight=h;resize();flush();compare();}
 node('rotate-tab').onclick();flush();assert.equal(node('stage').dataset.mode,'rotate');assert.equal(canvas.tabIndex,0);assert(node('comparison-controls').hidden);assert(!node('rotation-controls').hidden);compare();
+checkPanels('rotate');
 node('perspective').onclick();flush();assert.equal(uniforms.uOrthographic,0);
 listeners.pointerdown({button:0,pointerId:1,clientX:620,clientY:620,shiftKey:false,preventDefault(){}});
 listeners.pointermove({pointerId:1,clientX:820,clientY:840,shiftKey:false,preventDefault(){}});listeners.pointerup({pointerId:1});flush();
@@ -112,10 +118,11 @@ windowListeners.message({source:{},data:{channel:'listaunton-review',action:'act
 node('brown').onclick();flush();assert.equal(uniforms.uUseWood,1);
 const beforeSide=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
 node('side-tab').onclick();flush();assert.equal(node('stage').dataset.mode,'side');assert(!node('side-controls').hidden);assert(node('comparison-controls').hidden);
+checkPanels('side');
 for(const [id,amount] of [['side-guide-only',0],['side-model-only',1],['side-half',.5]]){
  node(id).onclick();
  assert.equal(node('side-model').style.opacity,amount);
- assert.equal(node('side-guide').style.visibility,amount===1?'hidden':'visible');
+ assert.equal(node('side-guide').hidden,amount===1);
 }
 const sr=JSON.parse(text('side-registration'));assert.equal(sr.source_blend_sha256,meta.sourceSha256);
 if(sr.portrait){
@@ -139,4 +146,6 @@ assert.deepEqual(sr.profile_dimensions,[sidePng.readUInt32BE(16),sidePng.readUIn
 assert.equal(parseFloat(node('side-model').style.width),sr.profile_dimensions[0]*sr.scale/sr.canvas[0]*100);
 assert.equal(parseFloat(node('side-model').style.height),sr.profile_dimensions[1]*sr.scale/sr.canvas[1]*100);
 node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),beforeSide,'Side comparison changed orbit');
+checkPanels('rotate');
+node('compare-tab').onclick();checkPanels('compare');
 console.log(JSON.stringify({passed:true,pigmentAtlasHashMatches:true,varnishAtlasChecked:!!meta.varnish,slopeAtlasChecked:!!meta.slope,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256},null,2));

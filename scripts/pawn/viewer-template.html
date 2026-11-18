@@ -33,18 +33,15 @@ footer{padding:12px 26px;display:flex;gap:16px;justify-content:space-between;ali
 .comparison-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
 .comparison-stage img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;user-select:none;pointer-events:none}
 #model-image{opacity:.5;background:#000}
-.stage[data-mode="compare"] canvas,.stage[data-mode="compare"] .zoom,.stage[data-mode="compare"] .badge{visibility:hidden;pointer-events:none}
-.stage[data-mode="rotate"] .comparison-stage{visibility:hidden;pointer-events:none}
+.stage:not([data-mode="rotate"]) canvas,.stage:not([data-mode="rotate"]) .zoom,.stage:not([data-mode="rotate"]) .badge{visibility:hidden;pointer-events:none}
 .comparison-note{margin-left:auto;color:#969fa9;font-size:12px}
 header .download{font-size:12px}
 @media(max-width:720px){.comparison-controls{padding:10px 14px;gap:8px}.mode-tabs{padding:8px 12px}.comparison-note{display:none}}
 
-.side-stage{position:absolute;inset:0;background:#000;overflow:hidden;visibility:hidden}
+.side-stage{position:absolute;inset:0;background:#000;overflow:hidden}
 .side-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
 .side-frame img{position:absolute;display:block;pointer-events:none;user-select:none}
 #side-model{opacity:.5}
-.stage[data-mode="side"] canvas,.stage[data-mode="side"] .zoom,.stage[data-mode="side"] .badge,.stage[data-mode="side"] .comparison-stage{visibility:hidden;pointer-events:none}
-.stage[data-mode="side"] .side-stage{visibility:visible}
 </style>
 </head>
 <body>
@@ -57,7 +54,7 @@ header .download{font-size:12px}
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Pawn model comparison">
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: black pawn candidate 2" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess black pawn" draggable="false"><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
-<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined pawn side guide"><img id="side-model" src="__SIDE_MODEL__" __PORTRAIT_ATTRIBUTE__ alt="Current pawn side render, uniformly registered at the foot"></div></div>
+<div class="side-stage" id="side-stage" hidden><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined pawn side guide"><img id="side-model" src="__SIDE_MODEL__" __PORTRAIT_ATTRIBUTE__ alt="Current pawn side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D pawn. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -104,7 +101,7 @@ setSideAngle();
 function paintSide(){
  const value=Math.min(100,Math.max(0,Number(sideOpacity.value)||0));
  sideModel.style.opacity=value/100;
- sideGuide.style.visibility=value===100?'hidden':'visible';
+ sideGuide.hidden=value===100;
  document.getElementById('side-opacity-value').textContent=value+'%';
 }
 sideOpacity.addEventListener('input',paintSide);
@@ -118,7 +115,6 @@ function fitComparison(){const side=Math.max(1,Math.min(stage.clientWidth,stage.
 document.getElementById('reference-choice').addEventListener('change',event=>{
  const original=event.target.value==='original';originalImage.hidden=!original;document.getElementById('reference-image').hidden=original;
 });
-fitComparison();
 function paintOverlay(){
  const value=Math.min(100,Math.max(0,Number(opacity.value)||0));
  document.getElementById('model-image').style.opacity=value/100;
@@ -128,6 +124,8 @@ opacity.addEventListener('input',paintOverlay);
 for(const [id,value] of [['reference-only',0],['half-overlay',50],['model-only',100]])document.getElementById(id).onclick=()=>{opacity.value=value;paintOverlay();};
 function mode(name){
  const rotate=name==='rotate';stage.dataset.mode=name;
+ document.getElementById('comparison-stage').hidden=name!=='compare';
+ document.getElementById('side-stage').hidden=name!=='side';
  compareTab.setAttribute('aria-pressed',String(name==='compare'));sideTab.setAttribute('aria-pressed',String(name==='side'));rotateTab.setAttribute('aria-pressed',String(rotate));
  document.getElementById('comparison-controls').hidden=name!=='compare';document.getElementById('side-controls').hidden=name!=='side';
  document.getElementById('rotation-controls').hidden=!rotate;document.getElementById('view-controls').hidden=!rotate;
@@ -136,8 +134,8 @@ function mode(name){
  fitComparison();if(rotate){if(autoFit)fit();schedule();}
 }
 compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');sideTab.onclick=()=>mode('side');
-paintOverlay();canvas.tabIndex=-1;status.hidden=true;
-if (window.location && window.location.hash === '#side') mode('side');
+paintOverlay();
+mode(window.location?.hash === '#side' ? 'side' : 'compare');
 const gl=canvas.getContext('webgl2',{antialias:true,alpha:true,powerPreference:'high-performance'});
 if(!gl){new ResizeObserver(fitComparison).observe(stage);rotateTab.disabled=true;rotateTab.title='WebGL 2 is unavailable in this browser.';status.textContent='This browser could not start 3D graphics. Try opening this page in Chrome or Edge, or open the Blender file below.';return;}
 const vs=`#version 300 es
