@@ -15,8 +15,23 @@ function guide(scales){
  return Object.fromEntries(scales.pieces.map(item=>[item.piece,Math.round(1000*item.height*item.defaultScale/(king.height*king.defaultScale))/1000]));
 }
 function bounded(value,fallback,min,max){return typeof value==='number'&&Number.isFinite(value)?Math.max(min,Math.min(max,Math.round(value*10)/10)):fallback;}
+const scaleRange = {min: 50, max: 150};
+const unwarped = Object.freeze({height: 100, width: 100, scale: 100});
+
+function effectiveWarp({height, width, scale = 100}) {
+ const factor = scale / 100;
+ return {height: height * factor, width: width * factor};
+}
+
 function preset(name,records,targets){
- return Object.fromEntries(Object.keys(records).map(piece=>[piece,{height:name==='chavet'?bounded(100*targets[piece]/records[piece].ratio,100,50,150):name==='bishop'&&piece==='bishop'?88:100,width:100}]));
+ const pieces = {};
+ for (const piece of Object.keys(records)) {
+  const shape = {...unwarped};
+  if (name === 'chavet') shape.height = bounded(100 * targets[piece] / records[piece].ratio, 100, 50, 150);
+  if (name === 'bishop' && piece === 'bishop') shape.height = 88;
+  pieces[piece] = shape;
+ }
+ return pieces;
 }
 function restore(saved,records,targets){
  const state={angle:54,tilts:Object.fromEntries(Object.keys(records).map(piece=>[piece,null])),pieces:preset('bishop',records,targets)};
@@ -26,6 +41,7 @@ function restore(saved,records,targets){
   state.tilts[piece]=bounded(saved.tilts&&saved.tilts[piece],null,20,80);
   const item=saved.pieces&&saved.pieces[piece];if(!item||typeof item!=='object')continue;
   value.height=bounded(item.height,value.height,50,150);value.width=bounded(item.width,100,70,130);
+  value.scale=bounded(item.scale,100,scaleRange.min,scaleRange.max);
  }
  return state;
 }
@@ -52,5 +68,5 @@ function projectedBounds(model,warp,angle,registration){
  }
  return {left,right,top,bottom};
 }
-window.ListauntonWarpMath={registrations,guide,bounded,preset,restore,angleForPiece,setAllTilts,referenceBasis,orbitBasis,columnMajor,projectedBounds};
+window.ListauntonWarpMath={registrations,guide,bounded,scaleRange,unwarped,effectiveWarp,preset,restore,angleForPiece,setAllTilts,referenceBasis,orbitBasis,columnMajor,projectedBounds};
 })();

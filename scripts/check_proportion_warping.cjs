@@ -18,6 +18,20 @@ for(const [piece,r] of Object.entries(records)){
  const digest=()=>crypto.createHash('sha256').update(Buffer.from(data)).digest('hex'),before=digest();
  const original=math.projectedBounds(model,{height:100,width:100},54,r);
  const changed=math.projectedBounds(model,squashed[piece],54,r);
+ // With both a warp and a nonstandard camera, uniform scale must expand every
+ // projected edge about the foot center, including the visible front of the sole.
+ const shape = {height: 83, width: 112};
+ const tilt = 47;
+ const unscaled = math.projectedBounds(model, shape, tilt, r);
+ for (const scale of [50, 125, 150]) {
+  const dimensions = math.effectiveWarp({...shape, scale});
+  const scaled = math.projectedBounds(model, dimensions, tilt, r);
+  for (const edge of ['left','right','top','bottom']) {
+   const anchor = edge === 'left' || edge === 'right' ? r.centerX : r.ground;
+   const expected = anchor + (unscaled[edge] - anchor) * scale / 100;
+   assert(Math.abs(scaled[edge] - expected) < 1e-6, piece+' '+edge+' must scale about the foot');
+  }
+ }
  // Alpha sampling and the low-res mesh export can shift the measured edge by
  // a pixel or two, but the same saved camera must reproduce its registration.
  assert(Math.abs(original.top-r.targetTop)<2,piece+' camera/top registration: '+(original.top-r.targetTop));
@@ -45,6 +59,9 @@ assert.equal(restored.angle,80);assert.equal(restored.pieces.bishop.height,50);a
 assert.equal(math.restore(null,records,guide).pieces.bishop.height,88);
 assert.equal(math.restore({angle:49.5,pieces:{bishop:{height:80,width:101}}},records,guide).pieces.bishop.height,80);
 const legacy=math.restore({angle:49.5,pieces:{bishop:{height:84.4,width:105},queen:{height:87.7,width:112.7}}},records,guide);
+for(const shape of Object.values(legacy.pieces))assert.equal(shape.scale,100,'Existing experiments retain their original size');
+const sized=math.restore({pieces:{pawn:{scale:121.3},king:{scale:999},queen:{scale:'invalid'}}},records,guide);
+assert.equal(sized.pieces.pawn.scale,121.3);assert.equal(sized.pieces.king.scale,150);assert.equal(sized.pieces.queen.scale,100);
 for(const piece of Object.keys(records))assert.equal(math.angleForPiece(legacy,piece),49.5,'Old saved experiment must retain its reference angle');
 assert.equal(legacy.pieces.queen.height,87.7);assert.equal(legacy.pieces.queen.width,112.7);
 const independent=math.restore({...legacy,tilts:{bishop:45,queen:60,rook:'invalid',pawn:999}},records,guide);

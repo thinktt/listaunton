@@ -5,11 +5,25 @@
 .warp-scroll{overflow-x:auto;overscroll-behavior-x:contain;margin-bottom:16px}.warp-lineup{min-width:1320px}
 .warp-headings,.warp-piece-controls{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
 .warp-heading{text-align:center;font-size:15px;padding:8px 4px}.warp-heading strong,.warp-heading small{display:block}.warp-heading small{font-size:12px;color:#b1b4a9;margin-top:4px}
-.warp-model-stage{height:420px;position:relative;background:#20231f}.warp-model-stage canvas{width:100%;height:100%;display:block;cursor:grab;touch-action:none}.warp-model-stage canvas:active{cursor:grabbing}
+.warp-model-stage{height:clamp(240px,36vh,320px);position:relative;background:#20231f}.warp-model-stage canvas{width:100%;height:100%;display:block;cursor:grab;touch-action:none}.warp-model-stage canvas:active{cursor:grabbing}
 .warp-model-stage p{position:absolute;inset:0;display:grid;place-items:center;text-align:center;margin:0;padding:20px;color:#b1b4a9}
 .warp-piece-control{border-right:1px solid #363a31;padding:12px 14px;min-width:0}.warp-piece-control:last-child{border:0}
 .warp-control-row{display:flex;align-items:center;justify-content:space-between;font-size:13px}.warp-control-row span{display:flex;align-items:center;gap:4px}
 .warp-piece-control input[type=range]{display:block;width:100%;accent-color:#d7ad77;margin:7px 0 12px;cursor:ew-resize}
+.warp-scale-control{display:flex;align-items:center;gap:10px;margin:4px 0 9px}
+.warp-scale-control input[type=range]{flex:1;min-width:0;margin:0}
+.warp-scale-dial{
+ --sweep:135deg;
+ position:relative;display:block;flex:0 0 44px;height:44px;border-radius:50%;
+ background:conic-gradient(from 225deg,#d7ad77 0deg var(--sweep),#53594f var(--sweep) 270deg,transparent 270deg);
+ touch-action:none;user-select:none;cursor:grab;
+}
+.warp-scale-dial:active{cursor:grabbing}
+.warp-scale-dial::before{content:"";position:absolute;inset:3px;border:1px solid #555a50;border-radius:50%;background:#252923}
+.warp-scale-dial::after{
+ content:"";position:absolute;left:calc(50% - 1.5px);top:7px;width:3px;height:12px;border-radius:2px;background:#edc48e;
+ transform-origin:50% 15px;transform:rotate(calc(var(--sweep) - 135deg));
+}
 .warp-piece-control button{padding:3px 8px;font-size:12px}.warp-gap{font-size:12px;color:#b1b4a9;margin:6px 0 10px;min-height:1.4em}
 .warp-board-stage{position:relative;width:100%;max-width:1318px;aspect-ratio:659/202;overflow:hidden;background:#20231f;margin-bottom:8px}
 .warp-board-stage img,.warp-board-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.warp-board-stage img{user-select:none;pointer-events:none}

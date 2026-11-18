@@ -8,7 +8,48 @@ let saved=null;try{saved=JSON.parse(localStorage.getItem(key));}catch{}
 let state=math.restore(saved,records,targets),before=false,wood=true,view='side',yaw=0,pitch=0,comparison='overlay';
 let models=null,mainRenderer=null,boardRenderer=null,loading=false,failed=false,pending=false,drag=null;
 const names=Object.fromEntries(scales.pieces.map(item=>[item.piece,item.name]));
-const controls={height:{label:'Height',min:50,max:150,unit:'%',spoken:'percent'},width:{label:'Width',min:70,max:130,unit:'%',spoken:'percent'},tilt:{label:'Tilt',min:20,max:80,unit:'°',spoken:'degrees'}};
+const controls={
+ scale: {label:'Scale', ...math.scaleRange, unit:'%', spoken:'percent'},
+ height:{label:'Height',min:50,max:150,unit:'%',spoken:'percent'},
+ width:{label:'Width',min:70,max:130,unit:'%',spoken:'percent'},
+ tilt:{label:'Tilt',min:20,max:80,unit:'°',spoken:'degrees'}
+};
+const dialSweep = 270;
+
+function bindScaleDial(dial, range) {
+ let drag = null;
+ function changeScale(event) {
+  if (!drag || event.pointerId !== drag.id) return;
+  const dx = event.clientX - drag.centerX;
+  const dy = event.clientY - drag.centerY;
+  let value;
+  if (drag.fromCenter) {
+   // A straight drag from the middle gives finer control than turning the rim.
+   value = drag.startValue + (drag.startY - event.clientY) * 0.5;
+  } else {
+   if (Math.hypot(dx, dy) < 4) return;
+   const angle = Math.atan2(dx, -dy) * 180 / Math.PI;
+   if (Math.abs(angle) > dialSweep / 2) return;
+   value = Number(range.min) + (angle / dialSweep + 0.5) * (range.max - range.min);
+  }
+  const previous = range.value;
+  range.value = String(value);
+  if (range.value !== previous) range.dispatchEvent(new Event('input', {bubbles:true}));
+ }
+ dial.addEventListener('pointerdown', event => {
+  if (event.button !== 0 || drag) return;
+  event.preventDefault();
+  const box = dial.getBoundingClientRect();
+  const centerX = box.left + box.width / 2, centerY = box.top + box.height / 2;
+  drag = {id:event.pointerId, centerX, centerY, startY:event.clientY, startValue:Number(range.value),
+   fromCenter:Math.hypot(event.clientX - centerX, event.clientY - centerY) < box.width / 4};
+  dial.setPointerCapture(event.pointerId);
+  range.focus({preventScroll:true});
+  changeScale(event);
+ });
+ dial.addEventListener('pointermove', changeScale);
+ dial.addEventListener('lostpointercapture', () => { drag = null; });
+}
 for(const piece of order){
  const heading=document.createElement('div');heading.className='warp-heading';
  heading.innerHTML='<strong>'+names[piece]+'</strong><small id="warp-ratio-'+piece+'"></small><small>Chavet guide '+(targets[piece]*100).toFixed(1)+'%</small>';
@@ -16,9 +57,14 @@ for(const piece of order){
  const card=document.createElement('div');card.className='warp-piece-control';
  card.innerHTML=Object.entries(controls).map(([axis,{label,min,max,unit,spoken}])=>{
   const id='warp-'+piece+'-'+axis;
-  return '<div class="warp-control-row"><label for="'+id+'">'+label+'</label><span><input id="'+id+'-number" type="number" min="'+min+'" max="'+max+'" step="0.1" aria-label="'+names[piece]+' '+axis+' '+spoken+'">'+unit+'</span></div><input id="'+id+'" type="range" min="'+min+'" max="'+max+'" step="0.1" aria-label="'+names[piece]+' '+axis+' '+spoken+'">';
+  const labelRow = '<div class="warp-control-row"><label for="'+id+'">'+label+'</label><span><input id="'+id+'-number" type="number" min="'+min+'" max="'+max+'" step="0.1" aria-label="'+names[piece]+' '+axis+' '+spoken+'">'+unit+'</span></div>';
+  const slider = '<input id="'+id+'" type="range" min="'+min+'" max="'+max+'" step="0.1" aria-label="'+names[piece]+' '+axis+' '+spoken+'">';
+  if (axis !== 'scale') return labelRow + slider;
+  const dial = '<span id="'+id+'-dial" class="warp-scale-dial" aria-hidden="true" title="Turn the rim, or drag the center up or down"></span>';
+  return labelRow + '<div class="warp-scale-control">'+dial+slider+'</div>';
  }).join('')+'<p id="warp-gap-'+piece+'" class="warp-gap">Reference gap —</p><button id="warp-reset-'+piece+'" type="button" aria-label="Reset '+names[piece].toLowerCase()+' proportions and tilt">Reset</button> <button id="warp-tilt-reset-'+piece+'" type="button" aria-label="Reset '+names[piece].toLowerCase()+' tilt to 54 degrees">Tilt 54°</button>';
  byId('warp-piece-controls').append(card);
+ bindScaleDial(byId('warp-'+piece+'-scale-dial'), byId('warp-'+piece+'-scale'));
  for(const [axis,control] of Object.entries(controls)){
   const id='warp-'+piece+'-'+axis;
   function change(value){
@@ -30,10 +76,10 @@ for(const piece of order){
   byId(id).addEventListener('input',event=>change(event.target.value));
   byId(id+'-number').addEventListener('change',event=>change(event.target.value));
  }
- byId('warp-reset-'+piece).addEventListener('click',()=>{state.pieces[piece]={height:100,width:100};state.tilts[piece]=null;changed();});
+ byId('warp-reset-'+piece).addEventListener('click',()=>{state.pieces[piece]={...math.unwarped};state.tilts[piece]=null;changed();});
  byId('warp-tilt-reset-'+piece).addEventListener('click',()=>{state.tilts[piece]=54;changed();});
 }
-function values(piece){return before?{height:100,width:100}:state.pieces[piece];}
+function values(piece){return before ? math.unwarped : math.effectiveWarp(state.pieces[piece]);}
 function save(){try{localStorage.setItem(key,JSON.stringify(state));return true;}catch{return false;}}
 function changed(){before=false;const stored=save();paint();schedule();byId('warp-status').textContent=stored?'Experiment saved in this browser.':'Experiment active for this visit. Use Save settings to keep a copy.';}
 function paint(){
@@ -43,11 +89,17 @@ function paint(){
   for(const axis of Object.keys(controls)){
    const id='warp-'+piece+'-'+axis,value=axis==='tilt'?math.angleForPiece(state,piece):state.pieces[piece][axis];
    byId(id).value=String(value);byId(id+'-number').value=String(value);
-   byId(id).setAttribute('aria-valuetext',axis==='tilt'?value+' degrees above the board':value+'% of unwarped '+axis);
+   const description = axis==='scale' ? value+'% overall size' : value+'% of unwarped '+axis;
+   byId(id).setAttribute('aria-valuetext',axis==='tilt'?value+' degrees above the board':description);
   }
+  const range = controls.scale;
+  const sweep = dialSweep * (state.pieces[piece].scale - range.min) / (range.max - range.min);
+  byId('warp-'+piece+'-scale-dial').style.setProperty('--sweep', sweep+'deg');
  }
  for(const [id,name] of [['warp-bishop-preset','bishop'],['warp-chavet-preset','chavet'],['warp-reset','unwarped']]){
-  const p=math.preset(name,records,targets);byId(id).setAttribute('aria-pressed',String(order.every(piece=>p[piece].height===state.pieces[piece].height&&p[piece].width===state.pieces[piece].width)));
+  const p=math.preset(name,records,targets);
+  const matches=order.every(piece=>Object.keys(math.unwarped).every(axis=>p[piece][axis]===state.pieces[piece][axis]));
+  byId(id).setAttribute('aria-pressed',String(matches));
  }
  byId('warp-before').setAttribute('aria-pressed',String(before));
  byId('warp-side').setAttribute('aria-pressed',String(view==='side'));
@@ -65,14 +117,15 @@ for(const [id,name] of [['warp-bishop-preset','bishop'],['warp-chavet-preset','c
 byId('warp-before').addEventListener('click',()=>{before=!before;paint();schedule();byId('warp-status').textContent=before?'Showing unwarped shapes. Your experiment is preserved.':'Showing your warped shapes.';});
 byId('warp-side').addEventListener('click',()=>{view='side';yaw=0;pitch=0;paint();schedule();});
 byId('warp-reference').addEventListener('click',()=>{view='reference';paint();schedule();});
+byId('warp-fit').addEventListener('click',fitLineup);
 byId('warp-wood').addEventListener('click',()=>{wood=true;paint();schedule();});
 byId('warp-neutral').addEventListener('click',()=>{wood=false;paint();schedule();});
 byId('warp-angle').addEventListener('change',event=>{if(event.target.value===''){paint();return;}math.setAllTilts(state,Number(event.target.value));changed();});
 byId('warp-angle-reset').addEventListener('click',()=>{math.setAllTilts(state,54);changed();});
 for(const [id,name] of [['warp-original','original'],['warp-overlay','overlay'],['warp-model-only','model']])byId(id).addEventListener('click',()=>{comparison=name;paint();});
 byId('warp-export').addEventListener('click',()=>{
- const exported={schema:'listaunton-proportion-warping-v2',created:new Date().toISOString(),referenceAngle:state.angle,referenceAngles:Object.fromEntries(order.map(piece=>[piece,math.angleForPiece(state,piece)])),warpPercent:state.pieces,
-  baseline:'Board-matched sizes, with model origin at the foot; width scales both horizontal axes.',
+ const exported={schema:'listaunton-proportion-warping-v3',created:new Date().toISOString(),referenceAngle:state.angle,referenceAngles:Object.fromEntries(order.map(piece=>[piece,math.angleForPiece(state,piece)])),warpPercent:state.pieces,
+  baseline:'Board-matched sizes with the origin at the foot. Scale multiplies height and both horizontal dimensions after the height and width adjustments.',
   models:Object.fromEntries(order.map(piece=>[piece,{sourceSha256:records[piece].sourceSha256,baselineHeightRatio:records[piece].ratio,chavetHeightRatio:targets[piece]}]))};
  const url=URL.createObjectURL(new Blob([JSON.stringify(exported,null,2)+'\n'],{type:'application/json'}));
  const a=document.createElement('a');a.href=url;a.download='listaunton-proportion-warping.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -121,16 +174,42 @@ class Renderer{
  }
 }
 function schedule(){if(!models||failed||panel.hidden||pending)return;pending=true;requestAnimationFrame(()=>{pending=false;draw();});}
+let lineupFit;
+function fitLineup(){
+ if(!models)return;
+ // Capture the visible sizes on entry or on request. Moving a dial then changes
+ // the piece on screen without moving the floor or zooming all six pieces.
+ const fit={height:0,halfWidth:0,radius:0,referenceTop:0,referenceBottom:0,referenceHalfWidth:0};
+ for(const piece of order){
+  const model=models[piece], bounds=model.meta.bounds, warp=values(piece);
+  const units=records[piece].ratio/bounds.size[2], horizontal=units*warp.width/100;
+  const x=Math.max(Math.abs(bounds.min[0]),Math.abs(bounds.max[0]));
+  const y=Math.max(Math.abs(bounds.min[1]),Math.abs(bounds.max[1]));
+  fit.height=Math.max(fit.height,records[piece].ratio*warp.height/100);
+  fit.halfWidth=Math.max(fit.halfWidth,x*horizontal);
+  fit.radius=Math.max(fit.radius,Math.hypot(x,y)*horizontal);
+  const reference=math.projectedBounds(model,warp,math.angleForPiece(state,piece),{pixels:units,centerX:0,ground:0});
+  fit.referenceTop=Math.max(fit.referenceTop,-reference.top);
+  fit.referenceBottom=Math.max(fit.referenceBottom,reference.bottom);
+  fit.referenceHalfWidth=Math.max(fit.referenceHalfWidth,-reference.left,reference.right);
+ }
+ lineupFit=fit;
+ schedule();
+}
 function draw(){
  if(!models||failed||panel.hidden)return;
  const width=stage.clientWidth,height=stage.clientHeight,cell=width/order.length;
- // Frame the entire allowed experiment range once, so moving a height slider
- // never causes an automatic zoom that conceals the geometry change.
- const maxWidth=Math.max(...order.map(piece=>Math.hypot(models[piece].meta.bounds.size[0],models[piece].meta.bounds.size[1])*records[piece].ratio/models[piece].meta.bounds.size[2]*1.3));
- const radius=Math.max(...order.map(piece=>models[piece].baseRadius*records[piece].ratio/models[piece].meta.bounds.size[2]*1.3));
- const pixels=Math.min(300,view==='reference'?(height-32)/(1.55+radius):(height-50)/1.55,cell*.87/maxWidth);
- // Keep one fixed foot line throughout individual reference-tilt adjustments.
- const angle=view==='reference'?80*Math.PI/180:pitch,ground=height-16-radius*Math.abs(Math.sin(angle))*pixels;
+ let above=lineupFit.height,below=0,halfWidth=lineupFit.halfWidth;
+ if(view==='reference'){
+  above=lineupFit.referenceTop;below=lineupFit.referenceBottom;halfWidth=lineupFit.referenceHalfWidth;
+ }else if(view==='orbit'){
+  below=lineupFit.radius*Math.abs(Math.sin(pitch));
+  above=lineupFit.height*Math.cos(pitch)+below;
+  halfWidth=lineupFit.radius;
+ }
+ const margin=12;
+ const pixels=Math.min((height-2*margin)/(above+below),(cell-2*margin)/(2*halfWidth));
+ const ground=height-margin-below*pixels;
  mainRenderer.frame(false);boardRenderer.frame(true);
  const boardScale=boardStage.clientWidth/board.width;
  for(const [index,piece] of order.entries()){
@@ -151,7 +230,7 @@ async function start(){
    const model=await window.ListauntonModelSource.loadPiece(piece);if(model.meta.sourceSha256!==records[piece].sourceSha256)throw Error('The '+piece+' model changed. Rebuild the comparison page before using this lab.');return [piece,model];
   }));
   models=Object.fromEntries(entries);mainRenderer=new Renderer(byId('warp-model-canvas'));boardRenderer=new Renderer(byId('warp-board-canvas'));
-  byId('warp-load-message').hidden=true;byId('warp-status').textContent='Drag the lineup to rotate. Tilt changes the reference overlay and Reference view; Side view stays level.';paint();schedule();
+  byId('warp-load-message').hidden=true;byId('warp-status').textContent='Drag the lineup to rotate. Tilt changes the reference overlay and Reference view; Side view stays level.';paint();fitLineup();
  }catch(error){console.error(error);showError('Could not load the proportion lab. '+error.message);}
 }
 const canvas=byId('warp-model-canvas');
