@@ -38,6 +38,12 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
   report['internal_features']['finial']='The shallow button, direct head contact and full-depth mitre slit remain exact from checkpoint 022.'
   report['internal_features']['collars']='The accepted collar rims, heights and middle-lip overhang remain exact from checkpoint 022.'
   report['internal_features']['lower_body']='Only mid-stem radii 34-36 are narrowed. Every height, the lower-stem controls at the root, socket, flare, groove and foot are retained. Actual contour rays separate the stem boundary from the rear base; the unsupported subpixel shoulder adjustment is omitted. Level views check that the earlier lower-stem bulge has not been reintroduced.'
+if json.loads((root/'scripts/bishop/profile.json').read_text()).get('shared_turning'):
+ report['internal_features'].update(
+  lower_body='The sole, foot, groove, flare, socket and first stem support use all 40 queen/king rows at a common scale. The stem blends into this support.',
+  collars='The upper profile fit uses the original-white silhouette and three front collar arcs in the saved camera.',
+  finial='The low button seats directly on the shortened mitre. The diagonal cutter moves with the head.',
+  limits='The thinner shared turning moves the groove and rear flare in the original overlay. The saved wood retains photographic shading. See iteration 025 for the measured tradeoffs.')
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

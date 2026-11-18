@@ -379,3 +379,13 @@ Use `profile_shape_trial.py` for saved/reopened diagnostic trials,
 `record_flare_stem_study.py` preserves the exact trial configurations, source
 hashes, outputs and rejection decisions and verifies that public stage assets
 remain unchanged. It does not activate a goal or publish a candidate.
+
+Checkpoint 025 transplants the complete queen 033 / king 017 turning and
+fits the bishop's upper body to the registered original. Reproduce a saved
+case with `shared_turning.py` and the configuration in
+[`iteration-025`](../../docs/bishop-mission/iteration-025/assessment.md).
+`validate_checkpoint.py` selects the corresponding closed-mesh, donor,
+UV, material, saw and camera checks for the current profile.
+`refresh_set_entry.py` refreshes the bishop records in the existing set
+page using the canonical sources. `check_served_checkpoint.py` checks
+the model, images and lineup against the local HTTP server.

@@ -1,27 +1,38 @@
 {
   "passed": true,
-  "model_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
-  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
-  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
-  "config_sha256": "27678b1b20ffb302788ba3f28d984e3a8cfddc0a3dfdf27cb494ed5e1528d6a8",
-  "changed_body_rings": [
-    34,
-    35,
-    36
-  ],
-  "changed_finial_rings": [],
-  "max_control_error_from_declared_edit": 1.3392830400249522e-08,
-  "unlisted_controls_exact": true,
-  "control_errors_by_component": {
-    "Bishop - continuous turned body": 1.3392830400249522e-08,
-    "Bishop - domed button finial": 0.0
+  "model_sha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+  "source": "history/bishop-mission-024/bishop-rebuilt.blend",
+  "source_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "configuration": {
+    "config": "docs/bishop-mission/iteration-025/turning.json",
+    "case": "registered",
+    "upper_axis_offset": 0.7051323835672675,
+    "upper_index_offset": 7
   },
-  "topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved": true,
-  "button_controls_preserved": true,
+  "donor_sha256": {
+    "queen": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "king": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146"
+  },
+  "scale": 0.978,
+  "donor_rings": 40,
+  "max_base_radius_or_height_error": 1.5282630916324536e-07,
+  "upper_controls_match_specification": true,
+  "supported_head_and_button_join_cage_checked": true,
+  "cutter_translation_z": -0.02,
+  "cutter_shape_and_rotation_preserved": true,
+  "lower_uv_interpolation_max_error": 2.974161095181671e-08,
+  "original_upper_uvs_exact": true,
+  "packed_images_and_material_graphs_preserved": true,
+  "packed_images": {
+    "albedo.png.001": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+    "inferred-pigment-source-v1.png.001": "6b228b1e6f57e60d8f5e27f16a5479156ae69d463cfbd900408fd1510e83fe63",
+    "reference.png": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
+  },
+  "lights_exact": true,
   "reference_pixels_unchanged": true,
   "camera_exactly_unchanged": true,
-  "shader": "Principled BSDF",
-  "saved_scene_albedo_bakes_lighting_flag": false,
+  "geometry_phase": true,
+  "saved_and_reopened": true,
   "render_receivers": {
     "passed": true,
     "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
@@ -30,9 +41,9 @@
     "regions": [
       {
         "region": "body-rest",
-        "faces": 55852,
-        "vertices": 56335,
-        "normal_max_component_error": 4.9680471420288086e-05,
+        "faces": 57900,
+        "vertices": 58383,
+        "normal_max_component_error": 3.6209821701049805e-05,
         "uv_max_component_errors": {
           "Pigment projection": 5.960464477539063e-08,
           "Wood atlas": 5.960464477539063e-08
@@ -42,21 +53,46 @@
         "region": "socket-lip",
         "faces": 5632,
         "vertices": 5888,
-        "normal_max_component_error": 3.7670135498046875e-05,
+        "normal_max_component_error": 3.039836883544922e-05,
         "uv_max_component_errors": {
-          "Pigment projection": 5.960464477539063e-08,
-          "Wood atlas": 5.960464477539063e-08
+          "Pigment projection": 0.0,
+          "Wood atlas": 0.0
         }
       }
     ],
     "all_faces_once": true
   },
-  "saved_and_reopened": true,
-  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score. The preserved albedo metadata flag is not proof that pigment is illumination-free; the inherited atlas still contains photographic shading.",
-  "declared_geometry_changes_validated": true,
   "finite_uvs_and_unit_normals": true,
-  "texture_hash_matches": true,
-  "declared_slit_revision_validated": true,
-  "geometry_phase": true,
-  "prior_material_atlas_exact": true
+  "exported_triangles": 139290,
+  "bounds": {
+    "min": [
+      -1.0213689804077148,
+      -1.0213689804077148,
+      0.0
+    ],
+    "max": [
+      1.0213689804077148,
+      1.0213689804077148,
+      4.550049304962158
+    ],
+    "size": [
+      2.0427379608154297,
+      2.0427379608154297,
+      4.550049304962158
+    ],
+    "center": [
+      0.0,
+      0.0,
+      2.275024652481079
+    ]
+  },
+  "old_size": [
+    2.0130202770233154,
+    2.0130200386047363,
+    4.592006683349609
+  ],
+  "socket_receiver_band": [
+    0.7996400573197923,
+    1.2278954172039138
+  ]
 }

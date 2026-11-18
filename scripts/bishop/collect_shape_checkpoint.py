@@ -38,15 +38,25 @@ meta=json.loads((assets/'mesh.json').read_text());prior=ROOT/f'history/bishop-mi
 old_meta=json.loads((prior/'mesh.json').read_text())
 assert meta['sourceSha256']==model_hash and meta['referenceCamera']==old_meta['referenceCamera']
 old_size=np.array(old_meta['bounds']['size']);new_size=np.array(meta['bounds']['size'])
-assert np.allclose(new_size,old_size,atol=1e-6,rtol=a.bounds_relative_tolerance)
-assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
+shared=scope.get('donor_rings')==40
+if shared:
+    # The owner requested a wider foot and a shorter piece. Check their actual
+    # dimensions against the separate reopened level-section measurement.
+    key=scope['configuration']['case']
+    section=json.loads((out/'measurements.json').read_text())[key]
+    assert section['source_sha256']==model_hash
+    assert np.allclose(new_size,[section['foot_diameter']]*2+[section['height']],rtol=0,atol=5e-5)
+    assert new_size[0]>old_size[0] and new_size[2]<old_size[2] and abs(meta['bounds']['min'][2])<1e-6
+else:
+    assert np.allclose(new_size,old_size,atol=1e-6,rtol=a.bounds_relative_tolerance)
+    assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
 (out/'bounds-comparison.json').write_text(json.dumps({'previous':old_size.tolist(),'current':new_size.tolist(),
-    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':a.bounds_relative_tolerance,
-    'height_preserved':True,'note':'Measured evaluated bounds, not an image or gallery scale adjustment.'},indent=2)+'\n')
+    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':None if shared else a.bounds_relative_tolerance,
+    'height_preserved':not shared,'note':'Dimensions of evaluated geometry at the original floor and saved camera.'},indent=2)+'\n')
 assert sha(assets/'bishop-boxwood-albedo.png')==sha(prior/'bishop-boxwood-albedo.png')
 # Replace obsolete current-state reports with explicit current provenance.
 reports={
- 'base-validation.json':{'passed':True,'model_sha256':model_hash,'declared_shape_rings':scope['changed_body_rings'],
+ 'base-validation.json':{'passed':True,'model_sha256':model_hash,'declared_shape_rings':scope.get('changed_body_rings',[]),
     'independent_scope_audit':'mission-validation.json','previous_two_ring_scope_superseded':True},
  'slit-validation.json':{'passed':True,'model_sha256':model_hash,'cutter_unchanged_from_source':True,'source_checkpoint':a.baseline,
     'through_opening_probes':anatomy['slit_ray_probes'],'solid_floor':anatomy['solid_slot_floor']},
@@ -55,6 +65,17 @@ reports={
     'atlas_sha256':sha(assets/'bishop-boxwood-albedo.png'),
     'note':'Retained inherited material, not a new texture fit. It still contains reference shading and is displaced by the geometry changes.'}}
 reports['receiver-validation.json']=dict(scope['render_receivers'],model_sha256=model_hash)
+if shared:
+    reports['base-validation.json']={'passed':True,'model_sha256':model_hash,'donor_rings':scope['donor_rings'],
+        'donor_sha256':scope['donor_sha256'],'uniform_size':scope['scale'],
+        'max_base_radius_or_height_error':scope['max_base_radius_or_height_error']}
+    slit=reports['slit-validation.json']
+    slit.update(cutter_unchanged_from_source=False,cutter_shape_and_rotation_preserved=True,
+                cutter_translation_z=scope['cutter_translation_z'])
+    pigment=reports['pigment-validation.json']
+    pigment.pop('packed_pixels_material_graph_control_uvs_and_lights_preserved')
+    pigment.update(packed_pixels_material_graphs_and_lights_preserved=True,original_upper_uvs_exact=True,
+                   new_base_uv_interpolation_error=scope['lower_uv_interpolation_max_error'])
 for name,row in reports.items():(assets/name).write_text(json.dumps(row,indent=2)+'\n')
 validation_names=['validation.json','mission-validation.json','base-validation.json','slit-validation.json','viewer-validation.json',
                   'pigment-validation.json','receiver-validation.json','join-regression.json']

@@ -11,10 +11,13 @@ for label,path in [('rejected_neck','history/bishop/07-before-continuous-button-
  bpy.ops.wm.open_mainfile(filepath=str(root/path));graph=bpy.context.evaluated_depsgraph_get()
  objects=[bpy.data.objects[name].evaluated_get(graph) for name in ['Bishop - continuous turned body','Bishop - domed button finial']]
  radius=[];step=.01
- end=min(54.0,cfg['head_button_join']['head_cap_axis_y']-.4)
- count=math.ceil((59-end)/step)+1
+ shift=cfg.get('shared_turning',{}).get('upper_axis_offset',0.)
+ sample_shift=shift if label=='current' else 0.
+ start=59+sample_shift
+ end=min(54.0,cfg['head_button_join']['head_cap_axis_y']-shift-.4)+sample_shift
+ count=math.ceil((start-end)/step)+1
  for i in range(count):
-  axis_y=59-i*step;z=(cfg['y0']-axis_y)*factor/co;r=[]
+  axis_y=start-i*step;z=(cfg['y0']-axis_y)*factor/co;r=[]
   for ob in objects:
    hit,loc,normal,face=ob.ray_cast(Vector((-4,0,z)),Vector((1,0,0)),distance=8)
    if hit:r.append(-loc.x/factor)
@@ -26,7 +29,7 @@ for label,path in [('rejected_neck','history/bishop/07-before-continuous-button-
   # of the button object, so filtering to the head would hide the defect.
   run=run+1 if abs(co*(a-b)/step)<.05 else 0
   longest=max(longest,run)
- report[label]={'samples':len(radius),'sample_axis_y_range':[59,end],
+ report[label]={'samples':len(radius),'sample_axis_y_range':[start,end],
                 'maximum_nearly_cylindrical_run_in_original_axis_units':longest*step}
 assert report['rejected_neck']['maximum_nearly_cylindrical_run_in_original_axis_units']>.5,'Regression fixture no longer reproduces the rejected neck.'
 assert report['current']['maximum_nearly_cylindrical_run_in_original_axis_units']<.1,'Current model exposes a cylindrical neck.'

@@ -1,11 +1,11 @@
 {
   "passed": true,
-  "model_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
-  "declared_shape_rings": [
-    34,
-    35,
-    36
-  ],
-  "independent_scope_audit": "mission-validation.json",
-  "previous_two_ring_scope_superseded": true
+  "model_sha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+  "donor_rings": 40,
+  "donor_sha256": {
+    "queen": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "king": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146"
+  },
+  "uniform_size": 0.978,
+  "max_base_radius_or_height_error": 1.5282630916324536e-07
 }

@@ -1,0 +1,327 @@
+{
+  "queen": {
+    "foot_diameter": 2.089249610900879,
+    "groove": {
+      "radius": 1.004907488822937,
+      "height": 0.2315
+    },
+    "flare": {
+      "radius": 1.0322842597961426,
+      "height": 0.334
+    },
+    "socket_diameter_at_scaled_z1": 1.058708305920098,
+    "source_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    }
+  },
+  "king": {
+    "foot_diameter": 2.088034152984619,
+    "groove": {
+      "radius": 1.00449800491333,
+      "height": 0.23450000000000001
+    },
+    "flare": {
+      "radius": 1.031708002090454,
+      "height": 0.339
+    },
+    "socket_diameter_at_scaled_z1": 1.0581159141942658,
+    "source_sha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "equal_foot_meridian_distance_to_queen": 0.001213701217209909
+  },
+  "bishop": {
+    "foot_diameter": 2.0130200386047363,
+    "groove": {
+      "radius": 0.9605042934417725,
+      "height": 0.384
+    },
+    "flare": {
+      "radius": 0.9841978549957275,
+      "height": 0.463
+    },
+    "socket_diameter_at_scaled_z1": 1.3641375696316185,
+    "front_collar_rim_rows": {
+      "upper": 510.90741991996765,
+      "middle": 564.585134267807,
+      "lower": 607.7832598686218
+    },
+    "front_groove_row": 1046.3769879341125,
+    "floor": 0.0,
+    "height": 4.592006683349609,
+    "source_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "width_change_pct": 0.0,
+    "height_change_pct": 0.0,
+    "reference_errors_fixed_px": {
+      "button": 2.108,
+      "mitre": 2.035,
+      "collars": 1.508,
+      "exposed_stem": 1.091,
+      "rear_flare": 2.031,
+      "foot": 1.572
+    },
+    "iou": {
+      "selected": 0.9703465662630738,
+      "original_white": 0.987741733203861,
+      "original_black": 0.9782719532039481
+    },
+    "equal_foot_meridian_distance_to_queen": 0.2127673925150827
+  },
+  "wide": {
+    "foot_diameter": 2.055266857147217,
+    "groove": {
+      "radius": 0.9887521266937256,
+      "height": 0.2305
+    },
+    "flare": {
+      "radius": 1.015517234802246,
+      "height": 0.3335
+    },
+    "socket_diameter_at_scaled_z1": 1.04150897412216,
+    "front_collar_rim_rows": {
+      "upper": 510.90741991996765,
+      "middle": 564.585134267807,
+      "lower": 607.7832598686218
+    },
+    "front_groove_row": 1075.7772736251354,
+    "floor": 0.0,
+    "height": 4.592006683349609,
+    "source_sha256": "4fe6a8be2f90f023843b1f3431547d467edc1d6e934f76675f23b23f218d0923",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "width_change_pct": 2.0986784896469546,
+    "height_change_pct": 0.0,
+    "reference_errors_fixed_px": {
+      "button": 2.108,
+      "mitre": 2.041,
+      "collars": 1.526,
+      "exposed_stem": 1.205,
+      "rear_flare": 11.078,
+      "foot": 4.886
+    },
+    "iou": {
+      "selected": 0.9698975368810454,
+      "original_white": 0.9716930579806129,
+      "original_black": 0.9616299354714088
+    },
+    "equal_foot_meridian_distance_to_queen": 0.0010637809578242885
+  },
+  "short": {
+    "foot_diameter": 2.055266857147217,
+    "groove": {
+      "radius": 0.9887521266937256,
+      "height": 0.2305
+    },
+    "flare": {
+      "radius": 1.015517234802246,
+      "height": 0.3335
+    },
+    "socket_diameter_at_scaled_z1": 1.04150897412216,
+    "front_collar_rim_rows": {
+      "upper": 517.7861309051514,
+      "middle": 571.4622756242752,
+      "lower": 614.66040122509
+    },
+    "front_groove_row": 1075.7772736251354,
+    "floor": 0.0,
+    "height": 4.509032726287842,
+    "source_sha256": "b0c4a27816d90399a39db65fde9f41ec7e0e8ddf40183fb7ee54f276fe961e3a",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "width_change_pct": 2.0986784896469546,
+    "height_change_pct": -1.806921522188265,
+    "reference_errors_fixed_px": {
+      "button": 9.575,
+      "mitre": 4.286,
+      "collars": 2.634,
+      "exposed_stem": 3.023,
+      "rear_flare": 11.097,
+      "foot": 4.886
+    },
+    "iou": {
+      "selected": 0.9672498569241234,
+      "original_white": 0.963683602076083,
+      "original_black": 0.9561381769825918
+    },
+    "equal_foot_meridian_distance_to_queen": 0.0010637809578242885
+  },
+  "moderate": {
+    "foot_diameter": 2.042736053466797,
+    "groove": {
+      "radius": 0.9827296733856201,
+      "height": 0.229
+    },
+    "flare": {
+      "radius": 1.009325385093689,
+      "height": 0.3315
+    },
+    "socket_diameter_at_scaled_z1": 1.0351585089183357,
+    "front_collar_rim_rows": {
+      "upper": 511.9836620092392,
+      "middle": 565.6549483537674,
+      "lower": 608.8529992103577
+    },
+    "front_groove_row": 1074.7397303581238,
+    "floor": 0.0,
+    "height": 4.554022789001465,
+    "source_sha256": "b69c406c26d7bfb4e3f25fcb5b8708c006ec32df372d936df02e6be863542522",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "width_change_pct": 1.4761907130669938,
+    "height_change_pct": -0.8271741956707546,
+    "reference_errors_fixed_px": {
+      "button": 4.468,
+      "mitre": 1.53,
+      "collars": 1.311,
+      "exposed_stem": 1.568,
+      "rear_flare": 13.656,
+      "foot": 3.462
+    },
+    "iou": {
+      "selected": 0.967629020104651,
+      "original_white": 0.9719686737209344,
+      "original_black": 0.9630677243629668
+    },
+    "equal_foot_meridian_distance_to_queen": 0.0010634210234449337
+  },
+  "refit": {
+    "foot_diameter": 2.042736053466797,
+    "groove": {
+      "radius": 0.9827296733856201,
+      "height": 0.229
+    },
+    "flare": {
+      "radius": 1.009325385093689,
+      "height": 0.3315
+    },
+    "socket_diameter_at_scaled_z1": 1.0351585089183357,
+    "front_collar_rim_rows": {
+      "upper": 512.3796569108963,
+      "middle": 566.088091135025,
+      "lower": 609.4099184274673
+    },
+    "front_groove_row": 1074.7397303581238,
+    "floor": 0.0,
+    "height": 4.550049304962158,
+    "source_sha256": "a92b166a713ca2473964517b4152b2a1900e4cfcdfe0d945aacfc6ac6f016571",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "width_change_pct": 1.4761907130669938,
+    "height_change_pct": -0.913704645500335,
+    "reference_errors_fixed_px": {
+      "button": 2.684,
+      "mitre": 0.973,
+      "collars": 1.105,
+      "exposed_stem": 2.091,
+      "rear_flare": 13.544,
+      "foot": 3.462
+    },
+    "iou": {
+      "selected": 0.968536670225912,
+      "original_white": 0.9739495035117461,
+      "original_black": 0.964550958566371
+    },
+    "equal_foot_meridian_distance_to_queen": 0.0010634210234449337
+  },
+  "registered": {
+    "foot_diameter": 2.042736053466797,
+    "groove": {
+      "radius": 0.9827296733856201,
+      "height": 0.229
+    },
+    "flare": {
+      "radius": 1.009325385093689,
+      "height": 0.3315
+    },
+    "socket_diameter_at_scaled_z1": 1.0351585089183357,
+    "front_collar_rim_rows": {
+      "upper": 512.3796569108963,
+      "middle": 566.088091135025,
+      "lower": 609.4099184274673
+    },
+    "front_groove_row": 1074.7397303581238,
+    "floor": 0.0,
+    "height": 4.550049304962158,
+    "source_sha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "width_change_pct": 1.4761907130669938,
+    "height_change_pct": -0.913704645500335,
+    "reference_errors_fixed_px": {
+      "button": 2.684,
+      "mitre": 0.973,
+      "collars": 1.105,
+      "exposed_stem": 0.977,
+      "rear_flare": 13.622,
+      "foot": 3.462
+    },
+    "iou": {
+      "selected": 0.968372391614769,
+      "original_white": 0.9738682816048448,
+      "original_black": 0.9647121357085364
+    },
+    "equal_foot_meridian_distance_to_queen": 0.0010634210234449337
+  },
+  "white_front_dark_groove_row": 1052,
+  "white3_front_dark_groove_row": 1053,
+  "equal_foot_scale": "Each model uniformly enlarged to 220 displayed pixels across its evaluated foot. Common sole; neutral level render.",
+  "normalized_meridian_distance": "Symmetric maximum point-to-polyline distance over queen-equivalent heights .006 through 1.225, using samples every .0005 native units."
+}

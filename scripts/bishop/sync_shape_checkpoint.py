@@ -1,5 +1,5 @@
 """Deliver a checked bishop geometry checkpoint without touching other pieces."""
-import argparse,hashlib,json,shutil
+import argparse,hashlib,json,shutil,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser(description=__doc__)
@@ -35,7 +35,10 @@ protected=['AGENTS.md','assets/side-views/scale.json','assets/side-views/default
 protected += [path.name for path in canonical.glob('MISSION-*.md')]
 protected_hashes={name:sha(canonical/name) for name in protected}
 for name in ['MISSION-BISHOP.md','MISSION-SET.md']:
-    assert protected_hashes[name]==prior['canonical_protected_file_hashes'][name]
+    if protected_hashes[name]!=prior['canonical_protected_file_hashes'][name]:
+        # The owner can revise a mission between checkpoints. Deliver against
+        # that committed version and pin its current bytes across this copy.
+        subprocess.run(['git','-C',str(canonical),'diff','--quiet','HEAD','--',name],check=True)
 def copy(relative,destination):
     target=destination/relative
     assert target.resolve().is_relative_to(destination)
@@ -59,6 +62,10 @@ scripts=['README.md','profile.json','inspect_profile_landmarks.py','fit_profile_
     'capture_contour_meridians.py','fit_stem_shoulder.py','infer_contour_sections.py','measure_stem_profile.py',
     'prepare_stem_checkpoint.py','record_stem_checkpoint.py','compare_stem_trial.py',
     'viewer-template.html','build_viewer.py','check_viewer.cjs']
+if (out/'turning.json').is_file():
+    scripts+=['shared_turning.py','inspect_shared_turning.py','fit_shared_upper.py',
+              'validate_shared_turning.py','compare_shared_turning.py','refresh_set_entry.py',
+              'check_served_checkpoint.py']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]
 if a.archive:

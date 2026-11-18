@@ -763,3 +763,16 @@ Node viewer/review checks pass. Bounds are unchanged. Rollback checkpoint 022,
 mission statements, originals, registration, other pieces and gallery settings
 are preserved. No native browser QA, quota watcher, workers, push or publication
 is claimed. The geometry goal remains active and incomplete.
+
+## 025 · Shared queen and king base
+
+The bishop uses all 39 base rings and the first stem support from queen 033
+and king 017 at one uniform scale. Compared with 024, its foot is 1.48%
+wider and its height 0.91% shorter. Five editable trials separate the effect
+of the new turning from the upper refit at the saved 54-degree camera.
+The final stem, collars and mitre fit the original more closely in their
+respective outline regions. The lower groove and rear flare fit less closely.
+Original-white silhouette overlap falls from 98.77% to 97.39%. The
+equal-diameter side profiles, fixed comparisons, trial measurements and
+reproduction settings are in [iteration 025](bishop-mission/iteration-025/assessment.md).
+The wood and lighting remain unfinished. Bishop 024 is archived for rollback.

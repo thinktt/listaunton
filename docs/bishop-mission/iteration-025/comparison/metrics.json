@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/turning-registered/wood.png",
+  "render_sha256": "9ac1510f19a98149b121068b095b85eb2cda7b3ef1c081407e95f0088d8b267d",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.968372391614769,
+      "legacy_raw_model_mask_iou": 0.968372391614769
+    },
+    "original_white": {
+      "silhouette_iou": 0.9738682816048448,
+      "legacy_raw_model_mask_iou": 0.9738682816048448
+    },
+    "original_black": {
+      "silhouette_iou": 0.9647121357085364,
+      "legacy_raw_model_mask_iou": 0.9647121357085364
+    }
+  }
+}
