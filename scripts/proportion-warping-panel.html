@@ -7,7 +7,7 @@
 <div class="warp-toolbar" aria-label="Warped model view">
  <button id="warp-side" type="button" aria-pressed="true">Side view</button><button id="warp-reference" type="button" aria-pressed="false">54° view</button>
  <button id="warp-wood" type="button" aria-pressed="true">Wood</button><button id="warp-neutral" type="button" aria-pressed="false">Neutral</button>
- <label>Reference angle <input id="warp-angle" type="number" min="35" max="70" step="0.5" value="54">°</label><button id="warp-angle-reset" type="button">54°</button>
+ <label>Set all tilts <input id="warp-angle" type="number" min="20" max="80" step="0.1" value="54">°</label><button id="warp-angle-reset" type="button">All 54°</button>
 </div>
 <div class="warp-scroll"><div class="warp-lineup">
  <div id="warp-headings" class="warp-headings"></div>
@@ -19,6 +19,6 @@
  <button id="warp-original" type="button" aria-pressed="false">Original</button><button id="warp-overlay" type="button" aria-pressed="true">Overlay</button><button id="warp-model-only" type="button" aria-pressed="false">Models</button>
 </div>
 <div id="warp-board-stage" class="warp-board-stage"><img id="warp-board-background" src="assets/board-comparison/original-lineup.png" alt="Original Lichess pieces on the board"><canvas id="warp-board-canvas" aria-label="Warped models at the original board registration"></canvas></div>
-<p class="warp-note">The overlay keeps the starting scale and foot positions fixed. A positive top gap means the model stops below the original. Browser lighting is approximate.</p>
+<p class="warp-note">Tilt changes the reference overlay and Reference view; Side view stays level. The overlay keeps the starting scale and foot positions fixed. A positive top gap means the model stops below the original. Browser lighting is approximate.</p>
 <p id="warp-status" class="warp-note" role="status" aria-live="polite"></p>
 </section>

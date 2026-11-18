@@ -27,12 +27,29 @@ for(const [piece,r] of Object.entries(records)){
   assert(Math.abs(changed.bottom-original.bottom)<.1,'Foot must stay anchored');
   assert(Math.abs((changed.right-changed.left)-(original.right-original.left))<.1,'Squash must preserve base width');
   console.log('Bishop −12%: top moves down '+(changed.top-original.top).toFixed(2)+' original pixels; foot moves '+(changed.bottom-original.bottom).toFixed(3)+' px.');
+  const tilted=math.projectedBounds(model,squashed[piece],45,r);
+  assert(Math.abs(tilted.top-changed.top)>10,'Tilt must update the actual reference projection');
+  for(const angle of [20,45,80]){
+   const basis=math.referenceBasis(meta,angle);
+   for(let row=0;row<3;row++)for(let other=0;other<3;other++){
+    const dot=basis[row*3]*basis[other*3]+basis[row*3+1]*basis[other*3+1]+basis[row*3+2]*basis[other*3+2];
+    assert(Math.abs(dot-(row===other?1:0))<1e-6,'Camera tilt must rotate without stretching');
+   }
+  }
  }else for(const key of ['top','bottom','left','right'])assert.equal(changed[key],original[key],piece+' changed unexpectedly');
  assert.equal(digest(),before,'Source vertices must not be mutated');
  console.log(piece+': original registration top Δ '+(original.top-r.targetTop).toFixed(2)+'px, foot Δ '+(original.bottom-r.targetBottom).toFixed(2)+'px');
 }
 const restored=math.restore({angle:999,pieces:{bishop:{height:-20,width:999},king:{height:null,width:'bad'}}},records,guide);
-assert.equal(restored.angle,70);assert.equal(restored.pieces.bishop.height,50);assert.equal(restored.pieces.bishop.width,130);assert.equal(restored.pieces.king.height,100);assert.equal(restored.pieces.king.width,100);
+assert.equal(restored.angle,80);assert.equal(restored.pieces.bishop.height,50);assert.equal(restored.pieces.bishop.width,130);assert.equal(restored.pieces.king.height,100);assert.equal(restored.pieces.king.width,100);
 assert.equal(math.restore(null,records,guide).pieces.bishop.height,88);
 assert.equal(math.restore({angle:49.5,pieces:{bishop:{height:80,width:101}}},records,guide).pieces.bishop.height,80);
-console.log('PASS: exact saved cameras, fixed foot/width under compression, Chavet preset, source preservation, and bounded saved settings.');
+const legacy=math.restore({angle:49.5,pieces:{bishop:{height:84.4,width:105},queen:{height:87.7,width:112.7}}},records,guide);
+for(const piece of Object.keys(records))assert.equal(math.angleForPiece(legacy,piece),49.5,'Old saved experiment must retain its reference angle');
+assert.equal(legacy.pieces.queen.height,87.7);assert.equal(legacy.pieces.queen.width,112.7);
+const independent=math.restore({...legacy,tilts:{bishop:45,queen:60,rook:'invalid',pawn:999}},records,guide);
+assert.equal(math.angleForPiece(independent,'bishop'),45);assert.equal(math.angleForPiece(independent,'queen'),60);assert.equal(math.angleForPiece(independent,'king'),49.5);assert.equal(math.angleForPiece(independent,'rook'),49.5);assert.equal(math.angleForPiece(independent,'pawn'),80);
+const shapes=JSON.stringify(independent.pieces);math.setAllTilts(independent,42.5);
+assert.equal(JSON.stringify(independent.pieces),shapes,'All-tilts control must preserve height and width');
+for(const piece of Object.keys(records))assert.equal(math.angleForPiece(independent,piece),42.5);
+console.log('PASS: exact saved cameras, fixed foot/width under compression, Chavet preset, source preservation, independent tilts, and migration of saved experiments.');

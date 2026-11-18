@@ -19,14 +19,20 @@ function preset(name,records,targets){
  return Object.fromEntries(Object.keys(records).map(piece=>[piece,{height:name==='chavet'?bounded(100*targets[piece]/records[piece].ratio,100,50,150):name==='bishop'&&piece==='bishop'?88:100,width:100}]));
 }
 function restore(saved,records,targets){
- const state={angle:54,pieces:preset('bishop',records,targets)};
+ const state={angle:54,tilts:Object.fromEntries(Object.keys(records).map(piece=>[piece,null])),pieces:preset('bishop',records,targets)};
  if(!saved||typeof saved!=='object'||Array.isArray(saved))return state;
- state.angle=bounded(saved.angle,54,35,70);
+ state.angle=bounded(saved.angle,54,20,80);
  for(const [piece,value] of Object.entries(state.pieces)){
+  state.tilts[piece]=bounded(saved.tilts&&saved.tilts[piece],null,20,80);
   const item=saved.pieces&&saved.pieces[piece];if(!item||typeof item!=='object')continue;
   value.height=bounded(item.height,value.height,50,150);value.width=bounded(item.width,100,70,130);
  }
  return state;
+}
+function angleForPiece(state,piece){return bounded(state.tilts&&state.tilts[piece],state.angle,20,80);}
+function setAllTilts(state,angle){
+ state.angle=bounded(angle,state.angle,20,80);
+ for(const piece of Object.keys(state.pieces))state.tilts[piece]=null;
 }
 function referenceBasis(meta,angle){
  const m=meta.referenceCamera.worldToCamera,d=(angle-(meta.referenceCamera.elevationDegrees||54))*Math.PI/180,c=Math.cos(d),s=Math.sin(d);
@@ -46,5 +52,5 @@ function projectedBounds(model,warp,angle,registration){
  }
  return {left,right,top,bottom};
 }
-window.ListauntonWarpMath={registrations,guide,bounded,preset,restore,referenceBasis,orbitBasis,columnMajor,projectedBounds};
+window.ListauntonWarpMath={registrations,guide,bounded,preset,restore,angleForPiece,setAllTilts,referenceBasis,orbitBasis,columnMajor,projectedBounds};
 })();
