@@ -1,0 +1,494 @@
+{
+  "checkpoint": "019",
+  "previous_checkpoint": "018",
+  "accepted_variant": "195-rounded-low-seat",
+  "model_sha256": "df3164833519d169641ac22f3a6f52ad2cb87f4f1739f8ac7e206f64404d79b5",
+  "mesh_sha256": "760c6063d650f1b157345cf14b89cdff5ca0343283f0e8028beb78844284defb",
+  "render_sha256": "5a7a5c9da3613f6d2f3fe46c4383262a4163e857d2ba3ac7191e4ed033c3132e",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "source_hashes": {
+    "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+    "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/Black-King.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/White-King.png": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48",
+    "assets/king/materials/king-pigment-atlas-v6.png": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+    "assets/side-views/defaults.json": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578",
+    "models/queen/queen-rebuilt.blend": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"
+  },
+  "camera_elevation_degrees": 54.000000800055794,
+  "scores": {
+    "silhouette_iou_percent": 96.38878413721793,
+    "interior_form": 90,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "equal_weight_mean": 83.47775682744359,
+  "original_iou_percent": 95.21033013844516,
+  "trials": {
+    "191": {
+      "config": {
+        "variant": "191-low-dome",
+        "king_source": "history/king-mission-018/king-rebuilt.blend",
+        "king_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+        "shoulder_profile": [
+          [
+            68,
+            0.602,
+            3.998
+          ],
+          [
+            69,
+            0.607,
+            4.02
+          ],
+          [
+            70,
+            0.605,
+            4.042
+          ],
+          [
+            71,
+            0.584,
+            4.069
+          ],
+          [
+            72,
+            0.537,
+            4.099
+          ],
+          [
+            73,
+            0.459,
+            4.129
+          ],
+          [
+            74,
+            0.377,
+            4.147
+          ]
+        ],
+        "old_seat_start": 4.176,
+        "seat_width_scale": 0.97,
+        "seat_height_scale": 0.95,
+        "seat_drop": -0.02,
+        "cross_width_scale": 0.97,
+        "cross_height_scale": 0.94
+      },
+      "side": {
+        "shoulder_mean_vertical_error_px": 1.3833333333333333,
+        "side_crown_iou": 0.8640707459706176
+      },
+      "fixed": {
+        "original": {
+          "head_iou": 0.9338316751815005,
+          "exposed_cross_iou": 0.7218765764250883,
+          "seat_mean_luma_error_255": 19.77505316321106,
+          "cross_face_mean_luma_error_255": 16.168106658721882,
+          "cross_face_luma_correlation": 0.27325873132284034
+        },
+        "selected": {
+          "head_iou": 0.9331861567430686,
+          "exposed_cross_iou": 0.7174862037723416,
+          "seat_mean_luma_error_255": 22.766746411483254,
+          "cross_face_mean_luma_error_255": 15.301876955161626,
+          "cross_face_luma_correlation": 0.4711397327126096
+        }
+      },
+      "whole_original_iou": 0.9478004304819947,
+      "whole_selected_iou": 0.9588817388261368
+    },
+    "192": {
+      "config": {
+        "variant": "192-compact-guide-dome",
+        "king_source": "history/king-mission-018/king-rebuilt.blend",
+        "king_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+        "shoulder_profile": [
+          [
+            68,
+            0.588,
+            3.994
+          ],
+          [
+            69,
+            0.596,
+            4.015
+          ],
+          [
+            70,
+            0.593,
+            4.04
+          ],
+          [
+            71,
+            0.572,
+            4.07
+          ],
+          [
+            72,
+            0.529,
+            4.102
+          ],
+          [
+            73,
+            0.455,
+            4.132
+          ],
+          [
+            74,
+            0.375,
+            4.145
+          ]
+        ],
+        "old_seat_start": 4.176,
+        "seat_width_scale": 0.93,
+        "seat_height_scale": 0.88,
+        "seat_drop": -0.025,
+        "cross_width_scale": 0.94,
+        "cross_height_scale": 0.87
+      },
+      "side": {
+        "shoulder_mean_vertical_error_px": 1.45,
+        "side_crown_iou": 0.8694315284235788
+      },
+      "fixed": {
+        "original": {
+          "head_iou": 0.9092129479268161,
+          "exposed_cross_iou": 0.5476695814585278,
+          "seat_mean_luma_error_255": 17.654505582137162,
+          "cross_face_mean_luma_error_255": 17.441307910025323,
+          "cross_face_luma_correlation": 0.11246575703507469
+        },
+        "selected": {
+          "head_iou": 0.907724807805388,
+          "exposed_cross_iou": 0.5321637426900585,
+          "seat_mean_luma_error_255": 22.720494417862838,
+          "cross_face_mean_luma_error_255": 19.97944287203933,
+          "cross_face_luma_correlation": 0.2384248963714694
+        }
+      },
+      "whole_original_iou": 0.9423132349201352,
+      "whole_selected_iou": 0.9532273607771753
+    },
+    "193": {
+      "config": {
+        "variant": "193-rounded-sprite-fit",
+        "king_source": "history/king-mission-018/king-rebuilt.blend",
+        "king_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+        "shoulder_profile": [
+          [
+            67,
+            0.588,
+            3.971
+          ],
+          [
+            68,
+            0.595,
+            3.997
+          ],
+          [
+            69,
+            0.5975,
+            4.018
+          ],
+          [
+            70,
+            0.593,
+            4.043
+          ],
+          [
+            71,
+            0.574,
+            4.077
+          ],
+          [
+            72,
+            0.529,
+            4.112
+          ],
+          [
+            73,
+            0.455,
+            4.146
+          ],
+          [
+            74,
+            0.374,
+            4.1595
+          ]
+        ],
+        "old_seat_start": 4.176,
+        "seat_width_scale": 0.955,
+        "seat_height_scale": 0.925,
+        "seat_drop": -0.014,
+        "cross_width_scale": 0.975,
+        "cross_height_scale": 0.945,
+        "cross_depth_scale": 1.6
+      },
+      "side": {
+        "shoulder_mean_vertical_error_px": 0.38333333333333336,
+        "side_crown_iou": 0.8716119828815977
+      },
+      "fixed": {
+        "original": {
+          "head_iou": 0.9547414722497736,
+          "exposed_cross_iou": 0.8966199505358615,
+          "seat_mean_luma_error_255": 18.40742955874535,
+          "cross_face_mean_luma_error_255": 17.23674214211232,
+          "cross_face_luma_correlation": 0.1863471120252749
+        },
+        "selected": {
+          "head_iou": 0.9598359496535144,
+          "exposed_cross_iou": 0.9247488885229705,
+          "seat_mean_luma_error_255": 21.459197235513024,
+          "cross_face_mean_luma_error_255": 19.76094890510949,
+          "cross_face_luma_correlation": 0.26301894376751633
+        }
+      },
+      "whole_original_iou": 0.9525009013456062,
+      "whole_selected_iou": 0.964872157328357
+    },
+    "194": {
+      "config": {
+        "variant": "194-rounded-short-cross",
+        "king_source": "history/king-mission-018/king-rebuilt.blend",
+        "king_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+        "shoulder_profile": [
+          [
+            67,
+            0.588,
+            3.971
+          ],
+          [
+            68,
+            0.595,
+            3.997
+          ],
+          [
+            69,
+            0.5975,
+            4.018
+          ],
+          [
+            70,
+            0.593,
+            4.043
+          ],
+          [
+            71,
+            0.574,
+            4.077
+          ],
+          [
+            72,
+            0.529,
+            4.112
+          ],
+          [
+            73,
+            0.455,
+            4.146
+          ],
+          [
+            74,
+            0.374,
+            4.1595
+          ]
+        ],
+        "old_seat_start": 4.176,
+        "seat_width_scale": 0.955,
+        "seat_height_scale": 0.925,
+        "seat_drop": -0.014,
+        "cross_width_scale": 0.97,
+        "cross_height_scale": 0.935,
+        "cross_depth_scale": 1.43,
+        "arm_height_adjustments": [
+          [
+            4.36,
+            0
+          ],
+          [
+            4.5,
+            0.049
+          ],
+          [
+            4.56,
+            0.049
+          ],
+          [
+            4.83,
+            0.034
+          ],
+          [
+            4.9,
+            0.034
+          ],
+          [
+            5.06,
+            0
+          ],
+          [
+            5.13,
+            0
+          ]
+        ]
+      },
+      "side": {
+        "shoulder_mean_vertical_error_px": 0.38333333333333336,
+        "side_crown_iou": 0.8420196591471607
+      },
+      "fixed": {
+        "original": {
+          "head_iou": 0.9543024975974257,
+          "exposed_cross_iou": 0.8928482016189602,
+          "seat_mean_luma_error_255": 17.93361244019139,
+          "cross_face_mean_luma_error_255": 16.38142410248771,
+          "cross_face_luma_correlation": 0.2731274325259112
+        },
+        "selected": {
+          "head_iou": 0.9560762302571466,
+          "exposed_cross_iou": 0.8966680378445084,
+          "seat_mean_luma_error_255": 21.234582668793195,
+          "cross_face_mean_luma_error_255": 16.727096678087293,
+          "cross_face_luma_correlation": 0.37516069814736386
+        }
+      },
+      "whole_original_iou": 0.9524017002159157,
+      "whole_selected_iou": 0.9640311224216709
+    },
+    "195": {
+      "config": {
+        "variant": "195-rounded-low-seat",
+        "king_source": "history/king-mission-018/king-rebuilt.blend",
+        "king_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+        "shoulder_profile": [
+          [
+            67,
+            0.588,
+            3.971
+          ],
+          [
+            68,
+            0.595,
+            3.997
+          ],
+          [
+            69,
+            0.5975,
+            4.018
+          ],
+          [
+            70,
+            0.593,
+            4.043
+          ],
+          [
+            71,
+            0.574,
+            4.077
+          ],
+          [
+            72,
+            0.529,
+            4.112
+          ],
+          [
+            73,
+            0.455,
+            4.146
+          ],
+          [
+            74,
+            0.374,
+            4.1595
+          ]
+        ],
+        "old_seat_start": 4.176,
+        "seat_width_scale": 0.955,
+        "seat_height_scale": 0.925,
+        "seat_drop": -0.014,
+        "cross_width_scale": 0.978,
+        "cross_height_scale": 0.979,
+        "cross_depth_scale": 1.1,
+        "arm_height_adjustments": [
+          [
+            4.36,
+            0
+          ],
+          [
+            4.5,
+            0.04
+          ],
+          [
+            4.56,
+            0.04
+          ],
+          [
+            4.83,
+            0.045
+          ],
+          [
+            4.9,
+            0.045
+          ],
+          [
+            5.06,
+            0
+          ],
+          [
+            5.13,
+            0
+          ]
+        ]
+      },
+      "side": {
+        "shoulder_mean_vertical_error_px": 0.38333333333333336,
+        "side_crown_iou": 0.8149337341166826
+      },
+      "fixed": {
+        "original": {
+          "head_iou": 0.9529710184035836,
+          "exposed_cross_iou": 0.8825732356857523,
+          "seat_mean_luma_error_255": 17.98551302498671,
+          "cross_face_mean_luma_error_255": 14.068002383435125,
+          "cross_face_luma_correlation": 0.5382156389008625
+        },
+        "selected": {
+          "head_iou": 0.955435905803013,
+          "exposed_cross_iou": 0.8911827603224215,
+          "seat_mean_luma_error_255": 21.52478734715577,
+          "cross_face_mean_luma_error_255": 8.195963056755549,
+          "cross_face_luma_correlation": 0.7777357375287511
+        }
+      },
+      "whole_original_iou": 0.9521033013844515,
+      "whole_selected_iou": 0.9638878413721793
+    }
+  },
+  "independent_render": {
+    "alpha_exact": true,
+    "maximum_rgb_error_255": 1,
+    "changed_pixels": 46
+  },
+  "scope": "Blender shoulder, two seat beads and cross. Both surface materials, subdivision, camera and all lights validated against 018.",
+  "profile_crossings": [],
+  "checked_profile_segments": 196,
+  "closed_components": [
+    {
+      "name": "King - beveled cross",
+      "vertices": 1584,
+      "triangleCount": 3164,
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.0799629161316028
+    },
+    {
+      "name": "King - continuous turned body",
+      "vertices": 37826,
+      "triangleCount": 75648,
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.493794606073694
+    }
+  ],
+  "receiver_count": 9,
+  "receiver_normal_error": 0
+}

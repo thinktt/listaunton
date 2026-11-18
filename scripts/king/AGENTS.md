@@ -143,3 +143,5 @@ iteration-018 configuration and its --validate mode. The archived single-seat
 assertion in validate_chavet_profile.py applies to checkpoint 016. Use
 compare_crown_seat.py for the fixed and level comparisons. Keep both beads
 in the exported mesh and synchronize the king review and set lineup.
+
+Checkpoint 019 rounds the shoulder into the two seat beads and lowers the cross. Rebuild from archived 018 with round_crown.py and the iteration-019 config. Use --validate to compare the saved controls, profile curvature, ring crests, wood and lights. compare_rounded_crown.py measures the local side registration and both fixed references. The exporter records the midpoint of the evaluated seat crests for the rotating close-up. Update the current crown plate before rebuilding the viewer.

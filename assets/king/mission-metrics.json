@@ -1,13 +1,13 @@
 {
   "mask_convention": "max RGB >12 and alpha >127, largest component and holes filled; model alpha >127",
-  "highres_iou": 0.9645310480854248,
-  "original_iou": 0.9521345470006184,
+  "highres_iou": 0.9638878413721793,
+  "original_iou": 0.9521033013844515,
   "previous_highres_iou": 0.9645310480854248,
   "previous_original_iou": 0.9521345470006184,
   "regional_iou": {
     "head": {
       "previous": 0.9583558329913385,
-      "trial": 0.9583558329913385
+      "trial": 0.955435905803013
     },
     "collars": {
       "previous": 0.9773263059897593,
@@ -22,9 +22,9 @@
       "trial": 0.944219827515936
     }
   },
-  "render_sha256": "7253aedfe2e129ca4ac6b90086e5b36e7c416eab809e7947eae82266989ab1d0",
+  "render_sha256": "5a7a5c9da3613f6d2f3fe46c4383262a4163e857d2ba3ac7191e4ed033c3132e",
   "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
   "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
-  "previous_sha256": "ed5894fa39e14282e0767a2d63af42dd5733046739e08cf12e74551cc603f45b",
-  "model_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2"
+  "previous_sha256": "7253aedfe2e129ca4ac6b90086e5b36e7c416eab809e7947eae82266989ab1d0",
+  "model_sha256": "df3164833519d169641ac22f3a6f52ad2cb87f4f1739f8ac7e206f64404d79b5"
 }

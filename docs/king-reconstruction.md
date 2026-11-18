@@ -7,7 +7,7 @@ fixed at 54°. [Open the king review](../king-review.html)
 
 Open [Crown seat](../king-review.html#crown-seat) for the registered details from both references,
 the earlier single-ring king and the current model. **Rotate close-up** centers the live mesh on
-the two rings. The crown measurements are in [checkpoint 018](king-mission/iteration-018/README.md).
+the two rings. **Before and after** compares the rounded crown and lowered cross with the previous king. The side and fixed-camera fits are in [checkpoint 019](king-mission/iteration-019/README.md). The two-ring seat measurements are in [checkpoint 018](king-mission/iteration-018/README.md).
 The true-scale queen and king base comparison is in [checkpoint 017](king-mission/iteration-017/README.md).
 
 ## Historical clay study

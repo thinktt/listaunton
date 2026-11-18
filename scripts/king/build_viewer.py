@@ -30,6 +30,8 @@ if meta.get('referenceCamera', {}).get('type') != 'ORTHO':
     raise RuntimeError('The king viewer requires its saved orthographic reference camera.')
 fields = ['vertexCount', 'indexCount', 'triangleCount', 'vertexStrideBytes', 'vertexByteLength', 'indexByteOffset', 'totalByteLength', 'bounds', 'sourceSha256', 'referenceCamera', 'texture', 'textureSha256', 'uvLayer']
 public_meta = {key: meta[key] for key in fields}
+if 'crownSeatCenterZ' in meta:
+    public_meta['crownSeatCenterZ'] = meta['crownSeatCenterZ']
 mesh = (assets/'mesh.bin').read_bytes()
 assert len(mesh) == meta['totalByteLength'], 'Mesh binary length does not match metadata.'
 assert meta['vertexStrideBytes'] == 32, 'Expected interleaved position, normal and pigment UV.'
@@ -88,5 +90,6 @@ for label, description, crop in zip(labels, descriptions, seat_crops):
     encoded = base64.b64encode(buffer.getvalue()).decode('ascii')
     cards.append(f'<figure><figcaption>{label}</figcaption><img alt="{description}" width="{crop.width}" height="{crop.height}" src="data:image/png;base64,{encoded}"></figure>')
 html = html.replace('__CROWN_CARDS__','\n'.join(cards))
+html = html.replace('__CROWN_HISTORY__',data_uri(root/'docs/king-mission/iteration-019/crown-comparison.png'))
 out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

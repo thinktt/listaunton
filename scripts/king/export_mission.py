@@ -17,9 +17,19 @@ for ob in objects:
     for modifier in ob.modifiers:
         if modifier.type=='SUBSURF':modifier.levels=modifier.render_levels
 bpy.context.view_layer.update();graph=bpy.context.evaluated_depsgraph_get();blocks=[];parts=[]
+crown_center = None
 for ob in objects:
     ev=ob.evaluated_get(graph);me=ev.to_mesh(preserve_all_data_layers=True,depsgraph=graph);me.calc_loop_triangles();bm=bmesh.new();bm.from_mesh(me)
     nonmanifold=sum(not e.is_manifold for e in bm.edges);volume=bm.calc_volume(signed=True);assert nonmanifold==0 and volume>0
+    if ob.get('king_editable_control') and s.get('king_crown_seat_018'):
+        from turn_crown_seat import features
+        positions = np.array([vertex.co[:] for vertex in me.vertices])
+        rings = np.array([item.value for item in me.attributes['King profile ring'].data])
+        on_meridian = (abs(positions[:,1]) < 1e-7) & (positions[:,0] > 1e-7)
+        section = np.column_stack((rings,positions[:,0],positions[:,2]))[on_meridian]
+        beads = features(section[np.argsort(section[:,0])])['beads']
+        assert len(beads) == 2
+        crown_center = sum(bead['height'] for bead in beads)/2
     uv=me.uv_layers.get('Pigment atlas');assert uv is not None
     rows=[];normal_matrix=ob.matrix_world.to_3x3().inverted().transposed()
     for tri in me.loop_triangles:
@@ -36,6 +46,8 @@ W=s.render.resolution_x;H=s.render.resolution_y;P=cam.calc_matrix_camera(graph,x
 camera={'type':'ORTHO','worldToCamera':[float(v) for row in cam.matrix_world.inverted() for v in row],'projectionMatrix':[float(v) for row in P for v in row],'width':W,'height':H,'orthoScale':cam.data.ortho_scale,'shiftX':cam.data.shift_x,'shiftY':cam.data.shift_y,'elevationDegrees':elevation}
 lo=vertices[:,:3].min(0);hi=vertices[:,:3].max(0)
 meta={'vertexCount':len(vertices),'indexCount':len(indices),'triangleCount':len(indices)//3,'vertexStrideBytes':32,'uvOffsetBytes':24,'uvLayer':'Pigment atlas','vertexByteLength':vertices.nbytes,'indexByteOffset':vertices.nbytes,'totalByteLength':len(raw),'bounds':{'min':lo.tolist(),'max':hi.tolist(),'size':(hi-lo).tolist(),'center':((hi+lo)/2).tolist()},'parts':parts,'sourceSha256':before,'referenceCamera':camera,'texture':s['king_pigment_atlas'],'textureSha256':sha(ROOT/s['king_pigment_atlas'])}
+if crown_center is not None:
+    meta['crownSeatCenterZ'] = crown_center
 assert sha(source)==before
 validation={'components':parts,'sourceSha256':before,'source_hash_matches':True,'elevationDegrees':elevation,'cameraOrthographic':True,'exactCornerPositionNormalUvRoundtrip':True,'allAttributesFinite':True,'allNormalsUnit':True,'packedPigment':bool(bpy.data.images[s.get('king_pigment_image','King pigment atlas')].packed_file),'note':'Body and cross remain separate closed intersecting components. Viewer lighting is approximate.'}
 validation['renderReceivers']=receiver_validation

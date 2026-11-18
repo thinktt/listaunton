@@ -633,3 +633,7 @@ lighter in the render. The whole-piece overlap is 95.21% with the original
 and 96.45% with the candidate at 54°. Interior form is assessed at 89, wood
 color at 82, grain and surface at 80, and lighting at 69.
 [Comparison, geometry and reproduction](king-mission/iteration-018/README.md)
+
+## 019 · Rounded crown and lower cross
+
+The turned shoulder now rounds into the two smaller seat rings in one continuous curve. The seat is 4.5% narrower. The cross tip sits 0.044 units lower. At the level camera the mean shoulder error against the locally aligned imagined guide fell from 4.65 to 0.38 pixels. At 54° the whole model overlaps the original by 95.21% and black candidate 1 by 96.39%. The cross-face highlights and wood grain still differ. Visual scores are 90 for interior form, 82 for color, 80 for surface texture and 69 for lighting. [Before and after, trials and reproduction](king-mission/iteration-019/README.md)

@@ -49,6 +49,9 @@ header .download{font-size:12px}
 .stage[data-mode="crown"] .comparison-stage,.stage[data-mode="crown"] canvas,.stage[data-mode="crown"] .zoom,.stage[data-mode="crown"] .badge{visibility:hidden;pointer-events:none}
 .crown-stage{position:absolute;inset:0;overflow:auto;background:#181b1d;padding:14px}
 .crown-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px;max-width:1150px;margin:0 auto}
+#crown-details[hidden]{display:none}
+#crown-history-image:not([hidden]){display:block;width:100%;max-width:948px;height:auto;margin:0 auto}
+#crown-history[aria-pressed="true"]{background:#ead2ac;color:#1a1918}
 .crown-grid figure{margin:0}.crown-grid figcaption{color:#eee6da;font-size:14px;margin:0 0 6px}
 .crown-grid img{display:block;width:100%;height:auto}
 @media(max-width:680px){.crown-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.crown-stage{padding:10px}}
@@ -58,13 +61,13 @@ header .download{font-size:12px}
 <main>
 <header><div><h1>King model</h1><p>54° reference camera · wood reconstruction</p></div><a id="side-render" class="download" href="assets/king/profile.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/king/king-rebuilt.blend" download>Blender file ↗</a></header>
 <nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button><button id="crown-tab" aria-pressed="false">Crown seat</button></nav>
-<div class="comparison-controls" id="crown-controls" hidden><button class="reset" id="rotate-crown">Rotate close-up</button></div>
+<div class="comparison-controls" id="crown-controls" hidden><button class="reset" id="rotate-crown">Rotate close-up</button><button class="reset" id="crown-history" aria-pressed="false" aria-controls="crown-history-image">Before and after</button></div>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 1</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
 <div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">Imagined side guide · base width and foot aligned</span></div>
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="King model comparison">
-<div class="crown-stage" id="crown-stage" role="region" aria-label="Crown seat close-ups" hidden><div class="crown-grid">__CROWN_CARDS__</div></div>
+<div class="crown-stage" id="crown-stage" role="region" aria-label="Crown seat close-ups" hidden><div class="crown-grid" id="crown-details">__CROWN_CARDS__</div><img id="crown-history-image" src="__CROWN_HISTORY__" alt="Imagined guide, previous king and rounded crown at eye level, with the Lichess original and both 54-degree renders below" width="948" height="684" hidden></div>
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: black king candidate 1" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess black king, including its clipped cross" draggable="false"><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
 <div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined king side guide"><img id="side-model" src="__SIDE_MODEL__" alt="Current king side render, uniformly registered at the foot"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D king. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
@@ -127,6 +130,14 @@ function mode(name){
 }
 compareTab.onclick=()=>mode('compare');rotateTab.onclick=()=>mode('rotate');sideTab.onclick=()=>mode('side');
 document.getElementById('crown-tab').onclick=()=>mode('crown');
+const crownHistory=document.getElementById('crown-history');
+const crownHistoryImage=document.getElementById('crown-history-image');
+crownHistory.onclick=()=>{
+ const show=crownHistoryImage.hidden;
+ crownHistoryImage.hidden=!show;
+ document.getElementById('crown-details').hidden=show;
+ crownHistory.setAttribute('aria-pressed',String(show));
+};
 if(window.parent!==window){
  const sideRender=document.getElementById('side-render');
  sideRender.textContent='Side render';
@@ -198,7 +209,7 @@ woodImage.src='data:image/png;base64,'+document.getElementById('wood-texture').t
 let projection='orthographic',orthoHeight=6,activeView='overlay';
 let orbitCenter=meta.bounds.center;
 // Midpoint of the two crown-seat crests in Blender coordinates.
-const crownCenter=[0,0,4.268];
+const crownCenter=[0,0,meta.crownSeatCenterZ ?? 4.268];
 const reference=meta.referenceCamera;
 const fov=40*Math.PI/180,tanHalf=Math.tan(fov/2);
 const size=meta.bounds.size,radius=Math.hypot(...size)/2;

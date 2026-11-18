@@ -1,0 +1,48 @@
+{
+  "guide_registration": "Scale fixed by foot width. Guide (623,270) maps to profile (300,243).",
+  "side_camera_px_per_blender_unit": 150,
+  "side": {
+    "previous": {
+      "shoulder_mean_vertical_error_px": 4.65,
+      "side_crown_iou": 0.7968169761273209
+    },
+    "current": {
+      "shoulder_mean_vertical_error_px": 0.38333333333333336,
+      "side_crown_iou": 0.8149337341166826
+    }
+  },
+  "fixed": {
+    "original": {
+      "previous": {
+        "head_iou": 0.953102090178409,
+        "exposed_cross_iou": 0.87537721229916,
+        "seat_mean_luma_error_255": 21.056552365762894,
+        "cross_face_mean_luma_error_255": 12.89468196037539,
+        "cross_face_luma_correlation": 0.6751002095385462
+      },
+      "current": {
+        "head_iou": 0.9529710184035836,
+        "exposed_cross_iou": 0.8825732356857523,
+        "seat_mean_luma_error_255": 17.98551302498671,
+        "cross_face_mean_luma_error_255": 14.068002383435125,
+        "cross_face_luma_correlation": 0.5382156389008625
+      }
+    },
+    "selected": {
+      "previous": {
+        "head_iou": 0.9583558329913385,
+        "exposed_cross_iou": 0.9122677796873722,
+        "seat_mean_luma_error_255": 22.471026049973418,
+        "cross_face_mean_luma_error_255": 4.710934008639953,
+        "cross_face_luma_correlation": 0.9442297556723678
+      },
+      "current": {
+        "head_iou": 0.955435905803013,
+        "exposed_cross_iou": 0.8911827603224215,
+        "seat_mean_luma_error_255": 21.52478734715577,
+        "cross_face_mean_luma_error_255": 8.195963056755549,
+        "cross_face_luma_correlation": 0.7777357375287511
+      }
+    }
+  }
+}

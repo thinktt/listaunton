@@ -1,0 +1,89 @@
+{
+  "source_sha256": "3d68f22187f398b2664f72b3bdf3fb11b12ea6601ab4dcfba36761916cd42bf2",
+  "model_sha256": "df3164833519d169641ac22f3a6f52ad2cb87f4f1739f8ac7e206f64404d79b5",
+  "previous_seat": {
+    "beads": [
+      {
+        "ring": 77.0,
+        "radius": 0.3542470335960388,
+        "height": 4.211833477020264
+      },
+      {
+        "ring": 82.5,
+        "radius": 0.2999733090400696,
+        "height": 4.324313163757324
+      }
+    ],
+    "groove": {
+      "ring": 80.0,
+      "radius": 0.26347851753234863,
+      "height": 4.271500110626221
+    },
+    "separation": 0.11247968673706055,
+    "upper_to_lower_diameter": 0.8467913082996776,
+    "upper_bead_proud_of_groove": 0.03649479150772095
+  },
+  "current_seat": {
+    "beads": [
+      {
+        "ring": 77.0,
+        "radius": 0.33830589056015015,
+        "height": 4.195146083831787
+      },
+      {
+        "ring": 82.5,
+        "radius": 0.2864744961261749,
+        "height": 4.29918909072876
+      }
+    ],
+    "groove": {
+      "ring": 80.0,
+      "radius": 0.25162196159362793,
+      "height": 4.250338077545166
+    },
+    "separation": 0.10404300689697266,
+    "upper_to_lower_diameter": 0.8467913332867029,
+    "upper_bead_proud_of_groove": 0.034852534532547
+  },
+  "previous_cross": {
+    "width": 0.7142857313156128,
+    "depth": 0.17393480241298676,
+    "tip": 5.127651214599609,
+    "embedded_depth": 0.19436883926391602,
+    "deck": 4.361999988555908
+  },
+  "current_cross": {
+    "width": 0.6985714435577393,
+    "depth": 0.1913282871246338,
+    "tip": 5.083622932434082,
+    "embedded_depth": 0.19028711318969727,
+    "deck": 4.334050178527832
+  },
+  "previous_shoulder_slopes": [
+    1.64069360419238,
+    0.845577500814401,
+    0.48558403058894556,
+    0.31162718946182183,
+    0.2060239336951246,
+    0.17653891472824954,
+    0.3422436293050245,
+    0.7392825703852084,
+    0.8043287185554125
+  ],
+  "current_shoulder_slopes": [
+    3.256737267765744,
+    1.9830546735090069,
+    1.306443317904636,
+    0.8981462607094984,
+    0.6623709402994253,
+    0.5082933998001284,
+    0.37524599454328506,
+    0.2390592719215321,
+    0.13061958944576504
+  ],
+  "unchanged_body_control_rings": 78,
+  "unchanged_evaluated_profile_below_logical_ring": 65.5,
+  "uv_material_packed_images_camera_lights_exact": true,
+  "receiver_count": 9,
+  "receiver_normal_error": 0
+}
