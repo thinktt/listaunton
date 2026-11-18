@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+  "model_sha256": "4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468",
+  "changed_controls": {
+    "10": {
+      "before": [
+        0.7389463782310486,
+        0.0,
+        0.22241206467151642
+      ],
+      "after": [
+        0.7749999761581421,
+        0.0,
+        0.22241206467151642
+      ]
+    }
+  },
+  "all_other_control_coordinates_exact": true,
+  "uv_coordinates_exact": true,
+  "mesh_normals_uv_sha256": "2e82f1892f0e9807b22697efc58c2cd739b4e451b8a6e37ecd7964e3e8f94a10",
+  "reference_lights_preserved": 47,
+  "side_lights_preserved": 5,
+  "both_worlds_unchanged": true,
+  "same_shader_graph_except_four_image_inputs": true,
+  "same_shader_ramps": true,
+  "packed_maps_match_external_files": [
+    {
+      "path": "assets/pawn/pawn-walnut-v12.png",
+      "sha256": "e5493b818314187af9bf306e04fe1e04a965e21ac85bd24ff72e5a2b7f3649a6",
+      "node": "Pawn walnut pigment",
+      "encoding": "sRGB"
+    },
+    {
+      "path": "assets/pawn/pawn-walnut-relief-v3.png",
+      "sha256": "c8f9921ed43c2b8395649837c333ab9066f0b27d0ac74fb854155e4853481646",
+      "node": null,
+      "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+      "encoding": "sRGB"
+    },
+    {
+      "path": "assets/pawn/pawn-varnish-v10.png",
+      "sha256": "f66f735aea5aa50ec6f880c07836b139e93409b224d33ffc14b4a8382706d6b4",
+      "node": "Pawn varnish roughness",
+      "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+      "encoding": "Non-Color"
+    },
+    {
+      "path": "assets/pawn/pawn-fine-slopes-v11.png",
+      "sha256": "7f8b35ef88fbbc773b1485994ada545bb99b64ecbab8b5c154db23e1784f7fad",
+      "node": "Pawn fine slope atlas",
+      "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+      "encoding": "Non-Color"
+    }
+  ],
+  "shared_editable_object": true,
+  "reference_camera_54_degrees": true,
+  "originals": {
+    "original.png": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "white-original.png": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3",
+    "reference.png": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "config": {
+    "source": "history/pawn-side-quality-001/pawn-rebuilt.blend",
+    "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+    "samples": 128,
+    "side_resolution": 900,
+    "output": "build/pawn-side-quality/013-continuous-walnut",
+    "variants": [
+      {
+        "name": "trial-blend",
+        "pigment": "build/pawn-side-quality/013-continuous-walnut/blend/pigment.png",
+        "pigment_sha256": "3f53f7b20ea721d97c4bf8466d0e3c6ed7e2e23bba0549a49d85e584086e0bb8",
+        "maps": [
+          {
+            "path": "build/pawn-side-quality/013-continuous-walnut/blend/relief.png",
+            "sha256": "06b3cc8d3a294cac6acb9e014db485a1ac3ac3d950289e2b67319083330b8543",
+            "node": null,
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "sRGB"
+          },
+          {
+            "path": "build/pawn-side-quality/013-continuous-walnut/blend/finish.png",
+            "sha256": "fbfe5641ee119974d662fadf455c06b011c8ce7319f1d6d9cd79105786496cd3",
+            "node": "Pawn varnish roughness",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          },
+          {
+            "path": "build/pawn-side-quality/013-continuous-walnut/blend/slopes.png",
+            "sha256": "9bc82a0bb50dd2db637d16ff6f14f0f51d65357721df6ad24722c7819eeebe73",
+            "node": "Pawn fine slope atlas",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          }
+        ]
+      },
+      {
+        "name": "trial-full",
+        "pigment": "build/pawn-side-quality/013-continuous-walnut/full/pigment.png",
+        "pigment_sha256": "c8386b45099e60d75dc32a1153b9a8fad63ae8673c136c3a979be3b4786eeac9",
+        "maps": [
+          {
+            "path": "build/pawn-side-quality/013-continuous-walnut/full/relief.png",
+            "sha256": "c8386b45099e60d75dc32a1153b9a8fad63ae8673c136c3a979be3b4786eeac9",
+            "node": null,
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "sRGB"
+          },
+          {
+            "path": "build/pawn-side-quality/013-continuous-walnut/full/finish.png",
+            "sha256": "a71d9757fc1849ecebeb58fafb6f3ddd06e340dfffaf625ee6179a184888f1b0",
+            "node": "Pawn varnish roughness",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          },
+          {
+            "path": "build/pawn-side-quality/013-continuous-walnut/full/slopes.png",
+            "sha256": "6490e77d3e2a4228d445feae4922a9cbff2116d810f404a310eca88f5fbca097",
+            "node": "Pawn fine slope atlas",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "trial-blend": {
+      "pawn.blend": "dce3496ceb8b01b03aa311c7bddebf4b0307e4b456b5c7456293ddf5646e74b3",
+      "fixed.png": "8cd3ec68d2a37c7903be80995f8157646b65a620f73242f96799378d6d9e66cd",
+      "side.png": "4e0f4d7459c15f81aac982afad2eacc5c5879a21b4d7493c7e491c718033abda"
+    },
+    "trial-full": {
+      "pawn.blend": "0e7765d117ce01ef9a23f48ccf894ca8dcaf7f265d8bff4631a75d0a0dc1bcb4",
+      "fixed.png": "5e6b15fff9db0c7ce4175c7643c88d6a1b947c5576e7ca36b08d9ff8bce9969e",
+      "side.png": "6fef40e08d8a62f70aad9445279ccaa7ee93f33000b688f844ae308914c2ae3c"
+    }
+  }
+}

@@ -596,3 +596,25 @@ front glint despite a small whole-image error. The saved current model is
 Both scenes share its actual object and material; live browser lighting remains
 approximate. The goal is active and incomplete. Next separate residual broad
 illumination from the front pigment before another coordinated form/material fit.
+
+## Side-quality checkpoint 002 — continuous walnut and restrained groove
+
+Accepted on 2026-11-18. Side quality improves from 64.85 to 71.65/100.
+Continuous inferred walnut replaces the diagonal filler grain beneath the ball
+and base, and a bounded material edit removes the upper-neck stripe. Only
+radial control 10 changes, from 0.7389464 to 0.775. All heights, other control
+coordinates, UVs, both lighting rigs and the 54-degree reference camera remain
+unchanged. The saved side studio and main scene share the same editable model.
+
+Native original RGB error remains approximately 16.67; original silhouette
+overlap remains 98.50%, selected overlap 96.81%. Selected high-resolution
+regional errors rise modestly: head 2.740 to 3.197, collar/stem 2.306 to 3.408,
+base/foot 2.706 to 3.356. This texture tradeoff is documented rather than
+claimed as an improvement to the fixed view. Broader groove, narrower socket,
+full material replacement and reflected-grain tests are rejected.
+
+The current model is 4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468.
+All review assets are rebuilt from it. See [scope, comparisons and reproduction](pawn-side-quality/iteration-002/README.md).
+The goal stays active; the heavy collar, broad socket and remaining front
+grain boundaries prevent a finished-quality rating. No watchers or subagents
+were started.

@@ -1,0 +1,87 @@
+{
+  "config": {
+    "maps": {
+      "pigment": {
+        "source": "assets/pawn/pawn-walnut-v11.png",
+        "sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+        "encoding": "sRGB"
+      },
+      "relief": {
+        "source": "assets/pawn/pawn-walnut-v2.png",
+        "sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+        "encoding": "sRGB"
+      },
+      "finish": {
+        "source": "assets/pawn/pawn-varnish-v9.png",
+        "sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+        "encoding": "Non-Color"
+      },
+      "slopes": {
+        "source": "assets/pawn/pawn-fine-slopes-v10.png",
+        "sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+        "encoding": "Non-Color",
+        "neutral": [
+          128,
+          128,
+          255
+        ]
+      }
+    },
+    "measurement": "build/pawn-side-quality/source-measurement",
+    "tile": "assets/pawn/material-studies/continuous-walnut-generated.png",
+    "tile_sha256": "dbb5332dbb23b4c3972691962bb85a714454880f8463ce6639bed2b0d5dde61e",
+    "frequency": 0.65,
+    "facing_range": [
+      0.08,
+      0.48
+    ],
+    "depth_range": [
+      0.008,
+      0.035
+    ],
+    "blend_radius": 8,
+    "reference_weight": 1,
+    "output": "build/pawn-side-quality/016-retained-reference/maps",
+    "erase_height_bands": [
+      {
+        "height": [
+          1.4,
+          1.49,
+          1.7,
+          1.76
+        ],
+        "strength": 1
+      }
+    ]
+  },
+  "results": {
+    "pigment": {
+      "path": "build/pawn-side-quality/016-retained-reference/maps/pigment.png",
+      "sha256": "e5493b818314187af9bf306e04fe1e04a965e21ac85bd24ff72e5a2b7f3649a6"
+    },
+    "relief": {
+      "path": "build/pawn-side-quality/016-retained-reference/maps/relief.png",
+      "sha256": "c8f9921ed43c2b8395649837c333ab9066f0b27d0ac74fb854155e4853481646"
+    },
+    "finish": {
+      "path": "build/pawn-side-quality/016-retained-reference/maps/finish.png",
+      "sha256": "f66f735aea5aa50ec6f880c07836b139e93409b224d33ffc14b4a8382706d6b4"
+    },
+    "slopes": {
+      "path": "build/pawn-side-quality/016-retained-reference/maps/slopes.png",
+      "sha256": "7f8b35ef88fbbc773b1485994ada545bb99b64ecbab8b5c154db23e1784f7fad"
+    }
+  },
+  "source_median_linear": [
+    0.09758736193180084,
+    0.02518685720860958,
+    0.006512091029435396
+  ],
+  "generated_median_linear": [
+    0.11953843384981155,
+    0.020288562402129173,
+    0.002428215928375721
+  ],
+  "mean_reference_weight": 0.3396240472793579,
+  "method": "Static, normal-blended object-space texture with soft retained reference detail. Generated texture is an interpretation, not historical evidence."
+}

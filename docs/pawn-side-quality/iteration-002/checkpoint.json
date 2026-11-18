@@ -1,0 +1,65 @@
+{
+  "checkpoint": "side-quality-002",
+  "model_sha256": "4d5b41cde90b5cb9290312a13c495a44693c35c37a45ece8fba387b65bf77468",
+  "render_sha256": "38117a3ca5d6fab36dfb071183f21dd922601e33180e4ffd12c4920a3491ae62",
+  "profile_sha256": "918399ee07014f0ff9027bc308a0c867ecfb394c7546bc19be8709e62473ee12",
+  "scores_subjective": {
+    "profile_and_proportions": 70,
+    "turned_details": 64,
+    "wood_continuity": 70,
+    "surface_finish": 70,
+    "lighting_and_form": 82,
+    "seating_and_presentation": 85
+  },
+  "weights": [
+    0.3,
+    0.15,
+    0.2,
+    0.15,
+    0.15,
+    0.05
+  ],
+  "weighted_side_quality": 71.65,
+  "previous_side_quality": 64.85,
+  "geometry_edit": {
+    "10": [
+      0.775,
+      null
+    ]
+  },
+  "original_camera_elevation": 54,
+  "iou": {
+    "selected": 0.9681177792206453,
+    "original_black": 0.985002241932907,
+    "original_white": 0.9813684449301961
+  },
+  "reference_regions": {
+    "head": {
+      "mean_absolute_rgb_error_255": 3.197264319888809,
+      "overlap_pixels": 49884
+    },
+    "collar-stem": {
+      "mean_absolute_rgb_error_255": 3.4075086512275528,
+      "overlap_pixels": 65116
+    },
+    "base-foot": {
+      "mean_absolute_rgb_error_255": 3.3561594169501108,
+      "overlap_pixels": 108487
+    }
+  },
+  "native_original_rgb_mae_255": 16.669240951538086,
+  "previous_native_original_rgb_mae_255": 16.67085838317871,
+  "native_browser_gpu_check": false,
+  "native_browser_gpu_check_reason": "Earlier local-file browser-policy rejection; no alternate browser route attempted. Direct Cycles images inspected; Node interaction checks use mocked WebGL.",
+  "goal_complete": false,
+  "protected_sources": {
+    "original_black": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052",
+    "original_white": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3",
+    "selected": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+    "gallery_defaults": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578"
+  },
+  "map_bake_runtime": {
+    "numpy": "2.3.5",
+    "Pillow": "13.0.0"
+  }
+}

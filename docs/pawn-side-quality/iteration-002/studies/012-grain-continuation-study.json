@@ -1,0 +1,91 @@
+{
+  "config": {
+    "source": "history/pawn-side-quality-001/pawn-rebuilt.blend",
+    "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+    "samples": 128,
+    "side_resolution": 900,
+    "output": "build/pawn-side-quality/012-grain-continuation",
+    "variants": [
+      {
+        "name": "trial-0",
+        "pigment": "build/pawn-side-quality/012-grain-continuation/peel-0/pigment.png",
+        "pigment_sha256": "2fa732d2d3d97668c379fe6a4dbec0c903dac3e8ee53ada38b8ebb0e6cd757bd",
+        "maps": [
+          {
+            "path": "build/pawn-side-quality/012-grain-continuation/peel-0/relief.png",
+            "sha256": "cf6eb41fe1fdb7b76b080a2457b2f1d2c95e51a9ad20dd458460870bdd8e2307",
+            "changed_fraction": 0.7108020782470703,
+            "protected_changed": 0,
+            "node": null,
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "sRGB"
+          },
+          {
+            "path": "build/pawn-side-quality/012-grain-continuation/peel-0/finish.png",
+            "sha256": "64954cd9eb78cca161e75874549cd6214c6f9b4bf826224076f4305f039dd35e",
+            "changed_fraction": 0.5375688076019287,
+            "protected_changed": 0,
+            "node": "Pawn varnish roughness",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          },
+          {
+            "path": "build/pawn-side-quality/012-grain-continuation/peel-0/slopes.png",
+            "sha256": "59da212ca8f30dbe710b979d48c614f348571df986006d0b8071920004a85020",
+            "changed_fraction": 0.7023453712463379,
+            "protected_changed": 0,
+            "node": "Pawn fine slope atlas",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          }
+        ]
+      },
+      {
+        "name": "trial-30",
+        "pigment": "build/pawn-side-quality/012-grain-continuation/peel-30/pigment.png",
+        "pigment_sha256": "66c3976df723e4d8d27f67de9aa4571d3e8013dabaad7d6375ffc7cd698d37da",
+        "maps": [
+          {
+            "path": "build/pawn-side-quality/012-grain-continuation/peel-30/relief.png",
+            "sha256": "28a5f9a5e4ff4fe7b05e2969ef8cf73279d10f718d2cdeb596ae3f67e41c7e43",
+            "changed_fraction": 0.7947185039520264,
+            "protected_changed": 0,
+            "node": null,
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "sRGB"
+          },
+          {
+            "path": "build/pawn-side-quality/012-grain-continuation/peel-30/finish.png",
+            "sha256": "87ca442119e9ff14fe98857d205a8ce56bfd2d5cd44ef541b0ee7da5cd1e4189",
+            "changed_fraction": 0.5981340408325195,
+            "protected_changed": 0,
+            "node": "Pawn varnish roughness",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          },
+          {
+            "path": "build/pawn-side-quality/012-grain-continuation/peel-30/slopes.png",
+            "sha256": "3330f4a26f391d0e7dcd8ba5812647ec7a50448651be2c86b43a34c33568fcb5",
+            "changed_fraction": 0.7847700119018555,
+            "protected_changed": 0,
+            "node": "Pawn fine slope atlas",
+            "old_sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+            "encoding": "Non-Color"
+          }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "trial-0": {
+      "pawn.blend": "b59aa25dc7164ee08a074984c4828c7b184ad0a87f87364c032e4a8b0ad9e4f4",
+      "fixed.png": "a8f0c180a1bcf73bfd2767f49e4e21cab432dddb07387d1eae04b28a3f32d4bc",
+      "side.png": "cd8e8430a002c120dfc1f2687fd34c50c11db371f3ed136a9dadd1c507ad4970"
+    },
+    "trial-30": {
+      "pawn.blend": "17f882c7a3e31f8fd3cd61a0cc93108a810a786f21839b8ea952ed44923175cb",
+      "fixed.png": "486a90f8360b274844074bfb22d6aae7bbbcc184418eb2edd14dfa41dc27ed7d",
+      "side.png": "ef400125fe16a0acf68c817f2c409946a5baa21bcf2d9e829d3cc31ce9300eb3"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "config": {
+    "source": "history/pawn-side-quality-001/pawn-rebuilt.blend",
+    "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+    "samples": 128,
+    "side_resolution": 900,
+    "output": "build/pawn-side-quality/011-unlit-macro",
+    "variants": [
+      {
+        "name": "macro-45",
+        "pigment": "build/pawn-side-quality/011-unlit-macro/wood-45.png",
+        "pigment_sha256": "35a283811b07270a4622e568e409b71680862b9e03bf744005eafd4e90ac720f"
+      },
+      {
+        "name": "macro-85",
+        "pigment": "build/pawn-side-quality/011-unlit-macro/wood-85.png",
+        "pigment_sha256": "235cb833306c9f9aa60c12adcd068b3a18b52a0f35e49297eee8369ab49e4036"
+      }
+    ]
+  },
+  "results": {
+    "macro-45": {
+      "pawn.blend": "7667f3beebe2d9e5d27be224d244297498e3ff670604ecee27bfc2a5a4f5ffe1",
+      "fixed.png": "1dbce28092c9aeb5bafcbf2e6ad00a9fe502f36d387f871d4c190892375af03a",
+      "side.png": "2f28167ed231a9061d52c0a0490484414e595d1c7d2afd8e075e932fd537502e"
+    },
+    "macro-85": {
+      "pawn.blend": "6556ad55e1c7f18c796c0a20b80941084631828bcdcc4a54446e2d0db598ad9b",
+      "fixed.png": "9e5cae1b0de66b8a086df7d373c3b7c61543da7e2d7ee97b26472586af23fd1c",
+      "side.png": "962b7c4121882207dc39f2df4c8825286464e71e7a11d37cb3581ad52c6a1a99"
+    }
+  }
+}

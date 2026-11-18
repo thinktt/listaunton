@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "prompt": "Create a square, seamless DIFFUSE BASE-COLOR material texture of the wood seen in the attached wooden Staunton pawn. The image must be only the wood texture, a flat square of wood filling the canvas edge to edge, with NO pawn, no objects, no perspective, no edge, no shadows, no highlights, no gloss baked into it. The attached pawn is a color and fine-grain style reference only. Match its deep reddish medium-dark walnut brown (warm chestnut undertone, dark reddish-brown pores, no yellow/orange stripes). Study the fine, gently curled irregular grain on the ball and broad sloping base: naturally swirling fine walnut grain, subtle burl figuring, small-scale irregular fibers and pores, restrained medium-scale mottling. The grain should look photographic and natural, quietly figured, not graphic, not cartoonish, not wavy lines drawn over a flat fill, not concentric spaghetti loops. Keep contrast restrained and the illumination/color even across the entire tile. This is an unlit material color map that will be lit by a 3D renderer; remove every reflection and cast-shadow effect. Make the edges seamlessly tile horizontally and vertically. Fine high-resolution wood structure, not a close-up of a single giant knot. Preserve the original pawn's rich dark red-brown identity.",
+  "reference": "assets/pawn/reference.png",
+  "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "transparent_background": false,
+  "purpose": "Continuous wood pigment experiment. Not an authoritative piece reference.",
+  "output_sha256": "dbb5332dbb23b4c3972691962bb85a714454880f8463ce6639bed2b0d5dde61e"
+}

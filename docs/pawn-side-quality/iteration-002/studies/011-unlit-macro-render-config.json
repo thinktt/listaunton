@@ -1,0 +1,19 @@
+{
+  "source": "history/pawn-side-quality-001/pawn-rebuilt.blend",
+  "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+  "samples": 128,
+  "side_resolution": 900,
+  "output": "build/pawn-side-quality/011-unlit-macro",
+  "variants": [
+    {
+      "name": "macro-45",
+      "pigment": "build/pawn-side-quality/011-unlit-macro/wood-45.png",
+      "pigment_sha256": "35a283811b07270a4622e568e409b71680862b9e03bf744005eafd4e90ac720f"
+    },
+    {
+      "name": "macro-85",
+      "pigment": "build/pawn-side-quality/011-unlit-macro/wood-85.png",
+      "pigment_sha256": "235cb833306c9f9aa60c12adcd068b3a18b52a0f35e49297eee8369ab49e4036"
+    }
+  ]
+}

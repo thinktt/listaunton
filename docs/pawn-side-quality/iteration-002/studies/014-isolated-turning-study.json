@@ -1,0 +1,59 @@
+{
+  "config": {
+    "source": "history/pawn-side-quality-001/pawn-rebuilt.blend",
+    "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+    "samples": 128,
+    "side_resolution": 900,
+    "output": "build/pawn-side-quality/014-isolated-turning",
+    "variants": [
+      {
+        "name": "groove-only",
+        "profile_rz": {
+          "9": [
+            0.778,
+            null
+          ],
+          "10": [
+            0.765,
+            null
+          ]
+        },
+        "clay": true
+      },
+      {
+        "name": "socket-only",
+        "profile_rz": {
+          "25": [
+            0.45,
+            null
+          ],
+          "26": [
+            0.438,
+            null
+          ],
+          "27": [
+            0.417,
+            null
+          ],
+          "28": [
+            0.373,
+            null
+          ]
+        },
+        "clay": true
+      }
+    ]
+  },
+  "results": {
+    "groove-only": {
+      "pawn.blend": "f02e1a486236258d659100af267dc0909620f98ea548c53527ad428d8bdc9b4c",
+      "fixed.png": "e35f6bdc8462878a7ecc5d2f5fe527d44f5cb11df2c1b40c84854cb59aba7269",
+      "side.png": "df67d9feb27a85183f9ea2b4775197a328a487a86099d7da2189f58f55aa1ad0"
+    },
+    "socket-only": {
+      "pawn.blend": "18b87c9c42ab3376cff9a55b490935bce764ae7a1262f161c110459fa91a3af5",
+      "fixed.png": "b846fa0a8e5a9505e1c456f468ec49d8b38f38ced96392fdb2594dc1a95e6898",
+      "side.png": "f693305804fc26371832cd1a17cad78579de809a551b05dc7249e4eebb133269"
+    }
+  }
+}

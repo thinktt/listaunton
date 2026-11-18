@@ -1,0 +1,37 @@
+{
+  "pigment": "assets/pawn/pawn-walnut-v11.png",
+  "pigment_sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+  "measurement": "build/pawn-mission/pigment-060",
+  "reflection_cap": 180,
+  "reflection_scale": 0.8,
+  "blend_pixels": 48,
+  "maps": {
+    "pigment": {
+      "source": "assets/pawn/pawn-walnut-v11.png",
+      "sha256": "69f8a0bff7f61b1329089e7544f230ba464d559a4fe4a29a4ea8077c55dc8400",
+      "encoding": "sRGB"
+    },
+    "relief": {
+      "source": "assets/pawn/pawn-walnut-v2.png",
+      "sha256": "e24b9d1d6a965b771d6da109afcc85a738759e67598e8a361aade02610b2deb7",
+      "encoding": "sRGB"
+    },
+    "finish": {
+      "source": "assets/pawn/pawn-varnish-v9.png",
+      "sha256": "0f5d437cca82efdb7c65b86e4796f74dec2938d5addbc6c27f6cc387bb89b8bd",
+      "encoding": "Non-Color"
+    },
+    "slopes": {
+      "source": "assets/pawn/pawn-fine-slopes-v10.png",
+      "sha256": "01dbe735b63aac594fc595f5333889d8c51e449dca19f0d93032bf4c19ffa243",
+      "encoding": "Non-Color",
+      "neutral": [
+        128,
+        128,
+        255
+      ]
+    }
+  },
+  "peel_pixels": 30,
+  "output": "build/pawn-side-quality/012-grain-continuation/peel-30"
+}

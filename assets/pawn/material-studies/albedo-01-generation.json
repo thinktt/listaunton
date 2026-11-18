@@ -1,0 +1,18 @@
+{
+  "tool": "built-in image_gen",
+  "purpose": "Experimental unlit material source, not a replacement reference or final shaded render.",
+  "source": "assets/pawn/reference.png",
+  "source_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f",
+  "output": "assets/pawn/material-studies/albedo-01-generated.png",
+  "output_sha256": "286c2140cd9574b00a133eddbf43363b0b9ce38ee4952395f5f027a09afca8e7",
+  "source_dimensions": [
+    1254,
+    1254
+  ],
+  "output_dimensions": [
+    1254,
+    1254
+  ],
+  "prompt": "Use case: lighting-weather / intrinsic texture extraction.\nEdit target: the attached black Staunton pawn reference. Create a DIFFUSE ALBEDO / BASE COLOR pass for 3D texturing, not a beauty photograph. Preserve the exact camera, perspective, framing, silhouette, all turned geometry, and the positions and fine structure of the existing reddish dark walnut grain. Keep the surrounding background pure black and the pawn in exactly the same place and scale. Remove ALL illumination baked into the wood: erase the three white specular highlights on the ball, all bright reflective arcs on the collar and base, the cast shadow stripe beneath the head, contact darkening, ambient occlusion, directional gradients and edge falloff. Fill the removed lighting with continuous plausible walnut pigment grain matching the surrounding wood. Every part of the wood, including the stem beneath the head, collar recess and foot groove, has the same neutral uniformly lit dark reddish-brown walnut reflectance. It should look like a flat unlit texture pass with fine natural grain, with no glossy reflections or shadows; do not paint a varnished photograph. Do not add, remove or redesign any geometry; do not move the object. Preserve fine original grain instead of smoothing it into plain brown. No text or annotations.\n",
+  "transparent_background": false
+}

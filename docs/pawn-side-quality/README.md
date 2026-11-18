@@ -70,6 +70,17 @@ an interpretation, and the Lichess sprites settle conflicts.
 
 ## Current work
 
+[Side checkpoint 002](iteration-002/README.md) is the current accepted model.
+It replaces mismatched inferred grain with continuous walnut, removes the
+painted neck stripe, and eases the base undercut by changing only control 10.
+Both real lighting rigs, overall dimensions and the 54-degree camera remain
+unchanged. Side quality is now **71.65/100**, up from 64.85. The native original
+comparison is effectively unchanged; the selected high-resolution image has
+a small, documented texture/finish tradeoff. The goal remains incomplete.
+The collar, socket and remaining front grain boundaries are the next priorities.
+
+## Previous checkpoint
+
 [Side checkpoint 001](iteration-001/README.md) accepts a separate saved side
 studio and a 1254-pixel profile render. It retains checkpoint 017's exact
 geometry, wood, finish, UVs and reference rig. The side-quality score improves

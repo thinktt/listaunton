@@ -1,0 +1,45 @@
+{
+  "source": "history/pawn-side-quality-001/pawn-rebuilt.blend",
+  "source_sha256": "ba243990f54a0444f94852667dd8335b7f9b177dde97ec8ccd42749f55bf1536",
+  "samples": 128,
+  "side_resolution": 900,
+  "output": "build/pawn-side-quality/014-isolated-turning",
+  "variants": [
+    {
+      "name": "groove-only",
+      "profile_rz": {
+        "9": [
+          0.778,
+          null
+        ],
+        "10": [
+          0.765,
+          null
+        ]
+      },
+      "clay": true
+    },
+    {
+      "name": "socket-only",
+      "profile_rz": {
+        "25": [
+          0.45,
+          null
+        ],
+        "26": [
+          0.438,
+          null
+        ],
+        "27": [
+          0.417,
+          null
+        ],
+        "28": [
+          0.373,
+          null
+        ]
+      },
+      "clay": true
+    }
+  ]
+}
