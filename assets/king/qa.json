@@ -3,15 +3,15 @@
   "mask_convention": "max RGB >12 and alpha >127, largest component, holes filled; model alpha >127",
   "images": {
     "original": {
-      "silhouette_iou": 0.9688629413400056,
-      "mean_boundary_error_px": 5.517592592592592,
-      "p95_boundary_error_px": 17.0,
+      "silhouette_iou": 0.9521345470006184,
+      "mean_boundary_error_px": 8.698252069917203,
+      "p95_boundary_error_px": 28.0,
       "reference_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4"
     },
     "selected": {
-      "silhouette_iou": 0.9756150502942671,
-      "mean_boundary_error_px": 4.44921514312096,
-      "p95_boundary_error_px": 14.0,
+      "silhouette_iou": 0.9645310480854248,
+      "mean_boundary_error_px": 6.186175115207373,
+      "p95_boundary_error_px": 17.0,
       "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c"
     }
   }

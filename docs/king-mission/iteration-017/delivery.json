@@ -1,0 +1,41 @@
+{
+  "http": {
+    "king-review.html": "74652e7f308087ba64c5ec63e6a650ca4a8970f843ab181cab17ac584bf2e824",
+    "king-model.html": "2839eab9b9ac5b2d769ad679266bc9394b1fc5948d2434e756fb0ad568b68c5d",
+    "set-comparison.html": "ca21e3623c76d82e13a024dd725f2c7ebe594472d0bdce0b0d7183782aba1b12",
+    "assets/king/render.png": "ed5894fa39e14282e0767a2d63af42dd5733046739e08cf12e74551cc603f45b",
+    "assets/king/profile.png": "01bdd31fd6103169791158362968e546cc4a41258dd9df714fb922677ab9b54f",
+    "assets/king/mesh.json": "b23769d8ab1add2b6b54d887bfd875f537b07ae5529ad164436b6590589c558a",
+    "assets/king/mesh.bin": "a2be56c1c1a37477c9e4d82c7bfb21583984082ef0651739cbca6d8a0ae788c7",
+    "docs/king-mission/iteration-017/base-comparison.png": "ff85bffa79553385a104fc76521949ac5149403f01547f4dfd1e1ec361771758",
+    "docs/king-mission/iteration-017/fixed-comparison.png": "7c4576a4dc9cf0a66879a756caa70b9ea25abccaf5180dd29fa08491000e6192"
+  },
+  "historical_measurement_differences": [
+    [
+      "knight",
+      "assets/knight/mesh.json",
+      "104c19170f0976a86c98d529887603d19ea227374a044894d8d87a3855942326",
+      "7960f981e72c90c9a79b7fe786cbb41da1e2839fdf7b509bedf6373a00763e61"
+    ],
+    [
+      "knight",
+      "assets/knight/mesh.bin",
+      "50b30e70d614bd0e8f5157b0a94827c2ab49f8b79a3dd045878ef40afb9478ca",
+      "40a8ba6a8b6a9995c95b93a0edd8b0bc98f06c52282eccd25ff75521f471fe9e"
+    ],
+    [
+      "knight",
+      "assets/knight/reconstruction.json",
+      "072c5faa9ee1844230b10d3ff8830a64b23d90b67ee8820b393b55bdd784814b",
+      "1c90781ba772b2dfc3883b6d295cec8ade43c1b3e7cfa5492b2acb50a6254647"
+    ]
+  ],
+  "checks": {
+    "king_viewer_repository_and_windows_preview": true,
+    "local_http_files_match_repository": 9,
+    "candidate_review_and_projection_pages": true,
+    "whole_set_model_assets_and_presentation": true,
+    "side_and_board_height_modes_and_registration": true,
+    "historical_side_measurements": "The archived sizing audit flags three older knight file hashes. The king and the other four pieces agree with the archive."
+  }
+}

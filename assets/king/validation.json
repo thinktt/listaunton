@@ -3,9 +3,9 @@
     {
       "name": "King - continuous turned body",
       "nonmanifold_edges": 0,
-      "signed_volume": 4.5038251780794525,
-      "vertices": 33602,
-      "faces": 33600
+      "signed_volume": 4.4485963666412385,
+      "vertices": 37826,
+      "faces": 37824
     },
     {
       "name": "King - beveled cross",
@@ -15,7 +15,7 @@
       "faces": 1508
     }
   ],
-  "sourceSha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb",
+  "sourceSha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
   "source_hash_matches": true,
   "elevationDegrees": 54.000000800055794,
   "cameraOrthographic": true,
@@ -28,7 +28,7 @@
     "used": true,
     "receiverCount": 9,
     "exactSurfaceFacesUvsFloatAttributes": true,
-    "triangles": 67200,
+    "triangles": 75648,
     "normalMaxError": 0.0,
     "materialsShared": true,
     "closedControlRetained": true,
@@ -145,6 +145,18 @@
       ],
       "Collar lower right": [
         "lower-collar"
+      ],
+      "Shared base flare": [
+        "lower-flare"
+      ],
+      "Shared base left bevel": [
+        "lower-flare"
+      ],
+      "Shared base right bevel": [
+        "foot"
+      ],
+      "Shared base socket edge": [
+        "socket"
       ]
     }
   },

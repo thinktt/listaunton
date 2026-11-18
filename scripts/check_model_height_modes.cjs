@@ -1,11 +1,22 @@
 // Exercise the actual embedded model and board controls together, including
 // the saved-profile fallback and the independent side-view slider values.
-const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
 const html=fs.readFileSync(process.argv[2],'utf8');
 function script(id){const m=html.match(new RegExp('<script id="'+id+'"[^>]*>([\\s\\S]*?)</script>'));assert(m,'Missing '+id);return m[1];}
 const scales=JSON.parse(script('side-scale-data'));
 const board=JSON.parse(script('board-data'));
 const profiles=JSON.parse(script('model-profile-data'));
+// The original board measurements are fixed. A model edit can change the
+// visible footprint at 54 degrees and its inferred height in matched mode.
+const fitFile=path.join(path.dirname(process.argv[2]),'assets/board-comparison/height-fit.json');
+const {targets}=JSON.parse(fs.readFileSync(fitFile,'utf8'));
+const expectedHeights={};
+for(const piece of board.pieces){
+ const target=targets[piece.piece];
+ const imageScale=(target.bottom-target.top)/(piece.renderBottom-piece.renderTop);
+ expectedHeights[piece.piece]=imageScale*piece.pixelsPerUnit*piece.modelHeight;
+}
+const matchedLabel=piece=>(100*expectedHeights[piece]/expectedHeights.king).toFixed(1)+'% of king';
 class Element{
  constructor(){this.children=[];this.style={};this.attrs={};this.events={};this.value='';this.hidden=false;this.clientWidth=1320;this.clientHeight=620;this.classList={toggle(){}};}
  append(child){this.children.push(child)}
@@ -44,8 +55,8 @@ function assertProfileRatios(){
  }
 }
 assert.equal(ids['models-height-matched'].attrs['aria-pressed'],'true');
-assert.equal(label('queen'),'82.2% of king');assert.equal(label('bishop'),'81.7% of king');
-assert(ids['board-height-summary'].textContent.includes('Q 82.2%'));
+for(const piece of scales.defaultOrder)assert.equal(label(piece),matchedLabel(piece),piece+' matched to the original board');
+assert(ids['board-height-summary'].textContent.includes('Q '+matchedLabel('queen').split(' ')[0]));
 assertProfileRatios();
 ids['models-height-matched'].click();
 assert.equal(ids['models-height-matched'].attrs['aria-pressed'],'false');
@@ -57,10 +68,10 @@ ids['side-scale-pawn'].value='120';ids['side-scale-pawn'].fire('input');
 assert.equal(label('pawn'),'57.4% of king');
 ids['models-height-matched'].click();
 assert.equal(ids['board-height-matched'].attrs['aria-pressed'],'true');
-assert.equal(label('pawn'),'51.4% of king');
+assert.equal(label('pawn'),matchedLabel('pawn'));
 assert.equal(ids['side-scale-pawn'].value,'120','Matched mode must preserve chosen sizes');
 assertProfileRatios();
 ids['board-height-chosen'].click();assert.equal(ids['models-height-matched'].attrs['aria-pressed'],'false');assert.equal(label('pawn'),'57.4% of king');
-ids['board-height-matched'].click();assert.equal(ids['models-height-matched'].attrs['aria-pressed'],'true');assert.equal(label('pawn'),'51.4% of king');
+ids['board-height-matched'].click();assert.equal(ids['models-height-matched'].attrs['aria-pressed'],'true');assert.equal(label('pawn'),matchedLabel('pawn'));
 assert(!ids['models-height-matched'].disabled,'Height switch remains available for saved profiles');
 console.log('PASS: matched and chosen heights stay synchronized in both directions, including saved profiles and chosen slider values.');

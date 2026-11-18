@@ -126,3 +126,12 @@ stores the evaluated control's exact corner vectors in the receiver meshes.
 The archived earlier checkpoints use their original encoding. Validate with
 validate_chavet_profile.py, the receiver regeneration check and the full profile
 intersection check before updating fixed, side, rotating and set views.
+
+Checkpoint 017 uses all of queen 033's base loops plus a stem support with
+the king's original angular resolution. Reproduce from archived king 016 with
+match_queen_base.py and docs/king-mission/iteration-017/reproduction.json.
+On this cage King profile ring is a logical, fractional coordinate. Use that
+attribute to locate anatomical features. Regeneration preserves it when
+king_mapped_profile_rings is set. Keep the Queen base varnish 017 field and
+the four lower-region reflector routes. Validate the donor match and scope
+with validate_queen_base.py as well as the standard export and receiver checks.

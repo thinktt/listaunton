@@ -1,0 +1,59 @@
+{
+  "variant": "187-queen-base-near-reflections",
+  "king_source": "history/king-mission-016/king-rebuilt.blend",
+  "king_sha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb",
+  "queen_source": "models/queen/queen-rebuilt.blend",
+  "queen_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "uniform_size": 1.0,
+  "varnish_weight": 1.0,
+  "base_lights": [
+    {
+      "name": "flare",
+      "side_xz": [
+        0.3655,
+        0.4374
+      ],
+      "receiver": "lower-flare",
+      "size": 0.67,
+      "energy": 0.3766,
+      "distance": 1.45,
+      "spread_degrees": 24
+    },
+    {
+      "name": "left bevel",
+      "side_xz": [
+        -0.9936,
+        0.251
+      ],
+      "receiver": "lower-flare",
+      "size": 0.4,
+      "energy": 0.0065,
+      "distance": 2.5,
+      "spread_degrees": 16
+    },
+    {
+      "name": "right bevel",
+      "side_xz": [
+        1.0068,
+        0.207
+      ],
+      "receiver": "foot",
+      "size": 0.38,
+      "energy": 0.0116,
+      "distance": 2.5,
+      "spread_degrees": 16
+    },
+    {
+      "name": "socket edge",
+      "side_xz": [
+        0.5243,
+        0.9631
+      ],
+      "receiver": "socket",
+      "size": 0.36,
+      "energy": 0.0184,
+      "distance": 2.5,
+      "spread_degrees": 16
+    }
+  ]
+}

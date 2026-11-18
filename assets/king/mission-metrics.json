@@ -1,30 +1,30 @@
 {
   "mask_convention": "max RGB >12 and alpha >127, largest component and holes filled; model alpha >127",
-  "highres_iou": 0.9756150502942671,
-  "original_iou": 0.9688629413400056,
-  "previous_highres_iou": 0.978259955426601,
-  "previous_original_iou": 0.9684661715256992,
+  "highres_iou": 0.9645310480854248,
+  "original_iou": 0.9521345470006184,
+  "previous_highres_iou": 0.9756150502942671,
+  "previous_original_iou": 0.9688629413400056,
   "regional_iou": {
     "head": {
-      "previous": 0.961869925758694,
-      "trial": 0.9583351332670957
+      "previous": 0.9583351332670957,
+      "trial": 0.9583558329913385
     },
     "collars": {
-      "previous": 0.978708946772367,
-      "trial": 0.9773116309799093
+      "previous": 0.9773116309799093,
+      "trial": 0.9773263059897593
     },
     "stem-socket": {
-      "previous": 0.981319646737874,
-      "trial": 0.9773861246296268
+      "previous": 0.9773861246296268,
+      "trial": 0.981566074798752
     },
     "base-foot": {
-      "previous": 0.9875858744124383,
-      "trial": 0.9864505890673244
+      "previous": 0.9864505890673244,
+      "trial": 0.944219827515936
     }
   },
-  "render_sha256": "a8b1ec78b3f0bcdd5c0ffb371b1ea8b5984285c80f7cff8265ba37178e70d9bb",
+  "render_sha256": "ed5894fa39e14282e0767a2d63af42dd5733046739e08cf12e74551cc603f45b",
   "reference_sha256": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
   "original_sha256": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
-  "previous_sha256": "02df7625a18d6ca5112e5f0619210f306c558063cad8b95d84ce18e9d4079ea9",
-  "model_sha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb"
+  "previous_sha256": "a8b1ec78b3f0bcdd5c0ffb371b1ea8b5984285c80f7cff8265ba37178e70d9bb",
+  "model_sha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146"
 }

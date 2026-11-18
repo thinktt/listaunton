@@ -13,7 +13,12 @@ def controls(scene):
 
 def partition(scene,body,profile_sections=False,split_flare=False,split_socket=False,split_socket_seam=False,split_collars=False):
     assert not any(o.get('king_render_region') for o in scene.objects),'Start from an unpartitioned source.'
-    if profile_sections:
+    if profile_sections and scene.get('king_mapped_profile_rings'):
+        # The shared queen base has extra loops between the king's original
+        # texture and light landmarks. Preserve its interpolated ring coordinates.
+        field = body.data.attributes['King profile ring']
+        assert field.domain == 'POINT' and field.data_type == 'FLOAT'
+    elif profile_sections:
         attr=body.data.attributes.get('King profile ring') or body.data.attributes.new('King profile ring','FLOAT','POINT')
         attr.data.foreach_set('value',(np.arange(len(body.data.vertices))//96).astype(np.float32))
     levels=[(m,m.levels) for m in body.modifiers if m.type=='SUBSURF']

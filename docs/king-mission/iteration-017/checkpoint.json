@@ -1,0 +1,79 @@
+{
+  "checkpoint": "017",
+  "previous_checkpoint": "016",
+  "accepted_variant": "187-queen-base-near-reflections",
+  "status": "accepted, validated and synchronized",
+  "model_sha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
+  "render_sha256": "ed5894fa39e14282e0767a2d63af42dd5733046739e08cf12e74551cc603f45b",
+  "mesh_sha256": "a2be56c1c1a37477c9e4d82c7bfb21583984082ef0651739cbca6d8a0ae788c7",
+  "pigment_sha256": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+  "source_hashes": {
+    "assets/king/reference.png": "eb6094ebfd426d45fb5e57db5dfc73fed4ba47de1eb8f95a758c8663e0bf250c",
+    "assets/king/original.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/Black-King.png": "182e0ad834a1ffab73c010544cecf7eea7bdb62e4139e690066eb55f6d03e6f4",
+    "references/lichess-staunton-3d/White-King.png": "b05a432ec1dc455e2123f8a13b501a40d173867bf46fa17dcc1676100d945d48",
+    "assets/king/materials/king-pigment-atlas-v6.png": "6fc71802159bf7c9742a4c2adf83b6e3bdb5f0a8e57d31c864e1a1d2acaf73b4",
+    "assets/side-views/defaults.json": "5a7ca5abecb0066b67bb35d16a606172cc72cd0a2b2a644b110254a271dcf578",
+    "models/queen/queen-rebuilt.blend": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"
+  },
+  "camera_elevation_degrees": 54.000000800055794,
+  "scores": {
+    "silhouette_iou_percent": 96.45310480854248,
+    "interior_form": 87,
+    "wood_color": 82,
+    "grain_surface": 80,
+    "lighting_reflections": 69
+  },
+  "equal_weight_mean": 82.89062096170849,
+  "original_iou_percent": 95.21345470006185,
+  "silhouettes": {
+    "original_iou": 0.9521345470006184,
+    "previous_original_iou": 0.9688629413400056,
+    "highres_iou": 0.9645310480854248,
+    "previous_highres_iou": 0.9756150502942671,
+    "regional_iou": {
+      "head": {
+        "previous": 0.9583351332670957,
+        "trial": 0.9583558329913385
+      },
+      "collars": {
+        "previous": 0.9773116309799093,
+        "trial": 0.9773263059897593
+      },
+      "stem-socket": {
+        "previous": 0.9773861246296268,
+        "trial": 0.981566074798752
+      },
+      "base-foot": {
+        "previous": 0.9864505890673244,
+        "trial": 0.944219827515936
+      }
+    }
+  },
+  "closed_components": [
+    {
+      "name": "King - beveled cross",
+      "vertices": 1584,
+      "triangleCount": 3164,
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.07536784391920683
+    },
+    {
+      "name": "King - continuous turned body",
+      "vertices": 37826,
+      "triangleCount": 75648,
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.4485963666412385
+    }
+  ],
+  "checked_profile_segments": 196,
+  "profile_crossings": [],
+  "exact_receiver_count": 9,
+  "maximum_receiver_normal_error": 0.0,
+  "independent_render": {
+    "alpha_exact": true,
+    "maximum_rgb_error_255": 1,
+    "changed_pixels": 46
+  },
+  "delivery_report": "delivery.json"
+}

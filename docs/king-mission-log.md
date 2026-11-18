@@ -607,3 +607,18 @@ lighting. The upper-face reflection is broad and the lower flare glint remains
 too concentrated. Source images, camera registration and chosen set heights
 are preserved. The editable mesh, review and whole-set views are synchronized.
 [Side and fixed comparisons, reproduction and validation](king-mission/iteration-016/README.md)
+
+## 017 · Full queen base at native size
+
+The king takes all 39 base rings and the next stem support from the current
+queen. In Blender units the foot diameters are 2.0893 for the queen and 2.0880
+for the king. The groove center comes down from 0.3039 to 0.2345. The two
+finished meshes differ by at most 0.00135 units along the measured side profile.
+The base now uses the queen’s varnish settings and four small local reflectors.
+Its grain comes from the king’s existing wood atlas.
+
+At the same 54° camera, overlap with the original sprite changes from 96.89%
+to 95.21%, and overlap with black candidate 1 changes from 97.56% to 96.45%.
+The lower flanks project wider. Interior form is estimated at 87, color 82,
+grain 80 and lighting 69. The side and fixed comparisons document the tradeoff.
+[Images, measurements and reconstruction recipe](king-mission/iteration-017/README.md)

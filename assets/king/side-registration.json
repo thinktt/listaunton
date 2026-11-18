@@ -2,16 +2,16 @@
   "guide": "assets/king/concepts/side-01-cutout.png",
   "profile": "assets/king/profile.png",
   "guide_sha256": "fb1504dd66887d36f574c92f1fb28cca98fba49bc0905febe7f3cc3f3f213f51",
-  "profile_sha256": "c485019156df5524ba3bab54caee88acd9fa51c667770be93ea3afa1de808212",
-  "source_blend_sha256": "7ba92ad38cd7524f1af89fd7b930407274b49d8817aa1c0dfedda1f831c78dbb",
+  "profile_sha256": "01bdd31fd6103169791158362968e546cc4a41258dd9df714fb922677ab9b54f",
+  "source_blend_sha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
   "canvas": [
     1254,
     1414
   ],
   "guide_top": 160,
-  "scale": 1.6064516129032258,
-  "offset_x": 135.06451612903226,
-  "offset_y": -43.270967741935465,
+  "scale": 1.585987261146497,
+  "offset_x": 141.20382165605093,
+  "offset_y": -25.917197452229402,
   "guide_foot": {
     "width": 498,
     "center": 617.0,
@@ -19,10 +19,10 @@
     "row": 1102
   },
   "model_foot": {
-    "width": 310,
+    "width": 314,
     "center": 300.0,
     "floor": 848,
-    "row": 817
+    "row": 840
   },
   "method": "Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth."
 }

@@ -1,10 +1,11 @@
 # King reconstruction
 
-The current king uses the queen’s compact socket, base turning and thin stacked
-collars. Its Chavet-style head flares into the rim and carries one low seat
-beneath the cross. The working camera is fixed at 54°. The side and registered
-comparisons, source hashes and build recipe are in [checkpoint 016](king-mission/iteration-016/README.md).
-The [king review](../king-review.html) opens the current reconstruction.
+The king and queen now share the full base turning, with a straight-walled
+foot, one low groove, a rounded flare and a short socket. The king retains
+its close collars and Chavet-style head. The working camera is fixed at 54°.
+The true-scale side comparison, fixed-reference fit and Blender recipe are in
+[checkpoint 017](king-mission/iteration-017/README.md). The [king review](../king-review.html)
+opens the current reconstruction.
 
 ## Historical clay study
 

@@ -1,0 +1,109 @@
+{
+  "window_xz_model_units": {
+    "flare": [
+      0.2,
+      0.7,
+      0.32,
+      0.53
+    ],
+    "left bevel": [
+      -1.035,
+      -0.91,
+      0.17,
+      0.29
+    ],
+    "right bevel": [
+      0.92,
+      1.035,
+      0.16,
+      0.26
+    ],
+    "socket edge": [
+      0.36,
+      0.53,
+      0.89,
+      1.09
+    ]
+  },
+  "method": "8-bit Rec. 709 luma, one-pixel Gaussian blur, alpha >240. Each region is evaluated in model coordinates.",
+  "views": {
+    "Queen": {
+      "source_sha256": "fabb014c01aa3202e8e90260e005e29b4f16c8e6ee4c9c405de0155e7d71e1f2",
+      "pixels_per_unit": 136.36363636363637,
+      "measurements": {
+        "flare": {
+          "median": 58.0,
+          "p99": 172.0,
+          "area_above_100": 0.024468888888888884
+        },
+        "left bevel": {
+          "median": 23.0,
+          "p99": 144.12,
+          "area_above_100": 0.0007528888888888888
+        },
+        "right bevel": {
+          "median": 31.0,
+          "p99": 178.63000000000002,
+          "area_above_100": 0.0015057777777777775
+        },
+        "socket edge": {
+          "median": 33.0,
+          "p99": 169.0,
+          "area_above_100": 0.0027426666666666663
+        }
+      }
+    },
+    "Previous king": {
+      "source_sha256": "c485019156df5524ba3bab54caee88acd9fa51c667770be93ea3afa1de808212",
+      "pixels_per_unit": 150.0,
+      "measurements": {
+        "flare": {
+          "median": 31.0,
+          "p99": 60.0,
+          "area_above_100": 0.0
+        },
+        "left bevel": {
+          "median": 33.0,
+          "p99": 42.0,
+          "area_above_100": 0.0
+        },
+        "right bevel": {
+          "median": 35.0,
+          "p99": 43.69999999999999,
+          "area_above_100": 0.0
+        },
+        "socket edge": {
+          "median": 40.0,
+          "p99": 58.0,
+          "area_above_100": 0.0
+        }
+      }
+    },
+    "Revised king": {
+      "source_sha256": "01bdd31fd6103169791158362968e546cc4a41258dd9df714fb922677ab9b54f",
+      "pixels_per_unit": 150.0,
+      "measurements": {
+        "flare": {
+          "median": 50.0,
+          "p99": 173.75999999999976,
+          "area_above_100": 0.009333333333333334
+        },
+        "left bevel": {
+          "median": 38.0,
+          "p99": 144.51999999999998,
+          "area_above_100": 0.0008888888888888889
+        },
+        "right bevel": {
+          "median": 41.0,
+          "p99": 179.48999999999995,
+          "area_above_100": 0.0011111111111111111
+        },
+        "socket edge": {
+          "median": 39.0,
+          "p99": 168.53999999999996,
+          "area_above_100": 0.002533333333333333
+        }
+      }
+    }
+  }
+}
