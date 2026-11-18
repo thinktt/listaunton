@@ -4,6 +4,7 @@ function script(text,id){const m=text.match(new RegExp('<script id="'+id+'"[^>]*
 const board=JSON.parse(script(html,'board-data')),scales=JSON.parse(script(html,'side-scale-data'));
 const context={window:{}};vm.runInNewContext(script(html,'warp-math-runtime'),context);const math=context.window.ListauntonWarpMath;
 const records=math.registrations(board),guide=math.guide(scales),squashed=math.preset('bishop',records,guide),chavet=math.preset('chavet',records,guide);
+const matchedRecords=math.registrations({...board,pieces:board.pieces.map(({warpRuler,...item})=>item)});
 assert.equal(squashed.bishop.height,88);assert.equal(squashed.bishop.width,100);
 for(const [piece,r] of Object.entries(records)){
  assert.equal(squashed[piece].width,100);if(piece!=='bishop')assert.equal(squashed[piece].height,100);
@@ -33,9 +34,11 @@ for(const [piece,r] of Object.entries(records)){
   }
  }
  // Alpha sampling and the low-res mesh export can shift the measured edge by
- // a pixel or two, but the same saved camera must reproduce its registration.
- assert(Math.abs(original.top-r.targetTop)<2,piece+' camera/top registration: '+(original.top-r.targetTop));
- assert(Math.abs(original.bottom-r.targetBottom)<2,piece+' camera/foot registration: '+(original.bottom-r.targetBottom));
+ // a pixel or two. Test the current mesh against its own render registration,
+ // even when the lab deliberately retains an earlier physical ruler.
+ const matched=math.projectedBounds(model,math.unwarped,54,matchedRecords[piece]);
+ assert(Math.abs(matched.top-r.targetTop)<2,piece+' camera/top registration: '+(matched.top-r.targetTop));
+ assert(Math.abs(matched.bottom-r.targetBottom)<2,piece+' camera/foot registration: '+(matched.bottom-r.targetBottom));
  if(piece==='bishop'){
   assert(changed.top-original.top>9,'Squash should visibly lower the bishop top');
   assert(Math.abs(changed.bottom-original.bottom)<.1,'Foot must stay anchored');
@@ -56,7 +59,13 @@ for(const [piece,r] of Object.entries(records)){
 }
 const restored=math.restore({angle:999,pieces:{bishop:{height:-20,width:999},king:{height:null,width:'bad'}}},records,guide);
 assert.equal(restored.angle,80);assert.equal(restored.pieces.bishop.height,50);assert.equal(restored.pieces.bishop.width,130);assert.equal(restored.pieces.king.height,100);assert.equal(restored.pieces.king.width,100);
-assert.equal(math.restore(null,records,guide).pieces.bishop.height,88);
+assert.equal(math.restore(null,records,guide).pieces.bishop.height,100,'Show the actual bishop on first load');
+assert.equal(records.bishop.warpRuler.checkpoint,'025');
+const resized=math.registrations({...board,pieces:board.pieces.map(item=>item.piece==='bishop'
+ ? {...item,renderTop:item.renderTop+50,modelHeight:item.modelHeight*.9} : item)});
+assert.equal(resized.bishop.pixels,records.bishop.pixels,'A shorter bishop must keep the same measuring scale');
+assert.equal(resized.bishop.ground,records.bishop.ground);
+assert(Math.abs(resized.bishop.ratio/records.bishop.ratio-.9)<1e-9);
 assert.equal(math.restore({angle:49.5,pieces:{bishop:{height:80,width:101}}},records,guide).pieces.bishop.height,80);
 const legacy=math.restore({angle:49.5,pieces:{bishop:{height:84.4,width:105},queen:{height:87.7,width:112.7}}},records,guide);
 for(const shape of Object.values(legacy.pieces))assert.equal(shape.scale,100,'Existing experiments retain their original size');

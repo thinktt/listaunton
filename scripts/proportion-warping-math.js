@@ -1,10 +1,13 @@
 (()=>{'use strict';
 function registrations(board){
  const entries=board.pieces.map(item=>{
-  const imageScale=(item.targetBottom-item.targetTop)/(item.renderBottom-item.renderTop);
-  return [item.piece,{...item,pixels:imageScale*item.pixelsPerUnit,
-   ground:item.targetTop+(item.footY-item.renderTop)*imageScale,
-   physicalHeight:imageScale*item.pixelsPerUnit*item.modelHeight}];
+  // Reuse the physical scale at which an accepted modeling target was chosen.
+  const ruler = item.warpRuler ?? item;
+  const imageScale = (item.targetBottom - item.targetTop) / (ruler.renderBottom - ruler.renderTop);
+  const pixels = imageScale * ruler.pixelsPerUnit;
+  return [item.piece, {...item, pixels,
+   ground: item.targetTop + (ruler.footY - ruler.renderTop) * imageScale,
+   physicalHeight: pixels * item.modelHeight}];
  });
  const result=Object.fromEntries(entries);
  for(const item of Object.values(result))item.ratio=item.physicalHeight/result.king.physicalHeight;
@@ -34,7 +37,7 @@ function preset(name,records,targets){
  return pieces;
 }
 function restore(saved,records,targets){
- const state={angle:54,tilts:Object.fromEntries(Object.keys(records).map(piece=>[piece,null])),pieces:preset('bishop',records,targets)};
+ const state={angle:54,tilts:Object.fromEntries(Object.keys(records).map(piece=>[piece,null])),pieces:preset('unwarped',records,targets)};
  if(!saved||typeof saved!=='object'||Array.isArray(saved))return state;
  state.angle=bounded(saved.angle,54,20,80);
  for(const [piece,value] of Object.entries(state.pieces)){

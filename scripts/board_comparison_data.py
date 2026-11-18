@@ -68,6 +68,7 @@ def build_board_data(root: Path) -> dict:
     if png_size(root / original) != (659, 202) or png_size(root / empty) != (659, 202):
         raise ValueError('Expected the two supplied 659×202 board screenshots')
     fit = json.loads((root / 'assets/board-comparison/height-fit.json').read_text(encoding='utf-8'))
+    warp_rulers = json.loads((root / 'assets/board-comparison/warp-rulers.json').read_text(encoding='utf-8'))
     if hashlib.sha256((root / original).read_bytes()).hexdigest() != fit['original_sha256'] or hashlib.sha256((root / empty).read_bytes()).hexdigest() != fit['empty_board_sha256']:
         raise ValueError('Board screenshots changed; remeasure the matched heights')
     if set(fit['targets']) != set(RENDERS):
@@ -97,6 +98,8 @@ def build_board_data(root: Path) -> dict:
                        'centerX': CENTERS[piece], 'sourceSha256': meta['sourceSha256'],
                        'renderTop': visible['top'], 'renderBottom': visible['bottom'],
                        'targetTop': target['top'], 'targetBottom': target['bottom']})
+        if piece in warp_rulers:
+            pieces[-1]['warpRuler'] = warp_rulers[piece]
     return {'width': 659, 'height': 202, 'original': original, 'empty': empty,
             'kingHeight': king_height, 'kingPixelsPerUnit': king_pixels_per_unit,
             'groundY': 151.0, 'kingBasePixels': 86.0, 'pieces': pieces}
