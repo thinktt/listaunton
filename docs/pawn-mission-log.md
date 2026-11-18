@@ -633,3 +633,9 @@ The broader shoulder trial lost a foot reflection. The accepted model retains
 the previous base. The pigment still shows a pale band on the front shoulder.
 The saved model hash is a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756.
 [Renders, scores and reproduction](pawn-side-quality/iteration-003/README.md)
+
+## Pawn shared base 001
+
+Transferred the level turning from queen 033 and king 017 to the pawn, including the first stem support. The accepted foot measures 1.700 Blender units across and the whole pawn stands 2.725 units tall. The previous measurements were 1.654 and 2.775. Nine geometry trials tested width, height and seating against the fixed 54° original.
+
+The native black sprite’s mean RGB error fell from 16.81 to 14.77. Silhouette overlap fell from 98.50% to 96.62%. The shared turning places the front groove and socket about four original pixels lower. The subjective side score rose from 76.10 to 80.05/100. [Level profiles, source comparisons and measurements](pawn-shared-base/iteration-001/index.html)

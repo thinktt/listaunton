@@ -1,0 +1,314 @@
+{
+  "groups": {
+    "head reflections": 0.25199958716773835,
+    "flare reflections": 0.06370800244465785,
+    "foot reflections": 0.3711359260839997,
+    "surround diffuse": 1.0004096581579924,
+    "front diffuse": 0.37802234250611966,
+    "socket reflections": 0.05401004382285956,
+    "stem and collar reflections": 0.18926890578103964,
+    "Turning left sweep": 4.831340122952012,
+    "Turning right sweep": 2.991086443379891,
+    "Turning socket glint": 2.9163128440423742,
+    "Turning right shoulder": 5.0,
+    "Turning foot edge": 0.0
+  },
+  "lamps": {
+    "Left head glint": 0.5813247561454773,
+    "Upper head glint": 0.28604522347450256,
+    "Right head glint": 0.1589372456073761,
+    "Upper head glint core": 0.5854375958442688,
+    "Right head glint core": 0.38627293705940247,
+    "Left polish core": 0.04477111995220184,
+    "Upper polish core": 0.18110616505146027,
+    "Right polish core": 0.18345734477043152,
+    "Base upper": 0.02472543902695179,
+    "Flare left edge": 0.0012899725697934628,
+    "Flare left taper": 0.0019712031353265047,
+    "Flare left lip": 0.0011885854182764888,
+    "Flare right inner": 0.0007299419376067817,
+    "Flare right edge": 0.00503968633711338,
+    "Flare front lip": 0.00016317325935233384,
+    "Flare lip taper": 0.0007931605796329677,
+    "Flare left sweep": 0.010263664647936821,
+    "Flare left center": 0.022164326161146164,
+    "Flare right sweep": 0.01036802027374506,
+    "Flare right lip": 0.005835218355059624,
+    "Right flare core": 0.0014911805046722293,
+    "Outer flare line": 0.00037596136098727584,
+    "Foot right": 0.3885439932346344,
+    "Foot front": 0.015014746226370335,
+    "Foot center-right": 0.07871419191360474,
+    "Foot edge outer left": 0.24515920877456665,
+    "Foot edge center left": 0.3386174738407135,
+    "Foot lip core": 0.014241849072277546,
+    "Inner groove arc 535": 0.0003305979771539569,
+    "Inner groove arc 550": 0.00043254622141830623,
+    "Inner groove arc 565": 0.0007178483065217733,
+    "Right bounce": 88.75556182861328,
+    "Back bounce": 165.14190673828125,
+    "High left card": 95.7714614868164,
+    "Lower front bounce": 2.2197265625,
+    "Lower right bounce": 2.0422725677490234,
+    "Upper face bounce": 0.7641307711601257,
+    "Front shadow key": 9.062567710876465,
+    "Front shadow feather": 243.08538818359375,
+    "Socket right": 0.07517003268003464,
+    "Socket lip core": 0.0030972061213105917,
+    "Upper stem rim": 0.0003270110464654863,
+    "Lower stem rim": 6.080055391066708e-05,
+    "Collar left ribbon": 0.009266681969165802,
+    "Collar tip of ribbon": 0.010474251583218575,
+    "Collar right flank": 0.004302762448787689,
+    "Lower collar glint": 0.028507646173238754,
+    "Turning left sweep": 0.7247010469436646,
+    "Turning right sweep": 0.44866299629211426,
+    "Turning socket glint": 0.3791206479072571,
+    "Turning right shoulder": 0.699999988079071,
+    "Turning foot edge": 0.0
+  },
+  "cards": [
+    {
+      "name": "Turning left sweep",
+      "pixel": [
+        412.0199620217554,
+        894.8052583458364
+      ],
+      "position": [
+        -1.8286277055740356,
+        -2.6957828998565674,
+        2.050222396850586
+      ],
+      "rotation": [
+        -1.004210352897644,
+        0.17825430631637573,
+        2.598989725112915
+      ],
+      "size": 1.7691496748650901,
+      "size_y": 0.18011193845410392,
+      "spread": 30,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ],
+      "energy": 0.7247010469436646
+    },
+    {
+      "name": "Turning right sweep",
+      "pixel": [
+        590.2598813765941,
+        865.7894575206301
+      ],
+      "position": [
+        2.6672208309173584,
+        -1.9120146036148071,
+        1.9419152736663818
+      ],
+      "rotation": [
+        -1.0518743991851807,
+        -0.2500561773777008,
+        -2.2495920658111572
+      ],
+      "size": 2.3678716469152876,
+      "size_y": 0.14458280290450498,
+      "spread": 30,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ],
+      "energy": 0.44866299629211426
+    },
+    {
+      "name": "Turning socket glint",
+      "pixel": [
+        540.5185085333833,
+        745.581139816204
+      ],
+      "position": [
+        2.3825409412384033,
+        -1.8705989122390747,
+        2.3599722385406494
+      ],
+      "rotation": [
+        -0.26505929231643677,
+        1.0689445734024048,
+        -0.9184322953224182
+      ],
+      "size": 3.8,
+      "size_y": 1.2044909676018583,
+      "spread": 30,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ],
+      "energy": 0.3791206479072571
+    },
+    {
+      "name": "Turning right shoulder",
+      "pixel": [
+        532.2282797261814,
+        828.483427888222
+      ],
+      "position": [
+        1.156653881072998,
+        -1.2735919952392578,
+        3.3664088249206543
+      ],
+      "rotation": [
+        -0.38896435499191284,
+        -0.18782444298267365,
+        -2.679211139678955
+      ],
+      "size": 0.6849628705509161,
+      "size_y": 0.09979024951889778,
+      "spread": 30,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ],
+      "energy": 0.699999988079071
+    },
+    {
+      "name": "Turning foot edge",
+      "pixel": [
+        523.9380509189797,
+        965.2722032070516
+      ],
+      "position": [
+        0.8611353635787964,
+        -2.745091438293457,
+        -1.9943132400512695
+      ],
+      "rotation": [
+        0.10351831465959549,
+        -2.3872992992401123,
+        1.7697604894638062
+      ],
+      "size": 3.8,
+      "size_y": 1.2334562237179965,
+      "spread": 30,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ],
+      "energy": 0.0
+    }
+  ],
+  "fit_loss": [
+    0.015168834234835045,
+    0.01139765212796321,
+    0.010605746018065505,
+    0.010449688175610924,
+    0.010423874757401298,
+    0.010420254907397002,
+    0.010419794571147462,
+    0.010419740070215318,
+    0.010419731635777455
+  ],
+  "foreground_pixels": 11577,
+  "settings": {
+    "base": "build/pawn-shared-base/refit-balanced",
+    "output": "build/pawn-shared-base/balanced-light",
+    "original_head_weight": 0.45,
+    "original_weight": 0.72,
+    "max_gain": 5,
+    "samples": 512,
+    "cards": [
+      {
+        "name": "Turning left sweep",
+        "native_xy": [
+          98,
+          217
+        ],
+        "native_half_axes": [
+          8,
+          2.3
+        ],
+        "angle": 14,
+        "probe_watts": 0.15,
+        "color": [
+          1,
+          0.77,
+          0.58
+        ]
+      },
+      {
+        "name": "Turning right sweep",
+        "native_xy": [
+          141,
+          210
+        ],
+        "native_half_axes": [
+          10,
+          1.8
+        ],
+        "angle": -29,
+        "probe_watts": 0.15,
+        "color": [
+          1,
+          0.77,
+          0.58
+        ]
+      },
+      {
+        "name": "Turning socket glint",
+        "native_xy": [
+          129,
+          181
+        ],
+        "native_half_axes": [
+          3.2,
+          2.2
+        ],
+        "angle": -31,
+        "probe_watts": 0.13,
+        "color": [
+          1,
+          0.77,
+          0.58
+        ]
+      },
+      {
+        "name": "Turning right shoulder",
+        "native_xy": [
+          127,
+          201
+        ],
+        "native_half_axes": [
+          3.3,
+          1.9
+        ],
+        "angle": -16,
+        "probe_watts": 0.14,
+        "color": [
+          1,
+          0.77,
+          0.58
+        ]
+      },
+      {
+        "name": "Turning foot edge",
+        "native_xy": [
+          125,
+          234
+        ],
+        "native_half_axes": [
+          7,
+          1.15
+        ],
+        "angle": -8,
+        "probe_watts": 0.08,
+        "color": [
+          1,
+          0.77,
+          0.58
+        ]
+      }
+    ]
+  }
+}

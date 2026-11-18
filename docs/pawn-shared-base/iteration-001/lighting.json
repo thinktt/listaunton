@@ -1,0 +1,100 @@
+{
+  "base": "build/pawn-shared-base/refit-balanced",
+  "output": "build/pawn-shared-base/balanced-light",
+  "original_head_weight": 0.45,
+  "original_weight": 0.72,
+  "max_gain": 5,
+  "samples": 512,
+  "cards": [
+    {
+      "name": "Turning left sweep",
+      "native_xy": [
+        98,
+        217
+      ],
+      "native_half_axes": [
+        8,
+        2.3
+      ],
+      "angle": 14,
+      "probe_watts": 0.15,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ]
+    },
+    {
+      "name": "Turning right sweep",
+      "native_xy": [
+        141,
+        210
+      ],
+      "native_half_axes": [
+        10,
+        1.8
+      ],
+      "angle": -29,
+      "probe_watts": 0.15,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ]
+    },
+    {
+      "name": "Turning socket glint",
+      "native_xy": [
+        129,
+        181
+      ],
+      "native_half_axes": [
+        3.2,
+        2.2
+      ],
+      "angle": -31,
+      "probe_watts": 0.13,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ]
+    },
+    {
+      "name": "Turning right shoulder",
+      "native_xy": [
+        127,
+        201
+      ],
+      "native_half_axes": [
+        3.3,
+        1.9
+      ],
+      "angle": -16,
+      "probe_watts": 0.14,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ]
+    },
+    {
+      "name": "Turning foot edge",
+      "native_xy": [
+        125,
+        234
+      ],
+      "native_half_axes": [
+        7,
+        1.15
+      ],
+      "angle": -8,
+      "probe_watts": 0.08,
+      "color": [
+        1,
+        0.77,
+        0.58
+      ]
+    }
+  ]
+}

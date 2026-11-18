@@ -33,4 +33,10 @@ report['internal_feature_review']={
 if (out/'mission-validation.json').is_file():
  report['internal_feature_review'].update(head='Round upper sphere with the widest latitude raised to fit both originals; original physical apex-to-floor height retained.',collar='The accepted broad seat radius and collar remain attached to the lower head; the lower spherical flank curves into the seat.',base='Compact turned base with a flatter sole edge; the existing front groove and upper flare remain inspection priorities.',limitations='The unseen surface, illumination and pigment are inferred. Compare fixed beauty, clay and rotating model separately.')
  report['mask_method']='Largest component with holes filled; reference max RGB >12 and alpha >127, model alpha >127.'
+ accepted=json.loads((out/'mission-validation.json').read_text())
+ if 'pawn-shared-base' in Path(accepted.get('variant','')).parts:
+  report['internal_feature_review'].update(
+   head='A shallow adjustment to the dome keeps the ball seated as the total pawn height decreases.',
+   stem='The narrower waist curves into the upper collar and joins the first support above the shared socket.',
+   base='The sole, foot, single groove, flare and socket share the queen and king turning at one uniform scale.')
 (out/'qa.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

@@ -89,6 +89,13 @@ if portrait:
                      '<option value="level">Level · 0°</option></select></label>')
     portrait_attribute = 'data-portrait="' + data_uri(photo) + '"'
 html = html.replace('__ANGLE_CONTROL__', angle_control).replace('__PORTRAIT_ATTRIBUTE__', portrait_attribute)
+study = root/'docs/pawn-shared-base/iteration-001'
+study_link = ''
+if (study/'index.html').is_file() and (study/'checkpoint.json').is_file():
+    study_model = json.loads((study/'checkpoint.json').read_text(encoding='utf-8'))['model_sha256']
+    if study_model == meta['sourceSha256']:
+        study_link = '<a class="download" href="docs/pawn-shared-base/iteration-001/index.html" target="_blank" rel="noopener">Compare base trials ↗</a>'
+html = html.replace('__BASE_STUDY__', study_link)
 html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',',':')))
 out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

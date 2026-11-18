@@ -1,0 +1,53 @@
+{
+  "model_sha256": "ad418e94891bc04803d213c1d7d51880b5d2b6f4316d65c23cd9e5c36ac376d6",
+  "donor_sha256": {
+    "king": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
+    "queen": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68"
+  },
+  "base_rings": 39,
+  "adjoining_stem_support": 1,
+  "ring_segments": 96,
+  "uniform_scale": 0.8140996544704238,
+  "floor": -0.008137030526995659,
+  "height": 2.7249104976654053,
+  "diameter": 1.6998697519302368,
+  "max_control_coordinate_delta_donor_units": {
+    "queen": 3.64415891906944e-08,
+    "king": 3.64415891906944e-08
+  },
+  "evaluated_base_max_normal_distance_donor_units": {
+    "queen": 0.0013498143531514017,
+    "king": 1.6313902569707214e-07
+  },
+  "previous_at_equal_diameter": {
+    "queen": 0.18126478325576856,
+    "king": 0.1813257244621615
+  },
+  "compared_z_donor_units": [
+    0.006,
+    1.225
+  ],
+  "donor_native_foot_diameter": 2.0880367755889893,
+  "normalized_dimensions": {
+    "queen": {
+      "foot_diameter": 2.0892510414123535,
+      "groove_center_height": 0.23147809505462646,
+      "flare_crest_height": 0.33386990427970886,
+      "socket_diameter_at_z_1": 1.0587081961090798
+    },
+    "king": {
+      "foot_diameter": 2.0880367755889893,
+      "groove_center_height": 0.23451264202594757,
+      "flare_crest_height": 0.33902060985565186,
+      "socket_diameter_at_z_1": 1.0581106547032095
+    },
+    "pawn": {
+      "foot_diameter": 2.088036449341096,
+      "groove_center_height": 0.2345126520785191,
+      "flare_crest_height": 0.33902059296936027,
+      "socket_diameter_at_z_1": 1.0581107848616778
+    }
+  },
+  "level_camera_sine": -1.6292068494294654e-07,
+  "same_control_mesh_at_54_and_0_degrees": true
+}

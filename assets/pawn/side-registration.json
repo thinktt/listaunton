@@ -2,16 +2,16 @@
   "guide": "assets/pawn/concepts/side-01-cutout.png",
   "profile": "assets/pawn/profile.png",
   "guide_sha256": "2310467e0e8b588e8f28ff44644a986c800ee63b236be71fc01a0b5d1b6a7d37",
-  "profile_sha256": "aa39b71f309c2e4b6e1b117619742c91ef0fc051298cbb6b80c1d93fc2bde9e7",
-  "source_blend_sha256": "a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756",
+  "profile_sha256": "d5540b2f98c1efcb082c6ec529ee2d985b53b12bf08d224f063c9b52f06aee77",
+  "source_blend_sha256": "ad418e94891bc04803d213c1d7d51880b5d2b6f4316d65c23cd9e5c36ac376d6",
   "canvas": [
     1254,
     1414
   ],
   "guide_top": 160,
-  "scale": 1.1182432432432432,
-  "offset_x": -74.13851351351343,
-  "offset_y": 82.27702702702709,
+  "scale": 1.0852459016393443,
+  "offset_x": -53.44918032786893,
+  "offset_y": 119.03606557377043,
   "guide_foot": {
     "width": 662,
     "center": 627.0,
@@ -19,10 +19,10 @@
     "row": 1081
   },
   "model_foot": {
-    "width": 592,
+    "width": 610,
     "center": 627.0,
     "floor": 1114,
-    "row": 1111
+    "row": 1096
   },
   "method": "Uniform scale and translation only: equal base width and common floor. Guide is imagined, not geometric ground truth.",
   "profile_dimensions": [
@@ -37,20 +37,20 @@
   "lighting_preset": "polished-walnut",
   "portrait": {
     "profile": "assets/pawn/guide-angle.png",
-    "profile_sha256": "a9a61cca6ec4f88450ba55400bb98189f263f0b91319d63d3c2831a6e43c9968",
+    "profile_sha256": "b185f3c3ef334919eb33c1abdc7c89e60fa665607400969ef9d76819890294b1",
     "profile_dimensions": [
       1254,
       1254
     ],
     "elevation": 11.5,
     "model_foot": {
-      "width": 592,
+      "width": 610,
       "center": 627.0,
       "floor": 1162,
-      "row": 1104
+      "row": 1087
     },
-    "scale": 1.1182432432432432,
-    "offset_x": -74.13851351351343,
-    "offset_y": 28.601351351351468
+    "scale": 1.0852459016393443,
+    "offset_x": -53.44918032786893,
+    "offset_y": 66.9442622950819
   }
 }

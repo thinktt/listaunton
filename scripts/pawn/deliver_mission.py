@@ -32,7 +32,13 @@ def export(scene,body,model):
     finally:ev.to_mesh_clear()
     lo=xyz.min(0);hi=xyz.max(0);bounds=hi-lo
     reference=json.loads((ROOT/"history/pawn-mission-start/mesh.json").read_text())["bounds"]["size"]
-    assert abs(bounds[2]-reference[2])<.001 and abs(bounds[0]-reference[0])<.005,(bounds,reference)
+    if "pawn_shared_base" in scene:
+        turning=json.loads(scene["pawn_shared_base"])
+        assert abs(float(lo[2])-turning["floor"])<.0001
+        assert abs(float(bounds[2])-turning["target_height"])<.0005
+        assert abs(float(bounds[0])-turning["target_foot_diameter"])<.002
+    else:
+        assert abs(bounds[2]-reference[2])<.001 and abs(bounds[0]-reference[0])<.005,(bounds,reference)
     count=len(block);raw=block.tobytes()+np.arange(count,dtype="<u4").tobytes()
     (ASSETS/"mesh.bin").write_bytes(raw)
     cam=scene.camera;projection=cam.calc_matrix_camera(graph,x=1254,y=1254)

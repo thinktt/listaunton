@@ -2,30 +2,30 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original is authoritative.",
   "images": {
     "original": {
-      "silhouette_iou": 0.985002241932907,
-      "mean_boundary_error_px": 2.1354489164086687,
-      "p95_boundary_error_px": 6.0,
+      "silhouette_iou": 0.9661522612757798,
+      "mean_boundary_error_px": 4.89751552795031,
+      "p95_boundary_error_px": 16.0,
       "reference_sha256": "99128f4a21a7f43d24c616e22fd18f51a29d820a07a123aff2f3975cd1862052"
     },
     "original_white": {
-      "silhouette_iou": 0.9813684449301961,
-      "mean_boundary_error_px": 2.469814241486068,
-      "p95_boundary_error_px": 7.0,
+      "silhouette_iou": 0.955597690164901,
+      "mean_boundary_error_px": 6.298913043478261,
+      "p95_boundary_error_px": 17.649999999999864,
       "reference_sha256": "21f7831ba96bfd83581ea0c2b8f41bc7bc2babdfd746d176332202cc1903b4f3"
     },
     "selected": {
-      "silhouette_iou": 0.9681177792206453,
-      "mean_boundary_error_px": 4.702012383900929,
-      "p95_boundary_error_px": 15.0,
+      "silhouette_iou": 0.960825746890627,
+      "mean_boundary_error_px": 5.663043478260869,
+      "p95_boundary_error_px": 10.0,
       "reference_sha256": "e98f12aa17af520e6b32674e5f9ce82b556842b3dcb18989336085de1e75fa7f"
     }
   },
   "internal_feature_review": {
     "camera_elevation_degrees": 54,
-    "head": "Round upper sphere with the widest latitude raised to fit both originals; original physical apex-to-floor height retained.",
+    "head": "A shallow adjustment to the dome keeps the ball seated as the total pawn height decreases.",
     "collar": "The accepted broad seat radius and collar remain attached to the lower head; the lower spherical flank curves into the seat.",
-    "stem": "Curved narrow stem widens into an upper shoulder bead and a short lower wall; both original sprites inspected.",
-    "base": "Compact turned base with a flatter sole edge; the existing front groove and upper flare remain inspection priorities.",
+    "stem": "The narrower waist curves into the upper collar and joins the first support above the shared socket.",
+    "base": "The sole, foot, single groove, flare and socket share the queen and king turning at one uniform scale.",
     "limitations": "The unseen surface, illumination and pigment are inferred. Compare fixed beauty, clay and rotating model separately."
   },
   "mask_method": "Largest component with holes filled; reference max RGB >12 and alpha >127, model alpha >127."

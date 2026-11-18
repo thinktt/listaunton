@@ -1,0 +1,734 @@
+{
+  "Previously accepted": {
+    "native_mask_iou": 0.9839165782962177,
+    "native_rgb_error": 16.80965211663972,
+    "region_errors": {
+      "head": 15.950885955523843,
+      "collar_stem": 16.548367029548988,
+      "base": 17.380651945320714
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.2422267727109784,
+        "bias_px": 1.1142331776121164,
+        "native_position": 143.10526315789474,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 0.42118658701996736,
+        "bias_px": 0.16741329023117166,
+        "native_position": 153.07000663570005,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 0.8766593756420828,
+        "bias_px": 0.09823675659446174,
+        "native_position": 184.19187675070026,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 1.1890424204541636,
+        "bias_px": 1.1890424204541636,
+        "native_position": 229.85,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 0.4444444444444444,
+        "bias_px": 0.4444444444444444,
+        "native_position": 86.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.7586206896551724,
+        "bias_px": -0.7586206896551724,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6535700559616089,
+    "height": 2.7748525142669678,
+    "ratio": 1.6780979458734173,
+    "fixed_iou": {
+      "selected": 0.9681177792206453,
+      "original_black": 0.985002241932907,
+      "original_white": 0.9813684449301961
+    }
+  },
+  "donor-at-old-width": {
+    "native_mask_iou": 0.9579646017699115,
+    "native_rgb_error": 18.995411855273286,
+    "region_errors": {
+      "head": 16.39017719110477,
+      "collar_stem": 17.78067073824065,
+      "base": 22.111040068201195
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.2261013184871519,
+        "bias_px": 1.107817199283918,
+        "native_position": 143.12908496732027,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.3368657315253287,
+        "bias_px": 1.0719943035699206,
+        "native_position": 153.09047619047618,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.5721082562656115,
+        "bias_px": 4.061904174632957,
+        "native_position": 188.43673469387755,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.3920558410488897,
+        "bias_px": 3.3920558410488897,
+        "native_position": 231.85294117647058,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 0.4444444444444444,
+        "bias_px": 0.4444444444444444,
+        "native_position": 86.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 1.5517241379310345,
+        "bias_px": -1.5517241379310345,
+        "native_position": 240.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6535700559616089,
+    "height": 2.7748398780822754,
+    "ratio": 1.6780903041139124,
+    "fixed_iou": {
+      "selected": 0.9722894215966571,
+      "original_black": 0.9605439719240297,
+      "original_white": 0.9614749729626237
+    }
+  },
+  "wide-only": {
+    "native_mask_iou": 0.971075100191671,
+    "native_rgb_error": 20.357168490938452,
+    "region_errors": {
+      "head": 16.388393388036626,
+      "collar_stem": 17.44321766561514,
+      "base": 25.282688194300697
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.2193480805758234,
+        "bias_px": 1.1006895060349002,
+        "native_position": 143.11764705882354,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.3378795155516983,
+        "bias_px": 1.073386349744574,
+        "native_position": 153.09047619047618,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.1565193073465405,
+        "bias_px": 4.1565193073465405,
+        "native_position": 188.3195080091533,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 4.107196300466858,
+        "bias_px": 4.107196300466858,
+        "native_position": 232.80769230769232,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 0.4444444444444444,
+        "bias_px": 0.4444444444444444,
+        "native_position": 86.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.1724137931034483,
+        "bias_px": 0.1724137931034483,
+        "native_position": 242.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.7114449739456177,
+    "height": 2.7748398780822754,
+    "ratio": 1.6213433211849484,
+    "fixed_iou": {
+      "selected": 0.9580193811455823,
+      "original_black": 0.9668057778408055,
+      "original_white": 0.9562425539648244
+    }
+  },
+  "wide-short": {
+    "native_mask_iou": 0.9591019839888618,
+    "native_rgb_error": 21.047178370531665,
+    "region_errors": {
+      "head": 18.664918196577993,
+      "collar_stem": 17.961776102209654,
+      "base": 25.28082522597116
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 2.948066167325892,
+        "bias_px": 2.868436537696263,
+        "native_position": 145.07129629629628,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 2.4785550834204884,
+        "bias_px": 1.9660925245843732,
+        "native_position": 155.04069630675133,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.159348439743969,
+        "bias_px": 4.159348439743969,
+        "native_position": 188.3195080091533,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 4.106323058440936,
+        "bias_px": 4.106323058440936,
+        "native_position": 232.80769230769232,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 3.0,
+        "bias_px": 3.0,
+        "native_position": 89.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.1724137931034483,
+        "bias_px": 0.1724137931034483,
+        "native_position": 242.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": -1.0,
+        "native_position": 55.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.7114449739456177,
+    "height": 2.6971547603607178,
+    "ratio": 1.575951784264857,
+    "fixed_iou": {
+      "selected": 0.9468298086401561,
+      "original_black": 0.9542789796609998,
+      "original_white": 0.9432314190381146
+    }
+  },
+  "wide-short-strong": {
+    "native_mask_iou": 0.9267135474032026,
+    "native_rgb_error": 22.7064667519961,
+    "region_errors": {
+      "head": 21.887299695404582,
+      "collar_stem": 18.539051170499274,
+      "base": 26.82405299109915
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 4.859751368967852,
+        "bias_px": 4.859751368967852,
+        "native_position": 147.08229813664596,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 5.816719415093459,
+        "bias_px": 3.714178257524144,
+        "native_position": 157.17780748663102,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.361325199094731,
+        "bias_px": 3.718847995447314,
+        "native_position": 188.23387096774195,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 5.025955952965098,
+        "bias_px": 5.025955952965098,
+        "native_position": 233.75925925925927,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 6.0,
+        "bias_px": 6.0,
+        "native_position": 92.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 1.1724137931034482,
+        "bias_px": 1.1724137931034482,
+        "native_position": 243.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": -1.0,
+        "native_position": 55.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.7527843713760376,
+    "height": 2.622241973876953,
+    "ratio": 1.4960436758221096,
+    "fixed_iou": {
+      "selected": 0.9048781327966222,
+      "original_black": 0.9235109748765511,
+      "original_white": 0.9133696196810862
+    }
+  },
+  "wide-short-light": {
+    "native_mask_iou": 0.9666931007137193,
+    "native_rgb_error": 20.01968826907301,
+    "region_errors": {
+      "head": 17.138817794028032,
+      "collar_stem": 18.095464135021096,
+      "base": 23.77221526908636
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.9895864886818788,
+        "bias_px": 1.822919822015212,
+        "native_position": 144.02756892230576,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.9719198496574915,
+        "bias_px": 1.9719198496574915,
+        "native_position": 154.2300156739812,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.44024383014955,
+        "bias_px": 4.44024383014955,
+        "native_position": 188.83790650406502,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.531027057214777,
+        "bias_px": 3.531027057214777,
+        "native_position": 232.22222222222223,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 2.0,
+        "bias_px": 2.0,
+        "native_position": 88.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.6206896551724138,
+        "bias_px": -0.6206896551724138,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6833343505859375,
+    "height": 2.7332208156585693,
+    "ratio": 1.6236945528422122,
+    "fixed_iou": {
+      "selected": 0.9685722279212907,
+      "original_black": 0.9652424107211546,
+      "original_white": 0.956241238526947
+    }
+  },
+  "refit-light": {
+    "native_mask_iou": 0.9660164180421926,
+    "native_rgb_error": 19.867903265107213,
+    "region_errors": {
+      "head": 17.048735800659582,
+      "collar_stem": 17.521192758253463,
+      "base": 23.785773884021694
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 0.8623032128546816,
+        "bias_px": 0.36865241920388786,
+        "native_position": 142.5375,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.561259708266024,
+        "bias_px": 0.33043095460403055,
+        "native_position": 152.36013986013987,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.438728411273971,
+        "bias_px": 4.438728411273971,
+        "native_position": 188.82184517497348,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.5319390499188357,
+        "bias_px": 3.5319390499188357,
+        "native_position": 232.22222222222223,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 1.4444444444444444,
+        "bias_px": 1.4444444444444444,
+        "native_position": 87.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.6206896551724138,
+        "bias_px": -0.6206896551724138,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": -1.0,
+        "native_position": 55.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6833343505859375,
+    "height": 2.7332208156585693,
+    "ratio": 1.6236945528422122,
+    "fixed_iou": {
+      "selected": 0.9672877331591444,
+      "original_black": 0.9659260781342306,
+      "original_white": 0.9578217202503935
+    }
+  },
+  "refit-medium": {
+    "native_mask_iou": 0.9649798634214674,
+    "native_rgb_error": 20.72627472328071,
+    "region_errors": {
+      "head": 18.668018184052094,
+      "collar_stem": 17.35437817258883,
+      "base": 24.855219552609775
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.000618764097356,
+        "bias_px": 0.8738664257351137,
+        "native_position": 142.99722222222223,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.5633793277077572,
+        "bias_px": 0.4285645204117496,
+        "native_position": 152.4404761904762,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.168826867443563,
+        "bias_px": 4.168826867443563,
+        "native_position": 188.35071301247774,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.957421997772668,
+        "bias_px": 3.957421997772668,
+        "native_position": 232.6875,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 2.0,
+        "bias_px": 2.0,
+        "native_position": 88.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.034482758620689655,
+        "bias_px": -0.034482758620689655,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.7031770944595337,
+    "height": 2.7027101516723633,
+    "ratio": 1.586863844320317,
+    "fixed_iou": {
+      "selected": 0.9553980398679598,
+      "original_black": 0.96222167899122,
+      "original_white": 0.9515458527696423
+    }
+  },
+  "refit-broad": {
+    "native_mask_iou": 0.9552831491712708,
+    "native_rgb_error": 21.710193385143683,
+    "region_errors": {
+      "head": 20.487608426270135,
+      "collar_stem": 17.34925123049534,
+      "base": 26.025253570689298
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.7175485554544803,
+        "bias_px": 1.4740702945849147,
+        "native_position": 143.5,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.5170013697306868,
+        "bias_px": 0.7545251825641976,
+        "native_position": 152.74432576769027,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.11339360803005,
+        "bias_px": 4.11339360803005,
+        "native_position": 188.33278867102396,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 4.451412661204183,
+        "bias_px": 4.451412661204183,
+        "native_position": 233.1875,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 3.0,
+        "bias_px": 3.0,
+        "native_position": 89.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.4482758620689655,
+        "bias_px": 0.4482758620689655,
+        "native_position": 242.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.7279807329177856,
+    "height": 2.6638612747192383,
+    "ratio": 1.541603574607669,
+    "fixed_iou": {
+      "selected": 0.9371847177281588,
+      "original_black": 0.9517892644135189,
+      "original_white": 0.9412309231923943
+    }
+  },
+  "refit-balanced": {
+    "native_mask_iou": 0.9687335785601682,
+    "native_rgb_error": 20.515535063134738,
+    "region_errors": {
+      "head": 17.854279850295786,
+      "collar_stem": 17.68803554427166,
+      "base": 24.678344389165286
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 0.9101760824816149,
+        "bias_px": 0.7197677700338284,
+        "native_position": 142.85069444444446,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 1.584544880473299,
+        "bias_px": 0.33784240343004157,
+        "native_position": 152.19654977375563,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.397665458759716,
+        "bias_px": 4.397665458759716,
+        "native_position": 188.85421824414396,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.862371034086259,
+        "bias_px": 3.862371034086259,
+        "native_position": 232.625,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 1.2222222222222223,
+        "bias_px": 1.2222222222222223,
+        "native_position": 87.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.13793103448275862,
+        "bias_px": -0.13793103448275862,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6998697519302368,
+    "height": 2.7249104976654053,
+    "ratio": 1.603011345175837,
+    "fixed_iou": {
+      "selected": 0.9608060355217741,
+      "original_black": 0.9661726606964363,
+      "original_white": 0.955608082348456
+    }
+  },
+  "balanced-light": {
+    "native_mask_iou": 0.9686432512919331,
+    "native_rgb_error": 14.773879494830757,
+    "region_errors": {
+      "head": 10.292391304347825,
+      "collar_stem": 12.483338622659474,
+      "base": 19.30783053424563
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.0685162060162046,
+        "bias_px": 0.9116869241869227,
+        "native_position": 142.9835164835165,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 0.7098501399497698,
+        "bias_px": -0.5643080215555045,
+        "native_position": 152.45706260032102,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.393517050375097,
+        "bias_px": 4.393517050375097,
+        "native_position": 188.74466463414635,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.9912862456558273,
+        "bias_px": 3.9912862456558273,
+        "native_position": 232.75,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 1.2222222222222223,
+        "bias_px": 1.2222222222222223,
+        "native_position": 87.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.1724137931034483,
+        "bias_px": -0.1724137931034483,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6998697519302368,
+    "height": 2.7249104976654053,
+    "ratio": 1.603011345175837,
+    "fixed_iou": {
+      "selected": 0.960825746890627,
+      "original_black": 0.9661522612757798,
+      "original_white": 0.955597690164901
+    }
+  },
+  "accepted_saved_model": {
+    "native_mask_iou": 0.9686432512919331,
+    "native_rgb_error": 14.773909636193748,
+    "region_errors": {
+      "head": 10.292512077294687,
+      "collar_stem": 12.483338622659474,
+      "base": 19.30783053424563
+    },
+    "landmarks": {
+      "ball_seat": {
+        "mae_px": 1.0685162060162046,
+        "bias_px": 0.9116869241869227,
+        "native_position": 142.9835164835165,
+        "reference_position": 142.16964285714286
+      },
+      "collar_front": {
+        "mae_px": 0.7098501399497698,
+        "bias_px": -0.5643080215555045,
+        "native_position": 152.45706260032102,
+        "reference_position": 152.88119590873328
+      },
+      "socket_front": {
+        "mae_px": 4.393517050375097,
+        "bias_px": 4.393517050375097,
+        "native_position": 188.74466463414635,
+        "reference_position": 184.09294871794873
+      },
+      "foot_groove": {
+        "mae_px": 3.9912862456558273,
+        "bias_px": 3.9912862456558273,
+        "native_position": 232.75,
+        "reference_position": 228.76315789473685
+      },
+      "ball_apex": {
+        "mae_px": 1.2222222222222223,
+        "bias_px": 1.2222222222222223,
+        "native_position": 87.0,
+        "reference_position": 86.0
+      },
+      "foot_bottom": {
+        "mae_px": 0.1724137931034483,
+        "bias_px": -0.1724137931034483,
+        "native_position": 241.0,
+        "reference_position": 241.0
+      },
+      "ball_width": {
+        "mae_px": 1.0,
+        "bias_px": 1.0,
+        "native_position": 57.0,
+        "reference_position": 56.0
+      }
+    },
+    "diameter": 1.6998697519302368,
+    "height": 2.7249104976654053,
+    "ratio": 1.603011345175837,
+    "fixed_iou": {
+      "selected": 0.960825746890627,
+      "original_black": 0.9661522612757798,
+      "original_white": 0.955597690164901
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "source": "history/pawn-side-quality-003/pawn-rebuilt.blend",
+  "source_sha256": "a264c4e048240f6178c36e50976e26ed9f5e0c2cd3633f4e5ccc0b55c61b4756",
+  "queen": "models/queen/queen-rebuilt.blend",
+  "queen_sha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+  "king": "history/king-mission-017/king-rebuilt.blend",
+  "king_sha256": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146",
+  "starting_dimensions": "history/pawn-side-quality-003/mission-validation.json",
+  "donor_foot_diameter": 2.0880367755889893,
+  "samples": 128,
+  "side_resolution": 900,
+  "output": "build/pawn-shared-base",
+  "lighting_variants": ["balanced-light"],
+  "candidates": [
+    {
+      "name": "donor-at-old-width",
+      "width_factor": 1,
+      "height_factor": 1
+    },
+    {
+      "name": "wide-only",
+      "width_factor": 1.035,
+      "height_factor": 1
+    },
+    {
+      "name": "wide-short",
+      "width_factor": 1.035,
+      "height_factor": 0.972
+    },
+    {
+      "name": "wide-short-strong",
+      "width_factor": 1.06,
+      "height_factor": 0.945
+    },
+    {
+      "name": "wide-short-light",
+      "width_factor": 1.018,
+      "height_factor": 0.985
+    },
+    {
+      "name": "refit-light",
+      "width_factor": 1.018,
+      "height_factor": 0.985,
+      "stem_share": 0.1,
+      "seat_lift": 0.009,
+      "collar_compression": 0.006,
+      "waist_factor": 1.015,
+      "collar_factor": 0.985,
+      "ball_factor": 0.992,
+      "dome_falloff": 1.85
+    },
+    {
+      "name": "refit-medium",
+      "width_factor": 1.03,
+      "height_factor": 0.974,
+      "stem_share": 0.2,
+      "seat_lift": 0.014,
+      "collar_compression": 0.009,
+      "waist_factor": 1.015,
+      "collar_factor": 0.985,
+      "ball_factor": 0.996,
+      "dome_falloff": 1.9
+    },
+    {
+      "name": "refit-broad",
+      "width_factor": 1.045,
+      "height_factor": 0.96,
+      "stem_share": 0.23,
+      "seat_lift": 0.016,
+      "collar_compression": 0.012,
+      "waist_factor": 1.025,
+      "collar_factor": 0.99,
+      "ball_factor": 1.003,
+      "dome_falloff": 2.05
+    },
+    {
+      "name": "refit-balanced",
+      "width_factor": 1.028,
+      "height_factor": 0.982,
+      "stem_share": 0.12,
+      "seat_lift": 0.012,
+      "collar_compression": 0.006,
+      "waist_lowering": 0.032,
+      "waist_factor": 0.974,
+      "collar_factor": 0.99,
+      "ball_factor": 0.998,
+      "dome_falloff": 2.2
+    }
+  ]
+}
