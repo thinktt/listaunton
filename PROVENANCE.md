@@ -82,6 +82,8 @@ The twelve first-import PNGs were checked against their recorded SHA-256 values.
 
 The first-import PNGs already carry black shadows in their transparency channel. Across all twelve, 78,771 of 78,886 sampled pixels with alpha 8–170 outside a five-pixel expansion of the alpha-240 silhouette have RGB values of zero. This supports a workflow that prepared pieces and shadows for compositing over a separate board. The shape and texture could come from direct renders or separately prepared cutouts.
 
+The follow-up checksum search covered every imported PNG in four formats (MD5, raw SHA-1, SHA-256, and Git blob SHA-1). Each of the 48 fingerprints was searched individually as quoted text with and without a pre–January 29, 2017 date filter. All 96 queries completed with no indexed hits. Software Heritage returned an exact content record for each of the twelve files, with matching SHA-256 and byte length. Its authenticated origin lookup is needed to trace those records to a repository. Indexed checksum searches cover references that publish the digest, and a resize, re-encode, or metadata change yields a different file fingerprint. [First-import files](https://github.com/lichess-org/lila/tree/6043adc1324b712e630d75e53338af377137b645/public/images/staunton/piece/Staunton), [example Software Heritage record](https://archive.softwareheritage.org/api/1/content/sha1_git:d4b10c25bb7d98bca55673947b2eeadc0c4b94ae/).
+
 The earliest dated evidence for these particular PNGs remains the December 28, 2016, Photoshop preparation recorded in the imported files. The earlier renders or models could predate that work. Their creator and source before the Userstyle remain unknown.
 
 ## Metadata shared by all twelve first-import PNGs
