@@ -1,0 +1,74 @@
+{
+  "before": {
+    "foot_diameter": 2.0130200386047363,
+    "groove": {
+      "radius": 0.9605042934417725,
+      "height": 0.384
+    },
+    "flare": {
+      "radius": 0.9841978549957275,
+      "height": 0.463
+    },
+    "socket_diameter_at_scaled_z1": 1.3641375696316185,
+    "front_collar_rim_rows": {
+      "upper": 510.90741991996765,
+      "middle": 564.585134267807,
+      "lower": 607.7832598686218
+    },
+    "front_groove_row": 1046.3769879341125,
+    "floor": 0.0,
+    "height": 4.592006683349609,
+    "source": "history/bishop-mission-024/bishop-rebuilt.blend",
+    "source_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+    "rim_measurements": {
+      "lower": {
+        "radius": 0.6536810398101807,
+        "half_protrusion_thickness": 0.19050000000006362
+      },
+      "middle": {
+        "radius": 0.5978467464447021,
+        "half_protrusion_thickness": 0.18100000000006045
+      },
+      "upper": {
+        "radius": 0.5184874534606934,
+        "half_protrusion_thickness": 0.11100000000003707
+      }
+    }
+  },
+  "after": {
+    "foot_diameter": 2.0130200386047363,
+    "groove": {
+      "radius": 0.9737958908081055,
+      "height": 0.34900000000000003
+    },
+    "flare": {
+      "radius": 0.987736701965332,
+      "height": 0.438
+    },
+    "socket_diameter_at_scaled_z1": 1.175479351116355,
+    "front_collar_rim_rows": {
+      "upper": 509.29765355587006,
+      "middle": 566.2756991386414,
+      "lower": 607.178205370903
+    },
+    "front_groove_row": 1054.5216418504715,
+    "floor": 0.0,
+    "height": 4.592006683349609,
+    "source": "build/bishop-mission/186-family-style-b/bishop.blend",
+    "source_sha256": "2cebd2e24cbf773e7551d14f68cacf6d33a590c85dd249026e6221ea9afd2ba6",
+    "rim_measurements": {
+      "lower": {
+        "radius": 0.6587128639221191,
+        "half_protrusion_thickness": 0.13850000000004625
+      },
+      "middle": {
+        "radius": 0.6027567386627197,
+        "half_protrusion_thickness": 0.12200000000004074
+      },
+      "upper": {
+        "radius": 0.5241024494171143,
+        "half_protrusion_thickness": 0.07350000000002455
+      }
+    }
+  }
+}

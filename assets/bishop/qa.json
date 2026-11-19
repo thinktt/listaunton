@@ -2,15 +2,15 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9876834094368341,
-      "mean_boundary_error_px": 2.0216016859852477,
+      "silhouette_iou": 0.9854630201503595,
+      "mean_boundary_error_px": 2.4072708113804,
       "p95_boundary_error_px": 5.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.4663846224524367
+      "mean_boundary_error_original_300px_units": 0.5553587021071628
     },
     "selected": {
-      "silhouette_iou": 0.9697667869084285,
-      "mean_boundary_error_px": 5.480505795574289,
+      "silhouette_iou": 0.9699092811445086,
+      "mean_boundary_error_px": 5.4520547945205475,
       "p95_boundary_error_px": 10.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
@@ -18,9 +18,9 @@
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "The shallow button, direct head contact and full-depth mitre slit remain exact from checkpoint 022.",
-    "collars": "The accepted collar rims, heights and middle-lip overhang remain exact from checkpoint 022.",
-    "lower_body": "Only mid-stem radii 34-36 are narrowed. Every height, the lower-stem controls at the root, socket, flare, groove and foot are retained. Actual contour rays separate the stem boundary from the rear base; the unsupported subpixel shoulder adjustment is omitted. Level views check that the earlier lower-stem bulge has not been reintroduced.",
-    "limits": "The accepted side guide is art direction, not a recovered source camera. Boxwood pigment, surface relief and reflections are an unfinished reconstruction. Single-view evidence cannot determine hidden geometry uniquely. The retained pigment and lights have not been refitted to this geometry; neutral comparison is required."
+    "finial": "The restored tall head, seated button and deep slit retain their exact controls from checkpoint 024.",
+    "collars": "All three rims use thinner turned edges with softened corners, guided by the current king and queen. Front-rim locations and the original silhouette are checked at the unchanged 54-degree camera.",
+    "lower_body": "The base has a shallower groove and a continuous rounded flare. The socket rolls into the stem rather than ending in a flat ledge. The existing foot width, total height and upper stem are retained.",
+    "limits": "This is a local style revision, not an exact shared scaled base. The bishop still follows its own authoritative reference. Wood and lights remain inherited and unfinished."
   }
 }

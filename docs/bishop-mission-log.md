@@ -812,3 +812,32 @@ The owner rejected checkpoint 027 because its button and upper body missed the o
 ## Restore the tall reference model after rejected shortening
 
 The owner rejected iteration 029 and requested the tall bishop that matched the original. Restore the active model, editable profile, fixed render, clay render, rotating mesh, side views and review from checkpoint 024 through restoration commit ca4f90b. The restored model has height 4.59200668335 and uses the original 54-degree comparison camera. The rejected shortening changes and their active comparison documents have been removed. The whole-set page uses the restored bishop.
+
+## 030 — Bishop base, socket and collars in the king/queen style
+
+At the owner's request, reshape the restored tall bishop's lower turning and
+three collar rims using the current king and queen as style references.
+The base has a more continuous curved slope and shallower groove. The socket
+rolls into the stem without the former flat ledge. The three rims are roughly
+27–34% thinner at half protrusion, with rounded edges retained after rejecting
+a sharper first trial. Height and maximum foot diameter remain exact.
+
+The camera stays at 54 degrees with unchanged registration. Original-white
+outline overlap changes from 98.7742% to 98.5534%; selected white 3 from
+97.0347% to 97.0519%; original black from 97.8272% to 97.9130%.
+The front groove lands closer to the original dark line; the upper collar
+front edge moves 1.6 comparison pixels upward. The side style improves with
+a small original-outline tradeoff, not a claim of perfect recovery.
+
+The saved model passes scoped controls, surface closure, slit, button contact,
+receiver, UV, packed-texture, camera and mesh-export checks. Neutral side views
+use identical framing. The public overlay, orbit mesh and whole-set bishop
+records are synchronized. Materials and lights remain inherited; their defects
+are deferred during this shape-only request. Missions, other pieces and the
+owner's gallery defaults are unchanged.
+
+Current model SHA-256:
+`2cebd2e24cbf773e7551d14f68cacf6d33a590c85dd249026e6221ea9afd2ba6`.
+The [030 assessment](bishop-mission/iteration-030/assessment.md) records the
+before/after views, actual measurements, both trials and reproduction steps.
+The full visual-match mission remains incomplete. No push or publication.

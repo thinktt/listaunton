@@ -43,5 +43,5 @@ for piece,images in data['pieces'].items():
     if reconstruction:
         config['reconstructionWorkspace']=True
     for key,value in {'__REVIEW_TABS__':review_tabs,'__CANDIDATES_HIDDEN__':' hidden' if initial_tab=='model' else '', '__MODEL_HIDDEN__':'' if initial_tab=='model' else ' hidden','__EMPTY_HIDDEN__':' hidden' if initial_tab=='model' else '', '__EXTRA_TAB__':extra_tab,'__EXTRA_PANEL__':extra_panel,'__PIECE__':piece.title(),'__LOWER_PIECE__':piece,'__NAV__':nav,'__OPTIONS_A__':options('black'),'__OPTIONS_B__':options(images[2]['id']),'__FIRST_A__':images[0]['file'],'__FIRST_B__':images[2]['file'],'__DATA__':json.dumps(config,separators=(',',':')).replace('<','\\u003c')}.items():page=page.replace(key,value)
-    (root/f'{piece}-review.html').write_text(page,encoding='utf-8')
+    (root/f'{piece}-review.html').write_text(page,encoding='utf-8',newline='\n')
 print('Built bishop reconstruction workspace.')

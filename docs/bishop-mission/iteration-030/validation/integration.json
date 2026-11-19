@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "source_sha256": "2cebd2e24cbf773e7551d14f68cacf6d33a590c85dd249026e6221ea9afd2ba6",
+  "checks": [
+    "saved/reopened shape and receiver audit",
+    "closed meshes, slit opening and flush button",
+    "fixed 54-degree camera and exact export",
+    "bishop viewer and review interactions",
+    "all-piece review integration",
+    "current Blender lineup sources",
+    "board comparison",
+    "matched/chosen height modes",
+    "proportion warping",
+    "HTTP embedded/external mesh and renders"
+  ],
+  "native_browser_inspection": {
+    "url": "http://localhost:8080/bishop-review.html",
+    "observed": [
+      "new versioned model frame",
+      "reference overlay controls",
+      "neutral rotating mesh at saved camera",
+      "neutral Side preset"
+    ],
+    "passed": true
+  },
+  "note": "Shared Node checks used the installed Windows runtime and synchronized preview; canonical HTTP assets and all recorded delivery file hashes were checked independently."
+}

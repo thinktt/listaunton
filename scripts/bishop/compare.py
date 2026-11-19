@@ -38,6 +38,12 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_sha
   report['internal_features']['finial']='The shallow button, direct head contact and full-depth mitre slit remain exact from checkpoint 022.'
   report['internal_features']['collars']='The accepted collar rims, heights and middle-lip overhang remain exact from checkpoint 022.'
   report['internal_features']['lower_body']='Only mid-stem radii 34-36 are narrowed. Every height, the lower-stem controls at the root, socket, flare, groove and foot are retained. Actual contour rays separate the stem boundary from the rear base; the unsupported subpixel shoulder adjustment is omitted. Level views check that the earlier lower-stem bulge has not been reintroduced.'
+if 'iteration-030/family-style.json' in json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_shape_refit',{}).get('config',''):
+ report['internal_features'].update(
+  lower_body='The base has a shallower groove and a continuous rounded flare. The socket rolls into the stem rather than ending in a flat ledge. The existing foot width, total height and upper stem are retained.',
+  collars='All three rims use thinner turned edges with softened corners, guided by the current king and queen. Front-rim locations and the original silhouette are checked at the unchanged 54-degree camera.',
+  finial='The restored tall head, seated button and deep slit retain their exact controls from checkpoint 024.',
+  limits='This is a local style revision, not an exact shared scaled base. The bishop still follows its own authoritative reference. Wood and lights remain inherited and unfinished.')
 if json.loads((root/'scripts/bishop/profile.json').read_text()).get('shared_turning'):
  report['internal_features'].update(
   lower_body='The sole, foot, groove, flare, socket and first stem support use all 40 queen/king rows at a common scale. The stem blends into this support.',
