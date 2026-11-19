@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "model_sha256": "d394dddf520ba6672735b41da3c795ff3f6917cbe6c513d0adc14ac05952903c",
+  "cutter_unchanged_from_source": true,
+  "source_checkpoint": "030",
+  "through_opening_probes": [
+    {
+      "height_above_slot_bottom_original_units": 7,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 12,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 17,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    }
+  ],
+  "solid_floor": true
+}

@@ -1,0 +1,20 @@
+{
+  "mask": "reference max RGB >12 and alpha >127; model alpha >127; both largest 4-connected component with holes filled. No alignment search or warping.",
+  "render": "build/bishop-mission/187-compact-family-b/wood.png",
+  "render_sha256": "e19c5e545fbbebaf6b93b4f8414d9a206bcbfc73f880fedfb284e096e18c083e",
+  "legacy_raw_model_mask_different_pixels": 0,
+  "images": {
+    "selected": {
+      "silhouette_iou": 0.9780906447052892,
+      "legacy_raw_model_mask_iou": 0.9780906447052892
+    },
+    "original_white": {
+      "silhouette_iou": 0.9918991515859472,
+      "legacy_raw_model_mask_iou": 0.9918991515859472
+    },
+    "original_black": {
+      "silhouette_iou": 0.9781387660169081,
+      "legacy_raw_model_mask_iou": 0.9781387660169081
+    }
+  }
+}

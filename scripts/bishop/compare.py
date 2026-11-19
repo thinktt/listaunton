@@ -44,6 +44,12 @@ if 'iteration-030/family-style.json' in json.loads((root/'scripts/bishop/profile
   collars='All three rims use thinner turned edges with softened corners, guided by the current king and queen. Front-rim locations and the original silhouette are checked at the unchanged 54-degree camera.',
   finial='The restored tall head, seated button and deep slit retain their exact controls from checkpoint 024.',
   limits='This is a local style revision, not an exact shared scaled base. The bishop still follows its own authoritative reference. Wood and lights remain inherited and unfinished.')
+if 'iteration-031/compact-family.json' in json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_shape_refit',{}).get('config',''):
+ report['internal_features'].update(
+  lower_body='The flare and socket are compressed 12% above the groove, with locally broader radii and a slightly wider foot. The stem is refitted to the lower socket at the original fixed camera.',
+  collars='The upper collar is lower and slightly narrower to retain its reference-view rim. Middle and lower collars retain the accepted shape.',
+  finial='The upper head is lowered modestly and the button dome refitted. The first flat-button trial was rejected. Actual contact, slit opening and overall dimensions are independently checked.',
+  limits='The overall height reduction is modest. Reference images and camera registration are unchanged; finish remains inherited and unfinished.')
 if json.loads((root/'scripts/bishop/profile.json').read_text()).get('shared_turning'):
  report['internal_features'].update(
   lower_body='The sole, foot, groove, flare, socket and first stem support use all 40 queen/king rows at a common scale. The stem blends into this support.',

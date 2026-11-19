@@ -6,9 +6,9 @@
   "regions": [
     {
       "region": "body-rest",
-      "faces": 56108,
-      "vertices": 56591,
-      "normal_max_component_error": 7.778406143188477e-05,
+      "faces": 56352,
+      "vertices": 56832,
+      "normal_max_component_error": 2.1904706954956055e-05,
       "uv_max_component_errors": {
         "Pigment projection": 5.960464477539063e-08,
         "Wood atlas": 5.960464477539063e-08
@@ -16,9 +16,9 @@
     },
     {
       "region": "socket-lip",
-      "faces": 3840,
-      "vertices": 4096,
-      "normal_max_component_error": 9.810924530029297e-05,
+      "faces": 4352,
+      "vertices": 4608,
+      "normal_max_component_error": 1.5228986740112305e-05,
       "uv_max_component_errors": {
         "Pigment projection": 0.0,
         "Wood atlas": 0.0
@@ -26,5 +26,5 @@
     }
   ],
   "all_faces_once": true,
-  "model_sha256": "2cebd2e24cbf773e7551d14f68cacf6d33a590c85dd249026e6221ea9afd2ba6"
+  "model_sha256": "d394dddf520ba6672735b41da3c795ff3f6917cbe6c513d0adc14ac05952903c"
 }

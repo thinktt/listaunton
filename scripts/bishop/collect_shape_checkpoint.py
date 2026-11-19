@@ -12,6 +12,8 @@ p.add_argument('--finish-scores',type=float,nargs=3,metavar=('COLOR','GRAIN','LI
 p.add_argument('--holistic-range',type=float,nargs=2,default=[75,85])
 p.add_argument('--bounds-relative-tolerance',type=float,default=0,
                help='Explicitly declared allowance for a local evaluated diameter change; default preserves exact prior bounds.')
+p.add_argument('--bounds-evidence',type=Path,
+               help='Independent saved-file measurements for an owner-requested shorter and wider revision.')
 a=p.parse_args();assert a.checkpoint.isdigit() and a.baseline.isdigit() and a.log_prefix.isdigit()
 assert 0<=a.bounds_relative_tolerance<=.001
 assert 0<=a.holistic_range[0]<=a.holistic_range[1]<=100
@@ -53,11 +55,19 @@ if shared:
     else:
         assert new_size[0]>old_size[0] and new_size[2]<old_size[2]
     assert abs(meta['bounds']['min'][2])<1e-6
+elif a.bounds_evidence:
+    measured=json.loads((ROOT/a.bounds_evidence).read_text())['after']
+    assert measured['source_sha256']==model_hash
+    assert np.allclose(new_size,[measured['foot_diameter']]*2+[measured['height']],rtol=0,atol=5e-5)
+    assert new_size[0]>old_size[0] and new_size[2]<old_size[2]
+    assert np.max(np.abs(new_size/old_size-1))<.05,'This option covers a modest shorter/wider refit.'
+    assert abs(meta['bounds']['min'][2])<1e-6
 else:
     assert np.allclose(new_size,old_size,atol=1e-6,rtol=a.bounds_relative_tolerance)
     assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
 (out/'bounds-comparison.json').write_text(json.dumps({'previous':old_size.tolist(),'current':new_size.tolist(),
-    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':None if shared else a.bounds_relative_tolerance,
+    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':None if shared or a.bounds_evidence else a.bounds_relative_tolerance,
+    'independent_bounds_evidence':str(a.bounds_evidence) if a.bounds_evidence else None,
     'height_preserved':bool(abs(new_size[2]-old_size[2])<1e-6),'note':'Dimensions of evaluated geometry at the original floor and saved camera.'},indent=2)+'\n')
 old_atlas=prior/'bishop-boxwood-albedo.png'
 new_atlas=assets/'bishop-boxwood-albedo.png'

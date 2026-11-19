@@ -1,8 +1,12 @@
 """Produce equal-camera side panels for the geometry style revision."""
 from pathlib import Path
+import argparse
 from PIL import Image,ImageDraw,ImageFont
 ROOT=Path(__file__).resolve().parents[2]
-DOC=ROOT/'docs/bishop-mission/iteration-030'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--iteration',default='030')
+args=parser.parse_args();assert args.iteration.isdigit()
+DOC=ROOT/f'docs/bishop-mission/iteration-{args.iteration}'
 font=ImageFont.load_default()
 for path in ['C:/Windows/Fonts/arial.ttf','/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf']:
     if Path(path).is_file():font=ImageFont.truetype(path,22);break

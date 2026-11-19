@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "model_sha256": "d394dddf520ba6672735b41da3c795ff3f6917cbe6c513d0adc14ac05952903c",
+  "saved_blend_checks": [
+    "export_mission.py",
+    "validate.py",
+    "validate_mission.py",
+    "check_join_regression.py"
+  ],
+  "browser_asset_checks": [
+    "viewer check",
+    "bishop review check",
+    "check_served_checkpoint.py",
+    "scripts/check_model_site.py"
+  ],
+  "shared_page_checks": [
+    "check_model_lineup.cjs",
+    "check_board_comparison.cjs",
+    "check_model_height_modes.cjs",
+    "check_proportion_warping.cjs"
+  ],
+  "shared_checks_environment": "Windows Node v24.19.0 against synchronized Windows preview; HTTP and site checks against canonical WSL repository",
+  "native_browser": {
+    "url": "http://localhost:8080/bishop-review.html",
+    "revision": "709fd394389cba2b",
+    "observed": "Updated rotate-model tab displays the full neutral orthographic side view, including button, lower upper collar, compressed socket and broader base. Foot visible after ordinary page scroll.",
+    "passed": true
+  },
+  "camera_elevation_degrees": 54,
+  "mission_complete": false
+}

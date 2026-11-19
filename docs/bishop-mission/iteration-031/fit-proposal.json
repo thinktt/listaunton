@@ -1,0 +1,45 @@
+{
+  "method": "Calibrated sampled rotational-envelope prediction. Saved-file renders govern acceptance. No camera or image alignment changes.",
+  "start": {
+    "loss": 2.886484794215932,
+    "height_control": 4.559,
+    "regions": {
+      "button": 2.032326473494932,
+      "head": 1.0234968146307954,
+      "collars": 1.3012831026048386,
+      "stem": 3.837183084369166,
+      "base": 2.082459394080308
+    },
+    "parameters": {
+      "flare_bulge": 0.035,
+      "upper_drop": 0.048,
+      "upper_radius": 0.945,
+      "head_drop": 0.025,
+      "cap_radius": 0.985,
+      "cap_rim_z": 4.505,
+      "stem_radius": 0.003,
+      "foot_width": 0.012
+    }
+  },
+  "fit": {
+    "loss": 2.322421026206433,
+    "height_control": 4.559,
+    "regions": {
+      "button": 1.7765265605647356,
+      "head": 1.0747989262327655,
+      "collars": 1.2028170086690286,
+      "stem": 1.7439897271111704,
+      "base": 1.1091021385529714
+    },
+    "parameters": {
+      "flare_bulge": 0.029960000000000004,
+      "upper_drop": 0.05394000000000001,
+      "upper_radius": 0.945,
+      "head_drop": 0.02052,
+      "cap_radius": 0.97645,
+      "cap_rim_z": 4.508,
+      "stem_radius": 0.006,
+      "foot_width": 0.0069299999999999995
+    }
+  }
+}

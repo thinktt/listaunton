@@ -2,25 +2,25 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9854630201503595,
-      "mean_boundary_error_px": 2.4072708113804,
-      "p95_boundary_error_px": 5.0,
+      "silhouette_iou": 0.9918653183903431,
+      "mean_boundary_error_px": 1.3638275499474237,
+      "p95_boundary_error_px": 3.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.5553587021071628
+      "mean_boundary_error_original_300px_units": 0.31463576696735235
     },
     "selected": {
-      "silhouette_iou": 0.9699092811445086,
-      "mean_boundary_error_px": 5.4520547945205475,
-      "p95_boundary_error_px": 10.0,
+      "silhouette_iou": 0.977506014194098,
+      "mean_boundary_error_px": 4.213459516298633,
+      "p95_boundary_error_px": 8.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
     "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "The restored tall head, seated button and deep slit retain their exact controls from checkpoint 024.",
-    "collars": "All three rims use thinner turned edges with softened corners, guided by the current king and queen. Front-rim locations and the original silhouette are checked at the unchanged 54-degree camera.",
-    "lower_body": "The base has a shallower groove and a continuous rounded flare. The socket rolls into the stem rather than ending in a flat ledge. The existing foot width, total height and upper stem are retained.",
-    "limits": "This is a local style revision, not an exact shared scaled base. The bishop still follows its own authoritative reference. Wood and lights remain inherited and unfinished."
+    "finial": "The upper head is lowered modestly and the button dome refitted. The first flat-button trial was rejected. Actual contact, slit opening and overall dimensions are independently checked.",
+    "collars": "The upper collar is lower and slightly narrower to retain its reference-view rim. Middle and lower collars retain the accepted shape.",
+    "lower_body": "The flare and socket are compressed 12% above the groove, with locally broader radii and a slightly wider foot. The stem is refitted to the lower socket at the original fixed camera.",
+    "limits": "The overall height reduction is modest. Reference images and camera registration are unchanged; finish remains inherited and unfinished."
   }
 }

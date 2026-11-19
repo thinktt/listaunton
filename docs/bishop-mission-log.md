@@ -841,3 +841,33 @@ Current model SHA-256:
 The [030 assessment](bishop-mission/iteration-030/assessment.md) records the
 before/after views, actual measurements, both trials and reproduction steps.
 The full visual-match mission remains incomplete. No push or publication.
+
+## 031 — Compress the lower turning and lower the upper collar
+
+The owner requested compression and widening through the base/socket, a lower
+top collar, and continued matching at 54 degrees. Starting from archived 030,
+the accepted revision compresses the turning above the groove by 12%, broadens
+the inner flare by 3.9%, and widens the foot by 0.69%. The socket-top control
+moves down 0.12876 units and the upper collar crest down 0.05394 units.
+The upper head and rounded button are refitted separately. A first, flatter
+button trial was rejected after side-view inspection despite its high outline
+score.
+
+The saved model is 4.55895996 high and 2.02697039 wide at its foot, versus
+4.59200668 and 2.01302004 before. Overall shortening is only 0.72%; the
+height-to-foot ratio drops about 1.4%. The larger local base change must not
+be described as a 12% reduction of the whole bishop.
+
+With exactly the same camera and reference registration, outline overlap is
+99.1899% original white and 97.8091% selected white 3, up from 98.5534% and
+97.0519%. Original black falls slightly to 97.8139%. The upper front collar
+rim moves nearer the original edge; the groove moves about 1.6 comparison
+pixels lower. Internal transitions and the inherited finish remain imperfect.
+
+The saved/reopened geometry passes control scope, surface closure, slit,
+button join, receiver, UV, packed texture and fixed-camera checks. Neutral
+side comparisons retain equal scale and ground level. Accepted renders,
+mesh, review and whole-set records are synchronized. No material/light,
+mission, source-registration, gallery-default or other-piece changes.
+The [031 assessment](bishop-mission/iteration-031/assessment.md) records
+measurements, both trials, limitations and reproduction. Full mission incomplete.

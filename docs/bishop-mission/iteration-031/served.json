@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "server": "http://127.0.0.1:8080",
+  "source_sha256": "d394dddf520ba6672735b41da3c795ff3f6917cbe6c513d0adc14ac05952903c",
+  "bishop_review_revision": "709fd394389cba2b",
+  "embedded_mesh_and_images_exact": true,
+  "set_board_entry": {
+    "piece": "bishop",
+    "file": "assets/bishop/render.png",
+    "version": "e19c5e545fbbebaf",
+    "width": 1254,
+    "height": 1254,
+    "footX": 491.6982756704092,
+    "footY": 903.0247418599915,
+    "pixelsPerUnit": 260.00000873208046,
+    "modelHeight": 4.5589599609375,
+    "baseWidth": 2.026970624923706,
+    "centerX": 274.5,
+    "sourceSha256": "d394dddf520ba6672735b41da3c795ff3f6917cbe6c513d0adc14ac05952903c",
+    "renderTop": 161,
+    "renderBottom": 1111,
+    "targetTop": 52,
+    "targetBottom": 189,
+    "warpRuler": {
+      "checkpoint": "025",
+      "sourceSha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+      "pixelsPerUnit": 260.00000873208046,
+      "renderTop": 163,
+      "renderBottom": 1113,
+      "footY": 903.0247418599915
+    }
+  },
+  "set_profile_entry": {
+    "file": "assets/bishop/side-profile.png",
+    "version": "1d18af04a3655b83",
+    "width": 1000,
+    "height": 1000,
+    "top": 50,
+    "bottom": 965,
+    "left": 296,
+    "right": 703,
+    "center": 499.5
+  },
+  "physical_height_percent_of_king": null,
+  "served_sha256": {
+    "assets/bishop/mesh.json": "1ddb87b45767388f2db552cd101cac009ef1ae3bf0c6bfeb9f866fffb6e4e152",
+    "bishop-model.html": "709fd394389cba2b601f8a6f5ecdb304d896c4f82af5909011d352bea07b0f50",
+    "bishop-review.html": "e8cb1380069e51137288c9d5ef5ef4a4db690123367d17cec7c5b16bc5d99343",
+    "assets/bishop/mesh.bin": "0659222e4fefc58f5dc4641591980181e8bf1e00284027f4bbedb0d098bb3858",
+    "assets/bishop/render.png": "e19c5e545fbbebaf6b93b4f8414d9a206bcbfc73f880fedfb284e096e18c083e",
+    "assets/bishop/render-clay.png": "b1c923d72ffa8a9af651bb723ff0785524e3d05bcdf87414877a7d55e4cfd59c",
+    "assets/bishop/original.png": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
+    "set-comparison.html": "57f42295dc146622a8af01aed010c3aae0bfad4affcc9ac15f14c1c8a24e1fb2",
+    "assets/bishop/side-profile.png": "1d18af04a3655b83636241fef23971c395ab99947f24d8d8895c2c17e14cfb90",
+    "assets/bishop/head-side.png": "b2ab5ab9a3a98fa5224c8c14ff4583d02b1f9b64a384bb6313b5082cb04bea1d",
+    "assets/bishop/rear-oblique.png": "bccf1aa59f088139c90879585dd8c0fa35594245576bc2351418783346bbfd4a",
+    "assets/bishop/camera.json": "927473572d4322e936b7e11aaba3ec698d05dacb6a68ffdbadd6c35d33d14080"
+  }
+}
