@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "model_sha256": "cebfcaa64ef40e6834e991bc3bb24ce14435661abb36189dfc0881664bb33292",
-  "cutter_unchanged_from_source": false,
-  "source_checkpoint": "026",
+  "model_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "cutter_unchanged_from_source": true,
+  "source_checkpoint": "022",
   "through_opening_probes": [
     {
       "height_above_slot_bottom_original_units": 7,
@@ -20,20 +20,5 @@
       "adjacent_material_hit": true
     }
   ],
-  "solid_floor": true,
-  "cutter_shape_and_rotation_preserved": false,
-  "cutter_translation_z": 1.087764404296875,
-  "cutter_follows_mitre_affine": false,
-  "radial_scale": 1.03,
-  "vertical_scale": 0.737,
-  "rigid_rotation_after_mitre_affine": true,
-  "world_plane": {
-    "dx_dz": 0.4454900502125468,
-    "dx_dy": 0.2550811503940622,
-    "anchor_xz": [
-      0.19860708690921822,
-      3.8458633422851562
-    ],
-    "floor_z": 3.8416
-  }
+  "solid_floor": true
 }

@@ -1,101 +1,27 @@
 {
   "passed": true,
-  "model_sha256": "cebfcaa64ef40e6834e991bc3bb24ce14435661abb36189dfc0881664bb33292",
-  "source": "history/bishop-mission-026/bishop-rebuilt.blend",
-  "source_sha256": "f18de9f1c93a49a32cee8a37eb66f49fa2022e0150e8f04a52b8c699c3e59dcb",
-  "configuration": {
-    "config": "docs/bishop-mission/iteration-027/side-refit.json",
-    "case": "refit",
-    "height_factor": 1.0,
-    "base_factor": 1.0510625,
-    "head_radius": 1.03,
-    "head_height": 0.737,
-    "head_z_translation": 1.087764404296875,
-    "axis_slope": 0.669933,
-    "axis_offset": 31.732626395046168,
-    "locked_height": 4.135986328125,
-    "cap_roundoff_correction": 0.0,
-    "probe_radius_factor": 0.9942384000000001,
-    "probe_height_factor": 0.669933,
-    "placed_slit": {
-      "dx_dz": 0.4454900502125468,
-      "dx_dy": 0.2550811503940622,
-      "anchor_xz": [
-        0.19860708690921822,
-        3.8458633422851562
-      ],
-      "floor_z": 3.8416
-    },
-    "placed_slit_world_transform": [
-      [
-        0.8865163922309875,
-        0.247166708111763,
-        -0.39114877581596375,
-        1.681986689567566
-      ],
-      [
-        -0.2261335849761963,
-        0.9689729809761047,
-        0.09977466613054276,
-        0.0
-      ],
-      [
-        0.40367355942726135,
-        0.0,
-        0.9149031043052673,
-        0.4855078160762787
-      ],
-      [
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ]
-    ],
-    "healed_atlas": {
-      "path": "build/bishop-mission/healed-boxwood.png",
-      "sha256": "63e2e42a391d3403f59fc31e911b8577e3574a4869f872454f56c60101344560",
-      "source_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-      "reproduce": "scripts/bishop/heal_slit_atlas.py"
-    }
+  "model_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "config_sha256": "27678b1b20ffb302788ba3f28d984e3a8cfddc0a3dfdf27cb494ed5e1528d6a8",
+  "changed_body_rings": [
+    34,
+    35,
+    36
+  ],
+  "changed_finial_rings": [],
+  "max_control_error_from_declared_edit": 1.3392830400249522e-08,
+  "unlisted_controls_exact": true,
+  "control_errors_by_component": {
+    "Bishop - continuous turned body": 1.3392830400249522e-08,
+    "Bishop - domed button finial": 0.0
   },
-  "donor_rings": 40,
-  "donor_sha256": {
-    "queen": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
-    "king": "9c1fc33df2cc0cf59bdb97bf2745ee6307b455b67f036e874522d5a43d39f146"
-  },
-  "scale": 0.9744862905,
-  "max_base_radius_or_height_error": 5.7592987934285134e-08,
-  "upper_controls_match_specification": true,
-  "cutter_translation_z": 1.087764404296875,
-  "head_radius_factor": 1.03,
-  "head_height_factor": 0.737,
-  "cutter_and_button_transform_matches_mitre": false,
-  "placed_slit": {
-    "dx_dz": 0.4454900502125468,
-    "dx_dy": 0.2550811503940622,
-    "anchor_xz": [
-      0.19860708690921822,
-      3.8458633422851562
-    ],
-    "floor_z": 3.8416
-  },
-  "all_control_uvs_exact": true,
-  "original_upper_uvs_exact": true,
-  "lower_uv_interpolation_max_error": 0.0,
-  "packed_images_and_material_graphs_preserved": false,
-  "healed_atlas": {
-    "path": "build/bishop-mission/healed-boxwood.png",
-    "sha256": "63e2e42a391d3403f59fc31e911b8577e3574a4869f872454f56c60101344560",
-    "source_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-    "reproduce": "scripts/bishop/heal_slit_atlas.py"
-  },
-  "material_graph_preserved": true,
-  "lights_exact": true,
+  "topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved": true,
+  "button_controls_preserved": true,
   "reference_pixels_unchanged": true,
   "camera_exactly_unchanged": true,
-  "geometry_phase": true,
-  "saved_and_reopened": true,
+  "shader": "Principled BSDF",
+  "saved_scene_albedo_bakes_lighting_flag": false,
   "render_receivers": {
     "passed": true,
     "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
@@ -104,9 +30,9 @@
     "regions": [
       {
         "region": "body-rest",
-        "faces": 57429,
-        "vertices": 57888,
-        "normal_max_component_error": 5.841255187988281e-06,
+        "faces": 55852,
+        "vertices": 56335,
+        "normal_max_component_error": 4.9680471420288086e-05,
         "uv_max_component_errors": {
           "Pigment projection": 5.960464477539063e-08,
           "Wood atlas": 5.960464477539063e-08
@@ -114,73 +40,23 @@
       },
       {
         "region": "socket-lip",
-        "faces": 5888,
-        "vertices": 6144,
-        "normal_max_component_error": 3.0875205993652344e-05,
+        "faces": 5632,
+        "vertices": 5888,
+        "normal_max_component_error": 3.7670135498046875e-05,
         "uv_max_component_errors": {
-          "Pigment projection": 0.0,
-          "Wood atlas": 0.0
+          "Pigment projection": 5.960464477539063e-08,
+          "Wood atlas": 5.960464477539063e-08
         }
       }
     ],
     "all_faces_once": true
   },
+  "saved_and_reopened": true,
+  "note": "The separate anatomy validator checks closed components, actual slit opening and continuous button join. Scope validation is not a visual fidelity score. The preserved albedo metadata flag is not proof that pigment is illumination-free; the inherited atlas still contains photographic shading.",
+  "declared_geometry_changes_validated": true,
   "finite_uvs_and_unit_normals": true,
-  "exported_triangles": 138812,
-  "bounds": {
-    "min": [
-      -1.0176993608474731,
-      -1.0176994800567627,
-      0.0
-    ],
-    "max": [
-      1.0176994800567627,
-      1.0176993608474731,
-      4.135986328125
-    ],
-    "size": [
-      2.0353989601135254,
-      2.0353989601135254,
-      4.135986328125
-    ],
-    "center": [
-      5.960464477539063e-08,
-      -5.960464477539063e-08,
-      2.0679931640625
-    ]
-  },
-  "old_size": [
-    1.9365154504776,
-    1.9365155696868896,
-    4.135986328125
-  ],
-  "target_size": [
-    2.0353987706676127,
-    2.0353988959640263,
-    4.135986328125
-  ],
-  "height_ratio": 1.0,
-  "foot_ratio": 1.0510625978282475,
-  "physical_sections": {
-    "sole_to_first_stem_support": {
-      "old": 1.2107419967651367,
-      "new": 1.2725655099749564,
-      "change": 0.061823513209819714
-    },
-    "stem": {
-      "old": 1.3000783920288086,
-      "new": 1.4708621244677784,
-      "change": 0.17078373243896983
-    },
-    "collar_stack": {
-      "old": 0.5545737743377686,
-      "new": 0.6035322680822133,
-      "change": 0.04895849374444472
-    },
-    "mitre_and_button": {
-      "old": 1.0705921649932861,
-      "new": 0.7890264256000519,
-      "change": -0.28156573939323426
-    }
-  }
+  "texture_hash_matches": true,
+  "declared_slit_revision_validated": true,
+  "geometry_phase": true,
+  "prior_material_atlas_exact": true
 }
