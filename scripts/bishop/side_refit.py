@@ -1,4 +1,4 @@
-"""Fit bishop 025 to the owner's side proportions at its original physical registration."""
+"""Fit a saved bishop by anatomical region at its original physical registration."""
 import argparse
 import json
 import math
@@ -24,7 +24,7 @@ def put_rings(obj, rings):
     obj.data.update()
 
 
-def build(case_name, spec, samples):
+def build(case_name, spec, samples, config=CONFIG):
     src=ROOT/spec['source']
     assert digest(src)==spec['source_sha256']
     bpy.ops.wm.open_mainfile(filepath=str(src),load_ui=False)
@@ -34,6 +34,7 @@ def build(case_name, spec, samples):
     old_profile=meridian(old)
     height=json.loads((src.parent/'mesh.json').read_text())['bounds']['size'][2]
     case=spec['cases'][case_name]
+    foot=case.get('base_factor',spec['base_factor'])
     new, dz=shape(old_profile,height,spec,case)
     hr,hz=case['head_radius'],case['head_height']
     memberships=remove_receivers(scene)
@@ -45,6 +46,24 @@ def build(case_name, spec, samples):
     finial[:,:,:2]*=hr
     finial[:,:,2]=finial[:,:,2]*hz+dz
     put_rings(button,finial)
+    cap_delta=0.
+    if 'locked_height' in spec:
+        # Compensate subdivision's small float32 drift at the dome. These
+        # four control rows lie above the join and leave the contact intact.
+        assert abs(spec['locked_height']-height)<1e-7
+        for _ in range(6):
+            bpy.context.view_layer.update()
+            ev=button.evaluated_get(bpy.context.evaluated_depsgraph_get())
+            top=max(v.co.z for v in ev.data.vertices)
+            delta=height-top
+            if abs(delta)<5e-7:
+                break
+            assert abs(delta)<7e-5,('Unexpected finial height',top,height)
+            finial[-4:,:,2]+=delta
+            cap_delta+=delta
+            put_rings(button,finial)
+        else:
+            raise ValueError(f'Could not lock the evaluated top to {height}')
     cutter=next(m.object for m in body.modifiers if m.type=='BOOLEAN')
     # Preserve the rounded floor and oblique plane even if the cutter's
     # existing local axes are rotated. Transform its actual cage in that frame.
@@ -53,8 +72,13 @@ def build(case_name, spec, samples):
     cutter.data.transform(cutter.matrix_world.inverted() @ affine @ cutter.matrix_world)
     cutter.data.update()
     bpy.context.view_layer.update()
+    plane=case.get('placed_slit')
+    if plane:
+        from fit_surface_slot import place_cutter
+        rotation=place_cutter(cutter,plane)
+        bpy.context.view_layer.update()
     band=json.loads(scene['bishop_receiver_trial'])['socket_z_band']
-    restore_receiver_band(scene,memberships,[z*spec['base_factor'] for z in band])
+    restore_receiver_band(scene,memberships,[z*foot for z in band])
     profile=json.loads((ROOT/spec['source_profile']).read_text())
     factor=1254/300/json.loads((ROOT/'assets/bishop/original-alignment.json').read_text())['scale']/profile['scale']
     cos=math.cos(math.radians(54))
@@ -74,14 +98,35 @@ def build(case_name, spec, samples):
     new_angle=math.atan(math.tan(old_angle)*hr/hz)
     slit['width']*=hr*math.cos(new_angle)/math.cos(old_angle)
     slit['angle']=math.degrees(new_angle)
-    decl={'config':CONFIG.relative_to(ROOT).as_posix(),'case':case_name,
-          'height_factor':spec['height_factor'],'base_factor':spec['base_factor'],
+    previous=profile.get('side_refit',{})
+    decl={'config':config.relative_to(ROOT).as_posix(),'case':case_name,
+          'height_factor':spec['height_factor'],'base_factor':foot,
           'head_radius':hr,'head_height':hz,'head_z_translation':dz,
-          'axis_slope':hz,'axis_offset':axis(profile['shared_turning']['upper_axis_offset'])}
+          'axis_slope':hz*previous.get('axis_slope',1.),
+          'axis_offset':axis(previous.get('axis_offset',profile['shared_turning']['upper_axis_offset']))}
+    if 'locked_height' in spec:
+        decl.update(locked_height=height,cap_roundoff_correction=cap_delta,
+                    probe_radius_factor=hr*previous.get('probe_radius_factor',previous.get('head_radius',1.)),
+                    probe_height_factor=decl['axis_slope'])
+    if plane:
+        # Keep the pre-placement kerf dimensions available as the build
+        # input. The world plane below specifies the actual final cut.
+        decl.update(placed_slit=plane,placed_slit_world_transform=rotation)
+    if case.get('healed_atlas'):
+        pigment=body.data.materials[0].node_tree.nodes['Baked boxwood pigment']
+        atlas=ROOT/case['healed_atlas']['path']
+        assert digest(atlas)==case['healed_atlas']['sha256']
+        prior=pigment.image
+        assert prior.packed_file and prior.colorspace_settings.name=='sRGB'
+        im=bpy.data.images.load(str(atlas),check_existing=False)
+        im.pack()
+        pigment.image=im
+        assert im.colorspace_settings.name==prior.colorspace_settings.name
+        decl['healed_atlas']=case['healed_atlas']
     profile['side_refit']=decl
     profile['revision']='side-refit-'+case_name
     scene['bishop_side_refit']=json.dumps(decl,sort_keys=True)
-    out=RUN/('side-refit-'+case_name)
+    out=RUN/(spec.get('prefix','side-refit')+'-'+case_name)
     out.mkdir(parents=True,exist_ok=True)
     (out/'profile.json').write_text(json.dumps(profile,indent=2)+'\n')
     scene.cycles.samples=samples
@@ -112,16 +157,18 @@ if __name__=='__main__':
     p.add_argument('cases',nargs='+')
     p.add_argument('--samples',type=int,default=48)
     p.add_argument('--render-existing',action='store_true')
+    p.add_argument('--config',type=Path,default=CONFIG)
     args=p.parse_args(sys.argv[sys.argv.index('--')+1:])
-    spec=json.loads(CONFIG.read_text())
+    config=ROOT/args.config
+    spec=json.loads(config.read_text())
     for name in args.cases:
-        out=RUN/('side-refit-'+name)
+        out=RUN/(spec.get('prefix','side-refit')+'-'+name)
         out.mkdir(parents=True,exist_ok=True)
-        if name=='025':
+        if name==spec.get('baseline_label','025'):
             diagnostics(out,ROOT/spec['source'])
             continue
         if not args.render_existing:
-            build(name,spec,args.samples)
+            build(name,spec,args.samples,config)
         diagnostics(out,out/'bishop.blend')
         render_saved(out,args.samples)
         print('BISHOP_SIDE_REFIT_RENDERED',name,flush=True)

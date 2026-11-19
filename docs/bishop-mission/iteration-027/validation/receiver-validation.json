@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "surface_positions_faces_attributes_material_indices_and_slots_exact": true,
+  "evaluated_uv_error_below_1e_7": true,
+  "closed_editable_control_retained": true,
+  "regions": [
+    {
+      "region": "body-rest",
+      "faces": 57429,
+      "vertices": 57888,
+      "normal_max_component_error": 5.841255187988281e-06,
+      "uv_max_component_errors": {
+        "Pigment projection": 5.960464477539063e-08,
+        "Wood atlas": 5.960464477539063e-08
+      }
+    },
+    {
+      "region": "socket-lip",
+      "faces": 5888,
+      "vertices": 6144,
+      "normal_max_component_error": 3.0875205993652344e-05,
+      "uv_max_component_errors": {
+        "Pigment projection": 0.0,
+        "Wood atlas": 0.0
+      }
+    }
+  ],
+  "all_faces_once": true,
+  "model_sha256": "cebfcaa64ef40e6834e991bc3bb24ce14435661abb36189dfc0881664bb33292"
+}

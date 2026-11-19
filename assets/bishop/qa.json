@@ -2,25 +2,25 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.8562982129470655,
-      "mean_boundary_error_px": 22.21485714285714,
-      "p95_boundary_error_px": 60.0,
+      "silhouette_iou": 0.9572086280313967,
+      "mean_boundary_error_px": 5.099667774086379,
+      "p95_boundary_error_px": 21.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 5.124979778772232
+      "mean_boundary_error_original_300px_units": 1.1764961643722585
     },
     "selected": {
-      "silhouette_iou": 0.8471615068558598,
-      "mean_boundary_error_px": 24.406285714285715,
-      "p95_boundary_error_px": 57.0,
+      "silhouette_iou": 0.9525490749894083,
+      "mean_boundary_error_px": 5.883296460176991,
+      "p95_boundary_error_px": 20.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
-    "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "The seated button and live diagonal saw follow the same transformation as the mitre.",
-    "collars": "The collar stack was fitted against the owner\u2019s level screenshot and the original three arcs at the saved 54-degree registration.",
-    "lower_body": "The 40 rows from the sole through the first stem support retain the queen and king profile at a uniform scale. The stem above them was refitted separately.",
-    "limits": "The owner\u2019s narrower, shorter side target lowers the head and collars in the registered reference view. Iteration 026 records both fits and the actual model dimensions."
+    "mitre": "The rounded saw slot is cut through the real body at the orientation fitted to the original white stroke.",
+    "finial": "The low button seats directly in a continuous curved mitre. Its top falls below the original tip at the chosen physical height.",
+    "collars": "The front arcs of the three collar rims are registered separately to the original white sprite.",
+    "lower_body": "A wider foot and socket carry a newly tapered stem on the same floor. The common lower turning is retained at a uniform scale.",
+    "limits": "The original and selected reference retain their saved registration. The button and front foot groove still differ. Grain and illumination retain errors away from the reference view."
   }
 }

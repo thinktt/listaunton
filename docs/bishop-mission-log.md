@@ -792,3 +792,15 @@ camera its original-white overlap is 85.63%, down from 97.39%. The head
 and front collar rims sit lower. The open slit, flush button, UVs, saved
 camera and mesh export passed verification. Wood and lighting are inherited.
 Bishop 025 is archived. [Lineup, measured tradeoffs and checkpoint](bishop-mission/iteration-026/assessment.md).
+
+## 027. Refit at the shorter height
+
+The bishop keeps its 026 height of 4.135986328125, the 025 lineup ruler and
+the saved 54° camera. Original-white outline overlap rose from 85.63% to
+95.72% after widening the shared lower turning, raising the three collars,
+and reshaping the stem and mitre. The real saw now follows the original
+stroke within 0.93 pixels over 14 sampled rows. A localized pigment repair
+removes the stripe from the previous slit. The physical side height stays
+at 74.48% of the king. The button still projects too low, the groove sits
+too low and the level mitre is broader than the earlier side guide.
+[Fixed-view images, level profiles and remaining errors](bishop-mission/iteration-027/assessment.md).

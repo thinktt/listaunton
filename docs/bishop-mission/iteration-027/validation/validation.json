@@ -1,0 +1,137 @@
+{
+  "components": [
+    {
+      "name": "Bishop - continuous turned body",
+      "nonmanifold_edges": 0,
+      "signed_volume": 4.145425597407973,
+      "vertices": 63520,
+      "faces": 63317
+    },
+    {
+      "name": "Bishop - domed button finial",
+      "nonmanifold_edges": 0,
+      "signed_volume": 0.012151647631432493,
+      "vertices": 5890,
+      "faces": 5888
+    }
+  ],
+  "slit_ray_probes": [
+    {
+      "height_above_slot_bottom_original_units": 7,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 12,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    },
+    {
+      "height_above_slot_bottom_original_units": 17,
+      "through_slot_clear": true,
+      "adjacent_material_hit": true
+    }
+  ],
+  "solid_slot_floor": true,
+  "source_hash_matches": true,
+  "reference_camera_elevation": 54,
+  "saved_camera_matches_export": true,
+  "head_surface_probe_count": 100,
+  "head_surface_max_normal_step_degrees": 5.488908637317381,
+  "lower_65_profile_points_preserved": false,
+  "declared_changed_foot_rings": [],
+  "flare_socket_stem_collars_preserved": false,
+  "slit_parameters_preserved": false,
+  "button_height_to_width": 0.14565407169611908,
+  "head_button_join": {
+    "level_section_samples": 161,
+    "visible_component_transitions": 1,
+    "contact_axis_y": 67.63287038660866,
+    "contact_width_to_button_width": 0.8521506740571232,
+    "minimum_exposed_head_radius_slope": 0.42478887735485527,
+    "head_cap_concealed": true,
+    "gap_free": true,
+    "no_exposed_cylindrical_neck": true
+  },
+  "note": "Two closed editable components intersect. The accepted side guide directs the continuous head-to-button join. The model is not boolean-fused for manufacture.",
+  "slit_angle_width_and_original_floor_anchor_preserved": false,
+  "declared_rounded_floor": {
+    "config": "docs/bishop-mission/iteration-006/slit-044.json",
+    "baseline_model": "history/bishop-mission-005/bishop-rebuilt.blend",
+    "baseline_sha256": "f16145ddeaa44988403e18dddc41bffefc4e4751b2e6417422080ec4bf94fd32",
+    "description": "Rounded semicircular floor; parallel full-depth opening, width, angle and original bevel retained."
+  },
+  "slit_dimensions_and_floor_relative_to_head_preserved": false,
+  "shared_turning": {
+    "config": "docs/bishop-mission/iteration-025/turning.json",
+    "case": "registered",
+    "upper_axis_offset": 0.7051323835672675,
+    "upper_index_offset": 7
+  },
+  "side_refit": {
+    "config": "docs/bishop-mission/iteration-027/side-refit.json",
+    "case": "refit",
+    "height_factor": 1.0,
+    "base_factor": 1.0510625,
+    "head_radius": 1.03,
+    "head_height": 0.737,
+    "head_z_translation": 1.087764404296875,
+    "axis_slope": 0.669933,
+    "axis_offset": 31.732626395046168,
+    "locked_height": 4.135986328125,
+    "cap_roundoff_correction": 0.0,
+    "probe_radius_factor": 0.9942384000000001,
+    "probe_height_factor": 0.669933,
+    "placed_slit": {
+      "dx_dz": 0.4454900502125468,
+      "dx_dy": 0.2550811503940622,
+      "anchor_xz": [
+        0.19860708690921822,
+        3.8458633422851562
+      ],
+      "floor_z": 3.8416
+    },
+    "placed_slit_world_transform": [
+      [
+        0.8865163922309875,
+        0.247166708111763,
+        -0.39114877581596375,
+        1.681986689567566
+      ],
+      [
+        -0.2261335849761963,
+        0.9689729809761047,
+        0.09977466613054276,
+        0.0
+      ],
+      [
+        0.40367355942726135,
+        0.0,
+        0.9149031043052673,
+        0.4855078160762787
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "healed_atlas": {
+      "path": "build/bishop-mission/healed-boxwood.png",
+      "sha256": "63e2e42a391d3403f59fc31e911b8577e3574a4869f872454f56c60101344560",
+      "source_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+      "reproduce": "scripts/bishop/heal_slit_atlas.py"
+    }
+  },
+  "slit_and_button_mapped_with_mitre": false,
+  "placed_slit": {
+    "dx_dz": 0.4454900502125468,
+    "dx_dy": 0.2550811503940622,
+    "anchor_xz": [
+      0.19860708690921822,
+      3.8458633422851562
+    ],
+    "floor_z": 3.8416
+  }
+}

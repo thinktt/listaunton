@@ -396,3 +396,11 @@ and five regional trials are in [the 026 assessment](../../docs/bishop-mission/i
 To rebuild a case, run Blender with `--python scripts/bishop/side_refit.py -- compromise --samples 384`.
 The other case names are in `side-refit.json`. The archived 025 mesh supplies
 the editable control rings, Boolean saw, direct button seat and UVs.
+
+For the fixed-height 027 refit, run `python scripts/bishop/heal_slit_atlas.py`
+to regenerate the local pigment repair from the archived 026 atlas. Then run
+Blender with `--python scripts/bishop/side_refit.py -- refit --config docs/bishop-mission/iteration-027/side-refit.json --samples 384`.
+The builder changes the 026 control rings and rotates its rounded saw.
+The physical height is measured on the evaluated dome. The source trace,
+world plane, saw-floor calibration and measured trial results are recorded
+in [the fixed-height comparison](../../docs/bishop-mission/iteration-027/assessment.md).

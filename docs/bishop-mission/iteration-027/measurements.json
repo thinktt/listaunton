@@ -1,0 +1,1647 @@
+{
+  "side_calibration": {
+    "source": "Owner side lineup, centered on bishop; full screenshot is not needed to reproduce the comparison.",
+    "source_sha256": "16bfa1f0c2f4ca5ac725f694790a904e760a48c08127df842d021c8ed3a463b4",
+    "crop_xyxy": [
+      696,
+      150,
+      828,
+      406
+    ],
+    "crop_sha256": "08bcc12f1166c3a8787e605971f608ac8ccf61153ef82100cb18ff199fcbf3c2",
+    "pixel_bounds_inclusive": [
+      14,
+      28,
+      117,
+      248
+    ],
+    "side_camera_elevation": 0,
+    "registered_camera_elevation": 54,
+    "old_width": 2.0427379608154297,
+    "old_height": 4.550049304962158,
+    "height_multiplier": 0.909,
+    "width_multiplier": 0.948,
+    "target_width": 1.9365155868530273,
+    "target_height": 4.135994818210602,
+    "scale_control": 1,
+    "screenshot_king_percent": 100,
+    "screenshot_queen_percent": 83.3,
+    "screenshot_bishop_percent": 74.5,
+    "x_center": 66.0,
+    "floor_y": 249,
+    "pixels_per_unit": 53.433335802778764,
+    "width_based_pixels_per_unit": 53.704705867618266,
+    "board_page_at_screenshot": "0d841f3",
+    "baseline_board_records": {
+      "king": {
+        "piece": "king",
+        "file": "assets/king/render.png",
+        "version": "5a7a5c9da3613f6d",
+        "width": 1254,
+        "height": 1254,
+        "footX": 502.600077111455,
+        "footY": 868.9007415819193,
+        "pixelsPerUnit": 279.9999935925007,
+        "modelHeight": 5.083622932434082,
+        "baseWidth": 2.0880367755889893,
+        "centerX": 55.5,
+        "sourceSha256": "df3164833519d169641ac22f3a6f52ad2cb87f4f1739f8ac7e206f64404d79b5",
+        "renderTop": 13,
+        "renderBottom": 1100,
+        "targetTop": 28,
+        "targetBottom": 187,
+        "archived_side_profile": {
+          "file": "assets/king/profile.png",
+          "version": "ae5bd0c2bae5cc67",
+          "width": 600,
+          "height": 900,
+          "top": 85,
+          "bottom": 847,
+          "left": 143,
+          "right": 456,
+          "center": 299.5
+        },
+        "frozen_board_pixels_per_native_unit": 40.95676079227931,
+        "height_in_board_pixels": 208.2087284018482
+      },
+      "queen": {
+        "piece": "queen",
+        "file": "assets/queen/queen-brown.png",
+        "version": "509cc46d3fd73860",
+        "width": 1254,
+        "height": 1254,
+        "footX": 483.62499314546585,
+        "footY": 860.2234728349108,
+        "pixelsPerUnit": 264.6112602353096,
+        "modelHeight": 4.393647193908691,
+        "baseWidth": 2.091421365737915,
+        "centerX": 164.0,
+        "sourceSha256": "243844939937d0b753df253810f0e60d67b86a664f14b86dd678e7e22d348a68",
+        "renderTop": 60,
+        "renderBottom": 1079,
+        "targetTop": 37,
+        "targetBottom": 189,
+        "archived_side_profile": {
+          "file": "assets/queen/queen-wood-profile.png",
+          "version": "fabb014c01aa3202",
+          "width": 600,
+          "height": 900,
+          "top": 198,
+          "bottom": 797,
+          "left": 157,
+          "right": 442,
+          "center": 299.5
+        },
+        "frozen_board_pixels_per_native_unit": 39.47096325394216,
+        "height_in_board_pixels": 173.42148694155603
+      },
+      "bishop": {
+        "piece": "bishop",
+        "file": "assets/bishop/render.png",
+        "version": "9ac1510f19a98149",
+        "width": 1254,
+        "height": 1254,
+        "footX": 491.6982756704092,
+        "footY": 903.0247418599915,
+        "pixelsPerUnit": 260.00000873208046,
+        "modelHeight": 4.550049304962158,
+        "baseWidth": 2.0427379608154297,
+        "centerX": 274.5,
+        "sourceSha256": "b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d",
+        "renderTop": 163,
+        "renderBottom": 1113,
+        "targetTop": 52,
+        "targetBottom": 189,
+        "frozen_board_pixels_per_native_unit": 37.49473810136318,
+        "height_in_board_pixels": 170.6029070378457
+      }
+    },
+    "bishop_025_percent_on_fixed_king_ruler": 81.93840303782929,
+    "target_bishop_percent_on_fixed_king_ruler": 74.48200836138682,
+    "queen_percent_on_fixed_king_ruler": 83.2921310613108
+  },
+  "original_white_optical_landmarks": {
+    "collar_trough_rows": [
+      515,
+      567,
+      611
+    ],
+    "socket_highlight_row": 810,
+    "groove_trough_row": 1053,
+    "slit_dark_center_samples": [
+      [
+        566,
+        250
+      ],
+      [
+        567,
+        260
+      ],
+      [
+        566,
+        270
+      ],
+      [
+        563,
+        280
+      ],
+      [
+        562,
+        290
+      ],
+      [
+        558,
+        300
+      ],
+      [
+        554,
+        310
+      ],
+      [
+        551,
+        320
+      ],
+      [
+        549,
+        330
+      ],
+      [
+        544,
+        340
+      ],
+      [
+        540,
+        350
+      ],
+      [
+        532,
+        360
+      ],
+      [
+        528,
+        370
+      ],
+      [
+        527,
+        380
+      ],
+      [
+        524,
+        390
+      ],
+      [
+        519,
+        400
+      ],
+      [
+        515,
+        410
+      ]
+    ],
+    "slit_tip_approx_xy": [
+      511,
+      422
+    ]
+  },
+  "row_measurement": "Native 1254-pixel frame. Width includes entire absent rows. Optical troughs are cues for physical crests, subject to illumination.",
+  "026": {
+    "foot_diameter": 1.9365143775939941,
+    "groove": {
+      "radius": 0.9316308498382568,
+      "height": 0.2175
+    },
+    "flare": {
+      "radius": 0.9568386077880859,
+      "height": 0.314
+    },
+    "socket_diameter_at_scaled_z1": 0.9813297048676815,
+    "front_collar_rim_rows": {
+      "upper": 551.3082429170609,
+      "middle": 598.8007979393005,
+      "lower": 637.8373893499374
+    },
+    "front_groove_row": 1065.7488410174847,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "f18de9f1c93a49a32cee8a37eb66f49fa2022e0150e8f04a52b8c699c3e59dcb",
+    "registered": {
+      "selected": 0.8476617001634256,
+      "original_white": 0.8562559694364852,
+      "original_black": 0.8643332200889428
+    },
+    "side_fit": {
+      "outline_iou": 0.9816489824317273,
+      "edge_mae_screenshot_px": 0.47737556561085975,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 0.2727272727272727,
+        "collars": 1.25,
+        "stem": 0.3223684210526316,
+        "socket_and_base": 0.6228070175438597
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -94.93103448275862,
+        "mean_abs_half_width_px_including_missing_rows": 47.46551724137931,
+        "whole_reference_rows_missing": 58
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -71.71505376344086,
+        "mean_abs_half_width_px_including_missing_rows": 35.895161290322584,
+        "whole_reference_rows_missing": 14
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": -7.989637305699482,
+        "mean_abs_half_width_px_including_missing_rows": 15.72538860103627,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 46.44444444444444,
+        "mean_abs_half_width_px_including_missing_rows": 23.74074074074074,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -67.9235294117647,
+        "mean_abs_half_width_px_including_missing_rows": 33.96176470588235,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": -30.46273291925466,
+        "mean_abs_half_width_px_including_missing_rows": 15.23136645962733,
+        "whole_reference_rows_missing": 9
+      }
+    },
+    "front_collar_mean_abs_error_px": 31.648810068766277,
+    "slit": {
+      "original_and_real_wall_midpoints": [
+        [
+          280,
+          563,
+          558.0
+        ],
+        [
+          290,
+          562,
+          564.5
+        ],
+        [
+          300,
+          558,
+          568.0
+        ],
+        [
+          310,
+          554,
+          569.5
+        ],
+        [
+          320,
+          551,
+          570.0
+        ],
+        [
+          330,
+          549,
+          569.5
+        ],
+        [
+          340,
+          544,
+          568.0
+        ],
+        [
+          350,
+          540,
+          565.5
+        ],
+        [
+          360,
+          532,
+          563.0
+        ],
+        [
+          370,
+          528,
+          559.5
+        ],
+        [
+          380,
+          527,
+          556.0
+        ],
+        [
+          390,
+          524,
+          552.0
+        ],
+        [
+          400,
+          519,
+          547.5
+        ],
+        [
+          410,
+          515,
+          543.0
+        ]
+      ],
+      "centerline_mae_px": 21.285714285714285,
+      "visible_tip_xy": [
+        505.5,
+        480
+      ],
+      "first_visible_button_row": 228,
+      "source_sha256": "f18de9f1c93a49a32cee8a37eb66f49fa2022e0150e8f04a52b8c699c3e59dcb"
+    }
+  },
+  "foot": {
+    "foot_diameter": 2.0372109413146973,
+    "groove": {
+      "radius": 0.9800641536712646,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0065953731536865,
+      "height": 0.3305
+    },
+    "socket_diameter_at_scaled_z1": 1.0323594221572632,
+    "front_collar_rim_rows": {
+      "upper": 551.3082429170609,
+      "middle": 598.8007979393005,
+      "lower": 637.8373893499374
+    },
+    "front_groove_row": 1074.2554812133312,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "3f5379585124e51f6134ea077cda3d91bd024d3d3d8ab07b838367db10c19317",
+    "registered": {
+      "selected": 0.8982432900122922,
+      "original_white": 0.8990630221292657,
+      "original_black": 0.891703428340384
+    },
+    "side_fit": {
+      "outline_iou": 0.9468085106382979,
+      "edge_mae_screenshot_px": 1.4366515837104072,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 0.2727272727272727,
+        "collars": 1.25,
+        "stem": 1.111842105263158,
+        "socket_and_base": 3.289473684210526
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -94.93103448275862,
+        "mean_abs_half_width_px_including_missing_rows": 47.46551724137931,
+        "whole_reference_rows_missing": 58
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -71.70430107526882,
+        "mean_abs_half_width_px_including_missing_rows": 35.88978494623656,
+        "whole_reference_rows_missing": 14
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": -8.005181347150259,
+        "mean_abs_half_width_px_including_missing_rows": 15.72279792746114,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 46.51851851851852,
+        "mean_abs_half_width_px_including_missing_rows": 23.77777777777778,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -30.405882352941177,
+        "mean_abs_half_width_px_including_missing_rows": 15.202941176470588,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.947368421052632,
+        "mean_abs_half_width_px_including_missing_rows": 3.260061919504644,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 31.648810068766277
+  },
+  "raised": {
+    "foot_diameter": 2.0372109413146973,
+    "groove": {
+      "radius": 0.9800641536712646,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0065953731536865,
+      "height": 0.3305
+    },
+    "socket_diameter_at_scaled_z1": 1.0323594221572632,
+    "front_collar_rim_rows": {
+      "upper": 516.684700012207,
+      "middle": 570.4772214889526,
+      "lower": 613.6620426177979
+    },
+    "front_groove_row": 1074.2554812133312,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "5074a0421b43a6ebed7f13de6a81085accef347d27982ef8dac264ad7b102e9c",
+    "registered": {
+      "selected": 0.9395520752326249,
+      "original_white": 0.9408647520529921,
+      "original_black": 0.9340111545845585
+    },
+    "side_fit": {
+      "outline_iou": 0.8691149526009718,
+      "edge_mae_screenshot_px": 3.7171945701357467,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.136363636363637,
+        "collars": 11.454545454545455,
+        "stem": 1.4342105263157894,
+        "socket_and_base": 3.289473684210526
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -94.93103448275862,
+        "mean_abs_half_width_px_including_missing_rows": 47.46551724137931,
+        "whole_reference_rows_missing": 58
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -22.693548387096776,
+        "mean_abs_half_width_px_including_missing_rows": 15.233870967741936,
+        "whole_reference_rows_missing": 11
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 1.1554404145077721,
+        "mean_abs_half_width_px_including_missing_rows": 2.3082901554404147,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": -1.0,
+        "mean_abs_half_width_px_including_missing_rows": 3.240740740740741,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.68235294117647,
+        "mean_abs_half_width_px_including_missing_rows": 14.841176470588236,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.947368421052632,
+        "mean_abs_half_width_px_including_missing_rows": 3.260061919504644,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 2.6079880396525064,
+    "slit": {
+      "original_and_real_wall_midpoints": [
+        [
+          280,
+          563,
+          571.0
+        ],
+        [
+          290,
+          562,
+          573.0
+        ],
+        [
+          300,
+          558,
+          574.0
+        ],
+        [
+          310,
+          554,
+          574.0
+        ],
+        [
+          320,
+          551,
+          573.0
+        ],
+        [
+          330,
+          549,
+          571.5
+        ],
+        [
+          340,
+          544,
+          569.0
+        ],
+        [
+          350,
+          540,
+          566.5
+        ],
+        [
+          360,
+          532,
+          563.0
+        ],
+        [
+          370,
+          528,
+          559.0
+        ],
+        [
+          380,
+          527,
+          555.0
+        ],
+        [
+          390,
+          524,
+          550.5
+        ],
+        [
+          400,
+          519,
+          546.0
+        ],
+        [
+          410,
+          515,
+          541.0
+        ]
+      ],
+      "centerline_mae_px": 22.892857142857142,
+      "visible_tip_xy": [
+        505.5,
+        464
+      ],
+      "first_visible_button_row": 225,
+      "source_sha256": "5074a0421b43a6ebed7f13de6a81085accef347d27982ef8dac264ad7b102e9c"
+    }
+  },
+  "arc-fit": {
+    "foot_diameter": 2.035395383834839,
+    "groove": {
+      "radius": 0.9791765213012695,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0056967735290527,
+      "height": 0.33
+    },
+    "socket_diameter_at_scaled_z1": 1.0314393074382056,
+    "front_collar_rim_rows": {
+      "upper": 517.0416784286499,
+      "middle": 565.0465303659439,
+      "lower": 611.2760574817657
+    },
+    "front_groove_row": 1074.0687701404095,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "0f049082b7a382ba31cefa012f3e2f6977958193cfd5f2b0ec9f7e93db3e7f78",
+    "registered": {
+      "selected": 0.9483763305069457,
+      "original_white": 0.9515351056702047,
+      "original_black": 0.9439954952898385
+    },
+    "side_fit": {
+      "outline_iou": 0.8646229404309252,
+      "edge_mae_screenshot_px": 3.8665158371040724,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.424242424242424,
+        "collars": 11.431818181818182,
+        "stem": 1.6973684210526316,
+        "socket_and_base": 3.192982456140351
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -94.93103448275862,
+        "mean_abs_half_width_px_including_missing_rows": 47.46551724137931,
+        "whole_reference_rows_missing": 58
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -10.629032258064516,
+        "mean_abs_half_width_px_including_missing_rows": 7.233870967741935,
+        "whole_reference_rows_missing": 1
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 0.8704663212435233,
+        "mean_abs_half_width_px_including_missing_rows": 0.9533678756476683,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 1.8148148148148149,
+        "mean_abs_half_width_px_including_missing_rows": 2.1296296296296298,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.870588235294118,
+        "mean_abs_half_width_px_including_missing_rows": 14.935294117647059,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.315789473684211,
+        "mean_abs_half_width_px_including_missing_rows": 3.0928792569659445,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 1.4237351814905803
+  },
+  "contour-fit": {
+    "foot_diameter": 2.035395383834839,
+    "groove": {
+      "radius": 0.9791765213012695,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0056967735290527,
+      "height": 0.33
+    },
+    "socket_diameter_at_scaled_z1": 1.0314393074382056,
+    "front_collar_rim_rows": {
+      "upper": 515.5699646472931,
+      "middle": 564.8430018424988,
+      "lower": 609.0750643014908
+    },
+    "front_groove_row": 1074.0687701404095,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "9f9b246267aabc2c6004d63ac1cce71f7b0a0e3c55d33d79256204148c4dd479",
+    "registered": {
+      "selected": 0.948184955390424,
+      "original_white": 0.9523354651674081,
+      "original_black": 0.9439271107215893
+    },
+    "side_fit": {
+      "outline_iou": 0.8594342604298356,
+      "edge_mae_screenshot_px": 4.024886877828054,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.6893939393939394,
+        "collars": 12.25,
+        "stem": 1.6907894736842106,
+        "socket_and_base": 3.192982456140351
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -94.93103448275862,
+        "mean_abs_half_width_px_including_missing_rows": 47.46551724137931,
+        "whole_reference_rows_missing": 58
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -9.279569892473118,
+        "mean_abs_half_width_px_including_missing_rows": 6.60752688172043,
+        "whole_reference_rows_missing": 1
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 0.17616580310880828,
+        "mean_abs_half_width_px_including_missing_rows": 0.5751295336787565,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 1.2962962962962963,
+        "mean_abs_half_width_px_including_missing_rows": 1.8703703703703705,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.888235294117646,
+        "mean_abs_half_width_px_including_missing_rows": 14.944117647058823,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.315789473684211,
+        "mean_abs_half_width_px_including_missing_rows": 3.0928792569659445,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 1.5506328344345093,
+    "slit": {
+      "original_and_real_wall_midpoints": [
+        [
+          280,
+          563,
+          576.0
+        ],
+        [
+          290,
+          562,
+          577.5
+        ],
+        [
+          300,
+          558,
+          578.5
+        ],
+        [
+          310,
+          554,
+          578.0
+        ],
+        [
+          320,
+          551,
+          577.0
+        ],
+        [
+          330,
+          549,
+          575.5
+        ],
+        [
+          340,
+          544,
+          573.5
+        ],
+        [
+          350,
+          540,
+          571.0
+        ],
+        [
+          360,
+          532,
+          568.0
+        ],
+        [
+          370,
+          528,
+          564.5
+        ],
+        [
+          380,
+          527,
+          560.5
+        ],
+        [
+          390,
+          524,
+          557.0
+        ],
+        [
+          400,
+          519,
+          552.0
+        ],
+        [
+          410,
+          515,
+          547.5
+        ]
+      ],
+      "centerline_mae_px": 27.892857142857142,
+      "visible_tip_xy": [
+        505.0,
+        463
+      ],
+      "first_visible_button_row": 223,
+      "source_sha256": "9f9b246267aabc2c6004d63ac1cce71f7b0a0e3c55d33d79256204148c4dd479"
+    }
+  },
+  "smooth": {
+    "foot_diameter": 2.035395383834839,
+    "groove": {
+      "radius": 0.9791765213012695,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0056967735290527,
+      "height": 0.33
+    },
+    "socket_diameter_at_scaled_z1": 1.0314393074382056,
+    "front_collar_rim_rows": {
+      "upper": 516.7447196245193,
+      "middle": 566.6018829345703,
+      "lower": 610.8338706493378
+    },
+    "front_groove_row": 1074.0687701404095,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "9f781c578f1494edf905a9212c035e16511f7aad65e5e1d4946fdb2f74c2e9a9",
+    "registered": {
+      "selected": 0.9530971908220693,
+      "original_white": 0.9571667717987287,
+      "original_black": 0.9495877632043647
+    },
+    "side_fit": {
+      "outline_iou": 0.8593614505321245,
+      "edge_mae_screenshot_px": 4.036199095022624,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.893939393939394,
+        "collars": 11.795454545454545,
+        "stem": 1.6776315789473684,
+        "socket_and_base": 3.192982456140351
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -89.70689655172414,
+        "mean_abs_half_width_px_including_missing_rows": 44.85344827586207,
+        "whole_reference_rows_missing": 53
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -3.9086021505376345,
+        "mean_abs_half_width_px_including_missing_rows": 2.943548387096774,
+        "whole_reference_rows_missing": 0
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 1.5233160621761659,
+        "mean_abs_half_width_px_including_missing_rows": 0.8341968911917098,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 1.5555555555555556,
+        "mean_abs_half_width_px_including_missing_rows": 2.037037037037037,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.94705882352941,
+        "mean_abs_half_width_px_including_missing_rows": 14.973529411764705,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.306501547987616,
+        "mean_abs_half_width_px_including_missing_rows": 3.088235294117647,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 0.7696553468704224
+  },
+  "front-cut": {
+    "foot_diameter": 2.035395383834839,
+    "groove": {
+      "radius": 0.9791765213012695,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0056967735290527,
+      "height": 0.33
+    },
+    "socket_diameter_at_scaled_z1": 1.0314393074382056,
+    "front_collar_rim_rows": {
+      "upper": 516.7447196245193,
+      "middle": 566.6018829345703,
+      "lower": 610.8338706493378
+    },
+    "front_groove_row": 1074.0687701404095,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "29de1a0e8da2445db1cc0c74201c920ec042451fef82fa0923fcd99ac53909a3",
+    "registered": {
+      "selected": 0.9531425685304216,
+      "original_white": 0.9572065856550628,
+      "original_black": 0.9496040601718936
+    },
+    "side_fit": {
+      "outline_iou": 0.8593392730426556,
+      "edge_mae_screenshot_px": 4.036199095022624,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.893939393939394,
+        "collars": 11.795454545454545,
+        "stem": 1.6776315789473684,
+        "socket_and_base": 3.192982456140351
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -89.72413793103448,
+        "mean_abs_half_width_px_including_missing_rows": 44.86206896551724,
+        "whole_reference_rows_missing": 53
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -3.8655913978494625,
+        "mean_abs_half_width_px_including_missing_rows": 2.932795698924731,
+        "whole_reference_rows_missing": 0
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 1.528497409326425,
+        "mean_abs_half_width_px_including_missing_rows": 0.8471502590673575,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 1.5555555555555556,
+        "mean_abs_half_width_px_including_missing_rows": 2.037037037037037,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.905882352941177,
+        "mean_abs_half_width_px_including_missing_rows": 14.952941176470588,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.318885448916409,
+        "mean_abs_half_width_px_including_missing_rows": 3.0944272445820435,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 0.7696553468704224,
+    "slit": {
+      "original_and_real_wall_midpoints": [
+        [
+          280,
+          563,
+          561.0
+        ],
+        [
+          290,
+          562,
+          561.0
+        ],
+        [
+          300,
+          558,
+          559.5
+        ],
+        [
+          310,
+          554,
+          558.0
+        ],
+        [
+          320,
+          551,
+          555.5
+        ],
+        [
+          330,
+          549,
+          552.5
+        ],
+        [
+          340,
+          544,
+          549.5
+        ],
+        [
+          350,
+          540,
+          546.0
+        ],
+        [
+          360,
+          532,
+          542.5
+        ],
+        [
+          370,
+          528,
+          539.5
+        ],
+        [
+          380,
+          527,
+          535.0
+        ],
+        [
+          390,
+          524,
+          530.0
+        ],
+        [
+          400,
+          519,
+          524.0
+        ],
+        [
+          410,
+          515,
+          517.5
+        ]
+      ],
+      "centerline_mae_px": 5.107142857142857,
+      "visible_tip_xy": [
+        506.0,
+        430
+      ],
+      "first_visible_button_row": 224,
+      "source_sha256": "29de1a0e8da2445db1cc0c74201c920ec042451fef82fa0923fcd99ac53909a3"
+    }
+  },
+  "turned-cut": {
+    "foot_diameter": 2.035395383834839,
+    "groove": {
+      "radius": 0.9791765213012695,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0056967735290527,
+      "height": 0.33
+    },
+    "socket_diameter_at_scaled_z1": 1.0314393074382056,
+    "front_collar_rim_rows": {
+      "upper": 516.7447196245193,
+      "middle": 566.6018829345703,
+      "lower": 610.8338706493378
+    },
+    "front_groove_row": 1074.0687701404095,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "231eb74eaa593c8142ffe1217124ba72e33cf311aadda1e3c426c2ee76a70900",
+    "registered": {
+      "selected": 0.9531001972196835,
+      "original_white": 0.9571994820145631,
+      "original_black": 0.9496026792510276
+    },
+    "side_fit": {
+      "outline_iou": 0.8592937096011352,
+      "edge_mae_screenshot_px": 4.038461538461538,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.901515151515151,
+        "collars": 11.795454545454545,
+        "stem": 1.6776315789473684,
+        "socket_and_base": 3.192982456140351
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -89.70689655172414,
+        "mean_abs_half_width_px_including_missing_rows": 44.85344827586207,
+        "whole_reference_rows_missing": 53
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -3.8655913978494625,
+        "mean_abs_half_width_px_including_missing_rows": 2.932795698924731,
+        "whole_reference_rows_missing": 0
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 1.5181347150259068,
+        "mean_abs_half_width_px_including_missing_rows": 0.8316062176165803,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 1.5555555555555556,
+        "mean_abs_half_width_px_including_missing_rows": 2.037037037037037,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.941176470588236,
+        "mean_abs_half_width_px_including_missing_rows": 14.970588235294118,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.306501547987616,
+        "mean_abs_half_width_px_including_missing_rows": 3.088235294117647,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 0.7696553468704224,
+    "slit": {
+      "original_and_real_wall_midpoints": [
+        [
+          280,
+          563,
+          563.5
+        ],
+        [
+          290,
+          562,
+          562.0
+        ],
+        [
+          300,
+          558,
+          558.0
+        ],
+        [
+          310,
+          554,
+          554.5
+        ],
+        [
+          320,
+          551,
+          551.0
+        ],
+        [
+          330,
+          549,
+          547.0
+        ],
+        [
+          340,
+          544,
+          543.5
+        ],
+        [
+          350,
+          540,
+          539.5
+        ],
+        [
+          360,
+          532,
+          535.5
+        ],
+        [
+          370,
+          528,
+          531.5
+        ],
+        [
+          380,
+          527,
+          527.5
+        ],
+        [
+          390,
+          524,
+          523.5
+        ],
+        [
+          400,
+          519,
+          519.5
+        ],
+        [
+          410,
+          515,
+          514.5
+        ]
+      ],
+      "centerline_mae_px": 0.9285714285714286,
+      "visible_tip_xy": [
+        504.0,
+        430
+      ],
+      "first_visible_button_row": 224,
+      "source_sha256": "231eb74eaa593c8142ffe1217124ba72e33cf311aadda1e3c426c2ee76a70900"
+    }
+  },
+  "refit": {
+    "foot_diameter": 2.035395383834839,
+    "groove": {
+      "radius": 0.9791765213012695,
+      "height": 0.2285
+    },
+    "flare": {
+      "radius": 1.0056967735290527,
+      "height": 0.33
+    },
+    "socket_diameter_at_scaled_z1": 1.0314393074382056,
+    "front_collar_rim_rows": {
+      "upper": 516.7447196245193,
+      "middle": 566.6018829345703,
+      "lower": 610.8338706493378
+    },
+    "front_groove_row": 1074.0687701404095,
+    "floor": 0.0,
+    "height": 4.135986328125,
+    "side": {
+      "elevation_degrees": 0,
+      "width": 600,
+      "height": 1000,
+      "pixels_per_unit": 204.0816326530612,
+      "z_target": 2.3,
+      "floor_row": 969.3877551020407,
+      "ortho_scale": 4.9
+    },
+    "source_sha256": "cebfcaa64ef40e6834e991bc3bb24ce14435661abb36189dfc0881664bb33292",
+    "registered": {
+      "selected": 0.9530853062758361,
+      "original_white": 0.9572081907950603,
+      "original_black": 0.9495876097195625
+    },
+    "side_fit": {
+      "outline_iou": 0.8592937096011352,
+      "edge_mae_screenshot_px": 4.038461538461538,
+      "top_and_bottom": [
+        28,
+        248
+      ],
+      "mean_edge_error_by_region": {
+        "button_and_mitre": 4.901515151515151,
+        "collars": 11.795454545454545,
+        "stem": 1.6776315789473684,
+        "socket_and_base": 3.192982456140351
+      }
+    },
+    "regional_geometry": {
+      "button": {
+        "rows": [
+          156,
+          213
+        ],
+        "mean_signed_full_width_px": -89.70689655172414,
+        "mean_abs_half_width_px_including_missing_rows": 44.85344827586207,
+        "whole_reference_rows_missing": 53
+      },
+      "mitre": {
+        "rows": [
+          214,
+          399
+        ],
+        "mean_signed_full_width_px": -3.8655913978494625,
+        "mean_abs_half_width_px_including_missing_rows": 2.932795698924731,
+        "whole_reference_rows_missing": 0
+      },
+      "collars": {
+        "rows": [
+          400,
+          592
+        ],
+        "mean_signed_full_width_px": 1.5181347150259068,
+        "mean_abs_half_width_px_including_missing_rows": 0.8316062176165803,
+        "whole_reference_rows_missing": 0
+      },
+      "stem": {
+        "rows": [
+          593,
+          619
+        ],
+        "mean_signed_full_width_px": 1.5555555555555556,
+        "mean_abs_half_width_px_including_missing_rows": 2.037037037037037,
+        "whole_reference_rows_missing": 0
+      },
+      "rear_flare": {
+        "rows": [
+          620,
+          789
+        ],
+        "mean_signed_full_width_px": -29.941176470588236,
+        "mean_abs_half_width_px_including_missing_rows": 14.970588235294118,
+        "whole_reference_rows_missing": 0
+      },
+      "foot": {
+        "rows": [
+          790,
+          1113
+        ],
+        "mean_signed_full_width_px": 4.306501547987616,
+        "mean_abs_half_width_px_including_missing_rows": 3.088235294117647,
+        "whole_reference_rows_missing": 0
+      }
+    },
+    "front_collar_mean_abs_error_px": 0.7696553468704224,
+    "slit": {
+      "original_and_real_wall_midpoints": [
+        [
+          280,
+          563,
+          563.5
+        ],
+        [
+          290,
+          562,
+          562.0
+        ],
+        [
+          300,
+          558,
+          558.0
+        ],
+        [
+          310,
+          554,
+          554.5
+        ],
+        [
+          320,
+          551,
+          551.0
+        ],
+        [
+          330,
+          549,
+          547.0
+        ],
+        [
+          340,
+          544,
+          543.5
+        ],
+        [
+          350,
+          540,
+          539.5
+        ],
+        [
+          360,
+          532,
+          535.5
+        ],
+        [
+          370,
+          528,
+          531.5
+        ],
+        [
+          380,
+          527,
+          527.5
+        ],
+        [
+          390,
+          524,
+          523.5
+        ],
+        [
+          400,
+          519,
+          519.5
+        ],
+        [
+          410,
+          515,
+          514.5
+        ]
+      ],
+      "centerline_mae_px": 0.9285714285714286,
+      "visible_tip_xy": [
+        509.0,
+        421
+      ],
+      "first_visible_button_row": 224,
+      "source_sha256": "cebfcaa64ef40e6834e991bc3bb24ce14435661abb36189dfc0881664bb33292"
+    }
+  }
+}

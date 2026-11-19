@@ -1,0 +1,13 @@
+{
+  "url": "http://localhost:8080/bishop-review.html",
+  "tested_in": "Codex in-app browser",
+  "viewer_revision": "7465cb7fe8205f23",
+  "height_comparison_target": "docs/bishop-mission/iteration-027/frozen-lineup.png",
+  "observed": [
+    "The initial fixed overlay displayed Original white, Neutral and a 50% model blend.",
+    "The Model button changed the displayed overlay slider to 100%.",
+    "Rotate model opened the orthographic mesh with the saved overlay camera selected.",
+    "Selecting Boxwood and Side displayed the textured mesh in profile."
+  ],
+  "passed": true
+}

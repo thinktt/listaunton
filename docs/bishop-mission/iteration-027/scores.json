@@ -1,0 +1,37 @@
+{
+  "scores_percent": {
+    "silhouette": 95.30853062758361,
+    "interior": 85.0,
+    "color": 82.0,
+    "texture": 78.0,
+    "lighting": 70.0
+  },
+  "mean_percent": 82.06170612551672,
+  "holistic_range_percent": [
+    78.0,
+    86.0
+  ],
+  "silhouette_measured_other_scores_subjective": true,
+  "phase": "geometry",
+  "model_sha256": "cebfcaa64ef40e6834e991bc3bb24ce14435661abb36189dfc0881664bb33292",
+  "render_sha256": "aa4cb513c8111a765b70008e5a74234e9885612e80efcdc7cb43f5dfc68673a6",
+  "neutral_sha256": "08e6d6b4ec6484905ce0aedd68716710e1591166dd9e81be5b1c561794e4f7d0",
+  "atlas_sha256": "63e2e42a391d3403f59fc31e911b8577e3574a4869f872454f56c60101344560",
+  "original_and_selected_ious": {
+    "selected": {
+      "silhouette_iou": 0.9530853062758361,
+      "legacy_raw_model_mask_iou": 0.9530853062758361
+    },
+    "original_white": {
+      "silhouette_iou": 0.9572081907950603,
+      "legacy_raw_model_mask_iou": 0.9572081907950603
+    },
+    "original_black": {
+      "silhouette_iou": 0.9495876097195625,
+      "legacy_raw_model_mask_iou": 0.9495876097195625
+    }
+  },
+  "shape_complete": false,
+  "full_mission_complete": false,
+  "tradeoff": "The fixed-camera geometry and the painted former slit improved. The chosen height leaves a low button and a broader level mitre. The atlas still carries other baked lighting."
+}

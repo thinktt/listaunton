@@ -58,8 +58,21 @@ else:
     assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
 (out/'bounds-comparison.json').write_text(json.dumps({'previous':old_size.tolist(),'current':new_size.tolist(),
     'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':None if shared else a.bounds_relative_tolerance,
-    'height_preserved':not shared,'note':'Dimensions of evaluated geometry at the original floor and saved camera.'},indent=2)+'\n')
-assert sha(assets/'bishop-boxwood-albedo.png')==sha(prior/'bishop-boxwood-albedo.png')
+    'height_preserved':bool(abs(new_size[2]-old_size[2])<1e-6),'note':'Dimensions of evaluated geometry at the original floor and saved camera.'},indent=2)+'\n')
+old_atlas=prior/'bishop-boxwood-albedo.png'
+new_atlas=assets/'bishop-boxwood-albedo.png'
+healing=scope.get('healed_atlas')
+if healing:
+    assert sha(new_atlas)==healing['sha256'] and sha(old_atlas)==healing['source_sha256']
+    a0=np.asarray(Image.open(old_atlas));a1=np.asarray(Image.open(new_atlas))
+    assert a0.shape==a1.shape==(2048,2048,4) and np.array_equal(a0[:,:,3],a1[:,:,3])
+    yy,xx=np.where((a0!=a1).any(2))
+    assert len(xx)==45089 and xx.min()>=1024 and xx.max()<=2009 and yy.min()>=660 and yy.max()<=845
+    patch_evidence={'changed_texels':len(xx),'total_texels':2048**2,'unchanged_alpha':True,
+                    'changed_bounds_xyxy':[int(xx.min()),int(yy.min()),int(xx.max()),int(yy.max())],
+                    'prior_sha256':sha(old_atlas),'reproduction':healing['reproduce']}
+else:
+    assert sha(new_atlas)==sha(old_atlas)
 # Replace obsolete current-state reports with explicit current provenance.
 reports={
  'base-validation.json':{'passed':True,'model_sha256':model_hash,'declared_shape_rings':scope.get('changed_body_rings',[]),
@@ -87,6 +100,14 @@ if shared:
                     radial_scale=scope['head_radius_factor'],vertical_scale=scope['head_height_factor'])
         pigment['all_control_uvs_exact']=scope['all_control_uvs_exact']
         reports['base-validation.json']['foot_factor_from_previous']=scope['foot_ratio']
+        if scope.get('placed_slit'):
+            slit.update(cutter_follows_mitre_affine=False,rigid_rotation_after_mitre_affine=True,
+                        world_plane=scope['placed_slit'])
+        if healing:
+            pigment.update(packed_pixels_material_graphs_and_lights_preserved=False,
+                           other_packed_images_material_graphs_and_lights_preserved=True,
+                           localized_atlas_change=patch_evidence,
+                           note='The printed mark from the older slit was replaced with grain sampled from adjacent boxwood at the same azimuth.')
 for name,row in reports.items():(assets/name).write_text(json.dumps(row,indent=2)+'\n')
 validation_names=['validation.json','mission-validation.json','base-validation.json','slit-validation.json','viewer-validation.json',
                   'pigment-validation.json','receiver-validation.json','join-regression.json']
@@ -134,5 +155,7 @@ record={'scores_percent':scores,'mean_percent':sum(scores.values())/5,'holistic_
         'atlas_sha256':sha(assets/'bishop-boxwood-albedo.png'),'original_and_selected_ious':metrics['images'],
         'shape_complete':False,'full_mission_complete':False,
         'tradeoff':'Geometry is evaluated independently of the retained pigment and lights. Those still have visible mismatches and are not newly fitted or claimed complete.'}
+if healing:
+    record['tradeoff']='The fixed-camera geometry and the painted former slit improved. The chosen height leaves a low button and a broader level mitre. The atlas still carries other baked lighting.'
 (out/'scores.json').write_text(json.dumps(record,indent=2)+'\n')
 print(json.dumps({'collected':True,'model_sha256':model_hash,'regional_geometry':regional,'scores':scores},indent=2))

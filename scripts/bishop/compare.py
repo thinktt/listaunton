@@ -50,6 +50,14 @@ if json.loads((root/'scripts/bishop/profile.json').read_text()).get('side_refit'
   collars='The collar stack was fitted against the owner’s level screenshot and the original three arcs at the saved 54-degree registration.',
   finial='The seated button and live diagonal saw follow the same transformation as the mitre.',
   limits='The owner’s narrower, shorter side target lowers the head and collars in the registered reference view. Iteration 026 records both fits and the actual model dimensions.')
+refit=json.loads((root/'scripts/bishop/profile.json').read_text()).get('side_refit',{})
+if 'locked_height' in refit:
+ report['internal_features'].update(
+  lower_body='A wider foot and socket carry a newly tapered stem on the same floor. The common lower turning is retained at a uniform scale.',
+  collars='The front arcs of the three collar rims are registered separately to the original white sprite.',
+  finial='The low button seats directly in a continuous curved mitre. Its top falls below the original tip at the chosen physical height.',
+  mitre='The rounded saw slot is cut through the real body at the orientation fitted to the original white stroke.',
+  limits='The original and selected reference retain their saved registration. The button and front foot groove still differ. Grain and illumination retain errors away from the reference view.')
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

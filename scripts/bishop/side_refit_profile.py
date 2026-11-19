@@ -12,7 +12,7 @@ def smooth(t):
 
 def shape(old, height, spec, case):
     """Map control rings by anatomical region, keeping socket and cap tangents."""
-    foot = spec['base_factor']
+    foot = case.get('base_factor',spec['base_factor'])
     hz, hr = case['head_height'], case['head_radius']
     target_top = spec['height_factor']*height
     za, zb, zc = old[[SOCKET, COLLAR, MITRE], 1]
@@ -39,4 +39,21 @@ def shape(old, height, spec, case):
     out[sl,0] *= case['collar_radius'] + (hr-case['collar_radius'])*f
     out[MITRE:,0] *= hr
     out[MITRE:,1] = target_top + (old[MITRE:,1]-height)*hz
+    # Radius controls taper to zero at the ends of each named region. This
+    # leaves the original cap seat and all forty donor rings intact.
+    for name,lo,peak,hi in [('lower_rim',46,52,57),('middle_rim',57,60,66),
+                            ('upper_rim',66,70,72),('mitre_lower',72,82,101),
+                            ('mitre_upper',83,97,110)]:
+        if name in case:
+            i=np.arange(lo,hi+1)
+            weight=smooth((i-lo)/(peak-lo))*smooth((hi-i)/(hi-peak))
+            out[lo:hi+1,0]+=case[name]*weight
+    if case.get('mitre_lift'):
+        # Lift the bulb's existing curved sections together. The integral
+        # profile keeps one crest and meets the original seat tangentially.
+        sl=slice(MITRE,111)
+        z=old[sl,1]
+        u=(z-z[0])/(z[-1]-z[0])
+        out[sl,1]+=case['mitre_lift']*16*u*u*(1-u)**2
+        assert np.all(np.diff(out[sl,1])>0),'Mitre sections must rise monotonically'
     return out, target_top-height*hz

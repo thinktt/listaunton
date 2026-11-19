@@ -34,7 +34,8 @@ def main(root,url):
         match=re.search(rb'id="'+tag.encode()+rb'" src="data:image/png;base64,([^"]+)"',viewer)
         assert match and base64.b64decode(match[1],validate=True)==get('assets/bishop/'+filename),tag
     lineup=get('set-comparison.html')
-    board,=[p for p in json.loads(section(lineup,'board-data').group(2))['pieces'] if p['piece']=='bishop']
+    records={row['piece']:row for row in json.loads(section(lineup,'board-data').group(2))['pieces']}
+    board=records['bishop']
     assert board['sourceSha256']==meta['sourceSha256']
     assert board['file']=='assets/bishop/render.png' and board['version']==received[board['file']][:16]
     assert board['modelHeight']==meta['bounds']['size'][2] and board['baseWidth']==meta['bounds']['size'][0]
@@ -44,6 +45,16 @@ def main(root,url):
     for path in ['assets/bishop/head-side.png','assets/bishop/rear-oblique.png','assets/bishop/camera.json']:
         get(path)
     profile=json.loads((root/'scripts/bishop/profile.json').read_text())
+    physical_percent=None
+    if 'locked_height' in profile.get('side_refit',{}):
+        rule=board['warpRuler']
+        assert rule['checkpoint']=='025' and rule['sourceSha256']=='b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d'
+        def height(record):
+            ruler=record.get('warpRuler',record)
+            return record['modelHeight']*ruler['pixelsPerUnit']*(record['targetBottom']-record['targetTop'])/(ruler['renderBottom']-ruler['renderTop'])
+        physical_percent=100*height(board)/height(records['king'])
+        assert abs(physical_percent-74.48186)<.0001
+        assert sha(get('assets/bishop/bishop-boxwood-albedo.png'))==meta['material']['textureSha256']
     if profile.get('side_refit'):
         figures=Path(profile['side_refit']['config']).parent
         assert (figures/'frozen-lineup.png').as_posix().encode() in review
@@ -54,6 +65,7 @@ def main(root,url):
             assert sha((root/path).read_bytes())==digest,('Local server returned a different file',path)
     return {'passed':True,'server':url,'source_sha256':meta['sourceSha256'],'bishop_review_revision':sha(viewer)[:16],
             'embedded_mesh_and_images_exact':True,'set_board_entry':board,'set_profile_entry':side,
+            'physical_height_percent_of_king':physical_percent,
             'served_sha256':received}
 
 if __name__=='__main__':

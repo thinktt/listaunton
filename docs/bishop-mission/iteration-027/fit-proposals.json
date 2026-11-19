@@ -1,0 +1,295 @@
+{
+  "model": "Calibrated cubic meridian envelope at the 026 saved camera. Predictions and photographic arc cues are independently checked on real renders.",
+  "original_white_features": {
+    "collar_trough_rows": [
+      515,
+      567,
+      611
+    ],
+    "socket_highlight_row": 810,
+    "groove_trough_row": 1053,
+    "slit_dark_center_samples": [
+      [
+        566,
+        250
+      ],
+      [
+        567,
+        260
+      ],
+      [
+        566,
+        270
+      ],
+      [
+        563,
+        280
+      ],
+      [
+        562,
+        290
+      ],
+      [
+        558,
+        300
+      ],
+      [
+        554,
+        310
+      ],
+      [
+        551,
+        320
+      ],
+      [
+        549,
+        330
+      ],
+      [
+        544,
+        340
+      ],
+      [
+        540,
+        350
+      ],
+      [
+        532,
+        360
+      ],
+      [
+        528,
+        370
+      ],
+      [
+        527,
+        380
+      ],
+      [
+        524,
+        390
+      ],
+      [
+        519,
+        400
+      ],
+      [
+        515,
+        410
+      ]
+    ],
+    "slit_tip_approx_xy": [
+      511,
+      422
+    ]
+  },
+  "white_3_features": {
+    "collar_trough_rows": [
+      512,
+      570,
+      609
+    ],
+    "socket_highlight_row": 809,
+    "groove_trough_row": 1052,
+    "slit_dark_center_samples": [
+      [
+        562,
+        250
+      ],
+      [
+        562,
+        260
+      ],
+      [
+        561,
+        270
+      ],
+      [
+        559,
+        280
+      ],
+      [
+        556,
+        290
+      ],
+      [
+        553,
+        300
+      ],
+      [
+        554,
+        310
+      ],
+      [
+        546,
+        320
+      ],
+      [
+        546,
+        330
+      ],
+      [
+        542,
+        340
+      ],
+      [
+        536,
+        350
+      ],
+      [
+        532,
+        360
+      ],
+      [
+        527,
+        370
+      ],
+      [
+        524,
+        380
+      ],
+      [
+        524,
+        390
+      ],
+      [
+        522,
+        400
+      ],
+      [
+        520,
+        410
+      ]
+    ],
+    "slit_tip_approx_xy": [
+      511,
+      422
+    ]
+  },
+  "radius_and_height_parameter_bounds": {
+    "base_factor": [
+      1.025,
+      1.085
+    ],
+    "stem_radius": [
+      0.95,
+      1.13
+    ],
+    "waist_height": [
+      -0.075,
+      0.1
+    ],
+    "collar_radius": [
+      1.01,
+      1.105
+    ],
+    "collar_height": [
+      0.95,
+      1.24
+    ],
+    "head_radius": [
+      0.99,
+      1.045
+    ],
+    "head_height": [
+      0.69,
+      0.89
+    ],
+    "lower_rim": [
+      -0.023,
+      0.027
+    ],
+    "middle_rim": [
+      -0.023,
+      0.025
+    ],
+    "upper_rim": [
+      -0.024,
+      0.022
+    ],
+    "mitre_lower": [
+      -0.015,
+      0.065
+    ],
+    "mitre_upper": [
+      0.0,
+      0.085
+    ]
+  },
+  "proposals": {
+    "arc-fit": {
+      "case": {
+        "base_factor": 1.0510625,
+        "stem_radius": 1.075,
+        "waist_height": -0.0410156,
+        "collar_radius": 1.0471875,
+        "collar_height": 1.101875,
+        "head_radius": 1.045,
+        "head_height": 0.73875,
+        "lower_rim": 0.0148438,
+        "middle_rim": -0.01925,
+        "upper_rim": 0.0158125,
+        "mitre_lower": 0.005,
+        "mitre_upper": 0.085
+      },
+      "proxy_outline_iou": 0.9527627000273343,
+      "half_width_errors": {
+        "button": 45.875,
+        "mitre": 7.176033363046343,
+        "collars": 0.9495689644847723,
+        "stem": 1.2936998964052093,
+        "rear_flare": 14.992571513906219,
+        "foot": 2.903601640895288
+      },
+      "rim_errors": [
+        1.957462597962376,
+        1.967855133430703,
+        0.27990894510253383
+      ],
+      "side_half_width_mae": 3.868859772428791,
+      "secondary_bulge_native": 0.0,
+      "weights": [
+        0.7,
+        0.35,
+        24.0
+      ]
+    },
+    "contour-fit": {
+      "case": {
+        "base_factor": 1.0510625,
+        "stem_radius": 1.075,
+        "waist_height": -0.053125,
+        "collar_radius": 1.0709375,
+        "collar_height": 1.0882813,
+        "head_radius": 1.045,
+        "head_height": 0.72625,
+        "lower_rim": 0.0015625,
+        "middle_rim": -0.0215,
+        "upper_rim": 0.0107813,
+        "mitre_lower": 0.00375,
+        "mitre_upper": 0.085
+      },
+      "proxy_outline_iou": 0.9538372796623391,
+      "half_width_errors": {
+        "button": 45.875,
+        "mitre": 6.476296836613528,
+        "collars": 0.6822170148769479,
+        "stem": 1.3068561171696473,
+        "rear_flare": 14.99912311965477,
+        "foot": 2.903601640895288
+      },
+      "rim_errors": [
+        0.572713702088322,
+        2.169209567863277,
+        1.9211279474784533
+      ],
+      "side_half_width_mae": 4.021049040245921,
+      "secondary_bulge_native": 0.0,
+      "weights": [
+        0.27,
+        0.2,
+        80.0
+      ]
+    }
+  }
+}

@@ -33,6 +33,8 @@ protected=['AGENTS.md','assets/side-views/scale.json','assets/side-views/default
     'references/lichess-staunton-3d/White-Bishop.png','references/lichess-staunton-3d/Black-Bishop.png',
     'assets/candidates/bishop/white-candidate-3.png']
 protected += [path.name for path in canonical.glob('MISSION-*.md')]
+warp_rulers='assets/board-comparison/warp-rulers.json'
+if (canonical/warp_rulers).is_file():protected.append(warp_rulers)
 protected_hashes={name:sha(canonical/name) for name in protected}
 for name in ['MISSION-BISHOP.md','MISSION-SET.md']:
     if protected_hashes[name]!=prior['canonical_protected_file_hashes'][name]:
@@ -69,6 +71,8 @@ if (out/'turning.json').is_file():
 if (out/'side-refit.json').is_file():
     scripts+=['shared_turning.py','side_refit.py','side_refit_profile.py','fit_side_refit.py','compare_side_refit.py',
               'validate_side_refit.py','render_diagnostics.py','review-template.html','build_review.py','check_served_checkpoint.py']
+if (out/'cut-plane.json').is_file():
+    scripts+=['fit_locked_height.py','fit_surface_slot.py','heal_slit_atlas.py','compare_locked_height.py']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]
 if a.archive:
@@ -101,6 +105,10 @@ if (out/'side-refit.json').is_file():
         frozen_king_percent=measured['side_calibration']['target_bishop_percent_on_fixed_king_ruler'],
         screenshot_side_iou=row['side_fit']['outline_iou'],registered_original_iou=row['registered']['original_white'],
         note='Owner-directed physical sizing on the 025 ruler. The unchanged 54-degree view records the reference-fit cost. Material and lighting work remains open.')
+    if 'locked_height' in fit:
+        checkpoint.update(goal_status='accepted fixed-height geometry checkpoint',
+            locked_height_model_units=row['height'],foot_diameter_model_units=row['foot_diameter'],
+            note='Same floor, measured height, 025 lineup ruler and 54-degree camera. Original-white contours, three collar arcs and the real slit are examined separately.')
 (ROOT/relative).write_text(json.dumps(checkpoint,indent=2)+'\n',newline='\n');copy(relative,canonical)
 manifest=sorted(set(list(public)+copied+[relative]))
 (ROOT/f'build/bishop-mission/{a.log_prefix}-delivered-files.json').write_text(json.dumps({r:sha(ROOT/r) for r in manifest},indent=2)+'\n')

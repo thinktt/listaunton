@@ -23,17 +23,26 @@ cfg=json.loads((root/args.profile).read_text());alignment=json.loads((root/'asse
 factor=1254/300/alignment['scale']/cfg['scale'];sl=cfg['slit'];angle=math.radians(sl['angle'])
 bottom=(cfg['y0']-sl['bottom_center_y'])*factor/math.cos(math.radians(cfg['elevation']))
 side_refit=cfg.get('side_refit',{})
-radial=side_refit.get('head_radius',1.)
-axial=side_refit.get('head_height',1.)
+radial=side_refit.get('probe_radius_factor',side_refit.get('head_radius',1.))
+axial=side_refit.get('probe_height_factor',side_refit.get('head_height',1.))
 body=bpy.data.objects['Bishop - continuous turned body'].evaluated_get(graph)
 probes=[]
+plane=side_refit.get('placed_slit')
+direction=Vector((plane['dx_dy'] if plane else 0.,1.,0.)).normalized()
+across=Vector((direction.y,-direction.x,0.))
+def saw_center(z):
+ if plane:
+  x,zref=plane['anchor_xz']
+  return Vector((x+plane['dx_dz']*(z-zref),0.,z))
+ return Vector((sl['x']*factor+(z-bottom)*math.tan(angle),0.,z))
+floor=plane['floor_z'] if plane else bottom
 for dz in [7,12,17]:
- x=(sl['x']+dz*axial*math.tan(angle))*factor;z=bottom+dz*axial*factor
- clear=not body.ray_cast(Vector((x,-4,z)),Vector((0,1,0)),distance=8)[0]
- near=body.ray_cast(Vector((x-6*radial*factor,-4,z)),Vector((0,1,0)),distance=8)[0]
+ mid=saw_center(floor+dz*axial*factor)
+ clear=not body.ray_cast(mid-4*direction,direction,distance=8)[0]
+ near=body.ray_cast(mid-4*direction-6*radial*factor*across,direction,distance=8)[0]
  assert clear and near,('Slit must pass through thickness with material beside it',dz,clear,near)
  probes.append({'height_above_slot_bottom_original_units':dz,'through_slot_clear':clear,'adjacent_material_hit':near})
-assert body.ray_cast(Vector((sl['x']*factor,-4,bottom-3*axial*factor)),Vector((0,1,0)),distance=8)[0], 'Slot requires a solid floor.'
+assert body.ray_cast(saw_center(floor-3*axial*factor)-4*direction,direction,distance=8)[0], 'Slot requires a solid floor.'
 meta=json.loads((root/'assets/bishop/mesh.json').read_text())
 if not args.skip_export:assert meta['sourceSha256']==hashlib.sha256(model.read_bytes()).hexdigest()
 assert meta['referenceCamera']['elevationDegrees']==54
@@ -166,6 +175,6 @@ if shared:
                slit_dimensions_and_floor_relative_to_head_preserved=True,shared_turning=shared)
 if side_refit:
  result.update(side_refit=side_refit,slit_dimensions_and_floor_relative_to_head_preserved=False,
-               slit_and_button_mapped_with_mitre=True)
+               slit_and_button_mapped_with_mitre=not bool(plane),placed_slit=plane)
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

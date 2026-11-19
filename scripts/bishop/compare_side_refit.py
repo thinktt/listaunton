@@ -80,7 +80,7 @@ def panel(images,labels,path,size):
     result.save(path,optimize=True)
 
 
-def frozen_lineup():
+def frozen_lineup(output=DOC, previous=ARCHIVE, names=('Bishop 025','Bishop 026')):
     frame=read(DOC/'side-target.json')
     board=frame['baseline_board_records']
     reference_height=board['king']['height_in_board_pixels']
@@ -89,7 +89,7 @@ def frozen_lineup():
     draw=ImageDraw.Draw(canvas)
     floor=347
     draw.line((8,floor,816,floor),fill='#52604e')
-    for i,(name,key) in enumerate([('King','king'),('Queen','queen'),('Bishop 025','bishop'),('Bishop 026','bishop')]):
+    for i,(name,key) in enumerate([('King','king'),('Queen','queen'),(names[0],'bishop'),(names[1],'bishop')]):
         row=board[key]
         if key!='bishop':
             p=row['archived_side_profile']
@@ -103,7 +103,7 @@ def frozen_lineup():
             bottom=p['bottom']+1
             percent=row['height_in_board_pixels']/reference_height*100
         else:
-            which=ARCHIVE if i==2 else ASSETS
+            which=previous if i==2 else ASSETS
             source=Image.open(which/'side-profile.png').convert('RGBA')
             # Both bishops are drawn from the same zero-degree camera,
             # 1000/4.98 pixels per model unit, at z=2.32 with zero shift.
@@ -121,7 +121,7 @@ def frozen_lineup():
         canvas.paste(piece,(i*206,0),piece)
         draw.text((x,359),name,anchor='mt',font=FONT,fill='white')
         draw.text((x,380),f'{percent:.1f}% of king',anchor='mt',font=FONT,fill='#e3c295')
-    canvas.save(DOC/'frozen-lineup.png',optimize=True)
+    canvas.save(output/'frozen-lineup.png',optimize=True)
 
 
 def evaluate(keys,selected=None):

@@ -19,12 +19,11 @@ for label,path in [('rejected_neck','history/bishop/07-before-continuous-button-
   start=59*scale+offset
   end=min(54*scale+offset,cfg['head_button_join']['head_cap_axis_y']-.4*scale)
  else:
-  benchmark=cfg
-  if cfg.get('side_refit'):
-   spec=json.loads((root/cfg['side_refit']['config']).read_text())
-   benchmark=json.loads((root/spec['source_profile']).read_text())
-  source_shift=benchmark.get('shared_turning',{}).get('upper_axis_offset',0.)
-  start,end=59.,min(54.,benchmark['head_button_join']['head_cap_axis_y']-source_shift-.4)
+  # Express the concealed cap of the current profile in the original probe
+  # coordinates so the historical bad-neck fixture always gets the same test.
+  refit=cfg.get('side_refit',{})
+  cap=(cfg['head_button_join']['head_cap_axis_y']-refit.get('axis_offset',shift))/refit.get('axis_slope',1.)
+  start,end=59.,min(54.,cap-.4)
  count=math.ceil((start-end)/step)+1
  for i in range(count):
   axis_y=start-i*step;z=(cfg['y0']-axis_y)*factor/co;r=[]
