@@ -2,25 +2,25 @@
   "note": "Silhouette scores compare visible boundaries only, not internal geometry, wood, lighting or unseen surfaces. Original controls overall proportions; the accepted side guide directs the head/button join.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9876834094368341,
-      "mean_boundary_error_px": 2.0216016859852477,
-      "p95_boundary_error_px": 5.0,
+      "silhouette_iou": 0.99102813984651,
+      "mean_boundary_error_px": 1.454736842105263,
+      "p95_boundary_error_px": 4.0,
       "reference_sha256": "c876560917be67d4305ee5ebb8feba8e2e2becc1c4c663b1a8abebe65079a8c7",
-      "mean_boundary_error_original_300px_units": 0.4663846224524367
+      "mean_boundary_error_original_300px_units": 0.33560859074088856
     },
     "selected": {
-      "silhouette_iou": 0.9697667869084285,
-      "mean_boundary_error_px": 5.480505795574289,
+      "silhouette_iou": 0.9741162146275926,
+      "mean_boundary_error_px": 4.714736842105263,
       "p95_boundary_error_px": 10.0,
       "reference_sha256": "654e261e43002ebb9d61de13639b9890d36daba3a96d94e65f0b902a7c9b0176"
     }
   },
   "internal_features": {
     "inspection": "Original and selected overlays plus true level head profiles checked against neutral render; topology, junction surface and slit depth independently validated.",
-    "mitre": "Continuous curved head with a full-thickness oblique slit. The declared semicircular floor replaces the earlier flat termination; solid wood remains below it. Width, angle and the original edge bevel are preserved.",
-    "finial": "The shallow button, direct head contact and full-depth mitre slit remain exact from checkpoint 022.",
-    "collars": "The accepted collar rims, heights and middle-lip overhang remain exact from checkpoint 022.",
-    "lower_body": "Only mid-stem radii 34-36 are narrowed. Every height, the lower-stem controls at the root, socket, flare, groove and foot are retained. Actual contour rays separate the stem boundary from the rear base; the unsupported subpixel shoulder adjustment is omitted. Level views check that the earlier lower-stem bulge has not been reintroduced.",
-    "limits": "The accepted side guide is art direction, not a recovered source camera. Boxwood pigment, surface relief and reflections are an unfinished reconstruction. Single-view evidence cannot determine hidden geometry uniquely. The retained pigment and lights have not been refitted to this geometry; neutral comparison is required."
+    "mitre": "The real through-slit was oriented using the dark cut in the original white sprite. Through-rays and the rounded floor were checked.",
+    "finial": "The convex seated button is physically shorter. The front button arc and top silhouette were fitted independently at the original camera.",
+    "collars": "All three front rims were fitted against the original white arc rows, with the rear and side curves constrained by the original outline.",
+    "lower_body": "A wider waist and a shorter span from socket to collar give the stem more body in profile. The widest foot and the original plane of the sole are fixed. The three collar arcs and front groove were cross-checked in the original view.",
+    "limits": "The body outline also overlaps the selected enlargement. The cut, highlights and grain retain visible differences at this camera."
   }
 }

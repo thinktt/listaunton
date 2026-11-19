@@ -808,3 +808,7 @@ too low and the level mitre is broader than the earlier side guide.
 ## 028. Restore the original-view reference fit
 
 The owner rejected checkpoint 027 because its button and upper body missed the original at 54°. The active bishop returned to 024, commit `6d6944c`, including its original camera, wood, fixed renders and rotating mesh. This is the starting point for retrying the height. [Restored reference fit](bishop-mission/iteration-028/assessment.md).
+
+## 029. Stockier bishop at the original camera
+
+Compared with restored bishop 024, the waist is 9.8% wider, the socket-to-collar span is 12.5% shorter and overall height is 0.68% lower at the original foot width. The saved 54° view reaches 99.111% outline overlap with original white. The three collar arcs, through-slit and foot groove were checked independently. [Assessment and side profiles](bishop-mission/iteration-029/assessment.md).

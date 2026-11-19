@@ -73,7 +73,14 @@ if (out/'side-refit.json').is_file():
               'validate_side_refit.py','render_diagnostics.py','review-template.html','build_review.py','check_served_checkpoint.py']
 if (out/'cut-plane.json').is_file():
     scripts+=['fit_locked_height.py','fit_surface_slot.py','heal_slit_atlas.py','compare_locked_height.py']
+reference_fit=(out/'profile-fit.json').is_file() and 'reference_first_height' in json.loads((out/'profile-fit.json').read_text())
+if reference_fit:
+    scripts=['profile.json','profile_shape_trial.py','validate_profile_shape.py','finial_reflectors.py',
+             'fit_short_reference.py','fit_reference_turning.py','fit_stockier_stem.py','measure_reference_fit.py','record_reference_fit.py',
+             'collect_shape_checkpoint.py','compare.py','build_review.py','validate.py','check_served_checkpoint.py','sync_shape_checkpoint.py']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
+if reference_fit:
+    copied.append(f'docs/bishop-mission/iteration-{a.previous}/checkpoint.json')
 copied += [path.relative_to(ROOT).as_posix() for path in out.rglob('*') if path.is_file()]
 if a.archive:
     assert a.archive.isdigit()
@@ -97,6 +104,12 @@ checkpoint={'classification':'Accepted geometry checkpoint; inherited finish rem
     'geometry_phase_complete':False,'mission_complete':False,'goal_status':'active','no_quota_monitoring':True,'no_push':True,
     'note':'Only bishop files copied. Neutral is the review default. The old material/lights are retained without hiding their mismatch. Other pieces and shared gallery settings are untouched.'}
 relative=f'docs/bishop-mission/iteration-{a.checkpoint}/checkpoint.json'
+if reference_fit:
+    ruler=json.loads((out/'measurements.json').read_text())['accepted']
+    checkpoint.update(goal_status='accepted reference-first shortening',registered_original_iou=ruler['registered']['original_white'],
+        foot_diameter_model_units=ruler['foot_diameter'],height_model_units=ruler['height'],
+        height_percent_of_king=ruler['percent_of_king'],
+        note='The model is shorter at fixed foot width, original camera and sprite registration. The exported review and set lineup use the same saved mesh.')
 if (out/'side-refit.json').is_file():
     fit=json.loads((out/'side-refit.json').read_text())
     measured=json.loads((out/'measurements.json').read_text())
@@ -110,6 +123,10 @@ if (out/'side-refit.json').is_file():
             locked_height_model_units=row['height'],foot_diameter_model_units=row['foot_diameter'],
             note='Same floor, measured height, 025 lineup ruler and 54-degree camera. Original-white contours, three collar arcs and the real slit are examined separately.')
 (ROOT/relative).write_text(json.dumps(checkpoint,indent=2)+'\n',newline='\n');copy(relative,canonical)
+if reference_fit:
+    for evidence in out.rglob('*'):
+        if evidence.is_file():
+            copy(evidence.relative_to(ROOT).as_posix(),preview)
 manifest=sorted(set(list(public)+copied+[relative]))
 (ROOT/f'build/bishop-mission/{a.log_prefix}-delivered-files.json').write_text(json.dumps({r:sha(ROOT/r) for r in manifest},indent=2)+'\n')
 print(json.dumps({'synchronized':True,'public_files':len(public),'evidence_and_script_files':len(copied)+1,'model_sha256':model_hash},indent=2))

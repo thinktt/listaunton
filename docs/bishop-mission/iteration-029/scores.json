@@ -1,0 +1,37 @@
+{
+  "scores_percent": {
+    "silhouette": 97.46929638998161,
+    "interior": 87.0,
+    "color": 82.0,
+    "texture": 76.0,
+    "lighting": 71.0
+  },
+  "mean_percent": 82.69385927799632,
+  "holistic_range_percent": [
+    78.0,
+    87.0
+  ],
+  "silhouette_measured_other_scores_subjective": true,
+  "phase": "geometry",
+  "model_sha256": "1eca45577df128ca092e8305cc93abc867c40963791d453a1a26623f1a4eec58",
+  "render_sha256": "218c4dd5e71bd26ecff3671ce0d5e447a05ed2e56171ce0ec28b6a9c9df8b9f3",
+  "neutral_sha256": "89fe8e1d576609df376c4396aaf6e8265d7009271ac82b5b0a906b37145e0957",
+  "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
+  "original_and_selected_ious": {
+    "selected": {
+      "silhouette_iou": 0.9746929638998161,
+      "legacy_raw_model_mask_iou": 0.9746929638998161
+    },
+    "original_white": {
+      "silhouette_iou": 0.9911105832480631,
+      "legacy_raw_model_mask_iou": 0.9911105832480631
+    },
+    "original_black": {
+      "silhouette_iou": 0.9805818426033336,
+      "legacy_raw_model_mask_iou": 0.9805818426033336
+    }
+  },
+  "shape_complete": false,
+  "full_mission_complete": false,
+  "tradeoff": "The original-white outline and collar arcs improved with a shorter physical finial at fixed foot width. The slit, grain and reflections retain the differences described in the checkpoint assessment."
+}

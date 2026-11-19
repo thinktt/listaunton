@@ -61,6 +61,13 @@ if cfg.get('finial_rings'):
 if 'head_cap_axis_y' in cfg:
     assert profile['profile'][-1][1]==profile['profile'][-2][1]==cfg['head_cap_axis_y']
     profile['head_button_join']['head_cap_axis_y']=cfg['head_cap_axis_y']
+cut_name=None
+if cfg.get('slit_plane'):
+    from fit_surface_slot import place_cutter
+    saw=next(m.object for m in body.modifiers if m.type=='BOOLEAN')
+    cut_name=saw.name
+    place_cutter(saw,cfg['slit_plane'])
+    bpy.context.view_layer.update()
 parts,partition=partition_socket(s,*band)
 for name,names in memberships.items():
     collection=bpy.data.collections.get(name)
@@ -75,7 +82,7 @@ for key in ['lights','materials','camera','world','color_management','render_pat
 for name,row in before['meshes'].items():
     if name in part_names:continue
     new=after['meshes'][name]
-    if name==BODY or (name==BUTTON and cfg.get('finial_rings')):
+    if name in (BODY,cut_name) or (name==BUTTON and cfg.get('finial_rings')):
         for k in row:
             if k!='mesh':assert row[k]==new[k],(name,k)
         for k in row['mesh']:
@@ -83,11 +90,15 @@ for name,row in before['meshes'].items():
         for k,value in row['mesh']['hashes'].items():
             if k not in ['positions','normals']:assert value==new['mesh']['hashes'][k],(name,k)
     else:assert row==new,('Unintended mesh change',name)
+if cfg.get('finial_lights'):
+    from finial_reflectors import apply_finial_reflectors
+    apply_finial_reflectors(cfg['finial_lights'])
+    after=snapshot()
 profile['revision']=cfg['variant']
 profile['mission_shape_refit']={'config':str(config_path.relative_to(ROOT)).replace('\\','/'),
                               'source':cfg['source'],'source_sha256':cfg['source_sha256'],
                               'profile':cfg['profile'],'body_rings':cfg['body_rings']}
-for key in ['finial_rings','head_cap_axis_y']:
+for key in ['finial_rings','head_cap_axis_y','reference_first_height','finial_lights','slit_plane']:
     if key in cfg:profile['mission_shape_refit'][key]=cfg[key]
 s['bishop_shape_refit']=json.dumps(profile['mission_shape_refit'],sort_keys=True)
 s.cycles.samples=cfg.get('samples',128);s.cycles.use_adaptive_sampling=False
@@ -119,7 +130,8 @@ if not a.no_render:
     bpy.ops.render.render(write_still=True)
 report={'config':cfg,'model_sha256':sha(out/'bishop.blend'),'source_unchanged':sha(source)==cfg['source_sha256'],
         'source_state':before,'reopened_state':reopened,'receiver_check':receiver_check,
-        'materials_lighting_camera_uvs_topology_and_cutter_preserved':True,
+        'materials_lighting_camera_uvs_topology_and_cutter_preserved':not (cfg.get('finial_lights') or cfg.get('slit_plane')),
+        'declared_finial_lights':[lamp['name'] for lamp in cfg.get('finial_lights',[])],
         'button_controls_preserved':not bool(cfg.get('finial_rings')),
         'saved_and_reopened':True,'partition':partition}
 (out/'trial-audit.json').write_text(json.dumps(report,indent=2)+'\n')

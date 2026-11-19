@@ -14,6 +14,11 @@ if profile.get('side_refit'):
     lineup=Path(profile['side_refit']['config']).parent/'frozen-lineup.png'
     if (root/lineup).is_file():
         side_link=f' · <a href="{lineup.as_posix()}" target="_blank" rel="noopener">Side height comparison</a>'
+declaration=profile.get('mission_shape_refit',{})
+if declaration.get('reference_first_height'):
+    directory=Path(declaration['config']).parent
+    side_link=(f' · <a href="{directory.as_posix()}/fixed-comparison.png" target="_blank" rel="noopener">Original-view comparison</a>'
+               f' · <a href="{directory.as_posix()}/side-comparison.png" target="_blank" rel="noopener">Side profiles</a>')
 template=template.replace('__SIDE_PROPORTIONS__',side_link)
 # Model pages activate automatically when their checked standalone viewer exists.
 for piece,images in data['pieces'].items():

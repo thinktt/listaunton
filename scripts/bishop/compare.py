@@ -58,6 +58,17 @@ if 'locked_height' in refit:
   finial='The low button seats directly in a continuous curved mitre. Its top falls below the original tip at the chosen physical height.',
   mitre='The rounded saw slot is cut through the real body at the orientation fitted to the original white stroke.',
   limits='The original and selected reference retain their saved registration. The button and front foot groove still differ. Grain and illumination retain errors away from the reference view.')
+declaration=json.loads((root/'scripts/bishop/profile.json').read_text()).get('mission_shape_refit',{})
+if declaration.get('reference_first_height'):
+ report['internal_features'].update(
+  finial='The convex seated button is physically shorter. The front button arc and top silhouette were fitted independently at the original camera.',
+  mitre=('The real through-slit was oriented using the dark cut in the original white sprite. Through-rays and the rounded floor were checked.'
+         if declaration.get('slit_plane') else 'The real through-slit retains its rounded floor and preceding orientation.'),
+  collars='All three front rims were fitted against the original white arc rows, with the rear and side curves constrained by the original outline.',
+  lower_body='The turned body was fitted to the original white sprite, including the foot groove. The plane of the sole and the widest part of the foot are fixed.',
+  limits='The body outline also overlaps the selected enlargement. The cut, highlights and grain retain visible differences at this camera.')
+ if declaration['reference_first_height'].get('stockier_stem'):
+  report['internal_features']['lower_body']='A wider waist and a shorter span from socket to collar give the stem more body in profile. The widest foot and the original plane of the sole are fixed. The three collar arcs and front groove were cross-checked in the original view.'
 for name,ar in [('original',original),('selected',ref)]:
  a=(ar[:,:,3]>128)&(ar[:,:,:3].max(2)>12);b=ren[:,:,3]>128;l,rr=bounds(a);bl,br=bounds(b);valid=a.any(1)&b.any(1)
  error=np.abs(np.r_[l[valid]-bl[valid],rr[valid]-br[valid]])

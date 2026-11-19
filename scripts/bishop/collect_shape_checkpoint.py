@@ -41,7 +41,21 @@ old_meta=json.loads((prior/'mesh.json').read_text())
 assert meta['sourceSha256']==model_hash and meta['referenceCamera']==old_meta['referenceCamera']
 old_size=np.array(old_meta['bounds']['size']);new_size=np.array(meta['bounds']['size'])
 shared=scope.get('donor_rings')==40
-if shared:
+declaration=json.loads((ROOT/'scripts/bishop/profile.json').read_text()).get('mission_shape_refit',{})
+shorter=declaration.get('reference_first_height')
+if shorter:
+    assert a.baseline==shorter['baseline']
+    measured=json.loads((out/'measurements.json').read_text())['accepted']
+    assert measured['source_sha256']==model_hash
+    assert np.allclose(new_size,[measured['foot_diameter']]*2+[measured['height']],rtol=0,atol=1.e-6)
+    assert np.allclose(new_size[:2],old_size[:2],rtol=0,atol=1.e-6)
+    assert abs(meta['bounds']['min'][2])<1.e-6 and new_size[2]<old_size[2]
+    assert abs(new_size[2]-shorter['expected_height'])<.0001
+    metrics=json.loads((out/'comparison/metrics.json').read_text())
+    baseline=json.loads((ROOT/f'docs/bishop-mission/iteration-{a.baseline}/comparison/metrics.json').read_text())
+    for ref in ('original_white','original_black','selected'):
+        assert metrics['images'][ref]['silhouette_iou']>=baseline['images'][ref]['silhouette_iou'],ref
+elif shared:
     # The owner requested a wider foot and a shorter piece. Check their actual
     # dimensions against the separate reopened level-section measurement.
     key=scope['configuration']['case']
@@ -57,7 +71,7 @@ else:
     assert np.allclose(new_size,old_size,atol=1e-6,rtol=a.bounds_relative_tolerance)
     assert abs(new_size[2]-old_size[2])<1e-6,'Local foot edit must not alter overall height.'
 (out/'bounds-comparison.json').write_text(json.dumps({'previous':old_size.tolist(),'current':new_size.tolist(),
-    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':None if shared else a.bounds_relative_tolerance,
+    'relative_change':((new_size-old_size)/old_size).tolist(),'allowed_relative_tolerance':None if shared or shorter else a.bounds_relative_tolerance,
     'height_preserved':bool(abs(new_size[2]-old_size[2])<1e-6),'note':'Dimensions of evaluated geometry at the original floor and saved camera.'},indent=2)+'\n')
 old_atlas=prior/'bishop-boxwood-albedo.png'
 new_atlas=assets/'bishop-boxwood-albedo.png'
@@ -84,6 +98,13 @@ reports={
     'atlas_sha256':sha(assets/'bishop-boxwood-albedo.png'),
     'note':'Retained inherited material, not a new texture fit. It still contains reference shading and is displaced by the geometry changes.'}}
 reports['receiver-validation.json']=dict(scope['render_receivers'],model_sha256=model_hash)
+if scope.get('rigid_cutter_placement'):
+    reports['slit-validation.json'].update(cutter_unchanged_from_source=False,rigid_cutter_placement=scope['rigid_cutter_placement'])
+if scope.get('declared_finial_lights'):
+    pigment=reports['pigment-validation.json']
+    del pigment['packed_pixels_material_graph_control_uvs_and_lights_preserved']
+    pigment.update(packed_pixels_material_graph_and_uvs_preserved=True,remaining_lights_preserved=True,
+                   refitted_finial_reflectors=scope['declared_finial_lights'])
 if shared:
     reports['base-validation.json']={'passed':True,'model_sha256':model_hash,'donor_rings':scope['donor_rings'],
         'donor_sha256':scope['donor_sha256'],'uniform_size':scope['scale'],
@@ -144,7 +165,7 @@ canvas=Image.new('RGB',(1000,535),'#14181c');draw=ImageDraw.Draw(canvas)
 for i,(label,path) in enumerate([('Previous side',prior/'side-profile.png'),('Current side',assets/'side-profile.png')]):
     im=Image.open(path).convert('RGBA').resize((500,500),Image.Resampling.LANCZOS)
     canvas.paste(im,(500*i,35),im);draw.text((500*i+10,10),label,fill='white')
-canvas.save(out/('wood-side-comparison.png' if 'target_size' in scope else 'side-comparison.png'))
+canvas.save(out/('wood-side-comparison.png' if shorter or 'target_size' in scope else 'side-comparison.png'))
 metrics=json.loads((out/'comparison/metrics.json').read_text())
 assert metrics['render_sha256']==sha(assets/'render.png')
 scores={'silhouette':100*metrics['images']['selected']['silhouette_iou'],'interior':a.interior_score,
@@ -157,5 +178,7 @@ record={'scores_percent':scores,'mean_percent':sum(scores.values())/5,'holistic_
         'tradeoff':'Geometry is evaluated independently of the retained pigment and lights. Those still have visible mismatches and are not newly fitted or claimed complete.'}
 if healing:
     record['tradeoff']='The fixed-camera geometry and the painted former slit improved. The chosen height leaves a low button and a broader level mitre. The atlas still carries other baked lighting.'
+if shorter:
+    record['tradeoff']='The original-white outline and collar arcs improved with a shorter physical finial at fixed foot width. The slit, grain and reflections retain the differences described in the checkpoint assessment.'
 (out/'scores.json').write_text(json.dumps(record,indent=2)+'\n')
 print(json.dumps({'collected':True,'model_sha256':model_hash,'regional_geometry':regional,'scores':scores},indent=2))
