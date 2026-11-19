@@ -46,26 +46,15 @@ def main(root,url):
         get(path)
     profile=json.loads((root/'scripts/bishop/profile.json').read_text())
     physical_percent=None
-    if 'warpRuler' in board:
+    if 'locked_height' in profile.get('side_refit',{}):
         rule=board['warpRuler']
         assert rule['checkpoint']=='025' and rule['sourceSha256']=='b55a5a5fa998508c1b252691b72d41fc5b4a15b8fa159f3e78c4bec74a48b05d'
         def height(record):
             ruler=record.get('warpRuler',record)
             return record['modelHeight']*ruler['pixelsPerUnit']*(record['targetBottom']-record['targetTop'])/(ruler['renderBottom']-ruler['renderTop'])
         physical_percent=100*height(board)/height(records['king'])
-        if 'locked_height' in profile.get('side_refit',{}):
-            assert abs(physical_percent-74.48186)<.0001
+        assert abs(physical_percent-74.48186)<.0001
         assert sha(get('assets/bishop/bishop-boxwood-albedo.png'))==meta['material']['textureSha256']
-    declaration=profile.get('mission_shape_refit',{})
-    if declaration.get('reference_first_height'):
-        figures=Path(declaration['config']).parent
-        for name in ('fixed-comparison.png','side-comparison.png'):
-            relative=(figures/name).as_posix()
-            assert relative.encode() in review
-            get(relative)
-        measured=json.loads(get((figures/'measurements.json').as_posix()))
-        assert abs(measured['accepted']['height']-board['modelHeight'])<1e-6
-        assert abs(physical_percent-measured['accepted']['percent_of_king'])<.0001
     if profile.get('side_refit'):
         figures=Path(profile['side_refit']['config']).parent
         assert (figures/'frozen-lineup.png').as_posix().encode() in review

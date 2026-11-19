@@ -27,7 +27,7 @@ radial=side_refit.get('probe_radius_factor',side_refit.get('head_radius',1.))
 axial=side_refit.get('probe_height_factor',side_refit.get('head_height',1.))
 body=bpy.data.objects['Bishop - continuous turned body'].evaluated_get(graph)
 probes=[]
-plane=side_refit.get('placed_slit') or cfg.get('mission_shape_refit',{}).get('slit_plane')
+plane=side_refit.get('placed_slit')
 direction=Vector((plane['dx_dy'] if plane else 0.,1.,0.)).normalized()
 across=Vector((direction.y,-direction.x,0.))
 def saw_center(z):
@@ -176,9 +176,5 @@ if shared:
 if side_refit:
  result.update(side_refit=side_refit,slit_dimensions_and_floor_relative_to_head_preserved=False,
                slit_and_button_mapped_with_mitre=not bool(plane),placed_slit=plane)
-if shape_refit and shape_refit.get('slit_plane'):
- result.update(slit_parameters_preserved=False,slit_angle_width_and_original_floor_anchor_preserved=False,
-               slit_dimensions_and_floor_relative_to_head_preserved=False,placed_slit=plane,
-               rounded_saw_shape_and_kerf_preserved=True)
 (root/args.out).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print('PASS',json.dumps(result))

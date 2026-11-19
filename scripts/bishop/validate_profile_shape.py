@@ -29,17 +29,10 @@ def audit(model,config,profile_path):
     declaration=profile['mission_shape_refit']
     assert declaration['source']==cfg['source'] and declaration['source_sha256']==cfg['source_sha256']
     assert declaration['body_rings']==cfg['body_rings'] and declaration['profile']==cfg['profile']
-    for key in ['finial_rings','head_cap_axis_y','reference_first_height','finial_lights','slit_plane']:
+    for key in ['finial_rings','head_cap_axis_y']:
         assert declaration.get(key)==cfg.get(key),('Undeclared component edit',key)
     assert (ROOT/declaration['config']).resolve()==config.resolve()
     bpy.ops.wm.open_mainfile(filepath=str(source),load_ui=False);before=snapshot()
-    expected_lights=before['lights']
-    if cfg.get('finial_lights'):
-        from finial_reflectors import apply_finial_reflectors
-        apply_finial_reflectors(cfg['finial_lights'])
-        expected_lights=snapshot()['lights']
-        for lamp in cfg['finial_lights']:
-            assert expected_lights[lamp['name']]['receivers']==[BUTTON]
     al=json.loads((ROOT/'assets/bishop/original-alignment.json').read_text())
     factor=1254/300/al['scale']/old_profile['scale']/math.cos(math.radians(54))
     components={BODY:(old_profile['profile'],cfg['body_rings']),
@@ -53,16 +46,6 @@ def audit(model,config,profile_path):
             i=int(key);r0,y0=rings[i];sl=slice(i*128,(i+1)*128)
             expected[sl,:2]*=r/r0;expected[sl,2]+=(y0-y)*factor;touched[sl]=True
         expected_controls[name]=(old,expected,touched)
-    cut_name=None
-    if cfg.get('slit_plane'):
-        from fit_surface_slot import place_cutter
-        saw=next(m.object for m in bpy.data.objects[BODY].modifiers if m.type=='BOOLEAN')
-        cut_name=saw.name
-        old=array(saw.data.vertices,'co',3).copy()
-        transform=np.asarray(place_cutter(saw,cfg['slit_plane']))
-        rotation=transform[:3,:3]
-        assert np.allclose(rotation.T@rotation,np.eye(3),rtol=0,atol=1e-6) and abs(np.linalg.det(rotation)-1)<1e-6
-        expected_controls[cut_name]=(old,array(saw.data.vertices,'co',3).copy(),np.ones(len(old),dtype=bool))
     bpy.ops.wm.open_mainfile(filepath=str(model),load_ui=False);s=bpy.context.scene;after=snapshot()
     control_errors={}
     for name,(old,expected,touched) in expected_controls.items():
@@ -73,13 +56,12 @@ def audit(model,config,profile_path):
     max_error=max(control_errors.values())
     assert json.loads(s['bishop_shape_refit'])==declaration
     regions=[o.name for o in s.objects if o.get('bishop_render_region')]
-    assert expected_lights==after['lights'],'Saved light setup differs from declared specular fit.'
-    for key in ['materials','camera','world','color_management','render_path','objects']:
+    for key in ['lights','materials','camera','world','color_management','render_path','objects']:
         assert before[key]==after[key],('Undeclared scene change',key)
     for name,row in before['meshes'].items():
         if name in regions:continue
         new=after['meshes'][name]
-        if name not in (BODY,cut_name) and not (name==BUTTON and cfg.get('finial_rings')):
+        if name!=BODY and not (name==BUTTON and cfg.get('finial_rings')):
             assert row==new,('Unlisted mesh changed',name);continue
         for key,value in row.items():
             if key!='mesh':assert value==new[key],(name,key)
@@ -99,10 +81,7 @@ def audit(model,config,profile_path):
         'changed_finial_rings':sorted(map(int,cfg.get('finial_rings',{}))),
         'max_control_error_from_declared_edit':max_error,'unlisted_controls_exact':True,
         'control_errors_by_component':control_errors,
-        'topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved':not (cfg.get('finial_lights') or cfg.get('slit_plane')),
-        'rigid_cutter_placement':cfg.get('slit_plane'),
-        'declared_finial_lights':[lamp['name'] for lamp in cfg.get('finial_lights',[])],
-        'remaining_lights_materials_camera_and_topology_preserved':True,
+        'topology_modifiers_uvs_cutter_materials_packed_pixels_lights_and_camera_preserved':True,
         'button_controls_preserved':not bool(cfg.get('finial_rings')),
         'reference_pixels_unchanged':True,'camera_exactly_unchanged':True,
         'shader':'Principled BSDF','saved_scene_albedo_bakes_lighting_flag':False,

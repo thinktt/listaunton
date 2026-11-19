@@ -68,5 +68,5 @@ html = html.replace('__ORIGINAL_ALIGNMENT__',json.dumps(alignment,separators=(',
 html = html.replace('__BLACK_IMAGE__',data_uri(assets/'black-original.png'))
 black_alignment=json.loads((assets/'black-alignment.json').read_text())
 html = html.replace('__BLACK_ALIGNMENT__',json.dumps(black_alignment,separators=(',',':')))
-out.write_text(html,encoding='utf-8',newline='\n')
+out.write_text(html,encoding='utf-8')
 print(f'{out}: {out.stat().st_size:,} bytes; {meta["triangleCount"]:,} triangles')

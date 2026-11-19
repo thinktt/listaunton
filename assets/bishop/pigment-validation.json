@@ -1,14 +1,9 @@
 {
   "passed": true,
-  "model_sha256": "1eca45577df128ca092e8305cc93abc867c40963791d453a1a26623f1a4eec58",
-  "source": "history/bishop-mission-024/bishop-rebuilt.blend",
-  "source_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "model_sha256": "2ac4f898f5c5a8b6f69edec478e8d380d23c4c3021122697b0a2973878a2b425",
+  "source": "history/bishop-mission-022/bishop-rebuilt.blend",
+  "source_sha256": "0fe6300a7b5e7ef645a84519de7f26fe6efa93ebec8e610c50a710cce4e126da",
+  "packed_pixels_material_graph_control_uvs_and_lights_preserved": true,
   "atlas_sha256": "c09df839f9ab363f5e4c2ed3d669293f99a81de59a449f85096a49e849aa8f2a",
-  "note": "Retained inherited material, not a new texture fit. It still contains reference shading and is displaced by the geometry changes.",
-  "packed_pixels_material_graph_and_uvs_preserved": true,
-  "remaining_lights_preserved": true,
-  "refitted_finial_reflectors": [
-    "button reflection",
-    "Button second glint"
-  ]
+  "note": "Retained inherited material, not a new texture fit. It still contains reference shading and is displaced by the geometry changes."
 }
