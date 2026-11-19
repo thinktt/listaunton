@@ -77,7 +77,7 @@ reference_fit=(out/'profile-fit.json').is_file() and 'reference_first_height' in
 if reference_fit:
     scripts=['profile.json','profile_shape_trial.py','validate_profile_shape.py','finial_reflectors.py',
              'fit_short_reference.py','fit_reference_turning.py','fit_stockier_stem.py','measure_reference_fit.py','record_reference_fit.py',
-             'collect_shape_checkpoint.py','compare.py','build_review.py','validate.py','check_served_checkpoint.py','sync_shape_checkpoint.py']
+             'collect_shape_checkpoint.py','compare.py','build_viewer.py','build_review.py','validate.py','check_served_checkpoint.py','sync_shape_checkpoint.py']
 copied=[f'scripts/bishop/{name}' for name in scripts]+['docs/bishop-mission-log.md']
 if reference_fit:
     copied.append(f'docs/bishop-mission/iteration-{a.previous}/checkpoint.json')
