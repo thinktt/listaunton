@@ -1,0 +1,50 @@
+{
+  "method": "Five equal weights. Filled-mask silhouette is measured in the fixed view. The other scores and holistic range are visual assessments.",
+  "scores": {
+    "selected_silhouette": 97.87,
+    "interior_form": 92,
+    "wood_color": 90,
+    "grain_and_surface_texture": 85,
+    "lighting_and_reflections": 80
+  },
+  "mean": 88.97,
+  "holistic_range": [
+    86,
+    90
+  ],
+  "geometry_comparisons": {
+    "original": {
+      "iou": 0.9853897090091732,
+      "previous_iou": 0.9853897090091732
+    },
+    "selected": {
+      "iou": 0.9787343038550667,
+      "previous_iou": 0.9787343038550667
+    },
+    "white_mirrored": {
+      "iou": 0.9718682743653703,
+      "previous_iou": 0.9718682743653703
+    }
+  },
+  "reviewed_scene": "9378b0674ffcf854c4aa8b31b94ada81d38a4647651502225f0866dc4183b3be",
+  "accepted_scene": "4b9a7268fc1e4f811822f2210fdb3bdec58b579385479713cc681174145bfb0c",
+  "render_verification": {
+    "render.png": {
+      "trial": "9603b00bcdeb3b920f7bdd1e9dfd6c3ecd78414a2a70dc9e0740ad7f9b06d581",
+      "release": "be4fc34ecc87ece5959f60780716dfbbfd83f241010b9d0cf957b21e748f9cd3",
+      "mean_foreground_rgba_delta_255": 3.134719541994538e-05,
+      "same_filled_mask": true
+    },
+    "guide-render.png": {
+      "trial": "14bf85af5decd6e58097b5840a3d08ecb2a4d1bbeb76684f09a32d641f0f8ec8",
+      "release": "6964d33eb1e33c76fef93fbce65070e4b0323db063f8910057b891cf7cf1703e",
+      "mean_foreground_rgba_delta_255": 2.113720445046696e-05,
+      "same_filled_mask": true
+    }
+  },
+  "source_hashes": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

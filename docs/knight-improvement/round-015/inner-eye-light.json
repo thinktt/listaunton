@@ -1,0 +1,124 @@
+{
+  "method": "1.25 px blur in sRGB with Rec.709 luminance. Keep positive contrast above the 65th percentile within the identical source-defined polygon. Measure its brightness-weighted centroid and distribution. The original offers coarse guidance at this magnification.",
+  "polygon": [
+    [
+      478,
+      469
+    ],
+    [
+      490,
+      465
+    ],
+    [
+      504,
+      466
+    ],
+    [
+      514,
+      469
+    ],
+    [
+      525,
+      474
+    ],
+    [
+      537,
+      482
+    ],
+    [
+      541,
+      487
+    ],
+    [
+      535,
+      490
+    ],
+    [
+      522,
+      490
+    ],
+    [
+      508,
+      487
+    ],
+    [
+      497,
+      484
+    ],
+    [
+      486,
+      479
+    ],
+    [
+      477,
+      474
+    ]
+  ],
+  "results": {
+    "Original black": {
+      "center_of_bright_contrast_x_y": [
+        520.91,
+        479.2
+      ],
+      "brightest_x_y": [
+        536,
+        482
+      ],
+      "local_baseline": 48.51,
+      "strongest_luma": 76.15,
+      "bright_weight_noseward_of_x517_percent": 53.68
+    },
+    "Black 2": {
+      "center_of_bright_contrast_x_y": [
+        514.13,
+        477.75
+      ],
+      "brightest_x_y": [
+        504,
+        473
+      ],
+      "local_baseline": 60.33,
+      "strongest_luma": 153.66,
+      "bright_weight_noseward_of_x517_percent": 32.0
+    },
+    "Parent": {
+      "center_of_bright_contrast_x_y": [
+        515.2,
+        479.88
+      ],
+      "brightest_x_y": [
+        528,
+        486
+      ],
+      "local_baseline": 59.86,
+      "strongest_luma": 118.85,
+      "bright_weight_noseward_of_x517_percent": 46.57
+    },
+    "A": {
+      "center_of_bright_contrast_x_y": [
+        514.99,
+        474.66
+      ],
+      "brightest_x_y": [
+        529,
+        481
+      ],
+      "local_baseline": 54.25,
+      "strongest_luma": 107.99,
+      "bright_weight_noseward_of_x517_percent": 39.84
+    },
+    "B": {
+      "center_of_bright_contrast_x_y": [
+        513.63,
+        479.92
+      ],
+      "brightest_x_y": [
+        506,
+        474
+      ],
+      "local_baseline": 53.7,
+      "strongest_luma": 134.32,
+      "bright_weight_noseward_of_x517_percent": 38.57
+    }
+  }
+}

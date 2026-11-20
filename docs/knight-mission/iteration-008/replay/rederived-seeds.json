@@ -1,0 +1,39 @@
+{
+  "blender": "5.2.2 LTS",
+  "numpy": "2.3.4",
+  "parent_file_sha256": "1a8c2b2384ac360766d3a3121671199f231df21b2ceea6caee22c9ebdb5e9766",
+  "parent_evaluated_parts": {
+    "Knight | turned pedestal": "d79bf8535143d67a53df0e48f367ce61a4c393120458e0d82365cc221b5e6129",
+    "Knight | swept rounded mane": "8dae7693f9481208eabb35d40c92766856ee9b621681822555b3a0ebcae0eef8",
+    "Knight | near swept ear": "c2ced3cdf07f404afad052db7d2ab26682a11df419a7fd91a558293816e1695c",
+    "Knight | near eye": "2da0765c467e6b648ee977b1248bb99159b10caf715dc8a45f7247bb737ac5ce",
+    "Knight | far swept ear": "50db6bd058ceb21a30e0993694214ae64dc00e7940381c7eebd2195a105050b3",
+    "Knight | far eye": "4078fdd3faad1e69d4928c113dd93e3a7119a773fde917584eec601674b535cc",
+    "Knight | continuous horse head and neck": "4d29fb805efc7bd32e8cfa290e717d17c468eea2d937b0dbd5e01f4955857f34",
+    "Knight | curved neck and chest": "e5a1c88e0e258def6f325a42c11a1e7a84bc0f9685aad5bbe2f61980912c1dfc",
+    "Knight | coherent skull cheek and conical muzzle": "3285601c2cfa246525d25f0fb65afe51a71cbed7816c3bfc8c1bc526d204d444"
+  },
+  "trials": {
+    "mission008-mane": {
+      "all_nine_parts_match_expected": true,
+      "changed_evaluated_parts": {
+        "Knight | swept rounded mane": "9ded7975c8613c847577e9c4ab0512127f6fba0584ba0912d7aa78eaaacbb446"
+      },
+      "all_nine_parts_match_reopened_frozen_scene": true,
+      "frozen_file_sha256": "51931f0ca0fb78c90fad0a2d7388af9e8a3236372bd1069b834a5df6b135c1a6"
+    },
+    "mission008-neck": {
+      "all_nine_parts_match_expected": true,
+      "changed_evaluated_parts": {
+        "Knight | continuous horse head and neck": "90a03b08ec5fdeca4836bf9a19268da841ceb150023bc2d58c25cd7649d610d2",
+        "Knight | curved neck and chest": "872b115988574e1dc827ff0979902c19398fbd0bdc95a1d29e80be741afac210"
+      },
+      "all_nine_parts_match_reopened_frozen_scene": true,
+      "frozen_file_sha256": "5629290d255c7f2c471da5ffc9c3d6b7a5d594ea8a8ba476cc8d2be323439c2e"
+    }
+  },
+  "rederived_seed_arrays_equal": [
+    "mane station grid and both caps",
+    "all neck survey arrays"
+  ]
+}

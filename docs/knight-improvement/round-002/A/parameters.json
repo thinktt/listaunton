@@ -1,0 +1,110 @@
+{
+  "parent_sha256": "3d2ccb939f7b96b114cabcd179d8856e8922f734eeb034eb8bc711f641b23f17",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "mane_ring_weights": [
+    0.42,
+    0.9,
+    1.0,
+    1.0,
+    0.88,
+    0.5,
+    0.12,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mane_fraction_at_crest": [
+    0.72,
+    0.6,
+    0.44,
+    0.4,
+    0.37,
+    0.34,
+    0.34,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "ear_ring_weights": [
+    0.0,
+    0.3,
+    0.85,
+    1.0,
+    1.0,
+    0.68,
+    0.0
+  ],
+  "ear_outer_chord_blend": [
+    0.72,
+    0.46
+  ],
+  "ear_underside_seat": 0.018,
+  "geometry": {
+    "swept rounded mane": {
+      "max_displacement": 0.025111224502325058,
+      "vertices_moved_over_0.001": 126
+    },
+    "near swept ear": {
+      "max_displacement": 0.039895787835121155,
+      "vertices_moved_over_0.001": 231
+    },
+    "far swept ear": {
+      "max_displacement": 0.039895784109830856,
+      "vertices_moved_over_0.001": 231
+    }
+  },
+  "model_sha256": "3504e20a772ecdc171e1e48db21918efc757d64c3e62dd870d89d82464acc863",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "1a72892aef6d8a37ff991661592068be3895574ac0381b2a366a37b7f1e6487f",
+    "side_sha256": "92c179f11c27cdcbf6b3bfc094b11f10262caf7051f0f2633618943d3cae7003",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

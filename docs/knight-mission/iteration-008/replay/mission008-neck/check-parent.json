@@ -1,0 +1,188 @@
+{
+  "footprint": {
+    "z": 1.733,
+    "actual_axis_xy": [
+      0.03251595380318414,
+      0.0
+    ],
+    "front_far_back_near_r": [
+      1.10979,
+      0.84567,
+      1.02245,
+      0.85816
+    ],
+    "min_max": [
+      0.83858,
+      1.10985
+    ],
+    "min_max_angles": [
+      103,
+      359
+    ]
+  },
+  "three_face_planarity_rms": [
+    0.004079,
+    0.009916,
+    0.009818
+  ],
+  "native": {
+    "Knight | turned pedestal": {
+      "coords": "f317a3e4101dd0ea98378e95e9ac1bf1a660df3ec1e251095015fedcd7c7e5db",
+      "triangles": "f43ef2d118b6255db6bfbd5670bcb2983642580a2df82078105a71746c7617c9",
+      "uv": "501f1d2aa967f12fe13ee7cc7663f7792e9a5eeef67562684a6f6d72c1d14402",
+      "count": [
+        31234,
+        62464
+      ]
+    },
+    "Knight | swept rounded mane": {
+      "coords": "553fae1b000a01125bef8a95a87e1a9bd0293d6043009ccee920a0f5b056d736",
+      "triangles": "552fbb25fd9d652e47fa0b911c17c3fa2ebb357b1003b22a10e662d241d284d8",
+      "uv": "493b3adf4c1de9c29ecce9b574372aad6d486f09375f8fbeb5029a636248b5bc",
+      "count": [
+        12802,
+        25600
+      ]
+    },
+    "Knight | near swept ear": {
+      "coords": "edec2c6e4bf93239c44488b92517da40b2b9ff803a6229175ae64962c9d4336d",
+      "triangles": "21f05c3a314f9ef1631a98cbe656619d2ee953c2a99955149056db1b5aa9c68f",
+      "uv": "1cb045edceead527a05e62bd1e94fac378dd45f27e7ce759880e63fa95837182",
+      "count": [
+        6658,
+        13312
+      ]
+    },
+    "Knight | near eye": {
+      "coords": "1031342bd6b01cd058212ca447340bbcbeff4dddf475aeac81a7f60cf3b99d25",
+      "triangles": "4d66f569fc753fc26f178c4feaaba9b6b5d4078fc261ac5ac84aca1c4bbc1a29",
+      "uv": "548e0b1ce4a0efd044aae809ea67a17e5c526c1c5a5e6aa8915e3614d8f7a876",
+      "count": [
+        7938,
+        15872
+      ]
+    },
+    "Knight | far swept ear": {
+      "coords": "bc8a1b82dafa26cb1e0c7af8101f4d23cb8c1540b8c8621a78fd0ec517c9496a",
+      "triangles": "3daa89e37933fe01b7054759f26a5245099a5b1eda19c7bd2838c07be28246db",
+      "uv": "3a850f6bfb5d17c4e26086a2231dcf403c46141b39b3714d3bf0c41887fc0b5c",
+      "count": [
+        6658,
+        13312
+      ]
+    },
+    "Knight | far eye": {
+      "coords": "27920aac218c79e5314d4fe93590df965cff4ecd89795618bbef09dd024940f6",
+      "triangles": "a23fbf347007fee8116913027a7cadab886c0b890d8474db8044ccbf91dbc778",
+      "uv": "899e8136f4e90d702baddaf99252b62a2bf4f03c163b7904808a0c648fce85d5",
+      "count": [
+        7938,
+        15872
+      ]
+    },
+    "Knight | continuous horse head and neck": {
+      "coords": "28e4c1721bc42433e8eda2080361cd0760ae14c8422772a5d237bf4ea64ca9d4",
+      "triangles": "9ee2f96278a63ec6469ca8f3e84080650911fedf43906411e7e971129579932d",
+      "uv": "cebfb65b94e0dc7c8ceba66edd5b41a7edb8e889010634fb6763fee723b19dfc",
+      "count": [
+        71001,
+        141998
+      ]
+    },
+    "Knight | curved neck and chest": {
+      "coords": "6c833c5914a312c23b37355738cf88149e57690c026ba9c871e5127803de910c",
+      "triangles": "7d3a7ca003604fae978aee5827143c3bedf04cd570459c6d1f899f0d59ca3812",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": [
+        57858,
+        115712
+      ]
+    },
+    "Knight | coherent skull cheek and conical muzzle": {
+      "coords": "63d1b1051716987dbda244df1cfb2833b89345029b55991ed30429c782668291",
+      "triangles": "534e36f9e0e91144fd7f3a242905978820b395b2d5b37e7dcf11e72566cdad1f",
+      "uv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": [
+        27778,
+        55552
+      ]
+    }
+  },
+  "mesh": {
+    "Knight | continuous horse head and neck": {
+      "nonadjacent_intersections": 0,
+      "degenerates_below_1e-12": 0,
+      "signed_volume": 6.352694988250732
+    },
+    "Knight | curved neck and chest": {
+      "nonadjacent_intersections": 0,
+      "degenerates_below_1e-12": 0,
+      "signed_volume": 5.1143083572387695
+    }
+  },
+  "outline_rays_xy_then_rest_xyz": [
+    [
+      597,
+      538,
+      0.6600000262260437,
+      0.5609999895095825,
+      2.4170000553131104
+    ],
+    [
+      600,
+      540,
+      0.6700000166893005,
+      0.5649999976158142,
+      2.3970000743865967
+    ],
+    [
+      607,
+      545,
+      0.7039999961853027,
+      0.5559999942779541,
+      2.371999979019165
+    ],
+    [
+      615,
+      550,
+      0.734000027179718,
+      0.5659999847412109,
+      2.3239998817443848
+    ],
+    [
+      629,
+      560,
+      0.8019999861717224,
+      0.5490000247955322,
+      2.2730000019073486
+    ],
+    [
+      652,
+      580,
+      0.8989999890327454,
+      0.5320000052452087,
+      2.1459999084472656
+    ],
+    [
+      669,
+      600,
+      0.9819999933242798,
+      0.48500001430511475,
+      2.0510001182556152
+    ],
+    [
+      681,
+      620,
+      1.0549999475479126,
+      0.40299999713897705,
+      1.99399995803833
+    ],
+    [
+      689,
+      640,
+      1.1119999885559082,
+      0.30799999833106995,
+      1.9470000267028809
+    ]
+  ]
+}

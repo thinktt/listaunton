@@ -1,0 +1,31 @@
+{
+  "recipe": 9,
+  "restoration": {
+    "recipe": [
+      71,
+      26,
+      1.11,
+      0.82,
+      0.215,
+      1.32,
+      1.22,
+      0.32,
+      1.4,
+      0.62,
+      0.48
+    ],
+    "sha256": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+    "mane_texels": 452423,
+    "changed_texels_including_bleed": 346467,
+    "changed_protected": 0,
+    "max_abs_channel_change": 94
+  },
+  "parent_sha256": "eaecb543e309c713db12fc83888bb2ffc0142686a06917ee6c76d24e7d2b2188",
+  "parent_pigment_sha256": "1e35b27f1eea257ee9bacc6ae60aa26cbeaf80fad5139365d58be1db395dd78b",
+  "release_texture": "wood-atlas-improvement-014-B.png",
+  "pigment_sha256": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+  "model_sha256": "768e8da32b31736302b3b9b99a747d2a8116aee23887dc227eccd33c233d47fd",
+  "fixed_sha256": "d3726be6bbd7555c88d622cddb3a67865e457acc0dd6d1d39ad72b047cbe1659",
+  "side_sha256": "bbafa6d4b8ed8bd7fb974dc21a41eb9ee1627e7704fc7a60ed8e963797f61e8c",
+  "samples": 144
+}

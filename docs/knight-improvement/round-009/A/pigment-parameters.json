@@ -1,0 +1,24 @@
+{
+  "input_sha256": "6dd2c27434783d5490a0fc35d0650e040b0b903497206a05e04d4e665d6d6515",
+  "output_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "dimensions": [
+    3072,
+    3072
+  ],
+  "covered_anatomical_samples": 225323,
+  "changed_rgb_texels": 197880,
+  "strong_cheek_multipliers": [
+    0.774,
+    0.75,
+    0.676
+  ],
+  "eye_floor_stain_weight": 0.17,
+  "far_side_stain_fraction": 0.33,
+  "fine_grain_seeds": [
+    7203,
+    708,
+    3912,
+    9023,
+    1146
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "fixed": {
+    "silhouette_iou": 1.0,
+    "changed_silhouette_pixels": 0,
+    "piece_outside_crest_crop": {
+      "absolute_luma_change_mean": 0.01827056107134611,
+      "absolute_luma_change_p95": 0.0
+    },
+    "head_eye": {
+      "absolute_luma_change_mean": 0.00092126,
+      "absolute_luma_change_p95": 0.0
+    }
+  },
+  "side": {
+    "silhouette_iou": 0.9984303766414603,
+    "changed_silhouette_pixels": 691
+  }
+}

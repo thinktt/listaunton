@@ -1,20 +1,25 @@
 {
-  "priority": "Original sprite governs the elevated fit. This imagined side guide provides an independent style and proportion comparison.",
   "registration": {
-    "elevation": 7,
-    "azimuth": 0,
-    "guideBaseWidth": 565,
-    "guideBaseCenterX": 624,
-    "guideFloorY": 1127,
-    "pixelsPerWorldUnit": 188.33333333333334,
-    "target": [
-      0.0,
-      0.0,
-      2.548305034637451
+    "source_blend_sha256": "1a8c2b2384ac360766d3a3121671199f231df21b2ceea6caee22c9ebdb5e9766",
+    "profile_size": [
+      1254,
+      1254
     ],
-    "orthoScale": 6.658407211303711,
-    "shiftX": 0.0023923444095999002,
-    "note": "Approximate inferred study camera; fixed base width and physical floor. No rotation, warp, or anisotropic fit of the source image."
+    "canvas": [
+      1254,
+      1254
+    ],
+    "scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "physical_foot_center_x": 0.03251595380318414,
+    "profile": "assets/knight/guide-render.png",
+    "profile_sha256": "231fa4d8db21583728cbc6de0b264abf62f7ca7b148c14ffa1d7db8898f6d3ce",
+    "neutral": "assets/knight/guide-neutral.png",
+    "neutral_sha256": "e45f7e9a48904a6e201a4e6ac5639f55d5dc7b5c6ce65b01eed0e95ae929f480",
+    "elevation": 7,
+    "method": "Walnut and neutral clay rendered from the reopened scene using the same registered side camera."
   },
-  "review": "Compare broad cheek continuity, blunt gently conical muzzle, wide S neck/chest, arched mane and flat plinth directly. Silhouette metrics cannot establish anatomical quality."
+  "side_render_mask_iou": 1.0,
+  "review": "Inspect the same carved surfaces in wood and neutral clay from the registered side camera."
 }

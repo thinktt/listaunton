@@ -32,8 +32,9 @@ Do not invent a token budget or mark an unfinished goal complete to replace it.
 ## Reference authority and shared proportions
 
 The original Lichess sprites settle conflicts. Selected high-resolution
-candidates support detailed interpretation. Generated side views and design
-studies guide plausible unseen form; they do not establish original geometry,
+candidates support detailed interpretation. Use generated side views and design
+studies only where the piece mission accepts them. For those pieces they guide
+plausible unseen form; they do not establish original geometry,
 camera settings, or design ancestry. Preserve source images and registration.
 Record uncertainty and distinguish observed features from interpretation.
 

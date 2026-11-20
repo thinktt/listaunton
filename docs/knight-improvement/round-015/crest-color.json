@@ -1,0 +1,383 @@
+{
+  "method": "At each registered x sample, trace the brightest smoothed pixel within 10px of the source bevel, then average the three brightest pixels within 3px. Measure warm color and relative grain contrast on either side of the bevel. Fine-grain values from the enlarged original are resolution-limited.",
+  "results": {
+    "Original black": {
+      "rear": {
+        "median_peak_luma": 66.35,
+        "median_peak_rgb": [
+          117.3,
+          55.7,
+          22.0
+        ],
+        "median_underface_luma_15px_below": 33.64,
+        "median_bevel_y_offset_px": -3.0,
+        "warmth_R_minus_B": 95.33,
+        "cap_pore_contrast": 0.0207,
+        "underface_pore_contrast": 0.0326
+      },
+      "middle": {
+        "median_peak_luma": 81.35,
+        "median_peak_rgb": [
+          140.0,
+          69.0,
+          31.0
+        ],
+        "median_underface_luma_15px_below": 39.0,
+        "median_bevel_y_offset_px": -2.0,
+        "warmth_R_minus_B": 110.33,
+        "cap_pore_contrast": 0.0207,
+        "underface_pore_contrast": 0.042
+      },
+      "front shoulder": {
+        "median_peak_luma": 100.73,
+        "median_peak_rgb": [
+          150.0,
+          90.0,
+          58.0
+        ],
+        "median_underface_luma_15px_below": 42.7,
+        "median_bevel_y_offset_px": -2.0,
+        "warmth_R_minus_B": 92.0,
+        "cap_pore_contrast": 0.0537,
+        "underface_pore_contrast": 0.0457
+      },
+      "return": {
+        "median_peak_luma": 76.75,
+        "median_peak_rgb": [
+          111.8,
+          69.7,
+          43.7
+        ],
+        "median_underface_luma_15px_below": 36.89,
+        "median_bevel_y_offset_px": 1.0,
+        "warmth_R_minus_B": 68.17,
+        "cap_pore_contrast": 0.0264,
+        "underface_pore_contrast": 0.069
+      }
+    },
+    "Black 2": {
+      "rear": {
+        "median_peak_luma": 113.83,
+        "median_peak_rgb": [
+          171.3,
+          102.3,
+          58.3
+        ],
+        "median_underface_luma_15px_below": 36.71,
+        "median_bevel_y_offset_px": -1.0,
+        "warmth_R_minus_B": 106.33,
+        "cap_pore_contrast": 0.079,
+        "underface_pore_contrast": 0.1006
+      },
+      "middle": {
+        "median_peak_luma": 148.38,
+        "median_peak_rgb": [
+          196.3,
+          139.0,
+          101.7
+        ],
+        "median_underface_luma_15px_below": 42.49,
+        "median_bevel_y_offset_px": 1.0,
+        "warmth_R_minus_B": 95.0,
+        "cap_pore_contrast": 0.093,
+        "underface_pore_contrast": 0.0928
+      },
+      "front shoulder": {
+        "median_peak_luma": 176.94,
+        "median_peak_rgb": [
+          206.7,
+          170.7,
+          146.7
+        ],
+        "median_underface_luma_15px_below": 46.77,
+        "median_bevel_y_offset_px": -1.0,
+        "warmth_R_minus_B": 58.0,
+        "cap_pore_contrast": 0.1814,
+        "underface_pore_contrast": 0.1139
+      },
+      "return": {
+        "median_peak_luma": 142.77,
+        "median_peak_rgb": [
+          181.0,
+          135.0,
+          107.2
+        ],
+        "median_underface_luma_15px_below": 43.7,
+        "median_bevel_y_offset_px": 3.0,
+        "warmth_R_minus_B": 71.5,
+        "cap_pore_contrast": 0.1115,
+        "underface_pore_contrast": 0.2004
+      }
+    },
+    "Parent": {
+      "rear": {
+        "median_peak_luma": 132.59,
+        "median_peak_rgb": [
+          145.0,
+          130.3,
+          121.3
+        ],
+        "median_underface_luma_15px_below": 64.02,
+        "median_bevel_y_offset_px": -1.0,
+        "warmth_R_minus_B": 23.0,
+        "cap_pore_contrast": 0.0527,
+        "underface_pore_contrast": 0.0456
+      },
+      "middle": {
+        "median_peak_luma": 153.81,
+        "median_peak_rgb": [
+          164.3,
+          152.0,
+          142.7
+        ],
+        "median_underface_luma_15px_below": 56.14,
+        "median_bevel_y_offset_px": 3.0,
+        "warmth_R_minus_B": 23.67,
+        "cap_pore_contrast": 0.1074,
+        "underface_pore_contrast": 0.0963
+      },
+      "front shoulder": {
+        "median_peak_luma": 139.15,
+        "median_peak_rgb": [
+          155.0,
+          135.7,
+          124.0
+        ],
+        "median_underface_luma_15px_below": 53.93,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 32.33,
+        "cap_pore_contrast": 0.0934,
+        "underface_pore_contrast": 0.1529
+      },
+      "return": {
+        "median_peak_luma": 87.67,
+        "median_peak_rgb": [
+          120.7,
+          80.5,
+          62.0
+        ],
+        "median_underface_luma_15px_below": 69.08,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 62.67,
+        "cap_pore_contrast": 0.0998,
+        "underface_pore_contrast": 0.1264
+      }
+    },
+    "A": {
+      "rear": {
+        "median_peak_luma": 132.59,
+        "median_peak_rgb": [
+          145.0,
+          130.3,
+          121.3
+        ],
+        "median_underface_luma_15px_below": 64.02,
+        "median_bevel_y_offset_px": -1.0,
+        "warmth_R_minus_B": 23.0,
+        "cap_pore_contrast": 0.0527,
+        "underface_pore_contrast": 0.0456
+      },
+      "middle": {
+        "median_peak_luma": 153.81,
+        "median_peak_rgb": [
+          164.3,
+          152.0,
+          142.7
+        ],
+        "median_underface_luma_15px_below": 56.14,
+        "median_bevel_y_offset_px": 3.0,
+        "warmth_R_minus_B": 23.67,
+        "cap_pore_contrast": 0.1074,
+        "underface_pore_contrast": 0.0964
+      },
+      "front shoulder": {
+        "median_peak_luma": 139.15,
+        "median_peak_rgb": [
+          155.0,
+          135.7,
+          124.0
+        ],
+        "median_underface_luma_15px_below": 53.93,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 32.33,
+        "cap_pore_contrast": 0.0934,
+        "underface_pore_contrast": 0.1529
+      },
+      "return": {
+        "median_peak_luma": 87.67,
+        "median_peak_rgb": [
+          120.7,
+          80.5,
+          62.0
+        ],
+        "median_underface_luma_15px_below": 69.08,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 62.67,
+        "cap_pore_contrast": 0.0998,
+        "underface_pore_contrast": 0.1266
+      }
+    },
+    "B": {
+      "rear": {
+        "median_peak_luma": 132.59,
+        "median_peak_rgb": [
+          145.0,
+          130.3,
+          121.3
+        ],
+        "median_underface_luma_15px_below": 64.02,
+        "median_bevel_y_offset_px": -1.0,
+        "warmth_R_minus_B": 23.0,
+        "cap_pore_contrast": 0.0527,
+        "underface_pore_contrast": 0.0456
+      },
+      "middle": {
+        "median_peak_luma": 153.81,
+        "median_peak_rgb": [
+          164.3,
+          152.0,
+          142.7
+        ],
+        "median_underface_luma_15px_below": 56.14,
+        "median_bevel_y_offset_px": 3.0,
+        "warmth_R_minus_B": 23.67,
+        "cap_pore_contrast": 0.1074,
+        "underface_pore_contrast": 0.0963
+      },
+      "front shoulder": {
+        "median_peak_luma": 139.15,
+        "median_peak_rgb": [
+          155.0,
+          135.7,
+          124.0
+        ],
+        "median_underface_luma_15px_below": 53.93,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 32.33,
+        "cap_pore_contrast": 0.0934,
+        "underface_pore_contrast": 0.1529
+      },
+      "return": {
+        "median_peak_luma": 87.67,
+        "median_peak_rgb": [
+          120.7,
+          80.5,
+          62.0
+        ],
+        "median_underface_luma_15px_below": 69.08,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 62.67,
+        "cap_pore_contrast": 0.0998,
+        "underface_pore_contrast": 0.1264
+      }
+    },
+    "Pigment": {
+      "rear": {
+        "median_peak_luma": 48.09,
+        "median_peak_rgb": [
+          84.3,
+          40.7,
+          12.0
+        ],
+        "median_underface_luma_15px_below": 22.81,
+        "median_bevel_y_offset_px": -9.0,
+        "warmth_R_minus_B": 71.67,
+        "cap_pore_contrast": 0.0625,
+        "underface_pore_contrast": 0.0527
+      },
+      "middle": {
+        "median_peak_luma": 50.55,
+        "median_peak_rgb": [
+          88.7,
+          43.3,
+          15.7
+        ],
+        "median_underface_luma_15px_below": 27.51,
+        "median_bevel_y_offset_px": -3.0,
+        "warmth_R_minus_B": 73.33,
+        "cap_pore_contrast": 0.1057,
+        "underface_pore_contrast": 0.0506
+      },
+      "front shoulder": {
+        "median_peak_luma": 47.75,
+        "median_peak_rgb": [
+          80.3,
+          41.3,
+          16.7
+        ],
+        "median_underface_luma_15px_below": 32.22,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 64.33,
+        "cap_pore_contrast": 0.1173,
+        "underface_pore_contrast": 0.0818
+      },
+      "return": {
+        "median_peak_luma": 35.67,
+        "median_peak_rgb": [
+          63.2,
+          30.0,
+          10.2
+        ],
+        "median_underface_luma_15px_below": 32.25,
+        "median_bevel_y_offset_px": 7.0,
+        "warmth_R_minus_B": 52.67,
+        "cap_pore_contrast": 0.086,
+        "underface_pore_contrast": 0.0988
+      }
+    },
+    "Neutral polish": {
+      "rear": {
+        "median_peak_luma": 153.25,
+        "median_peak_rgb": [
+          157.3,
+          152.7,
+          147.0
+        ],
+        "median_underface_luma_15px_below": 111.84,
+        "median_bevel_y_offset_px": -1.0,
+        "warmth_R_minus_B": 10.67,
+        "cap_pore_contrast": 0.0165,
+        "underface_pore_contrast": 0.0136
+      },
+      "middle": {
+        "median_peak_luma": 163.96,
+        "median_peak_rgb": [
+          168.0,
+          163.3,
+          158.0
+        ],
+        "median_underface_luma_15px_below": 104.56,
+        "median_bevel_y_offset_px": 3.0,
+        "warmth_R_minus_B": 10.33,
+        "cap_pore_contrast": 0.0257,
+        "underface_pore_contrast": 0.0369
+      },
+      "front shoulder": {
+        "median_peak_luma": 150.18,
+        "median_peak_rgb": [
+          155.3,
+          149.3,
+          143.3
+        ],
+        "median_underface_luma_15px_below": 97.56,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 12.0,
+        "cap_pore_contrast": 0.0109,
+        "underface_pore_contrast": 0.0704
+      },
+      "return": {
+        "median_peak_luma": 140.25,
+        "median_peak_rgb": [
+          144.7,
+          139.7,
+          133.0
+        ],
+        "median_underface_luma_15px_below": 130.2,
+        "median_bevel_y_offset_px": 5.0,
+        "warmth_R_minus_B": 11.67,
+        "cap_pore_contrast": 0.0405,
+        "underface_pore_contrast": 0.0629
+      }
+    }
+  }
+}

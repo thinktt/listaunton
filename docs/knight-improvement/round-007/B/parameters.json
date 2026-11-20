@@ -1,0 +1,48 @@
+{
+  "parent_sha256": "1837b02f0c472044a8e86ffd112d15dbe007eb70d9a4330d86f8f073b7440208",
+  "design": {
+    "upper_recession": 0.187,
+    "lower_recession": 0.108,
+    "flank_transition_width": 0.151,
+    "flank_transition_shift": -0.069
+  },
+  "components": {
+    "continuous horse head and neck": {
+      "changed_vertices_over_1e-5": 6755,
+      "max_displacement": 0.22749662399291992,
+      "max_above_z_3_36": 0.0,
+      "max_below_z_1_74": 0.0
+    },
+    "curved neck and chest": {
+      "changed_vertices_over_1e-5": 628,
+      "max_displacement": 0.22701799869537354,
+      "max_above_z_3_36": 0.0,
+      "max_below_z_1_74": 0.0
+    }
+  },
+  "lower_eyelid_reflection": {
+    "lamp": "Eye reflection lower",
+    "position": [
+      0.37970995903015137,
+      -0.6123799681663513,
+      3.7264626026153564
+    ],
+    "axes": [
+      0.24996834993362427,
+      0.24919073283672333
+    ],
+    "energy": 0.009999999776482582,
+    "rotation": [
+      2.4146502017974854,
+      -0.08240304887294769,
+      0.7745627760887146
+    ],
+    "spread_rad": 0.3839724361896515,
+    "refinished_cheek_vertices": 3118
+  },
+  "selected_eye_study": 12,
+  "model_sha256": "b0b15ee070862ede2ea6f199f00853bf359e3260a05ff3201f53002ebf1151af",
+  "fixed_sha256": "2865a41bd5be4cd91451d95e34c2a88f8bfb2d3cdcb7f451a5fe6758e1cd47ca",
+  "side_sha256": "8caa5adb8a4a2ecf86cea51617de0dbcc3640dafd1a7bd7e87eb773d368b4857",
+  "samples": 144
+}

@@ -1,0 +1,71 @@
+{
+  "method": "Use the same fixed-camera track for the parent pigment mark and the source hollow on every image. Also search independently for any coherent dark trough inside the broad wood face, allowing lateral shifts of three pixels per two-pixel row. Small wood pores differ between references. The whole color and moving-light views guide judgment.",
+  "parent_mark_trace_sha256": "63dcbc8ea56d84d898a6346b6840f9ec50853e2417c076c9a9aff4904ef993da",
+  "source_hollow_trace_sha256": "c2dc15a80afdbdb7dc30e19f5fbe8d21a90dd86cb90003e63ac5f317ad665bde",
+  "results": {
+    "Original black": {
+      "darkness_on_parent_mark_percent": -8.39,
+      "strongest_smooth_mark_percent": 2.73,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.0,
+      "distance_from_source_hollow_px": 2.0,
+      "real_hollow_median_luminance": 8.2,
+      "neck_18px_beyond_hollow": 31.01
+    },
+    "Black 2": {
+      "darkness_on_parent_mark_percent": -3.72,
+      "strongest_smooth_mark_percent": 6.86,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.0,
+      "distance_from_source_hollow_px": 1.0,
+      "real_hollow_median_luminance": 8.34,
+      "neck_18px_beyond_hollow": 43.63
+    },
+    "Parent": {
+      "darkness_on_parent_mark_percent": 26.82,
+      "strongest_smooth_mark_percent": 26.82,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.945,
+      "distance_from_source_hollow_px": 2.0,
+      "real_hollow_median_luminance": 5.33,
+      "neck_18px_beyond_hollow": 54.68
+    },
+    "A": {
+      "darkness_on_parent_mark_percent": -6.33,
+      "strongest_smooth_mark_percent": 6.54,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.036,
+      "distance_from_source_hollow_px": 1.0,
+      "real_hollow_median_luminance": 6.33,
+      "neck_18px_beyond_hollow": 54.89
+    },
+    "B": {
+      "darkness_on_parent_mark_percent": -4.83,
+      "strongest_smooth_mark_percent": 6.22,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.2,
+      "distance_from_source_hollow_px": 2.0,
+      "real_hollow_median_luminance": 4.98,
+      "neck_18px_beyond_hollow": 54.68
+    },
+    "Parent pigment": {
+      "darkness_on_parent_mark_percent": 33.57,
+      "strongest_smooth_mark_percent": 34.52,
+      "share_parent_line_darker_by_at_least_ten_percent": 1.0,
+      "distance_from_source_hollow_px": 4.0,
+      "real_hollow_median_luminance": 45.63,
+      "neck_18px_beyond_hollow": 66.31
+    },
+    "A pigment": {
+      "darkness_on_parent_mark_percent": 1.79,
+      "strongest_smooth_mark_percent": 9.48,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.091,
+      "distance_from_source_hollow_px": 7.0,
+      "real_hollow_median_luminance": 45.69,
+      "neck_18px_beyond_hollow": 66.31
+    },
+    "B pigment": {
+      "darkness_on_parent_mark_percent": 4.7,
+      "strongest_smooth_mark_percent": 6.1,
+      "share_parent_line_darker_by_at_least_ten_percent": 0.236,
+      "distance_from_source_hollow_px": 5.0,
+      "real_hollow_median_luminance": 37.29,
+      "neck_18px_beyond_hollow": 66.31
+    }
+  }
+}

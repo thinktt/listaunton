@@ -1,0 +1,130 @@
+{
+  "Original": {
+    "upper_glint_centroid": [
+      435.31591711275007,
+      333.73513178573626
+    ],
+    "sectors": {
+      "rear": {
+        "peak_y_offset": -3.0,
+        "luminance": 66.3,
+        "red_minus_blue": 95.3,
+        "underface": 33.5
+      },
+      "middle": {
+        "peak_y_offset": -2.0,
+        "luminance": 81.3,
+        "red_minus_blue": 110.3,
+        "underface": 39.0
+      },
+      "front": {
+        "peak_y_offset": -2.0,
+        "luminance": 101.4,
+        "red_minus_blue": 93.0,
+        "underface": 42.7
+      },
+      "return": {
+        "peak_y_offset": 1.0,
+        "luminance": 77.1,
+        "red_minus_blue": 68.2,
+        "underface": 36.9
+      }
+    }
+  },
+  "Black 2": {
+    "upper_glint_centroid": [
+      437.5527771727951,
+      332.54123119440743
+    ],
+    "sectors": {
+      "rear": {
+        "peak_y_offset": -1.0,
+        "luminance": 117.5,
+        "red_minus_blue": 106.7,
+        "underface": 36.7
+      },
+      "middle": {
+        "peak_y_offset": 1.0,
+        "luminance": 154.3,
+        "red_minus_blue": 88.3,
+        "underface": 42.5
+      },
+      "front": {
+        "peak_y_offset": -1.0,
+        "luminance": 182.6,
+        "red_minus_blue": 54.3,
+        "underface": 46.4
+      },
+      "return": {
+        "peak_y_offset": 3.0,
+        "luminance": 148.4,
+        "red_minus_blue": 70.0,
+        "underface": 43.5
+      }
+    }
+  },
+  "15A": {
+    "upper_glint_centroid": [
+      380.32569566697964,
+      332.3947058313511
+    ],
+    "sectors": {
+      "rear": {
+        "peak_y_offset": -1.0,
+        "luminance": 138.7,
+        "red_minus_blue": 21.3,
+        "underface": 63.3
+      },
+      "middle": {
+        "peak_y_offset": 3.0,
+        "luminance": 159.0,
+        "red_minus_blue": 21.0,
+        "underface": 56.0
+      },
+      "front": {
+        "peak_y_offset": 5.0,
+        "luminance": 144.9,
+        "red_minus_blue": 31.3,
+        "underface": 53.9
+      },
+      "return": {
+        "peak_y_offset": 5.0,
+        "luminance": 87.8,
+        "red_minus_blue": 63.0,
+        "underface": 69.7
+      }
+    }
+  },
+  "16A": {
+    "upper_glint_centroid": [
+      404.70656064145544,
+      331.6751467238451
+    ],
+    "sectors": {
+      "rear": {
+        "peak_y_offset": -3.0,
+        "luminance": 139.2,
+        "red_minus_blue": 60.7,
+        "underface": 48.6
+      },
+      "middle": {
+        "peak_y_offset": -1.0,
+        "luminance": 143.2,
+        "red_minus_blue": 69.3,
+        "underface": 51.7
+      },
+      "front": {
+        "peak_y_offset": 1.0,
+        "luminance": 148.4,
+        "red_minus_blue": 53.0,
+        "underface": 77.8
+      },
+      "return": {
+        "peak_y_offset": 0.0,
+        "luminance": 125.4,
+        "red_minus_blue": 51.0,
+        "underface": 77.4
+      }
+    }
+  }
+}

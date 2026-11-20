@@ -1,0 +1,23 @@
+{
+  "source_sha256": "2d03d00e333c39326a8660eceae5cf19f43c4b36899812ef5c845b8451f0d0c7",
+  "grid_step": 0.01,
+  "x_limits": [
+    -1.55,
+    -0.28
+  ],
+  "z_limits": [
+    2.43,
+    4.38
+  ],
+  "mirrored_side_depth_mean": 0.09219,
+  "mirrored_side_depth_p95": 0.15907,
+  "enclosed_side_gap_samples": {
+    "near": 0,
+    "far": 0
+  },
+  "parts": [
+    "mane",
+    "continuous head and neck"
+  ],
+  "method": "Opposed horizontal rays sample the outermost physical surface in the common unposed frame. Values are distances from the midplane. Missing samples between two occupied points on one row count openings. The study covers the hanging mane and adjacent neck below the crown; feature shape is judged from the actual renders."
+}

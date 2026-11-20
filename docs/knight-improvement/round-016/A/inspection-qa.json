@@ -1,0 +1,48 @@
+{
+  "scene_sha256": "9f911cbdd0f2cc66b800e0b377c87ab4f3773ebc552027759a2e9b2c4cb0750c",
+  "parts": {
+    "swept rounded mane": {
+      "triangles": 25600,
+      "smallest_double_area": 1.9721735852146418e-05,
+      "degenerate_triangles": 0,
+      "nonmanifold_edges": 0,
+      "self_intersections": 0,
+      "uv_sha256": "493b3adf4c1de9c29ecce9b574372aad6d486f09375f8fbeb5029a636248b5bc",
+      "uv_finite": true,
+      "uv_bounds": [
+        [
+          0.22469425201416016,
+          0.23613156378269196
+        ],
+        [
+          0.9303787350654602,
+          0.9800438284873962
+        ]
+      ]
+    },
+    "continuous horse head and neck": {
+      "triangles": 141998,
+      "smallest_double_area": 2.7665815543675666e-08,
+      "degenerate_triangles": 0,
+      "nonmanifold_edges": 0,
+      "self_intersections": 0,
+      "uv_sha256": "cebfb65b94e0dc7c8ceba66edd5b41a7edb8e889010634fb6763fee723b19dfc",
+      "uv_finite": true,
+      "uv_bounds": [
+        [
+          0.2060646116733551,
+          0.0016639820532873273
+        ],
+        [
+          0.9209144711494446,
+          0.93226158618927
+        ]
+      ]
+    }
+  },
+  "front_native_intersection_pairs": 384,
+  "both_sides_of_joint": [
+    172,
+    179
+  ]
+}

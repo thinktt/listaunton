@@ -1,0 +1,44 @@
+{
+  "mesh_source_sha256": "7772c51af8b25b5579acc7da9906c5c1eca4a71ccb3a6468d7d8e1a0577b5a72",
+  "before_sha256": "8666e40bed34d56756ac035a944396bfbd89eba78d05bc65ed42a31690381d71",
+  "after_sha256": "ee71f953f88247d7c2836433d2af45b59226b0d9cafddff5aea74b608f6a242c",
+  "changed_texels": 2004409,
+  "parts": {
+    "Knight | turned pedestal": {
+      "vertex_and_triangle_center_samples": 249856,
+      "changed_samples": 236109,
+      "max_rgb_change_255": 73
+    },
+    "Knight | swept rounded mane": {
+      "vertex_and_triangle_center_samples": 102400,
+      "changed_samples": 0,
+      "max_rgb_change_255": 0
+    },
+    "Knight | near swept ear": {
+      "vertex_and_triangle_center_samples": 53248,
+      "changed_samples": 0,
+      "max_rgb_change_255": 0
+    },
+    "Knight | near eye": {
+      "vertex_and_triangle_center_samples": 63488,
+      "changed_samples": 0,
+      "max_rgb_change_255": 0
+    },
+    "Knight | far swept ear": {
+      "vertex_and_triangle_center_samples": 53248,
+      "changed_samples": 0,
+      "max_rgb_change_255": 0
+    },
+    "Knight | far eye": {
+      "vertex_and_triangle_center_samples": 63488,
+      "changed_samples": 0,
+      "max_rgb_change_255": 0
+    },
+    "Knight | continuous horse head and neck": {
+      "vertex_and_triangle_center_samples": 567992,
+      "changed_samples": 0,
+      "max_rgb_change_255": 0
+    }
+  },
+  "method": "Nearest pigment texels at every triangle corner and center. Other components must stay byte-identical at every sampled surface point; the camera visibility and depth masks separately restrict the allowed component."
+}

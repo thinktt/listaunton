@@ -1,0 +1,252 @@
+{
+  "method": "Learn the strongest continuous dark residual on the central mane face from the saved unlit pigment. Compare that exact path with the earlier atlas on identical geometry and UVs, fitted reference, final render and neutral polish, using 2px Gaussian luminance. Shoulder samples are eight pixels either side. Units are displayed sRGB luminance, or a fraction for relative recess.",
+  "path_y_x": [
+    [
+      478,
+      234
+    ],
+    [
+      480,
+      234
+    ],
+    [
+      482,
+      233
+    ],
+    [
+      484,
+      231
+    ],
+    [
+      486,
+      231
+    ],
+    [
+      488,
+      231
+    ],
+    [
+      490,
+      231
+    ],
+    [
+      492,
+      231
+    ],
+    [
+      494,
+      229
+    ],
+    [
+      496,
+      228
+    ],
+    [
+      498,
+      228
+    ],
+    [
+      500,
+      227
+    ],
+    [
+      502,
+      227
+    ],
+    [
+      504,
+      227
+    ],
+    [
+      506,
+      227
+    ],
+    [
+      508,
+      226
+    ],
+    [
+      510,
+      226
+    ],
+    [
+      512,
+      225
+    ],
+    [
+      514,
+      224
+    ],
+    [
+      516,
+      224
+    ],
+    [
+      518,
+      224
+    ],
+    [
+      520,
+      224
+    ],
+    [
+      522,
+      224
+    ],
+    [
+      524,
+      224
+    ],
+    [
+      526,
+      224
+    ],
+    [
+      528,
+      224
+    ],
+    [
+      530,
+      224
+    ],
+    [
+      532,
+      224
+    ],
+    [
+      534,
+      224
+    ],
+    [
+      536,
+      225
+    ],
+    [
+      538,
+      225
+    ],
+    [
+      540,
+      225
+    ],
+    [
+      542,
+      226
+    ],
+    [
+      544,
+      226
+    ],
+    [
+      546,
+      226
+    ],
+    [
+      548,
+      226
+    ],
+    [
+      550,
+      226
+    ],
+    [
+      552,
+      227
+    ],
+    [
+      554,
+      228
+    ],
+    [
+      556,
+      228
+    ],
+    [
+      558,
+      229
+    ],
+    [
+      560,
+      230
+    ],
+    [
+      562,
+      232
+    ],
+    [
+      564,
+      232
+    ],
+    [
+      566,
+      232
+    ],
+    [
+      568,
+      233
+    ],
+    [
+      570,
+      233
+    ],
+    [
+      572,
+      234
+    ],
+    [
+      574,
+      235
+    ],
+    [
+      576,
+      236
+    ],
+    [
+      578,
+      237
+    ],
+    [
+      580,
+      238
+    ],
+    [
+      582,
+      240
+    ],
+    [
+      584,
+      240
+    ],
+    [
+      586,
+      240
+    ]
+  ],
+  "results": {
+    "Black 2": {
+      "center_luminance_median": 37.71,
+      "mean_of_shoulders_minus_center_median": -1.32,
+      "relative_recess_median": -0.037
+    },
+    "Saved walnut": {
+      "center_luminance_median": 20.17,
+      "mean_of_shoulders_minus_center_median": 6.57,
+      "relative_recess_median": 0.268
+    },
+    "Saved pigment": {
+      "center_luminance_median": 25.73,
+      "mean_of_shoulders_minus_center_median": 11.45,
+      "relative_recess_median": 0.336
+    },
+    "Earlier pigment": {
+      "center_luminance_median": 39.28,
+      "mean_of_shoulders_minus_center_median": 13.91,
+      "relative_recess_median": 0.277
+    },
+    "Neutral polish": {
+      "center_luminance_median": 58.49,
+      "mean_of_shoulders_minus_center_median": -4.93,
+      "relative_recess_median": -0.09
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "parent": {
+    "near": {
+      "uv_min": [
+        0.5809705257415771,
+        0.25666823983192444
+      ],
+      "uv_max": [
+        0.632606029510498,
+        0.2749690115451813
+      ],
+      "finite_and_in_range": true,
+      "visible_outer_triangles": 2013,
+      "exposed_uv_area_below_1e-7_sq_texels": 0,
+      "visible_longest_uv_edge_p50_p95_p99_max_in_texels": [
+        1.3224,
+        1.5047,
+        1.5273,
+        1.5506
+      ],
+      "uv_over_four_texels": {
+        "triangles": 0,
+        "exposed_surface_area_percent": 0
+      }
+    },
+    "far": {
+      "uv_min": [
+        0.5750566124916077,
+        0.23613159358501434
+      ],
+      "uv_max": [
+        0.6322601437568665,
+        0.2749689817428589
+      ],
+      "finite_and_in_range": true,
+      "visible_outer_triangles": 2022,
+      "exposed_uv_area_below_1e-7_sq_texels": 0,
+      "visible_longest_uv_edge_p50_p95_p99_max_in_texels": [
+        1.322,
+        1.5064,
+        1.5289,
+        1.5516
+      ],
+      "uv_over_four_texels": {
+        "triangles": 0,
+        "exposed_surface_area_percent": 0
+      }
+    }
+  },
+  "knight": {
+    "near": {
+      "uv_min": [
+        0.5809705257415771,
+        0.2568134665489197
+      ],
+      "uv_max": [
+        0.6325873136520386,
+        0.27496615052223206
+      ],
+      "finite_and_in_range": true,
+      "visible_outer_triangles": 8304,
+      "exposed_uv_area_below_1e-7_sq_texels": 0,
+      "visible_longest_uv_edge_p50_p95_p99_max_in_texels": [
+        0.6021,
+        0.9854,
+        1.2319,
+        91.0378
+      ],
+      "uv_over_four_texels": {
+        "triangles": 4,
+        "exposed_surface_area_percent": 0.139,
+        "center_u_v_range": [
+          [
+            0.0758,
+            0.0974
+          ],
+          [
+            0.1136,
+            0.102
+          ]
+        ]
+      }
+    },
+    "far": {
+      "uv_min": [
+        0.5750986933708191,
+        0.23613160848617554
+      ],
+      "uv_max": [
+        0.6312574744224548,
+        0.2747831642627716
+      ],
+      "finite_and_in_range": true,
+      "visible_outer_triangles": 8298,
+      "exposed_uv_area_below_1e-7_sq_texels": 0,
+      "visible_longest_uv_edge_p50_p95_p99_max_in_texels": [
+        0.5907,
+        1.0039,
+        1.2509,
+        60.9791
+      ],
+      "uv_over_four_texels": {
+        "triangles": 46,
+        "exposed_surface_area_percent": 1.326,
+        "center_u_v_range": [
+          [
+            -0.1921,
+            0.0406
+          ],
+          [
+            0.1063,
+            0.1101
+          ]
+        ]
+      }
+    }
+  }
+}

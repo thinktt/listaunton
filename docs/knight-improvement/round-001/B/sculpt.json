@@ -1,0 +1,36 @@
+{
+  "name": "Long orbital rim and seated brow",
+  "round": 1,
+  "parent_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
+  "mesh_edits": {
+    "Knight | swept rounded mane": {
+      "vertices_moved": 373,
+      "max_displacement": 0.029529385268688202
+    },
+    "Knight | near swept ear": {
+      "vertices_moved": 448,
+      "max_displacement": 0.06643046438694
+    },
+    "Knight | near eye": {
+      "vertices_moved": 482,
+      "max_displacement": 0.044231172651052475
+    },
+    "Knight | far swept ear": {
+      "vertices_moved": 448,
+      "max_displacement": 0.06643044948577881
+    },
+    "Knight | far eye": {
+      "vertices_moved": 482,
+      "max_displacement": 0.04423116147518158
+    },
+    "Knight | continuous horse head and neck": {
+      "vertices_moved": 3165,
+      "max_displacement": 0.0610005147755146
+    },
+    "Knight | coherent skull cheek and conical muzzle": {
+      "vertices_moved": 880,
+      "max_displacement": 0.06080325320363045
+    }
+  },
+  "candidate_sha256": "6477710c8600766243dde00f267037f16d7756a6ad28ae602ae90d93644f5f71"
+}

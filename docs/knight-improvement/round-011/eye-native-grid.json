@@ -1,0 +1,65 @@
+{
+  "source_box": [
+    106,
+    107,
+    136,
+    124
+  ],
+  "source_size": [
+    300,
+    300
+  ],
+  "method": "Downsample once to original registered 300-pixel PNG grid, then to 100 pixels. Crop the same window through the eye. The small images shown enlarged use nearest-neighbor sampling.",
+  "stats": {
+    "Lichess PNG": {
+      "300": {
+        "correlation_with_original": 1.0,
+        "luma_mae_to_original": 0.0
+      },
+      "100": {
+        "correlation_with_original": 1.0,
+        "luma_mae_to_original": 0.0
+      }
+    },
+    "Black 2": {
+      "300": {
+        "correlation_with_original": 0.8969,
+        "luma_mae_to_original": 17.069
+      },
+      "100": {
+        "correlation_with_original": 0.9564,
+        "luma_mae_to_original": 14.836
+      }
+    },
+    "Parent": {
+      "300": {
+        "correlation_with_original": 0.6603,
+        "luma_mae_to_original": 14.73
+      },
+      "100": {
+        "correlation_with_original": 0.73,
+        "luma_mae_to_original": 10.958
+      }
+    },
+    "A": {
+      "300": {
+        "correlation_with_original": 0.7426,
+        "luma_mae_to_original": 16.119
+      },
+      "100": {
+        "correlation_with_original": 0.7752,
+        "luma_mae_to_original": 13.347
+      }
+    },
+    "B": {
+      "300": {
+        "correlation_with_original": 0.6849,
+        "luma_mae_to_original": 15.052
+      },
+      "100": {
+        "correlation_with_original": 0.7549,
+        "luma_mae_to_original": 11.513
+      }
+    }
+  }
+}

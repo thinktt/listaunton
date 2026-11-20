@@ -1,0 +1,24 @@
+{
+  "parent_sha256": "8a53403942a3e5bea1df92e3f28c9bfd5d80c61a1026a03549f1c21fd4c96cb6",
+  "canthus_fairing": 1.0,
+  "chest_recession": 0.157,
+  "lateral_bevel_preservation": 1.0,
+  "parts": {
+    "continuous horse head and neck": {
+      "vertices_changed_over_1e-5": 13129,
+      "maximum_world_displacement": 0.15521281957626343
+    },
+    "coherent skull cheek and conical muzzle": {
+      "vertices_changed_over_1e-5": 392,
+      "maximum_world_displacement": 0.03204723820090294
+    },
+    "curved neck and chest": {
+      "vertices_changed_over_1e-5": 660,
+      "maximum_world_displacement": 0.15501877665519714
+    }
+  },
+  "model_sha256": "c8de5dbdd6019599b74b2f9d12b364b00caba7f38ea28dc348d24a2fdd365254",
+  "fixed_sha256": "d61339fe100d956166d5f8745188aa457be71920788ed9456c5553ca0b041656",
+  "side_sha256": "a265200c64ae148486de7fc9049ea9deb75e393f04f8d33e9e205e7affb6f549",
+  "samples": 144
+}

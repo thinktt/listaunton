@@ -1,0 +1,154 @@
+{
+  "model_sha256": "768e8da32b31736302b3b9b99a747d2a8116aee23887dc227eccd33c233d47fd",
+  "parent_sha256": "eaecb543e309c713db12fc83888bb2ffc0142686a06917ee6c76d24e7d2b2188",
+  "all_evaluated_uv_layers_identical": true,
+  "all_evaluated_topology_identical": true,
+  "max_displacement_by_mesh": {
+    "turned pedestal": 0.0,
+    "swept rounded mane": 0.0,
+    "near swept ear": 0.0,
+    "near eye": 0.0,
+    "far swept ear": 0.0,
+    "far eye": 0.0,
+    "continuous horse head and neck": 0.0,
+    "curved neck and chest": 0.0,
+    "coherent skull cheek and conical muzzle": 0.0
+  },
+  "all_lights_and_linking_identical": true,
+  "camera_identical": true,
+  "all_varnish_values_identical": true,
+  "height_parent_candidate": [
+    5.089041233062744,
+    5.089041233062744
+  ],
+  "pigment": {
+    "source": "1e35b27f1eea257ee9bacc6ae60aa26cbeaf80fad5139365d58be1db395dd78b",
+    "delivered": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+    "release_filename": "wood-atlas-improvement-014-B.png"
+  },
+  "intersections": {
+    "swept rounded mane": {
+      "triangles": 25600,
+      "folds": 0,
+      "sample_positions": []
+    },
+    "continuous horse head and neck": {
+      "triangles": 29669,
+      "folds": 0,
+      "sample_positions": []
+    }
+  },
+  "viewer_validation": {
+    "components": [
+      {
+        "name": "Knight | turned pedestal",
+        "nonmanifold_edges": 0,
+        "signed_volume": 10.002691660445445,
+        "connected_components": 1,
+        "vertices": 31234,
+        "faces": 31232,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | swept rounded mane",
+        "nonmanifold_edges": 0,
+        "signed_volume": 1.2527661672009387,
+        "connected_components": 1,
+        "vertices": 12802,
+        "faces": 12800,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | near swept ear",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.05861962174772995,
+        "connected_components": 1,
+        "vertices": 6658,
+        "faces": 6656,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | near eye",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.0017968240545407194,
+        "connected_components": 1,
+        "vertices": 7938,
+        "faces": 7936,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | far swept ear",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.05861964718143412,
+        "connected_components": 1,
+        "vertices": 6658,
+        "faces": 6656,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | far eye",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.0017903297186528154,
+        "connected_components": 1,
+        "vertices": 7938,
+        "faces": 7936,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | continuous horse head and neck",
+        "nonmanifold_edges": 0,
+        "signed_volume": 6.348636989574942,
+        "connected_components": 1,
+        "vertices": 71001,
+        "faces": 92546,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | curved neck and chest",
+        "nonmanifold_edges": 0,
+        "signed_volume": 5.114445202057922,
+        "connected_components": 1,
+        "vertices": 57858,
+        "faces": 57856,
+        "hidden_construction": true
+      },
+      {
+        "name": "Knight | coherent skull cheek and conical muzzle",
+        "nonmanifold_edges": 0,
+        "signed_volume": 1.5690118904165327,
+        "connected_components": 1,
+        "vertices": 27778,
+        "faces": 27776,
+        "hidden_construction": true
+      }
+    ],
+    "eyes": [
+      {
+        "name": "near",
+        "seated_in_surface": true,
+        "intersecting_face_pairs": 886,
+        "buried_vertices": 6948,
+        "exposed_vertices": 990,
+        "max_inset": 0.0557832604453381,
+        "max_exposure": 0.05522910415311344
+      },
+      {
+        "name": "far",
+        "seated_in_surface": true,
+        "intersecting_face_pairs": 894,
+        "buried_vertices": 6930,
+        "exposed_vertices": 1008,
+        "max_inset": 0.05414566716353875,
+        "max_exposure": 0.05489829127327539
+      }
+    ],
+    "source_hash_matches": true,
+    "mesh_finite": true,
+    "bounds_match": true,
+    "normals_unit_length": true,
+    "camera_matches_saved_blend": true,
+    "visible_component_count": 7,
+    "hidden_construction_count": 2,
+    "note": "One continuous broad skull, cheek and rounded gently conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "model_sha256": "945f97db359cf093a13be4490e96026770706f17caa1c83106b14759641f4617",
+  "masks": {
+    "fixed": {
+      "silhouette_iou": 1.0,
+      "changed_silhouette_pixels": 0,
+      "piece_outside_crest_crop": {
+        "absolute_luma_change_mean": 0.01827056107134611,
+        "absolute_luma_change_p95": 0.0
+      },
+      "head_eye": {
+        "absolute_luma_change_mean": 0.00092126,
+        "absolute_luma_change_p95": 0.0
+      }
+    },
+    "side": {
+      "silhouette_iou": 0.9984303766414603,
+      "changed_silhouette_pixels": 691
+    }
+  },
+  "physical_lamp_control": {
+    "Saved studio": {
+      "parts": {
+        "rear": {
+          "edge_luma": 102.09,
+          "warmth": 77.33,
+          "underface": 44.29,
+          "width": 13.0,
+          "cap_pore_contrast": 0.0512
+        },
+        "middle": {
+          "edge_luma": 129.83,
+          "warmth": 93.0,
+          "underface": 46.91,
+          "width": 10.0,
+          "cap_pore_contrast": 0.0909
+        },
+        "forward": {
+          "edge_luma": 145.29,
+          "warmth": 75.0,
+          "underface": 61.18,
+          "width": 19.0,
+          "cap_pore_contrast": 0.0796
+        },
+        "return": {
+          "edge_luma": 98.89,
+          "warmth": 73.67,
+          "underface": 77.85,
+          "width": 15.0,
+          "cap_pore_contrast": 0.0715
+        }
+      },
+      "cap_center": [
+        434.75,
+        332.56
+      ],
+      "cap_median": 86.92,
+      "cap_p90": 123.73
+    },
+    "Without oval": {
+      "parts": {
+        "rear": {
+          "edge_luma": 71.51,
+          "warmth": 86.67,
+          "underface": 30.8,
+          "width": 25.0,
+          "cap_pore_contrast": 0.054
+        },
+        "middle": {
+          "edge_luma": 92.59,
+          "warmth": 96.33,
+          "underface": 36.86,
+          "width": 21.0,
+          "cap_pore_contrast": 0.0948
+        },
+        "forward": {
+          "edge_luma": 136.29,
+          "warmth": 74.67,
+          "underface": 63.4,
+          "width": 20.0,
+          "cap_pore_contrast": 0.0799
+        },
+        "return": {
+          "edge_luma": 93.33,
+          "warmth": 71.0,
+          "underface": 66.54,
+          "width": 17.0,
+          "cap_pore_contrast": 0.0706
+        }
+      },
+      "cap_center": [
+        434.21,
+        331.4
+      ],
+      "cap_median": 81.82,
+      "cap_p90": 119.72
+    },
+    "Without forward": {
+      "parts": {
+        "rear": {
+          "edge_luma": 102.97,
+          "warmth": 78.33,
+          "underface": 42.71,
+          "width": 11.0,
+          "cap_pore_contrast": 0.0511
+        },
+        "middle": {
+          "edge_luma": 123.43,
+          "warmth": 89.33,
+          "underface": 41.36,
+          "width": 8.0,
+          "cap_pore_contrast": 0.1168
+        },
+        "forward": {
+          "edge_luma": 130.95,
+          "warmth": 70.0,
+          "underface": 42.64,
+          "width": 8.0,
+          "cap_pore_contrast": 0.1039
+        },
+        "return": {
+          "edge_luma": 94.74,
+          "warmth": 70.67,
+          "underface": 69.98,
+          "width": 12.0,
+          "cap_pore_contrast": 0.1125
+        }
+      },
+      "cap_center": [
+        386.37,
+        332.68
+      ],
+      "cap_median": 71.31,
+      "cap_p90": 89.7
+    },
+    "Without upper": {
+      "parts": {
+        "rear": {
+          "edge_luma": 101.81,
+          "warmth": 76.0,
+          "underface": 40.71,
+          "width": 7.0,
+          "cap_pore_contrast": 0.0579
+        },
+        "middle": {
+          "edge_luma": 125.66,
+          "warmth": 93.0,
+          "underface": 43.28,
+          "width": 7.0,
+          "cap_pore_contrast": 0.0738
+        },
+        "forward": {
+          "edge_luma": 143.62,
+          "warmth": 76.33,
+          "underface": 58.76,
+          "width": 18.0,
+          "cap_pore_contrast": 0.0752
+        },
+        "return": {
+          "edge_luma": 98.31,
+          "warmth": 73.67,
+          "underface": 77.35,
+          "width": 11.5,
+          "cap_pore_contrast": 0.0685
+        }
+      },
+      "cap_center": [
+        435.24,
+        332.81
+      ],
+      "cap_median": 70.77,
+      "cap_p90": 110.92
+    }
+  },
+  "sha256": {
+    "REPORT.md": "5389e2342bd899455af46c3600796487b33448561c874acbe48d33db0286657d",
+    "clay-00.png": "b5ae56d159388df8bcc0b26f822b5ee51f43be3cc703970f72054ab88eff4de9",
+    "clay-01.png": "a7ac2ae1bcfcd7be96c92f28eee917b76ab5b4e424c9cd6df976f9d235ebc2a7",
+    "clay-02.png": "6ed0f80efe2f6b6a0d9940663aefac2e9e5f33daf55d63291fab986c90ad8da3",
+    "clay-03.png": "aece154621646090849e3e02c0d7e8aac205b4e44d889f92b14ac784b4694a5a",
+    "clay-04.png": "a850cd1330c1bfc3482a5272e3d33d38b34ce7ef735da30e67dc9c06cdce1522",
+    "clay-05.png": "62b15f4bed5a71df4df3c897287916220f01b68f91fc243ee94e8fcbb2babd6a",
+    "clay-06.png": "2ed0fb8d012d6946b41f6f0f29282e85df2bb061ce6d374ecb828f4fe0cbeee1",
+    "clay-07.png": "dba4947410d88aa15b20383fa6d01f509971e757c5e55c38a685edff07e0b2da",
+    "clay-08.png": "0d9c4b28d21bcdfe9f779a7a87c447a53503a59aa4e0d0748c3c56859e4bcdf7",
+    "clay-09.png": "696c34dce5e3897c0f6b583ee3eda2cbb0ea44d95b09456ffa2199c269003cea",
+    "clay-10.png": "8b36cf2056ba444307eebb5cbd6a834caac7de297c842addfcb67a58cdb4ddb2",
+    "clay-11.png": "689b9e4392e8246de3d757b0e692783870872b0317717528731b41e862d5fcda",
+    "clay-12.png": "afe346113ebd360f14eaa1f4fe2b4b8e3527bbb3c94b64fa5f2f1d578a3d3fc7",
+    "clay-13.png": "a02d691604595fd7a96b0d4b0a07e41cab05d91ad52135ecf924a76a7cf3a673",
+    "clay-14.png": "37e730d6e2033140d8d5c43d4649c043f97286bc49222e92a88bb4e817f8da14",
+    "clay-15.png": "aa85f872c4979cf819b4b11b94f8c1991244d08f8e2b2a06a31fe0cd11f1df62",
+    "clay-fixed.png": "b96f3bc592e4cf1a97329fe435d1d99c7559b325d395186621b013a49d10d054",
+    "clay-side.png": "861c8ee0fbb4172689d915987de30ca32faa0278e4efa2a48908cc78e4222d52",
+    "clay-turn.webp": "c0af35793f6058bf1b891234cc8e8fb2d31c98823d10addfe174bce909919a03",
+    "controlled-light.png": "e6d74686c1d807f8bd047ff3107d71ffff8d41a3e01112f4a3e6863b909e1fbb",
+    "controls-knight.json": "42d364161715a2fb90f176e5d61a9475574c94b9c0bfe04186719f20562986d9",
+    "crest-B.json": "467b80efbd358726458b6e711814c57c0bd2e986d81c5250ca8a019a57dee0b7",
+    "crest-comparison.json": "317b751d8c3335f3f7481c5f37a5faf66a3031bd67cc53c34f12da78281d12be",
+    "crest-comparison.png": "6ca984b709508ce58d04e909afa1f854506d41755160eb8b71d0d940adc55c71",
+    "crest-parent.json": "f0d3984047c3d4aae456e664fe71ebe3bdf227712e0633300373b215fd1c5f5f",
+    "extent.json": "0f42c5968e61c7c116bbcf6be25a0190d70ad41e46dc3f42d79d7954efdd38cd",
+    "fixed-and-board.png": "cb10582acdeb1e196306f9caf1391ca00e38a8b4fb1d7b10a0d6b04ee77dfc85",
+    "geometry-parent.json": "311fcbcf69c6d9583720aba7b7061fedeb4f3edacd48615181aaa4cb0d2427b4",
+    "knight.blend": "945f97db359cf093a13be4490e96026770706f17caa1c83106b14759641f4617",
+    "moving-far.png": "2ed37ed61e7a23cf008cac62a6e5e5be72ec9560585f9be7ef1b99853639d1a7",
+    "moving-near.png": "3f76ef1757e78738bb1a80ba48c69c661cab07d8094d4c8e49f0a4065e59d174",
+    "orbit-proof.png": "33f5cd97179dba5e0b28932fab1c9759683e951953d0a187c7c391b6e7c32afa",
+    "package-proof.json": "1690f61f76b480d1c7b43f4d093f18e4eba3ccb0f3fe22e34d60eff41147d7cd",
+    "parameters.json": "2752747171ffb4106951f955ba50d14aaa67ea108a33b98dbe974c0171da938f",
+    "parent-pigment.png": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+    "parent-side.png": "51de3b8c818566ff4559f4f05720f92c5710f2227e4439d43cb2c0131e4a0ea1",
+    "parent-wood.png": "2258fccdba5eef72f26dc2bbf837a95864e23d38c75f083aa4fe01ae40045506",
+    "parent.blend": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+    "pigment-proof.json": "9565f217b328217bd334fd40271d9c80387b6f11b5534ce7fe2e96d8c3d4f467",
+    "pigment.png": "b56e8104f8845b4d221e82b1c20ff40f16d4361435d30a0a83b8be8882d6e69d",
+    "replay.json": "c13d475de6421bd1aa02bd4fa755b7244bccedaae08ee80b651dd5a877da1bdb",
+    "review-copy/assets/knight/camera.json": "6a93ea53cdd663e5d941b44bcbb6c610f4e0e50317f40ad00f02097f94e4276a",
+    "review-copy/assets/knight/mesh.bin": "8547fd387ec103fea098a99b9a8ba00c66c532249a2a48913a1219bf3772ecaf",
+    "review-copy/assets/knight/mesh.json": "bd21b7ed32aeec60176d1ce025dda8257c750a7f60b3be8db19d5e10b4239fac",
+    "review-copy/assets/knight/validation.json": "b8bde4d006a0130e4adc4d48c73653c991045d23e84f6569d8d44f80ef1a5df1",
+    "review-copy/assets/knight/varnish.bin": "578093b841b202f0a40fb17243bd218b2496ddecb43704b19208499204f112a4",
+    "support.json": "6937fef23d4cf5695802f11591d3281c3847927cf761007e7b567c69d73d405a",
+    "top-sections.png": "de39dc2de640e2e98d3f6ac11cc2cbe50ed9ad65debd0dd094f72d6291c53494",
+    "turn-knight-far-clay-0.png": "1d47f646b4b2a4276e8cc3a9ccf682585cb9e5f14bf3866af3ab5c8ef445cd5f",
+    "turn-knight-far-clay-1.png": "d236deb9c2ed39c58a39a50c6cecc24beebf1678cb9887f1e57512095968032f",
+    "turn-knight-far-clay-2.png": "3da63e11fbb4dd4922415e0332a0ef8585b743987cc95b6bfe1c1bc078b5e87b",
+    "turn-knight-far-walnut-0.png": "e97d01668cc7225494869bc189f2c985fe3a501830b5ae0c2802e727a5647a32",
+    "turn-knight-far-walnut-1.png": "e3ef2b5a3bd7705c0fde682fd5ceebaad531c68604459d39137bbe79490c6095",
+    "turn-knight-far-walnut-2.png": "0220da653d6a6cbbaacbf0533fffe6914814e4fc1866b9cca1fc1bb2b7b2a137",
+    "turn-knight-near-clay-0.png": "16e3eca9e2e5c7b3563bb210eb4470309670d923718a211fe7748c032011ebec",
+    "turn-knight-near-clay-1.png": "f53b697eabfd4694ee6cd65e9495fe9c916dd7e2dead2bc06884800b72405020",
+    "turn-knight-near-clay-2.png": "2e99b6f758227b3b29649752b8ed813afe3d54c284e80eaea5cad165f5584fac",
+    "turn-knight-near-walnut-0.png": "c5865e2edc85fa81341aa9a04c41baaea34ed9353277429311206589b75d0f0d",
+    "turn-knight-near-walnut-1.png": "3865707e264fd31edfe7b3c6e8352c6e1c99ce4e131d5aa4b8dbaed59da173f7",
+    "turn-knight-near-walnut-2.png": "704d4e433dd0beb5bee8ad7889fd48b2770e719454e44ad75a79221a5778680e",
+    "turn-knight.json": "558aca4d5e78d72792c351b210619a0489e60a3713e6da36b82dcff9905c3c27",
+    "turn-parent-far-clay-0.png": "cbe511128db88f8b321bd63be8f974afb2d4718eb856ad51d099d974b0ce299b",
+    "turn-parent-far-clay-1.png": "45517d3bf2d96fb3d9c63e20f9eda4daedec83db952643599e49b5bdc83f10ea",
+    "turn-parent-far-clay-2.png": "9a910530b30671c1bdef30f7734a0869d5904d41fb7cce8a05f66318296d7c25",
+    "turn-parent-far-walnut-0.png": "2263bc61ce76f40c65b35b137ccf05a2f4ccfd8ad359392c3e01ac83542bd13d",
+    "turn-parent-far-walnut-1.png": "e2fc784de9ec68571a6d9d35c9967637f1c8234c40da8d3393fced66fd2261ee",
+    "turn-parent-far-walnut-2.png": "6139dd9518a032d378ad08cc9578520bd705129a10f9885287aad36a665b814c",
+    "turn-parent-near-clay-0.png": "566f541055182aeb189f250081e684473276c2282547475daeeaee5795260e12",
+    "turn-parent-near-clay-1.png": "9199a3275f7900d543c13e8dbad7091a2cc403fd99ead61bfd598d61a2244951",
+    "turn-parent-near-clay-2.png": "ff05e418edf98ab679471e7114ac95473a97e43f9bb1778856c052377146c66a",
+    "turn-parent-near-walnut-0.png": "af8ab706d53b3090e380136a4196592fe7488a261dd6bb3eed8cee75e36f31e7",
+    "turn-parent-near-walnut-1.png": "63f34c60794cbd80ad533923aeaab337672807e774fd3705ea040c6dcf66a860",
+    "turn-parent-near-walnut-2.png": "a2dd12692c1bf0873ec05b7eeb697214ebb82b13cf207bab7683a020bbb1d809",
+    "turn-parent.json": "afa78ed0c811de34b9ded1b350cc1fab8cb769d1cefaaebffe8991a8544ab91b",
+    "verified.json": "8cc3bfb4b218ae028a41dc7536df6f7547f91f704adcfadb32de0acda7f08ca0",
+    "webgl/native-qa.json": "b2f56f44a570844d80160949f5653d5dbbdf9362171ac91da44f563c195fac11",
+    "without-forward-knight.png": "69d2041fec50fe2cbb900f78b7502189c3960b6bf0d286c1f4c091e2689b3050",
+    "without-oval-knight.png": "7d9100d03f25b1cf34c58d1aaac01542450a5c5382712bd1d48fabd1a3470716",
+    "without-upper-knight.png": "517759ac6c7b0be130db9e740f3a24c3b6c7ed4eb7c94631666e829a775bc889",
+    "wood-front.png": "0428354b43e88746d890a0e9da4b1210e91f433a27ba992338cc9a831b9f9af5",
+    "wood-near.png": "f036fdb05053f1bae9a09d291837046fe24a668b34a82662f177d03e6d55f34e",
+    "wood-opposite.png": "d970e15b573e20a2b8ee1fa50188bb2a37e9c54bece761d680c20f8918838ac8",
+    "wood-rear-quarter.png": "25be45b37aac9062de2a5c61e7873cccf888f44bc448f925e1acf0aa96c9d30d",
+    "wood-rear.png": "0be97ae3c992cbfb5073a97bb94137f7f05540c37acc7658df4a5324ec14d172",
+    "wood-side.png": "de6c4d55ab3c3c52f7a0bbe9c29b489aa6c0dd06565a48fe902a160f6b107ecb",
+    "wood.png": "e7b54e1a2e61755320b1b58d8a8d5f8b15ab4e87ae7a9d8418fc9da0b973032a"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "verified_mesh_topology_counts_uv_and_material_slots": 7,
+  "verified_studio_lights": 22,
+  "verified_packed_images": {
+    "continuous-grain.png": "8e00f950e34fe1ec891f9246c8f521bcd1f62e336c5b949faa0694602431c29e",
+    "Knight inference coverage": "266252bfdb7ae681d6d3c53befa50ce10cc527879255b35c6e6be9235a9772ae",
+    "Knight inferred walnut": "9699fcb1c64abf80cc59af3a6c9159c103380a22731289038cd744c6266e61d3",
+    "Knight | registered walnut pigment": "b65e6ad2fc4a1641c1d9a28d87203858c8f83498a97fc17cafdd741fb3f72b76",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "verified_fixed_camera": [
+    [
+      1.4664890766143799,
+      -6.899288654327393,
+      11.976606369018555
+    ],
+    [
+      0.6283186674118042,
+      1.1111258579887817e-08,
+      0.20943956077098846
+    ],
+    7.251631736755371,
+    0.1100916638970375,
+    -0.006666666828095913,
+    1254,
+    1254
+  ],
+  "verified_model_bounds": [
+    [
+      -1.740178108215332,
+      -1.4999282360076904,
+      0.03999999910593033
+    ],
+    [
+      1.5324442386627197,
+      1.4999282360076904,
+      5.1498799324035645
+    ]
+  ],
+  "parent_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
+  "candidate_sha256": "821bf09c2e466846a377a16a4162629bde77ef0e8d8c2d728f840a22e3f8df9d",
+  "geometrically_changed_visible_meshes": [
+    "Knight | near eye",
+    "Knight | far eye",
+    "Knight | continuous horse head and neck"
+  ]
+}

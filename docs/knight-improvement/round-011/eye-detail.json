@@ -1,0 +1,79 @@
+{
+  "method": "1.2 pixel Gaussian and Rec.709 luminance on registered sRGB crops. Normalized correlation describes placement of light and dark detail, independent of mean and contrast. Shape, native-scale readability and sculpture also require visual inspection.",
+  "boxes": {
+    "Eye and its carving": [
+      466,
+      461,
+      553,
+      489
+    ],
+    "Lower lid and cheek": [
+      463,
+      488,
+      548,
+      512
+    ]
+  },
+  "scores": {
+    "Original black": {
+      "Eye and its carving": {
+        "luminance_mae": 11.022,
+        "pattern_correlation": 0.7953
+      },
+      "Lower lid and cheek": {
+        "luminance_mae": 27.139,
+        "pattern_correlation": 0.8711
+      }
+    },
+    "Black 2": {
+      "Eye and its carving": {
+        "luminance_mae": 0.0,
+        "pattern_correlation": 1.0
+      },
+      "Lower lid and cheek": {
+        "luminance_mae": 0.0,
+        "pattern_correlation": 1.0
+      }
+    },
+    "Original white (mirrored)": {
+      "Eye and its carving": {
+        "luminance_mae": 14.902,
+        "pattern_correlation": 0.4487
+      },
+      "Lower lid and cheek": {
+        "luminance_mae": 23.49,
+        "pattern_correlation": 0.2607
+      }
+    },
+    "Parent": {
+      "Eye and its carving": {
+        "luminance_mae": 15.63,
+        "pattern_correlation": 0.2031
+      },
+      "Lower lid and cheek": {
+        "luminance_mae": 27.234,
+        "pattern_correlation": 0.6674
+      }
+    },
+    "A": {
+      "Eye and its carving": {
+        "luminance_mae": 14.941,
+        "pattern_correlation": 0.4209
+      },
+      "Lower lid and cheek": {
+        "luminance_mae": 20.793,
+        "pattern_correlation": 0.8073
+      }
+    },
+    "B": {
+      "Eye and its carving": {
+        "luminance_mae": 13.958,
+        "pattern_correlation": 0.401
+      },
+      "Lower lid and cheek": {
+        "luminance_mae": 25.854,
+        "pattern_correlation": 0.6194
+      }
+    }
+  }
+}

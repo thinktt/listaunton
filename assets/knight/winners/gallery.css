@@ -1,0 +1,7 @@
+#panel-improvement article { margin-bottom: 2rem; }
+#panel-improvement h2 { font-size: 1.2rem; margin: 0; }
+#panel-improvement p { color: var(--muted); margin: .2rem 0 .8rem; }
+.winner-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.winner-pair figure { margin: 0; background: #000; border: 1px solid var(--line); border-radius: .6rem; overflow: hidden; }
+.winner-pair figcaption { padding: .5rem .8rem; background: var(--panel); color: var(--ink); }
+.winner-pair img { display: block; width: 100%; height: auto; aspect-ratio: 1; }

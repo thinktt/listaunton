@@ -1,0 +1,49 @@
+{
+  "parent": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+  "models": {
+    "parent": {
+      "model": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+      "fixed": "2258fccdba5eef72f26dc2bbf837a95864e23d38c75f083aa4fe01ae40045506",
+      "side": "51de3b8c818566ff4559f4f05720f92c5710f2227e4439d43cb2c0131e4a0ea1",
+      "mesh": "13aaa7d867cac9243553095ea1c521978c87e9e9477030f77e95c84ef49ea74d",
+      "view_manifests": {
+        "wood": "5dca1477bae069e94f50bbceea4dcfd0f953a5b137b79a6fac783fa42fedf883",
+        "clay": "fe32d660f2e22bccb0f7f219d32bd1cffb150e0c36b8d0f58277fbd8ebc745c0",
+        "back": "dce65d638e143a0171b05ee7b1b360f9f203d3883e9125224998fb44e5848d8c",
+        "passes": "5c2560eda3c3b1de2b5167ad8ac216756b722e3ffa1bb498044d51f4f322c078",
+        "poll-rake": "ae8c7ddcf4fa6f6419563029088ad0761ac2fbd296e56b9779c86cfe9ae7b43d",
+        "common_studio": "0c3d27368a82cd1da16b816ce78e9bf3e3a5370be331e7cf41763bf1d42db1d5"
+      }
+    },
+    "A": {
+      "model": "9f911cbdd0f2cc66b800e0b377c87ab4f3773ebc552027759a2e9b2c4cb0750c",
+      "fixed": "19acfe74e458ea72cf85d1ab5558030b76eeb544278b4ca6721ebfd1bf9c4f36",
+      "side": "938346eef7710218754929e89e0f068261ba4d889d1376ca777f7eb464ae0f35",
+      "mesh": "b310291cacd4931d2121d72458d22f6b305ecee3a2229e8927751adbb826c49e",
+      "view_manifests": {
+        "wood": "612150ff34e7b142fcb93e686332b1601c78eb12c95f1940ca739686b1e4b9fb",
+        "clay": "b1fd0f14c8dbec2d88cd89162d9b905229236feebdf0f85dc5f001860a8aad72",
+        "back": "ab4583958a63290647785f8c78ab1b1db3a374073a593a5c16621b9655cc62ea",
+        "passes": "ab30f698623d975ff0e25a1468c5c3c2b2d962059a860eaddb39b2127ca9f22f",
+        "poll-rake": "631aa3cf6f300e564ca3567ea34651ffd04e7ff725b3aa6984f19b2ab0195121",
+        "common_studio": "ad78f4014d8f9040ec20314fbcfe9a829d31857d81183977c2571021be7c8d92"
+      }
+    },
+    "B": {
+      "model": "945f97db359cf093a13be4490e96026770706f17caa1c83106b14759641f4617",
+      "fixed": "e7b54e1a2e61755320b1b58d8a8d5f8b15ab4e87ae7a9d8418fc9da0b973032a",
+      "side": "de6c4d55ab3c3c52f7a0bbe9c29b489aa6c0dd06565a48fe902a160f6b107ecb",
+      "mesh": "8547fd387ec103fea098a99b9a8ba00c66c532249a2a48913a1219bf3772ecaf",
+      "view_manifests": {
+        "wood": "2cdd6b5787ac41208bde3b2f9fdc33d83897c15e35cff7db19c8db1ba7fc0b15",
+        "clay": "3a299abaec9990511240e33e8e5a884a184ecb6bb939392b80ce2fef99ab4640",
+        "back": "869ab0cf073aa63d1c5c64ceb9d348b27c3382c5b97e32aa6024f76d9a51f670",
+        "passes": "e225385469ac573bd58497d7c829bbe642e859ee0722542e8592273d3d4a1e18",
+        "poll-rake": "d3f27255fda6e0511806bfec473e0cbff4edc6c5372113ee32b7bdbc85f55595",
+        "common_studio": "36e71960d779ed594cdded438ba6d58efcf8bcb38ad9f117bcca933b87b020fa"
+      }
+    }
+  },
+  "source_anchors": "41b1bec9ccd4faf66f67ba4cf3f7902089f0a2ec0d20116603c49178927b30d8",
+  "method": "Each Blender turn, camera crop and moving light is tied to its saved scene. The three common studios use matching transforms and light links. The reference and export checks precede release."
+}

@@ -1,0 +1,26 @@
+{
+  "Original": {
+    "whole_IoU_with_original": 1.0,
+    "whole_IoU_with_black2": 0.983136,
+    "lower_lid_trace": 78.66,
+    "cheek_below": 56.92
+  },
+  "Black candidate 2": {
+    "whole_IoU_with_original": 0.983136,
+    "whole_IoU_with_black2": 1.0,
+    "lower_lid_trace": 128.01,
+    "cheek_below": 84.23
+  },
+  "Parent": {
+    "whole_IoU_with_original": 0.972681,
+    "whole_IoU_with_black2": 0.966688,
+    "lower_lid_trace": 71.69,
+    "cheek_below": 102.26
+  },
+  "B": {
+    "whole_IoU_with_original": 0.976702,
+    "whole_IoU_with_black2": 0.971455,
+    "lower_lid_trace": 87.79,
+    "cheek_below": 104.84
+  }
+}

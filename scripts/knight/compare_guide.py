@@ -1,17 +1,36 @@
-"""Compare the side-study at a shared physical base scale and inferred camera."""
+"""Compare the registered walnut and clay side renders from the accepted model."""
 from pathlib import Path
-from PIL import Image,ImageDraw,ImageFilter
-import numpy as np,json
-root=Path(__file__).resolve().parents[2];a=root/'assets/knight'
-guide=Image.open(a/'concepts/side-01.png').convert('RGB')
-render=Image.open(a/'guide-render.png').convert('RGBA')
-background=Image.new('RGB',guide.size,'#1b1c1e');background.paste(render,mask=render.getchannel('A'))
-mask=render.getchannel('A').point(lambda a:255 if a>127 else 0)
-edge=np.array(mask.filter(ImageFilter.MaxFilter(3)))!=np.array(mask.filter(ImageFilter.MinFilter(3)))
-overlay=np.array(guide);overlay[edge]=[45,225,235];overlay=Image.fromarray(overlay)
-canvas=Image.new('RGB',(1254*3,1304),'#17191d');d=ImageDraw.Draw(canvas)
-for i,(im,label) in enumerate([(guide,'Approved side guide'),(background,'Current walnut render - registered 7 degree side camera'),(overlay,'Cyan: rebuilt silhouette, fixed base registration')]):
- canvas.paste(im,(1254*i,50));d.text((1254*i+25,18),label,fill='white')
-canvas.save(a/'guide-comparison.png');overlay.save(a/'guide-overlay.png')
-report={'priority':'Original sprite governs the elevated fit. This imagined side guide provides an independent style and proportion comparison.','registration':json.loads((a/'guide-camera.json').read_text()),'review':'Compare broad cheek continuity, blunt gently conical muzzle, wide S neck/chest, arched mane and flat plinth directly. Silhouette metrics cannot establish anatomical quality.'}
-(a/'guide-comparison.json').write_text(json.dumps(report,indent=2)+'\n')
+import hashlib
+import json
+
+from PIL import Image, ImageChops, ImageDraw
+
+from side_profile import read_profile
+
+root = Path(__file__).resolve().parents[2]
+assets = root / 'assets/knight'
+model = root / 'models/knight/knight-rebuilt.blend'
+registration = read_profile(root, hashlib.sha256(model.read_bytes()).hexdigest())
+wood, clay = [Image.open(root / registration[key]).convert('RGBA') for key in ('profile', 'neutral')]
+width, height = wood.size
+sheet = Image.new('RGB', (2 * width, height + 50), '#17191d')
+draw = ImageDraw.Draw(sheet)
+for col, (view, material) in enumerate([(wood, 'Walnut'), (clay, 'Neutral clay')]):
+    sheet.paste(view, (col * width, 50), view)
+    label = f"{material} / {registration['elevation']} degree side camera"
+    draw.text((col * width + 24, 18), label, fill='white')
+sheet.save(assets / 'guide-comparison.png')
+Image.blend(clay, wood, .5).save(assets / 'guide-overlay.png')
+
+# The two materials should occupy the same projected shape. This diagnostic
+# measures their registration, not a match to a photographic side reference.
+masks = [im.getchannel('A').point(lambda a: 255 if a > 127 else 0) for im in (wood, clay)]
+overlap = ImageChops.darker(*masks).histogram()[255]
+union = ImageChops.lighter(*masks).histogram()[255]
+assert union > 0
+report = {
+    'registration': registration,
+    'side_render_mask_iou': overlap / union,
+    'review': 'Inspect the same carved surfaces in wood and neutral clay from the registered side camera.'
+}
+(assets / 'guide-comparison.json').write_text(json.dumps(report, indent=2) + '\n')

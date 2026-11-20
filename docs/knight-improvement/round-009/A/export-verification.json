@@ -1,0 +1,60 @@
+{
+  "model_sha256": "de181485ddcc8e4e0fe65790eee5fb3933175574590eb6bbd50133400951093a",
+  "parent_sha256": "53ca17473c08fc898e6c29bd5189e4188b3573e003719362cabb102ab621f757",
+  "pigment_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "same_camera": true,
+  "packed_png_matches": true,
+  "uv_and_geometry": {
+    "Knight | turned pedestal": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | swept rounded mane": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | near swept ear": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | near eye": {
+      "max_position_change": 0.08471323549747467,
+      "uv_exact": true
+    },
+    "Knight | far swept ear": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | far eye": {
+      "max_position_change": 0.08471318334341049,
+      "uv_exact": true
+    },
+    "Knight | continuous horse head and neck": {
+      "max_position_change": 0.08556879311800003,
+      "uv_exact": true,
+      "chest_crest_and_muzzle_probes": {
+        "vertex_count": 31082,
+        "max_rest_position_change": 1.1444091796875e-05
+      }
+    }
+  },
+  "parts": 7,
+  "triangles": 214866,
+  "atlas_datablock": "Knight walnut | figured cheek pigment 008-A",
+  "packed_before": {
+    "continuous-grain.png": "8e00f950e34fe1ec891f9246c8f521bcd1f62e336c5b949faa0694602431c29e",
+    "Knight inference coverage": "266252bfdb7ae681d6d3c53befa50ce10cc527879255b35c6e6be9235a9772ae",
+    "Knight inferred walnut": "9699fcb1c64abf80cc59af3a6c9159c103380a22731289038cd744c6266e61d3",
+    "Knight walnut | continuous rear mane 002-B": "6dd2c27434783d5490a0fc35d0650e040b0b903497206a05e04d4e665d6d6515",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "packed_after": {
+    "continuous-grain.png": "8e00f950e34fe1ec891f9246c8f521bcd1f62e336c5b949faa0694602431c29e",
+    "Knight inference coverage": "266252bfdb7ae681d6d3c53befa50ce10cc527879255b35c6e6be9235a9772ae",
+    "Knight inferred walnut": "9699fcb1c64abf80cc59af3a6c9159c103380a22731289038cd744c6266e61d3",
+    "Knight walnut | figured cheek pigment 008-A": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "webgl_mesh": "webgl-check\\mesh.json",
+  "finish_file_bytes": 120211
+}

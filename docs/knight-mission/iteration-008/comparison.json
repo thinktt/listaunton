@@ -1,0 +1,427 @@
+{
+  "registration": "Fixed 54-degree camera; source transformations from audit_mission.registered.",
+  "reference_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "models": {
+    "Parent": {
+      "image_sha256": "4f9f880805dcc246495f49857afc46b40e78dfabdee17436f76817b4759dfff4",
+      "image_size": [
+        1254,
+        1254
+      ],
+      "iou": {
+        "original": 0.9837682,
+        "selected": 0.9773035,
+        "white_mirrored": 0.9724639
+      },
+      "regions": {
+        "whole": {
+          "pixels": 318357,
+          "rgb_mae": 13.814,
+          "mean_rgb_error": [
+            0.59,
+            0.84,
+            1.43
+          ],
+          "luma_percentiles": [
+            24.67,
+            48.54,
+            93.5,
+            138.93
+          ],
+          "target_luma_percentiles": [
+            21.74,
+            47.02,
+            92.37,
+            155.72
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "mane and eyes": {
+          "pixels": 64087,
+          "rgb_mae": 19.805,
+          "mean_rgb_error": [
+            4.91,
+            3.79,
+            3.72
+          ],
+          "luma_percentiles": [
+            23.8,
+            51.75,
+            103.75,
+            153.31
+          ],
+          "target_luma_percentiles": [
+            24.02,
+            45.62,
+            95.4,
+            161.87
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "neck": {
+          "pixels": 92112,
+          "rgb_mae": 17.892,
+          "mean_rgb_error": [
+            -1.2,
+            -0.42,
+            0.33
+          ],
+          "luma_percentiles": [
+            32.57,
+            61.16,
+            109.77,
+            147.86
+          ],
+          "target_luma_percentiles": [
+            27.87,
+            60.58,
+            115.59,
+            180.42
+          ],
+          "median_2px_detail_render_target": [
+            3.0,
+            4.0
+          ]
+        },
+        "seat and platform": {
+          "pixels": 42275,
+          "rgb_mae": 11.008,
+          "mean_rgb_error": [
+            -0.44,
+            0.11,
+            -0.19
+          ],
+          "luma_percentiles": [
+            24.95,
+            34.36,
+            68.44,
+            116.82
+          ],
+          "target_luma_percentiles": [
+            20.81,
+            32.22,
+            71.96,
+            130.89
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            2.0
+          ]
+        },
+        "turned base": {
+          "pixels": 42800,
+          "rgb_mae": 6.018,
+          "mean_rgb_error": [
+            -2.4,
+            -1.04,
+            1.24
+          ],
+          "luma_percentiles": [
+            23.54,
+            45.84,
+            64.31,
+            75.01
+          ],
+          "target_luma_percentiles": [
+            25.23,
+            45.62,
+            66.79,
+            80.8
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            3.0
+          ]
+        }
+      }
+    },
+    "042-level-carving": {
+      "image_sha256": "b5e1421f61da8ebe9747cfbb1fdc7161c93d7739b2f56d12110d530627400e1e",
+      "image_size": [
+        1254,
+        1254
+      ],
+      "iou": {
+        "original": 0.9853897,
+        "selected": 0.9787343,
+        "white_mirrored": 0.9718683
+      },
+      "regions": {
+        "whole": {
+          "pixels": 318357,
+          "rgb_mae": 14.866,
+          "mean_rgb_error": [
+            0.1,
+            0.31,
+            0.8
+          ],
+          "luma_percentiles": [
+            24.12,
+            48.12,
+            92.93,
+            137.4
+          ],
+          "target_luma_percentiles": [
+            21.74,
+            47.02,
+            92.37,
+            155.72
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "mane and eyes": {
+          "pixels": 64087,
+          "rgb_mae": 20.16,
+          "mean_rgb_error": [
+            3.63,
+            2.92,
+            3.22
+          ],
+          "luma_percentiles": [
+            24.3,
+            49.15,
+            103.32,
+            155.94
+          ],
+          "target_luma_percentiles": [
+            24.02,
+            45.62,
+            95.4,
+            161.87
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "neck": {
+          "pixels": 92112,
+          "rgb_mae": 20.032,
+          "mean_rgb_error": [
+            -3.08,
+            -2.28,
+            -1.64
+          ],
+          "luma_percentiles": [
+            30.64,
+            60.24,
+            107.63,
+            139.96
+          ],
+          "target_luma_percentiles": [
+            27.87,
+            60.58,
+            115.59,
+            180.42
+          ],
+          "median_2px_detail_render_target": [
+            3.0,
+            4.0
+          ]
+        },
+        "seat and platform": {
+          "pixels": 42275,
+          "rgb_mae": 13.487,
+          "mean_rgb_error": [
+            1.99,
+            1.51,
+            -0.06
+          ],
+          "luma_percentiles": [
+            23.67,
+            33.64,
+            73.21,
+            149.09
+          ],
+          "target_luma_percentiles": [
+            20.81,
+            32.22,
+            71.96,
+            130.89
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            2.0
+          ]
+        },
+        "turned base": {
+          "pixels": 42800,
+          "rgb_mae": 6.016,
+          "mean_rgb_error": [
+            -2.38,
+            -1.03,
+            1.24
+          ],
+          "luma_percentiles": [
+            23.54,
+            45.84,
+            64.31,
+            75.01
+          ],
+          "target_luma_percentiles": [
+            25.23,
+            45.62,
+            66.79,
+            80.8
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            3.0
+          ]
+        }
+      }
+    },
+    "043-satin-carving": {
+      "image_sha256": "7a8b03e6b5a72c37fcc2a4cdc345858c6f41d1c11ba7fa5a8db0bf71e5f27279",
+      "image_size": [
+        1254,
+        1254
+      ],
+      "iou": {
+        "original": 0.9853897,
+        "selected": 0.9787343,
+        "white_mirrored": 0.9718683
+      },
+      "regions": {
+        "whole": {
+          "pixels": 318357,
+          "rgb_mae": 14.617,
+          "mean_rgb_error": [
+            0.03,
+            -0.1,
+            0.28
+          ],
+          "luma_percentiles": [
+            23.95,
+            47.76,
+            92.78,
+            134.31
+          ],
+          "target_luma_percentiles": [
+            21.74,
+            47.02,
+            92.37,
+            155.72
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "mane and eyes": {
+          "pixels": 64087,
+          "rgb_mae": 20.204,
+          "mean_rgb_error": [
+            5.95,
+            3.3,
+            2.61
+          ],
+          "luma_percentiles": [
+            24.16,
+            49.68,
+            104.76,
+            150.88
+          ],
+          "target_luma_percentiles": [
+            24.02,
+            45.62,
+            95.4,
+            161.87
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "neck": {
+          "pixels": 92112,
+          "rgb_mae": 20.032,
+          "mean_rgb_error": [
+            -3.11,
+            -2.29,
+            -1.61
+          ],
+          "luma_percentiles": [
+            30.64,
+            60.24,
+            107.56,
+            140.13
+          ],
+          "target_luma_percentiles": [
+            27.87,
+            60.58,
+            115.59,
+            180.42
+          ],
+          "median_2px_detail_render_target": [
+            3.0,
+            4.0
+          ]
+        },
+        "seat and platform": {
+          "pixels": 42275,
+          "rgb_mae": 11.815,
+          "mean_rgb_error": [
+            -1.38,
+            -1.66,
+            -2.79
+          ],
+          "luma_percentiles": [
+            23.23,
+            32.58,
+            68.51,
+            105.47
+          ],
+          "target_luma_percentiles": [
+            20.81,
+            32.22,
+            71.96,
+            130.89
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            2.0
+          ]
+        },
+        "turned base": {
+          "pixels": 42800,
+          "rgb_mae": 6.008,
+          "mean_rgb_error": [
+            -2.52,
+            -1.16,
+            1.14
+          ],
+          "luma_percentiles": [
+            23.54,
+            45.56,
+            64.1,
+            75.01
+          ],
+          "target_luma_percentiles": [
+            25.23,
+            45.62,
+            66.79,
+            80.8
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            3.0
+          ]
+        }
+      }
+    }
+  }
+}

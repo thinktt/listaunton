@@ -1,0 +1,172 @@
+{
+  "lights_identical": true,
+  "cameras_identical": true,
+  "geometry_identical_outside_sculpt": [
+    "Knight | turned pedestal",
+    "Knight | near swept ear",
+    "Knight | near eye",
+    "Knight | far swept ear",
+    "Knight | far eye"
+  ],
+  "all_other_geometry_protected": true,
+  "all_uv_finite": true,
+  "full_object_bounds": {
+    "Knight | swept rounded mane": {
+      "parent": [
+        [
+          -1.4314700365066528,
+          -0.6251299977302551,
+          1.7657500505447388
+        ],
+        [
+          0.2896600067615509,
+          0.4900999963283539,
+          5.129039764404297
+        ]
+      ],
+      "candidate": [
+        [
+          -1.4314700365066528,
+          -0.5838599801063538,
+          1.7657500505447388
+        ],
+        [
+          0.2896600067615509,
+          0.421779990196228,
+          5.129039764404297
+        ]
+      ]
+    },
+    "Knight | continuous horse head and neck": {
+      "parent": [
+        [
+          -1.1589399576187134,
+          -0.946179986000061,
+          1.6158000230789185
+        ],
+        [
+          1.698009967803955,
+          0.862030029296875,
+          5.0932297706604
+        ]
+      ],
+      "candidate": [
+        [
+          -1.1589399576187134,
+          -0.946179986000061,
+          1.6158000230789185
+        ],
+        [
+          1.698009967803955,
+          0.862030029296875,
+          5.0932297706604
+        ]
+      ]
+    }
+  },
+  "mane_all_eval_max_nearest_above_4_64": 0.00046697285142727196,
+  "mane_p95_above_4_64": 1.4317720342660323e-06,
+  "protected_skull_max_xyz_displacement_on_x_greater_than_0_24": 0.0,
+  "parent": {
+    "Knight | turned pedestal": {
+      "geometry": "42888e4c9c79ec1a52a05e6fbd23d6d12740f5d14d8149dd8a54c640349f6576",
+      "uv": "e5addd717f87ddf02c1f76d99c9c5c22a3406948f24fd5ffc842ee050138e261",
+      "uv_finite": true,
+      "vertices": 31234,
+      "triangles": 62464
+    },
+    "Knight | swept rounded mane": {
+      "geometry": "c0b85a6431f7125e5930333ee1882febd33ec2651a3b9fb7f47bc441689e2139",
+      "uv": "4acadc28182d14056c6c847a04c7dfb7520b7fb321d4e0f6352f1a634896bd38",
+      "uv_finite": true,
+      "vertices": 12802,
+      "triangles": 25600
+    },
+    "Knight | near swept ear": {
+      "geometry": "8d7ea6579dc8920948175d8378c69b1d6bbd6d2b3d4e23d4fe5d3e514ff49223",
+      "uv": "2b8ba78c3a8ced80a04aaa97ee9edcf8f5ed8b11d38af12cc80358e723cc9c0d",
+      "uv_finite": true,
+      "vertices": 6658,
+      "triangles": 13312
+    },
+    "Knight | near eye": {
+      "geometry": "08449b00dcc3f1c28ab5f39b4c2a4d1b33bbe13e79404a44423d3683ff7f1b0c",
+      "uv": "548e0b1ce4a0efd044aae809ea67a17e5c526c1c5a5e6aa8915e3614d8f7a876",
+      "uv_finite": true,
+      "vertices": 7938,
+      "triangles": 15872
+    },
+    "Knight | far swept ear": {
+      "geometry": "30e8c6c2ac07ecb763ea7927d209da55ddc9369619283d542a386ad81acbf33c",
+      "uv": "36b39f75594311171300cf4b42668ae9b89857d65a025bf0b4bb41581f1ab4bb",
+      "uv_finite": true,
+      "vertices": 6658,
+      "triangles": 13312
+    },
+    "Knight | far eye": {
+      "geometry": "643bfb0175678adf009f84bd4ccb44280971aac252f2ec35b9413960738f75fc",
+      "uv": "899e8136f4e90d702baddaf99252b62a2bf4f03c163b7904808a0c648fce85d5",
+      "uv_finite": true,
+      "vertices": 7938,
+      "triangles": 15872
+    },
+    "Knight | continuous horse head and neck": {
+      "geometry": "74e7533257e9542424c3360b92d764b27a168c3645f9090e46ee29a77c9ba23d",
+      "uv": "4171183bfbc079aa48eea029239358746914cf745706cf73bef2cfb019ed4dc8",
+      "uv_finite": true,
+      "vertices": 49131,
+      "triangles": 98258
+    }
+  },
+  "candidate": {
+    "Knight | turned pedestal": {
+      "geometry": "42888e4c9c79ec1a52a05e6fbd23d6d12740f5d14d8149dd8a54c640349f6576",
+      "uv": "e5addd717f87ddf02c1f76d99c9c5c22a3406948f24fd5ffc842ee050138e261",
+      "uv_finite": true,
+      "vertices": 31234,
+      "triangles": 62464
+    },
+    "Knight | swept rounded mane": {
+      "geometry": "b39499e4bc6b0303fd12cb3914d5f3ef9ed277a41eb86a8a31e05f4c54ec331f",
+      "uv": "e2a350f190b1a63d121945bb3849d34eba303ca2cc20371a7c4076d37c6cccd7",
+      "uv_finite": true,
+      "vertices": 12802,
+      "triangles": 25600
+    },
+    "Knight | near swept ear": {
+      "geometry": "8d7ea6579dc8920948175d8378c69b1d6bbd6d2b3d4e23d4fe5d3e514ff49223",
+      "uv": "2b8ba78c3a8ced80a04aaa97ee9edcf8f5ed8b11d38af12cc80358e723cc9c0d",
+      "uv_finite": true,
+      "vertices": 6658,
+      "triangles": 13312
+    },
+    "Knight | near eye": {
+      "geometry": "08449b00dcc3f1c28ab5f39b4c2a4d1b33bbe13e79404a44423d3683ff7f1b0c",
+      "uv": "548e0b1ce4a0efd044aae809ea67a17e5c526c1c5a5e6aa8915e3614d8f7a876",
+      "uv_finite": true,
+      "vertices": 7938,
+      "triangles": 15872
+    },
+    "Knight | far swept ear": {
+      "geometry": "30e8c6c2ac07ecb763ea7927d209da55ddc9369619283d542a386ad81acbf33c",
+      "uv": "36b39f75594311171300cf4b42668ae9b89857d65a025bf0b4bb41581f1ab4bb",
+      "uv_finite": true,
+      "vertices": 6658,
+      "triangles": 13312
+    },
+    "Knight | far eye": {
+      "geometry": "643bfb0175678adf009f84bd4ccb44280971aac252f2ec35b9413960738f75fc",
+      "uv": "899e8136f4e90d702baddaf99252b62a2bf4f03c163b7904808a0c648fce85d5",
+      "uv_finite": true,
+      "vertices": 7938,
+      "triangles": 15872
+    },
+    "Knight | continuous horse head and neck": {
+      "geometry": "c22e42361c8b40dd11ca8cf5ea0fa56ac64d699b9edc3dc710e55eaa05ee942c",
+      "uv": "4171183bfbc079aa48eea029239358746914cf745706cf73bef2cfb019ed4dc8",
+      "uv_finite": true,
+      "vertices": 49131,
+      "triangles": 98258
+    }
+  }
+}

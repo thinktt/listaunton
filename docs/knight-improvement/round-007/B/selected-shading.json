@@ -1,0 +1,39 @@
+{
+  "Original": {
+    "chest_shoulder_luma": 101.43,
+    "chest_crest_luma": 102.43,
+    "terminus_luma_p90": 72.08,
+    "terminus_luma_mae_black2": 14.81,
+    "eye_roi_luma_mae_black2": 15.87,
+    "lid_luma": 77.35,
+    "cheek_below": 57.48
+  },
+  "Black 2": {
+    "chest_shoulder_luma": 138.29,
+    "chest_crest_luma": 156.86,
+    "terminus_luma_p90": 91.18,
+    "terminus_luma_mae_black2": 0.0,
+    "eye_roi_luma_mae_black2": 0.0,
+    "lid_luma": 122.8,
+    "cheek_below": 84.52
+  },
+  "Parent 6A": {
+    "chest_shoulder_luma": 129.99,
+    "chest_crest_luma": 135.92,
+    "terminus_luma_p90": 94.83,
+    "terminus_luma_mae_black2": 3.6,
+    "eye_roi_luma_mae_black2": 19.95,
+    "lid_luma": 74.05,
+    "cheek_below": 101.8
+  },
+  "Candidate 7B": {
+    "chest_shoulder_luma": 130.01,
+    "chest_crest_luma": 135.85,
+    "terminus_luma_p90": 93.35,
+    "terminus_luma_mae_black2": 6.94,
+    "eye_roi_luma_mae_black2": 16.66,
+    "lid_luma": 87.42,
+    "cheek_below": 104.77
+  },
+  "side_eye_mean_absolute_luma_change": 0.27
+}

@@ -1,0 +1,280 @@
+{
+  "model_sha256": "de181485ddcc8e4e0fe65790eee5fb3933175574590eb6bbd50133400951093a",
+  "parent_sha256": "53ca17473c08fc898e6c29bd5189e4188b3573e003719362cabb102ab621f757",
+  "pigment_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "gallery": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "3ef8c9b196cd97ee00e82d41b57831f5d3f0ab71dafa1bac9077ea04b361f883",
+    "side_sha256": "7acfe5a45353057a14d63d43c7e253d0668c69ba1a5b04998c4d19d16abe5d27",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  },
+  "fixed_cheek": {
+    "Black 2": {
+      "median_rgb": [
+        97.0,
+        47.0,
+        17.0
+      ],
+      "local_contrast": 0.2680163713188022
+    },
+    "Parent": {
+      "median_rgb": [
+        130.0,
+        65.0,
+        26.0
+      ],
+      "local_contrast": 0.21565786783862548
+    },
+    "9A": {
+      "median_rgb": [
+        97.0,
+        47.0,
+        16.0
+      ],
+      "local_contrast": 0.26320071695990904
+    }
+  },
+  "paired_flank_cheek": {
+    "aligned_flank_rect": [
+      325,
+      220,
+      365,
+      245
+    ],
+    "measurements": {
+      "parent": {
+        "near": {
+          "median_rgb": [
+            119.5,
+            64.0,
+            34.0
+          ],
+          "local_contrast": 0.14748512789234747
+        },
+        "far": {
+          "median_rgb": [
+            89.0,
+            46.0,
+            20.0
+          ],
+          "local_contrast": 0.29056401875294746
+        }
+      },
+      "A": {
+        "near": {
+          "median_rgb": [
+            92.0,
+            49.0,
+            24.0
+          ],
+          "local_contrast": 0.2193646049314024
+        },
+        "far": {
+          "median_rgb": [
+            80.0,
+            41.0,
+            18.0
+          ],
+          "local_contrast": 0.2894008054758829
+        }
+      }
+    }
+  },
+  "registered_silhouette": {
+    "original": {
+      "parent": 0.9823105250257959,
+      "candidate": 0.9823105250257959
+    },
+    "black_2": {
+      "parent": 0.9790970628832281,
+      "candidate": 0.9790970628832281
+    },
+    "parent_overlap": {
+      "fixed": 1.0,
+      "side": 1.0
+    }
+  },
+  "fixed_eye": {
+    "parent": {
+      "ray_samples": 163,
+      "bounds": [
+        [
+          478,
+          473
+        ],
+        [
+          530,
+          489
+        ]
+      ],
+      "center": [
+        504.2453987730061,
+        480.97546012269936
+      ],
+      "downward_angle_deg": 11.478992804635324
+    },
+    "candidate": {
+      "ray_samples": 259,
+      "bounds": [
+        [
+          478,
+          467
+        ],
+        [
+          540,
+          495
+        ]
+      ],
+      "center": [
+        507.82239382239385,
+        480.6293436293436
+      ],
+      "downward_angle_deg": 18.504909204684562
+    }
+  },
+  "bilateral_aperture_iou": 0.9945,
+  "changed_studio_sources": [
+    "Eye reflection lower"
+  ],
+  "nonmanifold_edges": 0,
+  "evaluated_triangles_under_1e-10_double_area": 0,
+  "exported_parts": 7,
+  "exported_triangles": 214866,
+  "exported_varnish_bytes": 120211,
+  "packed_png_equals_delivered_atlas": true,
+  "all_existing_uv_data_exact": true,
+  "dense_angular_eye_comparison": {
+    "parent": {
+      "area_px": 658,
+      "tail_x_ymin_ymax": [
+        477,
+        473,
+        474
+      ],
+      "nose_x_ymin_ymax": [
+        529,
+        486,
+        487
+      ],
+      "median_upper_y_x495_to_504": 472.0
+    },
+    "candidate": {
+      "area_px": 1028,
+      "tail_x_ymin_ymax": [
+        477,
+        472,
+        473
+      ],
+      "nose_x_ymin_ymax": [
+        540,
+        492,
+        493
+      ],
+      "median_upper_y_x495_to_504": 467.0
+    },
+    "lower_glint": {
+      "Black 2": {
+        "peak_xy": [
+          494,
+          499
+        ],
+        "half_peak_width_height": [
+          31,
+          9
+        ],
+        "half_peak_centroid_xy": [
+          498.49,
+          499.14
+        ]
+      },
+      "8B parent": {
+        "peak_xy": [
+          490,
+          488
+        ],
+        "half_peak_width_height": [
+          27,
+          9
+        ],
+        "half_peak_centroid_xy": [
+          497.94,
+          490.39
+        ]
+      },
+      "Previous 8A": {
+        "peak_xy": [
+          500,
+          498
+        ],
+        "half_peak_width_height": [
+          20,
+          7
+        ],
+        "half_peak_centroid_xy": [
+          497.57,
+          496.69
+        ]
+      },
+      "9A": {
+        "peak_xy": [
+          493,
+          496
+        ],
+        "half_peak_width_height": [
+          16,
+          6
+        ],
+        "half_peak_centroid_xy": [
+          496.44,
+          496.58
+        ]
+      }
+    },
+    "glint_method": "Largest positive local contrast in the registered lower-lid and cheek window x478..529, y486..506. The contiguous half-peak extent of that patch uses 1.5 px and 7 px Gaussian luminance. The glints come from the studio and grain as well as the shape."
+  },
+  "physical_side_samples": {
+    "A": 2185,
+    "parent": 1361
+  },
+  "protected_chest_crown_and_muzzle": {
+    "vertex_count": 31082,
+    "max_rest_position_change": 1.1444091796875e-05
+  }
+}

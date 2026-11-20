@@ -1,0 +1,67 @@
+{
+  "design": 17,
+  "parameters": [
+    0.83,
+    0.89,
+    0.48,
+    0.52,
+    -0.4,
+    0.011,
+    0.006,
+    0.028,
+    13,
+    0.136,
+    0.26,
+    0.022
+  ],
+  "parent_sha256": "739bf4c1e3671770de868593ec10135c5345417bd80c043ee04ee7dea86efe4c",
+  "pigment_sha256": "71260879e1f471d7c40bafe1599318181beba8f880e6c5bcb784d2a08a701ff3",
+  "parts": {
+    "near eye": {
+      "closed_mesh_vertices": 14082,
+      "min_back_thickness": 0.03499999999999999,
+      "max_back_thickness": 0.119
+    },
+    "far eye": {
+      "closed_mesh_vertices": 14082,
+      "min_back_thickness": 0.03499999999999999,
+      "max_back_thickness": 0.119
+    },
+    "continuous horse head and neck": {
+      "max_delta": 0.09826745167951195,
+      "moved": 10223
+    },
+    "coherent skull cheek and conical muzzle": {
+      "max_delta": 0.09808332286122504,
+      "moved": 706
+    }
+  },
+  "native": {
+    "nonadjacent_intersections": {
+      "near eye": {
+        "triangles_checked": 28160,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      },
+      "far eye": {
+        "triangles_checked": 28160,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      },
+      "continuous horse head and neck": {
+        "triangles_checked": 20880,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      }
+    },
+    "sample_spacing": 0.006,
+    "near_exposed_samples": 1574,
+    "far_exposed_samples": 1576,
+    "mirrored_exposure_iou": 0.9886363636363636,
+    "exposed_mirrored_depth_difference_p95": 0.0030494928359985343
+  },
+  "model_sha256": "213c6597a98fe98057778838b953b23321af65e5f5b758e99e97d5846f6ad253",
+  "fixed_sha256": "58a5cc4ef7a2b57faacc38b8236662090483431eb4156775fa0ccd0eb2b7adb7",
+  "side_sha256": "61007b0bd24e92d5b6e03c6d0aa77ada62fb7b50316656d89139fcbfedefbd69",
+  "samples": 144
+}

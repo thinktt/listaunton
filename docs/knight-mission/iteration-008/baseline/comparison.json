@@ -1,0 +1,149 @@
+{
+  "registration": "Fixed 54-degree camera; source transformations from audit_mission.registered.",
+  "reference_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "models": {
+    "Parent": {
+      "image_sha256": "4f9f880805dcc246495f49857afc46b40e78dfabdee17436f76817b4759dfff4",
+      "image_size": [
+        1254,
+        1254
+      ],
+      "iou": {
+        "original": 0.9837682,
+        "selected": 0.9773035,
+        "white_mirrored": 0.9724639
+      },
+      "regions": {
+        "whole": {
+          "pixels": 318781,
+          "rgb_mae": 13.82,
+          "mean_rgb_error": [
+            0.62,
+            0.85,
+            1.45
+          ],
+          "luma_percentiles": [
+            24.67,
+            48.48,
+            93.46,
+            138.92
+          ],
+          "target_luma_percentiles": [
+            21.67,
+            46.98,
+            92.32,
+            155.67
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "mane and eyes": {
+          "pixels": 64091,
+          "rgb_mae": 19.806,
+          "mean_rgb_error": [
+            4.91,
+            3.79,
+            3.72
+          ],
+          "luma_percentiles": [
+            23.8,
+            51.75,
+            103.75,
+            153.3
+          ],
+          "target_luma_percentiles": [
+            24.02,
+            45.62,
+            95.4,
+            161.87
+          ],
+          "median_2px_detail_render_target": [
+            2.0,
+            3.0
+          ]
+        },
+        "neck": {
+          "pixels": 92113,
+          "rgb_mae": 17.892,
+          "mean_rgb_error": [
+            -1.2,
+            -0.42,
+            0.33
+          ],
+          "luma_percentiles": [
+            32.57,
+            61.16,
+            109.77,
+            147.86
+          ],
+          "target_luma_percentiles": [
+            27.87,
+            60.58,
+            115.59,
+            180.42
+          ],
+          "median_2px_detail_render_target": [
+            3.0,
+            4.0
+          ]
+        },
+        "seat and platform": {
+          "pixels": 42275,
+          "rgb_mae": 11.008,
+          "mean_rgb_error": [
+            -0.44,
+            0.11,
+            -0.19
+          ],
+          "luma_percentiles": [
+            24.95,
+            34.36,
+            68.44,
+            116.82
+          ],
+          "target_luma_percentiles": [
+            20.81,
+            32.22,
+            71.96,
+            130.89
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            2.0
+          ]
+        },
+        "turned base": {
+          "pixels": 42800,
+          "rgb_mae": 6.018,
+          "mean_rgb_error": [
+            -2.4,
+            -1.04,
+            1.24
+          ],
+          "luma_percentiles": [
+            23.54,
+            45.84,
+            64.31,
+            75.01
+          ],
+          "target_luma_percentiles": [
+            25.23,
+            45.62,
+            66.79,
+            80.8
+          ],
+          "median_2px_detail_render_target": [
+            1.0,
+            3.0
+          ]
+        }
+      }
+    }
+  }
+}

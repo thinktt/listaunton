@@ -1,0 +1,160 @@
+{
+  "parent_sha256": "53ca17473c08fc898e6c29bd5189e4188b3573e003719362cabb102ab621f757",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "carvings": {
+    "continuous horse head and neck": {
+      "changed_vertices_1e-5": 8636,
+      "rest_depth_extremes": [
+        -0.003984815278797605,
+        0.013886688907473807
+      ],
+      "normal_to_axis_extremes": [
+        -0.02271452318336143,
+        0.052168879703586205
+      ],
+      "along_axis_extremes": [
+        -0.03964834857472552,
+        0.08556745446028198
+      ]
+    },
+    "coherent skull cheek and conical muzzle": {
+      "changed_vertices_1e-5": 930,
+      "rest_depth_extremes": [
+        -0.003952114509464195,
+        0.011072549402738953
+      ],
+      "normal_to_axis_extremes": [
+        -0.022615071738912754,
+        0.05109737038183133
+      ],
+      "along_axis_extremes": [
+        -0.03883400149019181,
+        0.08443389098695281
+      ]
+    },
+    "near eye": {
+      "changed_vertices_1e-5": 482,
+      "rest_depth_extremes": [
+        -0.004479462179488309,
+        0.009256591654950967
+      ],
+      "normal_to_axis_extremes": [
+        8.451576451104044e-05,
+        0.05209452150819644
+      ],
+      "along_axis_extremes": [
+        -0.039591836346229294,
+        0.08471219900616428
+      ]
+    },
+    "far eye": {
+      "changed_vertices_1e-5": 482,
+      "rest_depth_extremes": [
+        -0.004479462887558895,
+        0.00925659136256893
+      ],
+      "normal_to_axis_extremes": [
+        8.451565766362342e-05,
+        0.052094526242934994
+      ],
+      "along_axis_extremes": [
+        -0.0395918399446306,
+        0.0847121998510133
+      ]
+    }
+  },
+  "atlas_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "release_texture": "wood-atlas-improvement-008-A.png",
+  "lower_lid_card": {
+    "name": "Eye reflection lower",
+    "axes": [
+      0.1599999964237213,
+      0.3199999928474426
+    ],
+    "watts": 0.04399999976158142,
+    "location": [
+      0.7505773305892944,
+      -0.8162385821342468,
+      3.6883890628814697
+    ],
+    "rotation": [
+      0.004549779463559389,
+      -2.054811954498291,
+      2.5639538764953613
+    ],
+    "receiver_points": [
+      [
+        490,
+        496
+      ],
+      [
+        493,
+        497
+      ],
+      [
+        497,
+        497
+      ],
+      [
+        500,
+        498
+      ],
+      [
+        503,
+        498
+      ],
+      [
+        506,
+        499
+      ]
+    ]
+  },
+  "model_sha256": "de181485ddcc8e4e0fe65790eee5fb3933175574590eb6bbd50133400951093a",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "3ef8c9b196cd97ee00e82d41b57831f5d3f0ab71dafa1bac9077ea04b361f883",
+    "side_sha256": "7acfe5a45353057a14d63d43c7e253d0668c69ba1a5b04998c4d19d16abe5d27",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

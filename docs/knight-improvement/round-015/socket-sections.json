@@ -1,0 +1,117 @@
+{
+  "method": "On each column of the opposed native eye rays, find upper and lower visible insert boundaries; compare the deepest nearby surface within 0.012 model units with a chord joining the samples 0.035 on either side of the boundary. Limits along eye axis are -0.16 to +0.165 units. The common-station figures use the same valid columns on every model. Positive numbers indicate recess. The source photograph supplies no true physical recess depth.",
+  "results": {
+    "parent": {
+      "near": {
+        "upper": {
+          "number_of_sections": 39,
+          "median_recess": 0.01926,
+          "p90_recess": 0.02197
+        },
+        "lower": {
+          "number_of_sections": 65,
+          "median_recess": 0.02188,
+          "p90_recess": 0.02805
+        }
+      },
+      "far": {
+        "upper": {
+          "number_of_sections": 39,
+          "median_recess": 0.01863,
+          "p90_recess": 0.02144
+        },
+        "lower": {
+          "number_of_sections": 65,
+          "median_recess": 0.02186,
+          "p90_recess": 0.02747
+        }
+      }
+    },
+    "A": {
+      "near": {
+        "upper": {
+          "number_of_sections": 29,
+          "median_recess": 0.01727,
+          "p90_recess": 0.02491
+        },
+        "lower": {
+          "number_of_sections": 65,
+          "median_recess": 0.0241,
+          "p90_recess": 0.02703
+        }
+      },
+      "far": {
+        "upper": {
+          "number_of_sections": 28,
+          "median_recess": 0.01712,
+          "p90_recess": 0.02469
+        },
+        "lower": {
+          "number_of_sections": 65,
+          "median_recess": 0.02423,
+          "p90_recess": 0.02695
+        }
+      }
+    },
+    "B": {
+      "near": {
+        "upper": {
+          "number_of_sections": 39,
+          "median_recess": 0.01124,
+          "p90_recess": 0.01946
+        },
+        "lower": {
+          "number_of_sections": 65,
+          "median_recess": 0.01217,
+          "p90_recess": 0.01444
+        }
+      },
+      "far": {
+        "upper": {
+          "number_of_sections": 39,
+          "median_recess": 0.01117,
+          "p90_recess": 0.01881
+        },
+        "lower": {
+          "number_of_sections": 65,
+          "median_recess": 0.01155,
+          "p90_recess": 0.01449
+        }
+      }
+    }
+  },
+  "common_stations": {
+    "near upper": {
+      "count": 29,
+      "median_recess": {
+        "parent": 0.01864,
+        "A": 0.01727,
+        "B": 0.01015
+      }
+    },
+    "near lower": {
+      "count": 65,
+      "median_recess": {
+        "parent": 0.02188,
+        "A": 0.0241,
+        "B": 0.01217
+      }
+    },
+    "far upper": {
+      "count": 28,
+      "median_recess": {
+        "parent": 0.01834,
+        "A": 0.01712,
+        "B": 0.00985
+      }
+    },
+    "far lower": {
+      "count": 65,
+      "median_recess": {
+        "parent": 0.02186,
+        "A": 0.02423,
+        "B": 0.01155
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "design": 10,
+  "parameters": [
+    1.0,
+    0.84,
+    1.18,
+    0.004,
+    0.03,
+    -0.343,
+    0.36,
+    0.66,
+    0.035,
+    0.034,
+    0.031,
+    1.58,
+    0.56
+  ],
+  "parent_sha256": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+  "pigment_sha256": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+  "parts": {
+    "continuous horse head and neck": {
+      "max_displacement": 0.0490691140294075,
+      "moved_vertices": 27221
+    },
+    "coherent skull cheek and conical muzzle": {
+      "max_displacement": 0.04906216636300087,
+      "moved_vertices": 466
+    },
+    "near eye": {
+      "max_displacement": 0.04907427355647087,
+      "moved_vertices": 7938,
+      "varnish_delta_max": 0.33020031557877483,
+      "intersecting_head_triangles": 1294
+    },
+    "far eye": {
+      "max_displacement": 0.04906284809112549,
+      "moved_vertices": 7938,
+      "hidden_return_triangulation": [
+        [
+          5492
+        ],
+        "FIXED"
+      ],
+      "varnish_delta_max": 0.3315399373137131,
+      "intersecting_head_triangles": 1327
+    }
+  },
+  "native": {
+    "nonadjacent_intersections": {
+      "near eye": {
+        "triangles_checked": 15872,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      },
+      "far eye": {
+        "triangles_checked": 15872,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      },
+      "continuous horse head and neck": {
+        "triangles_checked": 60038,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      }
+    },
+    "sample_spacing": 0.006,
+    "near_exposed_samples": 1808,
+    "far_exposed_samples": 1815,
+    "mirrored_exposure_iou": 0.9950440528634361,
+    "exposed_mirrored_depth_difference_p95": 0.0033431649208068848
+  },
+  "model_sha256": "d5aa43f9cdcead682f1228413869e4a58b482b8d80895dff240333faac067ad9",
+  "fixed_sha256": "540a04d73a0af1e8de0ef51c7766ad1ac89c17f3a9bd0ee4f5a7e69c3f5ff5eb",
+  "side_sha256": "cba4516262579ae6ad8d16c7d3f75c41c303c2f20605b06edffa1a40c5fe58e5",
+  "samples": 144
+}

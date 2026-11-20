@@ -1,0 +1,28 @@
+{
+  "foundation": {
+    "path": "build/knight-mission/mission008-evaluation/trial-level/knight.blend",
+    "sha256": "5b5af1acb6223089fd6f5d08e1dcd771da7702a13298b3d65e880189bbcf234d"
+  },
+  "components": [
+    {
+      "path": "build/knight-mission/mission008-neck/knight.blend",
+      "sha256": "5629290d255c7f2c471da5ffc9c3d6b7a5d594ea8a8ba476cc8d2be323439c2e",
+      "objects": [
+        "Knight | continuous horse head and neck",
+        "Knight | curved neck and chest"
+      ]
+    },
+    {
+      "path": "build/knight-mission/mission008-mane/knight.blend",
+      "sha256": "51931f0ca0fb78c90fad0a2d7388af9e8a3236372bd1069b834a5df6b135c1a6",
+      "objects": [
+        "Knight | swept rounded mane"
+      ]
+    }
+  ],
+  "texture": {
+    "path": "build/knight-mission/mission008-evaluation/cove-finish/pigment.png",
+    "sha256": "8666e40bed34d56756ac035a944396bfbd89eba78d05bc65ed42a31690381d71",
+    "previous_sha256": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8"
+  }
+}

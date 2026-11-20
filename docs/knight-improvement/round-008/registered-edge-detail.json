@@ -1,0 +1,38 @@
+{
+  "regions": {
+    "Upper head": "both outside edges, rows 310 to 355 inclusive",
+    "Space below muzzle": "chest outside edge, rows 540 to 655 inclusive"
+  },
+  "mean_absolute_horizontal_error_px": {
+    "Parent": {
+      "Upper head": {
+        "Original": 2.25,
+        "Black 2": 2.793
+      },
+      "Space below muzzle": {
+        "Original": 13.802,
+        "Black 2": 17.086
+      }
+    },
+    "A": {
+      "Upper head": {
+        "Original": 2.25,
+        "Black 2": 2.793
+      },
+      "Space below muzzle": {
+        "Original": 13.802,
+        "Black 2": 17.086
+      }
+    },
+    "B": {
+      "Upper head": {
+        "Original": 2.25,
+        "Black 2": 2.793
+      },
+      "Space below muzzle": {
+        "Original": 3.578,
+        "Black 2": 6.121
+      }
+    }
+  }
+}

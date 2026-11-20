@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-013",
+  "winner": "A",
+  "reason": "A carries the upper lid into the bridge of the nose. The open eye sits under one sweeping brow, and the lower cheek catches a long, subdued reflection at the board angle. B blends the lower lid beautifully in profile. At 54\u00b0 its broad pale reflection draws attention away from the eye.",
+  "scores": {
+    "Parent": {
+      "reference": 95.5,
+      "side": 94,
+      "form": 93,
+      "finish": 88
+    },
+    "A": {
+      "reference": 96.5,
+      "side": 95,
+      "form": 94,
+      "finish": 89
+    },
+    "B": {
+      "reference": 95.5,
+      "side": 95.5,
+      "form": 94.5,
+      "finish": 88
+    }
+  },
+  "parent": {
+    "scene": "739bf4c1e3671770de868593ec10135c5345417bd80c043ee04ee7dea86efe4c",
+    "fixed": "f5e2e3fa4a095980ddbc2581739e906077235f0d6bd5ddf3a92b79e1ffce6c6f",
+    "side": "9befe85333084043f25ef7224e6c04ea61527243ff2d1ab206745fccf41b9172"
+  },
+  "candidates": {
+    "A": {
+      "scene": "cd5de4ca41bf7061e04caf14843f399f49f7a82df8376bb966890d11edada20b",
+      "fixed": "96b566d290cc892a6818959e1093aa8de10103db091cdf83e9bfe6cb8cf9eaa8",
+      "side": "21dfb1a854d3bee713146d4323373e48c052bc07d1d1de9b5d8d21c120944eec",
+      "audit": "255a32047031e22ca50e01d0ee545e44219f4905d7901c25085385141ade44f1",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    },
+    "B": {
+      "scene": "213c6597a98fe98057778838b953b23321af65e5f5b758e99e97d5846f6ad253",
+      "fixed": "58a5cc4ef7a2b57faacc38b8236662090483431eb4156775fa0ccd0eb2b7adb7",
+      "side": "61007b0bd24e92d5b6e03c6d0aa77ada62fb7b50316656d89139fcbfedefbd69",
+      "audit": "bcc5d1e69e7e0ef6b8f25cd0d2e11776c5ee245db5925f59fcc3db8040498857",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    }
+  }
+}

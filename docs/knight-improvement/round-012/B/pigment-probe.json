@@ -1,0 +1,26 @@
+{
+  "protected_pixels_at_affected_mane": 0,
+  "affected_mane_pixels": 371649,
+  "physical_field": "Long bilateral blade face in native rest coordinates. Broad stain is invariant to viewing and illumination.",
+  "satin": {
+    "gain": 0.69,
+    "sha256": "1e35b27f1eea257ee9bacc6ae60aa26cbeaf80fad5139365d58be1db395dd78b",
+    "changed_texels": 337063,
+    "changed_protected_texels": 0,
+    "max_channel_delta": 53
+  },
+  "light": {
+    "gain": 0.76,
+    "sha256": "f984e9fead80359e5bd5605d870e826e6225391ebc78e86b933af1ed7c8e2b2f",
+    "changed_texels": 330806,
+    "changed_protected_texels": 0,
+    "max_channel_delta": 41
+  },
+  "deep": {
+    "gain": 0.64,
+    "sha256": "2b11a989b1c671bfa4435c4122ccd08a35db4ffc58e1d4dfb02dab855cf42e96",
+    "changed_texels": 340162,
+    "changed_protected_texels": 0,
+    "max_channel_delta": 62
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "model": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+  "reference_trace_sha256": "70dbeb01550d3510fd6991e5b5b248014c5f37f8cb9786b7a6a4eef567d01cfa",
+  "owner_ids": {
+    "0": "background",
+    "1": "carved head",
+    "2": "near swept ear",
+    "3": "exposed eye insert",
+    "4": "other part"
+  },
+  "areas": {
+    "earward": {
+      "-3": {
+        "samples": 15,
+        "skull": 0,
+        "ear": 15,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": 0.09391
+      },
+      "0": {
+        "samples": 15,
+        "skull": 10,
+        "ear": 5,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": 0.09011
+      },
+      "3": {
+        "samples": 15,
+        "skull": 15,
+        "ear": 0,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      },
+      "6": {
+        "samples": 15,
+        "skull": 9,
+        "ear": 0,
+        "insert": 6,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      }
+    },
+    "middle": {
+      "-3": {
+        "samples": 36,
+        "skull": 0,
+        "ear": 36,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": 0.08867
+      },
+      "0": {
+        "samples": 36,
+        "skull": 13,
+        "ear": 23,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": 0.08743
+      },
+      "3": {
+        "samples": 36,
+        "skull": 23,
+        "ear": 0,
+        "insert": 13,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      },
+      "6": {
+        "samples": 36,
+        "skull": 0,
+        "ear": 0,
+        "insert": 36,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      }
+    },
+    "noseward": {
+      "-3": {
+        "samples": 33,
+        "skull": 28,
+        "ear": 5,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": 0.08491
+      },
+      "0": {
+        "samples": 33,
+        "skull": 33,
+        "ear": 0,
+        "insert": 0,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      },
+      "3": {
+        "samples": 33,
+        "skull": 31,
+        "ear": 0,
+        "insert": 2,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      },
+      "6": {
+        "samples": 33,
+        "skull": 15,
+        "ear": 0,
+        "insert": 18,
+        "other": 0,
+        "ear_to_skull_distance_along_camera_ray": null
+      }
+    }
+  },
+  "method": "Cast the fixed camera through each pixel and intersect every visible evaluated component separately. Count foremost surfaces on the photographed upper crease and at the same columns three pixels above and three/six below. Ear-to-head distance is separation along the camera ray at the same pixel, which depends on camera elevation."
+}

@@ -1,0 +1,56 @@
+{
+  "source_sha256": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "spacing_model_units": 0.005,
+  "sampled_sides": [
+    "near",
+    "far"
+  ],
+  "near_exposed_insert": {
+    "samples": 2414,
+    "centroid_u_v": [
+      0.0171,
+      0.0463
+    ],
+    "extent_u_v": [
+      [
+        -0.21,
+        0.27
+      ],
+      [
+        -0.03,
+        0.14
+      ]
+    ]
+  },
+  "far_exposed_insert": {
+    "samples": 2422,
+    "centroid_u_v": [
+      0.0179,
+      0.0462
+    ],
+    "extent_u_v": [
+      [
+        -0.21,
+        0.27
+      ],
+      [
+        -0.03,
+        0.14
+      ]
+    ]
+  },
+  "exposed_insert_mirrored_iou": 0.995,
+  "raw_near_far_depth_difference_p95": 0.00438,
+  "local_near_far_relief_difference_p95": 0.00538,
+  "fitted_near_minus_far_plane": [
+    0.013113975476292604,
+    -0.025795023632497475,
+    0.002893896603752912
+  ],
+  "method": "Side rays through the evaluated skull and eye in the shared unposed x,z frame. The exposed insert includes only the surface in front of the skull on that side. Relief difference subtracts the plane fitted to the outer margin and is reported in model units, over the central lid region. This describes symmetry, not aesthetic quality."
+}

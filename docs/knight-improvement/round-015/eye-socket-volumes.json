@@ -1,0 +1,75 @@
+{
+  "method": "Strict native triangle crossings and sampled solid interval intersections on both flanks. The same grid, skull frame and evaluated mesh routines are used for all three scenes.",
+  "analysis_sha256": "1e4864583ddb07952b8af0b64ec0059d2c42791f2f50d3874c370b9356513c7f",
+  "models": {
+    "parent": {
+      "model": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+      "sides": {
+        "near": {
+          "transverse_segment_pairs_length_gt_1e-6": 1289,
+          "estimated_eye_volume": 0.0017976645319461822,
+          "inside_fraction": 0.38284787691732886,
+          "maximum_exposed_thickness": 0.02754378318786621,
+          "valid_eye_rays": 12426,
+          "odd_eye_rays_excluded": 0,
+          "odd_skull_rays_excluded": 0
+        },
+        "far": {
+          "transverse_segment_pairs_length_gt_1e-6": 1325,
+          "estimated_eye_volume": 0.0017894658901691435,
+          "inside_fraction": 0.3790751721476808,
+          "maximum_exposed_thickness": 0.02810978889465332,
+          "valid_eye_rays": 12439,
+          "odd_eye_rays_excluded": 0,
+          "odd_skull_rays_excluded": 0
+        }
+      }
+    },
+    "A": {
+      "model": "6a062fcb3b3eb525d3f10f137f6725d3db4b66f74cd0c8e79d9b0e4662741418",
+      "sides": {
+        "near": {
+          "transverse_segment_pairs_length_gt_1e-6": 1194,
+          "estimated_eye_volume": 0.001801799629211426,
+          "inside_fraction": 0.46432863134007296,
+          "maximum_exposed_thickness": 0.02747511863708496,
+          "valid_eye_rays": 12373,
+          "odd_eye_rays_excluded": 1,
+          "odd_skull_rays_excluded": 0
+        },
+        "far": {
+          "transverse_segment_pairs_length_gt_1e-6": 1202,
+          "estimated_eye_volume": 0.0017950232899188996,
+          "inside_fraction": 0.460450468873041,
+          "maximum_exposed_thickness": 0.027791976928710938,
+          "valid_eye_rays": 12387,
+          "odd_eye_rays_excluded": 1,
+          "odd_skull_rays_excluded": 0
+        }
+      }
+    },
+    "B": {
+      "model": "d5aa43f9cdcead682f1228413869e4a58b482b8d80895dff240333faac067ad9",
+      "sides": {
+        "near": {
+          "transverse_segment_pairs_length_gt_1e-6": 1293,
+          "estimated_eye_volume": 0.0018894277796745302,
+          "inside_fraction": 0.37861688963620643,
+          "maximum_exposed_thickness": 0.02769923210144043,
+          "valid_eye_rays": 13052,
+          "odd_eye_rays_excluded": 2,
+          "odd_skull_rays_excluded": 0
+        },
+        "far": {
+          "transverse_segment_pairs_length_gt_1e-6": 1325,
+          "estimated_eye_volume": 0.0018821190819740296,
+          "inside_fraction": 0.374452493739402,
+          "maximum_exposed_thickness": 0.028079986572265625,
+          "valid_eye_rays": 13075,
+          "odd_eye_rays_excluded": 1,
+          "odd_skull_rays_excluded": 0
+        }
+      }
+    }
+  }
+}

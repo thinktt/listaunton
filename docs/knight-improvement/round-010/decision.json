@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-010",
+  "winner": "B",
+  "reason": "B carves a finer edge into each shoulder of the mane and seats the ears lower. At 54\u00b0 the two bright stripes resolve into one. The crest keeps its arch from front and back, and its outline fits the Lichess original more closely. The forehead junction and the carved eye still need refinement.",
+  "scores": {
+    "Parent": {
+      "reference": 93,
+      "side": 90,
+      "form": 89,
+      "finish": 85
+    },
+    "A": {
+      "reference": 93,
+      "side": 91,
+      "form": 90,
+      "finish": 85
+    },
+    "B": {
+      "reference": 94,
+      "side": 91,
+      "form": 91,
+      "finish": 86
+    }
+  },
+  "parent": {
+    "scene": "8e015620e552bda2c1e67866da8a7a3ba0e671c16deb22d93c07fb6c7859121d",
+    "fixed": "8b08f0b97f7874feda9d9186b867bf376a963048b5f95fe5243adb06066a6195",
+    "side": "92f98189eed83a568369110ba1fd5b3599c5d6487f719b0a5c7b11cfe620eee0"
+  },
+  "candidates": {
+    "A": {
+      "scene": "1f308f8ee1e4d2c4c241d2bee15a08a2dab0aa2ce7aa353e8b2765a357efc057",
+      "fixed": "7faf9c08d082d9619636a87c35c840400dc77f3051b9f5c9049f057401da61ac",
+      "side": "9455958fe9f81546c764148456ffd8d816f829376c367eecd191366f5d1044d8",
+      "audit": "e966b80ce98f8a4d64a000ae3bcbb251f77dd6bfea258f14d8dc93d4ef2eb84e",
+      "outline_change_percentage_points": {
+        "original": -0.04562,
+        "selected": -0.02019,
+        "white_mirrored": -0.05392
+      }
+    },
+    "B": {
+      "scene": "56b1373250def855651b4d4a4306c5a824eec0f58ef198d1496bdd66270bc847",
+      "fixed": "bf25dea0c45448cf88fde79b5a9012017e4aedf4e919b2cee404984796c46c64",
+      "side": "cb0b7e7c3d6da7a359d057161ea0b3f4ec8aa976e1f82c1e32b0b1b97ee1e905",
+      "audit": "c6205842d3bd3f334391a032c26e81e0f8b29dab54dbeeeffa7e7577e0aa712f",
+      "outline_change_percentage_points": {
+        "original": 0.13862,
+        "selected": -0.20899,
+        "white_mirrored": 0.19388
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "source": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+  "results": {
+    "Original black": {
+      "rear": {
+        "median_luma": 66.7,
+        "median_R_minus_B": 96.0,
+        "top_plane_q90": 64.9
+      },
+      "middle": {
+        "median_luma": 81.4,
+        "median_R_minus_B": 110.0,
+        "top_plane_q90": 73.1
+      },
+      "front": {
+        "median_luma": 102.2,
+        "median_R_minus_B": 93.0,
+        "top_plane_q90": 95.6
+      },
+      "tip": {
+        "median_luma": 77.6,
+        "median_R_minus_B": 68.5,
+        "top_plane_q90": 59.0
+      }
+    },
+    "Black 2": {
+      "rear": {
+        "median_luma": 118.3,
+        "median_R_minus_B": 105.0,
+        "top_plane_q90": 76.8
+      },
+      "middle": {
+        "median_luma": 156.4,
+        "median_R_minus_B": 87.0,
+        "top_plane_q90": 94.9
+      },
+      "front": {
+        "median_luma": 184.1,
+        "median_R_minus_B": 54.0,
+        "top_plane_q90": 159.9
+      },
+      "tip": {
+        "median_luma": 148.8,
+        "median_R_minus_B": 70.0,
+        "top_plane_q90": 70.2
+      }
+    },
+    "studio": {
+      "rear": {
+        "median_luma": 140.2,
+        "median_R_minus_B": 21.0,
+        "top_plane_q90": 76.5
+      },
+      "middle": {
+        "median_luma": 158.8,
+        "median_R_minus_B": 21.0,
+        "top_plane_q90": 91.7
+      },
+      "front": {
+        "median_luma": 146.1,
+        "median_R_minus_B": 29.0,
+        "top_plane_q90": 88.1
+      },
+      "tip": {
+        "median_luma": 86.0,
+        "median_R_minus_B": 62.5,
+        "top_plane_q90": 66.3
+      }
+    },
+    "without-key": {
+      "rear": {
+        "median_luma": 137.8,
+        "median_R_minus_B": 18.0,
+        "top_plane_q90": 67.3
+      },
+      "middle": {
+        "median_luma": 156.4,
+        "median_R_minus_B": 17.0,
+        "top_plane_q90": 82.2
+      },
+      "front": {
+        "median_luma": 136.1,
+        "median_R_minus_B": 22.0,
+        "top_plane_q90": 75.4
+      },
+      "tip": {
+        "median_luma": 82.9,
+        "median_R_minus_B": 61.5,
+        "top_plane_q90": 66.3
+      }
+    },
+    "without-fill": {
+      "rear": {
+        "median_luma": 132.8,
+        "median_R_minus_B": 19.0,
+        "top_plane_q90": 61.8
+      },
+      "middle": {
+        "median_luma": 158.3,
+        "median_R_minus_B": 19.0,
+        "top_plane_q90": 85.7
+      },
+      "front": {
+        "median_luma": 145.2,
+        "median_R_minus_B": 27.0,
+        "top_plane_q90": 80.8
+      },
+      "tip": {
+        "median_luma": 85.9,
+        "median_R_minus_B": 62.0,
+        "top_plane_q90": 66.3
+      }
+    },
+    "without-upper-strip": {
+      "rear": {
+        "median_luma": 138.8,
+        "median_R_minus_B": 18.0,
+        "top_plane_q90": 62.0
+      },
+      "middle": {
+        "median_luma": 157.3,
+        "median_R_minus_B": 18.0,
+        "top_plane_q90": 52.1
+      },
+      "front": {
+        "median_luma": 142.2,
+        "median_R_minus_B": 25.0,
+        "top_plane_q90": 54.0
+      },
+      "tip": {
+        "median_luma": 85.3,
+        "median_R_minus_B": 61.5,
+        "top_plane_q90": 66.3
+      }
+    },
+    "without-rear-oval": {
+      "rear": {
+        "median_luma": 63.1,
+        "median_R_minus_B": 38.0,
+        "top_plane_q90": 74.1
+      },
+      "middle": {
+        "median_luma": 48.9,
+        "median_R_minus_B": 62.0,
+        "top_plane_q90": 90.6
+      },
+      "front": {
+        "median_luma": 71.9,
+        "median_R_minus_B": 72.0,
+        "top_plane_q90": 86.6
+      },
+      "tip": {
+        "median_luma": 82.8,
+        "median_R_minus_B": 62.0,
+        "top_plane_q90": 66.2
+      }
+    },
+    "without-all-four": {
+      "rear": {
+        "median_luma": 4.4,
+        "median_R_minus_B": 3.0,
+        "top_plane_q90": 5.5
+      },
+      "middle": {
+        "median_luma": 4.8,
+        "median_R_minus_B": 5.0,
+        "top_plane_q90": 4.6
+      },
+      "front": {
+        "median_luma": 6.1,
+        "median_R_minus_B": 7.0,
+        "top_plane_q90": 4.5
+      },
+      "tip": {
+        "median_luma": 82.7,
+        "median_R_minus_B": 61.5,
+        "top_plane_q90": 65.9
+      }
+    },
+    "diffuse-control": {
+      "rear": {
+        "median_luma": 33.8,
+        "median_R_minus_B": 58.0,
+        "top_plane_q90": 68.0
+      },
+      "middle": {
+        "median_luma": 45.0,
+        "median_R_minus_B": 71.0,
+        "top_plane_q90": 67.9
+      },
+      "front": {
+        "median_luma": 57.8,
+        "median_R_minus_B": 82.0,
+        "top_plane_q90": 71.4
+      },
+      "tip": {
+        "median_luma": 57.4,
+        "median_R_minus_B": 86.0,
+        "top_plane_q90": 56.9
+      }
+    }
+  },
+  "method": "For each studio control sample precisely the bevel positions from the saved scene. Reference measurements follow the crest in each source. The upper-plane value is the 90th percentile over the cap 6\u201322px above the reference edge."
+}

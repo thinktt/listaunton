@@ -1,0 +1,151 @@
+{
+  "method": "Adjacent triangles share a physical edge. Measure median RGB difference across it at three positions, 0.7 texture pixels inside each adjacent triangle. Count real UV island seams separately. Weight summaries by physical edge length. This assay can find a color seam but does not measure likeness or beauty.",
+  "models": {
+    "parent": {
+      "scene": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+      "atlas": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+      "component_changes": {
+        "Knight | turned pedestal": [],
+        "Knight | swept rounded mane": [],
+        "Knight | near swept ear": [],
+        "Knight | near eye": [],
+        "Knight | far swept ear": [],
+        "Knight | far eye": [],
+        "Knight | continuous horse head and neck": []
+      },
+      "studio_identical": true,
+      "wood_edge_continuity": {
+        "all UV seams": {
+          "edges": 253,
+          "model_length": 9.667,
+          "median_rgb_step": 2.025,
+          "p90_rgb_step": 4.966,
+          "percent_length_step_over_12": 1.1
+        },
+        "unbroken UV": {
+          "edges": 14935,
+          "model_length": 1041.192,
+          "median_rgb_step": 2.138,
+          "p90_rgb_step": 4.955,
+          "percent_length_step_over_12": 0.04
+        },
+        "back UV seams": {
+          "edges": 2,
+          "model_length": 0.207,
+          "median_rgb_step": 1.193,
+          "p90_rgb_step": 2.97,
+          "percent_length_step_over_12": 0.0
+        },
+        "back unbroken UV": {
+          "edges": 1644,
+          "model_length": 129.517,
+          "median_rgb_step": 1.975,
+          "p90_rgb_step": 4.754,
+          "percent_length_step_over_12": 0.09
+        }
+      }
+    },
+    "A": {
+      "scene": "9f911cbdd0f2cc66b800e0b377c87ab4f3773ebc552027759a2e9b2c4cb0750c",
+      "atlas": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+      "component_changes": {
+        "Knight | turned pedestal": [],
+        "Knight | swept rounded mane": [
+          "geometry",
+          "normals",
+          "uv",
+          "varnish"
+        ],
+        "Knight | near swept ear": [],
+        "Knight | near eye": [],
+        "Knight | far swept ear": [],
+        "Knight | far eye": [],
+        "Knight | continuous horse head and neck": [
+          "geometry",
+          "normals",
+          "varnish"
+        ]
+      },
+      "studio_identical": false,
+      "wood_edge_continuity": {
+        "all UV seams": {
+          "edges": 253,
+          "model_length": 9.667,
+          "median_rgb_step": 2.025,
+          "p90_rgb_step": 4.966,
+          "percent_length_step_over_12": 1.1
+        },
+        "unbroken UV": {
+          "edges": 14935,
+          "model_length": 1041.192,
+          "median_rgb_step": 2.138,
+          "p90_rgb_step": 4.955,
+          "percent_length_step_over_12": 0.04
+        },
+        "back UV seams": {
+          "edges": 2,
+          "model_length": 0.207,
+          "median_rgb_step": 1.193,
+          "p90_rgb_step": 2.97,
+          "percent_length_step_over_12": 0.0
+        },
+        "back unbroken UV": {
+          "edges": 1644,
+          "model_length": 129.517,
+          "median_rgb_step": 1.975,
+          "p90_rgb_step": 4.754,
+          "percent_length_step_over_12": 0.09
+        }
+      }
+    },
+    "B": {
+      "scene": "945f97db359cf093a13be4490e96026770706f17caa1c83106b14759641f4617",
+      "atlas": "b56e8104f8845b4d221e82b1c20ff40f16d4361435d30a0a83b8be8882d6e69d",
+      "component_changes": {
+        "Knight | turned pedestal": [],
+        "Knight | swept rounded mane": [
+          "geometry",
+          "normals",
+          "uv",
+          "varnish"
+        ],
+        "Knight | near swept ear": [],
+        "Knight | near eye": [],
+        "Knight | far swept ear": [],
+        "Knight | far eye": [],
+        "Knight | continuous horse head and neck": []
+      },
+      "studio_identical": false,
+      "wood_edge_continuity": {
+        "all UV seams": {
+          "edges": 253,
+          "model_length": 9.667,
+          "median_rgb_step": 2.025,
+          "p90_rgb_step": 4.966,
+          "percent_length_step_over_12": 1.1
+        },
+        "unbroken UV": {
+          "edges": 14935,
+          "model_length": 1041.192,
+          "median_rgb_step": 2.138,
+          "p90_rgb_step": 4.955,
+          "percent_length_step_over_12": 0.04
+        },
+        "back UV seams": {
+          "edges": 2,
+          "model_length": 0.207,
+          "median_rgb_step": 1.193,
+          "p90_rgb_step": 2.97,
+          "percent_length_step_over_12": 0.0
+        },
+        "back unbroken UV": {
+          "edges": 1644,
+          "model_length": 129.517,
+          "median_rgb_step": 1.975,
+          "p90_rgb_step": 4.754,
+          "percent_length_step_over_12": 0.09
+        }
+      }
+    }
+  }
+}

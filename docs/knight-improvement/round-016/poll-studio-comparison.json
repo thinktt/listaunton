@@ -1,0 +1,27 @@
+{
+  "poll_crop": [
+    234,
+    282,
+    505,
+    415
+  ],
+  "results": {
+    "reloaded_identical_scene_mae": 0.0,
+    "parent": {
+      "rgb_mae_common_vs_target": 20.352,
+      "rgb_mae_saved_vs_target": 20.391,
+      "rgb_mae_common_vs_saved": 1.115
+    },
+    "A": {
+      "rgb_mae_common_vs_target": 20.438,
+      "rgb_mae_saved_vs_target": 20.466,
+      "rgb_mae_common_vs_saved": 4.959
+    },
+    "B": {
+      "rgb_mae_common_vs_target": 20.971,
+      "rgb_mae_saved_vs_target": 19.462,
+      "rgb_mae_common_vs_saved": 5.684
+    }
+  },
+  "method": "Three identical crops. The common-light pass uses the complete released parent studio and the actual candidate mesh and material. The full reference render uses that candidate\u2019s saved studio."
+}

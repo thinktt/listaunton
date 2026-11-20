@@ -1,0 +1,97 @@
+{
+  "mane": {
+    "radial_stations": [
+      1.0,
+      0.93,
+      0.83,
+      0.71,
+      0.61,
+      0.55,
+      0.46,
+      0.25,
+      -0.08,
+      -0.48,
+      -0.64,
+      -0.73,
+      -0.81,
+      -0.89,
+      -0.965,
+      -1.0
+    ],
+    "half_widths": [
+      0.0,
+      0.24,
+      0.44,
+      0.56,
+      0.63,
+      0.81,
+      0.91,
+      0.93,
+      0.956,
+      0.97,
+      0.963,
+      0.95,
+      0.89,
+      0.78,
+      0.55,
+      0.0
+    ],
+    "support_edges": 88,
+    "maximum_change": 0.13705377280712128
+  },
+  "new_orbital_vertices": 6097,
+  "eyes": {
+    "near": {
+      "half_length": 0.203,
+      "half_height": 0.043,
+      "cap_depth": 0.053
+    },
+    "far": {
+      "half_length": 0.203,
+      "half_height": 0.043,
+      "cap_depth": 0.053
+    }
+  },
+  "socket": {
+    "Knight | continuous horse head and neck": {
+      "vertices_changed": 5575,
+      "max_displacement": 0.07226163148880005
+    },
+    "Knight | coherent skull cheek and conical muzzle": {
+      "vertices_changed": 340,
+      "max_displacement": 0.07641306519508362
+    }
+  },
+  "upper_cut_depth": 0.06,
+  "orbital_tilt_and_crown": [
+    0.07,
+    0.009,
+    0.053,
+    0.003,
+    0.3,
+    0.006
+  ],
+  "existing_upper_eye_card": {
+    "lamp": "Eye reflection upper",
+    "location": [
+      0.9605235457420349,
+      -0.3558841049671173,
+      3.816237211227417
+    ],
+    "energy": 0.63,
+    "diameter": 0.139,
+    "receivers": [
+      "Knight | near eye",
+      "Knight | far eye"
+    ],
+    "anchor": [
+      498,
+      474
+    ]
+  },
+  "parent_sha256": "65dac17941c4a06535e59ed0c63e0fc028979e5d60e8954046f4e92c5355b268",
+  "model_sha256": "fddd00699d622e0ee02c7410b12c52bda8ea2e95c45a9ddcc50e2e9b243e8c3b",
+  "fixed_sha256": "8b4d585bbae1a95d362ed59ffce95c3be1ac492d2799f6be4fbda6ea0418454d",
+  "side_sha256": "11deba6976322df3b8c2149dae6177e5a9b72920a1377af6820ba7209eee61a2",
+  "samples": 144
+}

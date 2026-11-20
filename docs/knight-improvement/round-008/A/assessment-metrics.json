@@ -1,0 +1,183 @@
+{
+  "model_sha256": "e021797f7d6063cd9c7293e4d9ec06e196b5885135b6737cfd33738246e5bc7a",
+  "parent_sha256": "8d984d59beea0f86d69bbb5b8f5dc57becf7e707e576412eb8eda4503e81a948",
+  "pigment_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "gallery": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "921e89261c73e3fde20025b3ee0ca5b65cb5159e1e6a038d840b4936c14d7db6",
+    "side_sha256": "1d5be73848fbeb91658f298bafdf53f544afa5ec808d2379bb0201919df12690",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  },
+  "fixed_cheek": {
+    "Black 2": {
+      "median_rgb": [
+        97.0,
+        47.0,
+        17.0
+      ],
+      "local_contrast": 0.2680163713188022
+    },
+    "Parent": {
+      "median_rgb": [
+        130.0,
+        65.0,
+        27.0
+      ],
+      "local_contrast": 0.20118469940029926
+    },
+    "8A": {
+      "median_rgb": [
+        95.0,
+        46.0,
+        15.0
+      ],
+      "local_contrast": 0.270034396783923
+    }
+  },
+  "paired_flank_cheek": {
+    "aligned_flank_rect": [
+      325,
+      220,
+      365,
+      245
+    ],
+    "measurements": {
+      "parent": {
+        "near": {
+          "median_rgb": [
+            119.0,
+            64.0,
+            34.0
+          ],
+          "local_contrast": 0.14748512789234747
+        },
+        "far": {
+          "median_rgb": [
+            89.0,
+            46.0,
+            20.0
+          ],
+          "local_contrast": 0.29056401875294746
+        }
+      },
+      "A": {
+        "near": {
+          "median_rgb": [
+            91.0,
+            48.0,
+            24.0
+          ],
+          "local_contrast": 0.20730553785258427
+        },
+        "far": {
+          "median_rgb": [
+            80.0,
+            41.0,
+            18.0
+          ],
+          "local_contrast": 0.29716081640632513
+        }
+      }
+    }
+  },
+  "registered_silhouette": {
+    "original": {
+      "parent": 0.9785026928142395,
+      "candidate": 0.9785026928142395
+    },
+    "black_2": {
+      "parent": 0.9750770419485548,
+      "candidate": 0.9750770419485548
+    },
+    "parent_overlap": {
+      "fixed": 1.0,
+      "side": 1.0
+    }
+  },
+  "fixed_eye": {
+    "parent": {
+      "ray_samples": 163,
+      "bounds": [
+        [
+          478,
+          473
+        ],
+        [
+          530,
+          489
+        ]
+      ],
+      "center": [
+        504.2453987730061,
+        480.97546012269936
+      ],
+      "downward_angle_deg": 11.478992804635324
+    },
+    "candidate": {
+      "ray_samples": 110,
+      "bounds": [
+        [
+          482,
+          475
+        ],
+        [
+          526,
+          487
+        ]
+      ],
+      "center": [
+        504.76363636363635,
+        481.0
+      ],
+      "downward_angle_deg": 11.550459193751308
+    }
+  },
+  "bilateral_aperture_iou": 0.999,
+  "changed_studio_sources": [
+    "Eye reflection lower"
+  ],
+  "nonmanifold_edges": 0,
+  "evaluated_triangles_under_1e-10_double_area": 0,
+  "exported_parts": 7,
+  "exported_triangles": 214866,
+  "exported_varnish_bytes": 120211,
+  "packed_png_equals_delivered_atlas": true,
+  "all_existing_uv_data_exact": true
+}

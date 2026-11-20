@@ -266,3 +266,17 @@ The render helper explicitly selects OptiX on the NVIDIA GeForce GTX 1650 Ti and
 The delivered 144-sample fixed and side renders reproduce the selected reopened trial with identical alpha and mean foreground RGB differences of 0.000035 and 0.000046 on the 0–255 scale. All nine closed shells passed validation and both eyes meet their sockets. The camera, maximum height and floor match checkpoint 006. The live viewer contains the actual pigment UVs, atlas and varnish coverage. Its lights are approximate. The Node interaction checks and headless Edge/ANGLE SwiftShader tests passed. Accepted scene SHA-256 `c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c`.
 
 Next, examine the poll edge and the lower eyelid at fixed registration, then test narrower physical reflections and scoped pigment corrections without disturbing the accepted chest and pedestal. [Trial decisions](knight-mission/iteration-007/scores.json) and [registered comparisons](knight-mission/iteration-007/comparison.png).
+
+## Checkpoint 008 · Return to the knight reconstruction mission
+
+On November 19, 2026, the owner activated the revised knight mission. The accepted starting model is the round 16A release at `67ea10d`. At the fixed 54° camera its filled silhouette overlaps the original black sprite by 98.38% and black candidate 2 by 97.73%. The starting interior form, wood color, grain and lighting scores are 88, 89, 79 and 74. The five-category working mean is 85.55%, with a holistic visual range of 83–88%.
+
+The current neck covers the entire level portion of the platform. The mane, front neck planes, wood grain and the positions of the major reflections also need further work. This entry establishes the baseline for the new geometry trials. [Starting review, image comparisons and measurements](knight-mission/iteration-008/initial-review.md).
+
+The accepted carving and finish are recorded with the fixed-camera comparison, actual model profile and five-category scores. [Checkpoint 008 review](knight-mission/iteration-008/verdict.md).
+
+The knight’s surface finish and studio are recorded with the fixed-camera comparison, actual model profile and five-category scores. [Checkpoint 009 review](knight-mission/iteration-009/verdict.md).
+
+## Owner selection · Return to round 16A
+
+Round 16A is the current editable knight and the source of its 54° render, side profile, rotating mesh and whole-set comparison. [Round 16 decision](knight-improvement/round-016/verdict.md).

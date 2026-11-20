@@ -29,9 +29,19 @@ async function main() {
       const gl = c.getContext('webgl2');
       const program = gl.getParameter(gl.CURRENT_PROGRAM);
       const detail = gl.getExtension('WEBGL_debug_renderer_info');
+      const satinBuffer = gl.getVertexAttrib(4, gl.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING);
+      let satinBufferBytes = 0;
+      if (satinBuffer) {
+        const previous = gl.getParameter(gl.ARRAY_BUFFER_BINDING);
+        gl.bindBuffer(gl.ARRAY_BUFFER, satinBuffer);
+        satinBufferBytes = gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
+        gl.bindBuffer(gl.ARRAY_BUFFER, previous);
+      }
       return {
         linked: Boolean(program && gl.getProgramParameter(program, gl.LINK_STATUS)),
         finishArray: gl.getVertexAttrib(3, gl.VERTEX_ATTRIB_ARRAY_ENABLED),
+        satinArray: gl.getVertexAttrib(4, gl.VERTEX_ATTRIB_ARRAY_ENABLED),
+        satinBufferBytes,
         error: gl.getError(),
         renderer: detail ? gl.getParameter(detail.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)
       };
@@ -39,6 +49,10 @@ async function main() {
     assert(gpu.linked && gpu.error === 0);
     const meta = await page.locator('#mesh-metadata').textContent().then(JSON.parse);
     if (meta.finish) assert(gpu.finishArray);
+    if (meta.satin) {
+      assert(gpu.satinArray);
+      assert.equal(gpu.satinBufferBytes, meta.vertexCount);
+    }
     const settle = () => page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     async function capture(name) {
       await settle();
@@ -59,6 +73,23 @@ async function main() {
     const rotated = await capture('drag-orbit');
     assert.notEqual(rotated, side);
     await page.locator('#side-tab').click();
+    const profile = page.locator('#side-frame');
+    const sizes = await profile.locator('img').evaluateAll(async imgs => {
+      await Promise.all(imgs.map(im => im.decode()));
+      return imgs.map(im => {
+        const box = im.getBoundingClientRect();
+        return [im.naturalWidth, im.naturalHeight, box.x, box.y, box.width, box.height];
+      });
+    });
+    assert.equal(sizes.length, 2);
+    assert.deepEqual(sizes[0], sizes[1]);
+    assert(sizes[0][0] > 0 && sizes[0][4] > 0);
+    assert.equal(await page.locator('#side-model').evaluate(el => Number(el.style.opacity)), 1);
+    const woodProfile = createHash('sha256').update(await profile.screenshot()).digest('hex');
+    await page.locator('#side-clay-only').click();
+    assert.equal(await page.locator('#side-model').evaluate(el => Number(el.style.opacity)), 0);
+    const clayProfile = createHash('sha256').update(await profile.screenshot()).digest('hex');
+    assert.notEqual(woodProfile, clayProfile);
     await page.locator('#side-model-only').click();
     assert.equal(await page.locator('#side-model').evaluate(el => Number(el.style.opacity)), 1);
     await page.locator('#compare-tab').click();
@@ -66,7 +97,7 @@ async function main() {
     await page.locator('#model-only').click();
     assert.equal(await page.locator('#model-image').evaluate(el => Number(el.style.opacity)), 1);
     assert.deepEqual(errors, []);
-    const report={source_sha256:meta.sourceSha256,browser:browser.version(),gpu,errors,wood_fixed:front,wood_side:side,neutral_side:clay,orbit_drag:rotated,side_and_fixed_tabs_passed:true};
+    const report={source_sha256:meta.sourceSha256,browser:browser.version(),gpu,errors,wood_fixed:front,wood_side:side,neutral_side:clay,orbit_drag:rotated,registered_wood:woodProfile,registered_clay:clayProfile,side_and_fixed_tabs_passed:true};
     fs.writeFileSync(path.join(output,'native-qa.json'),JSON.stringify(report,null,2)+'\n');
     console.log('PASS: Chromium compiled and drew the knight shader, changed material and preset, orbited, and switched comparison tabs.', gpu.renderer);
   } finally {

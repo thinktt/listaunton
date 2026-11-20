@@ -1,0 +1,28 @@
+{
+  "parent": {
+    "near": {
+      "samples": 522,
+      "p95_adjacent_normal_turn_degrees": 30.152596394680902,
+      "median_adjacent_normal_turn_degrees": 6.180848624233222
+    },
+    "far": {
+      "samples": 527,
+      "p95_adjacent_normal_turn_degrees": 37.13091218303309,
+      "median_adjacent_normal_turn_degrees": 7.199286636382015
+    },
+    "crown_alpha_gaps": []
+  },
+  "A": {
+    "near": {
+      "samples": 522,
+      "p95_adjacent_normal_turn_degrees": 17.030924772908477,
+      "median_adjacent_normal_turn_degrees": 2.187546949627798
+    },
+    "far": {
+      "samples": 527,
+      "p95_adjacent_normal_turn_degrees": 16.716047119185077,
+      "median_adjacent_normal_turn_degrees": 2.2084266815171154
+    },
+    "crown_alpha_gaps": []
+  }
+}

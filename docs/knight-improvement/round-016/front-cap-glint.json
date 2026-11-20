@@ -1,0 +1,293 @@
+{
+  "model": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+  "samples": {
+    "Original black": {
+      "centroid_xy": [
+        435.32,
+        333.74
+      ],
+      "brightest_xy": [
+        437,
+        337
+      ],
+      "median_luma": 64.16,
+      "p90_luma": 78.1,
+      "forward_share_of_excess_light": 0.972
+    },
+    "Black 2": {
+      "centroid_xy": [
+        437.55,
+        332.54
+      ],
+      "brightest_xy": [
+        435,
+        337
+      ],
+      "median_luma": 82.05,
+      "p90_luma": 104.48,
+      "forward_share_of_excess_light": 1.0
+    },
+    "Parent": {
+      "centroid_xy": [
+        380.33,
+        332.39
+      ],
+      "brightest_xy": [
+        318,
+        337
+      ],
+      "median_luma": 67.88,
+      "p90_luma": 86.9,
+      "forward_share_of_excess_light": 0.347
+    },
+    "A": {
+      "centroid_xy": [
+        404.71,
+        331.68
+      ],
+      "brightest_xy": [
+        410,
+        333
+      ],
+      "median_luma": 78.22,
+      "p90_luma": 122.05,
+      "forward_share_of_excess_light": 0.388
+    },
+    "B": {
+      "centroid_xy": [
+        434.75,
+        332.56
+      ],
+      "brightest_xy": [
+        439,
+        332
+      ],
+      "median_luma": 86.92,
+      "p90_luma": 123.73,
+      "forward_share_of_excess_light": 1.0
+    }
+  },
+  "native_intersections": {
+    "Original black centroid_xy": {
+      "pixel": [
+        435,
+        334
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.2957826808613806,
+        -0.09496010345815706,
+        5.107058863076809
+      ],
+      "normal": [
+        0.17754355079252018,
+        -0.2090460964030089,
+        0.9616537927708952
+      ],
+      "mirror": [
+        0.2044301924001823,
+        0.19034597239515966,
+        0.9601961354362094
+      ]
+    },
+    "Original black brightest_xy": {
+      "pixel": [
+        437,
+        337
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.2809360289594477,
+        -0.10918063751883969,
+        5.1009377766887525
+      ],
+      "normal": [
+        0.19226882416704416,
+        -0.27038186922217394,
+        0.9433590748221725
+      ],
+      "mirror": [
+        0.24008222860056722,
+        0.06546366403094261,
+        0.9685426905822443
+      ]
+    },
+    "Black 2 centroid_xy": {
+      "pixel": [
+        438,
+        333
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.28039234594991813,
+        -0.08392473879377463,
+        5.106444379224507
+      ],
+      "normal": [
+        0.18729967503689424,
+        -0.16601490261816138,
+        0.9681724453008133
+      ],
+      "mirror": [
+        0.21553354305849587,
+        0.2755807302588827,
+        0.9368033220506302
+      ]
+    },
+    "Black 2 brightest_xy": {
+      "pixel": [
+        435,
+        337
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.29210130964406866,
+        -0.11227958823069051,
+        5.101914784763699
+      ],
+      "normal": [
+        0.18455129547082458,
+        -0.278876663650584,
+        0.9424269869921804
+      ],
+      "mirror": [
+        0.22671643908663214,
+        0.04767958796294203,
+        0.972793001834422
+      ]
+    },
+    "Parent centroid_xy": {
+      "pixel": [
+        380,
+        332
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.6081593429062622,
+        -0.15509878795802534,
+        5.118308855944685
+      ],
+      "normal": [
+        0.017844105510646673,
+        -0.30888517684640476,
+        0.9509319299629654
+      ],
+      "mirror": [
+        -0.08833611238993067,
+        -0.01137970475155936,
+        0.9960256747926057
+      ]
+    },
+    "Parent brightest_xy": {
+      "pixel": [
+        318,
+        337
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.9588032449770831,
+        -0.22990039634130377,
+        5.069480824683232
+      ],
+      "normal": [
+        -0.12283552773416312,
+        -0.44013180354097614,
+        0.8894916686726398
+      ],
+      "mirror": [
+        -0.3574748844121881,
+        -0.26804548079759927,
+        0.8946302244597717
+      ]
+    },
+    "A centroid_xy": {
+      "pixel": [
+        405,
+        332
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.46644647830746794,
+        -0.12646206403994087,
+        5.120308500900889
+      ],
+      "normal": [
+        0.07376495343534376,
+        -0.25953812139222965,
+        0.962911571842853
+      ],
+      "mirror": [
+        0.01606424196634515,
+        0.08843897800746559,
+        0.9959520061616958
+      ]
+    },
+    "A brightest_xy": {
+      "pixel": [
+        410,
+        333
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.43699962431882927,
+        -0.1259299517275969,
+        5.118180515273882
+      ],
+      "normal": [
+        0.08989859547993087,
+        -0.2731852309976557,
+        0.9577515711788173
+      ],
+      "mirror": [
+        0.04732127390355037,
+        0.059774207099448584,
+        0.9970895909998465
+      ]
+    },
+    "B centroid_xy": {
+      "pixel": [
+        435,
+        333
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.2970512272354359,
+        -0.08899206376099841,
+        5.1084993368679905
+      ],
+      "normal": [
+        0.1741813457455151,
+        -0.1819397067361471,
+        0.9677596818978594
+      ],
+      "mirror": [
+        0.19439314967603438,
+        0.24423818492889027,
+        0.9500310119465241
+      ]
+    },
+    "B brightest_xy": {
+      "pixel": [
+        439,
+        332
+      ],
+      "part": "Knight | swept rounded mane",
+      "position": [
+        -0.27618080254365746,
+        -0.07592476145053528,
+        5.10671746144422
+      ],
+      "normal": [
+        0.18983869737563222,
+        -0.13434198660278018,
+        0.972580844770419
+      ],
+      "mirror": [
+        0.2146699107607305,
+        0.33654484013595076,
+        0.9168720255686247
+      ]
+    }
+  },
+  "method": "Within a common strip above the edge, blur at 3px then locate the weighted center of positive contrast above each image\u2019s 90th percentile. Cast these source positions onto the actual exported parent and record the smooth world normal and outgoing mirror direction."
+}

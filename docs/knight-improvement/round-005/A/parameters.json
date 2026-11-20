@@ -1,0 +1,191 @@
+{
+  "parent_sha256": "65dac17941c4a06535e59ed0c63e0fc028979e5d60e8954046f4e92c5355b268",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "mane": {
+    "guides_inner_to_back_half": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.7,
+        0.765
+      ],
+      [
+        -0.16,
+        1.015
+      ],
+      [
+        -0.802,
+        0.603
+      ],
+      [
+        -1.002,
+        0.0
+      ]
+    ],
+    "guide_vertex_indices": [
+      0,
+      8,
+      17,
+      25,
+      32
+    ],
+    "support_interpolation_linear_fraction": 0.23,
+    "last_two_ring_width_multipliers": [
+      0.945,
+      0.79
+    ],
+    "crown_varnish_multiplier": 0.47,
+    "max_displacement": 0.07352794706821442
+  },
+  "skull_editable_vertices_before_after": [
+    43499,
+    49131
+  ],
+  "eye_center_rest_xz": [
+    0.412,
+    4.158
+  ],
+  "half_length": 0.267,
+  "cheek_polynomial": {
+    "-1": [
+      0.3927300287963774,
+      -0.32602947824842254,
+      -0.5295295143940086,
+      0.1748003468120139,
+      -0.033602559828472434,
+      0.5201805860622913,
+      0.9371086672385586,
+      2.9449510055586257,
+      1.764503233829933,
+      5.509746573367178
+    ],
+    "1": [
+      0.39517955049303194,
+      -0.3294111605500487,
+      -0.5247969536124237,
+      0.13321423582764458,
+      0.08911200657120975,
+      0.3657678098255785,
+      0.9024851503537704,
+      3.1947249080722306,
+      1.2419946733445808,
+      5.806203269516607
+    ]
+  },
+  "continuous_surface": {
+    "changed_vertices": 7012,
+    "max_displacement": 0.06659440696239471
+  },
+  "source_loft": {
+    "changed_vertices": 480,
+    "max_displacement": 0.0815671905875206
+  },
+  "near_floor": {
+    "old_half_length": 0.19822070706851455,
+    "old_max_hemisphere_thickness": 0.13829239183326597,
+    "new_max_hemisphere_thickness": 0.03180725012165118,
+    "bed_setback": 0.03,
+    "center_crown": 0.038,
+    "max_varnish_fraction": 0.2571476399898529
+  },
+  "far_floor": {
+    "old_half_length": 0.19822071893225574,
+    "old_max_hemisphere_thickness": 0.1382029327804688,
+    "new_max_hemisphere_thickness": 0.03178667453950783,
+    "bed_setback": 0.03,
+    "center_crown": 0.038,
+    "max_varnish_fraction": 0.21739999949932098
+  },
+  "poll_oval_watts_before_after": [
+    112.0,
+    27.0
+  ],
+  "eye_reflections": [
+    {
+      "name": "Eye reflection upper",
+      "point_on_part": [
+        497,
+        479
+      ],
+      "world_position": [
+        0.7675462961196899,
+        -0.7332769632339478,
+        3.854165554046631
+      ],
+      "receiver": "Knight | eye reflection receivers",
+      "axes": [
+        0.068,
+        0.045
+      ],
+      "watts": 0.046
+    },
+    {
+      "name": "Eye reflection lower",
+      "point_on_part": [
+        501,
+        492
+      ],
+      "world_position": [
+        0.9387437105178833,
+        -0.5432844758033752,
+        3.9848623275756836
+      ],
+      "receiver": "Knight | lower eyelid finish",
+      "axes": [
+        0.2,
+        0.065
+      ],
+      "watts": 0.007
+    }
+  ],
+  "model_sha256": "eb6ba369c8c4a54f99e25eda22652155fd3fb95eda4ad0a12d19bd198ff59d26",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "57f513dd8cac7314648d611815b5ca31a59a064af40659fde7b15b497ee51147",
+    "side_sha256": "b983fbe81981bbbe8d54664871ba046686ee2665fe43ef9d8956ad1e845faa1d",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

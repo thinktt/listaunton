@@ -1,0 +1,128 @@
+{
+  "parent_sha256": "8d984d59beea0f86d69bbb5b8f5dc57becf7e707e576412eb8eda4503e81a948",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "carvings": {
+    "continuous horse head and neck": {
+      "changed_vertices_1e-5": 7254,
+      "rest_depth_extremes": [
+        0.0,
+        0.03779493939497458
+      ]
+    },
+    "coherent skull cheek and conical muzzle": {
+      "changed_vertices_1e-5": 957,
+      "rest_depth_extremes": [
+        0.0,
+        0.037052117171425064
+      ]
+    },
+    "near eye": {
+      "changed_vertices_1e-5": 440,
+      "rest_depth_extremes": [
+        -0.02249804224480462,
+        -0.0
+      ]
+    },
+    "far eye": {
+      "changed_vertices_1e-5": 440,
+      "rest_depth_extremes": [
+        -0.022498042193060896,
+        -0.0
+      ]
+    }
+  },
+  "atlas_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "release_texture": "wood-atlas-improvement-008-A.png",
+  "lower_lid_card": {
+    "name": "Eye reflection lower",
+    "axes": [
+      0.1599999964237213,
+      0.3199999928474426
+    ],
+    "watts": 0.04399999976158142,
+    "location": [
+      0.8763018846511841,
+      -0.7054644227027893,
+      3.8358826637268066
+    ],
+    "rotation": [
+      1.971745491027832,
+      -0.5729954838752747,
+      1.0058188438415527
+    ],
+    "receiver_points": [
+      [
+        490,
+        496
+      ],
+      [
+        493,
+        497
+      ],
+      [
+        497,
+        497
+      ],
+      [
+        500,
+        498
+      ],
+      [
+        503,
+        498
+      ],
+      [
+        506,
+        499
+      ]
+    ]
+  },
+  "model_sha256": "e021797f7d6063cd9c7293e4d9ec06e196b5885135b6737cfd33738246e5bc7a",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "921e89261c73e3fde20025b3ee0ca5b65cb5159e1e6a038d840b4936c14d7db6",
+    "side_sha256": "1d5be73848fbeb91658f298bafdf53f544afa5ec808d2379bb0201919df12690",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

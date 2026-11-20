@@ -1,0 +1,47 @@
+{
+  "parent_sha256": "53ca17473c08fc898e6c29bd5189e4188b3573e003719362cabb102ab621f757",
+  "shape": {
+    "dome_edge_slope": 0.39,
+    "edge_width_factor": 1.04,
+    "side_face_fall": 0.83,
+    "poll_drop": 0.056,
+    "poll_insertion": 0.124,
+    "poll_width_addition": 0.045,
+    "medial_lift": 0.052,
+    "edge_lift_ratio": 0.16,
+    "crown_roll": 0.13,
+    "arched_tip": 1.0,
+    "chamfer_width": 0.0245,
+    "chamfer_radial_slope": 0.52,
+    "far_edge_roll": 0.79,
+    "far_edge_fall": 0.076
+  },
+  "cage_vertices_changed": 412,
+  "max_displacement": 0.20643508434295654,
+  "maximum_lower_six_ring_shift": 0.0,
+  "design_index": 20,
+  "existing_poll_card": {
+    "name": "Walnut | poll rear oval",
+    "location": [
+      -0.5103931427001953,
+      -0.7575075626373291,
+      6.842337608337402
+    ],
+    "rotation": [
+      0.32403287291526794,
+      -0.2190292775630951,
+      0.1289723813533783
+    ],
+    "energy": 105.0,
+    "size": [
+      2.9525701999664307,
+      0.105
+    ],
+    "native_rail_offset_px": 0.0,
+    "receiver": "<bpy_struct, Collection(\"Knight | mane studio receivers\") at 0x000002443D3E55A0>"
+  },
+  "model_sha256": "c6edd8375c632aa48410186f4a77c575c87a8b91e3d6c353414f45f0c90c8ff3",
+  "fixed_sha256": "d04f25a96eb1a9a4962b93017f0c14919e98ebbd3d6481c0a2d24938f656a286",
+  "side_sha256": "c0565245d8e29099b458af24621bf94e03299e89be81f696bc4ab178b84f854a",
+  "samples": 144
+}

@@ -1,0 +1,27 @@
+{
+  "eye_crop": [
+    452,
+    445,
+    567,
+    516
+  ],
+  "results": {
+    "reloaded_identical_scene_mae": 0.0,
+    "parent": {
+      "rgb_mae_common_vs_target": 17.253,
+      "rgb_mae_saved_vs_target": 17.308,
+      "rgb_mae_common_vs_saved": 0.869
+    },
+    "A": {
+      "rgb_mae_common_vs_target": 16.765,
+      "rgb_mae_saved_vs_target": 16.184,
+      "rgb_mae_common_vs_saved": 4.558
+    },
+    "B": {
+      "rgb_mae_common_vs_target": 17.764,
+      "rgb_mae_saved_vs_target": 16.991,
+      "rgb_mae_common_vs_saved": 4.288
+    }
+  },
+  "method": "Three identical crops. The common-light pass uses the complete released parent studio and the actual candidate mesh and material. The full reference render uses that candidate\u2019s saved studio."
+}

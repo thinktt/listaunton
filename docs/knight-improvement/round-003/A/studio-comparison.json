@@ -1,0 +1,82 @@
+{
+  "measures": {
+    "Black candidate 2": {
+      "median_band_width_px": 9.0,
+      "mean_band_width_px": 10.337837837837839,
+      "mean_luminance_below": 47.49728148148148
+    },
+    "Accepted parent": {
+      "median_band_width_px": 24.0,
+      "mean_band_width_px": 25.364864864864863,
+      "mean_luminance_below": 67.00270930930931
+    },
+    "Candidate / parent lights": {
+      "median_band_width_px": 26.0,
+      "mean_band_width_px": 27.12162162162162,
+      "mean_luminance_below": 66.25750970970971
+    },
+    "Candidate / final lights": {
+      "median_band_width_px": 17.5,
+      "mean_band_width_px": 17.554054054054053,
+      "mean_luminance_below": 52.45464534534534
+    }
+  },
+  "object_luminance_srgb": {
+    "fixed": {
+      "upper mane": {
+        "samples": 215,
+        "mean_parent": 60.42876000000001,
+        "mean_final": 45.873556279069774,
+        "median_absolute_change": 13.833199999999998
+      },
+      "lower mane": {
+        "samples": 108,
+        "mean_parent": 50.232442592592584,
+        "mean_final": 37.01985185185185,
+        "median_absolute_change": 13.831199999999999
+      },
+      "other pieces": {
+        "samples": 1964,
+        "mean_parent": 55.83987362525458,
+        "mean_final": 55.80860254582484,
+        "median_absolute_change": 0.0
+      }
+    },
+    "side": {
+      "upper mane": {
+        "samples": 226,
+        "mean_parent": 59.08561946902654,
+        "mean_final": 48.134691150442464,
+        "median_absolute_change": 13.516300000000006
+      },
+      "lower mane": {
+        "samples": 284,
+        "mean_parent": 40.13865774647887,
+        "mean_final": 29.8207866197183,
+        "median_absolute_change": 11.052999999999999
+      },
+      "other pieces": {
+        "samples": 2556,
+        "mean_parent": 51.13016549295775,
+        "mean_final": 51.09473552425665,
+        "median_absolute_change": 0.0
+      }
+    }
+  },
+  "silhouettes_and_pair_hashes": {
+    "fixed": {
+      "iou": 1.0,
+      "parent": "4536afab8909f82b5be8e273c334f45dcf5e94e676d3f18dfa146fe6a741f4b3",
+      "final": "229a0e30fab524f79161fb20d7a664b459c97d6987ac0c7303f3871c923f568e"
+    },
+    "side": {
+      "iou": 1.0,
+      "parent": "477e05cdb73f925dd2a7070f35dd0a669b548308101cb6826697800649047c87",
+      "final": "d40b0cd57facf5e649a1122bab89e8d1ecfccf7964b906e10c09ac8a57d23794"
+    }
+  },
+  "controls": {
+    "matched-parent-rig.png": "81eb4dac7a7bf5653e43aa0edd57fbd674a73ed59555928fb38ff69373db3b98",
+    "matched-parent-rig-side.png": "fafa351bcc9f69983e3642be078c6b33c8a05c071ec13dcd93418934cd182280"
+  }
+}

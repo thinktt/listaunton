@@ -1,0 +1,26 @@
+{
+  "trial": "043-satin-carving",
+  "model_sha256": "7772c51af8b25b5579acc7da9906c5c1eca4a71ccb3a6468d7d8e1a0577b5a72",
+  "render_sha256": "7a8b03e6b5a72c37fcc2a4cdc345858c6f41d1c11ba7fa5a8db0bf71e5f27279",
+  "previous_render_sha256": "4f9f880805dcc246495f49857afc46b40e78dfabdee17436f76817b4759dfff4",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9853897090091732,
+      "previous_iou": 0.9837682126233759
+    },
+    "selected": {
+      "iou": 0.9787343038550667,
+      "previous_iou": 0.9773034965371586
+    },
+    "white_mirrored": {
+      "iou": 0.9718682743653703,
+      "previous_iou": 0.9724638811558031
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

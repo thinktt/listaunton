@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-016",
+  "winner": "A",
+  "reason": "A gives the upper mane one sharp edge above the swept ear. The walnut catches a warm line along that cut and turns down into the forehead. Both flanks keep their shape as the light moves.",
+  "scores": {
+    "Parent": {
+      "reference": 96.9,
+      "side": 96.7,
+      "form": 94.5,
+      "finish": 93.4
+    },
+    "A": {
+      "reference": 97,
+      "side": 97.3,
+      "form": 95,
+      "finish": 93.6
+    },
+    "B": {
+      "reference": 97.7,
+      "side": 96.2,
+      "form": 94.3,
+      "finish": 93.9
+    }
+  },
+  "parent": {
+    "scene": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+    "fixed": "2258fccdba5eef72f26dc2bbf837a95864e23d38c75f083aa4fe01ae40045506",
+    "side": "51de3b8c818566ff4559f4f05720f92c5710f2227e4439d43cb2c0131e4a0ea1"
+  },
+  "candidates": {
+    "A": {
+      "scene": "9f911cbdd0f2cc66b800e0b377c87ab4f3773ebc552027759a2e9b2c4cb0750c",
+      "fixed": "19acfe74e458ea72cf85d1ab5558030b76eeb544278b4ca6721ebfd1bf9c4f36",
+      "side": "938346eef7710218754929e89e0f068261ba4d889d1376ca777f7eb464ae0f35",
+      "audit": "29a1cfe1ff4d1f268d2f46473b4153c8d53e03aedae3c6fb0528563df80ef5a7",
+      "outline_change_percentage_points": {
+        "original": 0.00185,
+        "selected": 0.00423,
+        "white_mirrored": 0.00186
+      }
+    },
+    "B": {
+      "scene": "945f97db359cf093a13be4490e96026770706f17caa1c83106b14759641f4617",
+      "fixed": "e7b54e1a2e61755320b1b58d8a8d5f8b15ab4e87ae7a9d8418fc9da0b973032a",
+      "side": "de6c4d55ab3c3c52f7a0bbe9c29b489aa6c0dd06565a48fe902a160f6b107ecb",
+      "audit": "196578c2d104f7252ee5232694ae9dfb011535e94ae632c8be0f4628f669a224",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    }
+  }
+}

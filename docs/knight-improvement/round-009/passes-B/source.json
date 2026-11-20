@@ -1,0 +1,114 @@
+{
+  "source_sha256": "c6edd8375c632aa48410186f4a77c575c87a8b91e3d6c353414f45f0c90c8ff3",
+  "views": {
+    "pigment": "6e9c93b82499c862c360c4e69b9fa997ac59ec3248fb21677a16db61176be283",
+    "polish": "cec5ecbac658bddfa95d5331122ed74b3f8026ef2c247e39996df98477197d0d"
+  },
+  "lights": {
+    "Walnut key": {
+      "energy": 880.0,
+      "type": "AREA"
+    },
+    "Walnut soft fill": {
+      "energy": 250.0,
+      "type": "AREA"
+    },
+    "Walnut upper strip": {
+      "energy": 480.0,
+      "type": "AREA"
+    },
+    "Eye reflection upper": {
+      "energy": 0.04600000008940697,
+      "type": "AREA"
+    },
+    "Eye reflection lower": {
+      "energy": 0.008999999612569809,
+      "type": "AREA"
+    },
+    "Walnut | ear edge": {
+      "energy": 0.859499990940094,
+      "type": "AREA"
+    },
+    "Walnut | forehead": {
+      "energy": 0.15600000321865082,
+      "type": "AREA"
+    },
+    "Brow reflection 2": {
+      "energy": 2.671875,
+      "type": "AREA"
+    },
+    "Walnut | left collar strip": {
+      "energy": 7.529599666595459,
+      "type": "AREA"
+    },
+    "Walnut | right collar strip": {
+      "energy": 3.799999952316284,
+      "type": "AREA"
+    },
+    "Knight | front foot reflector": {
+      "energy": 0.10319999605417252,
+      "type": "AREA"
+    },
+    "Walnut | carved chest shoulder": {
+      "energy": 0.8080000281333923,
+      "type": "AREA"
+    },
+    "Walnut | carved chest bevel": {
+      "energy": 0.36000001430511475,
+      "type": "AREA"
+    },
+    "Walnut | carved chest crest": {
+      "energy": 0.13600000739097595,
+      "type": "AREA"
+    },
+    "Walnut | carved chest far_lip": {
+      "energy": 0.7400000095367432,
+      "type": "AREA"
+    },
+    "Walnut | chest segment shoulder2": {
+      "energy": 0.03200000151991844,
+      "type": "AREA"
+    },
+    "Walnut | chest segment bevel1": {
+      "energy": 0.07599999755620956,
+      "type": "AREA"
+    },
+    "Walnut | chest segment bevel2": {
+      "energy": 0.03200000151991844,
+      "type": "AREA"
+    },
+    "Walnut | chest segment crest1": {
+      "energy": 0.03200000151991844,
+      "type": "AREA"
+    },
+    "Walnut | chest segment crest2": {
+      "energy": 0.06400000303983688,
+      "type": "AREA"
+    },
+    "Walnut | chest segment crest3": {
+      "energy": 0.14000000059604645,
+      "type": "AREA"
+    },
+    "Walnut | chest segment far_lip1": {
+      "energy": 0.1080000028014183,
+      "type": "AREA"
+    },
+    "Walnut | poll rear oval": {
+      "energy": 105.0,
+      "type": "AREA"
+    },
+    "Poll flag | Walnut key": {
+      "energy": 484.0,
+      "type": "AREA"
+    },
+    "Poll flag | Walnut soft fill": {
+      "energy": 137.5,
+      "type": "AREA"
+    },
+    "Poll flag | Walnut upper strip": {
+      "energy": 264.0,
+      "type": "AREA"
+    }
+  },
+  "method": "At the saved 54-degree camera, full-res cropped film gate. Pigment routes the existing BSDF base-colour input directly to emission. Polish replaces that input with a neutral grey while leaving source normals, roughness, coat, lights and registration intact. Both passes use the scene colour transform."
+}

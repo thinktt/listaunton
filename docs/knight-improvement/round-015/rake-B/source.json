@@ -1,0 +1,87 @@
+{
+  "model": "d5aa43f9cdcead682f1228413869e4a58b482b8d80895dff240333faac067ad9",
+  "framing_model": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+  "rig": {
+    "near-from-poll.png": {
+      "light": [
+        -3.022467613220215,
+        -3.18143892288208,
+        6.15500020980835
+      ],
+      "camera": [
+        2.236025333404541,
+        -7.024486541748047,
+        5.135000228881836
+      ]
+    },
+    "near-across.png": {
+      "light": [
+        0.9267957210540771,
+        -4.518190860748291,
+        6.15500020980835
+      ],
+      "camera": [
+        2.236025333404541,
+        -7.024486541748047,
+        5.135000228881836
+      ]
+    },
+    "near-from-nose.png": {
+      "light": [
+        4.153216361999512,
+        -1.8773961067199707,
+        6.15500020980835
+      ],
+      "camera": [
+        2.236025333404541,
+        -7.024486541748047,
+        5.135000228881836
+      ]
+    },
+    "far-from-poll.png": {
+      "light": [
+        -3.9527735710144043,
+        1.9377034902572632,
+        6.15500020980835
+      ],
+      "camera": [
+        -0.38265547156333923,
+        7.385181427001953,
+        5.135000228881836
+      ]
+    },
+    "far-across.png": {
+      "light": [
+        -0.7263529300689697,
+        4.578497886657715,
+        6.15500020980835
+      ],
+      "camera": [
+        -0.38265547156333923,
+        7.385181427001953,
+        5.135000228881836
+      ]
+    },
+    "far-from-nose.png": {
+      "light": [
+        3.2229104042053223,
+        3.241746425628662,
+        6.15500020980835
+      ],
+      "camera": [
+        -0.38265547156333923,
+        7.385181427001953,
+        5.135000228881836
+      ]
+    }
+  },
+  "views": {
+    "near-from-poll.png": "0dfc2a3b76b814dcfad909dd66f8e1cb092253b9ca5eb6e978941930909eb0b0",
+    "near-across.png": "b98c041c6b56b1498a8c8872c9bf6d86f2596c3639cdfa32ce9ff5a8a7715a9c",
+    "near-from-nose.png": "8614c1c55f5f3f6e7da8eddab5ee6f53456ce882f05eba841ae5552d19a7c6e3",
+    "far-from-poll.png": "eee66ac63c2ea3a408bab2a602964354c31ff738a94753f90e33fb9990fc699b",
+    "far-across.png": "84ad3c02136db0764fd3296a6b69a5c9ce56163458fe20575fee8d596b2ad157",
+    "far-from-nose.png": "d659116f2b157fffd0ef53bc055da43cb9214a503ce5c7a57c06a9e6e032d528"
+  },
+  "method": "Common cameras centered on the parent\u2019s near and far eye positions. One rectangular softbox moves from the poll through broadside to the nose. The real wooden surfaces, fixed exposure, ambient world and framing stay constant. Both sides are tested under the corresponding mirrored angles."
+}

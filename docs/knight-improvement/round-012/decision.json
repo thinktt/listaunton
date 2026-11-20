@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-012",
+  "winner": "B",
+  "reason": "B gives the mane one sharp, sweeping edge. It starts beneath the ear, curves back along a fuller neck and tucks into the lower neck on both sides. The hollow follows the dark curve in both black references at 54\u00b0. A has a bright inward kink near the ear and a second edge that catches light in profile.",
+  "scores": {
+    "Parent": {
+      "reference": 94.5,
+      "side": 92.5,
+      "form": 92,
+      "finish": 87.5
+    },
+    "A": {
+      "reference": 94.5,
+      "side": 93,
+      "form": 92.5,
+      "finish": 87
+    },
+    "B": {
+      "reference": 95.5,
+      "side": 94,
+      "form": 93,
+      "finish": 88
+    }
+  },
+  "parent": {
+    "scene": "c4e629d930d907d77885c01dd430cab58e99e26a26e04b63d2a36b373ecdac58",
+    "fixed": "df7b350752c7216fb5a999baf8de46557e1bcd91af35458642e91ee2108bae53",
+    "side": "60d34cf8caa2481e080e5c2ca08827d82fed8277d8052dc464764a68c4cb274c"
+  },
+  "candidates": {
+    "A": {
+      "scene": "468df802932b0c97d716c913b2fadb9c6e1aa367756cd43ad411fe383573cf9d",
+      "fixed": "beea4f6157ceb3ec981fd7eb9490df39f9fe6121aeb1303999da690ec02a151b",
+      "side": "acd7b2592168f7a58dd9a1e77f89e8be8727d2cfab2f886d6fef5ddac9391c97",
+      "audit": "f0c193f4928265bb8225e7e44128c4a8b15ec43ee42aed4ad02ab404c32196c0",
+      "outline_change_percentage_points": {
+        "original": -0.07794,
+        "selected": -0.05952,
+        "white_mirrored": -0.08145
+      }
+    },
+    "B": {
+      "scene": "2d03d00e333c39326a8660eceae5cf19f43c4b36899812ef5c845b8451f0d0c7",
+      "fixed": "c27b948d48073ac9f5f0dca03635200ed319d78378a1414c954da7d830b1658d",
+      "side": "e22a283426831400c0ad2cd0f8b65d251ce47b669e9426762a1c3d0e8bba56c9",
+      "audit": "37d212e1ad9c362f628600b87870292f63f377e29cfba9e971a1713a1d8ffde0",
+      "outline_change_percentage_points": {
+        "original": 0.00954,
+        "selected": 0.02962,
+        "white_mirrored": 0.0105
+      }
+    }
+  }
+}

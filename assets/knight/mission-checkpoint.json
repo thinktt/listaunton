@@ -1,11 +1,11 @@
 {
-  "checkpoint": "007",
-  "variant": "040-chest-reflection-segments",
-  "prior_model_sha256": "92af7d120a24047d92f359a02aebff6e8c4ee7e484ee52d8825cf534f532fae3",
-  "source_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
-  "render_sha256": "0c9b60d1bf9a8f479a301eae06a9ee62d02f53f73d4f79123f6d9cf65d0e9395",
-  "texture_sha256": "b65e6ad2fc4a1641c1d9a28d87203858c8f83498a97fc17cafdd741fb3f72b76",
-  "texture_file": "wood-atlas-v5.png",
+  "checkpoint": "improvement-016",
+  "variant": "improvement-016-A",
+  "prior_model_sha256": "e865a0c635e99bb07a5262a48499140dc34b0e61c757d1e362913fa1c12aef6a",
+  "source_sha256": "1a8c2b2384ac360766d3a3121671199f231df21b2ceea6caee22c9ebdb5e9766",
+  "render_sha256": "4f9f880805dcc246495f49857afc46b40e78dfabdee17436f76817b4759dfff4",
+  "texture_sha256": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8",
+  "texture_file": "wood-atlas-improvement-014-B.png",
   "packed_texture_exact": true,
   "surface_color_coverage": {
     "Knight | turned pedestal": {
@@ -21,7 +21,7 @@
       "uncolored_fraction": 0.0
     },
     "Knight | near eye": {
-      "sampled_triangle_centers": 960,
+      "sampled_triangle_centers": 15872,
       "uncolored_fraction": 0.0
     },
     "Knight | far swept ear": {
@@ -29,12 +29,12 @@
       "uncolored_fraction": 0.0
     },
     "Knight | far eye": {
-      "sampled_triangle_centers": 960,
+      "sampled_triangle_centers": 15872,
       "uncolored_fraction": 0.0
     },
     "Knight | continuous horse head and neck": {
-      "sampled_triangle_centers": 86994,
-      "uncolored_fraction": 3.448513690599352e-05
+      "sampled_triangle_centers": 141998,
+      "uncolored_fraction": 2.112705812757926e-05
     }
   },
   "camera_degrees": 54,

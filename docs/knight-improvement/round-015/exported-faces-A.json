@@ -1,0 +1,42 @@
+{
+  "model": "6a062fcb3b3eb525d3f10f137f6725d3db4b66f74cd0c8e79d9b0e4662741418",
+  "mesh": "13aaa7d867cac9243553095ea1c521978c87e9e9477030f77e95c84ef49ea74d",
+  "parts": {
+    "Knight | turned pedestal": {
+      "triangle_count": 62464,
+      "double_area_minimum": 0.0001817073676338505,
+      "double_area_below_1e-10": 0
+    },
+    "Knight | swept rounded mane": {
+      "triangle_count": 25600,
+      "double_area_minimum": 1.9721735852146418e-05,
+      "double_area_below_1e-10": 0
+    },
+    "Knight | near swept ear": {
+      "triangle_count": 13312,
+      "double_area_minimum": 4.654819817977808e-06,
+      "double_area_below_1e-10": 0
+    },
+    "Knight | near eye": {
+      "triangle_count": 15872,
+      "double_area_minimum": 1.0371068406124678e-07,
+      "double_area_below_1e-10": 0
+    },
+    "Knight | far swept ear": {
+      "triangle_count": 13312,
+      "double_area_minimum": 4.656241774001004e-06,
+      "double_area_below_1e-10": 0
+    },
+    "Knight | far eye": {
+      "triangle_count": 15872,
+      "double_area_minimum": 1.3634336328857352e-07,
+      "double_area_below_1e-10": 0
+    },
+    "Knight | continuous horse head and neck": {
+      "triangle_count": 141998,
+      "double_area_minimum": 2.7665815543675666e-08,
+      "double_area_below_1e-10": 0
+    }
+  },
+  "method": "Decode the WebGL vertex and index streams in world coordinates. Check finite positions, normals and UVs, unit normals, and doubled area below 1e-10 for each triangle."
+}

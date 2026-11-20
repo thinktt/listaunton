@@ -1,0 +1,60 @@
+{
+  "model": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+  "shots": {
+    "studio": "bc5ff529c2702e962c65685f913548b1d4327459b359a1119c81b0e1aa85f0c3",
+    "without-key": "12ce7220f4978c914b1c650220a56685b24a3eced84c5d1e5b06612c7a5b3b81",
+    "without-fill": "a9673649551df7b65e6009449abe130fbfd0132a36fc6bd7cf238349afa9a7e3",
+    "without-upper-strip": "c97f6ca99b848756237dd979082439799c12b7f9dd32d9c503a156dc23de3760",
+    "without-rear-oval": "40b89f607123f0aba2f7c32b53588169febed5a4d96ab5eb4c13084b880ea3ca",
+    "without-all-four": "78608265c11135975f0cdac65c8e2a50c122d67c429020db721dfcce0985b9d9",
+    "diffuse-control": "eb6548bc7f2669d2690de8be051680d65ebbfd46f0575d7698781c3beed7ff72"
+  },
+  "lights": {
+    "key": {
+      "name": "Poll flag | Walnut key",
+      "energy": 484.0,
+      "color": [
+        1.0,
+        0.8799999952316284,
+        0.7300000190734863
+      ]
+    },
+    "fill": {
+      "name": "Poll flag | Walnut soft fill",
+      "energy": 137.5,
+      "color": [
+        1.0,
+        0.9100000262260437,
+        0.8100000023841858
+      ]
+    },
+    "upper strip": {
+      "name": "Poll flag | Walnut upper strip",
+      "energy": 264.0,
+      "color": [
+        1.0,
+        0.9399999976158142,
+        0.8500000238418579
+      ]
+    },
+    "rear oval": {
+      "name": "Walnut | poll rear oval",
+      "energy": 84.0,
+      "color": [
+        1.0,
+        0.9100000262260437,
+        0.800000011920929
+      ]
+    }
+  },
+  "surface_nodes": {
+    "Knight | polished walnut": [
+      "ShaderNodeBsdfPrincipled",
+      "ShaderNodeOutputMaterial",
+      "ShaderNodeBsdfPrincipled",
+      "ShaderNodeMixShader"
+    ]
+  },
+  "samples": 48,
+  "method": "Saved 54 degree studio and film gate, photographed with each of four mane lights disabled individually, all four disabled, and all lights present with Principled specular and coat strength set to zero. Each change occurs in memory. Compare visible sRGB changes at the same source pixels."
+}

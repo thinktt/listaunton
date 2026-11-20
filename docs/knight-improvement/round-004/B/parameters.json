@@ -1,0 +1,41 @@
+{
+  "parent_sha256": "6d06b1ca5d781bcca921e5745f10504ab1113aae983571704a979964a934c177",
+  "names": [
+    "mane_setback",
+    "mane_width",
+    "extension",
+    "neck_fullness",
+    "neck_width",
+    "lower_station_focus",
+    "broad_root_weight",
+    "mane_tip_feather"
+  ],
+  "values": [
+    0.99,
+    1.01,
+    1.27,
+    1.1,
+    0.9,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "mesh_scope": {
+    "swept rounded mane": {
+      "displaced_vertices": 320,
+      "max_displacement": 0.3681718409061432
+    },
+    "continuous horse head and neck": {
+      "displaced_vertices": 7127,
+      "max_displacement": 0.30957260727882385
+    },
+    "curved neck and chest": {
+      "displaced_vertices": 890,
+      "max_displacement": 0.3084566295146942
+    }
+  },
+  "model_sha256": "322b4b3a8c29e8e5705b735010b8d0c293bf9583fbd27cf47d07c7d1c6291345",
+  "fixed_sha256": "c061274ebb9afba80634ec9e1bb123410a82ddedd7bc045baec4f5a725d16e36",
+  "side_sha256": "5c39861d0046cb7dc56485d98cdb5f08791eb82a98fc9266733ada9ade33552f",
+  "reopened_samples": 144
+}

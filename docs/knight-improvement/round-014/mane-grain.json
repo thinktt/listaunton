@@ -1,0 +1,371 @@
+{
+  "method": "Within the face of the mane, mask out the exterior silhouette and interior hollow. Sample the middle of its width over rows 463\u2013621. Compare luminance residual in three spatial bands after dividing by local mean intensity, and inspect the dominant image-plane grain direction and its coherence. The paired native-grid result resamples renders to the original 300px canvas; its first entry samples the actual original PNG. The high-resolution image is interpretive.",
+  "results": {
+    "Original black": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 27.09,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.155,
+            "relative_rms": 0.0064
+          },
+          "2-8": {
+            "rms_luminance": 2.796,
+            "relative_rms": 0.1263
+          },
+          "8-16": {
+            "rms_luminance": 4.235,
+            "relative_rms": 0.2103
+          }
+        },
+        "grain_direction_image_degrees": 53.3,
+        "grain_coherence": 0.082
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 28.09,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.015,
+            "relative_rms": 0.0005
+          },
+          "2-8": {
+            "rms_luminance": 2.655,
+            "relative_rms": 0.1093
+          },
+          "8-16": {
+            "rms_luminance": 4.328,
+            "relative_rms": 0.2098
+          }
+        },
+        "grain_direction_image_degrees": 50.9,
+        "grain_coherence": 0.147
+      }
+    },
+    "Black 2": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 33.37,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 3.499,
+            "relative_rms": 0.0999
+          },
+          "2-8": {
+            "rms_luminance": 3.675,
+            "relative_rms": 0.1164
+          },
+          "8-16": {
+            "rms_luminance": 5.458,
+            "relative_rms": 0.2096
+          }
+        },
+        "grain_direction_image_degrees": 1.0,
+        "grain_coherence": 0.313,
+        "dark_grain_components": {
+          "0.07": {
+            "dark_pixel_share": 0.214,
+            "enclosed_features": 29,
+            "median_area_pixels": 8.0,
+            "median_axis_ratio": 1.75,
+            "elongated_features": 21,
+            "fraction_within_25_degrees_of_horizontal": 0.571
+          },
+          "0.12": {
+            "dark_pixel_share": 0.109,
+            "enclosed_features": 16,
+            "median_area_pixels": 9.0,
+            "median_axis_ratio": 1.85,
+            "elongated_features": 14,
+            "fraction_within_25_degrees_of_horizontal": 0.571
+          }
+        }
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 34.01,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.61,
+            "relative_rms": 0.0193
+          },
+          "2-8": {
+            "rms_luminance": 3.891,
+            "relative_rms": 0.1205
+          },
+          "8-16": {
+            "rms_luminance": 5.291,
+            "relative_rms": 0.1989
+          }
+        },
+        "grain_direction_image_degrees": -0.1,
+        "grain_coherence": 0.224
+      }
+    },
+    "Parent": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 24.66,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 1.492,
+            "relative_rms": 0.0612
+          },
+          "2-8": {
+            "rms_luminance": 2.95,
+            "relative_rms": 0.1335
+          },
+          "8-16": {
+            "rms_luminance": 3.573,
+            "relative_rms": 0.1707
+          }
+        },
+        "grain_direction_image_degrees": -86.0,
+        "grain_coherence": 0.205,
+        "dark_grain_components": {
+          "0.07": {
+            "dark_pixel_share": 0.23,
+            "enclosed_features": 31,
+            "median_area_pixels": 7.0,
+            "median_axis_ratio": 1.72,
+            "elongated_features": 23,
+            "fraction_within_25_degrees_of_horizontal": 0.043
+          },
+          "0.12": {
+            "dark_pixel_share": 0.108,
+            "enclosed_features": 10,
+            "median_area_pixels": 6.5,
+            "median_axis_ratio": 1.5,
+            "elongated_features": 6,
+            "fraction_within_25_degrees_of_horizontal": 0.0
+          }
+        }
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 24.24,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.084,
+            "relative_rms": 0.003
+          },
+          "2-8": {
+            "rms_luminance": 3.178,
+            "relative_rms": 0.1446
+          },
+          "8-16": {
+            "rms_luminance": 3.54,
+            "relative_rms": 0.1663
+          }
+        },
+        "grain_direction_image_degrees": -88.1,
+        "grain_coherence": 0.498
+      }
+    },
+    "A": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 34.85,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 3.151,
+            "relative_rms": 0.0932
+          },
+          "2-8": {
+            "rms_luminance": 3.024,
+            "relative_rms": 0.1011
+          },
+          "8-16": {
+            "rms_luminance": 4.692,
+            "relative_rms": 0.1804
+          }
+        },
+        "grain_direction_image_degrees": -0.5,
+        "grain_coherence": 0.298,
+        "dark_grain_components": {
+          "0.07": {
+            "dark_pixel_share": 0.22,
+            "enclosed_features": 27,
+            "median_area_pixels": 17.0,
+            "median_axis_ratio": 1.9,
+            "elongated_features": 21,
+            "fraction_within_25_degrees_of_horizontal": 0.619
+          },
+          "0.12": {
+            "dark_pixel_share": 0.107,
+            "enclosed_features": 23,
+            "median_area_pixels": 8.0,
+            "median_axis_ratio": 1.98,
+            "elongated_features": 15,
+            "fraction_within_25_degrees_of_horizontal": 0.8
+          }
+        }
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 35.55,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.707,
+            "relative_rms": 0.0224
+          },
+          "2-8": {
+            "rms_luminance": 3.48,
+            "relative_rms": 0.1099
+          },
+          "8-16": {
+            "rms_luminance": 4.628,
+            "relative_rms": 0.1739
+          }
+        },
+        "grain_direction_image_degrees": -11.4,
+        "grain_coherence": 0.086
+      }
+    },
+    "B": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 32.43,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 3.357,
+            "relative_rms": 0.1002
+          },
+          "2-8": {
+            "rms_luminance": 3.049,
+            "relative_rms": 0.1071
+          },
+          "8-16": {
+            "rms_luminance": 4.849,
+            "relative_rms": 0.1906
+          }
+        },
+        "grain_direction_image_degrees": 7.8,
+        "grain_coherence": 0.199,
+        "dark_grain_components": {
+          "0.07": {
+            "dark_pixel_share": 0.225,
+            "enclosed_features": 29,
+            "median_area_pixels": 15.0,
+            "median_axis_ratio": 1.79,
+            "elongated_features": 21,
+            "fraction_within_25_degrees_of_horizontal": 0.429
+          },
+          "0.12": {
+            "dark_pixel_share": 0.111,
+            "enclosed_features": 25,
+            "median_area_pixels": 10.0,
+            "median_axis_ratio": 1.77,
+            "elongated_features": 18,
+            "fraction_within_25_degrees_of_horizontal": 0.722
+          }
+        }
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 33.15,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.581,
+            "relative_rms": 0.0159
+          },
+          "2-8": {
+            "rms_luminance": 3.362,
+            "relative_rms": 0.1125
+          },
+          "8-16": {
+            "rms_luminance": 4.745,
+            "relative_rms": 0.183
+          }
+        },
+        "grain_direction_image_degrees": -54.4,
+        "grain_coherence": 0.067
+      }
+    },
+    "Parent pigment": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 34.58,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 2.265,
+            "relative_rms": 0.0662
+          },
+          "2-8": {
+            "rms_luminance": 3.661,
+            "relative_rms": 0.1265
+          },
+          "8-16": {
+            "rms_luminance": 4.633,
+            "relative_rms": 0.1494
+          }
+        },
+        "grain_direction_image_degrees": 89.0,
+        "grain_coherence": 0.235
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 33.79,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.331,
+            "relative_rms": 0.01
+          },
+          "2-8": {
+            "rms_luminance": 4.18,
+            "relative_rms": 0.1446
+          },
+          "8-16": {
+            "rms_luminance": 4.468,
+            "relative_rms": 0.1424
+          }
+        },
+        "grain_direction_image_degrees": -89.1,
+        "grain_coherence": 0.436
+      }
+    },
+    "Parent polish": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 55.77,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.497,
+            "relative_rms": 0.0093
+          },
+          "2-8": {
+            "rms_luminance": 4.049,
+            "relative_rms": 0.0925
+          },
+          "8-16": {
+            "rms_luminance": 7.665,
+            "relative_rms": 0.1959
+          }
+        },
+        "grain_direction_image_degrees": 74.1,
+        "grain_coherence": 0.572
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 56.7,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.0,
+            "relative_rms": 0.0
+          },
+          "2-8": {
+            "rms_luminance": 3.603,
+            "relative_rms": 0.0783
+          },
+          "8-16": {
+            "rms_luminance": 7.872,
+            "relative_rms": 0.1978
+          }
+        },
+        "grain_direction_image_degrees": 68.2,
+        "grain_coherence": 0.844
+      }
+    }
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "model": "d5aa43f9cdcead682f1228413869e4a58b482b8d80895dff240333faac067ad9",
+  "parent_studio": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+  "render": "1696d25ec5e156b25b73d0ec636e3e99f57b2a521777e259cb5aac5f6151fa8d",
+  "lights": {
+    "Walnut key": {
+      "links": {
+        "receiver_collection": "Knight | studio receivers beside mane",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": true,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut soft fill": {
+      "links": {
+        "receiver_collection": "Knight | studio receivers beside mane",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": true,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut upper strip": {
+      "links": {
+        "receiver_collection": "Knight | studio receivers beside mane",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": true,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Eye reflection upper": {
+      "links": {
+        "receiver_collection": "Knight | eye reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Eye reflection lower": {
+      "links": {
+        "receiver_collection": "Paired eyes and orbital cheek",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | ear edge": {
+      "links": {
+        "receiver_collection": "Knight | ear reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | forehead": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Brow reflection 2": {
+      "links": {
+        "receiver_collection": "Knight | ear reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | left collar strip": {
+      "links": {
+        "receiver_collection": "Knight | pedestal reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | right collar strip": {
+      "links": {
+        "receiver_collection": "Knight | pedestal reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Knight | front foot reflector": {
+      "links": {
+        "receiver_collection": "Knight | pedestal reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | carved chest shoulder": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | carved chest bevel": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | carved chest crest": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | carved chest far_lip": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment shoulder2": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment bevel1": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment bevel2": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment crest1": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment crest2": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment crest3": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | chest segment far_lip1": {
+      "links": {
+        "receiver_collection": "Knight | chest reflection receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Walnut | poll rear oval": {
+      "links": {
+        "receiver_collection": "Knight | mane studio receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": false,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Poll flag | Walnut key": {
+      "links": {
+        "receiver_collection": "Knight | mane studio receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": true,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Poll flag | Walnut soft fill": {
+      "links": {
+        "receiver_collection": "Knight | mane studio receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": true,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    },
+    "Poll flag | Walnut upper strip": {
+      "links": {
+        "receiver_collection": "Knight | mane studio receivers",
+        "blocker_collection": null
+      },
+      "ray_visibility": {
+        "visible_camera": false,
+        "visible_diffuse": true,
+        "visible_glossy": true,
+        "visible_transmission": true,
+        "visible_volume_scatter": true,
+        "visible_shadow": true
+      }
+    }
+  },
+  "light_groups": {
+    "Knight | studio receivers beside mane": [
+      [
+        "Knight | turned pedestal",
+        "INCLUDE"
+      ],
+      [
+        "Knight | near swept ear",
+        "INCLUDE"
+      ],
+      [
+        "Knight | near eye",
+        "INCLUDE"
+      ],
+      [
+        "Knight | far swept ear",
+        "INCLUDE"
+      ],
+      [
+        "Knight | far eye",
+        "INCLUDE"
+      ],
+      [
+        "Knight | continuous horse head and neck",
+        "INCLUDE"
+      ]
+    ],
+    "Knight | eye reflection receivers": [
+      [
+        "Knight | near eye",
+        "INCLUDE"
+      ],
+      [
+        "Knight | far eye",
+        "INCLUDE"
+      ]
+    ],
+    "Paired eyes and orbital cheek": [
+      [
+        "Knight | continuous horse head and neck",
+        "INCLUDE"
+      ],
+      [
+        "Knight | near eye",
+        "INCLUDE"
+      ],
+      [
+        "Knight | far eye",
+        "INCLUDE"
+      ]
+    ],
+    "Knight | ear reflection receivers": [
+      [
+        "Knight | near swept ear",
+        "INCLUDE"
+      ],
+      [
+        "Knight | far swept ear",
+        "INCLUDE"
+      ]
+    ],
+    "Knight | chest reflection receivers": [
+      [
+        "Knight | continuous horse head and neck",
+        "INCLUDE"
+      ]
+    ],
+    "Knight | pedestal reflection receivers": [
+      [
+        "Knight | turned pedestal",
+        "INCLUDE"
+      ]
+    ],
+    "Knight | mane studio receivers": [
+      [
+        "Knight | swept rounded mane",
+        "INCLUDE"
+      ]
+    ]
+  },
+  "method": "The parent lamp data, world, transforms, ray visibility and per-object Cycles light links are applied to the saved candidate mesh, material and reference camera. This 96-sample exposure uses the same cropped film gate for all three models."
+}

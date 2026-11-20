@@ -1,0 +1,154 @@
+{
+  "Original": {
+    "parts": {
+      "rear": {
+        "edge_luma": 66.35,
+        "warmth": 95.33,
+        "underface": 33.64,
+        "width": 26.0,
+        "cap_pore_contrast": 0.0207
+      },
+      "middle": {
+        "edge_luma": 81.35,
+        "warmth": 110.33,
+        "underface": 39.0,
+        "width": 26.0,
+        "cap_pore_contrast": 0.0207
+      },
+      "forward": {
+        "edge_luma": 100.73,
+        "warmth": 92.0,
+        "underface": 42.7,
+        "width": 20.0,
+        "cap_pore_contrast": 0.0537
+      },
+      "return": {
+        "edge_luma": 76.75,
+        "warmth": 68.17,
+        "underface": 36.89,
+        "width": 13.0,
+        "cap_pore_contrast": 0.0264
+      }
+    },
+    "cap_center": [
+      435.32,
+      333.74
+    ],
+    "cap_median": 64.16,
+    "cap_p90": 78.1
+  },
+  "Black 2": {
+    "parts": {
+      "rear": {
+        "edge_luma": 113.83,
+        "warmth": 106.33,
+        "underface": 36.71,
+        "width": 9.0,
+        "cap_pore_contrast": 0.079
+      },
+      "middle": {
+        "edge_luma": 148.38,
+        "warmth": 95.0,
+        "underface": 42.49,
+        "width": 8.0,
+        "cap_pore_contrast": 0.093
+      },
+      "forward": {
+        "edge_luma": 176.94,
+        "warmth": 58.0,
+        "underface": 46.77,
+        "width": 10.0,
+        "cap_pore_contrast": 0.1814
+      },
+      "return": {
+        "edge_luma": 142.77,
+        "warmth": 71.5,
+        "underface": 43.7,
+        "width": 7.5,
+        "cap_pore_contrast": 0.1115
+      }
+    },
+    "cap_center": [
+      437.55,
+      332.54
+    ],
+    "cap_median": 82.05,
+    "cap_p90": 104.48
+  },
+  "parent": {
+    "parts": {
+      "rear": {
+        "edge_luma": 132.59,
+        "warmth": 23.0,
+        "underface": 64.02,
+        "width": 6.0,
+        "cap_pore_contrast": 0.0527
+      },
+      "middle": {
+        "edge_luma": 153.81,
+        "warmth": 23.67,
+        "underface": 56.14,
+        "width": 6.0,
+        "cap_pore_contrast": 0.1074
+      },
+      "forward": {
+        "edge_luma": 139.15,
+        "warmth": 32.33,
+        "underface": 53.93,
+        "width": 7.0,
+        "cap_pore_contrast": 0.0934
+      },
+      "return": {
+        "edge_luma": 87.67,
+        "warmth": 62.67,
+        "underface": 69.08,
+        "width": 14.0,
+        "cap_pore_contrast": 0.0998
+      }
+    },
+    "cap_center": [
+      380.33,
+      332.39
+    ],
+    "cap_median": 67.88,
+    "cap_p90": 86.9
+  },
+  "knight": {
+    "parts": {
+      "rear": {
+        "edge_luma": 102.09,
+        "warmth": 77.33,
+        "underface": 44.29,
+        "width": 13.0,
+        "cap_pore_contrast": 0.0512
+      },
+      "middle": {
+        "edge_luma": 129.83,
+        "warmth": 93.0,
+        "underface": 46.91,
+        "width": 10.0,
+        "cap_pore_contrast": 0.0909
+      },
+      "forward": {
+        "edge_luma": 145.29,
+        "warmth": 75.0,
+        "underface": 61.18,
+        "width": 19.0,
+        "cap_pore_contrast": 0.0796
+      },
+      "return": {
+        "edge_luma": 98.89,
+        "warmth": 73.67,
+        "underface": 77.85,
+        "width": 15.0,
+        "cap_pore_contrast": 0.0715
+      }
+    },
+    "cap_center": [
+      434.75,
+      332.56
+    ],
+    "cap_median": 86.92,
+    "cap_p90": 123.73
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "parent_sha256": "8d984d59beea0f86d69bbb5b8f5dc57becf7e707e576412eb8eda4503e81a948",
+  "design": {
+    "collar_recession": 0.067,
+    "chest_recession": 0.256,
+    "posterior_hinge_x": -0.41,
+    "hinge_blend_width": 0.3,
+    "anterior_power": 2.65
+  },
+  "components": {
+    "continuous horse head and neck": {
+      "changed_vertices": 14458,
+      "largest_displacement": 0.28757262229919434,
+      "minimum_anterior_derivative": 0.2810710258953006,
+      "sagittal_profile_anchored": true,
+      "max_above_3_36": 0.0,
+      "max_lateral_displacement_in_rest": 0.0
+    },
+    "curved neck and chest": {
+      "changed_vertices": 1234,
+      "largest_displacement": 0.291873037815094,
+      "minimum_anterior_derivative": 0.2851223671548192,
+      "sagittal_profile_anchored": true,
+      "max_above_3_36": 0.0,
+      "max_lateral_displacement_in_rest": 0.0
+    }
+  },
+  "selected_cross_section_study": 17,
+  "model_sha256": "4e954e74ba4e40957bbe6ddfae623e01e0e383745c5e97febc7984b512e9dd2c",
+  "fixed_sha256": "b2ff44472cbbd1475a5fe937ac34c806dca9be172e8b91b276e0939bfd1a58ed",
+  "side_sha256": "49904938e3599e79ace20a23a3c1ce62c6a9df1d5092a4df24d763f4302ca160",
+  "samples": 144
+}

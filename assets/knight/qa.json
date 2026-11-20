@@ -1,25 +1,25 @@
 {
-  "note": "Silhouette scores document visible-boundary differences only. The original black sprite governs the fixed elevated fit. Black candidate 2 guides detail; the side study guides anatomy and plausible side proportions. Scores do not validate anatomy, wood, lighting or unseen surfaces.",
+  "note": "Registered 54-degree outline measurements. Candidate 2 and the original black sprite guide the elevated view. Side and all-around scores come from the actual model renders.",
   "images": {
     "original": {
-      "silhouette_iou": 0.9650575817179923,
-      "mean_boundary_error_px": 6.578523489932886,
-      "mean_boundary_error_source_px": 1.5738094473523652,
-      "p95_boundary_error_px": 22.0,
+      "silhouette_iou": 0.9800701124467789,
+      "mean_boundary_error_px": 3.301747311827957,
+      "mean_boundary_error_source_px": 0.789891701394248,
+      "p95_boundary_error_px": 7.0,
       "reference_sha256": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f"
     },
     "selected": {
-      "silhouette_iou": 0.9598952701797028,
-      "mean_boundary_error_px": 7.98470744680851,
-      "mean_boundary_error_source_px": 1.9102170925379214,
-      "p95_boundary_error_px": 24.0,
+      "silhouette_iou": 0.974277474898436,
+      "mean_boundary_error_px": 4.605756358768407,
+      "mean_boundary_error_source_px": 1.101855588222107,
+      "p95_boundary_error_px": 11.349999999999909,
       "reference_sha256": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
     },
     "white-original-mirrored": {
-      "silhouette_iou": 0.9594341418154567,
-      "mean_boundary_error_px": 8.323687752355315,
-      "mean_boundary_error_source_px": 1.9913128594151475,
-      "p95_boundary_error_px": 22.0,
+      "silhouette_iou": 0.972325802551726,
+      "mean_boundary_error_px": 5.757065948855989,
+      "mean_boundary_error_source_px": 1.3772885045110022,
+      "p95_boundary_error_px": 16.0,
       "reference_sha256": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304"
     }
   }

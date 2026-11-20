@@ -1,0 +1,48 @@
+{
+  "sha256": "6477710c8600766243dde00f267037f16d7756a6ad28ae602ae90d93644f5f71",
+  "equal_to_parent": {
+    "camera": true,
+    "pedestal": true,
+    "packed_images": true,
+    "mesh_loop_vertex_indices": true,
+    "mesh_UVs": true,
+    "materials": true,
+    "light_objects": true
+  },
+  "parent_eye": {
+    "2px_grid_hits": 222,
+    "bounds": [
+      [
+        480,
+        469
+      ],
+      [
+        530,
+        489
+      ]
+    ],
+    "screen_axis_degrees_down": 4.76,
+    "center": [
+      505.25,
+      479.97
+    ]
+  },
+  "candidate_eye": {
+    "2px_grid_hits": 246,
+    "bounds": [
+      [
+        480,
+        467
+      ],
+      [
+        534,
+        491
+      ]
+    ],
+    "screen_axis_degrees_down": 15.71,
+    "center": [
+      507.22,
+      478.93
+    ]
+  }
+}

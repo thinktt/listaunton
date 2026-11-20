@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-014",
+  "winner": "B",
+  "reason": "B gives the mane a single sharp inner edge. Short walnut strokes cross its broad face and turn into the grain on the back. The neck and mane read as one carving in profile, and the dark hollow lands in the same place as the original at 54\u00b0.",
+  "scores": {
+    "Parent": {
+      "reference": 96.5,
+      "side": 95,
+      "form": 94,
+      "finish": 89
+    },
+    "A": {
+      "reference": 96.6,
+      "side": 95.2,
+      "form": 94,
+      "finish": 91
+    },
+    "B": {
+      "reference": 97.1,
+      "side": 95.7,
+      "form": 94,
+      "finish": 93.5
+    }
+  },
+  "parent": {
+    "scene": "eaecb543e309c713db12fc83888bb2ffc0142686a06917ee6c76d24e7d2b2188",
+    "fixed": "7c4238bb5504258937cef3d729f82af349548ffe0f76009d6e53a3279afd9bf6",
+    "side": "0d4d237cd4ca3b3db6083bb9445686707bb2d9cbc94d5180533e5ca88339a388"
+  },
+  "candidates": {
+    "A": {
+      "scene": "a08cb00185833a97345896465de520efe5d3e0532bccfae61fdde8d1bf4cf734",
+      "fixed": "11555f7e66cdad1cfbad318894e53ffeccaf47f238791c8c7cd5e0fe88f556e9",
+      "side": "2463d590450044cb283ce34902937a3cf8f6c4b7e2d3b6dfa18c0ebf4bc247d1",
+      "audit": "7d1733737aa78e084930311d4a97dddb2b0bb667ee13947ac640e1290386f91d",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    },
+    "B": {
+      "scene": "768e8da32b31736302b3b9b99a747d2a8116aee23887dc227eccd33c233d47fd",
+      "fixed": "d3726be6bbd7555c88d622cddb3a67865e457acc0dd6d1d39ad72b047cbe1659",
+      "side": "bbafa6d4b8ed8bd7fb974dc21a41eb9ee1627e7704fc7a60ed8e963797f61e8c",
+      "audit": "041b7fcab763b05bf0415d3b4262a762dcee5bcf8fd7543e2d09418e7ed3ea9b",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    }
+  }
+}

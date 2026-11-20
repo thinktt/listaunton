@@ -1,0 +1,18 @@
+{
+  "model_units": "Model-rest XYZ sampled continuously on the fixed mesh. Camera and lighting do not enter the field.",
+  "height_blend": [
+    1.82,
+    2.37,
+    4.31,
+    4.76
+  ],
+  "brightness": 1.02,
+  "changed_texels": 456395,
+  "chart_edge_filter": {
+    "paired_samples": 3181,
+    "unique_boundary_filter_texels": 17945
+  },
+  "changed_texels_beyond_mane_chart_and_gutter": 0,
+  "protected_atlas_sha256": "1e35b27f1eea257ee9bacc6ae60aa26cbeaf80fad5139365d58be1db395dd78b",
+  "atlas_sha256": "c3633caf6a78e89d25cf3cbfe7fc85b19cf50830165d57108663450d6a174ece"
+}

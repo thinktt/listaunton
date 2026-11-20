@@ -1,0 +1,174 @@
+{
+  "parts": {
+    "near eye": {
+      "vertices": 7938,
+      "changed_1e-6": 6827,
+      "rest_depth_min_max": [
+        -0.009202600775112644,
+        0.027958608624424102
+      ],
+      "max_shift": 0.06240988150238991,
+      "finish_min_max": [
+        0.05321852100135127,
+        0.34510118764265907
+      ]
+    },
+    "far eye": {
+      "vertices": 7938,
+      "changed_1e-6": 6915,
+      "rest_depth_min_max": [
+        -0.009213196897876627,
+        0.02718483123125359
+      ],
+      "max_shift": 0.06240988150238991,
+      "finish_min_max": [
+        0.0629815929187528,
+        0.34664409563107496
+      ]
+    },
+    "continuous horse head and neck": {
+      "vertices": 49131,
+      "changed_1e-6": 8065,
+      "rest_depth_min_max": [
+        -0.00023390722309495684,
+        0.018368358527452746
+      ],
+      "max_shift": 0.06282777339220047,
+      "finish_min_max": [
+        0.0009513280653431251,
+        0.9199803471565247
+      ]
+    },
+    "coherent skull cheek and conical muzzle": {
+      "vertices": 6976,
+      "changed_1e-6": 644,
+      "max_shift": 0.06077739596366882
+    }
+  },
+  "parameters": {
+    "axis_rotation": 0.14,
+    "inner_mound": 0.031,
+    "inner_lower_ridge": 0.004,
+    "incision": 0.004,
+    "tear_corner_return": 0.018,
+    "lower_ridge_normalized_height": 0.25,
+    "lower_ridge_span": 0.174,
+    "central_polish": 0.101,
+    "inner_arc_radius_factor": 1.02,
+    "lower_return_slope": -0.58,
+    "physical_grain_factor": 1.0
+  },
+  "native_checks": {
+    "nonadjacent_intersections": {
+      "near eye": {
+        "triangles_checked": 15872,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      },
+      "far eye": {
+        "triangles_checked": 15872,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      },
+      "continuous horse head and neck": {
+        "triangles_checked": 17500,
+        "nonadjacent_crossings": 0,
+        "sample_crossings_u_v_y": []
+      }
+    },
+    "sample_spacing": 0.006,
+    "near_exposed_samples": 1423,
+    "far_exposed_samples": 1419,
+    "mirrored_exposure_iou": 0.9943859649122807,
+    "exposed_mirrored_depth_difference_p95": 0.0035366535186767576
+  },
+  "card_configuration": 10,
+  "physical_softboxes": [
+    {
+      "name": "Eye reflection upper",
+      "location": [
+        0.8287622332572937,
+        -0.5285483002662659,
+        4.097652912139893
+      ],
+      "rotation": [
+        -0.33455151319503784,
+        1.7577970027923584,
+        -0.5674194693565369
+      ],
+      "watts": 0.131,
+      "axes": [
+        0.43,
+        0.19
+      ],
+      "samples": [
+        [
+          503,
+          476
+        ],
+        [
+          506,
+          477
+        ],
+        [
+          509,
+          479
+        ],
+        [
+          512,
+          480
+        ]
+      ]
+    },
+    {
+      "name": "Eye reflection lower",
+      "location": [
+        0.45112916827201843,
+        -0.6352339386940002,
+        3.8662049770355225
+      ],
+      "rotation": [
+        0.795184850692749,
+        2.250108242034912,
+        0.2058202177286148
+      ],
+      "watts": 0.053,
+      "axes": [
+        0.19,
+        0.122
+      ],
+      "samples": [
+        [
+          499,
+          497
+        ],
+        [
+          503,
+          498
+        ],
+        [
+          507,
+          499
+        ],
+        [
+          511,
+          500
+        ]
+      ],
+      "receivers": [
+        "Knight | continuous horse head and neck",
+        "Knight | near eye",
+        "Knight | far eye"
+      ],
+      "spread_degrees": 15
+    }
+  ],
+  "parent_sha256": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+  "pigment_sha256": "beee98c4ee1af2c55823485a4c0149dea5332c7eaeaa07e06d82ae7022918fe7",
+  "design": 11,
+  "release_texture": "wood-atlas-improvement-011-B.png",
+  "model_sha256": "1a308c3a5428897032a3689452db3b79fe19efa3658fb3442eaa8d7f9f5c4d0a",
+  "fixed_sha256": "6d9ca722895cc7b81b14c58be63a53c17bebec2997de42244195e8ff52af8b48",
+  "side_sha256": "e62d634d0ffd72d28b867cfd79ea2d3f48fe938f896ad2343bb535b1da837b18",
+  "samples": 144
+}

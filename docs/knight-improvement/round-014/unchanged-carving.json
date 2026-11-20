@@ -1,0 +1,186 @@
+{
+  "A": {
+    "source": "a08cb00185833a97345896465de520efe5d3e0532bccfae61fdde8d1bf4cf734",
+    "register": {
+      "fixed": {
+        "parent": "7c4238bb5504258937cef3d729f82af349548ffe0f76009d6e53a3279afd9bf6",
+        "candidate": "11555f7e66cdad1cfbad318894e53ffeccaf47f238791c8c7cd5e0fe88f556e9",
+        "changed_alpha_pixels": 0,
+        "all_foreground_color_change": {
+          "mean": 0.4916,
+          "p95": 1.0,
+          "max": 93
+        },
+        "eye": {
+          "mean": 0.002,
+          "p95": 0.0,
+          "max": 1
+        },
+        "head of muzzle": {
+          "mean": 0.0012,
+          "p95": 0.0,
+          "max": 1
+        },
+        "mane face": {
+          "mean": 7.25,
+          "p95": 31.0,
+          "max": 78
+        }
+      },
+      "side": {
+        "parent": "0d4d237cd4ca3b3db6083bb9445686707bb2d9cbc94d5180533e5ca88339a388",
+        "candidate": "2463d590450044cb283ce34902937a3cf8f6c4b7e2d3b6dfa18c0ebf4bc247d1",
+        "changed_alpha_pixels": 0,
+        "all_foreground_color_change": {
+          "mean": 0.729,
+          "p95": 3.0,
+          "max": 111
+        }
+      }
+    },
+    "neutral_color_comparisons": {
+      "clay/back-poll.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/far-side.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/fixed.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/front-poll.png": {
+        "mean": 0.0001,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/rear-quarter.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/side.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "back/clay-back.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "back/clay-far-quarter.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "back/clay-near-quarter.png": {
+        "mean": 0.0001,
+        "p95": 0.0,
+        "max": 1
+      },
+      "mane-passes/polish.png": {
+        "mean": 0.2182,
+        "p95": 1.0,
+        "max": 7
+      }
+    }
+  },
+  "B": {
+    "source": "768e8da32b31736302b3b9b99a747d2a8116aee23887dc227eccd33c233d47fd",
+    "register": {
+      "fixed": {
+        "parent": "7c4238bb5504258937cef3d729f82af349548ffe0f76009d6e53a3279afd9bf6",
+        "candidate": "d3726be6bbd7555c88d622cddb3a67865e457acc0dd6d1d39ad72b047cbe1659",
+        "changed_alpha_pixels": 0,
+        "all_foreground_color_change": {
+          "mean": 0.2927,
+          "p95": 0.0,
+          "max": 75
+        },
+        "eye": {
+          "mean": 0.0009,
+          "p95": 0.0,
+          "max": 1
+        },
+        "head of muzzle": {
+          "mean": 0.0007,
+          "p95": 0.0,
+          "max": 1
+        },
+        "mane face": {
+          "mean": 6.4646,
+          "p95": 26.0,
+          "max": 75
+        }
+      },
+      "side": {
+        "parent": "0d4d237cd4ca3b3db6083bb9445686707bb2d9cbc94d5180533e5ca88339a388",
+        "candidate": "bbafa6d4b8ed8bd7fb974dc21a41eb9ee1627e7704fc7a60ed8e963797f61e8c",
+        "changed_alpha_pixels": 0,
+        "all_foreground_color_change": {
+          "mean": 0.4492,
+          "p95": 2.0,
+          "max": 108
+        }
+      }
+    },
+    "neutral_color_comparisons": {
+      "clay/back-poll.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/far-side.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/fixed.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/front-poll.png": {
+        "mean": 0.0001,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/rear-quarter.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "clay/side.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "back/clay-back.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "back/clay-far-quarter.png": {
+        "mean": 0.0,
+        "p95": 0.0,
+        "max": 1
+      },
+      "back/clay-near-quarter.png": {
+        "mean": 0.0001,
+        "p95": 0.0,
+        "max": 1
+      },
+      "mane-passes/polish.png": {
+        "mean": 0.1679,
+        "p95": 1.0,
+        "max": 8
+      }
+    }
+  }
+}

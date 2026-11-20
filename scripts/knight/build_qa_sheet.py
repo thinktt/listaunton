@@ -18,7 +18,7 @@ for i,label in enumerate(['side','front','opposite']):
  image=Image.open(a/f'view-{label}.png').convert('RGBA');views.paste(image,(i*640,40),image);draw.text((i*640+20,15),label.capitalize()+' volume inspection',fill='white')
 views.save(a/'volume-inspection.png')
 
-# Show the registered imagined side study as a separate anatomy check.
+# Show the actual model under its walnut and neutral materials in profile.
 Image.open(a/'guide-comparison.png').save(a/'anatomy-comparison.png')
 canvas=Image.new('RGB',(1920,1380),'#14171b');draw=ImageDraw.Draw(canvas)
 for i,(name,label) in enumerate([('view-profile.png','True level profile'),('view-front.png','Front'),('view-threequarter.png','Three-quarter'),('view-side.png','Side, 16 degrees'),('view-opposite.png','Opposite side'),('render.png','Saved reference camera, 54 degrees')]):

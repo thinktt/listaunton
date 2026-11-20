@@ -1,0 +1,107 @@
+{
+  "parent_sha256": "1837b02f0c472044a8e86ffd112d15dbe007eb70d9a4330d86f8f073b7440208",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "parameters": {
+    "rear_reach": 0.169,
+    "forehead_reach": 0.103,
+    "rear_onset_height": 4.254,
+    "forehead_onset_height": 4.254,
+    "ear_settle": 0.017,
+    "forehead_settle": 0.039
+  },
+  "geometry": {
+    "Knight | swept rounded mane": {
+      "changed_vertices": 363,
+      "max_shift": 0.16917480462415396,
+      "max_vertical_shift": 0.040415383875370026,
+      "vertices_below_z_4_20_moved": 0
+    },
+    "Knight | near swept ear": {
+      "changed_vertices": 355,
+      "max_shift": 0.14706309710601545,
+      "max_vertical_shift": 0.04427715064957738,
+      "vertices_below_z_4_20_moved": 0
+    },
+    "Knight | far swept ear": {
+      "changed_vertices": 355,
+      "max_shift": 0.14706309710601545,
+      "max_vertical_shift": 0.04427715064957738,
+      "vertices_below_z_4_20_moved": 0
+    },
+    "Knight | continuous horse head and neck": {
+      "changed_vertices": 7717,
+      "max_shift": 0.1408969795650991,
+      "max_vertical_shift": 0.04092349857091904,
+      "vertices_below_z_4_20_moved": 0
+    },
+    "Knight | coherent skull cheek and conical muzzle": {
+      "changed_vertices": 2109,
+      "max_shift": 0.1410231398717837,
+      "max_vertical_shift": 0.04092326760292053,
+      "vertices_below_z_4_20_moved": 0
+    },
+    "Knight | curved neck and chest": {
+      "changed_vertices": 616,
+      "max_shift": 0.108312462718834,
+      "max_vertical_shift": 0.0021710407454520464,
+      "vertices_below_z_4_20_moved": 0
+    }
+  },
+  "ear_tip": {
+    "recovery_fraction": 0.89,
+    "outward_turn": 0.036,
+    "rise_to_width_ratio": 1.37,
+    "weight_extent_rest_x": [
+      -0.93,
+      -0.2
+    ]
+  },
+  "model_sha256": "4c0dafdc512c99a5628441d904650ce51c5c0a81ac13ce2d574b7f9e0343c28d",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "9166e6ee81cc68068f67c9b44726ed0fbfff9f1cae27d043bf20fd6744d1029f",
+    "side_sha256": "79147b84c66ea211f8c5c7c15b3f5e6e17e0b6ac76f578c62bf82cb523005f8f",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

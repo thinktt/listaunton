@@ -1,0 +1,50 @@
+{
+  "method": "Fixed 54-degree camera, 1.8 px smoothed Rec.709 sRGB luminance. Across x314\u2013460 in steps of two, locate strongest ridge response within -20:+12 px of the manually traced reference. Width is the contiguous half-prominence band above the median of strips 21\u201328 px above and 18\u201326 px below the trace. Shadow strip lies 7\u201315 px below the traced ridge. MAE for tone covers x300\u2013470 between -22 and +25 px of the curve.",
+  "trace_x": [
+    300,
+    320,
+    340,
+    360,
+    380,
+    400,
+    420,
+    440,
+    460,
+    470
+  ],
+  "trace_y": [
+    345,
+    341,
+    338,
+    338,
+    338,
+    339,
+    340,
+    342,
+    351,
+    357
+  ],
+  "scores": {
+    "candidate_2": {
+      "median_band_width_px": 9.0,
+      "mean_band_width_px": 10.337837837837839,
+      "mean_luminance_below": 47.49728148148148,
+      "peak_row_mae_to_candidate_2_px": 0.0,
+      "luminance_mae_to_candidate_2": 0.0
+    },
+    "parent": {
+      "median_band_width_px": 24.0,
+      "mean_band_width_px": 25.364864864864863,
+      "mean_luminance_below": 67.00270930930931,
+      "peak_row_mae_to_candidate_2_px": 8.31081081081081,
+      "luminance_mae_to_candidate_2": 19.25075690976514
+    },
+    "model": {
+      "median_band_width_px": 25.0,
+      "mean_band_width_px": 25.986486486486488,
+      "mean_luminance_below": 59.34356056056056,
+      "peak_row_mae_to_candidate_2_px": 7.972972972972973,
+      "luminance_mae_to_candidate_2": 20.095475500618047
+    }
+  }
+}

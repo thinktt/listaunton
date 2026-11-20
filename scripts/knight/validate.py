@@ -1,6 +1,5 @@
 """Validate closed knight components and renderer/viewer camera data."""
 import bpy,bmesh,json,sys,hashlib
-from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 import numpy as np
 from pathlib import Path
@@ -57,10 +56,33 @@ assert np.allclose(vertices[:,:3].max(0),meta['bounds']['max'])
 assert np.allclose(np.array(meta['referenceCamera']['worldToCamera']).reshape(4,4),np.array(bpy.context.scene.camera.matrix_world.inverted()),atol=1e-7)
 cam=bpy.context.scene.camera
 assert np.allclose(np.array(meta['referenceCamera']['projectionMatrix']).reshape(4,4),np.array(cam.calc_matrix_camera(graph,x=1254,y=1254)),atol=1e-7)
-skin=bpy.data.objects['Knight | continuous horse head and neck'];tree=BVHTree.FromObject(skin,graph);eyes=[]
-for name,side in [('near',-1),('far',1)]:
- ob=bpy.data.objects[f'Knight | {name} eye'];origin=Vector((ob.location.x,2*side,ob.location.z));hit=tree.ray_cast(origin,Vector((0,-side,0)))[0]
- assert hit is not None
- distance=abs(ob.location.y-hit.y);assert distance<ob.dimensions.y/2
- eyes.append({'name':name,'socket_center_depth_difference':distance,'half_eye_depth':ob.dimensions.y/2,'seated_in_surface':True})
+def world_mesh(obj):
+ evaluated=obj.evaluated_get(graph)
+ mesh=bmesh.new()
+ mesh.from_mesh(evaluated.data)
+ mesh.transform(evaluated.matrix_world)
+ mesh.normal_update()
+ return mesh
+
+skin=world_mesh(bpy.data.objects['Knight | continuous horse head and neck'])
+tree=BVHTree.FromBMesh(skin)
+eyes=[]
+for name in ('near','far'):
+ eye=world_mesh(bpy.data.objects[f'Knight | {name} eye'])
+ intersections=tree.overlap(BVHTree.FromBMesh(eye))
+ assert intersections,(name,'eye surface does not intersect the head')
+ # An editable object's origin can stay at its old position after sculpting.
+ # Check the exposed lens and its buried seat on the evaluated carving.
+ depths=[]
+ for vertex in eye.verts:
+  hit,normal,_,_=tree.find_nearest(vertex.co)
+  depths.append((vertex.co-hit).dot(normal))
+ buried=sum(d < -1e-5 for d in depths)
+ exposed=sum(d > 1e-5 for d in depths)
+ assert buried and exposed,(name,buried,exposed)
+ eyes.append({'name':name,'seated_in_surface':True,'intersecting_face_pairs':len(intersections),
+              'buried_vertices':buried,'exposed_vertices':exposed,'max_inset':-min(depths),
+              'max_exposure':max(depths)})
+ eye.free()
+skin.free()
 (root/'assets/knight/validation.json').write_text(json.dumps({'components':report,'eyes':eyes,'source_hash_matches':True,'mesh_finite':True,'bounds_match':True,'normals_unit_length':True,'camera_matches_saved_blend':True,'visible_component_count':7,'hidden_construction_count':2,'note':'One continuous broad skull, cheek and rounded gently conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture.'},indent=2));print('PASS',report)

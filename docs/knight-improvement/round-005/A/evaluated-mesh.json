@@ -1,0 +1,90 @@
+{
+  "parent": {
+    "Knight | turned pedestal": {
+      "triangles": 62464,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 0.00018170739349443465,
+      "finite_corner_normals": true
+    },
+    "Knight | swept rounded mane": {
+      "triangles": 25600,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 3.726907380041666e-05,
+      "finite_corner_normals": true
+    },
+    "Knight | near swept ear": {
+      "triangles": 13312,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 6.119039881014032e-06,
+      "finite_corner_normals": true
+    },
+    "Knight | near eye": {
+      "triangles": 960,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 7.206379086710513e-05,
+      "finite_corner_normals": true
+    },
+    "Knight | far swept ear": {
+      "triangles": 13312,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 6.119708359619835e-06,
+      "finite_corner_normals": true
+    },
+    "Knight | far eye": {
+      "triangles": 960,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 7.52602209104225e-05,
+      "finite_corner_normals": true
+    },
+    "Knight | continuous horse head and neck": {
+      "triangles": 86994,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 8.075012374320067e-07,
+      "finite_corner_normals": true
+    }
+  },
+  "candidate": {
+    "Knight | turned pedestal": {
+      "triangles": 62464,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 0.00018170739349443465,
+      "finite_corner_normals": true
+    },
+    "Knight | swept rounded mane": {
+      "triangles": 25600,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 1.747576789057348e-05,
+      "finite_corner_normals": true
+    },
+    "Knight | near swept ear": {
+      "triangles": 13312,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 6.119039881014032e-06,
+      "finite_corner_normals": true
+    },
+    "Knight | near eye": {
+      "triangles": 960,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 1.9074539522989653e-05,
+      "finite_corner_normals": true
+    },
+    "Knight | far swept ear": {
+      "triangles": 13312,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 6.119708359619835e-06,
+      "finite_corner_normals": true
+    },
+    "Knight | far eye": {
+      "triangles": 960,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 1.948355566128157e-05,
+      "finite_corner_normals": true
+    },
+    "Knight | continuous horse head and neck": {
+      "triangles": 98258,
+      "double_area_below_1e-10": 0,
+      "minimum_double_area": 2.984251457061049e-10,
+      "finite_corner_normals": true
+    }
+  }
+}

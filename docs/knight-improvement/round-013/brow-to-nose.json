@@ -1,0 +1,189 @@
+{
+  "method": "Hand-registered trace of the dark upper lid and its continuation toward the nose in black candidate 2. Brightness is measured along local vertical profiles. A fold in the sculpture and a cast shadow can differ in position. The original provides lower-resolution corroboration.",
+  "anchor_points": [
+    [
+      459,
+      467
+    ],
+    [
+      474,
+      465
+    ],
+    [
+      488,
+      464
+    ],
+    [
+      497,
+      464
+    ],
+    [
+      506,
+      466
+    ],
+    [
+      516,
+      468
+    ],
+    [
+      526,
+      471
+    ],
+    [
+      535,
+      475
+    ],
+    [
+      544,
+      481
+    ],
+    [
+      553,
+      487
+    ],
+    [
+      562,
+      492
+    ],
+    [
+      572,
+      497
+    ],
+    [
+      580,
+      500
+    ]
+  ],
+  "results": {
+    "Original black": {
+      "rear": {
+        "trough_offset_px": 2,
+        "luma_at_fold": 25.35,
+        "upper_minus_fold": 12.53,
+        "lower_minus_fold": 0.63
+      },
+      "mid": {
+        "trough_offset_px": -3,
+        "luma_at_fold": 41.08,
+        "upper_minus_fold": -1.37,
+        "lower_minus_fold": 11.12
+      },
+      "nose corner": {
+        "trough_offset_px": -5,
+        "luma_at_fold": 49.66,
+        "upper_minus_fold": -8.66,
+        "lower_minus_fold": 13.39
+      },
+      "beyond eye": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 30.66,
+        "upper_minus_fold": 3.9,
+        "lower_minus_fold": 14.42
+      }
+    },
+    "Black 2": {
+      "rear": {
+        "trough_offset_px": 3,
+        "luma_at_fold": 27.66,
+        "upper_minus_fold": 22.14,
+        "lower_minus_fold": 1.14
+      },
+      "mid": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 36.8,
+        "upper_minus_fold": 12.25,
+        "lower_minus_fold": 32.5
+      },
+      "nose corner": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 36.63,
+        "upper_minus_fold": 15.23,
+        "lower_minus_fold": 35.24
+      },
+      "beyond eye": {
+        "trough_offset_px": -1,
+        "luma_at_fold": 26.52,
+        "upper_minus_fold": 15.8,
+        "lower_minus_fold": 37.13
+      }
+    },
+    "Parent": {
+      "rear": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 41.49,
+        "upper_minus_fold": 13.04,
+        "lower_minus_fold": -0.56
+      },
+      "mid": {
+        "trough_offset_px": 4,
+        "luma_at_fold": 47.12,
+        "upper_minus_fold": 10.14,
+        "lower_minus_fold": -3.24
+      },
+      "nose corner": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 35.85,
+        "upper_minus_fold": 8.06,
+        "lower_minus_fold": 5.48
+      },
+      "beyond eye": {
+        "trough_offset_px": -1,
+        "luma_at_fold": 32.01,
+        "upper_minus_fold": 4.26,
+        "lower_minus_fold": 11.96
+      }
+    },
+    "A": {
+      "rear": {
+        "trough_offset_px": 10,
+        "luma_at_fold": 45.52,
+        "upper_minus_fold": 8.97,
+        "lower_minus_fold": 2.78
+      },
+      "mid": {
+        "trough_offset_px": -1,
+        "luma_at_fold": 50.33,
+        "upper_minus_fold": 7.05,
+        "lower_minus_fold": 10.22
+      },
+      "nose corner": {
+        "trough_offset_px": 1,
+        "luma_at_fold": 44.52,
+        "upper_minus_fold": 18.96,
+        "lower_minus_fold": 15.98
+      },
+      "beyond eye": {
+        "trough_offset_px": 1,
+        "luma_at_fold": 30.44,
+        "upper_minus_fold": 13.32,
+        "lower_minus_fold": 10.82
+      }
+    },
+    "B": {
+      "rear": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 39.21,
+        "upper_minus_fold": 15.11,
+        "lower_minus_fold": 5.76
+      },
+      "mid": {
+        "trough_offset_px": -2,
+        "luma_at_fold": 52.0,
+        "upper_minus_fold": 5.21,
+        "lower_minus_fold": 8.58
+      },
+      "nose corner": {
+        "trough_offset_px": -1,
+        "luma_at_fold": 40.96,
+        "upper_minus_fold": 1.74,
+        "lower_minus_fold": 14.2
+      },
+      "beyond eye": {
+        "trough_offset_px": -5,
+        "luma_at_fold": 34.64,
+        "upper_minus_fold": -1.19,
+        "lower_minus_fold": 15.12
+      }
+    }
+  }
+}

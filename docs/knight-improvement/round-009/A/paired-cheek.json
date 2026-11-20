@@ -1,0 +1,46 @@
+{
+  "aligned_flank_rect": [
+    325,
+    220,
+    365,
+    245
+  ],
+  "measurements": {
+    "parent": {
+      "near": {
+        "median_rgb": [
+          119.5,
+          64.0,
+          34.0
+        ],
+        "local_contrast": 0.14748512789234747
+      },
+      "far": {
+        "median_rgb": [
+          89.0,
+          46.0,
+          20.0
+        ],
+        "local_contrast": 0.29056401875294746
+      }
+    },
+    "A": {
+      "near": {
+        "median_rgb": [
+          92.0,
+          49.0,
+          24.0
+        ],
+        "local_contrast": 0.2193646049314024
+      },
+      "far": {
+        "median_rgb": [
+          80.0,
+          41.0,
+          18.0
+        ],
+        "local_contrast": 0.2894008054758829
+      }
+    }
+  }
+}

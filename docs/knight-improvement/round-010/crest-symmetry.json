@@ -1,0 +1,233 @@
+{
+  "method": "All dimensions in model units, measured in the unposed head from the evaluated mane. For each station, compare top-surface height at matched y=\u00b10.05, \u00b10.06, \u2026, \u00b10.17. Crest width spans the outermost samples within 0.004 of maximum height. A flat or divided crown can give similar widths; consult the profiles and frontal photographs.",
+  "scenes": {
+    "parent": {
+      "source_sha256": "8e015620e552bda2c1e67866da8a7a3ba0e671c16deb22d93c07fb6c7859121d",
+      "stations": [
+        {
+          "station": -0.8,
+          "mirror_abs_mean": 0.0,
+          "mirror_max": 1e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.03948
+        },
+        {
+          "station": -0.6,
+          "mirror_abs_mean": 0.0,
+          "mirror_max": 1e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.08664
+        },
+        {
+          "station": -0.4,
+          "mirror_abs_mean": 2e-05,
+          "mirror_max": 4e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.10898
+        },
+        {
+          "station": -0.2,
+          "mirror_abs_mean": 4e-05,
+          "mirror_max": 0.00014,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.11151
+        },
+        {
+          "station": 0.0,
+          "mirror_abs_mean": 1e-05,
+          "mirror_max": 7e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.10413
+        },
+        {
+          "station": 0.14,
+          "mirror_abs_mean": 6e-05,
+          "mirror_max": 0.0002,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.1005
+        }
+      ],
+      "mean_mirror_difference": 2e-05,
+      "greatest_mirror_difference": 0.0002,
+      "median_width_within_004_of_peak": 0.04,
+      "median_abs_top_mid": 0.0
+    },
+    "9B": {
+      "source_sha256": "c6edd8375c632aa48410186f4a77c575c87a8b91e3d6c353414f45f0c90c8ff3",
+      "stations": [
+        {
+          "station": -0.8,
+          "mirror_abs_mean": 0.07568,
+          "mirror_max": 0.14795,
+          "crest_width": 0.05,
+          "top_mid": 0.095,
+          "peak_height": 5.08582
+        },
+        {
+          "station": -0.6,
+          "mirror_abs_mean": 0.06787,
+          "mirror_max": 0.16031,
+          "crest_width": 0.05,
+          "top_mid": 0.105,
+          "peak_height": 5.13907
+        },
+        {
+          "station": -0.4,
+          "mirror_abs_mean": 0.04329,
+          "mirror_max": 0.13011,
+          "crest_width": 0.06,
+          "top_mid": 0.11,
+          "peak_height": 5.16419
+        },
+        {
+          "station": -0.2,
+          "mirror_abs_mean": 0.01406,
+          "mirror_max": 0.0663,
+          "crest_width": 0.25,
+          "top_mid": 0.005,
+          "peak_height": 5.16582
+        },
+        {
+          "station": 0.0,
+          "mirror_abs_mean": 0.0074,
+          "mirror_max": 0.01004,
+          "crest_width": 0.27,
+          "top_mid": -0.015,
+          "peak_height": 5.1512
+        },
+        {
+          "station": 0.14,
+          "mirror_abs_mean": 0.0124,
+          "mirror_max": 0.01876,
+          "crest_width": 0.07,
+          "top_mid": 0.075,
+          "peak_height": 5.13604
+        }
+      ],
+      "mean_mirror_difference": 0.03678,
+      "greatest_mirror_difference": 0.16031,
+      "median_width_within_004_of_peak": 0.065,
+      "median_abs_top_mid": 0.085
+    },
+    "A": {
+      "source_sha256": "1f308f8ee1e4d2c4c241d2bee15a08a2dab0aa2ce7aa353e8b2765a357efc057",
+      "stations": [
+        {
+          "station": -0.8,
+          "mirror_abs_mean": 0.0,
+          "mirror_max": 1e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.03948
+        },
+        {
+          "station": -0.6,
+          "mirror_abs_mean": 1e-05,
+          "mirror_max": 2e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.08664
+        },
+        {
+          "station": -0.4,
+          "mirror_abs_mean": 1e-05,
+          "mirror_max": 3e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.10898
+        },
+        {
+          "station": -0.2,
+          "mirror_abs_mean": 5e-05,
+          "mirror_max": 0.00013,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.11151
+        },
+        {
+          "station": 0.0,
+          "mirror_abs_mean": 2e-05,
+          "mirror_max": 7e-05,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.10413
+        },
+        {
+          "station": 0.14,
+          "mirror_abs_mean": 7e-05,
+          "mirror_max": 0.0002,
+          "crest_width": 0.04,
+          "top_mid": 0.0,
+          "peak_height": 5.10036
+        }
+      ],
+      "mean_mirror_difference": 3e-05,
+      "greatest_mirror_difference": 0.0002,
+      "median_width_within_004_of_peak": 0.04,
+      "median_abs_top_mid": 0.0
+    },
+    "B": {
+      "source_sha256": "56b1373250def855651b4d4a4306c5a824eec0f58ef198d1496bdd66270bc847",
+      "stations": [
+        {
+          "station": -0.8,
+          "mirror_abs_mean": 1e-05,
+          "mirror_max": 1e-05,
+          "crest_width": 0.06,
+          "top_mid": 0.0,
+          "peak_height": 5.05073
+        },
+        {
+          "station": -0.6,
+          "mirror_abs_mean": 2e-05,
+          "mirror_max": 5e-05,
+          "crest_width": 0.06,
+          "top_mid": 0.0,
+          "peak_height": 5.09856
+        },
+        {
+          "station": -0.4,
+          "mirror_abs_mean": 2e-05,
+          "mirror_max": 7e-05,
+          "crest_width": 0.06,
+          "top_mid": 0.0,
+          "peak_height": 5.12251
+        },
+        {
+          "station": -0.2,
+          "mirror_abs_mean": 3e-05,
+          "mirror_max": 0.00011,
+          "crest_width": 0.06,
+          "top_mid": 0.0,
+          "peak_height": 5.12836
+        },
+        {
+          "station": 0.0,
+          "mirror_abs_mean": 1e-05,
+          "mirror_max": 6e-05,
+          "crest_width": 0.08,
+          "top_mid": 0.0,
+          "peak_height": 5.11451
+        },
+        {
+          "station": 0.14,
+          "mirror_abs_mean": 0.00012,
+          "mirror_max": 0.0004,
+          "crest_width": 0.08,
+          "top_mid": 0.0,
+          "peak_height": 5.08487
+        }
+      ],
+      "mean_mirror_difference": 4e-05,
+      "greatest_mirror_difference": 0.0004,
+      "median_width_within_004_of_peak": 0.06,
+      "median_abs_top_mid": 0.0
+    }
+  }
+}

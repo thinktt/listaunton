@@ -1,0 +1,590 @@
+{
+  "model": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+  "note": "Distances along the registered camera ray. Positive head depth minus mane depth means the mane surface lies in front of the neck. The source shadow is a visual landmark and has no measured physical depth.",
+  "sections": [
+    {
+      "y": 460,
+      "samples": {
+        "source_left": {
+          "x": 266,
+          "hits": {
+            "mane": {
+              "depth": 10.1889,
+              "pre_pose": [
+                -0.9602,
+                -0.3744,
+                4.2711
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 276,
+          "hits": {
+            "mane": {
+              "depth": 10.2097,
+              "pre_pose": [
+                -0.9027,
+                -0.3605,
+                4.2543
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 286,
+          "hits": {
+            "mane": {
+              "depth": 10.2306,
+              "pre_pose": [
+                -0.8453,
+                -0.3465,
+                4.2374
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 330,
+          "hits": {
+            "mane": {
+              "depth": 10.4595,
+              "pre_pose": [
+                -0.5949,
+                -0.2044,
+                4.0522
+              ]
+            },
+            "head": {
+              "depth": 10.4852,
+              "pre_pose": [
+                -0.5954,
+                -0.1894,
+                4.0315
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 484,
+      "samples": {
+        "source_left": {
+          "x": 255,
+          "hits": {
+            "mane": {
+              "depth": 10.3191,
+              "pre_pose": [
+                -1.0227,
+                -0.412,
+                4.0842
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 265,
+          "hits": {
+            "mane": {
+              "depth": 10.3393,
+              "pre_pose": [
+                -0.9652,
+                -0.3984,
+                4.0679
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 275,
+          "hits": {
+            "mane": {
+              "depth": 10.3601,
+              "pre_pose": [
+                -0.9078,
+                -0.3845,
+                4.0511
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 324,
+          "hits": {
+            "mane": {
+              "depth": 10.5495,
+              "pre_pose": [
+                -0.6279,
+                -0.2648,
+                3.8978
+              ]
+            },
+            "head": {
+              "depth": 10.5704,
+              "pre_pose": [
+                -0.6282,
+                -0.2526,
+                3.8809
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 508,
+      "samples": {
+        "source_left": {
+          "x": 253,
+          "hits": {
+            "mane": {
+              "depth": 10.4392,
+              "pre_pose": [
+                -1.033,
+                -0.454,
+                3.9055
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 263,
+          "hits": {
+            "mane": {
+              "depth": 10.459,
+              "pre_pose": [
+                -0.9755,
+                -0.4407,
+                3.8895
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 273,
+          "hits": {
+            "mane": {
+              "depth": 10.4786,
+              "pre_pose": [
+                -0.9181,
+                -0.4275,
+                3.8736
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 321,
+          "hits": {
+            "mane": {
+              "depth": 10.642,
+              "pre_pose": [
+                -0.6435,
+                -0.3232,
+                3.7414
+              ]
+            },
+            "head": {
+              "depth": 10.6564,
+              "pre_pose": [
+                -0.6437,
+                -0.3148,
+                3.7298
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 532,
+      "samples": {
+        "source_left": {
+          "x": 254,
+          "hits": {
+            "mane": {
+              "depth": 10.5476,
+              "pre_pose": [
+                -1.0258,
+                -0.5024,
+                3.7362
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 264,
+          "hits": {
+            "mane": {
+              "depth": 10.5672,
+              "pre_pose": [
+                -0.9683,
+                -0.4892,
+                3.7203
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 274,
+          "hits": {
+            "mane": {
+              "depth": 10.5869,
+              "pre_pose": [
+                -0.9109,
+                -0.4759,
+                3.7044
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 319,
+          "hits": {
+            "mane": {
+              "depth": 10.7416,
+              "pre_pose": [
+                -0.6534,
+                -0.3773,
+                3.5793
+              ]
+            },
+            "head": {
+              "depth": 10.755,
+              "pre_pose": [
+                -0.6537,
+                -0.3694,
+                3.5684
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 556,
+      "samples": {
+        "source_left": {
+          "x": 258,
+          "hits": {
+            "mane": {
+              "depth": 10.6584,
+              "pre_pose": [
+                -1.0013,
+                -0.5489,
+                3.565
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 268,
+          "hits": {
+            "mane": {
+              "depth": 10.6807,
+              "pre_pose": [
+                -0.9438,
+                -0.534,
+                3.5469
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 278,
+          "hits": {
+            "mane": {
+              "depth": 10.7033,
+              "pre_pose": [
+                -0.8865,
+                -0.5191,
+                3.5287
+              ]
+            },
+            "head": {
+              "depth": 11.4008,
+              "pre_pose": [
+                -0.9669,
+                -0.1471,
+                2.9644
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 318,
+          "hits": {
+            "mane": {
+              "depth": 10.8486,
+              "pre_pose": [
+                -0.6615,
+                -0.4285,
+                3.4111
+              ]
+            },
+            "head": {
+              "depth": 10.8665,
+              "pre_pose": [
+                -0.6627,
+                -0.4184,
+                3.3967
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 580,
+      "samples": {
+        "source_left": {
+          "x": 262,
+          "hits": {
+            "mane": {
+              "depth": 10.7886,
+              "pre_pose": [
+                -0.9821,
+                -0.5879,
+                3.3781
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 272,
+          "hits": {
+            "mane": {
+              "depth": 10.8184,
+              "pre_pose": [
+                -0.9264,
+                -0.5695,
+                3.354
+              ]
+            },
+            "head": {
+              "depth": 11.5422,
+              "pre_pose": [
+                -1.0403,
+                -0.2061,
+                2.7684
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 282,
+          "hits": {
+            "mane": {
+              "depth": 10.848,
+              "pre_pose": [
+                -0.8708,
+                -0.5511,
+                3.33
+              ]
+            },
+            "head": {
+              "depth": 11.3296,
+              "pre_pose": [
+                -0.9372,
+                -0.302,
+                2.9404
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 318,
+          "hits": {
+            "mane": {
+              "depth": 10.9748,
+              "pre_pose": [
+                -0.6749,
+                -0.4736,
+                3.2275
+              ]
+            },
+            "head": {
+              "depth": 10.9756,
+              "pre_pose": [
+                -0.675,
+                -0.4732,
+                3.2268
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 604,
+      "samples": {
+        "source_left": {
+          "x": 267,
+          "hits": {
+            "mane": {
+              "depth": 10.97,
+              "pre_pose": [
+                -0.9726,
+                -0.6081,
+                3.1498
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 277,
+          "hits": {
+            "mane": {
+              "depth": 11.0067,
+              "pre_pose": [
+                -0.9194,
+                -0.5862,
+                3.12
+              ]
+            },
+            "head": {
+              "depth": 11.4744,
+              "pre_pose": [
+                -1.002,
+                -0.3587,
+                2.7417
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 287,
+          "hits": {
+            "mane": {
+              "depth": 11.0433,
+              "pre_pose": [
+                -0.8665,
+                -0.5642,
+                3.0904
+              ]
+            },
+            "head": {
+              "depth": 11.3312,
+              "pre_pose": [
+                -0.9146,
+                -0.421,
+                2.8575
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 309,
+          "hits": {
+            "mane": {
+              "depth": 11.1273,
+              "pre_pose": [
+                -0.7518,
+                -0.5133,
+                3.0225
+              ]
+            },
+            "head": {
+              "depth": 11.137,
+              "pre_pose": [
+                -0.7533,
+                -0.5083,
+                3.0146
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "y": 628,
+      "samples": {
+        "source_left": {
+          "x": 276,
+          "hits": {
+            "mane": {
+              "depth": 11.2082,
+              "pre_pose": [
+                -0.9595,
+                -0.608,
+                2.8755
+              ]
+            },
+            "head": {
+              "depth": 11.6011,
+              "pre_pose": [
+                -1.0394,
+                -0.4261,
+                2.5576
+              ]
+            }
+          }
+        },
+        "source_shadow": {
+          "x": 286,
+          "hits": {
+            "mane": {
+              "depth": 11.248,
+              "pre_pose": [
+                -0.9089,
+                -0.5839,
+                2.8433
+              ]
+            },
+            "head": {
+              "depth": 11.4394,
+              "pre_pose": [
+                -0.9464,
+                -0.4933,
+                2.6884
+              ]
+            }
+          }
+        },
+        "source_right": {
+          "x": 296,
+          "hits": {
+            "mane": {
+              "depth": 11.2889,
+              "pre_pose": [
+                -0.8588,
+                -0.559,
+                2.8102
+              ]
+            },
+            "head": {
+              "depth": 11.3396,
+              "pre_pose": [
+                -0.8685,
+                -0.5345,
+                2.7691
+              ]
+            }
+          }
+        },
+        "model_edge": {
+          "x": 300,
+          "hits": {
+            "mane": {
+              "depth": 11.3054,
+              "pre_pose": [
+                -0.8389,
+                -0.5488,
+                2.7968
+              ]
+            },
+            "head": {
+              "depth": 11.3076,
+              "pre_pose": [
+                -0.8393,
+                -0.5478,
+                2.795
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

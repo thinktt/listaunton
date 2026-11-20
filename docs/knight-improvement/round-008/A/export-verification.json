@@ -1,0 +1,56 @@
+{
+  "model_sha256": "e021797f7d6063cd9c7293e4d9ec06e196b5885135b6737cfd33738246e5bc7a",
+  "parent_sha256": "8d984d59beea0f86d69bbb5b8f5dc57becf7e707e576412eb8eda4503e81a948",
+  "pigment_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "same_camera": true,
+  "packed_png_matches": true,
+  "uv_and_geometry": {
+    "Knight | turned pedestal": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | swept rounded mane": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | near swept ear": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | near eye": {
+      "max_position_change": 0.02249807119369507,
+      "uv_exact": true
+    },
+    "Knight | far swept ear": {
+      "max_position_change": 0.0,
+      "uv_exact": true
+    },
+    "Knight | far eye": {
+      "max_position_change": 0.02249804139137268,
+      "uv_exact": true
+    },
+    "Knight | continuous horse head and neck": {
+      "max_position_change": 0.03779494762420654,
+      "uv_exact": true
+    }
+  },
+  "parts": 7,
+  "triangles": 214866,
+  "atlas_datablock": "Knight walnut | figured orbital carving 008-A",
+  "packed_before": {
+    "continuous-grain.png": "8e00f950e34fe1ec891f9246c8f521bcd1f62e336c5b949faa0694602431c29e",
+    "Knight inference coverage": "266252bfdb7ae681d6d3c53befa50ce10cc527879255b35c6e6be9235a9772ae",
+    "Knight inferred walnut": "9699fcb1c64abf80cc59af3a6c9159c103380a22731289038cd744c6266e61d3",
+    "Knight walnut | continuous rear mane 002-B": "6dd2c27434783d5490a0fc35d0650e040b0b903497206a05e04d4e665d6d6515",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "packed_after": {
+    "continuous-grain.png": "8e00f950e34fe1ec891f9246c8f521bcd1f62e336c5b949faa0694602431c29e",
+    "Knight inference coverage": "266252bfdb7ae681d6d3c53befa50ce10cc527879255b35c6e6be9235a9772ae",
+    "Knight inferred walnut": "9699fcb1c64abf80cc59af3a6c9159c103380a22731289038cd744c6266e61d3",
+    "Knight walnut | figured orbital carving 008-A": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  },
+  "webgl_mesh": "webgl-check\\mesh.json",
+  "finish_file_bytes": 120211
+}

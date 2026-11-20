@@ -1,0 +1,338 @@
+{
+  "model": "9f3100d8a3b41a055cbe54574f7c1c80633749d2bd9eb66bd7b9312e3b892e8a",
+  "parent": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+  "renders": {
+    "wood.png": "0efa5a5e2cce64638ac9506c925f1579de28977532290db219bf75ec2707ea37",
+    "wood-side.png": "ec75cd1c6d29f98f5b57c031516c52817eae5bff5802f6acd05f3422f4115971"
+  },
+  "studio_control": {
+    "model": "9f3100d8a3b41a055cbe54574f7c1c80633749d2bd9eb66bd7b9312e3b892e8a",
+    "parent_lights": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+    "samples": 144,
+    "renders": {
+      "fixed": "c34fe398631dcaaeed8c0abe0072ef0f0f4c9390ff8259475fe082bebff764bd",
+      "side": "df4f58d7a858f3dc03176c939dbbb6476a86ddb42347ca9fb379ab0dc932aa4e"
+    }
+  },
+  "fixed_source_comparison": {
+    "Original black": {
+      "eye": {
+        "median_rgb": [
+          67.0,
+          36.0,
+          15.0
+        ],
+        "luminance_mae": 11.022124302134646,
+        "pattern_correlation": 0.7952672255515951
+      },
+      "lower_lid": {
+        "median_rgb": [
+          96.0,
+          47.0,
+          20.0
+        ],
+        "luminance_mae": 27.139422941176466,
+        "pattern_correlation": 0.8710517218537234
+      },
+      "cheek": {
+        "median_rgb": [
+          73.0,
+          34.0,
+          13.0
+        ],
+        "luminance_mae": 18.773910775510203,
+        "pattern_correlation": 0.9706710301349055
+      },
+      "chest": {
+        "median_rgb": [
+          79.0,
+          38.0,
+          14.0
+        ],
+        "luminance_mae": 14.63200726530612,
+        "pattern_correlation": 0.9522457937094936
+      }
+    },
+    "Black 2": {
+      "eye": {
+        "median_rgb": [
+          72.0,
+          39.0,
+          16.0
+        ],
+        "luminance_mae": 0.0,
+        "pattern_correlation": 1.0
+      },
+      "lower_lid": {
+        "median_rgb": [
+          135.0,
+          67.0,
+          28.0
+        ],
+        "luminance_mae": 0.0,
+        "pattern_correlation": 1.0
+      },
+      "cheek": {
+        "median_rgb": [
+          97.0,
+          47.0,
+          17.0
+        ],
+        "luminance_mae": 0.0,
+        "pattern_correlation": 1.0
+      },
+      "chest": {
+        "median_rgb": [
+          100.0,
+          50.0,
+          19.0
+        ],
+        "luminance_mae": 0.0,
+        "pattern_correlation": 1.0
+      }
+    },
+    "10B parent": {
+      "eye": {
+        "median_rgb": [
+          68.5,
+          33.0,
+          12.0
+        ],
+        "luminance_mae": 15.63020377668309,
+        "pattern_correlation": 0.20312555486954192
+      },
+      "lower_lid": {
+        "median_rgb": [
+          92.0,
+          47.0,
+          19.0
+        ],
+        "luminance_mae": 27.233694117647058,
+        "pattern_correlation": 0.6674176150687592
+      },
+      "cheek": {
+        "median_rgb": [
+          97.0,
+          47.0,
+          16.0
+        ],
+        "luminance_mae": 14.2893026122449,
+        "pattern_correlation": 0.6419998861882992
+      },
+      "chest": {
+        "median_rgb": [
+          106.0,
+          52.0,
+          21.0
+        ],
+        "luminance_mae": 6.897889714285714,
+        "pattern_correlation": 0.9181114036501964
+      }
+    },
+    "11A in parent studio": {
+      "eye": {
+        "median_rgb": [
+          68.0,
+          33.0,
+          11.0
+        ],
+        "luminance_mae": 15.512383497536945,
+        "pattern_correlation": 0.27363995433790106
+      },
+      "lower_lid": {
+        "median_rgb": [
+          97.0,
+          48.0,
+          18.0
+        ],
+        "luminance_mae": 24.072679411764703,
+        "pattern_correlation": 0.6874577701803138
+      },
+      "cheek": {
+        "median_rgb": [
+          99.0,
+          48.0,
+          16.0
+        ],
+        "luminance_mae": 12.79563730612245,
+        "pattern_correlation": 0.7046696698232666
+      },
+      "chest": {
+        "median_rgb": [
+          106.0,
+          52.0,
+          21.0
+        ],
+        "luminance_mae": 6.898323591836736,
+        "pattern_correlation": 0.9181013196765392
+      }
+    },
+    "11A gallery": {
+      "eye": {
+        "median_rgb": [
+          66.0,
+          32.0,
+          9.0
+        ],
+        "luminance_mae": 14.94147315270936,
+        "pattern_correlation": 0.42086896729834933
+      },
+      "lower_lid": {
+        "median_rgb": [
+          101.0,
+          51.0,
+          20.0
+        ],
+        "luminance_mae": 20.792645098039216,
+        "pattern_correlation": 0.8072922466499827
+      },
+      "cheek": {
+        "median_rgb": [
+          100.0,
+          48.0,
+          16.0
+        ],
+        "luminance_mae": 11.25842987755102,
+        "pattern_correlation": 0.851224413516493
+      },
+      "chest": {
+        "median_rgb": [
+          106.0,
+          52.0,
+          21.0
+        ],
+        "luminance_mae": 6.891576979591836,
+        "pattern_correlation": 0.9182824412720697
+      }
+    }
+  },
+  "trace_x496_504": {
+    "Original black": {
+      "central_peaks_y_luma": [
+        [
+          471,
+          58.79
+        ],
+        [
+          499,
+          107.96
+        ]
+      ],
+      "brightest_lower_y": 499
+    },
+    "Black 2": {
+      "central_peaks_y_luma": [
+        [
+          467,
+          78.93
+        ],
+        [
+          473,
+          96.85
+        ],
+        [
+          487,
+          71.92
+        ],
+        [
+          500,
+          198.79
+        ]
+      ],
+      "brightest_lower_y": 500
+    },
+    "10B parent": {
+      "central_peaks_y_luma": [
+        [
+          477,
+          111.1
+        ],
+        [
+          497,
+          165.91
+        ]
+      ],
+      "brightest_lower_y": 497
+    },
+    "11A in parent studio": {
+      "central_peaks_y_luma": [
+        [
+          467,
+          60.1
+        ],
+        [
+          475,
+          54.23
+        ],
+        [
+          484,
+          47.1
+        ],
+        [
+          502,
+          122.88
+        ]
+      ],
+      "brightest_lower_y": 502
+    },
+    "11A gallery": {
+      "central_peaks_y_luma": [
+        [
+          470,
+          103.18
+        ],
+        [
+          473,
+          101.96
+        ],
+        [
+          501,
+          177.2
+        ]
+      ],
+      "brightest_lower_y": 501
+    }
+  },
+  "outline": {
+    "Original black": {
+      "10B parent": 0.9836967727068754,
+      "11A gallery": 0.9836967727068754
+    },
+    "Black 2": {
+      "10B parent": 0.9770071378940054,
+      "11A gallery": 0.9770071378940054
+    },
+    "parent": {
+      "fixed": 1.0,
+      "side": 1.0
+    }
+  },
+  "bilateral_apertures": {
+    "parent": {
+      "samples": 2185,
+      "inclination_down_from_head_horizontal_deg": 47.7643262621595,
+      "extent_along_and_across_principal_axes": [
+        0.5052861083894613,
+        0.14782141046456188
+      ]
+    },
+    "A": {
+      "samples": 2428,
+      "inclination_down_from_head_horizontal_deg": 50.72517672394435,
+      "extent_along_and_across_principal_axes": [
+        0.5352058292986138,
+        0.1754144053107233
+      ]
+    }
+  },
+  "fixed_visible_insert": {
+    "parent": 1036,
+    "A": 1128
+  },
+  "bilateral_iou": 0.9934,
+  "per_part_self_intersections": {
+    "near eye": 0,
+    "far eye": 0
+  },
+  "skull_self_intersections": 0
+}

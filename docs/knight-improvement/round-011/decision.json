@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-011",
+  "winner": "B",
+  "reason": "B gives the horse a recognizable carved eye in profile. A broad inner surface rolls into a smaller crescent, and fine walnut grain reaches the nose-side corner. Both forms catch light at 54\u00b0. A follows the reflection on the cheek more closely, but its long, steep nose-side corner still draws attention in profile.",
+  "scores": {
+    "Parent": {
+      "reference": 94,
+      "side": 91,
+      "form": 91,
+      "finish": 86
+    },
+    "A": {
+      "reference": 94.5,
+      "side": 91,
+      "form": 91.5,
+      "finish": 86
+    },
+    "B": {
+      "reference": 94.5,
+      "side": 92.5,
+      "form": 92,
+      "finish": 87.5
+    }
+  },
+  "parent": {
+    "scene": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+    "fixed": "b69f382fd8eac3ad55aca2f5bde6dfbd0691f2a20c311aa01bb987e4b6f8a19c",
+    "side": "c00f428150d0ca2445c330c03816d0c99e69d12803b9d789b3c3db9a46ccc489"
+  },
+  "candidates": {
+    "A": {
+      "scene": "9f3100d8a3b41a055cbe54574f7c1c80633749d2bd9eb66bd7b9312e3b892e8a",
+      "fixed": "0efa5a5e2cce64638ac9506c925f1579de28977532290db219bf75ec2707ea37",
+      "side": "ec75cd1c6d29f98f5b57c031516c52817eae5bff5802f6acd05f3422f4115971",
+      "audit": "c09b443acf502e1be5828de9fedeb9f5374c379fe5bffddf42c92633e242e9dc",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    },
+    "B": {
+      "scene": "1a308c3a5428897032a3689452db3b79fe19efa3658fb3442eaa8d7f9f5c4d0a",
+      "fixed": "6d9ca722895cc7b81b14c58be63a53c17bebec2997de42244195e8ff52af8b48",
+      "side": "e62d634d0ffd72d28b867cfd79ea2d3f48fe938f896ad2343bb535b1da837b18",
+      "audit": "1dceabd9340f749bcdf3c439089740333cee75892e42dbda304dc1c073b88d13",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    }
+  }
+}

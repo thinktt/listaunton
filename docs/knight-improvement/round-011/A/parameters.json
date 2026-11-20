@@ -1,0 +1,144 @@
+{
+  "parent_sha256": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "orbital_fit": {
+    "-1": [
+      0.3927300287963774,
+      -0.32602947824842254,
+      -0.5295295143940086,
+      0.1748003468120139,
+      -0.033602559828472434,
+      0.5201805860622913,
+      0.9371086672385586,
+      2.9449510055586257,
+      1.764503233829933,
+      5.509746573367178
+    ],
+    "1": [
+      0.39517955049303194,
+      -0.3294111605500487,
+      -0.5247969536124237,
+      0.13321423582764458,
+      0.08911200657120975,
+      0.3657678098255785,
+      0.9024851503537704,
+      3.1947249080722306,
+      1.2419946733445808,
+      5.806203269516607
+    ]
+  },
+  "geometry": {
+    "continuous horse head and neck": {
+      "moved_vertices_1e-5": 7702,
+      "max_rest_shift": 0.07181555193675354
+    },
+    "coherent skull cheek and conical muzzle": {
+      "moved_vertices_1e-5": 523,
+      "max_rest_shift": 0.05448468422313807
+    },
+    "near eye": {
+      "moved_vertices_1e-5": 7682,
+      "max_rest_shift": 0.11331089676538367
+    },
+    "far eye": {
+      "moved_vertices_1e-5": 7682,
+      "max_rest_shift": 0.11344713629166653
+    }
+  },
+  "cards": [
+    {
+      "lamp": "Eye reflection upper",
+      "point_on_surface": [
+        499,
+        470
+      ],
+      "location": [
+        0.7127451300621033,
+        -0.7158026695251465,
+        4.1291823387146
+      ],
+      "rotation": [
+        1.7798211574554443,
+        0.0,
+        1.0315394401550293
+      ],
+      "axes": [
+        0.108,
+        0.09
+      ],
+      "watts": 0.031,
+      "spread_degrees": 21
+    },
+    {
+      "lamp": "Eye reflection lower",
+      "point_on_surface": [
+        501,
+        500
+      ],
+      "location": [
+        0.5754026174545288,
+        -0.6004618406295776,
+        3.781728982925415
+      ],
+      "rotation": [
+        2.0961241722106934,
+        0.0,
+        1.1573084592819214
+      ],
+      "axes": [
+        0.4,
+        0.25
+      ],
+      "watts": 0.084,
+      "spread_degrees": 15
+    }
+  ],
+  "model_sha256": "9f3100d8a3b41a055cbe54574f7c1c80633749d2bd9eb66bd7b9312e3b892e8a",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "0efa5a5e2cce64638ac9506c925f1579de28977532290db219bf75ec2707ea37",
+    "side_sha256": "ec75cd1c6d29f98f5b57c031516c52817eae5bff5802f6acd05f3422f4115971",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "parent_sha256": "709fb263f2cdf079c1a645002064ce83b72ff6b15faea2a9d8e8a19adfdd4dfb",
+  "basis": [
+    "lower_plane_height",
+    "lower_plane_offset",
+    "lower_plane_width",
+    "socket_fill",
+    "tilt",
+    "cheek_lift",
+    "lens_longitudinal_slope",
+    "lens_cross_slope",
+    "lens_crown",
+    "lens_back",
+    "lens_up"
+  ],
+  "physical_profile": [
+    -0.018,
+    0.026,
+    0.094,
+    0.04,
+    0.093,
+    0.052,
+    -0.1,
+    -0.15,
+    0.003,
+    -0.031,
+    0.01
+  ],
+  "moved": {
+    "Knight | continuous horse head and neck": {
+      "count_above_0.0001": 2854,
+      "max": 0.10443297773599625
+    },
+    "Knight | coherent skull cheek and conical muzzle": {
+      "count_above_0.0001": 786,
+      "max": 0.10257445275783539
+    },
+    "Knight | near eye": {
+      "count_above_0.0001": 482,
+      "max": 0.05329476296901703
+    },
+    "Knight | far eye": {
+      "count_above_0.0001": 482,
+      "max": 0.053294774144887924
+    }
+  },
+  "polish_card": {
+    "position": [
+      1.2835588455200195,
+      -0.3462359309196472,
+      4.230955600738525
+    ],
+    "energy": 3.8,
+    "disk_diameter": 0.128,
+    "receivers": [
+      "Knight | near eye",
+      "Knight | far eye"
+    ]
+  },
+  "model_sha256": "a884dea78cba06f8b476c856df43ba6fb02e8664cbd2b55e093ee98186e92ef7",
+  "fixed_sha256": "f0daf47ade96b90fcf1555e07a318910b2725261a60efb9f19dc533a4861f3aa",
+  "side_sha256": "9939d786ce527a0424bd82c13d3b0c07fd62ff8e894843d7244e28dafa58acb2",
+  "reopened_samples": 144
+}

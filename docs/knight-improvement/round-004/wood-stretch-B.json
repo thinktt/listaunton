@@ -1,0 +1,12 @@
+{
+  "parent": "6d06b1ca5d781bcca921e5745f10504ab1113aae983571704a979964a934c177",
+  "candidate": "322b4b3a8c29e8e5705b735010b8d0c293bf9583fbd27cf47d07c7d1c6291345",
+  "same_face_topology_and_wood_uv": true,
+  "method": "World-space deformation gradient on evaluated mane triangles with parent center z below 3.5. Quantiles weighted by original triangle area. A value of 1 means wood details retain their original size along that direction.",
+  "triangles": 9155,
+  "area_ratio": 1.2349,
+  "median_long_stretch": 1.1107,
+  "p95_long_stretch": 1.4137,
+  "median_short_stretch": 1.0097,
+  "p95_anisotropy": 1.3346
+}

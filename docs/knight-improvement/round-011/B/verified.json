@@ -1,0 +1,190 @@
+{
+  "candidate_sha256": "1a308c3a5428897032a3689452db3b79fe19efa3658fb3442eaa8d7f9f5c4d0a",
+  "parent_sha256": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+  "texture_sidecar": "pigment.png",
+  "packed_image_name": "Knight walnut | orbital grain 011-B",
+  "texture_sha256": "beee98c4ee1af2c55823485a4c0149dea5332c7eaeaa07e06d82ae7022918fe7",
+  "texture_export_filename": "wood-atlas-improvement-011-B.png",
+  "actual_repository_mesh_and_viewer_export_validation": {
+    "components": [
+      {
+        "name": "Knight | turned pedestal",
+        "nonmanifold_edges": 0,
+        "signed_volume": 10.002691660445445,
+        "connected_components": 1,
+        "vertices": 31234,
+        "faces": 31232,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | swept rounded mane",
+        "nonmanifold_edges": 0,
+        "signed_volume": 1.6516022516094833,
+        "connected_components": 1,
+        "vertices": 12802,
+        "faces": 12800,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | near swept ear",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.05861962174772995,
+        "connected_components": 1,
+        "vertices": 6658,
+        "faces": 6656,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | near eye",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.001864545880862815,
+        "connected_components": 1,
+        "vertices": 7938,
+        "faces": 7936,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | far swept ear",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.05861964718143412,
+        "connected_components": 1,
+        "vertices": 6658,
+        "faces": 6656,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | far eye",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.0018579158506729892,
+        "connected_components": 1,
+        "vertices": 7938,
+        "faces": 7936,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | continuous horse head and neck",
+        "nonmanifold_edges": 0,
+        "signed_volume": 5.862359700082703,
+        "connected_components": 1,
+        "vertices": 49131,
+        "faces": 66708,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | curved neck and chest",
+        "nonmanifold_edges": 0,
+        "signed_volume": 4.651322404706873,
+        "connected_components": 1,
+        "vertices": 57858,
+        "faces": 57856,
+        "hidden_construction": true
+      },
+      {
+        "name": "Knight | coherent skull cheek and conical muzzle",
+        "nonmanifold_edges": 0,
+        "signed_volume": 1.4986109819796891,
+        "connected_components": 1,
+        "vertices": 27778,
+        "faces": 27776,
+        "hidden_construction": true
+      }
+    ],
+    "eyes": [
+      {
+        "name": "near",
+        "socket_center_depth_difference": 0.023429274559020996,
+        "half_eye_depth": 0.11042125523090363,
+        "seated_in_surface": true
+      },
+      {
+        "name": "far",
+        "socket_center_depth_difference": 0.019103646278381348,
+        "half_eye_depth": 0.06353896856307983,
+        "seated_in_surface": true
+      }
+    ],
+    "source_hash_matches": true,
+    "mesh_finite": true,
+    "bounds_match": true,
+    "normals_unit_length": true,
+    "camera_matches_saved_blend": true,
+    "visible_component_count": 7,
+    "hidden_construction_count": 2,
+    "note": "One continuous broad skull, cheek and rounded gently conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+  },
+  "camera_unchanged": true,
+  "only_packed_image_change": [
+    "Knight walnut | figured cheek pigment 008-A",
+    "Knight walnut | orbital grain 011-B"
+  ],
+  "simple_subdivided_topology": [
+    "Knight | far eye",
+    "Knight | near eye"
+  ],
+  "interpolated_uvs_on_subdivided_eyes": [
+    "Knight | far eye",
+    "Knight | near eye"
+  ],
+  "surface_data_changes": [
+    "Knight | near eye",
+    "Knight | far eye",
+    "Knight | continuous horse head and neck"
+  ],
+  "geometry_changes": [
+    "Knight | near eye",
+    "Knight | far eye",
+    "Knight | continuous horse head and neck",
+    "Knight | coherent skull cheek and conical muzzle"
+  ],
+  "light_changes": [
+    "Eye reflection upper",
+    "Eye reflection lower"
+  ],
+  "max_skull_world_displacement_outside_orbital_window": 0.0,
+  "physical_heights": {
+    "parent": {
+      "whole_height": 5.089041229337454,
+      "top_z": {
+        "swept rounded mane": 5.1290411949157715,
+        "near swept ear": 4.886669158935547,
+        "far swept ear": 4.886668682098389,
+        "continuous horse head and neck": 5.093227386474609
+      }
+    },
+    "candidate": {
+      "whole_height": 5.089041229337454,
+      "top_z": {
+        "swept rounded mane": 5.1290411949157715,
+        "near swept ear": 4.886669158935547,
+        "far swept ear": 4.886668682098389,
+        "continuous horse head and neck": 5.093227386474609
+      }
+    }
+  },
+  "eye_visible_fixed_2px_samples": {
+    "parent": 259,
+    "candidate": 244
+  },
+  "eye_visible_bounds": {
+    "parent": [
+      [
+        479,
+        467
+      ],
+      [
+        541,
+        495
+      ]
+    ],
+    "candidate": [
+      [
+        475,
+        469
+      ],
+      [
+        539,
+        491
+      ]
+    ]
+  }
+}

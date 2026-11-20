@@ -1,0 +1,26 @@
+{
+  "trial": "044-chest-and-turned-walnut",
+  "model_sha256": "9378b0674ffcf854c4aa8b31b94ada81d38a4647651502225f0866dc4183b3be",
+  "render_sha256": "9603b00bcdeb3b920f7bdd1e9dfd6c3ecd78414a2a70dc9e0740ad7f9b06d581",
+  "previous_render_sha256": "f0f16fa16dfcc08944e67d2229f6e3395d28c6fcf255e00de83891ca90cf1565",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9853897090091732,
+      "previous_iou": 0.9853897090091732
+    },
+    "selected": {
+      "iou": 0.9787343038550667,
+      "previous_iou": 0.9787343038550667
+    },
+    "white_mirrored": {
+      "iou": 0.9718682743653703,
+      "previous_iou": 0.9718682743653703
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

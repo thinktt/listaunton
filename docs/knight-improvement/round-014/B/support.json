@@ -1,0 +1,48 @@
+{
+  "upstream_commit": "a859987",
+  "recipe": 9,
+  "candidate_directory": "build/knight-mission/improvement-014-B",
+  "local_seed_sha256": {
+    "parent.blend": "eaecb543e309c713db12fc83888bb2ffc0142686a06917ee6c76d24e7d2b2188",
+    "parent-pigment.png": "1e35b27f1eea257ee9bacc6ae60aa26cbeaf80fad5139365d58be1db395dd78b",
+    "parent-wood.png": "7c4238bb5504258937cef3d729f82af349548ffe0f76009d6e53a3279afd9bf6",
+    "parent-side.png": "0d4d237cd4ca3b3db6083bb9445686707bb2d9cbc94d5180533e5ca88339a388",
+    "arc-samples.json": "63dcbc8ea56d84d898a6346b6840f9ec50853e2417c076c9a9aff4904ef993da",
+    "hollow-samples.json": "c2dc15a80afdbdb7dc30e19f5fbe8d21a90dd86cb90003e63ac5f317ad665bde"
+  },
+  "local_script_and_report_sha256": {
+    "map.py": "d2c0cce858eeb2ab3b83fd5f73be4f30a69a5ae251c6aa4b8ae778c4bcfe583b",
+    "surface.py": "6a039b107634a00bc6f12f230199b31092919221d511009b0e212d42c0b2409e",
+    "donor.py": "1f6ce821b478141d7e00bf4658e42756ee0a456a93b95fa12df406b88f313419",
+    "donor_field.py": "1fd0e9fa102750eba12f7c2a10ff03202b009b15cfef642888c9a06f792475b1",
+    "restore.py": "a854809acf98d820204c3a8dcc9e7eff2e1a3e719c7b11ad908119c4ba2a4333",
+    "candidate.py": "ebb70698937d29c0a3a8d4ce9f7e4ea42565743ad25db2eb9a68ca640215ca4c",
+    "diagnostics.py": "7388bdea106886f8978b32ee772170340050cdc00a206da91b34dcc17bb9d8f6",
+    "evidence.py": "ed04569249f5b4aa34fdb2edb3519430942b1bd11c85c327eee37606be1a8055",
+    "reference_images.py": "3cf557393d27a71d85bfc781b9c98ad31ba25e8e102a0eb4bb37124ff7de3085",
+    "study.py": "db4ed0efd2e4ae923d0599c646174847d3d0e8370718b8d617c35a569bac57c2",
+    "qa_geometry.py": "ba40de530644d7184ffcc3adc98c7348417e0aac9bd67fec30086cd6c6626380",
+    "verify.py": "eda89a2ef91dca23a12b19536842d477d5d6a9d963cf3762b5a13260dfec156b",
+    "rear.py": "05d6ec7a7a1f1b905131214af1c414da54c20df98e48a2378e7a1221b8182494",
+    "viewer.py": "a930b629e54cb6eacfda7a6f89659cd1899f9b536f4a5566db94d67565c28334",
+    "report.py": "001910a32966fde22e2429f75ad4e063d5cc2bbf0b0343ab4ac529295733977f",
+    "support.py": "8ce552097c70c7d1ab56729a992978421f278246ae219a017a9d530f98c8aafb",
+    "reproduce.ps1": "9809c6a7699308dbed49e9ca4353ab8675f6b751101f593396b972343b937091",
+    "REPORT.md": "06a1dc29e51ebce4a741632f7905066994fdf7d5c14fe5e44c9e0c8219bf88fc"
+  },
+  "staging_helper_and_reference_sha256": {
+    "scripts/knight/mission_pose.py": "99ff349e3a9649c1af2303848f74144bc55a47b5f410aaabfbb470b80252528f",
+    "scripts/knight/mission_scene.py": "2ec64a698cbb23b4e4226aa79fb34ba409e6964e3d6f35bd3465adcc889c59e3",
+    "scripts/knight/lower_carving_fit.py": "9aa0e0be154f9461097cf1a276f870d9056ac6e593bb0234024a1b4e35764612",
+    "scripts/knight/export_mission.py": "be6812082bcd4234d50c88f6d81344c395022875f0238438f62c31e92cc3cf62",
+    "scripts/knight/validate.py": "d75ef19e6d797500218b33d11f7a962cfb6b7de449da0b8de24d90488afbd1b3",
+    "scripts/knight/viewer-template.html": "fe99cd9676765fea132f3c6692f14a8519463ccb36ef8ebaf3ca82fe410831d3",
+    "scripts/knight/build_viewer.py": "66897520d9272f1de7181328bb259add30ddb076685ca7cd3f7c06d87efab888",
+    "scripts/knight/check_viewer.cjs": "27f926602f2c01d11f79006dcc075f878f8085c34a6ef36a746793516587ecb6",
+    "scripts/knight/check_native_viewer.cjs": "2a86ffbce98bcb9d3d7522acda74fc87330952fda9d9f18fe2a1055214a900ac",
+    "assets/knight/ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+    "assets/knight/original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "assets/knight/original-alignment.json": "2488273788806b386e034f2c332a29465d475bf0cbab2e401ea290574fc5633e"
+  },
+  "expected_pigment_sha256": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8"
+}

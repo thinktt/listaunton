@@ -1,0 +1,26 @@
+{
+  "trial": "improvement-011-B",
+  "model_sha256": "1a308c3a5428897032a3689452db3b79fe19efa3658fb3442eaa8d7f9f5c4d0a",
+  "render_sha256": "6d9ca722895cc7b81b14c58be63a53c17bebec2997de42244195e8ff52af8b48",
+  "previous_render_sha256": "b69f382fd8eac3ad55aca2f5bde6dfbd0691f2a20c311aa01bb987e4b6f8a19c",
+  "registration": "Saved 54-degree, 12-degree-yaw orthographic camera and signed source alignments.",
+  "scores": {
+    "original": {
+      "iou": 0.9836967727068754,
+      "previous_iou": 0.9836967727068754
+    },
+    "selected": {
+      "iou": 0.9770071378940054,
+      "previous_iou": 0.9770071378940054
+    },
+    "white_mirrored": {
+      "iou": 0.9723822865079056,
+      "previous_iou": 0.9723822865079056
+    }
+  },
+  "source_sha256": {
+    "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
+  }
+}

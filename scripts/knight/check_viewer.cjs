@@ -11,9 +11,17 @@ const node=id=>{if(!nodes.has(id))nodes.set(id,{id,attrs:{},hidden:false,style:{
  setAttribute(k,v){this.attrs[k]=v;},remove(){},addEventListener(k,v){this.events[k]=v;},textContent:''});return nodes.get(id);};
 const views=[...html.matchAll(/data-view="([^"]+)"/g)].map(m=>Object.assign(node('view-'+m[1]),{dataset:{view:m[1]}}));
 node('mesh-metadata').textContent=text('mesh-metadata');node('mesh-data').textContent=text('mesh-data');node('original-alignment').textContent=text('original-alignment');
-node('side-registration').textContent=text('side-registration');node('side-opacity').value='50';
+node('side-registration').textContent=text('side-registration');node('side-opacity').value='100';
 node('wood-texture').textContent=text('wood-texture');
 node('varnish-data').textContent=text('varnish-data');
+if(meta.satin){
+ const tag=text('satin-data');node('satin-data').textContent=tag;
+ const data=Buffer.from(tag,'base64');
+ assert.equal(data.length,meta.vertexCount);
+ assert.equal(require('node:crypto').createHash('sha256').update(data).digest('hex'),meta.satin.sha256);
+ assert.deepEqual(data,fs.readFileSync(path.join(root,meta.satin.file)));
+ assert(data.some(v=>v>0) && data.some(v=>v===0));
+}
 if(meta.finish){
  const finish=Buffer.from(text('varnish-data'),'base64');
  assert.equal(finish.length,meta.vertexCount);
@@ -94,11 +102,26 @@ windowListeners.message({source:{},data:{channel:'listaunton-review',action:'act
 node('brown').onclick();flush();assert.equal(uniforms.uUseWood,1);
 const beforeSide=JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]);
 node('side-tab').onclick();flush();assert.equal(node('stage').dataset.mode,'side');assert(!node('side-controls').hidden);assert(node('comparison-controls').hidden);
-for(const [id,amount] of [['side-guide-only',0],['side-model-only',1],['side-half',.5]]){node(id).onclick();assert.equal(node('side-model').style.opacity,amount);}
+assert.equal(node('side-model').style.opacity,1);
+for(const [id,amount] of [['side-clay-only',0],['side-model-only',1],['side-half',.5]]){node(id).onclick();assert.equal(node('side-model').style.opacity,amount);}
 const sr=JSON.parse(text('side-registration'));assert.equal(sr.source_blend_sha256,meta.sourceSha256);
-assert.equal(parseFloat(node('side-model').style.width),sr.profile_size[0]*sr.scale/sr.canvas[0]*100);
+assert.equal(sr.elevation,7);assert.deepEqual(sr.canvas,sr.profile_size);
+for(const [id,key,filename] of [['side-model','profile','guide-render.png'],['side-clay','neutral','guide-neutral.png']]){
+ const src=html.match(new RegExp('<img id="'+id+'" src="data:image/png;base64,([^"]+)"'))[1];
+ const pixels=Buffer.from(src,'base64');
+ assert.equal(sr[key],'assets/knight/'+filename);
+ assert.deepEqual(pixels,fs.readFileSync(path.join(root,sr[key])));
+ assert.equal(require('node:crypto').createHash('sha256').update(pixels).digest('hex'),sr[key+'_sha256']);
+}
+assert.doesNotMatch(html,/concepts\/side-01|Imagined knight side guide/);
 node('rotate-tab').onclick();flush();assert.equal(JSON.stringify([uniforms.uRotation,uniforms.uPan,uniforms.uProjection]),beforeSide,'Side comparison changed orbit');
 const report={passed:true,horseFrontSidePresets:true,pigmentAtlasHashMatches:true,woodAndClayToggle:true,sideComparisonAndFootRegistration:true,sampledVertices:points.length,maxCameraErrorPixels:maxError,overlayEndpoints:true,tabOrbitPersistence:true,rotationPanZoom:true,cameraReset:true,sourceSha256:meta.sourceSha256};
 if(meta.finish){assert.equal(uniforms.uReliefDistance,Math.fround(meta.finish.reliefDistance));report.varnishCoverageAndReliefMatch=true;}
+if(meta.satin){
+ const p=meta.satin.parameters;
+ const r=p.Roughness,s=p['Specular IOR Level'],c=p['Coat Weight'];
+ assert.deepEqual(uniforms.uSatinResponse,[r[1]/r[0],(s[1]+.4*c[1])/(s[0]+.4*c[0])].map(Math.fround));
+ report.satinCoverageMatches=true;
+}
 fs.writeFileSync(path.join(root,'assets/knight/viewer-validation.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

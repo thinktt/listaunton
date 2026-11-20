@@ -1,0 +1,32 @@
+{
+  "parent": {
+    "sha256": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+    "near eye": {
+      "evaluated_triangles": 960,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": []
+    },
+    "far eye": {
+      "evaluated_triangles": 960,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": []
+    }
+  },
+  "candidate": {
+    "sha256": "9f3100d8a3b41a055cbe54574f7c1c80633749d2bd9eb66bd7b9312e3b892e8a",
+    "near eye": {
+      "evaluated_triangles": 15360,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": []
+    },
+    "far eye": {
+      "evaluated_triangles": 15360,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": []
+    }
+  }
+}

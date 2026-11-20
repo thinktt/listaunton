@@ -1,0 +1,54 @@
+{
+  "checkpoint": "improvement-015",
+  "winner": "A",
+  "reason": "A carves the eye into a single almond beneath a softly arched brow. The hook at the earward corner disappears in profile. Both flanks keep the same clean expression when the light crosses the face.",
+  "scores": {
+    "Parent": {
+      "reference": 97.1,
+      "side": 95.7,
+      "form": 94,
+      "finish": 93.5
+    },
+    "A": {
+      "reference": 96.9,
+      "side": 96.7,
+      "form": 94.5,
+      "finish": 93.4
+    },
+    "B": {
+      "reference": 97.4,
+      "side": 95.3,
+      "form": 94.1,
+      "finish": 93.6
+    }
+  },
+  "parent": {
+    "scene": "c404e26928309df6233e2e7b3595d5d10025632a18e61e635294eb08b411f33e",
+    "fixed": "380a8a1fb5a3a9d66154ef5ca174bc3384880096f498f84fdd3380b3b19d859b",
+    "side": "707bd4132c6a416e996587a7455b0bf93a864cd63cdf00e92d9c32c29efd2741"
+  },
+  "candidates": {
+    "A": {
+      "scene": "6a062fcb3b3eb525d3f10f137f6725d3db4b66f74cd0c8e79d9b0e4662741418",
+      "fixed": "aedb05c42b445c0af3bf9042acbdae2ab9a8cfc616d5031eda63a7dedc546e26",
+      "side": "a73198c4c3ad1a5b93346885713be0c35a0221395468df6b782841eb418c6569",
+      "audit": "20daee96a93a230a48b3e7c779218db59872a884a0681d0bbe3f7ff6de2e92d1",
+      "outline_change_percentage_points": {
+        "original": -0.00425,
+        "selected": -0.00421,
+        "white_mirrored": -0.0042
+      }
+    },
+    "B": {
+      "scene": "d5aa43f9cdcead682f1228413869e4a58b482b8d80895dff240333faac067ad9",
+      "fixed": "540a04d73a0af1e8de0ef51c7766ad1ac89c17f3a9bd0ee4f5a7e69c3f5ff5eb",
+      "side": "cba4516262579ae6ad8d16c7d3f75c41c303c2f20605b06edffa1a40c5fe58e5",
+      "audit": "3eb7d4c589dd229f94d3535d342b7a29cff8a3e7a1aebdfafdd8457830476477",
+      "outline_change_percentage_points": {
+        "original": 0.0,
+        "selected": 0.0,
+        "white_mirrored": 0.0
+      }
+    }
+  }
+}

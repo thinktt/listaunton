@@ -1,10 +1,10 @@
 {
   "piece": "Knight",
-  "revision": "mission-007-carved-chest",
+  "revision": "improvement-016-A",
   "source_priority": [
-    "Original black Lichess sprite; mirrored white sprite as an independent check",
-    "Selected black candidate 2 for detailed fixed-view fitting",
-    "Imagined side guide for profile style and proportions"
+    "Selected black candidate 2 for the detailed fixed-camera carving",
+    "Original black Lichess sprite at board size, authoritative where it clearly differs",
+    "Actual model views for bilateral form, profile style and wood continuity"
   ],
   "reference_camera": {
     "projection": "orthographic",
@@ -15,13 +15,13 @@
       -8.36,
       -8.36
     ],
-    "basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
+    "basis": "Owner-selected fixed orthographic reference camera."
   },
   "geometry": {
-    "method": "The seated horse keeps its conical muzzle, paired swept ears, eyes, mane and turned pedestal. Small bilateral depth changes shape the chest channel, adjacent bevels and inset panel. All heights, the upper head, lower seat, UVs, topology and other components are preserved.",
+    "method": "The existing mane mesh and its seat in the forehead were reshaped on both sides. A narrow bevel joins the broad cap to a smooth, darker plane. Two warm area lights pick up its forward turn. The model retains the walnut atlas and recessed eye from round 15A.",
     "visible_components": 7,
     "hidden_construction_lofts": 2,
-    "triangles": 203602,
+    "triangles": 288430,
     "parts_intersect": true,
     "manufacturing_ready": false
   },
@@ -41,56 +41,31 @@
   "source_hashes": {
     "original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
     "white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
-    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
-    "concepts/side-01.png": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e"
-  },
-  "side_study": "assets/knight/concepts/side-01.png",
-  "guide_camera": {
-    "elevation": 7,
-    "azimuth": 0,
-    "guideBaseWidth": 565,
-    "guideBaseCenterX": 624,
-    "guideFloorY": 1127,
-    "pixelsPerWorldUnit": 188.33333333333334,
-    "target": [
-      0.0,
-      0.0,
-      2.548305034637451
-    ],
-    "orthoScale": 6.658407211303711,
-    "shiftX": 0.0023923444095999002,
-    "note": "Approximate inferred study camera; fixed base width and physical floor. No rotation, warp, or anisotropic fit of the source image."
+    "ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0"
   },
   "checks": {
     "mesh_validation": "assets/knight/validation.json",
     "viewer_validation": "assets/knight/viewer-validation.json",
-    "guide_comparison": "assets/knight/guide-comparison.png",
     "reference_fit": "assets/knight/reference-fit/fit.json",
-    "final_reference_metrics": "assets/knight/qa.json"
+    "final_reference_metrics": "assets/knight/qa.json",
+    "model_profile_comparison": "assets/knight/guide-comparison.png"
   },
   "mission": {
-    "checkpoint": "007",
-    "source_sha256": "c1254b0087c39e4506b34575d88b52d92a1cd376ed9ee4b891c207d5ce51995c",
+    "checkpoint": "improvement-016",
+    "source_sha256": "1a8c2b2384ac360766d3a3121671199f231df21b2ceea6caee22c9ebdb5e9766",
+    "current_notes": "docs/knight-improvement/round-016/verdict.md",
+    "decision": "A gives the upper mane one sharp edge above the swept ear. The walnut catches a warm line along that cut and turns down into the forehead. Both flanks keep their shape as the light moves.",
     "scores": {
-      "variant": "040-chest-reflection-segments",
-      "silhouette": 96.28564531846479,
-      "form": 86,
-      "color": 87,
-      "grain": 79,
-      "lighting": 67,
-      "working_mean": 83.05712906369295,
-      "original_iou": 0.9686677095750399,
-      "mirrored_white_iou": 0.9595768851035483,
-      "decision": "Accepted after saved-scene, geometry, atlas, viewer and review checks. Smaller finite reflectors better follow the carved crest, with no outline regression. A visibly imperfect result, not mission completion.",
-      "blend_sha256": "11c0c11cffdc04f0454262c72f0b953f5daae4dd093901f01a3d0b533d0b0b0f",
-      "render_sha256": "42f361a921cb65e46715eb24f0ae70635761c11e884ea1ad84b727b62df8fc14"
+      "reference": 97,
+      "side": 97.3,
+      "form": 95,
+      "finish": 93.6,
+      "weighted": 96.64
     },
-    "current_notes": "docs/knight-mission-log.md",
     "limitations": [
-      "The broad shoulder reflection is still too narrow and uniform; the crest's glint is uneven and the dark channel is more sharply edged in places.",
-      "The poll retains a broad highlight where the reference has a thin curved edge; the lower eyelid, forehead grain and nose glints still differ.",
-      "The foot groove needs more broken grain and reflected flecks. The collar still has a golden cast in portions of the front arc.",
-      "Side and unseen geometry remain interpretations; the browser's lighting is approximate. The full visual-match mission remains incomplete."
+      "The strongest glint on the forward shoulder still sits about 33 pixels behind black candidate 2 in the registered image.",
+      "Where the mane meets the forehead, the bevel catches a wider, brighter patch than the references show.",
+      "The lower eyelid still reflects a stronger line than the carved cheek in the reference."
     ]
   },
   "history_at_activation": {
@@ -109,6 +84,27 @@
       "Fine carving and local anatomical transitions remain approximations. Neutral clay lighting differs from wood; no material study was performed.",
       "Mane, ears, eyes and pedestal are separate closed components intersecting the continuous head-neck skin, not fused for manufacturing.",
       "Native browser rendering was not exercised. Controls, Front/Side presets and saved-camera projection were checked with the Node VM harness."
-    ]
+    ],
+    "side_study": {
+      "image": "assets/knight/concepts/side-01.png",
+      "sha256": "95dbac4a2ea90a133f6d1833ca94e3dcbc4595689ddcdb642f76d7a164ac162e",
+      "camera": {
+        "elevation": 7,
+        "azimuth": 0,
+        "guideBaseWidth": 565,
+        "guideBaseCenterX": 624,
+        "guideFloorY": 1127,
+        "pixelsPerWorldUnit": 188.33333333333334,
+        "target": [
+          0.0,
+          0.0,
+          2.548305034637451
+        ],
+        "orthoScale": 6.658407211303711,
+        "shiftX": 0.0023923444095999002,
+        "note": "Approximate inferred study camera; fixed base width and physical floor. No rotation, warp, or anisotropic fit of the source image."
+      },
+      "reference_camera_basis": "Bounded secondary camera fit, after matching side guide geometry; remains inferred"
+    }
   }
 }

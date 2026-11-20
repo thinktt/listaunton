@@ -1,0 +1,24 @@
+{
+  "nonadjacent_intersections": {
+    "near eye": {
+      "triangles_checked": 28160,
+      "nonadjacent_crossings": 0,
+      "sample_crossings_u_v_y": []
+    },
+    "far eye": {
+      "triangles_checked": 28160,
+      "nonadjacent_crossings": 0,
+      "sample_crossings_u_v_y": []
+    },
+    "continuous horse head and neck": {
+      "triangles_checked": 20880,
+      "nonadjacent_crossings": 0,
+      "sample_crossings_u_v_y": []
+    }
+  },
+  "sample_spacing": 0.006,
+  "near_exposed_samples": 1574,
+  "far_exposed_samples": 1576,
+  "mirrored_exposure_iou": 0.9886363636363636,
+  "exposed_mirrored_depth_difference_p95": 0.0030494928359985343
+}

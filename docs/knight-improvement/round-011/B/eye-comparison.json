@@ -1,0 +1,118 @@
+{
+  "Original": {
+    "inner_eye": {
+      "correlation_black2": 0.7953,
+      "luma_mae_black2": 11.02
+    },
+    "lower_lid": {
+      "correlation_black2": 0.8711,
+      "luma_mae_black2": 27.14
+    },
+    "trace_x508_516": {
+      "inside": {
+        "y": 476,
+        "luma": 52.8
+      },
+      "separation": {
+        "y": 487,
+        "luma": 49.4
+      },
+      "second_arc": {
+        "y": 494,
+        "luma": 58.3
+      },
+      "lower_cheek": {
+        "y": 500,
+        "luma": 76.6
+      }
+    },
+    "arc_above_intervening_min": 8.9
+  },
+  "Black 2": {
+    "inner_eye": {
+      "correlation_black2": 1.0,
+      "luma_mae_black2": 0.0
+    },
+    "lower_lid": {
+      "correlation_black2": 1.0,
+      "luma_mae_black2": 0.0
+    },
+    "trace_x508_516": {
+      "inside": {
+        "y": 481,
+        "luma": 89.7
+      },
+      "separation": {
+        "y": 485,
+        "luma": 35.4
+      },
+      "second_arc": {
+        "y": 489,
+        "luma": 92.4
+      },
+      "lower_cheek": {
+        "y": 501,
+        "luma": 160.8
+      }
+    },
+    "arc_above_intervening_min": 57.0
+  },
+  "Parent": {
+    "inner_eye": {
+      "correlation_black2": 0.2031,
+      "luma_mae_black2": 15.63
+    },
+    "lower_lid": {
+      "correlation_black2": 0.6674,
+      "luma_mae_black2": 27.23
+    },
+    "trace_x508_516": {
+      "inside": {
+        "y": 482,
+        "luma": 53.4
+      },
+      "separation": {
+        "y": 487,
+        "luma": 27.7
+      },
+      "second_arc": {
+        "y": 494,
+        "luma": 50.6
+      },
+      "lower_cheek": {
+        "y": 500,
+        "luma": 72.8
+      }
+    },
+    "arc_above_intervening_min": 22.9
+  },
+  "11B": {
+    "inner_eye": {
+      "correlation_black2": 0.401,
+      "luma_mae_black2": 13.96
+    },
+    "lower_lid": {
+      "correlation_black2": 0.6194,
+      "luma_mae_black2": 25.85
+    },
+    "trace_x508_516": {
+      "inside": {
+        "y": 479,
+        "luma": 80.9
+      },
+      "separation": {
+        "y": 484,
+        "luma": 37.1
+      },
+      "second_arc": {
+        "y": 488,
+        "luma": 89.4
+      },
+      "lower_cheek": {
+        "y": 499,
+        "luma": 139.2
+      }
+    },
+    "arc_above_intervening_min": 52.3
+  }
+}

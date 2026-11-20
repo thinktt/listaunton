@@ -1,0 +1,57 @@
+{
+  "parent_sha256": "8e015620e552bda2c1e67866da8a7a3ba0e671c16deb22d93c07fb6c7859121d",
+  "pigment_sha256": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "parameters": {
+    "dome_drop_over_width": 0.28,
+    "shoulder_spread": 1.1,
+    "bevel_width": 0.024,
+    "bevel_slope": 0.62,
+    "ear_inset": 0.051,
+    "dorsal_satin": 0.99,
+    "card_watts": 84.0,
+    "additional_ear_side_seating": 0.037,
+    "ear_side_width": 19.0,
+    "forehead_bend": 0.9,
+    "rear_shoulder_fill": 0.052,
+    "forehead_cap_seat": 0.073
+  },
+  "mane_changed_points": 237,
+  "maximum_mane_displacement": 0.09478247910737991,
+  "maximum_lower_six_rings_displacement": 0.0,
+  "ears": {
+    "near": {
+      "max_displacement": 0.08467432856559753,
+      "end_ring_displacement": 0.0
+    },
+    "far": {
+      "max_displacement": 0.08467435091733932,
+      "end_ring_displacement": 0.0
+    }
+  },
+  "design_index": 12,
+  "pigment_datablock": "Knight walnut | figured cheek pigment 008-A",
+  "existing_poll_card": {
+    "name": "Walnut | poll rear oval",
+    "location": [
+      -0.4550997018814087,
+      -0.9516577124595642,
+      6.666615962982178
+    ],
+    "rotation": [
+      0.45719677209854126,
+      -0.08750700205564499,
+      0.14687320590019226
+    ],
+    "energy": 84.0,
+    "size": [
+      2.565389633178711,
+      0.105
+    ],
+    "native_rail_offset_px": 0.0,
+    "receiver": "Knight | mane studio receivers"
+  },
+  "model_sha256": "56b1373250def855651b4d4a4306c5a824eec0f58ef198d1496bdd66270bc847",
+  "fixed_sha256": "bf25dea0c45448cf88fde79b5a9012017e4aedf4e919b2cee404984796c46c64",
+  "side_sha256": "cb0b7e7c3d6da7a359d057161ea0b3f4ec8aa976e1f82c1e32b0b1b97ee1e905",
+  "samples": 144
+}

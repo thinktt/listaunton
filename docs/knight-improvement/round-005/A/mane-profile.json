@@ -1,0 +1,33 @@
+{
+  "method": "At the registered resolution of 1254px, first sustained run of five foreground pixels in each row. Local errors over y580\u2013686, left contour only. Median-filtered peak x marks the handoff between mane and base silhouettes. Cyan is original, gold is black candidate 2, rose is each panel contour. Both angles must still be judged visually.",
+  "observations": {
+    "Original": {
+      "mean_abs_x_error_to_Original": 0.0,
+      "mean_abs_x_error_to_Black 2": 1.12,
+      "deepest_indent_y": 667.5,
+      "deepest_indent_x": 274,
+      "x_at_640": 258
+    },
+    "Black 2": {
+      "mean_abs_x_error_to_Original": 1.12,
+      "mean_abs_x_error_to_Black 2": 0.0,
+      "deepest_indent_y": 667.5,
+      "deepest_indent_x": 276,
+      "x_at_640": 259
+    },
+    "Parent": {
+      "mean_abs_x_error_to_Original": 1.93,
+      "mean_abs_x_error_to_Black 2": 2.21,
+      "deepest_indent_y": 664.0,
+      "deepest_indent_x": 270,
+      "x_at_640": 258
+    },
+    "A": {
+      "mean_abs_x_error_to_Original": 2.26,
+      "mean_abs_x_error_to_Black 2": 2.49,
+      "deepest_indent_y": 660.0,
+      "deepest_indent_x": 272,
+      "x_at_640": 260
+    }
+  }
+}

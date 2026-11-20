@@ -1,0 +1,7 @@
+# Rebuild the chest and pedestal finish
+
+Start from the checkpoint 008 Blender scene in commit `39a1219`. The approved 009 walnut pigment is `assets/knight/wood-atlas-mission-009.png`. Its SHA-256 is recorded in `pigment.json`. The studio and varnish recipe in `chest` uses the actual native geometry and checks the parent polish field before making any change.
+
+Copy the accepted atlas to an empty trial directory as `pigment.png`, along with this folder’s `pigment.json`. Invoke Blender in background mode with `--python compose_chest.py -- PROJECT CHECKPOINT_008_BLEND CHEST_RECIPE_DIRECTORY TRIAL_DIRECTORY`. Place the trial under the project checkout for the viewer exporter. The recipe saves an editable native, reopens it and renders both cameras. The native comparison uses the Blender version, Cycles settings and seed in the saved model. The official publisher sets the checkpoint and resource paths before saving the public native. Use the production copy in Git to restore that exact binary.
+
+To repeat the atlas merge separately, `combine_walnut.py BASE_ATLAS CHEST_ATLAS FINE_PEDESTAL_ATLAS NEW_TRIAL_DIRECTORY 0.68` checks for overlapping edits, retains the chest correction, and adds the reduced pedestal grain. The pedestal study is included alongside this replay folder. The historical parent, current atlas and the small chest polish file are sufficient to reproduce the accepted material and light settings.

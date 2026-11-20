@@ -1,0 +1,163 @@
+{
+  "parent_sha256": "8e015620e552bda2c1e67866da8a7a3ba0e671c16deb22d93c07fb6c7859121d",
+  "pose": [
+    -0.313,
+    -0.045,
+    10.3
+  ],
+  "geometry": {
+    "mane": {
+      "max_displacement": 0.07125288944148717,
+      "moved_vertices_1e-6": 209,
+      "max_by_station": [
+        0.02105550529140735,
+        0.03350061970517501,
+        0.025961374402213282,
+        0.05336513330727863,
+        0.07125288944148717,
+        0.0560072109732473,
+        0.02891978350288311,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shoulder_weights": [
+        0,
+        0,
+        0.81,
+        0.9,
+        0.9,
+        0.81,
+        0.47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bevel_sections": {
+        "2": {
+          "old_face_tangent_turn_degrees": 46.284994361553714,
+          "tangent_trim": 0.018
+        },
+        "3": {
+          "old_face_tangent_turn_degrees": 44.63650511763693,
+          "tangent_trim": 0.018
+        },
+        "4": {
+          "old_face_tangent_turn_degrees": 44.37827237665871,
+          "tangent_trim": 0.018
+        },
+        "5": {
+          "old_face_tangent_turn_degrees": 40.140565000846976,
+          "tangent_trim": 0.018
+        },
+        "6": {
+          "old_face_tangent_turn_degrees": 29.714984814080466,
+          "tangent_trim": 0.018
+        }
+      },
+      "centerline_max_change": 3.859152097520348e-13
+    },
+    "near ear": {
+      "max_displacement": 0.05327935214351839,
+      "moved_vertices_1e-6": 293,
+      "max_by_station": [
+        0.0,
+        0.0,
+        0.009928141820098966,
+        0.01765686552024483,
+        0.05327935214351839,
+        0.030107951080443052,
+        0.008586818934100657
+      ],
+      "mean_polish_near_stripe": [
+        0.2467863808075587,
+        0.006542586236867445
+      ]
+    },
+    "far ear": {
+      "max_displacement": 0.05327933764219493,
+      "moved_vertices_1e-6": 293,
+      "max_by_station": [
+        0.0,
+        0.0,
+        0.009928141820098966,
+        0.01765686552024483,
+        0.05327933764219493,
+        0.03010795428653877,
+        0.008586814066410478
+      ],
+      "mean_polish_near_stripe": [
+        0.24767575164635977,
+        0.006502998706445232
+      ]
+    },
+    "continuous horse head and neck": {
+      "max_displacement": 0.05480436200387573,
+      "moved_vertices_1e-6": 723,
+      "max_by_station": [
+        0.05480436200387573
+      ],
+      "fillet_width": 0.085,
+      "visible_fillet_max_lift": 0.01926334994459687
+    },
+    "coherent skull cheek and conical muzzle": {
+      "max_displacement": 0.05302935171553419,
+      "moved_vertices_1e-6": 174,
+      "max_by_station": [
+        0.05302935171553419
+      ],
+      "fillet_width": 0.085,
+      "visible_fillet_max_lift": 0.01900441682457427
+    }
+  },
+  "model_sha256": "1f308f8ee1e4d2c4c241d2bee15a08a2dab0aa2ce7aa353e8b2765a357efc057",
+  "reopened_renders": {
+    "samples": 144,
+    "fixed_camera": {
+      "location": [
+        1.4664890766143799,
+        -6.899288654327393,
+        11.976606369018555
+      ],
+      "rotation": [
+        0.6283186674118042,
+        1.1111258579887817e-08,
+        0.20943956077098846
+      ],
+      "ortho_scale": 7.251631736755371,
+      "shift": [
+        0.1100916638970375,
+        -0.006666666828095913
+      ]
+    },
+    "fixed_sha256": "7faf9c08d082d9619636a87c35c840400dc77f3051b9f5c9049f057401da61ac",
+    "side_sha256": "9455958fe9f81546c764148456ffd8d816f829376c367eecd191366f5d1044d8",
+    "device": {
+      "backend": "OPTIX",
+      "scene_device": "GPU",
+      "devices": [
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "CUDA",
+          "enabled": false
+        },
+        {
+          "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA GeForce GTX 1650 Ti",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "source_sha256": "6a062fcb3b3eb525d3f10f137f6725d3db4b66f74cd0c8e79d9b0e4662741418",
+  "parts": {
+    "continuous horse head and neck": {
+      "evaluated_triangles": 141998,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": [],
+      "min_double_area": 2.7665770119256194e-08,
+      "degenerate": 0
+    },
+    "near swept ear": {
+      "evaluated_triangles": 13312,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": [],
+      "min_double_area": 4.654819804272847e-06,
+      "degenerate": 0
+    },
+    "far swept ear": {
+      "evaluated_triangles": 13312,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": [],
+      "min_double_area": 4.656241799239069e-06,
+      "degenerate": 0
+    },
+    "near eye": {
+      "evaluated_triangles": 15872,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": [],
+      "min_double_area": 1.0439475772727747e-07,
+      "degenerate": 0
+    },
+    "far eye": {
+      "evaluated_triangles": 15872,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": [],
+      "min_double_area": 1.3618391392355989e-07,
+      "degenerate": 0
+    },
+    "coherent skull cheek and conical muzzle": {
+      "evaluated_triangles": 55552,
+      "bvh_nonadjacent_pairs_checked": 0,
+      "intersection_count": 0,
+      "pairs": [],
+      "min_double_area": 3.027238619779382e-07,
+      "degenerate": 0
+    }
+  }
+}

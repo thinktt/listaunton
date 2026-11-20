@@ -1,0 +1,89 @@
+{
+  "parent": {
+    "area_px": 658,
+    "tail_x_ymin_ymax": [
+      477,
+      473,
+      474
+    ],
+    "nose_x_ymin_ymax": [
+      529,
+      486,
+      487
+    ],
+    "median_upper_y_x495_to_504": 472.0
+  },
+  "candidate": {
+    "area_px": 1028,
+    "tail_x_ymin_ymax": [
+      477,
+      472,
+      473
+    ],
+    "nose_x_ymin_ymax": [
+      540,
+      492,
+      493
+    ],
+    "median_upper_y_x495_to_504": 467.0
+  },
+  "lower_glint": {
+    "Black 2": {
+      "peak_xy": [
+        494,
+        499
+      ],
+      "half_peak_width_height": [
+        31,
+        9
+      ],
+      "half_peak_centroid_xy": [
+        498.49,
+        499.14
+      ]
+    },
+    "8B parent": {
+      "peak_xy": [
+        490,
+        488
+      ],
+      "half_peak_width_height": [
+        27,
+        9
+      ],
+      "half_peak_centroid_xy": [
+        497.94,
+        490.39
+      ]
+    },
+    "Previous 8A": {
+      "peak_xy": [
+        500,
+        498
+      ],
+      "half_peak_width_height": [
+        20,
+        7
+      ],
+      "half_peak_centroid_xy": [
+        497.57,
+        496.69
+      ]
+    },
+    "9A": {
+      "peak_xy": [
+        493,
+        496
+      ],
+      "half_peak_width_height": [
+        16,
+        6
+      ],
+      "half_peak_centroid_xy": [
+        496.44,
+        496.58
+      ]
+    }
+  },
+  "glint_method": "Largest positive local contrast in the registered lower-lid and cheek window x478..529, y486..506. The contiguous half-peak extent of that patch uses 1.5 px and 7 px Gaussian luminance. The glints come from the studio and grain as well as the shape."
+}

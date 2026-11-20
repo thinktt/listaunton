@@ -1,0 +1,59 @@
+{
+  "input_git": "67ea10d6e029aba5ee83a2c08a81d2ce85428e5f",
+  "source_repository_inputs": {
+    "models/knight/knight-rebuilt.blend": "1a8c2b2384ac360766d3a3121671199f231df21b2ceea6caee22c9ebdb5e9766",
+    "assets/knight/render.png": "4f9f880805dcc246495f49857afc46b40e78dfabdee17436f76817b4759dfff4",
+    "assets/knight/guide-render.png": "231fa4d8db21583728cbc6de0b264abf62f7ca7b148c14ffa1d7db8898f6d3ce",
+    "assets/knight/ref.png": "1699927b5c260ef2ccccb2b4daba22d1f4947bb4819ea7b39426474a8450baa0",
+    "assets/knight/original.png": "72c5554a02f76700cb17f105ad48266513322cd6d906acf5122325b44eb4e21f",
+    "assets/knight/white-original.png": "7d3a2949340b6121f4bf27db41ceddc133c3cf3395df0958ad1255489d5d2304",
+    "assets/knight/original-alignment.json": "a75cf47d0d08a3d263745645f546ee99c3c51fd22847a130ffea96b6c8de54b8",
+    "assets/knight/white-registration.json": "30420566f1d57031656e06dfd54a04b124de83313b6acb70b39f00ad01ff0fa9",
+    "assets/knight/guide-camera.json": "d598642c755d8b3dbd2227e62749c601c610ed07ce04da22715aefe620ad14a4",
+    "assets/knight/wood-atlas-improvement-014-B.png": "f6e6b26fad1baf22bbf7dd0eb0427cb61b9064245af6acbd268d31068502f4c8"
+  },
+  "geometry_run_project_dependencies": {
+    "scripts/knight/mission_pose.py": "99ff349e3a9649c1af2303848f74144bc55a47b5f410aaabfbb470b80252528f",
+    "scripts/knight/mission_scene.py": "2ec64a698cbb23b4e4226aa79fb34ba409e6964e3d6f35bd3465adcc889c59e3",
+    "scripts/knight/lower_carving_fit.py": "9aa0e0be154f9461097cf1a276f870d9056ac6e593bb0234024a1b4e35764612"
+  },
+  "frozen_worker_outputs": {
+    "mission008-mane": {
+      "knight.blend": "51931f0ca0fb78c90fad0a2d7388af9e8a3236372bd1069b834a5df6b135c1a6",
+      "wood.png": "7da6e9e326dc4cbc2a03fde3243907c46ca4f30596b8b458455a82f982254bcb",
+      "wood-side.png": "9760947eeca8e57b3ea0d8c17842e6b065ede830a8e1781f969d4cd8db0b6a6b"
+    },
+    "mission008-neck": {
+      "knight.blend": "5629290d255c7f2c471da5ffc9c3d6b7a5d594ea8a8ba476cc8d2be323439c2e",
+      "wood.png": "c83786e141eb4a4b22363da07a8be3dd6d53448a0f6f774b6836518915410a09",
+      "wood-side.png": "a221ba61f663cdebe907b791b6d323aafee649d18e036ec9b8f10af989caa858"
+    }
+  },
+  "direct_recipe_inputs": {
+    "mission008-mane": {
+      "geometry.py": "001525eb27c2e06cf87c8c5e7c3d1d98f36aa0eb39d062e8ab37f7b898c2a28a",
+      "registration.py": "d348e64d48e1f2539e5f02a9d44520b3733f08525e9f84e22114edc53cde86ab",
+      "ring-chart.npz": "70d8b2f41125236385d7706d0e583104486af7c6cf193ed66a88d78f0b7ec4d7",
+      "registration-fit.json": "643718f7f8a1780f91fb666cf91b1528df4db7513c4fb5b1477cbdd55b951496"
+    },
+    "mission008-neck": {
+      "neck.py": "dead877287e0dbd95c0c837ce12b2e63c7a76ebbee6e6ef79b9168aca86413c7",
+      "survey.py": "c1ebc122ea5d8b5f53f7e5a9b11efffa20fa66b36ce168504dbaff8ea9e9ecdc",
+      "sections-parent.npz": "a55b2078c07ed63f8a31655b1ee7167d80371cbfe935c644071baef7773deaf0"
+    }
+  },
+  "evaluated_component_hashes": {
+    "mission008-mane": {
+      "Knight | swept rounded mane": "9ded7975c8613c847577e9c4ab0512127f6fba0584ba0912d7aa78eaaacbb446"
+    },
+    "mission008-neck": {
+      "Knight | continuous horse head and neck": "90a03b08ec5fdeca4836bf9a19268da841ceb150023bc2d58c25cd7649d610d2",
+      "Knight | curved neck and chest": "872b115988574e1dc827ff0979902c19398fbd0bdc95a1d29e80be741afac210"
+    }
+  },
+  "working_copy_crlf_input_sha256": {
+    "assets/knight/original-alignment.json": "2488273788806b386e034f2c332a29465d475bf0cbab2e401ea290574fc5633e",
+    "assets/knight/white-registration.json": "3f2e68891baf497a3e22aaa74aaf0f79fdc957786700ebbdcebbd29a64f2a361",
+    "assets/knight/guide-camera.json": "34ba5f8a61c723b25802c217520dad52968d5d035c712cf515bf1a9cb761106f"
+  }
+}

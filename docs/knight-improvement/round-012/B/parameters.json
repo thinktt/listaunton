@@ -1,0 +1,66 @@
+{
+  "parent_sha256": "c4e629d930d907d77885c01dd430cab58e99e26a26e04b63d2a36b373ecdac58",
+  "parent_pigment_sha256": "beee98c4ee1af2c55823485a4c0149dea5332c7eaeaa07e06d82ae7022918fe7",
+  "pigment_sha256": "1e35b27f1eea257ee9bacc6ae60aa26cbeaf80fad5139365d58be1db395dd78b",
+  "design": 16,
+  "parameters": [
+    1.066,
+    0.024,
+    0.151,
+    0.1,
+    0.3,
+    0.18,
+    0.051,
+    1.36,
+    0.0,
+    0.47,
+    2.2,
+    1.0,
+    "satin",
+    0.0,
+    1.0
+  ],
+  "parts": {
+    "swept rounded mane": {
+      "max_dx": 0.3388008780164852,
+      "max_dy": 0.14027273965561682,
+      "max_dz": 0.0,
+      "changed_vertices": 8154
+    },
+    "continuous horse head and neck": {
+      "max_dx": 0.3389546404438748,
+      "max_dy": 0.14316213648444848,
+      "max_dz": 0.0,
+      "changed_vertices": 10426
+    },
+    "curved neck and chest": {
+      "max_dx": 0.33866737935147406,
+      "max_dy": 0.1464712316573723,
+      "max_dz": 0.0,
+      "changed_vertices": 1541
+    },
+    "coherent skull cheek and conical muzzle": {
+      "max_dx": 0.17031602298813653,
+      "max_dy": 0.08283677108874099,
+      "max_dz": 0.0,
+      "changed_vertices": 757
+    }
+  },
+  "release_texture": "wood-atlas-improvement-012-B.png",
+  "native_checks": {
+    "swept rounded mane": {
+      "triangles": 25600,
+      "folds": 0,
+      "sample_positions": []
+    },
+    "continuous horse head and neck": {
+      "triangles": 29669,
+      "folds": 0,
+      "sample_positions": []
+    }
+  },
+  "model_sha256": "2d03d00e333c39326a8660eceae5cf19f43c4b36899812ef5c845b8451f0d0c7",
+  "fixed_sha256": "c27b948d48073ac9f5f0dca03635200ed319d78378a1414c954da7d830b1658d",
+  "side_sha256": "e22a283426831400c0ad2cd0f8b65d251ce47b669e9426762a1c3d0e8bba56c9",
+  "samples": 144
+}

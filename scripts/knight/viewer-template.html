@@ -41,8 +41,7 @@ header .download{font-size:12px}
 
 .side-stage{position:absolute;inset:0;background:#000;overflow:hidden;visibility:hidden}
 .side-frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
-.side-frame img{position:absolute;display:block;pointer-events:none;user-select:none}
-#side-model{opacity:.5}
+.side-frame img{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none;user-select:none}
 .stage[data-mode="side"] canvas,.stage[data-mode="side"] .zoom,.stage[data-mode="side"] .badge,.stage[data-mode="side"] .comparison-stage{visibility:hidden;pointer-events:none}
 .stage[data-mode="side"] .side-stage{visibility:visible}
 </style>
@@ -50,14 +49,14 @@ header .download{font-size:12px}
 <body>
 <main>
 <header><div><h1>Knight model</h1><p>54° reference camera · wood reconstruction</p></div><a class="download" href="assets/knight/guide-render.png" target="_blank" rel="noopener">Side render ↗</a><a class="download" href="models/knight/knight-rebuilt.blend" download>Blender file ↗</a></header>
-<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side comparison</button></nav>
+<nav class="mode-tabs" aria-label="Model tools"><button id="compare-tab" aria-pressed="true">Reference overlay</button><button id="rotate-tab" aria-pressed="false">Rotate model</button><button id="side-tab" aria-pressed="false">Side profile</button></nav>
 <div class="comparison-controls" id="comparison-controls"><label for="reference-choice">Reference <select id="reference-choice"><option value="original">Original black</option><option value="selected">Black candidate 2</option></select></label><label for="model-opacity">Model <input id="model-opacity" type="range" min="0" max="100" value="50"><output id="opacity-value" for="model-opacity">50%</output></label><div class="group"><button id="reference-only">Reference</button><button id="half-overlay">50 / 50</button><button id="model-only">Model</button></div><span class="comparison-note">Same model and saved camera</span></div>
-<div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Model <input id="side-opacity" type="range" min="0" max="100" value="50"><output id="side-opacity-value">50%</output></label><div class="group"><button id="side-guide-only">Guide</button><button id="side-half">50 / 50</button><button id="side-model-only">Model</button></div><span class="comparison-note">Imagined side guide · base width and foot aligned</span></div>
+<div class="comparison-controls" id="side-controls" hidden><label for="side-opacity">Walnut <input id="side-opacity" type="range" min="0" max="100" value="100"><output id="side-opacity-value" for="side-opacity">100%</output></label><div class="group"><button id="side-clay-only">Clay</button><button id="side-half">50 / 50</button><button id="side-model-only">Walnut</button></div><span>__SIDE_ELEVATION__° side camera</span></div>
 <div class="controls" id="rotation-controls" hidden style="padding:12px 22px"><div class="group" aria-label="Camera projection"><button id="orthographic" aria-pressed="true" title="Parallel projection, as used by the overlay">Orthographic</button><button id="perspective" aria-pressed="false" title="Closer surfaces appear larger">Perspective</button></div><div class="group" aria-label="Surface preview"><button id="neutral" aria-pressed="false">Neutral</button><button id="brown" aria-pressed="true">Wood</button></div><button id="reset" class="reset" title="Return to the overlay camera, zoom and position (R)">Reset view</button></div>
 <nav id="view-controls" hidden class="views" aria-label="View angles"><button data-view="overlay" aria-pressed="true">Overlay camera</button><button data-view="threequarter" aria-pressed="false">3/4 view</button><button data-view="front" aria-pressed="false">Front</button><button data-view="side" aria-pressed="false">Side</button><button data-view="top" aria-pressed="false">Top</button><button data-view="bottom" aria-pressed="false">Underside</button></nav>
 <section class="stage" data-mode="compare" id="stage" aria-label="Knight model comparison">
 <div class="comparison-stage" id="comparison-stage"><div class="comparison-frame" id="comparison-frame"><img id="reference-image" src="__REFERENCE_IMAGE__" alt="Selected reference: black knight candidate 2" draggable="false" hidden><img id="original-image" src="__ORIGINAL_IMAGE__" alt="Original Lichess black knight" draggable="false"><img id="model-image" src="__RENDER_IMAGE__" alt="Current model rendered from its saved reference camera" draggable="false"></div></div>
-<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-guide" src="__SIDE_GUIDE__" alt="Imagined knight side guide"><img id="side-model" src="__SIDE_MODEL__" alt="Current knight side render, uniformly registered at the foot"></div></div>
+<div class="side-stage"><div class="side-frame" id="side-frame"><img id="side-clay" src="__SIDE_NEUTRAL__" alt="Neutral clay profile of the current knight"><img id="side-model" src="__SIDE_PROFILE__" alt="Walnut profile of the same knight"></div></div>
 <canvas id="viewer" tabindex="0" aria-label="3D knight. Drag to rotate freely, scroll to zoom, shift-drag or right-drag to pan. Arrow keys rotate; plus and minus zoom; R resets."></canvas>
 <div class="zoom" aria-label="Zoom controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
 <div class="badge" id="surface-note">Overlay camera · neutral surface</div>
@@ -69,6 +68,7 @@ header .download{font-size:12px}
 <script id="side-registration" type="application/json">__SIDE_REGISTRATION__</script>
 <script id="wood-texture" type="application/octet-stream">__WOOD_TEXTURE__</script>
 <script id="varnish-data" type="application/octet-stream">__VARNISH__</script>
+<script id="satin-data" type="application/octet-stream">__SATIN__</script>
 <script id="mesh-metadata" type="application/json">__MESH_META__</script>
 <script id="mesh-data" type="application/octet-stream">__MESH_BASE64__</script>
 <script>
@@ -81,13 +81,11 @@ const stage=document.getElementById('stage'),opacity=document.getElementById('mo
 let ready=false;
 const sideTab=document.getElementById('side-tab'),sideFrame=document.getElementById('side-frame');
 const sideRegistration=JSON.parse(document.getElementById('side-registration').textContent);
-const sideGuide=document.getElementById('side-guide'),sideModel=document.getElementById('side-model'),sideOpacity=document.getElementById('side-opacity');
+const sideModel=document.getElementById('side-model'),sideOpacity=document.getElementById('side-opacity');
 const [sideWidth,sideHeight]=sideRegistration.canvas;
-Object.assign(sideGuide.style,{width:'100%',height:(1254/sideHeight*100)+'%',left:'0%',top:(sideRegistration.guide_top/sideHeight*100)+'%'});
-Object.assign(sideModel.style,{width:(sideRegistration.profile_size[0]*sideRegistration.scale/sideWidth*100)+'%',height:(sideRegistration.profile_size[1]*sideRegistration.scale/sideHeight*100)+'%',left:(sideRegistration.offset_x/sideWidth*100)+'%',top:(sideRegistration.offset_y/sideHeight*100)+'%'});
 function paintSide(){const value=Math.min(100,Math.max(0,Number(sideOpacity.value)||0));sideModel.style.opacity=value/100;document.getElementById('side-opacity-value').textContent=value+'%';}
 sideOpacity.addEventListener('input',paintSide);
-for(const [id,value] of [['side-guide-only',0],['side-half',50],['side-model-only',100]])document.getElementById(id).onclick=()=>{sideOpacity.value=value;paintSide();};
+for(const [id,value] of [['side-clay-only',0],['side-half',50],['side-model-only',100]])document.getElementById(id).onclick=()=>{sideOpacity.value=value;paintSide();};
 paintSide();
 const originalAlignment=JSON.parse(document.getElementById('original-alignment').textContent);
 const originalImage=document.getElementById('original-image'),frame=document.getElementById('comparison-frame');
@@ -124,6 +122,8 @@ layout(location=0) in vec3 aPosition;
 layout(location=1) in vec3 aNormal;
 layout(location=2) in vec2 aUV;
 layout(location=3) in float aVarnish;
+layout(location=4) in float aSatin;
+out float vSatin;
 out float vVarnish;
 out vec2 vUV;
 uniform vec3 uCenter;
@@ -136,6 +136,7 @@ out vec3 vPosition;
 void main(){
  vUV=aUV;
  vVarnish=aVarnish;
+ vSatin=aSatin;
  vec3 p=aPosition-uCenter;
  p=uRotation*vec3(p.x,p.z,-p.y);
  vPosition=p+vec3(uPan,-uDistance);
@@ -152,6 +153,8 @@ uniform sampler2D uWood;
 uniform bool uUseWood;
 in vec2 vUV;
 in float vVarnish;
+in float vSatin;
+uniform vec2 uSatinResponse;
 uniform float uReliefDistance;
 vec3 surfaceColor;
 uniform bool uOrthographic;
@@ -160,7 +163,9 @@ vec3 light(vec3 n,vec3 v,vec3 l,vec3 color,float strength){
  float diffuse=max(dot(n,l),0.0);
  vec3 h=normalize(l+v);
  float nh=max(dot(n,h),0.0);
- float sheen=uUseWood?mix(0.065*pow(nh,30.0),0.50*pow(nh,115.0),vVarnish):0.25*pow(nh,uGloss);
+ float roughnessRatio=1.0+vSatin*uSatinResponse.x;
+ float satinSheen=0.065*(1.0+vSatin*uSatinResponse.y)*pow(nh,30.0/(roughnessRatio*roughnessRatio));
+ float sheen=uUseWood?mix(satinSheen,0.50*pow(nh,115.0),vVarnish):0.25*pow(nh,uGloss);
  return strength*color*(surfaceColor*diffuse+vec3(sheen*step(0.001,diffuse)));
 }
 void main(){
@@ -264,11 +269,18 @@ function initialize(){
   gl.bufferData(gl.ARRAY_BUFFER,values,gl.STATIC_DRAW);
   gl.enableVertexAttribArray(3);gl.vertexAttribPointer(3,1,gl.UNSIGNED_BYTE,true,1,0);
  }else{gl.vertexAttrib1f(3,0.32);}
+ if(meta.satin){
+  const packed=atob(document.getElementById('satin-data').textContent.trim());
+  if(packed.length!==meta.vertexCount)throw new Error('Chest finish data is incomplete');
+  const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+  gl.bufferData(gl.ARRAY_BUFFER,Uint8Array.from(packed,c=>c.charCodeAt(0)),gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(4);gl.vertexAttribPointer(4,1,gl.UNSIGNED_BYTE,true,1,0);
+ }else{gl.vertexAttrib1f(4,0);}
  const texture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);
  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,woodImage);
  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.generateMipmap(gl.TEXTURE_2D);
  const ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(meshBytes.buffer,meta.indexByteOffset,meta.indexCount),gl.STATIC_DRAW);
- uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood','uReliefDistance'])uniforms[name]=gl.getUniformLocation(program,name);
+ uniforms={};for(const name of ['uCenter','uRotation','uProjection','uPan','uDistance','uColor','uGloss','uOrthographic','uWood','uUseWood','uReliefDistance','uSatinResponse'])uniforms[name]=gl.getUniformLocation(program,name);
  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.clearColor(0,0,0,0);
  const error=gl.getError();if(error!==gl.NO_ERROR)throw new Error('WebGL upload error '+error);
  ready=true;status.hidden=true;schedule();
@@ -289,6 +301,13 @@ function draw(){
  gl.uniform1i(uniforms.uOrthographic,projection==='orthographic'?1:0);
  gl.uniform1i(uniforms.uWood,0);gl.uniform1i(uniforms.uUseWood,material==='brown'?1:0);
  gl.uniform1f(uniforms.uReliefDistance,meta.finish?meta.finish.reliefDistance:0);
+ let roughnessChange=0,glossChange=0;
+ if(meta.satin){
+  const p=meta.satin.parameters,rough=p.Roughness,spec=p['Specular IOR Level'],coat=p['Coat Weight'];
+  roughnessChange=rough[1]/rough[0];
+  glossChange=(spec[1]+0.4*coat[1])/(spec[0]+0.4*coat[0]);
+ }
+ gl.uniform2fv(uniforms.uSatinResponse,[roughnessChange,glossChange]);
  gl.uniform3fv(uniforms.uColor,material==='brown'?[.12,.045,.018]:[.24,.26,.29]);gl.uniform1f(uniforms.uGloss,material==='brown'?90:55);
  gl.drawElements(gl.TRIANGLES,meta.indexCount,gl.UNSIGNED_INT,0);
 }

@@ -1,0 +1,82 @@
+{
+  "Original": {
+    "wood": {
+      "old_arc_percent": -8.39,
+      "independent_arc_percent": 2.73,
+      "real_hollow_center": 8.2,
+      "hollow_offset_pixels": 2.0,
+      "rear_third": 31.05,
+      "inner_third": 21.37,
+      "figure_angle_deg": 53.49,
+      "figure_coherence": 0.083,
+      "crosswise_2to8px_rms": 0.126,
+      "pore_0to2px_rms": 0.006
+    }
+  },
+  "Black 2": {
+    "wood": {
+      "old_arc_percent": -3.72,
+      "independent_arc_percent": 6.86,
+      "real_hollow_center": 8.34,
+      "hollow_offset_pixels": 1.0,
+      "rear_third": 39.85,
+      "inner_third": 24.51,
+      "figure_angle_deg": 0.99,
+      "figure_coherence": 0.313,
+      "crosswise_2to8px_rms": 0.116,
+      "pore_0to2px_rms": 0.1
+    }
+  },
+  "13A": {
+    "wood": {
+      "old_arc_percent": 26.82,
+      "independent_arc_percent": 26.82,
+      "real_hollow_center": 5.33,
+      "hollow_offset_pixels": 2.0,
+      "rear_third": 23.38,
+      "inner_third": 29.34,
+      "figure_angle_deg": -86.11,
+      "figure_coherence": 0.205,
+      "crosswise_2to8px_rms": 0.134,
+      "pore_0to2px_rms": 0.061
+    },
+    "pigment": {
+      "old_arc_percent": 33.3,
+      "independent_arc_percent": 33.63,
+      "real_hollow_center": 45.49,
+      "hollow_offset_pixels": 4.0,
+      "rear_third": 31.65,
+      "inner_third": 49.31,
+      "figure_angle_deg": 87.97,
+      "figure_coherence": 0.239,
+      "crosswise_2to8px_rms": 0.126,
+      "pore_0to2px_rms": 0.066
+    }
+  },
+  "14B": {
+    "wood": {
+      "old_arc_percent": -4.83,
+      "independent_arc_percent": 6.22,
+      "real_hollow_center": 4.98,
+      "hollow_offset_pixels": 2.0,
+      "rear_third": 39.17,
+      "inner_third": 25.55,
+      "figure_angle_deg": 7.77,
+      "figure_coherence": 0.199,
+      "crosswise_2to8px_rms": 0.107,
+      "pore_0to2px_rms": 0.1
+    },
+    "pigment": {
+      "old_arc_percent": 4.39,
+      "independent_arc_percent": 6.34,
+      "real_hollow_center": 37.29,
+      "hollow_offset_pixels": 5.0,
+      "rear_third": 53.81,
+      "inner_third": 42.66,
+      "figure_angle_deg": 10.95,
+      "figure_coherence": 0.166,
+      "crosswise_2to8px_rms": 0.082,
+      "pore_0to2px_rms": 0.097
+    }
+  }
+}

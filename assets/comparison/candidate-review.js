@@ -8,6 +8,7 @@
   const handle=$('wipe-handle');
   const cache=new Map();
   const tabNames=['candidates','model',...(data.projections?.page?['projections']:[])];
+  if(data.improvement)tabNames.push('improvement');
   let activeTab='candidates',modelLoaded=false,projectionsLoaded=false;
   async function loadModel(frame,model){
     if(data.piece!=='King'||!model.revision){frame.src=model.page;return;}
@@ -158,4 +159,5 @@
   window.addEventListener('blur',()=>{drag=null;wipeDrag=null;});
   new ResizeObserver(()=>{if(zoom==='fit')resize('fit',false);}).observe(viewport);
   resize('fit',false);pair();if(data.initialTab)showTab(data.initialTab);
+  if(tabNames.includes('improvement') && window.location.hash==='#improvement')showTab('improvement');
 })();

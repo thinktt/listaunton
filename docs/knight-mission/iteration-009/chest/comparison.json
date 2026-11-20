@@ -1,0 +1,167 @@
+{
+  "measurements": {
+    "Original": {
+      "collar_to_chin": {
+        "selected_mae": 15.64,
+        "original_native_mae": 0.0
+      },
+      "outer_shoulder": {
+        "selected_mae": 21.0,
+        "original_native_mae": 0.0
+      },
+      "facet_center": {
+        "selected_mae": 13.2,
+        "original_native_mae": 0.0
+      },
+      "base_of_chest": {
+        "selected_mae": 14.5,
+        "original_native_mae": 0.0
+      },
+      "near": {
+        "ridge_contrast": 44.67,
+        "flank_luma": 49.6,
+        "grain": 0.94
+      },
+      "far": {
+        "ridge_contrast": 22.41,
+        "flank_luma": 62.2,
+        "grain": 0.21
+      }
+    },
+    "Black 2": {
+      "collar_to_chin": {
+        "selected_mae": 0.0,
+        "original_native_mae": 15.23
+      },
+      "outer_shoulder": {
+        "selected_mae": 0.0,
+        "original_native_mae": 20.27
+      },
+      "facet_center": {
+        "selected_mae": 0.0,
+        "original_native_mae": 13.64
+      },
+      "base_of_chest": {
+        "selected_mae": 0.0,
+        "original_native_mae": 13.8
+      },
+      "near": {
+        "ridge_contrast": 84.77,
+        "flank_luma": 54.6,
+        "grain": 9.88
+      },
+      "far": {
+        "ridge_contrast": 62.67,
+        "flank_luma": 77.2,
+        "grain": 5.89
+      }
+    },
+    "043": {
+      "collar_to_chin": {
+        "selected_mae": 19.63,
+        "original_native_mae": 17.13
+      },
+      "outer_shoulder": {
+        "selected_mae": 23.12,
+        "original_native_mae": 25.17
+      },
+      "facet_center": {
+        "selected_mae": 22.55,
+        "original_native_mae": 20.27
+      },
+      "base_of_chest": {
+        "selected_mae": 20.33,
+        "original_native_mae": 20.5
+      },
+      "near": {
+        "ridge_contrast": -3.74,
+        "flank_luma": 63.4,
+        "grain": 5.51
+      },
+      "far": {
+        "ridge_contrast": -4.03,
+        "flank_luma": 69.2,
+        "grain": 4.67
+      },
+      "fixed_alpha_identical": true,
+      "profile_alpha_identical": true
+    },
+    "Varnish": {
+      "collar_to_chin": {
+        "selected_mae": 18.14,
+        "original_native_mae": 16.94
+      },
+      "outer_shoulder": {
+        "selected_mae": 23.2,
+        "original_native_mae": 24.91
+      },
+      "facet_center": {
+        "selected_mae": 15.46,
+        "original_native_mae": 20.62
+      },
+      "base_of_chest": {
+        "selected_mae": 19.02,
+        "original_native_mae": 20.69
+      },
+      "near": {
+        "ridge_contrast": 56.02,
+        "flank_luma": 64.2,
+        "grain": 6.36
+      },
+      "far": {
+        "ridge_contrast": 42.79,
+        "flank_luma": 70.5,
+        "grain": 5.83
+      },
+      "fixed_alpha_identical": true,
+      "profile_alpha_identical": true
+    },
+    "Walnut": {
+      "collar_to_chin": {
+        "selected_mae": 14.43,
+        "original_native_mae": 15.79
+      },
+      "outer_shoulder": {
+        "selected_mae": 17.7,
+        "original_native_mae": 22.99
+      },
+      "facet_center": {
+        "selected_mae": 12.75,
+        "original_native_mae": 17.75
+      },
+      "base_of_chest": {
+        "selected_mae": 13.55,
+        "original_native_mae": 18.61
+      },
+      "near": {
+        "ridge_contrast": 60.26,
+        "flank_luma": 60.3,
+        "grain": 6.29
+      },
+      "far": {
+        "ridge_contrast": 56.11,
+        "flank_luma": 79.6,
+        "grain": 5.47
+      },
+      "fixed_alpha_identical": true,
+      "profile_alpha_identical": true
+    }
+  },
+  "hashes": {
+    "043": {
+      "knight.blend": "7772c51af8b25b5579acc7da9906c5c1eca4a71ccb3a6468d7d8e1a0577b5a72",
+      "wood.png": "7a8b03e6b5a72c37fcc2a4cdc345858c6f41d1c11ba7fa5a8db0bf71e5f27279",
+      "wood-side.png": "1d567e4ba76547d52724573b1243205d31a6ad340ab65eff14da713f7df3c8ff"
+    },
+    "Varnish": {
+      "knight.blend": "f96c3903eae93e0f8a61b7dc0c1d8b0d920bf3f518326e04d907428f5cd1f00b",
+      "wood.png": "b9f9401424427e0659a669de7a1cd675d6b23759a33c72a06252625658e293e9",
+      "wood-side.png": "cb5392b5103d30d3526a7a075d2beed4e2868348f2dd1a2faaa49a66d3c378a5"
+    },
+    "Walnut": {
+      "knight.blend": "e4b0d9758fab336b7ae89f7243b5b1f5a546525fbdaffb43fb9ec8783527958d",
+      "wood.png": "3b76f34ae6d4276ae8b9b5aa6eb9594f17a4d980de9a3c98b1925b060bff955f",
+      "wood-side.png": "748b4cb045c39b670c2dc8ef33272b24c4e969529bebccd79f141f397fce05b7"
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "candidate_sha256": "fddd00699d622e0ee02c7410b12c52bda8ea2e95c45a9ddcc50e2e9b243e8c3b",
+  "parent_sha256": "65dac17941c4a06535e59ed0c63e0fc028979e5d60e8954046f4e92c5355b268",
+  "actual_repository_mesh_and_viewer_export_validation": {
+    "components": [
+      {
+        "name": "Knight | turned pedestal",
+        "nonmanifold_edges": 0,
+        "signed_volume": 10.002691660445445,
+        "connected_components": 1,
+        "vertices": 31234,
+        "faces": 31232,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | swept rounded mane",
+        "nonmanifold_edges": 0,
+        "signed_volume": 1.8199288281380104,
+        "connected_components": 1,
+        "vertices": 12802,
+        "faces": 12800,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | near swept ear",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.07596853085544554,
+        "connected_components": 1,
+        "vertices": 6658,
+        "faces": 6656,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | near eye",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.0017290527550239652,
+        "connected_components": 1,
+        "vertices": 482,
+        "faces": 512,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | far swept ear",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.07596856076205835,
+        "connected_components": 1,
+        "vertices": 6658,
+        "faces": 6656,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | far eye",
+        "nonmanifold_edges": 0,
+        "signed_volume": 0.0017294011387357178,
+        "connected_components": 1,
+        "vertices": 482,
+        "faces": 512,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | continuous horse head and neck",
+        "nonmanifold_edges": 0,
+        "signed_volume": 6.1411971226588316,
+        "connected_components": 1,
+        "vertices": 49596,
+        "faces": 67228,
+        "hidden_construction": false
+      },
+      {
+        "name": "Knight | curved neck and chest",
+        "nonmanifold_edges": 0,
+        "signed_volume": 4.93475741397885,
+        "connected_components": 1,
+        "vertices": 57858,
+        "faces": 57856,
+        "hidden_construction": true
+      },
+      {
+        "name": "Knight | coherent skull cheek and conical muzzle",
+        "nonmanifold_edges": 0,
+        "signed_volume": 1.494363453009283,
+        "connected_components": 1,
+        "vertices": 27778,
+        "faces": 27776,
+        "hidden_construction": true
+      }
+    ],
+    "eyes": [
+      {
+        "name": "near",
+        "socket_center_depth_difference": 0.007147639989852905,
+        "half_eye_depth": 0.11126941442489624,
+        "seated_in_surface": true
+      },
+      {
+        "name": "far",
+        "socket_center_depth_difference": 0.003986537456512451,
+        "half_eye_depth": 0.0811493843793869,
+        "seated_in_surface": true
+      }
+    ],
+    "source_hash_matches": true,
+    "mesh_finite": true,
+    "bounds_match": true,
+    "normals_unit_length": true,
+    "camera_matches_saved_blend": true,
+    "visible_component_count": 7,
+    "hidden_construction_count": 2,
+    "note": "One continuous broad skull, cheek and rounded gently conical muzzle envelope joins the neck; two closed construction lofts remain hidden. Mane, ears, eyes and pedestal are separate overlapping closed parts. Artistic reconstruction, not prepared for manufacture."
+  },
+  "camera_unchanged": true,
+  "packed_images_unchanged": true,
+  "geometry_changes": [
+    "Knight | swept rounded mane",
+    "Knight | near eye",
+    "Knight | far eye",
+    "Knight | continuous horse head and neck",
+    "Knight | coherent skull cheek and conical muzzle"
+  ],
+  "light_changes": [
+    "Eye reflection upper"
+  ],
+  "eye_visible_fixed_2px_samples": {
+    "parent": 228,
+    "candidate": 130
+  },
+  "eye_visible_bounds": {
+    "parent": [
+      [
+        478,
+        468
+      ],
+      [
+        530,
+        490
+      ]
+    ],
+    "candidate": [
+      [
+        480,
+        468
+      ],
+      [
+        520,
+        482
+      ]
+    ]
+  }
+}

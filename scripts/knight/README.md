@@ -3,7 +3,8 @@
 The current knight uses a fixed 54-degree orthographic reference camera with
 12-degree yaw. Compare the original black Lichess sprite first, black candidate
 2 for detailed carving and finish, and the mirrored white sprite as a second
-shape check. The imagined side study supplies style and plausible proportions.
+shape check. For profile checks, render the saved model from the side.
+Exclude the imagined side study from reconstruction and evaluation.
 The visible model has seven closed components and two hidden construction lofts.
 
 Read [the knight mission](../../MISSION-KNIGHT.md) and
@@ -100,8 +101,9 @@ upper carving. The per-trial parameters are in `docs/knight-mission/iteration-00
 
 The standalone viewer embeds the actual pigment, UVs and local polish. Its real-time
 lighting is an approximation. Its Front and Side presets retain the horse
-orientation, and the side comparison uses the saved 7-degree camera and
-shared foot registration. Update the existing local review at each accepted
+orientation. The Side profile tab compares the walnut and neutral clay renders
+from the same 7-degree camera, with a common scale and foot position. The
+profile contact sheet uses that same pair. Update the existing local review at each accepted
 checkpoint. Detailed trial evidence and remaining discrepancies are in the
 mission log. The prior guide-first clay workflow is archived alongside its
 model in `history/knight/mission-start`.

@@ -1,0 +1,1208 @@
+{
+  "Original": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 0.0,
+        "581\u2013655": 0.0,
+        "540\u2013655": 0.0
+      },
+      "Black 2": {
+        "540\u2013580": 3.95,
+        "581\u2013655": 2.92,
+        "540\u2013655": 3.28
+      }
+    },
+    "edge_at_545": 600,
+    "shading": {
+      "shoulder_mean_luma": 101.43,
+      "shoulder_local_mae_to_black2": 37.05,
+      "crest_mean_luma": 102.43,
+      "crest_local_mae_to_black2": 40.05,
+      "trough_mean_luma": 43.86,
+      "trough_local_mae_to_black2": 12.72,
+      "terminal_luma_p90": 72.08
+    }
+  },
+  "Black 2": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 3.95,
+        "581\u2013655": 2.92,
+        "540\u2013655": 3.28
+      },
+      "Black 2": {
+        "540\u2013580": 0.0,
+        "581\u2013655": 0.0,
+        "540\u2013655": 0.0
+      }
+    },
+    "edge_at_545": 597,
+    "shading": {
+      "shoulder_mean_luma": 138.29,
+      "shoulder_local_mae_to_black2": 0.0,
+      "crest_mean_luma": 156.86,
+      "crest_local_mae_to_black2": 0.0,
+      "trough_mean_luma": 44.44,
+      "trough_local_mae_to_black2": 0.0,
+      "terminal_luma_p90": 91.18
+    }
+  },
+  "parent": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 18.49,
+        "581\u2013655": 11.24,
+        "540\u2013655": 13.8
+      },
+      "Black 2": {
+        "540\u2013580": 22.44,
+        "581\u2013655": 14.16,
+        "540\u2013655": 17.09
+      }
+    },
+    "edge_at_545": 622,
+    "shading": {
+      "shoulder_mean_luma": 129.98,
+      "shoulder_local_mae_to_black2": 13.75,
+      "crest_mean_luma": 135.9,
+      "crest_local_mae_to_black2": 20.8,
+      "trough_mean_luma": 55.47,
+      "trough_local_mae_to_black2": 13.22,
+      "terminal_luma_p90": 94.83
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 0.0
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 0.0
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 0.0
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 0.0
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 0.0
+      },
+      "center": {
+        "widest_breast_z": 1.96,
+        "widest_breast_x": 1.3231,
+        "max_turn_degrees_over_0_10": 13.04,
+        "x_at_1_72": 1.2058,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.0,
+        "height_where_breast_emerges_from_collar": 1.648
+      }
+    }
+  },
+  "trial-0": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 4.83,
+        "581\u2013655": 2.79,
+        "540\u2013655": 3.51
+      },
+      "Black 2": {
+        "540\u2013580": 8.78,
+        "581\u2013655": 5.71,
+        "540\u2013655": 6.79
+      }
+    },
+    "edge_at_545": 605,
+    "shading": {
+      "shoulder_mean_luma": 104.76,
+      "shoulder_local_mae_to_black2": 33.91,
+      "crest_mean_luma": 94.73,
+      "crest_local_mae_to_black2": 44.44,
+      "trough_mean_luma": 77.4,
+      "trough_local_mae_to_black2": 32.01,
+      "terminal_luma_p90": 125.48
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 0.93
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.18
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.77
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.27
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.37
+      },
+      "center": {
+        "widest_breast_z": 1.95,
+        "widest_breast_x": 1.2537,
+        "max_turn_degrees_over_0_10": 12.95,
+        "x_at_1_72": 1.1418,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.15
+      }
+    }
+  },
+  "trial-1": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 2.41,
+        "581\u2013655": 2.41,
+        "540\u2013655": 2.41
+      },
+      "Black 2": {
+        "540\u2013580": 6.37,
+        "581\u2013655": 3.87,
+        "540\u2013655": 4.75
+      }
+    },
+    "edge_at_545": 603,
+    "shading": {
+      "shoulder_mean_luma": 104.03,
+      "shoulder_local_mae_to_black2": 33.21,
+      "crest_mean_luma": 94.11,
+      "crest_local_mae_to_black2": 45.33,
+      "trough_mean_luma": 79.07,
+      "trough_local_mae_to_black2": 32.37,
+      "terminal_luma_p90": 123.63
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.45
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.78
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.55
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.19
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.32
+      },
+      "center": {
+        "widest_breast_z": 1.95,
+        "widest_breast_x": 1.2301,
+        "max_turn_degrees_over_0_10": 12.81,
+        "x_at_1_72": 1.1204,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.21
+      }
+    }
+  },
+  "trial-10": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 4.78,
+        "581\u2013655": 2.41,
+        "540\u2013655": 3.25
+      },
+      "Black 2": {
+        "540\u2013580": 8.73,
+        "581\u2013655": 4.72,
+        "540\u2013655": 6.14
+      }
+    },
+    "edge_at_545": 606,
+    "shading": {
+      "shoulder_mean_luma": 129.67,
+      "shoulder_local_mae_to_black2": 14.53,
+      "crest_mean_luma": 122.87,
+      "crest_local_mae_to_black2": 30.45,
+      "trough_mean_luma": 53.84,
+      "trough_local_mae_to_black2": 12.6,
+      "terminal_luma_p90": 119.37
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.27
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.64
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 11.75
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 15.99
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.16
+      },
+      "center": {
+        "widest_breast_z": 1.93,
+        "widest_breast_x": 1.2196,
+        "max_turn_degrees_over_0_10": 13.25,
+        "x_at_1_72": 1.1251,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 22.04,
+        "height_where_breast_emerges_from_collar": 1.6962
+      }
+    }
+  },
+  "trial-11": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 5.83,
+        "581\u2013655": 2.6,
+        "540\u2013655": 3.74
+      },
+      "Black 2": {
+        "540\u2013580": 9.78,
+        "581\u2013655": 5.2,
+        "540\u2013655": 6.82
+      }
+    },
+    "edge_at_545": 607,
+    "shading": {
+      "shoulder_mean_luma": 130.09,
+      "shoulder_local_mae_to_black2": 14.09,
+      "crest_mean_luma": 126.57,
+      "crest_local_mae_to_black2": 27.6,
+      "trough_mean_luma": 54.4,
+      "trough_local_mae_to_black2": 12.47,
+      "terminal_luma_p90": 118.05
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.7
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 7.72
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 13.91
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 19.15
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 13.31
+      },
+      "center": {
+        "widest_breast_z": 1.92,
+        "widest_breast_x": 1.2207,
+        "max_turn_degrees_over_0_10": 13.91,
+        "x_at_1_72": 1.1287,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 26.98,
+        "height_where_breast_emerges_from_collar": 1.6933
+      }
+    }
+  },
+  "trial-12": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 6.76,
+        "581\u2013655": 2.52,
+        "540\u2013655": 4.02
+      },
+      "Black 2": {
+        "540\u2013580": 10.71,
+        "581\u2013655": 5.09,
+        "540\u2013655": 7.08
+      }
+    },
+    "edge_at_545": 608,
+    "shading": {
+      "shoulder_mean_luma": 123.37,
+      "shoulder_local_mae_to_black2": 18.6,
+      "crest_mean_luma": 108.05,
+      "crest_local_mae_to_black2": 37.61,
+      "trough_mean_luma": 52.16,
+      "trough_local_mae_to_black2": 12.71,
+      "terminal_luma_p90": 123.2
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.69
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.33
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.38
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 5.53
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 7.72
+      },
+      "center": {
+        "widest_breast_z": 1.94,
+        "widest_breast_x": 1.2329,
+        "max_turn_degrees_over_0_10": 13.79,
+        "x_at_1_72": 1.137,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.07,
+        "height_where_breast_emerges_from_collar": 1.6891
+      }
+    }
+  },
+  "trial-13": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 8.61,
+        "581\u2013655": 2.99,
+        "540\u2013655": 4.97
+      },
+      "Black 2": {
+        "540\u2013580": 12.56,
+        "581\u2013655": 5.75,
+        "540\u2013655": 8.16
+      }
+    },
+    "edge_at_545": 610,
+    "shading": {
+      "shoulder_mean_luma": 128.49,
+      "shoulder_local_mae_to_black2": 15.16,
+      "crest_mean_luma": 120.27,
+      "crest_local_mae_to_black2": 31.62,
+      "trough_mean_luma": 52.7,
+      "trough_local_mae_to_black2": 10.17,
+      "terminal_luma_p90": 121.09
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.74
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.72
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.18
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.2
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 11.64
+      },
+      "center": {
+        "widest_breast_z": 1.93,
+        "widest_breast_x": 1.2296,
+        "max_turn_degrees_over_0_10": 13.87,
+        "x_at_1_72": 1.1357,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.08,
+        "height_where_breast_emerges_from_collar": 1.6897
+      }
+    }
+  },
+  "trial-14": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 9.49,
+        "581\u2013655": 3.09,
+        "540\u2013655": 5.35
+      },
+      "Black 2": {
+        "540\u2013580": 13.44,
+        "581\u2013655": 5.75,
+        "540\u2013655": 8.47
+      }
+    },
+    "edge_at_545": 612,
+    "shading": {
+      "shoulder_mean_luma": 129.96,
+      "shoulder_local_mae_to_black2": 14.16,
+      "crest_mean_luma": 126.57,
+      "crest_local_mae_to_black2": 28.17,
+      "trough_mean_luma": 54.56,
+      "trough_local_mae_to_black2": 11.63,
+      "terminal_luma_p90": 120.07
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 5.05
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.39
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.46
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 11.42
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 16.37
+      },
+      "center": {
+        "widest_breast_z": 1.92,
+        "widest_breast_x": 1.2188,
+        "max_turn_degrees_over_0_10": 13.95,
+        "x_at_1_72": 1.1273,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.11,
+        "height_where_breast_emerges_from_collar": 1.6952
+      }
+    }
+  },
+  "trial-15": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 11.24,
+        "581\u2013655": 3.95,
+        "540\u2013655": 6.53
+      },
+      "Black 2": {
+        "540\u2013580": 15.2,
+        "581\u2013655": 6.84,
+        "540\u2013655": 9.79
+      }
+    },
+    "edge_at_545": 613,
+    "shading": {
+      "shoulder_mean_luma": 130.18,
+      "shoulder_local_mae_to_black2": 13.86,
+      "crest_mean_luma": 131.63,
+      "crest_local_mae_to_black2": 24.75,
+      "trough_mean_luma": 55.42,
+      "trough_local_mae_to_black2": 12.67,
+      "terminal_luma_p90": 120.69
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 5.2
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.67
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 9.05
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.28
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 17.85
+      },
+      "center": {
+        "widest_breast_z": 1.93,
+        "widest_breast_x": 1.2277,
+        "max_turn_degrees_over_0_10": 13.93,
+        "x_at_1_72": 1.1354,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.09,
+        "height_where_breast_emerges_from_collar": 1.6897
+      }
+    }
+  },
+  "trial-16": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 4.63,
+        "581\u2013655": 2.48,
+        "540\u2013655": 3.24
+      },
+      "Black 2": {
+        "540\u2013580": 8.59,
+        "581\u2013655": 3.99,
+        "540\u2013655": 5.61
+      }
+    },
+    "edge_at_545": 606,
+    "shading": {
+      "shoulder_mean_luma": 123.59,
+      "shoulder_local_mae_to_black2": 19.13,
+      "crest_mean_luma": 102.14,
+      "crest_local_mae_to_black2": 40.97,
+      "trough_mean_luma": 53.74,
+      "trough_local_mae_to_black2": 14.23,
+      "terminal_luma_p90": 123.05
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.5
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.68
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.59
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.73
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.84
+      },
+      "center": {
+        "widest_breast_z": 1.91,
+        "widest_breast_x": 1.2164,
+        "max_turn_degrees_over_0_10": 14.21,
+        "x_at_1_72": 1.1331,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.17,
+        "height_where_breast_emerges_from_collar": 1.6904
+      }
+    }
+  },
+  "trial-17": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 5.66,
+        "581\u2013655": 2.48,
+        "540\u2013655": 3.6
+      },
+      "Black 2": {
+        "540\u2013580": 9.61,
+        "581\u2013655": 4.25,
+        "540\u2013655": 6.15
+      }
+    },
+    "edge_at_545": 607,
+    "shading": {
+      "shoulder_mean_luma": 128.12,
+      "shoulder_local_mae_to_black2": 15.85,
+      "crest_mean_luma": 111.11,
+      "crest_local_mae_to_black2": 36.42,
+      "trough_mean_luma": 52.43,
+      "trough_local_mae_to_black2": 11.19,
+      "terminal_luma_p90": 121.71
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.45
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.14
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.79
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.09
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 18.18
+      },
+      "center": {
+        "widest_breast_z": 1.9,
+        "widest_breast_x": 1.2118,
+        "max_turn_degrees_over_0_10": 14.36,
+        "x_at_1_72": 1.1333,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.2,
+        "height_where_breast_emerges_from_collar": 1.6897
+      }
+    }
+  },
+  "trial-18": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 6.39,
+        "581\u2013655": 2.47,
+        "540\u2013655": 3.85
+      },
+      "Black 2": {
+        "540\u2013580": 10.34,
+        "581\u2013655": 4.43,
+        "540\u2013655": 6.52
+      }
+    },
+    "edge_at_545": 608,
+    "shading": {
+      "shoulder_mean_luma": 127.73,
+      "shoulder_local_mae_to_black2": 15.88,
+      "crest_mean_luma": 112.12,
+      "crest_local_mae_to_black2": 35.73,
+      "trough_mean_luma": 52.02,
+      "trough_local_mae_to_black2": 10.44,
+      "terminal_luma_p90": 120.69
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.94
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.85
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 9.67
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 13.52
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 20.07
+      },
+      "center": {
+        "widest_breast_z": 1.9,
+        "widest_breast_x": 1.2096,
+        "max_turn_degrees_over_0_10": 14.39,
+        "x_at_1_72": 1.1321,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.21,
+        "height_where_breast_emerges_from_collar": 1.6904
+      }
+    }
+  },
+  "trial-2": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 1.98,
+        "581\u2013655": 2.63,
+        "540\u2013655": 2.4
+      },
+      "Black 2": {
+        "540\u2013580": 5.93,
+        "581\u2013655": 3.65,
+        "540\u2013655": 4.46
+      }
+    },
+    "edge_at_545": 602,
+    "shading": {
+      "shoulder_mean_luma": 110.08,
+      "shoulder_local_mae_to_black2": 28.09,
+      "crest_mean_luma": 99.04,
+      "crest_local_mae_to_black2": 43.05,
+      "trough_mean_luma": 70.01,
+      "trough_local_mae_to_black2": 26.85,
+      "terminal_luma_p90": 124.44
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.82
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.25
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.26
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.1
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.29
+      },
+      "center": {
+        "widest_breast_z": 1.94,
+        "widest_breast_x": 1.2229,
+        "max_turn_degrees_over_0_10": 12.73,
+        "x_at_1_72": 1.1149,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.23
+      }
+    }
+  },
+  "trial-3": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 2.95,
+        "581\u2013655": 2.08,
+        "540\u2013655": 2.39
+      },
+      "Black 2": {
+        "540\u2013580": 6.9,
+        "581\u2013655": 4.44,
+        "540\u2013655": 5.31
+      }
+    },
+    "edge_at_545": 603,
+    "shading": {
+      "shoulder_mean_luma": 101.86,
+      "shoulder_local_mae_to_black2": 35.9,
+      "crest_mean_luma": 91.77,
+      "crest_local_mae_to_black2": 46.34,
+      "trough_mean_luma": 83.29,
+      "trough_local_mae_to_black2": 34.35,
+      "terminal_luma_p90": 124.05
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.2
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 1.5
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.21
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.8
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.92
+      },
+      "center": {
+        "widest_breast_z": 1.95,
+        "widest_breast_x": 1.2388,
+        "max_turn_degrees_over_0_10": 12.9,
+        "x_at_1_72": 1.1282,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.2
+      }
+    }
+  },
+  "trial-4": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 4.05,
+        "581\u2013655": 2.29,
+        "540\u2013655": 2.91
+      },
+      "Black 2": {
+        "540\u2013580": 8.0,
+        "581\u2013655": 4.57,
+        "540\u2013655": 5.78
+      }
+    },
+    "edge_at_545": 605,
+    "shading": {
+      "shoulder_mean_luma": 127.53,
+      "shoulder_local_mae_to_black2": 16.27,
+      "crest_mean_luma": 115.76,
+      "crest_local_mae_to_black2": 35.29,
+      "trough_mean_luma": 53.96,
+      "trough_local_mae_to_black2": 13.52,
+      "terminal_luma_p90": 121.41
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 2.78
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.85
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.17
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 7.6
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 7.01
+      },
+      "center": {
+        "widest_breast_z": 1.94,
+        "widest_breast_x": 1.229,
+        "max_turn_degrees_over_0_10": 12.6,
+        "x_at_1_72": 1.1261,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 3.67
+      }
+    }
+  },
+  "trial-5": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 4.1,
+        "581\u2013655": 2.36,
+        "540\u2013655": 2.97
+      },
+      "Black 2": {
+        "540\u2013580": 8.05,
+        "581\u2013655": 4.48,
+        "540\u2013655": 5.74
+      }
+    },
+    "edge_at_545": 605,
+    "shading": {
+      "shoulder_mean_luma": 128.66,
+      "shoulder_local_mae_to_black2": 15.15,
+      "crest_mean_luma": 119.78,
+      "crest_local_mae_to_black2": 32.89,
+      "trough_mean_luma": 53.59,
+      "trough_local_mae_to_black2": 12.56,
+      "terminal_luma_p90": 119.76
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 3.64
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 5.36
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.84
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 10.48
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.9
+      },
+      "center": {
+        "widest_breast_z": 1.93,
+        "widest_breast_x": 1.2214,
+        "max_turn_degrees_over_0_10": 12.77,
+        "x_at_1_72": 1.1233,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 8.58
+      }
+    }
+  },
+  "trial-6": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 5.0,
+        "581\u2013655": 2.4,
+        "540\u2013655": 3.32
+      },
+      "Black 2": {
+        "540\u2013580": 8.95,
+        "581\u2013655": 4.71,
+        "540\u2013655": 6.21
+      }
+    },
+    "edge_at_545": 607,
+    "shading": {
+      "shoulder_mean_luma": 129.81,
+      "shoulder_local_mae_to_black2": 14.41,
+      "crest_mean_luma": 124.9,
+      "crest_local_mae_to_black2": 29.58,
+      "trough_mean_luma": 53.95,
+      "trough_local_mae_to_black2": 12.15,
+      "terminal_luma_p90": 117.79
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.32
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.65
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 10.99
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.82
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 9.89
+      },
+      "center": {
+        "widest_breast_z": 1.93,
+        "widest_breast_x": 1.2185,
+        "max_turn_degrees_over_0_10": 13.17,
+        "x_at_1_72": 1.1242,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 11.93
+      }
+    }
+  },
+  "trial-7": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 3.34,
+        "581\u2013655": 2.31,
+        "540\u2013655": 2.67
+      },
+      "Black 2": {
+        "540\u2013580": 7.29,
+        "581\u2013655": 4.59,
+        "540\u2013655": 5.54
+      }
+    },
+    "edge_at_545": 604,
+    "shading": {
+      "shoulder_mean_luma": 129.56,
+      "shoulder_local_mae_to_black2": 14.57,
+      "crest_mean_luma": 121.93,
+      "crest_local_mae_to_black2": 31.24,
+      "trough_mean_luma": 54.02,
+      "trough_local_mae_to_black2": 12.67,
+      "terminal_luma_p90": 116.01
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.29
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 7.41
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 13.61
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 16.24
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.55
+      },
+      "center": {
+        "widest_breast_z": 1.92,
+        "widest_breast_x": 1.2192,
+        "max_turn_degrees_over_0_10": 15.13,
+        "x_at_1_72": 1.1251,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 19.72,
+        "height_where_breast_emerges_from_collar": 1.6962
+      }
+    }
+  },
+  "trial-8": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 4.56,
+        "581\u2013655": 2.53,
+        "540\u2013655": 3.25
+      },
+      "Black 2": {
+        "540\u2013580": 8.51,
+        "581\u2013655": 5.16,
+        "540\u2013655": 6.34
+      }
+    },
+    "edge_at_545": 606,
+    "shading": {
+      "shoulder_mean_luma": 129.99,
+      "shoulder_local_mae_to_black2": 14.09,
+      "crest_mean_luma": 127.16,
+      "crest_local_mae_to_black2": 27.09,
+      "trough_mean_luma": 54.53,
+      "trough_local_mae_to_black2": 12.45,
+      "terminal_luma_p90": 113.18
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 5.09
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 10.1
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 19.05
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 22.11
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 14.61
+      },
+      "center": {
+        "widest_breast_z": 1.92,
+        "widest_breast_x": 1.2194,
+        "max_turn_degrees_over_0_10": 17.36,
+        "x_at_1_72": 1.1302,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 29.9,
+        "height_where_breast_emerges_from_collar": 1.692
+      }
+    }
+  },
+  "trial-9": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 5.05,
+        "581\u2013655": 2.6,
+        "540\u2013655": 3.47
+      },
+      "Black 2": {
+        "540\u2013580": 9.0,
+        "581\u2013655": 5.23,
+        "540\u2013655": 6.56
+      }
+    },
+    "edge_at_545": 607,
+    "shading": {
+      "shoulder_mean_luma": 130.13,
+      "shoulder_local_mae_to_black2": 13.91,
+      "crest_mean_luma": 130.05,
+      "crest_local_mae_to_black2": 24.77,
+      "trough_mean_luma": 55.29,
+      "trough_local_mae_to_black2": 12.84,
+      "terminal_luma_p90": 110.46
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 5.56
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 11.64
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 22.58
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0001,
+        "maximum_change_from_parent_in_section_normal_degrees": 25.74
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 16.07
+      },
+      "center": {
+        "widest_breast_z": 1.91,
+        "widest_breast_x": 1.2166,
+        "max_turn_degrees_over_0_10": 18.51,
+        "x_at_1_72": 1.1298,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 36.02,
+        "height_where_breast_emerges_from_collar": 1.692
+      }
+    }
+  },
+  "B": {
+    "mean_edge_error_pixels": {
+      "Original": {
+        "540\u2013580": 5.61,
+        "581\u2013655": 2.47,
+        "540\u2013655": 3.58
+      },
+      "Black 2": {
+        "540\u2013580": 9.56,
+        "581\u2013655": 4.24,
+        "540\u2013655": 6.12
+      }
+    },
+    "edge_at_545": 607,
+    "shading": {
+      "shoulder_mean_luma": 127.89,
+      "shoulder_local_mae_to_black2": 15.88,
+      "crest_mean_luma": 111.16,
+      "crest_local_mae_to_black2": 36.4,
+      "trough_mean_luma": 52.28,
+      "trough_local_mae_to_black2": 11.03,
+      "terminal_luma_p90": 121.51
+    },
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 4.45
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 6.14
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 8.79
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 12.09
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 18.18
+      },
+      "center": {
+        "widest_breast_z": 1.9,
+        "widest_breast_x": 1.2118,
+        "max_turn_degrees_over_0_10": 14.36,
+        "x_at_1_72": 1.1333,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 0.2,
+        "height_where_breast_emerges_from_collar": 1.6897
+      }
+    }
+  },
+  "discarded_7B": {
+    "sections": {
+      "1.92": {
+        "outward_rebound_within_0_7": 0.0,
+        "maximum_change_from_parent_in_section_normal_degrees": 7.98
+      },
+      "2.12": {
+        "outward_rebound_within_0_7": 0.0214,
+        "maximum_change_from_parent_in_section_normal_degrees": 64.52
+      },
+      "2.36": {
+        "outward_rebound_within_0_7": 0.0789,
+        "maximum_change_from_parent_in_section_normal_degrees": 88.92
+      },
+      "2.58": {
+        "outward_rebound_within_0_7": 0.1132,
+        "maximum_change_from_parent_in_section_normal_degrees": 89.79
+      },
+      "2.84": {
+        "outward_rebound_within_0_7": 0.0953,
+        "maximum_change_from_parent_in_section_normal_degrees": 84.1
+      },
+      "center": {
+        "widest_breast_z": 1.87,
+        "widest_breast_x": 1.2911,
+        "max_turn_degrees_over_0_10": 24.87,
+        "x_at_1_72": 1.2417,
+        "largest_cumulative_reverse_turn_degrees_1_90_to_2_85": 5.91
+      }
+    }
+  }
+}

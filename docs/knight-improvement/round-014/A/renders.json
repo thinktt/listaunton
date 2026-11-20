@@ -1,0 +1,27 @@
+{
+  "samples": 144,
+  "fixed_sha256": "11555f7e66cdad1cfbad318894e53ffeccaf47f238791c8c7cd5e0fe88f556e9",
+  "side_sha256": "2463d590450044cb283ce34902937a3cf8f6c4b7e2d3b6dfa18c0ebf4bc247d1",
+  "rendered_source_sha256": "a08cb00185833a97345896465de520efe5d3e0532bccfae61fdde8d1bf4cf734",
+  "device": {
+    "backend": "OPTIX",
+    "scene_device": "GPU",
+    "devices": [
+      {
+        "name": "NVIDIA GeForce GTX 1650 Ti",
+        "type": "CUDA",
+        "enabled": false
+      },
+      {
+        "name": "Intel Core i7-10750H CPU @ 2.60GHz",
+        "type": "CPU",
+        "enabled": false
+      },
+      {
+        "name": "NVIDIA GeForce GTX 1650 Ti",
+        "type": "OPTIX",
+        "enabled": true
+      }
+    ]
+  }
+}

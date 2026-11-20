@@ -1,0 +1,26 @@
+{
+  "fixed_silhouette": {
+    "iou": 0.99993894,
+    "different_threshold_pixels": 20
+  },
+  "side_silhouette": {
+    "iou": 0.99977935,
+    "different_threshold_pixels": 97
+  },
+  "appearance_checks": {
+    "lower blade at 54 degrees": {
+      "pixels": 3987,
+      "parent_median": 32.43,
+      "16A_median": 33.0,
+      "median_abs_change": 0.21,
+      "p95_abs_change": 1.14
+    },
+    "eye at 54 degrees": {
+      "pixels": 6161,
+      "parent_median": 55.63,
+      "16A_median": 55.63,
+      "median_abs_change": 0.0,
+      "p95_abs_change": 0.0
+    }
+  }
+}

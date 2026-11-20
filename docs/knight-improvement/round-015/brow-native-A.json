@@ -1,0 +1,189 @@
+{
+  "model": "6a062fcb3b3eb525d3f10f137f6725d3db4b66f74cd0c8e79d9b0e4662741418",
+  "trace": "02cf1bf796f5fb8bc7f90d6444beb34c04fd3b59d17165d1b0bb4de524cb65dc",
+  "samples": [
+    {
+      "fixed": [
+        459,
+        467
+      ],
+      "side": [
+        605.01,
+        291.24
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        474,
+        465
+      ],
+      "side": [
+        620.63,
+        289.26
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        488,
+        464
+      ],
+      "side": [
+        634.92,
+        290.78
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        497,
+        464
+      ],
+      "side": [
+        644.23,
+        292.19
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        506,
+        466
+      ],
+      "side": [
+        653.94,
+        294.89
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        516,
+        468
+      ],
+      "side": [
+        664.24,
+        300.43
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        526,
+        471
+      ],
+      "side": [
+        672.2,
+        321.84
+      ],
+      "source_hit": "Knight | near eye",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | near eye",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        535,
+        475
+      ],
+      "side": [
+        681.24,
+        332.21
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        544,
+        481
+      ],
+      "side": [
+        690.77,
+        343.35
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        553,
+        487
+      ],
+      "side": [
+        700.75,
+        351.78
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        562,
+        492
+      ],
+      "side": [
+        710.13,
+        362.0
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        572,
+        497
+      ],
+      "side": [
+        720.36,
+        373.41
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    },
+    {
+      "fixed": [
+        580,
+        500
+      ],
+      "side": [
+        728.52,
+        380.91
+      ],
+      "source_hit": "Knight | continuous horse head and neck",
+      "visible_in_side": true,
+      "side_first_hit": "Knight | continuous horse head and neck",
+      "occlusion_distance": 0.0
+    }
+  ],
+  "method": "Each photographed anchor is ray cast against the accepted sculpt at 54 degrees and projected to its actual side camera. Hidden correspondences are recorded. These are locations on this sculpt, dependent on its existing geometry."
+}

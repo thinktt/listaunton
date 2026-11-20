@@ -1,0 +1,142 @@
+{
+  "Original": {
+    "lower_glint_percentiles": [
+      483,
+      499,
+      525
+    ],
+    "lower_glint_length": 42,
+    "lower_glint_peak_contrast": 52.3,
+    "brow": {
+      "rear": {
+        "minimum_offset": 2,
+        "on_fold": 25.3,
+        "upper_minus_fold": 12.5,
+        "lower_minus_fold": 0.6
+      },
+      "mid": {
+        "minimum_offset": -3,
+        "on_fold": 41.1,
+        "upper_minus_fold": -1.4,
+        "lower_minus_fold": 11.1
+      },
+      "corner": {
+        "minimum_offset": -5,
+        "on_fold": 49.7,
+        "upper_minus_fold": -8.7,
+        "lower_minus_fold": 13.4
+      },
+      "bridge": {
+        "minimum_offset": -2,
+        "on_fold": 30.7,
+        "upper_minus_fold": 3.9,
+        "lower_minus_fold": 14.4
+      }
+    }
+  },
+  "Black 2": {
+    "lower_glint_percentiles": [
+      483,
+      500,
+      525
+    ],
+    "lower_glint_length": 42,
+    "lower_glint_peak_contrast": 119.8,
+    "brow": {
+      "rear": {
+        "minimum_offset": 3,
+        "on_fold": 27.7,
+        "upper_minus_fold": 22.1,
+        "lower_minus_fold": 1.1
+      },
+      "mid": {
+        "minimum_offset": -2,
+        "on_fold": 36.8,
+        "upper_minus_fold": 12.3,
+        "lower_minus_fold": 32.5
+      },
+      "corner": {
+        "minimum_offset": -2,
+        "on_fold": 36.6,
+        "upper_minus_fold": 15.2,
+        "lower_minus_fold": 35.2
+      },
+      "bridge": {
+        "minimum_offset": -1,
+        "on_fold": 26.5,
+        "upper_minus_fold": 15.8,
+        "lower_minus_fold": 37.1
+      }
+    }
+  },
+  "12B": {
+    "lower_glint_percentiles": [
+      493,
+      503,
+      511
+    ],
+    "lower_glint_length": 18,
+    "lower_glint_peak_contrast": 111.2,
+    "brow": {
+      "rear": {
+        "minimum_offset": -2,
+        "on_fold": 41.5,
+        "upper_minus_fold": 13.0,
+        "lower_minus_fold": -0.6
+      },
+      "mid": {
+        "minimum_offset": 4,
+        "on_fold": 47.1,
+        "upper_minus_fold": 10.1,
+        "lower_minus_fold": -3.2
+      },
+      "corner": {
+        "minimum_offset": -2,
+        "on_fold": 35.9,
+        "upper_minus_fold": 8.1,
+        "lower_minus_fold": 5.5
+      },
+      "bridge": {
+        "minimum_offset": -1,
+        "on_fold": 32.0,
+        "upper_minus_fold": 4.3,
+        "lower_minus_fold": 12.0
+      }
+    }
+  },
+  "13A": {
+    "lower_glint_percentiles": [
+      481,
+      499,
+      519
+    ],
+    "lower_glint_length": 38,
+    "lower_glint_peak_contrast": 51.8,
+    "brow": {
+      "rear": {
+        "minimum_offset": 10,
+        "on_fold": 45.5,
+        "upper_minus_fold": 9.0,
+        "lower_minus_fold": 2.8
+      },
+      "mid": {
+        "minimum_offset": -1,
+        "on_fold": 50.3,
+        "upper_minus_fold": 7.1,
+        "lower_minus_fold": 10.2
+      },
+      "corner": {
+        "minimum_offset": 1,
+        "on_fold": 44.5,
+        "upper_minus_fold": 19.0,
+        "lower_minus_fold": 16.0
+      },
+      "bridge": {
+        "minimum_offset": 1,
+        "on_fold": 30.4,
+        "upper_minus_fold": 13.3,
+        "lower_minus_fold": 10.8
+      }
+    }
+  }
+}

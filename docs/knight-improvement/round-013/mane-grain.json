@@ -1,0 +1,215 @@
+{
+  "method": "Within the face of the mane, mask out the exterior silhouette and interior hollow. Sample the middle of its width over rows 463\u2013621. Compare luminance residual in three spatial bands after dividing by local mean intensity, and inspect the dominant image-plane grain direction and its coherence. The paired native-grid result resamples renders to the original 300px canvas; its first entry samples the actual original PNG. The high-resolution image is interpretive.",
+  "results": {
+    "Original black": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 27.09,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.155,
+            "relative_rms": 0.0064
+          },
+          "2-8": {
+            "rms_luminance": 2.796,
+            "relative_rms": 0.1263
+          },
+          "8-16": {
+            "rms_luminance": 4.235,
+            "relative_rms": 0.2103
+          }
+        },
+        "grain_direction_image_degrees": 53.3,
+        "grain_coherence": 0.082
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 28.09,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.015,
+            "relative_rms": 0.0005
+          },
+          "2-8": {
+            "rms_luminance": 2.655,
+            "relative_rms": 0.1093
+          },
+          "8-16": {
+            "rms_luminance": 4.328,
+            "relative_rms": 0.2098
+          }
+        },
+        "grain_direction_image_degrees": 50.9,
+        "grain_coherence": 0.147
+      }
+    },
+    "Black 2": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 33.37,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 3.499,
+            "relative_rms": 0.0999
+          },
+          "2-8": {
+            "rms_luminance": 3.675,
+            "relative_rms": 0.1164
+          },
+          "8-16": {
+            "rms_luminance": 5.458,
+            "relative_rms": 0.2096
+          }
+        },
+        "grain_direction_image_degrees": 1.0,
+        "grain_coherence": 0.313
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 34.01,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.61,
+            "relative_rms": 0.0193
+          },
+          "2-8": {
+            "rms_luminance": 3.891,
+            "relative_rms": 0.1205
+          },
+          "8-16": {
+            "rms_luminance": 5.291,
+            "relative_rms": 0.1989
+          }
+        },
+        "grain_direction_image_degrees": -0.1,
+        "grain_coherence": 0.224
+      }
+    },
+    "Parent": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 24.66,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 1.492,
+            "relative_rms": 0.0612
+          },
+          "2-8": {
+            "rms_luminance": 2.949,
+            "relative_rms": 0.1335
+          },
+          "8-16": {
+            "rms_luminance": 3.574,
+            "relative_rms": 0.1707
+          }
+        },
+        "grain_direction_image_degrees": -86.1,
+        "grain_coherence": 0.206
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 24.24,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.084,
+            "relative_rms": 0.003
+          },
+          "2-8": {
+            "rms_luminance": 3.177,
+            "relative_rms": 0.1446
+          },
+          "8-16": {
+            "rms_luminance": 3.54,
+            "relative_rms": 0.1664
+          }
+        },
+        "grain_direction_image_degrees": -88.2,
+        "grain_coherence": 0.501
+      }
+    },
+    "Parent pigment": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 34.58,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 2.265,
+            "relative_rms": 0.0662
+          },
+          "2-8": {
+            "rms_luminance": 3.661,
+            "relative_rms": 0.1265
+          },
+          "8-16": {
+            "rms_luminance": 4.633,
+            "relative_rms": 0.1494
+          }
+        },
+        "grain_direction_image_degrees": 89.0,
+        "grain_coherence": 0.235
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 33.79,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.331,
+            "relative_rms": 0.01
+          },
+          "2-8": {
+            "rms_luminance": 4.18,
+            "relative_rms": 0.1446
+          },
+          "8-16": {
+            "rms_luminance": 4.468,
+            "relative_rms": 0.1424
+          }
+        },
+        "grain_direction_image_degrees": -89.1,
+        "grain_coherence": 0.436
+      }
+    },
+    "Parent polish": {
+      "reference_grid": {
+        "sample_pixels": 4509,
+        "median_luminance": 55.77,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.495,
+            "relative_rms": 0.0092
+          },
+          "2-8": {
+            "rms_luminance": 4.047,
+            "relative_rms": 0.0924
+          },
+          "8-16": {
+            "rms_luminance": 7.665,
+            "relative_rms": 0.1959
+          }
+        },
+        "grain_direction_image_degrees": 74.1,
+        "grain_coherence": 0.572
+      },
+      "sprite_grid": {
+        "sample_pixels": 213,
+        "median_luminance": 56.7,
+        "band_details": {
+          "0-2": {
+            "rms_luminance": 0.0,
+            "relative_rms": 0.0
+          },
+          "2-8": {
+            "rms_luminance": 3.607,
+            "relative_rms": 0.0784
+          },
+          "8-16": {
+            "rms_luminance": 7.872,
+            "relative_rms": 0.1978
+          }
+        },
+        "grain_direction_image_degrees": 68.2,
+        "grain_coherence": 0.844
+      }
+    }
+  }
+}

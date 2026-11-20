@@ -1,0 +1,59 @@
+{
+  "bands": {
+    "parent": {
+      "460-489": {
+        "mean_signed_px": 56.7,
+        "mean_abs_px": 56.7
+      },
+      "490-575": {
+        "mean_signed_px": 54.38,
+        "mean_abs_px": 54.38
+      },
+      "576-625": {
+        "mean_signed_px": 33.12,
+        "mean_abs_px": 33.12
+      },
+      "626-654": {
+        "mean_signed_px": 11.0,
+        "mean_abs_px": 11.0
+      }
+    },
+    "A": {
+      "460-489": {
+        "mean_signed_px": -9.5,
+        "mean_abs_px": 9.5
+      },
+      "490-575": {
+        "mean_signed_px": -4.17,
+        "mean_abs_px": 4.17
+      },
+      "576-625": {
+        "mean_signed_px": 0.82,
+        "mean_abs_px": 0.82
+      },
+      "626-654": {
+        "mean_signed_px": -2.8,
+        "mean_abs_px": 2.8
+      }
+    },
+    "B": {
+      "460-489": {
+        "mean_signed_px": -2.3,
+        "mean_abs_px": 2.3
+      },
+      "490-575": {
+        "mean_signed_px": -0.21,
+        "mean_abs_px": 0.69
+      },
+      "576-625": {
+        "mean_signed_px": 2.47,
+        "mean_abs_px": 2.59
+      },
+      "626-654": {
+        "mean_signed_px": 0.4,
+        "mean_abs_px": 0.4
+      }
+    }
+  },
+  "method": "Distances are measured horizontally in registered pixels. A shadow can fall off the part that casts it. For recessed cuts the depth sections and walnut views show the shape within the surface."
+}

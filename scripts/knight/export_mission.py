@@ -14,9 +14,12 @@ LAYER = "Knight wood atlas"
 
 def export(scene, texture, *, output=ASSETS, source=MODEL):
     graph=bpy.context.evaluated_depsgraph_get()
-    vertex_blocks=[];index_blocks=[];parts=[];finish_blocks=[]
+    vertex_blocks=[];index_blocks=[];parts=[];finish_blocks=[];satin_blocks=[]
+    meshes=visible_meshes(scene)
+    satin_name="Rubbed chest flats"
+    has_satin=any(obj.data.attributes.get(satin_name) is not None for obj in meshes)
     vert_offset=index_offset=0
-    for obj in visible_meshes(scene):
+    for obj in meshes:
         ev=obj.evaluated_get(graph);mesh=ev.to_mesh();mesh.calc_loop_triangles()
         co=np.empty((len(mesh.vertices),3),np.float32)
         normal=np.empty((len(mesh.loops),3),np.float32)
@@ -41,9 +44,20 @@ def export(scene, texture, *, output=ASSETS, source=MODEL):
             keys=np.column_stack((data,np.rint(255*coverage[loop_verts])))
         else:
             keys=data
+        if has_satin:
+            assert varnish is not None
+            attr=mesh.attributes.get(satin_name)
+            satin=np.zeros(len(mesh.vertices),np.float32)
+            if attr is not None:
+                assert attr.domain=="POINT" and attr.data_type=="FLOAT"
+                attr.data.foreach_get("value",satin)
+                assert np.isfinite(satin).all() and satin.min()>=0 and satin.max()<=1
+            keys=np.column_stack((keys,np.rint(255*satin[loop_verts])))
         unique,remap=np.unique(keys,axis=0,return_inverse=True)
         indices=remap.reshape(-1)[triangles].astype("<u4").ravel()
         assert np.array_equal(unique[indices],keys[triangles.ravel()])
+        if has_satin:
+            satin_blocks.append(unique[:,9].astype(np.uint8))
         if varnish is not None:
             finish_blocks.append(unique[:,8].astype(np.uint8))
             unique=unique[:,:8].copy()
@@ -80,5 +94,18 @@ def export(scene, texture, *, output=ASSETS, source=MODEL):
         meta["finish"]={"file":finish.relative_to(ROOT).as_posix(),"sha256":sha(finish),
                         "attribute":"Knight varnish coverage","encoding":"unorm8",
                         "reliefDistance":relief.inputs["Distance"].default_value if relief else 0}
+    if has_satin:
+        data=output/"satin.bin"
+        data.write_bytes(np.concatenate(satin_blocks).tobytes())
+        assert data.stat().st_size==len(vertices)
+        surface=meshes[0].data.materials[0].node_tree.nodes["Satin walnut in open grain"]
+        parameters={}
+        for name in ("Roughness","Specular IOR Level","Coat Weight"):
+            adjustment=surface.inputs[name].links[0].from_node
+            assert adjustment.operation=="MULTIPLY_ADD"
+            assert adjustment.inputs[0].links[0].from_node.attribute_name==satin_name
+            parameters[name]=[adjustment.inputs[i].default_value for i in (2,1)]
+        meta["satin"]={"file":data.relative_to(ROOT).as_posix(),"sha256":sha(data),
+                       "attribute":satin_name,"encoding":"unorm8","parameters":parameters}
     json_file(output/"camera.json",camera);json_file(output/"mesh.json",meta)
     return meta

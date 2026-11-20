@@ -1,0 +1,275 @@
+{
+  "regions": {
+    "parent": {
+      "Black 2": {
+        "mid eye": {
+          "pixels": 467,
+          "median_rgb": [
+            74.0,
+            40.0,
+            19.0
+          ],
+          "luminance_p90_minus_p10": 81.23,
+          "2px_detail_rms": 20.77
+        },
+        "nose corner": {
+          "pixels": 118,
+          "median_rgb": [
+            70.0,
+            44.0,
+            26.0
+          ],
+          "luminance_p90_minus_p10": 32.84,
+          "2px_detail_rms": 5.96
+        }
+      },
+      "Rendered walnut": {
+        "mid eye": {
+          "pixels": 467,
+          "median_rgb": [
+            78.0,
+            36.0,
+            11.0
+          ],
+          "luminance_p90_minus_p10": 46.51,
+          "2px_detail_rms": 14.26
+        },
+        "nose corner": {
+          "pixels": 118,
+          "median_rgb": [
+            73.0,
+            33.0,
+            12.0
+          ],
+          "luminance_p90_minus_p10": 18.82,
+          "2px_detail_rms": 5.41
+        }
+      },
+      "Pigment alone": {
+        "mid eye": {
+          "pixels": 467,
+          "median_rgb": [
+            60.0,
+            26.0,
+            3.0
+          ],
+          "luminance_p90_minus_p10": 9.98,
+          "2px_detail_rms": 1.84
+        },
+        "nose corner": {
+          "pixels": 118,
+          "median_rgb": [
+            58.0,
+            26.0,
+            5.0
+          ],
+          "luminance_p90_minus_p10": 8.23,
+          "2px_detail_rms": 1.41
+        }
+      },
+      "Neutral polish": {
+        "mid eye": {
+          "pixels": 467,
+          "median_rgb": [
+            100.0,
+            93.0,
+            85.0
+          ],
+          "luminance_p90_minus_p10": 29.01,
+          "2px_detail_rms": 9.46
+        },
+        "nose corner": {
+          "pixels": 118,
+          "median_rgb": [
+            94.0,
+            88.0,
+            80.0
+          ],
+          "luminance_p90_minus_p10": 12.83,
+          "2px_detail_rms": 4.39
+        }
+      }
+    },
+    "A": {
+      "Black 2": {
+        "mid eye": {
+          "pixels": 433,
+          "median_rgb": [
+            72.0,
+            38.0,
+            18.0
+          ],
+          "luminance_p90_minus_p10": 81.25,
+          "2px_detail_rms": 20.45
+        },
+        "nose corner": {
+          "pixels": 235,
+          "median_rgb": [
+            78.0,
+            48.0,
+            30.0
+          ],
+          "luminance_p90_minus_p10": 58.08,
+          "2px_detail_rms": 7.31
+        }
+      },
+      "Rendered walnut": {
+        "mid eye": {
+          "pixels": 433,
+          "median_rgb": [
+            81.0,
+            42.0,
+            21.0
+          ],
+          "luminance_p90_minus_p10": 56.36,
+          "2px_detail_rms": 13.04
+        },
+        "nose corner": {
+          "pixels": 235,
+          "median_rgb": [
+            86.0,
+            49.0,
+            27.0
+          ],
+          "luminance_p90_minus_p10": 70.72,
+          "2px_detail_rms": 13.91
+        }
+      },
+      "Pigment alone": {
+        "mid eye": {
+          "pixels": 433,
+          "median_rgb": [
+            60.0,
+            27.0,
+            4.0
+          ],
+          "luminance_p90_minus_p10": 10.39,
+          "2px_detail_rms": 1.75
+        },
+        "nose corner": {
+          "pixels": 235,
+          "median_rgb": [
+            56.0,
+            25.0,
+            5.0
+          ],
+          "luminance_p90_minus_p10": 9.15,
+          "2px_detail_rms": 1.44
+        }
+      },
+      "Neutral polish": {
+        "mid eye": {
+          "pixels": 433,
+          "median_rgb": [
+            99.0,
+            91.0,
+            83.0
+          ],
+          "luminance_p90_minus_p10": 39.16,
+          "2px_detail_rms": 8.85
+        },
+        "nose corner": {
+          "pixels": 235,
+          "median_rgb": [
+            104.0,
+            94.0,
+            84.0
+          ],
+          "luminance_p90_minus_p10": 47.41,
+          "2px_detail_rms": 8.72
+        }
+      }
+    },
+    "B": {
+      "Black 2": {
+        "mid eye": {
+          "pixels": 614,
+          "median_rgb": [
+            78.0,
+            42.0,
+            19.0
+          ],
+          "luminance_p90_minus_p10": 76.76,
+          "2px_detail_rms": 19.62
+        },
+        "nose corner": {
+          "pixels": 179,
+          "median_rgb": [
+            75.0,
+            46.0,
+            28.0
+          ],
+          "luminance_p90_minus_p10": 65.0,
+          "2px_detail_rms": 7.96
+        }
+      },
+      "Rendered walnut": {
+        "mid eye": {
+          "pixels": 614,
+          "median_rgb": [
+            88.0,
+            43.0,
+            18.5
+          ],
+          "luminance_p90_minus_p10": 34.01,
+          "2px_detail_rms": 6.94
+        },
+        "nose corner": {
+          "pixels": 179,
+          "median_rgb": [
+            92.0,
+            45.0,
+            18.0
+          ],
+          "luminance_p90_minus_p10": 52.36,
+          "2px_detail_rms": 9.14
+        }
+      },
+      "Pigment alone": {
+        "mid eye": {
+          "pixels": 614,
+          "median_rgb": [
+            67.0,
+            31.0,
+            6.0
+          ],
+          "luminance_p90_minus_p10": 8.06,
+          "2px_detail_rms": 1.63
+        },
+        "nose corner": {
+          "pixels": 179,
+          "median_rgb": [
+            74.0,
+            35.0,
+            10.0
+          ],
+          "luminance_p90_minus_p10": 8.92,
+          "2px_detail_rms": 1.6
+        }
+      },
+      "Neutral polish": {
+        "mid eye": {
+          "pixels": 614,
+          "median_rgb": [
+            103.0,
+            97.0,
+            88.0
+          ],
+          "luminance_p90_minus_p10": 22.85,
+          "2px_detail_rms": 4.37
+        },
+        "nose corner": {
+          "pixels": 179,
+          "median_rgb": [
+            94.0,
+            88.0,
+            80.0
+          ],
+          "luminance_p90_minus_p10": 42.67,
+          "2px_detail_rms": 5.46
+        }
+      }
+    }
+  },
+  "method": "Sample interior pixels of each mesh\u2019s projected eye after a two-pixel erosion. Pigment is shaded as emission. Neutral polish replaces the material base colour only. Source and final render statistics include illumination."
+}

@@ -1,0 +1,569 @@
+{
+  "parent": "7fe492399fa2738d264e73e9e85c427c1531cb902234d43ce1e5012468488922",
+  "model": "9f3100d8a3b41a055cbe54574f7c1c80633749d2bd9eb66bd7b9312e3b892e8a",
+  "atlas": "86debdcce4b5b6075ae7510cb25f77066ae912cfb8e1a0c4a49101ed43b79978",
+  "protected": {
+    "Knight | turned pedestal": {
+      "geometry_uv_and_varnish_all_exact": true
+    },
+    "Knight | swept rounded mane": {
+      "geometry_uv_and_varnish_all_exact": true
+    },
+    "Knight | near swept ear": {
+      "geometry_uv_and_varnish_all_exact": true
+    },
+    "Knight | near eye": {
+      "natively_refined_uv_globe": [
+        482,
+        7682
+      ]
+    },
+    "Knight | far swept ear": {
+      "geometry_uv_and_varnish_all_exact": true
+    },
+    "Knight | far eye": {
+      "natively_refined_uv_globe": [
+        482,
+        7682
+      ]
+    },
+    "Knight | continuous horse head and neck": {
+      "unchanged_outside_orbit": 41328,
+      "vertex_count": 49131,
+      "unchanged_chest_and_crown": 29134
+    }
+  },
+  "changed_lights": [
+    "Eye reflection upper",
+    "Eye reflection lower"
+  ],
+  "native": {
+    "Knight | turned pedestal": {
+      "verts": 1984,
+      "faces": 1922,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "be6cb8d166007847ef04d599596ce5f05d623508341823046fbf62778c21fd48",
+          "min": [
+            0.18307611346244812,
+            0.16504710912704468
+          ],
+          "max": [
+            0.5967406630516052,
+            0.5921315550804138
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "501f1d2aa967f12fe13ee7cc7663f7792e9a5eeef67562684a6f6d72c1d14402",
+          "min": [
+            0.0016639382811263204,
+            0.0016639360692352057
+          ],
+          "max": [
+            0.9983360767364502,
+            0.9824963212013245
+          ]
+        }
+      },
+      "topology": "016197732d7a8cf858edbb4b7a1a40690d48065c1223c5dba2e269bf90e104fc",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.048663169145584106,
+        0.5898846387863159
+      ]
+    },
+    "Knight | swept rounded mane": {
+      "verts": 832,
+      "faces": 770,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "074e12870a6d4fe0259bda3fee16b3036cbef114227793cda90f4f6e7ddd37f1",
+          "min": [
+            0.1469624638557434,
+            0.48847290873527527
+          ],
+          "max": [
+            0.40174630284309387,
+            0.7577588558197021
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "6b263290174214af510931429009495287b9bdd7a2623f1c7883aa50557d4728",
+          "min": [
+            0.22469422221183777,
+            0.23613153398036957
+          ],
+          "max": [
+            0.9303786158561707,
+            0.9800437092781067
+          ]
+        }
+      },
+      "topology": "5d8aab708380a9c0c7ad57873e11495b4865cbaf35ded9b740f71c39b903339c",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.020115381106734276,
+        0.6010000109672546
+      ]
+    },
+    "Knight | near swept ear": {
+      "verts": 448,
+      "faces": 386,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "ae4a2b5ce3c2c9d2f4ad2c7597b07697969081ca5803f8d64d86b4b83dd56fb4",
+          "min": [
+            0.23960578441619873,
+            0.6258958578109741
+          ],
+          "max": [
+            0.4371669888496399,
+            0.6770725846290588
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "1cb045edceead527a05e62bd1e94fac378dd45f27e7ce759880e63fa95837182",
+          "min": [
+            0.2060645967721939,
+            0.2494162619113922
+          ],
+          "max": [
+            0.6517817974090576,
+            0.9708532691001892
+          ]
+        }
+      },
+      "topology": "fbffc2f4d60fb5e60f77556a928d0fd65a132bcd8c3eab510898ec1c9e9f2300",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.0191430002450943,
+        0.3371504247188568
+      ]
+    },
+    "Knight | near eye": {
+      "verts": 7682,
+      "faces": 8192,
+      "uv": {
+        "UVMap": {
+          "sha256": "703071f269e6c256a9682b343fec4f5be7f4d315c888a0061f316fac06ed9b0a",
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            1.0,
+            1.0
+          ]
+        },
+        "Knight pigment projection": {
+          "sha256": "6885863fdef5fbdd6f092dad60903042eee6f1980929c5d3012804ef0deb3a12",
+          "min": [
+            0.40252020955085754,
+            0.6268841028213501
+          ],
+          "max": [
+            0.426710844039917,
+            0.6394428014755249
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "8a42a1ebdde01ebd6cf84634a7c4aaaab174e395e6963b8e1c66080501712e23",
+          "min": [
+            0.5809704661369324,
+            0.25666821002960205
+          ],
+          "max": [
+            0.6326059699058533,
+            0.2749689817428589
+          ]
+        }
+      },
+      "topology": "bef9944f17ecf17997d9e2711a3d5d3fac2bbc856f89adf4e615de095193e4b9",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.08500687032938004,
+        0.17991961538791656
+      ]
+    },
+    "Knight | far swept ear": {
+      "verts": 448,
+      "faces": 386,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "7f76fffb69bd515210f94a5cdc11120a5c65d3134f887ebe0eb5b635285339bf",
+          "min": [
+            0.24235492944717407,
+            0.7177398800849915
+          ],
+          "max": [
+            0.44014525413513184,
+            0.7655432224273682
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "3a850f6bfb5d17c4e26086a2231dcf403c46141b39b3714d3bf0c41887fc0b5c",
+          "min": [
+            0.4617104232311249,
+            0.25666823983192444
+          ],
+          "max": [
+            0.6526967883110046,
+            0.9708532094955444
+          ]
+        }
+      },
+      "topology": "af2de3ff8c4e5eeb8b8ae44c5358f3239a83a58d0928a9794e5113826f39bb44",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.021734178066253662,
+        0.36319586634635925
+      ]
+    },
+    "Knight | far eye": {
+      "verts": 7682,
+      "faces": 8192,
+      "uv": {
+        "UVMap": {
+          "sha256": "629b85660361b951894a60f7c0ebbaaf30ee045b8996c367db5a8ea61fabefcf",
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            1.0,
+            1.0
+          ]
+        },
+        "Knight pigment projection": {
+          "sha256": "e7803d3b01d15ccadfc7074de6a78606ddc0685557cfe08c81b1298be5692839",
+          "min": [
+            0.40514644980430603,
+            0.6984714865684509
+          ],
+          "max": [
+            0.4293370842933655,
+            0.7110301852226257
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "b205afaa68d03df50c2c94ac3b523df2b8633c68eb0c3d6233386fc1ce05456e",
+          "min": [
+            0.5750565528869629,
+            0.23613156378269196
+          ],
+          "max": [
+            0.6322600841522217,
+            0.2749689519405365
+          ]
+        }
+      },
+      "topology": "3a1b8eed9c19825f6f974435625138abdfd89ddfd788f73debf010230d215641",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.08500687032938004,
+        0.17991961538791656
+      ]
+    },
+    "Knight | continuous horse head and neck": {
+      "verts": 49131,
+      "faces": 66708,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "07951b58c93f0153aa2d6f2cc6e84c7a5d4e43c0627958360a3089129d48a257",
+          "min": [
+            0.2322596311569214,
+            0.36371129751205444
+          ],
+          "max": [
+            0.5766321420669556,
+            0.7613029479980469
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "4171183bfbc079aa48eea029239358746914cf745706cf73bef2cfb019ed4dc8",
+          "min": [
+            0.2060646116733551,
+            0.0016639820532873273
+          ],
+          "max": [
+            0.9209144711494446,
+            0.93226158618927
+          ]
+        }
+      },
+      "topology": "1cc9fc8b10512360d38c988a6a081931cdb18423de28aa5e709eef9db3a868b8",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.03317512571811676,
+        0.9199803471565247
+      ]
+    }
+  },
+  "parent_meshes": {
+    "Knight | turned pedestal": {
+      "verts": 1984,
+      "faces": 1922,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "be6cb8d166007847ef04d599596ce5f05d623508341823046fbf62778c21fd48",
+          "min": [
+            0.18307611346244812,
+            0.16504710912704468
+          ],
+          "max": [
+            0.5967406630516052,
+            0.5921315550804138
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "501f1d2aa967f12fe13ee7cc7663f7792e9a5eeef67562684a6f6d72c1d14402",
+          "min": [
+            0.0016639382811263204,
+            0.0016639360692352057
+          ],
+          "max": [
+            0.9983360767364502,
+            0.9824963212013245
+          ]
+        }
+      },
+      "topology": "016197732d7a8cf858edbb4b7a1a40690d48065c1223c5dba2e269bf90e104fc",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.048663169145584106,
+        0.5898846387863159
+      ]
+    },
+    "Knight | swept rounded mane": {
+      "verts": 832,
+      "faces": 770,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "074e12870a6d4fe0259bda3fee16b3036cbef114227793cda90f4f6e7ddd37f1",
+          "min": [
+            0.1469624638557434,
+            0.48847290873527527
+          ],
+          "max": [
+            0.40174630284309387,
+            0.7577588558197021
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "6b263290174214af510931429009495287b9bdd7a2623f1c7883aa50557d4728",
+          "min": [
+            0.22469422221183777,
+            0.23613153398036957
+          ],
+          "max": [
+            0.9303786158561707,
+            0.9800437092781067
+          ]
+        }
+      },
+      "topology": "5d8aab708380a9c0c7ad57873e11495b4865cbaf35ded9b740f71c39b903339c",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.020115381106734276,
+        0.6010000109672546
+      ]
+    },
+    "Knight | near swept ear": {
+      "verts": 448,
+      "faces": 386,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "ae4a2b5ce3c2c9d2f4ad2c7597b07697969081ca5803f8d64d86b4b83dd56fb4",
+          "min": [
+            0.23960578441619873,
+            0.6258958578109741
+          ],
+          "max": [
+            0.4371669888496399,
+            0.6770725846290588
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "1cb045edceead527a05e62bd1e94fac378dd45f27e7ce759880e63fa95837182",
+          "min": [
+            0.2060645967721939,
+            0.2494162619113922
+          ],
+          "max": [
+            0.6517817974090576,
+            0.9708532691001892
+          ]
+        }
+      },
+      "topology": "fbffc2f4d60fb5e60f77556a928d0fd65a132bcd8c3eab510898ec1c9e9f2300",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.0191430002450943,
+        0.3371504247188568
+      ]
+    },
+    "Knight | near eye": {
+      "verts": 482,
+      "faces": 512,
+      "uv": {
+        "UVMap": {
+          "sha256": "83ee9862e79d0266e294cfb6a5e252d0a213bf263c6ae8fe9c42dc8ef619cffb",
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            1.0,
+            1.0
+          ]
+        },
+        "Knight pigment projection": {
+          "sha256": "1d845a283bc3744d197eac20c719f48d91b1269b4d0cacf0313f5bb73c782d11",
+          "min": [
+            0.40252020955085754,
+            0.6268841028213501
+          ],
+          "max": [
+            0.426710844039917,
+            0.6394428014755249
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "9866dc00151982aeeeedb8d33ce47225ae9e92b500d88aba2c833aa68ff6ba39",
+          "min": [
+            0.5809704661369324,
+            0.25666821002960205
+          ],
+          "max": [
+            0.6326059699058533,
+            0.2749689817428589
+          ]
+        }
+      },
+      "topology": "ce4d35f579baafdcb1bcbfb710c749c21738f3fc1d1ad6ee2ed9cfced020d5a8",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.17668884992599487,
+        0.3543875813484192
+      ]
+    },
+    "Knight | far swept ear": {
+      "verts": 448,
+      "faces": 386,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "7f76fffb69bd515210f94a5cdc11120a5c65d3134f887ebe0eb5b635285339bf",
+          "min": [
+            0.24235492944717407,
+            0.7177398800849915
+          ],
+          "max": [
+            0.44014525413513184,
+            0.7655432224273682
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "3a850f6bfb5d17c4e26086a2231dcf403c46141b39b3714d3bf0c41887fc0b5c",
+          "min": [
+            0.4617104232311249,
+            0.25666823983192444
+          ],
+          "max": [
+            0.6526967883110046,
+            0.9708532094955444
+          ]
+        }
+      },
+      "topology": "af2de3ff8c4e5eeb8b8ae44c5358f3239a83a58d0928a9794e5113826f39bb44",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.021734178066253662,
+        0.36319586634635925
+      ]
+    },
+    "Knight | far eye": {
+      "verts": 482,
+      "faces": 512,
+      "uv": {
+        "UVMap": {
+          "sha256": "ad535d3fd2e4206fcc84062a5a3ea72893ec6e2378943326a3ae49c5b435c3d9",
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            1.0,
+            1.0
+          ]
+        },
+        "Knight pigment projection": {
+          "sha256": "78b3a66b4ee452036a9826abc5b63ce1100d7139d1acf185aeb4b01b75733071",
+          "min": [
+            0.40514644980430603,
+            0.6984714865684509
+          ],
+          "max": [
+            0.4293370842933655,
+            0.7110301852226257
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "bdfef6f9858fb6e6564402335b6bd800d137896f2d38c5473efcf12e513fd83c",
+          "min": [
+            0.5750565528869629,
+            0.23613156378269196
+          ],
+          "max": [
+            0.6322600841522217,
+            0.2749689519405365
+          ]
+        }
+      },
+      "topology": "117584ca2483ed78b011e7f6896ad80913a4323c526af0db0ff01a0a600dfd4e",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.20636329054832458,
+        0.3473302721977234
+      ]
+    },
+    "Knight | continuous horse head and neck": {
+      "verts": 49131,
+      "faces": 66708,
+      "uv": {
+        "Knight pigment projection": {
+          "sha256": "07951b58c93f0153aa2d6f2cc6e84c7a5d4e43c0627958360a3089129d48a257",
+          "min": [
+            0.2322596311569214,
+            0.36371129751205444
+          ],
+          "max": [
+            0.5766321420669556,
+            0.7613029479980469
+          ]
+        },
+        "Knight wood atlas": {
+          "sha256": "4171183bfbc079aa48eea029239358746914cf745706cf73bef2cfb019ed4dc8",
+          "min": [
+            0.2060646116733551,
+            0.0016639820532873273
+          ],
+          "max": [
+            0.9209144711494446,
+            0.93226158618927
+          ]
+        }
+      },
+      "topology": "1cc9fc8b10512360d38c988a6a081931cdb18423de28aa5e709eef9db3a868b8",
+      "nonmanifold_edges": 0,
+      "varnish_range": [
+        0.0013365518534556031,
+        0.9199803471565247
+      ]
+    }
+  },
+  "same_camera_and_pose": true,
+  "packed_images_exact": true,
+  "export_triangles": 243666,
+  "export_parts": 7,
+  "varnish_bytes": 135271
+}

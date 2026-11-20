@@ -1,0 +1,41 @@
+{
+  "method": "Mirror and render identical unposed x,z windows. An outer silhouette movement can change coverage without opening a hole. Consult the enclosed-gap counts and inspect the actual rotating model.",
+  "change_from_parent": {
+    "parent": {
+      "near": {
+        "newly_open_grid_points": 0,
+        "newly_covered_grid_points": 0,
+        "mean_absolute_depth_change": 0.0
+      },
+      "far": {
+        "newly_open_grid_points": 0,
+        "newly_covered_grid_points": 0,
+        "mean_absolute_depth_change": 0.0
+      }
+    },
+    "A": {
+      "near": {
+        "newly_open_grid_points": 0,
+        "newly_covered_grid_points": 18,
+        "mean_absolute_depth_change": 0.0559
+      },
+      "far": {
+        "newly_open_grid_points": 0,
+        "newly_covered_grid_points": 18,
+        "mean_absolute_depth_change": 0.0533
+      }
+    },
+    "B": {
+      "near": {
+        "newly_open_grid_points": 0,
+        "newly_covered_grid_points": 0,
+        "mean_absolute_depth_change": 0.0749
+      },
+      "far": {
+        "newly_open_grid_points": 0,
+        "newly_covered_grid_points": 0,
+        "mean_absolute_depth_change": 0.0746
+      }
+    }
+  }
+}

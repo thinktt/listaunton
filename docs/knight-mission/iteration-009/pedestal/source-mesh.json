@@ -1,0 +1,147 @@
+{
+  "vertexCount": 156861,
+  "indexCount": 865290,
+  "triangleCount": 288430,
+  "vertexStrideBytes": 32,
+  "vertexByteLength": 5019552,
+  "indexByteOffset": 5019552,
+  "totalByteLength": 8480712,
+  "bounds": {
+    "min": [
+      -1.7151273488998413,
+      -1.4943275451660156,
+      0.03999996557831764
+    ],
+    "max": [
+      1.5268431901931763,
+      1.4943275451660156,
+      5.141706466674805
+    ],
+    "size": [
+      3.2419705390930176,
+      2.9886550903320312,
+      5.101706504821777
+    ],
+    "center": [
+      -0.09414207935333252,
+      0.0,
+      2.590853214263916
+    ]
+  },
+  "parts": [
+    {
+      "name": "Knight | turned pedestal",
+      "vertexCount": 36392,
+      "indexCount": 187392,
+      "indexOffset": 0,
+      "vertexOffset": 0,
+      "triangleCount": 62464
+    },
+    {
+      "name": "Knight | swept rounded mane",
+      "vertexCount": 13918,
+      "indexCount": 76800,
+      "indexOffset": 187392,
+      "vertexOffset": 36392,
+      "triangleCount": 25600
+    },
+    {
+      "name": "Knight | near swept ear",
+      "vertexCount": 7889,
+      "indexCount": 39936,
+      "indexOffset": 264192,
+      "vertexOffset": 50310,
+      "triangleCount": 13312
+    },
+    {
+      "name": "Knight | near eye",
+      "vertexCount": 8382,
+      "indexCount": 47616,
+      "indexOffset": 304128,
+      "vertexOffset": 58199,
+      "triangleCount": 15872
+    },
+    {
+      "name": "Knight | far swept ear",
+      "vertexCount": 7923,
+      "indexCount": 39936,
+      "indexOffset": 351744,
+      "vertexOffset": 66581,
+      "triangleCount": 13312
+    },
+    {
+      "name": "Knight | far eye",
+      "vertexCount": 8382,
+      "indexCount": 47616,
+      "indexOffset": 391680,
+      "vertexOffset": 74504,
+      "triangleCount": 15872
+    },
+    {
+      "name": "Knight | continuous horse head and neck",
+      "vertexCount": 73975,
+      "indexCount": 425994,
+      "indexOffset": 439296,
+      "vertexOffset": 82886,
+      "triangleCount": 141998
+    }
+  ],
+  "sourceSha256": "7772c51af8b25b5579acc7da9906c5c1eca4a71ccb3a6468d7d8e1a0577b5a72",
+  "referenceCamera": {
+    "type": "ORTHO",
+    "elevationDegrees": 54,
+    "yawDegrees": 12.000003119425475,
+    "worldToCamera": [
+      0.9781476259231567,
+      0.20791175961494446,
+      -7.450580596923828e-09,
+      3.4875520782406966e-07,
+      -0.16820412874221802,
+      0.7913379669189453,
+      0.5877853631973267,
+      -1.3333357572555542,
+      0.12220748513936996,
+      -0.5749408006668091,
+      0.8090168833732605,
+      -13.835174560546875,
+      -0.0,
+      0.0,
+      -0.0,
+      1.0
+    ],
+    "projectionMatrix": [
+      0.2757999897003174,
+      0.0,
+      0.0,
+      -0.22018331289291382,
+      0.0,
+      0.2757999897003174,
+      0.0,
+      0.01333331223577261,
+      0.0,
+      0.0,
+      -0.0200200192630291,
+      -1.0020020008087158,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "width": 1254,
+    "height": 1254,
+    "orthoScale": 7.251631736755371,
+    "shiftX": 0.1100916638970375,
+    "shiftY": -0.006666666828095913
+  },
+  "texture": "build/knight-mission/mission008-evaluation/cove-finish/pigment.png",
+  "textureSha256": "8666e40bed34d56756ac035a944396bfbd89eba78d05bc65ed42a31690381d71",
+  "uvLayer": "Knight wood atlas",
+  "exactCornerData": true,
+  "finish": {
+    "file": "build/knight-mission/043-satin-carving/varnish.bin",
+    "sha256": "d9d7fba27a6f7f66f06c4115ec16ff6f64cca3124e5aaa30628e77679b6366b6",
+    "attribute": "Knight varnish coverage",
+    "encoding": "unorm8",
+    "reliefDistance": 0.00279999990016222
+  }
+}

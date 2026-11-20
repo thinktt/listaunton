@@ -1,0 +1,112 @@
+{
+  "blender": "5.2.2 LTS",
+  "all_nine_evaluated_meshes_identical": true,
+  "sampled_azimuths": 360,
+  "method": "World-space evaluated native triangles. Measure turning at top minus 0.00001 and footprint through the top. BVH triangle overlap verifies each joint separately.",
+  "trials": {
+    "042-level-carving": {
+      "scene_sha256": "11d21ea5a6ff2200290da4dabd92a9aea63c087c8e670511a839ac371b48d108",
+      "geometry": {
+        "Knight | turned pedestal": "329dc2afaa30a185427dada6a43cc467fbd86c6f9b767887681e1d1f01f9412f",
+        "Knight | swept rounded mane": "9ded7975c8613c847577e9c4ab0512127f6fba0584ba0912d7aa78eaaacbb446",
+        "Knight | near swept ear": "c2ced3cdf07f404afad052db7d2ab26682a11df419a7fd91a558293816e1695c",
+        "Knight | near eye": "2da0765c467e6b648ee977b1248bb99159b10caf715dc8a45f7247bb737ac5ce",
+        "Knight | far swept ear": "50db6bd058ceb21a30e0993694214ae64dc00e7940381c7eebd2195a105050b3",
+        "Knight | far eye": "4078fdd3faad1e69d4928c113dd93e3a7119a773fde917584eec601674b535cc",
+        "Knight | continuous horse head and neck": "90a03b08ec5fdeca4836bf9a19268da841ceb150023bc2d58c25cd7649d610d2",
+        "Knight | curved neck and chest": "872b115988574e1dc827ff0979902c19398fbd0bdc95a1d29e80be741afac210",
+        "Knight | coherent skull cheek and conical muzzle": "3285601c2cfa246525d25f0fb65afe51a71cbed7816c3bfc8c1bc526d204d444"
+      },
+      "native_contacts": {
+        "Knight | continuous horse head and neck": {
+          "intersecting_triangle_pairs": 1067,
+          "lowest_z": 1.61580228805542,
+          "height_below_top": 0.07919967174530029
+        },
+        "Knight | swept rounded mane": {
+          "intersecting_triangle_pairs": 418,
+          "lowest_z": 1.670194387435913,
+          "height_below_top": 0.02480757236480713
+        }
+      },
+      "top_z": 1.6950019598007202,
+      "turning_center_xy": [
+        0.0325160026550293,
+        0.0
+      ],
+      "level_tolerance": 1e-05,
+      "average_level_radius": 1.1226323209546658,
+      "neck_margin": {
+        "minimum": 0.05343292592083837,
+        "mean": 0.1657854256905772,
+        "positive_samples": 360,
+        "front": 0.05349510225502696,
+        "far": 0.24270031583828322,
+        "back": 0.10693483861941022,
+        "near": 0.23759588568388135
+      },
+      "combined_footprint_margin": {
+        "minimum": 0.05343292592083837,
+        "mean": 0.1657854256905772,
+        "positive_samples": 360,
+        "front": 0.05349510225502696,
+        "far": 0.24270031583828322,
+        "back": 0.10693483861941022,
+        "near": 0.23759588568388135
+      },
+      "mane_extends_beyond_neck_in_degrees": 0
+    },
+    "043-satin-carving": {
+      "scene_sha256": "7772c51af8b25b5579acc7da9906c5c1eca4a71ccb3a6468d7d8e1a0577b5a72",
+      "geometry": {
+        "Knight | turned pedestal": "329dc2afaa30a185427dada6a43cc467fbd86c6f9b767887681e1d1f01f9412f",
+        "Knight | swept rounded mane": "9ded7975c8613c847577e9c4ab0512127f6fba0584ba0912d7aa78eaaacbb446",
+        "Knight | near swept ear": "c2ced3cdf07f404afad052db7d2ab26682a11df419a7fd91a558293816e1695c",
+        "Knight | near eye": "2da0765c467e6b648ee977b1248bb99159b10caf715dc8a45f7247bb737ac5ce",
+        "Knight | far swept ear": "50db6bd058ceb21a30e0993694214ae64dc00e7940381c7eebd2195a105050b3",
+        "Knight | far eye": "4078fdd3faad1e69d4928c113dd93e3a7119a773fde917584eec601674b535cc",
+        "Knight | continuous horse head and neck": "90a03b08ec5fdeca4836bf9a19268da841ceb150023bc2d58c25cd7649d610d2",
+        "Knight | curved neck and chest": "872b115988574e1dc827ff0979902c19398fbd0bdc95a1d29e80be741afac210",
+        "Knight | coherent skull cheek and conical muzzle": "3285601c2cfa246525d25f0fb65afe51a71cbed7816c3bfc8c1bc526d204d444"
+      },
+      "native_contacts": {
+        "Knight | continuous horse head and neck": {
+          "intersecting_triangle_pairs": 1067,
+          "lowest_z": 1.61580228805542,
+          "height_below_top": 0.07919967174530029
+        },
+        "Knight | swept rounded mane": {
+          "intersecting_triangle_pairs": 418,
+          "lowest_z": 1.670194387435913,
+          "height_below_top": 0.02480757236480713
+        }
+      },
+      "top_z": 1.6950019598007202,
+      "turning_center_xy": [
+        0.0325160026550293,
+        0.0
+      ],
+      "level_tolerance": 1e-05,
+      "average_level_radius": 1.1226323209546658,
+      "neck_margin": {
+        "minimum": 0.05343292592083837,
+        "mean": 0.1657854256905772,
+        "positive_samples": 360,
+        "front": 0.05349510225502696,
+        "far": 0.24270031583828322,
+        "back": 0.10693483861941022,
+        "near": 0.23759588568388135
+      },
+      "combined_footprint_margin": {
+        "minimum": 0.05343292592083837,
+        "mean": 0.1657854256905772,
+        "positive_samples": 360,
+        "front": 0.05349510225502696,
+        "far": 0.24270031583828322,
+        "back": 0.10693483861941022,
+        "near": 0.23759588568388135
+      },
+      "mane_extends_beyond_neck_in_degrees": 0
+    }
+  }
+}

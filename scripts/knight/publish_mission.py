@@ -29,12 +29,50 @@ def angles(scene):
         render(scene,ASSETS/("view-"+label+".png"))
 
 
+def check_round(verdict, checkpoint, variant, model, assets, build):
+    """Bind a three-way artistic judgment to the scenes and renders actually reviewed."""
+    if verdict["checkpoint"] != checkpoint or variant != f"{checkpoint}-{verdict['winner']}":
+        raise ValueError("The recorded winner belongs to a different trial")
+    if verdict["winner"] not in ("A", "B") or not verdict["reason"].strip():
+        raise ValueError("A three-way release needs a winner and a reason")
+    def check_files(folder, expected):
+        for path, digest in expected.items():
+            if sha(folder / path) != digest:
+                raise ValueError(f"Reviewed file changed: {folder / path}")
+    parent = verdict["parent"]
+    if sha(model) != parent["scene"]:
+        raise ValueError("The reviewed parent is no longer current")
+    check_files(assets, {"render.png": parent["fixed"], "guide-render.png": parent["side"]})
+    for code in ("A", "B"):
+        trial = build / f"{checkpoint}-{code}"
+        row = verdict["candidates"][code]
+        check_files(trial, {"parent.blend": parent["scene"], "knight.blend": row["scene"],
+                            "wood.png": row["fixed"], "wood-side.png": row["side"],
+                            "metrics.json": row["audit"]})
+        audit = json.loads((trial / "metrics.json").read_text())
+        if (audit["previous_render_sha256"], audit["model_sha256"], audit["render_sha256"]) != (
+                parent["fixed"], row["scene"], row["fixed"]):
+            raise ValueError(f"Stale registration for {code}")
+        check_files(assets, audit["source_sha256"])
+    weights = {"reference": .45, "side": .35, "form": .15, "finish": .05}
+    totals = {}
+    for name in ("Parent", "A", "B"):
+        grades = verdict["scores"][name]
+        if any(not 0 <= grades[key] <= 100 for key in weights):
+            raise ValueError("Grade outside the mission scale")
+        totals[name] = sum(grades[key] * weight for key, weight in weights.items())
+    if totals[verdict["winner"]] < max(totals.values()):
+        raise ValueError("The recorded winner did not win the weighted comparison")
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("variant")
     parser.add_argument("--previous-hash",required=True)
     parser.add_argument("--atlas-name",required=True)
     parser.add_argument("--checkpoint",required=True)
+    parser.add_argument("--round-verdict",type=Path,
+                        help="Signed-off three-way comparison with both candidates' file digests and grades")
     args=parser.parse_args(sys.argv[sys.argv.index("--")+1:])
     assert Path(args.atlas_name).name==args.atlas_name
     trial=BUILD/args.variant
@@ -42,8 +80,11 @@ def main():
     assert sha(MODEL)==args.previous_hash
     assert sha(trial/"knight.blend")==metrics["model_sha256"]
     assert sha(trial/"wood.png")==metrics["render_sha256"]
-    for ref in ("original","selected"):
-        assert metrics["scores"][ref]["iou"]>=metrics["scores"][ref]["previous_iou"]-.00005
+    if args.round_verdict:
+        check_round(json.loads(args.round_verdict.read_text()), args.checkpoint, args.variant, MODEL, ASSETS, BUILD)
+    else:
+        for ref in ("original","selected"):
+            assert metrics["scores"][ref]["iou"]>=metrics["scores"][ref]["previous_iou"]-.00005
     bpy.ops.wm.open_mainfile(filepath=str(trial/"knight.blend"),load_ui=False)
     scene=bpy.context.scene
     material=visible_meshes(scene)[0].data.materials[0]
@@ -75,12 +116,13 @@ def main():
     use_side_camera(scene);render(scene,ASSETS/"guide-neutral.png")
     for obj in objects:obj.data.materials[0]=wood
     render(scene,ASSETS/"guide-render.png")
-    registration={"guide":"assets/knight/concepts/side-01.png","profile":"assets/knight/guide-render.png",
-                  "source_blend_sha256":sha(MODEL),"guide_sha256":sha(ASSETS/"concepts/side-01.png"),
+    registration={"neutral":"assets/knight/guide-neutral.png","profile":"assets/knight/guide-render.png",
+                  "source_blend_sha256":sha(MODEL),"neutral_sha256":sha(ASSETS/"guide-neutral.png"),
                   "profile_sha256":sha(ASSETS/"guide-render.png"),"profile_size":[1254,1254],
-                  "canvas":[1254,1254],"guide_top":0,"scale":1,"offset_x":0,"offset_y":0,
+                  "canvas":[1254,1254],"scale":1,"offset_x":0,"offset_y":0,
+                  "elevation":json.loads((ASSETS/"guide-camera.json").read_text())["elevation"],
                   "physical_foot_center_x":float(scene.get("knight_foot_center_x",0.0)),
-                  "method":"Actual registered 7-degree side-camera render. The camera follows the turned axis horizontally and preserves the shared 565px base width and projected foot at 1127px."}
+                  "method":"Walnut and neutral clay rendered from the reopened scene using the same registered side camera."}
     json_file(ASSETS/"side-registration.json",registration)
     for obj in objects:obj.data.materials[0]=clay
     angles(scene)
