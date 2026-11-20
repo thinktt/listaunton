@@ -18,12 +18,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
-      - name: Check pages and model provenance
-        run: python3 scripts/check_site.py
+      - name: Assemble the site from source and generated assets
+        env:
+          SITE_OUTPUTS_URL: ${{ vars.LISTAUNTON_SITE_OUTPUTS_URL }}
+        run: |
+          test -n "$SITE_OUTPUTS_URL" || { echo "Set LISTAUNTON_SITE_OUTPUTS_URL to the matching site-outputs.tar.gz."; exit 1; }
+          mkdir -p dist
+          curl --proto '=https' --proto-redir '=https' --fail --location --retry 3 --output dist/site-outputs.tar.gz "$SITE_OUTPUTS_URL"
+          python3 blender/project.py unpack dist/site-outputs.tar.gz
+          python3 blender/project.py site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: dist/site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

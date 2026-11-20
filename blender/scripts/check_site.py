@@ -1,0 +1,121 @@
+"""Check local links, dynamic overlay images, sandbox and mesh provenance."""
+from pathlib import Path
+from html.parser import HTMLParser
+from urllib.parse import urlsplit, unquote
+import hashlib
+import json
+import re
+import sys
+
+ROOT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parents[1]
+checked = set()
+class Links(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        for key, value in attrs:
+            if key not in ('href', 'src') or not value:
+                continue
+            url = urlsplit(value)
+            if url.scheme or url.netloc or not url.path:
+                continue
+            assert not url.path.startswith('/'), f'Nonportable root link: {value}'
+            target = ROOT / unquote(url.path)
+            assert target.is_file(), f'Missing local link: {value}'
+            checked.add(url.path)
+for name in ('index.html', 'set-comparison.html', 'review.html', 'king-review.html', 'rook-review.html', 'bishop-review.html', 'knight-review.html', 'pawn-review.html'):
+    html = (ROOT / name).read_text(encoding='utf-8')
+    assert 'file:///' not in html, f'Machine-specific URL in {name}'
+    Links().feed(html)
+review = (ROOT / 'review.html').read_text(encoding='utf-8')
+initial_style = re.search(r'<style>(.*?)</style>', review, re.S).group(1)
+assert '#stage #contours{z-index:3;display:none}' in initial_style, 'Contour hiding must beat the #stage img selector before JS starts'
+assert '#stage{visibility:hidden;' in initial_style, 'Keep the image hidden until the initial fit is ready'
+assert '#render{z-index:2;opacity:.5}' in initial_style
+assert 'cursor:grab' not in initial_style, 'Reference view should use the normal cursor'
+
+for value in re.findall(r"['\"](assets/queen/[^'\"]+\.png)['\"]", review):
+    assert (ROOT / value).is_file(), value
+def embedded(identifier):
+    return json.loads(re.search(r'<script id="'+identifier+r'"[^>]*>(.*?)</script>', review, re.S).group(1))
+parts = embedded('parts-document')
+assert parts == (ROOT/'scripts/queen/parts-template.html').read_text(encoding='utf-8')
+assert 'id="details-section"' not in review
+for obsolete in ('queen-3d.html', 'queen-parts.html', 'staunton-references.html'):
+    assert not (ROOT/obsolete).exists(), obsolete
+assert 'sandbox="allow-scripts"' in parts
+assert 'Content-Security-Policy' in parts
+viewer = embedded('viewer-document')
+Links().feed(viewer)
+meta = re.search(r'<script id="mesh-metadata"[^>]*>(.*?)</script>', viewer, re.S)
+assert meta, 'Missing viewer mesh metadata'
+expected = json.loads(meta.group(1))['sourceSha256']
+actual = hashlib.sha256((ROOT / 'models/queen/queen-rebuilt.blend').read_bytes()).hexdigest()
+assert expected == actual, 'Viewer is stale relative to the Blender model'
+print(f'PASS: eight pages, {len(checked)} local links, overlay images, parts sandbox/CSP, and model/viewer hash.')
+
+manifest=json.loads((ROOT/'references/lichess-staunton-3d/original-png-manifest.json').read_text())
+assert len(manifest['files'])==12
+gallery=(ROOT/'index.html').read_text(encoding='utf-8')
+assert 'data-piece=' not in gallery
+for piece in ('king','rook','bishop','knight','pawn'):
+    assert f'href="{piece}-review.html"' in gallery
+assert 'href="review.html"' in gallery
+assert gallery.count('<img ')==12
+for item in manifest['files']:
+    image=ROOT/'references/lichess-staunton-3d'/item['file']
+    assert hashlib.sha256(image.read_bytes()).hexdigest()==item['sha256'],item['file']
+    assert f'src="references/lichess-staunton-3d/{item["file"]}"' in gallery
+print('PASS: all twelve original PNG reference hashes and gallery images.')
+
+alignment=json.loads(re.search(r'<script id="original-reference-alignment"[^>]*>(.*?)</script>',review,re.S).group(1))
+assert alignment==json.loads((ROOT/'assets/queen/original-reference-alignment.json').read_text())
+for label in ('source','target'):
+    assert hashlib.sha256((ROOT/alignment[label]).read_bytes()).hexdigest()==alignment[label+'_sha256']
+print('PASS: original-reference alignment metadata and source image hashes.')
+
+generation=json.loads((ROOT/'assets/candidates/generation.json').read_text(encoding='utf-8'))
+placements=json.loads((ROOT/'assets/candidates/alignment.json').read_text(encoding='utf-8'))
+assert len(generation['records'])==33
+from collections import Counter
+assert Counter((r['piece'],r['color']) for r in generation['records'])=={(p,c):(5 if (p,c)==('rook','black') else 4 if (p,c)==('bishop','white') else 3) for p in ('king','rook','bishop','knight','pawn') for c in ('black','white')}
+for row in generation['records']:
+    assert hashlib.sha256((ROOT/row['file']).read_bytes()).hexdigest()==row['sha256']
+    import subprocess
+    archived = ROOT / 'assets/candidates/archived-source' / (row['source_sha256'] + '.png')
+    if row.get('source_revision') and archived.is_file():
+        source_bytes = archived.read_bytes()
+    elif row.get('source_revision'):
+        source_bytes = subprocess.check_output(['git', 'show', row['source_revision'] + ':' + row['source']], cwd=ROOT)
+    else:
+        source_bytes = (ROOT / row['source']).read_bytes()
+    assert hashlib.sha256(source_bytes).hexdigest()==row['source_sha256']
+    if row.get('supporting_reference'):
+        assert hashlib.sha256((ROOT/row['supporting_reference']).read_bytes()).hexdigest()==row['supporting_reference_sha256']
+for piece,images in placements['pieces'].items():
+    page=(ROOT/f'{piece}-review.html').read_text(encoding='utf-8')
+    embedded=json.loads(re.search(r'<script id="comparison-data"[^>]*>(.*?)</script>',page,re.S).group(1))
+    assert embedded['images']==images
+    assert len(images)==(10 if piece=='rook' else 9 if piece=='bishop' else 8)
+    assert len({item["id"] for item in images})==(10 if piece=='rook' else 9 if piece=='bishop' else 8)
+    for item in images:
+        assert (ROOT/item['file']).is_file()
+        assert item['width']==item['height']
+        assert .5<item['scale']<1.5
+        if 'candidate' in item['id']:assert item['width']>=1024
+print('PASS: candidate hashes, source provenance, five comparison pages and alignment data.')
+
+for row in generation['records']:
+    if row['piece']=='bishop' and row['color']=='white':
+        assert not re.search(r'\b(mitre|miter|slit|cut|groove)\b',row.get('prompt',''),re.I)
+print('PASS: white bishops used plain upscale prompts without mitre-specific instructions.')
+
+foot_report=json.loads((ROOT/'assets/candidates/foot-alignment-report.json').read_text(encoding='utf-8'))
+assert len(foot_report['candidates'])==33
+for images in placements['pieces'].values():
+    for item in images:
+        if 'candidate' not in item['id']:continue
+        refinement=item['foot_refinement']
+        assert abs(item['y']-item['silhouette_y']-refinement['dy_original_px']/3)<1e-6
+        assert abs(refinement['dy_original_px'])<4
+        assert refinement['correlation_after']>=refinement['correlation_before']-.00001
+        assert refinement['reference']==('white' if item['id'].startswith('white') else 'black')
+print('PASS: bounded foot-detail registration, unchanged image scale and same-color references.')

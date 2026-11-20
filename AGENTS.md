@@ -1,5 +1,7 @@
 # listaunton
 
+See [BUILD.md](BUILD.md) for the source layout, site output archive, and replay commands. The relative paths in the workflow below are the legacy paths created by `python3 blender/project.py workspace`. Run older build and validation scripts in that workspace.
+
 Reconstruct the Lichess Staunton chess set from its rendered images. All six pieces have editable reconstructions. Interpret unseen geometry as an art project while matching the references carefully. The queen and king have wood materials; consult individual mission logs for the other pieces.
 
 ## Communication between project chats
@@ -95,7 +97,7 @@ King rebuild order: preserve the current accepted model and follow `docs/king-mi
 
 The precise authorship of the original Lichess pieces is unclear. Do not attribute these pieces to James Clarke. Preserve the source notes; do not invent a license for the supplied references.
 
-Publish the repository root directly. Do not reintroduce an `_site` packaging folder. The original reference gallery uses the twelve PNGs from Lichess’s `public/images/staunton/piece/Staunton` set; omit its extra knight preview.
+Publish the generated `dist/site` directory through the Pages workflow. The original reference gallery uses the twelve PNGs from Lichess’s `public/images/staunton/piece/Staunton` set; omit its extra knight preview.
 
 The review embeds its viewer and unmodified parts map as JSON documents. Switch tools only through the tabs; image dragging only pans the reference. Preserve parent/frame message-source checks. Source templates live in scripts/queen; build_viewer.py updates the embedded documents in review.html. Keep the page limited to the tabs, controls, and viewing area, with no detail panels beneath. Both interaction checks in scripts/queen must pass after changes to review controls or the viewer bridge.
 
